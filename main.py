@@ -27,13 +27,31 @@ def load_data(file_path):
     message = np.asarray(df['message'])
     label = np.asarray(df['is_important'])
     label = np.asarray(list(map(lambda x: 1 if x == 1 else 0, label)))
-    total = len(message)
-    train_commit = message[:int(total * 0.8)]
-    train_importance = label[:int(total * 0.8)]
-    test_commit = message[int(total * 0.8):]
-    test_importance = label[int(total * 0.8):]
 
-    return (train_commit, train_importance), (test_commit, test_importance)
+    return message, label
+
+
+def separate_data(data, ratio):
+    """Separate the data into training and testing sets.
+
+    Parameters
+    ----------
+    data : tuple
+        (message, labels).
+    ratio : float
+        Ratio of training data to testing data.
+
+    Returns
+    -------
+    tuple
+        (train_data, train_labels), (test_data, test_labels).
+
+    """
+    data_size = len(data[0])
+    train_size = int(data_size * ratio)
+    train_dat = (data[0][:train_size], data[1][:train_size])
+    test_dat = (data[0][train_size:], data[1][train_size:])
+    return train_dat, test_dat
 
 
 def preprocess(commit, remove_stopwords=True):
@@ -116,12 +134,14 @@ def convert2vector(processed_commit):
 
     """
     global word2idx
+    global idx2word
     vector = []
     for word in processed_commit:
         if word in word2idx:
             vector.append(word2idx[word])
         else:
-            print("something wrong")
+            word = "unk"
+            vector.append(word2idx[word])
     return vector
 
 
@@ -136,19 +156,20 @@ def build_model(topwords, embedding_vector_len, input_length):
     """
     model = Sequential()
     model.add(Embedding(topwords, embedding_vector_len, input_length=input_length))
-    model.add(LSTM(128, dropout=0.2, recurrent_dropout=0.2))
+    model.add(LSTM(64, dropout=0.2, recurrent_dropout=0.2))
     model.add(Dense(1, activation='sigmoid'))
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
     return model
 
 
 if __name__ == '__main__':
-    (train_data, train_labels), (test_data, test_labels) = load_data('/content/drive/MyDrive/data.csv')
+    (train_data, train_labels), (test_data, test_labels) = separate_data(load_data('data.csv'), 0.8)
     train_data = [preprocess(commit) for commit in train_data]
     test_data = [preprocess(commit) for commit in test_data]
-    print(len(train_data), len(test_data))
     create_dictionary(train_data)
     create_dictionary(test_data)
+    word2idx["unk"] = len(word2idx)
+    idx2word[len(idx2word)] = "unk"
     train_data = [convert2vector(commit) for commit in train_data]
     test_data = [convert2vector(commit) for commit in test_data]
 
@@ -159,22 +180,24 @@ if __name__ == '__main__':
         [vector[:100] if len(vector) >= 100 else [0] * (100 - len(vector)) + vector for vector in test_data])
     train_labels = np.array(train_labels)
     test_labels = np.array(test_labels)
-    top_words = 4000
-    embedding_vector_length = 32
-    print(train_data[0])
+    print(f"Length of dictionary: {len(word2idx)}")
+    top_words = len(word2idx) + 1
+    embedding_vector_length = 300
     classify_model = build_model(top_words, embedding_vector_length, max_commit_length)
     print(classify_model.summary())
     classify_model.fit(train_data, train_labels, epochs=3, batch_size=64)
     scores = classify_model.evaluate(test_data, test_labels, verbose=0)
     print("Accuracy: %.2f%%" % (scores[1] * 100))
-
-
-
-
-
-
-
-
-
+    mes, res = load_data('test.csv')
+    mes = [preprocess(commit) for commit in mes]
+    mes = [convert2vector(commit) for commit in mes]
+    mes = np.array([vector[:100] if len(vector) >= 100 else [0] * (100 - len(vector)) + vector for vector in mes])
+    predict = classify_model.predict(mes)
+    count_success_case = 0
+    for i in range(len(mes)):
+        print("Message: {}\tPredict: {}\t Actual: {}".format(mes[i], predict[i], res[i]))
+        if (predict[i] < 0.5 and res[i] == 0) or (predict[i] >= 0.5 and res[i] == 1):
+            count_success_case += 1
+    print("Accuracy: {}".format(count_success_case / len(mes)))
 
 
