@@ -5,7 +5,6 @@ import pandas as pd
 import re
 from keras.models import Sequential
 from keras.layers import Dense, LSTM, Embedding
-from tensorflow import keras
 
 nlp = spacy.load('en_core_web_lg')
 nltk.download('stopwords')
