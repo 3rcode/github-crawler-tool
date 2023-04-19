@@ -1,22 +1,22 @@
 import os
+import time
+import pandas as pd
 from preprocessing import score_by_bleu
 
 
 if __name__ == '__main__':
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-    changelog_path = os.path.join(ROOT_DIR, 'changelog.txt')
-    with open(changelog_path, 'r', encoding='utf-8') as f:
-        changelog = f.read()
-
-    commit1 = "feat: session.resolveHost"
-    commit2 = "fix: showAboutPanel also on linux (#37828) showAboutPanel also on linux"
-    score1_a = score_by_bleu(commit1, changelog)
-    score2_a = score_by_bleu(commit2, changelog)
-    print(score1_a, score2_a)
-    # OUTPUT:
-    '''('session resolveproxy 17222', 0.5671687320916967) 
-       ('fix bug where app would crash if app showaboutpanel 
-         was call before set any about panel options on linux 19625', 0.35492629278049054)
-    '''
-
-    '''Note: Need to restructure commit.txt file to get better results.'''
+    release_notes_path = os.path.join(ROOT_DIR, 'release_notes.csv')
+    commits_path = os.path.join(ROOT_DIR, 'commits.csv')
+    release_notes = pd.read_csv(release_notes_path)
+    commits = pd.read_csv(commits_path)
+    changelog = '\n'.join(release_notes['Release Notes'])
+    commits = commits['Messages'][:10]
+    start = time.time()
+    scores = score_by_bleu(commits, changelog)
+    labeled_commits = pd.DataFrame({'Messages': commits, 'Score': scores})
+    labeled_commits.to_csv('labeled_commits.csv', index=False)
+    print(scores)
+    end = time.time()
+    print(end - start)
+    
