@@ -1,0 +1,773 @@
+Index,Message,Description
+1,test: add a new test setting to run tests with build files (#2583),test: add tests with build files
+2,2.1.5,
+3,fix: missing interop helpers in bundle (#2582),
+4,2.1.4,
+5,fix: Fix dependency tracking and useSES bug (#2576),"  fix #2446   test: update compare test snapshot   test: adjust compare order, makes the snapshot easier to understand   add test case   refactor: update memorizedSanpshot without changing its reference  (#2577)   refactor: always use cacheRef   refactor: update memorizedSnapshot without change its reference   refactor: isEqual   revert example change   add comment    Co-authored-by: Yixuan Xu yixuanxu94@outlook.com"
+6,deps: update @testing-library/react to v14 (#2578),  deps: update @testing-library/react to v14   test: remove the wrong assertion 
+7,chore: use provenance for release (#2571), chore: use provenance for release  https://docs.npmjs.com/generating-provenance-statements  fix: use npm instead of pnpm for --provenance
+8,fix: pass serialized args to preload fetcher (#2564),
+9,types: Allow auto-import by improving generated types (#2563),style: default export assigned variables
+10,examples: fix invalid links (#2559),fixing invalid links
+11,Upgrade bundler (#2557),
+12,2.1.3,
+13,types: allow passing function as Data for useSWRSubscriptionOptions (#2551),feat: allow passing function as Data for useSWRSubscriptionOptions
+14,fix: data passed to refreshInterval function is not latest (#2354),
+15,types: Update Cache Interface types (#2554),  update Cache.keys iterator type from string to Key   revert lockfile   use string as key for cache interface   revert String coercion 
+16,Examples: fix type in axios-typescript example (#2552),Examles: fix type in axios-typescript example close #2541
+17,Fix #2548: pass origin key to subcription callback (#2550),
+18,2.1.2,
+19,Rename subscription types (#2537),  Rename subscription types   use full name for test 
+20,types: improve useSWRSubscription types (#2535),  fix: allow passing generics to useSWRSubscription   fix: allow infering key type of useSWRSubscription   types: import useSWRSubscription type   types: improve useSWRSubscription key inference    Co-authored-by: Yuta Osawa yutaosawa81@gmail.com
+21,chore: remove engines (#2536),
+22,test: fix syntax error in Equal type alias implementation (#2517),  Fix syntax error in Equal type alias implementation   Fix : Adding a typing test 
+23,test: add typing test for empty config (#2521),
+24,2.1.1,
+25,fix: swr infers incorrect data type for default SWRConfig generic type (#2506),"  add test case   Revert ""Fix: type support for suspense and fallbackData(#2396) (#2452)""   This reverts commit 04df1bf06c95a13fd3bcd8fd25ab0500f798f78c.   fix: better tests that now properly explain why partial type inferrence won't work in typescript   add test for passing in a config of type SWRConfiguration "
+26,docs: update subscription example (#2499),
+27,"refactor: remove useless dataRef, always compare cached data (#2431)",
+28,2.1.0,
+29,chore: Add subscription example (#2480),  Add subscription example   update example   move out the sub source 
+30,refactor: initialize the cache only on first access (#2479),  refactor: initialize the cache only on first access   chore: format code 
+31,test: Fix flaky e2e test (#2476),
+32,Error should be reset when new data comes (#2472),
+33,fix: avoid creating new snapshot if cache is not updated at client during streaming (#2475),
+34,test: add a test for keepPreviousData without changing key (#2470),
+35,fix: use the latest config in useSWRMutation (#2468),
+36,Always assume subscriptions will return sub count from current key (#2460),
+37,feat: add the parallel option in useSWRInfinite (#2404),  feat: add parallel option in useSWRInfinite   test: add more tests for the parallel option   chore: rename a local variable   test: add comments for help   test: the parallel option with an error 
+38,ci: faster e2e test (#2428),
+39,Fix: type support for suspense and fallbackData(#2396) (#2452),  fix SWROptions type   add undefined to config type   fix typo   add test case for suspense   add test case for fallbackdata   add test case for config is undefined    Co-authored-by: taro taro.onishi@shelfy.jp
+40,Subscription mode (#1263),"  update subscribe with middleware   fix lint & test   update typing, fix test and lint   refactor callback, rename, use refs for callbacks   Delay unmount   no swr destruction and add getters, revert pkg.json   callback -> next   rename fix types and update test   change exports to unstable_subscription   manage subs with useESE   use serialize   fix lint   use cache helper to update error   update exports path   fix script   pub check   add exp jsdoc   use cache-scoped storage   use prefixed key; add more tests   fix type   remove subscriber ref   rename   fix lint    Co-authored-by: Shu Ding g@shud.in"
+41,ci: fix publish workflow (#2453),
+42,2.0.4,
+43,fix: ensure initCache setter function stays within bounds of subscriptions (#2411),  fix: ensure initCache stays within bounds of subscriptions   fix: update iterator    Co-authored-by: lfberge leiv.fredrik.berge@rikstv.no
+44,fix: Error retry should be handled by global revalidator instead of local revalidation function (#2415),  tests: add test case for #2412   chore: adjust jest config   fix: do error retry with global revalidator   ci: codesandbox   chore: name   chore: name   Update use-swr-config-callbacks.test.tsx 
+45,types: fix some mutation type issue (#2421), types: fix some mutation type issue  close #2418 #2406 #2280   chore: update   fix lint 
+46,test: fix an act warning (#2403),
+47,test: stream ssr e2e (#2395),  chore: bump deps version   test: setup playwright for stream ssr   clean up   ci: setup github action job   fix: jest should ignore e2e   chore: upgrade pnpm version   chore: delete useless file 
+48,build: fix release job condition (#2392),
+49,2.0.3,
+50,fix: Ensure hydration matches the SSR result during streaming (#2391),  fix hydration during streaming ssr   mark as failing   memorize server snapshot 
+51,unify - characters in README.md (#2334),unify - characters It triggered my OCD that there were 2 types of -
+52,fix: initial loading state should be false with revalidation is disabed (#2382), fix: initial loading state should be false with revalidation is disabled with fallbackData  close #2369  chore: dont read external data in useMemo
+53,test: add test case for #2375 (#2389),  test: add test case for #2375   chore: clean up 
+54,fix: make compare function only compare data (#2375) (#2387),
+55,ci: only run release when tags pushed (#2388),  ci: only run release when tags pushed   chore: merge release and test   fix syntax and sequence   chore: rename action 
+56,"fix: when inifinite key changes, should use cached pagesize instead of initialSize (#2386)",close #2370
+57,fix: parameters passed to subscribe is inconsistent with its declaration (#2353),Co-authored-by: Yixuan Xu yixuanxu94@outlook.com
+58,build: fix typos in workflow yml (#2385),  build: workflows_run -> workflow_run   workflows   run multiple jobs 
+59,build: dynamically add token and depend on test workflow (#2384),token and dependency
+60,build: use npm for publish (#2383),use npm for publish
+61,build: fix release workflow (#2381),
+62,2.0.2,
+63,fix: createCacheHelper type (#2365), fix: createCacheHelper type
+64,fix: delay revalidation if a key is already active and has error (#2338), fix: delay revalidation if a key is already active and has error  close #2336   apply code review   test: add test case for isValidating 
+65,release workflow (#2374),  release workflow   tweak   mark uses and run as key   tweak   missing command   merge commands   yml ext   separate install   fix   keep relative path   add shell   composite   reorder jobs 
+66,2.0.1,
+67,ci: add publint to check packaging on CI (#2363),
+68,feat: add all mutate options support to useSWRInfinite (#2350),
+69,Update license year (#2344),
+70,fix: types properites in exports fields (#2341),
+71,types: conditional swr response (#2301),  auto type data   infer swr options   update test   add tests   rm extra   Use config as 3rd generic param 
+72,fix: useSWRMutation should always use the latest fetcher (#2290),
+73,update bunchee to remove the extra target cli option (#2298),
+74,Improve type test (#2289),  types: improve type test   types: fix infinite key   types: update type test with equal   types: simplify SWRHook type   ci: codesandbox ci   ci: codesandbox ci   ci: codesandbox ci 
+75,type: enforce array literal as tuple (#2283),  bump dev version   enforce infer array literal as tuple   chore: simplify type   chore: apply code review 
+76,types: make FullConfiguration generic (#2273),
+77,2.0.0,
+78,2.0.0-rc.3,
+79,2.0.0-rc.2,
+80,fix: pass null fetcher to middleware (#2240),
+81,Fix missing esmodule mark in cjs build (#2251),
+82,2.0.0-rc.1,
+83,Update build target to es2018 (#2249),  target es2018   update 
+84,feat: support functional rollbackOnError (#2242),  feat: support functional rollbackOnError   only keep error arg   fix lint 
+85,test: update tests alias to swr subpath exports (#2243),  test: update tests alias to swr subpath exports   fix preset alias 
+86,resolve swr internal imports as external (#2225),  resolve swr imports as external   build subpackage by order   fix type path   bump bunchee for type path fixing 
+87,Bump bundler (#2187),
+88,type: export MutationFetcher (#2184),
+89,2.0.0-rc.0,
+90,docs: Add JSDoc comments to useSWRMutation (#2183),add jsdoc for useSWRMutation
+91,breaking: Change the error broadcasting behavior in mutations and add throwOnError option (#2182),change the error broadcast behavior and add throwOnError option
+92,fix: re-render when returned data and fallbackData is the same and keepPreviousData is enabled (#2169),test: add a failed test for #2128
+93,Remove downlevelIteration and traverse iterator manually (#2181),
+94,chore: fix missing husky warning (#2160),  Fix missing husky warning   remove husky from pkg json   add prepare script 
+95,2.0.0-beta.7,
+96,Revert target option (#2151),
+97,Bundle types into one file (#2150),  Bundle types into one file   update types ref and jobs   fix job script 
+98,memoize config values to avoid frequent context propagation (#2149),
+99,chore: bump dev deps (#2143),  Bump bundler to stable   bump other deps   rm duplicated add command 
+100,test: add tests for dependency collection (#2140),
+101,ci: use action/setup-node built-in pnpm cache and bump to node16 (#2142),ci: use action/setup-node built-in pnpm cache and bump node version to 16
+102,test: add more isLoading tests for the case a key is null or an error (#2141),  test: add more isLoading tests for the case a key is null or an error   fix: lint error caused by format 
+103,test: add a test for preload API in effects (#2138),
+104,Dedupe installed swc (#2136),dedupe swc
+105,chore: add github actions reporter (#2131),
+106,Bump typescript and assemble pnpm scripts (#2133),Bump typescript to 4.8 and assemble pnpm scripts
+107,Upgrade bunchee (#2132),  Upgrade bunchee   remove scripts 
+108,Reorder exports conditions (#2130),
+109,"chore: exclude .tsbuildinfo from files, reduce install size (#2119)",
+110,type: make tsconfig simpler and fix type error (#2115),  type: make tsconfig simpler and fix type error   fix: lint error 
+111,fix: add swr/_internal to paths (#2105),
+112,types: add generic for SWRInfiniteKeyLoader (#2104),
+113,chore: add basic tsdoc (#2089),chore: add basic tsdocs
+114,Chore: Typos and grammar (#2094),  chore: processed all high-level texts for grammatical corrections   chore: the sense was incorrectly corrected by the processor   chore: fixed unnecessary commas and grammar correction nuances   Apply suggestions from code review   Apply suggestions from code review   Co-authored-by: Jiachi Liu inbox@huozhi.im
+115,bump typescript and apply nodenext module resolution (#2084),  bump typescript and apply nodenext module resolution   update ts path   fix path   reorder ci job   update lockfile 
+116,Use pnpm workspace (#2085),  use dir filter and remove version field   Use pnpm ws and remove turbo 
+117,Remove unused info from dummy package.json (#2083),
+118,Fix: raf return type (#2074),  Fix: raf return type   add typing test 
+119,breaking: Revert SWR config generic for cache (#2065),  Revert swr config generic   explicit typing 
+120,Upgrading use-sync-external-store lib (#2063),  Upgrading use-sync-external-store lib   Update pnpm-lock.yaml   Co-authored-by: Shu Ding g@shud.in
+121,2.0.0-beta.6,
+122,Use consistent typing imports (#2061),
+123,feat: add DevTools hook (#2016),  feat: add SWR_DEVTOOLS_USE hook   refactor: define the devtools hook in web-preset   feat: expose the React instance as window.SWR_DEVTOOLS_REACT   refactor: create devtools preset and a setup function   test: fix a failed test for devtools   test: add a test for window.SWR_DEVTOOLS_REACT   refactor: inject the devtools middleware as a built-in middleware   fix: inject SWR_DEVTOOLS_REACT only .SWR_DEVTOOLS_USE is defined   refactor: sort an import statement 
+124,Fix typos (#2052),
+125,2.0.0-beta.5,
+126,feat: mutate filter (#1989),"  feat: mutate filter   tweak typing   add test   tweak typings   chore: remove useless overload (#1993)   fix typing   chore: change internalMutate type (#1997)   chore: change internalMutate type   chore: useoverload for internal mutate   store keys in global state   add type truthy key   polish truthy key   dont remove key   add clear test case, fix empty key   store key in cache   use values   fix cache test   pass original argument to the filter   fix types   fix types   fix failed tests; use useSyncExternalStore and memorized selector   move function declaration   fix infinite use cases   fix lint error   Co-authored-by: Yixuan Xu yixuanxu94@outlook.com Co-authored-by: Shu Ding g@shud.in"
+127,Fix ts type generation (#2038),  Fix ts type generation   update types path   fix type checking job 
+128,fix: isLoading and isValidating should always respect cache value (#2048), fix: isLoading and isValidating should always respect cache value  fix #2030  test: case for #2030
+129,fix: Avoid preloading the resource multiple times (#2036),fix: Avoid preloading multiple times
+130,2.0.0-beta.4,
+131,feat: add preload function (#2026),  feat: swr/preload   refactor: not add preload as a separate package   feat: add preload as a built-in middleware   fix: build-in middlewares should be run before use-defined middlewares   chore: remove an unnecessary diff   refactor: rename the API to preload   test: fix a failing test   test: add a test for resetting an error   fix: handling deduping and errors   refactor: variable names   refactor: tweak a comment   chore: s/middlewares/middleware/   refactor: add a type parameter for the preload function   refactor: ignore falsy fetcher   refactor: use SWRGlobalState to store preloading requests 
+132,test: fix all act warnings (#2031),
+133,feat: support functional swr context config (#2024),  feat: support functional swr context config   add typing test   fix typing   fix typing test   remove assertion 
+134,breaking: Rename SWRConfig.default to SWRConfig.defaultValue (#2023),
+135,fix: Adding debounce for autocomplete-suggestions example (#2017),fix: add debounce for autocomplete change handler
+136,test: add test case for #1974 (#2005),
+137,chore: add engine field to limit pnpm version (#1990),  chore: add engine field to limit pnpm version   update configs   use node 16 for cbx ci   switch to pnpm in csb   force install pnpm 7   Chore/add engine (#2004)   chore: update csb config   update   stick install version   rm node engine   Co-authored-by: Yixuan Xu yixuanxu94@outlook.com
+138,build: do not abort on watch mode when ts erroring (#1992),  build: do not abort on watch mode when ts erroring   bump 
+139,Fix typo: getSWRCacahe -> getSWRCache (#2000),
+140,fix: useSWRMutation - clear error after successful trigger (#1973) (#1995),
+141,chore: save some bytes (#1991),  chore: save some bytes   chroe: use mergeObject from core 
+142,fix: should only update cache when actually start new request (#1986),
+143,chore: switch to pnpm and turborepo (#1983),
+144,refactor: remove useless ref copy (#1981),
+145,fix: Should always reset to the original data after mutating with optimistic data (#1982),  fix _o bug   fix race conditions 
+146,chore: Add test cases for mutate (#1976),add test cases
+147,2.0.0-beta.3,
+148,Fix race conditions related to optimistic UI (#1970),  fix optimistic ui race conditions   fix test   fix 
+149,fix: try fix codesanbox ci import error (#1971),
+150,chore: Faster type checking (#1969),
+151,Bug fixes (#1968),  type fixes   remove unused code   cast Promise   remove ts-ignore 
+152,build: import with-selector with extension from useESE (#1967),  build: import with-selector with extension from useESE   fix shim import 
+153,fix: mutate args for useSWRInfinite hook (#1947),  fix: mutate args for useSWRInfinite hook   Add swr infinite test for revalidation with arguments   Add swr infinite test for non-revalidation with arguments   Rename swr infinite mutate test case   Update type for infite mutate args   Include 'MutatorOptions' import   Co-authored-by: sanjeev40 sanjeev@worknetwork.in
+154,types: fix type regressions (#1966),
+155,2.0.0-beta.2,
+156,Improved React 18 support (#1962),  update state in a transition   support snapshotting external state   wip   move types:check to pre-commit   refactor: switch to useSyncExternalStoreWithSelector (#1953)   type: extends useConfig cache interface (#1938)   remove mount check for react18 (#1927)   https://github.com/reactwg/react-18/discussions/82 related pr #787 #433   lint: dont check unused vars with underscore prefix (#1939)   test: upgrade to jest 28 (#1942)   Upgrade to jest 28   Upgrade to jest 28   feat: useSyncExternalStoreWithSelector   refactor: remove stateUpdate and boardcast   state update should be handled by uSESW   type: fix test type error   remove pnpm.lock   fix: import cjs for codesanbox   refactor: add selector   refactor: add cachestate interface and try fix custom cache   fix: custom cache init   refactor: remove useless flag   chore: codesanbox ci   refactor: remove force render in infinite   build: add _internal   chore: mark warning test   fix: dts generation   codesanbox ci   chore: rename swr folder to core   Co-authored-by: Jiachi Liu inbox@huozhi.im   chore: useSES should be external (#1960)   rename type   types: update cache types   chore: move @types/useSES to devDependencies   Co-authored-by: Shu Ding g@shud.in Co-authored-by: Jiachi Liu inbox@huozhi.im
+157,Fix cache types (#1961),  Fix cache types   Guard against undefined originalData   Change useSwrConfig   populateCache: undefined for currentData 
+158,test: upgrade to jest 28 (#1942),  Upgrade to jest 28   Upgrade to jest 28 
+159,lint: dont check unused vars with underscore prefix (#1939),
+160,remove mount check for react18 (#1927),https://github.com/reactwg/react-18/discussions/82 related pr #787 #433
+161,type: extends useConfig cache interface (#1938),
+162,breaking: Throw error when using suspense on the server side without fallback in React 18 (#1931),
+163,2.0.0-beta.1,
+164,breaking: drop legacy types (#1930),
+165,Add keepPreviousData option (#1929),  add laggy option   use keepPreviousData   add test cases   add new test 
+166,replace isFallback with isLoading state; optimize code (#1928),
+167,build: output mutation cjs bundle with named exports (#1926),
+168,Add isFallback state (#1925),  add isFallback   remove -m   add test case 
+169,2.0.0-beta.0,
+170,add missing .mjs build,
+171,feat: Hook for remote mutations (#1450),  (wip) initial impl.   fix test   (wip) fix deps   initial implementation   fix linter   fix state reset   avoid reset race condition   fix race conditions   code tweaks   code tweaks   return bound mutate   apply review comments   fix tsconfig   type fixes   fix lint errors   code tweaks   fix type error   update types   inline serialization result   merge main and update argument api   add tests   fix tests   update typing   update state api   change error condition 
+172,type: fix type error on SWRConfig (#1913),Refs: https://github.com/DefinitelyTyped/DefinitelyTyped/pull/56210
+173,type: make type inference simpler (#1908),
+174,build(deps): bump minimist from 1.2.5 to 1.2.6 (#1903),Bumps minimist from 1.2.5 to 1.2.6. - Release notes - Commits  updated-dependencies: - dependency-name: minimist   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+175,Update React 18 dependencies (#1824),  update react@next deps   update react 18   Co-authored-by: Jiachi Liu inbox@huozhi.im
+176,fix: wrong spell (#1902),
+177,Keep all fields with one single key (#1863),  store all data fields using one single key   fix tests   fix bugs and tests   fix lint error   refactor code   get rid of $ and $   simplify serialize 
+178,breaking: Change the fetcher argument to be consistent with the passed key (#1864),  change the fetcher argument to be consistent with the key   fix test cases   fix type checks 
+179,test: fix an act warning (#1888),
+180,feat: support functional optimisticData (#1861),  feat: support functional optimisticData   Update src/types.ts   Co-authored-by: Shu Ding g@shud.in
+181,bugfix: make suspense and revalidateIfStale work together (#1851),  bugfix: make suspense and revalidateIfStale work together   test: add test for revalidateIfStale used with suspense 
+182,1.2.2,
+183,feat: Support populateCache as a function (#1818),  allow populateCache as function   test: add a test for the behavior of revalidateOnMount when the key has been changed (#1847)   add tests   pass current data   update example and deps   remove next.lock   Co-authored-by: Toru Kobayashi koba0004@gmail.com
+184,test: add a test for the behavior of revalidateOnMount when the key has been changed (#1847),
+185,fix: reset stale unmountedRef in suspense (#1843),
+186,"refactor: revalidateIfStale has an effect on updates, not only mounting (#1837)",
+187,1.2.1,
+188,fix: useSWRInfinite revalidates with revalidateOnMount (#1830),
+189,build(deps-dev): bump next from 12.0.8 to 12.0.9 (#1821),
+190,feat: shouldErrorRetry accepts a function (#1816),
+191,1.2.0,
+192,fix: use the latest reference of fetcher with suspense mode (#1803),
+193,Add link to security email directly (#1795),
+194,chore: Move community health files to .github (#1794),
+195,chore: Clean up configurations (#1792),  clean up config files   match minor and patch releases for dev deps 
+196,test: use @swc/jest (#1790),
+197,test: remove flaky focus test case (#1793),
+198,chore: Update company name (#1791),
+199,chore: Update examples and dependencies (#1789),  upgrade @swc-node/jest   update examples 
+200,Improve watch commands (#1788),
+201,simplify example development (#1787),  simplify example development   move setup to test folder 
+202,1.2.0-beta.1,
+203,polish: display name in devtool (#1779),  polish: display name in devtool   revert withArgs export 
+204,type: Required return type when mutating (#1772),Co-authored-by: ekaterinarazanova ekaterina.ryazanova@sbermarket.ru
+205,test: add delay for flaky focus test (#1762),
+206,chore: remove useless react-native field (#1761),
+207,build: support mjs exports (#1760),
+208,doc: comment helper (#1757),
+209,1.2.0-beta.0,
+210,merge extra request states in cache (#1752),
+211,rename CONCURRENT_REQUESTS to FETCH (#1749),
+212,merge mutation states (#1748),
+213,feat: Optimistic mutation with error rollback (#1745),  add optimisticData and rollbackOnError   add test cases   add test for rollback 
+214,chore: Ignore coverage report (#1744),  remove coverage report   ignore coverage 
+215,1.1.2,
+216,Skip error retrying when document is not active and improve tests (#1742),  use the babel coverage reporter   improve coverage 
+217,merge concurrent request states (#1741),
+218,Fix local state sharing example deps (#1737),
+219,feat: Add populateCache option to mutate (#1729),  add populateCache option to mutate   rename type and export it 
+220,re-export InfiniteFetcher (#1728),
+221,1.1.2-beta.1,
+222,resolves #1131 (#1727),
+223,Improve test (#1725),  test: improve test coverage   ci 
+224,add moduleNameMapper (#1724),
+225,fix #1680 (#1720),
+226,type(infinite): export SWRInfinteHook and InfiniteKeyLoader from infinite (#1714),  type: export SWRInfinteHook and InfiniteKeyLoader from infinite   rename InfiniteKeyLoader and InfiniteFetcher 
+227,1.1.2-beta.0,
+228,Make polyfill for requestAnimationFrame more robust (#1707),  Add check for requestAnimationFrame availability   Fix comparison   Bring back missing import of hasWindow 
+229,1.1.1,
+230,fix: Return undefined data if key's falsy under suspense mode (#1698),
+231,"fix: If newData is deeply to the latest state, broadcast the latest state (#1697)",
+232,test: add refreshInterval function returns 0 (#1691),
+233,feat: refreshInterval as a function (#1690), allow passing a function that returns a new interval   for refreshInterval add tests for refreshInterval as a function
+234,1.1.0,
+235,chore: Add test case for getKey in useSWRInfinite (#1681),
+236,types: remove duplicated typing def (#1675),  types: remove duplicated typing def   add null   remove the last overloading 
+237,remove: unnecessary async (#1676),
+238,chore: upgrade eslint to v8 and prettier to v2 (#1674),  chore: upgrade prettier to v2   update eslint to v8 
+239,example: update typescript examples with strict ts mode (#1673),
+240,1.1.0-beta.12,
+241,fix: Add defaults for SWRResponse (#1609),Co-authored-by: Shu Ding g@shud.in
+242,fix keyloader index and previousPageData type (#1669),
+243,chore: rename major branch to main (#1664),
+244,1.1.0-beta.11,
+245,type: disbale inference when data generic is provided (#1658),  type: disbale inference when data generic is provided   type: refactor useSWRInfinite type   type: make config fetcher type work   chore: clean up 
+246,fix: supports ssr in ie11(#1657) (#1659),
+247,1.1.0-beta.10,
+248,Tweak types (#1640), test: add test for #1586  Author:    YixuanXu yixuanxu94@outlook.com Date:      Tue Nov 16 19:57:15 2021 +0800  fix: allow user to use generics  Author:    YixuanXu yixuanxu94@outlook.com Date:      Tue Nov 16 19:58:38 2021 +0800   chore: remove comments   fix: allow fallback to origin fetcher   chore: remove comment   chore: rename to barefetcher   add test   Co-authored-by: Shu Ding g@shud.in
+249,build: output without minification (#1650),
+250,fix: typos (#1647),
+251,1.1.0-beta.9,
+252,enhance: bind removeEventListener (#1596),  fix: bind removeEventListener   mock web preset   dynamic add check condition 
+253,"Revert ""chore: Add type: ""module"" and use .mjs extension (#1604)"" (#1618)",This reverts commit 396644f47f5078057e34d8cf49f07560c00aa0d4.
+254,1.1.0-beta.8,
+255,"chore: Add type: ""module"" and use .mjs extension (#1604)",  add type: module and use mjs extension   fix jest config 
+256,1.1.0-beta.7,
+257,fix mutate argument for infinite (#1602),
+258,Change config alteration process in withMiddleware to be immutable (#1556),Co-authored-by: Junsu Shin junsu.shin@linecorp.com
+259,"Revert ""mark data and error as readonly (#1514)"" (#1570)",This reverts commit af6353cf3a89d00319276983e8f7e15ac7e70472.
+260,fix: compatible with miniprogram (#1595),"""can't find variable removeEventListener"" in miniprogram Co-authored-by: 最刚 "
+261,fix: adds undefined as valid Key type to allow falsy Key or Key() (#1594),
+262,fix: Support for functions that return false (#1586),
+263,fix react-native issue (#1583),  fix react-native issue   v1.1.0-beta.9   update rn-fix   fix naming   check not needed for document   Co-authored-by: Andreas Fink andreas@afink.at
+264,1.1.0-beta.6,
+265,optimizations (#1578),
+266,test: speed up with @swc-node/jest (#1569),
+267,test: Add test case for mutation deduplication (#1549),  add test case for mutation deduplication   fix lint error 
+268,feat: using latest version of axios with fetch interceptor (#1548),  feat: using latest version of Axios   feat: using axios.request to pass TS types 
+269,chore: Refactor cleanupState (#1544),
+270,small fixes (#1541),
+271,1.1.0-beta.5,
+272,fix: Ensure mutate accepts undefined as the data (#1515),  add test to ensure mutate accepts undefined   bugfix   fix types   fix test case   fix warning   fix lint errors 
+273,chore: fix ts comments (#1540),
+274,fix: Reusing cache provider (#1539),
+275,add revalidateFirstPage option to infinite (#1538),
+276,chore: Code refactoring (#1533),  fix undefined helper   update comment   revert unnecessary changes 
+277,fix: Only trigger the success event if not discarded (#1529),  only trigger the success event if not discarded   add test 
+278,test: Add tests for reconnect and merge-config (#1530),  add test for reconnect events   add test for merge-config 
+279,mark data and error as readonly (#1514),
+280,output code coverage (#1511),Co-authored-by: Jiachi Liu inbox@huozhi.im
+281,1.1.0-beta.4,
+282,fix error events not deduped (#1522),
+283,feat: Add new onDiscarded option (#1523),  add onDiscarded   add test   revert unintended change 
+284,chore: Code refactoring (#1521),  adjust condition   use .catch 
+285,1.1.0-beta.3,
+286,chroe: use yalc for local development (#1508),  use yalc   handle watch fail 
+287,typing: fix-type-generation (#1509),Author:    YixuanXu yixuanxu94@outlook.com
+288,chore: Remove duplicate configs (#1507),  chore: merge duplicate configs   separate test type checking 
+289,fix: Refactor core revalidate function and fix isValidating state bug (#1493),  refactor core revalidate function; fix state bug   fix test 
+290,example: add ref checking condition (#1504),
+291,fix: Invalidate the key when mutating without revalidating (#1498),  add test for mount revalidation and deduplication   clear dedupling promises when invalidating a key   delete concurrent promise when revalidate is set to true   Co-authored-by: Shu Ding g@shud.in Co-authored-by: Gang Chen 13298548+MoonBall@users.noreply.github.com  disable ts assertion  Co-authored-by: Gang Chen 13298548+MoonBall@users.noreply.github.com
+292,1.1.0-beta.2,
+293,chore: Upgrade eslint and add local cache (#1499),  add cache to eslint   upgrade eslint 
+294,chore: Refine type interfaces (#1496),  refine type names   refine type names cont.   simplify SWRConfiguration type   apply review comments 
+295,chore: Improve project file structure (#1497),  move jest-setup.ts to scripts   move test-type into test   separate tsc type check and build   add github actions cache for yarn   use setup-node@v2   update include path 
+296,Type useSWR fetcher (#1477), type useSWR fetcher  add comments about implementation add type test scripts for other middleware   fix yarn.lock   add type check for middleware and fetcher   apply review change and type useSWRInfinite   simplify the implementation of fetcher type   Author:    YixuanXu yixuanxu94@outlook.com
+297,ci: multiple dir type checking (#1492),
+298,1.1.0-beta.1,
+299,chore: Code refactoring (#1482),  rename shouldRevalidate to revalidate   bind event listeners   refactor shouldDedupe condition   fix conditions 
+300,Upgrade typescript to 4.4.3 (#1486),  upgrade   update ts to 4.4.3   update yarn lock 
+301,build(deps): bump tmpl from 1.0.4 to 1.0.5 (#1484),
+302,test: refactor offline and refresh tests (#1483),
+303,"test: refactor key, middlewares, and suspense tests (#1474)",
+304,test: refactor integration and loading tests (#1473),
+305,add react 18 to peerDependencies (#1467),
+306,test: refactor immutable and infinite hook tests (#1466),
+307,1.1.0-beta.0,
+308,fix: Support IE11 (#1463),  fix: Support IE11   Fix type   Also consider window 
+309,test: refactor mutation tests (#1459),
+310,"Revert ""feat: add a warning for invalid arguments with suspense mode (#1402)"" (#1460)",
+311,test: refactor config tests (#1458),
+312,test: refactor concurrent rendering tests (#1457),  test: refactor concurrent rendering tests   test: use wrapper option that testing-library provides instead of wrapping manually 
+313,chore: refactor infinite (#1452),Co-authored-by: Jiachi Liu inbox@huozhi.im
+314,refactor code related to unsubscribing global listeners (#1451),
+315,test: refactor use-swr-cache-test (#1442),
+316,enhance: provider release handlers (#1449),  release provider   feat: return release handler for initFocus and initReconnect   flexible return types   update comment 
+317,chore: remove unused typings (#1448),
+318,build: no emit on error (#1446),
+319,Fix initial isValidating when isPaused() returns true (#1440),  Fix initial isValidating when isPaused returns true   Update unit test description 
+320,"Revert ""Feature: make return state(data, error and isValidating) readonly"" (#1443)"," Revert ""make return state(data, error and isValidating) readonly (#1431)""  This reverts commit ec778e70c8e17c239f2837c14dea99ce9a429fb0.  enable diagnostics on CI"
+321,test: add render utilities and remove TestSWRConfig (#1435),  test: add render utilities and remove TestSWRConfig   chore: fix a comment 
+322,Stable hash (#1429),"  code refactor   serialize object keys   (wip) serialization   add stable hash   add hash tests   optimize   support Number, String, Date   adjust the order   add regex   fix string encoding   reorganize code   reorganize code   handle objects and circular refs   correctly serialize date   adjust code flow   add support for object key   add test   code refactor "
+323,"make return state(data, error and isValidating) readonly (#1431)",
+324,should treat key change as remount (#1430),
+325,typing: use separated constants instead of enum (#1425),  typing: use separated constants instead of enum   make focus test more stable   Co-authored-by: Shu Ding g@shud.in
+326,Chore: always use config ref (#1397),  chore: always use config ref and shotern code   move func declaration   Co-authored-by: Shu Ding g@shud.in
+327,test: add tests for a global cache (#1421),  test: add tests for global cache   Apply suggestions from code review   Co-authored-by: Jiachi Liu inbox@huozhi.im Co-authored-by: Jiachi Liu inbox@huozhi.im
+328,1.0.1-beta.0,
+329,refactor: use TestSWRConfig for error-test (#1404),
+330,fix: isValidating cache inconsistence in mutatation (#1411),
+331,fix: useSWRConfig is exported as () => any type (#1409),
+332,Export KeyedMutator type from root export (#1406),
+333,"Revert ""ci: setup size bot (#1398)"" (#1405)",This reverts commit 321a0c1fa67c2a9d416e4a3c841c6c5ff8726f1d.
+334,feat: add a warning for invalid arguments with suspense mode (#1402),
+335,ci: setup size bot (#1398),
+336,fix: isValidating when an error occurred (#1396),
+337,chore: bump swr to latest in examples (#1394),
+338,chore: remove isomorphic-unfetch from examples (#1389),
+339,fix typo in test (#1393),
+340,1.0.0,
+341,chore(examples): update all examples to use v1 (#1385),  chore(examples): update the api-hooks example   chore(examples): update the autocomplete-suggestions example   chore(examples): update the axios example   chore(examples): update the axios-typescript example   chore(examples): update the basic example   chore(examples): update the basic-typescript example   chore(examples): update the focus-revalidate example   chore(examples): update the global-fetcher example   chore(examples): update the infinite example   chore(examples): update the infinite-scroll example   chore(examples): update the local-state-sharing example   chore(examples): update the optimistic-ui example   chore(examples): update the optimistic-ui-immer example   chore(examples): update the prefetch-preload example   chore(examples): update the refetch-interval example   chore(examples): update the server-render example   chore(examples): update the storage-tab-sync example   chore(examples): update the suspense example 
+342,Chore: add test to ensure the unserialized key is passed to middleware (#1384),
+343,1.0.0-beta.15,
+344,fix bound mutate (#1383),
+345,doc: update fallbackData usage examples (#1380),
+346,1.0.0-beta.14,
+347,rename revalidateWhenStale (#1381),
+348,[Infinite] Return current data if failed to resolve pages from cache when setting size (#1379),
+349,Add basic test for node env (#1378),  Add test for node env   use immutable   add is server flag checking 
+350,rm deprecated warning (#1374),
+351,fix: cache is missing on server side (#1377),
+352,Chore: add test for callback setSize (#1373),  add test for callback setSize   replace sleep 1 with nextTick 
+353,1.0.0-beta.13,
+354,Update README and CONTRIBUTING (#656),  remove docs from readme   (wip) contribution guidelines   merge master   add extra docs link   Update README.md 
+355,Replace Object.defineProperties with getter  (#1371),  some optimizations   use getter 
+356,rename fallbackValues to fallback; rename initialData to fallbackData (#1370),
+357,improve tests for cache provider (#1369),
+358,Rename middlewares option to use (#1368),
+359,New useSWRConfig API and remove createCache (#1361),  add useSWRProvider   send fallback to provider init   remove createCache   add fallbackValues option   rename setup functions; refactor function checks   fix provider extending; add tests   structuralize provider code   refactor; add test   refactor   add test case for extending cache   refactor: move provider and options to SWRConfig   rename options to providerOptions   refine code   fix test   merge providerOptions into values; add fallbackValues   code refactoring   rename useSWRProvider to useSWRConfig   Update src/utils/cache.ts   Co-authored-by: Paco 34928425+pacocoursey@users.noreply.github.com   fix non-null assertion   remove defaultProvider   Co-authored-by: Paco 34928425+pacocoursey@users.noreply.github.com
+360,1.0.0-beta.12,
+361,invert middleware order (#1360),
+362,"upgrade bunchee, dedupe yarn lock (#1358)","  upgrade bunchee, dedupe yarn lock   replace concurrently with npm-run-all   use rimraf instead of rm cmd "
+363,fix: isValidating should be false when no fetcher is provided (#1352),
+364,Add beta publish script (#1351),
+365,1.0.0-beta.11,
+366,Refactor code structure (#1350),  refactor state and revalidation logic   refactor cache   decouple utils   refine comments   fix review suggestions   adjust eslint ignore rules 
+367,fix: alias swr in next client bundle on dev mode (#1349),
+368,Local devdelopment with examples (#1330),
+369,"lint-staged: remove lint, fix prettier (#1347)","  lint-staged: remove lint, fix prettier   type checking on pre-push, lint changes on commit "
+370,Export unstable_serialize from SWR (#1337),  export serialize from swr and swr-infinite   fix API   rename api 
+371,Improvement: return stale data then revalidate when setting size of useSWRInfinite (#1343),  reuse cache when setting size   fix tests   optimize 
+372,fix type of MutatorCallback (#1342),
+373,1.0.0-beta.10,
+374,Improvement: ensure useSWRInfinite reuses useSWR cache (#1341),  make sure swr infinite reuses swr cache   update comment 
+375,build(deps): bump path-parse from 1.0.6 to 1.0.7 (#1334),Bumps path-parse from 1.0.6 to 1.0.7. - Release notes - Commits  updated-dependencies: - dependency-name: path-parse   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+376,BREAKING: Deprecate revalidate with mutate (#1332),
+377,"upgrade bunchee, reduce node_modules size (#1329)",
+378,chore: update useSWRInfinite import (#1326),
+379,update bunchee 1.6.2 (#1323),
+380,test: add a test for getInfiniteKey with current data (#1319),
+381,refine the infinite hook (#1315),
+382,Reset cache between tests (#1309),Co-authored-by: Shu Ding g@shud.in
+383,Fix config being ignored when fetcher is null (#1311),  fix #1274   add unit test   Co-authored-by: Jiachi Liu inbox@huozhi.im
+384,Add package.json to module exports (#1313),
+385,Code refactoring (#1307),  structure change   improve comments; refactor   avoid using timeout   code refactor   apply review feedback   Co-authored-by: Jiachi Liu inbox@huozhi.im
+386,1.0.0-beta.9,
+387,Rename isDocumentVisible to isVisible (#1308),
+388,Breaking: drop the default fetcher (#1304),
+389,Code structure refactoring (#1303),  refactor cache code structure   simply mutate   rearrange assignments   build all packages   use global state type guard and Revalidator type   Co-authored-by: Jiachi Liu inbox@huozhi.im
+390,Fix useSWRInfinite doesn't revalidate the first page (#1301),
+391,Refine createCache (#1283),
+392,enhance: simplify deno detection (#1299),
+393,add test case that covers #1286 (#1297),
+394,feat: add getInfiniteKey to mutate the cache for useSWRInfinite (#1257),
+395,Drop legacy types (#1276),
+396,Remove myself from codeowners (#1277),
+397,Move infinite types to swr/infinite and deprecate old ones (#1272),
+398,Fix types generate (#1266),  fix: types generation   replace resolved swr in tests   avoid emit swr types in subpath module   use paths for type imports   revert few changes 
+399,1.0.0-beta.8,
+400,chore: fix type SWRHookWithdMiddleware to SWRHookWithMiddleware (#1268),
+401,Fix typo in use-swr (#1267),
+402,chore: add watch scripts for sub packages to build them (#1261),
+403,enhance: use ts for testing (#1260),  enhance: use ts for testing   update deps   use node 14 for csb   Co-authored-by: Shu Ding g@shud.in
+404,fix: ignore .d.ts in dist/ for ESLint (#1258),
+405,test: run concurrent rendering tests with React v18 alpha (#1259),
+406,chore: fix to run the build script multiple times (#1255),
+407,fix: fail accessing navigator on Node (#1254),
+408,Sub-packages and immutable hook (#992),  add immutable mode   add test   rename as revalidateWhenStale   refactor infinite to use middleware   refactor   immutable   sub packages   better code-splitting   add types   remove declarations   fix tests   fix sub-package and types   fix test   code optimizations   code optimizations   code optimizations   code optimizations   clean up deps   fix noop   clean up   add more test   code optimizations   code refactoring; fix missing saveData option   fix test   simplify logic 
+409,enhance: add $ prefix for non-major keys (#1174),  enhance: add $ prefix for err and isValidating keys   update infinite keys   Update src/use-swr-infinite.ts   Co-authored-by: Jiachi Liu inbox@huozhi.im   add $ for inf@   make symbol rich   Co-authored-by: Shu Ding g@shud.in
+410,chore: bump typescript to use ts-expect-error instead of ts-ignore (#1239),  chore: update the typescript version to use ts-expect-error instead of ts-ignore   refactor: apply prettier   chore: revert the usage of ts-expect-error that causes an error   refactor: apply rAF regardless of environments   refactor: extend the Navigator type to use effectiveType 
+411,Add condition to check if window.addEventListener exists for React Native compatibility (#1234),
+412,1.0.0-beta.7,
+413,Middleware (#1160),  clean up code   abstract args hoc   simplify args   add comment   decouple handler   add middleware layer   add test case   more examples   support extending middlewares via context or per-hook config; fix direction   update eslint rules   fix type errors   fix failed tests   Apply suggestions from code review   Co-authored-by: Toru Kobayashi koba0004@gmail.com  Update src/types.ts  Co-authored-by: Toru Kobayashi koba0004@gmail.com  allow middlewares to modify keys  Co-authored-by: Toru Kobayashi koba0004@gmail.com Co-authored-by: Toru Kobayashi koba0004@gmail.com
+414,add codeowner @huozhi (#1221),
+415,build(deps): bump glob-parent from 5.1.0 to 5.1.2 (#1207),Bumps glob-parent from 5.1.0 to 5.1.2. - Release notes - Changelog - Commits  updated-dependencies: - dependency-name: glob-parent   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+416,build(deps): bump lodash from 4.17.19 to 4.17.21 (#1208),Bumps lodash from 4.17.19 to 4.17.21. - Release notes - Commits  updated-dependencies: - dependency-name: lodash   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+417,build(deps): bump y18n from 4.0.0 to 4.0.3 (#1209),Bumps y18n from 4.0.0 to 4.0.3. - Release notes - Changelog - Commits  updated-dependencies: - dependency-name: y18n   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+418,build(deps): bump acorn from 6.3.0 to 6.4.2 (#1210),Bumps acorn from 6.3.0 to 6.4.2. - Release notes - Commits  updated-dependencies: - dependency-name: acorn   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+419,Update package.json (#1205),
+420,Fix typo in placeholder (#1206),
+421,Update README.md (#1203),
+422,build(deps): bump ws from 7.4.2 to 7.4.6 (#1184),
+423,fix: autocomplete suggestions example (#1183),
+424,build(deps): bump browserslist from 4.16.3 to 4.16.6 (#1181),Bumps browserslist from 4.16.3 to 4.16.6. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+425,enhance: upgrade ts lint config (#1169),
+426,build(deps): bump hosted-git-info from 2.8.5 to 2.8.9 (#1164),
+427,fix global mutate generic (#1159),fix #1155
+428,enhance: support exports field (#1154),
+429,Code optimizations (#1150),  optimizations   use effect for ref updates   use effect for ref updates   fix setTimeout test   fix the case that undefined is overridden   get rid of object.assign   rename isVisible   refactor code   pass entire config to swr   revert isDocumentVisible   fix ts 
+430,Update bound mutate readme (#1127),"The bounded mutation example doesn't immediately mutate the cache, instead its waiting for the request to come back and then updating the cache.  I think making this example similar to the one above, where we are trying to optimistically update the local state is a more consistent example"
+431,Custom cache provider (#1017),  custom cache   deprecate cache comment   tweak the createCache api   refactor createCache   simplify cache interface   improve tests   bind swr state to the cache object; simplify internal logic   fix merge errors and add cache to deps   remove deps   revert preset changes   refactor code   refactor code   add multi-level cache test   add isolated cache test   Co-authored-by: Shu Ding g@shud.in
+432,clean code (#1145),
+433,add saveData to slowConnection (#1130),
+434,Replace deprecated types with latest types in axios-typescript example (#1128),
+435,build: upragde bundler (#1121),
+436,test: refactor use-swr-suspense.test.tsx (#1113),
+437,test: refactor use-swr-revalidate.test.tsx (#1111),
+438,Fix setting null cache in useSWRInfinite (#1110),  fix setting null as cache key   fix typo 
+439,docs: optimistic UI examples comments more clearer (#1102),
+440,test: refactor use-swr-refresh.test.tsx (#1103),  test: use fake timers for refresh tests   test: stop using container that the render function returns   chore: reset timers on each test 
+441,Bug fixes (#1096),  fix type: allow getKey to be null   fix leaking internal state when setSize on null key 
+442,fix: race problem when in dedupingInterval (#1088),
+443,Revert #1024 (#1085),  add dequal   fix 
+444,fix mutate (#1075),close #1070; close #1074;
+445,add --no-sourcemap (#1079),
+446,adopt bunchee as bundler (#1025),Co-authored-by: Shu Ding g@shud.in
+447,Code refactoring (#1077),  code refactoring   move argument resolving out 
+448,read cache during render (#794),  fix stale   fix types and add safecallback   imporve dispatch   fix dequal vendor   ensure stateRef sync with cache   add comment   fix isValidating   clean up   use in operator   fix resolveIsValidating   fix: error is stale when key changes   (wip) refactor   (wip) refactoring   refactor code   add back initialMounted check   Co-authored-by: Shu Ding g@shud.in
+449,Allow setting the generic on mutate() (#1069)," Allow setting the generic on mutate()  Without this change, it is not possible for users to do mutate<MyType>(...)   rm Mutator type   add return type   Fix types   Fix another type issue   Can skip Promise.resolve since we're in an async function "
+450,test: refactor use-swr-offline.test.tsx (#1063),
+451,fix #1056 (#1058),  fix #1056   add test for #1056 
+452,test: refactor use-swr-local-mutation.test.tsx (#1059),
+453,test: refactor use-swr-loading.test.tsx (#1057),
+454,0.5.4,
+455,test: refactor use-swr-key.test.tsx (#1055),
+456,types: expose KeyLoader (#1054),
+457,fix: invalid invocation on raf (#1051),
+458,test: refactor use-swr-integration.test.tsx (#1049),
+459,Export default SWR config to allow more flexible extensions (#1023),  Export default SWR config to allow more flexible extensions   export default config as static property on SWRConfig 
+460,test: refactor use-swr-infinite.test.tsx (#1039),
+461,test: refactor use-swr-focus.test.tsx (#1036),  test: refactor use-swr-focus.test.tsx   test: make a config callback test more reliable 
+462,refactor: fix a react-hooks/exhaustive-deps warning (#1035),
+463,0.5.3,
+464,fix: support multiple useSWRInfinite hooks in a page (#1009),"  fix: a flaky test for onLoadingSlow   fix: supprt multiple useSWRInfinite hooks in a page   test(useSWRInfinite): add a test for shared a page count between the same key   fix: inconsistency for the pageCount between useSWRInfinite hooks   fix: keep pageCount when persistSize is true   refactor: use a local mutate function   refactor: fix a react-hooks warning   refactor: revert unnecessary diffs   refactor: remove unused a ref   fix: revert the change removing a rerender with setSize   fix: avoid an unnecessary re-render   refactor: clear variable names and more strict types   refactor: put rAF and useIsomorphicLayoutEffect as one of web-presets   Revert ""refactor: put rAF and useIsomorphicLayoutEffect as one of web-presets""   This reverts commit 2bc4ac202804519701234fec366ddda18ee656c6.   refactor: create env.ts for a browser environment   refactor: remove an ununsed export   refactor: remove unnecessary diffs   test: make a test using setInterval more reliable   Co-authored-by: Shu Ding g@shud.in"
+465,Micro optimizations (#1018),  code refactoring   update rerender   code refactoring   code refactoring   Update cache.ts   make tests more stable 
+466,test: refactor use-swr-error.test.tsx (#1031),
+467,test: refactor tests for configs (#1006),  test: refactor use-swr-configs.test.tsx   test: refactor use-swr-context-config.test.tsx 
+468,fix dequal vendor (#1027),
+469,0.5.1,
+470,Make swr zero dependency (#1024),  Make swr zero dependencies   mark license 
+471,allow passing undefined config (#1022),
+472,Update CODEOWNERS,
+473,fix: revalidate with initialData when changing the key (#961),  fix: revalidate with initialData when changing the key   test: add the return data when a request is in flight   test: return initialData while revalidating 
+474,0.5.0,
+475,enable typescript strict mode (#1010),  strict mode   disbale strict in test   merge master   fix name 
+476,Clean up types (#1016),  deprecate ConfigInterface; fix exported types   deprecate SWRInfiniteConfigInterface and SWRInfiniteResponseInterface   deprecate CacheInterface   deprecate RevalidateOptionInterface and keyInterface   deprecate revalidateType   deprecate responseInterface   reorder   clean up internal types 
+477,Optimize isValidating status (#967),  remove unused command   Add useDebugValue to show the data label in the React DevTools   set isValidating to be true if will fetch on mount   cleanup   check key as well when trigger the initial revalidation 
+478,keep old esm directory structure (#1011),  keep old esm directory structure   add a new tsconfig.test.json for ts-jest 
+479,fix: sync cache only on compare returns true (#907),Co-authored-by: Shu Ding g@shud.in
+480,test: refactor use-swr-config-callbacks.test.tsx  (#933),  test: create a function to return a dummy response for testing   test: refactor use-swr-config-callbacks.test.tsx   test: use findByText instead of waiting a response promise   test: remove unnecessary assertions 
+481,fix: sync mutations are applied independently (#1003),"  fix: sync mutations are applied independently   test: update the test for sync mutation   test: fix type errors in tests   Revert ""test: fix type errors in tests""   This reverts commit c18af795b38beee2fec0bb49890e51682854138d.  Revert ""test: update the test for sync mutation""  This reverts commit cb053010701af809389ab14b7f1fd0614d9bbcda.  test: sync mutations are not batched"
+482,using vite2 and add playground to master (#995),  using vite2 and add playground to master   tweak   Co-authored-by: xuyx001 xuyx001@cmft.com
+483,test: refactor use-swr-cache.test.tsx (#932),  test: use @testing-library/jest-dom for asserting DOM   test: refactor use-swr-cache.test.tsx   test: use eslint-plugin-jest-dom and eslint-plugin-testing-library   test: fix jest-dom/prefer-to-have-attribute errors   test: remove assert functions for findByText 
+484,Fix: do not depend on navigator.onLine; code optimizations (#1004),  fix: do not depend on navigator.onLine   chore: use anonymous functions   micro optimization   micro optimization   add test 
+485,Add example using useSWRInfinite (#968),  add-infinite-example   Update package.json   Co-authored-by: Reza Babaei reza.tizro@gmail.com
+486,perf: avoid unnecessary re-renders with the suspense mode (#979),  test: add a test for render count with suspense   perf: avoid unnecessary re-renders with the suspense mode 
+487,refactor: add the register prefix to onFocus and onReconnect (#993),
+488,add-infinite-scroll-example (#970),Co-authored-by: Reza Babaei reza.tizro@gmail.com
+489,refactor: move DOM event handlers into web-preset (#972),
+490,fix: do not cache when mutate throws an error synchronously (#977),
+491,Update README.md (#974),"correct code example for ""Mutation and POST Request"""
+492,types: makes types fn and config and getKey more strictly (#946),
+493,0.4.2,
+494,fix: checking if document is defined (#963),
+495,refactor: rename from waitForDedupingInterval to waitForNextTick (#960),
+496,test: fix flaky tests for focus and location mutation (#944),  test: fix flaky tests in use-swr-focus.text.tsx   test: fix flaky tests in use-swr-local-mutation.test.tsx   test: create a waitForDedupingInterval function for sleep(1)   test: revert unnecessary change 
+497,remove legacy useSWRPages types (#938),
+498,chore: add comments that revalidate will be deprecated (#937),
+499,0.4.1,
+500,refactor: fix all react-hooks/exhaustive-deps warnings in useSWR (#927),
+501,chore: add a comment why fetcher accepts null (#918),
+502,test: recognize type definition for screen of testing-library/react (#903),  deps: bump @testing-library/react to v10.1.0   test: enable type checking with ts-jest   deps: bump jest packages to 25.x 
+503,chore: rm duplicated tests (#914),  chore: remove original duplicated tests   chore: remove original duplicated tests   update test 
+504,chore: format files (#915),
+505,check key before calling callback (#856),Co-authored-by: Shu Ding g@shud.in
+506,Fix the revalidation condition of the first page (#895),  fix the revalidation condition of the first page   add test   simplify logic   fix test 
+507,refactor: fix all react-hooks/exhaustive-deps warnings in useSWRInfinite (#905),
+508,docs: use a fake GraphQL endpoint instead of graph.cool (#904),
+509,refactor: fix all react-hooks/exhaustive-deps warnings in tests (#902),
+510,separate tests (#901),  separate-tests   fix tests 
+511,test: add a test for useSWRInfinite with initialData (#894),
+512,fix: react-hooks/exhaustive-deps warnings (#886),
+513,fix: add server check back for rAF (#899),
+514,refactor: use getter functions to avoid unnecessary re-renders (#890),"  refactor: use Object.assign to avoid unnecessary re-renders   refactor: use getter functions to avoid unnecessary re-renders   refactor: use Object.assign to avoid unnecessary re-renders   Revert ""refactor: use Object.assign to avoid unnecessary re-renders""   This reverts commit 116fced90a19a4b8b15bc811f09272ec399af8ed.  refactor: define properties with enumerable: true"
+515,fix: revalidateOnFocus not working on '< iOS 14'  (#889),"  To support <= 'iOS 13', replace window.addEventListener with document.addEventListener   Add guard for environment that doesn't have document   Revert ""Add guard for environment that doesn't have document""   This reverts commit 5fd759c9745b51701b68d5082e52530cd6f0b15b. Co-authored-by: dwan dwankim@toss.im"
+516,Update default fetcher documentation in README.md (#891),Ran into issues with this when using SWR for local state sharing. It seems that the default value for the fetcher is actually window.fetch and not undefined: https://github.com/vercel/swr/blob/00c5847ce6e95902920933aa1d49c7143f8ce4ba/src/config.ts#L71
+517,docs: add isPaused() into the options (#888),
+518,ci: remove Travis CI (#887),
+519,ci: add GitHub Actions for CI (#879),"  ci: add GitHub Actions for CI   ci: run CI for pull requets and push to master, next   Update test.yml "
+520,fix: add protection for navigator (#877),
+521,enhance: let config.isPaused works with react state (#871),
+522,0.4.0,
+523,First page of useSWRInfinite should reuse the cache from useSWR (#799),  fix type error   simplify code 
+524,add test for #852 (#855),  add test for #852   improve assert 
+525,fix: clear refresh timer on effects change and check it on starting new timer (#853),  fix: keep refresh timer refrence   simplify   clear timer 
+526,feature: provide config.isIdle indicating idle state and stop revalidation (#845),"  feature: ignore revalidations when config.isIdle() is truthy   add test   rename to isPaused(), ignore errors in catch "
+527,fix act (#839),
+528,Keep isValidating be true when there are two concurrent requests (#817),
+529,0.3.11,
+530,test(fetch) add test for default fetcher (#834),
+531,Fix #832 (#833),
+532,0.3.10,
+533,close #830 (#831),  close #830   trigger codesandbox ci 
+534,Bump ini from 1.3.5 to 1.3.8 (#806),Bumps ini from 1.3.5 to 1.3.8. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+535,Return '@null' if args is null ASAP (#767),  chore: return 'null' if arg[i] is null ASAP   chore: update comment   chore: use continue 
+536,Update api-hooks example README.md (#790),Updated the Vercel deploy link to the correct directory
+537,fix: do mount check in config callback (#787),
+538,Fix README.md typo (#783),"'/api/data' => '/api/user' in ""Multiple Arguments"""
+539,fix: mark isValidating as false when key is falsy (#757),  fix: tear down when key turns to empty   use false for empty key 
+540,0.3.9,
+541,Fix suspense (#777),  fix #494   add comment   rename to initialMountedRef 
+542,dispatch's payload type is actionType and run lint (#772),  chore: payload is actionType   chore: move a ts-ignore comment 
+543,Add CodeSandbox CI (#769),  add CodeSandbox CI   add new line   fix install cmd   Co-authored-by: Paco 34928425+pacocoursey@users.noreply.github.com
+544,Fix mutateCallback types (#745),  Fix mutateCallback types   WIP 
+545,fix eslint error (#768),
+546,refactor: support SSR in Deno (#754),  refactor: support SSR in Deno   refactor: improve Deno determining   Add @ts-ignore   Co-authored-by: Shu Ding g@shud.in Co-authored-by: Shu Ding g@shud.in
+547,Fix race condition when calling mutate synchronously (#735),  fix race condition when calling mutate synchronously   fix test   add comment   fix code reviews 
+548,replace rIC with rAF (#744),
+549,0.3.8,
+550,add test for mutate with async-fn (#739),
+551,Allow passing null as the fetcher function for lazy execution (#730), Allow passing null as the fetcher function  This allows again for lazy execution since passing undefined broke with the introduction of a default fetcher in #367  Fix syntax for null fetcher  Co-authored-by: Shu Ding g@shud.in
+552,0.3.7,
+553,Accept React 17 as a peer dependency (#725),Closes https://github.com/vercel/swr/issues/724 Let me know if you would like any other changes to accompany this one.
+554,feat: make swr more configurable across platform (#690),
+555,Add README to examples (#716),  Add README to suspense example   Add README to local-state-sharing example 
+556,0.3.6,
+557,fix: error should not be cleared while revalidating (#701),
+558,doc: fix readme's Request Deduplication example (#699),
+559,fix: missing dedupe in updaterInterface (#688),
+560,0.3.5,
+561,Remove unnecessary dependencies from mutate and setSize (#665),  make sure mutate and setSize are stable   lint   fix swr.mutate being updated 
+562,0.3.4,
+563,Add React and Hook config for ESLint (#270),  feat: install and config react rules for eslint   fix: add names to components in example   fix: move use of hook before conditional return   chore: bump plugins versions + recommended rules + fixes 
+564,chore: swap fde for dequal (#655),
+565,0.3.3,
+566,Add a default fetcher using Fetch API (#367),
+567,Remove Isomorphic Fetch from Axios Typescript example (#607),  Use axios since it's already in the project   remove isomorphic-unfetch from project   update typescript example as well.   fix: update for proper data handling 
+568,Promote isValidating to the global level of data and error (#569),  Promote isValidating to the global level of data and error   initialIsValidating to boolean 
+569,chore: fix error when data tobe 0 null (#622),  chore: fix error when data tobe 0 null   chore: prettify code   chore: extract initial resolver into a function   style: remove semicolon   Co-authored-by: anc95 1481988258@qq.com Co-authored-by: anchao.nx anchao.nx@bytedance.com
+570,try fix cannot stop polling by setting refreshInterval (#632) (#638),  fix Cannot stop polling by setting refreshInterval (#632)   clear exiting the effect when key changes   add test case for a-b-a and try fix a-b-a   set less task 
+571,Bump handlebars from 4.5.2 to 4.7.6 (#646),Bumps handlebars from 4.5.2 to 4.7.6. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+572,0.3.2,
+573,add function key arguments to WeakMap so they trigger revalidation on identity change (#612),
+574,chore: optimization dispatch (#621),Co-authored-by: anchao.nx anchao.nx@bytedance.com
+575,0.3.1,
+576,fix: do not rerender if data unchanged (#464),
+577,swr.vercel.app (#605),
+578,fix: 'revalidateOnFocus' and 'revalidateOnReconnect' shoule be statful (#583), fix: 'revalidateOnFocus' and 'revalidateOnReconnect' shoule be statful  closes #529  delete throttle.ts
+579,fix useSWRInfinite response type (#584),
+580,fix: eventsRef should trigger the lastest version of config callbacks (#521),"  fix: eventsRef should trigger the lastest version of config callbacks   Currently,the config callbacks captured by the eventsRef is the callbacks created in the initial render of the component.   If the config callbacks is pure, everything is fine   but if the config callbacks rely on some variables of the components , it would cause some bugs related to the stale closure.   test: change the key name   fix: update config in each redering   revert: update config in each redering(e4d473a7affa5afefbc19ae2e61ab1651ffbb384) "
+581,Added example for SWR Request De-duplication feature (#519),  Added example for SWR Request De-duplication feature   Update README.md   Co-authored-by: Paco 34928425+pacocoursey@users.noreply.github.com   explained the dedupingInterval feature   Corrected the option syntax   Update README.md   Co-authored-by: Paco 34928425+pacocoursey@users.noreply.github.com  Update README.md  Co-authored-by: Paco 34928425+pacocoursey@users.noreply.github.com  Update README.md  Co-authored-by: Paco 34928425+pacocoursey@users.noreply.github.com  Update README.md  reverting prettier edits  Update README.md  reverting minor prettier edits  Update README.md  reverting minor edits  Update README.md  reverting spaces in code  Update README.md  reverting minor spaces  Update README.md  reverting space in code Co-authored-by: Paco 34928425+pacocoursey@users.noreply.github.com
+582,fix problem of unnecessary revalidates when resolved data is falsy (#524),
+583,Add useDebugValue to show the data label in the React DevTools (#578),  remove unused command   Add useDebugValue to show the data label in the React DevTools 
+584,0.3.0,
+585,enhance: move online listeners to config (#474) (#476),  enhance: move online listeners to config   polish code & merge revalidator manipulation cases   still separate revalidators   move events attaching to use-swr   move global states to user-swr   group listeners 
+586,enhance: fallback to setTimeout when request idle callback is not available (#473),  enhance: polyfill irc (#471)   run timers   fix tests 
+587,Bump lodash from 4.17.15 to 4.17.19 (#531),Bumps lodash from 4.17.15 to 4.17.19. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+588,fix: should throw when mutate failed (#557),
+589,fix typescript warning (#530),fix bug https://github.com/vercel/swr/issues/238#issuecomment-633043782
+590,remove unused command (#544),
+591,Export interfaces used by useSWRInfinite (#511),  export interfaces used by useSWRInfinite   rename SWR infinite interfaces 
+592,update link (#516),
+593,Updated the readme (#513),Just resolved some basic grammar issues in the readme.
+594,fix: check if mounted when trigger rerender (#510),
+595,don't retry on error if errorRetryCount is set to 0 (#506),  don't retry on error if errorRetryCount is set to 0   check for number type for errorRetryCount 
+596,Fix page size persistence when remounting (#495),  fix page size persistence   fix version 
+597,enhance: remove mutate calls from cache (#493),  enhance: remove mutate from cache   add test 
+598,"Revert ""add microbundle (#487)"" (#492)",This reverts commit 415ab934717087a60dbbcf60af3af6331d998e5e.
+599,add persistSize option to useSWRInfinite (#490),
+600,add microbundle (#487),
+601,New infinite loading API (#435),  add useSWRInfinite   add tests   memorize methods and fix tests   don't revalidate all when changing page count   fix page count cache   fix set page count cache   make setPage return promise   Update src/use-swr-infinite.tsx   Co-authored-by: Yamagishi Kazutoshi ykzts@desire.sh   remove useSWRPages   do not notify when updating cache   change tsx to ts   change page to size in api   Co-authored-by: Yamagishi Kazutoshi ykzts@desire.sh
+602,test: add test case for error updating in cache when mutate (#481),  test: add test case for error updating in cache when mutate   resolve conflicts 
+603,Update keyErr on the cache when mutating (#480),  Update keyErr on the cache when mutating   Move cache set keyErr out of condition 
+604,Change name to Vercel (#467),
+605,0.2.3,
+606,Make trigger return a promise resolved to the new cache value (#391),  Make trigger return a promise resolved to the new cache value   Add promise of the updated value after calling the updaters in mutate 
+607,docs: setup issue template (#453),  docs: setup issue template   polish 
+608,Use initialData in suspense mode if provided (#448), Use initialData in suspense mode if provided  Signed-off-by: Joern Bernhardt joern.bernhardt@compose.us  Fix review comment  Signed-off-by: Joern Bernhardt joern.bernhardt@compose.us
+609,Update docs to explain dependent fetching with falsy (#449), Update docs to explain dependent fetching with falsy  This doesn't appear to be well documented. (See #426.)  Update README.md  Co-authored-by: Shu Ding ds303077135@gmail.com Co-authored-by: Shu Ding ds303077135@gmail.com
+610,Replace ZEIT with Vercel in examples (#442),"  Replace ZEIT by Vercel in examples   Apply suggestions from code review   Rename ""Vercel Now"" to ""Vercel"" Co-authored-by: Paco 34928425+pacocoursey@users.noreply.github.com Co-authored-by: Paco 34928425+pacocoursey@users.noreply.github.com"
+611,build: use es5 syntax for esm build (#443) (#444),
+612,remove unused file (#441),
+613,fix spread syntax with defineProperties (#436),
+614,Unmount check (#433),  fix: The onLoadingSlow and onSuccess callback miss unmount check refactor handlers to event emitters do unmount check for all events Closes: #286   add test for onError and onErrorRetry 
+615,Create CODE_OF_CONDUCT.md (#432),
+616,Fix mutate not disposing older async mutations (#427),"  Submit failing test   Properly break the tests   Implement fix   Remove async data mutate, not important to the issue "
+617,Fix No bound mutate returned by useRequest hook. (#410),useRequest hook does not return bound mutate function which is returned by useSwr hook. so it becomes impossible to use bound mutate. This pr fixes that issue by returning mutate.
+618,Change mutateCallback type to allow non-promise return value (#406),
+619,docs: update notes for returned data from mutate section (#394),
+620,0.2.2,
+621,Updated asset link (#408),
+622,0.2.1,
+623,Update README.md (#389),
+624,revalidateOnMount flag that disable automatic revalidation on mount (#225),"  Added autoLoad flag which defaults to true and disable automatic revalidation on mount   Fixed config usage   Added test coverage   Update src/use-swr.ts   Co-Authored-By: Shu Ding ds303077135@gmail.com  Update test/use-swr.test.tsx  Co-Authored-By: Shu Ding ds303077135@gmail.com   Renamed option to revalidateInitialData, updated documentation README to explain usage   Update src/use-swr.ts   Co-Authored-By: Sergio Xalambrí hello@sergiodxa.com   Renamed config, fixed source, docs and tests   Changed revalidateOnMount to a 3-state flag   removed example from readme   Co-authored-by: Shu Ding ds303077135@gmail.com Co-authored-by: Sergio Xalambrí hello@sergiodxa.com"
+625,Update links to Vercel (#385),
+626,fix: data inconsist on key change when fetcher is synchronized (#369),  fix: #361 data inconsist on key change when fetcher is synchronized   Update use-swr.ts 
+627,fix axios example unexpected mutation behavior (#380),Fix for #379
+628,Fix return type of mutateCallback (#381),
+629,Add Optimistic UI with Immer example (#374),
+630,change if condition and remove 'do nothing' (#356),
+631,remove the server side suspense warning (#370),
+632,update handle in CODEOWNERS,
+633,test: imporve dynamic polling interval test (#351),
+634,use latest (#342),Co-authored-by: matamatanot matamatanot@gmail.com
+635,Remove unused import in example (#338),
+636,Add Data and Error generics to pagesResponseInterface (#294),
+637,Minor documentation improvements (#321),  Annotate functions with argument names   Document bound mutate   Refs #245  Add code example to bound mutate section  Co-authored-by: Jan Paulus jan.paulus@mercedes-benz.io
+638,Upgrade Next.js (#324),
+639,0.2.0,
+640,remove keyRef check; add tests (#323),
+641,hoist side effects out of useSWRPages render fiber (#317),
+642,Document the compare option (#320),This was implemented in #219 but wasn't documented in the readme.
+643,Update examples/server-render: Use getServerSideProps (#307),  use getServerSideProps   update React   update ReadMe 
+644,Bump acorn from 5.7.3 to 5.7.4 (#303),Bumps acorn from 5.7.3 to 5.7.4. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+645,Use window as a target for online event (#300),Also fix unsubscribe callback assignment
+646,dedupe extra requests after mutation (#296),
+647,fix 'reconnect' assignment (#297),
+648,Change useRequest.js to use mutate (#292),
+649,fix polling conditions (#281),"Only continue polling if refreshWhenOffline is set to true (allowed to poll offline), or it's online."
+650,0.2.0-beta.0,
+651,Expose Cache (#231),  Add CacheInterface type   Create defautl cache and use it in the code   Add test to custom cache support   Replace custom cache with exposed cache   Fix error in comment   Update README.md (#235)   test(typo): fix typo (#244)   fix weakmap key is null (#251)   fix race condition and add test (#261)   0.1.17   Move getKeyArgs and getErrorKey to serializeKey in Cache   Make the Map instance in Cache private   Add methods to subscribe to cache updates and get all keys   Apply suggestions from code review   Co-Authored-By: Shu Ding ds303077135@gmail.com   Don't ignore tests   Cache methods receive keyInterface and serialize it if it's not a string   Don't expose Cache class anymore   Co-authored-by: Shu Ding ds303077135@gmail.com Co-authored-by: Darren Jennings dmjenn02@gmail.com
+652,0.1.18,
+653,Fixed potential typescript error in examples/axios-typescript (#265),
+654,add errorRetryCount config option (#277),  add errorRetryCount config option   documentation for errorRetryCount 
+655,Improve mutate function (#245),  Improve mutate function   If no data call trigger against the key  If data is a function call it passing current cached value  Return data or throw error after function   useSWR now returns a bound mutate call with key predefined   Remove trick to make shouldRevalidate true only with local mutation   Also update related test to manually pass shouldRevalidate as false   Add mutate to list of returned values from useSWR   Replace trigger with mutate   Add Mutate Based on Current Data example   Add Returned Data from Mutate example   Update Optimistic UI example   Update README.md (#235)   test(typo): fix typo (#244)   fix weakmap key is null (#251)   fix race condition and add test (#261)   0.1.17   Apply changes   Update src/use-swr.ts   Update src/use-swr.ts   Apply suggestions from code review   Co-authored-by: Shu Ding ds303077135@gmail.com Co-authored-by: Darren Jennings dmjenn02@gmail.com
+656,fix: disable dedupe when trigger/mutate (#271) (#279),  fix: disable dedupe when trigger/mutate (#271)   fix failed build   tests: show proof of the fix   Co-authored-by: Max Schmitt max@schmitt.mx
+657,Add regression test for WeakMap key is null (#273),  Update README.md (#235)   test(typo): fix typo (#244)   fix weakmap key is null (#251)   fix race condition and add test (#261)   0.1.17   Add regression test for weakmap key is null   This add a regression test for the fix of #251 Co-authored-by: Shu Ding ds303077135@gmail.com Co-authored-by: Darren Jennings dmjenn02@gmail.com
+658,0.1.17,
+659,fix race condition and add test (#261),
+660,fix weakmap key is null (#251),
+661,test(typo): fix typo (#244),
+662,Update README.md (#235),
+663,Moving page cache to use a cache map (#221),  Moving page cache to use a cache map   Apply suggestions from code review   Co-Authored-By: Shu Ding ds303077135@gmail.com Co-authored-by: Shu Ding ds303077135@gmail.com
+664,Allow use custom isEqual method (#219),  Allow use custom isEqual method   Update src/config.ts   Co-Authored-By: Shu Ding ds303077135@gmail.com  Update src/config.ts  Co-Authored-By: Shu Ding ds303077135@gmail.com  Update src/types.ts  Co-Authored-By: Shu Ding ds303077135@gmail.com  Update src/use-swr.ts  Co-Authored-By: Shu Ding ds303077135@gmail.com  Update src/use-swr.ts  Co-Authored-By: Shu Ding ds303077135@gmail.com  Update src/use-swr.ts  Co-Authored-By: Shu Ding ds303077135@gmail.com  Update test/use-swr.test.tsx  Co-Authored-By: Shu Ding ds303077135@gmail.com Co-authored-by: Shu Ding ds303077135@gmail.com
+665,Fix check for addEventListener existence (#223),"  Fix check for addEventListener existance   Check if variable ""removeEventListener"" is defined "
+666,Reorganize slow connection code. Make it a tiny bit smaller (#220),
+667,ESlint ignore add esm folder (#218),Ignore esm folder in product
+668,check if addEventListener and removeEventListener exists (#217),
+669,Fixed return awaits (#216),
+670,0.1.16,
+671,Reduce re-renders by auto detecting state dependencies (#186),  add dependency detection   remove debugger   memorize returned state   memorize dispatch   fix reference comparison 
+672,Fix #182 (#207),  Fix #182   use only 2 useEffect 
+673,skip immediate revalidation when initalData is provided (#211),
+674,0.1.15,
+675,Prevent polling when browser is offline (#203),"  Prevent polling when browser is offline   Add online config options, update README   Remove console.log statement   Add comment   Undo extraneous README changes   Resolve suggested changes from @quietshu "
+676,0.1.14,
+677,"Change cjs build target to ES5, csm build target to ESNext (#204)",
+678,Improve multiple argument example in README (#201),  improve multiple argument example   typo 
+679,Update index.js (#198),
+680,test: add race condition test (#195),
+681,Fix config as second parameter in use-swr (#196),  Fix config as second parameter in use-swr   Added better test 
+682,update local state example,
+683,Remove unneeded await statement on fetch lib (#187),
+684,Allow newer minor versions of React as peer dependency (#181),
+685,0.1.13,
+686,Fix race condition (#173),  fix race condition when revalidating   use hard revalidate in mutate and trigger 
+687,Scripts on windows (#171),"  Changed ' to "" in scripts so they also work on Windows   Removed unused useMemo import "
+688,Bug fixes (#165),  fix explicitly passing null as fetcher   fix #164 allow returning falsy value from the cache 
+689,Improvements (#148),"  fix the case that the arg array is empty   fix hash primitive types   add prefetch to the readme   improve wording   return cached state and remove hydration, fixes #144   remove useHydration "
+690,"Fix tsconfig's ""lib"" property, along with small improvements to README.md (#162)","  Fixed invalid value in tsconfig's ""lib"" property   Fixed typos and small tweaks in README.md   Revert ""Fixed typos and small tweaks in README.md""   This reverts commit ef0129289e7f8c2a17a759f349fa0cc1745e0caa.   Fixed   Updated README.md   Co-Authored-By: Paco 34928425+pacocoursey@users.noreply.github.com"
+691,Axios examples (#145),  Added example for using axios with a request object   Added TypeScript example for using axios with a request object   Added package-lock.json to .gitignore for examples   PR Fix: Removed unnecessary useMemo   PR Fix: Removed fetch 
+692,Fix 'SSR with Next.js' code error (#152),the issue: https://github.com/zeit/swr/issues/151
+693,Add react-native entry point (#149),
+694,0.1.12,
+695,Add async mutation support (#134),  async mutation   update README.md   Update README.md   Co-Authored-By: Paco 34928425+pacocoursey@users.noreply.github.com
+696,0.1.11,
+697,Add esm build (#140),
+698,Check for window before using it (#142),
+699,Clarify about HTTP RFC 5861 (#138)," Clarify about HTTP RFC 5861  Clarify that swr does not implement HTTP RFC 5861, but implements a cache invalidation strategy popularized by HTML RFC 5861.  Apply suggestions from code review  Co-Authored-By: Shu Ding ds303077135@gmail.com"
+700,Improve readme (#135),  add SSR docs   update ToC   improve args array docs   Apply suggestions from code review   Co-Authored-By: Paco 34928425+pacocoursey@users.noreply.github.com Co-Authored-By: Sergio Xalambrí hello@sergiodxa.com
+701,Add Server Side Render Example (#132),  Add Server Side Render Example   Change SSR example to use pokeapi to get the data 
+702,Improvements (#130),"  fix #128   allow function returning args   replace badges; adjust options   if there's no fetcher, we can ignore the error. #123   change splice to swap delete "
+703,Remove lockfile from example and ensure they can't be sent again (#125),  Delete yarn.lock   Ignore yarn.lock files inside examples 
+704,Add example on how to use fetch + mutate to prefetch data (#120),  Add prefetch example   Make example uses preload and use other way for prefetching 
+705,0.1.10,
+706,Use @zeit/ncc (#89),  use ncc to pack the module   @zeit/ncc 
+707,Replace batchedUpdates with reducer (#117),  add useReducer; ditch batchedUpdates   remove dependencies 
+708,Remove/inline dependencies (#115),  remove ms   remove ms and lodash 
+709,Improve readme (#104),  add multiple arguments docs   Update README.md   Update README.md   Update README.md   Co-Authored-By: Sergio Xalambrí hello@sergiodxa.com  Apply suggestions from code review  Co-Authored-By: Paco 34928425+pacocoursey@users.noreply.github.com  Update README.md
+710,demo: suspense demo (#105),  demo: suspense demo   chore: change dependency version and remove lockfile   chore: update dependencies 
+711,Adding initialData (#106),  Adding initialData   Adding types to useSWRPages   flipping ||   Adding test for initialData   Adding to readme   Requested changes 
+712,Add example sharing local state between components (#76),  Add local state sharing example   Delete yarn.lock 
+713,0.1.9,
+714,Args as key (#98),  implement args hash   Apply suggestions from code review   Co-Authored-By: Paco 34928425+pacocoursey@users.noreply.github.com
+715,improve swr pagination api (#95),
+716,Fix visibilityState type (#101),
+717,Use lodash/throttle instead of lodash.throttle (#102),The single packages are deprecated. Using lodash/throttle will allow bundlers to dedup dependencies.
+718,Key interface can include null (#96),
+719,Improve readme (#91),  improve styles   improve code snippets   add small logo   delete assets   improve docs   modify titles   adjust option list   add examples ToC   Update README.md   Apply suggestions from code review   Co-Authored-By: Paco 34928425+pacocoursey@users.noreply.github.com  Apply suggestions from code review
+720,Add an autocomplete suggestions examples (#88),  Add Autocomplete Suggestions example   Update example   Use countries instead of !isValidation   Co-Authored-By: Shu Ding ds303077135@gmail.com
+721,0.1.8,
+722,replace useLayoutEffect by useIsomorphicLayoutEffect to avoid ssr warnings (#85),
+723,0.1.7,
+724,Pass pageSWRs to swrDataToOffset (#52),  pass pageSWRs to swrDataToOffset   fix format and type checker   tiny performance improvement   fix tsconfig 
+725,Fix suspense bugs (#82),  fix suspense on hydration   refactor the code; add error to the cache   fix suspense and error catching   add test case for #57   Update src/use-swr.ts   Apply suggestions from code review   Co-Authored-By: Paco 34928425+pacocoursey@users.noreply.github.com
+726,add @pacocoursey to CODEOWNERS (#83),
+727,Add One-Click Deploy button to examples (#81),
+728,Add a README to every example (#79),"  Correct examples name in their package.json   Add a README to every example   How to download only this examples  How to install their dependencies and run it How to deploy it to Now  What the examples are about   Remove yarn.lock files of each examples   This way you will always get the latest version of SWR   Update examples package.json files to include react, react-dom and latest version of swr   Update README files to remove the command to install react, react-dom and swr "
+729,Improve readme (#73),  improve the documentation about fetch   add TOC and examples   update badges   Add section about key as a function 
+730,Add example using SWR to sync storage between tabs (#74),
+731,0.1.6,
+732,Fix error broadcasting (#67),  fix error broadcasting bug   update pre-commit hook 
+733,add @types/lodash.throttle package (#63), add @types/lodash.throttle package  add @types/lodash.throttle package  add @types/lodash.throttle package   yarn add @types/lodash.throttle@4.1.1 --dev   Update package.json   Update package.json   Update yarn.lock 
+734,Add React-Native Support (#42),  Support React-Native   Fix lint   Check if window has addEventListener   Check for document   Fix lint   Change export statement 
+735,Improve export for IntelliSense (#56)," Improve export for webstorm  This is an odd change, but without this, the IntelliSense doesn't know that useSWR is the export from this package (it tries to import from swr/dist/use-swr instead), Functionally, this only adds a new export to the package: useSWR  Update src/index.ts  Co-Authored-By: Shu Ding ds303077135@gmail.com"
+736,0.1.5,
+737,0.1.4,
+738,fix entry files,
+739,0.1.3,
+740,Use fast-deep-equal (#53),  use fast-deep-equal   add missing package 
+741,"Pre-commit, better linting and webstorm support (#55)","  Add WebStorm support ( ignore .idea folder )   Split some npm scripts, add pre-commit functionality and run it "
+742,Update package name (#51),  update package name   thanks to ryan 
+743,0.1.2,
+744,Fix suspense hanging (#49),  fix suspense on hydration   Update src/use-swr.ts 
+745,Add example of implementing optimistic UI with mutate (#31),  Add example of implementing optimistic UI with mutate   Move mutate above   Use trigger to revalidate instead of mutate 
+746,feature/basic-typescript-example: add basic-typescript example (#36),
+747,Add myself to CODEOWNERS (#38),
+748,Adding types to ConfigInterface for callbacks (#35),"  Updating types to be more helpful   Exporitng more stuff, making useSWR generic   Fixing style   Adding return types to overload signatures   Also adding type for error   Being explicit in the naming of the generics   Adding types to ConfigInterface for callbacks   Fixing lint issues "
+749,0.1.1,
+750,Adding more exports (#33),
+751,README Typo: faviourite --> favourite (#32),
+752,0.1.0,
+753,Add example creating custom hooks for API endpoints (#30),
+754,Change default value to undefined (#29),  use undefined as the default data/error state other than null   update test   update readme 
+755,Code cleanup and update comments (#28),  update comments and remove unrelated code   update comments   Update src/use-swr.ts   Co-Authored-By: Paco 34928425+pacocoursey@users.noreply.github.com
+756,add example on how to configure global fetcher (#22),While the documentation does not mark the fetch-function as optional it still can be omitted when a global fetcher is configured. This example is a copy of the basic-example with a custom _app.js added to show how global fetcher can be set up.
+757,Update useSWR-section in readme (#20),Clarify that the passed in fetcher-function must return a promise and is optional
+758,0.0.3,
+759,Add useSWRPages and example (#21),  add use-swr-pages and example   add comments 
+760,removed unwanted data (#19),
+761,fix linter errors; add .travis.yml (#15),
+762,Updating types to be more helpful (#13),"  Updating types to be more helpful   Exporitng more stuff, making useSWR generic   Fixing style   Adding return types to overload signatures   Also adding type for error   Being explicit in the naming of the generics "
+763,ESlint ignore node_modules (#6),To prevent lint:fix script failing.
+764,Removing mutate method unsed in example README (#2),In the Suspense example the import method mutate is not used. Removing this let the code more clean to read :)
+765,Add link to RFC (#3),
+766,Merge pull request #1 from zeit/package-json-repo,Fix repo and homepage in package.json
+767,"fix deps and other issues, 0.0.2",
+768,Fix repo and homepage in package.json,
+769,fix link to license file,
+770,update package description,
+771,Update banner to use absolute path for NPM preview,
+772,init package,

@@ -1,0 +1,368 @@
+Index,Release Note
+1,"What's Changed
+
+Update POTFILES by @ryonakano in https://github.com/elementary/appcenter/pull/2006
+StripeDialog: Add translator comment by @davidmhewitt in https://github.com/elementary/appcenter/pull/2009
+Many fixed and updated translations
+
+Full Changelog: https://github.com/elementary/appcenter/compare/7.2.0...7.2.1"
+2,"What's Changed
+
+AppListUpdateView: Rewrite with ListStore by @danirabbit in https://github.com/elementary/appcenter/pull/1979
+AppListUpdateView: Show when up to date by @danirabbit in https://github.com/elementary/appcenter/pull/1980
+Update flatpak.vapi by @tintou in https://github.com/elementary/appcenter/pull/1991
+Flatpak repair by @meisenzahl in https://github.com/elementary/appcenter/pull/1983
+CategoryView: Fix crash by @meisenzahl in https://github.com/elementary/appcenter/pull/1993
+
+Full Changelog: https://github.com/elementary/appcenter/compare/7.1.0...7.2.0"
+3,"What's Changed
+
+Show warnings when an app may not be localized by @danirabbit in https://github.com/elementary/appcenter/pull/1975
+Fix warnings for native packages, OS and Runtime updates by @meisenzahl in https://github.com/elementary/appcenter/pull/1977
+
+Full Changelog: https://github.com/elementary/appcenter/compare/7.0.0...7.1.0"
+4,"What's Changed
+
+PackageKitBackend: resolve addons in appstream pool by @danirabbit in https://github.com/elementary/appcenter/pull/1946
+Gresource: add more category icons by @danirabbit in https://github.com/elementary/appcenter/pull/1948
+Fix visual issues with category icons by @danirabbit in https://github.com/elementary/appcenter/pull/1954
+Flatpak Runtimes by @meisenzahl in https://github.com/elementary/appcenter/pull/1956
+Size information for Runtime Updates by @meisenzahl in https://github.com/elementary/appcenter/pull/1957
+Install PackageKit based Operating System Updates as Offline Updates by @meisenzahl in https://github.com/elementary/appcenter/pull/1943
+Pretty output Flatpak package origins by @meisenzahl in https://github.com/elementary/appcenter/pull/1962
+Warn running in Demo Mode by @meisenzahl in https://github.com/elementary/appcenter/pull/1963
+Show Operating System Updates and Runtime Updates only if available by @meisenzahl in https://github.com/elementary/appcenter/pull/1960
+Make loading updates async from main AppCenter window by @meisenzahl in https://github.com/elementary/appcenter/pull/1964
+Gettext: install git by @danirabbit in https://github.com/elementary/appcenter/pull/1968
+Gresource: mark OARS icons as scalable, scale all to 32px by @danirabbit in https://github.com/elementary/appcenter/pull/1970
+Metainfo Improvements by @danirabbit in https://github.com/elementary/appcenter/pull/1972
+Fix crash activating category while checking for updates by @vjr in https://github.com/elementary/appcenter/pull/1973
+
+New Contributors
+
+@vjr made their first contribution in https://github.com/elementary/appcenter/pull/1973
+
+Full Changelog: https://github.com/elementary/appcenter/compare/4.0.0...7.0.0"
+5,"New features:
+
+Rewritten navigation with multitouch gestures to go back
+Recently updated apps are shown at the top of category views
+A status overlay bar is now shown when tasks are in progress
+
+App Info Page Improvements:
+
+Screenshot carousels fill the width of the window, showing more screenshots at once
+An app's accent color is now shown behind screenshots
+Get brand colors from the AppStream standard so more apps are supported
+Wrap links at the bottom pages instead of ellipsize
+Better dark style support
+
+Updates View Improvements:
+
+Release notes are shown in a dialog
+Better fallback icons for components
+The ""Update All"" header now sticks to the top of the window when scrolling
+
+Other Improvements:
+
+Redesigned ""Fun & Games"" category card
+Performance improvements
+Stability improvements
+Updated translations
+"
+6,"New features:
+
+Added an option to automatically update apps
+Manually check for new updates
+Warn when apps are built against older runtimes
+
+Fixes:
+
+Prevent back button from disappearing or requiring multiple clicks
+
+Improvements:
+
+Don't show a warning dialog about apps from alt stores
+Show screenshot captions in a tooltip
+Show ""Try for Free"" when setting an app's price to 0
+Performance improvements
+Updated translations
+"
+7,"Fixes:
+
+Prevent potential crashes when updating
+
+Improvements:
+
+Link to Flathub's search page when no search results are found
+Updated translations
+"
+8,"Improvements:
+
+Amusements appear in the Games category
+Categories show as a grid instead of a list
+Allow window to shrink to much narrower sizes
+Updated translations
+"
+9,"What's Changed
+
+FlatpakBackend: Handle transaction success state correctly by @davidmhewitt in https://github.com/elementary/appcenter/pull/1730
+FlatpakBackend: Sort stable apps in XML first by @davidmhewitt in https://github.com/elementary/appcenter/pull/1731
+FlatpakBackend: Improve XML parsing efficiency by @davidmhewitt in https://github.com/elementary/appcenter/pull/1733
+
+Full Changelog: https://github.com/elementary/appcenter/compare/3.8.1...3.8.2"
+10,"Fixes:
+
+Don't store $0 app installs as paid
+Fix missing illicit substances icon
+Don't show plugins on the homepage
+Only show ""Multiplayer"" badge for games
+
+Improvements:
+
+Show installation progress in a more compact way
+Updated translations
+"
+11,"New features:
+ - Show content warnings on app info pages
+Fixes:
+- Show other apps by an author for Flatpak sources
+- Populate banner on home locally instead of relying on an external API
+Improvements:
+- Greatly increased number of recently-updated apps shown on home page
+- Navigate banners on the home page with multitouch gestures
+- Updated translations"
+12,"Improvements:
+
+Show apps from newly sideloaded remotes without requiring a restart
+Less abrupt transition when changing app sources
+Updated translations
+"
+13,"Fixes:
+
+Install Linux kernel headers for device drivers that use DKMS
+Use system Flatpak runtimes for locally installed apps
+
+Improvements:
+
+Mention Sideload when search returns no results
+Updated translations
+"
+14,"Fixes:
+
+Ensure user installation is selected by default when navigating from the homepage
+Fix opening apps from app installed toasts
+
+Improvements:
+
+Updated translations
+"
+15,"Fixes:
+
+Install Linux kernel headers with NVIDIA drivers
+
+Improvements:
+
+Updated translations
+"
+16,"Fixes:
+
+Show Recently Updated Flatpak apps on home page
+Show brand colors and support payments for Flatpak apps
+Fix missing mail icon in payments dialog
+Fix missing privacy policy in payments dialog
+
+Improvements:
+
+Updated translations
+"
+17,"New features:
+
+Show in-app notification when an app is installed
+Add contextual badges to notifications
+
+Improvements:
+
+Ensure Home button is usable during search
+Ask the user to manually restart if we can't ask the session to prompt
+Improve styling and contrast of buttons
+More concise and consistent language
+Updated translations
+
+Fixes:
+
+Fully uninstall Flatpaks, including locales
+Still fetch screenshots from remotes that don't include proper headers
+Fix truncated footer buttons
+Only show Mail button when a usable mail app is installed
+Fix some apps incorrectly showing as not installed during search
+Show an error dialog when opening an app fails
+"
+18,"Fixes
+
+Correctly display names of Flatpak runtime updates
+
+Minor updates
+
+Updated translations
+"
+19,"New features
+
+Support system-wide Flatpak remotes
+
+Fixes
+
+Fix Flatpak runtime updates getting stuck
+Fix long origin comboboxes breaking the header layout
+
+Minor updates
+
+When apps are available from multiple sources, prefer installed version, then prefer Flatpak
+Improve search performance
+Improve update badge styling and category styling
+Updated translations
+"
+20,"Fixes
+
+Ensure AppCenter is reopened at the correct position
+Clicking the updates badge in the header navigates to the updates view
+
+Minor updates
+
+Updated translations
+"
+21,"Fixes
+
+Ensure all updatable Flatpak runtimes are listed for update
+
+Minor updates
+
+Performance improvments
+Updated translations
+"
+22,"New features
+
+Perform updates without administrator permissions
+
+Minor updates
+
+Ensure apps on the homepage are more reliably displayed
+More reliably set the Dock badge number
+Updated translations
+"
+23,"Performance improvements
+
+Only check for updates at device startup if it's more than 24 hours since we last checked
+Reduce slowdowns when opening certain apps
+
+Extension improvements
+
+To de-clutter the updates view, extensions are now only shown if they require updates
+Clicking an extension on an app's info page now shows details for the extension
+Swap the main and overlay icons for extensions to more clearly associate extensions with their app
+
+Keyboard improvements
+
+Pressing down in the search field moves the keyboard focus to the search results list
+Ctrl+F now moves the cursor to the search field
+
+Fixes
+
+Use configured network proxy settings for apt operations
+No longer prompt for approval to update non-curated apps
+Ensure the OS updates subheading copy is correct after finishing updates
+Ellipsize long app names in App Info views
+
+And more
+
+Show a more informative loading screen when checking for updates
+Don't list fonts alongside apps
+Updated translations
+"
+24,"Fixes
+
+Prevent crashes when updating Flatpaks and system packages simultaneously
+Prevent suspending when installing, updating, or removing packages
+Updated translations
+"
+25,"appcenter 3.2.3 is out! 
+Updated translations"
+26,"appcenter 3.2.2 is out! 
+Minor fixes
+
+Update application details when changes happen outside of AppCenter
+Fix for notification not appearing when a restart is required
+Apps in list views now load in the correct order when scrolling
+Prevent unescaped XML entities from appearing in application names
+Load the ""Installed"" view faster
+Ensure flatpak applications show in the category views
+Save some bandwidth by downloading smaller screenshots where appropriate
+System components no longer have an ""Open"" button
+Applications menu can now remove flatpaks that weren't installed by AppCenter
+Make download size estimates more accurate
+"
+27,"appcenter 3.2.1 is out! 
+Minor fixes
+
+Prevent AppCenter from opening on log in
+Prevent ghost update notification when there are no updates available
+Show correct installation state for extensions
+"
+28,"appcenter 3.2.0 is out! 
+Changes:
+
+Add support for Flatpak apps
+Warn about non-curated apps
+Show an error dialog if an installation fails
+Fix an issue where some apps couldn't be uninstalled from the Applications Menu
+Allow browsing and uninstalling apps while offline
+Fix twitter share URLs
+Drop Google+ from the share menu
+Animate screenshot background while loading
+Add navigation arrows for screenshots
+Don't show uninstall buttons for essential system components
+Properly display proprietary licenses
+Fix some layout issues
+Fix crashes
+Performance improvements
+Updated translations
+"
+29,"AppCenter 3.1.1 is out!
+Changes:
+* Meson build system fixes
+* Improve window state restoration
+* Prevent action buttons from jumping around
+* Remove reset paid apps gsettings key
+* Memory management refinements
+* Add conditional compilation for disabling dynamic remote homepage content
+* Updated translations"
+30,"AppCenter 3.1.0 is out!
+Changes:
+* New categories: Communication, Finance, Media Production
+* Add Math to Science category
+* Relax email address validator
+* Present update availability more accurately
+* Category graphics revamped
+* Updated translations"
+31,"AppCenter 3.0.1 is out!
+This release includes updated translations."
+32,"AppCenter 3.0 is out!
+The list of issues closed by this release can be found here."
+33,"AppCenter 0.2.9 is out!
+This release includes several bug fixes."
+34,"AppCenter 0.2.8 is out!
+This release includes several bug fixes."
+35,"AppCenter 0.2.7 is out!
+This release includes several bug fixes."
+36,"AppCenter 0.2.6 is out!
+This release includes several bug fixes."
+37,"AppCenter 0.2.5 is out!
+This release includes several bug fixes."
+38,"AppCenter 0.2.4 is out!
+This release includes several bug fixes."
+39,"AppCenter 0.2.3 is out!
+This release includes several bug fixes."
+40,AppCenter 0.2.2 is out!
+41,AppCenter 0.2.1 is out!
+42,"AppCenter 0.2 is out!
+This release includes several bug fixes"

@@ -1,0 +1,171 @@
+Index,Release Note
+1,"What's Changed
+
+MainWindow: Update context menu on menu key press by @ryonakano in https://github.com/elementary/terminal/pull/697
+Add shortcuts Ctrl + PageUp and Ctrl + PageDown to switch between tabs by @Faelian in https://github.com/elementary/terminal/pull/700
+Update Meson Files by @Marukesu in https://github.com/elementary/terminal/pull/701
+Rework Application Class by @Marukesu in https://github.com/elementary/terminal/pull/702
+Escape '#' except when fragment identifier by @jeremypw in https://github.com/elementary/terminal/pull/631
+meson: Specify default test setup by @tintou in https://github.com/elementary/terminal/pull/711
+Switch to GHCR containers by @davidmhewitt in https://github.com/elementary/terminal/pull/712
+Application: Properly Unexport the DBus Interface on Exit by @Marukesu in https://github.com/elementary/terminal/pull/709
+Remove ctrl + shift + left / right for tab switching by @stan-janssen in https://github.com/elementary/terminal/pull/716
+Add option to start minimized by @stan-janssen in https://github.com/elementary/terminal/pull/715
+
+New Contributors
+
+@Faelian made their first contribution in https://github.com/elementary/terminal/pull/700
+@dependabot made their first contribution in https://github.com/elementary/terminal/pull/713
+@stan-janssen made their first contribution in https://github.com/elementary/terminal/pull/716
+
+Full Changelog: https://github.com/elementary/terminal/compare/6.1.1...6.1.2"
+2,"Other updates:
+
+Translation updates
+"
+3,"New features:
+
+Option to follow system dark style preference
+Create a custom color palette
+
+Fixes:
+
+Default styles are fully opaque and updated to the latest upstream values from Solarized for improved legibility
+
+Other updates:
+
+Translation updates
+Performance improvements
+"
+4,"New features:
+
+Switch tabs with Alt + 1-9
+Quit with Ctrl + Shift + Q
+
+Fixes:
+
+Fix build on OS 7
+
+Other updates:
+
+Translation updates
+"
+5,"Fixes:
+
+Properly restore zoom levels for all locales
+
+Other updates:
+
+Use XTerm title for window title if available
+Change ""Reload Tab"" shortcut to Shift + F5 to avoid clash with some foreground processes 
+Change preferred shortcut for ""Reload Tab"" to Shift + Control + R
+Translation updates
+"
+6,"New features:
+
+Move tabs with the shortcut Ctrl + Alt + ←/→
+Switch tabs with the shortcuts Ctrl + Tab and Ctrl + Shift + Tab
+Zoom levels are now remembered per-tab
+Also warn about multi-line pastes
+Show text details in unsafe paste dialogs
+Open Link option when secondary clicking
+Reload tabs in the context menu or with the shortcut Ctrl + Shift + R
+Notifications indicate if a process exited with errors or not
+Show keyboard shortcuts in tab context menus
+
+Other updates:
+
+Fix an issue with keyboard shortcuts not activating the first time they're pressed
+Avoid losing focus when closing background tabs
+Validate custom palette
+Translation updates
+"
+7,"terminal 5.5.2 is out! 
+New features:
+
+Add commandline option for New Tab (-t)
+
+Other updates:
+
+Fix URL selection
+Translation updates
+"
+8,"terminal 5.5.1 is out! 
+New features:
+
+Add commandline option for New Window (-n)
+
+Other updates:
+
+Prevent duplicate tab on startup
+Prevent unnecessary Home tab on startup
+Translation updates
+"
+9,"terminal 5.5.0 is out! 
+New features:
+
+Turn Natural Copy/Paste on or off in the Settings menu
+Zoom with Ctrl + Scroll
+
+Other updates:
+
+Include sudo password prompt when copying last output
+Apply font changes without restarting
+Translation updates
+"
+10,"terminal 5.4.0 is out! 
+Changes:
+
+Don't remember tabs when History is disabled in System Settings
+Show keyboard shortcuts in the secondary-click menu
+Middle-click paste now properly follows System Settings
+Shift + Control + D to duplicate tabs
+Use neutral colors for the dark style scheme
+Slightly pad text from the edge of the window
+Translation updates
+"
+11,"Terminal 5.3.6 is out!
+Changes:
+* Pressing the Menu key now opens the context menu
+* Added separator to context menu
+* Store state with GSettings
+* Updated translations"
+12,"Terminal 5.3.5 is out!
+Changes:
+* Support Ctrl+Equal key combo to zoom in
+* Fix a wrong foreground process response code
+* Updated translations"
+13,"Terminal 5.3.4 is out!
+Changes:
+* Return focus after popover menu closes
+* Prevent search and style buttons from receiving focus
+* Hide the cursor while typing
+* Updated translations"
+14,"Terminal 5.3.2 is out!
+Changes:
+ * Fix erratic search text highlightning behavior
+ * Support -h flag for help
+ * Add Alt+↑ action to scroll to last command
+ * Add Alt+c action to copy last output
+ * Add accels to tooltips
+ * Update translations"
+15,"Terminal 5.3.2 is out!
+The list of issues closed by this release can be found here."
+16,"Terminal 5.1.3 is out!
+This release includes updated translations."
+17,"Terminal 0.5.3 is out!
+Changes:
+* Adapt to type change of Gdk.Key constants to fix build with valac 0.42
+* Fixed mistranslated and broken icon names
+* New translations"
+18,"Terminal 0.5.2 is out!
+This release contains translations update and a minor API fix."
+19,"Terminal 0.5.1 is out!
+This release contains translations update and a minor API fix."
+20,"Terminal 0.5 is out!
+The list of issues closed by this release can be found here."
+21,"pantheon-terminal 0.4.3 is out!
+The list of issues closed for this release can be found here."
+22,"pantheon-terminal 0.4.2 is out!
+This release includes several bug fixes"
+23,pantheon-terminal 0.4.1 is out!

@@ -1,0 +1,83 @@
+Index,Commit Message,Score,Correspond Changelog Sentence,Commit Description,Class
+1,Add auto updater.,0.8772565,Fixes auto-update.," Updated package.json to build proper DMG  electron-builder v22 -> v23 to fix builds on macOS 12.3+   Made sure to use Python3 when building for future-proofing   (Re-)Update dependencies accidentally downgraded   Fix universal macOS builds, testing fixed workflow   Remove extra x86/ARM-only builds for macOS   Update checkout@v2 -> checkout@v3   Remove Linux ia32 build because Electron isn't available for ia32 (This would prevent you from building the Linux version at all)   Clean up Linux workflow (uses new upload-artifact@v3 featuers)   Polish Linux/Windows workflows   Fix Windows workflow not publishing instaler   Update actions to Node.js 16 in publism.yml   Quick change, publish the Windows Appx builds   I seem to have forgotten a single backslash ",1
+2,feat: add spell check,0.9847425,- feat: add spell check,close https://github.com/revoltchat/desktop/issues/116,1
+3,chore: switch to yarn v3 (#71),0.40585804,- fix: artifact like shapes on start (https://github.com/revoltchat/desktop/pull/57),[skip ci],0
+4,Update scripts.,0.60771453,Fixes auto-update.,[skip ci],0
+5,ci: Synced local '.github/workflows/triage_pr.yml' with remote 'workflows/triage_pr.yml',0.37031916,- feat: prevent launching multiple instances (https://github.com/revoltchat/desktop/issues/82),,0
+6,Fix shell script file name.,0.34934855,- Linux (tar.gz),,0
+7,docs: Update Readme format to be consistent with other Revolt projects (#51),0.4064724,- Automate CI for publishing new releases.,,0
+8,fix: use electron17,0.4243258,Bug fixes:,,0
+9,fix(ci): always run and on tag,0.48268846,- fix: use getConfig() instead of store.getConfig to prevent error on quit,,0
+10,chore: update commit hash,0.41467556,Fixes auto-update.,,0
+11,Contributor line is not needed apparently.,0.2240406,Add Discord RPC.,,0
+12,ci: update global workflows (#45),0.503926,- Automate CI for publishing new releases.,,0
+13,Attempt to create PKGBUILD and fix icons.,0.66071963,- Fix AppX icons,,0
+14,Bump version.,0.44071585,Add hardware acceleration toggle.,,0
+15,chore: bump version,0.4701607,- fix: artifact like shapes on start (https://github.com/revoltchat/desktop/pull/57),,0
+16,fix: revolt-desktop appearing instead of Revolt,0.5716506,- fix: artifact like shapes on start (https://github.com/revoltchat/desktop/pull/57),,0
+17,ci: Synced local '.github/workflows/triage_issue.yml' with remote 'workflows/triage_issue.yml',0.42027998,- feat: prevent launching multiple instances (https://github.com/revoltchat/desktop/issues/82),,0
+18,fix: switch to ts-ignore from ts-expect-error,0.36109674,- fix: use getConfig() instead of store.getConfig to prevent error on quit,,0
+19,ci: create proper DMG through package.json (#113),0.6018449,- feat(ci): generate DMG rather than ZIP,,0
+20,Add AppX logos.,0.7738886,- Fix AppX icons,,1
+21,Rename from Private to Public beta,0.37437716,- Change default settings,,0
+22,feat: update yarn & make dmg file build with background by default,0.49217778,- feat(ci): generate DMG rather than ZIP,closes #86,0
+23,fix: missing taskbar icon and fixed name in notifications (#54),0.6606381,- fix: wrong app icon (#95),,0
+24,Initial Commit,0.23122239,,,0
+25,chore: enable yarn berry,0.38290232,"- feat: allow zooming in with ""CTRL + ="" (https://github.com/revoltchat/desktop/issues/8)",,0
+26,Add contributor tag.,0.3721048,- feat: add spell check,,0
+27,merge: pull request #123 from xhayper/patch-1,0.3349429,- feat: prevent launching multiple instances (https://github.com/revoltchat/desktop/issues/82),  New DMG workflow for macOS   Trying new icons   Reverted icon changes ,0
+28,chore: add dmg build to release CI [skip ci],0.66135836,- feat(ci): generate DMG rather than ZIP,,0
+29,remove: pacman build,0.34130704,- fix: artifact like shapes on start (https://github.com/revoltchat/desktop/pull/57),,0
+30,Finalise(?) PKGBUILD for revolt-desktop-git,0.63328403,"If you are on Arch Linux, install revolt-desktop-git.",closes #8,0
+31,fix: macOS not showing BG,0.54431105,This release actually includes a DMG build for macOS.,closes #14,0
+32,fix: use getConfig() instead of store.getConfig,0.9035514,- fix: use getConfig() instead of store.getConfig to prevent error on quit,closes #2 closes #63 closes #40 closes #17,1
+33,Add version back.,0.50201494,Fixes auto-update.,closes #82,0
+34,Update README,0.5578978,Fixes auto-update.,,0
+35,"Not having a good time, this is the last one.",0.2928258,,,0
+36,feat(ci): add workflow for auto-compiling (#44),0.56110185,- Automate CI for publishing new releases.,,0
+37,chore: update publish.yml,0.53824854,- Automate CI for publishing new releases.,,0
+38,"Toggle RPC, closes #26.",0.5479247,- Update Discord RPC,,0
+39,fix: correct icon bundling,0.88581085,- fix: bundle window icon correctly,,1
+40,feat: add restart button to tray icon,0.8708372,- fix: restart from tray icon,,1
+41,chore: replace discord-rpc dependency,0.7007339,- Update Discord RPC,,1
+42,Changes to AppX config,0.73628515,- Fix AppX icons,,1
+43,chore(ci): passthrough token,0.37905407,- feat(ci): generate DMG rather than ZIP,,0
+44,fix: a bug with clicking icon in dock,0.68616617,- fix: wrong app icon (#95),,0
+45,fix: correctly restore from tray on 2nd start,0.88275564,- fix: correctly restore from tray icon on second instance start,,1
+46,Update pkgbuild.,0.5069418,Fixes auto-update.,,0
+47,Add submodule file.,0.43965617,Add Discord RPC.,,0
+48,Auto-start support and titlebar actions.,0.45177734,- Windows (Setup) (has auto-updates),,0
+49,fix: linux build,0.5990277,Bug fixes:,,0
+50,ci: synced local '.github/workflows/triage_pr.yml' with remote 'workflows/triage_pr.yml',0.36376035,- feat: prevent launching multiple instances (https://github.com/revoltchat/desktop/issues/82),,0
+51,feat: add node: prefix to node package,0.3804763,- feat: add spell check,,0
+52,ci: synced local '.github/workflows/triage_issue.yml' with remote 'workflows/triage_issue.yml',0.40990475,- feat: prevent launching multiple instances (https://github.com/revoltchat/desktop/issues/82),Co-authored-by: web-flow noreply@github.com,0
+53,Add desktop file.,0.46848005,- Change default settings,,0
+54,Test AppX.,0.5615007,- Fix AppX icons,,0
+55,fix: remove windows-specific dependency,0.5501002,- Windows (Setup) (has auto-updates),,0
+56,fix(readme): don't include submodules for start,0.44515532,Bug fixes:,,0
+57,ci: Created local '.github/workflows/triage_pr.yml' from remote 'workflows/triage_pr.yml',0.3746517,- feat: prevent launching multiple instances (https://github.com/revoltchat/desktop/issues/82),,0
+58,"revert: ""ci: new publish workflow (#106)"" (#112)",0.6463962,- Automate CI for publishing new releases.,,0
+59,Add min size and remember changes.,0.6534905,Added minimum window size and remember state of window.,,0
+60,feat(ci): generate a DMG rather than a ZIP (#57),0.9482415,- feat(ci): generate DMG rather than ZIP,,1
+61,feat: tray icon / minimise to tray config,0.7929435,- feat: allow minimising the app to the tray,,1
+62,fix: wrong app icon (#95),0.99468505,- fix: wrong app icon (#95),,1
+63,chore(ci): try to publish through CI,0.671008,- Automate CI for publishing new releases.,,0
+64,feat: add background colour to window,0.58560103,Added minimum window size and remember state of window.,Add hardware acceleration toggle.,0
+65,Add Discord RPC.,0.99999994,Add Discord RPC.,,1
+66,"feat: handle ""CTRL + ="" for zoom",0.68748146,"- feat: allow zooming in with ""CTRL + ="" (https://github.com/revoltchat/desktop/issues/8)",,0
+67,fix: move appx icons to correct directory,0.7973379,- Fix AppX icons,,1
+68,fix: restart from tray icon (closes #87),0.93182945,- fix: restart from tray icon,,1
+69,feat: use monochrome tray icon and fix tray icon on macOS (Fixes #88) (#91),0.9855329,- feat: use monochrome tray icon and fix tray icon on macOS (#91),,1
+70,Add publish scripts.,0.5876037,- Automate CI for publishing new releases.,,0
+71,Fix version.,0.7322366,Bug fixes:,,1
+72,Update desktop entry and add launch script.,0.5412694,- Change default settings,,0
+73,"Add LICENSE, closes #23.",0.36151892,Added minimum window size and remember state of window.,,0
+74,Temporarily remove.,0.33742788,Fixes auto-update.,,0
+75,Remove artifact.,0.37960678,- fix: artifact like shapes on start (https://github.com/revoltchat/desktop/pull/57),,0
+76,feat: only allow one instance / fmt code,0.40483963,- feat(ci): generate DMG rather than ZIP,,0
+77,ci: new publish workflow (#106),0.6539418,- Automate CI for publishing new releases.,,0
+78,fix: update URL in RPC,0.60533804,- Update Discord RPC,,0
+79,Merge pull request #21 from KeepSOBP/patch-1,0.4486056,- fix: use getConfig() instead of store.getConfig to prevent error on quit,,0
+80,feat: update background for dmg,0.55892074,- Mac (dmg),,0
+81,feat: improvment to package (read desc),0.529106,- feat(ci): generate DMG rather than ZIP,,0
+82,Initial Commit.,0.25022215,,,0

@@ -1,16 +1,17 @@
 import spacy
-import nltk
+# import nltk
 import numpy as np
 import pandas as pd
-import re
+import os
+# import re
 from keras.models import Sequential
 from keras.layers import Dense, LSTM, Embedding
+from sklearn.model_selection import train_test_split
 
 nlp = spacy.load('en_core_web_lg')
-nltk.download('stopwords')
-stopwords = nltk.corpus.stopwords.words('english')
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 word2idx = {}
-idx2word = {}
+max_commit_length = 30
 
 
 def load_data(file_path):
@@ -23,79 +24,54 @@ def load_data(file_path):
 
     """
     df = pd.read_csv(file_path)
-    message = np.asarray(df['message'])
-    label = np.asarray(df['is_important'])
-    label = np.asarray(list(map(lambda x: 1 if x == 1 else 0, label)))
-
-    return message, label
+    commit = df['Commit Message'].astype(str) + df['Commit Description'].astype(str)
+    label = df['Class']
+    return np.asarray(commit), np.asarray(label)
 
 
-def separate_data(data, ratio):
-    """Separate the data into training and testing sets.
+# def preprocess(commit, remove_stopwords=True):
+#     """Preprocess a commit message.
 
-    Parameters
-    ----------
-    data : tuple
-        (message, labels).
-    ratio : float
-        Ratio of training data to testing data.
+#     Parameters
+#     ----------
+#     commit : str
+#         Commit message.
+#     remove_stopwords : bool, optional
+#         Remove stopwords from the commit message. The default is True.
 
-    Returns
-    -------
-    tuple
-        (train_data, train_labels), (test_data, test_labels).
+#     Returns
+#     -------
+#     str
+#         Preprocessed commit message.
 
-    """
-    data_size = len(data[0])
-    train_size = int(data_size * ratio)
-    train_dat = (data[0][:train_size], data[1][:train_size])
-    test_dat = (data[0][train_size:], data[1][train_size:])
-    return train_dat, test_dat
-
-
-def preprocess(commit, remove_stopwords=True):
-    """Preprocess a commit message.
-
-    Parameters
-    ----------
-    commit : str
-        Commit message.
-    remove_stopwords : bool, optional
-        Remove stopwords from the commit message. The default is True.
-
-    Returns
-    -------
-    str
-        Preprocessed commit message.
-
-    """
-    global nlp, stopwords
-    commit = commit.lower()
-    # Format words and remove unwanted characters
-    commit = re.sub(r'https?://.*[\r\n]*', '', commit, flags=re.MULTILINE)
-    commit = re.sub(r'<a href', ' ', commit)
-    commit = re.sub(r'&amp;', '', commit)
-    commit = re.sub(r'[_"\-;%()|+&=*.,!?:#$@\[\]/]', ' ', commit)
-    commit = re.sub(r'<br />', ' ', commit)
-    commit = re.sub(r'\'', ' ', commit)
-    # Optionally, remove stop words
-    if remove_stopwords:
-        global stopwords
-        commit = commit.split()
-        commit = [w for w in commit if w not in stopwords]
-        commit = " ".join(commit)
-    nlp_commit = nlp(commit)
-    processed_commit = [token.text for token in nlp_commit]
-    return processed_commit
+#     """
+#     global nlp, stopwords
+#     commit = commit.lower()
+#     # Format words and remove unwanted characters
+#     commit = re.sub(r'https?://.*[\r\n]*', '', commit, flags=re.MULTILINE)
+#     commit = re.sub(r'<a href', ' ', commit)
+#     commit = re.sub(r'&amp;', '', commit)
+#     commit = re.sub(r'[_"\-;%()|+&=*.,!?:#$@\[\]/]', ' ', commit)
+#     commit = re.sub(r'<br />', ' ', commit)
+#     commit = re.sub(r'\'', ' ', commit)
+#     # Optionally, remove stop words
+#     if remove_stopwords:
+#         global stopwords
+#         commit = commit.split()
+#         commit = [w for w in commit if w not in stopwords]
+#         commit = " ".join(commit)
+#     nlp_commit = nlp(commit)
+#     processed_commit = [token.text for token in nlp_commit]
+#     return processed_commit
 
 
-def create_dictionary(all_processed_commits):
-    """Create a dictionary of words from all processed commits.
+def create_dictionary(commits):
+    """Create a dictionary of words from commits.
 
     Parameters
     ----------
-    all_processed_commits : list
-        List of processed commits.
+    commits : list
+        List of commits.
 
     Returns
     -------
@@ -104,49 +80,52 @@ def create_dictionary(all_processed_commits):
 
     """
     word_count = {}
-    for processed_commit in all_processed_commits:
-        for word in processed_commit:
+    for commit in commits:
+        lst_words = commit.split(' ')
+        for word in lst_words:
             if word in word_count:
                 word_count[word] += 1
             else:
                 word_count[word] = 1
     sorted_word_count = sorted(word_count.items(), key=lambda x: x[1], reverse=True)
     global word2idx
-    global idx2word
     for idx, (word, count) in enumerate(sorted_word_count):
-        word2idx[word] = idx
-        idx2word[idx] = word
+        word2idx[word] = idx + 1
+    word2idx['unk'] = len(word2idx) + 1
 
 
-def convert2vector(processed_commit):
-    """Convert a processed commit to a vector.
+def convert2vector(commit):
+    """Convert commit to a vector.
 
     Parameters
     ----------
-    processed_commit : list
-        Processed commit.
+    commit: str
+        Commit.
 
     Returns
     -------
     list
-        Vector of the processed commit.
+        Vector of the commit.
 
     """
     global word2idx
-    global idx2word
     vector = []
-    for word in processed_commit:
+    commit = commit.split(' ')
+    for word in commit:
         if word in word2idx:
             vector.append(word2idx[word])
         else:
-            word = "unk"
-            vector.append(word2idx[word])
+            vector.append(word2idx['unk'])
+    if len(vector) >= max_commit_length:
+        vector = vector[:max_commit_length]
+    else:
+        vector = [0] * (max_commit_length - len(vector)) + vector
     return vector
 
 
 def build_model(topwords, embedding_vector_len, input_length):
     """Build the model.
-
+    
     Returns
     -------
     keras.Sequential
@@ -162,41 +141,40 @@ def build_model(topwords, embedding_vector_len, input_length):
 
 
 if __name__ == '__main__':
-    (train_data, train_labels), (test_data, test_labels) = separate_data(load_data('data.csv'), 0.8)
-    train_data = [preprocess(commit) for commit in train_data]
-    test_data = [preprocess(commit) for commit in test_data]
-    create_dictionary(train_data)
-    create_dictionary(test_data)
-    word2idx["unk"] = len(word2idx)
-    idx2word[len(idx2word)] = "unk"
-    train_data = [convert2vector(commit) for commit in train_data]
-    test_data = [convert2vector(commit) for commit in test_data]
 
-    max_commit_length = 100
-    train_data = np.array(
-        [vector[:100] if len(vector) >= 100 else [0] * (100 - len(vector)) + vector for vector in train_data])
-    test_data = np.array(
-        [vector[:100] if len(vector) >= 100 else [0] * (100 - len(vector)) + vector for vector in test_data])
-    train_labels = np.array(train_labels)
-    test_labels = np.array(test_labels)
+    repos = []
+    data_path = os.path.join(ROOT_DIR, 'data')
+    for subdir, dirs, files in os.walk(data_path):
+        repos.extend(dirs)
+    X = np.asarray([])
+    y = np.asarray([])
+    for repo in repos:
+        path = os.path.join(data_path, repo, 'labeled_commits.csv')
+        commit, label = load_data(path)
+        X = np.concatenate((X, commit), axis=0)
+        y = np.concatenate((y, label), axis=0)
+    # Check number of dataset
+    # print(X.shape, y.shape)   
+
+    create_dictionary(X)
+    # Check create_dictionary function
     print(f"Length of dictionary: {len(word2idx)}")
+
+    X = np.asarray([convert2vector(commit) for commit in X])
+    # Check convert to vector function
+    print(X.shape)
+    print(X[0])
+
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=1)
+
     top_words = len(word2idx) + 1
     embedding_vector_length = 300
     classify_model = build_model(top_words, embedding_vector_length, max_commit_length)
+    # Check build_model function
     print(classify_model.summary())
-    classify_model.fit(train_data, train_labels, epochs=3, batch_size=64)
-    scores = classify_model.evaluate(test_data, test_labels, verbose=0)
+
+    classify_model.fit(X_train, y_train, epochs=3, batch_size=64) 
+    scores = classify_model.evaluate(X_val, y_val, verbose=0)
     print("Accuracy: %.2f%%" % (scores[1] * 100))
-    mes, res = load_data('test.csv')
-    mes = [preprocess(commit) for commit in mes]
-    mes = [convert2vector(commit) for commit in mes]
-    mes = np.array([vector[:100] if len(vector) >= 100 else [0] * (100 - len(vector)) + vector for vector in mes])
-    predict = classify_model.predict(mes)
-    count_success_case = 0
-    for i in range(len(mes)):
-        print("Message: {}\tPredict: {}\t Actual: {}".format(mes[i], predict[i], res[i]))
-        if (predict[i] < 0.5 and res[i] == 0) or (predict[i] >= 0.5 and res[i] == 1):
-            count_success_case += 1
-    print("Accuracy: {}".format(count_success_case / len(mes)))
 
 

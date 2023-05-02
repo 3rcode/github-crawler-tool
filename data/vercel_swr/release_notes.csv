@@ -1,0 +1,1923 @@
+Index,Release Note
+1,"What's Changed
+
+fix: missing interop helpers in bundle by @huozhi in https://github.com/vercel/swr/pull/2582
+
+Full Changelog: https://github.com/vercel/swr/compare/v2.1.4...v2.1.5"
+2,"What's Changed
+
+Upgrade bundler by @huozhi in https://github.com/vercel/swr/pull/2557
+examples: fix invalid links by @fxOne in https://github.com/vercel/swr/pull/2559
+types: Allow auto-import by improving generated types by @oosawy in https://github.com/vercel/swr/pull/2563
+fix: pass serialized args to preload fetcher by @oosawy in https://github.com/vercel/swr/pull/2564
+chore: use provenance for release by @HerringtonDarkholme in https://github.com/vercel/swr/pull/2571
+deps: update @testing-library/react to v14 by @koba04 in https://github.com/vercel/swr/pull/2578
+fix: Fix dependency tracking and useSES bug by @shuding and @promer94 in https://github.com/vercel/swr/pull/2576
+
+New Contributors
+
+@fxOne made their first contribution in https://github.com/vercel/swr/pull/2559
+@oosawy made their first contribution in https://github.com/vercel/swr/pull/2563
+@HerringtonDarkholme made their first contribution in https://github.com/vercel/swr/pull/2571
+
+Full Changelog: https://github.com/vercel/swr/compare/v2.1.3...v2.1.4"
+3,"What's Changed
+
+Fix #2548: pass origin key to subcription callback by @Zheaoli in https://github.com/vercel/swr/pull/2550
+Examples: fix type in axios-typescript example by @daochouwangu in https://github.com/vercel/swr/pull/2552
+Update Cache Interface types by @dmmulroy in https://github.com/vercel/swr/pull/2554
+fix: data passed to refreshInterval function is not latest by @hong24 in https://github.com/vercel/swr/pull/2354
+types: allow passing function as Data for useSWRSubscriptionOptions by @promer94 in https://github.com/vercel/swr/pull/2551
+
+New Contributors
+
+@Zheaoli made their first contribution in https://github.com/vercel/swr/pull/2550
+@daochouwangu made their first contribution in https://github.com/vercel/swr/pull/2552
+@dmmulroy made their first contribution in https://github.com/vercel/swr/pull/2554
+
+Full Changelog: https://github.com/vercel/swr/compare/v2.1.2...v2.1.3"
+4,"Patches
+
+Improved type inferring for swr/subscription
+Adding SWRSubscriptionOptions type for swr/subscription
+
+Changes
+
+test: add typing test for empty config by @koba04 in https://github.com/vercel/swr/pull/2521
+test: fix syntax error in Equal type alias implementation by @SACHINnANYAKKARA in https://github.com/vercel/swr/pull/2517
+chore: remove engines by @promer94 in https://github.com/vercel/swr/pull/2536
+types: improve useSWRSubscription types by @promer94 in https://github.com/vercel/swr/pull/2535
+Rename subscription types by @huozhi in https://github.com/vercel/swr/pull/2537
+
+New Contributors
+
+@SACHINnANYAKKARA made their first contribution in https://github.com/vercel/swr/pull/2517
+
+Full Changelog: https://github.com/vercel/swr/compare/v2.1.1...v2.1.2"
+5,"Patches
+
+refactor: remove useless dataRef, always compare cached data by @promer94 in https://github.com/vercel/swr/pull/2431
+fix: swr infers incorrect data type for default SWRConfig generic type by @connorch in https://github.com/vercel/swr/pull/2506
+
+Documentation
+
+docs: update subscription example by @huozhi in https://github.com/vercel/swr/pull/2499
+
+New Contributors
+
+@connorch made their first contribution in https://github.com/vercel/swr/pull/2506
+
+Full Changelog: https://github.com/vercel/swr/compare/v2.1.0...v2.1.1"
+6,"Feature
+
+Subscription mode by @huozhi in https://github.com/vercel/swr/pull/1263 
+parallel option for useSWRInfinite by @koba04 in https://github.com/vercel/swr/pull/2404 
+
+Checkout subscription docs and useSWRInfinite parallel fetching docs for more details
+Patches
+
+fix: use the latest config in useSWRMutation by @koba04 in https://github.com/vercel/swr/pull/2468
+Fix: type support for suspense and fallbackData(#2396) by @taro-28 in https://github.com/vercel/swr/pull/2452
+Error should be reset when new data comes by @huozhi in https://github.com/vercel/swr/pull/2472
+fix: avoid creating new snapshot if cache is not updated at client during streaming by @promer94 in https://github.com/vercel/swr/pull/2475
+refactor: initialize the cache only on first access by @promer94 in https://github.com/vercel/swr/pull/2479
+
+Misc
+
+ci: fix publish workflow by @promer94 in https://github.com/vercel/swr/pull/2453
+ci: faster e2e test by @promer94 in https://github.com/vercel/swr/pull/2428
+test: add a test for keepPreviousData without changing key by @koba04 in https://github.com/vercel/swr/pull/2470
+Always assume subscriptions will return sub count from current key by @huozhi in https://github.com/vercel/swr/pull/2460
+test: Fix flaky e2e test by @promer94 in https://github.com/vercel/swr/pull/2476
+chore: Add subscription example by @huozhi in https://github.com/vercel/swr/pull/2480
+
+New Contributors
+
+@taro-28 made their first contribution in https://github.com/vercel/swr/pull/2452
+
+Full Changelog: https://github.com/vercel/swr/compare/v2.0.4...v2.1.0"
+7,"Patches
+
+build: fix release job condition by @huozhi in https://github.com/vercel/swr/pull/2392
+types: fix some mutation type issue by @promer94 in https://github.com/vercel/swr/pull/2421
+fix: Error retry should be handled by global revalidator instead of local revalidation function by @promer94 in https://github.com/vercel/swr/pull/2415
+fix: ensure initCache setter function stays within bounds of subscriptions by @lfbergee in https://github.com/vercel/swr/pull/2411
+
+Misc
+
+test: stream ssr e2e by @promer94 in https://github.com/vercel/swr/pull/2395
+test: fix an act warning by @koba04 in https://github.com/vercel/swr/pull/2403
+
+New Contributors
+
+@lfbergee made their first contribution in https://github.com/vercel/swr/pull/2411
+
+Full Changelog: https://github.com/vercel/swr/compare/v2.0.3...v2.0.4"
+8,"Patches
+
+fix: parameters passed to subscribe is inconsistent with its declaration by @hong24 in https://github.com/vercel/swr/pull/2353
+fix: when inifinite key changes, should use cached pagesize instead of initialSize by @promer94 in https://github.com/vercel/swr/pull/2386
+fix: make compare function only compare data (#2375) by @Retrospection and @promer94 in https://github.com/vercel/swr/pull/2387 https://github.com/vercel/swr/pull/2389
+fix: initial loading state should be false with revalidation is disabed by @promer94 in https://github.com/vercel/swr/pull/2382
+fix: Ensure hydration matches the SSR result during streaming by @shuding in https://github.com/vercel/swr/pull/2391
+
+Chores
+
+ci: only run release when tags pushed by @promer94 in https://github.com/vercel/swr/pull/2388
+unify - characters in README.md by @JanKaifer in https://github.com/vercel/swr/pull/2334
+
+New Contributors
+
+@hong24 made their first contribution in https://github.com/vercel/swr/pull/2353
+@Retrospection made their first contribution in https://github.com/vercel/swr/pull/2387
+@JanKaifer made their first contribution in https://github.com/vercel/swr/pull/2334
+
+Full Changelog: https://github.com/vercel/swr/compare/v2.0.2...v2.0.3"
+9,"Patches
+
+fix: delay revalidation if a key is already active and has error by @promer94 in https://github.com/vercel/swr/pull/2338
+fix: createCacheHelper type by @promer94 in https://github.com/vercel/swr/pull/2365
+
+Chores
+
+release workflow by @huozhi in https://github.com/vercel/swr/pull/2374, https://github.com/vercel/swr/pull/2381, https://github.com/vercel/swr/pull/2383, https://github.com/vercel/swr/pull/2384, https://github.com/vercel/swr/pull/2385
+
+Full Changelog: https://github.com/vercel/swr/compare/v2.0.1...v2.0.2"
+10,"In this patch release, we majorly improved typing support and SWR can infer the types based on the configuration.
+
+When the suspense option is true, the returned data will exclude undefined and the isLoading will always be false.
+When the fallbackData option is provided, the returned data will be the same type of fallbackData, and the isLoading will always be false.
+
+Here's a demo for it:
+https://user-images.githubusercontent.com/4800338/213288879-ffbeeeb5-aca5-4a65-8229-69fbf9b0bf70.mp4
+What's Changed
+
+types: make FullConfiguration generic by @huozhi in https://github.com/vercel/swr/pull/2273
+type: enforce array literal as tuple by @promer94 in https://github.com/vercel/swr/pull/2283
+Improve type test by @promer94 in https://github.com/vercel/swr/pull/2289
+update bunchee to remove the extra target cli option by @huozhi in https://github.com/vercel/swr/pull/2298
+fix: useSWRMutation should always use the latest fetcher by @koba04 in https://github.com/vercel/swr/pull/2290
+types: conditional swr response by @huozhi in https://github.com/vercel/swr/pull/2301
+fix: types properites in exports fields by @koba04 in https://github.com/vercel/swr/pull/2341
+Update license year by @IcedMonk in https://github.com/vercel/swr/pull/2344
+feat: add all mutate options support to useSWRInfinite by @koba04 in https://github.com/vercel/swr/pull/2350
+ci: add publint to check packaging on CI by @koba04 in https://github.com/vercel/swr/pull/2363
+
+New Contributors
+
+@IcedMonk made their first contribution in https://github.com/vercel/swr/pull/2344
+
+Full Changelog: https://github.com/vercel/swr/compare/2.0.0...v2.0.1"
+11,"Announcing SWR 2.0
+We are excited to announce the release of SWR 2.0! The new version comes with a lot of improvements:
+
+New useSWRMutation hook
+Enhanced mutation and optimistic UI capabilities
+SWR DevTools
+Preload resource
+Improved React 18 support
+
+And more!
+Read our blog post and migration guide: https://swr.vercel.app/blog/swr-v2
+What's Changed
+
+bugfix: make suspense and revalidateIfStale work together by @simowe in https://github.com/vercel/swr/pull/1851
+feat: support functional optimisticData by @huozhi in https://github.com/vercel/swr/pull/1861
+test: fix an act warning by @koba04 in https://github.com/vercel/swr/pull/1888
+breaking: Change the fetcher argument to be consistent with the passed key by @shuding in https://github.com/vercel/swr/pull/1864
+Keep all fields with one single key by @shuding in https://github.com/vercel/swr/pull/1863
+fix: wrong spell by @baojie223 in https://github.com/vercel/swr/pull/1902
+Update React 18 dependencies by @shuding in https://github.com/vercel/swr/pull/1824
+build(deps): bump minimist from 1.2.5 to 1.2.6 by @dependabot in https://github.com/vercel/swr/pull/1903
+type: make type inference simpler by @promer94 in https://github.com/vercel/swr/pull/1908
+type: fix type error on SWRConfig by @Himself65 in https://github.com/vercel/swr/pull/1913
+feat: Hook for remote mutations by @shuding in https://github.com/vercel/swr/pull/1450
+Add isFallback state by @shuding in https://github.com/vercel/swr/pull/1925
+build: output mutation cjs bundle with named exports by @huozhi in https://github.com/vercel/swr/pull/1926
+Add isLoading state and refactor the core by @shuding in https://github.com/vercel/swr/pull/1928
+Add keepPreviousData option by @shuding in https://github.com/vercel/swr/pull/1929
+types: drop legacy types by @huozhi in https://github.com/vercel/swr/pull/1930
+breaking: Throw error when using suspense on the server side without fallback in React 18 by @shuding in https://github.com/vercel/swr/pull/1931
+type: extends useConfig cache interface by @promer94 in https://github.com/vercel/swr/pull/1938
+remove mount check for react18 by @promer94 in https://github.com/vercel/swr/pull/1927
+lint: dont check unused vars with underscore prefix by @huozhi in https://github.com/vercel/swr/pull/1939
+test: upgrade to jest 28 by @huozhi in https://github.com/vercel/swr/pull/1942
+Fix cache types by @chibicode in https://github.com/vercel/swr/pull/1961
+Improved React 18 support by @promer94 in https://github.com/vercel/swr/pull/1962
+types: fix type regressions by @promer94 in https://github.com/vercel/swr/pull/1966
+fix: mutate args for useSWRInfinite hook by @sanjeev29 in https://github.com/vercel/swr/pull/1947
+build: import with-selector with extension from useESE by @huozhi in https://github.com/vercel/swr/pull/1967
+Bug fixes by @shuding in https://github.com/vercel/swr/pull/1968
+chore: Faster type checking by @shuding in https://github.com/vercel/swr/pull/1969
+fix: try fix codesanbox ci import error by @promer94 in https://github.com/vercel/swr/pull/1971
+Fix race conditions related to optimistic UI by @shuding in https://github.com/vercel/swr/pull/1970
+chore: Add test cases for mutate by @shuding in https://github.com/vercel/swr/pull/1976
+fix: Should always reset to the original data after mutating with optimistic data by @shuding in https://github.com/vercel/swr/pull/1982
+refactor: remove useless ref copy by @promer94 in https://github.com/vercel/swr/pull/1981
+chore: switch to pnpm and turborepo by @promer94 in https://github.com/vercel/swr/pull/1983
+fix: should only update cache when actually start new request by @promer94 in https://github.com/vercel/swr/pull/1986
+chore: save some bytes by @promer94 in https://github.com/vercel/swr/pull/1991
+fix: useSWRMutation - clear error after successful trigger (#1973) by @anirudh1713 in https://github.com/vercel/swr/pull/1995
+Fix typo: getSWRCacahe -> getSWRCache by @sdornan in https://github.com/vercel/swr/pull/2000
+build: do not abort on watch mode when ts erroring by @huozhi in https://github.com/vercel/swr/pull/1992
+chore: add engine field to limit pnpm version by @huozhi in https://github.com/vercel/swr/pull/1990
+test: add test case for #1974 by @promer94 in https://github.com/vercel/swr/pull/2005
+fix: Adding debounce for autocomplete-suggestions example by @Walkeryr in https://github.com/vercel/swr/pull/2017
+BREAKING: rename SWRConfig.default to SWRConfig.defaultValue by @huozhi in https://github.com/vercel/swr/pull/2023
+feat: support functional swr context config by @huozhi in https://github.com/vercel/swr/pull/2024
+test: fix all act warnings by @koba04 in https://github.com/vercel/swr/pull/2031
+feat: add preload function by @koba04 in https://github.com/vercel/swr/pull/2026
+fix: Avoid preloading the resource multiple times by @shuding in https://github.com/vercel/swr/pull/2036
+fix: isLoading and isValidating should always respect cache value by @promer94 in https://github.com/vercel/swr/pull/2048
+Fix ts type generation by @huozhi in https://github.com/vercel/swr/pull/2038
+feat: mutate filter by @huozhi in https://github.com/vercel/swr/pull/1989
+Fix typos by @hiro0218 in https://github.com/vercel/swr/pull/2052
+feat: add DevTools hook by @koba04 in https://github.com/vercel/swr/pull/2016
+Use consistent typing imports by @huozhi in https://github.com/vercel/swr/pull/2061
+Upgrading use-sync-external-store lib by @sanjaiyan-dev in https://github.com/vercel/swr/pull/2063
+Revert swr config generic by @huozhi in https://github.com/vercel/swr/pull/2065
+Fix: raf return type by @huozhi in https://github.com/vercel/swr/pull/2074
+Remove unused info from dummy package.json by @huozhi in https://github.com/vercel/swr/pull/2083
+Use pnpm workspace by @huozhi in https://github.com/vercel/swr/pull/2085
+bump typescript and apply nodenext module resolution by @huozhi in https://github.com/vercel/swr/pull/2084
+Chore: Typos and grammar by @AllanOliveiraM in https://github.com/vercel/swr/pull/2094
+chore: add basic tsdoc by @promer94 in https://github.com/vercel/swr/pull/2089
+types: add generic for SWRInfiniteKeyLoader by @jason89521 in https://github.com/vercel/swr/pull/2104
+fix: add swr/_internal to paths by @jason89521 in https://github.com/vercel/swr/pull/2105
+type: make tsconfig simpler and fix type error by @promer94 in https://github.com/vercel/swr/pull/2115
+chore: exclude .tsbuildinfo from files, reduce install size by @promer94 in https://github.com/vercel/swr/pull/2119
+Reorder exports conditions by @huozhi in https://github.com/vercel/swr/pull/2130
+Upgrade bunchee by @huozhi in https://github.com/vercel/swr/pull/2132
+Bump typescript and assemble pnpm scripts by @huozhi in https://github.com/vercel/swr/pull/2133
+chore: add github actions reporter by @promer94 in https://github.com/vercel/swr/pull/2131
+Dedupe installed swc by @huozhi in https://github.com/vercel/swr/pull/2136
+test: add a test for preload API in effects by @koba04 in https://github.com/vercel/swr/pull/2138
+test: add more isLoading tests for the case a key is null or an error by @koba04 in https://github.com/vercel/swr/pull/2141
+ci: use action/setup-node built-in pnpm cache and bump to node16 by @promer94 in https://github.com/vercel/swr/pull/2142
+test: add tests for dependency collection by @koba04 in https://github.com/vercel/swr/pull/2140
+chore: bump dev deps by @huozhi in https://github.com/vercel/swr/pull/2143
+memoize config values to avoid frequent context propagation by @gnoff in https://github.com/vercel/swr/pull/2149
+Bundle types into one file by @huozhi in https://github.com/vercel/swr/pull/2150
+Revert target option by @huozhi in https://github.com/vercel/swr/pull/2151
+chore: fix missing husky warning by @huozhi in https://github.com/vercel/swr/pull/2160
+Remove downlevelIteration and traverse iterator manually by @huozhi in https://github.com/vercel/swr/pull/2181
+fix: re-render when returned data and fallbackData is the same and keepPreviousData is enabled by @koba04 in https://github.com/vercel/swr/pull/2169
+breaking: Change the error broadcasting behavior in mutations and add throwOnError option by @shuding in https://github.com/vercel/swr/pull/2182
+docs: Add JSDoc comments to useSWRMutation by @shuding in https://github.com/vercel/swr/pull/2183
+type: export MutationFetcher by @ssssota in https://github.com/vercel/swr/pull/2184
+Bump bundler by @huozhi in https://github.com/vercel/swr/pull/2187
+resolve swr internal imports as external by @huozhi in https://github.com/vercel/swr/pull/2225
+test: update tests alias to swr subpath exports by @huozhi in https://github.com/vercel/swr/pull/2243
+feat: support functional rollbackOnError by @huozhi in https://github.com/vercel/swr/pull/2242
+Update build target to es2018 by @shuding in https://github.com/vercel/swr/pull/2249
+Fix missing esmodule mark in cjs build by @huozhi in https://github.com/vercel/swr/pull/2251
+fix: pass null fetcher to middleware by @koba04 in https://github.com/vercel/swr/pull/2240
+
+New Contributors
+
+@simowe made their first contribution in https://github.com/vercel/swr/pull/1851
+@baojie223 made their first contribution in https://github.com/vercel/swr/pull/1902
+@Himself65 made their first contribution in https://github.com/vercel/swr/pull/1913
+@chibicode made their first contribution in https://github.com/vercel/swr/pull/1961
+@sanjeev29 made their first contribution in https://github.com/vercel/swr/pull/1947
+@sdornan made their first contribution in https://github.com/vercel/swr/pull/2000
+@Walkeryr made their first contribution in https://github.com/vercel/swr/pull/2017
+@hiro0218 made their first contribution in https://github.com/vercel/swr/pull/2052
+@sanjaiyan-dev made their first contribution in https://github.com/vercel/swr/pull/2063
+@AllanOliveiraM made their first contribution in https://github.com/vercel/swr/pull/2094
+@jason89521 made their first contribution in https://github.com/vercel/swr/pull/2104
+@gnoff made their first contribution in https://github.com/vercel/swr/pull/2149
+@ssssota made their first contribution in https://github.com/vercel/swr/pull/2184
+
+Full Changelog: https://github.com/vercel/swr/compare/1.2.2...2.0.0"
+12,"What's Changed
+
+Fix missing esmodule mark in cjs build by @huozhi in https://github.com/vercel/swr/pull/2251
+fix: pass null fetcher to middleware by @koba04 in https://github.com/vercel/swr/pull/2240
+
+Full Changelog: https://github.com/vercel/swr/compare/2.0.0-rc.1...2.0.0-rc.3"
+13,"~~The last RC before SWR 2.0.~~ This release includes several small fixes with one breaking change. 
+Breaking
+In this release, we are dropping IE 11 support, and using ES2018 as the build target. However, when using SWR in a framework or using a bundler (esbuild, Webpack, etc.), you can still target ES5 or using a browserlist configuration to customize this.
+The benefit of this change is, we can now use faster native APIs to make SWR more performant, instead of using old alternatives. A benchmark shows a 4.7x speed improvement of the useSWR() function call during SSR, when we change Object.assign({}, a, b) to { ...a, ...b }.
+Details can be found in #2249.
+What's Changed
+
+breaking: Update build target to es2018 by @shuding in https://github.com/vercel/swr/pull/2249
+feat: support functional rollbackOnError by @huozhi in https://github.com/vercel/swr/pull/2242
+fix: resolve swr internal imports as external by @huozhi in https://github.com/vercel/swr/pull/2225
+chore: update tests alias to swr subpath exports by @huozhi in https://github.com/vercel/swr/pull/2243
+chore: export MutationFetcher by @ssssota in https://github.com/vercel/swr/pull/2184
+chore: Bump bundler by @huozhi in https://github.com/vercel/swr/pull/2187
+
+New Contributors
+
+@ssssota made their first contribution in https://github.com/vercel/swr/pull/2184
+
+Full Changelog: https://github.com/vercel/swr/compare/2.0.0-rc.0...2.0.0-rc.1"
+14,"The SWR 2.0 release candidate. This RC has one breaking change, a new option for mutation APIs, and some bug fixes & improvements.
+Highlights & Breakings
+A failed mutation will not cause useSWR's error to be updated:
+```jsx
+const { error, mutate } = useSWR('/api/user', getUser)
+return  {
+  try {
+    await mutate(updateUser)
+  } catch (mutationError) {
+    // mutationError will not cause error to be updated.
+  }
+}}>Update User
+```
+In 2.0, with the example above, error will only be coming from getUser and will be shared across all useSWR('/api/user') hooks. And mutation errors (mutationError) will be coming from mutations like updateUser calls, they will be separated from fetcher errors.
+There is also a new option throwOnError for useSWRMutation to disable the default throwing behavior of trigger:
+```jsx
+const { trigger } = useSWRMutation('/api/user', updateUser)
+try {
+  await trigger()
+} catch (err) {
+  // ... it throws when failed to trigger the mutation so you can
+  // easily change the flow here
+}
+```
+```jsx
+const { trigger, error } = useSWRMutation('/api/user', updateUser, {
+  throwOnError: false
+})
+// You don't need to try-catch here, you can instead handle errors
+// on the component level in a declarative way
+await trigger()
+```
+Read more about this change in #2182.
+What's Changed
+
+chore: fix missing husky warning by @huozhi in https://github.com/vercel/swr/pull/2160
+fix: Remove downlevelIteration and traverse iterator manually by @huozhi in https://github.com/vercel/swr/pull/2181
+fix: re-render when returned data and fallbackData is the same and keepPreviousData is enabled by @koba04 in https://github.com/vercel/swr/pull/2169
+breaking: Change the error broadcasting behavior in mutations and add throwOnError option by @shuding in https://github.com/vercel/swr/pull/2182
+docs: Add JSDoc comments to useSWRMutation by @shuding in https://github.com/vercel/swr/pull/2183
+
+Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.7...2.0.0-rc.0"
+15,"Most changes in this release are maintenance related, as we are finalizing everything for the upcoming 2.0 stable version.
+What's Changed
+
+Upgrading use-sync-external-store lib by @sanjaiyan-dev in https://github.com/vercel/swr/pull/2063
+Revert swr config generic by @huozhi in https://github.com/vercel/swr/pull/2065
+Fix: raf return type by @huozhi in https://github.com/vercel/swr/pull/2074
+Remove unused info from dummy package.json by @huozhi in https://github.com/vercel/swr/pull/2083
+Use pnpm workspace by @huozhi in https://github.com/vercel/swr/pull/2085
+bump typescript and apply nodenext module resolution by @huozhi in https://github.com/vercel/swr/pull/2084
+Chore: Typos and grammar by @AllanOliveiraM in https://github.com/vercel/swr/pull/2094
+chore: add basic tsdoc by @promer94 in https://github.com/vercel/swr/pull/2089
+types: add generic for SWRInfiniteKeyLoader by @jason89521 in https://github.com/vercel/swr/pull/2104
+fix: add swr/_internal to paths by @jason89521 in https://github.com/vercel/swr/pull/2105
+type: make tsconfig simpler and fix type error by @promer94 in https://github.com/vercel/swr/pull/2115
+chore: exclude .tsbuildinfo from files, reduce install size by @promer94 in https://github.com/vercel/swr/pull/2119
+Reorder exports conditions by @huozhi in https://github.com/vercel/swr/pull/2130
+Upgrade bunchee by @huozhi in https://github.com/vercel/swr/pull/2132
+Bump typescript and assemble pnpm scripts by @huozhi in https://github.com/vercel/swr/pull/2133
+chore: add github actions reporter by @promer94 in https://github.com/vercel/swr/pull/2131
+Dedupe installed swc by @huozhi in https://github.com/vercel/swr/pull/2136
+test: add a test for preload API in effects by @koba04 in https://github.com/vercel/swr/pull/2138
+test: add more isLoading tests for the case a key is null or an error by @koba04 in https://github.com/vercel/swr/pull/2141
+ci: use action/setup-node built-in pnpm cache and bump to node16 by @promer94 in https://github.com/vercel/swr/pull/2142
+test: add tests for dependency collection by @koba04 in https://github.com/vercel/swr/pull/2140
+chore: bump dev deps by @huozhi in https://github.com/vercel/swr/pull/2143
+memoize config values to avoid frequent context propagation by @gnoff in https://github.com/vercel/swr/pull/2149
+Bundle types into one file by @huozhi in https://github.com/vercel/swr/pull/2150
+Revert target option by @huozhi in https://github.com/vercel/swr/pull/2151
+
+New Contributors
+
+@sanjaiyan-dev made their first contribution in https://github.com/vercel/swr/pull/2063
+@AllanOliveiraM made their first contribution in https://github.com/vercel/swr/pull/2094
+@jason89521 made their first contribution in https://github.com/vercel/swr/pull/2104
+@gnoff made their first contribution in https://github.com/vercel/swr/pull/2149
+
+Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.6...2.0.0-beta.7"
+16,"What's Changed
+
+fix: Fix typos by @hiro0218 in https://github.com/vercel/swr/pull/2052
+feat: Add DevTools hook by @koba04 in https://github.com/vercel/swr/pull/2016
+fix: Use consistent typing imports by @huozhi in https://github.com/vercel/swr/pull/2061
+
+New Contributors
+
+@hiro0218 made their first contribution in https://github.com/vercel/swr/pull/2052
+
+Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.5...2.0.0-beta.6"
+17,"Highlights & Breakings
+Mutate Multiple Keys (#1946, #1989)
+You can now pass a filter function to the global mutate API to match any keys and mutate them together:
+```js
+import { mutate } from 'swr'
+// Or from the hook if you customized the cache provider:
+// { mutate } = useSWRConfig()
+mutate(
+  key => typeof key === 'string' && key.startsWith('/api/item?id='),
+  data => update(data),
+  true
+)
+```
+This action will match all keys starting with '/api/item?id=', and replace their data with update, then re-fetch after the mutation. The signature is the same as the current mutate API:
+js
+mutate(
+  '/api/item?id=123',
+  data => update(data),
+  true
+)
+The only difference is if you pass a function instead of a specific key, SWR will use it to match and mutate all the data in the cache. It will be convenient to use this to batch updates, or mutate keys by pattern. 
+Worth noting that it works with any key types, too:
+```js
+useSWR(['item', 123], ...)
+useSWR(['item', 124], ...)
+useSWR(['item', 125], ...)
+mutate(
+  key => Array.isArray(key) && key[0] === 'item',
+  undefined,
+  false
+)
+```
+The mutation above will match all 3 keys and set the values to undefined (clear them), and skip the revalidation at the end. So another technique is to clear everything with this (e.g. when logging out):
+js
+mutate(
+  () => true,
+  undefined,
+  false
+)
+More use cases and discussions can be found in the original RFC: #1946.
+What's Changed
+
+feat: Mutate multiple keys by @huozhi in https://github.com/vercel/swr/pull/1989
+fix: Avoid preloading the resource multiple times by @shuding in https://github.com/vercel/swr/pull/2036
+fix: isLoading and isValidating should always respect cache value by @promer94 in https://github.com/vercel/swr/pull/2048
+chore: Fix TS type generation by @huozhi in https://github.com/vercel/swr/pull/2038
+
+Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.4...2.0.0-beta.5"
+18,"Highlights
+Preload API (#2026)
+SWR now has a preload API that you can call programmatically to kick off the request early. For example, you can do preload('/api/user', fetcher) even outside of React:
+```jsx
+import { useState } from 'react'
+import useSWR, { preload } from 'swr'
+const fetcher = (url) => fetch(url).then((res) => res.json())
+// Preload the resource before rendering the User component below,
+// this prevents potential waterfalls in your application.
+// You can also start preloading when hovering the button or link, too.
+preload('/api/user', fetcher)
+function User() {
+  const { data } = useSWR('/api/user', fetcher)
+  ...
+}
+export default function App() {
+  const [show, setShow] = useState(false)
+  return (
+    
+ setShow(true)}>Show User
+      {show ?  : null}
+    
+  )
+}
+```
+So at the moment of clicking the button and actually rendering the User component, the resource is likely loaded already. If the request depends on some props or states, you can also preload it when hovering the button:
+jsx
+function App({ userId }) {
+  const [show, setShow] = useState(false)
+  return (
+    <div>
+      <button
+        onClick={() => setShow(true)}
+        onHover={() => preload('/api/user?id=' + userId, fetcher)}
+      >
+        Show User
+      </button>
+      {show ? <User /> : null}
+    </div>
+  )
+}
+Demo: https://codesandbox.io/s/swr-preloading-14bikv?file=/src/App.js
+Function as SWRConfig value (#2024)
+A new way to extend the SWR global configuration:
+```jsx
+
+
+
+
+ ({ ...config, dedupingInterval: 1000 })}>
+      
+
+
+
+```
+Where you can inherit the parent configuration and override the dedupingInterval value, but reuse the other options.
+Breakings
+SWRConfig.default → SWRConfig.defaultValue (#2023)
+This is a currently undocumented API, but planned to go stable with the 2.0 release. You can access to SWR’s default options via the SWRConfig.defaultValue static and read-only property.
+What's Changed
+
+breaking: Rename SWRConfig.default to SWRConfig.defaultValue by @huozhi in https://github.com/vercel/swr/pull/2023
+feat: Add preload function by @koba04 in https://github.com/vercel/swr/pull/2026
+feat: Support function as context config by @huozhi in https://github.com/vercel/swr/pull/2024
+fix: Should always reset to the original data after mutating with optimistic data by @shuding in https://github.com/vercel/swr/pull/1982
+fix: Should only update cache when actually start new request by @promer94 in https://github.com/vercel/swr/pull/1986
+fix: useSWRMutation - clear error after successful trigger (#1973) by @anirudh1713 in https://github.com/vercel/swr/pull/1995
+chore: Adding debounce for autocomplete-suggestions example by @Walkeryr in https://github.com/vercel/swr/pull/2017
+chore: Remove useless ref copy by @promer94 in https://github.com/vercel/swr/pull/1981
+chore: Switch to pnpm and turborepo by @promer94 in https://github.com/vercel/swr/pull/1983
+test: Add test cases for mutate by @shuding in https://github.com/vercel/swr/pull/1976
+chore: Save some bytes by @promer94 in https://github.com/vercel/swr/pull/1991
+chore: getSWRCacahe -> getSWRCache by @sdornan in https://github.com/vercel/swr/pull/2000
+chore: Do not abort on watch mode when ts erroring by @huozhi in https://github.com/vercel/swr/pull/1992
+chore: Add engine field to limit pnpm version by @huozhi in https://github.com/vercel/swr/pull/1990
+test: Add test case for #1974 by @promer94 in https://github.com/vercel/swr/pull/2005
+test: Add test cases for mutate by @shuding in https://github.com/vercel/swr/pull/1976
+test: Fix all act warnings by @koba04 in https://github.com/vercel/swr/pull/2031
+
+New Contributors
+
+@sdornan made their first contribution in https://github.com/vercel/swr/pull/2000
+@Walkeryr made their first contribution in https://github.com/vercel/swr/pull/2017
+
+Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.3...2.0.0-beta.4"
+19,"Highlights
+Better React 18 Support (#1962)
+This is a change of SWR's internal implementation detail. For developers that use SWR, it will just work out of the box without any changes in their apps.
+Brought to you by @promer94 and @shuding, this release includes a core refactoring that improves React 18 support by adopting APIs like useSyncExternalStore and startTransition internally. Especially when rendering UIs concurrently with React 18, this new SWR version ensures stronger UI consistency.
+Worth note that the current stable 1.x version of SWR still works well in React 18. 
+This core change isn't breaking and does not affect React <=17 apps.
+Breakings
+Avoid using Suspense on the server-side (#1931)
+When using suspense: true with SWR on the server-side (including pre-rendering in Next.js), it's now required to provide the initial data via fallbackData or fallback. This means that you can't use Suspense to fetch data on the server side as of today, but either doing fully client-side data fetching, or fetch the data via the framework (such as getStaticProps in Next.js).
+While Suspense for libraries is still experimental, this behavior might change before the 2.0 stable release. More discussions can be found here: #1906.
+What's Changed
+
+breaking: Throw error when using suspense on the server side without fallback in React 18 by @shuding in https://github.com/vercel/swr/pull/1931
+feat: Improved React 18 support by @promer94 in https://github.com/vercel/swr/pull/1962
+fix: Fix cache types by @chibicode in https://github.com/vercel/swr/pull/1961
+fix: Remove mount check for react18 by @promer94 in https://github.com/vercel/swr/pull/1927
+fix: Mutate args for useSWRInfinite hook by @sanjeev29 in https://github.com/vercel/swr/pull/1947
+fix: Import with-selector with extension from useESE by @huozhi in https://github.com/vercel/swr/pull/1967
+fix: Bug fixes by @shuding in https://github.com/vercel/swr/pull/1968
+fix: Fix race conditions related to optimistic UI by @shuding in https://github.com/vercel/swr/pull/1970
+type: Extends useConfig cache interface by @promer94 in https://github.com/vercel/swr/pull/1938
+type: Fix type regressions by @promer94 in https://github.com/vercel/swr/pull/1966
+chore: Don't check unused vars with underscore prefix by @huozhi in https://github.com/vercel/swr/pull/1939
+chore: Upgrade to jest 28 by @huozhi in https://github.com/vercel/swr/pull/1942
+chore: Faster type checking by @shuding in https://github.com/vercel/swr/pull/1969
+chore: Fix codesanbox ci import error by @promer94 in https://github.com/vercel/swr/pull/1971
+
+New Contributors
+
+@chibicode made their first contribution in https://github.com/vercel/swr/pull/1961
+@sanjeev29 made their first contribution in https://github.com/vercel/swr/pull/1947
+
+Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.1...2.0.0-beta.3"
+20,"SWR 2.0 on its way! Check https://github.com/vercel/swr/releases/tag/2.0.0-beta.0 for the previous 2.0 beta updates.
+💖 Give feedback in discussion: https://github.com/vercel/swr/discussions/1932.
+Highlights
+New isLoading state (#1928)
+Previously, useSWR only returns a isValidating state, which is an indicator of both initial requests and automatic & manual revalidations.  It includes polling requests and focus revalidations, etc.
+But if you need to display an initial skeleton while loading the data, you will have to do something like
+js
+const isLoading = typeof data === 'undefined' && !error
+...which is a popular pattern in the community. In this case, isValidating doesn't help much.
+In this release, useSWR, useSWRInfinite and useSWRImmutable will return an extra isLoading state along with the isValidating state. They will fit to different scenarios:
+```jsx
+function Stock() {
+  const { data, isLoading, isValidating } = useSWR(STOCK_API, fetcher, {
+    refreshInterval: 3000
+  });
+// If it's still loading the initial data, there is nothing to display.
+  // We return a skeleton here.
+  if (isLoading) return ;
+// Otherwise, display the data and a spinner that indicates a background
+  // revalidation.
+  return (
+    <>
+      AAPL ${data}
+      {isValidating ?  : null}
+  
+  );
+}
+```
+In the example above, we display a skeleton while loading the data. After the data is loaded, we show a spinner next to the data whenever we are re-fetching (revalidating):
+
+You can find the full code for this example here: https://codesandbox.io/s/swr-isloading-v8dfpy.
+New keepPreviousData option (#1929)
+When doing data fetching based on continuous user actions, e.g. real-time search when typing, keeping the previous fetched data can improve the UX a lot.
+In SWR 2.0, there is now a keepPreviousData option to enable that behavior. Here's a simple search UI:
+```jsx
+function Search() {
+  const [search, setSearch] = React.useState('');
+const { data, isLoading } = useSWR(/search?q=${search}, fetcher, {
+    keepPreviousData: true
+  });
+return (
+    
+ setSearch(e.target.value)}
+        placeholder=""Search...""
+      />
+  <div className={isLoading ? ""loading"" : """"}>
+    {data?.products.map(item => <Product key={item.id} name={item.name} />)
+  </div>
+</div>
+
+);
+}
+```
+With keepPreviousData enabled, you will still get the previous data even if you change the SWR key and the data for the new key starts loading again. This improves the visual continuity quite a lot, the search feels smoother after flipping the switch:
+https://user-images.githubusercontent.com/3676859/163695903-a3eb1259-180e-41e0-821e-21c320201194.mp4
+You can find the full code for this example here: https://codesandbox.io/s/swr-keeppreviousdata-fsjz3m.
+Breakings
+Type InfiniteFetcher is renamed to SWRInfiniteFetcher (#1930)
+This type was already marked as deprecated in 1.x, and it now removed in this beta. If you are using it, please do the following change:
+diff
+- import { InfiniteFetcher } from 'swr/infinite'
++ import { SWRInfiniteFetcher } from 'swr/infinite'
+What's Changed
+
+breaking: drop legacy types by @huozhi in https://github.com/vercel/swr/pull/1930
+feat: isLoading state and refactor the core by @shuding in https://github.com/vercel/swr/pull/1928
+feat: keepPreviousData option by @shuding in https://github.com/vercel/swr/pull/1929
+chore: refactoring by @shuding in https://github.com/vercel/swr/pull/1925
+fix: output mutation cjs bundle with named exports by @huozhi in https://github.com/vercel/swr/pull/1926
+
+Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.0...2.0.0-beta.1"
+21,"SWR 2.0 coming soon, and this is the first beta version! 
+Keep in mind that APIs might still change until the stable release. Documentation will also be updated once stable.
+💖 Give feedback in discussion: https://github.com/vercel/swr/discussions/1919.
+Highlights
+useSWRMutation — dedicated API for remote mutations, e.g. POST (#1450)
+Added in #1450, the new useSWRMutation hook covers all the use cases of:
+- Requests that change data on the remote side: such as POST, PUT, DELETE, etc.
+- Requests that need to be triggered manually, instead of automatically by SWR.
+- Passing extra argument to fetcher, when triggering a request.
+- Knowing the status of a mutation, similar to isValidating but for mutations.
+- A lot more...
+Here's a quick example of how it looks:
+```jsx
+import useSWRMutation from 'swr/mutation'
+async function sendRequest(url, { arg }) {
+  return fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(arg)
+  })
+}
+function App() {
+  const { trigger } = useSWRMutation('/api/user', sendRequest)
+return  {
+    trigger({ username: 'johndoe' })
+  }}>Create User
+}
+```
+In this example, the ""fetcher"", which is sendRequest, will receive the value { username: 'johndoe' } as the arg from the second parameter. The request will only be triggered when clicking the button.
+The new useSWRMutation hook is actually more powerful than this, it also supports:
+- Optimistic updates
+- Automatic error rollback
+- Detect and avoid race conditions between useSWR
+- Populate the cache of useSWR after mutation finishes
+- ...
+More examples to come.
+Breakings
+Fetcher no longer accepts multiple arguments (#1864)
+Previously, if the key is an array, the values will be passed to the fetcher function as arguments separately. In 2.0, the key will always be passed to the fetcher as is.
+Before:
+js
+// SWR 1.x
+useSWR([1, 2, 3], (a, b, c) => {
+  assert(a === 1)
+  assert(b === 2)
+  assert(c === 3)
+})
+After 2.0.0:
+js
+// SWR 2.0.0
+useSWR([1, 2, 3], (a) => {
+  assert(a === [1, 2, 3])
+})
+Internal structure of the cached data (#1863)
+This change affects the code that directly reads/writes to the cache, or provides a cache preset. For example if you have something like cache.set(key, value), you'll have to update your code.
+Previously, the cached value of key will be the associated data, so this was guaranteed:
+js
+// SWR 1.x
+assert(cache.get(key) === data)
+And we keep other states (error, isValidating) with a special, prefixed key. Something like '$err$' + key.
+Since 2.0.0, the internal structure will be an object that holds all the current states:
+js
+// SWR 2.0.0
+assert(cache.get(key) === { data, error, isValidating })
+So you will have to do the following change to your code, get:
+diff
+- cache.get(key)
++ cache.get(key)?.data
+And set:
+diff
+- cache.set(key, data)
++ cache.set(key, { ...cache.get(key), data })
+What's Changed
+
+bugfix: make suspense and revalidateIfStale work together by @simowe in https://github.com/vercel/swr/pull/1851
+feat: support functional optimisticData by @huozhi in https://github.com/vercel/swr/pull/1861
+test: fix an act warning by @koba04 in https://github.com/vercel/swr/pull/1888
+breaking: Change the fetcher argument to be consistent with the passed key by @shuding in https://github.com/vercel/swr/pull/1864
+Keep all fields with one single key by @shuding in https://github.com/vercel/swr/pull/1863
+fix: wrong spell by @baojie223 in https://github.com/vercel/swr/pull/1902
+Update React 18 dependencies by @shuding in https://github.com/vercel/swr/pull/1824
+build(deps): bump minimist from 1.2.5 to 1.2.6 by @dependabot in https://github.com/vercel/swr/pull/1903
+type: make type inference simpler by @promer94 in https://github.com/vercel/swr/pull/1908
+type: fix type error on SWRConfig by @Himself65 in https://github.com/vercel/swr/pull/1913
+feat: Hook for remote mutations by @shuding in https://github.com/vercel/swr/pull/1450
+
+New Contributors
+
+@simowe made their first contribution in https://github.com/vercel/swr/pull/1851
+@baojie223 made their first contribution in https://github.com/vercel/swr/pull/1902
+@Himself65 made their first contribution in https://github.com/vercel/swr/pull/1913
+
+Full Changelog: https://github.com/vercel/swr/compare/1.2.2...2.0.0-beta.0"
+22,"What's Changed
+
+type: fix type error on SWRConfig by @Himself65 in #1913
+chore: update React 18 dependencies by @shuding in #1824
+test: fix an act warning by @koba04 in #1888
+feat: support functional optimisticData by @huozhi in #1861
+bugfix: make suspense and revalidateIfStale work together by @simowe in #1851
+
+Full Changelog: https://github.com/vercel/swr/compare/1.2.2...1.3.0"
+23,"Highlights of This Release
+populateCache Option Now Supports Function
+We added better Optimistic UI support in v1.2.0. However, what if your API is only returning a subset of the data (such as the mutated part), that can be populated into the cache? Usually, an extra revalidation after that mutation is needed. But now you can also use a function as populateCache to transform the mutate result into the full data:
+js
+await mutate(addTodo(newTodo), {
+  optimisticData: [...data, newTodo],
+  rollbackOnError: true,
+  populateCache: (addedTodo, currentData) => {
+    // `addedTodo` is what the API returns. It's not
+    // returning a list of all current todos but only
+    // the new added one.
+    // In this case, we can transform the mutate result
+    // together with current data, into the new data
+    // that can be updated.
+    return [...currentData, addedTodo];
+  },
+  // Since the API already gives us the updated information,
+  // we don't need to revalidate here.
+  revalidate: false,
+});
+The new definition:
+ts
+populateCache?: boolean | ((mutationResult: any, currentData: Data) => Data)
+Here is a demo for it: https://codesandbox.io/s/swr-basic-forked-hi9svh
+Bug Fixes
+What's Changed
+
+refactor: revalidateIfStale has an effect on updates, not only mounting by @koba04 in https://github.com/vercel/swr/pull/1837
+fix: reset stale unmountedRef in suspense by @promer94 in https://github.com/vercel/swr/pull/1843
+test: add a test for the behavior of revalidateOnMount when the key has been changed by @koba04 in https://github.com/vercel/swr/pull/1847
+feat: Support populateCache as a function by @shuding in https://github.com/vercel/swr/pull/1818
+
+Full Changelog: https://github.com/vercel/swr/compare/1.2.1...1.2.2"
+24,"Highlights of This Release
+shouldRetryOnError accepts a function
+Previously shouldRetryOnError is either true or false. Now it accepts a function that conditionally determines if SWR should retry. Here's a simple example:
+```js
+const fetcher = url => fetch(url).then(res => {
+  // Fetcher throws if the response code is not 2xx.
+  if (!res.ok) throw res
+  return res.json()
+})
+useSWR(key, fetcher, {
+  shouldRetryOnError: (error) => {
+    // We skip retrying if the API is returning 404:
+    if (error.status === 404) return false
+    return true
+  }
+})
+```
+Thanks to @sairajchouhan for contributing!
+What's Changed
+
+shouldRetryOnError accepts a function that can be used to conditionally stop retrying   by @sairajchouhan in https://github.com/vercel/swr/pull/1816
+build(deps-dev): bump next from 12.0.8 to 12.0.9 by @dependabot in https://github.com/vercel/swr/pull/1821
+fix: useSWRInfinite revalidates with revalidateOnMount by @koba04 in https://github.com/vercel/swr/pull/1830
+
+New Contributors
+
+@sairajchouhan made their first contribution in https://github.com/vercel/swr/pull/1816
+
+Full Changelog: https://github.com/vercel/swr/compare/1.2.0...1.2.1"
+25,"Highlights of This Release
+Optimistic Updates with Auto Error Rollback
+There are now some new options in mutate:
+js
+mutate(patchUser(user), {
+  optimisticData: user,
+  populateCache: true,
+  rollbackOnError: true,
+  revalidate: true,
+})
+Here the cache will be immediately updated to user, the “optimistic value”. And then a request (remote mutation) is started via patchUser(user) and the response will be written to the cache. If that request fails, the original result will be rolled back safely so the optimistic value will be gone. And after all those finish, a revalidation will start to fetch the latest value.
+This is extremely helpful for building the optimistic UI pattern.
+You can do the same for the global mutate, just remember to pass the key. Also, the current mutate APIs stay unchanged so mutate(data, false) works the same.
+Here's an example: https://codesandbox.io/s/swr-basic-forked-k5hps.
+https://user-images.githubusercontent.com/3676859/151381238-f3aba769-91b6-4bfc-9285-df1b9ef51773.mp4
+.mjs Support
+SWR now has .mjs exported for bundlers that prefer this format.
+This doesn’t break environments that don’t support .mjs. An alternative .esm.js and CJS bundle are also published.
+You can read more about ES modules here.
+What's Changed
+
+feat: Optimistic mutation with error rollback by @shuding in https://github.com/vercel/swr/pull/1745
+fix: Required return type when mutating by @RKatarine in https://github.com/vercel/swr/pull/1772
+fix: use the latest reference of fetcher with suspense mode by @koba04 in https://github.com/vercel/swr/pull/1803
+test: add delay for flaky focus test by @huozhi in https://github.com/vercel/swr/pull/1762
+test: remove flaky focus test case by @huozhi in https://github.com/vercel/swr/pull/1793
+test: use @swc/jest by @huozhi in https://github.com/vercel/swr/pull/1790
+chore: Ignore coverage report by @shuding in https://github.com/vercel/swr/pull/1744
+chore: Merge mutation states by @shuding in https://github.com/vercel/swr/pull/1748
+chore: Rename CONCURRENT_REQUESTS to FETCH by @shuding in https://github.com/vercel/swr/pull/1749
+chore: Merge extra request states in cache by @shuding in https://github.com/vercel/swr/pull/1752
+chore: support mjs exports by @huozhi in https://github.com/vercel/swr/pull/1760
+chore: remove useless react-native field by @huozhi in https://github.com/vercel/swr/pull/1761
+chore: comment helper by @huozhi in https://github.com/vercel/swr/pull/1757
+chore: display name in devtool by @huozhi in https://github.com/vercel/swr/pull/1779
+chore: simplify example development by @huozhi in https://github.com/vercel/swr/pull/1787
+chore: build: improve watch commands by @huozhi in https://github.com/vercel/swr/pull/1788
+chore: Update examples and dependencies by @shuding in https://github.com/vercel/swr/pull/1789
+chore: zeit -> vercel by @huozhi in https://github.com/vercel/swr/pull/1791
+chore: Clean up configurations by @shuding in https://github.com/vercel/swr/pull/1792
+chore: move community health files to .github dir by @huozhi in https://github.com/vercel/swr/pull/1794
+chore: Add link to security email directly by @huozhi in https://github.com/vercel/swr/pull/1795
+
+New Contributors
+
+@RKatarine made their first contribution in https://github.com/vercel/swr/pull/1772
+
+Full Changelog: https://github.com/vercel/swr/compare/1.1.2...1.2.0"
+26,"What's Changed
+
+doc: comment helper by @huozhi in https://github.com/vercel/swr/pull/1757
+build: support mjs exports by @huozhi in https://github.com/vercel/swr/pull/1760
+chore: remove useless react-native field by @huozhi in https://github.com/vercel/swr/pull/1761
+test: add delay for flaky focus test by @huozhi in https://github.com/vercel/swr/pull/1762
+Required return type when mutating by @RKatarine in https://github.com/vercel/swr/pull/1772
+polish: display name in devtool by @huozhi in https://github.com/vercel/swr/pull/1779
+
+New Contributors
+
+@RKatarine made their first contribution in https://github.com/vercel/swr/pull/1772
+
+Full Changelog: https://github.com/vercel/swr/compare/1.1.2...1.2.0-beta.1"
+27,"Highlights of This Release
+Dedicated API for Optimistic Updates with Auto Rollback on Error
+There are now some new options in mutate:
+js
+mutate(patchUser(user), {
+  optimisticData: user,
+  populateCache: true,
+  rollbackOnError: true,
+  revalidate: true,
+})
+Here the cache will be immediately updated to user, the “optimistic value”. And then a request (remote mutation) is started via patchUser(user) and the response will be written to the cache. If that request fails, the original result will be rolled back safely so the optimistic value will be gone. And after all those finish, a revalidation will start to fetch the latest value.
+This is extremely helpful for building the optimistic UI pattern.
+You can do the same for the global mutate, just remember to pass the key. Also, the current mutate APIs stay unchanged so mutate(data, false) works the same.
+Here's an example: https://codesandbox.io/s/swr-basic-forked-k5hps.
+What's Changed
+
+feat: Optimistic mutation with error rollback by @shuding in https://github.com/vercel/swr/pull/1745
+chore: Ignore coverage report by @shuding in https://github.com/vercel/swr/pull/1744
+chore: Merge mutation states by @shuding in https://github.com/vercel/swr/pull/1748
+chore: Rename CONCURRENT_REQUESTS to FETCH by @shuding in https://github.com/vercel/swr/pull/1749
+Merge extra request states in cache by @shuding in https://github.com/vercel/swr/pull/1752
+
+Full Changelog: https://github.com/vercel/swr/compare/1.1.2...1.2.0-beta.0"
+28,"Highlights of This Release
+Use the Latest Fetcher Function
+SWR will now use the latest fetcher function passed to the hook, when sending the request. Previously it uses the initial snapshotted fetcher.
+Avoid Unnecessary Auto Revalidations
+When refocusing on the window with state changes (like clicking a button that changes the SWR key immediately), SWR now avoids revalidations if they're not necessary. Details can be found in #1720.
+New Types for useSWRInfinite
+Two types for useSWRInfinite are added: SWRInfinteHook and SWRInfinteKeyLoader. You can use them to type the hook and the getKey function.
+New populateCache option for mutate
+A new option to control if the mutation data should be written to the cache. You can find the details in #1729.
+What's Changed
+
+Make polyfill for requestAnimationFrame more robust by @thomaspaulmann in https://github.com/vercel/swr/pull/1707
+type(infinite): export SWRInfinteHook and SWRInfiniteKeyLoader from infinite, rename InfiniteFetcher to SWRInfiniteFetcher by @houkanshan in https://github.com/vercel/swr/pull/1714
+feat: Ensure auto revalidations are executed after state updates by @shuding in https://github.com/vercel/swr/pull/1720
+Add moduleNameMapper to jest by @shuding in https://github.com/vercel/swr/pull/1724
+Improve test by @promer94 in https://github.com/vercel/swr/pull/1725
+feat: Use the latest reference of fetcher by @shuding in https://github.com/vercel/swr/pull/1727
+fix: Re-export InfiniteFetcher by @shuding in https://github.com/vercel/swr/pull/1728
+feat: Add populateCache option to mutate by @shuding in https://github.com/vercel/swr/pull/1729
+Fix local state sharing example deps by @huozhi in https://github.com/vercel/swr/pull/1737
+Merge states for concurrent requests by @shuding in https://github.com/vercel/swr/pull/1741
+Skip error retrying when document is not active and improve tests by @shuding in https://github.com/vercel/swr/pull/1742
+
+New Contributors
+
+@thomaspaulmann made their first contribution in https://github.com/vercel/swr/pull/1707
+@houkanshan made their first contribution in https://github.com/vercel/swr/pull/1714
+
+Full Changelog: https://github.com/vercel/swr/compare/1.1.1...1.1.2"
+29,"Highlights of This Release
+1. More Tests and Better Code Coverage
+We now have 23 test suits of 202 total test cases, with a 98.06% test coverage. The core files and main functionalities are now 100% covered. Kudos to @promer94 for improving it!
+2. Use the Latest Fetcher Function
+SWR will now use the latest fetcher function passed to the hook, when sending the request. Previously it uses the initial snapshotted fetcher.
+3. Avoid Unnecessary Auto Revalidations
+When refocusing on the window with state changes (like clicking a button that changes the SWR key immediately), SWR now avoids revalidations if they're not necessary. Details can be found in #1720.
+4. New Types for useSWRInfinite
+Two types for useSWRInfinite are added: SWRInfinteHook and SWRInfinteKeyLoader. You can use them to type the hook and the getKey function.
+What's Changed
+
+type(infinite): export SWRInfinteHook and InfiniteKeyLoader from infinite by @houkanshan in https://github.com/vercel/swr/pull/1714
+feat: Ensure auto revalidations are executed after state updates by @shuding in https://github.com/vercel/swr/pull/1720
+Add moduleNameMapper to jest by @shuding in https://github.com/vercel/swr/pull/1724
+Improve test by @promer94 in https://github.com/vercel/swr/pull/1725
+feat: Use the latest reference of fetcher by @shuding in https://github.com/vercel/swr/pull/1727
+
+New Contributors
+
+@houkanshan made their first contribution in https://github.com/vercel/swr/pull/1714
+
+Full Changelog: https://github.com/vercel/swr/compare/1.1.2-beta.0...1.1.2-beta.1"
+30,"What's Changed
+
+Make polyfill for requestAnimationFrame more robust by @thomaspaulmann in https://github.com/vercel/swr/pull/1707
+
+New Contributors
+
+@thomaspaulmann made their first contribution in https://github.com/vercel/swr/pull/1707
+
+Full Changelog: https://github.com/vercel/swr/compare/1.1.1...1.1.2-beta.0"
+31,"Highlights of This Release
+Dynamic refreshInterval
+You can now pass a function as refreshInterval, to dynamically return the interval (in millisecond) til the next request, based on the current data:
+typescript
+useSWR('key', fetcher, {
+  refreshInterval: function (data: Data | undefined) {
+    if (!data) return 3000 // Initial request 
+    return data.next_update
+  }
+})
+If return 0, polling will be stopped.
+What's Changed
+
+feat: refreshInterval as a function by @Andrewnt219 in https://github.com/vercel/swr/pull/1690
+test: add refreshInterval function returns 0 by @Andrewnt219 in https://github.com/vercel/swr/pull/1691
+fix: If newData is deeply to the latest state, broadcast the latest state by @icyJoseph in https://github.com/vercel/swr/pull/1697
+fix: Return undefined data if key's falsy under suspense mode by @icyJoseph in https://github.com/vercel/swr/pull/1698
+
+New Contributors
+
+@Andrewnt219 made their first contribution in https://github.com/vercel/swr/pull/1690
+@icyJoseph made their first contribution in https://github.com/vercel/swr/pull/1697
+
+Full Changelog: https://github.com/vercel/swr/compare/1.1.0...1.1.1"
+32,"Highlights for This Release
+1. Built-in & stable serialization for SWR keys
+js
+useSWR({ query: graphql`...`, variables }, fetcher)
+useSWR({ query: graphql`...`, variables }, fetcher)
+useSWR({ variables, query: graphql`...` }, fetcher)
+// ^all recognized as the same resource
+For array keys too, it's safe to do the following:
+js
+useSWR([ `...`, { variables } ], fetcher)
+2. revalidateFirstPage for useSWRInfinite
+This is a new added option for useSWRInfinite (defaults to true), you can use it to control if the first page should be revalidated when changing the size or doing a mutation.
+3. Better TypeScript support
+
+Key / arguments
+Conditional / dependent
+Constant keys
+Returned data
+
+
+What's Changed
+
+Feature: make return state(data, error and isValidating) readonly by @anirudh1713 in https://github.com/vercel/swr/pull/1431
+Stable hash by @shuding in https://github.com/vercel/swr/pull/1429
+test: add render utilities and remove TestSWRConfig by @koba04 in https://github.com/vercel/swr/pull/1435
+Revert ""Feature: make return state(data, error and isValidating) readonly"" by @huozhi in https://github.com/vercel/swr/pull/1443
+Fix initial isValidating when isPaused() returns true by @anothertempore in https://github.com/vercel/swr/pull/1440
+build: no emit on error by @huozhi in https://github.com/vercel/swr/pull/1446
+chore: remove unused typings by @huozhi in https://github.com/vercel/swr/pull/1448
+enhance: provider release handlers by @huozhi in https://github.com/vercel/swr/pull/1449
+test: refactor use-swr-cache-test by @koba04 in https://github.com/vercel/swr/pull/1442
+Chore: refactor code related to unsubscribing global listeners by @shuding in https://github.com/vercel/swr/pull/1451
+Chore: code refactoring for swr/infinite by @shuding in https://github.com/vercel/swr/pull/1452
+test: refactor concurrent rendering tests by @koba04 in https://github.com/vercel/swr/pull/1457
+test: refactor config tests by @koba04 in https://github.com/vercel/swr/pull/1458
+Revert ""feat: add a warning for invalid arguments with suspense mode … by @koba04 in https://github.com/vercel/swr/pull/1460
+test: refactor mutation tests by @koba04 in https://github.com/vercel/swr/pull/1459
+fix: Support IE11 by @amannn in https://github.com/vercel/swr/pull/1463
+test: refactor immutable and infinite hook tests by @koba04 in https://github.com/vercel/swr/pull/1466
+chore: Add React 18 to peerDependencies by @shuding in https://github.com/vercel/swr/pull/1467
+test: refactor integration and loading tests by @koba04 in https://github.com/vercel/swr/pull/1473
+test: refactor key, middlewares, and suspense tests by @koba04 in https://github.com/vercel/swr/pull/1474
+test: refactor offline and refresh tests by @koba04 in https://github.com/vercel/swr/pull/1483
+build(deps): bump tmpl from 1.0.4 to 1.0.5 by @dependabot in https://github.com/vercel/swr/pull/1484
+Upgrade typescript to 4.4.3 by @huozhi in https://github.com/vercel/swr/pull/1486
+chore: Code refactoring by @shuding in https://github.com/vercel/swr/pull/1482
+ci: multiple dir type checking by @huozhi in https://github.com/vercel/swr/pull/1492
+Type useSWR fetcher by @promer94 in https://github.com/vercel/swr/pull/1477
+chore: Improve project file structure by @shuding in https://github.com/vercel/swr/pull/1497
+chore: Refine type interfaces by @shuding in https://github.com/vercel/swr/pull/1496
+chore: Upgrade eslint and add local cache by @shuding in https://github.com/vercel/swr/pull/1499
+fix: Invalidate the key when mutating without revalidating by @shuding in https://github.com/vercel/swr/pull/1498
+example: add ref checking condition by @huozhi in https://github.com/vercel/swr/pull/1504
+fix: Refactor core revalidate function and fix isValidating state bug by @shuding in https://github.com/vercel/swr/pull/1493
+chore: remove duplicate configs by @huozhi in https://github.com/vercel/swr/pull/1507
+typing: fix-type-generation by @promer94 in https://github.com/vercel/swr/pull/1509
+chroe: use yalc for local development by @promer94 in https://github.com/vercel/swr/pull/1508
+chore: Code refactoring by @shuding in https://github.com/vercel/swr/pull/1521
+feat: Add new onDiscarded option by @shuding in https://github.com/vercel/swr/pull/1523
+fix: Error events should be deduplicated by @shuding in https://github.com/vercel/swr/pull/1522
+chore: Output test code coverage by @shuding in https://github.com/vercel/swr/pull/1511
+chore: Mark returned states and mutate callback argument as readonly by @shuding in https://github.com/vercel/swr/pull/1514
+test: Add tests for reconnect and merge-config by @shuding in https://github.com/vercel/swr/pull/1530
+fix: Only trigger the success event if not discarded by @shuding in https://github.com/vercel/swr/pull/1529
+chore: Code refactoring by @shuding in https://github.com/vercel/swr/pull/1533
+Add revalidateFirstPage option to swr/infinite (#1401) by @timas130 in https://github.com/vercel/swr/pull/1538
+fix: Reusing cache provider by @shuding in https://github.com/vercel/swr/pull/1539
+chore: fix ts comments by @huozhi in https://github.com/vercel/swr/pull/1540
+fix: Ensure mutate accepts undefined as the data by @shuding in https://github.com/vercel/swr/pull/1515
+chore: Fix comment and startAt type by @shuding in https://github.com/vercel/swr/pull/1541
+chore: Refactor cleanupState by @shuding in https://github.com/vercel/swr/pull/1544
+feat: using latest version of axios with fetch interceptor by @danestves in https://github.com/vercel/swr/pull/1548
+test: Add test case for mutation deduplication by @shuding in https://github.com/vercel/swr/pull/1549
+test: speed up with @swc-node/jest by @huozhi in https://github.com/vercel/swr/pull/1569
+chore: Optimizations by @shuding in https://github.com/vercel/swr/pull/1578
+fix react-native issue by @aFINKndreas in https://github.com/vercel/swr/pull/1583
+fix: Support for functions that return false by @TakahiroHimi in https://github.com/vercel/swr/pull/1586
+fix: adds undefined as valid Key type to allow falsy Key or Key() by @morgs32 in https://github.com/vercel/swr/pull/1594
+fix: can't find variable removeEventListener by @zhaomengfan in https://github.com/vercel/swr/pull/1595
+Revert ""chore: Mark returned states and mutate callback argument as readonly"" by @shuding in https://github.com/vercel/swr/pull/1570
+fix: change config alteration process in withMiddleware to be immutable by @junsushin-dev in https://github.com/vercel/swr/pull/1556
+fix: Allow empty mutate argument list for infinite by @shuding in https://github.com/vercel/swr/pull/1602
+chore: Add type: ""module"" and use .mjs extension by @shuding in https://github.com/vercel/swr/pull/1604
+Revert ""chore: Add type: ""module"" and use .mjs extension (#1604)"" by @huozhi in https://github.com/vercel/swr/pull/1618
+enhance: bind removeEventListener by @huozhi in https://github.com/vercel/swr/pull/1596
+fix: typos by @nguyenyou in https://github.com/vercel/swr/pull/1647
+build: output without minification by @huozhi in https://github.com/vercel/swr/pull/1650
+Tweak types by @promer94 in https://github.com/vercel/swr/pull/1640
+fix: supports ssr in ie11(#1657) by @Sh031224 in https://github.com/vercel/swr/pull/1659
+type: disbale inference when data generic is provided by @promer94 in https://github.com/vercel/swr/pull/1658
+chore: rename major branch to main by @huozhi in https://github.com/vercel/swr/pull/1664
+fix keyloader index and previousPageData type by @promer94 in https://github.com/vercel/swr/pull/1669
+Add defaults for SWRResponse by @TakahiroHimi in https://github.com/vercel/swr/pull/1609
+example: update typescript examples with strict ts mode by @huozhi in https://github.com/vercel/swr/pull/1673
+chore: upgrade eslint to v8 and prettier to v2 by @huozhi in https://github.com/vercel/swr/pull/1674
+fix: remove unnecessary async by @Cut0 in https://github.com/vercel/swr/pull/1676
+types: remove duplicated typing def by @huozhi in https://github.com/vercel/swr/pull/1675
+chore: Add test case for getKey in useSWRInfinite by @shuding in https://github.com/vercel/swr/pull/1681
+
+New Contributors
+
+@willheslam made their first contribution in https://github.com/vercel/swr/pull/1393
+@louisgv made their first contribution in https://github.com/vercel/swr/pull/1406
+@origin-master made their first contribution in https://github.com/vercel/swr/pull/1409
+@anirudh1713 made their first contribution in https://github.com/vercel/swr/pull/1431
+@amannn made their first contribution in https://github.com/vercel/swr/pull/1463
+@timas130 made their first contribution in https://github.com/vercel/swr/pull/1538
+@danestves made their first contribution in https://github.com/vercel/swr/pull/1548
+@aFINKndreas made their first contribution in https://github.com/vercel/swr/pull/1583
+@TakahiroHimi made their first contribution in https://github.com/vercel/swr/pull/1586
+@zhaomengfan made their first contribution in https://github.com/vercel/swr/pull/1595
+@junsushin-dev made their first contribution in https://github.com/vercel/swr/pull/1556
+@nguyenyou made their first contribution in https://github.com/vercel/swr/pull/1647
+@Sh031224 made their first contribution in https://github.com/vercel/swr/pull/1659
+@Cut0 made their first contribution in https://github.com/vercel/swr/pull/1676
+
+Full Changelog: https://github.com/vercel/swr/compare/1.0.1...1.1.0"
+33,"Patches
+
+Chore: rename major branch to main: #1664
+Fix keyloader index and previousPageData type: #1669
+Fix: Add defaults for SWRResponse: #1609
+
+Credits
+Huge thanks to @huozhi, @promer94, and @TakahiroHimi for helping!"
+34,"Patches
+
+Fix: supports ssr in ie11(#1657): #1659
+Type: disbale inference when data generic is provided: #1658
+
+Credits
+Huge thanks to @Sh031224 and @promer94 for helping!"
+35,"Minor Changes
+
+Build: output without minification: #1650
+Tweak types: #1640
+
+Patches
+
+Fix: typos: #1647
+
+Credits
+Huge thanks to @promer94, @huozhi, and @nguyenyou for helping!"
+36,"Minor Changes
+
+Revert ""chore: Add type: ""module"" and use .mjs extension"" (#1618): #1604
+
+Patches
+
+Enhance: bind removeEventListener: #1596
+
+Credits
+Huge thanks to @huozhi for helping!"
+37,"Patches
+
+Chore: Add type: ""module"" and use .mjs extension: #1604
+"
+38,"Minor Changes
+
+Fix: Support for functions that return false: #1586
+Fix: adds undefined as valid Key type to allow falsy Key or Key(): #1594
+Revert ""mark data and error as readonly "" (#1570): #1514
+
+Patches
+
+Fix react-native issue: #1583
+Fix: compatible with miniprogram: #1595
+Change config alteration process in withMiddleware to be immutable: #1556
+Fix mutate argument for infinite: #1602
+
+Credits
+Huge thanks to @TakahiroHimi, @morgs32, @aFINKndreas, @zhaomengfan, and @junsushin-dev for helping!"
+39,"Patches
+
+Small fixes: #1541
+Chore: Refactor cleanupState: #1544
+Feat: using latest version of axios with fetch interceptor: #1548
+Test: Add test case for mutation deduplication: #1549
+Test: speed up with @swc-node/jest: #1569
+Optimizations: #1578
+
+Credits
+Huge thanks to @danestves and @huozhi for helping!"
+40,"Minor Changes
+
+Mark data and error as readonly: #1514
+Add revalidateFirstPage option to infinite: #1538
+
+Patches
+
+Output code coverage: #1511
+Test: Add tests for reconnect and merge-config: #1530
+Fix: Only trigger the success event if not discarded: #1529
+Chore: Code refactoring: #1533
+Fix: Reusing cache provider: #1539
+Chore: fix ts comments: #1540
+Fix: Ensure mutate accepts undefined as the data: #1515
+
+Credits
+Huge thanks to @timas130 and @huozhi for helping!"
+41,"Minor Changes
+
+Feat: Add new onDiscarded option: #1523
+
+Patches
+
+Chore: Code refactoring: #1521
+Fix error events not deduped: #1522
+"
+42,"Patches
+
+Fix: Invalidate the key when mutating without revalidating: #1498
+Example: add ref checking condition: #1504
+Fix: Refactor core revalidate function and fix isValidating state bug: #1493
+Chore: Remove duplicate configs: #1507
+Typing: fix-type-generation: #1509
+Chroe: use yalc for local development: #1508
+
+Credits
+Huge thanks to @huozhi and @promer94 for helping!"
+43,"Minor Changes
+
+Type useSWR fetcher: #1477
+
+Patches
+
+Ci: multiple dir type checking: #1492
+Chore: Improve project file structure: #1497
+Chore: Refine type interfaces: #1496
+Chore: Upgrade eslint and add local cache: #1499
+
+Credits
+Huge thanks to @promer94 and @huozhi for helping!"
+44,"Minor Changes
+
+Add react 18 to peerDependencies: #1467
+Upgrade typescript to 4.4.3: #1486
+
+Patches
+
+Test: refactor immutable and infinite hook tests: #1466
+Test: refactor integration and loading tests: #1473
+Test: refactor key, middlewares, and suspense tests: #1474
+Test: refactor offline and refresh tests: #1483
+Build(deps): bump tmpl from 1.0.4 to 1.0.5: #1484
+Chore: Code refactoring: #1482
+
+Credits
+Huge thanks to @huozhi and @koba04 for helping!"
+45,"Minor Changes
+
+Should treat key change as remount: #1430
+Stable hash: #1429
+Enhance: provider release handlers: #1449
+
+Patches
+
+Test: add tests for a global cache: #1421
+Chore: always use config ref: #1397
+Typing: use separated constants instead of enum: #1425
+Test: add render utilities and remove TestSWRConfig: #1435
+Fix initial isValidating when isPaused() returns true: #1440
+Build: no emit on error: #1446
+Chore: remove unused typings: #1448
+Test: refactor use-swr-cache-test: #1442
+Refactor code related to unsubscribing global listeners: #1451
+Chore: refactor infinite: #1452
+Test: refactor concurrent rendering tests: #1457
+Test: refactor config tests: #1458
+Revert ""feat: add a warning for invalid arguments with suspense mode "" (#1460): #1402
+Test: refactor mutation tests: #1459
+Fix: Support IE11: #1463
+
+Credits
+Huge thanks to @huozhi, @koba04, @anirudh1713, @anothertempore, and @amannn for helping!"
+46,"Pre-releases
+
+https://github.com/vercel/swr/releases/tag/1.0.1-beta.0
+https://github.com/vercel/swr/releases/tag/1.0.1-beta.1
+"
+47,"Minor Changes
+
+Should treat key change as remount: #1430
+
+Patches
+
+Test: add tests for a global cache: #1421
+Chore: always use config ref: #1397
+Typing: use separated constants instead of enum: #1425
+
+Credits
+Huge thanks to @koba04 and @huozhi for helping!"
+48,"Minor Changes
+
+Feat: add a warning for invalid arguments with suspense mode: #1402
+Export KeyedMutator type from root export: #1406
+
+Patches
+
+Fix typo in test: #1393
+Chore: remove isomorphic-unfetch from examples: #1389
+Chore: bump swr to latest in examples: #1394
+Fix: isValidating when an error occurred: #1396
+Fix: useSWRConfig is exported as () => any type: #1409
+Fix: isValidating cache inconsistence in mutatation: #1411
+Refactor: use TestSWRConfig for error-test: #1404
+
+Credits
+Huge thanks to @louisgv, @willheslam, @koba04, @huozhi, and @origin-master for helping!"
+49,"Minor Changes & Breaking Changes
+See full changes of this major & previous beta updates on the Releases page. Also read our blog post and migration guide: https://swr.vercel.app/blog/swr-v1.
+Patches
+
+Chore: add test to ensure the unserialized key is passed to middleware: #1384
+Chore(examples): update all examples to use v1: #1385
+
+Credits
+Huge thanks to @koba04 for helping!"
+50,"Patches
+
+Doc: update fallbackData usage examples: #1380
+Fix bound mutate: #1383
+
+Credits
+Huge thanks to @huozhi and @karaggeorge for helping!"
+51,"Patches
+
+Chore: add test for callback setSize: #1373
+Fix: cache is missing on server side: #1377
+Rm deprecated warning: #1374
+Add basic test for node env: #1378
+[Infinite] Return current data if failed to resolve pages from cache when setting size: #1379
+Rename revalidateWhenStale: #1381
+
+Credits
+Huge thanks to @huozhi for helping!"
+52,"Major Changes
+
+New useSWRConfig API and remove createCache: #1361
+Rename middlewares option to use: #1368
+Rename fallbackValues to fallback; rename initialData to fallbackData: #1370
+
+Minor Changes
+
+Replace Object.defineProperties with getter: #1371
+Update README and CONTRIBUTING: #656
+
+Patches
+
+Improve tests for cache provider: #1369
+
+Credits
+Huge thanks to @huozhi and @pacocoursey for helping!"
+53,"Patches
+
+Add beta publish script: #1351
+Fix: isValidating should be false when no fetcher is provided: #1352
+Upgrade bunchee, dedupe yarn lock: #1358
+Reverse middleware order: #1360
+
+Credits
+Huge thanks to @huozhi for helping!"
+54,"Minor Changes
+
+Export unstable_serialize from SWR: #1337
+
+Patches
+
+Fix type of MutatorCallback: #1342
+Improvement: return stale data then revalidate when setting size of useSWRInfinite: #1343
+Lint-staged: remove lint, fix prettier: #1347
+Local devdelopment with examples: #1330
+Fix: alias swr in next client bundle on dev mode: #1349
+Refactor code structure: #1350
+
+Credits
+Huge thanks to @huozhi for helping!"
+55,"Major Changes
+
+BREAKING: Deprecate revalidate with mutate: #1332
+
+Minor Changes
+
+Improvement: ensure useSWRInfinite reuses useSWR cache: #1341
+
+Patches
+
+Code refactoring: #1307
+Add package.json to module exports: #1313
+Fix config being ignored when fetcher is null: #1311
+Reset cache between tests: #1309
+Refine the infinite hook: #1315
+Test: add a test for getInfiniteKey with current data: #1319
+Update bunchee 1.6.2: #1323
+Chore: update useSWRInfinite import: #1326
+Upgrade bunchee, reduce node_modules size: #1329
+Build(deps): bump path-parse from 1.0.6 to 1.0.7: #1334
+
+Credits
+Huge thanks to @huozhi, @heysailor, @koba04, and @eric-hc for helping!"
+56,"Major Changes
+
+Move infinite types to swr/infinite and deprecate old ones: #1272
+Drop legacy types: #1276
+Breaking: drop the default fetcher: #1304
+
+Minor Changes
+
+Feat: add getInfiniteKey to mutate the cache for useSWRInfinite: #1257
+Rename isDocumentVisible to isVisible: #1308
+
+Patches
+
+Fix types generate: #1266
+Add test case that covers #1286: #1297
+Enhance: simplify deno detection: #1299
+Refine createCache: #1283
+Fix useSWRInfinite doesn't revalidate the first page: #1301
+Code structure refactoring: #1303
+
+Credits
+Huge thanks to @huozhi and @koba04 for helping!"
+57,"Major Changes
+
+Sub-packages and immutable hook: #992
+
+Patches
+
+Add condition to check if window.addEventListener exists for React Native compatibility: #1234
+Chore: bump typescript to use ts-expect-error instead of ts-ignore: #1239
+Enhance: add $ prefix for non-major keys: #1174
+Fix: fail accessing navigator on Node: #1254
+Chore: fix to run the build script multiple times: #1255
+Test: run concurrent rendering tests with React v18 alpha: #1259
+Fix: ignore .d.ts in dist/ for ESLint: #1258
+Enhance: use ts for testing: #1260
+Chore: add watch scripts for sub packages to build them: #1261
+Fix typo in use-swr: #1267
+Chore: fix type SWRHookWithdMiddleware to SWRHookWithMiddleware: #1268
+
+Credits
+Huge thanks to @javascripter, @koba04, @huozhi, and @pa-rang for helping!"
+58,"Minor Changes
+
+Adopt bunchee as bundler: #1025
+Custom cache provider: #1017
+Middleware: #1160
+
+Patches
+
+Test: refactor use-swr-loading.test.tsx: #1057
+Test: refactor use-swr-local-mutation.test.tsx: #1059
+Fix #1056: #1058
+Test: refactor use-swr-offline.test.tsx: #1063
+Allow setting the generic on mutate(): #1069
+Read cache during render: #794
+Code refactoring: #1077
+Add --no-sourcemap: #1079
+Fix mutate: #1075
+Revert #1024: #1085
+Fix: race problem when in dedupingInterval: #1088
+Bug fixes: #1096
+Test: refactor use-swr-refresh.test.tsx: #1103
+Docs: optimistic UI examples comments more clearer: #1102
+Fix setting null cache in useSWRInfinite: #1110
+Test: refactor use-swr-revalidate.test.tsx: #1111
+Test: refactor use-swr-suspense.test.tsx: #1113
+Build: upragde bundler: #1121
+Replace deprecated types with latest types in axios-typescript example: #1128
+Add saveData to slowConnection: #1130
+Clean code: #1145
+Update bound mutate readme: #1127
+Code optimizations: #1150
+Enhance: support exports field: #1154
+Fix global mutate generic: #1159
+Build(deps): bump hosted-git-info from 2.8.5 to 2.8.9: #1164
+Enhance: upgrade ts lint config: #1169
+Build(deps): bump browserslist from 4.16.3 to 4.16.6: #1181
+Fix: autocomplete suggestions example: #1183
+Build(deps): bump ws from 7.4.2 to 7.4.6: #1184
+Update README.md: #1203
+Fix typo in placeholder: #1206
+Update package.json: #1205
+Build(deps): bump acorn from 6.3.0 to 6.4.2: #1210
+Build(deps): bump y18n from 4.0.0 to 4.0.3: #1209
+Build(deps): bump lodash from 4.17.19 to 4.17.21: #1208
+Build(deps): bump glob-parent from 5.1.0 to 5.1.2: #1207
+Add codeowner @huozhi: #1221
+
+Credits
+Huge thanks to @huozhi, @koba04, @promer94, @nstepien, @MoonBall, @mkrtchian, @eunsukimme, @Tak-Iwamoto, @meeoh, and @teinett for helping!"
+59,"Patches
+
+fix #1056: #1058
+
+Credits
+Huge thanks to @promer94 for helping!"
+60,"Patches
+
+Refactor: fix a react-hooks/exhaustive-deps warning: #1035
+Test: refactor use-swr-focus.test.tsx: #1036
+Test: refactor use-swr-infinite.test.tsx: #1039
+Export default SWR config to allow more flexible extensions: #1023
+Test: refactor use-swr-integration.test.tsx: #1049
+Fix: invalid invocation on raf: #1051
+Types: expose KeyLoader: #1054
+Test: refactor use-swr-key.test.tsx: #1055
+
+Credits
+Huge thanks to @koba04, @jakubriedl, and @huozhi for helping!"
+61,"Patches
+
+Fix dequal vendor: #1027
+Test: refactor tests for configs: #1006
+Test: refactor use-swr-error.test.tsx: #1031
+Micro optimizations: #1018
+Fix: support multiple useSWRInfinite hooks in a page: #1009
+
+Credits
+Huge thanks to @promer94 and @koba04 for helping!"
+62,"Patches
+
+Fix: revalidate with initialData when changing the key: #961
+Update CODEOWNERS: dd1bcf99daeacb167b31a7da9547c39ae4452d95
+Allow passing undefined config: #1022
+Make swr zero dependency: #1024
+
+Credits
+Huge thanks to @koba04 and @huozhi for helping!"
+63,"Minor Changes
+
+Types: makes types fn and config and getKey more strictly: #946
+Fix: do not cache when mutate throws an error synchronously: #977
+Perf: avoid unnecessary re-renders with the suspense mode: #979
+Fix: do not depend on navigator.onLine; code optimizations: #1004
+Fix: sync mutations are applied independently: #1003
+Fix: sync cache only on compare returns true: #907
+Optimize isValidating status: #967
+Clean up types: #1016
+Enable typescript strict mode: #1010
+
+Patches
+
+Update README.md: #974
+Refactor: move DOM event handlers into web-preset: #972
+Add-infinite-scroll-example: #970
+Refactor: add the register prefix to onFocus and onReconnect: #993
+Add example using useSWRInfinite: #968
+Test: refactor use-swr-cache.test.tsx: #932
+Using vite2 and add playground to master: #995
+Test: refactor use-swr-config-callbacks.test.tsx: #933
+Keep old esm directory structure: #1011
+
+Credits
+Huge thanks to @koba04, @huozhi, @Kexin-Li, @promer94, @dingran, and @ramyareye for helping!"
+64,"Patches
+
+Chore: add comments that revalidate will be deprecated: #937
+Remove legacy useSWRPages types: #938
+Test: fix flaky tests for focus and location mutation: #944
+Refactor: rename from waitForDedupingInterval to waitForNextTick: #960
+Fix: checking if document is defined: #963
+
+Credits
+Huge thanks to @koba04 for helping!"
+65,"Patches
+
+Enhance: let config.isPaused works with react state: #871
+Fix: add protection for navigator: #877
+Ci: add GitHub Actions for CI: #879
+Ci: remove Travis CI: #887
+Docs: add isPaused() into the options: #888
+Update default fetcher documentation in README.md: #891
+Fix: revalidateOnFocus not working on '< iOS 14': #889
+Refactor: use getter functions to avoid unnecessary re-renders: #890
+Fix: add server check back for rAF: #899
+Fix: react-hooks/exhaustive-deps warnings: #886
+Test: add a test for useSWRInfinite with initialData: #894
+Separate tests: #901
+Refactor: fix all react-hooks/exhaustive-deps warnings in tests: #902
+Docs: use a fake GraphQL endpoint instead of graph.cool: #904
+Refactor: fix all react-hooks/exhaustive-deps warnings in useSWRInfinite: #905
+Fix the revalidation condition of the first page: #895
+Check key before calling callback: #856
+Chore: format files: #915
+Chore: rm duplicated tests: #914
+Test: recognize type definition for screen of testing-library/react: #903
+Chore: add a comment why fetcher accepts null: #918
+Refactor: fix all react-hooks/exhaustive-deps warnings in useSWR: #927
+
+Credits
+Huge thanks to @huozhi, @koba04, @mcamis, @joshuakimDwan, @joakimgrr, and @promer94 for helping!"
+66,"Minor Changes
+
+Feature: provide config.isPaused indicating idle state and stop revalidation: #845
+First page of useSWRInfinite should reuse the cache from useSWR: #799
+
+Patches
+
+Keep isValidating be true when there are two concurrent requests: #817
+Fix act: #839
+Fix: clear refresh timer on effects change and check it on starting new timer: #853
+Add test for #852: #855
+
+Credits
+Huge thanks to @huozhi, @MoonBall, and @promer94 for helping!"
+67,"Patches
+
+Fix #832: #833
+Test(fetch) add test for default fetcher: #834
+
+Credits
+Huge thanks to @promer94 and @darrenjennings for helping!"
+68,"Patches
+
+Fix: mark isValidating as false when key is falsy: #757
+Fix README.md typo: #783
+Fix: do mount check in config callback: #787
+Update api-hooks example README.md: #790
+Return '@null' if args is null ASAP: #767
+Bump ini from 1.3.5 to 1.3.8: #806
+Close #830: #831
+
+Credits
+Huge thanks to @huozhi, @mingcenwei, @promer94, @CrutchTheClutch, and @matamatanot for helping!"
+69,"Patches
+
+Replace rIC with rAF: #744
+Fix race condition when calling mutate synchronously: #735
+Refactor: support SSR in Deno: #754
+Fix eslint error: #768
+Fix mutateCallback types: #745
+Add CodeSandbox CI: #769
+Dispatch's payload type is actionType and run lint: #772
+Fix suspense: #777
+
+Credits
+Huge thanks to @ije, @umidbekkarimov, @matamatanot, and @promer94 for helping!"
+70,"Patches
+
+Allow passing null as the fetcher function for lazy execution: #730
+Add test for mutate with async-fn: #739
+
+Credits
+Huge thanks to @maggo and @promer94 for helping!"
+71,"Patches
+
+Add README to examples: #716
+Feat: make swr more configurable across platform: #690
+Accept React 17 as a peer dependency: #725
+
+Credits
+Huge thanks to @thinceller, @huozhi, and @bcomnes for helping!"
+72,"Patches
+
+Fix: missing dedupe in updaterInterface: #688
+Doc: fix readme's Request Deduplication example: #699
+Fix: error should not be cleared while revalidating: #701
+
+Credits
+Huge thanks to @huozhi and @Brew-Brew for helping!"
+73,"Patches
+
+Remove unnecessary dependencies from mutate and setSize: #665
+"
+74,"Patches
+
+Chore: swap fde for dequal: #655
+Add React and Hook config for ESLint: #270
+
+Credits
+Huge thanks to @lukeed and @innocentiv for helping!"
+75,"Patches
+
+Bump handlebars from 4.5.2 to 4.7.6: #646
+Try fix cannot stop polling by setting refreshInterval  (#638): #632
+Chore: fix error when data tobe 0 null: #622
+Promote isValidating to the global level of data and error: #569
+Remove Isomorphic Fetch from Axios Typescript example: #607
+Add a default fetcher using Fetch API: #367
+
+Credits
+Huge thanks to @anc95, @blackarctic, @jmichaliga, and @sergiodxa for helping!"
+76,"Patches
+
+Chore: optimization dispatch: #621
+Add function key arguments to WeakMap so they trigger revalidation on identity change: #612
+
+Credits
+Huge thanks to @anc95 and @ath92 for helping!"
+77,"Patches
+
+Add useDebugValue to show the data label in the React DevTools: #578
+Fix problem of unnecessary revalidates when resolved data is falsy: #524
+Added example for SWR Request De-duplication feature: #519
+Fix: eventsRef should trigger the lastest version of config callbacks: #521
+Fix useSWRInfinite response type: #584
+Fix: 'revalidateOnFocus' and 'revalidateOnReconnect' shoule be statful: #583
+Swr.vercel.app: #605
+Fix: do not rerender if data unchanged: #464
+
+Credits
+Huge thanks to @Kexin-Li, @MHA15, @tanmaylaud, @lintuming, @lynxtaa, @promer94, @thomaswang, and @morgs32 for helping!"
+78,"Minor Changes
+
+New infinite loading API: #435
+Add microbundle: #487
+Add persistSize option to useSWRInfinite: #490
+Revert ""add microbundle "" (#492): #487
+Enhance: remove mutate calls from cache: #493
+Fix page size persistence when remounting: #495
+Don't retry on error if errorRetryCount is set to 0: #506
+Fix: check if mounted when trigger rerender: #510
+Export interfaces used by useSWRInfinite: #511
+Fix typescript warning: #530
+Fix: should throw when mutate failed: #557
+Enhance: fallback to setTimeout when request idle callback is not available: #473
+Enhance: move online listeners to config  (#476): #474
+
+Patches
+
+Change name to Vercel: #467
+Update keyErr on the cache when mutating: #480
+Test: add test case for error updating in cache when mutate: #481
+Updated the readme: #513
+Update link: #516
+Remove unused command: #544
+Bump lodash from 4.17.15 to 4.17.19: #531
+
+Credits
+Huge thanks to @huozhi, @dominictwlee, @lolPants, @MoeCasts, @markozxuu, @cristianbgp, @ashfaqnisar, @matamatanot, and @Kexin-Li for helping!"
+79,"Patches
+
+Docs: update notes for returned data from mutate section: #394
+Change mutateCallback type to allow non-promise return value: #406
+Fix No bound mutate returned by useRequest hook.: #410
+Fix mutate not disposing older async mutations: #427
+Create CODE_OF_CONDUCT.md: #432
+Unmount check: #433
+Fix spread syntax with defineProperties: #436
+Remove unused file: #441
+Build: use es5 syntax for esm build  (#444): #443
+Replace ZEIT with Vercel in examples: #442
+Update docs to explain dependent fetching with falsy: #449
+Use initialData in suspense mode if provided: #448
+Docs: setup issue template: #453
+Make trigger return a promise resolved to the new cache value: #391
+
+Credits
+Huge thanks to @huozhi, @ties-v, @shyamlohar, @TheHolyWaffle, @promer94, @alexandregv, @joshkel, @Narigo, and @sergiodxa for helping!"
+80,"Patches
+
+Updated asset link: #408
+
+Credits
+Huge thanks to @leo for helping!"
+81,"Patches
+
+Upgrade Next.js: #324
+Minor documentation improvements: #321
+Add Data and Error generics to pagesResponseInterface: #294
+Remove unused import in example: #338
+Use latest: #342
+Test: imporve dynamic polling interval test: #351
+Update handle in CODEOWNERS: 65449cdc46ac37cdad074c733513933aed43052e
+Remove the server side suspense warning: #370
+Change if condition and remove 'do nothing': #356
+Add Optimistic UI with Immer example: #374
+Fix return type of mutateCallback: #381
+Fix axios example unexpected mutation behavior: #380
+Fix: data inconsist on key change when fetcher is synchronized: #369
+Update links to Vercel: #385
+RevalidateOnMount flag that disable automatic revalidation on mount: #225
+Update README.md: #389
+
+Credits
+Huge thanks to @timneutkens, @akx, @Kerumen, @zusinShinpei, @matamatanot, @promer94, @hikaru7719, @sergiodxa, @jericopulvera, @huozhi, @sarupbanskota, and @ciak0 for helping!"
+82,"Patches
+
+Fix polling conditions: #281
+Change useRequest.js to use mutate: #292
+Fix 'reconnect' assignment: #297
+Dedupe extra requests after mutation: #296
+Use window as a target for online event: #300
+Bump acorn from 5.7.3 to 5.7.4: #303
+Update examples/server-render: Use getServerSideProps: #307
+Document the compare option: #320
+Hoist side effects out of useSWRPages render fiber: #317
+Remove keyRef check; add tests: #323
+
+Credits
+Huge thanks to @mattfwood, @zhengjitf, @buffaybu, @nulladdict, @matamatanot, @joshkel, and @neolefty for helping!"
+83,"Minor Changes
+
+Expose Cache: #231
+
+Credits
+Huge thanks to @sergiodxa for helping!"
+84,"Patches
+
+Add regression test for WeakMap key is null: #273
+Fix: disable dedupe when trigger/mutate  (#279): #271
+Improve mutate function: #245
+Add errorRetryCount config option: #277
+Fixed potential typescript error in examples/axios-typescript: #265
+
+Credits
+Huge thanks to @sergiodxa, @dominictwlee, and @Svish for helping!"
+85,"Patches
+
+Fixed return awaits: #216
+Check if addEventListener and removeEventListener exists: #217
+ESlint ignore add esm folder: #218
+Reorganize slow connection code. Make it a tiny bit smaller: #220
+Fix check for addEventListener existence: #223
+Allow use custom isEqual method: #219
+Moving page cache to use a cache map: #221
+Update README.md: #235
+Test(typo): fix typo: #244
+Fix weakmap key is null: #251
+Fix race condition and add test: #261
+
+Credits
+Huge thanks to @vassbence, @r13v, @jinxin0112, @onigoetz, @robinandeer, @lllllllqw, @aequasi, and @darrenjennings for helping!"
+86,"Patches
+
+skip immediate revalidation when initalData is provided: #211 
+Fix #182: #207 
+Reduce re-renders by auto detecting state dependencies: #186
+
+Credits
+Huge thanks to @addstar34 and @promer94 for helping!"
+87,"Patches
+
+Prevent polling when browser is offline: #203
+
+Credits
+Huge thanks to @daneden for helping!"
+88,"Patches
+
+Allow newer minor versions of React as peer dependency: #181
+Remove unneeded await statement on fetch lib: #187
+Update local state example: 95c6775b450e6717b131dcdc9a04946cc51daa9b
+Fix config as second parameter in use-swr: #196
+Test: add race condition test: #195
+Update index.js: #198
+Improve multiple argument example in README: #201
+Change cjs build target to ES5, csm build target to ESNext: #204
+
+Credits
+Huge thanks to @Svish, @markotom, @MSekrst, @wendellhu95, @Regaron, and @LiuuY for helping!"
+89,"Patches
+
+Add react-native entry point: #149
+Fix 'SSR with Next.js' code error: #152
+Axios examples: #145
+Fix tsconfig's ""lib"" property, along with small improvements to README.md: #162
+Improvements: #148
+Bug fixes: #165
+Scripts on windows: #171
+Fix race condition: #173
+
+Credits
+Huge thanks to @n3tr, @zeroslope, @Svish, and @BloodShura for helping!"
+90,"Patches
+
+Add example on how to use fetch + mutate to prefetch data: #120
+Remove lockfile from example and ensure they can't be sent again: #125
+Improvements: #130
+Add Server Side Render Example: #132
+Improve readme: #135
+Clarify about HTTP RFC 5861: #138
+Check for window before using it: #142
+Add esm build: #140
+Add async mutation support: #134
+
+Credits
+Huge thanks to @sergiodxa, @dancerphil, and @yesmeck for helping!"
+91,"Patches
+
+Add example sharing local state between components: #76
+Adding initialData: #106
+Demo: suspense demo: #105
+Improve readme: #104
+Remove/inline dependencies: #115
+Replace batchedUpdates with reducer: #117
+Use @zeit/ncc: #89
+
+Credits
+Huge thanks to @afc163, @aequasi, @pacocoursey and @wendzhue for helping!"
+92,"Patches
+
+Add an autocomplete suggestions examples: #88
+Improve readme: #91
+Key interface can include null: #96
+Use lodash/throttle instead of lodash.throttle: #102
+Fix visibilityState type: #101
+Improve swr pagination api: #95
+Args as key: #98
+
+Credits
+Huge thanks to @sergiodxa, @pacocoursey, @tusbar, and @StarHyx for helping!"
+93,"Patches
+
+Replace useLayoutEffect by useIsomorphicLayoutEffect to avoid ssr warnings: #85
+
+Credits
+Huge thanks to @bmvantunes for helping!"
+94,"Patches
+
+Add example using SWR to sync storage between tabs: #74
+Improve readme: #73
+Add a README to every example: #79
+Add One-Click Deploy button to examples: #81
+Add @pacocoursey to CODEOWNERS: #83
+Fix suspense bugs: #82
+Pass pageSWRs to swrDataToOffset: #52
+
+Credits
+Huge thanks to @sergiodxa, @pacocoursey for helping!"
+95,"Patches
+
+Improve export for IntelliSense: #56
+Add React-Native Support: #42
+Add @types/lodash.throttle package: #63
+Fix error broadcasting: #67
+
+Credits
+Huge thanks to @aequasi, @n3tr, and @Go7hic for helping!"
+96,"Patches
+
+Fix entry files: 8b849e39d98686c5b9e915095c12e235f3e56fc3
+"
+97,"Patches
+
+Adding types to ConfigInterface for callbacks: #35
+Add myself to CODEOWNERS: #38
+Feature/basic-typescript-example: add basic-typescript example: #36
+Add example of implementing optimistic UI with mutate: #31
+Fix suspense hanging: #49
+Update package name: #51
+Pre-commit, better linting and webstorm support: #55
+Use fast-deep-equal: #53
+
+Credits
+Huge thanks to @aequasi, @Timer, @marcelmokos, @sergiodxa, and @sztadii for helping!"
+98,Initial release

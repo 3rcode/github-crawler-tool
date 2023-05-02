@@ -1,0 +1,1311 @@
+Index,Release Note
+1,"The Kivy team is happy to announce the release of Kivy 2.1.0.
+Kivy is a full-featured framework for creating novel and performant user
+interfaces, such as multi-touch applications, released under the MIT license.
+The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
+Installation instructions and Kivy Docs are hosted on the Kivy Website
+
+Currently supported Python versions are 3.7-3.10
+macOS Kivy.app now supports both Intel and Apple Silicon hardware.
+aarch64 for manylinux2014 pre-built wheels are now available on PyPi. 
+Single universal2 wheel for macos Intel and Apple Silicon is now available on PyPi.
+
+Features marked as deprecated on 1.6.0 and prior versions will be removed in Kivy 2.2.0.
+Highlights
+
+[#7658]: Feature: Added EventManagerBase. We can now register managers that selectively process inputs e.g. touch and decide how to dispatch it to the widget tree. on_motion and motion_filter was added to Widget to handle generic motion inputs from the managers.
+[#7270]: Graphics: We now check whether the user called GL instructions from an external thread and raise an error.
+[#7293]: Properties: Added dynamic screen density/dpi support. KV code referencing density e.g. width: ""5dp"" will now update if the window dpi changes.
+[#7371]: KV: Allow using f-strings in KV-lang.
+[#7424]: Properties: Speed up bare widget creation (3X) and property dispatching/setting.
+[#7587]: Fix PermissionError when reconnecting mtdev input devices.
+[#7637]: Added Custom titlebar support.
+[#7642]: TextInput loading time optimization for large texts.
+[#7663]: Add python3.10 support.
+[#7678]: Add support for Apple Silicon.
+
+Deprecated
+
+#7701: deprecate 'kivy.utils.SafeList'.
+[#7786]: WindowBase: Add on_drop_begin, on_droptext and on_drop_end events.
+
+Breaking changes
+
+[#6290]: Widget: Fix signature of add/remove/clear_widget in subclasses to be consistent with base class.
+[#7264]: Camera: Change play default to False.
+[#7356]: Widget: Widget.clear_widgets providing empty widget list does not remove any children, unlike None that clears all the children.
+[#7437]: TextInput: Remove broken and confusing suggestion_text property
+[#7744]: Change default input_type to null. Add some warning regarding TYPE_TEXT_FLAG_NO_SUGGESTIONS
+[#7763]: Removed Python3.6 from the supported ones, it reached EOL
+[#7820]: kivy_deps.gstreamer releases 0.3.0, 0.14, 0.15, and 0.16 were deleted from PyPi to conserve space. They were not used, but if you did depend on them you can download them from https://kivy.org/downloads/ci/win/deps/.
+
+Kv-lang
+
+[#7371]: KV: Allow using f-strings in KV-lang
+[#7703]: refactor kivy.lang
+
+Misc
+
+[#7204]: Kivy: print kivy's version even when not a release.
+[#7271]: Inspector: Prevent circular import breaking Window
+[#7403]: Exceptions: Fix typos in message
+[#7433]: Source: Fix typos in source code
+[#7453]: Screen: Added Oneplus 6t in screen module
+
+
+Packaging
+
+[#7341]: OSX: Use platform.machine() for osx version detection
+[#7605]: PyInstaller hook: Replace modname_tkinter with 'tkinter'
+[#7781]: PyInstaller develop version isn't needed anymore
+
+Widgets
+
+[#7049]: Camera: Fix GI camera provider crash when no texture is available after loading
+[#7213]: ScrollView: Match scroll effect stop condition to start condition.
+[#7261]: Camera: Revert ""Fixes crash during camera configuration""
+[#7262]: RecycleGridLayout : Fix layout when number of widgets match number of columns
+[#7264]: Camera: Change play default to False
+[#7322]: Widget: fix export_to_png not passing arguments through
+[#7353]: RecycleLayout: Allow setting x, y sizing of views independently
+[#7372]: Focus: Allow modifiers (e.g. numlock) be present to tab cycle focus
+[#7383]: Dropdown: Fix reposition in scrollview/recycleview
+[#7391]: Factory: Registered TouchRippleBehavior and TouchRippleButtonBehavior with Factory
+[#7426]: Dropdown: Ensure visibility on reposition
+[#7434]: ModalView: code cleanup regarding detection of main-Window:
+[#7437]: TextInput: Remove broken and confusing suggestion_text property
+[#7457]: ScrollView: Fix for scroll bar areas blocking clicks when scroll is disabled with overscroll
+[#7471]: Video: Add support for preview image
+[#7488]: FocusBehavior: Fix assumption that modifiers is always a set.
+[#7520]: Video: Fixed handling eos after unloading
+[#7527]: Label: Fix label not displaying as disabled if it is disabled when created
+[#7548]: Fixes issue #7514 ('auto_halign_r' referenced before assignment)
+[#7610]: Added scroll from swipe feature in TextInput
+[#7612]: Fixed unexpected overscrolling bug when using mouse wheel
+[#7615]: Fixed unexpected overscrolling bug when using mouse wheel, complement to #7612 
+[#7618]: Fixed TextInput visual selection bugs while scrolling
+[#7621]: Fixed inconsistent behavior of TextInput bubble and handles
+[#7622]: Fixes TextInput cursor issues when resizing/scrolling
+[#7631]: Fixes some bugs in the TextInput if the text is right-aligned or center-aligned and not multiline.
+[#7636]: Textinput on double tap improvement
+[#7641]: Textinput:  Fixes issues #7165, #7236, #7235
+[#7642]: TextInput loading time optimisation for large texts
+[#7706]: SettingColor: Change method name to get_color_from_hex
+[#7737]: CodeInput: fixed disappearing lines after inserting text
+[#7740]: TextInput: easier tokenize delimiters setting; quotes removed from default delimiters
+[#7775]: Don't let 'ScrollEffect.reset()' set 'is_manual' to True
+[#7796]: EventManagerBase: Fix indentation and typos in the doc
+[#7807]: Textinput: Simplified the swipe feature logic. Fixed a bug that was preventing to show the select all / paste bubble
+[#7814]: :zap: Prevent crash (overflow error) when scrollbar is hidden
+[#7816]: VideoPlayer: Defer before the next frame the default thumbnail and annotations loading
+
+Core-app
+
+[#7173]: Logger: Do not mutate log record, fixes #7062
+[#7245]: Resources: Add a cache for resource_find
+[#7293]: Properties: Add dynamic screen density/dpi support
+[#7300]: Logger: Remove refactoring artifact
+[#7307]: Logger: Remove purge log's randomized behavior
+[#7326]: Command line: Fix disabling kivy cmd args
+[#7429]: Clock: Print remaining events before next frame upon too much iteration error
+[#7505]: EventLoopBase: Remove provider from auto-remove list
+[#7508]: App: Process app quit event while paused
+[#7512]: EventLoopBase: Start/stop event loop only once
+[#7749]: collections fix for python 3.10
+[#7763]: Removed Python3.6 from the supported ones, it reached EOL
+[#7771]: Explain the '--' separator for option parsing.
+[#7810]: Track whether the clock has started
+
+Core-providers
+
+[#7228]: Image: Fix PIL label rendering shadow
+[#7231]: Keyboard: Add keyboard suggestions and fix input type on android
+[#7260]: Camera: Use NSString instead of AVCaptureSessionPreset in order to support MacOS < 10.13
+[#7263]: Camera: Added API to change avfoundation camera provider orientation
+[#7279]: Window: prevent ""empty"" mousewheel events from breaking scrollview
+[#7290]: Camera: improve avfoundation by using memoryview and re-scheduling the interval on framerate change
+[#7299]: Window: Handle DPI Windows messages until SDL2 handles them
+[#7303]: Camera: Fix AVFoundation provider to release the camera, start it async, and check if started before stopping it
+[#7339]: Camera: Android camera focus mode fix
+[#7347]: Window: Delay binding dpi until window is ready.
+[#7389]: Mouse: Fix mouse being offset by 2 pixels vertically
+[#7390]: SoundAndroidPlayer: Properly stop after playback completion
+[#7409]: Window: Fix logging message
+[#7418]: Video: Reduce latency from user interaction for ffpyplayer
+[#7467]: Text: Raise when registering a font_regular with None
+[#7484]: WindowBase: Add to_normalized_pos method
+[#7517]: Core: Use importlib's import for compatibility with patching
+[#7541]: SoundLoader: Fix play calls not working in ffpyplayer after the first
+[#7620]: removed print and added logging to flipVert
+[#7637]: Added Custom titlebar support
+[#7647]: WindowBase: Change type of clearcolor property to ColorProperty
+[#7648]: WindowBase: Add transform_motion_event_2d method
+[#7688]: Fix dds header comparison
+[#7726]: Window.softinput_mode fix for ""pan"" and ""below_target"" modes when using kivy virtual keyboard.
+[#7744]: Change default input_type to null. Add some warning regarding TYPE_TEXT_FLAG_NO_SUGGESTIONS
+[#7770]: WindowBase: Update bind list of properties: system_size, size, width, height and center
+[#7778]: WindowBase: Don't return motion event in transform_motion_event_2d method
+[#7786]: WindowBase: Add on_drop_begin, on_droptext and on_drop_end events
+[#7793]: WindowBase|WindowSDL: Add drop position for all on_drop_xxx events
+[#7795]: WindowBase: Add *args to on_drop_xxx events
+
+Core-widget
+
+[#6290]: Widget: Fix signature of add/remove/clear_widget  to be consistent with base class
+[#7209]: Animation: Allow canceling all animated widgets
+[#7356]: Widget: Widget.clear_widgets empty widget list does not remove all children
+[#7424]: Properties: Speed up bare widget creation (3X) and property dispatching/setting
+[#7439]: Properties: Drop long number type and document numpy issues with NumericProperty
+[#7442]: EventDispatcher: Removed/replaced all basestring occurrences with str
+[#7445]: EventDispatcher: Rename method unregister_event_types to unregister_event_type
+[#7449]: TextInput: Fix readonly mode preventing using cursor keys, wrapping, and more
+[#7459]: Properties: Accept str-subclass where we accept strings
+[#7536]: EventDispatcher: Add nicer error message for non-existing properties
+[#7658]: Feature: EventManagerBase
+[#7774]: Fix widget.disabled handling of value change of equal truthiness
+
+Distribution
+
+[#7257]: Setup: Fix buggy detection of cython module name
+[#7362]: Build: No oneliners in [options.extras_require]
+[#7663]: Add python3.10 in the ci configuration
+[#7678]: Add support for Apple Silicon on CI/CD
+[#7711]: Add an option  to force a custom search path for SDL2 frameworks + fixes ARCHFLAGS
+[#7762]: macOS deps: Update SDL to 2.0.20 and update SDL_ttf to 2.0.18
+[#7769]: Add Linux AArch64 wheel build support
+[#7777]: Bump to 2.1.0rc1
+[#7802]: Bump to 2.1.0rc1
+[#7804]: Use the KIVY_RPI_VERSION env variable to force the build of egl_rpi in non Raspi CI builds
+[#7813]: Bump cython and kivy_deps versions to latest
+[#7820]: Patch gst current release to look for dlls in correct place for win store
+[#7821]: Bump to 2.1.0rc2
+[#7822]: Bump to 2.1.0rc3
+
+Documentation
+
+[#7010]: Doc: Warn that decorated methods might not be bindable.
+[#7284]: docs: fix simple typo, expressons -> expressions
+[#7286]: Doc: Add negative size warning
+[#7288]: Documentation: Updated prerequisites and supported python version for iOS
+[#7295]: Doc cleanups
+[#7301]: Doc: Add Kivy config example for inverted mtdev events
+[#7305]: Slider: Fix step property docs
+[#7328]: Added documentation for RecycleView viewclass statefullness,  including a warning, context paragraph, and minimal example
+[#7342]: TabbedPanel: Doc calling switch_to from __init__
+[#7344]: App: fix Trio example in docstring
+[#7358]: Doc: Fix doc code formatting
+[#7359]: Fix first doc line being ignored
+[#7366]: Docs: use print() in docs, comment and generated code
+[#7392]: Docs: Fix packaging-osx docs (homebrew)
+[#7432]: Docs: Fix codespell found typos
+[#7435]: Docs: check for ""sphinx"" in command line
+[#7441]: Docs: Fix creating of docs of compoundselection.py
+[#7451]: Docs: Fix Type Error when creating bytes from array in Python 3
+[#7481]: Doc: Properties spelling fix
+[#7497]: Docs: Use python3 super in example
+[#7560]: Comment references the wrong layout
+[#7561]: Typo on docs, missing ""the""
+[#7580]: Fix line number references in basic.rst
+[#7581]: Fixes double word in docs
+[#7592]: Fix missing word in doc/guide/events.rst
+[#7603]: Fixes pong tutorial collision on the right side.
+[#7614]: Fix install command for zsh
+[#7623]: Sphinx: Use class instead of instance in add_lexer + Fixes search on sphinx>1.7.9
+[#7624]: Sphinx: Fixes missing documentation_options
+[#7625]: Update line number references in documentation
+[#7672]: fix various docs
+[#7693]: Remove wording and functions specific to Python 2
+[#7717]: MotionEvent: Fix docstring in dispatch_done method to reference post_dispatch_input
+[#7752]: Improves docs on mobile, fixes duplicated getting started
+[#7757]: Update README.md
+[#7764]: Update license year
+[#7766]: Add support for older Sphinx versions
+[#7773]: Docs review before release 2.1.0
+[#7790]: made code examples user friendly; fixes #7720
+[#7799]: Dark Theme support for docs
+[#7801]: made Generic Prompt unselectable
+[#7815]: MotionEvent: Fix indentation in module doc
+[#7826]: add GitHub URL for PyPi
+[#7830]: EventManager: Fix typo in module doc
+
+Graphics
+
+[#4854]: Graphics: Add Sdl2 vsync
+[#7270]: Graphics: Check whether user updated GL instructions from external thread.
+[#7277]: SVG: Fix SVG instruction iteration for python 3.9.
+[#7455]: Graphics: Only check for threading issues once graphics is initialized
+
+Input
+
+[#7387]: Mouse: Update MouseMotionEventProvider to dispatch hover events
+[#7425]: Mouse: Fix computation of relative touch position in MouseMotionEventProvider
+[#7492]: MouseMotionEventProvider: Refactor of provider and tests
+[#7549]: MouseMotionEventProvider: Add disable_hover property
+[#7587]: Fix PermissionError when reconnecting mtdev input devices
+[#7644]: MouseMotionEventProvider: Update doc of disable_hover property
+[#7659]: MotionEvent: Fix scale_for_screen method
+[#7679]: MotionEvent: Fix calculation of z values in scale_for_screen method
+[#7684]: Enable pressure for touches in android (and ios?)
+[#7691]: MotionEvent: Fix keeping of the previous normalized position
+[#7714]: MouseMotionEventProvider: Update simulated touch graphics on window resize or rotate
+[#7785]: Input providers: Assign type_id to MotionEvent subclasses
+
+Tests/ci
+
+[#7176]: Dev: Add pre-commit.com framework hooks
+[#7292]: Benchmarks: Add benchmarks option measurements to pytest
+[#7461]: AsyncImageTestCase: Fix for test_reload_asyncimage method and cleanup
+[#7464]: Makefile: Add test commands to show missing coverage lines
+[#7466]: Tests: Increase test coverage
+[#7475]: MouseHoverEventTestCase: Skip testing on Windows platform
+[#7483]: MouseHoverEventTestCase: Enable some tests on Windows CI
+[#7493]: GraphicUnitTest: Add clear_window_and_event_loop method 
+[#7494]: MouseHoverEventTestCase: Dispatching event on_cursor_leave to cleanup some tests
+[#7495]: CI: Removed unused id_rsa.enc. ssh keys are in the secret env
+[#7502]: MultitouchSimulatorTestCase: Don't render widgets in tests
+[#7509]: CI: Switch rsa ssh key to ed25519 for server upload
+[#7513]: Tests: Latest pyinstaller includes fixes for tests
+[#7515]: GraphicUnitTest: Fix signature of tearDown method to use (args, *kwargs)
+[#7516]: MouseHoverEventTestCase: Removed skip of test methods on Windows CI
+[#7674]: temporary force python3.9 use in the ci
+[#7676]: Bump support-request to v2. Previous integration has been shut down.
+[#7760]: Fixes benchmark tests on wheels
+[#7780]: Updates action-gh-release and use the default token
+[#7784]: Linux AArch64 wheel build optimization
+[#7794]: Bring perf_test_textinput  inline with changes in TextInput
+[#7827]: Increase timeout to avoid failing tests on windows-2022
+
+Thanks
+A big thanks to all of the Contributors, especially those github usernames mentioned here:
+0x4A-0x41-0x4B, Akshay Arora, Alexander Lais, Alexander Wolf, Alspb, Andreas Ecker, Andrii Oriekhov, André Sbrocco Figueiredo, Anthon van der Neut, Auskas, Dalton Woodside-Moffatt, Daniel Foerster, Dean Serenevy, Dexer, Dominik Spicher, Eero af Heurlin, Filip Radović, Gabriel Pettier, Geo Maciolek, Ilya Kochankov, Jim Morris, Julian, Kostiantyn Syrykh, Kristian Sloth Lauszus, Lindström Mathias, Louwrensth, Mathieu Virbel, Matthew Einhorn, Mirko Galimberti, Nattōsai Mitō, Pablo Woolvett, Richard Larkin, Robert Niederreiter, Sander Land, Stanislav Syekirin, Steven P. Wells, SubaruArai, The Cheaterman, Tim Gates, Tomas Krizek, VIGNESH KUMAR, Vibhakar Solanki, abayomi185, allerter, baseplate-admin, eric15342335, luzpaz, meow464, onsunsl, oshotton, outdooracorn, salt-die, simon klemenc, snuq, willow, xayhewalo"
+2,"The Kivy team is happy to announce the release of Kivy 2.0.0.
+Kivy is a full-featured framework for creating novel and performant user
+interfaces, such as multi-touch applications, released under the MIT license.
+The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
+
+This is the first release to not support Python 2.7 - hence the increase in Kivy's major version to 2. Currently supported Python versions are 3.6 - 3.9.
+Installation has been largely simplified and all platforms now support a simpler pip install (see below).
+
+Installation instructions and Kivy documentation is available on the Kivy website:
+https://kivy.org
+
+or on GitHub.
+Installation notes
+Kivy can now be installed into your Virtual Environment on Windows, Linux, OSX, and RPi simply with:
+pip install kivy[base] kivy-examples
+# or to get the media dependecies as well
+pip install kivy[base,media] kivy-examples
+# or to get most kivy optional dependencies
+pip install kivy[full] kivy-examples
+
+* For the RPi, additional system dependencies should be pre-installed.
+These selectors allow specifying dependency categories, instead of having to pin Kivy's kivy_deps dependencies to specific versions. These selectors will install the proper dependency version to match Kivy's version.
+Additionally, by default, Kivy will install the base dependencies even if base is not specified. In order to facilitate easier install for GUI installation users e.g. in PyCharm. However, this may change as pip evolves and base should be manually specified. Use pip's --no-deps flag to disable it.
+See the selector documentation for more details.
+Installation from source has also been simplified, relying on pip's pyproject.toml. See the simplified instructions.
+Highlights
+
+[#6351]: Support for Python 2 has been dropped and Kivy source code is now incompatible with Python 2.
+[#6368]: Support for async has been added to Kivy. Kivy can now run cooperatively, in the same process or thread as asynchronous code.
+
+We currently support the stdlib asyncio framework and the excellent trio framework. See the kivy examples for how to use it.
+Breaking changes
+
+[#6351]: Core: Drop Python 2 support.
+[#6368]: Core: Add async support to kivy App
+[#6448]: EventDispatcher: Move __self__ from widget to EventDispatcher and fix tests.
+[#6467]: Graphics: Change filename to source
+[#6469]: ModalView: Updating ModalView to improve theming
+[#6607]: Window: Fix SDL Keycode Typo
+[#6650]: DropDown/ModalView: Make modal and dropdown consistent
+[#6677]: Widget: Remove id from Widget.
+[#6678]: ScrollView: Add always_enable_overscroll property on scrollview
+[#6721]: Image: Remove gpl gif implementation
+[#6918]: ColorProperty: Use ColorProperty instead of ListProperty for color property
+[#6937]: Base: Rename slave to embedded
+[#6950]: Cache: Raise KeyError if None is used as key in Cache
+
+Changelog
+Kv-lang
+
+[#6442]: KV lang: Make it easy to copy Builder and Factory and make them all contexts.
+[#6548]: Factory: Meaningful Error Message
+[#6880]: KV: Use utf-8 encoding by default on reading .kv files. Fixes #5154
+
+Misc
+
+[#6323]: Loader: User agent was not correctly resolved.
+[#6658]: Garden: Fixes incorrect path to kivy garden libs on iOS
+[#6703]: Network: Fix https in python3.x
+[#6748]: Network: Extend certifi usage to ios
+[#6922]: WeakMethod: Fx and cleanup WeakMethod usage
+[#6931]: VIM: Fix and improve vim syntax highlighting for kv lang
+[#6945]: Cache: Don't double copy keys when purging cache by timeout
+[#6950]: Cache: Raise KeyError if None is used as key in Cache
+[#6954]: Network: Ignore ca_file on http scheme, fixes #6946
+[#7054]: Networking: User Agent and Cookies added to UrlRequest
+
+Packaging
+
+[#6359]: Packaging: Fix path by setting to bytes
+[#6643]: PyInstaller: List kivy.weakmethod because pyinstaller doesn't see into cython files
+[#6772]: PyInstaller: window_info is not included in x86 pyinstaller
+[#7080]: OSX: Generate Kivy.app on the CI
+
+Widgets
+
+[#6288]: TextInput: Cache text property in TextInput
+[#6362]: Carousel: Let 'Carousel._curr_slide()' prepare for the situation where 'index' is None
+[#6365]: Carousel: Let 'Carousel.remove_widget()' remove the container of the widget
+[#6372]: Carousel: make 'Carousel.remove_widget()' not cause 'IndexError'
+[#6374]: Carousel: Make 'Carousel' able to handle the case where 'loop == True' and 'len(slides) == 2'
+[#6436]: ColorWheel: Remove bug in algorithm to compute arcs of colorwheel (#6435)
+[#6469]: ModalView: Updating ModalView to improve theming
+[#6481]: ScreenManager: Make clear_widgets correctly iterate over screens
+[#6542]: TextInput: Fixes TextInput Bubble from diseappering immediately after it appears
+[#6543]: TextInput: Fixes TextInput cursor ""rendering"" issue
+[#6574]: TreeViewNode: Fix arrow pos and size
+[#6579]: Slider: Horizontal value track is offset from the center of Slider
+[#6624]: Filechooser: Use full path
+[#6650]: DropDown/ModalView: Make modal and dropdown consistent
+[#6666]: TextInput: Fix for crashes caused by text selection outside of TextInput area
+[#6678]: ScrollView: Add always_enable_overscroll property on scrollview
+[#6741]: GridLayout: Add 'orientation' property to GridLayout
+[#6815]: Image: Fixes for Image and AsyncImage
+[#6859]: Slider: Adding allow_stretch to Slider in style.kv
+[#6879]: VKeyboard: Fix key_background_color property not used
+[#6897]: RecycleView: Add behavior to set RV data using kv ids
+[#6905]: FileChooser: Add font property
+[#6912]: TextInput: Remove 'encode' argument from getter method of 'text' property of TextInput
+[#6918]: ColorProperty: Use ColorProperty instead of ListProperty for color property
+[#6942]: ScrollView: Don't crash when scrollview's content is the same size
+[#6971]: Camera: Fix an inconsistency between docs and code on Camera
+[#6976]: ModalView: Prevent modalview dismissal without on_touch_down
+[#6985]: ScrollView: Fix scrollview scroll/effect recursion
+[#7009]: TextInput: IME support for textinput
+[#7021]: ColorProperty: Use ColorProperty for remaining color properites
+[#7032]: ScreenManager: Fix typo in SlideTransition
+[#7069]: ScrollView: Horizontal scrolling disabled if no overflow
+[#7074]: Splitter: Fix handling offset
+[#7118]: GridLayout : optimize GridLayout
+[#7129]: TabbedPanel: Stop tab buttons from scrolling around
+[#7196]: ScrollView: fix jumping to bottom when using scrollwheel.
+
+Core-app
+
+[#6351]: Core: Drop Python 2 support.
+[#6368]: Core: Add async support to kivy App
+[#6376]: Cython: Set cython language_level to py3.
+[#6381]: Inspector: Use sets to check if inspector should be activated.
+[#6404]: App: Fix pausing without app instance
+[#6458]: Core: Fix memory leaks by cleaning up after resources
+[#6540]: Config: fix erroneous check of KIVY_NO_ENV_CONFIG
+[#6581]: Dependencies: Bump max cython version
+[#6729]: DDSFile: ddsfile.py fix for string/bytes comparing for py3
+[#6773]: Clock: Add correct value of CLOCK_MONOTONIC for OpenBSD
+[#6798]: Platform: Corrected platform detection on Android
+[#6910]: Logger: Add encoding
+[#6926]: Clock: Add clock lifecycle, better exception handling and other cleanup
+[#6937]: Base: Rename slave to embedded
+[#6994]: EventLoop: Don't do event loop stuff when stopped.
+[#7083]: Core: Add _version.py and move updating version metadata to the CI
+[#7112]: Python: Require python version >=3.6
+[#7132]: Python: Add support for Python 3.9.
+[#7151]: Dependencies: Bump cython to 0.29.21
+[#7178]: Dependencies: Add dependency selection varaibles
+[#7181]: Logging: Added color support for compatible terminals
+
+Core-providers
+
+[#6384]: Window: Allow window providers to indicate which gl backends they are compatible with
+[#6422]: Label: Fixes multiline label w/ line_height < 1
+[#6433]: Window: Center cache problem on MacOS
+[#6461]: Audio: Fix playing audio streams from ffpyplayer
+[#6507]: Text: Revert ""Fixes multiline label w/ line_height < 1""
+[#6513]: Text: Fix issue #6508 Multiline label w/ line_height < 1 renders badly (workaround)
+[#6515]: Text: Fixes positioning (valign) issue when using max_lines
+[#6578]: Window: Revert swap forced sync (#4219) as it causes performance issue
+[#6589]: Window: Add the ability to show statusbar on iOS
+[#6603]: Audio: Native audio support for Android
+[#6607]: Window: Fix SDL Keycode Typo
+[#6608]: Audio: Replace deprecated variables in audio providers
+[#6721]: Image: Remove gpl gif implementation
+[#6743]: Clipboard: xclip less verbose Kivy startup
+[#6754]: Text: Properly raise errors reading a font
+[#6947]: Image: Remove 'img_gif' entry from image_libs
+[#6988]: Camera: Improve avfoundation camera implementation on iOS
+[#7071]: Camera: Fixes crash during camera configuration
+[#7102]: Audio: Added loop functionality for SoundAndroidPlayer
+
+Core-widget
+
+[#5926]: Animation: Fix kivy.animation.Sequence and kivy.animation.Parallel consistency
+[#6373]: Properties: Allow observable list and dict dispatch to propagate exceptions.
+[#6441]: EventDispatcher: Move Widget proxy_ref upwards to EventDispatcher
+[#6443]: Property: Initialize KV created property with default value
+[#6448]: EventDispatcher: Move __self__ from widget to EventDispatcher and fix tests.
+[#6677]: Widget: Remove id from Widget.
+[#6858]: Effects: Fix update_velocity
+[#6917]: ColorProperty: Re-add ColorProperty to all list in properties.pyx module
+[#6930]: Property: Use ObservableList as internal storage for ColorProperty
+[#6941]: Property: Let ColorProperty accept arbitrary list types.
+[#6965]: Property: Allow assignment of color names as values for ColorProperty
+[#6993]: Property: Add kwargs to 'sort' method of ObservableList
+
+Distribution
+
+[#6354]: Dependecy: Move cython version info to setup.cfg.
+[#6355]: Dependency: kivy_deps need to be imported before any modules.
+[#6356]: Dependency: Bump cython to 0.29.10 to fix CI building.
+[#6397]: Install: Automatically discover kivy sub-packages
+[#6562]: RPi: Autodetect when we are on a Raspberry Pi 4
+[#6568]: CI: Cross compile wheel for armv7l (Raspberry Pi 4) using Github Actions CI
+[#6642]: Install: Switch to using pyproject.toml and setup.cfg for metadata
+[#6656]: Wheel: Don't package examples in the wheel
+[#6662]: CI: Compile wheels for Raspberry Pi 1-3 using the CI
+[#6670]: Dependencies: Fix CI PyPI upload and pin to latest kivy_deps versions.
+[#6674]: Sdist: Cannot handle carriage return in description.
+[#6769]: RPi: Kivy now works on the Raspberry Pi 4 without X11
+[#6774]: Install: Build the extensions in parallel if the options has not been set
+[#6852]: Platform: Fix android platform detection when using p4a
+[#6854]: Install: Reuse kivy_build var (complements #6852)
+[#6891]: Cython: Update to latest cython version
+[#6990]: Installation: Make setuptools use its local distutils
+[#7084]: Dependencies: Add min basic dependencies to install requirements.
+[#7110]: Makefile: Detect python verion and gracefully fail on unsupported version
+[#7152]: RPi: Stop building wheels for RPi stretch
+[#7154]: Anconda: Respect SDKROOT and use_osx_frameworks
+[#7157]: Makefile: Try python3 first as python may point to python2.
+[#7159]: Makefile: Use python3 if it's present.
+[#7195]: Inlcude doc in PR checklist
+
+Documentation
+
+[#6352]: Docs: force to use sphinx 1.7.9 to restore search
+[#6377]: Docs: Embed func signatures in cython to help IDEs.
+[#6383]: Doc: Create FUNDING.yml
+[#6389]: Doc: Fix linux install docs and update garden instructions
+[#6398]: Doc: Update clock.py - Corrected typo
+[#6399]: Doc: Fix pip link
+[#6427]: Doc: Add comment on required pip version
+[#6459]: Docs: fix wrong highlights
+[#6466]: Docs: Config docs update
+[#6478]: Examples: Fix lack of white-space after "":"" in pong.kv
+[#6479]: Doc: Fix typos, grammar in install instructions
+[#6485]: Doc: Fix KIVY_EVENTLOOP doc
+[#6491]: Doc: Fix Widget.pos_hint doc
+[#6510]: Doc: Few minor fixes in the doc.
+[#6511]: Doc: Update note about kivy-ios python version
+[#6523]: Doc: Remove reference to Kivy Designer
+[#6537]: Doc: fix GridLayout doc
+[#6558]: Examples: Fixed depreciated option for twisted, and sys.exc_call is only run in py2
+[#6625]: Doc: Update CONTRIBUTING.md
+[#6636]: Example: Missing directory replaced in colorpicker #6599
+[#6638]: Docs: Fix typo
+[#6641]: Doc: Fix TextInput typos cursor row/col
+[#6683]: Doc: Fix spinner kv example
+[#6694]: Doc: Fix css on docs
+[#6712]: Doc: Revisit of the Windows installation instructions
+[#6714]: Doc: Fix spelling errors
+[#6750]: Doc: Update packaging-windows.rst
+[#6775]: Doc: Fixed the gallery documentation
+[#6778]: Doc: Updated Raspberry Pi 4 doc on HW acceleration
+[#6780]: Doc: Make RPi SDL2 install instructions clear
+[#6813]: Example: bugfix for 3D rendering example
+[#6821]: Doc: Expand on the current logger docs
+[#6863]: Doc: Add missing hid input parameter
+[#6868]: Doc: iOS - migrates to the new install procedure
+[#6882]: Example: Improved ScreenManager example
+[#6895]: Doc: Add annotations to proxies.
+[#6924]: Doc: Buildozer is now in Beta.
+[#6927]: Doc: Improvements to kv lang docs
+[#6938]: Doc: trigger_action warning / documentation updates
+[#6963]: Doc: Correct comments to use proportion, not percent
+[#6969]: Doc: Fix docs for on_dropfile
+[#6975]: Doc: Update the dev installation instructions
+[#6977]: Doc: Add some typing to clock
+[#6979]: Doc: Remove duplicate python3-pip
+[#7002]: Doc: Print about KIVY_NO_ARGS when printing usage.
+[#7022]: Doc: Update doc for all instances of ColorProperty
+[#7038]: Doc: Fix on_ref_press documentation
+[#7039]: Doc: fixed typo in hbar doc string
+[#7043]: Doc: fixed doc string
+[#7160]: Examples: Add Recycleview examples
+[#7179]: Docs: Switch to staging docs on kivy-website-docs
+[#7222]: Docs: minor typo fix in layout docs
+[#7240]: Docs: Re-write install docs.
+[#7241]: Docs: Add changelog to docs
+
+Graphics
+
+[#6457]: Graphics: Fix ""Error in sys.excepthook""
+[#6467]: Graphics: Change filename to source
+[#6472]: Graphics: Fix relative import for the egl backend
+[#6533]: Graphics: Fixes fbo/renderbuffer freeze on iOS
+[#6702]: Graphics: Adding support for non-file SVGs
+[#6777]: Graphics: Also set points _mode propery to LINE_MODE_POINTS
+[#6808]: Graphics: Fix Svg consistency #6467
+[#6844]: Graphics: Use GLES context when ES2 is forced
+[#6846]: Graphics: Revert ""Use GLES context when ES2 is forced""
+[#6978]: Graphics: fix ignored alpha value in hsv mode
+
+Input
+
+[#6319]: Mouse: Fix ctypes definition to work with other packages
+[#7065]: Mouse: Added support for the mouse4 and mouse5 buttons
+
+Tests/ci
+
+[#6375]: CI: Fix CI failure, 3.5.7 doesn't have compiled binaries.
+[#6390]: CI: Python 3.5 doesn't seem to work anymore on travis bionic.
+[#6403]: CI: Remove osx workarounds as it breaks the build.
+[#6415]: Test: Add tests for coordinates translation
+[#6417]: Test: Add preliminary support for coverage for kv files.
+[#6482]: CI: Remove usage of KIVY_USE_SETUPTOOLS
+[#6503]: CI: Fix rtd builds
+[#6514]: Test: Add test method for touch to follow a widget's position
+[#6516]: CI: Don't use the Window when computing dp during docs generation
+[#6554]: CI: Build latest .DMG for osx app
+[#6556]: CI: Update .travis.yml for osx app on master
+[#6565]: Test: Add ability to specify offset from widget pos
+[#6570]: CI: Enable Python 3.8 wheel generation for osx
+[#6595]: Tests: Fix test failures in Python 3.8 (fixes #6594)
+[#6618]: Test: Don't preset async_sleep
+[#6622]: CI: Switch from Travis/Appveyor to GitHub Actions
+[#6659]: CI: Use pip to build wheel so it uses pyproject.toml.
+[#6669]: CI: Test generated wheels and sdist
+[#6673]: CI: Latest twine doesn't support py3.5
+[#6681]: CI: Switch to flake8 and fix PEP8 issues
+[#6682]: CI: Create all the wheels before doing any uploads
+[#6771]: GitHub: Update issue templates to new format
+[#6845]: Tests: Fix failing tests
+[#6855]: CI: Upgrade to actions/checkout@v2 & actions/setup-python@v2
+[#6892]: Test: Fix failing coverage
+[#6940]: CI: Fix linux SDL2
+[#6951]: Tests: Refactors test_urlrequest.py
+[#7115]: CI: Remove mcnotify integration
+[#7147]: PEP8: Fix PEP8 issues
+[#7174]: Tests: Warn that async app test framewrok may be removed from kivy.
+[#7201]: CI: Test all wheel versions, not just one per OS
+[#7203]: Tests: Ensure Bubble uses it's superclass's valid private API
+
+Branching
+The new stable branch is now derived from the 2.0.0 tag. The oldest stable branch has been renamed to stable-1.11.1. If you still want to compile on android with this branch, use ""kivy==stable-1.11.1"" as requirement. We do not support previous versions, so if things doesn't work anymore due to changes in python-for-android, please take time to update your application.
+Thanks
+A big thanks to all of the Contributors, especially those github usernames mentioned here:
+0x005c, Abenezer Adane, Akshay Arora, Alexander Taylor, Andre Miras, Andreas Ecker, Armin Sebastian, Asad Rauf, Cheaterman, Chris Hamberg, Christian Sirolli, CristiFati, D4SK, Daniel, ElliotGarbus, Evstifeev Roman, Felix Yan, Filip Radović, Franccisco, Francisco Bustos, Gabriel Pettier, Gabriel Vogel, Galland, Holger Badorreck, Howard Chang, Hudson Barkley, Ibrahim Cetin, Ivan Djuricic, Joao S O Bueno, Jordan Emerson, Joseph Kogut, Julian, Julian-O, Juraj Fiala, Kristian Sloth Lauszus, Lucas Samaruga, Ludwig Kraatz, Mathias Lindström, Mathieu Virbel, Matthew Einhorn, Matthias Harrer, Michal Smrž, Mirko, Mirko Galimberti, Niklas Hasselmeyer, Nikolay Sedelnikov, Nils-Hero Lindemann, Olivier Boesch, Pol Canelles, Rafa, Rafał Kropidłowski, Richard Larkin, Sander Land, Sebastian Engel, Shashi Ranjan, Vibhakar Solanki, WutDuk?, Zachary Spector, Zen-CODE, akshauaurora, bajisci, chadys, comet, crigaut, eriksandberg, fluxrider, fruitbat, gottadiveintopython, ia7ck, luphord, matham, noEmbryo, pythonic64, quitegreensky, rafalou38, s0h3ck, salt-die, samize, sanderland, shreyash, snuq, td1803, vicendithas, wezu, yves-surrel, 水戸う納豆齋(Nattōsai Mitō)
+Hope we mentioned them all.
+--
+Kivy Team
+https://kivy.org/#aboutus"
+3,"This release fixed some issues with the docs, the CI, and Kivy dependencies that was introduced in 1.11.0 (https://github.com/kivy/kivy/pull/6357)."
+4,"We are pleased to announce Kivy 1.11.0.
+Kivy is a full featured framework for creating novel and performant user
+interfaces, such as multitouch applications, released under the MIT license.
+The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
+
+This is the last release to support Python 2.7. The next release will only support Python 3.5+.
+This is also the first release with Kivy wheels for Linux (3.5+ only, Windows and macOS already have wheels).
+Windows dependencies are now under the kivy_deps.xxx namespace external to Kivy, rather than kivy.deps.xxx under Kivy. Whether you're upgrading Kivy, please pin the dependency versions when installing because Kivy binary dependencies are not generally backward compatible [#6312].
+The kivy.garden.flower namespace is similarly being transitioned to the kivy_garden.flower namespace.
+
+See below for more details.
+Downloads and installation instructions are available on the Kivy website:
+https://kivy.org
+
+Installation notes
+Windows
+
+[#6324]: We are transitioning the kivy Windows dependencies from the kivy.deps.xxx namespace stored under kivy/deps/xxx to the kivy_deps.xxx namespace stored under kivy_deps/xxx. Pip is sometimes not able to distinguish between these two formats, so follow the instructions below.
+If you're not upgrading Kivy, please make sure to pin your kivy.deps.xxx==x.y.z dependencies to the versions that was on pypi when your Kivy was released so that you don't get newer incompatible dependencies.
+If you're upgrading Kivy, manually uninstall all the kivy.deps.xxx dependencies because pip will not uninstall them when you're upgrading. Then re-install the kivy_deps.xxx dependencies as instructed on the Kivy website.
+If you're installing the first time, simply follow the instructions on Kivy's website.
+
+Linux and macOS
+The new Linux wheels (#6248) can be installed with just pip install kivy, however, just like on macOS it comes without the Gstreamer dependencies so it has no video and minor audio support. For video/audio support, please install ffpyplayer and set KIVY_VIDEO=ffpyplayer in the environment, or install kivy using an alternative method that provides these dependencies.
+Highlights
+Support
+
+[#5947]: We have moved from IRC to Discord. However, there's matrix integration if you are unable to use Discord. See https://kivy.org/doc/master/contact.html#discord.
+
+Configuration
+
+[#6192]: Support for environmental variables that control the config in the form of KCFG_SECTION_KEY has been added. E.g. setting KCFG_KIVY_LOG_LEVEL=warning in the environment is the same as calling Config.set(""kivy"", ""log_level"", ""warning"") or setting the log_level in the kivy section of the config to warning. Note that underscores are not allowed in the section names.
+
+Any key set this will way will take precedence on the loaded config.ini file. Support for this can be disabled by setting the enviornmental variable KIVY_NO_ENV_CONFIG=1 and the environment will not be read for configuration options.
+KV lang
+
+[#6257]: A new KV-Python integration event that fires when all the KV rules of the widget has been applied, on_kv_post, has been added to the Widget class. This event fires for a widget when all the KV rules it participates in has been applied and ids has been initialized. Binding to this event will let you execute code for your widget without having to schedule the code for the next clock cycle.
+
+Similarly, a new apply_class_lang_rules method was added to Widget that is called in order to apply the KV rules of that widget class. Inheriting and overwriting that method will give you the oppertunity to execute code before any KV rules are applied.
+Garden
+We are transitioning the Kivy garden flowers from the kivy.garden.flower namespace stored under kivy/garden/flower or ~/.kivy/garden to the normal python package format kivy_garden.flower namespace stored under kivy_garden/flower. With the new configuration, garden flowers will be pip installable, support cython flowers, and not require the custom garden tool.
+We're hoping to transition all flowers to the new format, however, for now many flowers still require installation by the garden tool.
+For users, see https://kivy-garden.github.io/index.html#generalusageguidelines. For developers, see https://kivy-garden.github.io/index.html#developmentguidelines for how to start a new flower, and https://kivy-garden.github.io/index.html#guideformigratingflowersfromlegacystructure for how to migrate existing flowers to the new format.
+Other
+
+[#6186]: Live resizing has been added for desktop platforms that use the SDL2 window backend.
+
+Deprecated
+
+[#6313]: Pygame has been deprecated. We urge users who have been using pygame to try SDL2 and
+our other providers. If there are any reasons why Pygame is used instead of SDL2 please let
+us know so we can fix them.
+
+Deprecation warnings have also been added to everything that has been deprecated in the past.
+Breaking changes
+
+[#6095]: Changed the Android version to use App.user_data_dir for the configuration and added a missing dot to the config file name.
+[#5340]: Removed DropDown.dismiss in on_touch_down so it is only dismissed in on_touch_up.
+[#5990, #6169]: We now use pytest to run our tests rather than nose.
+[#5968]: Listview and all its associated modules has finally be removed in favor of RecycleView.
+
+Changelog
+Base
+Cache
+
+[#5995]: : use Logger.trace to prevent the purge flooding terminal in debug
+[#5988]: Removed cache print statements
+
+Config
+
+[#6333]: Properly chceck that KIVY_NO_ENV_CONFIG is not set to zero.
+
+Inspector
+
+[#5919]: Let the Inspector browse into WeakProxy'd widgets
+
+Logger
+
+[#6322]: PermissionError is not defined in py2.
+
+Multistroke
+
+[#5821]: Increase timeout/sleep to increase test robustness
+
+Network
+
+[#6256]: Set cookie header workaround
+[#6083]: Added the ability to stop (kill) the UrlRequest thread
+[#5964]: Allow setting url agent for async image and urlrequest
+
+Properties
+
+[#6223]: Fix handling None values in DictProperty and ListProperty
+[#6055]: Cache values of AliasProperty where possible
+[#5960]: Fix Cython properties syntax
+[#5856]: Update AliasProperty to cache value only if ""cache"" argument is set to True
+[#5841]: fix issues with disabled aliasproperty
+
+Storage
+
+[#6230]: Update jsonstore.py
+
+Tools
+
+[#6330]: Create changelog_parser.py
+[#5797]: fix syntax table for emacs kivy-mode
+
+Utils
+
+[#6175]: kivy.utils.rgba function bug fix for python 3 (used to crash)
+
+CI
+
+[#6311]: Fix versioning in CI and in kivy.
+[#6295]: Add pep8 stage and name builds on travis
+[#6250]: Disable wheel building on osx by not watching travis cron status.
+[#6187]: Make travis brew update more reliable
+[#6148]: Fix some travis errors
+[#5985]: Remove notification webhook from travis
+[#5978]: tell travis to use bionic instead of trusty for tests
+[#5977]: Fix travis flaky test
+[#5973]: try using xcode10 for travis, as we cannot reproduce the imageio issue locally
+[#5934]: Fix repo path in github app config comment
+[#5845]: fix osx wheels
+
+Core
+Camera
+
+[#6168]: fix broken update to avfoundation
+[#6156]: Adding fixes to support ios camera
+[#6119]: Add support for opencv 4
+[#6051]: Update camera_android.py; fixes camera for Python 3
+[#6033]: adding division future import to prevent further fps bugs
+[#6032]: ensure floating point math when calculating fps
+[#6027]: Fix 5146
+[#5940]: Set android camera to autofocus
+[#5922]: Updated camera_opencv.py to use reshape(-1) instead of tostring()
+
+Clipboard
+
+[#6178]: Clipboard: fixes for nspaste
+
+Image
+
+[#6194]: imageio: fix jpg/png saving
+[#6193]: Image: don't force iteration if we reuse the cache
+[#6142]: Fixes SDL2 image loading (jpg)
+[#6122]: Allow saving a core Image into BytesIO
+[#5822]: AsyncImage test fix for Windows py2.7
+
+Spelling
+
+[#5951]: Add a warning about support for pyenchant on windows
+
+Text
+
+[#5970]: fix styles from latests PR
+[#5962]: Pango + fontconfig/freetype2 text provider
+
+Video
+
+[#6270]: Suggest how to fix unable to create playbin error.
+[#6246]: Disabled set_volume() in core.video.ffpyplayer play() function. Fix for #6210
+[#5959]: Issue 5945
+
+Window
+
+[#6283]: Limit live resize to desktop
+[#6179]: window: fix multiple resize sent, and always sent the GL size, never …
+[#6164]: Removed default orientation hints on Android
+[#6138]: Fix android's sensor orientation
+[#6133]: Make top/left of window dispatch events on updates
+[#6107]: Fixed fullscreen and orientation handling to work with SDL-2.0.9 on Android
+[#6092]: Fix sdl close inconsistencies. closes #4194
+
+Doc
+
+[#6343]: Fix docs for the release
+[#6334]: Add docs for linux wheels
+[#6316]: Update doc of AliasProperty
+[#6296]: Remove duplicate installation instructions.
+[#6282]: example for adding, background_color to Label
+[#6217]: add a few kv examples to widget docs
+[#6215]: Added pillow as a required python library
+[#6214]: Grammar tweaks
+[#6204]: Update OSX Install instructions for MakeSymlinks
+[#6199]: Replace ""it's"" with ""its"" in several places
+[#6198]: Correct a grammar mistake in two places
+[#6189]: Update docs referring the change from nose tests to pytest
+[#6185]: Raises minimum OSX version for current DMG.
+[#6180]: Updated version no. for SDL building
+[#6159]: Update installation for RPI with notes for latest Raspian issues
+[#6129]: typo in doc comments
+[#6124]: Removed doc note about Python 3 on Android being experimental
+[#6069]: : explain mechanics of size property
+[#6061]: Fix rpi instructions
+[#6049]: Lang widgets need to be capitalized
+[#6047]: fix misspelling in docs
+[#6031]: rewriting of installation instructions
+[#6023]: Fix docstring example for Vector.rotate
+[#6016]: : Add doc for transform_point
+[#5971]: fix doc generation
+[#5953]: FAQ about the ""Unable to get Window: abort""
+[#5943]: Fixed bounce
+[#5925]: Fix Doc 'Input Management'
+[#5912]: OS X to macOS in README
+[#5911]: Maintain separate docs for different releases
+[#5910]: Versioned docs
+[#5908]: : corrected typo in docs
+[#5903]: Correct iOS docs, add ref links
+[#5900]: : fix typo in window docs
+[#5896]: add missing versionadded to pagelayout's anim_kwargs
+[#5895]: add an example for using UrlRequest
+[#5887]: : Grammar tweaks to test docs
+[#5879]: add instructions for Fedora dependencies
+[#5869]: python basics
+[#5858]: Fixed PEP8 in Pong examples
+[#5850]: : Update for Python 3.7
+[#5848]: Document the data parameter for add_json_panel()
+[#5846]: Maintain separate docs for different releases
+[#5840]: : Remove py34 substitutions in nightly lists
+[#5839]: Docs: Fix Windows nightly wheel links
+[#5833]: Docs: Add note about not yet available py3.7 packages
+[#5790]: Removed checkbox doc info about colours outside 0-1 range
+[#5765]: Update documentation for Clock.triggered decorator
+
+Graphics
+
+[#6269]: Add ability to specify dash offsets for Line
+[#6267]: actually return value of wrapped gil_dbgGetAttribLocation
+[#6247]: Fixes broken lines vertices
+[#6232]: Respect the alpha value when setting rgb.
+[#6112]: declare _filename in svg.pxd
+[#6026]: Support building against mesa video core drivers.
+[#6003]: : fix invalid offset calculation if attribute is optimized out
+[#6000]: : Prevent enabling vertex attribute that are not in the shader
+[#5999]: : Fixes KIVY_GL_DEBUG=1
+[#5980]: Issue #5956: Fix casts in texture.blit_buffer for ushort and uint types.
+[#5969]: Fix version number and supports ARGB/BGRA
+[#5957]: Fix matrix transformation for orthographic projection
+[#5952]: Change order of CGL backend to prefer dynamic GL symbol loading
+[#5907]: Better #4752 fix
+[#6145]: img_tools.pxi: Support pitch alignment in bgr->rgb conversion
+
+Highlight
+
+[#6062]: Activating Open Collective
+
+Input
+
+[#6286]: Add caps and numlock to the modifiers
+[#6281]: SetWindowLongPtrW ctypes prototype bug
+[#6264]: Fix the ctrl bug in hidinput (Issue #4007)
+[#6153]: MTDMotionEventProvider, set thread name
+[#6152]: HIDInputMotionEventProvider, set thread name
+[#6012]: Fix HIDMotionEvent log formatting
+[#5870]: Provider matching for input postproc calibration
+[#5855]: add missing mapping for numpaddecimal
+
+Lang
+
+[#5878]: Make kivy.graphics.instructions.Callback available from within Kv lan…
+
+Lib
+Osc
+
+[#5982]: Removed kivy.lib.osc from setup.py packages
+[#5967]: Since osc is now available through oscpy, remove old crappy oscapi code
+
+Modules
+Screen
+
+[#6048]: screen: add definition for OnePlus 3t
+[#5928]: Add definition for the HUAWEI MediaPad M3 Lite 10 tablet
+
+Showborder
+
+[#6005]: add modules/showborder
+
+Other
+
+[#6303]: Update license file year.
+
+Packaging
+
+[#6341]: Bump cython max version.
+[#6329]: Add Pyinstaller tests
+[#6310]: Only delete files in kivy, properly detect git.
+[#6306]: Fixes for PPA and CI
+[#6305]: Re-enable building osx wheels and app
+[#6275]: Add windows gst support without pkg-config.
+[#6268]: Tested with cython 0.29.7
+[#6182]: Update OSX SDL2/Image/Mixer/TTF to latest version
+[#6165]: Include GStreamer in PyInstaller package
+[#6130]: Removed python version specification from buildozer install
+[#6128]: Fix reading description #6127
+[#6054]: Add new ""canonical"" path for binary Mali driver
+[#6046]: Added Arch Linux (ARM)
+[#6008]: Allow to override build date with SOURCE_DATE_EPOCH
+[#5998]: Change check for Cython to attempt fallback to setuptools on supporte…
+[#5966]: Update with Cython 0.28.5
+[#5866]: Add support for cross-compiling for the raspberry pi
+[#5834]: Fix missing requirements for Python 3.6 64bit
+[#5826]: Drop support for py3.3, which is EOL
+[#5820]: automate .app/dmg creatio for both python2 and 3 on osx
+[#5793]: Improve Makefile debug configuration
+[#5777]: Update Cython to 0.28.3
+
+Widgets
+Bubble
+
+[#6043]: Configure Bubble's BackgroundImage's auto scale property
+
+Carousel
+
+[#5975]: fix missing touchModeChange renaming to touch_mode_change
+[#5958]: Fix 5783 carousel looping
+[#5837]: carousel - update add_widget with 'canvas' parameter
+
+Checkbox
+
+[#6317]: Fix checkbox state issues.
+[#6287]: Fix CheckBox Python2 compatibility.
+[#6273]: Fix ""Object no attribute active"" (Bug introduced via PR #4898)
+
+Colorpicker
+
+[#5961]: ColorPicker refactor to prevent multiples event firing
+
+Filechooser
+
+[#6050]: correction of a malfunctioning with ..\ in Windows platforms (function _generate_file_entries)
+[#6044]: Limited FileChooserProgress text size to widget size
+
+Modalview
+
+[#5781]: Add 'on_pre_open' and 'on_pre_dismiss' events to ModalView
+
+Pagelayout
+
+[#5868]: anim_kwargs in PageLayout
+
+Recycleview
+
+[#5963]: Fix 5913 recycle view steals data
+
+Scatter
+
+[#5983]: Issue #5773: Ensure to dispatch on_transform_with_touch event when the angle change
+
+Screen
+
+[#6347]: add tests for #6338
+[#6346]: Make switch_to accept already added screens.
+
+[#6279]: Fix #3143
+
+Scrollview
+
+[#6294]: [ScrollView] Touch is in wrong coordinates
+
+[#6252]: Attempt to fix nested scrollviews
+[#6020]: Add smooth_scroll_end
+
+Tabbedpanel
+
+[#6291]: Fix bug in TabbedPanel.remove_widget method
+
+Textinput
+
+[#6309]: Fix TextInput shortcuts
+[#6249]: Fix issues #6226 and #6227 in multiline-enabled TextInput
+[#6120]: Corrected textinput key input detection to only use on_textinput
+[#6113]: Made textinput ignore space keydown/keyup for space input
+
+Treeview
+
+[#5844]: fix #5815 uncomplete node unselection in treeview
+
+Widget
+
+[#5972]: fix widget tests for python2
+[#5954]: Scale export to png
+
+Branching
+The new stable branch is now derived from the 1.11.0 tag. The oldest stable branch has been renamed to stable-1.10.1. If you still want to compile on android with this branch, use ""kivy==stable-1.10.1"" as requirement. We do not support previous versions, so if things doesn't work anymore due to changes in python-for-android, please take time to update your application.
+Thanks
+A big thanks to all of the Contributors, especially those github
+usernames mentioned here:
+Akshay Arora, Albert Zeyer, Alexander Taylor, Andre Miras, Andres Vargas, Andrew McLeod, Armin Sebastian, Balazs OROSZI, Ben Saylor, Bernhard M. Wiedemann, Cheaterman, Christian Rishøj, Coen de Groot, CristiFati, Dominik Lang, Evstifeev Roman, Farley Lai, Filip Radović, Gabriel Pettier, Girts Folkmanis, GoBig87, Gunnar Strand, Guy Sheffer, Huyston, Jacob Gustafson, JakubBlaha, James Moore, Jess, Jim Morris, Jonas Schröder, Justin Marsh (:flaviusb), Kjetil Andre Liknes, Kristian Sloth Lauszus, Lindström Mathias, Luke Biddle, Mathieu Virbel, Mike Tran, Mirko, Mirko Galimberti, Narcisse Assogba, Peter Badida, Peter Dave Hello, Rafał Kaczor, Robert Niederreiter, Sean O'Donnell, Shai Avraham, Silas Gyger, Skaft, Terje Skjaeveland, Tom Ritchford, Vyacheslav Korneev, Zachary Spector, Zen-CODE, clach04, dolang, e-matteson, el3phanten, erm3nda, gottadiveintopython, jfrancoc, maddyaby, matham, opacam, pythonic64, richard, saqib1707, vchslv13, vmaillol
+Hope we mentioned them all.
+--
+Kivy Team
+https://kivy.org/#aboutus"
+5,"This was supposedly a bugfix releases, but a few new features have 
+managed to get in, aside that, a lot of fixes are included.
+Highlighted changes:
+
+It's now possible to query Window information with the SDL provider.
+SVG support improvements.
+Export_to_png now preserves widget's alpha.
+It's now possible to define a custom comparison for properties, to 
+   manage dispatching better.
+Layouts' add_widget method now accept the canvas argument that 
+   Widget's does.
+Fix for infamous SDL window issue on Linux.
+disabled property of widget now restores the previous value of 
+   disabled of children on unset.
+The tuio implementation now uses the new oscpy library instead of 
+   the bundled oscAPI module, this solves a lot of issues with python3 
+   and massively increase performances. The old OSC package is still 
+   shipped, but will be removed in future releases.
+On Linux, probesysfs input detection doesn't depend on getconf 
+   anymore, which makes it more portable.
+
+This is the last release to officially support python 3.3 and 3.4.
+For technical reasons, there is no 3.7 wheels for Windows yet, they will 
+come soon after our continuous integration infrastructure allows it.
+Many thanks to: Peter Badida, Gabriel Pettier, Richard Larkin, Matthew 
+Einhorn, Mathieu Virbel, Armin Sebastian, germn, Akshay Arora, fruitbat, 
+Terje Skjaeveland, Alexander Taylor, Joseph Kogut, Zachary Spector, 
+DavidCaughell, ismailof, Atis, Boyan Hristov, The Cheaterman, Dominik 
+Lang, Rasmus Pedersen, Pablo Mendoza, Jan Kantert, audryste, parabolize, 
+Benoit HERVIER, DefaultUser, Emil Milanov, Eugene, GottaDiveIntoPython, 
+Volker Gaibler, loa-in-, scoder, skall, sugarlata, Adachinski, Alberto 
+Galera, Alexandre Esse, Andre Miras, Arien Tolner, Ashok Kumar P 
+(ParokshaX), Charlie Yan, Christophe CHAUVET, David H. Bronke, Dev, 
+EndilWayfare, Gleapsite, Kristian Sloth Lauszus, Leon Davison, Manthan 
+Sharma, Nafis Abdullah Khan, Piotr Kasprzyk, Rafał Kaczor, Ray Gomez, 
+Robert Bradshaw, Robert Niederreiter, Shubham Tatvamasi, Sumit Madhwani, 
+WillW, William Bernoudy, Yash Jain, brami, hajime, kinkoazc, 
+mahomahomaho, onnlv, phunsukwangdu, pythonic64, saband, verderten, and 
+水戸う納豆斎(Nattōsai Mitō), for their contributions to this release.
+The Kivy team plans to drop support for python 2.7 before the end of 
+2018, but we hope to make multiple releases before that, as a lot of 
+work to streamline our release process was done during this release.
+Full listing of changes by section (with pull request id when there was 
+one, or commit id when it was directly done on master).
+Core
+4974: Video: update 'loaded' on new video, unload previous video
+5053: ffpyplayer video: update frame/position on seek if video paused
+5109: Add textedit event for text editing by IME
+5187: Fix Windows clipboard when pasting a file
+5206: Touchscreen fixes
+5220: Redeclare Svg.reload as throwing an exception.
+5222: Fix typo in SVG
+5233: svg improvements
+5252: Add support for shaped windows
+5264: Remove double list copy in Animation._update
+5265: Remove dead code for SDL2 windowresized event
+5281: Make App.on_config_change an event
+5298: Add support for saving flipped Textures
+5305: img_pygame: Fix loading of binary alpha formats
+5312: ffpyplayer video: disable builtin subtitles by default
+5313: ffpyplayer video: better video seek
+5324: window_sdl2: Fix memory leak in screenshot
+5325: text_sdl2: Fix very unlikely memory leak
+5328: Fix build with cython 0.26
+5355: handle_exception defaults to RAISE, not STOP
+5362: Raspbian stretch egl library fix
+5377: Let dpi formatting exceptions in kv propagate out from cython.
+5382: Fix Json+DictStore not raising error for non-existing folder + unittest
+5387: _text_sdl2.pyx: Don't clear pixel memory twice
+5389: Don t drop SDL_Dropfile event while in pause #5388
+5393: Forward kwargs to config parser.
+5396: Actually display multitouch emulation if sim set to True.
+5421: Fix host/port handling in UrlRequest
+5423: Add probesysfs option to include devices that offer core pointer functionality
+5435: Changed Logger.error to Logger.warning on android import
+5437: Purge KV lang TRACE logs on demand with environment variable
+5459: audio_sdl2: Update for mixer v2.0.2 support
+5461: Monkey patch PIL frombytes & tobytes, fixes #5460
+5470: Added 'frag_modelview_mat' uniform to address #180
+5535: Fix FileNotFoundError when sys path doesn't exist
+5539: Window info
+5555: python3 package of Pillow needs a updated Import
+5556: Fixed loading fonts with dot in name, fixed spelling in Russisn examle
+5576: window_x11: implement get_window_info()
+5577: window_x11: fix python3 TypeError
+5579: Fix Ctypes Clipboard error with embeded null character
+5593: Fix float division by zero
+5612: raise exception when trying to add Widget with a parent to Window
+5621: do not use the clock in dealloc to prevent deadlock
+5624: Update LICENSE
+5664: Fixes renderbuffer leaking when creating Fbo
+5693: PiCamera-based camera provider for Raspberry Pi
+5703: Fixed format string mistake in Error Message
+5705: Check for activation before attaching to window. references #5645
+5716: Replace vendored lib/OSC and lib/oscAPI with oscpy.
+5778: Update extensions for ImageLoaderPIL
+fc2c3824a: Update properties.pxd
+5bf0ff056: Properties: Allow custom comparator.
+cf7b55c1b: change opengl ids to unsigned ints
+87897c489: Add on_textedit event to SDL2 Window (#5597)
+4d9f19d08: Expose ""absolute"" options in HIDInputMotionEventProvider class
+ae3665c32: camera: fix all export
+53c2b4d63: picamera: fix for python2. Closes #5698
+d3d517dd2: Re-add gi camera provider.
+d175cf82c: Fix Inspector crash if shaped window is disabled
+4deb3606d: Add sdl2 system cursors (#5308)
+f5161a248: Clean hanging code (#5232)
+b7906e745: Fix py2/py3 iteritems (#5194)
+5961169c5: add versionadded tag for KIVY_BCM_DISPMANX_LAYER
+ebeb6c486: cache.py bug fixes (#5107)
+b4ab896b0: input: probesysfs: remove getconf dependency
+58b9685da: @triggered: add cancel method
+f8194bb69: Add test units to ClockTestCase
+dafc07c0e: @triggered: Set default timeout=0
+061891ce1: Add decorator for Clock.create_trigger()
+1c855eb14: on_joy_ball is called with 2 position valuesc
+1a20a3aef: Prioritize XClip for clipboard on Linux
+Widgets
+4905: Removed textinput cursor bug #3237
+5167: Add support for RST replace
+5200: Added abs_tol argument to isclose call to ensure no float edge cases
+5212: fix #5184: ScrollView bar_margin affects also touch position
+5218: Add support for footnotes to RST
+5243: Fix for crash when setting is_focusable property in issue #5242
+5255: Fix race condition in AsyncImage
+5260: Disable emacs bindings for Alt-Gr (Ctrl+Alt) key
+5263: Avoid Animation.cancel_all(Window) that interfers with user animations
+5268: Fix crash when instantiating ActionView(use_separator=True)
+5335: issue #5333 - actionbar throws exception when resized
+5339: Rewrite ActionGroup from Spinner to Button+DropDown
+5370: Fix all ScreenManagers sharing the same transition
+5379: Allow negative values in textinput with filters.
+5413: Don't pass touch to children when outside the ScrollView.
+5418: Add text_validate_unfocus option to TextInput
+5445: Resize treeview collapse. closes #5426
+5455: Add TextInput cursor blinking control
+5472: export widget canvas to png including alpha values
+5484: DragBehavior: Transform window coordinates to parent coordinates befo…
+5567: EffectWidget: Correct typo 'setdefaults' to 'setdefault'
+5641: Fix LabelBase.register() to behave as documented
+5715: Let Layout.add_widget use the canvas argument
+5748: Add canvas argument to FloatLayout.add_widget
+5764: Fix #5761 AsyncImage reload() doesn't invalidate Loader Cache
+5632: Fixes #5632, typo of col instead of row.
+9a8603d54: hotfix: Stop AccordionItem collapse animation
+a432e0d73: Let BoxLayout.add_widget use the canvas argument
+37ccbfac2: pass an empty list for ""buttons"" param to create_touch
+8da2272e5: Remove ineffective changes
+2faa6a993: doc: Added default value to Scatter 'do_collide_after_children' property
+faa03f7e4: Gridlayout min size bounds check (#5278)
+27e3b90ea: Fix touch passing down when overlapping TextInputs (#5189)
+5e2b71840: Fix image size and comment handling in RST (#5197)
+b505b1d13: Add on_load to AsyncImage (#5195)
+873427dbb: Add Slider.sensitivity (#5145)
+d06ea4da2: Deprecate the Widget's id property
+Tests
+5226: Add test for ScrollView bars
+5282: Add test for _init_rows_cols_sizes
+5346: Add unittest for ActionBar
+5368: Unittesting features
+5372: test_video.py: Fix misleading class name
+5374: Fix creating 'results' folder in GraphicUnitTest if not making screenshots
+5378: Add test for Inspector module, fix children order for ModalView
+5381: Add test for KV event/property + trailing space
+5399: Add unittest for Mouse multitouch simulator
+5433: Add simple guide for GraphicUnitTest
+5446: Add unittest for AsyncImage + remote .zip sequence
+5489: Add unittest for TextInput selection overwrite
+5607: Add unittest for Vector.segment_intersection floatingpoint error
+6b93d8aa4: Fix unicode error
+c9ecb4017: Add test for RST replace
+Docs
+5170: Fix typo in installation/windows.rst
+5177: Fix comments for paste in textinput.py
+5221: Docs: Link methods, remove empty title
+5227: Add gstreamer to ubuntu install
+5240: Settings in example are faulty
+5270: doc: add missing escape characters into Linux installation instructions
+5307: Docs: Explain handling Popup in KV
+5330: Docs: Rewrite system cursor
+5424: Add notice about Kivy.app not being available for download
+5439: OSX Install Instruction Update - Cython explicit version
+5458: Add docs for setting Window.shape_mode
+5518: less renaming
+5519: oxford
+5520: Documentation consistency
+5521: redundant 'as'
+5522: widget's
+5523: terser
+5524: tighten
+5559: Docs: Add note about MemoryError for kivy.deps.gstreamer
+5600: Fixed one letter documentation typo (in example)
+5626: Fix typo in docs.
+5695: Docs: Add warning about using Texture before application start
+12487a24f: Remove tree; doesn't look good with website CSS
+bb07d95e9: Clarify Windows alternate location installation
+d6d8a2405: Doc: Fix parsed literal block in installation docs
+4d4ee413c: Doc: added 18.04 to dev install docs
+5f6c66eba: Doc: Fixed typo in animation.py
+285162be5: Kivy is available on Macports directly
+94d623f91: Doc: changed disabled state docs for widget to more standard form
+e029bed41: Doc: tweak to uix/spinner.py docs
+86b6e19d8: Doc: tweaks to cython version installation instructions
+ef745c2fe: Doc: remove specifying cython version, list working cython vs. kivy versions. references #5674
+0ccd8ccd9: Doc: tweaks to modules/console.py
+90448cbfa: Doc: revisions to modules/console.py
+73f99351c: Doc: added explanation for Builder.unload filename parameter
+67fb972ee: Doc: refinements to actionbar.py
+96252c9ad: Doc: refinements to actionbar docs
+917a1b4a2: Update installation-osx.rst
+a3251fd79: Doc: clarified angle offering for python 3.5+
+0fbac3bdb: Doc: tweaks to actionbar docs
+0ec9530b3: Doc: additions to ActionBar docs
+1aa431539: Fix stencil's documentation
+51d172500: Doc: corrected typo in recycleview layout docs
+6af68c41f: Doc: Added link to toggle button image
+e7d171393: Doc: Added togglebutton image to docs
+0ea6e95df: Doc: Added 16.04 dependencies listing
+0cc3a9812: Update debian installation doc
+22aa73f55: Docs: Remove ""-dev"" version in versionchanged
+c07f97179: Docs: Fetch cython version from setup.py (#5302)
+2ad58a9a0: Doc: cleanup, added doc strign for RecycleLayout to make linkable
+493a4a985: Doc: tweaks to the recycleview docs
+114c1a026: Doc: Grammer tweaks to /doc/sources/guide/graphics.rst and kivy/core/window/init.py
+3d243629f: Doc: petty grammar tweaks to kicy/core/window/init.py
+7cdf9b3fd: Doc: corrected the kkivy/core/window/keyboard_anim_args docs to more accurately reflect defaults
+c5eb87974: Docs: removed the 'None' default value as it is actualy ''
+c090c6370: Doc: corrected path for AliasProperty in RecycleViewBehavior
+24647bd9c: Doc: added heirarchical namespacing to treeview items
+6f0639a25: Docs: Fix note indentation after code block
+7daea785f: Doc: added description of rotation property value for kivy.uix.scatter
+ac0d28f1f: Reorder osx packaging methods
+19d9d9d81: Doc: tweaks to grammar for RoundedRectangle graphics instruction
+cdee22eaa: Doc: tweaks to grammar for RoundedRectangle graphics instruction
+c6b2fe309: Fix nightly links.
+242beb39a: Update android virtual machine documentation
+fa1e0b283: Deprecate the vm.
+bd392abca: Remove vm link.
+a6ee7605c: Add info about kivy_examples.
+97f3096cc: Doc: remove leftover USE_OSX_FRAMEWORKS env var
+b4ce25698: doc: setting KIVY_OSX_FRAMEWORKS=0 during installation is not needed anymore
+e5126afce: doc: use latest Cython version for macOS and do not force reinstallation
+bd98d81bc: docs: remove warning about unavailable wheels on Windows
+f1b412d9a: Docs: Fix examples PPA command; Cython for v1.10.0
+333f15845: Doc: Fix Mesh docstring (#5806)
+Examples:
+5026: Update Twisted Framework Example to Py3
+5173: Fix shapecollisions example for py2
+5486: Rotate monkey head smoothly
+5487: Update codeinput.kv
+5564: Update basic.rst
+5611: typo fix in docs example
+e658c65ce: Fix animation transition around the unit circle in Android compass example
+4de0599a8: Update joystick example
+Misc:
+4984: Allow changing kivy dispmanx layer in the Raspberry Pi
+5285: fix install_twisted_reactor for python3 (_threadedselect is now inclu…
+5350: tools/kviewer: Fixed it working on python3
+5525: Switch to manual KV trace purging
+5763: Add kivy/core/window/window_info.c to .gitignore
+98e944277: Updated copyright year in doc index
+b39c84bc0: pep8 fixes
+8143c6be9: Add -- to separate Atlas module options
+d054d5665: Add -- to --use-path option in documentation
+38ed32f2b: Create CODE_OF_CONDUCT.md
+fa01246c8: long overdue update to the kv syntax highlight for vim
+0c63c698f Fix licensing issues (#5786)
+Packaging:
+5366: Fix 'git' not found in setup.py
+5392: Fix setup.py under python2
+5466: Introduce no support for Cython 0.27 - 0.27.2
+5584: Added Python 3.6 to setup.py categories
+5627: Add setupconfig.py to packagedata
+5747: Updated minimum cython version
+10530bbfc: Added missing comma in package_data list
+f66f34023: setup: fix error about gl_mock that doesn't exist anymore
+d462a70f9: setup: fix cython rebuilding all graphics even if it has been already done. Closes #4849
+aaca07b20: Fix missing kivy.tools in setup.py (#5230)
+CI:
+5229: Appveyor: switch DO_WHEELS to True
+5406: Fixes for Cython 0.27
+d5e0ccc00: comment out failing mingw appveyor builds
+71cbd4c40: fixes for osx builders in travis
+55200ee1a: workaround to make inspector tests pass without blocking window
+002e46f7d: travis.yml: add semi-colon
+f1693863e: travis.yml: add sudo to easy_install
+9f71b38a4: travis.yml: try easy_install pip to fix missing command error
+bae09d913: travis.yml: Make TRAVIS_OS_NAME detection consistent
+94db03ed3: Prevented warnings for repeated loading for travis Inspector test cases
+61e05c113: Fix travis build error in inpector.py, line 382
+cd592c1e8: Fixed Pep8 violations (fix travis build 3676 moans)
+a736f287a: Remove fixed version of cython from .travis.yml
+87ae2145c: Removed outdated line from .travis.yml
+30fd00fa8: Restore cython=-=0.26.1 for appveyor builds
+5c4b8ed14: Downgrade Cython to 0.26.1 for builds
+484b2f788: Upload wheels directly to server (#5175)
+e2c309416: travis.yml add back missing "";""
+2fc9cf521: add back pip installation in osx travis build
+7f5d9a4b4: use travis_retry for coveralls, in case it fails randomly
+e12d21667: fix again osx travis build (pip command not found)
+3d41f1da1: Update .travis.yml
+642e029a8: Add docutils to Travis deps
+ce6d54e2f: Add wheel generation support for osx and Linux.
+36e029aec: Upload sdist and examples.
+2e400aa41: Quote filenames [build wheel]
+04bfcff4d: Give better wheel upload path [build wheel win]
+8167ff410: Fix wheel building on all platforms (#5812)"
+6,"We are pleased to announce Kivy 1.10.0.
+Packages are available at https://kivy.org/#download.
+Details about this release can be found at https://kivy.org/#changelog."
+7,"We are pleased to announce Kivy 1.9.1.
+Packages are available at https://kivy.org/#download.
+Details about this release can be found at https://kivy.org/#changelog."
+8,"Packages are available at https://kivy.org/#download.
+Details about this release can be found at https://kivy.org/#changelog."
+9,

@@ -5,16 +5,15 @@ from bs4 import BeautifulSoup
 from markdown import markdown
 import re
 
-owner = 'revoltchat'
-repo = 'desktop'
-github_token = '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'
+
+github_token = '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'
 headers = {
     'Authorization': f'token {github_token}',
     'Accept': 'application/vnd.github.v3+json'
 }
 
-def crawl_release_notes():
-    global headers, owner, repo
+def crawl_release_notes(owner, repo):
+    global headers
     page = 1
     all_releases = []
     while True:
@@ -35,13 +34,15 @@ def crawl_release_notes():
 
 def get_commit_message(commit):
     commit_lines = commit.splitlines()
+    if len(commit_lines) == 0:
+        return '', ''
     message = commit_lines[0]
     description = ' '.join(commit_lines[1:])
     return message, description
 
 
-def crawl_commit():
-    global headers, owner, repo
+def crawl_commit(owner, repo):
+    global headers
     page = 1
     all_commits = []
     while True:
@@ -77,43 +78,60 @@ def markdown_to_text(markdown_string):
 
 
 if __name__ == '__main__':
-    # Crawl release notes and commits
-    release_notes = crawl_release_notes()
-    print('Crawl releases done')
-    release_notes = [markdown_to_text(release) for release in release_notes]
-    idx = range(1, len(release_notes) + 1)
-    release_notes_df = pd.DataFrame({'Index': idx, 'Release Note': release_notes})
-    
-    commits = crawl_commit()
-    print('Crawl commits done')
-    commits = [markdown_to_text(commit) for commit in commits]
-    messages = []
-    descriptions = []
-    for commit in commits:
-        message, description = get_commit_message(commit)
-        messages.append(message)
-        descriptions.append(description)
-
-    idx = range(1, len(messages) + 1)
-    commits_df = pd.DataFrame({'Index': idx, 'Message': messages, 'Description': descriptions})
-
-    # Check dataframe
-
-    # print(commits_df.shape)
-    # print(release_notes_df.shape)
-    # print(commits_df.head())
-    # print(release_notes_df.head())
-
-
-    # Save data to folder
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-    REPO = f'{owner}_{repo}'
-    repo_folder_path = os.path.join(ROOT_DIR, REPO)
-    os.mkdir(repo_folder_path)
-    release_notes_path = os.path.join(ROOT_DIR, REPO, 'release_notes.csv')
-    commits_path = os.path.join(ROOT_DIR, REPO, 'commits.csv')
-    release_notes_df.to_csv(release_notes_path, index=False)
-    commits_df.to_csv(commits_path, index=False)
+    corpus_path = os.path.join(ROOT_DIR, 'data', 'Corpus Repo - Training.csv')
+    corpus_repo_training = pd.read_csv(corpus_path)
+    
+    # Check corpus repo training
+    # print(corpus_repo_training.shape)
+    # print(corpus_repo_training.head())
+    
+    num_repo = corpus_repo_training.shape[0]
+    for i in range(num_repo):
+        crawl_status = corpus_repo_training.loc[i, 'Crawl status']
+        if crawl_status != 'Done':
+            owner = corpus_repo_training.loc[i, 'User']
+            repo = corpus_repo_training.loc[i, 'Repo name']
+            folder_name = f'{owner}_{repo}'
+            print(owner, repo)
+            # Crawl release notes and commits
+            release_notes = crawl_release_notes(owner, repo)
+            print('Crawl releases done')
+            release_notes = [markdown_to_text(release) for release in release_notes]
+            idx = range(1, len(release_notes) + 1)
+            release_notes_df = pd.DataFrame({'Index': idx, 'Release Note': release_notes})
+            
+            commits = crawl_commit(owner, repo)
+            print('Crawl commits done')
+            commits = [markdown_to_text(commit) for commit in commits]
+            messages = []
+            descriptions = []
+            for commit in commits:
+                message, description = get_commit_message(commit)
+                messages.append(message)
+                descriptions.append(description)
+
+            idx = range(1, len(messages) + 1)
+            commits_df = pd.DataFrame({'Index': idx, 'Message': messages, 'Description': descriptions})
+
+            # Check dataframe
+
+            print(commits_df.shape)
+            print(release_notes_df.shape)
+            print(commits_df.head())
+            print(release_notes_df.head())
+
+
+            # Save data to folder
+            repo_folder_path = os.path.join(ROOT_DIR, 'data', folder_name)
+            os.mkdir(repo_folder_path)
+            release_notes_path = os.path.join(ROOT_DIR, 'data', folder_name, 'release_notes.csv')
+            commits_path = os.path.join(ROOT_DIR, 'data', folder_name, 'commits.csv')
+            release_notes_df.to_csv(release_notes_path, index=False)
+            commits_df.to_csv(commits_path, index=False)
+
+            corpus_repo_training.loc[i, 'Crawl status'] = 'Done'
+            corpus_repo_training.to_csv(corpus_path, index=False)
 
 
     

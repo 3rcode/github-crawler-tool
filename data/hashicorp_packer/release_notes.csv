@@ -1,0 +1,531 @@
+Index,Release Note
+1,"Nightly releases are snapshots of the development activity on the Packer project that may include new features and bug fixes scheduled for upcoming releases. These releases are made available to make it easier for users to test their existing build configurations against the latest Packer code base for potential issues or to experiment with new features, with a chance to provide feedback on ways to improve the changes before being released.
+As these releases are snapshots of the latest code, you may encounter an issue compared to the latest stable release. Users are encouraged to run nightly releases in a non production environment. If you encounter an issue, please check our issue tracker to see if the issue has already been reported; if a report hasn't been made, please report it so we can review the issue and make any needed fixes.
+Note: Nightly releases are only available via GitHub Releases, and artifacts are not codesigned or notarized. Distribution via other Release Channels such as the Releases Site or Homebrew is not yet supported."
+2,"1.8.6 (February 15, 2023)
+NOTES:
+
+core: Users will see some changes in how names are displayed during a Packer
+     build for JSON templates. Previously only the builder type or the builder
+     name, if it was set, would be displayed. Now for named builders
+     (""name"":""mybuilder"") the builder's type and name will be displayed (i.e
+     "".mybuilder"". This does not impact the behavior of options such as
+     only or except, they will continue to work as they did before.)
+
+IMPROVEMENTS:
+
+Bump bundled plugins to latest available version.
+     GH-12271
+bump github.com/hashicorp/hcp-sdk-go from 0.28.0 to 0.29.0
+     GH-12163
+Bump github.com/hashicorp/hcp-sdk-go from 0.33.0 to 0.34.0 
+     GH-12262
+core/hcl2: Packer will no longer warn on excluded post-processors when using
+     -only/exlude filters for running select builds.
+     GH-12187
+
+BUG FIXES:
+
+cmd/hcl2_upgrade: Fix crash when variables block is undefined.
+     GH-12250
+core/hcl2: Templates with build blocks referencing an unknown source block
+     would display an empty string for the template filename at line 0, which
+     made it difficult to identify the broken build block. Packer has been
+     updated to display the proper filename and line number where the unknown
+     reference resides.
+     GH-12167
+core: Linux packages now have vendor label and set the default label to
+     HashiCorp. This fix is implemented for any future releases, but will not be
+     updated for historical releases.
+"
+3,
+4,"1.8.5 (December 12, 2022)
+NOTES:
+
+data/packer-image-iteration has been removed. This was an undocumented and
+     unusable data source that was built for experimentation but not released. It
+     should not affect users in any way but is being mentioned for visibility
+     purposes.
+     GH-12111
+
+FEATURES:
+
+core: Metadata for capturing template types such as JSON or HCL2 has been added to the
+     HCP Packer registry metadata. Upon running a packer build the type of
+     template used during execution will be sent along to the registry as
+     additional build metadata.GH-12132
+
+PLUGINS:
+The following external plugins have been updated and pinned to address open
+    issues. Please see their respective changelogs for details on plugin
+    specific bug fixes and improvements.
+
+alicloud@v1.0.5 - CHANGELOG
+amazon@v1.1.6 - CHANGELOG
+proxmox@v1.1.0 - CHANGELOG
+vsphere@v1.1.1 - CHANGELOG
+qemu@v1.0.8 - CHANGELOG
+
+IMPROVEMENTS:
+
+cmd/hcl2_upgrade: Generate variable block for all referenced user input
+     variables. GH-12136
+cmd/validate: Add support for the -evaluate-datasources flag to evaluate
+     the data sources from a template during validation time.
+     GH-12106
+GH-12152
+core/hcl2: Variable definition files containing undeclared variables within
+     an HCL2 template will no longer warn during build execution. Warnings will
+     be displayed to a user during template validation, which can be disabled by
+     passing the -no-warn-undeclared-var flag to the validate command.
+     GH-12104
+GH-12109
+core: Docker images have been updated to include the xorriso package for
+     supporting the creation of ISO files.GH-12081
+core: Split HCP Packer publishing components into a separate internal-only
+     module. GH-11
+GH-12116
+
+BUG FIXES:
+
+cmd/init: The init command will try to fallback to the next available version
+     for a plugin, if the most recent version is not available or has a missing
+     checksum file. This should prevent Packer from trying to install versions
+     that have a GitHub tag but no actual assets.
+     GH-12103
+cmd/plugins: The plugins install sub-command will try to fallback to the
+     next available version for a plugin, if the most recent version is not
+     available or has a missing checksum file. This should prevent Packer from
+     trying to install versions that have a GitHub tag but no actual assets.
+     GH-12103
+core: Bump Go version to 1.18.9 to address vulnerability GO-2022-1144, which
+     concerns the net/http and golang.org/x/net
+     packages.GH-12153
+GH-12158
+core: Fix the registration of deleted input artifacts in HCP Packer when
+     setting keep_input_artifacts to
+     false.GH-11462
+core: Using different template types when building a HCP Packer
+     image iteration will now trigger a runtime build error due to the 
+     mixing of template types.
+     GH-12132
+"
+5,"1.8.4 (October 28 2022)
+NOTES:
+
+
+Packer user documentation has been moved to the new HashiCorp developer
+     documentation portal. The main Packer site (https://www.packer.io) will
+     continue to be the home for Packer but all requests for general
+     documentation and binary downloads will be redirected to
+     https://developer.hashicorp.com/packer. Users are encouraged to visit the
+     developer documentation portal for access to all Packer related
+     documentation; including integrations with HCP Packer.
+
+
+The Oracle builder and post-processor are no longer vendored with Packer
+     core. Users of the Oracle plugin should use packer init to install the
+     latest version of the plugin. See the Oracle Plugin
+     Documentation for more
+     information. GH-11983
+
+
+HCP Packer environment variables: The behaviour of some HCP Packer-specific
+     environment variables has changed slightly. Refer to HCP Packer
+     in the Packer documentation for a full list of HCP Packer environment variables. GH-12059
+
+For JSON templates, the HCP_PACKER_REGISTRY environment variable was
+ previously required to enable the HCP Packer integration. In this release,
+ the environment variable is now optional, and can be used for disabling the
+ publishing of metadata for any HCP Packer enabled configuration template.
+For HCL2 templates, the HCP_PACKER_REGISTRY environment variable can be used
+ to disable publishing to a HCP Packer registry even if the template defines a
+ hcp_packer_registry block. This can be useful for testing that a template
+ works as intended prior to pushing metadata to HCP Packer.
+The HCP_PACKER_BUCKET_NAME environment variable is now the only
+ requirement to push metadata to a HCP Packer registry, in both JSON 
+ and HCL2 templates without a hcp_packer_registry block.
+
+
+
+FEATURES:
+
+provisioner/powershell: Add use_pwsh configuration argument to support pwsh
+     in powershell provisioner. GH-11950
+
+PLUGINS:
+
+builder/oracle: Remove Oracle plugin from the list of vendored
+     plugins. GH-11983
+
+IMPROVEMENTS:
+
+command/hcl2_upgrade: Has been updated to persist all possible template
+     engine options that were supported by the legacy JSON templates. While the
+     upgrade command copies the template engine options as is support for the
+     template options may not actually work with HCL2 templates; indicated by an
+     error similar to fieldname type <no value> is invalid. Before executing a
+     build with the upgraded template you are encouraged to run packer validate
+     against the template and fix any invalid <no value> references.
+     GH-12068
+core/hcl2: Packer will now report an error when executing a build with no
+     sources selected for execution.
+     GH-12016
+core/hcp: Configuration errors for HCP Packer enabled builds have been
+     consolidated into a single report to help users address all potential
+     issues before retrying their build.
+     GH-12031
+core/hcp: Named builds within a legacy JSON template are now published to a
+     HCP Packer registry using its full build name (e.g happycloud.windows-srv-2019), 
+     as opposed to just the build name field (e.g ""name""=""windows-srv-2019""). 
+     Builders with no defined name will continue to publish build
+     metadate using the builder type as the build name (e.g happycloud).
+     GH-12059
+core:hcl2: When a variable is set in a variables definitions file (i.e
+     *.pkrvars.hcl), but isn't defined with the template files (i.e
+     *.pkr.hcl), the outputted error message will now include an example of
+     variable block that can be added to the build template to remedy the issue.
+     GH-12020
+core: Add ppc64le to binary releases for Linux.
+     GH-11966
+core: Bump github.com/hashicorp/packer-plugin-sdk from 0.3.1 to 0.3.2.
+     GH-11981
+core: Bump supported Go version to 1.18.
+     GH-11927
+
+BUG FIXES:
+
+command/hcl2_upgrade: special case: Azure shared_image_gallery fix.
+     GH-12087
+core: Bump golang.org/x/sys to address CVE-2022-29526.
+     GH-11953
+core: Bump golang.org/x/text to v0.3.8.
+     GH-12047
+core: Update dependency to resolve GO-2022-0969.
+     GH-12009
+"
+6,"1.8.3 (August 2, 2022)
+NOTES:
+
+
+There's been a change in the way the ssh_timeout and the
+    ssh_handshake_attempts configuration arguments work together. The
+    behaviour is unchanged if both or none are specified. However, if only one
+    of the two is set the other won't have a default value anymore and will be
+    ignored. See Packer Plugin SDK change for details
+
+
+packer-plugin-digitalocean: The Digital Ocean Packer plugin has been handed over
+    to the Digital Ocean team. New releases for this plugin are available at
+    https://github.com/digitalocean/packer-plugin-digitalocean. This plugin is
+    still being bundled in the Packer binary but will be removed in a future
+    release. Existing references to the plugin will continue to work but
+    users are advised to update the required_plugins block to use the new
+    plugin source address.
+    GH-11912
+required_plugins {
+    digitalocean = {
+     source =  ""github.com/digitalocean/digitalocean""
+     version = "">=1.0.8""
+    }
+}
+
+
+packer-plugin-outscale:  The Outscale Packer plugin managed by the Outscale
+    team, since Packer 1.7.9, has been removed from the Packer binary. Users are
+    advised to install the latest version of the plugin by running
+    packer plugins install github.com/outscale/outscale. GH-11912
+
+
+packer-plugin-outscale:  The Scaleway Packer plugin managed by the Scaleway
+    team, since Packer 1.7.7, has been removed from the Packer binary. Users are
+    advised to install the latest version of the plugin by running
+    packer plugins install github.com/scaleway/scaleway. GH-11912
+
+
+FEATURES:
+
+Future Scaffolding: This release contains additional changes that allow
+    Packer core to validate that a newly built image is a direct child of a HCP
+    Packer registry source image. This feature is only available for HCP Packer
+    enabled builds using the hcp_packer_image and hcp_packer_iteration data
+    source for setting a builder's source image.
+    GH-11861
+
+PLUGINS:
+The following external plugins have been updated and pinned to address open
+    issues. Please see their respective changelogs for details on plugin
+    specific bug fixes and improvements.
+
+amazon@v1.1.2 - CHANGELOG
+ansible@v1.0.3 - CHANGELOG
+azure@v1.3.0 - CHANGELOG
+docker@v1.0.7 - CHANGELOG
+googlecompute@v1.0.14 - CHANGELOG
+lxc@v1.0.2 - CHANGELOG
+triton@v1.0.2 - CHANGELOG
+vsphere@v1.0.7 - CHANGELOG
+yandex@v1.1.2 - CHANGELOG
+
+IMPROVEMENTS:
+
+Bump packer-plugin-sdk to v0.3.1 to fix inconsistencies between ssh_timeout
+    and ssh_handshake_attempts configuration arguments in the SSH
+    communicator. GH-11909
+core: During long running builds the HCP Packer registry will mark a build as
+    timed out if it has not posted an update after a certain number of minutes. For HCP
+    Packer enabled builds a status update will now be sent every 2 minutes to
+    the registry to prevent long builds from being marked as timed
+    out. GH-11846
+data/hcp_packer_image: Add component_type configuration argument to
+    support specifying an exact build image when multiple images exist in the
+    same provider and region for a given HCP Packer bucket iteration.
+    GH-11872
+data/hcp_packer_image: Add support for channel as input argument to
+    retrieve an image from the associated iteration. If
+    using several images from a single iteration, you may prefer sourcing an
+    iteration first, and referencing it for subsequent uses, as every
+    hcp_packer_image with the channel set will generate a potentially
+    billable HCP Packer request, but if several hcp_packer_images use a
+    shared hcp_packer_iteration that will only generate one potentially
+    billable request.
+    GH-11865
+
+BUG FIXES
+
+core/hcl2: Fix crash when parsing malformed provisioner override blocks.
+    GH-11881
+core/hcl2: Fix crash when running packer validate on templates containing
+    one or more  HCP Packer data sources.
+    GH-11883
+"
+7,"1.8.2 (June 21, 2022)
+NOTES:
+The Packer plugin SDK includes the latest version of the go-getter library, which has been updated to address the vulnerabilities listed in HCSEC-2022-13. 
+The updated SDK contains changes that can be breaking for some plugins as the updated go-getter settings in the SDK  prevent reading/writing through symlinks and to sub-directories that require upward path traversal (e.g /tmp/.../etc/hosts). The updates also includes a 30 minute maximum timeout for file downloading, which can be an issue for very large or slow downloads if they exceed more than 30 minutes to complete.
+SECURITY:
+
+Bump packer-plugin-sdk to v0.3.0 to address reported vulnerabilities within
+    the go-getter library.
+    GH-11843
+Bump plugins relying on go-getter for downloading remote files to address
+    reported vulnerabilities within the go-getter library. See HCSEC-2022-13 for details.
+    GH-11844
+
+FEATURES:
+
+Future Scaffolding: This release contains changes that allow Packer core to
+    validate that a newly built image is a direct child of a HCP Packer
+    registry source image. This feature is only available for HCP Packer
+    enabled builds using the hcp_packer_image data source for setting a
+    builder's source image.
+    GH-11832
+
+PLUGINS:
+External plugins have been pinned to the following versions. Please see their
+    respective changelogs for details on plugin specific bug fixes and
+    improvements.
+
+azure@v1.1.0 - CHANGELOG
+hyperv@v1.0.4 - CHANGELOG
+parallels@v1.0.3 - CHANGELOG
+proxmox@v1.0.8 - CHANGELOG
+qemu@v1.0.5 - CHANGELOG
+vagrant@v1.0.3 - CHANGELOG
+virtualbox@v1.0.4 - CHANGELOG
+vmware@v1.0.7 - CHANGELOG
+vsphere@v1.0.5 - CHANGELOG
+
+IMPROVEMENTS:
+
+Add pause_after configuration argument to Powershell provisioner.
+    GH-11792
+HCP Packer data sources will now fail for revoked iterations to prevent building non-compliant images.
+    GH-11854
+
+BUG FIXES:
+
+Add missing support for the env configuration argument in remote shell
+    provisioners. GH-11819
+The preinst and postrm user scripts, including the service configuration
+    directives, have been removed from the Packer rpm installations packages,
+    as Packer does not require a service user in order to run.
+    GH-11831
+"
+8,"1.8.1 (May 27, 2022)
+NOTES:
+
+All bundled plugins have been updated to their latest release to address any
+    open issues pertaining to the legacy SSH key algorithm fix made to the
+    Packer plugin SDK.
+    GH-11761
+GH-11802
+This release contains the latest golang.org/x/crypto/ssh module which
+    implements client authentication support for signature algorithms based on
+    SHA-2 for use with existing RSA keys. Previously, a client would fail to
+    authenticate with RSA keys to servers that reject signature algorithms
+    based on SHA-1.
+
+FEATURES:
+
+New Datasource HTTP datasource retrieves information from a HTTP
+    endpoint to be used during Packer builds.
+    GH-11658
+
+PLUGINS:
+External plugins have been pinned to the following versions. Please see their
+    respective changelogs for details on plugin specific bug fixes and
+    improvements.
+
+alicloud@v1.0.2 - CHANGELOG
+amazon@v1.1.0 - CHANGELOG
+ansible@v1.0.2 - CHANGELOG
+azure@v1.0.8 - CHANGELOG
+chef@v1.0.2 - CHANGELOG
+cloudstack@v1.0.1 - CHANGELOG
+converge@v1.0.1 - CHANGELOG
+digitalocean@v1.0.3 - CHANGELOG
+docker@v1.0.5 - CHANGELOG
+googlecompute@v1.0.13 - CHANGELOG
+hcloud@v1.0.4 - CHANGELOG
+hyperone@v1.0.1 - CHANGELOG
+hyperv@v1.0.3 - CHANGELOG
+inspec@v1.0.0 - CHANGELOG
+jdcloud@v1.0.1 - CHANGELOG
+linode@v1.0.3 - CHANGELOG
+lxc@v1.0.1 - CHANGELOG
+lxd@v1.0.1 - CHANGELOG
+ncloud@v1.0.3 - CHANGELOG
+oneandone@v1.0.1 - CHANGELOG
+openstack@v1.0.1 - CHANGELOG
+oracle@v1.0.2 - CHANGELOG
+parallels@v1.0.2 - CHANGELOG
+profitbricks@v1.0.2 - CHANGELOG
+proxmox@v1.0.7 - CHANGELOG
+puppet@v1.0.1 - CHANGELOG
+qemu@v1.0.4 - CHANGELOG
+salt@v1.0.0 - CHANGELOG
+tencentcloud@v1.0.5 - CHANGELOG
+triton@v1.0.1 - CHANGELOG
+ucloud@v1.0.1 - CHANGELOG
+vagrant@v1.0.2 - CHANGELOG
+virtualbox@v1.0.3 - CHANGELOG
+vmware@v1.0.5 - CHANGELOG
+vsphere@v1.0.4 - CHANGELOG
+yandex@v1.1.1 - CHANGELOG
+
+IMPROVEMENTS:
+
+Bump hcp-sdk-go to latest version.
+    GH-11763
+Plugins installed via the packer plugins install command will now
+    automatically load for builds using HCL2 templates without a
+    required_plugins block.
+    GH-11712
+Plugins installed via the packer plugins install command will now
+    automatically load for builds using JSON templates.
+    GH-11712
+
+BUG FIXES:
+
+Bump github.com/hashicorp/go-getter to fix the untarring of OVA files
+    regression. GH-11675
+Bump github.com/hashicorp/packer-plugin-sdk to address legacy SSH key
+    algorithms in SSH communicator.
+    GH-11774
+GH-11754
+"
+9,"1.8.0 (March 4, 2022)
+NOTES:
+
+Breaking Change: The packer-plugin-check(github.com/hashicorp/packer/cmd/packer-plugins-check) has been replaced by the packer-sdc plugin-check command. Plugin maintainers who may be using the packer-plugin-check as part of their release pipeline are encouraged to move to the packer-sdc command. As an alternative, maintainers can continue to use the packer-plugin-check by pinning the command to Packer 1.7.10.  GH-11317
+
+FEATURES
+
+New Command packer plugins command and subcommands to manage external
+    plugins. GH-11553
+GH-11625
+
+IMPROVEMENTS
+
+core: Add a env argument to provisioner blocks that allow for setting a
+    map of key/value pairs to inject prior to the execute_command. The env argument 
+    is an alternative to using environment_vars for setting environment variables, 
+    which has the added ability to read from Packer datasources. GH-11569
+core: Bump version of go-getter to allow for downloading ISOs with PGP signed
+    checksums. GH-11495
+core: Docker images are now available for all supported architectures that
+    the linux binaries are built for including arm, arm64, 386, and amd64
+    GH-11564
+GH-11601
+GH-11603
+core: Packer's linux package service configs and pre/post install scripts are
+    now available under .release/linux.
+    GH-11601
+GH-11603
+core: Packer's linux packages are now available for all supported linux
+    architectures including arm, arm64, 386, and amd64
+    GH-11564
+GH-11601
+GH-11603
+core: The dockerfile that is used to build the packer docker image available
+    at hashicorp/packer now lives in the root of this repo. The README that
+    describes how to build the docker targets defined in the Dockerfile are
+    available under ./release/docker/README.md.
+    GH-11564
+GH-11601
+GH-11603
+core: The packer-plugin-check command has been removed. Plugin maintainers
+    should update their release configuration to use the packer-sdc plugin-
+    check command.  GH-11317
+
+BUG FIXES
+
+core/hcl2: Fixes an issue preventing builds from pausing between provisioners when
+    the --debug argument has been passed.
+    GH-11537
+core/hcl2: Fixes a data loss issue when merging an empty-object map to a non-
+    empty map variable.
+    GH-11566
+core/hcl2: Fixes a regression where references to locals via the lookup
+    function were failing to find defined keys.
+    GH-11566
+core/hcl2: Fixes an issue where HCP Packer build labels from the first
+    completed build image were being copied to all images within the same
+    build. GH-11574
+GH-11584
+core: HCP Packer datasources will no longer fail for iterations with
+    scheduled revocations.
+    GH-11619
+core: Packer darwin builds now use macOS system DNS resolver for resolving
+    hostnames.GH-9710
+GH-11564
+"
+10,Packer patch release version 1.7.10
+11,Packer patch release version 1.7.9
+12,Packer patch release version 1.7.8
+13,Packer release version 1.7.7 with improved HCP Packer registry support
+14,Packer patch release version 1.7.6
+15,Packer patch release version 1.7.5
+16,Packer patch release version 1.7.4
+17,Packer patch release version 1.7.3
+18,Packer patch release version 1.7.2
+19,Packer patch release version 1.7.1
+20,"Packer release version 1.7.0, introducing to Packer init and datasources !"
+21,Packer patch release version 1.6.6
+22,Packer patch release version 1.6.5
+23,fast-follow release 1.6.4 fixes some regressions in 1.6.3
+24,release 1.6.3
+25,1.6.2 patch release
+26,1.6.1 patch release
+27,
+28,Version 1.5.6
+29,
+30,Version 1.5.4
+31,
+32,
+33,
+34,
+35,This is the 1.4.5 release of Packer. 
+36,Version 1.4.4 of Packer
+37,Version 1.4.3 of Packer

@@ -1,0 +1,124 @@
+Index,Release Note
+1,"What's Changed
+
+MainWindow: Spelling: ellipsis by @comradekingu in https://github.com/elementary/mail/pull/791
+build: fix documentation build by @bobby285271 in https://github.com/elementary/mail/pull/795
+Docs: Add curiously omitted dependency on meson to the readme by @turbobastii in https://github.com/elementary/mail/pull/803
+actions/checkout@v3 by @meisenzahl in https://github.com/elementary/mail/pull/811
+build: support webkit2gtk-4.1 by @bobby285271 in https://github.com/elementary/mail/pull/794
+Make a link containing '%' valid (Fix for #810) by @leolost2605 in https://github.com/elementary/mail/pull/813
+Metainfo Improvements by @danirabbit in https://github.com/elementary/mail/pull/821
+Fix #814: Crash on setting a message flag by @leolost2605 in https://github.com/elementary/mail/pull/825
+Release 7.0.1 by @danirabbit in https://github.com/elementary/mail/pull/826
+
+New Contributors
+
+@bobby285271 made their first contribution in https://github.com/elementary/mail/pull/795
+@turbobastii made their first contribution in https://github.com/elementary/mail/pull/803
+@leolost2605 made their first contribution in https://github.com/elementary/mail/pull/813
+
+Full Changelog: https://github.com/elementary/mail/compare/7.0.0...7.0.1"
+2,"Fixes:
+
+Fixed an error which caused mail accounts to be loaded multiple times
+Fixed a bug which caused Mail to crash occasionally
+Display recipient in Sent folder instead of sender
+
+Improvements:
+
+Updated app icon
+New design
+Updated translations
+"
+3,"New features:
+
+Use message subject for composer window title
+Added support for Unified Inbox for Microsoft 365 accounts
+
+Fixes:
+
+Fixed an error which caused the inbox monitoring in the background to crash
+Removed duplicate sender addresses when composing a message
+Fix a freeze when archiving the last message in a folder
+
+Improvements:
+
+Renamed Office 365 to Microsoft 365 to follow suite on Microsoft's rebranding
+Updated translations
+"
+4,"Fixes:
+
+Fix a potential crash while loading messages
+
+Improvements:
+
+Updated translations
+"
+5,"New features:
+
+Secondary-click menu on the conversations list
+
+Fixes:
+
+Ensure conversations are re-sorted by date when new messages appear
+Fixed sender combobox after opening a mailto link
+Mark sent messages as read
+Fix a hang when deleting the last message in a mailbox
+Fix an issue where some mail fails to be deleted
+
+Improvements:
+
+Use accent color for unread message titles
+Autoselect the next message after archiving
+Use local time in message headers
+Updated translations
+"
+6,"New features:
+
+Send a notification when new messages arrive
+Add a button to manually fetch new messages
+Automatically select the next message after deleting
+Filter unread or starred conversations
+
+Fixes:
+
+Make sure we don't save sent messages twice for outlook.com accounts
+Fix a potential crash when changing folders
+
+Improvements:
+
+Improve search performance
+Updated translations
+"
+7,"Fixes:
+
+Fix an issue that prevented some messaging from rendering at all
+Set the correct ""From"" address when replying and multiple accounts are set up
+Fix a crash on startup for some conversations
+
+Improvements:
+
+Only save drafts when there are new changes
+Move Undo notification to the message view
+Updated translations
+"
+8,"Improvements:
+
+Preserve conversation subjects when replying or forwarding
+Disable the composer while messages are being sent
+Edit saved draft messages
+Make sure we don't save sent messages twice for some account types
+Stability improvements
+Updated translations
+"
+9,Complete rewrite from scratch
+10,"pantheon-mail 1.0.8 is out!
+Changes:
+* Don't automatically load messages on the first run
+* Support libsignon-glib instead of libgsignon-glib
+* Build fixes
+* Updated translations"
+11,"pantheon-mail 1.0.7 is out!
+This release contains minor fixes for deprecations and missing translations."
+12,"pantheon-mail 1.0.6 is out!
+The list of issues closed by this release can be found here."
