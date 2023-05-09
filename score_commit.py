@@ -21,15 +21,19 @@ if __name__ == '__main__':
     while any(label_status != 'Done' for label_status in corpus_repo_training['Label status']):
         if (corpus_repo_training.loc[index, 'Crawl status'] == 'Done' 
             and corpus_repo_training.loc[index, 'Label status'] != 'Done'):
+
             owner = corpus_repo_training.loc[index, 'User']
             repo = corpus_repo_training.loc[index, 'Repo name']
             folder_name = f'{owner}_{repo}'
             print(owner, repo)
+
             # Load and encode changelog sentences
             release_notes_path = os.path.join(ROOT_DIR, 'data', folder_name, 'release_notes.csv')
             release_notes = pd.read_csv(release_notes_path)
             changelog = '\n'.join(map(str, release_notes['Release Note']))
             changelog_sentences = list(set(changelog.split('\n')))
+
+
             print('Start to encode changelog sentences')
             encoded_changelog_sentences = model.encode(changelog_sentences)
             print('Successfully encoded changelog sentences')

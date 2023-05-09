@@ -17,8 +17,8 @@ New Contributors
 Full Changelog: https://github.com/electron/electron-packager/compare/v17.0.0...v17.1.0"
 3,"Changed
 
-BREAKING: Replaced electron-osx-sign with @electron/osx-sign.  The accepted properties on the osxSign options object are now slightly different.  Please see the migration guide for more information on these changes. (#1428)
-Replaced asar with @electron/asar. The configuration options are unchanged. This migration is purely cosmetic. (#1431)
+BREAKING: Replaced module with module.  The accepted properties on the module options object are now slightly different.  Please see the link for more information on these changes. (#1428)
+Replaced module with module. The configuration options are unchanged. This migration is purely cosmetic. (#1431)
 "
 4,"Fixed
 
@@ -30,7 +30,7 @@ Node 16 & 18 support (#1399)
 
 Changed
 
-Bump got to 2.0.0 (#1397)
+Bump module to 2.0.0 (#1397)
 
 Removed
 
@@ -38,32 +38,32 @@ Node 12 support (#1399)
 "
 5,"Fixed
 
-Package should not log info on --quiet flag
-Ignore node_gyp_bins directory if it exists
+Package should not log info on module flag
+Ignore module directory if it exists
 "
 6,"Added
 
-New universal architecture supported when packaging for macOS to generate a universal app
-osxUniveral option to allow providing options to @electron/universal when packaging a universal app
+New module architecture supported when packaging for macOS to generate a universal app
+module option to allow providing options to module when packaging a universal app
 "
 7,"Added
 
-extendHelperInfo option to allow extending helper app Info.plist files (#1233)
-Automatically insert ElectronAsarIntegrity into Info.plist files (#1279)
+module option to allow extending helper app module files (#1233)
+Automatically insert module into module files (#1279)
 
 Fixed
 
-Compatibility with electron-notarize@^1.1.0 (#1278)
+Compatibility with module (#1278)
 "
 8,"Added
 
-Bundled app validation to ensure that both package.json and the main entry point exist (#1257)
+Bundled app validation to ensure that both module and the main entry point exist (#1257)
 Support for customizing Windows targets on darwin/arm64 (#1260)
 Support for customizing Windows targets on WSL without Wine installed (#1260)
 "
 9,"Added
 
-Upgrade electron-osx-sign to 0.5.0 which adds a new option, entitlementsForFile (#1189)
+Upgrade module to 0.5.0 which adds a new option, module (#1189)
 
 Fixed
 
@@ -76,7 +76,7 @@ add darwin/arm64 and mas/arm64 as official platform/arch combinations (#1168)
 
 Fixed
 
-TypeScript: ensure OsxNotarizeOptions definition contains credentials (#1167)
+TypeScript: ensure module definition contains credentials (#1167)
 "
 11,"Added
 
@@ -85,7 +85,7 @@ TypeScript definition (#1131)
 
 Changed
 
-Replace cross-zip with extract-zip (#1139)
+Replace module with module (#1139)
 
 Removed
 
@@ -98,7 +98,7 @@ win32: correctly catch missing wine exceptions (#1117)
 "
 13,"Added
 
-electronZipDir option (#1094)
+module option (#1094)
 "
 14,"Fixed
 
@@ -109,11 +109,11 @@ Handle a missing inferred app version better (#1079)
 
 Chores
 
-Upgrade electron-notarize to ^0.2.0 (#1069)
+Upgrade module to module (#1069)
 "
 15,"Added
 
-(darwin/mas only) usageDescription option (#1049)
+(darwin/mas only) module option (#1049)
 Support for official win32/arm64 builds (#1053)
 "
 16,"Fixed
@@ -122,7 +122,7 @@ Send the properly formatted options from the CLI to electron-osx-sign (#1047)
 "
 17,"Fixed
 
-ensure that CFBundleExecutable and friends are correct for helper apps (#1046)
+ensure that module and friends are correct for helper apps (#1046)
 "
 18,"Fixed
 
@@ -139,7 +139,7 @@ Warn Windows 7 users of the unzip dependencies (#1030)
 "
 21,"Changed
 
-Upgrade fs-extra to ^8.1.0 (#993)
+Upgrade module to module (#993)
 
 Fixed
 
@@ -151,19 +151,19 @@ Ignore system junk files by default (#1005)
 
 Fixed
 
-Handle inference when electron-prebuilt-compile points to a non-version (#978)
+Handle inference when module points to a non-version (#978)
 
 Changed
 
-Replace extract-zip with cross-zip - on macOS/Linux, the zip binary is required; on Windows,
-  a relatively recent Powershell and .NET runtime is required, see cross-zip for details (#984)
-Convert from electron-download to @electron/get (#1002). Drops support for versions of Electron
-  < 1.3.2, plus all of the download options have changed, notably:
-cache is now cacheRoot
-strictSSL is now rejectUnauthorized
-The mirror URL string is now a set of options defined by mirrorOptions
-quiet is removed as the default downloader no longer has a progress bar
-Linux/ia32 support for Electron >= 4 is downgraded to a warning from @electron/get (#1016)
+Replace module with module - on macOS/Linux, the module binary is required; on Windows,
+  a relatively recent Powershell and .NET runtime is required, see module for details (#984)
+Convert from module to module (#1002). Drops support for versions of Electron
+  < 1.3.2, plus all of the module options have changed, notably:
+module is now module
+module is now module
+The module URL string is now a set of options defined by module
+module is removed as the default downloader no longer has a progress bar
+Linux/ia32 support for Electron >= 4 is downgraded to a warning from module (#1016)
 "
 23,"Fixed
 
@@ -175,8 +175,8 @@ Support for inferring version from Electron nightlies (#931)
 
 Fixed
 
-Infer versions from electron-prebuilt-compile better (#932)
-Upgrade asar to ^1.0.0, which removes a vulnerable transitive dependency (#952)
+Infer versions from module better (#932)
+Upgrade module to module, which removes a vulnerable transitive dependency (#952)
 "
 25,"Fixed
 
@@ -188,7 +188,7 @@ Ensure relative out dirs are correctly ignored when copying (#919)
 "
 27,"Added
 
-prebuiltAsar option to specify a prebuilt ASAR file (#823)
+module option to specify a prebuilt ASAR file (#823)
 support for macOS Mojave app notarization (#899)
 
 Changed
@@ -198,7 +198,7 @@ Dropped support for running on Node < 6.0. (#900)
 Removed
 
 Deprecated target arch APIs (#915)
-The callback version of the API (use nodeify if you need that syntax style) (#916)
+The callback version of the API (use module if you need that syntax style) (#916)
 "
 28,"Added
 
@@ -219,16 +219,16 @@ Host arch utilities moved to electron-download. This is not a breaking change, a
 
 Deprecated
 
-hostArch and unameArch in electron-packager/targets, replaced with host and uname in
-  electron-download/lib/arch, respectively
+module and module in module, replaced with module and module in
+  module, respectively
 "
 31,"Added
 
---version shows the Packager/Node versions & host platform/arch (#841)
+module shows the Packager/Node versions & host platform/arch (#841)
 
 Fixed
 
-mips64el arch is only available with Electron 1.8.x (#843)
+module arch is only available with Electron 1.8.x (#843)
 better detection of node modules (#847)
 "
 32,"Fixed
@@ -237,18 +237,18 @@ Support for Node 10 via the CLI (#835)
 "
 33,"Fixed
 
-Upgraded galactus to ^0.2.1 to fix a bug with relative paths
+Upgraded module to module to fix a bug with relative paths
 "
 34,"Changed
 
-prune exclusively utilizes the galactus module for pruning devDependencies, instead of
+module exclusively utilizes the module module for pruning devDependencies, instead of
   depending on package managers (#819)
-electron-packager is no longer ignored by default (#819)
+module is no longer ignored by default (#819)
 A warning is emitted when an Electron module is a production dependency (#819)
 
 Removed
 
-packageManager option (#819)
+module option (#819)
 "
 35,"Added
 
@@ -260,26 +260,26 @@ Support for MAS Login Helper (Electron 2.0.0-beta.1 and above) (#807)
 "
 37,"Fixed
 
-rcedit module updated to 1.0.0, which fixes some bugs (#804)
---help prints usage to stdout (#805)
+module module updated to 1.0.0, which fixes some bugs (#804)
+module prints usage to stdout (#805)
 "
 38,"Added
 
-linux platform, mips64el arch builds (Electron 1.8.2-beta.5 and above) (#800)
+module platform, module arch builds (Electron 1.8.2-beta.5 and above) (#800)
 
 Changed
 
-all or platform=linux, arch=all now include arch=mips64el if the Electron version specified
+module or module now include module if the Electron version specified
   is 1.8.2-beta.5 or above (#800)
 "
 39,"Fixed
 
-overwrite: true when no platform/arch is specified (#794)
+module when no platform/arch is specified (#794)
 "
 40,"Fixed
 
 ARM detection with prebuilt armv7l Node.js (#783)
-Don't create yarn.lock when pruning with Yarn (#784)
+Don't create module when pruning with Yarn (#784)
 "
 41,"Added
 
@@ -287,18 +287,18 @@ Option to set the executable name separate from the app name (#758)
 
 Fixed
 
-mz dependency (#759)
+module dependency (#759)
 "
 42,"Changed
 
-Switch from minimist to yargs-parser (#732)
+Switch from module to module (#732)
 Electron Packager only officially supports Node versions that are supported by the
   NodeJS team (#747)
-Refactor to use Promises internally. This has the side effect of somewhat parallelizing building two or more targets at once and/or two or more functions for a given hook, via Promise.all (#753)
+Refactor to use modules internally. This has the side effect of somewhat parallelizing building two or more targets at once and/or two or more functions for a given hook, via module (#753)
 "
 43,"Added
 
-hostArch() and allOfficialArchsForPlatformAndVersion() (#727)
+module and module (#727)
 
 Changed
 
@@ -306,66 +306,66 @@ CLI arguments with nonstandard argument values emit warnings (#722)
 
 Deprecated
 
-In the CLI, --tmpdir=false has been deprecated in favor of --no-tmpdir (#722)
+In the CLI, module has been deprecated in favor of module (#722)
 "
 44,"Fixed
 
-Inferring win32metadata.CompanyName from author in package.json when it's an Object (#718)
+Inferring module from module in module when it's an Object (#718)
 "
 45,"Added
 
 API hook for afterPrune (#677)
-Package manager-agnostic pruning support (set packageManager to false) (#690)
-linux platform, arm64 arch builds (Electron 1.8.0 and above) (#711)
+Package manager-agnostic pruning support (set module to module) (#690)
+module platform, module arch builds (Electron 1.8.0 and above) (#711)
 
 Changed
 
-Promise support for packager - function returns a Promise instead of the return value of the
+Promise support for module - function returns a Promise instead of the return value of the
   callback (#658)
-win32metadata.CompanyName defaults to author name from nearest package.json (#667)
-win32metadata.FileDescription defaults to productName or name from
-  nearest package.json (#667)
-win32metadata.OriginalFilename defaults to renamed .exe (#667)
-win32metadata.ProductName defaults to productName or name from nearest package.json (#667)
-win32metadata.InternalName defaults to productName or name from
-  nearest package.json (#667)
+module defaults to module name from nearest module (#667)
+module defaults to module or module from
+  nearest module (#667)
+module defaults to renamed module (#667)
+module defaults to module or module from nearest module (#667)
+module defaults to module or module from
+  nearest module (#667)
 Warn when downloading from the official Electron releases and the arch/platform combination
   specified is invalid (#562)
-Do not error out immediately if a download.mirror is specified and an unofficial arch/platform
+Do not error out immediately if a module is specified and an unofficial arch/platform
   is specified (#670)
 Allow spaces when specifying archs/platforms as a string, rather than an array (#487)
-The extraResource option works on all target platforms (#637)
-all or platform=linux, arch=all now include arch=arm64 if the Electron version specified is
+The module option works on all target platforms (#637)
+module or module now include module if the Electron version specified is
   1.8.0 or above (#711)
 
 Fixed
 
-common.warning for codesigning (#694)
+module for codesigning (#694)
 
 Removed
 
-version is removed in favor of electronVersion (CLI: --electron-version) (#665)
-version-string is removed in favor of win32metadata (#668)
+module is removed in favor of module (CLI: module) (#665)
+module is removed in favor of module (#668)
 Options set via the JavaScript API formatted in kebab-case (i.e., with hyphens) are removed in
   favor of their camelCase variants, per JavaScript naming standards (#669)
 "
 46,"Fixed
 
-Stop yarn creating .bin folders when pruning (#678)
+Stop yarn creating module folders when pruning (#678)
 "
 47,"Fixed
 
-Usage docs for win32metadata.application-manifest and win32metadata.requested-execution-level
+Usage docs for module and module
 "
 48,"Added
 
-packageManager (--package-manager via CLI) option (#618)
-win32metadata.application-manifest option (#610)
-win32metadata.requested-execution-level option (#610)
+module (module via CLI) option (#618)
+module option (#610)
+module option (#610)
 
 Fixed
 
-Support for extract-zip >= 1.6.1
+Support for module >= 1.6.1
 "
 49,"Added
 
@@ -392,15 +392,15 @@ Show CLI option when showing option deprecation message (#560)
 "
 52,"Added
 
-electronVersion (--electron-version via CLI) option (#547)
+module (module via CLI) option (#547)
 
 Deprecated
 
-version is deprecated in favor of electronVersion (--electron-version via CLI) (#547)
+module is deprecated in favor of module (module via CLI) (#547)
 "
 53,"Added
 
-quiet option (#541)
+module option (#541)
 
 Fixed
 
@@ -416,32 +416,32 @@ Clarify symlink error message for Windows
 "
 55,"Added
 
-Allow extend-info to specify an object instead of a filename (#510)
+Allow module to specify an object instead of a filename (#510)
 
 Fixed
 
-Retrieving metadata from package.json by upgrading get-package-info (#505)
-Typo when using extend-info (#510)
+Retrieving metadata from module by upgrading module (#505)
+Typo when using module (#510)
 "
 56,"Added
 
-.o and .obj files are ignored by default (#491)
+module and module files are ignored by default (#491)
 Electron downloads are now checked against their published checksums (#493)
-Documentation for download.quiet option to enable/disable progress bar (#494)
-The build-version property, when unspecified, now defaults to the
-  app-version property value on Windows (#501)
+Documentation for module option to enable/disable progress bar (#494)
+The module property, when unspecified, now defaults to the
+  module property value on Windows (#501)
 "
 57,"Added
 
-win32metadata option (#331, #463)
-linux platform, armv7l arch support (#106, #474)
+module option (#331, #463)
+module platform, module arch support (#106, #474)
 
 Changed
 
-all now includes the linux platform, armv7l arch combination
-Default the platform option to the host platform (#464)
-Default the arch option to the host arch (#36, #464)
-Default the prune option to true (#235, #472)
+module now includes the module platform, module arch combination
+Default the module option to the host platform (#464)
+Default the module option to the host arch (#36, #464)
+Default the module option to module (#235, #472)
 
 Fixed
 
@@ -450,27 +450,27 @@ Allow scoped package names as Electron app names - invalid characters are replac
 
 Deprecated
 
-version-string is deprecated in favor of win32metadata (#331, #463)
+module is deprecated in favor of module (#331, #463)
 
 Removed
 
-asar-unpack is removed in favor of asar.unpack
-asar-unpack-dir is removed in favor of asar.unpackDir
-cache is removed in favor of download.cache
-strict-ssl is removed in favor of download.strictSSL
+module is removed in favor of module
+module is removed in favor of module
+module is removed in favor of module
+module is removed in favor of module
 "
 58,"Added
 
-The package.json version property is the default app version if --app-version is unspecified (#449)
+The module module property is the default app version if module is unspecified (#449)
 
 Changed
 
-[darwin/mas] Explicitly disallow osx-sign.binaries (#459)
+[darwin/mas] Explicitly disallow module (#459)
 "
 59,"Added
 
 [API] hook for afterCopy (#448)
-[darwin/mas] Documentation for protocol and protocol-name options (#121, #450)
+[darwin/mas] Documentation for module and module options (#121, #450)
 
 Changed
 
@@ -479,7 +479,7 @@ Changed
 Fixed
 
 [CLI] ensure --out has either a string or null value (#442)
-Use get-package-info (again) to support finding prebuilt in parent directories (#445)
+Use module (again) to support finding prebuilt in parent directories (#445)
 "
 60,"Fixed
 
@@ -487,11 +487,11 @@ Resolve to absolute path when inferring app name/Electron version (#440)
 "
 61,"Added
 
-Support the new electron package name (#435)
+Support the new module package name (#435)
 "
 62,"Added
 
-Basic debugging messages via the debug module - see CONTRIBUTING.md for usage (#433)
+Basic debugging messages via the module module - see CONTRIBUTING.md for usage (#433)
 
 Changed
 
@@ -503,25 +503,25 @@ Fixed
 "
 63,"Added
 
-asar options can be specified as an Object (via the API) or with dot notation (via the CLI) -
+module options can be specified as an module (via the API) or with dot notation (via the CLI) -
   see the respective docs for details (#353, #417)
 
 Deprecated
 
-asar-unpack is deprecated in favor of asar.unpack (#417)
-asar-unpack-dir is deprecated in favor of asar.unpackDir (#417)
+module is deprecated in favor of module (#417)
+module is deprecated in favor of module (#417)
 "
 64,"Added
 
-derefSymlinks option (#410)
+module option (#410)
 
 Fixed
 
-Clarified message when wine is not found (#357)
+Clarified message when module is not found (#357)
 "
 65,"Added
 
-afterExtract hook (#354, #403)
+module hook (#354, #403)
 "
 66,"Fixed
 
@@ -537,17 +537,17 @@ CLI output truncated when using Node 6 (and possibly earlier) (#381)
 "
 68,"Fixed
 
-The default .git ignore only ignores that directory (#344)
-Specifying the download.strictSSL CLI parameter no longer triggers a deprecation warning for
-  strict-ssl (#349)
+The default module ignore only ignores that directory (#344)
+Specifying the module CLI parameter no longer triggers a deprecation warning for
+  module (#349)
 "
 69,"Fixed
 
-Not specifying strict-ssl CLI parameter no longer triggers a deprecation warning (#335)
+Not specifying module CLI parameter no longer triggers a deprecation warning (#335)
 "
 70,"Added
 
-Add download parameter (#320)
+Add module parameter (#320)
 
 Changed
 
@@ -555,69 +555,69 @@ Dropped support for running on Node < 4.0. (#319)
 
 Fixed
 
-strict-ssl (and by extension, download.strictSSL) defaults to true, as documented (#320)
+module (and by extension, module) defaults to module, as documented (#320)
 
 Deprecated
 
-cache is deprecated in favor of download.cache (#320)
-strict-ssl is deprecated in favor of download.strictSSL (#320)
+module is deprecated in favor of module (#320)
+module is deprecated in favor of module (#320)
 
 Removed
 
-[win32] version-string.FileVersion and version-string.ProductVersion are replaced by
-  favor of app-version and build-version, respectively (#327)
-[win32] version-string.LegalCopyright is replaced by app-copyright (#327)
+[win32] module and module are replaced by
+  favor of module and module, respectively (#327)
+[win32] module is replaced by module (#327)
 "
 71,"Changed
 
-[win32] rcedit dependency updated to 0.5.x. The DLL mentioned in the 6.0.1 release notes
+[win32] module dependency updated to 0.5.x. The DLL mentioned in the 6.0.1 release notes
   is no longer required.
 "
 72,"Changed
 
-[win32] rcedit dependency updated to 0.4.x
+[win32] module dependency updated to 0.4.x
 API documentation moved from readme.md to docs/api.md (#296)
 
 Fixed
 
 [darwin/mas] The OSX icon is properly replaced when Electron ≥ 0.37.4 is used (#301)
-default_app.asar is deleted during packaging (necessary when Electron ≥ 0.37.4 is used).
-  The default_app folder is still deleted for older Electron versions (#298, #311)
+module is deleted during packaging (necessary when Electron ≥ 0.37.4 is used).
+  The module folder is still deleted for older Electron versions (#298, #311)
 "
 73,"Added
 
-Add support for a new target platform, Mac App Store (mas), including signing OS X apps
+Add support for a new target platform, Mac App Store (module), including signing OS X apps
   (#223, #278)
-Add app-copyright parameter (#223)
-Add tmpdir parameter to specify a custom temp directory (#230); set to false to disable
+Add module parameter (#223)
+Add module parameter to specify a custom temp directory (#230); set to module to disable
   using a temporary directory at all (#251, #276)
-Add NEWS.md, a human-readable list of changes in each version (since 5.2.0) (#263)
+Add module, a human-readable list of changes in each version (since 5.2.0) (#263)
 
 Changed
 
 The GitHub repository has been moved into an organization,
-  electron-userland
-Allow the ignore parameter to take a function (#247)
+  link
+Allow the module parameter to take a function (#247)
 [contributors] Update Standard (JavaScript coding standard) package to 5.4.x
 [contributors] Add code coverage support via Coveralls (#257)
 Better docs around contributing to the project (#258)
-Ignore the directory specified by the out parameter by default (#255)
+Ignore the directory specified by the module parameter by default (#255)
 [darwin/mas] Add support for merging arbitrary plist files and adding arbitrary resource
   files (#253)
 Split out the code to sign OS X apps into a separate Node module,
-  electron-osx-sign (#223)
-[darwin/mas] BREAKING: The sign parameter is now osx-sign (for better cross-platform
+  link (#223)
+[darwin/mas] BREAKING: The module parameter is now module (for better cross-platform
   compatibility) and optionally takes several of the same sub-parameters as
   electron-osx-sign (#286)
 
 Deprecated
 
-[win32] version-string.LegalCopyright is deprecated in favor of app-copyright (#268)
+[win32] module is deprecated in favor of module (#268)
 
 Fixed
 
-[darwin/mas] Ensure CFBundleVersion and CFBundleShortVersionString are strings (#250)
+[darwin/mas] Ensure module and module are strings (#250)
 [darwin/mas] Correctly set the helper bundle ID in all relevant plist files (#223)
 [darwin/mas] OSX-specific binaries are correctly renamed to the application name (#244, #293)
 
-If you are upgrading from ≤ 5.2.1 and building for a darwin target, you may experience problems. See #323 for details."
+If you are upgrading from ≤ 5.2.1 and building for a module target, you may experience problems. See #323 for details."

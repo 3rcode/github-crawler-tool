@@ -29,42 +29,6 @@ def load_data(file_path):
     return np.asarray(commit), np.asarray(label)
 
 
-# def preprocess(commit, remove_stopwords=True):
-#     """Preprocess a commit message.
-
-#     Parameters
-#     ----------
-#     commit : str
-#         Commit message.
-#     remove_stopwords : bool, optional
-#         Remove stopwords from the commit message. The default is True.
-
-#     Returns
-#     -------
-#     str
-#         Preprocessed commit message.
-
-#     """
-#     global nlp, stopwords
-#     commit = commit.lower()
-#     # Format words and remove unwanted characters
-#     commit = re.sub(r'https?://.*[\r\n]*', '', commit, flags=re.MULTILINE)
-#     commit = re.sub(r'<a href', ' ', commit)
-#     commit = re.sub(r'&amp;', '', commit)
-#     commit = re.sub(r'[_"\-;%()|+&=*.,!?:#$@\[\]/]', ' ', commit)
-#     commit = re.sub(r'<br />', ' ', commit)
-#     commit = re.sub(r'\'', ' ', commit)
-#     # Optionally, remove stop words
-#     if remove_stopwords:
-#         global stopwords
-#         commit = commit.split()
-#         commit = [w for w in commit if w not in stopwords]
-#         commit = " ".join(commit)
-#     nlp_commit = nlp(commit)
-#     processed_commit = [token.text for token in nlp_commit]
-#     return processed_commit
-
-
 def create_dictionary(commits):
     """Create a dictionary of words from commits.
 
@@ -139,6 +103,8 @@ def build_model(topwords, embedding_vector_len, input_length):
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
     return model
 
+def naive_bayes_approach():
+    pass
 
 if __name__ == '__main__':
 

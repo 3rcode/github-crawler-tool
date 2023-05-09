@@ -6,7 +6,7 @@ from markdown import markdown
 import re
 
 
-github_token = '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'
+github_token = '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'
 headers = {
     'Authorization': f'token {github_token}',
     'Accept': 'application/vnd.github.v3+json'
@@ -65,15 +65,21 @@ def markdown_to_text(markdown_string):
 
     # md -> html -> text since BeautifulSoup can extract text cleanly
     html = markdown(markdown_string)
-
-    # remove code snippets
-    html = re.sub(r'<pre>(.*?)</pre>', ' ', html)
-    html = re.sub(r'<code>(.*?)</code >', ' ', html)
-
-    # extract text
     soup = BeautifulSoup(html, "html.parser")
-    text = ''.join(soup.findAll(string=True))
+    
+    # Replace code tag with 'module' as abstraction
+    for code in soup.find_all('code'):
+        code.string = 'module'
 
+    # Replace image tag with 'image' as abstraction
+    for image in soup.find_all('img'):
+        image.string = 'image'
+    
+    # Replace link tag with 'link' as abstraction
+    for link in soup.find_all('a'):
+        link.string = 'link'
+    # Extract text
+    text = ''.join(soup.findAll(string=True))
     return text
 
 

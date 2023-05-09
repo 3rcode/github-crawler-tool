@@ -54,7 +54,7 @@ Fixed some crashes on Android 8+. https://github.com/wallabag/android-app/pull/1
 "
 4,"Added
 
-@di72nn made the articles content use lazy-load, which improves performance a bit. This also brings full-text search and advanced queries. A full sync is recommended https://github.com/wallabag/android-app/pull/874 https://github.com/wallabag/android-app/pull/872
+@di72nn made the articles content use lazy-load, which improves performance a bit. This also brings full-text search and link. A full sync is recommended https://github.com/wallabag/android-app/pull/874 https://github.com/wallabag/android-app/pull/872
 @di72nn added experimental support for annotations. This feature is disabled by default until we polish the angles and can be activated in the settings. https://github.com/wallabag/android-app/pull/843
 @di72nn added the possibility to launch a QR code scanner app for easier wallabag credentials setup https://github.com/wallabag/android-app/pull/369
 @di72nn added extra stacktrace details when an error happens and also added a button on the error notification to copy the details to the clipboard https://github.com/wallabag/android-app/pull/881
@@ -90,8 +90,8 @@ Adaptive icon.
 UI should no longer be blocked by database operations.
 Other fixes and improvements
 Various fixes #1004 #1005 #1006 #1011
-Fixed crash on the tags management screen. (@di72nn)
-Fixed annotations. (@di72nn)
+Fixed crash on the tags management screen. (link)
+Fixed annotations. (link)
 
 Updated translations
 
@@ -114,8 +114,8 @@ Ukrainian
 "
 5,"Fixed
 
-Fixed crash on the tags management screen. (@di72nn)
-Fixed annotations. (@di72nn)
+Fixed crash on the tags management screen. (link)
+Fixed annotations. (link)
 "
 6,"Changes
 
@@ -179,7 +179,7 @@ Some other changes.
 "
 10,"Added
 
-@di72nn made the articles content use lazy-load, which improves performance a bit. This also brings full-text search and advanced queries. A full sync is recommended https://github.com/wallabag/android-app/pull/874 https://github.com/wallabag/android-app/pull/872
+@di72nn made the articles content use lazy-load, which improves performance a bit. This also brings full-text search and link. A full sync is recommended https://github.com/wallabag/android-app/pull/874 https://github.com/wallabag/android-app/pull/872
 @di72nn added experimental support for annotations. This feature is disabled by default until we polish the angles and can be activated in the settings. https://github.com/wallabag/android-app/pull/843
 @di72nn added the possibility to launch a QR code scanner app for easier wallabag credentials setup https://github.com/wallabag/android-app/pull/369
 @di72nn added extra stacktrace details when an error happens and also added a button on the error notification to copy the details to the clipboard https://github.com/wallabag/android-app/pull/881
@@ -251,10 +251,10 @@ Updated deps
 Updated the following translations: Persian, Thai, Italian, French, Dutch, Japanese, Korean, Spanish, Portuguese, Polish
 "
 13,"
-@di72nn added the Conscrypt Security Provider, allowing us to support TLS 1.3, among other things
+@di72nn added the link Security Provider, allowing us to support TLS 1.3, among other things
 @di72nn removed the custom SSL settings option, which was made to activate newer TLS versions on Android < 5, that we don't support anymore.
 @NWuensche improved the theming system and fixed TTS icons color on dark theme
-AboutLibraries was automatically bumped to v7.0.3
+link was automatically bumped to v7.0.3
 "
 14,@NWuensche made the app use the white logo when using dark themes (#816) and added a setting to disable wrapping long preformated lines (#812).
 15,"
@@ -387,7 +387,7 @@ Show reading time for entry in list view
 Show last update time in navigation drawer 
 Add menu entry to copy article url to clipboard
 Multiple format download
-Scroll with PAGE_UP/PAGE_DOWN (e-ink readers)
+Scroll with module/module (e-ink readers)
 Option to disable touch input
 
 Fixes
@@ -412,12 +412,12 @@ Improvements:
 * Improve bottom toolbar on article view
 Bugs:
 * Handle server 500 errors with message
-* Fix display of tables, quotes and <pre> elements in all themes
+* Fix display of tables, quotes and module elements in all themes
 Translations:
 * French
 * Spanish
 * Hungarian"
-25,"Important changes if you're coming from a 1.x version : This release drops wallabag v1 support. If you need support for wallabag v1, you must build yourself the sources from the v1_legacy branch.
+25,"Important changes if you're coming from a 1.x version : This release drops wallabag v1 support. If you need support for wallabag v1, you must build yourself the sources from the module branch.
 Changes from beta release: 
 * Added Framabag preset
 * Fix PDF Downloading

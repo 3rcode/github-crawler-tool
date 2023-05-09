@@ -1,9 +1,74 @@
 Index,Release Note
-1," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.6 
+1," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.11 
 What's Changed
 Changelog
 
-Move TURBO_FORCE config env var detection to Rust by @smaeda-ks in https://github.com/vercel/turbo/pull/4590
+Fix basic example to update on dependency changes by @mehulkar in https://github.com/vercel/turbo/pull/4835
+fix(examples): with rollup by @tknickman in https://github.com/vercel/turbo/pull/4836
+fix(docs): internal workspace cache by @tknickman in https://github.com/vercel/turbo/pull/4838
+Update basic example for App Router. by @anthonyshew in https://github.com/vercel/turbo/pull/4839
+Update with-rollup with App Router. by @anthonyshew in https://github.com/vercel/turbo/pull/4848
+Clarify how task skipping works when scripts are not implemented by @mehulkar in https://github.com/vercel/turbo/pull/4851
+fix: no longer include peer dependencies in transitive closures by @chris-olszewski in https://github.com/vercel/turbo/pull/4824
+Optional framework inference by @nathanhammond in https://github.com/vercel/turbo/pull/4788
+Fix/daemon fixups by @arlyon in https://github.com/vercel/turbo/pull/4831
+Hack to get correct log file by @gsoltis in https://github.com/vercel/turbo/pull/4873
+
+New Contributors
+
+@ihmpavel made their first contribution in https://github.com/vercel/turbo/pull/4743
+
+Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.10...v1.9.4-canary.11"
+2," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.10 
+What's Changed
+Changelog
+
+Prefactor package hashing by @nathanhammond in https://github.com/vercel/turbo/pull/4816
+chore: add underlying error to lockfile error messages by @chris-olszewski in https://github.com/vercel/turbo/pull/4800
+
+Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.9...v1.9.4-canary.10"
+3," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.9 
+What's Changed
+Changelog
+
+Remove --serial from the docs. by @nathanhammond in https://github.com/vercel/turbo/pull/4813
+Don't cache test:setup task by @mehulkar in https://github.com/vercel/turbo/pull/4773
+
+New Contributors
+
+@rakesh-blacksof made their first contribution in https://github.com/vercel/turbo/pull/4774
+
+Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.8...v1.9.4-canary.9"
+4," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.8 
+What's Changed
+Changelog
+
+chore: remove unused path imports by @chris-olszewski in https://github.com/vercel/turbo/pull/4780
+Send run summary to Spaces even without --summarize flag by @mehulkar in https://github.com/vercel/turbo/pull/4785
+port(turborepo): Package Manager Inference by @NicholasLYang in https://github.com/vercel/turbo/pull/4655
+Send turbo version to run payload by @mehulkar in https://github.com/vercel/turbo/pull/4786
+Add gitbranch and sha into spaces payload by @mehulkar in https://github.com/vercel/turbo/pull/4734
+Stripped down unix path by @gsoltis in https://github.com/vercel/turbo/pull/4767
+
+Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.7...v1.9.4-canary.8"
+5," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.7 
+What's Changed
+Changelog
+
+Make sure that we only hash the env pairs. by @nathanhammond in https://github.com/vercel/turbo/pull/4708
+Inline a constant so it's individualized to each task run by @mehulkar in https://github.com/vercel/turbo/pull/4735
+chore(turborepo): Fixed clippy warnings by @NicholasLYang in https://github.com/vercel/turbo/pull/4744
+chore: Disallows unknown fields in JSON sent by Rust. by @NicholasLYang in https://github.com/vercel/turbo/pull/4753
+fix: allow for workplace descriptors without a protocol by @chris-olszewski in https://github.com/vercel/turbo/pull/4755
+fix: berry prune including all builtin patch descriptors by @chris-olszewski in https://github.com/vercel/turbo/pull/4770
+make RepoConfig and CommandBase use absolute system paths by @arlyon in https://github.com/vercel/turbo/pull/4693
+
+Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.6...v1.9.4-canary.7"
+6," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.6 
+What's Changed
+Changelog
+
+Move module config env var detection to Rust by @smaeda-ks in https://github.com/vercel/turbo/pull/4590
 fix: turborepo unused code lints by @chris-olszewski in https://github.com/vercel/turbo/pull/4727
 Delete unused git_go file by @mehulkar in https://github.com/vercel/turbo/pull/4730
 We no longer require libc6-compat by @gsoltis in https://github.com/vercel/turbo/pull/4729
@@ -13,7 +78,7 @@ New Contributors
 @smaeda-ks made their first contribution in https://github.com/vercel/turbo/pull/4590
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.5...v1.9.4-canary.6"
-2," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.5 
+7," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.5 
 What's Changed
 Changelog
 
@@ -25,7 +90,7 @@ New Contributors
 @skauffmann made their first contribution in https://github.com/vercel/turbo/pull/4676
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.4...v1.9.4-canary.5"
-3," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.4 
+8," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.4 
 What's Changed
 Changelog
 
@@ -42,7 +107,7 @@ New Contributors
 @seeplusplus made their first contribution in https://github.com/vercel/turbo/pull/4667
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.3...v1.9.4-canary.4"
-4," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.3 
+9," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.3 
 What's Changed
 Changelog
 
@@ -53,16 +118,16 @@ fix: rebuild protobuf code and update ffi callsite by @chris-olszewski in https:
 Use spaceID from turbo.json if available by @mehulkar in https://github.com/vercel/turbo/pull/4687
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.2...v1.9.4-canary.3"
-5," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.2 
+10," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.2 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.1...v1.9.4-canary.2"
-6," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.1 
+11," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.1 
 What's Changed
 Changelog
 
 Include logs when posting task summary by @mehulkar in https://github.com/vercel/turbo/pull/4642
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.4-canary.0...v1.9.4-canary.1"
-7," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.0 
+12," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.4-canary.0 
 What's Changed
 Changelog
 
@@ -73,20 +138,20 @@ fix(turborepo): Switching back to git command instead of git2 by @NicholasLYang 
 feat(turbo): add spaces link by @tknickman in https://github.com/vercel/turbo/pull/4632
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.3...v1.9.4-canary.0"
-8," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.3 
+13," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.3 
 What's Changed
 Changelog
 
 Revert ""fix(turborepo): SCM tests and renaming (#4462)"" by @NicholasLYang in https://github.com/vercel/turbo/pull/4604
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.2...v1.9.3"
-9," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.2 
+14," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.2 
 What's Changed
 Changelog
 
 chore: Fix spelling by @NicholasLYang in https://github.com/vercel/turbo/pull/4552
 Include TimeSaved metric in Run Summaries by @mehulkar in https://github.com/vercel/turbo/pull/4539
-docs: add missing comma in turbo.json by @BRKalow in https://github.com/vercel/turbo/pull/4557
+docs: add missing comma in module by @BRKalow in https://github.com/vercel/turbo/pull/4557
 Delete a test fixture we don't need by @mehulkar in https://github.com/vercel/turbo/pull/4558
 fix(create-turbo): correct package manager selection by @tknickman in https://github.com/vercel/turbo/pull/4574
 Print Run URL if there is one by @mehulkar in https://github.com/vercel/turbo/pull/4562
@@ -100,7 +165,7 @@ New Contributors
 @BRKalow made their first contribution in https://github.com/vercel/turbo/pull/4557
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.1...v1.9.2"
-10," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.2-canary.1 
+15," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.2-canary.1 
 What's Changed
 Changelog
 
@@ -108,13 +173,13 @@ fix(create-turbo): prompt fix by @tknickman in https://github.com/vercel/turbo/p
 fix: better support for pnpm aliases by @chris-olszewski in https://github.com/vercel/turbo/pull/4555
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.2-canary.0...v1.9.2-canary.1"
-11," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.2-canary.0 
+16," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.2-canary.0 
 What's Changed
 Changelog
 
 chore: Fix spelling by @NicholasLYang in https://github.com/vercel/turbo/pull/4552
 Include TimeSaved metric in Run Summaries by @mehulkar in https://github.com/vercel/turbo/pull/4539
-docs: add missing comma in turbo.json by @BRKalow in https://github.com/vercel/turbo/pull/4557
+docs: add missing comma in module by @BRKalow in https://github.com/vercel/turbo/pull/4557
 Delete a test fixture we don't need by @mehulkar in https://github.com/vercel/turbo/pull/4558
 fix(create-turbo): correct package manager selection by @tknickman in https://github.com/vercel/turbo/pull/4574
 Print Run URL if there is one by @mehulkar in https://github.com/vercel/turbo/pull/4562
@@ -124,12 +189,12 @@ New Contributors
 @BRKalow made their first contribution in https://github.com/vercel/turbo/pull/4557
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.1...v1.9.2-canary.0"
-12," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.1 
+17," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.1 
 What's Changed
 Changelog
 
 Add more readme for integration tests by @mehulkar in https://github.com/vercel/turbo/pull/4515
-Deprecate THASH. by @nathanhammond in https://github.com/vercel/turbo/pull/4526
+Deprecate module. by @nathanhammond in https://github.com/vercel/turbo/pull/4526
 oldGlobalHash can be named by @nathanhammond in https://github.com/vercel/turbo/pull/4528
 feat(summary): add taskId to single package task by @tknickman in https://github.com/vercel/turbo/pull/4530
 Document --summarize flag and include in Troubleshooting doc by @mehulkar in https://github.com/vercel/turbo/pull/4467
@@ -144,7 +209,7 @@ Use both key and version when sorting lockfile entries by @mehulkar in https://g
 Save task duration correctly by @mehulkar in https://github.com/vercel/turbo/pull/4540
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.0...v1.9.1"
-13," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.0 
+18," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.0 
 What's Changed
 Changelog
 
@@ -161,7 +226,7 @@ fix: delete libgit2 by @chris-olszewski in https://github.com/vercel/turbo/pull/
 Make --summarize flag to work without a value by @mehulkar in https://github.com/vercel/turbo/pull/4375
 Enable the summarize flag in help output by @mehulkar in https://github.com/vercel/turbo/pull/4418
 fix: update example lockfiles by @chris-olszewski in https://github.com/vercel/turbo/pull/4321
-feature(turborepo): -F as filter shorthand by @NicholasLYang in https://github.com/vercel/turbo/pull/4422
+feature(turborepo): module as filter shorthand by @NicholasLYang in https://github.com/vercel/turbo/pull/4422
 chore: removing signal forwarding test by @chris-olszewski in https://github.com/vercel/turbo/pull/4436
 chore(deps): update yarn to v1.22.19 by @renovate in https://github.com/vercel/turbo/pull/4404
 Polish the shape of the Run Summary JSON by @mehulkar in https://github.com/vercel/turbo/pull/4421
@@ -175,7 +240,7 @@ Fix typos in example tsconfig' readme by @FranciscoMoretti in https://github.com
 chore: pipe through root package json to lockfile parsing by @chris-olszewski in https://github.com/vercel/turbo/pull/4437
 chore: Remove release flag from turborepo-ffi build by @NicholasLYang in https://github.com/vercel/turbo/pull/4478
 Strict Environment Handling by @nathanhammond in https://github.com/vercel/turbo/pull/4449
-chore: update with-tailwind example by @Chia1104 in https://github.com/vercel/turbo/pull/4379
+chore: update module example by @Chia1104 in https://github.com/vercel/turbo/pull/4379
 ci: Stop building Go code twice by @NicholasLYang in https://github.com/vercel/turbo/pull/4501
 Remove unused constant by @mehulkar in https://github.com/vercel/turbo/pull/4502
 Improve integration test setup by @mehulkar in https://github.com/vercel/turbo/pull/4512
@@ -191,11 +256,11 @@ New Contributors
 @cursecodes made their first contribution in https://github.com/vercel/turbo/pull/4427
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.8...v1.9.0"
-14," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.0-canary.3 
+19," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.0-canary.3 
 What's Changed
 Changelog
 
-chore: update with-tailwind example by @Chia1104 in https://github.com/vercel/turbo/pull/4379
+chore: update module example by @Chia1104 in https://github.com/vercel/turbo/pull/4379
 ci: Stop building Go code twice by @NicholasLYang in https://github.com/vercel/turbo/pull/4501
 Remove unused constant by @mehulkar in https://github.com/vercel/turbo/pull/4502
 Improve integration test setup by @mehulkar in https://github.com/vercel/turbo/pull/4512
@@ -208,7 +273,7 @@ New Contributors
 @cursecodes made their first contribution in https://github.com/vercel/turbo/pull/4427
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.0-canary.2...v1.9.0-canary.3"
-15," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.0-canary.2 
+20," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.0-canary.2 
 What's Changed
 Changelog
 
@@ -217,7 +282,7 @@ Fix typos in example tsconfig' readme by @FranciscoMoretti in https://github.com
 chore: pipe through root package json to lockfile parsing by @chris-olszewski in https://github.com/vercel/turbo/pull/4437
 chore: Remove release flag from turborepo-ffi build by @NicholasLYang in https://github.com/vercel/turbo/pull/4478
 Strict Environment Handling by @nathanhammond in https://github.com/vercel/turbo/pull/4449
-chore: update with-tailwind example by @Chia1104 in https://github.com/vercel/turbo/pull/4379
+chore: update module example by @Chia1104 in https://github.com/vercel/turbo/pull/4379
 
 New Contributors
 
@@ -225,7 +290,7 @@ New Contributors
 @Chia1104 made their first contribution in https://github.com/vercel/turbo/pull/4379
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.9.0-canary.1...v1.9.0-canary.2"
-16," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.0-canary.1 
+21," Release notes generated using configuration in .github/turborepo-release.yml at v1.9.0-canary.1 
 What's Changed
 Changelog
 
@@ -240,7 +305,7 @@ New Contributors
 @ozum made their first contribution in https://github.com/vercel/turbo/pull/4406
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.9-canary.1...v1.9.0-canary.1"
-17," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.9-canary.1 
+22," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.9-canary.1 
 What's Changed
 Changelog
 
@@ -250,13 +315,13 @@ fix: delete libgit2 by @chris-olszewski in https://github.com/vercel/turbo/pull/
 Make --summarize flag to work without a value by @mehulkar in https://github.com/vercel/turbo/pull/4375
 Enable the summarize flag in help output by @mehulkar in https://github.com/vercel/turbo/pull/4418
 fix: update example lockfiles by @chris-olszewski in https://github.com/vercel/turbo/pull/4321
-feature(turborepo): -F as filter shorthand by @NicholasLYang in https://github.com/vercel/turbo/pull/4422
+feature(turborepo): module as filter shorthand by @NicholasLYang in https://github.com/vercel/turbo/pull/4422
 chore: removing signal forwarding test by @chris-olszewski in https://github.com/vercel/turbo/pull/4436
 chore(deps): update yarn to v1.22.19 by @renovate in https://github.com/vercel/turbo/pull/4404
 Polish the shape of the Run Summary JSON by @mehulkar in https://github.com/vercel/turbo/pull/4421
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.9-canary.0...v1.8.9-canary.1"
-18," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.9-canary.0 
+23," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.9-canary.0 
 What's Changed
 Changelog
 
@@ -269,7 +334,7 @@ Remove executionSummary from dry run json by @mehulkar in https://github.com/ver
 chore(deps): update dependency nodemon to v2.0.22 by @renovate in https://github.com/vercel/turbo/pull/4201
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.8...v1.8.9-canary.0"
-19," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.8 
+24," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.8 
 What's Changed
 Changelog
 
@@ -279,7 +344,7 @@ Make attempted include tasks that started but didn't finish by @mehulkar in http
 Revert ""Add cache state to task summaries on real runs"" by @tknickman in https://github.com/vercel/turbo/pull/4390
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.7...v1.8.8"
-20," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.7 
+25," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.7 
 What's Changed
 Changelog
 
@@ -288,21 +353,21 @@ Update Done payload for Vercel Runs by @mehulkar in https://github.com/vercel/tu
 move env var handling into rust and expose summarize env as a command by @arlyon in https://github.com/vercel/turbo/pull/4364
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.6...v1.8.7"
-21," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.7-canary.1 
+26," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.7-canary.1 
 What's Changed
 
 fix: correctly deserialize npm packages in lockfile by @chris-olszewski in https://github.com/vercel/turbo/pull/4370
 release(turborepo): 1.8.7-canary.0 by @github-actions in https://github.com/vercel/turbo/pull/4372
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.7-canary.0...v1.8.7-canary.1"
-22," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.7-canary.0 
+27," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.7-canary.0 
 What's Changed
 Changelog
 
 Add cache state to task summaries on real runs by @mehulkar in https://github.com/vercel/turbo/pull/4225
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.6...v1.8.7-canary.0"
-23," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.6 
+28," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.6 
 What's Changed
 Changelog
 
@@ -315,7 +380,7 @@ fix(signal handling for child process) by @chris-olszewski in https://github.com
 Send run summary to API by @mehulkar in https://github.com/vercel/turbo/pull/4250
 Make Single Package repo work with globalDependencies config by @mehulkar in https://github.com/vercel/turbo/pull/4240
 fix: make turbo command regex stricter by @chris-olszewski in https://github.com/vercel/turbo/pull/4325
-Add endTime into task execution summary by @mehulkar in https://github.com/vercel/turbo/pull/4326
+Add module into task execution summary by @mehulkar in https://github.com/vercel/turbo/pull/4326
 Add start and endTime to top level execution summary by @mehulkar in https://github.com/vercel/turbo/pull/4334
 Record exit codes per task in a run by @mehulkar in https://github.com/vercel/turbo/pull/4344
 Consolidate two representations of task by @mehulkar in https://github.com/vercel/turbo/pull/4342
@@ -324,7 +389,7 @@ Reduce boilerplate in run sumamry tests by @mehulkar in https://github.com/verce
 fix: error swallowing when using continue by @chris-olszewski in https://github.com/vercel/turbo/pull/4354
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.5...v1.8.6"
-24," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.6-canary.1 
+29," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.6-canary.1 
 What's Changed
 Changelog
 
@@ -336,7 +401,7 @@ Reduce boilerplate in run sumamry tests by @mehulkar in https://github.com/verce
 fix: error swallowing when using continue by @chris-olszewski in https://github.com/vercel/turbo/pull/4354
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.6-canary.0...v1.8.6-canary.1"
-25," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.6-canary.0 
+30," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.6-canary.0 
 What's Changed
 Changelog
 
@@ -349,10 +414,10 @@ fix(signal handling for child process) by @chris-olszewski in https://github.com
 Send run summary to API by @mehulkar in https://github.com/vercel/turbo/pull/4250
 Make Single Package repo work with globalDependencies config by @mehulkar in https://github.com/vercel/turbo/pull/4240
 fix: make turbo command regex stricter by @chris-olszewski in https://github.com/vercel/turbo/pull/4325
-Add endTime into task execution summary by @mehulkar in https://github.com/vercel/turbo/pull/4326
+Add module into task execution summary by @mehulkar in https://github.com/vercel/turbo/pull/4326
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.5...v1.8.6-canary.0"
-26," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.5 
+31," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.5 
 What's Changed
 Changelog
 
@@ -363,7 +428,7 @@ Revert rust scm usage by @gsoltis in https://github.com/vercel/turbo/pull/4277
 send a SIGTERM on unix rather than just killing the process by @arlyon in https://github.com/vercel/turbo/pull/4276
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.4...v1.8.5"
-27," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4 
+32," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4 
 What's Changed
 Changelog
 
@@ -401,7 +466,7 @@ chore: Bumping fsnotify version by @NicholasLYang in https://github.com/vercel/t
 Add globalenv to run summary by @mehulkar in https://github.com/vercel/turbo/pull/4090
 Flag on the Go sandwich, attempt #2 by @gsoltis in https://github.com/vercel/turbo/pull/4115
 Re-repair Root Inference by @nathanhammond in https://github.com/vercel/turbo/pull/4049
-Correct argument to local turbo inference. by @nathanhammond in https://github.com/vercel/turbo/pull/4122
+Correct argument to local module inference. by @nathanhammond in https://github.com/vercel/turbo/pull/4122
 release(turborepo): 1.8.4-canary.3 by @github-actions in https://github.com/vercel/turbo/pull/4125
 Revert ""Flag on the Go sandwich, attempt #2"" (#4127 by @gsoltis in https://github.com/vercel/turbo/pull/4127
 Support exclusions in inputs by @gsoltis in https://github.com/vercel/turbo/pull/4066
@@ -454,7 +519,7 @@ New Contributors
 @bhatvikrant made their first contribution in https://github.com/vercel/turbo/pull/4158
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.3...v1.8.4"
-28," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.6 
+33," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.6 
 What's Changed
 Changelog
 
@@ -468,7 +533,7 @@ fix: prune pnpm patched dependencies with peer dependencies by @chris-olszewski 
 Add a version to the run summary schema by @mehulkar in https://github.com/vercel/turbo/pull/4230
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.4-canary.5...v1.8.4-canary.6"
-29," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.5 
+34," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.5 
 What's Changed
 Changelog
 
@@ -503,7 +568,7 @@ New Contributors
 @bhatvikrant made their first contribution in https://github.com/vercel/turbo/pull/4158
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.4-canary.4...v1.8.4-canary.5"
-30," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.4 
+35," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.4 
 What's Changed
 Changelog
 
@@ -512,7 +577,7 @@ Revert ""Flag on the Go sandwich, attempt #2"" (#4127 by @gsoltis in https://git
 Support exclusions in inputs by @gsoltis in https://github.com/vercel/turbo/pull/4066
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.4-canary.3...v1.8.4-canary.4"
-31," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.3 
+36," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.3 
 What's Changed
 Changelog
 
@@ -521,10 +586,10 @@ chore: Bumping fsnotify version by @NicholasLYang in https://github.com/vercel/t
 Add globalenv to run summary by @mehulkar in https://github.com/vercel/turbo/pull/4090
 Flag on the Go sandwich, attempt #2 by @gsoltis in https://github.com/vercel/turbo/pull/4115
 Re-repair Root Inference by @nathanhammond in https://github.com/vercel/turbo/pull/4049
-Correct argument to local turbo inference. by @nathanhammond in https://github.com/vercel/turbo/pull/4122
+Correct argument to local module inference. by @nathanhammond in https://github.com/vercel/turbo/pull/4122
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.4-canary.2...v1.8.4-canary.3"
-32," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.2 
+37," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.2 
 What's Changed
 Changelog
 
@@ -540,12 +605,12 @@ New Contributors
 @tunguyen-ct made their first contribution in https://github.com/vercel/turbo/pull/4097
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.4-canary.1...v1.8.4-canary.2"
-33,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230307.1...turbopack-230307.2
-34,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230306.1...turbopack-230307.1
-35,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230305.1...turbopack-230306.1
-36,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230304.1...turbopack-230305.1
-37,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230303.1...turbopack-230304.1
-38," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.1 
+38,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230307.1...turbopack-230307.2
+39,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230306.1...turbopack-230307.1
+40,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230305.1...turbopack-230306.1
+41,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230304.1...turbopack-230305.1
+42,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230303.1...turbopack-230304.1
+43," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.1 
 What's Changed
 Changelog
 
@@ -554,11 +619,11 @@ Revert ""enable rust codepath in release process"" by @gsoltis in https://github
 release(turborepo): 1.8.4-canary.0 by @github-actions in https://github.com/vercel/turbo/pull/4065
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.4-canary.0...v1.8.4-canary.1"
-39,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230302.2...turbopack-230303.1
-40,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230302.1...turbopack-230302.2
-41,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230301.1...turbopack-230302.1
-42,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230228.1...turbopack-230301.1
-43," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.0 
+44,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230302.2...turbopack-230303.1
+45,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230302.1...turbopack-230302.2
+46,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230301.1...turbopack-230302.1
+47,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230228.1...turbopack-230301.1
+48," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.4-canary.0 
 What's Changed
 Changelog
 
@@ -590,8 +655,8 @@ New Contributors
 @tm1000 made their first contribution in https://github.com/vercel/turbo/pull/4010
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.3...v1.8.4-canary.0"
-44,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230227.1...turbopack-230228.1
-45," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.3 
+49,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230227.1...turbopack-230228.1
+50," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.3 
 What's Changed
 Changelog
 
@@ -601,7 +666,7 @@ Align carets to key in JSON file by @n2o in https://github.com/vercel/turbo/pull
 fix(examples): svelte (#3919 by @tknickman in https://github.com/vercel/turbo/pull/3919
 fix(examples): kitchen-sink (#3920 by @tknickman in https://github.com/vercel/turbo/pull/3920
 fix(prettier): remove whitespace from example (#3924 by @tknickman in https://github.com/vercel/turbo/pull/3924
-Add empty public folder to stop Docker builds breaking by @a3957273 in https://github.com/vercel/turbo/pull/3899
+Add empty module folder to stop Docker builds breaking by @a3957273 in https://github.com/vercel/turbo/pull/3899
 feature: Use error_for_status by @NicholasLYang in https://github.com/vercel/turbo/pull/3898
 fix: Inference with workspace config by @NicholasLYang in https://github.com/vercel/turbo/pull/3938
 Add global hash inputs to dry run by @mehulkar in https://github.com/vercel/turbo/pull/3934
@@ -623,7 +688,7 @@ New Contributors
 @The-0xAlex made their first contribution in https://github.com/vercel/turbo/pull/3968
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.2...v1.8.3"
-46," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.3-canary.0 
+51," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.3-canary.0 
 What's Changed
 Changelog
 
@@ -633,7 +698,7 @@ Align carets to key in JSON file by @n2o in https://github.com/vercel/turbo/pull
 fix(examples): svelte (#3919 by @tknickman in https://github.com/vercel/turbo/pull/3919
 fix(examples): kitchen-sink (#3920 by @tknickman in https://github.com/vercel/turbo/pull/3920
 fix(prettier): remove whitespace from example (#3924 by @tknickman in https://github.com/vercel/turbo/pull/3924
-Add empty public folder to stop Docker builds breaking by @a3957273 in https://github.com/vercel/turbo/pull/3899
+Add empty module folder to stop Docker builds breaking by @a3957273 in https://github.com/vercel/turbo/pull/3899
 feature: Use error_for_status by @NicholasLYang in https://github.com/vercel/turbo/pull/3898
 fix: Inference with workspace config by @NicholasLYang in https://github.com/vercel/turbo/pull/3938
 Add global hash inputs to dry run by @mehulkar in https://github.com/vercel/turbo/pull/3934
@@ -654,18 +719,18 @@ New Contributors
 @The-0xAlex made their first contribution in https://github.com/vercel/turbo/pull/3968
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.2...v1.8.3-canary.0"
-47,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230226.1...turbopack-230227.1
-48,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230225.1...turbopack-230226.1
-49,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230224.1...turbopack-230225.1
-50,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230223.3...turbopack-230224.1
-51,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230223.2...turbopack-230223.3
-52,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230223.1...turbopack-230223.2
-53," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.2 
+52,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230226.1...turbopack-230227.1
+53,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230225.1...turbopack-230226.1
+54,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230224.1...turbopack-230225.1
+55,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230223.3...turbopack-230224.1
+56,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230223.2...turbopack-230223.3
+57,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230223.1...turbopack-230223.2
+58," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.2 
 What's Changed
 Changelog
 
 release(turborepo): 1.8.1 by @github-actions in https://github.com/vercel/turbo/pull/3869
-refactor: remove react/jsx-key ESLint rule by @albertothedev in https://github.com/vercel/turbo/pull/3880
+refactor: remove module ESLint rule by @albertothedev in https://github.com/vercel/turbo/pull/3880
 Add missing comma to dependsOn code example by @jan-paulus in https://github.com/vercel/turbo/pull/3884
 Add --log-prefix=none option by @mehulkar in https://github.com/vercel/turbo/pull/3851
 Fix turbo run when --filter is provided and no packages are affected by @mehulkar in https://github.com/vercel/turbo/pull/3901
@@ -677,15 +742,15 @@ New Contributors
 @jan-paulus made their first contribution in https://github.com/vercel/turbo/pull/3884
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.1...v1.8.2"
-54,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230222.3...turbopack-230223.1
-55,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230222.1...turbopack-230222.2
-56,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230221.3...turbopack-230222.1
-57," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.2-canary.0 
+59,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230222.3...turbopack-230223.1
+60,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230222.1...turbopack-230222.2
+61,See the commit diff at https://github.com/vercel/turbo/compare/turbopack-230221.3...turbopack-230222.1
+62," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.2-canary.0 
 What's Changed
 Changelog
 
 release(turborepo): 1.8.1 by @github-actions in https://github.com/vercel/turbo/pull/3869
-refactor: remove react/jsx-key ESLint rule by @albertothedev in https://github.com/vercel/turbo/pull/3880
+refactor: remove module ESLint rule by @albertothedev in https://github.com/vercel/turbo/pull/3880
 Add missing comma to dependsOn code example by @jan-paulus in https://github.com/vercel/turbo/pull/3884
 Add --log-prefix=none option by @mehulkar in https://github.com/vercel/turbo/pull/3851
 
@@ -695,12 +760,12 @@ New Contributors
 @jan-paulus made their first contribution in https://github.com/vercel/turbo/pull/3884
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.1...v1.8.2-canary.0"
-58,
-59,
-60,
-61,
-62,
-63," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.1 
+63,
+64,
+65,
+66,
+67,
+68," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.1 
 What's Changed
 Changelog
 
@@ -710,9 +775,9 @@ Documentation for Workspace Configs by @mehulkar in https://github.com/vercel/tu
 Fix issue with merging dependsOn from Workspace Configs by @mehulkar in https://github.com/vercel/turbo/pull/3866
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.8.0...v1.8.1"
-64," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.0 
+69," Release notes generated using configuration in .github/turborepo-release.yml at v1.8.0 
 Blog Post
-Turborepo 1.8
+link
 What's Changed
 Changelog
 
@@ -733,7 +798,7 @@ feat(docs): update verbosity reference by @tknickman in https://github.com/verce
 feat(cli): reccomend codemod in updater by @tknickman in https://github.com/vercel/turbo/pull/3743
 fix(turbo): improved yarn berry pnp support (#3744 by @tknickman in https://github.com/vercel/turbo/pull/3744
 release(turborepo): 1.7.5-canary.0 by @github-actions in https://github.com/vercel/turbo/pull/3752
-Add support for --graph=file.mermaid by @styfle in https://github.com/vercel/turbo/pull/3633
+Add support for module by @styfle in https://github.com/vercel/turbo/pull/3633
 chore: add option to dump args sent to go by @chris-olszewski in https://github.com/vercel/turbo/pull/3515
 Revert ""chore: add option to dump args sent to go (#3515)"" by @mehulkar in https://github.com/vercel/turbo/pull/3782
 Warn on absolute paths used in turbo.json by @gsoltis in https://github.com/vercel/turbo/pull/3658
@@ -745,12 +810,12 @@ feat(types): update turbo.json schema by @tknickman in https://github.com/vercel
 Ensure Task can depend across workspaces by @mehulkar in https://github.com/vercel/turbo/pull/3820
 Error if none of the tasks passed to CLI were found by @mehulkar in https://github.com/vercel/turbo/pull/3828
 port(turborepo): Unlink by @NicholasLYang in https://github.com/vercel/turbo/pull/3824
-Add outputs to all examples by @anthonyshew in https://github.com/vercel/turbo/pull/3830
+Add module to all examples by @anthonyshew in https://github.com/vercel/turbo/pull/3830
 Callout installation docs in getting started by @mehulkar in https://github.com/vercel/turbo/pull/3833
 Bump @types/react version in create-turbo starter by @mehulkar in https://github.com/vercel/turbo/pull/3844
 chore(deps): update dependency @types/express to v4.17.17 by @renovate in https://github.com/vercel/turbo/pull/3636
 Add package version to eslint.mdx in eslint-config-custom example by @KamWis in https://github.com/vercel/turbo/pull/3511
-Copy public directory to docker by @sandumorari in https://github.com/vercel/turbo/pull/2642
+Copy module directory to docker by @sandumorari in https://github.com/vercel/turbo/pull/2642
 
 New Contributors
 
@@ -762,17 +827,17 @@ New Contributors
 @angeblecon made their first contribution in https://github.com/vercel/turbo/pull/3852
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.7.4...v1.8.0"
-65,
-66,
-67,
-68,
-69,
 70,
 71,
 72,
 73,
 74,
-75," Release notes generated using configuration in .github/release.yml at v1.7.5-canary.0 
+75,
+76,
+77,
+78,
+79,
+80," Release notes generated using configuration in .github/release.yml at v1.7.5-canary.0 
 What's Changed
 Changelog
 
@@ -794,7 +859,7 @@ feat(cli): reccomend codemod in updater by @tknickman in https://github.com/verc
 fix(turbo): improved yarn berry pnp support (#3744 by @tknickman in https://github.com/vercel/turbo/pull/3744
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.7.4...v1.7.5-canary.0"
-76,"What's Changed
+81,"What's Changed
 
 publish 1.7.4 to registry by @Turbobot
 chore: add local and global versions in debug (#3661) by @chris-olszewski
@@ -826,14 +891,14 @@ release(turborepo): 1.7.3 (#3627) by @github-actions[bot]
 add helper for walking a tree concurrently and deterministic (#3619) by @sokra
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.7.3...v1.7.4"
-77,"What's Changed
+82,"What's Changed
 
 publish 1.7.3 to registry by @Turbobot
 fix: SSO Login (#3626) by @NicholasLYang
 feat: Use lockfiles when determining what packages changed across commits (#3250) by @chris-olszewski
 fix: mismatched pnpm lockfile version resolution (#3611) by @chris-olszewski
 initial work for compile-time evaluation (#3495) by @sokra
-Update swc_core to v0.59.11 (#3484) by @kdy1
+Update module to module (#3484) by @kdy1
 ci(actions): adjust test summary format (#3588) by @kwonoj
 fix(cli): prefer constant over name (#3608) by @tknickman
 needs this -- to actually pass the flag (#3487) by @phocks
@@ -841,7 +906,7 @@ fix(docs): update turbo.json highlighting in docs (#3609) by @tknickman
 release(turborepo): 1.7.3-canary.1 (#3606) by @github-actions[bot]
 fix(cli): ci detection (#3605) by @tknickman
 Capture engine/run unit tests with prysk (#3592) by @mehulkar
-chore: Removed Cargo.lock from CI for PRs (#3558) by @NicholasLYang
+chore: Removed module from CI for PRs (#3558) by @NicholasLYang
 update next.js to 13.1.7-canary.2 (#3595) by @sokra
 test(turborepo): Test link (#3556) by @NicholasLYang
 release(turborepo): 1.7.3-canary.0 (#3603) by @github-actions[bot]
@@ -862,7 +927,7 @@ fix cache cleanup (#3546) by @ForsakenHarmony
 Bump cli dependency (#3563) by @gsoltis
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.7.2...v1.7.3"
-78,"What's Changed
+83,"What's Changed
 
 publish 1.7.2 to registry by @Turbobot
 ci(workflow): store plain text test summary (#3567) by @kwonoj
@@ -878,7 +943,7 @@ ci(workflow): format integration test results (#3534) by @kwonoj
 release(turborepo): 1.7.1 (#3560) by @github-actions[bot]
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.7.1...v1.7.2"
-79,"What's Changed
+84,"What's Changed
 
 publish 1.7.1 to registry by @Turbobot
 port(turbo): Link (#3500) by @NicholasLYang
@@ -905,7 +970,7 @@ clean branch caches less often (#3509) by @ForsakenHarmony
 [FIX]: VSCode ""Parsing error: Cannot find module 'next/babel"" PNPM ESLint (#3489) by @ImBIOS
 fix(shim): better error message for missing go bin (#3498) by @tknickman
 Review fixes for Next routing (#3501) by @jridgewell
-fix(turborepo): Add .npmrc support to turbo prune (#3492) by @Kuirak
+fix(turborepo): Add module support to module (#3492) by @Kuirak
 fix: Skip over repo root package for package inferrence (#3503) by @chris-olszewski
 Handle routing by calling Next.js code (#3446) by @jridgewell
 ci(workflow): fix integration job log detection (#3481) by @kwonoj
@@ -918,9 +983,9 @@ add edge compilation, runtime config parsing and edge apis (#3396) by @sokra
 release(turborepo): 1.7.1-canary.7 (#3485) by @github-actions[bot]
 fix(codemod): correct to flag validation (#3478) by @tknickman
 fix: Support pnpm lockfile keys in dependencies (#3461) by @chris-olszewski
-changesets action: add pnpm install (#3482) by @colbyfayock
+module action: add pnpm install (#3482) by @colbyfayock
 fix(shim): use custom version parser (#3474) by @tknickman
-changesets action: yarn -> pnpm (#3477) by @anthonyshew
+module action: module -> module (#3477) by @anthonyshew
 fix(turborepo): fix create branch workflow (#3471) by @tknickman
 Use mdxjs upstream at 0.1.5 (#3473) by @wbinnssmith
 Added an example with rollup (#1867) by @mattpocock
@@ -933,7 +998,7 @@ move clippy to separate action and remove cache (#3311) by @ForsakenHarmony
 ci(workflow): setup a new workflow for next.js repo_dispatch (#3441) by @kwonoj
 fix: use the correct value in termsize tuple (#3458) by @chris-olszewski
 Fixed prisma example to allow importing interfaces from database (#2710) by @mattpocock
-don't run cargo fmt --all in pre-commit hook (#3403) by @wbinnssmith
+don't run module in pre-commit hook (#3403) by @wbinnssmith
 publish 1.7.1-canary.6 to registry (#3457) by @tknickman
 Fix data requests for dynamic routes (#3435) by @alexkirsz
 fix(release): use turbo to build packages (#3454) by @tknickman
@@ -988,7 +1053,7 @@ Factor out ReadTurboConfig method (#3368) by @mehulkar
 Unused packages. (#3358) by @nathanhammond
 fix(docs): small typo in caching doc (#3365) by @walkerdb
 chore: Port logout to be pure Rust (#3302) by @chris-olszewski
-Update swc_core to v0.56.0 (#3303) by @kdy1
+Update module to module (#3303) by @kdy1
 Cover gitignored env files in docs and examples (#3270) by @mehulkar
 add sweep timestamp to gitignore by @ForsakenHarmony
 fix(docs): remove empty array instruction (#3351) by @tknickman
@@ -1011,7 +1076,7 @@ fix(docs): corect blog typo (#3296) by @tknickman
 fix(docs): update yarn install command (#3287) by @tknickman
 chore(docs): update 1.7 OG image (#3295) by @tknickman
 publish 1.7.1-canary.0 to registry (#3293) by @tknickman
-Add support for dynamic import()s on the server-side (#3193) by @alexkirsz
+Add support for dynamic modules on the server-side (#3193) by @alexkirsz
 only try to push benchmark data (#3289) by @sokra
 fix: use error logger in Rust turborepo (#3253) by @chris-olszewski
 fix(turborepo): typos (#3285) by @paleite
@@ -1026,18 +1091,18 @@ feat(docs): update output-logs options (#3266) by @tknickman
 add necessary permissions to commit step again (#3258) by @sokra
 Moved docs to global turbo installation (#2701) by @mattpocock
 Update examples with features from 1.7 release (#2738) by @mehulkar
-Document persistent key (#2669) by @mehulkar
+Document module key (#2669) by @mehulkar
 Update docs on default outputs (#2713) by @mehulkar
 publish 1.7.0 to registry (#3251) by @tknickman
 remove muzzammil.xyz/jsonc package in favour of more stable github url (#3213) by @arlyon
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.7.0...v1.7.1"
-80,"What's Changed
+85,"What's Changed
 
 remove muzzammil.xyz/jsonc package in favour of more stable github url (#3213) by @arlyon in https://github.com/vercel/turbo/pull/3213
 publish 1.7.0 to registry (#3251) by @tknickman in https://github.com/vercel/turbo/pull/3251
 Update docs on default outputs (#2713) by @mehulkar in https://github.com/vercel/turbo/pull/2713
-Document persistent key (#2669) by @mehulkar in https://github.com/vercel/turbo/pull/2669
+Document module key (#2669) by @mehulkar in https://github.com/vercel/turbo/pull/2669
 Update examples with features from 1.7 release (#2738) by @mehulkar in https://github.com/vercel/turbo/pull/2738
 Moved docs to global turbo installation (#2701) by @mattpocock in https://github.com/vercel/turbo/pull/2701
 add necessary permissions to commit step again (#3258) by @sokra in https://github.com/vercel/turbo/pull/3258
@@ -1054,8 +1119,8 @@ fix: use error logger in Rust turborepo (#3253) by @chris-olszewski in https://g
 publish 1.7.1-canary.0 to registry by @Turbobot in https://github.com/vercel/turbo/pull/3293
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.7.0...v1.7.1-canary.0"
-81,"Blog Post
-Turborepo 1.7
+86,"Blog Post
+link
 What's Changed
 
 publish 1.7.0 to registry by @Turbobot in https://github.com/vercel/turbo/pull/3251
@@ -1065,7 +1130,7 @@ clean cache a little less often (#3245) by @ForsakenHarmony in https://github.co
 fix(cli): npm lockfile workspace parsing (#3244) by @tknickman in https://github.com/vercel/turbo/pull/3244
 fix main push detection in workflow (#3240) by @sokra in https://github.com/vercel/turbo/pull/3240
 Open PRs for font data updates instead (#3232) by @wbinnssmith in https://github.com/vercel/turbo/pull/3232
-Update swc_core to v0.53.0 (#3210) by @kdy1 in https://github.com/vercel/turbo/pull/3210
+Update module to module (#3210) by @kdy1 in https://github.com/vercel/turbo/pull/3210
 update to next.js version with working test suite (#3211) by @sokra in https://github.com/vercel/turbo/pull/3211
 Show an error if no tasks are supplied to run (#3236) by @gsoltis in https://github.com/vercel/turbo/pull/3236
 fix: support both formats of workspace definition for npm and yarn (#3235) by @chris-olszewski in https://github.com/vercel/turbo/pull/3235
@@ -1099,7 +1164,7 @@ fix: add info message when using global turbo in repo (#3169) by @chris-olszewsk
 fix(turborepo): Check version before adding --single-package flag (#3165) by @NicholasLYang in https://github.com/vercel/turbo/pull/3165
 Update examples for stable transpilePackages. (#3167) by @anthonyshew in https://github.com/vercel/turbo/pull/3167
 Refactor the Next SSG transform to handle the inverse operation (#2968) by @alexkirsz in https://github.com/vercel/turbo/pull/2968
-Update docs to use transpilePackages instead of next-transpile-modules. (#3158) by @leerob in https://github.com/vercel/turbo/pull/3158
+Update docs to use module instead of module. (#3158) by @leerob in https://github.com/vercel/turbo/pull/3158
 fix(vite): update deps (#3133) by @tknickman in https://github.com/vercel/turbo/pull/3133
 Fix vite example build (#3129) by @DevmaticTech in https://github.com/vercel/turbo/pull/3129
 Fix command to delete local turborepo cache (#3109) by @nasso in https://github.com/vercel/turbo/pull/3109
@@ -1173,7 +1238,7 @@ feat(rust-port): Split up shim and cli (#2970) by @NicholasLYang in https://gith
 Use native fetch in node over node-fetch (#2985) by @wbinnssmith in https://github.com/vercel/turbo/pull/2985
 turbo-tasks-fetch: Emit issues on failed fetches (#2964) by @wbinnssmith in https://github.com/vercel/turbo/pull/2964
 fix(core): fix turbo engine task builder (#2981) by @tknickman in https://github.com/vercel/turbo/pull/2981
-generate shim bindings into OUT_DIR (#2977) by @ForsakenHarmony in https://github.com/vercel/turbo/pull/2977
+generate shim bindings into module (#2977) by @ForsakenHarmony in https://github.com/vercel/turbo/pull/2977
 Run setup-node in update-google-fonts workflow (#2980) by @wbinnssmith in https://github.com/vercel/turbo/pull/2980
 update npm deps (#2960) by @ForsakenHarmony in https://github.com/vercel/turbo/pull/2960
 ci(action): auto update PR for swc_* (#2938) by @kwonoj in https://github.com/vercel/turbo/pull/2938
@@ -1198,7 +1263,7 @@ Remove unused dependencies (#2934) by @alexkirsz in https://github.com/vercel/tu
 add memory usage tracking (#2865) by @sokra in https://github.com/vercel/turbo/pull/2865
 @next/font [1/n] Add query structure to module requests (#2743) by @wbinnssmith in https://github.com/vercel/turbo/pull/2743
 add turbo_tasks State (#2935) by @sokra in https://github.com/vercel/turbo/pull/2935
-support _devPageManifest.json (#2885) by @ForsakenHarmony in https://github.com/vercel/turbo/pull/2885
+support module (#2885) by @ForsakenHarmony in https://github.com/vercel/turbo/pull/2885
 Docs: Add Authdog to Turbo Showcase page (#2921) by @dbrrt in https://github.com/vercel/turbo/pull/2921
 enable id reusing (#2895) by @sokra in https://github.com/vercel/turbo/pull/2895
 reduce number of allocations (#2833) by @sokra in https://github.com/vercel/turbo/pull/2833
@@ -1214,7 +1279,7 @@ build(cargo): update swc_core, dependencies to resolve circular deps (#2869) by 
 Fix the missing links. (#2707) by @nathanhammond in https://github.com/vercel/turbo/pull/2707
 Update lint-staged behavior. (#2904) by @nathanhammond in https://github.com/vercel/turbo/pull/2904
 Add additional detailed warning message if no tasks were run. (#2778) by @nathanhammond in https://github.com/vercel/turbo/pull/2778
-simplify next-binding (#2899) by @ForsakenHarmony in https://github.com/vercel/turbo/pull/2899
+simplify module (#2899) by @ForsakenHarmony in https://github.com/vercel/turbo/pull/2899
 fix(examples): cra pnpm fix (#2897) by @tknickman in https://github.com/vercel/turbo/pull/2897
 fix(eslint): include all versions above 6.6 (#2896) by @tknickman in https://github.com/vercel/turbo/pull/2896
 Support basic next/image loading (#2481) by @jridgewell in https://github.com/vercel/turbo/pull/2481
@@ -1248,7 +1313,7 @@ feat(turbo-ignore): pretty errors (#2805) by @tknickman in https://github.com/ve
 fix(examples): design system linking (#2822) by @tknickman in https://github.com/vercel/turbo/pull/2822
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.6.3...v1.7.0"
-82,"What's Changed
+87,"What's Changed
 
 Merge release branch staging-1.6.2 by @nathanhammond in https://github.com/vercel/turbo/pull/2453
 refactor(next/dev): allow devserver args serializable by @kwonoj in https://github.com/vercel/turbo/pull/2446
@@ -1330,7 +1395,7 @@ New Contributors
 @pahaz made their first contribution in https://github.com/vercel/turbo/pull/2468
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.6.2...v1.6.3"
-83,"What's Changed
+88,"What's Changed
 
 Merge release branch staging-1.6.2 by @nathanhammond in https://github.com/vercel/turbo/pull/2453
 refactor(next/dev): allow devserver args serializable by @kwonoj in https://github.com/vercel/turbo/pull/2446
@@ -1411,7 +1476,7 @@ New Contributors
 @pahaz made their first contribution in https://github.com/vercel/turbo/pull/2468
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.6.2...v1.6.3-canary.0"
-84,"What's Changed
+89,"What's Changed
 
 Merge release branch staging-1.6.1 by @nathanhammond in https://github.com/vercel/turbo/pull/2301
 Make ship happen by @sokra in https://github.com/vercel/turbo/pull/2315
@@ -1433,8 +1498,8 @@ chore(deps): update pnpm/action-setup action to v2.2.4 by @renovate in https://g
 Fix twitter link on Turbopack README by @sosukesuzuki in https://github.com/vercel/turbo/pull/2360
 fix: license link not found by @chunsch in https://github.com/vercel/turbo/pull/2358
 chore(docs): cache false doesn't ignore dependsOn by @zEh- in https://github.com/vercel/turbo/pull/2342
-feature(rust): bin command porting by @NicholasLYang in https://github.com/vercel/turbo/pull/2234
-chore(docs): fix broken ""installing the turbo"" link by @KarnellSchultz in https://github.com/vercel/turbo/pull/2376
+feature(rust): module command porting by @NicholasLYang in https://github.com/vercel/turbo/pull/2234
+chore(docs): fix broken ""installing the module"" link by @KarnellSchultz in https://github.com/vercel/turbo/pull/2376
 Fix links for Architecture: Registry by @lpalmes in https://github.com/vercel/turbo/pull/2368
 fix: why turborepo? link by @hijuliancode in https://github.com/vercel/turbo/pull/2354
 chore(docs): fix broken links by @ChFlick in https://github.com/vercel/turbo/pull/2373
@@ -1449,7 +1514,7 @@ Update examples to next@latest by @mehulkar in https://github.com/vercel/turbo/p
 benchmark update contrast by @gaspar09 in https://github.com/vercel/turbo/pull/2393
 Don't allocate collectibles unless necessary by @alexkirsz in https://github.com/vercel/turbo/pull/2395
 Warn on not-yet-supported import.meta usage by @wbinnssmith in https://github.com/vercel/turbo/pull/2397
-Speed up NoMoveVec allocations by @alexkirsz in https://github.com/vercel/turbo/pull/2398
+Speed up module allocations by @alexkirsz in https://github.com/vercel/turbo/pull/2398
 Update degit instructions in examples with new repo address by @mehulkar in https://github.com/vercel/turbo/pull/2396
 Fixed an issue where the graph benchmark bars were too small when under a second by @mattpocock in https://github.com/vercel/turbo/pull/2384
 Switch to inverted definition. by @nathanhammond in https://github.com/vercel/turbo/pull/2367
@@ -1462,7 +1527,7 @@ Do not forget by @Brooooooklyn in https://github.com/vercel/turbo/pull/2418
 Add area label to turbopack bug reports by @mehulkar in https://github.com/vercel/turbo/pull/2419
 fix: npm lockfile causing cache instability by @chris-olszewski in https://github.com/vercel/turbo/pull/2424
 tests(turbo): Rust CLI Tests by @NicholasLYang in https://github.com/vercel/turbo/pull/2379
-chore(docs): improve description of --force and --no-cache by @styfle in https://github.com/vercel/turbo/pull/2425
+chore(docs): improve description of module and module by @styfle in https://github.com/vercel/turbo/pull/2425
 Support comments in tsconfig.json by @johanholmerin in https://github.com/vercel/turbo/pull/2429
 Revert ""Support comments in tsconfig.json"" by @jaredpalmer in https://github.com/vercel/turbo/pull/2432
 Revert ""Revert ""Support comments in tsconfig.json"""" by @jridgewell in https://github.com/vercel/turbo/pull/2433
@@ -1478,7 +1543,7 @@ Optimize {run_add_to,run_remove_from}_scope_queue by @alexkirsz in https://githu
 Fix decrement_tasks incrementing instead by @alexkirsz in https://github.com/vercel/turbo/pull/2399
 Update Next.js dependency for the TP benchmark by @alexkirsz in https://github.com/vercel/turbo/pull/2435
 prettier fixes by @sokra in https://github.com/vercel/turbo/pull/2436
-Fix unsound with_task_id_mapping implementation by @bdbai in https://github.com/vercel/turbo/pull/2362
+Fix unsound module implementation by @bdbai in https://github.com/vercel/turbo/pull/2362
 Fix unnecessary question mark warnings by @allan2 in https://github.com/vercel/turbo/pull/2443
 
 New Contributors
@@ -1515,11 +1580,11 @@ New Contributors
 @allan2 made their first contribution in https://github.com/vercel/turbo/pull/2443
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.6.1...v1.6.2"
-85,"What's Changed
+90,"What's Changed
 
 Merge release branch staging-1.6.0 by @nathanhammond in https://github.com/vercel/turbo/pull/2294
 feat(docs): 1.6 docs & blog by @mattpocock in https://github.com/vercel/turbo/pull/2157
-fix(docs): correct typo in eslint-config-custom/package.json by @junhoyeo in https://github.com/vercel/turbo/pull/2295
+fix(docs): correct typo in module by @junhoyeo in https://github.com/vercel/turbo/pull/2295
 copy: task runner -> ""build system"" by @jaredpalmer in https://github.com/vercel/turbo/pull/2297
 fix(blog): correct install by @tknickman in https://github.com/vercel/turbo/pull/2299
 Revert find-up change. by @nathanhammond in https://github.com/vercel/turbo/pull/2300
@@ -1529,8 +1594,8 @@ New Contributors
 @junhoyeo made their first contribution in https://github.com/vercel/turbo/pull/2295
 
 Full Changelog: https://github.com/vercel/turbo/compare/v1.5.5...v1.6.1"
-86,"Blog Post
-Turborepo 1.6
+91,"Blog Post
+link
 What's Changed
 
 seo: Add script to generate RSS feed.xml to docs site by @jaredpalmer in https://github.com/vercel/turborepo/pull/2132
@@ -1631,7 +1696,7 @@ New Contributors
 @benjervis made their first contribution in https://github.com/vercel/turborepo/pull/2290
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.5.5...v1.6.0"
-87,"What's Changed
+92,"What's Changed
 
 Fix leaving .turbo-cookie around by @gsoltis in https://github.com/vercel/turborepo/pull/2180
 fix(examples): cache .vercel for adapter-vercel by @tknickman in https://github.com/vercel/turborepo/pull/2191
@@ -1651,7 +1716,7 @@ New Contributors
 @erikhofer made their first contribution in https://github.com/vercel/turborepo/pull/2225
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.5.6...v1.5.7-canary.0"
-88,"Note that this release enables CGO for all targets
+93,"Note that this release enables module for all targets
 What's Changed
 
 seo: Add script to generate RSS feed.xml to docs site by @jaredpalmer in https://github.com/vercel/turborepo/pull/2132
@@ -1697,15 +1762,15 @@ New Contributors
 @blake-mealey made their first contribution in https://github.com/vercel/turborepo/pull/2179
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.5.5...v1.5.6"
-89,"What's Changed
+94,"What's Changed
 
 fix(fs): overwrite symlink in restore cache by @AielloChan in https://github.com/vercel/turborepo/pull/2016
 seo: Add rewrite to turbo sitemap crawler by @jaredpalmer in https://github.com/vercel/turborepo/pull/2106
-Change Berry's cacheKey to be a string by @amitdahan in https://github.com/vercel/turborepo/pull/2102
+Change Berry's module to be a string by @amitdahan in https://github.com/vercel/turborepo/pull/2102
 Fix small typo by @arturcarvalho in https://github.com/vercel/turborepo/pull/2108
 Add React Flow to showcase by @moklick in https://github.com/vercel/turborepo/pull/2107
 Test that env vars dependencies are sorted consistently by @mehulkar in https://github.com/vercel/turborepo/pull/2111
-Extract the patch for tar by @nathanhammond in https://github.com/vercel/turborepo/pull/2116
+Extract the patch for module by @nathanhammond in https://github.com/vercel/turborepo/pull/2116
 Re-add log message about remote caching by @mehulkar in https://github.com/vercel/turborepo/pull/2122
 Temporarily disable daemon on windows by @gsoltis in https://github.com/vercel/turborepo/pull/2124
 
@@ -1717,7 +1782,7 @@ New Contributors
 @moklick made their first contribution in https://github.com/vercel/turborepo/pull/2107
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.5.4...v1.5.5"
-90,"What's Changed
+95,"What's Changed
 
 Drop log line breaking JSON dry-run output when remote caching is enabled by @gsoltis in https://github.com/vercel/turborepo/pull/2067
 Use fmt.Sprintf where appropriate in logs by @gsoltis in https://github.com/vercel/turborepo/pull/2068
@@ -1725,7 +1790,7 @@ Fix typo by @morinokami in https://github.com/vercel/turborepo/pull/2074
 Add path types for cache. by @nathanhammond in https://github.com/vercel/turborepo/pull/2059
 fix(deps): update dependency ts-json-schema-generator to v1.1.1 by @renovate in https://github.com/vercel/turborepo/pull/2071
 Fix: Docs Edit This Page Button not working by @fmcalado in https://github.com/vercel/turborepo/pull/2076
-chore(docs): sections for globalDependencies and globalEnv by @QuiiBz in https://github.com/vercel/turborepo/pull/2080
+chore(docs): sections for module and module by @QuiiBz in https://github.com/vercel/turborepo/pull/2080
 Add single-package mode and integration tests by @gsoltis in https://github.com/vercel/turborepo/pull/1979
 fix(prune) respect dir permissions during prune by @chris-olszewski in https://github.com/vercel/turborepo/pull/2066
 Fix typo in docs by @davemaier in https://github.com/vercel/turborepo/pull/2086
@@ -1733,7 +1798,7 @@ Path casts by @nathanhammond in https://github.com/vercel/turborepo/pull/2077
 fix(prune): place workspace configuration file in json directory by @chris-olszewski in https://github.com/vercel/turborepo/pull/2030
 chore(deps): update nextjs monorepo to v12.3.1 by @renovate in https://github.com/vercel/turborepo/pull/2035
 Turn down logging for the daemon by @gsoltis in https://github.com/vercel/turborepo/pull/2085
-fix(docs): overflow on <Callout /> by @QuiiBz in https://github.com/vercel/turborepo/pull/2082
+fix(docs): overflow on module by @QuiiBz in https://github.com/vercel/turborepo/pull/2082
 chore(deps): update dependency autoprefixer to v10.4.12 by @renovate in https://github.com/vercel/turborepo/pull/2007
 Update command line reference for prune by @chris-olszewski in https://github.com/vercel/turborepo/pull/2087
 Handle pnpm resolving a dependency to multiple versions by @gsoltis in https://github.com/vercel/turborepo/pull/2090
@@ -1746,7 +1811,7 @@ New Contributors
 @davemaier made their first contribution in https://github.com/vercel/turborepo/pull/2086
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.5.3...v1.5.4"
-91,"What's Changed
+96,"What's Changed
 
 Update turbo-1-5-0.mdx by @cedric25 in https://github.com/vercel/turborepo/pull/2061
 Add test to ensure relevant fields are sorted by @gsoltis in https://github.com/vercel/turborepo/pull/2064
@@ -1756,7 +1821,7 @@ New Contributors
 @cedric25 made their first contribution in https://github.com/vercel/turborepo/pull/2061
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.5.2...v1.5.3"
-92,"What's Changed
+97,"What's Changed
 
 Update docs on declaring env key dependencies by @mehulkar in https://github.com/vercel/turborepo/pull/1936
 Rewrote option syntax to be more flexible (thanks Cobra) by @mattpocock in https://github.com/vercel/turborepo/pull/2014
@@ -1780,14 +1845,14 @@ New Contributors
 @sppatel made their first contribution in https://github.com/vercel/turborepo/pull/1988
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.5.1...v1.5.2"
-93,"What's Changed
+98,"What's Changed
 
 Drop no-longer-supported platform references by @gsoltis in https://github.com/vercel/turborepo/pull/2033
 We can infer identifer, we don't need to specify it by @gsoltis in https://github.com/vercel/turborepo/pull/2032
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.5.0...v1.5.1"
-94,"Blog Post
-Turborepo 1.5
+99,"Blog Post
+link
 What's Changed
 
 Document inclusion of package.json in workspace task cache keys by @mehulkar in https://github.com/vercel/turborepo/pull/1955
@@ -1812,7 +1877,7 @@ feat(codemod): migrate turbo.json dependsOn by @tknickman in https://github.com/
 feat: Add prune support for Yarn 3 by @chris-olszewski in https://github.com/vercel/turborepo/pull/2019
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.4.7...v1.5.0"
-95,"What's Changed
+100,"What's Changed
 
 Add degit instructions for all examples by @mehulkar in https://github.com/vercel/turborepo/pull/1884
 chore(turbo-ignore): add console message of an unfriendly error by @t-i-0414 in https://github.com/vercel/turborepo/pull/1871
@@ -1872,7 +1937,7 @@ New Contributors
 @mauricekleine made their first contribution in https://github.com/vercel/turborepo/pull/1922
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.4.6...v1.4.7"
-96,"What's Changed
+101,"What's Changed
 
 Use correct flag for graphviz version by @gsoltis in https://github.com/vercel/turborepo/pull/1954
 Add mutex around helper cleanups by @gsoltis in https://github.com/vercel/turborepo/pull/1947
@@ -1892,7 +1957,7 @@ New Contributors
 @mauricekleine made their first contribution in https://github.com/vercel/turborepo/pull/1922
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.4.7-canary.0...v1.4.7-canary.1"
-97,"What's Changed
+102,"What's Changed
 
 Add degit instructions for all examples by @mehulkar in https://github.com/vercel/turborepo/pull/1884
 chore(turbo-ignore): add console message of an unfriendly error by @t-i-0414 in https://github.com/vercel/turborepo/pull/1871
@@ -1937,7 +2002,7 @@ New Contributors
 @yanmao-cc made their first contribution in https://github.com/vercel/turborepo/pull/1898
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.4.6...v1.4.7-canary.0"
-98,"What's Changed
+103,"What's Changed
 Internal
 
 fix(deps): update dependency ora to v4.1.1 by @renovate in https://github.com/vercel/turborepo/pull/1854
@@ -1976,7 +2041,7 @@ New Contributors
 @PhentomPT made their first contribution in https://github.com/vercel/turborepo/pull/1794
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.4.5...v1.4.6"
-99,"What's Changed
+104,"What's Changed
 Core
 
 Split notion of logged in into user and linked-team by @gsoltis in https://github.com/vercel/turborepo/pull/1844
@@ -1989,7 +2054,7 @@ Fix broken links at ""Next Steps"" on ""Add to Existing Monorepo"" by @pakaponk 
 Upgrade Nextra by @shuding in https://github.com/vercel/turborepo/pull/1831
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.4.4...v1.4.5"
-100,"What's Changed
+105,"What's Changed
 
 chore(deps): update dependency postcss to v8.4.16 by @renovate in https://github.com/vercel/turborepo/pull/1669
 chore(deps): update nextjs monorepo to v12.2.4 by @renovate in https://github.com/vercel/turborepo/pull/1670
@@ -2072,7 +2137,7 @@ Set cmd.Dir to an absolute path when we execute scripts by @gsoltis in https://g
 Remove errant indentation by @gsoltis in https://github.com/vercel/turborepo/pull/1810
 Remove --no-gc flag, always run with garbage collection by @gsoltis in https://github.com/vercel/turborepo/pull/1803
 (refactor) add lockfile abstraction by @chris-olszewski in https://github.com/vercel/turborepo/pull/1789
-Move fs.AbsolutePath to turbopath.AbsolutePath by @nathanhammond in https://github.com/vercel/turborepo/pull/1779
+Move module to module by @nathanhammond in https://github.com/vercel/turborepo/pull/1779
 Update to insert newlines. by @nathanhammond in https://github.com/vercel/turborepo/pull/1813
 chore(configs): update tsconfigs & packages by @tknickman in https://github.com/vercel/turborepo/pull/1815
 [refactor] - made Features components more reusable by @mattpocock in https://github.com/vercel/turborepo/pull/1782
@@ -2099,7 +2164,7 @@ New Contributors
 @HosseinAgha made their first contribution in https://github.com/vercel/turborepo/pull/1673
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.4.3...v1.4.4"
-101,"What's Changed
+106,"What's Changed
 
 chore(deps): update dependency postcss to v8.4.16 by @renovate in https://github.com/vercel/turborepo/pull/1669
 chore(deps): update nextjs monorepo to v12.2.4 by @renovate in https://github.com/vercel/turborepo/pull/1670
@@ -2159,7 +2224,7 @@ New Contributors
 @laurentlucian made their first contribution in https://github.com/vercel/turborepo/pull/1743
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.4.3...v1.4.4-canary.0"
-102,"What's Changed
+107,"What's Changed
 
 Make the ESPN logo less chonky on /showcase by @jaredpalmer in https://github.com/vercel/turborepo/pull/1613
 docs: add N26 to showcase list by @brunojppb in https://github.com/vercel/turborepo/pull/1610
@@ -2197,7 +2262,7 @@ New Contributors
 @chris-olszewski made their first contribution in https://github.com/vercel/turborepo/pull/1632
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.4.2...v1.4.3"
-103,"What's Changed
+108,"What's Changed
 
 1.4 blog post. by @nathanhammond in https://github.com/vercel/turborepo/pull/1593
 fix: modern yarn lockfile parsing error by @erj826 in https://github.com/vercel/turborepo/pull/1597
@@ -2212,8 +2277,8 @@ New Contributors
 @naffydharni006 made their first contribution in https://github.com/vercel/turborepo/pull/1602
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.4.0...v1.4.2"
-104,"Blog Post
-Turborepo 1.4
+109,"Blog Post
+link
 What's Changed
 
 fix(deps): update dependency @react-stately/radio to v3.4.1 by @renovate in https://github.com/vercel/turborepo/pull/1552
@@ -2226,7 +2291,7 @@ feat(turbo-ignore): update to support vercel CI by @tknickman in https://github.
 Add /showcase by @jaredpalmer in https://github.com/vercel/turborepo/pull/1584
 Use GoReleaser for Builds by @nathanhammond in https://github.com/vercel/turborepo/pull/1455
 Use new future next image component and priority prop by @jaredpalmer in https://github.com/vercel/turborepo/pull/1588
-.css should be never included in content field by @B2o5T in https://github.com/vercel/turborepo/pull/1589
+module should be never included in content field by @B2o5T in https://github.com/vercel/turborepo/pull/1589
 Update lockfile after version bump by @nathanhammond in https://github.com/vercel/turborepo/pull/1591
 feat(cli): auto hash framework env vars by @tknickman in https://github.com/vercel/turborepo/pull/1580
 
@@ -2235,19 +2300,19 @@ New Contributors
 @B2o5T made their first contribution in https://github.com/vercel/turborepo/pull/1589
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.3.4...v1.4.0"
-105,"What's Changed
+110,"What's Changed
 
 fix(deps): update dependency @react-types/radio to v3.2.1 by @renovate in https://github.com/vercel/turborepo/pull/1553
 Move fixtures to correct directory. by @nathanhammond in https://github.com/vercel/turborepo/pull/1561
 fix(cli): don’t exit when no tasks are found by @tknickman in https://github.com/vercel/turborepo/pull/1564
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.3.3...v1.3.4"
-106,"What's Changed
+111,"What's Changed
 
 fix(create-turbo): pnpm peer deps error by @tknickman in https://github.com/vercel/turborepo/pull/1559
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.3.2...v1.3.3"
-107,"Core
+112,"Core
 
 Update schema generation script invocation. by @nathanhammond in https://github.com/vercel/turborepo/pull/1436
 fix(cli): cache with correct file perms by @tknickman in https://github.com/vercel/turborepo/pull/1429
@@ -2262,7 +2327,7 @@ fix: remove suggestion of using fetch-depth by @harshcut in https://github.com/v
 Chip away at path migration by @gsoltis in https://github.com/vercel/turborepo/pull/1459
 Implement allowing both sides of git comparison by @gsoltis in https://github.com/vercel/turborepo/pull/1442
 Move some fields out of Config by @gsoltis in https://github.com/vercel/turborepo/pull/1460
-chore: remove redundant .turbo by @shayc in https://github.com/vercel/turborepo/pull/1475
+chore: remove redundant module by @shayc in https://github.com/vercel/turborepo/pull/1475
 Depending on root tasks should work by @gsoltis in https://github.com/vercel/turborepo/pull/1485
 Implement filesystem cookies for filewatch ordering by @gsoltis in https://github.com/vercel/turborepo/pull/1410
 Label root package in dependency graph by @gsoltis in https://github.com/vercel/turborepo/pull/1491
@@ -2293,7 +2358,7 @@ Makefile works for turbobot by @nathanhammond in https://github.com/vercel/turbo
 Examples
 
 feat(examples): add svelte by @tknickman in https://github.com/vercel/turborepo/pull/1458
-Fix yarn start not working by @elis in https://github.com/vercel/turborepo/pull/1468
+Fix module not working by @elis in https://github.com/vercel/turborepo/pull/1468
 feat(examples): add tailwind by @tknickman in https://github.com/vercel/turborepo/pull/1464
 fix: added vite.config and fixes for svelte-next.358 by @oneezy in https://github.com/vercel/turborepo/pull/1496
 chore(examples): update tsconfig declaration val by @tknickman in https://github.com/vercel/turborepo/pull/1483
@@ -2307,7 +2372,7 @@ docs(cli): update contributing.md with new deps by @tknickman in https://github.
 Update caching.mdx by @chitchu in https://github.com/vercel/turborepo/pull/1482
 fix(docs): update prune compatibility by @tknickman in https://github.com/vercel/turborepo/pull/1505
 Typo: verifcation --> verification by @samouri in https://github.com/vercel/turborepo/pull/1517
-Add with-prisma example by @NuroDev in https://github.com/vercel/turborepo/pull/979
+Add module example by @NuroDev in https://github.com/vercel/turborepo/pull/979
 feat(examples): add cra by @tknickman in https://github.com/vercel/turborepo/pull/1504
 Examples fast follows by @tknickman in https://github.com/vercel/turborepo/pull/1526
 feat(examples): add docker by @tknickman in https://github.com/vercel/turborepo/pull/1522
@@ -2332,12 +2397,12 @@ New Contributors
 @StevenMatchett made their first contribution in https://github.com/vercel/turborepo/pull/1527
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.3.1...v1.3.2"
-108,"What's Changed
+113,"What's Changed
 
 Makefile works for turbobot by @nathanhammond in https://github.com/vercel/turborepo/pull/1550
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.3.2-canary.3...v1.3.2-canary.4"
-109,"What's Changed
+114,"What's Changed
 
 Filter in package by @nathanhammond in https://github.com/vercel/turborepo/pull/1538
 chore(deps): update pnpm/action-setup action to v2.2.2 by @renovate in https://github.com/vercel/turborepo/pull/1546
@@ -2345,7 +2410,7 @@ chore(deps): update dependency postcss to v8.4.14 by @renovate in https://github
 chore(docs): improvements by @tknickman in https://github.com/vercel/turborepo/pull/1540
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.3.2-canary.2...v1.3.2-canary.3"
-110,"What's Changed
+115,"What's Changed
 
 fix: added vite.config and fixes for svelte-next.358 by @oneezy in https://github.com/vercel/turborepo/pull/1496
 Add golang to OSX setup by @neolivz in https://github.com/vercel/turborepo/pull/1492
@@ -2359,7 +2424,7 @@ Typo: verifcation --> verification by @samouri in https://github.com/vercel/turb
 chore(renovate): support go mod tidy by @tknickman in https://github.com/vercel/turborepo/pull/1515
 fix(deps): update dependency @heroicons/react to v1.0.6 by @renovate in https://github.com/vercel/turborepo/pull/1520
 chore(deps): update dependency @babel/core to v7.18.6 by @renovate in https://github.com/vercel/turborepo/pull/1523
-Add with-prisma example by @NuroDev in https://github.com/vercel/turborepo/pull/979
+Add module example by @NuroDev in https://github.com/vercel/turborepo/pull/979
 feat(examples): add cra by @tknickman in https://github.com/vercel/turborepo/pull/1504
 Examples fast follows by @tknickman in https://github.com/vercel/turborepo/pull/1526
 chore(deps): update dependency tailwindcss to v3.1.6 by @renovate in https://github.com/vercel/turborepo/pull/1529
@@ -2383,7 +2448,7 @@ New Contributors
 @StevenMatchett made their first contribution in https://github.com/vercel/turborepo/pull/1527
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.3.2-canary.1...v1.3.2-canary.2"
-111,"What's Changed
+116,"What's Changed
 
 feat(examples): add svelte by @tknickman in https://github.com/vercel/turborepo/pull/1458
 docs(cli): update contributing.md with new deps by @tknickman in https://github.com/vercel/turborepo/pull/1449
@@ -2391,8 +2456,8 @@ fix: remove suggestion of using fetch-depth by @harshcut in https://github.com/v
 Chip away at path migration by @gsoltis in https://github.com/vercel/turborepo/pull/1459
 Implement allowing both sides of git comparison by @gsoltis in https://github.com/vercel/turborepo/pull/1442
 Move some fields out of Config by @gsoltis in https://github.com/vercel/turborepo/pull/1460
-chore: remove redundant .turbo by @shayc in https://github.com/vercel/turborepo/pull/1475
-Fix yarn start not working by @elis in https://github.com/vercel/turborepo/pull/1468
+chore: remove redundant module by @shayc in https://github.com/vercel/turborepo/pull/1475
+Fix module not working by @elis in https://github.com/vercel/turborepo/pull/1468
 Update caching.mdx by @chitchu in https://github.com/vercel/turborepo/pull/1482
 Depending on root tasks should work by @gsoltis in https://github.com/vercel/turborepo/pull/1485
 chore(examples): update tsconfig declaration val by @tknickman in https://github.com/vercel/turborepo/pull/1483
@@ -2411,7 +2476,7 @@ New Contributors
 @trevorr made their first contribution in https://github.com/vercel/turborepo/pull/1487
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.3.2-canary.0...v1.3.2-canary.1"
-112,"Core
+117,"Core
 
 Update schema generation script invocation. by @nathanhammond in https://github.com/vercel/turborepo/pull/1436
 fix(cli): cache with correct file perms by @tknickman in https://github.com/vercel/turborepo/pull/1429
@@ -2426,7 +2491,7 @@ Cross-compile amd64. by @nathanhammond in https://github.com/vercel/turborepo/pu
 Add test to confirm that file copying works as expected. by @nathanhammond in https://github.com/vercel/turborepo/pull/1450
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.3.1...v1.3.2-canary.0"
-113,"Core
+118,"Core
 
 Ensure maps are accessed with a lock by @gsoltis in https://github.com/vercel/turborepo/pull/1434
 Drop -- in pnpm invocation for pnpm 7+ by @gsoltis in https://github.com/vercel/turborepo/pull/1432
@@ -2440,8 +2505,8 @@ Chore
 Remove Dependabot by @nathanhammond in https://github.com/vercel/turborepo/pull/1423
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.3.0...v1.3.1"
-114,"Blog Post
-Turborepo 1.3
+119,"Blog Post
+link
 Core
 
 Prevent side effects when looking for config files. by @nathanhammond in https://github.com/vercel/turborepo/pull/1328
@@ -2510,7 +2575,7 @@ New Contributors
 @enBonnet made their first contribution in https://github.com/vercel/turborepo/pull/1430
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.16...v1.3.0"
-115,"What's Changed
+120,"What's Changed
 
 Fix link to dependsOn section in configuration from getting started in documentation by @rafaeltab in https://github.com/vercel/turborepo/pull/1326
 Prevent side effects when looking for config files. by @nathanhammond in https://github.com/vercel/turborepo/pull/1328
@@ -2549,12 +2614,12 @@ New Contributors
 @ObliviousHarmony made their first contribution in https://github.com/vercel/turborepo/pull/1332
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.16...v1.2.17-canary.0"
-116,"create-turbo
+121,"create-turbo
 
 fix(create-turbo): fix ui lint in pnpm example by @tknickman in https://github.com/vercel/turborepo/pull/1325
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.15...v1.2.16"
-117,"Core
+122,"Core
 
 Options cleanup by @gsoltis in https://github.com/vercel/turborepo/pull/1295
 fix(yarn): include prerelease versions in constraints by @tknickman in https://github.com/vercel/turborepo/pull/1314
@@ -2584,17 +2649,17 @@ New Contributors
 @helgee made their first contribution in https://github.com/vercel/turborepo/pull/1302
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.14...v1.2.15"
-118,"Core
+123,"Core
 
 Ensure logs are flushed before we attempt to cache them by @gsoltis in https://github.com/vercel/turborepo/pull/1293
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.13...v1.2.14"
-119,"Core
+124,"Core
 
 Add additional debugging for tarring files by @gsoltis in https://github.com/vercel/turborepo/pull/1291
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.12...v1.2.13"
-120,"Core
+125,"Core
 
 Adopt doublestar, disable traversing symlinks in globwalk by @gsoltis in https://github.com/vercel/turborepo/pull/1275
 
@@ -2611,7 +2676,7 @@ New Contributors
 @saeed-mosavat made their first contribution in https://github.com/vercel/turborepo/pull/1285
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.11...v1.2.12"
-121,"Core
+126,"Core
 
 Compile regexes once by @gsoltis in https://github.com/vercel/turborepo/pull/1228
 fix: Remove unused arguments and code paths. by @nathanhammond in https://github.com/vercel/turborepo/pull/1234
@@ -2639,7 +2704,7 @@ New Contributors
 @bennycode made their first contribution in https://github.com/vercel/turborepo/pull/1240
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.9...v1.2.10"
-122,"Core
+127,"Core
 
 Compile regexes once by @gsoltis in https://github.com/vercel/turborepo/pull/1228
 fix: Remove unused arguments and code paths. by @nathanhammond in https://github.com/vercel/turborepo/pull/1234
@@ -2657,7 +2722,7 @@ New Contributors
 @bennycode made their first contribution in https://github.com/vercel/turborepo/pull/1240
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.9...v1.2.10-canary.0"
-123,"Core
+128,"Core
 
 git integration cleanup by @gsoltis in https://github.com/vercel/turborepo/pull/1194
 Add better diagnostic errors when we fail to hash files with git by @gsoltis in https://github.com/vercel/turborepo/pull/1195
@@ -2682,15 +2747,15 @@ New Contributors
 @maschwenk made their first contribution in https://github.com/vercel/turborepo/pull/1201
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.8...v1.2.9"
-124,"Core
+129,"Core
 
-Refactor PackageManager to return information about the workspace. by @nathanhammond in https://github.com/vercel/turborepo/pull/1187
+Refactor module to return information about the workspace. by @nathanhammond in https://github.com/vercel/turborepo/pull/1187
 Support wslview on linux runtime, don't error on failure to open browser by @gsoltis in https://github.com/vercel/turborepo/pull/1215
 Skip cache fetch for tasks that are marked cache: false by @gsoltis in https://github.com/vercel/turborepo/pull/1224
-Apply inputs filter to uncommitted changes by @gsoltis in https://github.com/vercel/turborepo/pull/1223
+Apply module filter to uncommitted changes by @gsoltis in https://github.com/vercel/turborepo/pull/1223
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.9-canary.0...v1.2.9-canary.1"
-125,"Core
+130,"Core
 
 git integration cleanup by @gsoltis in https://github.com/vercel/turborepo/pull/1194
 Add better diagnostic errors when we fail to hash files with git by @gsoltis in https://github.com/vercel/turborepo/pull/1195
@@ -2710,13 +2775,13 @@ New Contributors
 @maschwenk made their first contribution in https://github.com/vercel/turborepo/pull/1201
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.8...v1.2.9-canary.0"
-126,"Core
+131,"Core
 
 fix: allow cache outputs external, but relative to packages by @nathanhammond in https://github.com/vercel/turborepo/pull/1192
 fix: don't output usage or errors from cobra in error scenarios by @gsoltis in https://github.com/vercel/turborepo/pull/1193
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.7...v1.2.8"
-127,"Core
+132,"Core
 
 Remove test directories from workspace ignores. by @nathanhammond in https://github.com/vercel/turborepo/pull/1145
 Implement status check for SSO login by @gsoltis in https://github.com/vercel/turborepo/pull/1139
@@ -2741,7 +2806,7 @@ Examples
 
 examples: Set with-changesets GitHub Action branch to be main by @jaredpalmer in https://github.com/vercel/turborepo/pull/1189
 Better ESLint configuration examples by @nathanhammond in https://github.com/vercel/turborepo/pull/1172
-Update eslint naming in examples and add lint script to ui package by @jaredpalmer in https://github.com/vercel/turborepo/pull/1174
+Update eslint naming in examples and add module script to module package by @jaredpalmer in https://github.com/vercel/turborepo/pull/1174
 ESLint: one more spot change by @nathanhammond in https://github.com/vercel/turborepo/pull/1180
 
 Internal
@@ -2751,12 +2816,12 @@ Fix kodiak config by @jaredpalmer in https://github.com/vercel/turborepo/pull/11
 Remove unused golint. by @nathanhammond in https://github.com/vercel/turborepo/pull/1170
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.6...v1.2.7"
-128,"Core
+133,"Core
 
 Add afero to Config, Refactor Config file access by @gsoltis in https://github.com/vercel/turborepo/pull/1156
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.7-canary.1...v1.2.7-canary.2"
-129,"Core
+134,"Core
 
 Address all SSA-dependent lint. by @nathanhammond in https://github.com/vercel/turborepo/pull/1181
 Error on no caches by @gsoltis in https://github.com/vercel/turborepo/pull/1169
@@ -2768,28 +2833,28 @@ Remove unused golint. by @nathanhammond in https://github.com/vercel/turborepo/p
 Docs
 
 Better ESLint configuration examples by @nathanhammond in https://github.com/vercel/turborepo/pull/1172
-Update eslint naming in examples and add lint script to ui package by @jaredpalmer in https://github.com/vercel/turborepo/pull/1174
+Update eslint naming in examples and add module script to module package by @jaredpalmer in https://github.com/vercel/turborepo/pull/1174
 ESLint: one more spot change by @nathanhammond in https://github.com/vercel/turborepo/pull/1180
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.7-canary.0...v1.2.7-canary.1"
-130,"Core
+135,"Core
 
-Remove test directories from workspace ignores. by @nathanhammond in https://github.com/vercel/turborepo/pull/1145
+Remove module directories from workspace ignores. by @nathanhammond in https://github.com/vercel/turborepo/pull/1145
 Implement status check for SSO login by @gsoltis in https://github.com/vercel/turborepo/pull/1139
 Handle 403s by @gsoltis in https://github.com/vercel/turborepo/pull/1116
-Include pipeline definition in global hash by @gsoltis in https://github.com/vercel/turborepo/pull/1166
+Include module definition in global hash by @gsoltis in https://github.com/vercel/turborepo/pull/1166
 
-turbo-ignore
+module
 
-Add experimental turbo-ignore package by @jaredpalmer in https://github.com/vercel/turborepo/pull/1154
+Add experimental module package by @jaredpalmer in https://github.com/vercel/turborepo/pull/1154
 
 Docs
 
 docs: pin pnpm versions in ci to 6 by @Ethan-Arrowood in https://github.com/vercel/turborepo/pull/1165
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.6...v1.2.7-canary.0"
-131,"Core
-Go 1.18, Faster globbing, new --preflight flag for Remote Caching, and more...
+136,"Core
+Go 1.18, Faster globbing, new module flag for Remote Caching, and more...
 * Set version range explicitly by @nathanhammond in https://github.com/vercel/turborepo/pull/1112
 * Fix typo in comment by @hiro0218 in https://github.com/vercel/turborepo/pull/1110
 * feat: add authorization header in preflight request by @promer94 in https://github.com/vercel/turborepo/pull/1086
@@ -2799,7 +2864,7 @@ Go 1.18, Faster globbing, new --preflight flag for Remote Caching, and more...
 * Adopt afero, create tests for globby by @nathanhammond in https://github.com/vercel/turborepo/pull/1090
 * Officially support windows-arm64 by @nathanhammond in https://github.com/vercel/turborepo/pull/1118
 * Fix makefile for windows-arm64 by @jaredpalmer in https://github.com/vercel/turborepo/pull/1120
-* Implement globby.GlobFiles using doublestar.GlobWalk by @nathanhammond in https://github.com/vercel/turborepo/pull/1108
+* Implement module using module by @nathanhammond in https://github.com/vercel/turborepo/pull/1108
 * Check Remote Caching status before linking by @gsoltis in https://github.com/vercel/turborepo/pull/1087
 * Plumb through errors in globbing.  by @nathanhammond in https://github.com/vercel/turborepo/pull/1129
 * Bump versions of dependencies. (Go 1.18, pnpm, CI, .devcontainer) by @nathanhammond in https://github.com/vercel/turborepo/pull/1153
@@ -2833,7 +2898,7 @@ New Contributors
 @AbdallahAbis made their first contribution in https://github.com/vercel/turborepo/pull/1132
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.5...v1.2.6"
-132,"Core
+137,"Core
 
 Implement globby.GlobFiles using doublestar.GlobWalk by @nathanhammond in https://github.com/vercel/turborepo/pull/1108
 Check Remote Caching status before linking by @gsoltis in https://github.com/vercel/turborepo/pull/1087
@@ -2860,7 +2925,7 @@ New Contributors
 @AbdallahAbis made their first contribution in https://github.com/vercel/turborepo/pull/1132
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.6-canary.0...v1.2.6-canary.1"
-133,"Core
+138,"Core
 
 Configure VSCode to use the same lint tool as CI. by @nathanhammond in https://github.com/vercel/turborepo/pull/1111
 Fix typo in comment by @hiro0218 in https://github.com/vercel/turborepo/pull/1110
@@ -2885,13 +2950,13 @@ New Contributors
 @hiro0218 made their first contribution in https://github.com/vercel/turborepo/pull/1110
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.5...v1.2.6-canary.0"
-134,"Core
+139,"Core
 
 Delete flaky and bad test by @gsoltis in https://github.com/vercel/turborepo/pull/1060
 Fix remix example by pinning version by @jaredpalmer in https://github.com/vercel/turborepo/pull/1061
-Add --preflight for sending preflight requests before artifact uploads and downloads by @chelkyl in https://github.com/vercel/turborepo/pull/1052
-Ensure usage of turbo@latest everywhere. by @nathanhammond in https://github.com/vercel/turborepo/pull/1051
-Support loading --preflight option from env var TURBO_PREFLIGHT by @chelkyl in https://github.com/vercel/turborepo/pull/1063
+Add module for sending preflight requests before artifact uploads and downloads by @chelkyl in https://github.com/vercel/turborepo/pull/1052
+Ensure usage of module everywhere. by @nathanhammond in https://github.com/vercel/turborepo/pull/1051
+Support loading module option from env var module by @chelkyl in https://github.com/vercel/turborepo/pull/1063
 Cache symlinks in filesystem cache by @gsoltis in https://github.com/vercel/turborepo/pull/1068
 Refactor backends to be less-leaky. by @nathanhammond in https://github.com/vercel/turborepo/pull/1044
 Apply global ignore patterns for global deps by @Kingwl in https://github.com/vercel/turborepo/pull/1075
@@ -2916,7 +2981,7 @@ New Contributors
 @mundish made their first contribution in https://github.com/vercel/turborepo/pull/1091
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.4...v1.2.5"
-135,"Core
+140,"Core
 
 Apply global ignore patterns for global deps by @Kingwl in https://github.com/vercel/turborepo/pull/1075
 Unify symlink handling in http cache by @gsoltis in https://github.com/vercel/turborepo/pull/1071
@@ -2926,10 +2991,10 @@ New Contributors
 @Kingwl made their first contribution in https://github.com/vercel/turborepo/pull/1075
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.5-canary.0...v1.2.5-canary.1"
-136,"Core
+141,"Core
 
-Add --preflight for sending preflight requests before artifact uploads and downloads by @chelkyl in https://github.com/vercel/turborepo/pull/1052
-Support loading preflight option from env var TURBO_PREFLIGHT by @chelkyl in https://github.com/vercel/turborepo/pull/1063
+Add module for sending preflight requests before artifact uploads and downloads by @chelkyl in https://github.com/vercel/turborepo/pull/1052
+Support loading preflight option from env var module by @chelkyl in https://github.com/vercel/turborepo/pull/1063
 Cache symlinks in filesystem cache by @gsoltis in https://github.com/vercel/turborepo/pull/1068
 Delete flaky and bad test by @gsoltis in https://github.com/vercel/turborepo/pull/1060
 
@@ -2947,7 +3012,7 @@ New Contributors
 @yuler made their first contribution in https://github.com/vercel/turborepo/pull/1073
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.4...v1.2.5-canary.0"
-137,"Core
+142,"Core
 
 Detect and handle cycles in package dependency graph by @gsoltis in https://github.com/vercel/turborepo/pull/1050
 Don't run log replay asynchronously by @gsoltis in https://github.com/vercel/turborepo/pull/1054
@@ -2961,13 +3026,13 @@ Internal
 Implement golangci workflow by @gsoltis in https://github.com/vercel/turborepo/pull/1049
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.3...v1.2.4"
-138,"Core
+143,"Core
 
 Refactor Pipeline parsing by @gsoltis in https://github.com/vercel/turborepo/pull/1038
 Proposal for incremental path refactor by @gsoltis in https://github.com/vercel/turborepo/pull/995
-Use correct --since in filters by @gsoltis in https://github.com/vercel/turborepo/pull/1045
+Use correct module in filters by @gsoltis in https://github.com/vercel/turborepo/pull/1045
 Handle unknown package in graph traversal by @gsoltis in https://github.com/vercel/turborepo/pull/1043
-experimental: support inputs in pipeline config, hashes are per task by @gsoltis in https://github.com/vercel/turborepo/pull/951
+experimental: support module in pipeline config, hashes are per task by @gsoltis in https://github.com/vercel/turborepo/pull/951
 
 Docs
 
@@ -2982,14 +3047,14 @@ New Contributors
 @eric-burel made their first contribution in https://github.com/vercel/turborepo/pull/1014
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.2...v1.2.3"
-139,"What's Changed
+144,"What's Changed
 
-Support inputs globs in pipeline config, hashes are per task by @gsoltis in https://github.com/vercel/turborepo/pull/951
+Support module globs in module config, hashes are per task by @gsoltis in https://github.com/vercel/turborepo/pull/951
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.2...v1.2.3-canary.0"
-140,"Core
+145,"Core
 
-Add back support for link:... dependencies by @LeSuisse in https://github.com/vercel/turborepo/pull/1030
+Add back support for module dependencies by @LeSuisse in https://github.com/vercel/turborepo/pull/1030
 Add test for filter synthesis bug by @gsoltis in https://github.com/vercel/turborepo/pull/1021
 
 Docs
@@ -3008,29 +3073,29 @@ New Contributors
 @LeSuisse made their first contribution in https://github.com/vercel/turborepo/pull/1030
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.1...v1.2.2"
-141,"What's Changed
+146,"What's Changed
 
 Improve WalkMode usage by @gsoltis in https://github.com/vercel/turborepo/pull/1018
 only prepend since w/ ... if since is not empty by @gsoltis in https://github.com/vercel/turborepo/pull/1020
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.0...v1.2.1"
-142,"Blog Post
-Turborepo 1.2
+147,"Blog Post
+link
 Core
 
-Implement --filter RFC by @gsoltis in https://github.com/vercel/turborepo/pull/887
+Implement module RFC by @gsoltis in https://github.com/vercel/turborepo/pull/887
 Stop removing unreferenced packages before task graph construction by @gsoltis in https://github.com/vercel/turborepo/pull/918
 Don't squash tasks with package tasks by @gsoltis in https://github.com/vercel/turborepo/pull/932
 Include entry packages, not just dependencies when checking changed packages. by @gsoltis in https://github.com/vercel/turborepo/pull/950
-fix: Enable chrome tracing if --profile is specified by @jaredpalmer in https://github.com/vercel/turborepo/pull/949
+fix: Enable chrome tracing if module is specified by @jaredpalmer in https://github.com/vercel/turborepo/pull/949
 Support HMAC signing on artifact uploads by @gaspar09 in https://github.com/vercel/turborepo/pull/892
-Improve and document login --sso-team by @gaspar09 in https://github.com/vercel/turborepo/pull/953
-BYOK signature uses TURBO_REMOTE_CACHE_SIGNATURE_KEY env variable by default by @gaspar09 in https://github.com/vercel/turborepo/pull/963
+Improve and document module by @gaspar09 in https://github.com/vercel/turborepo/pull/953
+BYOK signature uses module env variable by default by @gaspar09 in https://github.com/vercel/turborepo/pull/963
 signature secret key missing: Update error message by @gaspar09 in https://github.com/vercel/turborepo/pull/970
 Update run command's --help  by @gaspar09 in https://github.com/vercel/turborepo/pull/971
 Only check for yarn berry if it is installed by @jaredpalmer in https://github.com/vercel/turborepo/pull/976
 Implement  --remote-only by @gaspar09 in https://github.com/vercel/turborepo/pull/969
-Add support for TURBO_FORCE env var by @jaredpalmer in https://github.com/vercel/turborepo/pull/921
+Add support for module env var by @jaredpalmer in https://github.com/vercel/turborepo/pull/921
 Use CGO on macOS M1 darwin-arm64 by @jaredpalmer in https://github.com/vercel/turborepo/pull/985
 Add options for forcing color/no-color by @thebanjomatic in https://github.com/vercel/turborepo/pull/990
 Drop behavior that was previously used in tests by @gsoltis in https://github.com/vercel/turborepo/pull/1000
@@ -3053,9 +3118,9 @@ Document --filter by @gsoltis in https://github.com/vercel/turborepo/pull/914
 Document remote only caching by @gaspar09 in https://github.com/vercel/turborepo/pull/967
 Add v1.2 blog post by @jaredpalmer in https://github.com/vercel/turborepo/pull/1012
 
-create-turbo
+module
 
-Fix: Change the strict TS flag true for shared tsconfig by @rajatkulkarni95 in https://github.com/vercel/turborepo/pull/907
+Fix: Change the module TS flag true for shared tsconfig by @rajatkulkarni95 in https://github.com/vercel/turborepo/pull/907
 
 Internal
 
@@ -3068,7 +3133,7 @@ New Contributors
 @Kikobeats made their first contribution in https://github.com/vercel/turborepo/pull/989
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.10...v1.2.0"
-143,"Core
+148,"Core
 
 Add options for forcing color/no-color by @thebanjomatic in https://github.com/vercel/turborepo/pull/990
 
@@ -3081,13 +3146,13 @@ Internal
 Add @nathanhammond to CODEOWNERS by @jaredpalmer in https://github.com/vercel/turborepo/pull/1011
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.0-canary.6...v1.2.0-canary.7"
-144,"Core
+149,"Core
 
-Fix empty --filter regression, by removing run all behavior that was previously used in tests by @gsoltis in https://github.com/vercel/turborepo/pull/1000
+Fix empty module regression, by removing run all behavior that was previously used in tests by @gsoltis in https://github.com/vercel/turborepo/pull/1000
 
 Docs
 
-Use exact nextra version by @Kikobeats in https://github.com/vercel/turborepo/pull/989
+Use exact module version by @Kikobeats in https://github.com/vercel/turborepo/pull/989
 Update css order to fix docs hero by @tknickman in https://github.com/vercel/turborepo/pull/992
 Fix hero in Safari by @jaredpalmer in https://github.com/vercel/turborepo/pull/999
 
@@ -3096,34 +3161,34 @@ New Contributors
 @Kikobeats made their first contribution in https://github.com/vercel/turborepo/pull/989
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.0-canary.5...v1.2.0-canary.6"
-145,"Core
+150,"Core
 
 Cosmetic change, canary.4 looks like it may not have been properly released
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.0-canary.4...v1.2.0-canary.5"
-146,"Core
+151,"Core
 
-BYOK signature uses TURBO_REMOTE_CACHE_SIGNATURE_KEY env variable by default by @gaspar09 in https://github.com/vercel/turborepo/pull/963
+BYOK signature uses module env variable by default by @gaspar09 in https://github.com/vercel/turborepo/pull/963
 signature secret key missing: Update error message by @gaspar09 in https://github.com/vercel/turborepo/pull/970
 Update run command's --help  by @gaspar09 in https://github.com/vercel/turborepo/pull/971
 Only check for yarn berry if it is installed by @jaredpalmer in https://github.com/vercel/turborepo/pull/976
-Implement  --remote-only by @gaspar09 in https://github.com/vercel/turborepo/pull/969
-Add support for TURBO_FORCE env var by @jaredpalmer in https://github.com/vercel/turborepo/pull/921
-Compile with CGO_ENABLED on macOS M1 darwin-arm64 by @jaredpalmer in https://github.com/vercel/turborepo/pull/985
+Implement  module by @gaspar09 in https://github.com/vercel/turborepo/pull/969
+Add support for module env var by @jaredpalmer in https://github.com/vercel/turborepo/pull/921
+Compile with module on macOS M1 module by @jaredpalmer in https://github.com/vercel/turborepo/pull/985
 
 Docs
 
 Upgrade Nextra by @shuding in https://github.com/vercel/turborepo/pull/960
 Remove outdated npmClient reference in docs by @VanTanev in https://github.com/vercel/turborepo/pull/955
-Improve and document login --sso-team by @gaspar09 in https://github.com/vercel/turborepo/pull/953
+Improve and document module by @gaspar09 in https://github.com/vercel/turborepo/pull/953
 Add documentation for percentage concurrency setting by @VanTanev in https://github.com/vercel/turborepo/pull/954
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.0-canary.3...v1.2.0-canary.4"
-147,"Core
+152,"Core
 
 Support HMAC signing on artifact uploads by @gaspar09 in https://github.com/vercel/turborepo/pull/892
 
-create-turbo
+module
 
 Fix: Change the strict flag true for shared tsconfig by @rajatkulkarni95 in https://github.com/vercel/turborepo/pull/907
 
@@ -3132,11 +3197,11 @@ New Contributors
 @rajatkulkarni95 made their first contribution in https://github.com/vercel/turborepo/pull/907
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.0-canary.2...v1.2.0-canary.3"
-148,"Core
+153,"Core
 
 Work on e2e by @gsoltis in https://github.com/vercel/turborepo/pull/940
 Include entry packages, not just dependencies when checking changed packages. by @gsoltis in https://github.com/vercel/turborepo/pull/950
-fix: Enable chrome tracing if --profile is specified by @jaredpalmer in https://github.com/vercel/turborepo/pull/949
+fix: Enable chrome tracing if module is specified by @jaredpalmer in https://github.com/vercel/turborepo/pull/949
 
 Docs
 
@@ -3145,29 +3210,29 @@ Improve pipelines documentation by @jaredpalmer in https://github.com/vercel/tur
 Upgrade docs theme by @shuding in https://github.com/vercel/turborepo/pull/893
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.0-canary.1...v1.2.0-canary.2"
-149,"Core
+154,"Core
 
 Don't squash tasks with package tasks by @gsoltis in https://github.com/vercel/turborepo/pull/932
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.2.0-canary.0...v1.2.0-canary.1"
-150,"Core
+155,"Core
 
-Implement --filter RFC by @gsoltis in https://github.com/vercel/turborepo/pull/887
+Implement module RFC by @gsoltis in https://github.com/vercel/turborepo/pull/887
 Stop removing unreferenced packages before task graph construction by @gsoltis in https://github.com/vercel/turborepo/pull/918
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.10...v1.2.0-canary.0"
-151,"Core
+156,"Core
 
 Allow concurrency to be set with percentage values by @VanTanev in https://github.com/vercel/turborepo/pull/873
-Do not show >>> FULL TURBO on 0 attempt runs by @jaredpalmer in https://github.com/vercel/turborepo/pull/922
-Reset ANSI bold after >>> FULL TURBO by @jaredpalmer in https://github.com/vercel/turborepo/pull/926
+Do not show module on 0 attempt runs by @jaredpalmer in https://github.com/vercel/turborepo/pull/922
+Reset ANSI bold after module by @jaredpalmer in https://github.com/vercel/turborepo/pull/926
 
 New Contributors
 
 @VanTanev made their first contribution in https://github.com/vercel/turborepo/pull/873
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.9...v1.1.10"
-152,"Core
+157,"Core
 
 fix: Update inline snapshot of create-turbo by @jaredpalmer in https://github.com/vercel/turborepo/pull/915
 Revert trailer md5 by @gaspar09 in https://github.com/vercel/turborepo/pull/916
@@ -3182,29 +3247,29 @@ New Contributors
 @VanTanev made their first contribution in https://github.com/vercel/turborepo/pull/873
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.7...v1.1.10-canary.0"
-153,"Core
+158,"Core
 
-hotfix: regression where turbo run exit code always 0 by @ThibautMarechal in https://github.com/vercel/turborepo/pull/911
+hotfix: regression where module exit code always 0 by @ThibautMarechal in https://github.com/vercel/turborepo/pull/911
 
 New Contributors
 
 @ThibautMarechal made their first contribution in https://github.com/vercel/turborepo/pull/911
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.7...v1.1.9"
-154,"Core
+159,"Core
 
 Fix regression so that depending on ""*"" should match everything by @gsoltis in https://github.com/vercel/turborepo/pull/855
-Remove packageManager warning by @jaredpalmer in https://github.com/vercel/turborepo/pull/858
-Allow specifying cache outputs outside of package folder by @jaredpalmer in https://github.com/vercel/turborepo/pull/861
-Implement --dry-run and --dry-run=json, formerly --plan by @gsoltis in https://github.com/vercel/turborepo/pull/862
+Remove module warning by @jaredpalmer in https://github.com/vercel/turborepo/pull/858
+Allow specifying module outputs outside of package folder by @jaredpalmer in https://github.com/vercel/turborepo/pull/861
+Implement module and module, formerly module by @gsoltis in https://github.com/vercel/turborepo/pull/862
 Switch task graph edges to direct dependencies by @gsoltis in https://github.com/vercel/turborepo/pull/869
-fix: dump all contents of outputs in --dry instead of all but the first one by @weyert in https://github.com/vercel/turborepo/pull/877
+fix: dump all contents of module in module instead of all but the first one by @weyert in https://github.com/vercel/turborepo/pull/877
 Hash correct file paths for global dependencies by @gsoltis in https://github.com/vercel/turborepo/pull/888
-fix: make --dry=json jq and JSON.parse-friendly by @jaredpalmer in https://github.com/vercel/turborepo/pull/894
+fix: make module module and module-friendly by @jaredpalmer in https://github.com/vercel/turborepo/pull/894
 Add --output-logs= option to turbo CLI by @chelkyl in https://github.com/vercel/turborepo/pull/822
 fix(remote-cache): use posix paths for tar archives by @thebanjomatic in https://github.com/vercel/turborepo/pull/895
 
-create-turbo
+module
 
 Use user-customized npm registry in create-turbo by @gemwuu in https://github.com/vercel/turborepo/pull/885
 
@@ -3215,7 +3280,7 @@ Update footer form by @mitchellwright in https://github.com/vercel/turborepo/pul
 docs: make remote caching evergreen by @dbredvick in https://github.com/vercel/turborepo/pull/868
 Remove tabs from run help text by @gsoltis in https://github.com/vercel/turborepo/pull/879
 Update CONTRIBUTING.md for pnpm. Use pnpm to run line-staged by @gaspar09 in https://github.com/vercel/turborepo/pull/889
-Add docs for --dry by @gsoltis in https://github.com/vercel/turborepo/pull/890
+Add docs for module by @gsoltis in https://github.com/vercel/turborepo/pull/890
 
 New Contributors
 
@@ -3226,7 +3291,7 @@ New Contributors
 @gemwuu made their first contribution in https://github.com/vercel/turborepo/pull/885
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.6...v1.1.7"
-155,"Core
+160,"Core
 
 Implement --dry-run, formerly --plan by @gsoltis in https://github.com/vercel/turborepo/pull/862
 Switch task graph edges to direct dependencies by @gsoltis in https://github.com/vercel/turborepo/pull/869
@@ -3240,9 +3305,9 @@ New Contributors
 @dbredvick made their first contribution in https://github.com/vercel/turborepo/pull/868
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.6...v1.1.7-canary.3"
-156,"Core
+161,"Core
 
-Remove packageManager warning by @jaredpalmer in https://github.com/vercel/turborepo/pull/858
+Remove module warning by @jaredpalmer in https://github.com/vercel/turborepo/pull/858
 Allow specifying cache outputs outside of package folder by @jaredpalmer in https://github.com/vercel/turborepo/pull/861
 
 Docs
@@ -3255,7 +3320,7 @@ New Contributors
 @mitchellwright made their first contribution in https://github.com/vercel/turborepo/pull/857
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.7-canary.0...v1.1.7-canary.1"
-157,"Core
+162,"Core
 
 depending on ""*"" should match everything by @gsoltis in https://github.com/vercel/turborepo/pull/855
 
@@ -3268,14 +3333,14 @@ New Contributors
 @marcusmolchany made their first contribution in https://github.com/vercel/turborepo/pull/856
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.6...v1.1.7-canary.0"
-158,"Core
+163,"Core
 
 Fix SSO login regression to ensure that the RepoConfig Directory and file exists before writing team ID and API url by @gaspar09 in https://github.com/vercel/turborepo/pull/823
-Log an error when scope is invalid in turbo prune #703 by @m-shaka in https://github.com/vercel/turborepo/pull/826
+Log an error when scope is invalid in module #703 by @m-shaka in https://github.com/vercel/turborepo/pull/826
 Update text for more inclusive language. by @leerob in https://github.com/vercel/turborepo/pull/837
-Add support for turbo run w/ yarn pnp by @thebanjomatic in https://github.com/vercel/turborepo/pull/797
-Add back support for file:... dependencies by @gsoltis in https://github.com/vercel/turborepo/pull/854
-Don't consider peerDependencies when constructing graph by @thebanjomatic in https://github.com/vercel/turborepo/pull/813
+Add support for module w/ yarn pnp by @thebanjomatic in https://github.com/vercel/turborepo/pull/797
+Add back support for module dependencies by @gsoltis in https://github.com/vercel/turborepo/pull/854
+Don't consider module when constructing graph by @thebanjomatic in https://github.com/vercel/turborepo/pull/813
 
 Docs
 
@@ -3292,9 +3357,9 @@ New Contributors
 @m-shaka made their first contribution in https://github.com/vercel/turborepo/pull/826
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.5...v1.1.6"
-159,"Core
+164,"Core
 
-Change ""Bootstrapping"" to ""Creating"" in create-turbo by @jaredpalmer in https://github.com/vercel/turborepo/pull/780
+Change ""Bootstrapping"" to ""Creating"" in module by @jaredpalmer in https://github.com/vercel/turborepo/pull/780
 Running build with --cwd works by @gsoltis in https://github.com/vercel/turborepo/pull/783
 Fixing generateBinPath when yarn pnp is enabled by @thebanjomatic in https://github.com/vercel/turborepo/pull/795
 Implement SSO login with combined link step by @gsoltis in https://github.com/vercel/turborepo/pull/811
@@ -3310,7 +3375,7 @@ Update FAQ wording by @denno020 in https://github.com/vercel/turborepo/pull/818
 Internal
 
 Remove dependencies on context methods / functions by @gsoltis in https://github.com/vercel/turborepo/pull/821
-Continue evolving Context towards a data structure that can be sent over the wire by @gsoltis in https://github.com/vercel/turborepo/pull/788
+Continue evolving module towards a data structure that can be sent over the wire by @gsoltis in https://github.com/vercel/turborepo/pull/788
 Move to core monorepo to pnpm by @jaredpalmer in https://github.com/vercel/turborepo/pull/810
 Add cancel workflow GH Action by @jaredpalmer in https://github.com/vercel/turborepo/pull/808
 
@@ -3323,17 +3388,17 @@ New Contributors
 @denno020 made their first contribution in https://github.com/vercel/turborepo/pull/818
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.4...v1.1.5"
-160,"Core
+165,"Core
 
 Running build with --cwd works by @gsoltis in https://github.com/vercel/turborepo/pull/783
-Continue evolving Context towards a data structure that can be sent over the wire by @gsoltis in https://github.com/vercel/turborepo/pull/788 
+Continue evolving module towards a data structure that can be sent over the wire by @gsoltis in https://github.com/vercel/turborepo/pull/788 
 Prep before SSO login flow work by @gsoltis in https://github.com/vercel/turborepo/pull/798
 Implement SSO login with combined link step by @gsoltis in https://github.com/vercel/turborepo/pull/811
-Fixing generateBinPath in postinstall.js when yarn pnp is enabled by @thebanjomatic in https://github.com/vercel/turborepo/pull/795
+Fixing module in postinstall.js when yarn pnp is enabled by @thebanjomatic in https://github.com/vercel/turborepo/pull/795
 
-create-turbo
+module
 
-Change ""Bootstrapping"" to ""Creating"" in create-turbo by @jaredpalmer in https://github.com/vercel/turborepo/pull/780
+Change ""Bootstrapping"" to ""Creating"" in module by @jaredpalmer in https://github.com/vercel/turborepo/pull/780
 
 Documentation
 
@@ -3350,16 +3415,16 @@ New Contributors
 @thebanjomatic made their first contribution in https://github.com/vercel/turborepo/pull/795
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.4...v1.1.5-canary.0"
-161,"Core
+166,"Core
 
 Stop hitting remote cache after a few failures by @jaredpalmer in https://github.com/vercel/turborepo/pull/545
-Add support for JSON5 with comments in turbo.json file by @weyert in https://github.com/vercel/turborepo/pull/745
-Fix --no-cache flag regression by @Xenfo in https://github.com/vercel/turborepo/pull/699
-Switch default Remote Caching API URL to https://vercel.com/api by @jaredpalmer in https://github.com/vercel/turborepo/pull/776
+Add support for JSON5 with comments in module file by @weyert in https://github.com/vercel/turborepo/pull/745
+Fix module flag regression by @Xenfo in https://github.com/vercel/turborepo/pull/699
+Switch default Remote Caching API URL to module by @jaredpalmer in https://github.com/vercel/turborepo/pull/776
 Fix upstream eslint-plugin-react issue causing next build and lint to fail by @jaredpalmer in https://github.com/vercel/turborepo/pull/779
-Add /artifacts/events by @gsoltis in https://github.com/vercel/turborepo/pull/754
+Add module by @gsoltis in https://github.com/vercel/turborepo/pull/754
 Fix postinstall script on node 16 on ubuntu by @jaredpalmer in https://github.com/vercel/turborepo/pull/778
-Throw an error when --scope returns an empty set by @ragrag in https://github.com/vercel/turborepo/pull/735
+Throw an error when module returns an empty set by @ragrag in https://github.com/vercel/turborepo/pull/735
 
 Documentation
 
@@ -3371,10 +3436,10 @@ New Contributors
 @ragrag made their first contribution in https://github.com/vercel/turborepo/pull/735
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.3...v1.1.4"
-162,"Core
+167,"Core
 
-Switch default api url to https://vercel.com/api by @jaredpalmer in https://github.com/vercel/turborepo/pull/776
-Fix upstream eslint-plugin-react issue causing next build and next lint to fail by @jaredpalmer in https://github.com/vercel/turborepo/pull/779
+Switch default api url to module by @jaredpalmer in https://github.com/vercel/turborepo/pull/776
+Fix upstream module issue causing module and module to fail by @jaredpalmer in https://github.com/vercel/turborepo/pull/779
 Calculate local and remote time saved by @gsoltis in https://github.com/vercel/turborepo/pull/754
 Fix install on node 16 on ubuntu by @jaredpalmer in https://github.com/vercel/turborepo/pull/778
 
@@ -3383,20 +3448,20 @@ Documentation
 Upgrade Nextra by @shuding in https://github.com/vercel/turborepo/pull/760
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.4-canary.1...v1.1.4-canary.2"
-163,"What's Changed
+168,"What's Changed
 
-turbo.json now supports JSON5 (comments, etc.)
-Fixed --no-cache flag and added e2e tests
+module now supports JSON5 (comments, etc.)
+Fixed module flag and added e2e tests
 
 Commits
 
-feat: add support for JSON with comments turbo.json file by @weyert in https://github.com/vercel/turborepo/pull/745
+feat: add support for JSON with comments module file by @weyert in https://github.com/vercel/turborepo/pull/745
 fix(run): no-cache flag by @Xenfo in https://github.com/vercel/turborepo/pull/699
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.4-canary.0...v1.1.4-canary.1"
-164,"What's Changed?
+169,"What's Changed?
 
-turbo will no give up on Remote Caching and fallback to local execution after 3 failed HTTP request attempts
+module will no give up on Remote Caching and fallback to local execution after 3 failed HTTP request attempts
 New troubleshooting guide in the documentation https://turborepo.org/docs/troubleshooting
 
 Commits
@@ -3407,27 +3472,24 @@ Start splitting the Run command up by @gsoltis in https://github.com/vercel/turb
 Stop hitting remote cache after a few failures by @jaredpalmer in https://github.com/vercel/turborepo/pull/545
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.3...v1.1.4-canary.0"
-165,"What's New?
+170,"What's New?
 
-turbo bin now prints the location of binary
-VSCode now recognizes turbo.json with a custom file icon
+module now prints the location of binary
+VSCode now recognizes module with a custom file icon
 
-Added JSON Schema schema.json to have a better IDE intellisense in turbo.json. You can add this line to turbo.json to get it working:
-   jsonc
-      {
-        ""$schema"": ""https://turborepo.org/schema.json"",     
-      } 
+Added JSON Schema module to have a better IDE intellisense in module. You can add this line to module to get it working:
+   module 
     This will give you descriptions over each key in VSCode and other IDEs...
-
+image
 
 
 Bug fixes
 
 Logging is now thread-safe (no more awkward line collisions)
 Exit codes are now properly propagated
-Fixed crash and added error message if packageManager field in package.json is invalid
-Stopped targeting all packages with --since if no there are no git/scm changes
-Fixed --scope exclusion. As a reminder, a ! is the proper way to ignore something from execution scope (e.g. --scope=""!something-*""). Recall that--ignoreis only used for--since`. 
+Fixed crash and added error message if module field in module is invalid
+Stopped targeting all packages with module if no there are no git/scm changes
+Fixed module exclusion. As a reminder, a module is the proper way to ignore something from execution scope (e.g. module--ignoremodule--since`. 
 Fixed passthrough CLI args so that they are now only applied to primary tasks
 
 Commits
@@ -3449,7 +3511,7 @@ Fix cache index being missing after incremental builds by @shuding in https://gi
 fix: stop targeting all packages with --since if no changes by @stevejcox in https://github.com/vercel/turborepo/pull/637
 Move to a packages directory by @jaredpalmer in https://github.com/vercel/turborepo/pull/708
 Fix typo in CounterButton in kitchen-sink example by @eDonec in https://github.com/vercel/turborepo/pull/710
-Add schema.json to have a better IDE intellisense by @arthurfiorette in https://github.com/vercel/turborepo/pull/634
+Add module to have a better IDE intellisense by @arthurfiorette in https://github.com/vercel/turborepo/pull/634
 Fix existing benchmarks by @gsoltis in https://github.com/vercel/turborepo/pull/718
 fix: typo by @astahmer in https://github.com/vercel/turborepo/pull/724
 feat: basic exclude for scope by @Xenfo in https://github.com/vercel/turborepo/pull/696
@@ -3476,10 +3538,10 @@ New Contributors
 @ValentinH made their first contribution in https://github.com/vercel/turborepo/pull/743
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.2...v1.1.3"
-166,"What's new?
+171,"What's new?
 
 Rename go module to allow go doc @dglsparsons in https://github.com/vercel/turborepo/pull/327
-Add schema.json to have a better IDE intellisense in turbo.json by @arthurfiorette in https://github.com/vercel/turborepo/pull/634
+Add module to have a better IDE intellisense in module by @arthurfiorette in https://github.com/vercel/turborepo/pull/634
 
 Bug fixes
 
@@ -3503,11 +3565,11 @@ New Contributors
 @astahmer made their first contribution in https://github.com/vercel/turborepo/pull/724
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.2...v1.1.3-canary.2"
-167,"What's New?
+172,"What's New?
 
-Added new turbo bin command  that prints the location of the installed binary 
-Fixed crash and added error message if packageManager field is invalid
-Stop targeting all packages with --since if no changes are found
+Added new module command  that prints the location of the installed binary 
+Fixed crash and added error message if module field is invalid
+Stop targeting all packages with module if no changes are found
 
 Bug fixes
 
@@ -3541,11 +3603,11 @@ New Contributors
 @eDonec made their first contribution in https://github.com/vercel/turborepo/pull/710
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.2...v1.1.3-canary.1"
-168,"What's Changed?
+173,"What's Changed?
 
-Hitting Ctrl+C on the terminal will shut down all of the child processes via SIGINT. Additionally, if one task fails, other tasks will not be left lingering, and will be sent a SIGINT. More explicitly:
-When turbo receives an external signal, send SIGINT to our child processes
-When a child process exits w/ a non-zero exit code, and --continue is not set, turbo will send SIGINT to all of our child processes
+Hitting module on the terminal will shut down all of the child processes via module. Additionally, if one task fails, other tasks will not be left lingering, and will be sent a module. More explicitly:
+When module receives an external signal, send module to our child processes
+When a child process exits w/ a non-zero exit code, and module is not set, module will send module to all of our child processes
 
 Commits
 
@@ -3556,34 +3618,34 @@ chore(deps): bump @headlessui/react from 1.4.2 to 1.4.3 by @dependabot in https:
 Improve child process management by @gsoltis in https://github.com/vercel/turborepo/pull/663
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.2...v1.1.3-canary.0"
-169,"What's Changed
+174,"What's Changed
 
 fix: Newer versions of OSX use port 5000 by default for Airplay by @gsoltis in https://github.com/vercel/turborepo/pull/627
-fix: copy turbo.json when running turbo prune by @jaredpalmer in https://github.com/vercel/turborepo/pull/633
+fix: copy turbo.json when running module by @jaredpalmer in https://github.com/vercel/turborepo/pull/633
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.1...v1.1.2"
-170,"What's Changed
+175,"What's Changed
 
 Fix @turbo/codemod help text by @jaredpalmer in https://github.com/vercel/turborepo/pull/625
-Add back npm to run-exampes.sh by @jaredpalmer in https://github.com/vercel/turborepo/pull/626
+Add back npm to module by @jaredpalmer in https://github.com/vercel/turborepo/pull/626
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.0...v1.1.1"
-171,"Blog Post
-Turborepo 1.1
+176,"Blog Post
+link
 What's New?
 
-Added partial and experimental yarn v2/3 support with nodeLinker: ""node-modules""
-Added new @turbo/codemod package for automatic migrations
-Move configuration into turbo.json for convenience
-Use packageManager in root package.json to determine package manager faster
-Show deprecation warning when turbo key in package.json with suggestions to run npx @turbo/codemod create-turbo-config
-Show deprecation warning when packageManager key in package.json is not set  with suggestions to run npx @turbo/codemod add-package-manager
-Updated create-turbo templates to set packageManager automatically
+Added partial and experimental yarn v2/3 support with link
+Added new module package for automatic migrations
+Move configuration into module for convenience
+Use module in root module to determine package manager faster
+Show deprecation warning when module key in module with suggestions to run module
+Show deprecation warning when module key in module is not set  with suggestions to run module
+Updated module templates to set module automatically
 New and improved documentation search and UI tweaks
 
 Bug Fixes
 
-Fixed regression where turbo prune broke subsequent yarn install --frozen-lockfile
+Fixed regression where module broke subsequent module
 Fixed CRLF/LF issues in lockfile and yaml parsing
 Fixed memory leak / CPU overheating issue
 
@@ -3612,7 +3674,7 @@ docs: Bump nextra to fix search by @jaredpalmer in https://github.com/vercel/tur
 Migrate root turbo config from package.json to turbo.json by @gsoltis in https://github.com/vercel/turborepo/pull/606
 Add @types/node to examples and template by @jaredpalmer in https://github.com/vercel/turborepo/pull/623
 Set packageManager in create-turbo before install by @jaredpalmer in https://github.com/vercel/turborepo/pull/621
-Finish docs move to turbo.json by @jaredpalmer in https://github.com/vercel/turborepo/pull/622
+Finish docs move to module by @jaredpalmer in https://github.com/vercel/turborepo/pull/622
 
 New Contributors
 
@@ -3626,15 +3688,15 @@ New Contributors
 @gsoltis made their first contribution in https://github.com/vercel/turborepo/pull/605
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.29...v1.1.0"
-172,"What's Changed?
+177,"What's Changed?
 
 fix: cached symlinks causing cache misses (#491)
 fix: handle dead symlinks in walk (#569)
 
 What's coming?
-In v1.1.x, we'll be moving configuration into turbo.json and using the new packageManager key to detect the package manager even faster. We're also going to be publishing a new package to assist with this and future incremental migrations called @turbo/codemod. All of the changes coming are backwards compatible. turbo will show a warning message along with the command you should run to execute the necessary migration. 
+In v1.1.x, we'll be moving configuration into module and using the new module key to detect the package manager even faster. We're also going to be publishing a new package to assist with this and future incremental migrations called module. All of the changes coming are backwards compatible. module will show a warning message along with the command you should run to execute the necessary migration. 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.28...v1.0.29"
-173,"What's Changed
+178,"What's Changed
 
 fix: handle dead symlinks in walk by @markjm in https://github.com/vercel/turborepo/pull/569
 chore: fixed typo on ancestralHash by @sebasrodriguez in https://github.com/vercel/turborepo/pull/578
@@ -3657,7 +3719,7 @@ New Contributors
 @adamelmore made their first contribution in https://github.com/vercel/turborepo/pull/491
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.1.0-canary.1...v1.1.0-canary.2"
-174,"What's Changed
+179,"What's Changed
 
 Add yarn berry node_modules linker, CRLF/LF, and update prune by @Xenfo in https://github.com/vercel/turborepo/pull/544
 Fix channel closing on errors by @jaredpalmer in https://github.com/vercel/turborepo/pull/557
@@ -3669,17 +3731,17 @@ New Contributors
 @chentsulin made their first contribution in https://github.com/vercel/turborepo/pull/568
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.26...v1.1.0-canary.1"
-175,"What's changed?
+180,"What's changed?
 
-Updated next-env.d.ts in create-turbo so that there isn't a cache miss on the first run due to altered source
+Updated module in module so that there isn't a cache miss on the first run due to altered source
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.27...v1.0.28"
-176,"What's changed?
+181,"What's changed?
 
 Patched bug causing turbo to hang on errors #557 
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.26...v1.0.27"
-177,"What's Changed
+182,"What's Changed
 
 fix a typo in hashable env pairs array name by @hemache in https://github.com/vercel/turborepo/pull/547
 
@@ -3688,64 +3750,24 @@ New Contributors
 @hemache made their first contribution in https://github.com/vercel/turborepo/pull/547
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.25...v1.0.26"
-178,"What's new?
+183,"What's new?
 Environment variable dependencies and hashing
-When you use turbo with tools which inline environment variables at build time (e.g. Next.js or Create React App), it is important you tell turbo about it. Otherwise, you could ship a cached artifact with the wrong environment variables!
+When you use module with tools which inline environment variables at build time (e.g. Next.js or Create React App), it is important you tell module about it. Otherwise, you could ship a cached artifact with the wrong environment variables!
 With this release, you can now change a task hash by doing any of the following:
 
-(new) Including environment variables in a dependsOn in your pipeline definition prefixed by a $ will impact the cache fingerprint on a per-task or per-package-task basis. 
-(new) Including environment variables in globalDependencies list prefixed by a $ will impact the cache fingerprint of all tasks.
-Including files or globs of files in globalDependencies will impact the cache fingerprint of all tasks.
-(new) The value of any environment variable that includes THASH in its name will impact the cache fingerprint of all tasks.
+(new) Including environment variables in a module in your module definition prefixed by a module will impact the cache fingerprint on a per-task or per-package-task basis. 
+(new) Including environment variables in module list prefixed by a module will impact the cache fingerprint of all tasks.
+Including files or globs of files in module will impact the cache fingerprint of all tasks.
+(new) The value of any environment variable that includes module in its name will impact the cache fingerprint of all tasks.
 
 Example Configuration
-json5
-{
-  ""turbo"": {
-    ""pipeline"": {
-      ""build"": {
-        ""dependsOn"": {
-          ""^build""
-          // env vars will impact hashes of all ""build"" tasks
-          ""$SOME_ENV_VAR""
-        },
-        ""outputs"": [""dist/**""]
-      },
-      ""web#build"": { // override settings for the ""build"" task for the ""web"" app
-        ""dependsOn"": [
-          ""^build"",
-           // env vars that will impact the hash of ""build"" task for only ""web"" app
-           ""$STRIPE_SECRET_KEY"",
-           ""$NEXT_PUBLIC_STRIPE_PUBLIC_KEY"",
-           ""$NEXT_PUBLIC_ANALYTICS_ID"",
-        ],
-        ""outputs"": ["".next/**""],
-      },
-      ""docs#build"": { // override settings for the ""build"" task for the ""docs"" app
-        ""dependsOn"": [
-          ""^build"",
-           // env vars that will impact the hash of ""build"" task for only ""web"" app
-           ""$STRIPE_SECRET_KEY"",
-           ""$NEXT_PUBLIC_STRIPE_PUBLIC_KEY"",
-           ""$NEXT_PUBLIC_ANALYTICS_ID"",
-        ],
-        ""outputs"": ["".next/**""],
-      }
-    },
-    ""baseBranch"": ""origin/main"",
-    ""globalDependencies"": [
-      ""$GITHUB_TOKEN""// env var that will impact the hashes of all tasks,
-      ""tsconfig.json"" // file contents will impact the hashes of all tasks,
-      "".env.*"" // glob file contents will impact the hashes of all tasks,
-    ],
-  }
-}
+module
 Bugfixes
 
-Correctly show pnpx command in create-turbo
-Treat symlink directory as directory in globalDependencies
+Correctly show pnpx command in module
+Treat symlink directory as directory in module
 Fix cpu overloading during long running tasks
-Better error message when workspaces are not defined
+Better error message when module are not defined
 
 Commits
 
@@ -3758,7 +3780,7 @@ docs: add missing flag for pnpm install command by @fwouts in https://github.com
 docs: add privacy / security questions to faq by @jaredpalmer in https://github.com/vercel/turborepo/pull/522
 fix: pnpx command is deprecated in version 6.x by @KieSun in https://github.com/vercel/turborepo/pull/486
 fix: treat symlink directory as directory by @markjm in https://github.com/vercel/turborepo/pull/532
-fix: Move runOptions stream checks before the for loop to prevent cpu load by @marcinbunsch in https://github.com/vercel/turborepo/pull/529
+fix: Move runOptions stream checks before the module loop to prevent cpu load by @marcinbunsch in https://github.com/vercel/turborepo/pull/529
 QoL changes for using examples by @markjm in https://github.com/vercel/turborepo/pull/518
 Hash env vars by @jaredpalmer in https://github.com/vercel/turborepo/pull/495
 fix: error when workspaces are not defined by @KarolNov in https://github.com/vercel/turborepo/pull/472
@@ -3773,7 +3795,7 @@ New Contributors
 @KarolNov made their first contribution in https://github.com/vercel/turborepo/pull/472
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.24...v1.0.25"
-179,"What's Changed
+184,"What's Changed
 
 Bump @babel/core from 7.16.0 to 7.16.7 by @dependabot in https://github.com/vercel/turborepo/pull/477
 fix kitchen-sink test #466 by @kbenrafik in https://github.com/vercel/turborepo/pull/473
@@ -3784,7 +3806,7 @@ docs: add missing flag for pnpm install command by @fwouts in https://github.com
 docs: add privacy / security questions to faq by @jaredpalmer in https://github.com/vercel/turborepo/pull/522
 fix: pnpx command is deprecated in version 6.x by @KieSun in https://github.com/vercel/turborepo/pull/486
 fix: treat symlink directory as directory by @markjm in https://github.com/vercel/turborepo/pull/532
-fix: Move runOptions stream checks before the for loop to prevent cpu load by @marcinbunsch in https://github.com/vercel/turborepo/pull/529
+fix: Move runOptions stream checks before the module loop to prevent cpu load by @marcinbunsch in https://github.com/vercel/turborepo/pull/529
 QoL changes for using examples by @markjm in https://github.com/vercel/turborepo/pull/518
 Hash env vars by @jaredpalmer in https://github.com/vercel/turborepo/pull/495
 fix: error when workspaces are not defined by @KarolNov in https://github.com/vercel/turborepo/pull/472
@@ -3799,58 +3821,18 @@ New Contributors
 @KarolNov made their first contribution in https://github.com/vercel/turborepo/pull/472
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.24...v1.0.25-canary.1"
-180,"What's New?
+185,"What's New?
 Hashing Environment Variables
-When you use turbo with tools which inline environment variables at build time (e.g. Next.js or Create React App), it is important you tell turbo about it. Otherwise, you could ship a cached artifact with the wrong environment variables!
+When you use module with tools which inline environment variables at build time (e.g. Next.js or Create React App), it is important you tell module about it. Otherwise, you could ship a cached artifact with the wrong environment variables!
 With this PR, you can now change a task hash by doing any of the following:
 
-Including environment variables in a dependsOn in your pipeline definition prefixed by a $ will impact the cache fingerprint on a per-task or per-package-task basis.
-Including environment variables in globalDependencies list prefixed by a $ will impact the cache fingerprint of all tasks.
-Including files or globs of files in globalDependencies will impact the cache fingerprint of all tasks.
-The value of any environment variable that includes THASH in its name will impact the cache fingerprint of all tasks.
+Including environment variables in a module in your module definition prefixed by a module will impact the cache fingerprint on a per-task or per-package-task basis.
+Including environment variables in module list prefixed by a module will impact the cache fingerprint of all tasks.
+Including files or globs of files in module will impact the cache fingerprint of all tasks.
+The value of any environment variable that includes module in its name will impact the cache fingerprint of all tasks.
 
 Example Configuration
-json5
-{
-  ""turbo"": {
-    ""pipeline"": {
-      ""build"": {
-        ""dependsOn"": {
-          ""^build""
-          // env vars will impact hashes of all ""build"" tasks
-          ""$SOME_ENV_VAR""
-        },
-        ""outputs"": [""dist/**""]
-      },
-      ""web#build"": { // override settings for the ""build"" task for the ""web"" app
-        ""dependsOn"": [
-          ""^build"",
-           // env vars that will impact the hash of ""build"" task for only ""web"" app
-           ""$STRIPE_SECRET_KEY"",
-           ""$NEXT_PUBLIC_STRIPE_PUBLIC_KEY"",
-           ""$NEXT_PUBLIC_ANALYTICS_ID"",
-        ],
-        ""outputs"": ["".next/**""],
-      },
-      ""docs#build"": { // override settings for the ""build"" task for the ""docs"" app
-        ""dependsOn"": [
-          ""^build"",
-           // env vars that will impact the hash of ""build"" task for only ""web"" app
-           ""$STRIPE_SECRET_KEY"",
-           ""$NEXT_PUBLIC_STRIPE_PUBLIC_KEY"",
-           ""$NEXT_PUBLIC_ANALYTICS_ID"",
-        ],
-        ""outputs"": ["".next/**""],
-      }
-    },
-    ""baseBranch"": ""origin/main"",
-    ""globalDependencies"": [
-      ""$GITHUB_TOKEN""// env var that will impact the hashes of all tasks,
-      ""tsconfig.json"" // file contents will impact the hashes of all tasks,
-      "".env.*"" // glob file contents will impact the hashes of all tasks,
-    ],
-  }
-}
+module
 Commits
 
 Bump @babel/core from 7.16.0 to 7.16.7 by @dependabot in https://github.com/vercel/turborepo/pull/477
@@ -3869,9 +3851,9 @@ New Contributors
 @KieSun made their first contribution in https://github.com/vercel/turborepo/pull/486
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.24...v1.0.25-canary.0"
-181,"What's Changed?
+186,"What's Changed?
 
-Added pnpm starter to create-turbo
+Added pnpm starter to module
 Fixed yarn lockfile parsing on Windows machines. In the past, windows machines would not resolve yarn deps like linux and mac, but just hash the contents of the file. This has been fixed and removed.
 Fixed log output streaming so that both stderr and stdout now correctly print output regardless of which one goes first. This was causing rollup and storybook watch commands to hang
 
@@ -3882,14 +3864,14 @@ examples: bump next package version by @charkour in https://github.com/vercel/tu
 chore: Update devcontainer  by @jaredpalmer in https://github.com/vercel/turborepo/pull/431
 Add bash scripts to test all examples by @jaredpalmer in https://github.com/vercel/turborepo/pull/432
 Fix yarn lockfile parsing on Windows by @jaredpalmer in https://github.com/vercel/turborepo/pull/434
-chore: sync the versions of eslint to the same 7.32.0 version by @weyert in https://github.com/vercel/turborepo/pull/435
+chore: sync the versions of module to the same 7.32.0 version by @weyert in https://github.com/vercel/turborepo/pull/435
 drain body to prevent potential connection thrashing by @cometkim in https://github.com/vercel/turborepo/pull/433
-Merge stderr before stdout by @jaredpalmer in https://github.com/vercel/turborepo/pull/296
-Prefer --include-dependencies in docs by @ericclemmons in https://github.com/vercel/turborepo/pull/450
+Merge module before module by @jaredpalmer in https://github.com/vercel/turborepo/pull/296
+Prefer module in docs by @ericclemmons in https://github.com/vercel/turborepo/pull/450
 docs: fix typo in migrate-from-lerna.mdx by @kyletsang in https://github.com/vercel/turborepo/pull/457
 docs: Fix dag diagram by @jaredpalmer in https://github.com/vercel/turborepo/pull/459
 Refactor log streaming by @jaredpalmer in https://github.com/vercel/turborepo/pull/462
-fix: monroepo to monorepo typo by @AlaaZorkane in https://github.com/vercel/turborepo/pull/469
+fix: module to module typo by @AlaaZorkane in https://github.com/vercel/turborepo/pull/469
 
 New Contributors
 
@@ -3899,17 +3881,17 @@ New Contributors
 @AlaaZorkane made their first contribution in https://github.com/vercel/turborepo/pull/469
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.23...v1.0.24"
-182,"What's Changed
+187,"What's Changed
 
 Enable pnpm starter by @jaredpalmer in https://github.com/vercel/turborepo/pull/423
 examples: bump next package version by @charkour in https://github.com/vercel/turborepo/pull/424
 chore: Update devcontainer  by @jaredpalmer in https://github.com/vercel/turborepo/pull/431
 Add bash scripts to test all examples by @jaredpalmer in https://github.com/vercel/turborepo/pull/432
 Fix yarn lockfile parsing on Windows by @jaredpalmer in https://github.com/vercel/turborepo/pull/434
-chore: sync the versions of eslint to the same 7.32.0 version by @weyert in https://github.com/vercel/turborepo/pull/435
+chore: sync the versions of module to the same 7.32.0 version by @weyert in https://github.com/vercel/turborepo/pull/435
 drain body to prevent potential connection thrashing by @cometkim in https://github.com/vercel/turborepo/pull/433
-Merge stderr before stdout by @jaredpalmer in https://github.com/vercel/turborepo/pull/296
-Prefer --include-dependencies in docs by @ericclemmons in https://github.com/vercel/turborepo/pull/450
+Merge module before module by @jaredpalmer in https://github.com/vercel/turborepo/pull/296
+Prefer module in docs by @ericclemmons in https://github.com/vercel/turborepo/pull/450
 docs: fix typo in migrate-from-lerna.mdx by @kyletsang in https://github.com/vercel/turborepo/pull/457
 docs: Fix dag diagram by @jaredpalmer in https://github.com/vercel/turborepo/pull/459
 Refactor log streaming by @jaredpalmer in https://github.com/vercel/turborepo/pull/462
@@ -3921,17 +3903,17 @@ New Contributors
 @kyletsang made their first contribution in https://github.com/vercel/turborepo/pull/457
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.23...v1.0.24-canary.2"
-183,"What's Changed
+188,"What's Changed
 
 Enable pnpm starter by @jaredpalmer in https://github.com/vercel/turborepo/pull/423
 examples: bump next package version by @charkour in https://github.com/vercel/turborepo/pull/424
 chore: Update devcontainer  by @jaredpalmer in https://github.com/vercel/turborepo/pull/431
 Add bash scripts to test all examples by @jaredpalmer in https://github.com/vercel/turborepo/pull/432
 Fix yarn lockfile parsing on Windows by @jaredpalmer in https://github.com/vercel/turborepo/pull/434
-chore: sync the versions of eslint to the same 7.32.0 version by @weyert in https://github.com/vercel/turborepo/pull/435
+chore: sync the versions of module to the same 7.32.0 version by @weyert in https://github.com/vercel/turborepo/pull/435
 drain body to prevent potential connection thrashing by @cometkim in https://github.com/vercel/turborepo/pull/433
-Merge stderr before stdout by @jaredpalmer in https://github.com/vercel/turborepo/pull/296
-Prefer --include-dependencies in docs by @ericclemmons in https://github.com/vercel/turborepo/pull/450
+Merge module before module by @jaredpalmer in https://github.com/vercel/turborepo/pull/296
+Prefer module in docs by @ericclemmons in https://github.com/vercel/turborepo/pull/450
 docs: fix typo in migrate-from-lerna.mdx by @kyletsang in https://github.com/vercel/turborepo/pull/457
 docs: Fix dag diagram by @jaredpalmer in https://github.com/vercel/turborepo/pull/459
 Refactor log streaming by @jaredpalmer in https://github.com/vercel/turborepo/pull/462
@@ -3943,17 +3925,17 @@ New Contributors
 @kyletsang made their first contribution in https://github.com/vercel/turborepo/pull/457
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.23...v1.0.24-canary.1"
-184,"What's Changed
+189,"What's Changed
 
 Enable pnpm starter by @jaredpalmer in https://github.com/vercel/turborepo/pull/423
 examples: bump next package version by @charkour in https://github.com/vercel/turborepo/pull/424
 chore: Update devcontainer  by @jaredpalmer in https://github.com/vercel/turborepo/pull/431
 Add bash scripts to test all examples by @jaredpalmer in https://github.com/vercel/turborepo/pull/432
 Fix yarn lockfile parsing on Windows by @jaredpalmer in https://github.com/vercel/turborepo/pull/434
-chore: sync the versions of eslint to the same 7.32.0 version by @weyert in https://github.com/vercel/turborepo/pull/435
+chore: sync the versions of module to the same 7.32.0 version by @weyert in https://github.com/vercel/turborepo/pull/435
 drain body to prevent potential connection thrashing by @cometkim in https://github.com/vercel/turborepo/pull/433
-Merge stderr before stdout by @jaredpalmer in https://github.com/vercel/turborepo/pull/296
-Prefer --include-dependencies in docs by @ericclemmons in https://github.com/vercel/turborepo/pull/450
+Merge module before module by @jaredpalmer in https://github.com/vercel/turborepo/pull/296
+Prefer module in docs by @ericclemmons in https://github.com/vercel/turborepo/pull/450
 docs: fix typo in migrate-from-lerna.mdx by @kyletsang in https://github.com/vercel/turborepo/pull/457
 
 New Contributors
@@ -3963,12 +3945,12 @@ New Contributors
 @kyletsang made their first contribution in https://github.com/vercel/turborepo/pull/457
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.23...v1.0.24-canary.0"
-185,"What's Changed
+190,"What's Changed
 
-Refactor internal implementation of --scope and adde more more e2e tests by @jaredpalmer in #421 
+Refactor internal implementation of module and adde more more e2e tests by @jaredpalmer in #421 
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.22...v1.0.23"
-186,"What's Changed
+191,"What's Changed
 
 Add support for Android arm64 architecture by @beastOP in https://github.com/vercel/turborepo/pull/391
 Add support for Windows ARM 64, OpenBSD, NetBSD, and more by @jaredpalmer in https://github.com/vercel/turborepo/pull/412
@@ -3983,7 +3965,7 @@ New Contributors
 @kylemh made their first contribution in https://github.com/vercel/turborepo/pull/416
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.21...v1.0.22"
-187,"What's changed?
+192,"What's changed?
 
 Fix postinstall script to work with NPM. Sorry about that! postinstall scripts are very hard to test. Going to deprecate 1.0.20 on npm since it is botched.
 
@@ -3993,11 +3975,11 @@ Export downloadedBinPath in turbo postinstall by @jaredpalmer in https://github.
 Set preferUnplugged in all optionalDependencies by @jaredpalmer in https://github.com/vercel/turborepo/pull/410
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.20...v1.0.21"
-188,"What's new?
+193,"What's new?
 
 Fixed internal / external dependency hashing https://github.com/vercel/turborepo/pull/358
-Refactored postinstall script to use optionalDependencies https://github.com/vercel/turborepo/pull/405
-Fixed  pass through arguments -- parsing so that they are not mistaken for build targets
+Refactored postinstall script to use module https://github.com/vercel/turborepo/pull/405
+Fixed  pass through arguments module parsing so that they are not mistaken for build targets
 
 Docs
 
@@ -4013,7 +3995,7 @@ Add acknowledgements and callouts to docs by @jaredpalmer in https://github.com/
 docs: fix turborepo name by @weyert in https://github.com/vercel/turborepo/pull/382
 docs: Update npmClient with pnpm option in documentation by @guillaumewuip in https://github.com/vercel/turborepo/pull/393
 fix: preserve file permission by @rubiagatra in https://github.com/vercel/turborepo/pull/362
-Update postinstall script to use optionalDependencies by @jaredpalmer in https://github.com/vercel/turborepo/pull/405
+Update module script to use module by @jaredpalmer in https://github.com/vercel/turborepo/pull/405
 
 New Contributors
 
@@ -4022,7 +4004,7 @@ New Contributors
 @rubiagatra made their first contribution in https://github.com/vercel/turborepo/pull/362
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.19...v1.0.20"
-189,"What's Changed
+194,"What's Changed
 
 Fix flaky getTargetsFromArgs tests by @jaredpalmer in https://github.com/vercel/turborepo/pull/356
 Papercuts in context.go by @jaredpalmer in https://github.com/vercel/turborepo/pull/354
@@ -4032,7 +4014,7 @@ Add acknowledgements and callouts to docs by @jaredpalmer in https://github.com/
 docs: fix turborepo name by @weyert in https://github.com/vercel/turborepo/pull/382
 docs: Update npmClient with pnpm option in documentation by @guillaumewuip in https://github.com/vercel/turborepo/pull/393
 fix: preserve file permission by @rubiagatra in https://github.com/vercel/turborepo/pull/362
-Update postinstall script to use optionalDependencies by @jaredpalmer in https://github.com/vercel/turborepo/pull/405
+Update module script to use module by @jaredpalmer in https://github.com/vercel/turborepo/pull/405
 
 New Contributors
 
@@ -4041,7 +4023,7 @@ New Contributors
 @rubiagatra made their first contribution in https://github.com/vercel/turborepo/pull/362
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.19...v1.0.20-canary.2"
-190,"What's Changed
+195,"What's Changed
 
 Fix flaky getTargetsFromArgs tests by @jaredpalmer in https://github.com/vercel/turborepo/pull/356
 Papercuts in context.go by @jaredpalmer in https://github.com/vercel/turborepo/pull/354
@@ -4059,22 +4041,22 @@ New Contributors
 @rubiagatra made their first contribution in https://github.com/vercel/turborepo/pull/362
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.19...v1.0.20-canary.1"
-191,"What's Changed
+196,"What's Changed
 
 Fix flaky getTargetsFromArgs tests by @jaredpalmer in https://github.com/vercel/turborepo/pull/356
 Papercuts in context.go by @jaredpalmer in https://github.com/vercel/turborepo/pull/354
 Fix internal dep hashing by @jaredpalmer in https://github.com/vercel/turborepo/pull/358
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.19...v1.0.20-canary.0"
-192,"What's Changed
+197,"What's Changed
 
 Fix pass thru arguments from becoming targets by @jaredpalmer in https://github.com/vercel/turborepo/pull/351 cc @padmaia 
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.18...v1.0.19"
-193,"What's Changed
+198,"What's Changed
 
 Fix empty outputs behavior by @jaredpalmer in https://github.com/vercel/turborepo/pull/347
-Add support for --graph=file.html by @styfle in https://github.com/vercel/turborepo/pull/329
+Add support for module by @styfle in https://github.com/vercel/turborepo/pull/329
 Docs: removes ""simply"" to be more inclusive by @bmuenzenmeyer in https://github.com/vercel/turborepo/pull/342
 
 New Contributors
@@ -4082,18 +4064,18 @@ New Contributors
 @bmuenzenmeyer made their first contribution in https://github.com/vercel/turborepo/pull/342
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.17...v1.0.18"
-194,"What's Changed
+199,"What's Changed
 
 Correctly hash empty outputs first by @jaredpalmer in https://github.com/vercel/turborepo/pull/341
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.16...v1.0.17"
-195,"What's Changed
+200,"What's Changed
 
 Set user agent on GET by @jaredpalmer in https://github.com/vercel/turborepo/pull/332
 Faster globbing by @jaredpalmer in https://github.com/vercel/turborepo/pull/335
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.15...v1.0.16"
-196,"What's Changed
+201,"What's Changed
 
 Docs debug flags #229 by @VarunSAthreya in https://github.com/vercel/turborepo/pull/319
 fix(docs): fix title indent by @promer94 in https://github.com/vercel/turborepo/pull/323
@@ -4105,28 +4087,28 @@ New Contributors
 @promer94 made their first contribution in https://github.com/vercel/turborepo/pull/323
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.14...v1.0.15"
-197,"What's Changed
+202,"What's Changed
 
 Update README.md by @Dueen in https://github.com/vercel/turborepo/pull/312
 Add nodemon to api in kitchen sink by @mr-bjerre in https://github.com/vercel/turborepo/pull/316
-Fix create-turbo ui typescript to support next.js dynamic imports by @jaredpalmer in https://github.com/vercel/turborepo/pull/324
+Fix create-turbo module typescript to support next.js dynamic imports by @jaredpalmer in https://github.com/vercel/turborepo/pull/324
 
 New Contributors
 
 @Dueen made their first contribution in https://github.com/vercel/turborepo/pull/312
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.13...v1.0.14"
-198,"What's Changed
+203,"What's Changed
 
-Allow barrel files in ui starter packages by @jaredpalmer in https://github.com/vercel/turborepo/pull/305
-Remove unused zlib dependency by @styfle in https://github.com/vercel/turborepo/pull/308
+Allow barrel files in module starter packages by @jaredpalmer in https://github.com/vercel/turborepo/pull/305
+Remove unused module dependency by @styfle in https://github.com/vercel/turborepo/pull/308
 
 New Contributors
 
 @styfle made their first contribution in https://github.com/vercel/turborepo/pull/308
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.12...v1.0.13"
-199,"What's Changed
+204,"What's Changed
 
 chore: Add clean to turbo pipeline in design system example by @mr-bjerre in https://github.com/vercel/turborepo/pull/291
 docs: Docs update playwright link by @tknickman in https://github.com/vercel/turborepo/pull/294
@@ -4140,23 +4122,23 @@ New Contributors
 @marcomafessolli made their first contribution in https://github.com/vercel/turborepo/pull/297
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.11...v1.0.12"
-200,"What's Changed
+205,"What's Changed
 
-Fix turbo link when user has no name by @jaredpalmer in https://github.com/vercel/turborepo/pull/280
+Fix module when user has no name by @jaredpalmer in https://github.com/vercel/turborepo/pull/280
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.10...v1.0.11"
-201,"What's Changed
+206,"What's Changed
 
 Add more customer testimonials from Twitter. by @leerob in https://github.com/vercel/turborepo/pull/254
 docs: Set timeout before closing search by @jaredpalmer in https://github.com/vercel/turborepo/pull/274
 docs: Fix docs' typos by @kubaprzetakiewicz in https://github.com/vercel/turborepo/pull/273
-Support yarn not installed in create-turbo by @seanyusa in https://github.com/vercel/turborepo/pull/255
+Support yarn not installed in module by @seanyusa in https://github.com/vercel/turborepo/pull/255
 Add design system example by @jaredpalmer in https://github.com/vercel/turborepo/pull/269
 CLI papercuts by @jaredpalmer in https://github.com/vercel/turborepo/pull/277
 Fix --global-deps 
 Documented --global-deps, --cache-dir
 Deprecated --cacheFolder with warning
-All CLI flags should can now be dash-cased (--includeDependencies  -> --include-dependencies) 
+All CLI flags should can now be dash-cased (module  -> module) 
 
 
 
@@ -4165,17 +4147,17 @@ New Contributors
 @kubaprzetakiewicz made their first contribution in https://github.com/vercel/turborepo/pull/273
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.9...v1.0.10"
-202,"What's Changed
-create-turbo
+207,"What's Changed
+module
 
-Remove pnpm engine definition to get rid of warning 
+Remove pnpm module definition to get rid of warning 
 
 Internal
 
 Upgrade actions/setup-node to 2.5.x by @jaredpalmer in https://github.com/vercel/turborepo/pull/250
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.8...v1.0.9"
-203,"What's Changed
+208,"What's Changed
 
 Fix remote cache config detection to support just slug by @jaredpalmer in https://github.com/vercel/turborepo/pull/248
 
@@ -4193,20 +4175,20 @@ Refactor examples folder layout to match starters by @jaredpalmer in https://git
 Setup remote caching on our own GH Actions by @jaredpalmer in https://github.com/vercel/turborepo/pull/249
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.7...v1.0.8"
-204,"What's Changed
-turbo
+209,"What's Changed
+module
 
 Fix parsing weird formats of the keywords field of some package.json files by @01walid in https://github.com/vercel/turborepo/pull/161
 Remove WriteFile and move it into CopyFile by @bolshoytoster in https://github.com/vercel/turborepo/pull/204
 Fix error when passing --api, --url, --heap, --cpuprofile, --trace, --no-gc flags by @jaredpalmer in https://github.com/vercel/turborepo/pull/233
 
-create-turbo
+module
 
-fix: remove ., which is not needed by @lidqqq in https://github.com/vercel/turborepo/pull/186
+fix: remove module, which is not needed by @lidqqq in https://github.com/vercel/turborepo/pull/186
 update create-turbo template gitignore pnpm by @charkour in https://github.com/vercel/turborepo/pull/196
 Fix initiating a project within the current directory by @seanyusa in https://github.com/vercel/turborepo/pull/212
 Improved success output for create-turbo by @seanyusa in https://github.com/vercel/turborepo/pull/222
-Add engine requirements to create-turbo/package.json, fix examples/with-pnpm by @charkour in https://github.com/vercel/turborepo/pull/199
+Add engine requirements to module, fix module by @charkour in https://github.com/vercel/turborepo/pull/199
 
 Docs
 
@@ -4242,36 +4224,18 @@ New Contributors
 @mattpocock made their first contribution in https://github.com/vercel/turborepo/pull/228
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.6...v1.0.7"
-205,"What's Changed
+210,"What's Changed
 
-Add support for --only flag that matches lerna/pnpm run behavior by @jaredpalmer in https://github.com/vercel/turborepo/pull/174 The --only flag is to support restricting task execution to only the tasks specified in run. This makes it easier to adopt Turbo in a Lerna codebase since --only behavior is effectively an exact match. 
+Add support for module flag that matches lerna/pnpm run behavior by @jaredpalmer in https://github.com/vercel/turborepo/pull/174 The module flag is to support restricting task execution to only the tasks specified in module. This makes it easier to adopt Turbo in a Lerna codebase since module behavior is effectively an exact match. 
 
 For this Turbo pipeline:
-json
-""turbo"": {
-    ""pipeline"": {
-      ""build"": {
-        ""outputs"": [
-          ""dist/**/*""
-        ],
-        ""dependsOn"": [
-          ""^build""
-        ]
-      },
-      ""test"": {
-        ""dependsOn"": [
-          ""^build""
-        ]
-      }
-    }
-sh
-turbo run test 
-
-sh
-turbo run test --only --graph
-
+module
+module 
+image
+module
+image
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.5...v1.0.6"
-206,"What's Changed
+211,"What's Changed
 
 Fix packageJson struct by @jaredpalmer in https://github.com/vercel/turborepo/pull/155
 Fix typos in comments by @Jastor11 in https://github.com/vercel/turborepo/pull/160
@@ -4294,13 +4258,13 @@ New Contributors
 @williamtetlow made their first contribution in https://github.com/vercel/turborepo/pull/168
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.4...v1.0.5"
-207,"What's Changed
+212,"What's Changed
 
-Stop running yarn in base template by @jaredpalmer in https://github.com/vercel/turborepo/pull/152
+Stop running module in base template by @jaredpalmer in https://github.com/vercel/turborepo/pull/152
 Bump next.js by @jaredpalmer in https://github.com/vercel/turborepo/pull/151
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.3...v1.0.4"
-208,"What's Changed
+213,"What's Changed
 
 Set a fallback for the user's name when running turbo link by @dglsparsons in https://github.com/vercel/turborepo/pull/137
 Fix Github link by @ThangHuuVu in https://github.com/vercel/turborepo/pull/138
@@ -4309,7 +4273,7 @@ Add a codeblock showing how to run a pipeline by @dglsparsons in https://github.
 Link directly to getting started by @jaredpalmer in https://github.com/vercel/turborepo/pull/139
 Fix templates backticks by @jaredpalmer in https://github.com/vercel/turborepo/pull/141
 Updated OG image by @BretHudson in https://github.com/vercel/turborepo/pull/142
-Update login instruction on failed link to run npx turbo login by @gaspar09 in https://github.com/vercel/turborepo/pull/147
+Update login instruction on failed link to run module by @gaspar09 in https://github.com/vercel/turborepo/pull/147
 
 New Contributors
 
@@ -4318,13 +4282,13 @@ New Contributors
 @BretHudson made their first contribution in https://github.com/vercel/turborepo/pull/142
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.2...v1.0.3"
-209,"What's Changed
+214,"What's Changed
 
 Fixed broekn links by @molebox in https://github.com/vercel/turborepo/pull/125
 Typo: it's chaching –> its caching by @dylanklohr in https://github.com/vercel/turborepo/pull/126
 Update explanation of remote caching in Turbo CLI output by @leerob in https://github.com/vercel/turborepo/pull/127
 Use @latest everywhere npx is used by @jaredpalmer in https://github.com/vercel/turborepo/pull/128
-Fix faulty microsoft/beachball-link by @KATT in https://github.com/vercel/turborepo/pull/129
+Fix faulty module-link by @KATT in https://github.com/vercel/turborepo/pull/129
 Fix faulty CODE_OF_CONDUCT.md link by @cbourgois in https://github.com/vercel/turborepo/pull/131
 Fix typo in getting started section. by @dokeet in https://github.com/vercel/turborepo/pull/130
 Fix Changesets references in the docs by @Andarist in https://github.com/vercel/turborepo/pull/132
@@ -4341,17 +4305,17 @@ New Contributors
 @furkandmrblk made their first contribution in https://github.com/vercel/turborepo/pull/134
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v1.0.1...v1.0.2"
-210,
-211,
-212,"What's Changed
+215,
+216,
+217,"What's Changed
 
 Fixed postinstall script 
 "
-213,"What's Changed
+218,"What's Changed
 
 Add workaround for windows x yarn users by @jaredpalmer in https://github.com/vercel/turborepo/pull/93
 "
-214,"What's Changed
+219,"What's Changed
 
 Getting Started Docs update by @becca in https://github.com/vercel/turborepo/pull/70
 Move CLI to Vercel by @jaredpalmer in https://github.com/vercel/turborepo/pull/52
@@ -4365,25 +4329,25 @@ New Contributors
 @becca made their first contribution in https://github.com/vercel/turborepo/pull/70
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v0.8.5...v0.9.0-next.0"
-215,"What's Changed
+220,"What's Changed
 
 Completely rewritten and revamped internal graph. Fixes long standing bug with construction. You no longer need to specify all possible tasks, turbo will figure out the transitive tasks necessary automatically.
-Anything passed after a -- to turbo run will be passed through to all build tasks. This is a temporary workaround for parameterized builds. The use case is for something like turbo or Next.js which has OS-specific builds and cache artifacts which would otherwise have an identical hash.
-turbo CLI output is now color aware, which should make reading build logs on platforms like Vercel and Netlify (and any other non-interactive terminal) easier.
+Anything passed after a module to module will be passed through to all build tasks. This is a temporary workaround for parameterized builds. The use case is for something like module or Next.js which has OS-specific builds and cache artifacts which would otherwise have an identical hash.
+module CLI output is now color aware, which should make reading build logs on platforms like Vercel and Netlify (and any other non-interactive terminal) easier.
 
 
 Historical Changelog
 v0.8.4
 
-turbo is now much more friendly to OSS. In prior versions, a CI run triggered by a pull request by an outside contributor on a turborepo with remote caching would fail because turbo would bail in response to the unauthorized HTTP status code from our API (because the outside contributor doesn't have access to the original repo's secrets and thus TURBO_TOKEN). From now on though, turbo will show this warning message and fallback to local caching in this situation. This is a win for everyone as it allows core contributors with write access to get fastest builds, while still have fairly fast external contributions. In the future, we may explore public remote caches for OSS as well as read-only tokens.
+module is now much more friendly to OSS. In prior versions, a CI run triggered by a pull request by an outside contributor on a turborepo with remote caching would fail because module would bail in response to the unauthorized HTTP status code from our API (because the outside contributor doesn't have access to the original repo's secrets and thus TURBO_TOKEN). From now on though, module will show this warning message and fallback to local caching in this situation. This is a win for everyone as it allows core contributors with write access to get fastest builds, while still have fairly fast external contributions. In the future, we may explore public remote caches for OSS as well as read-only tokens.
 
 v0.8.3
 
-Remove support doublestar globs in workspaces (introduced in v0.8.1) until a faster implementation can be found
+Remove support doublestar globs in workspaces (introduced in module) until a faster implementation can be found
 
 v0.8.2
 
-The globs you use to specify your package.json workspaces or pnpm-workspaces.yaml now properly handles doublestar globs directives (e.g. packages/**)—turbo will automatically ignore node_modules and bower_components directories for you. This matches up with NPM, PNPM, and Yarn implementations.
+The globs you use to specify your module module or module now properly handles doublestar globs directives (e.g. module)—module will automatically ignore module and module directories for you. This matches up with NPM, PNPM, and Yarn implementations.
 
 v0.8.1
 
@@ -4391,23 +4355,23 @@ Botched release due to GitHub packages bug, do not use. This has been removed fr
 
 v0.8.0
 
-turbo can now be run from a workspaces which are in subdirectories (not the git root).
+module can now be run from a workspaces which are in subdirectories (not the git root).
 Internal changes need for the forthcoming UI, which is flagged off warranted a minor version bump
 
 v0.7.5
 
-Fixed issue where including an pipeline package-specific overrides with topological dependsOn created circular task graph dependency
+Fixed issue where including an pipeline package-specific overrides with topological module created circular task graph dependency
 
 v0.7.4
 
-Fix regression with --since flag (it wasn't working)
+Fix regression with module flag (it wasn't working)
 Unknown/misspelled CLI flags will now properly error instead of failing silently
 
 v0.7.3
 
-Fixed issue with prune where .gitignore didn't exist. It now safely handles this situation.
-Fixed issue with prune where turbo's internal representation of the lockfile was being outputted to the root directory instead of to the cache.
-Fixed infinite loop during turbo link
+Fixed issue with module where module didn't exist. It now safely handles this situation.
+Fixed issue with module where turbo's internal representation of the lockfile was being outputted to the root directory instead of to the cache.
+Fixed infinite loop during module
 
 v0.7.2
 
@@ -4416,22 +4380,22 @@ Improved error messages around auth flow
 v0.7.1
 
 Invalid flag/config errors now return proper exit code (1)
-Added ability to specify token, team, and project via TURBO_TOKEN, TURBO_TEAM, and TURBO_PROJECT environment variables. The flags will take precendence over the environement variables when both are present.
+Added ability to specify token, team, and project via module, module, and module environment variables. The flags will take precendence over the environement variables when both are present.
 
 v0.7.0
 
-Remote caching is finally here! Along with a super super early preview of https://beta.turborepo.com. Remote caching allows everyone on your team and even your CI/CD to recycle previously cached task artifacts. Think of it like Dropbox, but for your builds!
+Remote caching is finally here! Along with a super super early preview of module. Remote caching allows everyone on your team and even your CI/CD to recycle previously cached task artifacts. Think of it like Dropbox, but for your builds!
 
 Getting started with v0.7.0
 
-Remove all the .npmrc stuff! You no longer need a token to download turbo.
-Upgrade turbo: yarn add turbo -W
-Create an account and team on https://beta.turborepo.com/signup
-Activate your CLI: yarn turbo login
-Link your monorepo to a new project: yarn turbo link
-Use turbo! In addition to locally caching artifacts, turbo will now also two-way sync artifacts to your remote cache.
+Remove all the module stuff! You no longer need a token to download module.
+Upgrade turbo: module
+Create an account and team on module
+Activate your CLI: module
+Link your monorepo to a new project: module
+Use module! In addition to locally caching artifacts, turbo will now also two-way sync artifacts to your remote cache.
 Invite your team members so they can use your artifacts too. In your dashboard, go to Users and then blast out some invites. Once they have accepted the invitation, they'll be added to your team and have access to all of your projects. They can then link their local git repos to your shared turborepo.
-Connect your CI (programmatic non-interactive access): To give your CI/CD access to your turborepo.com team, project, and cache, go to the dashboard and create a personal access token for your account (API Tokens > Create). Copy this token to a safe place (you'll only see it once). Add it to as a secret environment variable in your CI provider. You can then pass it to turbo CLI like so: yarn turbo run build --token=<my_token> --team=<my-team-url> --project=<my-project>
+Connect your CI (programmatic non-interactive access): To give your CI/CD access to your turborepo.com team, project, and cache, go to the dashboard and create a personal access token for your account (API Tokens > Create). Copy this token to a safe place (you'll only see it once). Add it to as a secret environment variable in your CI provider. You can then pass it to turbo CLI like so: module
 
 During this limited preview period, storage and bandwidth is free for everyone in the Discord, but please don't abuse it.
 Stuff missing/what we're working on
@@ -4443,7 +4407,7 @@ Cleaner error messages
 WARNING/DISCLAIMER: This is rough, and they'll be bugs, but #shippingisperfection.
 v0.6.10
 
-Added (back) partial support for NPM and PNPM workspaces. When using either of these package managers, turbo will include the entire contents of the relevant lockfile in its hashing algorithm for each package task. This differs from yarn behavior where turbo will include the resolved the versions of dependencies for a given package. The prune command does not yet work with pnpm or npm. These features will be added at a later date.
+Added (back) partial support for NPM and PNPM workspaces. When using either of these package managers, module will include the entire contents of the relevant lockfile in its hashing algorithm for each package task. This differs from module behavior where module will include the resolved the versions of dependencies for a given package. The module command does not yet work with module or module. These features will be added at a later date.
 
 v0.6.9
 
@@ -4451,7 +4415,7 @@ Remote cache hits now store to other caches (file system).
 
 v0.6.8
 
-Improved chrome profiling output (--profile) flag
+Improved chrome profiling output (module) flag
 Fixed hashing regression with lockfiles
 
 v0.6.7
@@ -4460,7 +4424,7 @@ Removed misleading/useless warning message about reading missing log file during
 
 v0.6.6
 
-turbo can now construct hashes without being in a git repository. This is extremely useful for docker deployment and running builds inside of pruned out directories for a PaaS like Vercel or Netlify.
+module can now construct hashes without being in a git repository. This is extremely useful for docker deployment and running builds inside of pruned module directories for a PaaS like Vercel or Netlify.
 
 v0.6.5
 
@@ -4483,25 +4447,25 @@ Internal refactoring related to remote caching
 
 v0.6.1
 
-In the presence of an error without --continue, turbo will properly flush/shutdown async cache workers instead of leaving them hanging (resulting in partial artifact outputs).
+In the presence of an error without module, module will properly flush/shutdown async cache workers instead of leaving them hanging (resulting in partial artifact outputs).
 
 v0.6.0
 
-turbo is now 50-80% faster thanks to refactoring/improving cache behavior. While fetching artifacts from the cache is still synchronous, storing task artifacts is now async (and queued) among a worker pool so that it is non-blocking. The cache internals have been tweaked so that multiple cache implementations (i.e. local and remote) can be multiplexed together in the future.
-Improved file copying algorithm. turbo will first attempt to use hardlinks to copy files and fallback to a real copy if the hardlink fails. If you experience any regressions, please let us know. If necessary, we can add --no-hardlinks flag and/or ""copyBehavior"" config key to tune this (either globally or on a per-task basis).
-Fixed glob bug in pipeline.<taskId>.outputs not respecting ! properly
+module is now 50-80% faster thanks to refactoring/improving cache behavior. While fetching artifacts from the cache is still synchronous, storing task artifacts is now async (and queued) among a worker pool so that it is non-blocking. The cache internals have been tweaked so that multiple cache implementations (i.e. local and remote) can be multiplexed together in the future.
+Improved file copying algorithm. module will first attempt to use hardlinks to copy files and fallback to a real copy if the hardlink fails. If you experience any regressions, please let us know. If necessary, we can add module flag and/or module config key to tune this (either globally or on a per-task basis).
+Fixed glob bug in module not respecting module properly
 
 v0.5.12
 
-turbo is around 20% faster thanks to some concurrency/performance improvements to hashing
+module is around 20% faster thanks to some concurrency/performance improvements to hashing
 
 v0.5.11
 
-turbo will now print a warning when .git is not present. It will continue with forced local execution and avoid caching any artifacts (the equivalent of --force and --no-cache flags)
+module will now print a warning when module is not present. It will continue with forced local execution and avoid caching any artifacts (the equivalent of module and module flags)
 
 v0.5.10
 
-Fixed regression with --includeDependencies and --since flags in turbo run
+Fixed regression with module and module flags in module
 
 v0.5.9
 
@@ -4509,65 +4473,42 @@ Pruned lockfile now includes correct file header and line breaks between entries
 
 v0.5.8
 
-You can now express package-specific tasks and implicit dependencies between tasks in pipeline like this:
+You can now express package-specific tasks and implicit dependencies between tasks in module like this:
 
-json
-  {
-    ""turbo"": {
-      ""pipeline"": {
-        ""build"": {
-          ""dependsOn"": [""^build""]
-        },
-        ""test"": {
-          ""dependsOn"": [""build""]
-        },
-        ""deploy"": {
-          ""dependsOn"": [""test""]
-        },
-        ""frontend#deploy"": {
-          ""dependsOn"": [""ui#test"", ""backend#deploy"", ""backend#health-check""]
-        }
-      }
-    }
-  }
-In this example, we illustrate a deploy script of frontend application depends on both the deploy and health-check NPM scripts of backend as well as the test script of a ui package. The syntax is <package>#<task>.
-This seems like it goes against the ""test"": { ""dependsOn"": [""build""] } and ""deploy"": { ""dependsOn"": [""test""] }, but it does not. Since test and deploy scripts do not have topological dependencies (e.g. ^<task>), they theoretically can get triggered anytime once their own package's build and test scripts have finished!
-  Although this feature is extremely powerful, unless they are being used for applications/services for CI/CD orchestration, the general guidance is to get rid of these specific package-task to package-task dependencies in the pipeline (so the turbo can be schedule more optimally).
-Note: Package-tasks do not inherit cache configuration. You must redeclare outputs at the moment.
+module
+In this example, we illustrate a module script of module application depends on both the module and module NPM scripts of module as well as the module script of a module package. The syntax is module.
+This seems like it goes against the module and module, but it does not. Since module and module scripts do not have topological dependencies (e.g. module), they theoretically can get triggered anytime once their own package's module and module scripts have finished!
+  Although this feature is extremely powerful, unless they are being used for applications/services for CI/CD orchestration, the general guidance is to get rid of these specific package-task to package-task dependencies in the module (so the module can be schedule more optimally).
+Note: Package-tasks do not inherit cache configuration. You must redeclare link at the moment.
 v0.5.7
 
-Fix regression with --scope flag on multi-cluster dependency graphs
+Fix regression with module flag on multi-cluster dependency graphs
 
 v0.5.6
 
-Improved lockfile parse performance. turbo now will hash/cache the converted SYML in the cache folder for faster subsequent reads. This hash is not included in task hashes, it's just used for determining if turbo should re-parse the SYML lockfile or not.
-turbo prune now properly includes lockfile entries from root deps, devDeps, optionalDeps, and peerDeps. You should now safely be able to run yarn --frozen-lockfile inside of the out directory.
+Improved lockfile parse performance. module now will hash/cache the converted SYML in the cache folder for faster subsequent reads. This hash is not included in task hashes, it's just used for determining if module should re-parse the SYML lockfile or not.
+module now properly includes lockfile entries from root deps, devDeps, optionalDeps, and peerDeps. You should now safely be able to run module inside of the module directory.
 Performance improvements
 
 v0.5.5
 
-Deprecated turbo graph with an error message. This functionality has been moved into turbo run behind the --graph flag.
-  If Graphviz is installed, this flag will generate an file visualizing the current task graph.
-  The output file format can be controlled with the filename's extension if it is specified. If a filename is not specified, graph-<timestamp>.jpg is outputted. If Graphviz is not installed, this command prints the dot graph to stdout.
+Deprecated module with an error message. This functionality has been moved into module behind the module flag.
+  If link is installed, this flag will generate an file visualizing the current task graph.
+  The output file format can be controlled with the filename's extension if it is specified. If a filename is not specified, module is outputted. If Graphviz is not installed, this command prints the dot graph to module.
 
-sh
-  turbo run build --graph
-  turbo run build test lint --graph=my-graph.svg
-  turbo run build test lint --graph=my-json-graph.json
-  turbo run build test lint --graph=my-graph.pdf
-  turbo run build test lint --graph=my-graph.png
+module
 v0.5.4
 
-Fixed regression with --docker flag json directory
+Fixed regression with module flag module directory
 
 v0.5.3
 
-Added back --concurrency flag from v0.3.x to limit task execution concurrency. The default is 10.
-Deprecated --serial flag with a warning message. This will still work for now, but is simply equivalent to --concurrency=1.
+Added back module flag from v0.3.x to limit task execution concurrency. The default is module.
+Deprecated module flag with a warning message. This will still work for now, but is simply equivalent to module.
 
 v0.5.2
 
-Adds back turbo prune behavior from v0.4.x (i.e. out/full, out/json, one sublockfile) via --docker flag. This output
+Adds back module behavior from v0.4.x (i.e. module, module, one sublockfile) via module flag. This output
   style is in fact optimal for Docker layer caching. However, the v0.5.x default is also useful when deploying to PaaS providers (e.g. Vercel). So now it can do both!
 
 v0.5.1
@@ -4577,20 +4518,20 @@ Fixed regression when copying files and folders recursively
 v0.5.0
 Breaking changes
 
-turbo prune now generates only one folder with all the source code in it (instead of 2). This makes the command more useful to people not using Docker.
-turbo now includes pipeline.<task>.outputs in its hashing algorithm. Changing it should bust the cache. This is both more correct and also makes it easier to migrate to turbo (i.e. changing outputs yields different hashes meaning the cache is less likely to include unwanted stuff)
-Added internal optionalDependencies to hash algorithm
-Fixed regression where turbo's hashing algorithm was not including the OS platform (e.g. darwin/linux/windows) in global hash calculation
+module now generates only one folder with all the source code in it (instead of 2). This makes the command more useful to people not using Docker.
+module now includes module in its hashing algorithm. Changing it should bust the cache. This is both more correct and also makes it easier to migrate to module (i.e. changing outputs yields different hashes meaning the cache is less likely to include unwanted stuff)
+Added internal module to hash algorithm
+Fixed regression where module's hashing algorithm was not including the OS platform (e.g. darwin/linux/windows) in global hash calculation
 
 Improvements
 
 Replaying cached logs no longer blocks graph / task execution resulting in a massive perf improvement
-Fixed incorrect CLI usage text for turbo prune
-Improved turbo prune error messages and error message CLI output
+Fixed incorrect CLI usage text for module
+Improved module error messages and error message CLI output
 
 v0.4.11
 
-Tweak to turbo CLI installation and authentication
+Tweak to module CLI installation and authentication
 
 v0.4.10
 
@@ -4602,7 +4543,7 @@ Improved error messages
 
 v0.4.9
 
-Tweak to turbo installation and authentication
+Tweak to module installation and authentication
 
 v0.4.7
 
@@ -4610,7 +4551,7 @@ Fix cache outputs in pipelines to respect folders that start with dots
 
 v0.4.6
 
-Tweaked turbo installation script
+Tweaked module installation script
 
 v0.4.5
 
@@ -4618,11 +4559,11 @@ Fixed CLI panic caused by concurrent writes to log colorizer
 
 v0.4.4
 
-turbo now properly handles long and shorthand workspaces declarations in package.json
+module now properly handles long and shorthand module declarations in module
 
 v0.4.3
 
-Fixed lockfile parsing when dependencies use string version names (e.g. latest)
+Fixed lockfile parsing when dependencies use string version names (e.g. module)
 
 v0.4.2
 
@@ -4630,33 +4571,33 @@ Improved error handling and error messages
 
 v0.4.1
 
-turbo run will now throw an error if you attempt to run a target that doesn't exist in the pipeline.
+module will now throw an error if you attempt to run a target that doesn't exist in the module.
 Added back "">>> FULL TURBO"" indicator when 100% of results are cached.
 
 v0.4.0
 Breaking changes
 
-Logs are now output to .turbo directory instead of turbo directory. This moves the directory out of the middle of your package's source code. Update your .gitignore accordingly.
+Logs are now output to module directory instead of module directory. This moves the directory out of the middle of your package's source code. Update your module accordingly.
 Removed support for NPM and PNPM (although we can add these back later)
-The --concurrency has been removed. 9/10 times this was used to force serial execution with --concurrency=1.
-  Now you can just pass --serial to get this behavior.
+The module has been removed. 9/10 times this was used to force serial execution with module.
+  Now you can just pass module to get this behavior.
 Turbo no longer includes the hash of the contents of the root lockfile in its hash algorithm.
-  Instead, turbo now hashes the set of the resolved versions of a package's dependencies and devDependencies
+  Instead, module now hashes the set of the resolved versions of a package's module and module
   based on the root lockfile. The old behavior would explode the cache whenever the root lockfile changed. With this new behavior,
   changing the lockfile will only bust the cache for those package's impacted by the added/changed/removed dependencies. To get this to work, though, you must now specify all
-  dependencies and devDependencies in each package.json.
-environmentGlobs have been renamed to globalDependencies
+  module and module in each module.
+module have been renamed to module
 
 What's New?
 
-Completely rewritten from the ground up in Go!! turbo is now more than 10x faster.
-Added prune command to allow outputting a pruned subset of your monorepo for a given project! Perfect
+Completely rewritten from the ground up in Go!! module is now more than 10x faster.
+Added module command to allow outputting a pruned subset of your monorepo for a given project! Perfect
   for Docker layer caching.
-Added a graph command that will print a .dot graph to the console and/or output to a file
+Added a module command that will print a .dot graph to the console and/or output to a file
   which you can view in Graphviz or online
 We now validate your graph with more useful errors for cycles and multiple roots
-Added pipeline key to turbo in package.json. This allows users to control the task graph topology
-  and per-task options such as outputs. Right now, pipeline exists at the project level,
+Added module key to module in module. This allows users to control the task graph topology
+  and per-task options such as module. Right now, module exists at the project level,
   but in later releases these will be overridable on per-package basis.
 
 ```json
@@ -4664,42 +4605,25 @@ Added pipeline key to turbo in package.json. This allows users to control the ta
   {
     ""turbo"": {
       ""pipeline"": {
-    ""build"": {
-      // This `^` tells turbo that this pipeline target relies on a topological target being completed.
-      // In english, this reads as: ""this package's `build` command depends on its dependencies' or
-      // devDependencies' `build` command being completed""
-      ""dependsOn"": [""^build""]
-      // You can now also specify outputs on a per-task basis. Logs will also be automatically
-      // added to this, so you can omit them.
-      ""outputs"": [""dist/**""]
-    },
-    ""test"": {
-      // Without a `^`, `dependsOn` can be used to express the relationships between tasks at the package level.
-      // In English, this reads as: ""this package's `test` command depends on its `build` command first being completed""
-      ""dependsOn"": [""build""]
-    },
-    ""dev"": {},
-  }
-}
-
+module
 }
   ```
 Migration Guide
 
-Move your config from turbo.json into package.json under the turbo key.
-Add an object called pipeline that specifies the relationship of your project's tasks. turbo can now only run those tasks listed in pipeline object.
-Replace usage of --concurrency=1 flags to just --serial
-Since turbo now only hashes the resolved version of deps (and not the contents of the root lockfile), you need specify all devDependencies used by a package in the package itself.
+Move your config from module into module under the module key.
+Add an object called module that specifies the relationship of your project's tasks. module can now only run those tasks listed in module object.
+Replace usage of module flags to just module
+Since module now only hashes the resolved version of deps (and not the contents of the root lockfile), you need specify all module used by a package in the package itself.
 
 v0.3.18
 
-Fixed turbo run output showing false error with 0 exit code
+Fixed module output showing false error with 0 exit code
 
 v0.3.17
 
-Added --continue flag to turbo run (defaults to false). This flag tells turbo whether or not to continue with execution in the presence of an error (i.e. non-zero exit code from a task).
-  By default, specifying the --parallel flag will automatically set --continue to true unless explicitly set to false.
-  When --continue is true, turbo will exit with the highest exit code value encountered during exection.
+Added module flag to module (defaults to module). This flag tells module whether or not to continue with execution in the presence of an error (i.e. non-zero exit code from a task).
+  By default, specifying the module flag will automatically set module to module unless explicitly set to module.
+  When module is module, module will exit with the highest exit code value encountered during exection.
 
 v0.3.16
 
@@ -4707,15 +4631,15 @@ Speed improvements
 
 v0.3.15
 
-cacheStorageOptions now default to local so they can be omitted in turbo configuration
-Changed docs to suggest using package.json key turbo for configuration going forward. This will ease future migration to Go implementation.
+module now default to module so they can be omitted in module configuration
+Changed docs to suggest using module key module for configuration going forward. This will ease future migration to Go implementation.
 
 v0.3.14
 
-Fixed caching issue with Lerna due to turbo not properly reading packages list from lerna.json resulting in null hashes.
-Top-level lint command now has specialized log treatment along with test where turbo will now only cache turbo/run-lint.log.
-Added documentation around caching ESLint by setting TIMING=1 eslint ...
+Fixed caching issue with Lerna due to module not properly reading module list from module resulting in module hashes.
+Top-level module command now has specialized log treatment along with module where module will now only cache module.
+Added documentation around caching ESLint by setting module
 
 Full Changelog: https://github.com/vercel/turborepo/compare/v0.8.4...v0.8.5"
-216,"Completely rewritten and revamped internal graph. Fixes long standing bug with construction. You no longer need to specify all possible tasks, turbo will figure out the transitive tasks necessary automatically. 
-This is available on the next branch so install with yarn add turbo@next or equivalent"
+221,"Completely rewritten and revamped internal graph. Fixes long standing bug with construction. You no longer need to specify all possible tasks, turbo will figure out the transitive tasks necessary automatically. 
+This is available on the next branch so install with yarn add module or equivalent"
