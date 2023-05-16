@@ -4,9 +4,12 @@ import numpy as np
 import pandas as pd
 import os
 # import re
-from keras.models import Sequential
+from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM, Embedding
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 nlp = spacy.load('en_core_web_lg')
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -103,8 +106,6 @@ def build_model(topwords, embedding_vector_len, input_length):
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
     return model
 
-def naive_bayes_approach():
-    pass
 
 if __name__ == '__main__':
 
@@ -121,26 +122,48 @@ if __name__ == '__main__':
         y = np.concatenate((y, label), axis=0)
     # Check number of dataset
     # print(X.shape, y.shape)   
+    def LSTM_model(X, y):
+        create_dictionary(X)
+        # Check create_dictionary function
+        print(f"Length of dictionary: {len(word2idx)}")
 
-    create_dictionary(X)
-    # Check create_dictionary function
-    print(f"Length of dictionary: {len(word2idx)}")
+        X = np.asarray([convert2vector(commit) for commit in X])
+        # Check convert to vector function
+        print(X.shape)
+        print(X[0])
 
-    X = np.asarray([convert2vector(commit) for commit in X])
-    # Check convert to vector function
-    print(X.shape)
-    print(X[0])
+        X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=1)
 
-    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=1)
-
-    top_words = len(word2idx) + 1
-    embedding_vector_length = 300
-    classify_model = build_model(top_words, embedding_vector_length, max_commit_length)
-    # Check build_model function
-    print(classify_model.summary())
-
-    classify_model.fit(X_train, y_train, epochs=3, batch_size=64) 
-    scores = classify_model.evaluate(X_val, y_val, verbose=0)
-    print("Accuracy: %.2f%%" % (scores[1] * 100))
+        top_words = len(word2idx) + 1
+        embedding_vector_length = 300
+        # classify_model = build_model(top_words, embedding_vector_length, max_commit_length)
+        classify_model = load_model('models/lstm_model')
+        # Check build_model function
+        print(classify_model.summary())
+        # classify_model.fit(X_train, y_train, epochs=3, batch_size=64) 
+        # classify_model.save('models/lstm_model')
+        scores = classify_model.evaluate(X_val, y_val, verbose=0)
+        print("Accuracy: %.2f%%" % (scores[1] * 100))
+        preds = classify_model.predict(X_val)
+        preds = [1 if x > 0.5 else 0 for x in preds]
+        score = f1_score(y_val, preds)
+        print(f"F1 score: {score}")
+    
+    def naive_bayes(X, y):
+        vectorizer = TfidfVectorizer()
+        X = vectorizer.fit_transform(X)
+        print(f"Num Samples: {X.shape[0]}\nNum Features: {X.shape[1]}")
+        X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=1)
+        model = MultinomialNB()
+        model.fit(X_train, y_train)
+        test_size = X_val.shape[0]
+        y_pred = model.predict(X_val)
+        true_pred = sum([y_pred[i] == y_val[i] for i in range(test_size)])
+        print("Accuracy: %.2f%%" % (true_pred / test_size * 100))
+        score = f1_score(y_val, y_pred)
+        print(f"F1 score: {score}")
+    
+    naive_bayes(X, y)
+    
 
 

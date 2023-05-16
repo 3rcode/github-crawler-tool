@@ -1,464 +1,509 @@
 Index,Release Note
 1,"The following packages have been updated
-module
+@keystone-6/core@5.2.0
+@keystone-6/fields-document@8.0.0
 Breaking Changes
 
-module Changes module to module, and adds module, aligned with other document fields (#8493) @borisno2
+[fields-document] Changes fields.array({ label: ... to fields.array({ itemLabel: ..., and adds fields.array({ label: string, aligned with other document fields (#8493) @borisno2
 
 New Features
 
-module Adds newline compatibility to description text in admin ui (#8369) @DiesIrae
-module Adds a new module configuration option, for specifying where your Keystone types are built (#8381) @dcousens
-module Adds support for Prisma Data Proxy client generation, automatically enabled for module's with a module prefix (#8370) @borisno2
-module Updates Prisma version to module (#8432) @renovate
+[ui] Adds newline compatibility to description text in admin ui (#8369) @DiesIrae
+[core] Adds a new .types.path configuration option, for specifying where your Keystone types are built (#8381) @dcousens
+[core] Adds support for Prisma Data Proxy client generation, automatically enabled for db.url's with a prisma: prefix (#8370) @borisno2
+[core] Updates Prisma version to 4.12.0 (#8432) @renovate
 
 Bug Fixes
 
-module Adds module to Document field files that allow it to be used in the Next App Dorectory (#8403) @borisno2
-module Fixes regression from #8073, module now retains the module (#8441) @dcousens
-module Fixes #8046 regression which prevented other command line arguments from being used (#8455) @borisno2
-module Fixes the printed output when using module (#8400) @renovate
-module Fixes the module import paths when using module on Windows (#8373) @borisno2
-module Fixes the JSON output type values for the structure field (#8457) @borisno2
-module module is now deprecated and will be removed in the next major version (#8438) @dcousens
+[fields-document] Adds ""use client"" to Document field files that allow it to be used in the Next App Dorectory (#8403) @borisno2
+[core] Fixes regression from #8073, .sudo now retains the context.session (#8441) @dcousens
+[core] Fixes #8046 regression which prevented other command line arguments from being used (#8455) @borisno2
+[core] Fixes the printed output when using keystone telemetry reset (#8400) @renovate
+[core] Fixes the .keystone/types import paths when using db.prismaSchemaPath on Windows (#8373) @borisno2
+[fields-document] Fixes the JSON output type values for the structure field (#8457) @borisno2
+[core] .exitSudo is now deprecated and will be removed in the next major version (#8438) @dcousens
 
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
-- @adrianbienias (link)
-- @AlanBreck (link)
-- @ChrisLaneAU (link)
-- @DiesIrae (link)
-- @DustinWoods (link)
-- @ganobrega (link)
-- @kporten (link)
-- @pahaz (link)
-- @serranoarevalo (link)
-- @timgates42 (link)
+- @adrianbienias (#8500)
+- @AlanBreck (#8391)
+- @ChrisLaneAU (#8503)
+- @DiesIrae (#8369)
+- @DustinWoods (#8411)
+- @ganobrega (#8364)
+- @kporten (#8387)
+- @pahaz (#8488)
+- @serranoarevalo (#8515)
+- @timgates42 (#8367)
 :blue_heart: Acknowledgements
-Lastly, thanks to @borisno2 (link,link,link,link,link,link,link,link,link), @dcousens (link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link), @kennedybaird (link), @keystonejs-release-bot (link), @raveling (link), @renovate (link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link) for changes not shown above, but none-the-less appreciated."
+Lastly, thanks to @borisno2 (#8471,#8508,#8371,#8456,#8454,#8447,#8439,#8440,#8360), @dcousens (#8523,#8520,#8517,#8491,#8483,#8482,#8479,#8478,#8477,#8476,#8473,#8470,#8459,#8431,#8398,#8399,#8395,#8392,#8375,#8363,#8362,#8361), @kennedybaird (#8380), @keystonejs-release-bot (#8374), @raveling (#8461), @renovate (#8512,#8507,#8495,#8494,#7802,#8489,#8444,#8474,#8422,#8463,#8464,#8450,#8451,#8448,#8449,#8433,#8425,#8423,#8426,#8421,#8424,#8428,#8429,#8427,#8229,#8379,#8378) for changes not shown above, but none-the-less appreciated."
 2,"The following packages have been updated
-module
+@keystone-6/core@5.1.0
 New Features
 
-module Updates Prisma to v4.11.0 (#7964) @renovate
+[core] Updates Prisma to v4.11.0 (#7964) @renovate
 
 Bug Fixes
 
-module Removes outdated Prisma module work-around that blocked Prisma Data Proxy support (#8347) @borisno2
-module Updates module to module to mitigate link (#8304) @dcousens
-module Fixes module exiting after a migration (#8354) @acburdine
-module Fixes Typescript types to use module for omitted types (#8355) @acburdine
-module Fixes list-level module syntax to match the field-level module (#8352) @acburdine
+[core] Removes outdated Prisma prismaClient.$on('beforeExit'... work-around that blocked Prisma Data Proxy support (#8347) @borisno2
+[core] Updates image-size to 5.0.0 to mitigate CVE-2022-36313 (#8304) @dcousens
+[core] Fixes keystone start --with-migrations exiting after a migration (#8354) @acburdine
+[core] Fixes Typescript types to use never for omitted types (#8355) @acburdine
+[core] Fixes list-level graphql.omit syntax to match the field-level graphql.omit (#8352) @acburdine
 
 :rotating_light: Security Updates
 We have identified and fixed an upstream security vulnerability
-- link - An upstream transitive dependency module is vulnerable to a ReDoS. We have upgraded to a version of module where this is resolved.
+- CVE-2022-36313 - An upstream transitive dependency file-type is vulnerable to a ReDoS. We have upgraded to a version of file-type where this is resolved.
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
-- @stall84 (link)
+- @stall84 (#8335)
 :blue_heart: Acknowledgements
-Lastly, thanks to @borisno2 (link), @dcousens (link,link,link,link,link,link), @renovate (link,link,link,link) for changes not shown above, but none-the-less appreciated."
+Lastly, thanks to @borisno2 (#8344), @dcousens (#8348,#8348,#8358,#8343,#8337,#8336), @renovate (#7553,#8340,#8235,#8341) for changes not shown above, but none-the-less appreciated."
 3,"The following packages have been updated
-module
+@keystone-6/auth@7.0.0
+@keystone-6/cloudinary@7.0.0
+@keystone-6/core@5.0.0
+@keystone-6/fields-document@7.0.0
 Breaking Changes
 
-module Changes module type from array to explicit module (#8283) @dcousens
-module Changes module to module, and adds module for optimistic locking usecases (#8283) @dcousens
-module Removes module from module, use module to reset your database (#8302) @dcousens
-module Renames module on module to module, which is what it actually is (#8280) @dcousens
-module Upgrade Apollo Server to version 4 (#8221) @borisno2
-module Remove experimental module - use module instead (#8221) @borisno2
-module Removes module from our exports (#8315) @dcousens
-module Removes assumptions about module output location, with a new module configuration option to set where to import the Prisma client from (#8307) @borisno2
-module Adds additional flags to the module, module and module CLI commands (#8046) @borisno2
+[core] Changes graphql.omit type from array to explicit { read: boolean, create: boolean, update: boolean } (#8283) @dcousens
+[core] Changes graphql.*.isNonNull to graphql.isNonNull.*, and adds graphql.isNonNull.update for optimistic locking usecases (#8283) @dcousens
+[core] Removes --reset-db from keystone dev, use keystone prisma db push --force-reset to reset your database (#8302) @dcousens
+[auth, core] Renames isValidSession on pageMiddleware to wasAccessAllowed, which is what it actually is (#8280) @dcousens
+[core] Upgrade Apollo Server to version 4 (#8221) @borisno2
+[core] Remove experimental generateNextGraphqlAPI - use getContext instead (#8221) @borisno2
+[core] Removes @keystone-6/core/next from our exports (#8315) @dcousens
+[core] Removes assumptions about @prisma/client output location, with a new db.prismaClientPath configuration option to set where to import the Prisma client from (#8307) @borisno2
+[core] Adds additional flags to the keystone dev, keystone build and keystone start CLI commands (#8046) @borisno2
 
 New Features
 
-module Removes module errors for module and module when field access control is configured (#8283) @dcousens
-module Adds an experimental module configuration option for lists and fields to mutate the prisma schema (#8241) @borisno2
-module Add module option for s3 storage configuration (#8264) @jhohlfeld
-module Add a module argument for module queries, enabling cursor-based pagination (see link for how this works) (#8313) @marekryb
-module Extend module to support other Prisma log levels (#8321) @MurzNN
-module Adds a module GraphQL extension for the module passed to module; enabling developers to determine if they are extending the sudo GraphQL schema (#8298) @dcousens
+[core] Removes keystone build errors for graphql.isNonNull.create and graphql.isNonNull.update when field access control is configured (#8283) @dcousens
+[core, fields-document] Adds an experimental extendPrismaSchema configuration option for lists and fields to mutate the prisma schema (#8241) @borisno2
+[core] Add acl option for s3 storage configuration (#8264) @jhohlfeld
+[core] Add a cursor argument for findMany queries, enabling cursor-based pagination (see Prisma.io documentation for how this works) (#8313) @marekryb
+[core] Extend db.enableLogging to support other Prisma log levels (#8321) @MurzNN
+[core] Adds a sudo GraphQL extension for the GraphQLSchema passed to extendGraphqlSchema; enabling developers to determine if they are extending the sudo GraphQL schema (#8298) @dcousens
 
 Bug Fixes
 
-module Changes the module command output to show formatted output instead of JSON (#8326) @dcousens
-module Fixes the device telemetry configuration which had duplicate data under a malformed project path (#8326) @dcousens
-module Fixes withRequest behavior when no session strategy is configured (#8318) @acburdine
-module Fixes module requiring Typescript by removing module from the generated AdminUI output (#8293) @borisno2
-module Fixes Dataloader error when resolving relationships when access is module on related to-one item (#8216) @borisno2
-module Fixes module to be called for module, returning support for public redirects (#8280) @dcousens
-module Fixes creating new relationships in card view on create item page (#8177) @borisno2
-module Fixes regression in authenticatedItem query (#8278) @marekryb
-module Fixes module including invalid definitions (#8256) @dcousens
-module Fixes undefined types when using module for create or update (#8300) @dcousens
-module Fixes module (#8222) @emmatown
-module Add telemetry field type name for module field (#8259) @borisno2
-module Fixes module error on List Page (#8237) @borisno2
-module Fixes GraphQL error when using module for auth list id (#8182) @borisno2
-module Fixes GraphQL error when module returns null or undefined (#8182) @borisno2
-module Adds the ability to disable telemetry using environment variable module (#8159) @borisno2
-module Fixes module throwing an error for identity fields (#8298) @dcousens
-module Export module for use in auth package (#8234) @borisno2
-module Fixes module and module errors on signin (#8234) @borisno2
-module Fixes error when deleting an item that has a file or image that is no longer on the filesystem (#8239) @borisno2
+[core] Changes the keystone telemetry status command output to show formatted output instead of JSON (#8326) @dcousens
+[core] Fixes the device telemetry configuration which had duplicate data under a malformed project path (#8326) @dcousens
+[core] Fixes withRequest behavior when no session strategy is configured (#8318) @acburdine
+[core] Fixes keystone start requiring Typescript by removing tsconfig.json from the generated AdminUI output (#8293) @borisno2
+[core] Fixes Dataloader error when resolving relationships when access is false on related to-one item (#8216) @borisno2
+[auth, core] Fixes pageMiddleware to be called for publicPages, returning support for public redirects (#8280) @dcousens
+[core] Fixes creating new relationships in card view on create item page (#8177) @borisno2
+[auth] Fixes regression in authenticatedItem query (#8278) @marekryb
+[core] Fixes .keystone/types including invalid definitions (#8256) @dcousens
+[core] Fixes undefined types when using omit for create or update (#8300) @dcousens
+[core] Fixes defaultFieldMode (#8222) @emmatown
+[cloudinary] Add telemetry field type name for cloudinaryImage field (#8259) @borisno2
+[core] Fixes <div> cannot appear as a dependant of <p> error on List Page (#8237) @borisno2
+[auth] Fixes GraphQL error when using autoincrement for auth list id (#8182) @borisno2
+[auth] Fixes GraphQL error when sessionStrategy.start returns null or undefined (#8182) @borisno2
+[core] Adds the ability to disable telemetry using environment variable KEYSTONE_TELEMETRY_DISABLED (#8159) @borisno2
+[auth] Fixes isFilterable: false throwing an error for identity fields (#8298) @dcousens
+[core] Export next/head for use in auth package (#8234) @borisno2
+[auth] Fixes loading Admin Metadata and <head> cannot appear as a child of <div> errors on signin (#8234) @borisno2
+[core] Fixes error when deleting an item that has a file or image that is no longer on the filesystem (#8239) @borisno2
 
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
-- @adamjkb (link)
-- @austin047 (link)
-- @CarlQLange (link)
-- @jhohlfeld (link)
-- @kennedybaird (link)
-- @pnxdxt (link)
-- @TasinIshmam (link)
+- @adamjkb (#8167)
+- @austin047 (#8311)
+- @CarlQLange (#8268)
+- @jhohlfeld (#8264)
+- @kennedybaird (#8266)
+- @pnxdxt (#8316)
+- @TasinIshmam (#8137)
 :blue_heart: Acknowledgements
-Lastly, thanks to @borisno2 (link,link,link,link,link,link,link), @dcousens (link,link,link,link,link,link,link,link), @dependabot (link,link,link), @flexdinesh (link,link,link,link), @Meetcpatel (link), @raveling (link,link), @renovate (link,link,link,link,link,link,link,link,link,link,link,link) for changes not shown above, but none-the-less appreciated."
+Lastly, thanks to @borisno2 (#8258,#8247,#8232,#8231,#8188,#8170,#8157), @dcousens (#8330,#8323,#8320,#8096,#8301,#8299,#8255,#8212), @dependabot (#8287,#8275,#8271), @flexdinesh (#8175,#8173,#8174,#8148), @Meetcpatel (#8260), @raveling (#8314,#8310), @renovate (#8328,#8327,#8249,#8273,#8267,#8142,#8152,#8141,#8236,#8133,#8172,#7939) for changes not shown above, but none-the-less appreciated."
 4,"The following packages have been updated
-module
+@keystone-6/core@4.0.1
 Bug Fixes
 
-module Resolve module check issue (#8155) @borisno2
+[core] Resolve config.telemetry check issue (#8155) @borisno2
 "
 5,"The following packages have been updated
-module
+@keystone-6/auth@6.0.0
+@keystone-6/cloudinary@6.0.0
+@keystone-6/core@4.0.0
+@keystone-6/fields-document@6.0.0
 Breaking Changes
 
-module Removes module, module - replace any relevant usage with module, module or module (#8073) @borisno2
+[core] Removes createContext, createRequestContext - replace any relevant usage with context.sudo(), context.withSession() or context.withRequest() (#8073) @borisno2
 
 New Features
 
-module Adds Project and Device Telemetry events to the module script (#8118) @borisno2
-module Adds module as an environment variable for module and module, with higher precedence than module (#8132) @fkrauthan
-module Next.js 13 Upgrade (#8061) @AliceRossa
-module Adds a new module field type, a composable JSON data structure with a powerful GraphQL API (#7936) @emmatown
+[core, fields-document] Adds Project and Device Telemetry events to the keystone dev script (#8118) @borisno2
+[core] Adds HOST as an environment variable for keystone dev and keystone start, with higher precedence than config.server.options.host (#8132) @fkrauthan
+[core] Next.js 13 Upgrade (#8061) @AliceRossa
+[fields-document] Adds a new structure field type, a composable JSON data structure with a powerful GraphQL API (#7936) @emmatown
 
 Bug Fixes
 
-module Fixes inline related item form submitting the parent form (#8123) @januzis
-module Fixes module bypass when module is defined (#8115) @dcousens
+[core] Fixes inline related item form submitting the parent form (#8123) @januzis
+[auth] Fixes initFirstItem bypass when ui.isAccessAllowed is defined (#8115) @dcousens
 
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
-- @fkrauthan (link)
-- @januzis (link)
-- @AliceRossa (link)
-- @shusiner (link)
+- @fkrauthan (#8132)
+- @januzis (#8123)
+- @AliceRossa (#8061)
+- @shusiner (#8114)
 :blue_heart: Acknowledgements
-Lastly, thanks to @dcousens (link,link,link,link,link,link,link,link), @borisno2 (link), @flexdinesh (link,link), @renovate (link,link,link), @emmatown (link) for changes not shown above, but none-the-less appreciated."
+Lastly, thanks to @dcousens (#8127,#8125,#8122,#8120,#8104,#8108,#8108,#8108), @borisno2 (#8134), @flexdinesh (#8124,#8119), @renovate (#8072,#8116,#8109), @emmatown (#8099) for changes not shown above, but none-the-less appreciated."
 6,"The following packages have been updated
-module
+@keystone-6/core@3.1.3
 Bug Fixes
 
-module Fixes module passing module (#8122) @dcousens
+[core] Fixes access.filter.* passing listKey: undefined (#8122) @dcousens
 "
 7,"The following packages have been updated
-module
+@keystone-6/core@3.1.2
 Bug Fixes
 
-module Fix module server not binding to module by default (regression introduced by link) (#8105) @dcousens
+[core] Fix http server not binding to :: by default (regression introduced by #8078) (#8105) @dcousens
 "
 8,"The following packages have been updated
-module
+@keystone-6/core@3.1.1
 Bug Fixes
 
-module Fixes module in the module field incorrectly defaulting to module instead of module (#8099) @emmatown
+[core] Fixes ui.displayMode in the relationship field incorrectly defaulting to count instead of select (#8099) @emmatown
 "
 9,"The following packages have been updated
-module
+@keystone-6/auth@5.0.1
+@keystone-6/cloudinary@5.0.1
+@keystone-6/core@3.1.0
+@keystone-6/document-renderer@1.1.2
+@keystone-6/fields-document@5.0.2
 New Features
 
-module Adds a new module function for grouping fields in the Admin UI (#8088) @emmatown
-module Adds module for the relationship field (#8074) @dcousens
-module Adds module to field module, for moving a field to the sidebar (#8075) @borisno2
-module Adds module, a method to derive an updated context from an incoming request and response (#8013) @borisno2
+[core] Adds a new group function for grouping fields in the Admin UI (#8088) @emmatown
+[core] Adds ui.searchFields for the relationship field (#8074) @dcousens
+[core] Adds fieldPosition to field ui.itemView, for moving a field to the sidebar (#8075) @borisno2
+[core] Adds context.withRequest, a method to derive an updated context from an incoming request and response (#8013) @borisno2
 
 Bug Fixes
 
-module Fix the startup message to use the configured module host instead of assuming module (#8078) @u-ishii
-module Fix relationship fields not using their module configuration (#8049) @georgekrax
-module Adds module field to module (#8054) @emmatown
+[core] Fix the startup message to use the configured http.options host instead of assuming localhost (#8078) @u-ishii
+[core, fields-document] Fix relationship fields not using their ui.labelField configuration (#8049) @georgekrax
+[auth, cloudinary, core, document-renderer, fields-document] Adds exports field to package.json (#8054) @emmatown
 
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
-- @u-ishii (link)
-- @georgekrax (link)
+- @u-ishii (#8078)
+- @georgekrax (#8049)
 :blue_heart: Acknowledgements
-Lastly, thanks to @keystonejs-release-bot (link,link,link) for changes not shown above, but none-the-less appreciated."
+Lastly, thanks to @keystonejs-release-bot (#8064,#8064,#8064) for changes not shown above, but none-the-less appreciated."
 10,"The following packages have been updated
-module
+@keystone-6/core@3.0.2
+@keystone-6/fields-document@5.0.1
 Bug Fixes
 
-module Improves performance of querying to-one relationships (#8000) @mitchellhamilton
-module Fixes module and module filter views for module, module, module and module fields (#7930) @nya1
-module Fixes issue where the custom field view module was not being used. You should be able to override field module when setting module parameter in fields. (#8034) @gautamsi
-module Fixes changes to module/module/module/module not being updated in live reloads (#8038) @mitchellhamilton
-module Fixes platform configuration for esbuild (#8031) @mmachatschek
-module Fixes selection for component blocks without child fields (#8021) @mitchellhamilton
+[core] Improves performance of querying to-one relationships (#8000) @mitchellhamilton
+[core] Fixes in and not_in filter views for integer, bigInt, decimal and float fields (#7930) @nya1
+[core] Fixes issue where the custom field view controller was not being used. You should be able to override field controller when setting ui.views parameter in fields. (#8034) @gautamsi
+[core] Fixes changes to session/ui.publicPages/ui.isValidSession/ui.pageMiddleware not being updated in live reloads (#8038) @mitchellhamilton
+[core] Fixes platform configuration for esbuild (#8031) @mmachatschek
+[fields-document] Fixes selection for component blocks without child fields (#8021) @mitchellhamilton
 
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
-- @nya1 (link)
-- @mmachatschek (link)
-- @bketelsen (link)
-- @lukebennett88 (link)
+- @nya1 (#7930)
+- @mmachatschek (#8031)
+- @bketelsen (#8032)
+- @lukebennett88 (#8033)
 :blue_heart: Acknowledgements
-Lastly, thanks to @mitchellhamilton (link,link,link), @renovate (link,link,link,link,link,link,link), @flexdinesh (link,link,link), @bladey (link), @dcousens (link) for changes not shown above, but none-the-less appreciated."
+Lastly, thanks to @mitchellhamilton (#8063,#8059,#8027), @renovate (#8056,#8055,#8053,#8045,#8041,#8036,#7974), @flexdinesh (#8060,#8039,#8048), @bladey (#8057), @dcousens (#8026) for changes not shown above, but none-the-less appreciated."
 11,"The following packages have been updated
-module
+@keystone-6/core@3.0.1
 Bug Fixes
 
-module Fixes the inputData field type for FieldCreateItemAccessArgs (#8017) @acburdine
+[core] Fixes the inputData field type for FieldCreateItemAccessArgs (#8017) @acburdine
 
 :blue_heart: Acknowledgements
-Lastly, thanks to @dcousens (link) for changes not shown above, but none-the-less appreciated."
+Lastly, thanks to @dcousens (#8016) for changes not shown above, but none-the-less appreciated."
 12,"The following packages have been updated
-module
+@keystone-6/auth@5.0.0
+@keystone-6/cloudinary@5.0.0
+@keystone-6/core@3.0.0
+@keystone-6/fields-document@5.0.0
 Breaking Changes
 
-module Changes access-control error messages to only show the list key and operation (#7914) @dcousens
-module Replaces module exports with module, for a module use module instead (#7968) @mitchellhamilton
-module Removes module from our exports (#7972) @mitchellhamilton
-module Removes module from module (#7971) @mitchellhamilton
-module Removes module flag from module (#7969) @mitchellhamilton
-module Removes the module wrapping functions module and module.  Developers should import module themselves, or use module (as exported by module). (#7943) @borisno2
-module Removes module export from module (#7919) @mitchellhamilton
-module Removes module, use module instead (#7957) @dcousens
-module module is now called with an unprivileged context, not sudo.  Use module if you need to bypass access control (#7955) @dcousens
-module Removes the parameters for module when writing field types, and the respective types module, module and module therein. (#7913) @mitchellhamilton
-module Removes module export from module (#7912) @mitchellhamilton
-module Changes default Apollo Server configuration to use module and module (#7888) @mitchellhamilton
-module Changes module control on module to required, with new module and module functions for easy shorthand. (#7848) @Noviny
-module Upgrade to module (#7817) @mitchellhamilton
-module Changes field module module resolution, from a path, to a module path that is resolved from where module is run (#7805) @mitchellhamilton
-module Changes the return type for the module hook with module fields.  Previously you may have used module or module as respective null magic values - you can now always use a Javascript module value.
-Unlike previous behaviour, a null value will now consistently map to a module. (#7671) @renovate
+[core] Changes access-control error messages to only show the list key and operation (#7914) @dcousens
+[core] Replaces @keystone-6/core/testing exports with { resetDatabase }, for a context use getContext instead (#7968) @mitchellhamilton
+[core] Removes @keystone-6/core/artifacts from our exports (#7972) @mitchellhamilton
+[core] Removes disconnect from SessionStrategy (#7971) @mitchellhamilton
+[core] Removes isLiveReload flag from createSystem (#7969) @mitchellhamilton
+[core] Removes the @graphql-tools/schema wrapping functions graphQLSchemaExtension and gql.  Developers should import @graphql-tools/schema themselves, or use graphql (as exported by @keystone-6/core). (#7943) @borisno2
+[core] Removes filters export from @keystone-6/core/types (#7919) @mitchellhamilton
+[core] Removes experimental.generateNodeAPI, use getContext instead (#7957) @dcousens
+[core] db.onConnect is now called with an unprivileged context, not sudo.  Use context.sudo() if you need to bypass access control (#7955) @dcousens
+[core] Removes the parameters for getAdminMeta when writing field types, and the respective types AdminMetaRootVal, ListMetaRootVal and FieldMetaRootVal therein. (#7913) @mitchellhamilton
+[core] Removes createSessionContext export from @keystone-6/core/session (#7912) @mitchellhamilton
+[core] Changes default Apollo Server configuration to use cache: ""bounded"" and persistedQueries: false (#7888) @mitchellhamilton
+[core] Changes .access control on list to required, with new allowAll and denyAll functions for easy shorthand. (#7848) @Noviny
+[core] Upgrade to graphql@16 (#7817) @mitchellhamilton
+[core] Changes field .views module resolution, from a path, to a module path that is resolved from where keystone start is run (#7805) @mitchellhamilton
+[core] Changes the return type for the resolveInput hook with json fields.  Previously you may have used 'DbNull' or 'JsonNull' as respective null magic values - you can now always use a Javascript null value.
+Unlike previous behaviour, a null value will now consistently map to a Prisma.DbNull. (#7671) @renovate
 
 New Features
 
-module Adds module, a list configuration option to enforce the maximum module value in findMany queries for that list (#7963) @dcousens
-module Adds new module function (from module) for working with a Keystone configuration directly (#7954) @dcousens
-module Adds a search input field to the list view, resulting in a module query across module joined with the list view filters (#7841) @Noviny
-module Adds a new module property for configuring Singleton lists (#7863) @mitchellhamilton
+[core] Adds [list].graphql.maxTake, a list configuration option to enforce the maximum take value in findMany queries for that list (#7963) @dcousens
+[core] Adds new getContext function (from @keystone-6/core/context) for working with a Keystone configuration directly (#7954) @dcousens
+[core] Adds a search input field to the list view, resulting in a contains query across ui.searchFields joined with the list view filters (#7841) @Noviny
+[core] Adds a new isSingleton property for configuring Singleton lists (#7863) @mitchellhamilton
 
 Bug Fixes
 
-module Fixes JSON field type view assuming the empty string is equivalent to module (#7982) @dcousens
-module Adds type refinement for module using a TypeInfo type parameter (#7831) @dcousens
-module Removes module (#7910) @mitchellhamilton
-module Changed platform compilation to use link, previously used next.js (#7809) @mitchellhamilton
-module Removes module from formatting the generated module (#7874) @mitchellhamilton
+[core] Fixes JSON field type view assuming the empty string is equivalent to null (#7982) @dcousens
+[auth] Adds type refinement for withAuth using a TypeInfo type parameter (#7831) @dcousens
+[core] Removes experimental.enableNextJsGraphqlApiEndpoint (#7910) @mitchellhamilton
+[core] Changed platform compilation to use esbuild, previously used next.js (#7809) @mitchellhamilton
+[core] Removes prettier from formatting the generated schema.graphql (#7874) @mitchellhamilton
 
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
 :blue_heart: Acknowledgements
-Lastly, thanks to @dcousens (link,link,link,link,link,link,link,link,link,link,link), @renovate (link,link,link,link,link,link,link,link,link), @flexdinesh (link,link,link,link,link,link,link), @mitchellhamilton (link,link,link,link,link,link,link,link,link,link,link,link,link,link,link,link), @Tekipeps (link), @Noviny (link) for changes not shown above, but none-the-less appreciated."
+Lastly, thanks to @dcousens (#8012,#7998,#7997,#7995,#7981,#7979,#7973,#7897,#7895,#7894,#7864), @renovate (#8008,#7988,#7976,#7938,#7854,#7892,#7886,#7885,#7868), @flexdinesh (#8004,#8002,#7987,#7994,#7983,#7937,#7813), @mitchellhamilton (#7999,#7990,#7991,#7960,#7951,#7953,#7928,#7921,#7911,#7903,#7882,#7887,#7871,#7872,#7845,#7844), @Tekipeps (#7989), @Noviny (#7941) for changes not shown above, but none-the-less appreciated."
 13,"The following packages have been updated
-module
+@keystone-6/core@2.3.1
 Security Updates
 We have identified and fixed 1 security vulnerabilities
-- link - The multiselect field is vulnerable to a field-level access-control bypass. We have patched the vulnerability in this release.
+- GHSA-6mhr-52mv-6v6f - The multiselect field is vulnerable to a field-level access-control bypass. We have patched the vulnerability in this release.
 Bug Fixes
 
-module Fixes the multiselect field type not using the provided module, module, module, module or module configuration options (#8007) @marekryb
-module Fixes BigInt values throwing on deserialisation in the item view (#8005) @dcousens
+[core] Fixes the multiselect field type not using the provided label, access, graphql, isFilterable or isOrderable configuration options (#8007) @marekryb
+[core] Fixes BigInt values throwing on deserialisation in the item view (#8005) @dcousens
 
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
-- @marekryb (link)"
+- @marekryb (#8007)"
 14,"The following packages have been updated
-module
+@keystone-6/fields-document@4.1.2
 Bug Fixes
 
-module Fixes a broken code path for conditional component-blocks when fields are missing - this previously resulted in invalid data structures within the document editor (#7922) @mitchellhamilton
+[fields-document] Fixes a broken code path for conditional component-blocks when fields are missing - this previously resulted in invalid data structures within the document editor (#7922) @mitchellhamilton
 "
 15,"The following packages have been updated
-module
+@keystone-6/core@2.3.0
+@keystone-6/fields-document@4.1.1
 New Features
 
-module Fixes return types for module so that correct types are returned when using a module (#7878) @borisno2
+[core] Fixes return types for context.graphql so that correct types are returned when using a TypedDocumentNode (#7878) @borisno2
 
 Bug Fixes
 
-module Fixes expand/collapse button in the editor (#7926) @mitchellhamilton
-module Adds contextualised types when using the module export for GraphQL schema extensions (#7877) @dcousens
-module Fixes nullable and non-nullable calendarDay fields existing in the same schema creating a GraphQL schema with two different types with the same name (#7866) @acburdine
-module Fixes types for module, and the return types for module hooks. (#7833) @Noviny
+[fields-document] Fixes expand/collapse button in the editor (#7926) @mitchellhamilton
+[core] Adds contextualised types when using the graphql export for GraphQL schema extensions (#7877) @dcousens
+[core] Fixes nullable and non-nullable calendarDay fields existing in the same schema creating a GraphQL schema with two different types with the same name (#7866) @acburdine
+[core] Fixes types for resolvedData, and the return types for resolveInput hooks. (#7833) @Noviny
 
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
-- @hmmhmmhm (link)
-- @acburdine (link)
+- @hmmhmmhm (#7916)
+- @acburdine (#7866)
 :blue_heart: Acknowledgements
-Lastly, thanks to @dcousens (link,link,link,link), @mitchellhamilton (link,link,link,link,link,link,#7928), @dependabot[bot] (link), @renovate[bot] (link,link,link,link,link,link), @renovate (link,link) and @moselhy (link) for changes not shown above, but none-the-less appreciated."
+Lastly, thanks to @dcousens (#7876,#7839,#7832,#7819), @mitchellhamilton (#7875,#7873,#7847,#7830,#7828,#7818,#7928), @dependabot[bot] (#7869), @renovate[bot] (#7862,#7860,#7826,#7825,#7823,#7824), @renovate (#7721,#7812) and @moselhy (#7843) for changes not shown above, but none-the-less appreciated."
 16,"The following packages have been updated
-module
+@keystone-6/auth@4.0.1
+@keystone-6/cloudinary@4.0.1
+@keystone-6/core@2.2.0
+@keystone-6/document-renderer@1.1.1
+@keystone-6/fields-document@4.1.0
+@keystone-6/session-store-redis@4.0.1
 New Features
 
-module Adds module functions as exports to module, assume to be an experimental unstable export and may change in a patch release. (#5645) @gautamsi
-module Adds 'graphql' schema to module. (#7722) @borisno2
-module Adds the ability to set additional Prisma datasource fields in the module file, for example, module by adding options to module (#7747) @willemmulder
-module Adds http.Server options as configuration module (#7324) @dcousens
-module Adds a new module field type (#7683) @Achisingh
-module Adds module field to store a date without a time or timezone attached (#7658) @Achisingh
-module Adds module as an option for the select field. (#7752) @Achisingh
-module Changes the editors default overflow behaviour to align with other multi-line text inputs, supporting scrolling instead of an unbounded height for the field. (#7729) @Achisingh
-module Adds a new module field type, an integer of width 8 bytes (64 bits), analogous with Prisma's module. (#5175) @MurzNN
+[core] Adds cli functions as exports to @keystone-6/core/scripts/cli, assume to be an experimental unstable export and may change in a patch release. (#5645) @gautamsi
+[core] Adds 'graphql' schema to extendHttpServer. (#7722) @borisno2
+[core] Adds the ability to set additional Prisma datasource fields in the schema.prisma file, for example, referentialIntegrity by adding options to db.additionalPrismaDatasourceProperties (#7747) @willemmulder
+[core] Adds http.Server options as configuration server.options (#7324) @dcousens
+[core] Adds a new multiselect field type (#7683) @Achisingh
+[core] Adds calendarDay field to store a date without a time or timezone attached (#7658) @Achisingh
+[core] Adds ui.displayMode: 'radio' as an option for the select field. (#7752) @Achisingh
+[fields-document] Changes the editors default overflow behaviour to align with other multi-line text inputs, supporting scrolling instead of an unbounded height for the field. (#7729) @Achisingh
+[core] Adds a new bigInt field type, an integer of width 8 bytes (64 bits), analogous with Prisma's BigInt. (#5175) @MurzNN
 
 Bug Fixes
 
-module Removes wrong types for module hooks until actual types are provided (#7801) @dcousens
-module Removes node module restrictions (#7804) @dcousens
-module Updates module to module (#7803) @mitchellhamilton
-module Fixes environment variable module precedence; module now takes priority over the configured module (#7787) @dcousens
-module Fixes the document editor erroring when handling HTML in certain cases (#7764) @mitchellhamilton
-module Fixes long lines in code blocks in the document editor overflowing the editor (#7783) @mitchellhamilton
-module Fixes pasting plain text in the document editor removing markdown link definition and usages (#null) @mitchellhamilton
-module Fixes errors not being thrown by your module on module (#7771) @Noviny
-module Adds support for pasting a url onto text to create a link (#7766) @mitchellhamilton
-module Updates module to module (#7744) @mitchellhamilton
-module Updates module to module (#7742) @mitchellhamilton
-module Fixes return type of module to support module, which is returned if no item is found (#7731) @nderkim
+[core] Removes wrong types for resolveInput hooks until actual types are provided (#7801) @dcousens
+[auth, cloudinary, core, document-renderer, fields-document, session-store-redis] Removes node .engines restrictions (#7804) @dcousens
+[cloudinary, core] Updates graphql-upload to 15.0.2 (#7803) @mitchellhamilton
+[core] Fixes environment variable PORT= precedence; PORT= now takes priority over the configured server.port (#7787) @dcousens
+[fields-document] Fixes the document editor erroring when handling HTML in certain cases (#7764) @mitchellhamilton
+[fields-document] Fixes long lines in code blocks in the document editor overflowing the editor (#7783) @mitchellhamilton
+[fields-document] Fixes pasting plain text in the document editor removing markdown link definition and usages (#null) @mitchellhamilton
+[session-store-redis] Fixes errors not being thrown by your @redis/client on connect (#7771) @Noviny
+[fields-document] Adds support for pasting a url onto text to create a link (#7766) @mitchellhamilton
+[core] Updates @apollo/client to 3.6.9 (#7744) @mitchellhamilton
+[core] Updates @graphql-ts/schema to 0.5.3 (#7742) @mitchellhamilton
+[core] Fixes return type of findOne to support null, which is returned if no item is found (#7731) @nderkim
 
 :rotating_light: Security Updates
 We have identified and fixed 1 upstream security vulnerability
 
-link - An upstream transitive dependency module is vulnerable to a complete denial-of-service attack. We have upgraded to a version of module package to a version that doesn't use module.
+CVE-2022-24434 - An upstream transitive dependency dicer is vulnerable to a complete denial-of-service attack. We have upgraded to a version of graphql-upload package to a version that doesn't use dicer.
 
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
-- @willemmulder (link)
-- @Greenheart (link)
-- @nderkim (link)
-- @Meetcpatel (link)
+- @willemmulder (#7747)
+- @Greenheart (#7533)
+- @nderkim (#7731)
+- @Meetcpatel (#7717)
 :blue_heart: Acknowledgements
-Lastly, thanks to @mitchellhamilton (link,link,link,link,link), @renovate (link,link,link,link,link,link,link,link,link), @dcousens (link,link,link,link), @Noviny (link), @Achisingh (link), @dependabot (link) for changes not shown above, but none-the-less appreciated."
+Lastly, thanks to @mitchellhamilton (#7786,#7785,#7784,#7769,#7745), @renovate (#7797,#7798,#7670,#7780,#7781,#7779,#7755,#7487,#7725), @dcousens (#7713,#7743,#7739,#7730), @Noviny (#7770), @Achisingh (#7757), @dependabot (#7728) for changes not shown above, but none-the-less appreciated."
 17,"The following packages have been updated
-module
+@keystone-6/fields-document@4.0.1
 Bug Fixes
 
-module Updates slate and slate-react to ^0.81.1 (#7701) @mitchellhamilton
-module Fixes inline relationships being removed when loading/saving an item in the Admin UI (#7685, #7700) @mitchellhamilton
+[fields-document] Updates slate and slate-react to ^0.81.1 (#7701) @mitchellhamilton
+[fields-document] Fixes inline relationships being removed when loading/saving an item in the Admin UI (#7685, #7700) @mitchellhamilton
 
 Acknowledgements :blue_heart:
-Thanks to @Skulek (link) for their first contribution to the project."
+Thanks to @Skulek (#7695) for their first contribution to the project."
 18,"30 June 2022
 Feature release.
-module
+@keystone-6/core@2.1.0
+@keystone-6/auth@4.0.0
+@keystone-6/cloudinary@4.0.0
+@keystone-6/fields-document@4.0.0
+@keystone-6/session-store-redis@4.0.0
 Adds MySQL Support
-Keystone now supports MySQL by setting module in your module link for further information.
-:warning: There are some differences in how Postgres and MySQL operate so be sure to checkout our new link guide.
+Keystone now supports MySQL by setting mysql in your db.provider see pull request #7538 for further information.
+:warning: There are some differences in how Postgres and MySQL operate so be sure to checkout our new choosing the right database guide.
 Admin UI Improvements
 
-:heavy_plus_sign: Adds module for fields to show a description below the label in the Admin UI - link
-:heavy_plus_sign: Adds the ability to set ambiguous plurals - like module or module - as list names without receiving an error. This builds on the existing module configuration by adding the configuration options of module, module, module and module to change the auto-generated names of lists used in the Admin UI link
-Fixes the inconsistent spacing in the Admin UI on relationships fields using the cards display mode - link
-Fixes the semantic-based browser input behaviour for inline create and edit forms on relationship fields when using the cards display mode - link
-Fixes the layout and component block floating toolbars from being shown behind other elements - link
-Moves the remove button in component block array fields from inside a menu on the drag handle to the right of the drag handle - link
-Fixes the document editor from breaking when the underlying schema for a component has a new field added. Please note that new fields will still be missing for existing data when fetched from GraphQL - link
-Changes segmented control to not show a clear button if module is set - link Thanks link
+:heavy_plus_sign: Adds ui.description for fields to show a description below the label in the Admin UI - #7578
+:heavy_plus_sign: Adds the ability to set ambiguous plurals - like Firmware or Shrimp - as list names without receiving an error. This builds on the existing graphql.plural configuration by adding the configuration options of ui.label, ui.singular, ui.plural and ui.path to change the auto-generated names of lists used in the Admin UI #7657
+Fixes the inconsistent spacing in the Admin UI on relationships fields using the cards display mode - #7616
+Fixes the semantic-based browser input behaviour for inline create and edit forms on relationship fields when using the cards display mode - #7629
+Fixes the layout and component block floating toolbars from being shown behind other elements - #7604
+Moves the remove button in component block array fields from inside a menu on the drag handle to the right of the drag handle - #7626
+Fixes the document editor from breaking when the underlying schema for a component has a new field added. Please note that new fields will still be missing for existing data when fetched from GraphQL - #7674
+Changes segmented control to not show a clear button if isRequired is set - #7639 Thanks @u-ishii
 
 Other Improvements :sparkles:
 
-:heavy_plus_sign: Changes the module GraphQL output type to be exported for developer usage, for example in virtual fields - link  Thanks link!
-:heavy_plus_sign: Adds support for Prisma's module option with module. Your Prisma schemas will now always include module, though using module is optional - link Thanks link and link!
-:heavy_plus_sign: Adds support for BigInt autoincrement id fields with module - link Thanks link!
-Fixes for module, custom resolvers, if replacing default resolvers, were previously broken - link
-:heavy_plus_sign: Adds module option to the module field to customise the database type - link
-Fixes the generation of an invalid Prisma schema when module and module are set - link Thanks link!
+:heavy_plus_sign: Changes the cloudinaryImage GraphQL output type to be exported for developer usage, for example in virtual fields - #7607  Thanks @mmachatschek!
+:heavy_plus_sign: Adds support for Prisma's shadowDatabaseUrl option with db.shadowDatabaseUrl. Your Prisma schemas will now always include shadowDatabaseUrl = env(""SHADOW_DATABASE_URL""), though using db.shadowDatabaseUrl is optional - #7350 Thanks @chelkyl and @jlarmstrongiv!
+:heavy_plus_sign: Adds support for BigInt autoincrement id fields with idField: { kind: 'autoincrement', type: 'BigInt' } - #7188 Thanks @MurzNN!
+Fixes for graphQLSchemaExtension, custom resolvers, if replacing default resolvers, were previously broken - #7644
+:heavy_plus_sign: Adds db.nativeType option to the text field to customise the database type - #7538
+Fixes the generation of an invalid Prisma schema when {field}.isIndexed: true and {field}.db.map are set - #7666 Thanks @TonnyORG!
 
 Acknowledgements :blue_heart:
 Big shoutout to the following community members for their help in improving our documentation with their contributions:
 
-link - link
-link - link
+#7665 - @EvonuX
+#7627 - @ratson
 
 Thanks to @mmachatschek (#7607), @ratson (#7627), @chelkyl (#7350) and @u-ishii (#7639) for making their first contributions to the project!
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect with Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect with Keystone on Twitter and in Slack.
 Verbose Changelog :scroll:
-You can also view the link or compare via GitHub since link"
-19,"module
+You can also view the verbose changelog or compare via GitHub since 2022-06-09"
+19,"🦋  @keystone-ui/button@7.0.0
+🦋  @keystone-ui/core@5.0.0
+🦋  @keystone-ui/fields@7.0.0
+🦋  @keystone-ui/icons@6.0.0
+🦋  @keystone-ui/loading@6.0.0
+🦋  @keystone-ui/modals@6.0.0
+🦋  @keystone-ui/notice@6.0.0
+🦋  @keystone-ui/options@6.0.0
+🦋  @keystone-ui/pill@7.0.0
+🦋  @keystone-ui/popover@6.0.0
+🦋  @keystone-ui/segmented-control@7.0.0
+🦋  @keystone-ui/toast@6.0.0
+🦋  @keystone-ui/tooltip@6.0.0
+🦋  @keystone-6/auth@3.0.0
+🦋  @keystone-6/cloudinary@3.0.0
+🦋  @keystone-6/core@2.0.0
+🦋  @keystone-6/document-renderer@1.1.0
+🦋  @keystone-6/fields-document@3.0.0
+🦋  @keystone-6/session-store-redis@3.0.0
 New Features
 Array Fields and Components Blocks
 
 Warning: This new feature includes breaking changes that may affect you
 
 Changes to the underlying document-editor component block interfaces, with the addition of array fields. The breaking changes are only for defining components, no database migration is needed.
-The breaking changes for module are:
-- :warning: For the arguments of the module function, rename module to module 
-- :warning: For the arguments of the module function, rename module to module
-- :warning: For your component module (previously module), rename module to module.
-- :warning: When rendering child field React components, change module to module.
-For example, use module instead of module.
-For a nested example, use module instead of module.
-See link for information on how to upgrade and solutions to common problems.  If you have any other questions, please don't hesitate link.
+The breaking changes for @keystone-6/fields-document/component-blocks are:
+- :warning: For the arguments of the component function, rename component to preview 
+- :warning: For the arguments of the component function, rename props to schema
+- :warning: For your component .schema (previously .props), rename props.{innerFieldName} to props.fields.{innerFieldName}.
+- :warning: When rendering child field React components, change props.{innerFieldName} to props.{innerFieldName}.element.
+For example, use props.fields.title instead of props.title.
+For a nested example, use props.fields.someObject.fields.title instead of props.someObject.title.
+See pull request #7428 for information on how to upgrade and solutions to common problems.  If you have any other questions, please don't hesitate to open a GitHub discussion.
 Images and Files
 
 Warning: This new feature includes breaking changes that may affect you
 
-The module and module configuration options link from Keystone's configuration,  and a new module configuration object introduced.
+The image and files configuration options have been removed from Keystone's configuration,  and a new storage configuration object introduced.
 
 :heavy_plus_sign: Amazon S3 (and other compatible providers) are now supported when uploading images and files
 :heavy_plus_sign: New Guide coming - see #7563 will be merged soon but check it out if you are keen
 :rotating_light: Images and files are now - DELETED BY DEFAULT from the underlying storage provider when replaced or deleted from the database
 
 
-Note: A module flag has been added to the new storage configurations to default back to the previous behaviour
+Note: A preserve flag has been added to the new storage configurations to default back to the previous behaviour
 
 
 
 
 :warning: If you were previously using refs in your application, you need to migrate your database
 
-See link for information on how to upgrade and solutions to common problems.
-If you have any other questions, please don't hesitate link.
+See pull request #7070 for information on how to upgrade and solutions to common problems.
+If you have any other questions, please don't hesitate to open a GitHub discussion.
 Other Improvements
 Major Dependency Upgrades
-If you can't upgrade your dependencies for any reason and you think Keystone might be able to help, please link so we can try and help you.
+If you can't upgrade your dependencies for any reason and you think Keystone might be able to help, please open a GitHub discussion so we can try and help you.
 React 18.1.0
-We have updated React to link (pull request link.
+We have updated React to version 18 (pull request #7410).
 Redis 4
-Our module package has been upgraded to use link (pull request link.
+Our @keystone-6/session-store-redis package has been upgraded to use @redis/client@v1.1.0/redis@4.1.0 (pull request #7051).
 Configuration
-Added support for module options when configuring GraphQL link
+Added support for body-parser options when configuring GraphQL #7591
 Admin UI
 The following changes include a number of accessibility and quality of life improvements for users of the admin interface.
 
-List descriptions now display in the Admin UI - link
-Fixed the viewport sometimes shifting when opening the date picker in the create drawer - link
-Removed all Keystone Links, i.e. API explorer, GitHub repository and Keystone documentation, from the popover and replacing the popover button with Sign out button in production - link
-Fixed document editor preventing tabbing out of the editor - link
-The label shown for a text field in the Admin UI is now associated with the input so the label can be read by screen readers - link
-The document editor label is now associated with the editable element so the label can be read by screen readers - link
-Fixed z-index issues occurring when pop-overs in document editor text-area or the toolbar overlapped other fields and buttons - link
-Alert dialogs are now centered in the Admin UI - link
-The reset changes button on the item view now presents a confirmation modal before resetting changes and it has been moved to the right of the bottom bar so it is next to the delete button. - link
-Fixed splitting text with marks/inlines into multiple list items when turning a paragraph into a list and splitting a single list item with marks/inlines into multiple paragraphs when turning a list into paragraphs - link
-Replaced create item drawer with a page when creating an item from the list view or dashboard - link
-Fixed the Admin UI crashing when saving an item with a relationship field using the cards display mode when another item is added to the relationship (e.g. by another user or a hook) since the item was initially loaded - link
+List descriptions now display in the Admin UI - #7537
+Fixed the viewport sometimes shifting when opening the date picker in the create drawer - #7543
+Removed all Keystone Links, i.e. API explorer, GitHub repository and Keystone documentation, from the popover and replacing the popover button with Sign out button in production - #7546
+Fixed document editor preventing tabbing out of the editor - #7547
+The label shown for a text field in the Admin UI is now associated with the input so the label can be read by screen readers - #7548
+The document editor label is now associated with the editable element so the label can be read by screen readers - #7549
+Fixed z-index issues occurring when pop-overs in document editor text-area or the toolbar overlapped other fields and buttons - #7556
+Alert dialogs are now centered in the Admin UI - #7561
+The reset changes button on the item view now presents a confirmation modal before resetting changes and it has been moved to the right of the bottom bar so it is next to the delete button. - #7562
+Fixed splitting text with marks/inlines into multiple list items when turning a paragraph into a list and splitting a single list item with marks/inlines into multiple paragraphs when turning a list into paragraphs - #7565
+Replaced create item drawer with a page when creating an item from the list view or dashboard - #7594
+Fixed the Admin UI crashing when saving an item with a relationship field using the cards display mode when another item is added to the relationship (e.g. by another user or a hook) since the item was initially loaded - #7598
 
 Could not find prisma-fmt binaries
-link have reported problems with the Prisma binaries not being installed properly by their package manager.
-As part of link the Prisma binaries are now downloaded just before they're needed.
+A number of users have reported problems with the Prisma binaries not being installed properly by their package manager.
+As part of pull request #7595 the Prisma binaries are now downloaded just before they're needed.
 Note this should not happen in production, they should still be downloaded before as part of your deployment step.
 Acknowledgements
 Big shoutout to the following community members for their help in improving our documentation with their contributions:
 
-link - link
-link - link
+#7573 - @vladbndko
+#7235 - @ogre-yoga
 
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect with Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect with Keystone on Twitter and in Slack.
 Changelog
-You can also view the link in this pull request."
+You can also view the verbose changelog in this pull request."
 20,"Maintenance release.
-module
+sh
+""@keystone-6/core"": ""1.1.1""
+""@keystone-6/fields-document"": ""2.0.1""
 Core changes ⚙️
 
-Fixed decimal module not being respected and module being used as the min if provided.
+Fixed decimal validation.min not being respected and validation.max being used as the min if provided.
 
 Admin UI – quality of life improvements ✨
 
@@ -479,52 +524,90 @@ New team members 🥳
 We’re proud to announce that two new members have joined the team:
 
 @Achi06 is a Software Developer who focuses on Front End. Achi has worked as an Angular Developer for HCL at Coles, an on several government projects including TAC and Queensland Health.
-@borisno2 – the author behind the link is now an official part of team Keystone. An awesome example of the power of OSS communities 💙 
+@borisno2 – the author behind the Keystone next auth plugin is now an official part of team Keystone. An awesome example of the power of OSS communities 💙 
 
 
-If you’re an AU or NZ based developer or designer looking to work on projects like Keystone, feel free to send your CV through to us at link.
+If you’re an AU or NZ based developer or designer looking to work on projects like Keystone, feel free to send your CV through to us at Thinkmill.
 
 Community Contributors
 
 Thanks @moselhy! - Fixed React key warning when showing GraphQL errors
-Thanks @MurzNN! - Added sandbox configs for all examples, so now all our examples can be launched on the codesandbox.io service. Give it a try in our link 🚀 
+Thanks @MurzNN! - Added sandbox configs for all examples, so now all our examples can be launched on the codesandbox.io service. Give it a try in our blog example 🚀 
 
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
-You can also view the link in this pull request."
+You can also view the verbose changelog in this pull request."
 21,"Maintenance release.
-module
+sh
+""@keystone-6/auth"": ""2.0.0"",
+""@keystone-6/cloudinary"": ""2.0.0"",
+""@keystone-6/core"": ""1.1.0"",
+""@keystone-6/fields-document"": ""2.0.0"",
+""@keystone-6/session-store-redis"": ""2.0.0"",
 ⚠️   This release contains a breaking change! Please read the instructions below.
 Core ⚙️
 Date Selection Issue
 When selecting a date, the date picker sometimes changed to the previous day, this is now resolved.
-The root of the problem as highlighted in https://github.com/keystonejs/keystone/issues/6115 is the inconsistency in how browsers handle module where value is some string representation of a module.
-Year, month, and day to module is now explicitly passed in for more deterministic behaviour.
+The root of the problem as highlighted in https://github.com/keystonejs/keystone/issues/6115 is the inconsistency in how browsers handle new Date(value) where value is some string representation of a Date.
+Year, month, and day to Date is now explicitly passed in for more deterministic behaviour.
 Thanks @ChuckJonas and community members for reporting this issue.
 Relationships in Component Blocks
 ⚠️   Breaking change! Please follow the guidance below.
 We've moved the configuration for relationships in component blocks, if you have relationships in component blocks, you'll need to update your configuration.
-This configuration has moved so that it's configured at the relationship prop rather than in the module key on the document field config.
-The module key in the document field config now exclusively refers to inline relationships.
+This configuration has moved so that it's configured at the relationship prop rather than in the relationships key on the document field config.
+The relationships key in the document field config now exclusively refers to inline relationships.
 We have also added documentation for child fields and early validation for checking that relationships in the document field (both inline relationships and props in component blocks) refer to lists that actually exist.
 Before:
-module
-module
+tsx
+import { config, list } from '@keystone-6/core';
+import { document } from '@keystone-6/fields-document';
+export default config({
+  lists: {
+    ListName: list({
+      fields: {
+        fieldName: document({
+          relationships: {
+            featuredAuthors: {
+              kind: 'prop',
+              listKey: 'Author',
+              selection: 'id name posts { title }',
+              many: true,
+            },
+          },
+          /* ... */
+        }),
+        /* ... */
+      },
+    }),
+    /* ... */
+  },
+  /* ... */
+});
+tsx
+import { fields } from '@keystone-6/fields-document/component-blocks';
+fields.relationship({ label: 'Authors', relationship: 'featuredAuthors' });
 After:
-module
+tsx
+import { fields } from '@keystone-6/fields-document/component-blocks';
+fields.relationship({
+  label: 'Authors',
+  listKey: 'Author',
+  selection: 'id name posts { title }',
+  many: true,
+});
 Miscellaneous
 
-Added support for extending the underlying Node.js module server, thanks @lachieh!
+Added support for extending the underlying Node.js http server, thanks @lachieh!
 Fixed issues with float field filtering when the field is required with default value, thanks @gautamsi!
-Bumped Next.js from 12.0.7 to 12.1.0, which fixed using module to get the paths to module not working with newer versions of Next.js
+Bumped Next.js from 12.0.7 to 12.1.0, which fixed using require.resolve to get the paths to views not working with newer versions of Next.js
 Updated Prisma to 3.9.2
 
 Admin UI 👀
 
 Fixes a bug where headings would appear in shortcut menu even when they were disabled
 Fixes a bug where the shortcuts menu would clip behind the styles menu - it is now always above the styles menu
-Fixed module component to toggle open and closed on click of the trigger, previously trigger click would only open the dialog. This is necessary because the Admin UI has limited usability on mobile phones, and when certain dialogs open, it is difficult to close by clicking outside. This adds the option of closing it by clicking the menu button again.
+Fixed Popover component to toggle open and closed on click of the trigger, previously trigger click would only open the dialog. This is necessary because the Admin UI has limited usability on mobile phones, and when certain dialogs open, it is difficult to close by clicking outside. This adds the option of closing it by clicking the menu button again.
 Fixed cards view in the relationship field not showing up for many relationships in the create view
 Improved how stacking contexts are organised in the Admin UI
 Minor a11y improvement to table browsing
@@ -534,19 +617,20 @@ Documentation ✏️
 Fixed invalid field value for Selection in docs for Component Block Relationship Fields, thanks @nizhu!
 
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
-You can also view the link in the related PR (https://github.com/keystonejs/keystone/pull/7219) for this release."
-22,"This patch release is related to security advisory link.
-module
+You can also view the verbose changelog in the related PR (https://github.com/keystonejs/keystone/pull/7219) for this release."
+22,"This patch release is related to security advisory CVE-2022-0087.
+sh
+""@keystone-6/auth"": ""1.0.2""
 Security Advisory 🔒
-This patch is relating to a security advisory that removes the capability for an attacker to exploit a reflected cross-site scripting vulnerability when using a previous version of the module package. The original security advisory is located link.
+This patch is relating to a security advisory that removes the capability for an attacker to exploit a reflected cross-site scripting vulnerability when using a previous version of the @keystone-6/auth package. The original security advisory is located here.
 Impact
-The vulnerability can impact users of the administration user interface when following an untrusted link to the module or module page.
+The vulnerability can impact users of the administration user interface when following an untrusted link to the signin or init page.
 This is a targeted attack and may present itself in the form of phishing and or chained in conjunction with some other vulnerability.
 Mitigation
-Please upgrade to module (this patch), where this vulnerability has been closed.
-If you are using module,  we strongly recommend you upgrade to module.
+Please upgrade to @keystone-6/auth >= 1.0.2 (this patch), where this vulnerability has been closed.
+If you are using @keystone-next/auth,  we strongly recommend you upgrade to @keystone-6.
 Workarounds
 If for some reason you cannot upgrade the dependencies in software, you could alternatively
 
@@ -558,43 +642,51 @@ https://owasp.org/www-community/attacks/xss/
 Credits
 Thanks to Shivansh Khari (@Shivansh-Khari) for discovering and reporting this vulnerability.
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
-You can also view the link in the related PR (https://github.com/keystonejs/keystone/pull/7156) for this release."
+You can also view the verbose changelog in the related PR (https://github.com/keystonejs/keystone/pull/7156) for this release."
 23,"Patch release.
-module
+sh
+""@keystone-6/auth"": ""1.0.1"",
+""@keystone-6/core"": ""1.0.1"",
 Miscellaneous Fixes ⚙️
 
-Page titles now reflect the page you are on: module view shows the item's label, module view shows the list name, other pages show module
+Page titles now reflect the page you are on: item view shows the item's label, list view shows the list name, other pages show Keystone
 Refactoring of TypeScript type generation
-Fixed the inferred type of a field module hook to support returning module
+Fixed the inferred type of a field resolveInput hook to support returning undefined
 Explicitly disable caching for redirect responses in the Admin UI
-Fixed error module when using the module experimental option
-Fixed setting moduleto module erroring
-Removed redundant module dependency
+Fixed error You must await server.start() before calling server.createHandler() when using the generateNextGraphqlAPI experimental option
+Fixed setting db.enableLoggingto false erroring
+Removed redundant fast-glob dependency
 Updated Prisma monorepo to v3.6.0
 Fixed Lists import in artifacts types, thanks @SerWonka!
 
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
-You can also view the link in the related PR (https://github.com/keystonejs/keystone/pull/7044) for this release."
+You can also view the verbose changelog in the related PR (https://github.com/keystonejs/keystone/pull/7044) for this release."
 24,"This release marks the achievement of General Availability status for Keystone 6! 🚀
-We've also included a range of improvements to Keystone's TypeScript DX since shipping link.
+We've also included a range of improvements to Keystone's TypeScript DX since shipping last week's release candidate.
 Keystone 6 ⚡️
-With this major release, the project has moved to the module namespace on npm, and our version numbers have been reset.
+With this major release, the project has moved to the @keystone-6 namespace on npm, and our version numbers have been reset.
 We highly recommend you upgrade your existing Keystone Next projects to Keystone 6 with the packages below:
-module
+json
+""@keystone-6/auth"": ""1.0.0"",
+""@keystone-6/cloudinary"": ""1.0.0"",
+""@keystone-6/document-renderer"": ""1.0.0"",
+""@keystone-6/fields-document"": ""1.0.0"",
+""@keystone-6/core"": ""1.0.0"",
+""@keystone-6/session-store-redis"": ""1.0.0"",
 
-Note: module has been changed to module
+Note: @keystone-next/keystone has been changed to @keystone-6/core
 
-Among other internal naming changes, our CLI commands have switched from module to simply module, please ensure you update your startup scripts to suit!
+Among other internal naming changes, our CLI commands have switched from keystone-next to simply keystone, please ensure you update your startup scripts to suit!
 
-Note: To learn more about this major release and what's in store for the road ahead, checkout our official link and updated link.
+Note: To learn more about this major release and what's in store for the road ahead, checkout our official general availability announcement and updated roadmap.
 
 Type Enhancements ✨
 We've shipped a significant update to our generated TypeScript types.
-The types for your schema are stricter when your lists are contextually typed by the newly provided module types from module.
+The types for your schema are stricter when your lists are contextually typed by the newly provided Lists types from .keystone/types.
 This results in a smoother, type-safe auto-complete experience and stricter types for your access control, hooks, and any other code that uses a Keystone context.
 For example, if you write all your lists in one object:
 ```ts
@@ -613,60 +705,76 @@ export const Blah: Lists.Blah = list({
 For a more in-depth view of what TypeScript types have been changed, see below:
 
 The following types have been renamed:
-module → module
-module → module
-module → module
-module → module
-module now has a required type parameter which must satisfy module
-The following types now have a required type parameter which must satisfy module:
-module
-module
-module
-module
-module
-module
-module
-module and module now have a required type parameter which must satisfy module
-module no longer has a type parameter
-The first parameter to the resolver in a module field will be typed as the item type if the list is typed with module or module, otherwise it will be typed as module
-The module/module arguments in hooks/access control will now receive the module type if the list is typed with module or module, otherwise it will be typed as module
-module has been removed from module
-module and module has been added to module
-In module:
-module has been moved to module
-module has been renamed to module
+BaseGeneratedListTypes → BaseListTypeInfo
+ItemRootValue → BaseItem
+ListInfo → ListGraphQLTypes
+TypesForList → GraphQLTypesForList
+FieldTypeFunc now has a required type parameter which must satisfy BaseListTypeInfo
+The following types now have a required type parameter which must satisfy BaseKeystoneTypeInfo:
+ServerConfig
+CreateRequestContext
+AdminUIConfig
+DatabaseConfig
+ListOperationAccessControl
+MaybeSessionFunction
+MaybeItemFunction
+GraphQLResolver and GraphQLSchemaExtension now have a required type parameter which must satisfy KeystoneContext
+KeystoneGraphQLAPI no longer has a type parameter
+The first parameter to the resolver in a virtual field will be typed as the item type if the list is typed with Keystone.Lists or Keystone.Lists.ListKey, otherwise it will be typed as unknown
+The item/originalItem arguments in hooks/access control will now receive the Item type if the list is typed with Keystone.Lists or Keystone.Lists.ListKey, otherwise it will be typed as BaseItem
+args has been removed from BaseListTypeInfo
+inputs.orderBy and all has been added to BaseListTypeInfo
+In .keystone/types:
+ListKeyListTypeInfo has been moved to Lists.ListKey.TypeInfo
+KeystoneContext has been renamed to Context
 
 Credits 💫
 This release would not have been possible without the support and feedback of such an awesome developer community.
 We're grateful for the ideas you bring, the help you give others, and the code contributions the you've made to get Keystone to where it is today.
-Like this release? link on GitHub!
+Like this release? Give us a star on GitHub!
 Changelog
-You can view the link in the related PR (https://github.com/keystonejs/keystone/pull/7018) for this release."
+You can view the verbose changelog in the related PR (https://github.com/keystonejs/keystone/pull/7018) for this release."
 25,"The Release Candidate for Keystone 6 General Availability has arrived! Within you'll find numerous improvements across the project. ⭐️
-After this release, we will be moving Keystone 6 to General Availability and promoting the project to the module namespace on npm.
+After this release, we will be moving Keystone 6 to General Availability and promoting the project to the @keystone-6 namespace on npm.
 We highly recommend you upgrade to this release:
-module
+json
+""@keystone-next/auth"": ""37.0.0"",
+""@keystone-next/cloudinary"": ""12.0.0"",
+""@keystone-next/document-renderer"": ""5.0.0"",
+""@keystone-next/fields-document"": ""14.0.0"",
+""@keystone-next/keystone"": ""29.0.0"",
+""@keystone-next/session-store-redis"": ""9.0.0"",
 ⚠️   This release contains breaking changes! Please backup your data before upgrading and read the instructions below.
 Shorter Relationship Names 🤏
 
 Warning: ⚠️ Breaking change! Please follow the guidance below to avoid losing data.
 
-The names of one-sided and two-sided, many-many relationships has been shortened. Two-sided many-many relationship names contain only the left-hand side names now; and the module suffix has been dropped from one-sided many-many relationships.
-This reduces the probability that you will exceed link with typical usage.
+The names of one-sided and two-sided, many-many relationships has been shortened. Two-sided many-many relationship names contain only the left-hand side names now; and the _many suffix has been dropped from one-sided many-many relationships.
+This reduces the probability that you will exceed PostgreSQL's 63 character limit for identifiers with typical usage.
 There are two different ways you can update your schema:
 
 
-Explicitly set the module on many-to-many relations, allowing your database to remain unchanged.
+Explicitly set the db.relationName on many-to-many relations, allowing your database to remain unchanged.
 
 
 Rename your many-to-many relations and tables using a migration, changing your database.
 
 
-Set module on many to many relations
-Rather than doing a migration, you can set the new field property module, for either side of a many-to-many relationship field.
+Set db.relationName on many to many relations
+Rather than doing a migration, you can set the new field property db.relationName, for either side of a many-to-many relationship field.
 If set to the existing relation name, your database will remain unchanged.
 For example, given a schema like this:
-module
+ts
+Post: list({
+  fields: {
+    tags: relationship({ ref: 'Tag.posts', many: true }),
+  },
+}),
+Tag: list({
+  fields: {
+    posts: relationship({ ref: 'Post.tags', many: true }),
+  },
+}),
 Before this release, the generated Prisma schema looked like this:
 ```prisma
 // This file is automatically generated by Keystone, do not modify it manually.
@@ -689,26 +797,46 @@ model Tag {
   posts Post[] @relation(""Post_tags_Tag_posts"")
 }
 ```
-By adding module to one side of the many-to-many relationship; you can preclude yourself from a migration.
+By adding db: { relationName: 'Post_tags_Tag_posts' } to one side of the many-to-many relationship; you can preclude yourself from a migration.
 
 Note: It doesn't matter which side of the relationship you put this property, but it should be only on one side; otherwise you will receive an error.
 
-module
+ts
+Post: list({
+  fields: {
+    tags: relationship({ ref: 'Tag.posts', many: true, db: { relationName: 'Post_tags_Tag_posts' } }),
+  },
+}),
+Tag: list({
+  fields: {
+    posts: relationship({ ref: 'Post.tags', many: true }),
+  },
+}),
 Rename your many relation tables using a migration
 For example, given a schema like this:
-module
-When updating to this change, and running module, Keystone will prompt you to update your schema.
+ts
+Post: list({
+  fields: {
+    tags: relationship({ ref: 'Tag.posts', many: true }),
+  },
+}),
+Tag: list({
+  fields: {
+    posts: relationship({ ref: 'Post.tags', many: true }),
+  },
+}),
+When updating to this change, and running yarn dev, Keystone will prompt you to update your schema.
 
-Warning: ⚠️ Warning: DO NOT APPLY THE AUTOMATICALLY GENERATED MIGRATION! You will lose your data. Only apply the migration if you want to module your data.
+Warning: ⚠️ Warning: DO NOT APPLY THE AUTOMATICALLY GENERATED MIGRATION! You will lose your data. Only apply the migration if you want to DROP your data.
 
-If using module, Keystone will follow the typical migration flow and offer to apply an automatically generated migration.
-If using module, Keystone will follow the typical flow and offer to automatically migrate your schema.
+If using useMigrations: true, Keystone will follow the typical migration flow and offer to apply an automatically generated migration.
+If using useMigrations: false, Keystone will follow the typical flow and offer to automatically migrate your schema.
 On PostgreSQL, Prisma will generate a migration that looks something like this:
 ```sql
 /*
   Warnings:
 
-You are about to drop the module table. If the table is not empty, all the data it contains will be lost.
+You are about to drop the _Post_tags_Tag_posts table. If the table is not empty, all the data it contains will be lost.
 
 */
 -- DropForeignKey
@@ -732,13 +860,18 @@ ALTER TABLE ""_Post_tags"" ADD FOREIGN KEY (""A"") REFERENCES ""Post""(""id"") O
 ALTER TABLE ""_Post_tags"" ADD FOREIGN KEY (""B"") REFERENCES ""Tag""(""id"") ON DELETE CASCADE ON UPDATE CASCADE;
 ```
 You need to modify it so that it looks like this with the old and new table names for your schema substituted:
-module
+sql
+ALTER TABLE ""_Post_tags_Tag_posts"" RENAME TO ""_Post_tags"";
+ALTER INDEX ""_Post_tags_Tag_posts_AB_unique"" RENAME TO ""_Post_tags_AB_unique"";
+ALTER INDEX ""_Post_tags_Tag_posts_B_index"" RENAME TO ""_Post_tags_B_index"";
+ALTER TABLE ""_Post_tags"" RENAME CONSTRAINT ""_Post_tags_Tag_posts_A_fkey"" TO ""_Post_tags_A_fkey"";
+ALTER TABLE ""_Post_tags"" RENAME CONSTRAINT ""_Post_tags_Tag_posts_B_fkey"" TO ""_Post_tags_B_fkey"";
 On SQLite, Prisma will generate a migration that looks something like this:
 ```sql
 /*
   Warnings:
 
-You are about to drop the module table. If the table is not empty, all the data it contains will be lost.
+You are about to drop the _Post_tags_Tag_posts table. If the table is not empty, all the data it contains will be lost.
 
 */
 -- DropTable
@@ -758,15 +891,20 @@ CREATE UNIQUE INDEX ""_Post_tags_AB_unique"" ON ""_Post_tags""(""A"", ""B"");
 CREATE INDEX ""_Post_tags_B_index"" ON ""_Post_tags""(""B"");
 ```
 You need to modify it so that it looks like this with the old and new table names for your schema substituted:
-module
+sql
+ALTER TABLE ""_Post_tags_Tag_posts"" RENAME TO ""_Post_tags"";
+DROP INDEX ""_Post_tags_Tag_posts_AB_unique"";
+DROP INDEX ""_Post_tags_Tag_posts_B_index"";
+CREATE UNIQUE INDEX ""_Post_tags_AB_unique"" ON ""_Post_tags""(""A"", ""B"");
+CREATE INDEX ""_Post_tags_B_index"" ON ""_Post_tags""(""B"");
 Query Engine Switch 🚂
 Keystone now uses Prisma's Node-API Query Engine instead of the Binary Query Engine. This should improve the performance of operations using Prisma.
 From our initial testing, performance has increased significantly when getting large amounts of data and is marginally better for smaller amounts.
-See the link for more details.
+See the Prisma docs for more details.
 Node Engines 💽
 Keystone officially supports running on LTS versions of Node.js - this is currently version 14 and 16. We've updated our engine values throughout the project to reflect this.
 
-Note: We recommend you run Node.js module or module for the best Keystone experience.
+Note: We recommend you run Node.js ^14.15 or ^16.13 for the best Keystone experience.
 
 Miscellaneous Fixes ⚙️
 
@@ -777,19 +915,19 @@ Fixed the init/sign in page showing for a short amount of time after submitting 
 Fixed clear button not removing inline relationships when used in the document field.
 
 
-Relationship field now respects module in the create view.
+Relationship field now respects ui.displayMode: 'cards' in the create view.
 
 
-The module/module button is now hidden if the relationship field already has the authenticated item.
+The Set as Authenticated Item/Add Authenticated Item button is now hidden if the relationship field already has the authenticated item.
 
 
-Fixed module not being respected in the admin meta query when no session strategy was defined.
+Fixed ui.isAccessAllowed not being respected in the admin meta query when no session strategy was defined.
 
 
 The item page in the Admin UI no longer crashes when failing to fetch an item.
 
 
-The admin meta query now bypasses module for sudo contexts.
+The admin meta query now bypasses ui.isAccessAllowed for sudo contexts.
 
 
 Fixed doing multiple writes at the same time on SQLite causing an timeout immediately.
@@ -798,33 +936,57 @@ Fixed doing multiple writes at the same time on SQLite causing an timeout immedi
 Credits 💫
 
 
-Thanks to link, link, link link, link, and link for reporting bugs that were fixed in this release!
+Thanks to gregpalaci, vicaia, jakegiri davebeauchemin, Temkit, and bkbooth for reporting bugs that were fixed in this release!
 
 
-Fixed default renderer of module block in module. Thanks link!
+Fixed default renderer of layout block in <DocumentRenderer />. Thanks @datner!
 
 
-Like this release? link on GitHub!
+Like this release? Give us a star on GitHub!
 Changelog
-You can view the link in the related PR (https://github.com/keystonejs/keystone/pull/6943) for this release."
+You can view the verbose changelog in the related PR (https://github.com/keystonejs/keystone/pull/6943) for this release."
 26,"Expanded unique filters, customisable table and column names support and a new example featuring Nexus as we continue to finalise our GA release. 🪢
-module
-Like this release? link on GitHub!
+json
+""@keystone-next/auth"": ""36.0.0"",
+""@keystone-next/cloudinary"": ""11.0.0"",
+""@keystone-next/fields-document"": ""13.0.0"",
+""@keystone-next/keystone"": ""28.0.0"",
+""@keystone-next/session-store-redis"": ""8.0.0"",
+Like this release? Give us a star on GitHub!
 Expanded Unique Filters 🔎
-module, module, module and module fields with module now have unique filters via module which module, module and the module field already support.
-For example, if you added module to a select field in a theoretical Settings list, you can now run the following query:
-module
+select, timestamp, float and decimal fields with isIndexed: 'unique' now have unique filters via ListWhereUniqueInput which text, integer and the id field already support.
+For example, if you added isIndexed: 'unique' to a select field in a theoretical Settings list, you can now run the following query:
+ts
+query {
+  setting ( where: { provider: ""github"" } ) {
+    id
+    token
+  }
+}
 This is instead of running a settings query where you would have received a list back, and have had to check for results and get the first element:
-module
+ts
+query {
+  settings ( where: { provider: { equals: ""github"" } } ) {
+    id
+    token
+  }
+}
 Customisable Table and Column Names 📇
-You may now use different table and column names to those automatically chosen by Keystone for your list and field keys. This is powered by Prisma's link and link attributes. You can read more about this concept in link.
+You may now use different table and column names to those automatically chosen by Keystone for your list and field keys. This is powered by Prisma's @map and @@map attributes. You can read more about this concept in Prisma's documentation.
 This is useful if you do not want to modify your existing database (such as a read-only database) and use it with Keystone.
-For example if you wanted to refer to a table named module but you refer to it in Keystone as module provide module to a list or field key such as:
-module
+For example if you wanted to refer to a table named stories but you refer to it in Keystone as Posts provide config.db.map to a list or field key such as:
+Post: list({
+  db: {
+    map: 'stories',
+  },
+  fields: {
+    ...
+  }
+})
 Nexus Example 🪢
-We've got a link using link, a declarative, code-first and strongly typed GraphQL schema construction for TypeScript & JavaScript.
+We've got a new example using Nexus, a declarative, code-first and strongly typed GraphQL schema construction for TypeScript & JavaScript.
 Using Nexus you can extend the GraphQL API provided by Keystone with custom queries and mutations.
-In the example below we expose a mutation called module which pulls out items from our module list that have been published within the past 7 days (by default), with an optional author filter.
+In the example below we expose a mutation called nexusPosts which pulls out items from our Posts list that have been published within the past 7 days (by default), with an optional author filter.
 ```ts
 export const PostQuery = extendType({
   type: ""Query"",
@@ -839,32 +1001,42 @@ export const PostQuery = extendType({
         const cutoff = new Date(
           new Date().setUTCDate(new Date().getUTCDate() - days)
         ).toISOString();
-module
+    return await context.prisma.post.findMany({
+      where: {
+        ...(authorId ? { author: { id: authorId } } : null),
+        publishDate: { gt: cutoff },
+      },
+    });
+  },
+});
+
 },
 });
 ```
-link in Keystone's examples directory.
+Check out the example in Keystone's examples directory.
 Miscellaneous Fixes ⚙️
 
-The format of the date shown in the module now uses the user's locale.
-When the module option is invalid, the error will now be thrown on startup instead of silently ignored.
+The format of the date shown in the DatePicker now uses the user's locale.
+When the sessionData option is invalid, the error will now be thrown on startup instead of silently ignored.
 
 Changelog
-You can also the link in the related PR (https://github.com/keystonejs/keystone/pull/6914) for this release."
+You can also the verbose changelog in the related PR (https://github.com/keystonejs/keystone/pull/6914) for this release."
 27,"Patch release.
-module
+sh
+""@keystone-next/keystone"": ""27.0.2"",
 Miscellaneous Fixes ⚙️
 
 Fixed importing packages that provide Node ESM
-Local images and files are no longer restricted behind module
+Local images and files are no longer restricted behind ui.isAccessAllowed
 Updated Prisma monorepo to v3.4.0
 
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
-You can also view the link in the related PR (https://github.com/keystonejs/keystone/pull/6892) for this release."
+You can also view the verbose changelog in the related PR (https://github.com/keystonejs/keystone/pull/6892) for this release."
 28,"Patch release.
-module
+sh
+""@keystone-next/keystone"": ""27.0.1"",
 Miscellaneous Fixes ⚙️
 
 Fixed files with names including things like [...rest] created using ui.getAdditionalFiles being deleted after being written in dev.
@@ -872,90 +1044,95 @@ Runtime type errors from Prisma are now actually returned instead of being retur
 Fixed Schema must contain uniquely named types but contains multiple types named ""OrderDirection"". error when running keystone-next build.
 
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
-You can also view the link in the related PR (https://github.com/keystonejs/keystone/pull/6871) for this release."
+You can also view the verbose changelog in the related PR (https://github.com/keystonejs/keystone/pull/6871) for this release."
 29,"Server-side Live Reloading is here! 🚀 Plus more updates as we finalise the Keystone 6 GA release.
-module
-Like this release? link on GitHub!
+json
+""keystone-next/auth"": ""35.0.0"",
+""keystone-next/cloudinary"": ""10.0.0"",
+""keystone-next/fields-document"": ""12.0.0"",
+""keystone-next/keystone"": ""27.0.0"",
+""keystone-next/session-store-redis"": ""7.0.0"",
+Like this release? Give us a star on GitHub!
 
 Warning:  ⚠️  This release contains breaking changes, please see below!
 
 Server-side Live Reloading 🚀
-Keystone now supports live reloading with module.
+Keystone now supports live reloading with keystone-next dev.
 You can now update your GraphQL schema, change your hooks and access control, log errors and see how your data returns, then immediately use the playground to test it and iterate.
 This is in addition to the current support for live reloading changes to custom views in the Admin UI.
 How it works
-When you run module now, it will start watching for changes to your config and schema. When changes are detected, Keystone will reload your config and schema and hot-swap the GraphQL endpoint.
+When you run keystone-next dev now, it will start watching for changes to your config and schema. When changes are detected, Keystone will reload your config and schema and hot-swap the GraphQL endpoint.
 To balance performance and predictability, Keystone does not do a complete restart when changes are made. The things to know are:
 Prisma Schema Changes
-The Prisma Client is not reloaded as you make changes to the Keystone Schema. If you make changes that affect your Prisma schema, Keystone will exit the process and wait for you to run module again.
+The Prisma Client is not reloaded as you make changes to the Keystone Schema. If you make changes that affect your Prisma schema, Keystone will exit the process and wait for you to run keystone-next dev again.
 This is because making database schema changes involves generating database migrations, and can result in data loss if those migrations are automatically run against your current database.
-When adding or removing lists and fields (except virtual fields), we recommend you finish making your changes then start the module process again. This will generate a single migration for all the changes you’ve made, and interactively prompt you to resolve any migrations that can't be run safely.
+When adding or removing lists and fields (except virtual fields), we recommend you finish making your changes then start the dev process again. This will generate a single migration for all the changes you’ve made, and interactively prompt you to resolve any migrations that can't be run safely.
 onConnect is not hot reloaded
-The module function (if specified) will only be run once when Keystone is started, and not when your config is hot reloaded.
-This is because module is typically used to run data seeding and other once-off processes that should be executed once before the Keystone server comes online. Re-running it whenever a file is changed could result in a heavy database load, harming overall dev performance and introducing unpredictable behaviour.
-If you make changes to the module function, you need to manually stop the module process and start it again for your changes to take effect.
+The db.onConnect function (if specified) will only be run once when Keystone is started, and not when your config is hot reloaded.
+This is because onConnect is typically used to run data seeding and other once-off processes that should be executed once before the Keystone server comes online. Re-running it whenever a file is changed could result in a heavy database load, harming overall dev performance and introducing unpredictable behaviour.
+If you make changes to the onConnect function, you need to manually stop the dev process and start it again for your changes to take effect.
 GraphQL Playground and Apollo Sandbox 🏝
-image
-image
+
+
 In the last release we upgraded to Apollo Server 3 which brought Apollo Sandbox as the default development UI for testing your GraphQL queries.
 This surfaced a number of issues as Apollo Sandbox is hosted remotely rather than locally, including CORS issues and security concerns, making it a bad default.
 With this in mind, Keystone will now go back to using the GraphQL Playground by default instead of Apollo Sandbox as it did prior to updating to Apollo Server 3.
-We have now introduced the module config option, with three possible settings:
+We have now introduced the graphql.playground config option, with three possible settings:
 
-module will configure Apollo Server plugins to enable the GraphQL Playground
-module will configure Apollo Server plugins to disable any module requests to the GraphQL endpoint
-module will add no plugins to Apollo Server, enabling the new Apollo Sandbox behaviour
+true will configure Apollo Server plugins to enable the GraphQL Playground
+false will configure Apollo Server plugins to disable any GET requests to the GraphQL endpoint
+'apollo' will add no plugins to Apollo Server, enabling the new Apollo Sandbox behaviour
 
-module defaults to module which matches the previous Keystone 6 behaviour before the October update and Apollo Server 3.
+graphql.playground defaults to process.env.NODE_ENV !== 'production' which matches the previous Keystone 6 behaviour before the October update and Apollo Server 3.
 Next.js Update ✨
-We've updated our Next.js dependency from module to module! This latest release of Next.js includes a new Rust powered compiler with faster refresh and build rates, making your Keystone dev experience even faster.
-Check out the link for more details.
+We've updated our Next.js dependency from 11.x to 12.x! This latest release of Next.js includes a new Rust powered compiler with faster refresh and build rates, making your Keystone dev experience even faster.
+Check out the Next.js blog for more details.
 Relationship Filtering ❤️
 If you have hundreds of items in your relationship fields, the Admin UI was sometimes displaying duplicate entries and/or missing entries.
 We've made a series of improvements to fetching data resulting in a performance boost, as well as filtering fixes. We also changed the way we detect when an ID is pasted into the field allowing you to select a related item quickly.
 CORS Configuration 🌐
-We've removed the module option, we had one too many ways to configure CORS and it was proving to be confusing.
-You should now exclusively configure module with the module option.
-Renamed module in Image and File Fields 🗄️
+We've removed the graphql.cors option, we had one too many ways to configure CORS and it was proving to be confusing.
+You should now exclusively configure cors with the server.cors option.
+Renamed src in Image and File Fields 🗄️
 ⚠️   Breaking Change
-The module field on the output of module and module fields has been renamed to module.
-Subsequently the module function on module and module has been renamed to module.
-Removed module 🚧
-The deprecated module from module has been removed.
-If you were still using it, you should switch to providing module to module or use module if you were providing module.
-The module functions will now also throw an error if an empty string is passed to module rather than silently returning what the module functions return, you must select at least one field or omit the module option to default to selecting the module.
+The src field on the output of image and file fields has been renamed to url.
+Subsequently the getSrc function on ImagesContext and FilesContext has been renamed to getUrl.
+Removed resolveFields 🚧
+The deprecated resolveFields from context.query has been removed.
+If you were still using it, you should switch to providing the query option to context.query or use context.db if you were providing false.
+The context.query functions will now also throw an error if an empty string is passed to query rather than silently returning what the context.db functions return, you must select at least one field or omit the query option to default to selecting the id.
 Internal Types Renamed ✏️
-We have updated module to module.
-The module properties on module, module and module have been renamed to module, this is intended to be internal but you may have depended on it, if you were using it, rename module to module.
-In addition the module property on module has been renamed to module and it will no longer exist at runtime like the other types.
+We have updated @graphql-ts/schema to 0.5.0.
+The __rootVal properties on ObjectType, InterfaceType and UnionType have been renamed to __source, this is intended to be internal but you may have depended on it, if you were using it, rename __rootVal to __source.
+In addition the fields property on InterfaceType has been renamed to __fields and it will no longer exist at runtime like the other types.
 GraphQL Schema Reorder 🛗
-We've made internal changes to the module field on the module type and the module field on the module type. This may result in re-ordering in your generated module file.
+We've made internal changes to the endSession field on the Mutation type and the keystone field on the Query type. This may result in re-ordering in your generated schema.graphql file.
 Miscellaneous Fixes ⚙️
 
-The module export of module has been removed.
-module no longer has a value if the session is invalid.
-module, module, module and module on the item view now render correctly when using module.
-Admin UI home page now respects module and won't show a plus button when create is disabled.
-Read-only arrays are now accepted where previously mutable arrays were required. Using module when writing an array and then passing it to various APIs in Keystone will now work.
-Fixed bug in module button for double sided relationships.
+The sessionSchema export of @keystone-next/keystone/session has been removed.
+context.session no longer has a value if the session is invalid.
+text, integer, float and decimal on the item view now render correctly when using ui.itemView.fieldMode: 'read'.
+Admin UI home page now respects ui.hideCreate and won't show a plus button when create is disabled.
+Read-only arrays are now accepted where previously mutable arrays were required. Using as const when writing an array and then passing it to various APIs in Keystone will now work.
+Fixed bug in LinkToRelatedItems button for double sided relationships.
 Updated minor typos in GraphQL errors.
 
 Prisma Update 🗃
-We've updated our Prisma dependency from module to module!
-Check out the link for more details.
+We've updated our Prisma dependency from 3.1.1 to 3.3.0!
+Check out the Prisma releases page for more details.
 Credits 💫
 
 
-Added a short plain-text display to module fields in the module view as well as a rendered document view in module. Thanks link!
+Added a short plain-text display to document fields in the List view as well as a rendered document view in CardValue. Thanks @oplik0!
 
 
-We now support extensions with numerical characters when generating safe filenames. Thanks link!
+We now support extensions with numerical characters when generating safe filenames. Thanks @Zlitus!
 
 
 Changelog
-You can view the link in the related PR (https://github.com/keystonejs/keystone/pull/6762) for this release."
+You can view the verbose change log in the related PR (https://github.com/keystonejs/keystone/pull/6762) for this release."
 30,"We're nearly at Gold Master status for the Keystone 6 GA release! Here's what's new:
 
 Fields Overhaul with lots of tweaks and additions 🚀
@@ -965,7 +1142,7 @@ Renaming of options for consistency 📛
 Apollo Server Upgrade to version 3 👩‍🚀
 Improved Error Messaging 📟
 Performance updates for a faster Admin UI 🏃‍♀️
-REST API Example using the new module inside module 👩‍🏫
+REST API Example using the new createContext inside extendExpressApp 👩‍🏫
 Other Notable Changes to be aware of 🛎️
 Prisma Update from 2.x to 3.x 🗃
 
@@ -973,16 +1150,21 @@ We've got further improvements to error messaging and performance to come in the
 
 Warning: This release contains breaking changes, please see below!
 
-module
+json
+""@keystone-next/auth"": ""33.0.0"",
+""@keystone-next/cloudinary"": ""8.0.0"",
+""@keystone-next/fields-document"": ""10.0.0"",
+""@keystone-next/keystone"": ""26.0.1"",
+""@keystone-next/session-store-redis"": ""5.0.0"",
 Upgrade Guide 👇
 Be sure to read the entire release notes below for everything you need to know about this new release.
 The main things to keep in mind are:
 
-module config is now static, if you have dynamic defaults, use the module hook
-module for fields is now module and we have new validation options such as module and module for some fields
+defaultValue config is now static, if you have dynamic defaults, use the resolveInput hook
+isRequired for fields is now validation: { isRequired } and we have new validation options such as min and max for some fields
 We've made it clearer which fields are nullable in the database and tweaked the defaults, you now have more control but may need to migrate your database (more details below)
-The module API has new arguments, and we've consolidated update and delete events into module and module
-module has been renamed to module
+The hooks API has new arguments, and we've consolidated update and delete events into beforeOperation and afterOperation
+context.lists has been renamed to context.query
 
 Fields Overhaul 🚀
 Keystone's field types have been given a big overhaul - including several breaking changes, read on to understand what has changed.
@@ -991,90 +1173,90 @@ Warning: Some of these API changes are breaking and you will be required to upda
 
 text
 
-module is now a static value
-module has moved to module
+defaultValue is now a static value
+isRequired has moved to validation.isRequired
 Now requires that the value has a length of at least one
-New module, module and module options
+New validation.length.min, validation.length.max and validation.match options
 
 float
 
-module is now a static number
-module has moved to module
-New module and module options
+defaultValue is now a static number
+isRequired has moved to validation.isRequired
+New validation.min and validation.max options
 
 integer
 
-module is now a static number or module
-module has moved to module
-New module and module options
+defaultValue is now a static number or { kind: 'autoincrement' }
+isRequired has moved to validation.isRequired
+New validation.min and validation.max options
 
-The module field has also been removed, use the integer field with a module of module.
+The autoIncrement field has also been removed, use the integer field with a defaultValue of { kind: 'autoincrement' }.
 decimal
 
-module is now a static number written as a string
-module has moved to module
-Now requires the input isn't module
-New module and module options
+defaultValue is now a static number written as a string
+isRequired has moved to validation.isRequired
+Now requires the input isn't NaN
+New validation.min and validation.max options
 
 timestamp
 
-module is now a static date time value in an ISO8601 string or module
-module has moved to module
+defaultValue is now a static date time value in an ISO8601 string or { kind: 'now' }
+isRequired has moved to validation.isRequired
 
-The field can also be automatically set to the current time on a create/update by setting module, this will add Prisma's module attribute to the field.
-The module field also now uses a custom GraphQL scalar type named module which requires inputs as full ISO8601 date-time strings such as module. Using module will give you a string in the correct format.
+The field can also be automatically set to the current time on a create/update by setting db.updatedAt: true, this will add Prisma's @updatedAt attribute to the field.
+The timestamp field also now uses a custom GraphQL scalar type named DateTime which requires inputs as full ISO8601 date-time strings such as ""2021-01-30T00:00:00.000Z"". Using new Date().toISOString() will give you a string in the correct format.
 select
 
-module has been renamed to module
-module is now a static value
-module has moved to module
+dataType has been renamed to type
+defaultValue is now a static value
+isRequired has moved to validation.isRequired
 
-The module can now also be cleared in the Admin UI when module is module.
+The select can now also be cleared in the Admin UI when ui.displayMode is segmented-control.
 password
 
-module has been removed
-module has moved to module
-module has moved to module
-module has moved to module
-New module and module options
+defaultValue has been removed
+isRequired has moved to validation.isRequired
+rejectCommon has moved to validation.rejectCommon
+minLength has moved to validation.length.min
+New validation.length.max and validation.match options
 
-module also must be module or above, though it still defaults to module.
-If module is outside of the range of module to module, an error will now be thrown instead of the previous behaviour of clamping the value to module to module and warning if it's below module.
+validation.length.min also must be 1 or above, though it still defaults to 8.
+If workFactor is outside of the range of 6 to 31, an error will now be thrown instead of the previous behaviour of clamping the value to 4 to 31 and warning if it's below 6.
 image
 
-Removed module
-Removed module
+Removed isRequired
+Removed defaultValue
 
-If you were using these options, the same behaviour can be re-created with the module and module hooks respectively.
+If you were using these options, the same behaviour can be re-created with the validateInput and resolveInput hooks respectively.
 file
 
-Removed module
-Removed module
+Removed isRequired
+Removed defaultValue
 
-If you were using these options, the same behaviour can be re-created with the module and module hooks respectively.
+If you were using these options, the same behaviour can be re-created with the validateInput and resolveInput hooks respectively.
 cloudinaryImage
 
-Removed module
-Removed module
+Removed isRequired
+Removed defaultValue
 
-If you were using these options, the same behaviour can be re-created with the module and module hooks respectively.
+If you were using these options, the same behaviour can be re-created with the validateInput and resolveInput hooks respectively.
 json
 
-Removed module
-module can no longer be dynamic in the module field
+Removed isRequired
+defaultValue can no longer be dynamic in the json field
 
-If you were using module, the same behaviour can be re-created with the module hook.
+If you were using isRequired, the same behaviour can be re-created with the validateInput hook.
 relationship
 
-Removed module
-Removed undocumented module option
+Removed defaultValue
+Removed undocumented withMeta option
 
-To re-create module, you can use module though note that if you're using autoincrement ids, you need to return the id as number, not a string like you would provide to GraphQL, e.g. module rather than module.
-If you were using module, please link with your use case.
+To re-create defaultValue, you can use resolveInput though note that if you're using autoincrement ids, you need to return the id as number, not a string like you would provide to GraphQL, e.g. { connect: { id: 1 } } rather than { connect: { id: ""1"" } }.
+If you were using withMeta: false, please open an issue with your use case.
 checkbox
-The module field is now non-nullable in the database, if you need three states, you should use the module field.
-The field no longer accepts dynamic default values and it will default to module unless a different module is specified.
-If you're using SQLite, Prisma will generate a migration that makes the column non-nullable and sets any rows that have null values to the module.
+The checkbox field is now non-nullable in the database, if you need three states, you should use the select field.
+The field no longer accepts dynamic default values and it will default to false unless a different defaultValue is specified.
+If you're using SQLite, Prisma will generate a migration that makes the column non-nullable and sets any rows that have null values to the defaultValue.
 If you're using PostgreSQL, Prisma will generate a migration but you'll need to modify it if you have nulls in a checkbox field. Keystone will say that the migration cannot be executed:
 ```
 ✨ Starting Keystone
@@ -1082,7 +1264,7 @@ If you're using PostgreSQL, Prisma will generate a migration but you'll need to 
 ✨ Generating GraphQL and Prisma schemas
 ✨ There has been a change to your Keystone schema that requires a migration
 ⚠️ We found changes that cannot be executed:
-• Made the column module on table module required, but there are 1 existing NULL values.
+• Made the column isAdmin on table User required, but there are 1 existing NULL values.
 ✔ Name of migration … make-is-admin-non-null
 ✨ A migration has been created at migrations/20210906053141_make_is_admin_non_null
 Please edit the migration and run keystone-next dev again to apply the migration
@@ -1092,7 +1274,7 @@ The generated migration will look like this:
 /*
   Warnings:
 
-Made the column module on table module required. This step will fail if there are existing NULL values in that column.
+Made the column isAdmin on table User required. This step will fail if there are existing NULL values in that column.
 
 */
 -- AlterTable
@@ -1100,13 +1282,16 @@ ALTER TABLE ""User"" ALTER COLUMN ""isAdmin"" SET NOT NULL,
 ALTER COLUMN ""isAdmin"" SET DEFAULT false;
 ```
 To make it set any null values to false in your database, you need to modify it so that it looks like this but with the table and column names replaced.
-module
+sql
+ALTER TABLE ""User"" ALTER COLUMN ""isAdmin"" SET DEFAULT false;
+UPDATE ""User"" SET ""isAdmin"" = DEFAULT WHERE ""isAdmin"" IS NULL;
+ALTER TABLE ""User"" ALTER COLUMN ""isAdmin"" SET NOT NULL;
 document
-The module field is now non-nullable in the database. The field no longer has module or module options.
-The same behaviour can be re-created with the module and module hooks respectively.
-The field will default to module. The output type has also been renamed to module
+The document field is now non-nullable in the database. The field no longer has defaultValue or isRequired options.
+The same behaviour can be re-created with the validateInput and resolveInput hooks respectively.
+The field will default to [{ ""type"": ""paragraph"", ""children"": [{ ""text"": """" }] }]. The output type has also been renamed to ListKey_fieldKey_Document
 If you're using SQLite, Prisma will generate a migration that makes the column non-nullable and sets any rows that have null values to an empty paragraph.
-If you're using PostgreSQL, Prisma will generate a migration but you'll need to modify it if you have nulls in a module field.
+If you're using PostgreSQL, Prisma will generate a migration but you'll need to modify it if you have nulls in a document field.
 Keystone will say that the migration cannot be executed:
 ```
 ✨ Starting Keystone
@@ -1114,7 +1299,7 @@ Keystone will say that the migration cannot be executed:
 ✨ Generating GraphQL and Prisma schemas
 ✨ There has been a change to your Keystone schema that requires a migration
 ⚠️ We found changes that cannot be executed:
-• Made the column module on table module required, but there are 1 existing NULL values.
+• Made the column content on table Post required, but there are 1 existing NULL values.
 ✔ Name of migration … make_document_field_non_null
 ✨ A migration has been created at migrations/20210915050920_make_document_field_non_null
 Please edit the migration and run keystone-next dev again to apply the migration
@@ -1124,7 +1309,7 @@ The generated migration will look like this:
 /*
   Warnings:
 
-Made the column module on table module required. This step will fail if there are existing NULL values in that column.
+Made the column content on table Post required. This step will fail if there are existing NULL values in that column.
 
 */
 -- AlterTable
@@ -1132,48 +1317,51 @@ ALTER TABLE ""Post"" ALTER COLUMN ""content"" SET NOT NULL,
 ALTER COLUMN ""content"" SET DEFAULT E'[{""type"":""paragraph"",""children"":[{""text"":""""}]}]';
 ```
 To make it set any null values to an empty paragraph in your database, you need to modify it so that it looks like this but with the table and column names replaced.
-module
+sql
+ALTER TABLE ""Post"" ALTER COLUMN ""content"" SET DEFAULT E'[{""type"":""paragraph"",""children"":[{""text"":""""}]}]';
+UPDATE ""Post"" SET ""content"" = DEFAULT WHERE ""content"" IS NULL;
+ALTER TABLE ""Post"" ALTER COLUMN ""content"" SET NOT NULL;
 general
-module, module, module, module, module, module, module can be made non-nullable at the database-level with the module option which defaults to module, except for module which defaults to module.
-All fields above except module can also have:
+text, float, integer, decimal, timestamp, select, password can be made non-nullable at the database-level with the isNullable option which defaults to true, except for text which defaults to false.
+All fields above except password can also have:
 
 
-module set if the field has module and you have no read access control and you don't intend to add any in the future, it will make the GraphQL output field non-nullable.
+graphql.read.isNonNull set if the field has isNullable: false and you have no read access control and you don't intend to add any in the future, it will make the GraphQL output field non-nullable.
 
 
-module set if you have no create access control and you don't intend to add any in the future, it will make the GraphQL create input field non-nullable.
+graphql.create.isNonNull set if you have no create access control and you don't intend to add any in the future, it will make the GraphQL create input field non-nullable.
 
 
-Keep in mind, module is now link.
+Keep in mind, checkbox is now always non-nullable.
 Hook Updates 🪝
-We've consolidated the module/module and module/module hooks into module and module.
+We've consolidated the beforeChange/beforeDelete and afterChange/afterDelete hooks into beforeOperation and afterOperation.
 Additionaly, we've renamed:
 
 
-module for access control functions to module
+originalInput for access control functions to inputData
 
 
-module for hook functions to module
+originalInput for hook functions to inputData
 
 
-module for all hooks (except module) to module
+existingItem for all hooks (except afterOperation) to item
 
 
-module for module to module
+existingItem for afterOperation to originalItem
 
 
-module for module to module
+updatedItem for afterOperation to item
 
 
-See the link for a complete reference for the updated API!
+See the Hooks API docs for a complete reference for the updated API!
 Removals 🚫
 Some unused return types and unused values from enum definitions have been removed:
 
-module and module only ever return module, so now have return types of module.
-module no longer has a module value.
-module and module no longer have the values module, module, module, or module.
+sendUserPasswordResetLink and sendUserMagicAuthLink only ever return null, so now have return types of Boolean.
+UserAuthenticationWithPasswordFailure no longer has a code value.
+MagicLinkRedemptionErrorCode and PasswordResetRedemptionErrorCode no longer have the values IDENTITY_NOT_FOUND, MULTIPLE_IDENTITY_MATCHES, TOKEN_NOT_SET, or TOKEN_MISMATCH.
 
-If you were using the module function, you can also remove the call to module and pass the lists directly to the module property.
+If you were using the createSchema function, you can also remove the call to createSchema and pass the lists directly to the lists property.
 Before:
 ```
 import { config, createSchema, list } from '@keystone-next/keystone';
@@ -1192,14 +1380,14 @@ config({
   },
  })
 ```
-We've removed the deprecated module option. Please use module to indicate the database provider for your system.
-Finally, the internal module variable which was previously hardcoded to module to protect user data, there are no immediate plans to implement this as a configurable option.
+We've removed the deprecated config.db.adapter option. Please use config.db.provider to indicate the database provider for your system.
+Finally, the internal protectIdentities variable which was previously hardcoded to true to protect user data, there are no immediate plans to implement this as a configurable option.
 Renames 📇
-The API module has been renamed to module, and module has been renamed to module.
-The module argument to module to module for consistency with module.
-When using the experimental option module, the module module now exports module rather than module.
-Renamed module to module in the virtual field options. The virtual field now checks if module is required for the GraphQL output type, and throws an error if it is missing. If you don't want want the Admin UI to fetch the field, you can set module and module to module instead of providing module.
-Also, we've moved the module export of module to module.
+The API context.lists has been renamed to context.query, and context.db.lists has been renamed to context.db.
+The skipAccessControl argument to createContext to sudo for consistency with context.sudo().
+When using the experimental option config.experimental.generateNodeAPI, the api module now exports query rather than lists.
+Renamed graphQLReturnFragment to ui.query in the virtual field options. The virtual field now checks if ui.query is required for the GraphQL output type, and throws an error if it is missing. If you don't want want the Admin UI to fetch the field, you can set ui.itemView.fieldMode and ui.listView.fieldMode to 'hidden' instead of providing ui.query.
+Also, we've moved the graphql export of @keystone-next/keystone/types to @keystone-next/keystone.
 Improved Error Messaging 📟
 Error messages have been improved across the board, in summary:
 
@@ -1215,59 +1403,59 @@ Improved error messages when returning bad filters from filter access control
 
 Performance 🚅
 Field Mode
-We've optimised the module field mode fetching - we now only fetch the item once to determine the field modes rather than once per field.
-The Admin UI will also skip fetching fields that have a statically set module on the module.
-The module argument to the module GraphQL field can now be omitted which will make module return null when there isn't a static field mode.
-The module also no longer uses a sudo context when fetching the item in the module. Previously, if someone had access to the Admin UI(module) and a field had a module function that used the module argument, someone could bypass access control to determine whether or not an item with a given id exists.
+We've optimised the itemView field mode fetching - we now only fetch the item once to determine the field modes rather than once per field.
+The Admin UI will also skip fetching fields that have a statically set itemView.fieldMode: 'hidden' on the itemView.
+The id argument to the KeystoneAdminUIFieldMeta.itemView GraphQL field can now be omitted which will make KeystoneAdminUIFieldMetaItemView.fieldMode return null when there isn't a static field mode.
+The itemView also no longer uses a sudo context when fetching the item in the KeystoneAdminUIFieldMetaItemView.fieldMode. Previously, if someone had access to the Admin UI(ui.isAccessAllowed) and a field had a itemView.fieldMode function that used the item argument, someone could bypass access control to determine whether or not an item with a given id exists.
 Query Generation Performance
 Query generation performance has been improved when querying single relationships without filter-based access control.
 When resolving related items, we often have a foreign key available to us that we can use to help optimise the subsequent related item query. If, on top of this, there are no filter-based access control rules in place, then we can use the Prisma findUnique operation, which will group all the operations into a single database query. This solves the GraphQL N+1 query problem in this specific instance.
 REST API Example 👩‍🏫
-This release also adds module to the module function giving you access to the full context API from Keystone.
-In a link we demonstate how to create REST endpoints by extending Keystone's express app and using the Query API to execute queries against the schema.
-image
-image
+This release also adds createContext to the extendExpressApp function giving you access to the full context API from Keystone.
+In a new example we demonstate how to create REST endpoints by extending Keystone's express app and using the Query API to execute queries against the schema.
 
-Note:  You can find all of our examples in our link on GitHub.
+
+
+Note:  You can find all of our examples in our examples folder on GitHub.
 
 Other Notable Changes 🛎️
 
 
-The module and module fields are no longer statically resolvable and will now take into account the context/session. This also means module and module are no longer accessible on module, they can be fetched through GraphQL if you need them in the Admin UI.
+The KeystoneAdminUIFieldMeta.isOrderable and KeystoneAdminUIFieldMeta.isFilterable fields are no longer statically resolvable and will now take into account the context/session. This also means isOrderable and isFilterable are no longer accessible on useList().fields[fieldKey].isOrderable/isFilterable, they can be fetched through GraphQL if you need them in the Admin UI.
 
 
-The module and module mutations now always return module instead of always returning module
+The sendItemMagicAuthLink and sendItemPasswordResetLink mutations now always return true instead of always returning null
 
 
-Added support for dynamic module and module field config values. If a function is provided for these config option, it will be dynamically evaluated each time the field is used for filtering and ordering, and an error will be returned if the function returns module.
+Added support for dynamic isFilterable and isOrderable field config values. If a function is provided for these config option, it will be dynamically evaluated each time the field is used for filtering and ordering, and an error will be returned if the function returns false.
 
 
 Apollo Server Upgrade 👩‍🚀
-Apollo Server has had a major upgrade to link.
+Apollo Server has had a major upgrade to Version 3.
 The Apollo documentation contains a full list of breaking changes introduced by this update.
-You can configure the Apollo Server provided by Keystone using the link configuration option.
+You can configure the Apollo Server provided by Keystone using the graphql.apolloConfig configuration option.
 The most prominent change for most users will be that the GraphQL Playground has been replaced by the Apollo Sandbox.
-If you prefer to keep the GraphQL Playground, you can configure your server by link.
+If you prefer to keep the GraphQL Playground, you can configure your server by following these instructions.
 Prisma Update 🗃
-We've updated our Prisma dependency from module to module!
+We've updated our Prisma dependency from 2.30.2 to 3.1.1!
 Note that Keystone continues to use the ""binary"" query engine, rather than the new ""node-API"" query engine, which is now the Prisma default. We are still performing tests to ensure that the node-API query engine will work well with Keystone.
-Check out the link for more details on this major update.
+Check out the Prisma releases page for more details on this major update.
 Credits 💫
 
 
-Exported Field types to help in updating contrib packages. Thanks link!
+Exported Field types to help in updating contrib packages. Thanks @gautamsi!
 
 
-Fixed remaining windows issue where it creates invalid import path. This removes some duplicate code which caused this. Thanks link!
+Fixed remaining windows issue where it creates invalid import path. This removes some duplicate code which caused this. Thanks @gautamsi!
 
 
-Added support for link via the module configuration option. Thanks link!
+Added support for Prisma preview features via the config.db.prismaPreviewFeatures configuration option. Thanks @Nikitoring!
 
 
 Changelog
-You can view the link in the related PR (https://github.com/keystonejs/keystone/pull/6483) for this release."
+You can view the verbose change log in the related PR (https://github.com/keystonejs/keystone/pull/6483) for this release."
 31,"What's New
-Big strides towards our module release for Keystone 6 in the very near future⌛  this release includes:
+Big strides towards our General Availability release for Keystone 6 in the very near future⌛  this release includes:
 
 New & Improved Access Control API ✨ 
 Customisable Express App 🗺️
@@ -1279,88 +1467,114 @@ Omit GraphQL Operations 🚦
 And more...
 
 ⚠️   This release contains breaking changes, please see below!
-module
+json
+""@keystone-next/admin-ui-utils"": ""6.0.0"",
+""@keystone-next/auth"": ""32.0.0"",
+""@keystone-next/cloudinary"": ""7.0.0"",
+""@keystone-next/fields"": ""15.0.0"",
+""@keystone-next/fields-document"": ""9.0.0"",
+""@keystone-next/keystone"": ""25.0.1"",
+""@keystone-next/session-store-redis"": ""4.0.0"",
+""@keystone-next/testing"": ""2.0.0"",
+""@keystone-next/types"": ""25.0.0"",
+""@keystone-next/utils"": ""2.0.0"",
 New & Improved Access Control API ✨
 ⚠️   This includes breaking changes which impact the security of all Keystone systems.
 Access Control is now easier to program, and makes it harder to introduce security gaps in your system:
 
 The static approach to access control has been replaced. Now access control never effects the operations in your GraphQL API.
-Keystone used to return an module error from a query if an item couldn't be found, or explicitly had access denied. The improved API never returns that error type on a query. 
+Keystone used to return an access denied error from a query if an item couldn't be found, or explicitly had access denied. The improved API never returns that error type on a query. 
 Access rules are now more explicit, and support fewer variations so you're less likely to introduce security gaps. They're also easier to read, write, and maintain.
 
 How to upgrade
 
-Follow the instructions in our link.
-Review our updated link docs.
+Follow the instructions in our Access Control upgrade guide.
+Review our updated Access Control API docs.
 
 
-💡 If you get stuck or have questions, reach out to us in the link to get the help you need.
+💡 If you get stuck or have questions, reach out to us in the Keystone community slack to get the help you need.
 
-image
+
 Faster Startup 🚀
 The GraphQL API endpoint now starts up significantly faster in development!
 Often when you're working with the GraphQL API you'll be waiting around for it to start up, now you don't need to wait for the Admin UI to be ready before hitting the server. The process of creating of the Express Server + GraphQL API has been split from the Admin UI, which significantly speeds up boot time for the GraphQL API in development! 🎉
 
-💡 To facilitate this, module no longer includes the step of creating the Admin UI Middleware, which changes its signature. module is now also exported from module.
+💡 To facilitate this, createExpressServer no longer includes the step of creating the Admin UI Middleware, which changes its signature. createAdminUIMiddleware is now also exported from @keystone-next/keystone/system.
 
 Next.js 11 ⚙️
-We've updated the underlying Next.js server that Keystone uses under the hood from version module to module, which includes optimisations to improve cold startup time.
+We've updated the underlying Next.js server that Keystone uses under the hood from version 10 to 11, which includes optimisations to improve cold startup time.
 
 💡 If you've been using a custom Babel config, you'll need to remove this as it’s no longer supported in Next.js 11.
 
 Omit GraphQL Operations 🚦
-You can now add module to list and field level configuration to control which types and operations are excluded from the GraphQL API. This option accepts either module, or an array of the values read, create, or update. If you specify module then the field will be excluded from all input and output types in the GraphQL API. If you provide an array of read, create, or update the field will be omitted from the corresponding input and output types in the GraphQL API.
-module
+You can now add graphql.omit to list and field level configuration to control which types and operations are excluded from the GraphQL API. This option accepts either true, or an array of the values read, create, or update. If you specify true then the field will be excluded from all input and output types in the GraphQL API. If you provide an array of read, create, or update the field will be omitted from the corresponding input and output types in the GraphQL API.
+User: list({
+  fields: {
+    name: text({
+      graphql: {
+        omit: ['read', 'create', 'update'],
+      }
+    }),
+  },
+})
 Customisable Express App 🗺️
-A long awaited feature, the Express App that Keystone creates is now customisable with the new module option!
+A long awaited feature, the Express App that Keystone creates is now customisable with the new extendExpressApp option!
 
 Add your own custom server routes
 Host two apps on separate ports
 And more...
 
-Check out the link for more information.
+Check out the Server Config docs for more information.
 Package Shuffle 💃
-We've moved some packages around to make it easier for you to keep your project in sync with Keystone releases, in order to prevent mismatching versions of Keystone packages. The exports from the following packages now reside inside the module package:
-module
+We've moved some packages around to make it easier for you to keep your project in sync with Keystone releases, in order to prevent mismatching versions of Keystone packages. The exports from the following packages now reside inside the @keystone-next/keystone/* package:
+@keystone-next/admin-ui-utils
+@keystone-next/fields
+@keystone-next/testing
+@keystone-next/types
+@keystone-next/utils
 For example if you had:
-module
+import {
+  relationship,
+} from '@keystone-next/fields';
 This is now:
-module
+import {
+  relationship,
+} from '@keystone-next/keystone/fields';
 
-💡 For any affected package, you'll need to change your import references and remove deprecated packages from your module as they will no longer be updated.
+💡 For any affected package, you'll need to change your import references and remove deprecated packages from your package.json as they will no longer be updated.
 
 Key Changes 🔑
-module now module for unique fields 🗂
-Unique fields marked as module are now represented as module. This ensures that regular indexes and unique indexes aren't enabled at the same time.
-module accepts the following options as per the link -
+isUnique now isIndex for unique fields 🗂
+Unique fields marked as isUnique: true are now represented as isIndexed: 'unique'. This ensures that regular indexes and unique indexes aren't enabled at the same time.
+isIndexed accepts the following options as per the Fields API docs -
 
-If module then the field will be indexed by the database.
-If module then all values of the field must be unique.
+If true then the field will be indexed by the database.
+If 'unique' then all values of the field must be unique.
 
-module now module for field hooks 🪝
-The module argument to field hooks has been renamed to module. This makes the naming consistent with the Access Control APIs.
-module now module for virtual and custom fields 🥽
-If you've using Virtual fields or custom field types, or if constructing GraphQL types, we used to export module, this has been changed to module.
+fieldPath now fieldKey for field hooks 🪝
+The fieldPath argument to field hooks has been renamed to fieldKey. This makes the naming consistent with the Access Control APIs.
+schema now graphql for virtual and custom fields 🥽
+If you've using Virtual fields or custom field types, or if constructing GraphQL types, we used to export schema, this has been changed to graphql.
 Disabled filtering and ordering (by default) 🙅‍♀️
-Filtering and ordering is no longer enabled by default, as they have the potential to expose data which would otherwise be protected by access control. To enable filtering and ordering you can set module and module on specific fields, or set module and module at the list level.
-Check out our link for all field level options.
+Filtering and ordering is no longer enabled by default, as they have the potential to expose data which would otherwise be protected by access control. To enable filtering and ordering you can set isFilterable: true and isOrderable: true on specific fields, or set defaultIsFilterable: true and defaultIsOrderable: true at the list level.
+Check out our Fields API docs for all field level options.
 Introspection 🔎
-You can now enable module in the Apollo Server config. Introspection enables you to query a GraphQL server for information about the underlying schema. Check out the link for more information.
+You can now enable introspection in the Apollo Server config. Introspection enables you to query a GraphQL server for information about the underlying schema. Check out the GraphQL Config docs for more information.
 GraphQL Path Customisation 🚏
-The GraphQL endpoint accessible by default at module can now be customised with the new option module. You can find this and all other options in our link.
+The GraphQL endpoint accessible by default at /api/graphql can now be customised with the new option config.graphql.path. You can find this and all other options in our GraphQL API docs.
 Admin UI Improvements 🛠️
 The Navigation component has been updated to show docs and playground links irrespective of authentication. The triple-dot menu is now available in the Admin UI even if authentication isn't being used.
-image
+
 Additionally, performance has been improved of the create item modal when many fields are configured. Thanks to Sam Lam for the heads up!
 Prisma Update ⬆️
-Updated Prisma dependencies from module to module, check out the link for more details.
+Updated Prisma dependencies from 2.29.0 to 2.30.2, check out the Prisma releases page for more details.
 Credits 💫
 
-Fixed an issue in the Relationship field when using display mode module, thanks to link!
+Fixed an issue in the Relationship field when using display mode count, thanks to @gautamsi!
 Sam Lam for alerting us to performance issues with Admin UI create item modal.
 
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 
 View verbose release notes
 
@@ -1964,7 +2178,7 @@ View verbose release notes
 
 -   [#6432](https://github.com/keystonejs/keystone/pull/6432) [`0a189d5d0`](https://github.com/keystonejs/keystone/commit/0a189d5d0e618ee5598e9beaccea0290d2a3f8d9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated `typescript` dependency to `^4.4.2`."
 32,"What's New
-A major milestone in the path to a module status for Keystone 6, this release includes:
+A major milestone in the path to a General Availability status for Keystone 6, this release includes:
 
 A new and improved GraphQL API 🎉 ✨  
 Enhancements to Custom Admin UI Pages
@@ -1972,35 +2186,47 @@ Better deletion notifications
 And more…
 
 ⚠️    This release contains breaking changes, please see below!
-module
+json
+""@keystone-ui/notice"": ""4.0.1"",
+""@keystone-ui/segmented-control"": ""4.0.2"",
+""@keystone-ui/toast"": ""4.0.2"",
+""@keystone-next/admin-ui-utils"": ""5.0.6"",
+""@keystone-next/auth"": ""31.0.0"",
+""@keystone-next/cloudinary"": ""6.0.6"",
+""@keystone-next/fields"": ""14.0.0"",
+""@keystone-next/fields-document"": ""8.0.0"",
+""@keystone-next/keystone"": ""24.0.0"",
+""@keystone-next/testing"": ""1.1.1"",
+""@keystone-next/types"": ""24.0.0"",
+""@keystone-next/utils"": ""1.0.4"",
 A new & improved GraphQL API ✨
 We’ve made the experience of working with Keystone’s GraphQL API easier to program and reason about:
 
 Queries: the names of top-level queries are now easier to understand. We also removed deprecated and unused legacy features.
 Filters: the arguments used in queries have been updated to accept a filter object for each field, rather than having all the filter options available at the top level.
 Mutations: all generated CRUD mutations have the same names and return types, but their inputs have changed.
-Input Types: we’ve updated the input types used for relationship fields in module and module operations, removing obsolete options and making the syntax between the two operations easier to differentiate.
+Input Types: we’ve updated the input types used for relationship fields in update and create operations, removing obsolete options and making the syntax between the two operations easier to differentiate.
 
 Upgrade guidance
-We've link to the improvements we've made, and it includes link. Be sure to check it out!
+We've written a complete guide to the improvements we've made, and it includes a checklist of the steps you need to take to upgrade your Keystone projects. Be sure to check it out!
 
-💡 While there are a lot of changes to this API, if you approach the upgrade process systematically your experience should be pretty smooth. If you get stuck or have questions, reach out to us in the link to get the help you need.
+💡 While there are a lot of changes to this API, if you approach the upgrade process systematically your experience should be pretty smooth. If you get stuck or have questions, reach out to us in the Keystone community slack to get the help you need.
 
-image
+
 Custom Admin UI Pages 📃
-Our link guide has been expanded, with an example to make your custom pages look more like the Admin UI, as well as adding links to your custom pages from the Admin UI Navigation!
-image
+Our Custom Admin UI Pages guide has been expanded, with an example to make your custom pages look more like the Admin UI, as well as adding links to your custom pages from the Admin UI Navigation!
+
 Improved Deletion Notifications 🗑
 When items are deleted via the Admin UI, we now display all the items that were successfully deleted, and any that failed, instead of displaying multiple notifications without any context.
-image
+
 Deeper GraphQL Errors 🚧
-A module option has been added, which can be used to control whether debug information such as stack traces are included in the errors returned by the GraphQL API.
+A config.graphql.debug option has been added, which can be used to control whether debug information such as stack traces are included in the errors returned by the GraphQL API.
 Prisma Update ⬆️
-Updated Prisma dependencies from module to module, check out the link for more details.
+Updated Prisma dependencies from 2.27.0 to 2.29.0, check out the Prisma releases page for more details.
 Credits 💫
-Added option for module token auth when using session, thanks to link!
+Added option for Bearer token auth when using session, thanks to @gautamsi!
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 
 View verbose release notes
 
@@ -2759,43 +2985,73 @@ View verbose release notes
     -   @keystone-next/types@24.0.0"
 33,"What's New
 Custom navigation, pages and logo in this big Admin UI themed release! 🎛️ 
-module
+sh
+""@keystone-ui/tooltip"": ""4.0.1"",
+""@keystone-next/admin-ui-utils"": ""5.0.5"",
+""@keystone-next/auth"": ""30.0.0"",
+""@keystone-next/cloudinary"": ""6.0.5"",
+""@keystone-next/fields"": ""13.0.0"",
+""@keystone-next/fields-document"": ""7.0.3"",
+""@keystone-next/keystone"": ""23.0.2"",
+""@keystone-next/testing"": ""1.1.0"",
+""@keystone-next/types"": ""23.0.0"",
+""@keystone-next/utils"": ""1.0.3"",
 Custom Admin UI Navigation 🚏
 You can now create your own custom navigation component with custom routes to be rendered in the Admin UI.
-Check out our detailed link for all the details!
-image
+Check out our detailed Custom Admin UI Navigation guide for all the details!
+
 Custom Admin UI Pages 📃
-Take things a step further with custom pages. As the Admin UI is built on top of Next.js, it exposes the same module directory for adding custom pages.
+Take things a step further with custom pages. As the Admin UI is built on top of Next.js, it exposes the same /pages directory for adding custom pages.
 ℹ️ In the near future you'll be able to directly embed pages within the Keystone Admin UI itself, stay tuned!
-Read our new link for more details.
-image
+Read our new Custom Admin UI Pages guide for more details.
+
 Custom Admin UI Logo 🚩
 Wait, theres more. You can also replace the default Admin UI logo with your own brand assets. ✨ 
-Dive into our link to find out how.
-image
+Dive into our Custom Admin UI Logo guide to find out how.
+
 Health Check 💙
-We've added an optional module endpoint to Keystone's express server. You can use this endpoint to ensure your Keystone instance is up and running using website monitoring solutions.
-Enable it by setting module, by default it will respond with module.
+We've added an optional /_healthcheck endpoint to Keystone's express server. You can use this endpoint to ensure your Keystone instance is up and running using website monitoring solutions.
+Enable it by setting config.server.healthCheck: true, by default it will respond with { status: 'pass', timestamp: Date.now() }.
 You can also specify a custom path and JSON data:
-module
-Or use a function for the module config to return real-time information:
-module
+js
+  config({
+    server: {
+      healthCheck: {
+        path: ""/my-health-check"",
+        data: { status: ""healthy"" },
+      },
+    },
+  });
+Or use a function for the data config to return real-time information:
+js
+  config({
+    server: {
+      healthCheck: {
+        path: ""/my-health-check"",
+        data: () => ({
+          status: ""healthy"",
+          timestamp: Date.now(),
+          uptime: process.uptime(),
+        }),
+      },
+    },
+  });
 Prisma Update ⬆️
-Updated Prisma dependencies to module, check out the link for more details.
+Updated Prisma dependencies to 2.27.0, check out the Prisma releases page for more details.
 Credits 💫
 
 
-Fixed virtual field rendering of module & module values thanks to link!
+Fixed virtual field rendering of false & 0 values thanks to @ChuckJonas!
 
 
-Added module to module on module module to better allow custom module thanks to link!
+Added / to list.path on HomePage ListCard to better allow custom basePath thanks to @borisno2!
 
 
-Changed symlink generation to use relative path instead of absolute which solves running project in docker when mapping volume, thanks to link!
+Changed symlink generation to use relative path instead of absolute which solves running project in docker when mapping volume, thanks to @gautamsi!
 
 
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -3006,35 +3262,47 @@ View verbose release notes
 -   [#6145](https://github.com/keystonejs/keystone/pull/6145) [`2de1615a0`](https://github.com/keystonejs/keystone/commit/2de1615a0959076a9a2c6f70c8b22aca8f2f8779) Thanks [@gwyneplaine](https://github.com/gwyneplaine)! - Initial version of the custom-admin-ui-logo example."
 34,"What's New
 More examples, types, and UI rendering tweaks as we push forward towards a general availability release! 🚀
-module
+sh
+""@keystone-ui/core"": ""3.1.1"",
+""@keystone-next/admin-ui-utils"": ""5.0.4"",
+""@keystone-next/auth"": ""29.0.0"",
+""@keystone-next/cloudinary"": ""6.0.4"",
+""@keystone-next/document-renderer"": ""4.0.0"",
+""@keystone-next/fields"": ""12.0.0"",
+""@keystone-next/fields-document"": ""7.0.2"",
+""@keystone-next/keystone"": ""22.0.0"",
+""@keystone-next/session-store-redis"": ""3.0.2"",
+""@keystone-next/testing"": ""1.0.2"",
+""@keystone-next/types"": ""22.0.0"",
+""@keystone-next/utils"": ""1.0.2"",
 New Examples 📖
 Custom Field Views
-We have a link, demonstrating how to create a custom field view for a JSON field. This example allows users to add, edit and remove navigation items from a list:
-image
+We have a new example for custom field views, demonstrating how to create a custom field view for a JSON field. This example allows users to add, edit and remove navigation items from a list:
+
 Inline Relationship in Document Field
-Rendering an inline relationship for the document field has been added to the existing link as well as our link:
-image
-Be sure to check out all the link, with more to come.
+Rendering an inline relationship for the document field has been added to the existing example project as well as our docs page:
+
+Be sure to check out all the examples, with more to come.
 Document Rendering Improvements 📇
 If an item referenced in a document field is deleted from Keystone, the document field now handles this gracefully. Before an error would be returned when querying the field, which prevents the user from being able to manage the issue.
-This release fixes this to simply return module for the missing item. This also covers the behavior for when a user doesn't have read access for an item.
+This release fixes this to simply return null for the missing item. This also covers the behavior for when a user doesn't have read access for an item.
 UI Fixes ⚙️
 A variety of UI fixes are in this release when rendering fields in the Admin UI:
 
-The value of module passed to the inline relationship renderer now matches the data returned by the GraphQL query.
-Falsey values of module are no longer set to module and falsey values of module are no longer set to module.
+The value of data passed to the inline relationship renderer now matches the data returned by the GraphQL query.
+Falsey values of data.label are no longer set to data.id and falsey values of data.data are no longer set to {}.
 Fixed the relationship name not being passed to the inline relationship renderer.
-Fixed confusing error when providing fields that don't exist to module, module and module.
-Fixed module field with module not using labels for related items in the cell view.
+Fixed confusing error when providing fields that don't exist to ui.cardFields, ui.inlineCreate.fields and ui.inlineEdit.fields.
+Fixed relationship field with displayMode: 'cards' not using labels for related items in the cell view.
 
-Types for module, module and module 🪢
-We've added generated types for module, module and module.
-You can now import these from module (instead of module) to get types that are pre-bound to your project's schema.
+Types for KeystoneContext, KeystoneListsAPI and KeystoneDbAPI 🪢
+We've added generated types for KeystoneContext, KeystoneListsAPI and KeystoneDbAPI.
+You can now import these from .keystone/types (instead of @keystone-next/types) to get types that are pre-bound to your project's schema.
 Housekeeping 🧹
-Another update for Prisma, version module, check out the link for more details.
-Our module folder has moved over to module as part of our push to a general availability release in the near future!
+Another update for Prisma, version 2.26.0, check out the Prisma releases page for more details.
+Our packages-next folder has moved over to packages as part of our push to a general availability release in the near future!
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -3454,12 +3722,18 @@ View verbose release notes
     -   @keystone-next/fields@12.0.0
     -   @keystone-next/keystone@22.0.0"
 35,"What's New
-We've fixed an issue with module and module fields. 🔥
-module
+We've fixed an issue with cloudinaryImage and relationship fields. 🔥
+sh
+""@keystone-next/auth"": ""28.0.1"",
+""@keystone-next/cloudinary"": ""6.0.3"",
+""@keystone-next/fields"": ""11.0.3"",
+""@keystone-next/keystone"": ""21.0.2"",
+""@keystone-next/session-store-redis"": ""3.0.1"",
+""@keystone-next/types"": ""21.0.1"",
 Field Options Hotfix 🔥
-We've discovered an issue where module and module fields were not passing through access control, hooks, ui and graphql options to Keystone, this is now resolved!
+We've discovered an issue where cloudinaryImage and relationship fields were not passing through access control, hooks, ui and graphql options to Keystone, this is now resolved!
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -3593,24 +3867,49 @@ View verbose release notes
     -   @keystone-next/fields@11.0.3
     -   @keystone-next/keystone@21.0.2"
 36,"What's New
-The ID Field option has been revamped with module, module and module options! 🤹
-module
+The ID Field option has been revamped with cuid, uuid and autoincrement options! 🤹
+sh
+""@keystone-next/admin-ui-utils"": ""5.0.3"",
+""@keystone-next/auth"": ""28.0.0"",
+""@keystone-next/cloudinary@"": ""6.0.2"",
+""@keystone-next/fields"": ""11.0.2"",
+""@keystone-next/fields-document"": ""7.0.1"",
+""@keystone-next/keystone"": ""21.0.1"",
+""@keystone-next/testing"": ""1.0.1"",
+""@keystone-next/types"": ""21.0.0"",
+""@keystone-next/utils"": ""1.0.1"",
 New ID Fields 🧮
-We've replaced the module list configuration option with a more constrained option, module.
-This option accepts an object with a module property with a value of:
+We've replaced the idField list configuration option with a more constrained option, db.idField.
+This option accepts an object with a kind property with a value of:
 
-module
-module
-module
+cuid
+uuid
+autoincrement
 
-The default behaviour has changed from using module to using module.
-To keep the current behaviour, you should set module at module in your top level config.
-module can be set on either the top level module object:
-module
+The default behaviour has changed from using autoincrement to using cuids.
+To keep the current behaviour, you should set { kind: 'autoincrement' } at db.idField in your top level config.
+db.idField can be set on either the top level config object:
+config({
+  db: {
+    idField: { kind: 'uuid' }
+  },
+  lists,
+});
 Or on individual lists:
-module
+config({
+  db,
+  lists: createSchema({
+    User: list({
+      db: {
+        idField: { kind: 'uuid' },
+      },
+      fields: {
+        name: text({ isRequired: true }),
+      },
+    }),
+});
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -3897,27 +4196,40 @@ View verbose release notes
     -   @keystone-next/testing@1.0.1"
 37,"What's New
 An assortment of good things in this release! A new package to help test the behaviour of your GraphQL API, a document field example, better error messages, accessibility updates and another Prisma update! 🍱
-module
+sh
+""@keystone-ui/fields"": ""4.1.2"",
+""@keystone-ui/options"": ""4.0.1"",
+""@keystone-ui/pill"": ""5.0.0"",
+""@keystone-ui/popover"": ""4.0.2"",
+""@keystone-ui/toast"": ""4.0.1"",
+""@keystone-next/cloudinary"": ""6.0.1"",
+""@keystone-next/fields"": ""11.0.1"",
+""@keystone-next/keystone"": ""20.0.1"",
+""@keystone-next/testing"": ""1.0.0"",
+""@keystone-next/types"": ""20.0.1"",
+""@keystone-next/utils"": ""1.0.0"",
 Testing Package 🧪
-We’ve shipped a new package called module to help you write tests for your GraphQL API!
-Check out the guide on the link for more details.
+We’ve shipped a new package called @keystone-next/testing to help you write tests for your GraphQL API!
+Check out the guide on the Keystone website for more details.
 Document Field Example ✍️
-We have a link which covers the basic use case of configuring the toolbar, rendering the document field in a front end, and providing custom renderers for the built in data.
+We have a new example project for the document field which covers the basic use case of configuring the toolbar, rendering the document field in a front end, and providing custom renderers for the built in data.
 Another example showing advanced use cases is in-progress and will be available soon!
 Error Messages ❗
-GraphQL error messages are far more helpful when running queries. You will now get relevant error messages instead of getting module back.
-Thanks link for contributing this fix!
-Improved Types for module 📜
-⚠️ We've tweaked module and module APIs on module to have improved types. If you're using the generated module type like this:
-module
-You will have to change it to use module like this:
-module
+GraphQL error messages are far more helpful when running queries. You will now get relevant error messages instead of getting Cannot assign to read only property 'path' of object '#<Object>'"" back.
+Thanks @tjbp for contributing this fix!
+Improved Types for KeystoneContext 📜
+⚠️ We've tweaked lists and db.lists APIs on KeystoneContext to have improved types. If you're using the generated KeystoneListsTypeInfo type like this:
+ts
+const lists: KeystoneListsAPI<KeystoneListsTypeInfo> = context.lists;
+You will have to change it to use as like this:
+ts
+const lists = context.lists as KeystoneListsAPI<KeystoneListsTypeInfo>;
 UI Accessibility 🏷️
 Another set of accessibility improvements in the Admin UI in this release including assorted quality of life and screen reader improvements to Filter pills and dialogs, as well as labels and descriptions.
 Prisma update ⬆️
-We've updated our Prisma dependencies to module, check out the link for more information.
+We've updated our Prisma dependencies to 2.25.0, check out the Prisma releases page for more information.
 Enjoying Keystone?
-Star this repo 🌟 ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -4188,12 +4500,24 @@ View verbose release notes
 Keystone Next now has a new core 🤖, unblocking many of the features you’ve been waiting for!
 After months of work deep in the codebase, it’ll be much easier for us to ship roadmap features like custom field types, GraphQL Schema extensions, and more.
 ⚠️ This release does come with some minor behavioural changes to Keystone’s APIs, read on below.
-module
+sh
+""@keystone-next/admin-ui-utils"": ""5.0.2"",
+""@keystone-next/auth"": ""27.0.0"",
+""@keystone-next/cloudinary"": ""6.0.0"",
+""@keystone-next/fields-document"": ""7.0.0"",
+""@keystone-next/fields"": ""11.0.0"",
+""@keystone-next/keystone"": ""20.0.0"",
+""@keystone-next/test-utils-legacy"": ""21.0.0"",
+""@keystone-next/types"": ""20.0.0"",
+""@keystone-next/utils-legacy"": ""12.0.0"",
+""@keystone-ui/core"": ""3.1.0"",
+""@keystone-ui/fields"": ""4.1.1"",
+""@keystone-ui/segmented-control"": ""4.0.1"",
 New Core 🤖
 The core of Keystone has been re-implemented to make building fields and new features in Keystone easier. While the observable changes for most users should be minimal, there could be breakage 🤖.
-⚠️ If you implemented a custom field type, you will need to change it to the new API, see fields in the module link for inspiration on how to do this.
+⚠️ If you implemented a custom field type, you will need to change it to the new API, see fields in the @keystone-next/fields package for inspiration on how to do this.
 Password tweaks 🔒
-The module field type now adds a GraphQL type module to the GraphQL output type instead of adding module, exposing a module boolean.
+The password field type now adds a GraphQL type PasswordState to the GraphQL output type instead of adding ${fieldKey}_is_set, exposing a isSet boolean.
 ```
 type User {
   password: PasswordState
@@ -4203,25 +4527,31 @@ type PasswordState {
 }
 ```
 Access control operations 👑
-List level module, module and module access control is now called for each operation in a many operation rather than on all of the operations as a whole.
-This means that rather than receiving module as an array with module, your access control functions will always be called with just an module and/or module (depending on which access control function it is).
-⚠️ If your access control functions already worked with creating/updating/deleting one item, they will continue working (though you may get TypeScript errors if you were previously handling module and module as an array, to fix that, you should stop handling that case).
+List level create, update and delete access control is now called for each operation in a many operation rather than on all of the operations as a whole.
+This means that rather than receiving originalInput as an array with itemIds, your access control functions will always be called with just an itemId and/or originalInput (depending on which access control function it is).
+⚠️ If your access control functions already worked with creating/updating/deleting one item, they will continue working (though you may get TypeScript errors if you were previously handling itemIds and originalInput as an array, to fix that, you should stop handling that case).
 In addition, filters returned from access control now go through GraphQL validation and coercion like filters that you pass in through the GraphQL API, this will produce better errors when you return invalid values.
 Virtual field input 🔣
-The API to configure module fields has changed to accept a module using the module API exported from module rather than GraphQL SDL.
+The API to configure virtual fields has changed to accept a field using the schema API exported from @keystone-next/types rather than GraphQL SDL.
 Schema reorder 🍡
 The ordering of relationships fields in the generated Prisma schema has changed so that it aligns with the order specified in the list config with the opposites to one-sided relationships added at the end.
-The name of one-to-one and one-to-many relationships has also changed to include module between the list key and field key to align with many-to-many relationships.
-⚠️ Note that these changes do not require a migration, only your module file will need to be updated with module or module.
+The name of one-to-one and one-to-many relationships has also changed to include _ between the list key and field key to align with many-to-many relationships.
+⚠️ Note that these changes do not require a migration, only your schema.prisma file will need to be updated with keystone-next dev or keystone-next postinstall --fix.
 Text and integer filtering 🪡
-A long awaited feature, you can now find an item by a unique field! Filtering now works for module and module fields that have module set, for example:
-module
+A long awaited feature, you can now find an item by a unique field! Filtering now works for text and integer fields that have isUnique: true set, for example:
+query {
+  Post(where: { slug: ""something-something-something"" }) {
+    id
+    title
+    content
+  }
+}
 UI Accessibility 🏷️
-A number of updates have been made in this release to improve accessibility in the Admin UI — updates to the module labels, relationship fields and more, including visual updates to the segment control (when no value is selected).
+A number of updates have been made in this release to improve accessibility in the Admin UI — updates to the DatePicker labels, relationship fields and more, including visual updates to the segment control (when no value is selected).
 Prisma update ⬆️
-We've updated our Prisma dependencies to module, check out the link for more information.
+We've updated our Prisma dependencies to 2.24.1, check out the Prisma releases page for more information.
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -4719,21 +5049,29 @@ View verbose release notes
 39,"What's New
 We have a new JSON field ✨, a bunch of new learning resources, and plenty of under the hood optimisations in this big release. 💪 
 JSON Field 👩🏻‍💻
-Thanks to the new module field, you can now represent JSON blobs in your backend. Check out the link to learn more.  
-module
+Thanks to the new json field, you can now represent JSON blobs in your backend. Check out the JSON example project to learn more.  
+Package: list({
+  fields: {
+    pkgjson: json({ isRequired: true }),
+    isPrivate: checkbox(),
+    ownedBy: relationship({ ref: 'Person.packages', many: false }),
+  },
+}),
 More Learning Resources 🧑‍🏫
 In addition to the JSON one above, we added new examples for: 
 
-Setting link for fields.
-link with custom queries and mutations.
+Setting Default Values for fields.
+Extending the GraphQL Schema with custom queries and mutations.
 
-We also published a tutorial that shows you link. The end result is an app with a queryable GraphQL endpoint based on your Keystone schema that you can run live on Vercel – for free! 🚀 
-module deprecated with improvements to module 🤹‍♂️
-We deprecated the module GraphQL filter and updated the module GraphQL filter with an improved API.
-Previously a module list's module query would have the argument:
-module
+We also published a tutorial that shows you how to embed Keystone and SQLite in a Next.js app. The end result is an app with a queryable GraphQL endpoint based on your Keystone schema that you can run live on Vercel – for free! 🚀 
+sortBy deprecated with improvements to orderBy 🤹‍♂️
+We deprecated the sortBy GraphQL filter and updated the orderBy GraphQL filter with an improved API.
+Previously a User list's allUsers query would have the argument:
+graphql
+orderBy: String
 The new API gives it the argument:
-module
+graphql
+orderBy: [UserOrderByInput!]! = []
 where
 ```graphql
 input UserOrderByInput {
@@ -4746,11 +5084,11 @@ enum OrderDirection {
   desc
 }
 ```
-Rather than writing module you now write module. You can also order by multiple fields, e.g. module.
-Note: each module must have exactly one key, or else an error will be returned.
-module replaced with module 🔧
-We removed module in favour of a module option to the module function.
-Previously, module would be used to wrap the module argument:
+Rather than writing allUsers(orderBy: ""name_ASC"") you now write allUsers(orderBy: { name: asc }). You can also order by multiple fields, e.g. allUsers(orderBy: [{ score: asc }, { name: asc }]).
+Note: each UserOrderByInput must have exactly one key, or else an error will be returned.
+withItemData replaced with sessionData 🔧
+We removed withItemData in favour of a sessionData option to the createAuth() function.
+Previously, withItemData would be used to wrap the config.session argument:
 ```typescript
 import { config, createSchema, list } from '@keystone-next/keystone/schema';
 import { statelessSessions, withAuthData } from '@keystone-next/keystone/session';
@@ -4765,11 +5103,19 @@ const session = statelessSessions({ secret: '-- EXAMPLE COOKIE SECRET; CHANGE ME
 export default withAuth(
   config({
     lists: createSchema({
-module
+    fields: {
+      email: text({ isUnique: true }),
+      password: password(),
+      isAdmin: checkbox(),
+    },
+  }),
+  session: withItemData(session, { User: 'id isAdmin' }),
+}),
+
 })
 );
 ```
-Now, the fields to populate are configured on module in module, and module is completely removed. 🧹 
+Now, the fields to populate are configured on sessionData in createAuth, and withItemData is completely removed. 🧹 
 ```typescript
 import { config, createSchema, list } from '@keystone-next/keystone/schema';
 import { statelessSessions } from '@keystone-next/keystone/session';
@@ -4785,34 +5131,43 @@ const session = statelessSessions({ secret: '-- EXAMPLE COOKIE SECRET; CHANGE ME
 export default withAuth(
   config({
     lists: createSchema({
-module
+    fields: {
+      email: text({ isUnique: true }),
+      password: password(),
+      isAdmin: checkbox(),
+    },
+  }),
+  session,
+}),
+
 })
 );
 ```
-More consistent and predictable module, module, and module mutations 🧘‍♀️
-We fixed the behaviour of module, module, and module mutations to be consistent and predictable.
+More consistent and predictable createItems, updateItems, and deleteItems mutations 🧘‍♀️
+We fixed the behaviour of createItems, updateItems, and deleteItems mutations to be consistent and predictable.
 Previously, these mutations could return items in an arbitrary order. They now return items in the same order they were provided to the mutation.
-Previously, if there was an error (e.g. validation) on one or more of the items – the return value would be module and a single top level error would be returned. The state of the database in this case was non-deterministic.
-The new behaviour is to return values for all items created, with module values for those that had errors. These errors are returned in the module array and have paths which correctly point to the module values in the returned array. All the valid operations will be completed, leaving the database in a deterministic state.
-Previously, if items were filtered out by declarative access control, then no error would be returned, and only those accessible items would be returned. Now the returned data will contain module values for those items which couldn't accessed, and the module array will contain errors with paths which correctly point to the module values in the returned array.
-Previously, if static access control denied access to the mutation, then module was returned, and a single module was returned. Now, an array of modules is returned, with a separate error for each object. This makes the behaviour of static and declarative access control consistent.
+Previously, if there was an error (e.g. validation) on one or more of the items – the return value would be null and a single top level error would be returned. The state of the database in this case was non-deterministic.
+The new behaviour is to return values for all items created, with null values for those that had errors. These errors are returned in the errors array and have paths which correctly point to the null values in the returned array. All the valid operations will be completed, leaving the database in a deterministic state.
+Previously, if items were filtered out by declarative access control, then no error would be returned, and only those accessible items would be returned. Now the returned data will contain null values for those items which couldn't accessed, and the errors array will contain errors with paths which correctly point to the null values in the returned array.
+Previously, if static access control denied access to the mutation, then null was returned, and a single error was returned. Now, an array of nulls is returned, with a separate error for each object. This makes the behaviour of static and declarative access control consistent.
 Counts Improved 🔢
-The GraphQL field module generated for module relationships has been deprecated in favour of a new field module, which directly returns the count.
-A module relationship field would have the following field added to the API:
-module
-Prisma updated to module ⬆️
-We've updated our Prisma dependency from module to module! Check out the link for more details.
+The GraphQL field _all<path>Meta { count } generated for many relationships has been deprecated in favour of a new field <path>Count, which directly returns the count.
+A posts relationship field would have the following field added to the API:
+graphql
+postsCount(where: PostWhereInput! = {}): Int
+Prisma updated to 2.24.0 ⬆️
+We've updated our Prisma dependency from 2.22.1 to 2.24.0! Check out the Prisma release notes for more details.
 Credits 🎉
 
 
-Thanks link for adding a module option to the session options for cookies. Can be one of true, false, 'strict', 'lax' or 'none' as per Mozilla docs. See the link for more details!
+Thanks @jonowu for adding a sameSite option to the session options for cookies. Can be one of true, false, 'strict', 'lax' or 'none' as per Mozilla docs. See the PR for more details!
 
 
-Thanks link for fixing a typo link page!
+Thanks @gabrielkuettel for fixing a typo Database Items API page!
 
 
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -6342,13 +6697,13 @@ View verbose release notes
 -   Updated dependencies \[[`0eadba2ba`](https://github.com/keystonejs/keystone/commit/0eadba2badb13fc6a17f7e525d429494ca953481), [`f52079f0b`](https://github.com/keystonejs/keystone/commit/f52079f0bffc4cf2ab5e26e4c3654127b59d6078), [`b9c828fb0`](https://github.com/keystonejs/keystone/commit/b9c828fb0d6e587976dbd0dc4e87004bce3b2ef7), [`74bc77854`](https://github.com/keystonejs/keystone/commit/74bc778547623fe4ed3db97ed09384d9dc076372), [`a6a444acd`](https://github.com/keystonejs/keystone/commit/a6a444acd23f2590d9812872441cafb5d088c48e), [`29075e580`](https://github.com/keystonejs/keystone/commit/29075e58074672d90cfca84aba8dcedeecf243ca), [`59421c039`](https://github.com/keystonejs/keystone/commit/59421c0399368e56e46537c1c687daa27f5912d0), [`319c19bd5`](https://github.com/keystonejs/keystone/commit/319c19bd5f8e8c261a1aefb1997d66b2a136ae28), [`c6cd0a6bd`](https://github.com/keystonejs/keystone/commit/c6cd0a6bdc7ccb000c39fba0da31819e33d9e056), [`195d4fb12`](https://github.com/keystonejs/keystone/commit/195d4fb1218517d7b9a40d3bba1a087d40e6d1d6), [`1fe4753f3`](https://github.com/keystonejs/keystone/commit/1fe4753f3af28aa851e1f90d55937c940be5af1a), [`5b02e8625`](https://github.com/keystonejs/keystone/commit/5b02e8625e18c8e79547d5caf8cacb5014ffee9d), [`76cdb791b`](https://github.com/keystonejs/keystone/commit/76cdb791b1ab36d015e43b87deff52be2ea6b629), [`762f17823`](https://github.com/keystonejs/keystone/commit/762f1782334c9b7174c320182c753c215834ff7f), [`0617c81ea`](https://github.com/keystonejs/keystone/commit/0617c81eacc88e40bdd21bacab285d674b171a4a), [`02af04c03`](https://github.com/keystonejs/keystone/commit/02af04c03c96c26c273cd49eda5b4a132e02a26a), [`107eeb037`](https://github.com/keystonejs/keystone/commit/107eeb0374e214b69be3727ca955a9f76e1468bb), [`9de71a9fb`](https://github.com/keystonejs/keystone/commit/9de71a9fb0d3b7f5f05c0d908bebdb818723fd4b), [`08478b8a7`](https://github.com/keystonejs/keystone/commit/08478b8a7bb9fe5932c7f74f9f6d3af75a0a5394), [`7bda87ea7`](https://github.com/keystonejs/keystone/commit/7bda87ea7f11e0faceccc6ab3f715c72b07c129b), [`590bb1fe9`](https://github.com/keystonejs/keystone/commit/590bb1fe9254c2f8feff7e3a0e2e964610116f95), [`4b11c5ea8`](https://github.com/keystonejs/keystone/commit/4b11c5ea87b759c24bdbff9d18443bbc972757c0), [`38a177d61`](https://github.com/keystonejs/keystone/commit/38a177d6140874b29d3c09b5852dbfd787d5c429), [`bb4f4ac91`](https://github.com/keystonejs/keystone/commit/bb4f4a..."
 40,"What's New
 Node updates :rocket:
-Node.JS engines in our packages have been updated to module and module to keep up to date with the latest versions of our dependencies. 
+Node.JS engines in our packages have been updated to 12.x and 14.x to keep up to date with the latest versions of our dependencies. 
 Admin UI package moved :truck:
-module now lives inside module.
-If you were directly importing from module you can now import the same items from module.
-⚠️ Please remove references to module in your module files.
+@keystone-next/admin-ui now lives inside @keystone-next/keystone/admin-ui.
+If you were directly importing from @keystone-next/admin-ui you can now import the same items from @keystone-next/keystone/admin-ui.
+⚠️ Please remove references to @keystone-next/admin-ui in your package.json files.
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -6956,12 +7311,12 @@ View verbose release notes
 
 -   [#5746](https://github.com/keystonejs/keystone/pull/5746) [`19750d2dc`](https://github.com/keystonejs/keystone/commit/19750d2dc5801cc8d2ffae1f50d1d5ca6ab9407d) Thanks [@timleslie](https://github.com/timleslie)! - Update Node.js dependency to `^12.20 || >= 14.13`."
 41,"What's New
-Apollo link can now be configured on a per list or field basis — which can dramatically improve your applications performance 🔥.
-Implementing basic authentication? We've got link using module from the module package to get you started 🔒.
-Focus control is now handled better in the Keystone UI, see link for the before and after 👀!
-Thanks to @cameronbraid for spotting a link and resolving it 🐛. 
+Apollo cache hinting can now be configured on a per list or field basis — which can dramatically improve your applications performance 🔥.
+Implementing basic authentication? We've got another example using withAuth from the auth package to get you started 🔒.
+Focus control is now handled better in the Keystone UI, see the PR for the before and after 👀!
+Thanks to @cameronbraid for spotting a session issue and resolving it 🐛. 
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -7123,7 +7478,7 @@ View verbose release notes
 42,"What's New
 A bunch of admin UI tweaks in this release 🖥️, among other minor fixes. We also have the initial stages of a new blog example and a sweet new admin UI logo.
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -7275,10 +7630,10 @@ View verbose release notes
     -   @keystone-next/fields@8.2.0
     -   @keystone-next/keystone@17.1.1"
 43,"What's New
-Aside from dependency updates 😴, we added an module config option to the module, module, module, module, and module field types.
+Aside from dependency updates 😴, we added an isIndexed config option to the text, integer, float, select, and timestamp field types.
 If you look closely you’ll see the core team working on example projects to share Keystone some best-practices. Keep an eye out for those in the not too distant future 🔮.
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -7467,10 +7822,10 @@ View verbose release notes
     -   @keystone-next/admin-ui@14.1.1
     -   @keystone-next/auth@23.0.0"
 44,"What's New
-This release involved a bunch of busywork behind the scenes in Keystone Next 🔧. Stripping away all the things we don't need now that we're using link exclusively. The end of the cleanup is in sight, and we're getting closer to the point where we can start working on some great new features.
-Files in Keystone Next 📁. Now you can use Admin UI to upload local files to your repo using SQLite. We also added a module property for easier project config.
+This release involved a bunch of busywork behind the scenes in Keystone Next 🔧. Stripping away all the things we don't need now that we're using Prisma exclusively. The end of the cleanup is in sight, and we're getting closer to the point where we can start working on some great new features.
+Files in Keystone Next 📁. Now you can use Admin UI to upload local files to your repo using SQLite. We also added a maxFileSize property for easier project config.
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -7790,16 +8145,30 @@ View verbose release notes
 "
 45,"What's New
 Improvements to the Lists API
-To make the link (i.e module) more intuitive to use, we deprecated the module option in favour of two new methods 🔧:
-1. Specify a string of fields to return with the new module option:
-Use this when you want to query for resolved field values (including querying relationships and virtual fields). This replaces the module use case. Now you can query a Post like so:
-module
+To make the Lists API (i.e context.lists.{List}) more intuitive to use, we deprecated the resolveFields option in favour of two new methods 🔧:
+1. Specify a string of fields to return with the new query option:
+Use this when you want to query for resolved field values (including querying relationships and virtual fields). This replaces the resolveFields: false use case. Now you can query a Post like so:
+js
+const [post] = await context.lists.Post.findMany({
+  where: { slug },
+  query: `
+    title
+    content
+    image {
+      src
+      width
+      height
+    }`,
+});
 2. Return the unresolved item data with read hooks
-This replaces the module use case. We now have a new set of APIs on module which return unresolved item data from your database (but with read hooks applied). They can be referenced directly or returned from a custom mutation or query in the GraphQL API to be handled by the Field resolvers. 
+This replaces the resolveFields: boolean use case. We now have a new set of APIs on context.db.lists.{List} which return unresolved item data from your database (but with read hooks applied). They can be referenced directly or returned from a custom mutation or query in the GraphQL API to be handled by the Field resolvers. 
 For example, to query for the raw data stored in the database:
-module
+js
+const [post] = await context.db.lists.Post.findMany({
+  where: { slug },
+});
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -8841,15 +9210,15 @@ View verbose release notes
 Controlled code demolition 🏗️ 👷‍♀️
 We pruned a lot of code from the Keystone garden – cutting out the dead wood to make way for a more efficient and productive core in Keystone 6. Notable changes include:
 
-Removed Keystone‘s DB adapters and the module config option (now that Keystone 6 uses link under the hood).
+Removed Keystone‘s DB adapters and the db.adapter config option (now that Keystone 6 uses Prisma under the hood).
 Said goodbye to a bunch of redundant methods and arguments for the same reasons as above.
-Exchanged module, module and module commands for module e.g:
-module -> module 
+Exchanged deploy, reset and generate commands for keystone-next prisma e.g:
+keystone-next deploy -> keystone-next prisma migrate deploy 
 
 Better pagination in Admin UI ⏭️  ✨
 Pagination in the Admin UI has fresh styles and is easier to use.
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -9330,16 +9699,16 @@ View verbose release notes
 Goodbye legacy code 👋 🌇
 We removed a few legacy items including: 
 
-Field types module, module, module, module, and module.
-Arguments module, module, and module from the Keystone constructor.
-Arguments module, module, module, and module were unused and have been removed from the module function (which we also removed).
+Field types CalendarDay, DateTime, Slug, Url, and Uuid.
+Arguments cookieSecret, cookie, and sessionStore from the Keystone constructor.
+Arguments schemaName, schemaNames, keystoneOptions, and graphqlOptions were unused and have been removed from the setupServer() function (which we also removed).
 
-Improved module field type 🔽
+Improved select field type 🔽
 It now uses the correct underlying type, which lets you make use of { dataType: 'enum' } and { dataType: 'integer'}.
 Squashed bugs 🐛
-We fixed a bug that existed in module on lists with declarative access control.
+We fixed a bug that existed in updateMany on lists with declarative access control.
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -9696,11 +10065,11 @@ View verbose release notes
     -   @keystone-next/adapter-mongoose-legacy@11.1.3"
 48,"What's New
 Added support for SQLite with Prisma 🎉
-You can now use SQLite to store your data via Prisma. The SQLite rollout also includes support for the module and module field types.
+You can now use SQLite to store your data via Prisma. The SQLite rollout also includes support for the File and Cloudinary field types.
 Noteworthy bug-squashing 🐛
-Mitchell link where module returned sessions that don't match an item, rather than treating them as invalid.
+Mitchell solved a bug where withItemData returned sessions that don't match an item, rather than treating them as invalid.
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes
@@ -9843,17 +10212,17 @@ View verbose release notes
 49,"What's New
 Prisma migrations 🚚
 
-We updated module with the Prisma adapter so that it interactively prompts for creating and applying migrations.
-module and module also accept a migration mode now instead of a script.
-module now uses Prisma's programmatic APIs to generate migrations and it accepts the following options as command line arguments or as prompts:
-module to set the name of the migration
-module to allow resetting the database when it is out of sync with the migrations
-module to create an empty migration when there are no changes to the schema.
+We updated keystone-next dev with the Prisma adapter so that it interactively prompts for creating and applying migrations.
+createKeystone and createSystem also accept a migration mode now instead of a script.
+keystone-next generate now uses Prisma's programmatic APIs to generate migrations and it accepts the following options as command line arguments or as prompts:
+--name to set the name of the migration
+--accept-data-loss to allow resetting the database when it is out of sync with the migrations
+--allow-empty to create an empty migration when there are no changes to the schema.
 
 Noteworthy bug-squashing 🐛
-Now you can include negative values for module, module and module fields. 🎉 
+Now you can include negative values for float, decimal and integer fields. 🎉 
 Enjoying Keystone?
-Star this repo 🌟  ☝️ or connect to Keystone on link and in link.
+Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
 
 
 View verbose release notes

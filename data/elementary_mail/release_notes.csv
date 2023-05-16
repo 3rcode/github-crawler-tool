@@ -1,52 +1,6 @@
 Index,Release Note
 1,"What's Changed
 
-Make SourceList internal by @danirabbit in https://github.com/elementary/mail/pull/827
-MessageListItem: avoid crashing on empty Mime by @tintou in https://github.com/elementary/mail/pull/828
-ci: Use JSON instead of YAML by @tintou in https://github.com/elementary/mail/pull/829
-Switch to GHCR container by @davidmhewitt in https://github.com/elementary/mail/pull/831
-Bump docker/setup-qemu-action from 1 to 2 by @dependabot in https://github.com/elementary/mail/pull/833
-Bump bilelmoussaoui/flatpak-github-actions from 4 to 5 by @dependabot in https://github.com/elementary/mail/pull/832
-Update flatpak actions to new namespace by @davidmhewitt in https://github.com/elementary/mail/pull/834
-ComposerWidget: replace grid/box, code style by @danirabbit in https://github.com/elementary/mail/pull/839
-AttachmentBar: Update style classes, include dialog by @danirabbit in https://github.com/elementary/mail/pull/841
-Dialogs use present and response connect by @danirabbit in https://github.com/elementary/mail/pull/838
-MessageListBox: set action enabled directly by @danirabbit in https://github.com/elementary/mail/pull/840
-Replace unnecessary grids with boxes by @leolost2605 in https://github.com/elementary/mail/pull/843
-InlineComposer: Small preparations for GTK4 by @leolost2605 in https://github.com/elementary/mail/pull/846
-Prep for GTK4 MessageListItem cleanup by @leolost2605 in https://github.com/elementary/mail/pull/848
-Bump flatpak/flatpak-github-actions from 5 to 6 by @dependabot in https://github.com/elementary/mail/pull/850
-Prep GTK4: Include AttachmentBar in MessageListItem by @leolost2605 in https://github.com/elementary/mail/pull/849
-Application: use startup by @danirabbit in https://github.com/elementary/mail/pull/837
-Subclass Gtk.Box instead of Gtk.ListBox in Mail.MessageListBox by @leolost2605 in https://github.com/elementary/mail/pull/845
-MainWindow: don't allow pane to shrink past contents by @danirabbit in https://github.com/elementary/mail/pull/854
-MessageList: code style and cleanup by @danirabbit in https://github.com/elementary/mail/pull/853
-Handle account adding live by @leolost2605 in https://github.com/elementary/mail/pull/855
-Derive MessageListBox from Gtk.Box in preparation for GTK4 by @leolost2605 in https://github.com/elementary/mail/pull/856
-ConversationListItem: Small updates for gtk4 by @leolost2605 in https://github.com/elementary/mail/pull/861
-AttachmentButton: Updates for gtk4 by @leolost2605 in https://github.com/elementary/mail/pull/862
-Remove inline composer by @leolost2605 in https://github.com/elementary/mail/pull/860
-Composer: remove construction property that is always true by @danirabbit in https://github.com/elementary/mail/pull/863
-Composer: use Hdy.Window and Hdy.HeaderBar by @danirabbit in https://github.com/elementary/mail/pull/864
-Composer: Remove unused can_change_sender by @leolost2605 in https://github.com/elementary/mail/pull/865
-Application.css: add scrolledwindow undershoot by @danirabbit in https://github.com/elementary/mail/pull/869
-ConversationList: put the filter menu next to the searchbar by @danirabbit in https://github.com/elementary/mail/pull/868
-MessageList: Use parameters for reply etc. actions by @leolost2605 in https://github.com/elementary/mail/pull/859
-WelcomeView: Updates for gtk4 by @leolost2605 in https://github.com/elementary/mail/pull/870
-Composer: add keyboard shortcuts by @danirabbit in https://github.com/elementary/mail/pull/873
-Composer: set parent internally, use present by @danirabbit in https://github.com/elementary/mail/pull/872
-InsertLinkDialog: Update for GTK4 by @leolost2605 in https://github.com/elementary/mail/pull/878
-MessageListItem: Make Gravatar work again by @leolost2605 in https://github.com/elementary/mail/pull/883
-Composer: Remove Ctrl + Backspace/Delete shortcuts by @lenemter in https://github.com/elementary/mail/pull/887
-
-New Contributors
-
-@dependabot made their first contribution in https://github.com/elementary/mail/pull/833
-@lenemter made their first contribution in https://github.com/elementary/mail/pull/887
-
-Full Changelog: https://github.com/elementary/mail/compare/7.0.1...7.1.0"
-2,"What's Changed
-
 MainWindow: Spelling: ellipsis by @comradekingu in https://github.com/elementary/mail/pull/791
 build: fix documentation build by @bobby285271 in https://github.com/elementary/mail/pull/795
 Docs: Add curiously omitted dependency on meson to the readme by @turbobastii in https://github.com/elementary/mail/pull/803
@@ -64,7 +18,7 @@ New Contributors
 @leolost2605 made their first contribution in https://github.com/elementary/mail/pull/813
 
 Full Changelog: https://github.com/elementary/mail/compare/7.0.0...7.0.1"
-3,"Fixes:
+2,"Fixes:
 
 Fixed an error which caused mail accounts to be loaded multiple times
 Fixed a bug which caused Mail to crash occasionally
@@ -76,7 +30,7 @@ Updated app icon
 New design
 Updated translations
 "
-4,"New features:
+3,"New features:
 
 Use message subject for composer window title
 Added support for Unified Inbox for Microsoft 365 accounts
@@ -92,7 +46,7 @@ Improvements:
 Renamed Office 365 to Microsoft 365 to follow suite on Microsoft's rebranding
 Updated translations
 "
-5,"Fixes:
+4,"Fixes:
 
 Fix a potential crash while loading messages
 
@@ -100,7 +54,7 @@ Improvements:
 
 Updated translations
 "
-6,"New features:
+5,"New features:
 
 Secondary-click menu on the conversations list
 
@@ -119,7 +73,7 @@ Autoselect the next message after archiving
 Use local time in message headers
 Updated translations
 "
-7,"New features:
+6,"New features:
 
 Send a notification when new messages arrive
 Add a button to manually fetch new messages
@@ -136,7 +90,7 @@ Improvements:
 Improve search performance
 Updated translations
 "
-8,"Fixes:
+7,"Fixes:
 
 Fix an issue that prevented some messaging from rendering at all
 Set the correct ""From"" address when replying and multiple accounts are set up
@@ -148,7 +102,7 @@ Only save drafts when there are new changes
 Move Undo notification to the message view
 Updated translations
 "
-9,"Improvements:
+8,"Improvements:
 
 Preserve conversation subjects when replying or forwarding
 Disable the composer while messages are being sent
@@ -157,14 +111,14 @@ Make sure we don't save sent messages twice for some account types
 Stability improvements
 Updated translations
 "
-10,Complete rewrite from scratch
-11,"pantheon-mail 1.0.8 is out!
+9,Complete rewrite from scratch
+10,"pantheon-mail 1.0.8 is out!
 Changes:
 * Don't automatically load messages on the first run
 * Support libsignon-glib instead of libgsignon-glib
 * Build fixes
 * Updated translations"
-12,"pantheon-mail 1.0.7 is out!
+11,"pantheon-mail 1.0.7 is out!
 This release contains minor fixes for deprecations and missing translations."
-13,"pantheon-mail 1.0.6 is out!
-The list of issues closed by this release can be found link."
+12,"pantheon-mail 1.0.6 is out!
+The list of issues closed by this release can be found here."

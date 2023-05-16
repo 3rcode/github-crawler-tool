@@ -16,5 +16,4 @@ def from_score_to_class():
         df['Class'] = df['Score'].apply(lambda score: 1 if score > 0.7 else 0)
         df.to_csv(path, index=False)
 
-
 from_score_to_class()

@@ -1,79 +1,79 @@
 Index,Release Note
 1,"Added
 
-Support the module video container format (link)
+Support the .m2ts video container format (hicom150)
 
 Changed
 
-Update to Electron 10.1.0 link (link)
-Update the Windows installer loading image link (link)
+Update to Electron 10.1.0 #1864 (feross)
+Update the Windows installer loading image #1841 (alxhotel)
 
 Fixed
 
-Fix music metadata not showing up link (link)
-Fix the ""Play in VLC"" functionality link (link)
-Prevent shortcuts from activating when user input elements are focused link (link)
+Fix music metadata not showing up #1847 (Borewit)
+Fix the ""Play in VLC"" functionality #1850 (Hinara)
+Prevent shortcuts from activating when user input elements are focused #1840 (subins2000)
 "
 2,"🔒 This release contains a critical security fix. Please update as soon as possible.
 Added
 
-Add macOS Notarization link (link)
+Add macOS Notarization #1834 (feross)
 
 Changed
 
-Update to Electron 10 beta link (link)
+Update to Electron 10 beta #1834 (feross)
 "
 3,"❤️✨ A new version of WebTorrent Desktop is out! ❤️✨
 Added
 
-Linux module packages and module builds are now available! link (link)
-Add support for multiple audio tracks link (link)
-Improve codec unsupported detection link (link)
-Report when files are being verified link (link)
-Support additional audio files: MPEG-Layer-2, Musepack, Matroska audio, WavePack link
+Linux .rpm packages and arm64 builds are now available! #1694 (hicom150)
+Add support for multiple audio tracks #1712 (hicom150)
+Improve codec unsupported detection #1711 (hicom150)
+Report when files are being verified #1717 (pR0Ps)
+Support additional audio files: MPEG-Layer-2, Musepack, Matroska audio, WavePack #1772
 
 Changed
 
-Update to Electron 9 link link
-Update to music-metadata 4.8.0 link (link)
-Update Windows build documentation link (link)
-Remove unneeded dependencies (link)
+Update to Electron 9 #1729 #1832
+Update to music-metadata 4.8.0 #1719 (Borewit)
+Update Windows build documentation #1715 (RecoX)
+Remove unneeded dependencies (feross)
 
 Fixed
 
-Fix a few type errors link (link)
-Fix electron SUID sandbox error link (link)
-Fix percentage rounding error link (link)
-Fix path-selector in preferences page link (link)
-Fix path-selector in preferences page link (link)
-Fix: Increase height of 'About' window link (link)
-Fix ""Save Torrent File As..."" link (link)
+Fix a few type errors #1720 (mathiasvr)
+Fix electron SUID sandbox error #1707 (hicom150)
+Fix percentage rounding error #1716 (pR0Ps)
+Fix path-selector in preferences page #1702 (314eter)
+Fix path-selector in preferences page #1704 (mathiasvr)
+Fix: Increase height of 'About' window #1737 (akaustav)
+Fix ""Save Torrent File As..."" #1743 (gpatarin)
 "
 4,"Added
 
-Add YouTube style hotkeys link (link)
-Toggle sound notifications on/off link (link)
-Ability to play MPEG-4 Audio Book (.m4b) link (link)
-Add support for subtitles on Chromecast link (link)
+Add YouTube style hotkeys #1579 (dsernst)
+Toggle sound notifications on/off #1536 (adriantombu)
+Ability to play MPEG-4 Audio Book (.m4b) #1450 (Borewit)
+Add support for subtitles on Chromecast #1165 (janza)
 
 Changed
 
-Update to Electron 4 link (link)
-Remove '(BETA)' from app window title link (link)
-Update React (v16) and Material-UI (v0.20) link (link)
-Show audio track and disk number link (link)
-Asynchronous music metadata updates while streaming link (link)
-If torrent is not private, leave private flag unset link (link)
-Improve audio poster selection: link (link)
-Save preferences immediately when changed link (link)
+Update to Electron 4 #1590 (Borewit)
+Remove '(BETA)' from app window title #1562 (dsernst)
+Update React (v16) and Material-UI (v0.20) #1483 (mathiasvr)
+Show audio track and disk number #1454 (Borewit)
+Asynchronous music metadata updates while streaming #1449 (Borewit)
+If torrent is not private, leave private flag unset #1411 (feross)
+Improve audio poster selection: #1368 (Borewit)
+Save preferences immediately when changed #1042 (Flet)
 
 Fixed
 
-Ensure that the minutes field in playback indicator is zero-padded. link (link)
-Bug Fix: Empty Array Reduce link (link)
-Fix startup problems link (link)
-Add back loading spinner for player page. link (link)
-Fix Linux desktop file link (link)
+Ensure that the minutes field in playback indicator is zero-padded. #1506 (bnjmnt4n)
+Bug Fix: Empty Array Reduce #1494 (clujin)
+Fix startup problems #1419 (Borewit)
+Add back loading spinner for player page. #1311 (bnjmnt4n)
+Fix Linux desktop file #1309 (bilelmoussaoui)
 "
 5,"Added
 
@@ -83,7 +83,7 @@ Changed
 
 Displaying filename while music metadata is being downloaded (#1361)
 Improved the poster selection for audio/music based torrents (#1334)
-Launch VLC player without the module flag (#1286)
+Launch VLC player without the --video-on-top flag (#1286)
 
 Fixed
 
@@ -176,7 +176,7 @@ Fix app DMG background image
 "
 11,"Added
 
-Windows 64-bit support! (link)
+Windows 64-bit support! (#931)
 Existing 32-bit users will update to 64-bit automatically in next release
 64-bit reduces likelihood of out-of-memory errors by increasing the address space
 
@@ -213,7 +213,7 @@ Torrent list style improvements
 Fixed
 
 Fix App.js crash in Linux (#882)
-Fix error on Windows caused by module (#867)
+Fix error on Windows caused by setBadge (#867)
 Don't crash when restarting after adding a magnet link (#869)
 Restore playback state when reopening player (#877)
 "
@@ -280,7 +280,7 @@ Changed
 
 Change WebTorrent Desktop peer ID prefix to 'WD' to distinguish from WebTorrent in the browser, 'WW' (#688)
 Switch UI to React to improve UI rendering speed (#729)
-The primary bottleneck was actually module, not module.
+The primary bottleneck was actually hyperx, not virtual-dom.
 Update Electron to 1.3.2 (#738) (#739) (#740) (#747) (#756)
 Mac 10.9: Fix the fullscreen button showing
 Mac 10.9: Fix window having border
@@ -291,7 +291,7 @@ Mac: Fix context menu always choosing first item by default
 Linux: Fix startup crashes (some Linux distros)
 Linux: Fix menubar not hiding after entering fullscreen (some Linux distros)
 Improved location history (back/forward buttons) to fix rare exceptions (#687) (#748)
-Location history abstraction released independently as link
+Location history abstraction released independently as location-history
 
 Fixed
 
@@ -342,13 +342,13 @@ Windows tray icon now stays in the right state
 22,"Fixed
 
 Fix exception that affects users upgrading from v0.5.1 or older
-Ensure module configuration exists
+Ensure state.saved.prefs configuration exists
 Fix window title on ""About WebTorrent"" window
 "
 23,"Changed
 
-Change ""Step Forward"" keyboard shortcut to module (Windows)
-Change ""Step Backward"" keyboard shortcut to to module (Windows)
+Change ""Step Forward"" keyboard shortcut to Alt+Left (Windows)
+Change ""Step Backward"" keyboard shortcut to to Alt+Right (Windows)
 
 Fixed
 
@@ -356,7 +356,7 @@ First time startup bug -- invalid torrent/poster paths
 "
 24,"Added
 
-Improved AirPlay support -- using the new link package
+Improved AirPlay support -- using the new airplayer package
 Remember volume setting in player, for as long as the app is open
 
 Changed
@@ -386,7 +386,7 @@ When upgrading to WebTorrent Desktop v0.7.0, some torrent metadata (file list,
   selected files, whether torrent is streamable) will be cleared. Just start the
   torrent to re-populate the metadata.
 "
-25,"Download: link
+25,"Download: WebTorrent Desktop
 Fixed
 
 Disable WebRTC to work around Electron crash (Windows)
@@ -397,15 +397,15 @@ Fix crash when dropping files onto the dock icon (OS X)
 Fix keyboard shortcuts Space and ESC being captured globally (#585)
 Fix crash, show error when drag-dropping hidden files (#586)
 "
-26,"Download: link
+26,"Download: WebTorrent Desktop
 Added
 
 Added Preferences page to set Download folder
 Save video position, resume playback from saved position
 Add additional video player keyboard shortcuts (#275)
-Use module file as the poster image if available (#558)
+Use poster.jpg file as the poster image if available (#558)
 Associate .torrent files to WebTorrent Desktop (OS X) (#553)
-Add support for pasting module links (#559)
+Add support for pasting instant.io links (#559)
 Add announcement feature
 
 Changed
@@ -425,12 +425,12 @@ After deleting torrent, remove just the player from forward stack
 After creating torrent, remove create torrent page from forward stack
 Cancel button on create torrent page should only go back one page
 "
-27,"Download: link
+27,"Download: WebTorrent Desktop
 Fixed
 
 Fix auto-updater (OS X, Windows).
 "
-28,"Download: link
+28,"Download: WebTorrent Desktop
 Added
 
 Select/deselect individual files to torrent.
@@ -448,7 +448,7 @@ Multi-file torrents would not seed in-place, were copied to Downloads folder.
 Missing 'About WebTorrent' menu item. (Windows)
 Rare exception. (""Cannot create BrowserWindow before app is ready"")
 "
-29,"Download: link
+29,"Download: WebTorrent Desktop
 Added
 
 Better Windows support!
@@ -556,7 +556,7 @@ Better error handling when Chromecast/Airplay cannot connect
 Show player controls immediately on mouse move
 When creating a torrent, show it in UI immediately
 Stop casting to TV when player is closed
-Torrent engine: Fixed memory leaks in module and module
+Torrent engine: Fixed memory leaks in torrent-discovery and bittorrent-tracker
 Torrent engine: Fixed sub-optimal tcp/webrtc connection timeouts
 Torrent engine: Throttle web seed connections to maximum of 4
 
@@ -615,7 +615,7 @@ Thanks to @dcposch, @ungoldman, and @feross for contributing to this release."
 Wait 10 seconds (instead of 60 seconds) after app launch before checking for updates.
 "
 38,"The first official release of WebTorrent.app, the streaming torrent client for OS X, Windows, and Linux. For now, we're only releasing binaries for OS X.
-WebTorrent.app is in ALPHA and under very active development – expect lots more polish in the coming weeks! If you know JavaScript and want to help us out, there's link!
+WebTorrent.app is in ALPHA and under very active development – expect lots more polish in the coming weeks! If you know JavaScript and want to help us out, there's lots to do!
 Features
 
 Lightweight, fast torrent client
@@ -625,7 +625,7 @@ WebTorrent fetches file pieces from the network on-demand, for instant playback.
 Even when the file is not fully downloaded, seeking still works! (Seeking just reprioritizes what pieces are fetched from the network.)
 Stream videos to AirPlay and Chromecast
 Pure Javascript, so it's very easy to contribute code!
-Based on the most popular and comprehensive torrent package in Node.js, link.
+Based on the most popular and comprehensive torrent package in Node.js, webtorrent.
 Lots of features, without the bloat:
 Opens magnet links and .torrent files
 Drag-and-drop makes adding torrents easy!

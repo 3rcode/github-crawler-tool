@@ -27,7 +27,7 @@ Fix #2548: pass origin key to subcription callback by @Zheaoli in https://github
 Examples: fix type in axios-typescript example by @daochouwangu in https://github.com/vercel/swr/pull/2552
 Update Cache Interface types by @dmmulroy in https://github.com/vercel/swr/pull/2554
 fix: data passed to refreshInterval function is not latest by @hong24 in https://github.com/vercel/swr/pull/2354
-types: allow passing function as module for module by @promer94 in https://github.com/vercel/swr/pull/2551
+types: allow passing function as Data for useSWRSubscriptionOptions by @promer94 in https://github.com/vercel/swr/pull/2551
 
 New Contributors
 
@@ -38,15 +38,15 @@ New Contributors
 Full Changelog: https://github.com/vercel/swr/compare/v2.1.2...v2.1.3"
 4,"Patches
 
-Improved type inferring for module
-Adding module type for module
+Improved type inferring for swr/subscription
+Adding SWRSubscriptionOptions type for swr/subscription
 
 Changes
 
 test: add typing test for empty config by @koba04 in https://github.com/vercel/swr/pull/2521
 test: fix syntax error in Equal type alias implementation by @SACHINnANYAKKARA in https://github.com/vercel/swr/pull/2517
 chore: remove engines by @promer94 in https://github.com/vercel/swr/pull/2536
-types: improve module types by @promer94 in https://github.com/vercel/swr/pull/2535
+types: improve useSWRSubscription types by @promer94 in https://github.com/vercel/swr/pull/2535
 Rename subscription types by @huozhi in https://github.com/vercel/swr/pull/2537
 
 New Contributors
@@ -57,7 +57,7 @@ Full Changelog: https://github.com/vercel/swr/compare/v2.1.1...v2.1.2"
 5,"Patches
 
 refactor: remove useless dataRef, always compare cached data by @promer94 in https://github.com/vercel/swr/pull/2431
-fix: swr infers incorrect module type for default module generic type by @connorch in https://github.com/vercel/swr/pull/2506
+fix: swr infers incorrect data type for default SWRConfig generic type by @connorch in https://github.com/vercel/swr/pull/2506
 
 Documentation
 
@@ -73,7 +73,7 @@ Full Changelog: https://github.com/vercel/swr/compare/v2.1.0...v2.1.1"
 Subscription mode by @huozhi in https://github.com/vercel/swr/pull/1263 
 parallel option for useSWRInfinite by @koba04 in https://github.com/vercel/swr/pull/2404 
 
-Checkout link and link for more details
+Checkout subscription docs and useSWRInfinite parallel fetching docs for more details
 Patches
 
 fix: use the latest config in useSWRMutation by @koba04 in https://github.com/vercel/swr/pull/2468
@@ -124,7 +124,7 @@ fix: Ensure hydration matches the SSR result during streaming by @shuding in htt
 Chores
 
 ci: only run release when tags pushed by @promer94 in https://github.com/vercel/swr/pull/2388
-unify module characters in README.md by @JanKaifer in https://github.com/vercel/swr/pull/2334
+unify - characters in README.md by @JanKaifer in https://github.com/vercel/swr/pull/2334
 
 New Contributors
 
@@ -145,8 +145,8 @@ release workflow by @huozhi in https://github.com/vercel/swr/pull/2374, https://
 Full Changelog: https://github.com/vercel/swr/compare/v2.0.1...v2.0.2"
 10,"In this patch release, we majorly improved typing support and SWR can infer the types based on the configuration.
 
-When the module option is module, the returned module will exclude module and the module will always be module.
-When the module option is provided, the returned module will be the same type of module, and the module will always be module.
+When the suspense option is true, the returned data will exclude undefined and the isLoading will always be false.
+When the fallbackData option is provided, the returned data will be the same type of fallbackData, and the isLoading will always be false.
 
 Here's a demo for it:
 https://user-images.githubusercontent.com/4800338/213288879-ffbeeeb5-aca5-4a65-8229-69fbf9b0bf70.mp4
@@ -194,8 +194,8 @@ type: fix type error on SWRConfig by @Himself65 in https://github.com/vercel/swr
 feat: Hook for remote mutations by @shuding in https://github.com/vercel/swr/pull/1450
 Add isFallback state by @shuding in https://github.com/vercel/swr/pull/1925
 build: output mutation cjs bundle with named exports by @huozhi in https://github.com/vercel/swr/pull/1926
-Add module state and refactor the core by @shuding in https://github.com/vercel/swr/pull/1928
-Add module option by @shuding in https://github.com/vercel/swr/pull/1929
+Add isLoading state and refactor the core by @shuding in https://github.com/vercel/swr/pull/1928
+Add keepPreviousData option by @shuding in https://github.com/vercel/swr/pull/1929
 types: drop legacy types by @huozhi in https://github.com/vercel/swr/pull/1930
 breaking: Throw error when using suspense on the server side without fallback in React 18 by @shuding in https://github.com/vercel/swr/pull/1931
 type: extends useConfig cache interface by @promer94 in https://github.com/vercel/swr/pull/1938
@@ -262,7 +262,7 @@ Revert target option by @huozhi in https://github.com/vercel/swr/pull/2151
 chore: fix missing husky warning by @huozhi in https://github.com/vercel/swr/pull/2160
 Remove downlevelIteration and traverse iterator manually by @huozhi in https://github.com/vercel/swr/pull/2181
 fix: re-render when returned data and fallbackData is the same and keepPreviousData is enabled by @koba04 in https://github.com/vercel/swr/pull/2169
-breaking: Change the error broadcasting behavior in mutations and add module option by @shuding in https://github.com/vercel/swr/pull/2182
+breaking: Change the error broadcasting behavior in mutations and add throwOnError option by @shuding in https://github.com/vercel/swr/pull/2182
 docs: Add JSDoc comments to useSWRMutation by @shuding in https://github.com/vercel/swr/pull/2183
 type: export MutationFetcher by @ssssota in https://github.com/vercel/swr/pull/2184
 Bump bundler by @huozhi in https://github.com/vercel/swr/pull/2187
@@ -299,7 +299,7 @@ Full Changelog: https://github.com/vercel/swr/compare/2.0.0-rc.1...2.0.0-rc.3"
 13,"~~The last RC before SWR 2.0.~~ This release includes several small fixes with one breaking change. 
 Breaking
 In this release, we are dropping IE 11 support, and using ES2018 as the build target. However, when using SWR in a framework or using a bundler (esbuild, Webpack, etc.), you can still target ES5 or using a browserlist configuration to customize this.
-The benefit of this change is, we can now use faster native APIs to make SWR more performant, instead of using old alternatives. A benchmark shows a 4.7x speed improvement of the module function call during SSR, when we change module to module.
+The benefit of this change is, we can now use faster native APIs to make SWR more performant, instead of using old alternatives. A benchmark shows a 4.7x speed improvement of the useSWR() function call during SSR, when we change Object.assign({}, a, b) to { ...a, ...b }.
 Details can be found in #2249.
 What's Changed
 
@@ -317,19 +317,19 @@ New Contributors
 Full Changelog: https://github.com/vercel/swr/compare/2.0.0-rc.0...2.0.0-rc.1"
 14,"The SWR 2.0 release candidate. This RC has one breaking change, a new option for mutation APIs, and some bug fixes & improvements.
 Highlights & Breakings
-A failed mutation will not cause module's module to be updated:
+A failed mutation will not cause useSWR's error to be updated:
 ```jsx
 const { error, mutate } = useSWR('/api/user', getUser)
 return  {
   try {
     await mutate(updateUser)
   } catch (mutationError) {
-    // module will not cause module to be updated.
+    // mutationError will not cause error to be updated.
   }
 }}>Update User
 ```
-In 2.0, with the example above, module will only be coming from module and will be shared across all module hooks. And mutation errors (module) will be coming from mutations like module calls, they will be separated from fetcher errors.
-There is also a new option module for module to disable the default throwing behavior of module:
+In 2.0, with the example above, error will only be coming from getUser and will be shared across all useSWR('/api/user') hooks. And mutation errors (mutationError) will be coming from mutations like updateUser calls, they will be separated from fetcher errors.
+There is also a new option throwOnError for useSWRMutation to disable the default throwing behavior of trigger:
 ```jsx
 const { trigger } = useSWRMutation('/api/user', updateUser)
 try {
@@ -353,7 +353,7 @@ What's Changed
 chore: fix missing husky warning by @huozhi in https://github.com/vercel/swr/pull/2160
 fix: Remove downlevelIteration and traverse iterator manually by @huozhi in https://github.com/vercel/swr/pull/2181
 fix: re-render when returned data and fallbackData is the same and keepPreviousData is enabled by @koba04 in https://github.com/vercel/swr/pull/2169
-breaking: Change the error broadcasting behavior in mutations and add module option by @shuding in https://github.com/vercel/swr/pull/2182
+breaking: Change the error broadcasting behavior in mutations and add throwOnError option by @shuding in https://github.com/vercel/swr/pull/2182
 docs: Add JSDoc comments to useSWRMutation by @shuding in https://github.com/vercel/swr/pull/2183
 
 Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.7...2.0.0-rc.0"
@@ -407,7 +407,7 @@ New Contributors
 Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.5...2.0.0-beta.6"
 17,"Highlights & Breakings
 Mutate Multiple Keys (#1946, #1989)
-You can now pass a filter function to the global module API to match any keys and mutate them together:
+You can now pass a filter function to the global mutate API to match any keys and mutate them together:
 ```js
 import { mutate } from 'swr'
 // Or from the hook if you customized the cache provider:
@@ -418,8 +418,13 @@ mutate(
   true
 )
 ```
-This action will match all keys starting with module, and replace their data with module, then re-fetch after the mutation. The signature is the same as the current mutate API:
-module
+This action will match all keys starting with '/api/item?id=', and replace their data with update, then re-fetch after the mutation. The signature is the same as the current mutate API:
+js
+mutate(
+  '/api/item?id=123',
+  data => update(data),
+  true
+)
 The only difference is if you pass a function instead of a specific key, SWR will use it to match and mutate all the data in the cache. It will be convenient to use this to batch updates, or mutate keys by pattern. 
 Worth noting that it works with any key types, too:
 ```js
@@ -433,7 +438,12 @@ mutate(
 )
 ```
 The mutation above will match all 3 keys and set the values to undefined (clear them), and skip the revalidation at the end. So another technique is to clear everything with this (e.g. when logging out):
-module
+js
+mutate(
+  () => true,
+  undefined,
+  false
+)
 More use cases and discussions can be found in the original RFC: #1946.
 What's Changed
 
@@ -445,7 +455,7 @@ chore: Fix TS type generation by @huozhi in https://github.com/vercel/swr/pull/2
 Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.4...2.0.0-beta.5"
 18,"Highlights
 Preload API (#2026)
-SWR now has a module API that you can call programmatically to kick off the request early. For example, you can do module even outside of React:
+SWR now has a preload API that you can call programmatically to kick off the request early. For example, you can do preload('/api/user', fetcher) even outside of React:
 ```jsx
 import { useState } from 'react'
 import useSWR, { preload } from 'swr'
@@ -468,10 +478,24 @@ export default function App() {
   )
 }
 ```
-So at the moment of clicking the button and actually rendering the module component, the resource is likely loaded already. If the request depends on some props or states, you can also preload it when hovering the button:
-module
+So at the moment of clicking the button and actually rendering the User component, the resource is likely loaded already. If the request depends on some props or states, you can also preload it when hovering the button:
+jsx
+function App({ userId }) {
+  const [show, setShow] = useState(false)
+  return (
+    <div>
+      <button
+        onClick={() => setShow(true)}
+        onHover={() => preload('/api/user?id=' + userId, fetcher)}
+      >
+        Show User
+      </button>
+      {show ? <User /> : null}
+    </div>
+  )
+}
 Demo: https://codesandbox.io/s/swr-preloading-14bikv?file=/src/App.js
-Function as module value (#2024)
+Function as SWRConfig value (#2024)
 A new way to extend the SWR global configuration:
 ```jsx
 
@@ -484,10 +508,10 @@ A new way to extend the SWR global configuration:
 
 
 ```
-Where you can inherit the parent configuration and override the module value, but reuse the other options.
+Where you can inherit the parent configuration and override the dedupingInterval value, but reuse the other options.
 Breakings
-module → module (#2023)
-This is a currently undocumented API, but planned to go stable with the 2.0 release. You can access to SWR’s default options via the module static and read-only property.
+SWRConfig.default → SWRConfig.defaultValue (#2023)
+This is a currently undocumented API, but planned to go stable with the 2.0 release. You can access to SWR’s default options via the SWRConfig.defaultValue static and read-only property.
 What's Changed
 
 breaking: Rename SWRConfig.default to SWRConfig.defaultValue by @huozhi in https://github.com/vercel/swr/pull/2023
@@ -517,12 +541,12 @@ Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.3...2.0.0-beta.
 19,"Highlights
 Better React 18 Support (#1962)
 This is a change of SWR's internal implementation detail. For developers that use SWR, it will just work out of the box without any changes in their apps.
-Brought to you by @promer94 and @shuding, this release includes a core refactoring that improves React 18 support by adopting APIs like module and module internally. Especially when rendering UIs concurrently with React 18, this new SWR version ensures stronger UI consistency.
+Brought to you by @promer94 and @shuding, this release includes a core refactoring that improves React 18 support by adopting APIs like useSyncExternalStore and startTransition internally. Especially when rendering UIs concurrently with React 18, this new SWR version ensures stronger UI consistency.
 Worth note that the current stable 1.x version of SWR still works well in React 18. 
 This core change isn't breaking and does not affect React <=17 apps.
 Breakings
 Avoid using Suspense on the server-side (#1931)
-When using module with SWR on the server-side (including pre-rendering in Next.js), it's now required to provide the initial data via link. This means that you can't use Suspense to fetch data on the server side as of today, but either doing fully client-side data fetching, or fetch the data via the framework (such as module in Next.js).
+When using suspense: true with SWR on the server-side (including pre-rendering in Next.js), it's now required to provide the initial data via fallbackData or fallback. This means that you can't use Suspense to fetch data on the server side as of today, but either doing fully client-side data fetching, or fetch the data via the framework (such as getStaticProps in Next.js).
 While Suspense for libraries is still experimental, this behavior might change before the 2.0 stable release. More discussions can be found here: #1906.
 What's Changed
 
@@ -550,12 +574,13 @@ Full Changelog: https://github.com/vercel/swr/compare/2.0.0-beta.1...2.0.0-beta.
 20,"SWR 2.0 on its way! Check https://github.com/vercel/swr/releases/tag/2.0.0-beta.0 for the previous 2.0 beta updates.
 💖 Give feedback in discussion: https://github.com/vercel/swr/discussions/1932.
 Highlights
-New module state (#1928)
-Previously, module only returns a module state, which is an indicator of both initial requests and automatic & manual revalidations.  It includes polling requests and focus revalidations, etc.
+New isLoading state (#1928)
+Previously, useSWR only returns a isValidating state, which is an indicator of both initial requests and automatic & manual revalidations.  It includes polling requests and focus revalidations, etc.
 But if you need to display an initial skeleton while loading the data, you will have to do something like
-module
-...which is a popular pattern in the community. In this case, module doesn't help much.
-In this release, module, module and module will return an extra module state along with the module state. They will fit to different scenarios:
+js
+const isLoading = typeof data === 'undefined' && !error
+...which is a popular pattern in the community. In this case, isValidating doesn't help much.
+In this release, useSWR, useSWRInfinite and useSWRImmutable will return an extra isLoading state along with the isValidating state. They will fit to different scenarios:
 ```jsx
 function Stock() {
   const { data, isLoading, isValidating } = useSWR(STOCK_API, fetcher, {
@@ -575,15 +600,15 @@ function Stock() {
 }
 ```
 In the example above, we display a skeleton while loading the data. After the data is loaded, we show a spinner next to the data whenever we are re-fetching (revalidating):
-image
+
 You can find the full code for this example here: https://codesandbox.io/s/swr-isloading-v8dfpy.
-New module option (#1929)
+New keepPreviousData option (#1929)
 When doing data fetching based on continuous user actions, e.g. real-time search when typing, keeping the previous fetched data can improve the UX a lot.
-In SWR 2.0, there is now a module option to enable that behavior. Here's a simple search UI:
+In SWR 2.0, there is now a keepPreviousData option to enable that behavior. Here's a simple search UI:
 ```jsx
 function Search() {
   const [search, setSearch] = React.useState('');
-const { data, isLoading } = useSWR(module, fetcher, {
+const { data, isLoading } = useSWR(/search?q=${search}, fetcher, {
     keepPreviousData: true
   });
 return (
@@ -591,22 +616,28 @@ return (
  setSearch(e.target.value)}
         placeholder=""Search...""
       />
-module
+  <div className={isLoading ? ""loading"" : """"}>
+    {data?.products.map(item => <Product key={item.id} name={item.name} />)
+  </div>
+</div>
+
 );
 }
 ```
-With module enabled, you will still get the previous module even if you change the SWR key and the data for the new key starts loading again. This improves the visual continuity quite a lot, the search feels smoother after flipping the switch:
+With keepPreviousData enabled, you will still get the previous data even if you change the SWR key and the data for the new key starts loading again. This improves the visual continuity quite a lot, the search feels smoother after flipping the switch:
 https://user-images.githubusercontent.com/3676859/163695903-a3eb1259-180e-41e0-821e-21c320201194.mp4
 You can find the full code for this example here: https://codesandbox.io/s/swr-keeppreviousdata-fsjz3m.
 Breakings
-Type module is renamed to module (#1930)
+Type InfiniteFetcher is renamed to SWRInfiniteFetcher (#1930)
 This type was already marked as deprecated in 1.x, and it now removed in this beta. If you are using it, please do the following change:
-module
+diff
+- import { InfiniteFetcher } from 'swr/infinite'
++ import { SWRInfiniteFetcher } from 'swr/infinite'
 What's Changed
 
 breaking: drop legacy types by @huozhi in https://github.com/vercel/swr/pull/1930
-feat: module state and refactor the core by @shuding in https://github.com/vercel/swr/pull/1928
-feat: module option by @shuding in https://github.com/vercel/swr/pull/1929
+feat: isLoading state and refactor the core by @shuding in https://github.com/vercel/swr/pull/1928
+feat: keepPreviousData option by @shuding in https://github.com/vercel/swr/pull/1929
 chore: refactoring by @shuding in https://github.com/vercel/swr/pull/1925
 fix: output mutation cjs bundle with named exports by @huozhi in https://github.com/vercel/swr/pull/1926
 
@@ -616,11 +647,11 @@ Keep in mind that APIs might still change until the stable release. Documentatio
 💖 Give feedback in discussion: https://github.com/vercel/swr/discussions/1919.
 Highlights
 useSWRMutation — dedicated API for remote mutations, e.g. POST (#1450)
-Added in #1450, the new module hook covers all the use cases of:
+Added in #1450, the new useSWRMutation hook covers all the use cases of:
 - Requests that change data on the remote side: such as POST, PUT, DELETE, etc.
 - Requests that need to be triggered manually, instead of automatically by SWR.
 - Passing extra argument to fetcher, when triggering a request.
-- Knowing the status of a mutation, similar to module but for mutations.
+- Knowing the status of a mutation, similar to isValidating but for mutations.
 - A lot more...
 Here's a quick example of how it looks:
 ```jsx
@@ -638,32 +669,50 @@ return  {
   }}>Create User
 }
 ```
-In this example, the ""fetcher"", which is module, will receive the value module as the module from the second parameter. The request will only be triggered when clicking the button.
-The new module hook is actually more powerful than this, it also supports:
+In this example, the ""fetcher"", which is sendRequest, will receive the value { username: 'johndoe' } as the arg from the second parameter. The request will only be triggered when clicking the button.
+The new useSWRMutation hook is actually more powerful than this, it also supports:
 - Optimistic updates
 - Automatic error rollback
-- Detect and avoid race conditions between module
-- Populate the cache of module after mutation finishes
+- Detect and avoid race conditions between useSWR
+- Populate the cache of useSWR after mutation finishes
 - ...
 More examples to come.
 Breakings
 Fetcher no longer accepts multiple arguments (#1864)
-Previously, if the module is an array, the values will be passed to the module function as arguments separately. In 2.0, the module will always be passed to the module as is.
+Previously, if the key is an array, the values will be passed to the fetcher function as arguments separately. In 2.0, the key will always be passed to the fetcher as is.
 Before:
-module
+js
+// SWR 1.x
+useSWR([1, 2, 3], (a, b, c) => {
+  assert(a === 1)
+  assert(b === 2)
+  assert(c === 3)
+})
 After 2.0.0:
-module
+js
+// SWR 2.0.0
+useSWR([1, 2, 3], (a) => {
+  assert(a === [1, 2, 3])
+})
 Internal structure of the cached data (#1863)
-This change affects the code that directly reads/writes to the cache, or provides a cache preset. For example if you have something like module, you'll have to update your code.
-Previously, the cached value of module will be the associated module, so this was guaranteed:
-module
-And we keep other states (module, module) with a special, prefixed key. Something like module.
+This change affects the code that directly reads/writes to the cache, or provides a cache preset. For example if you have something like cache.set(key, value), you'll have to update your code.
+Previously, the cached value of key will be the associated data, so this was guaranteed:
+js
+// SWR 1.x
+assert(cache.get(key) === data)
+And we keep other states (error, isValidating) with a special, prefixed key. Something like '$err$' + key.
 Since 2.0.0, the internal structure will be an object that holds all the current states:
-module
-So you will have to do the following change to your code, module:
-module
-And module:
-module
+js
+// SWR 2.0.0
+assert(cache.get(key) === { data, error, isValidating })
+So you will have to do the following change to your code, get:
+diff
+- cache.get(key)
++ cache.get(key)?.data
+And set:
+diff
+- cache.set(key, data)
++ cache.set(key, { ...cache.get(key), data })
 What's Changed
 
 bugfix: make suspense and revalidateIfStale work together by @simowe in https://github.com/vercel/swr/pull/1851
@@ -695,11 +744,28 @@ bugfix: make suspense and revalidateIfStale work together by @simowe in #1851
 
 Full Changelog: https://github.com/vercel/swr/compare/1.2.2...1.3.0"
 23,"Highlights of This Release
-module Option Now Supports Function
-We added better Optimistic UI support in link. However, what if your API is only returning a subset of the data (such as the mutated part), that can be populated into the cache? Usually, an extra revalidation after that mutation is needed. But now you can also use a function as module to transform the mutate result into the full data:
-module
+populateCache Option Now Supports Function
+We added better Optimistic UI support in v1.2.0. However, what if your API is only returning a subset of the data (such as the mutated part), that can be populated into the cache? Usually, an extra revalidation after that mutation is needed. But now you can also use a function as populateCache to transform the mutate result into the full data:
+js
+await mutate(addTodo(newTodo), {
+  optimisticData: [...data, newTodo],
+  rollbackOnError: true,
+  populateCache: (addedTodo, currentData) => {
+    // `addedTodo` is what the API returns. It's not
+    // returning a list of all current todos but only
+    // the new added one.
+    // In this case, we can transform the mutate result
+    // together with current data, into the new data
+    // that can be updated.
+    return [...currentData, addedTodo];
+  },
+  // Since the API already gives us the updated information,
+  // we don't need to revalidate here.
+  revalidate: false,
+});
 The new definition:
-module
+ts
+populateCache?: boolean | ((mutationResult: any, currentData: Data) => Data)
 Here is a demo for it: https://codesandbox.io/s/swr-basic-forked-hi9svh
 Bug Fixes
 What's Changed
@@ -707,12 +773,12 @@ What's Changed
 refactor: revalidateIfStale has an effect on updates, not only mounting by @koba04 in https://github.com/vercel/swr/pull/1837
 fix: reset stale unmountedRef in suspense by @promer94 in https://github.com/vercel/swr/pull/1843
 test: add a test for the behavior of revalidateOnMount when the key has been changed by @koba04 in https://github.com/vercel/swr/pull/1847
-feat: Support module as a function by @shuding in https://github.com/vercel/swr/pull/1818
+feat: Support populateCache as a function by @shuding in https://github.com/vercel/swr/pull/1818
 
 Full Changelog: https://github.com/vercel/swr/compare/1.2.1...1.2.2"
 24,"Highlights of This Release
-module accepts a function
-Previously link is either true or false. Now it accepts a function that conditionally determines if SWR should retry. Here's a simple example:
+shouldRetryOnError accepts a function
+Previously shouldRetryOnError is either true or false. Now it accepts a function that conditionally determines if SWR should retry. Here's a simple example:
 ```js
 const fetcher = url => fetch(url).then(res => {
   // Fetcher throws if the response code is not 2xx.
@@ -730,7 +796,7 @@ useSWR(key, fetcher, {
 Thanks to @sairajchouhan for contributing!
 What's Changed
 
-module accepts a function that can be used to conditionally stop retrying   by @sairajchouhan in https://github.com/vercel/swr/pull/1816
+shouldRetryOnError accepts a function that can be used to conditionally stop retrying   by @sairajchouhan in https://github.com/vercel/swr/pull/1816
 build(deps-dev): bump next from 12.0.8 to 12.0.9 by @dependabot in https://github.com/vercel/swr/pull/1821
 fix: useSWRInfinite revalidates with revalidateOnMount by @koba04 in https://github.com/vercel/swr/pull/1830
 
@@ -741,17 +807,23 @@ New Contributors
 Full Changelog: https://github.com/vercel/swr/compare/1.2.0...1.2.1"
 25,"Highlights of This Release
 Optimistic Updates with Auto Error Rollback
-There are now some new options in module:
-module
-Here the cache will be immediately updated to module, the “optimistic value”. And then a request (remote mutation) is started via module and the response will be written to the cache. If that request fails, the original result will be rolled back safely so the optimistic value will be gone. And after all those finish, a revalidation will start to fetch the latest value.
+There are now some new options in mutate:
+js
+mutate(patchUser(user), {
+  optimisticData: user,
+  populateCache: true,
+  rollbackOnError: true,
+  revalidate: true,
+})
+Here the cache will be immediately updated to user, the “optimistic value”. And then a request (remote mutation) is started via patchUser(user) and the response will be written to the cache. If that request fails, the original result will be rolled back safely so the optimistic value will be gone. And after all those finish, a revalidation will start to fetch the latest value.
 This is extremely helpful for building the optimistic UI pattern.
-You can do the same for the global module, just remember to pass the key. Also, the current module APIs stay unchanged so module works the same.
+You can do the same for the global mutate, just remember to pass the key. Also, the current mutate APIs stay unchanged so mutate(data, false) works the same.
 Here's an example: https://codesandbox.io/s/swr-basic-forked-k5hps.
 https://user-images.githubusercontent.com/3676859/151381238-f3aba769-91b6-4bfc-9285-df1b9ef51773.mp4
-module Support
-SWR now has module exported for bundlers that prefer this format.
-This doesn’t break environments that don’t support module. An alternative module and CJS bundle are also published.
-You can read more about ES modules link.
+.mjs Support
+SWR now has .mjs exported for bundlers that prefer this format.
+This doesn’t break environments that don’t support .mjs. An alternative .esm.js and CJS bundle are also published.
+You can read more about ES modules here.
 What's Changed
 
 feat: Optimistic mutation with error rollback by @shuding in https://github.com/vercel/swr/pull/1745
@@ -797,11 +869,17 @@ New Contributors
 Full Changelog: https://github.com/vercel/swr/compare/1.1.2...1.2.0-beta.1"
 27,"Highlights of This Release
 Dedicated API for Optimistic Updates with Auto Rollback on Error
-There are now some new options in module:
-module
-Here the cache will be immediately updated to module, the “optimistic value”. And then a request (remote mutation) is started via module and the response will be written to the cache. If that request fails, the original result will be rolled back safely so the optimistic value will be gone. And after all those finish, a revalidation will start to fetch the latest value.
+There are now some new options in mutate:
+js
+mutate(patchUser(user), {
+  optimisticData: user,
+  populateCache: true,
+  rollbackOnError: true,
+  revalidate: true,
+})
+Here the cache will be immediately updated to user, the “optimistic value”. And then a request (remote mutation) is started via patchUser(user) and the response will be written to the cache. If that request fails, the original result will be rolled back safely so the optimistic value will be gone. And after all those finish, a revalidation will start to fetch the latest value.
 This is extremely helpful for building the optimistic UI pattern.
-You can do the same for the global module, just remember to pass the key. Also, the current module APIs stay unchanged so module works the same.
+You can do the same for the global mutate, just remember to pass the key. Also, the current mutate APIs stay unchanged so mutate(data, false) works the same.
 Here's an example: https://codesandbox.io/s/swr-basic-forked-k5hps.
 What's Changed
 
@@ -817,20 +895,20 @@ Use the Latest Fetcher Function
 SWR will now use the latest fetcher function passed to the hook, when sending the request. Previously it uses the initial snapshotted fetcher.
 Avoid Unnecessary Auto Revalidations
 When refocusing on the window with state changes (like clicking a button that changes the SWR key immediately), SWR now avoids revalidations if they're not necessary. Details can be found in #1720.
-New Types for module
-Two types for module are added: module and module. You can use them to type the hook and the module function.
-New module option for module
+New Types for useSWRInfinite
+Two types for useSWRInfinite are added: SWRInfinteHook and SWRInfinteKeyLoader. You can use them to type the hook and the getKey function.
+New populateCache option for mutate
 A new option to control if the mutation data should be written to the cache. You can find the details in #1729.
 What's Changed
 
-Make polyfill for module more robust by @thomaspaulmann in https://github.com/vercel/swr/pull/1707
+Make polyfill for requestAnimationFrame more robust by @thomaspaulmann in https://github.com/vercel/swr/pull/1707
 type(infinite): export SWRInfinteHook and SWRInfiniteKeyLoader from infinite, rename InfiniteFetcher to SWRInfiniteFetcher by @houkanshan in https://github.com/vercel/swr/pull/1714
 feat: Ensure auto revalidations are executed after state updates by @shuding in https://github.com/vercel/swr/pull/1720
 Add moduleNameMapper to jest by @shuding in https://github.com/vercel/swr/pull/1724
 Improve test by @promer94 in https://github.com/vercel/swr/pull/1725
 feat: Use the latest reference of fetcher by @shuding in https://github.com/vercel/swr/pull/1727
 fix: Re-export InfiniteFetcher by @shuding in https://github.com/vercel/swr/pull/1728
-feat: Add module option to module by @shuding in https://github.com/vercel/swr/pull/1729
+feat: Add populateCache option to mutate by @shuding in https://github.com/vercel/swr/pull/1729
 Fix local state sharing example deps by @huozhi in https://github.com/vercel/swr/pull/1737
 Merge states for concurrent requests by @shuding in https://github.com/vercel/swr/pull/1741
 Skip error retrying when document is not active and improve tests by @shuding in https://github.com/vercel/swr/pull/1742
@@ -848,8 +926,8 @@ We now have 23 test suits of 202 total test cases, with a 98.06% test coverage. 
 SWR will now use the latest fetcher function passed to the hook, when sending the request. Previously it uses the initial snapshotted fetcher.
 3. Avoid Unnecessary Auto Revalidations
 When refocusing on the window with state changes (like clicking a button that changes the SWR key immediately), SWR now avoids revalidations if they're not necessary. Details can be found in #1720.
-4. New Types for module
-Two types for module are added: module and module. You can use them to type the hook and the module function.
+4. New Types for useSWRInfinite
+Two types for useSWRInfinite are added: SWRInfinteHook and SWRInfinteKeyLoader. You can use them to type the hook and the getKey function.
 What's Changed
 
 type(infinite): export SWRInfinteHook and InfiniteKeyLoader from infinite by @houkanshan in https://github.com/vercel/swr/pull/1714
@@ -865,7 +943,7 @@ New Contributors
 Full Changelog: https://github.com/vercel/swr/compare/1.1.2-beta.0...1.1.2-beta.1"
 30,"What's Changed
 
-Make polyfill for module more robust by @thomaspaulmann in https://github.com/vercel/swr/pull/1707
+Make polyfill for requestAnimationFrame more robust by @thomaspaulmann in https://github.com/vercel/swr/pull/1707
 
 New Contributors
 
@@ -873,16 +951,22 @@ New Contributors
 
 Full Changelog: https://github.com/vercel/swr/compare/1.1.1...1.1.2-beta.0"
 31,"Highlights of This Release
-Dynamic module
-You can now pass a function as module, to dynamically return the interval (in millisecond) til the next request, based on the current data:
-module
-If return module, polling will be stopped.
+Dynamic refreshInterval
+You can now pass a function as refreshInterval, to dynamically return the interval (in millisecond) til the next request, based on the current data:
+typescript
+useSWR('key', fetcher, {
+  refreshInterval: function (data: Data | undefined) {
+    if (!data) return 3000 // Initial request 
+    return data.next_update
+  }
+})
+If return 0, polling will be stopped.
 What's Changed
 
 feat: refreshInterval as a function by @Andrewnt219 in https://github.com/vercel/swr/pull/1690
 test: add refreshInterval function returns 0 by @Andrewnt219 in https://github.com/vercel/swr/pull/1691
-fix: If module is deeply to the latest state, broadcast the latest state by @icyJoseph in https://github.com/vercel/swr/pull/1697
-fix: Return module data if key's falsy under suspense mode by @icyJoseph in https://github.com/vercel/swr/pull/1698
+fix: If newData is deeply to the latest state, broadcast the latest state by @icyJoseph in https://github.com/vercel/swr/pull/1697
+fix: Return undefined data if key's falsy under suspense mode by @icyJoseph in https://github.com/vercel/swr/pull/1698
 
 New Contributors
 
@@ -892,11 +976,16 @@ New Contributors
 Full Changelog: https://github.com/vercel/swr/compare/1.1.0...1.1.1"
 32,"Highlights for This Release
 1. Built-in & stable serialization for SWR keys
-module
+js
+useSWR({ query: graphql`...`, variables }, fetcher)
+useSWR({ query: graphql`...`, variables }, fetcher)
+useSWR({ variables, query: graphql`...` }, fetcher)
+// ^all recognized as the same resource
 For array keys too, it's safe to do the following:
-module
-2. module for module
-This is a new added option for module (defaults to module), you can use it to control if the first page should be revalidated when changing the size or doing a mutation.
+js
+useSWR([ `...`, { variables } ], fetcher)
+2. revalidateFirstPage for useSWRInfinite
+This is a new added option for useSWRInfinite (defaults to true), you can use it to control if the first page should be revalidated when changing the size or doing a mutation.
 3. Better TypeScript support
 
 Key / arguments
@@ -904,7 +993,7 @@ Conditional / dependent
 Constant keys
 Returned data
 
-image
+
 What's Changed
 
 Feature: make return state(data, error and isValidating) readonly by @anirudh1713 in https://github.com/vercel/swr/pull/1431
@@ -956,7 +1045,7 @@ chore: fix ts comments by @huozhi in https://github.com/vercel/swr/pull/1540
 fix: Ensure mutate accepts undefined as the data by @shuding in https://github.com/vercel/swr/pull/1515
 chore: Fix comment and startAt type by @shuding in https://github.com/vercel/swr/pull/1541
 chore: Refactor cleanupState by @shuding in https://github.com/vercel/swr/pull/1544
-feat: using latest version of module with fetch interceptor by @danestves in https://github.com/vercel/swr/pull/1548
+feat: using latest version of axios with fetch interceptor by @danestves in https://github.com/vercel/swr/pull/1548
 test: Add test case for mutation deduplication by @shuding in https://github.com/vercel/swr/pull/1549
 test: speed up with @swc-node/jest by @huozhi in https://github.com/vercel/swr/pull/1569
 chore: Optimizations by @shuding in https://github.com/vercel/swr/pull/1578
@@ -967,7 +1056,7 @@ fix: can't find variable removeEventListener by @zhaomengfan in https://github.c
 Revert ""chore: Mark returned states and mutate callback argument as readonly"" by @shuding in https://github.com/vercel/swr/pull/1570
 fix: change config alteration process in withMiddleware to be immutable by @junsushin-dev in https://github.com/vercel/swr/pull/1556
 fix: Allow empty mutate argument list for infinite by @shuding in https://github.com/vercel/swr/pull/1602
-chore: Add module and use module extension by @shuding in https://github.com/vercel/swr/pull/1604
+chore: Add type: ""module"" and use .mjs extension by @shuding in https://github.com/vercel/swr/pull/1604
 Revert ""chore: Add type: ""module"" and use .mjs extension (#1604)"" by @huozhi in https://github.com/vercel/swr/pull/1618
 enhance: bind removeEventListener by @huozhi in https://github.com/vercel/swr/pull/1596
 fix: typos by @nguyenyou in https://github.com/vercel/swr/pull/1647
@@ -982,7 +1071,7 @@ example: update typescript examples with strict ts mode by @huozhi in https://gi
 chore: upgrade eslint to v8 and prettier to v2 by @huozhi in https://github.com/vercel/swr/pull/1674
 fix: remove unnecessary async by @Cut0 in https://github.com/vercel/swr/pull/1676
 types: remove duplicated typing def by @huozhi in https://github.com/vercel/swr/pull/1675
-chore: Add test case for module in module by @shuding in https://github.com/vercel/swr/pull/1681
+chore: Add test case for getKey in useSWRInfinite by @shuding in https://github.com/vercel/swr/pull/1681
 
 New Contributors
 
@@ -1030,7 +1119,7 @@ Credits
 Huge thanks to @promer94, @huozhi, and @nguyenyou for helping!"
 36,"Minor Changes
 
-Revert ""chore: Add module and use module extension"" (#1618): #1604
+Revert ""chore: Add type: ""module"" and use .mjs extension"" (#1618): #1604
 
 Patches
 
@@ -1040,7 +1129,7 @@ Credits
 Huge thanks to @huozhi for helping!"
 37,"Patches
 
-Chore: Add module and use module extension: #1604
+Chore: Add type: ""module"" and use .mjs extension: #1604
 "
 38,"Minor Changes
 
@@ -1061,7 +1150,7 @@ Huge thanks to @TakahiroHimi, @morgs32, @aFINKndreas, @zhaomengfan, and @junsush
 
 Small fixes: #1541
 Chore: Refactor cleanupState: #1544
-Feat: using latest version of module with fetch interceptor: #1548
+Feat: using latest version of axios with fetch interceptor: #1548
 Test: Add test case for mutation deduplication: #1549
 Test: speed up with @swc-node/jest: #1569
 Optimizations: #1578
@@ -1188,14 +1277,14 @@ Fix typo in test: #1393
 Chore: remove isomorphic-unfetch from examples: #1389
 Chore: bump swr to latest in examples: #1394
 Fix: isValidating when an error occurred: #1396
-Fix: module is exported as module type: #1409
+Fix: useSWRConfig is exported as () => any type: #1409
 Fix: isValidating cache inconsistence in mutatation: #1411
 Refactor: use TestSWRConfig for error-test: #1404
 
 Credits
 Huge thanks to @louisgv, @willheslam, @koba04, @huozhi, and @origin-master for helping!"
 49,"Minor Changes & Breaking Changes
-See full changes of this major & previous beta updates link. Also read our blog post and migration guide: link.
+See full changes of this major & previous beta updates on the Releases page. Also read our blog post and migration guide: https://swr.vercel.app/blog/swr-v1.
 Patches
 
 Chore: add test to ensure the unserialized key is passed to middleware: #1384
@@ -1249,12 +1338,12 @@ Credits
 Huge thanks to @huozhi for helping!"
 54,"Minor Changes
 
-Export module from SWR: #1337
+Export unstable_serialize from SWR: #1337
 
 Patches
 
 Fix type of MutatorCallback: #1342
-Improvement: return stale data then revalidate when setting size of module: #1343
+Improvement: return stale data then revalidate when setting size of useSWRInfinite: #1343
 Lint-staged: remove lint, fix prettier: #1347
 Local devdelopment with examples: #1330
 Fix: alias swr in next client bundle on dev mode: #1349
@@ -1264,11 +1353,11 @@ Credits
 Huge thanks to @huozhi for helping!"
 55,"Major Changes
 
-BREAKING: Deprecate module with module: #1332
+BREAKING: Deprecate revalidate with mutate: #1332
 
 Minor Changes
 
-Improvement: ensure module reuses module cache: #1341
+Improvement: ensure useSWRInfinite reuses useSWR cache: #1341
 
 Patches
 
@@ -1349,7 +1438,7 @@ Fix: race problem when in dedupingInterval: #1088
 Bug fixes: #1096
 Test: refactor use-swr-refresh.test.tsx: #1103
 Docs: optimistic UI examples comments more clearer: #1102
-Fix setting module cache in module: #1110
+Fix setting null cache in useSWRInfinite: #1110
 Test: refactor use-swr-revalidate.test.tsx: #1111
 Test: refactor use-swr-suspense.test.tsx: #1113
 Build: upragde bundler: #1121
@@ -1516,7 +1605,7 @@ Replace rIC with rAF: #744
 Fix race condition when calling mutate synchronously: #735
 Refactor: support SSR in Deno: #754
 Fix eslint error: #768
-Fix module types: #745
+Fix mutateCallback types: #745
 Add CodeSandbox CI: #769
 Dispatch's payload type is actionType and run lint: #772
 Fix suspense: #777
@@ -1548,7 +1637,7 @@ Credits
 Huge thanks to @huozhi and @Brew-Brew for helping!"
 73,"Patches
 
-Remove unnecessary dependencies from module and module: #665
+Remove unnecessary dependencies from mutate and setSize: #665
 "
 74,"Patches
 
@@ -1580,7 +1669,7 @@ Huge thanks to @anc95 and @ath92 for helping!"
 Add useDebugValue to show the data label in the React DevTools: #578
 Fix problem of unnecessary revalidates when resolved data is falsy: #524
 Added example for SWR Request De-duplication feature: #519
-Fix: module should trigger the lastest version of config callbacks: #521
+Fix: eventsRef should trigger the lastest version of config callbacks: #521
 Fix useSWRInfinite response type: #584
 Fix: 'revalidateOnFocus' and 'revalidateOnReconnect' shoule be statful: #583
 Swr.vercel.app: #605
@@ -1665,7 +1754,7 @@ Huge thanks to @timneutkens, @akx, @Kerumen, @zusinShinpei, @matamatanot, @prome
 82,"Patches
 
 Fix polling conditions: #281
-Change useRequest.js to use module: #292
+Change useRequest.js to use mutate: #292
 Fix 'reconnect' assignment: #297
 Dedupe extra requests after mutation: #296
 Use window as a target for online event: #300
@@ -1685,11 +1774,11 @@ Credits
 Huge thanks to @sergiodxa for helping!"
 84,"Patches
 
-Add regression test for WeakMap key is module: #273
+Add regression test for WeakMap key is null: #273
 Fix: disable dedupe when trigger/mutate  (#279): #271
 Improve mutate function: #245
 Add errorRetryCount config option: #277
-Fixed potential typescript error in module: #265
+Fixed potential typescript error in examples/axios-typescript: #265
 
 Credits
 Huge thanks to @sergiodxa, @dominictwlee, and @Svish for helping!"
@@ -1704,7 +1793,7 @@ Allow use custom isEqual method: #219
 Moving page cache to use a cache map: #221
 Update README.md: #235
 Test(typo): fix typo: #244
-Fix weakmap key is module: #251
+Fix weakmap key is null: #251
 Fix race condition and add test: #261
 
 Credits
@@ -1771,7 +1860,7 @@ Demo: suspense demo: #105
 Improve readme: #104
 Remove/inline dependencies: #115
 Replace batchedUpdates with reducer: #117
-Use module: #89
+Use @zeit/ncc: #89
 
 Credits
 Huge thanks to @afc163, @aequasi, @pacocoursey and @wendzhue for helping!"
@@ -1801,7 +1890,7 @@ Add a README to every example: #79
 Add One-Click Deploy button to examples: #81
 Add @pacocoursey to CODEOWNERS: #83
 Fix suspense bugs: #82
-Pass module to module: #52
+Pass pageSWRs to swrDataToOffset: #52
 
 Credits
 Huge thanks to @sergiodxa, @pacocoursey for helping!"
@@ -1827,7 +1916,7 @@ Add example of implementing optimistic UI with mutate: #31
 Fix suspense hanging: #49
 Update package name: #51
 Pre-commit, better linting and webstorm support: #55
-Use module: #53
+Use fast-deep-equal: #53
 
 Credits
 Huge thanks to @aequasi, @Timer, @marcelmokos, @sergiodxa, and @sztadii for helping!"

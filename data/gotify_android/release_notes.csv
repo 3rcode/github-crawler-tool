@@ -35,7 +35,7 @@ Fix crash when polling new messages and the request fails
 Fix crash when sharing, but there is no active user
 "
 7,"
-Add module extra (#200 by @ngruychev)
+Add client::notification.bigImageUrl extra (#200 by @ngruychev)
 Update dependencies
 Fix APK signing
 "
@@ -93,12 +93,12 @@ Add support for open url on notification click (#66 via #91 by @mzoeller)
 Cache images to disk (#88 by @dylanparker)
 "
 19,"
-Fix link by removing the module-library (#87)
+Fix CVE-2019-11932 by removing the android-gif-drawable-library (#87)
 Update several dependencies (#87)
 Cache images in messages with picasso (#79 via #87)
 "
 20,"
-Messages are now rendered as module by default. In v2.0.6 it was module.
+Messages are now rendered as text/plain by default. In v2.0.6 it was text/markdown.
 
 
 Use extra property to determine how the message content is rendered (#67) 

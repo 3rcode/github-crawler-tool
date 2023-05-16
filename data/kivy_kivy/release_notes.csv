@@ -3,19 +3,19 @@ Index,Release Note
 Kivy is a full-featured framework for creating novel and performant user
 interfaces, such as multi-touch applications, released under the MIT license.
 The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
-Installation instructions and Kivy Docs are hosted on the link
+Installation instructions and Kivy Docs are hosted on the Kivy Website
 
 Currently supported Python versions are 3.7-3.10
-macOS module now supports both module and module hardware.
-module for module pre-built wheels are now available on PyPi. 
-Single module wheel for module module and module is now available on PyPi.
+macOS Kivy.app now supports both Intel and Apple Silicon hardware.
+aarch64 for manylinux2014 pre-built wheels are now available on PyPi. 
+Single universal2 wheel for macos Intel and Apple Silicon is now available on PyPi.
 
 Features marked as deprecated on 1.6.0 and prior versions will be removed in Kivy 2.2.0.
 Highlights
 
-[#7658]: Feature: Added EventManagerBase. We can now register managers that selectively process inputs e.g. touch and decide how to dispatch it to the widget tree. module and module was added to Widget to handle generic motion inputs from the managers.
+[#7658]: Feature: Added EventManagerBase. We can now register managers that selectively process inputs e.g. touch and decide how to dispatch it to the widget tree. on_motion and motion_filter was added to Widget to handle generic motion inputs from the managers.
 [#7270]: Graphics: We now check whether the user called GL instructions from an external thread and raise an error.
-[#7293]: Properties: Added dynamic screen density/dpi support. KV code referencing density e.g. module will now update if the window dpi changes.
+[#7293]: Properties: Added dynamic screen density/dpi support. KV code referencing density e.g. width: ""5dp"" will now update if the window dpi changes.
 [#7371]: KV: Allow using f-strings in KV-lang.
 [#7424]: Properties: Speed up bare widget creation (3X) and property dispatching/setting.
 [#7587]: Fix PermissionError when reconnecting mtdev input devices.
@@ -26,7 +26,7 @@ Highlights
 
 Deprecated
 
-link: deprecate 'kivy.utils.SafeList'.
+#7701: deprecate 'kivy.utils.SafeList'.
 [#7786]: WindowBase: Add on_drop_begin, on_droptext and on_drop_end events.
 
 Breaking changes
@@ -34,7 +34,7 @@ Breaking changes
 [#6290]: Widget: Fix signature of add/remove/clear_widget in subclasses to be consistent with base class.
 [#7264]: Camera: Change play default to False.
 [#7356]: Widget: Widget.clear_widgets providing empty widget list does not remove any children, unlike None that clears all the children.
-[#7437]: TextInput: Remove broken and confusing module property
+[#7437]: TextInput: Remove broken and confusing suggestion_text property
 [#7744]: Change default input_type to null. Add some warning regarding TYPE_TEXT_FLAG_NO_SUGGESTIONS
 [#7763]: Removed Python3.6 from the supported ones, it reached EOL
 [#7820]: kivy_deps.gstreamer releases 0.3.0, 0.14, 0.15, and 0.16 were deleted from PyPi to conserve space. They were not used, but if you did depend on them you can download them from https://kivy.org/downloads/ci/win/deps/.
@@ -73,7 +73,7 @@ Widgets
 [#7391]: Factory: Registered TouchRippleBehavior and TouchRippleButtonBehavior with Factory
 [#7426]: Dropdown: Ensure visibility on reposition
 [#7434]: ModalView: code cleanup regarding detection of main-Window:
-[#7437]: TextInput: Remove broken and confusing module property
+[#7437]: TextInput: Remove broken and confusing suggestion_text property
 [#7457]: ScrollView: Fix for scroll bar areas blocking clicks when scroll is disabled with overscroll
 [#7471]: Video: Add support for preview image
 [#7488]: FocusBehavior: Fix assumption that modifiers is always a set.
@@ -175,7 +175,7 @@ Distribution
 [#7769]: Add Linux AArch64 wheel build support
 [#7777]: Bump to 2.1.0rc1
 [#7802]: Bump to 2.1.0rc1
-[#7804]: Use the module env variable to force the build of module in non Raspi CI builds
+[#7804]: Use the KIVY_RPI_VERSION env variable to force the build of egl_rpi in non Raspi CI builds
 [#7813]: Bump cython and kivy_deps versions to latest
 [#7820]: Patch gst current release to look for dlls in correct place for win store
 [#7821]: Bump to 2.1.0rc2
@@ -191,7 +191,7 @@ Documentation
 [#7301]: Doc: Add Kivy config example for inverted mtdev events
 [#7305]: Slider: Fix step property docs
 [#7328]: Added documentation for RecycleView viewclass statefullness,  including a warning, context paragraph, and minimal example
-[#7342]: TabbedPanel: Doc calling module from module
+[#7342]: TabbedPanel: Doc calling switch_to from __init__
 [#7344]: App: fix Trio example in docstring
 [#7358]: Doc: Fix doc code formatting
 [#7359]: Fix first doc line being ignored
@@ -284,39 +284,45 @@ interfaces, such as multi-touch applications, released under the MIT license.
 The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
 
 This is the first release to not support Python 2.7 - hence the increase in Kivy's major version to 2. Currently supported Python versions are 3.6 - 3.9.
-Installation has been largely simplified and all platforms now support a simpler module install (see below).
+Installation has been largely simplified and all platforms now support a simpler pip install (see below).
 
 Installation instructions and Kivy documentation is available on the Kivy website:
-module
-or on link.
+https://kivy.org
+
+or on GitHub.
 Installation notes
 Kivy can now be installed into your Virtual Environment on Windows, Linux, OSX, and RPi simply with:
-module
-module For the RPi, additional system dependencies should be pre-installed.
-These selectors allow specifying dependency categories, instead of having to pin Kivy's module dependencies to specific versions. These selectors will install the proper dependency version to match Kivy's version.
-Additionally, by default, Kivy will install the module dependencies even if module is not specified. In order to facilitate easier install for GUI installation users e.g. in PyCharm. However, this may change as module evolves and module should be manually specified. Use module's module flag to disable it.
-See the link for more details.
-Installation from source has also been simplified, relying on module's module. See the link.
+pip install kivy[base] kivy-examples
+# or to get the media dependecies as well
+pip install kivy[base,media] kivy-examples
+# or to get most kivy optional dependencies
+pip install kivy[full] kivy-examples
+
+* For the RPi, additional system dependencies should be pre-installed.
+These selectors allow specifying dependency categories, instead of having to pin Kivy's kivy_deps dependencies to specific versions. These selectors will install the proper dependency version to match Kivy's version.
+Additionally, by default, Kivy will install the base dependencies even if base is not specified. In order to facilitate easier install for GUI installation users e.g. in PyCharm. However, this may change as pip evolves and base should be manually specified. Use pip's --no-deps flag to disable it.
+See the selector documentation for more details.
+Installation from source has also been simplified, relying on pip's pyproject.toml. See the simplified instructions.
 Highlights
 
 [#6351]: Support for Python 2 has been dropped and Kivy source code is now incompatible with Python 2.
 [#6368]: Support for async has been added to Kivy. Kivy can now run cooperatively, in the same process or thread as asynchronous code.
 
-We currently support the stdlib asyncio framework and the excellent trio framework. See the link for how to use it.
+We currently support the stdlib asyncio framework and the excellent trio framework. See the kivy examples for how to use it.
 Breaking changes
 
 [#6351]: Core: Drop Python 2 support.
 [#6368]: Core: Add async support to kivy App
-[#6448]: EventDispatcher: Move module from widget to EventDispatcher and fix tests.
+[#6448]: EventDispatcher: Move __self__ from widget to EventDispatcher and fix tests.
 [#6467]: Graphics: Change filename to source
 [#6469]: ModalView: Updating ModalView to improve theming
 [#6607]: Window: Fix SDL Keycode Typo
 [#6650]: DropDown/ModalView: Make modal and dropdown consistent
-[#6677]: Widget: Remove module from Widget.
+[#6677]: Widget: Remove id from Widget.
 [#6678]: ScrollView: Add always_enable_overscroll property on scrollview
 [#6721]: Image: Remove gpl gif implementation
 [#6918]: ColorProperty: Use ColorProperty instead of ListProperty for color property
-[#6937]: Base: Rename module to module
+[#6937]: Base: Rename slave to embedded
 [#6950]: Cache: Raise KeyError if None is used as key in Cache
 
 Changelog
@@ -348,7 +354,7 @@ Packaging
 
 Widgets
 
-[#6288]: TextInput: Cache module property in TextInput
+[#6288]: TextInput: Cache text property in TextInput
 [#6362]: Carousel: Let 'Carousel._curr_slide()' prepare for the situation where 'index' is None
 [#6365]: Carousel: Let 'Carousel.remove_widget()' remove the container of the widget
 [#6372]: Carousel: make 'Carousel.remove_widget()' not cause 'IndexError'
@@ -400,7 +406,7 @@ Core-app
 [#6798]: Platform: Corrected platform detection on Android
 [#6910]: Logger: Add encoding
 [#6926]: Clock: Add clock lifecycle, better exception handling and other cleanup
-[#6937]: Base: Rename module to module
+[#6937]: Base: Rename slave to embedded
 [#6994]: EventLoop: Don't do event loop stuff when stopped.
 [#7083]: Core: Add _version.py and move updating version metadata to the CI
 [#7112]: Python: Require python version >=3.6
@@ -437,8 +443,8 @@ Core-widget
 [#6373]: Properties: Allow observable list and dict dispatch to propagate exceptions.
 [#6441]: EventDispatcher: Move Widget proxy_ref upwards to EventDispatcher
 [#6443]: Property: Initialize KV created property with default value
-[#6448]: EventDispatcher: Move module from widget to EventDispatcher and fix tests.
-[#6677]: Widget: Remove module from Widget.
+[#6448]: EventDispatcher: Move __self__ from widget to EventDispatcher and fix tests.
+[#6677]: Widget: Remove id from Widget.
 [#6858]: Effects: Fix update_velocity
 [#6917]: ColorProperty: Re-add ColorProperty to all list in properties.pyx module
 [#6930]: Property: Use ObservableList as internal storage for ColorProperty
@@ -462,7 +468,7 @@ Distribution
 [#6769]: RPi: Kivy now works on the Raspberry Pi 4 without X11
 [#6774]: Install: Build the extensions in parallel if the options has not been set
 [#6852]: Platform: Fix android platform detection when using p4a
-[#6854]: Install: Reuse module var (complements #6852)
+[#6854]: Install: Reuse kivy_build var (complements #6852)
 [#6891]: Cython: Update to latest cython version
 [#6990]: Installation: Make setuptools use its local distutils
 [#7084]: Dependencies: Add min basic dependencies to install requirements.
@@ -592,7 +598,7 @@ Hope we mentioned them all.
 --
 Kivy Team
 https://kivy.org/#aboutus"
-3,"This release fixed some issues with the docs, the CI, and Kivy dependencies that was introduced in module (https://github.com/kivy/kivy/pull/6357)."
+3,"This release fixed some issues with the docs, the CI, and Kivy dependencies that was introduced in 1.11.0 (https://github.com/kivy/kivy/pull/6357)."
 4,"We are pleased to announce Kivy 1.11.0.
 Kivy is a full featured framework for creating novel and performant user
 interfaces, such as multitouch applications, released under the MIT license.
@@ -600,22 +606,23 @@ The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
 
 This is the last release to support Python 2.7. The next release will only support Python 3.5+.
 This is also the first release with Kivy wheels for Linux (3.5+ only, Windows and macOS already have wheels).
-Windows dependencies are now under the module namespace external to Kivy, rather than module under Kivy. Whether you're upgrading Kivy, please pin the dependency versions when installing because Kivy binary dependencies are not generally backward compatible [#6312].
-The module namespace is similarly being transitioned to the module namespace.
+Windows dependencies are now under the kivy_deps.xxx namespace external to Kivy, rather than kivy.deps.xxx under Kivy. Whether you're upgrading Kivy, please pin the dependency versions when installing because Kivy binary dependencies are not generally backward compatible [#6312].
+The kivy.garden.flower namespace is similarly being transitioned to the kivy_garden.flower namespace.
 
 See below for more details.
 Downloads and installation instructions are available on the Kivy website:
-module
+https://kivy.org
+
 Installation notes
 Windows
 
-[#6324]: We are transitioning the kivy Windows dependencies from the module namespace stored under module to the module namespace stored under module. Pip is sometimes not able to distinguish between these two formats, so follow the instructions below.
-If you're not upgrading Kivy, please make sure to pin your module dependencies to the versions that was on pypi when your Kivy was released so that you don't get newer incompatible dependencies.
-If you're upgrading Kivy, manually uninstall all the module dependencies because pip will not uninstall them when you're upgrading. Then re-install the module dependencies as instructed on the Kivy website.
+[#6324]: We are transitioning the kivy Windows dependencies from the kivy.deps.xxx namespace stored under kivy/deps/xxx to the kivy_deps.xxx namespace stored under kivy_deps/xxx. Pip is sometimes not able to distinguish between these two formats, so follow the instructions below.
+If you're not upgrading Kivy, please make sure to pin your kivy.deps.xxx==x.y.z dependencies to the versions that was on pypi when your Kivy was released so that you don't get newer incompatible dependencies.
+If you're upgrading Kivy, manually uninstall all the kivy.deps.xxx dependencies because pip will not uninstall them when you're upgrading. Then re-install the kivy_deps.xxx dependencies as instructed on the Kivy website.
 If you're installing the first time, simply follow the instructions on Kivy's website.
 
 Linux and macOS
-The new Linux wheels (#6248) can be installed with just module, however, just like on macOS it comes without the Gstreamer dependencies so it has no video and minor audio support. For video/audio support, please install ffpyplayer and set module in the environment, or install kivy using an alternative method that provides these dependencies.
+The new Linux wheels (#6248) can be installed with just pip install kivy, however, just like on macOS it comes without the Gstreamer dependencies so it has no video and minor audio support. For video/audio support, please install ffpyplayer and set KIVY_VIDEO=ffpyplayer in the environment, or install kivy using an alternative method that provides these dependencies.
 Highlights
 Support
 
@@ -623,16 +630,16 @@ Support
 
 Configuration
 
-[#6192]: Support for environmental variables that control the config in the form of module has been added. E.g. setting module in the environment is the same as calling module or setting the module in the module section of the config to module. Note that underscores are not allowed in the section names.
+[#6192]: Support for environmental variables that control the config in the form of KCFG_SECTION_KEY has been added. E.g. setting KCFG_KIVY_LOG_LEVEL=warning in the environment is the same as calling Config.set(""kivy"", ""log_level"", ""warning"") or setting the log_level in the kivy section of the config to warning. Note that underscores are not allowed in the section names.
 
-Any key set this will way will take precedence on the loaded module file. Support for this can be disabled by setting the enviornmental variable module and the environment will not be read for configuration options.
+Any key set this will way will take precedence on the loaded config.ini file. Support for this can be disabled by setting the enviornmental variable KIVY_NO_ENV_CONFIG=1 and the environment will not be read for configuration options.
 KV lang
 
-[#6257]: A new KV-Python integration event that fires when all the KV rules of the widget has been applied, module, has been added to the module class. This event fires for a widget when all the KV rules it participates in has been applied and module has been initialized. Binding to this event will let you execute code for your widget without having to schedule the code for the next clock cycle.
+[#6257]: A new KV-Python integration event that fires when all the KV rules of the widget has been applied, on_kv_post, has been added to the Widget class. This event fires for a widget when all the KV rules it participates in has been applied and ids has been initialized. Binding to this event will let you execute code for your widget without having to schedule the code for the next clock cycle.
 
-Similarly, a new module method was added to module that is called in order to apply the KV rules of that widget class. Inheriting and overwriting that method will give you the oppertunity to execute code before any KV rules are applied.
+Similarly, a new apply_class_lang_rules method was added to Widget that is called in order to apply the KV rules of that widget class. Inheriting and overwriting that method will give you the oppertunity to execute code before any KV rules are applied.
 Garden
-We are transitioning the Kivy garden flowers from the module namespace stored under module or module to the normal python package format module namespace stored under module. With the new configuration, garden flowers will be module installable, support cython flowers, and not require the custom garden tool.
+We are transitioning the Kivy garden flowers from the kivy.garden.flower namespace stored under kivy/garden/flower or ~/.kivy/garden to the normal python package format kivy_garden.flower namespace stored under kivy_garden/flower. With the new configuration, garden flowers will be pip installable, support cython flowers, and not require the custom garden tool.
 We're hoping to transition all flowers to the new format, however, for now many flowers still require installation by the garden tool.
 For users, see https://kivy-garden.github.io/index.html#generalusageguidelines. For developers, see https://kivy-garden.github.io/index.html#developmentguidelines for how to start a new flower, and https://kivy-garden.github.io/index.html#guideformigratingflowersfromlegacystructure for how to migrate existing flowers to the new format.
 Other
@@ -648,7 +655,7 @@ us know so we can fix them.
 Deprecation warnings have also been added to everything that has been deprecated in the past.
 Breaking changes
 
-[#6095]: Changed the Android version to use module for the configuration and added a missing dot to the config file name.
+[#6095]: Changed the Android version to use App.user_data_dir for the configuration and added a missing dot to the config file name.
 [#5340]: Removed DropDown.dismiss in on_touch_down so it is only dismissed in on_touch_up.
 [#5990, #6169]: We now use pytest to run our tests rather than nose.
 [#5968]: Listview and all its associated modules has finally be removed in favor of RecycleView.
@@ -688,7 +695,7 @@ Properties
 [#6055]: Cache values of AliasProperty where possible
 [#5960]: Fix Cython properties syntax
 [#5856]: Update AliasProperty to cache value only if ""cache"" argument is set to True
-[#5841]: fix issues with module aliasproperty
+[#5841]: fix issues with disabled aliasproperty
 
 Storage
 
@@ -773,7 +780,7 @@ Doc
 [#6334]: Add docs for linux wheels
 [#6316]: Update doc of AliasProperty
 [#6296]: Remove duplicate installation instructions.
-[#6282]: example for adding, module to Label
+[#6282]: example for adding, background_color to Label
 [#6217]: add a few kv examples to widget docs
 [#6215]: Added pillow as a required python library
 [#6214]: Grammar tweaks
@@ -810,7 +817,7 @@ Doc
 [#5869]: python basics
 [#5858]: Fixed PEP8 in Pong examples
 [#5850]: : Update for Python 3.7
-[#5848]: Document the module parameter for add_json_panel()
+[#5848]: Document the data parameter for add_json_panel()
 [#5846]: Maintain separate docs for different releases
 [#5840]: : Remove py34 substitutions in nightly lists
 [#5839]: Docs: Fix Windows nightly wheel links
@@ -824,7 +831,7 @@ Graphics
 [#6267]: actually return value of wrapped gil_dbgGetAttribLocation
 [#6247]: Fixes broken lines vertices
 [#6232]: Respect the alpha value when setting rgb.
-[#6112]: declare module in svg.pxd
+[#6112]: declare _filename in svg.pxd
 [#6026]: Support building against mesa video core drivers.
 [#6003]: : fix invalid offset calculation if attribute is optimized out
 [#6000]: : Prevent enabling vertex attribute that are not in the shader
@@ -849,7 +856,7 @@ Input
 [#6152]: HIDInputMotionEventProvider, set thread name
 [#6012]: Fix HIDMotionEvent log formatting
 [#5870]: Provider matching for input postproc calibration
-[#5855]: add missing mapping for module
+[#5855]: add missing mapping for numpaddecimal
 
 Lang
 
@@ -995,12 +1002,12 @@ SVG support improvements.
 Export_to_png now preserves widget's alpha.
 It's now possible to define a custom comparison for properties, to 
    manage dispatching better.
-Layouts' add_widget method now accept the module argument that 
-   module's does.
+Layouts' add_widget method now accept the canvas argument that 
+   Widget's does.
 Fix for infamous SDL window issue on Linux.
-module property of widget now restores the previous value of 
+disabled property of widget now restores the previous value of 
    disabled of children on unset.
-The tuio implementation now uses the new module library instead of 
+The tuio implementation now uses the new oscpy library instead of 
    the bundled oscAPI module, this solves a lot of issues with python3 
    and massively increase performances. The old OSC package is still 
    shipped, but will be removed in future releases.
@@ -1089,7 +1096,7 @@ cf7b55c1b: change opengl ids to unsigned ints
 4d9f19d08: Expose ""absolute"" options in HIDInputMotionEventProvider class
 ae3665c32: camera: fix all export
 53c2b4d63: picamera: fix for python2. Closes #5698
-d3d517dd2: Re-add module camera provider.
+d3d517dd2: Re-add gi camera provider.
 d175cf82c: Fix Inspector crash if shaped window is disabled
 4deb3606d: Add sdl2 system cursors (#5308)
 f5161a248: Clean hanging code (#5232)
@@ -1106,7 +1113,7 @@ dafc07c0e: @triggered: Set default timeout=0
 Widgets
 4905: Removed textinput cursor bug #3237
 5167: Add support for RST replace
-5200: Added module argument to isclose call to ensure no float edge cases
+5200: Added abs_tol argument to isclose call to ensure no float edge cases
 5212: fix #5184: ScrollView bar_margin affects also touch position
 5218: Add support for footnotes to RST
 5243: Fix for crash when setting is_focusable property in issue #5242
@@ -1126,12 +1133,12 @@ Widgets
 5484: DragBehavior: Transform window coordinates to parent coordinates befo…
 5567: EffectWidget: Correct typo 'setdefaults' to 'setdefault'
 5641: Fix LabelBase.register() to behave as documented
-5715: Let Layout.add_widget use the module argument
+5715: Let Layout.add_widget use the canvas argument
 5748: Add canvas argument to FloatLayout.add_widget
 5764: Fix #5761 AsyncImage reload() doesn't invalidate Loader Cache
 5632: Fixes #5632, typo of col instead of row.
 9a8603d54: hotfix: Stop AccordionItem collapse animation
-a432e0d73: Let BoxLayout.add_widget use the module argument
+a432e0d73: Let BoxLayout.add_widget use the canvas argument
 37ccbfac2: pass an empty list for ""buttons"" param to create_touch
 8da2272e5: Remove ineffective changes
 2faa6a993: doc: Added default value to Scatter 'do_collide_after_children' property

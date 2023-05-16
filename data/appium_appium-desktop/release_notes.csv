@@ -18,7 +18,7 @@ bump the embedded appium version to 1.22.2
 
 Moved the inspector feature (New session windows section) to https://github.com/appium/appium-inspector
 Bump embedded Appium version to 1.22.0
-The version still expects to have module prefix as Remote Path
+The version still expects to have /wd/hub prefix as Remote Path
 
 
 "
@@ -28,7 +28,7 @@ Please refer to https://github.com/appium/appium-inspector for Appium 1.22 and n
 Bump Appium version to 1.21.0
 "
 7,"
-Feat: add UA in the header like module
+Feat: add UA in the header like appium-inspector/version
 (Browserstack) Feat: add sessionName in the attach to session dropdown #1694
 Fix: request to remote server not sent in case of fresh installation https://github.com/appium/appium-desktop/pull/1732
 Fix: stale session ids being displayed in the attach to session dropdown #1727
@@ -51,7 +51,7 @@ Update translations
 
 No changes except for the above since AD 1.19.1"
 11,"
-Bump embedded Appium version to 1.20.0-beta.0 link
+Bump embedded Appium version to 1.20.0-beta.0 diff
 "
 12,"
 Bump Appium version to 1.19.1
@@ -70,7 +70,7 @@ This version had an issue like https://github.com/appium/appium-desktop/issues/1
 
 
 feat: bump appium version to 1.19.0 beta
-feat: replace internal Appium client from link to link
+feat: replace internal Appium client from wd to web2driver
 Now, the client can follow W3C spec
 
 
@@ -91,14 +91,14 @@ Fix to attaching to an existing session https://github.com/appium/appium-desktop
 "
 20,"
 Inspector for Web(view) improvements: 
-Add Web(View) notification in Selected Element: link
-Add Web(View) inspector to inspect the HTML-tree: link 
-Add new locators for iOS: link 
+Add Web(View) notification in Selected Element: #1438
+Add Web(View) inspector to inspect the HTML-tree: #1443 
+Add new locators for iOS: #1452 
 
 
-Get Timings button in element section to confirm their performance link
+Get Timings button in element section to confirm their performance #1448
 Automatically download the correct version of ChromeDriver when using a Web or Hybrid app for Android
-The module checkbox in the Advanced-tab can disable this
+The Relaxed Security checkbox in the Advanced-tab can disable this
 
 
 Windows 32 bit installer
@@ -121,45 +121,45 @@ Bump up Appium to v1.15.0
 28,Bundles Appium 1.15.0 (which supports iOS 13+)
 29,"
 feat: Update bundled version of Appium to 1.14.0 
-feat: Intelligently resize screenshot and source tree widths link
-feat: Make sure formatted caps stays visible in saved caps area link
-feat: Make sure to save server type change even without setting change link
-feat: Make configurable ""Get Running Sessions"" link
-fix:  apply session.server.${providername}.host/port/path/ssl  link
+feat: Intelligently resize screenshot and source tree widths #974
+feat: Make sure formatted caps stays visible in saved caps area #973
+feat: Make sure to save server type change even without setting change #973
+feat: Make configurable ""Get Running Sessions"" #979
+fix:  apply session.server.${providername}.host/port/path/ssl  #983
 "
 30,
 31,"
-Update Appium to version 1.13.0 link
-Add 'copy attributes to clipboard"" feature link
+Update Appium to version 1.13.0 #964
+Add 'copy attributes to clipboard"" feature #952
 Russian, Korean and Chinese translations https://crowdin.com/project/appium-desktop
-Add SauceLabs data centers option link
+Add SauceLabs data centers option #966
 "
 32,"
 Features
-🇨🇳 Chinese localization link
+🇨🇳 Chinese localization #923
 Fixes
-Fix bug causing search results to not be highlighted link
-Bump up no new command limit to 24 hours link
-module action call was not being properly parsed link
-Improve performance in cloud by concurrently retrieving source, screenshot and window size link
+Fix bug causing search results to not be highlighted #922
+Bump up no new command limit to 24 hours #902
+updateSettings action call was not being properly parsed #911
+Improve performance in cloud by concurrently retrieving source, screenshot and window size #916
 "
 33,"Bug Fixes
 
-Revert Sentry changes that were causing desired capabilities to not be saved (link) (link)
-Fix defect that made ""object"" args not work for capabilities (link)
-Provide more helpful error and success messages (link)
+Revert Sentry changes that were causing desired capabilities to not be saved (#904) (8e9adb6)
+Fix defect that made ""object"" args not work for capabilities (ef2ff5d)
+Provide more helpful error and success messages (0fe3551)
 
 Features
 
-Add actions that can be executed from Appium Desktop (link)
+Add actions that can be executed from Appium Desktop (7245fb6)
 Translations
-Japanese translations (link) (link)
-Russian translations (link) (link)
+Japanese translations (#857) (15bfa81)
+Russian translations (#843) (10d6c84)
 New cloud providers
-TestingBot (link) (link)
-Pcloudy (link) (link)
-Can copy located element to clipboard (link)
-Stop showing all cloud providers on tab. Make cloud providers individually selectable from a modal (link) (link)
+TestingBot (#862) (88d8f0f)
+Pcloudy (#830) (de0a295)
+Can copy located element to clipboard (1724bc1)
+Stop showing all cloud providers on tab. Make cloud providers individually selectable from a modal (#876) (87624a8)
 Update Appium to 1.12.1
 "
 34,"This build is no longer available due to a major bug
@@ -176,7 +176,7 @@ Feature: Upgrade React to v16.x and ANTD to v3.x to get benefits of performance 
 reduced dependency size (#769)
 "
 36,"
-Fix: Use forked version of WD to resolve W3C attach problem (link)
+Fix: Use forked version of WD to resolve W3C attach problem (see here)
 "
 37,"
 Feature: Upgrade Appium to 1.10 (#753)
@@ -327,7 +327,7 @@ Fix: Filepath capabilities was being parsed as array, parses it to string
 72,"
 Feature: When update fails to work automatically, show a link to the releases page
 Feature: Add a simple element finding recommendation to the element detail
-Fix: With logTimestamps set to module, server console timestamps would all update anytime a new one came in
+Fix: With logTimestamps set to true, server console timestamps would all update anytime a new one came in
 Fix: When opening up the app after an old version had been installed, any click would cause an error due to inability to read settings files correctly
 "
 73,"
@@ -336,20 +336,20 @@ Feature: Updater dialog shows Linux users a link to releases page because Linux 
 Fix: Windows waits 20 seconds after first run before checking for updates due to a timing issue with Squirrel.windows
 "
 74,"
-Feature: add logging to autoUpdater (link)
-Fix: improved markup and CSS in update window (link)
+Feature: add logging to autoUpdater (#74)
+Fix: improved markup and CSS in update window (#74)
 Fix: when an update is found, pulls release notes from GitHub API and displays them in the update window textarea 
 "
 75,"
 Feature: add ""Attach to Session"" tab on New Session window that allows attaching to an already-running session
-Fix: make 'connectHardwareKeyboard' capability true by default so that sims are interactable via the hardware keyboard when running under an Inspector session (link)
+Fix: make 'connectHardwareKeyboard' capability true by default so that sims are interactable via the hardware keyboard when running under an Inspector session (#61)
 "
 76,"
-Fix: issue where typing into a desired capability box was prevented if the app had not been used before. (link)
+Fix: issue where typing into a desired capability box was prevented if the app had not been used before. (#57)
 "
 77,"
-Fix: shell environment was not loaded so drivers dependent on shell path or environment variables could not function (link)
-Fix: some persistent settings keys were not given defaults and caused issues e.g. saving presets (link)
+Fix: shell environment was not loaded so drivers dependent on shell path or environment variables could not function (#45)
+Fix: some persistent settings keys were not given defaults and caused issues e.g. saving presets (#52)
 "
 78,"Features
 

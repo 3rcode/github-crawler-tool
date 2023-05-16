@@ -1,88 +1,25 @@
 Index,Release Note
 1,"Changes:
 
-Fix several UI bugs (#1238, #1241)
-Lazily initialise Bitbucket host provider dependencies (#1239)
-
-Changes from 2.1.0:
-
-Support ports in URL-scoped config (#825)
-Support URL-scoped enterprise default settings (#1149)
-Add support for client TLS certificates (#1152)
-Add TRACE2 support(#1131, #1151, #1156, #1162)
-Better browser detection inside of WSL (#1148)
-Handle expired OAuth refresh token for generic auth (#1196)
-Target *-latest runner images in CI workflow (#1178)
-Various bug fixes:
-Ensure we create a WindowsProcessManager on Windows (#1146)
-Ensure we start child processes created with ProcessManager (#1177)
-Fix app path name of Windows dropping file extension (#1181)
-Ensure we init IEnvironment before SessionManager (#1167)
-git: consistently read from stdout before exit wait (#1136)
-trace2: guard against null pipe client in dispose (#1135)
-Make Avalonia UI the default Windows and move to in-process (#1207)
-Add Git configuration options for trace & debug (#1228)
-Transition from Nerdbank.GitVersioning to a version file (#1231)
-Add support for using the current Windows user for WAM on DevBox (#1197)
-Various documentation updates:
-org-rename: update references to GitCredentialManager (#1141)
-issue templates: remove core suffix (#1180)
-readme: add link to project roadmap (#1204)
-docs: add bitbucket app password requirements (#1213)
-.net tool: clarify install instructions (#1126)
-docs: call out different GCM install paths in WSL docs (#1168)
-docs: add trace2 to config/env documentation (#1230)
-"
-2,"Changes:
-
-Support ports in URL-scoped config (#825)
-Support URL-scoped enterprise default settings (#1149)
-Add support for client TLS certificates (#1152)
-Add TRACE2 support(#1131, #1151, #1156, #1162)
-Better browser detection inside of WSL (#1148)
-Handle expired OAuth refresh token for generic auth (#1196)
-Target *-latest runner images in CI workflow (#1178)
-Various bug fixes:
-Ensure we create a WindowsProcessManager on Windows (#1146)
-Ensure we start child processes created with ProcessManager (#1177)
-Fix app path name of Windows dropping file extension (#1181)
-Ensure we init IEnvironment before SessionManager (#1167)
-git: consistently read from stdout before exit wait (#1136)
-trace2: guard against null pipe client in dispose (#1135)
-Make Avalonia UI the default Windows and move to in-process (#1207)
-Add Git configuration options for trace & debug (#1228)
-Transition from Nerdbank.GitVersioning to a version file (#1231)
-Add support for using the current Windows user for WAM on DevBox (#1197)
-Various documentation updates:
-org-rename: update references to GitCredentialManager (#1141)
-issue templates: remove core suffix (#1180)
-readme: add link to project roadmap (#1204)
-docs: add bitbucket app password requirements (#1213)
-.net tool: clarify install instructions (#1126)
-docs: call out different GCM install paths in WSL docs (#1168)
-docs: add trace2 to config/env documentation (#1230)
-"
-3,"Changes:
-
 Guard against null pipe client (#1135)
 Consistently read from stdout before waiting for Git process exit (#1136)
 "
-4,"Changes:
+2,"Changes:
 
-Secret Service module error fix #996
+Secret Service sec_free: Assertion cell->requested > 0 failed. error fix #996
 Release pipeline fixes #995 #1009 #1061
 Generic OAuth support via config 🎉 #1062
 Initial TRACE2 tracing events #1045
 "
-5,"Changes:
+3,"Changes:
 
 Fix various problems with install path and app path variables #968
 Sign Linux tarball and .NET tool #985 
 "
-6,"Changes:
+4,"Changes:
 
 Check for broken links in documentation (#700)
-Support macOS module installs via Homebrew (#798) 
+Support macOS arm64 installs via Homebrew (#798) 
 Validate installers before publishing (#813)
 Auto-generate maintainer away notification issues (#842)
 Access Azure storage account using service principle credentials (#851)
@@ -91,18 +28,18 @@ Unify documentation line length (#862)
 Add generic username/password UI (#871)
 Bitbucket DC OAuth support (#607)
 Distribute GCM as a dotnet tool (#886)
-Drop module suffix from entry executable #551 
+Drop -core suffix from entry executable #551 
 Speed up build graph (#924)
 Convert issue templates to YAML (https://github.com/GitCredentialManager/git-credential-manager/commit/24ae90a4bd18fec6edcc860281ff82f715588e44)
 Replace netstandard2.0 with dotnet6.0 (https://github.com/GitCredentialManager/git-credential-manager/commit/65cead2b5caa443fde1f9b86d02ab377a80a279c)
 Ensure correct installation directory resolution for all OSes and distribution methods (https://github.com/GitCredentialManager/git-credential-manager/pull/951)
 Align with dotnet-supported Linux distributions (https://github.com/GitCredentialManager/git-credential-manager/pull/953)
 "
-7,"Changes:
+5,"Changes:
 
 Fix build script error creating incorrect x64 packages for macOS (https://github.com/GitCredentialManager/git-credential-manager/pull/778)
 "
-8,"Changes:
+6,"Changes:
 
 Added Markdown Linting/Dependabot (#668, #674)
 Improved detection of dotnet on Linux (#685)
@@ -110,9 +47,9 @@ Added support for local network host URIs (#699)
 Updated generic provider to support all protocols (#712)
 Updated Bitbucket credential UI to show the URL of the Bitbucket Server or Data Center instance if applicable (#713)
 Migrated release process from Azure DevOps to GitHub actions (#707)
-Updated to manually scanning module instead of using module on POSIX systems (#717)
-Added module scope to GitLab OAuth app (#719)
-Added support for module (#732)
+Updated to manually scanning $PATH instead of using which on POSIX systems (#717)
+Added read_repository scope to GitLab OAuth app (#719)
+Added support for osx-arm64 (#732)
 Discontinued incorrect use of Homebrew Git shim (#731)
 Stopped serializing/writing credentials that already exist (#739)
 Corrected runtime exceptions with Bitbucket DC authentication (#743)
@@ -131,16 +68,16 @@ Special thanks to our contributors 🎉:
 @buchwasa
 @mminns 
 "
-9,"This release is a fast follow to module to fix issues with the Debian package generated as part of that release.
+7,"This release is a fast follow to 2.0.692 to fix issues with the Debian package generated as part of that release.
 Changes:
 
 Ensure Debian package is expected size and contains necessary files (https://github.com/GitCredentialManager/git-credential-manager/pull/648)
 Ensure git-credential-manager-core command is available after Debian package install (https://github.com/GitCredentialManager/git-credential-manager/pull/650)
 "
-10,"Changes:
+8,"Changes:
 
 Improved Bitbucket OAuth performance through verification of access token validity (#518)
-Fixed bug in binding module command for Azure Repos (#575)
+Fixed bug in binding list command for Azure Repos (#575)
 Added OAuth UI support for Bitbucket (#579)
 Improved usability for GitHub auth (#587)
 Added option to disable GUI prompts (#600)
@@ -148,7 +85,7 @@ Added support for GitLab (#591, #614, #621) 🎉
 Added support for new preferred WSL UNC file path (#612)
 Updated WAM support to only include applicable OSes (#629)
 Added install from source helper script for Linux users (#630)
-Fixed GHE credential storage bug by removing module prefix from API URL (#599)
+Fixed GHE credential storage bug by removing raw prefix from API URL (#599)
 Simplified build number included in artifact names (#638)
 Upgraded to .NET 6.0 (#635, #640)
 
@@ -161,10 +98,10 @@ Thanks to our contributors ❤️:
 @buchwasa 
 @felipecrs
 "
-11,"Changes:
+9,"Changes:
 - Show the terminal/TTY based prompts when there is no desktop/GUI sessions present for GitHub (#453, #538)
 - Copy Debian package files to correct directory (#545, #566, #569, #539)"
-12,"Changes:
+10,"Changes:
 
 Remove noisy messages during auto-detection (#492, #494)
 Improve proxy environment variable handling (#497, #501, #503)
@@ -172,11 +109,11 @@ Update MSAL; set MS auth embedded window title (#239, #512)
 Fix missing dependencies in Debian package (#506, #514, #528)
 Persist auto-detected provider setting (#507, #517)
 Refactor namespace, assembly and project names (#500)
-Support the module command  to open the browser (#529)
+Support the wslview command  to open the browser (#529)
 Update System.CommandLine and fix some bugs (#531)
 Fix a bug to prevent setting credential.provider when it wasn't needed (Only set credential.provider for dynamic matches #535)
 "
-13,"Changes:
+11,"Changes:
 
 Remove noisy messages during auto-detection (#492, #494)
 Improve proxy environment variable handling (#497, #501, #503)
@@ -184,13 +121,13 @@ Update MSAL; set MS auth embedded window title (#239, #512)
 Fix missing dependencies in Debian package (#506, #514, #528)
 Persist auto-detected provider setting (#507, #517)
 Refactor namespace, assembly and project names (#500)
-Support the module command  to open the browser (#529)
+Support the wslview command  to open the browser (#529)
 Update System.CommandLine and fix some bugs (#531)
 "
-14,"Changes:
+12,"Changes:
 
-Include UI helpers in Debian package for Linux release; move GCM symlink to module (#405)
-Respect module settings (#242, #411)
+Include UI helpers in Debian package for Linux release; move GCM symlink to /usr/local/bin (#405)
+Respect http.sslCAInfo settings (#242, #411)
 Fix bug with enumerating Azure Repos bindings outside of a repository (#416, #417)
 Allow forcing OAuth authentication with Bitbucket host provider (#329, #401)
 Stop echoing password on Linux in basic credentials prompt (#432, #436)
@@ -199,18 +136,18 @@ Use native Git path interpolation for config values (#439)
 Allow hostname-specific proxy override to use no proxy (#442, #449)
 Future proof Windows broker ""WAM"" version detection (#465)
 Add support for using WSL Git configuration (#461)
-Add new module command to help debug problems in the wild (#463)
+Add new diagnose command to help debug problems in the wild (#463)
 Add option to use the new DPAPI-based credential store on Windows (#464)
 Add explicit device code authentication for GitHub (#478)
 Fix WSL configuration instructions (#479)
 Improve host provider auto-detection logic (#384, #481)
 "
-15,"Changes:
+13,"Changes:
 
 Autodetect Bitbucket DC instances (#373)
 Create Linux plaintext store with safer directory permissions (#397)
 Add ability to read GCM default settings from the Windows Registry (#404)
-Allow users to specify path to GPG executable for module credential store on Linux (#406)
+Allow users to specify path to GPG executable for gpg credential store on Linux (#406)
 
 Thanks to our contributors ❤️:
 
@@ -220,11 +157,11 @@ Thanks to our contributors ❤️:
 @mminns
 @ldennington
 "
-16,"Changes:
+14,"Changes:
 
 Fix bug where GUI prompts would not be shown on Windows (#374)
 "
-17,"Changes:
+15,"Changes:
 
 Fix bug in GitHub x-platform UI where the browser/OAuth option is not shown (#360)
 
@@ -235,21 +172,21 @@ GHES OAuth support (#354)
 More winget publishing fixes (#353)
 Fix release builds .NET SDK version (#358)
 "
-18,"Changes:
+16,"Changes:
 
 UI on macOS and Linux thanks to AvaloniaUI 🎉 (#336)
 GHES OAuth support (#354)
 More winget publishing fixes (#353)
 Fix release builds .NET SDK version (#358)
 "
-19,"Changes:
+17,"Changes:
 
 Add preliminary support for OAuth with GitHub AE (requires server support/changes) (#343)
 Add workaround for Windows Broker (WAM) running as admin (#344)
 Consume new MSAL library versions (#346)
-~Set MSAL embedded webview window title to give more context to the user (#347, #239)~ Not working currently (see link)
+~Set MSAL embedded webview window title to give more context to the user (#347, #239)~ Not working currently (see here)
 "
-20,"Changes:
+18,"Changes:
 
 Add support for the Windows authentication broker - Windows Hello support (default off) (#323)
 Pass parent window handle information to MSAL (#306)
@@ -266,12 +203,12 @@ Thanks to our contributors ❤️:
 @ldennington 
 @WormJim 
 "
-21,"Changes:
+19,"Changes:
 
-Experimental support for not using PATs for Azure Repos - default disabled (#294) (read more link)
+Experimental support for not using PATs for Azure Repos - default disabled (#294) (read more here)
 Better warning messages on macOS when there are Keychain issues (#305)
 "
-22,"Changes:
+20,"Changes:
 
 Move to .NET Framework 4.7.2 on Windows (#283)
 Move to .NET 5.0 on macOS and Linux (#288)
@@ -279,9 +216,9 @@ Auto-detect on-premises/self-hosted providers via HTTP headers (#262)
 Use the user's default web browser for Microsoft authentication on macOS and drop the native helper (#274, #277)
 Trivially fix the macOS native helper crashes by deleting it 😅 (#264)
 Share the MSAL token cache with Microsoft developer tools on macOS as we already do on Windows (#275)
-Support module as a credential backing store on Linux (#287)
-Support for the module option to bypass the proxy for certain addresses (#299, #297)
-Use link to handle our command line parsing and allow host providers to offer custom commands (#273)
+Support git-credential-cache as a credential backing store on Linux (#287)
+Support for the NO_PROXY option to bypass the proxy for certain addresses (#299, #297)
+Use System.CommandLine to handle our command line parsing and allow host providers to offer custom commands (#273)
 Fix a bug with host provider disposal (#272)
 Fix problems with resolving the executable file path on Linux (#298, #229, #252)
 Documentation fixes and improvements (#278, #265, #263)
@@ -293,7 +230,7 @@ Thanks to our contributors ❤️:
 @johnemau
 @NN---
 "
-23,"Changes:
+21,"Changes:
 
 Add explicit PAT authentication mode for the GitHub Provider (#236, #259)
 Auto-detect GHES instances that have a ""github."" URL prefix (#241)
@@ -306,7 +243,7 @@ Thanks to our contributors ❤️:
 
 @AlexanderLanin
 "
-24,"Security Fixes:
+22,"Security Fixes:
 
 Patched an issue whereby cloning malicious repository on Windows could result in execution of an unverified executable
    (CVE-2020-26233)
@@ -317,7 +254,7 @@ Fix NTLM proxy authentication (#216)
 Fix reading empty Git configuration entry values (#215)
 Allow users to select the type of interactive authentication flow for the Microsoft auth stack (#210)
 "
-25,"Changes:
+23,"Changes:
 
 Fix a bug where Windows Integrated Authentication would be disabled by default (#194)
 Set the full path to standalone GCM Core installs, enabling overriding of bundled versions (#188, #199)
@@ -328,47 +265,47 @@ Thanks to our contributors ❤️:
 
 @mastercoms
 "
-26,"Changes:
+24,"Changes:
 
 Fixed a where a deadlock would occur when reading very large Git config files (#183)
 "
-27,"Changes:
+25,"Changes:
 
 Fixed a bug on Linux were launching a browser would print out text to the terminal and fail authentication (#178)
 "
-28,"Changes:
+26,"Changes:
 
 Very early support for Linux (#135)
 Remove username/password authentication for GitHub.com (#171)
-Enables support for multiple users for GitHub, Bitbucket, and Azure Repos (when using the module URLs) (#160)
+Enables support for multiple users for GitHub, Bitbucket, and Azure Repos (when using the *.visualstudio.com URLs) (#160)
 Fixes bug where the username was required in the remote URL for basic auth (#142)
 Fixes bug where port numbers in remote URLs were not parsed correctly (#156)
 
-The Linux support has currently only been tested on Ubuntu 18.04 and 20.04 on 64-bit Intel processors. The provided Debian package is not yet signed. Due to the varied nature of Linux distributions, you will need to select and configure a credential storage system manually – see more here: link.
-Now that OAuth has been fully adopted for GitHub.com and works for all users (personal and organizational alike), the username/password option has been removed. The username/password option will soon be removed from the server-side anyway – see more here: link."
-29,"Changes:
+The Linux support has currently only been tested on Ubuntu 18.04 and 20.04 on 64-bit Intel processors. The provided Debian package is not yet signed. Due to the varied nature of Linux distributions, you will need to select and configure a credential storage system manually – see more here: https://aka.ms/gcmcore-linuxcredstores.
+Now that OAuth has been fully adopted for GitHub.com and works for all users (personal and organizational alike), the username/password option has been removed. The username/password option will soon be removed from the server-side anyway – see more here: https://github.blog/changelog/2019-08-08-password-based-http-basic-authentication-deprecation-and-removal/."
+27,"Changes:
 
 Support ""SSO"" PATs for GitHub (#133, #134)
 Bitbucket Server support (#140, #141)
 OAuth Device Authorization Grant support for GitHub (#147)
 Fix a bug with using Microsoft Accounts with Azure Repos (#143, #148)
 "
-30,"Changes:
+28,"Changes:
 
 Fix a bug in parsing Bitbucket 2FA responses (#128, #126)
 Target 32-bit on Windows (#112)
 "
-31,"Changes:
+29,"Changes:
 
 Fix a bug where Windows interactive sessions were not detected correctly (#123)
 "
-32,"Changes:
+30,"Changes:
 
 Introduce the Bitbucket host provider with Windows GUI (#37)
 Fix a bug with handling libgit2 errors (#111)
 Correctly detect a UI interactive session on all platforms (#95)
 "
-33,"Changes:
+31,"Changes:
 
 Add option to prevent interactivity (#91)
 Publish zip and tar balls of releases (#96)
@@ -378,23 +315,23 @@ Add an OAuth2 client implementation with PKCE support (#99, #102)
 Add GitHub OAuth support and refreshed Windows UI (#101, #103)
 Move to .NET Core 3.1 (LTS) (#101)
 "
-34,"Changes:
+32,"Changes:
 
 Enable copy/paste/cut etc on fields in the Microsoft authentication WebView on MacOS (#82)
 Notarize the macOS installer and binaries to permit running on macOS Catalina 10.15 (#84)
 "
-35,"First Windows preview release and updated macOS release.
+33,"First Windows preview release and updated macOS release.
 Changes:
 - Windows support (64-bit only) (#46)
-- GCM Core now worked behind network proxies (link) (#11)
-- Renamed the main executable from module to module to allow for easier side-by-side use with Java GCM and Windows GCM during the preview (#70)
+- GCM Core now worked behind network proxies (configuration guide) (#11)
+- Renamed the main executable from git-credential-manager to git-credential-manager-core to allow for easier side-by-side use with Java GCM and Windows GCM during the preview (#70)
 - Microsoft authentication is performed in-process on Windows, with support for GUI-less environments (such as SSH) via device code flow (#75)
-- Installation now configures GCM Core per-user (sets module in the current user's module) but continues to be installed in a system-wide location. Other users can opt-in to using GCM Core by setting their own configuration by running module (#57)
-- Allow overriding the selection of host provider; also supports GitHub Enterprise scenarios (link, link for users of the module setting) (#59)
+- Installation now configures GCM Core per-user (sets credential.helper in the current user's $HOME/.gitconfig) but continues to be installed in a system-wide location. Other users can opt-in to using GCM Core by setting their own configuration by running git-credential-manager-core configure (#57)
+- Allow overriding the selection of host provider; also supports GitHub Enterprise scenarios (configuration option, migration guide for users of the credential.authority setting) (#59)
 - Various bug fixes and improvements
 Thanks to our contributors ❤️:
 - @czipperz"
-36,"Changes:
+34,"Changes:
 
 Mac installer will now unlink the Java GCM via Homebrew if installed (#45)
 Codebase and build improvements (#49)
@@ -402,12 +339,12 @@ Groundwork for upcoming Windows release, including:
 WPF-based GitHub auth UI (#40)
 Basic Windows installer (#41)
 "
-37,"Update to Git Credential Manager Core (beta) on macOS.
+35,"Update to Git Credential Manager Core (beta) on macOS.
 Changes:
 - Fix TTY-based prompts for GitHub authentication (#30)
 - Support AAD users as guest users in MSA-based Azure DevOps organizations (#32)
 - Codebase and build improvements (#29, #33)"
-38,"Initial release of Git Credential Manager Core with beta support for...
+36,"Initial release of Git Credential Manager Core with beta support for...
 Operating Systems:
 - macOS
 Git Host Providers:

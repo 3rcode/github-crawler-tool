@@ -94,7 +94,7 @@ Index,Message,Description
 93,Merge branch 'master' into doc_fixes,
 94,Merge branch 'master' into patch-1,
 95,Merge branch 'master' into feature/adminrouteshook,
-96,Merge pull request #4766 from andreicioromila/patch-1,[Docs] Add details for module hook
+96,Merge pull request #4766 from andreicioromila/patch-1,[Docs] Add details for pre:admin hook
 97,Merge branch 'master' into patch-1,
 98,Merge branch 'master' into feature/adminrouteshook,
 99,Merge pull request #4888 from larrybolt/master,Remove kerberos from dependencies
@@ -109,9 +109,9 @@ Index,Message,Description
 108,part-2.md fix copypasta error,Fixed the event model defaultColumns using the User's fields instead of the Event's fields
 109,Update part-4.md,"1) Fixing a typo in var Event = keystone.List('Event') - L in ""List"" should not be capitalized 2) Adding an action property to the form for the post request to be sent to the api"
 110,Urlfield enahancement (#4856),  add thumb option support to url type   do not fix the height of form input since it the value can be out of bound 
-111,Fix markup typo in quick start docs. (#4854),The module field was highlighted incorrectly.
+111,Fix markup typo in quick start docs. (#4854),The auto update field was highlighted incorrectly.
 112,Build S3 upload name when not present (#4871),  Restore/repair S3 image uploading in tinymce   Use custom root for S3 paths   Build S3 upload name when not present 
-113,Return a 500 error when module fails (#4832)," Return a 500 error when module fails  Currently, errors from module are not handled at all in the callback. This gives an empty 200 back to the frontend, which will do nothing with this response (no visual feedback on the error). We should return an actual error. All suggestions on how to return this error Keystone style are welcome.  directly send the module to module"
+113,Return a 500 error when item.remove fails (#4832)," Return a 500 error when item.remove fails  Currently, errors from item.remove are not handled at all in the callback. This gives an empty 200 back to the frontend, which will do nothing with this response (no visual feedback on the error). We should return an actual error. All suggestions on how to return this error Keystone style are welcome.  directly send the err to apiError"
 114,UPDATE deleteItem action with custom error message (#4683),
 115,Fixed dependsOn setting when applied to a boolean field set to false by default (#4867),
 116,Added option to hide Today button in Date field (#4869),
@@ -123,7 +123,7 @@ Index,Message,Description
 122,fix: fields explorer invalid capitilisations (#4834),
 123,incorrect link to database docs (#4833),
 124,docs(syntax): update an upper-case (#4810),"By copying and pasting the site, I realized that the list was previously referenced with an uppercase."
-125,Add _req_user to removed item so you can use this in the remove pre/post hook,"As discussed in https://github.com/keystonejs/keystone/issues/1857 the remove pre/post hooks are ""missing"" the _req_user. I, amongst others, am using this object to handle some permissions. It's available in the updateHandler (in module and module) but missing in module. it's added on the updateHandler here: https://github.com/keystonejs/keystone/blob/d34f45662eb359e2cb18b397f2ffea21f9883141/lib/list/updateItem.js#L157 Remove doesn't use the updateHandler, so this is missing."
+125,Add _req_user to removed item so you can use this in the remove pre/post hook,"As discussed in https://github.com/keystonejs/keystone/issues/1857 the remove pre/post hooks are ""missing"" the _req_user. I, amongst others, am using this object to handle some permissions. It's available in the updateHandler (in create and update) but missing in remove. it's added on the updateHandler here: https://github.com/keystonejs/keystone/blob/d34f45662eb359e2cb18b397f2ffea21f9883141/lib/list/updateItem.js#L157 Remove doesn't use the updateHandler, so this is missing."
 126,Merge branch 'master' into master,
 127,Merge pull request #4826 from Vultraz/patch-1,Fixed incorrectly named API method label (fixes #4825)
 128,Merge branch 'master' into patch-1,
@@ -131,7 +131,7 @@ Index,Message,Description
 130,Fixed incorrectly named API method label (fixes #4825),
 131,Merge branch 'master' into patch-2,
 132,Merge pull request #4828 from laurenskling/patch-1,Update Underscore-Methods.md
-133,Update options.md,Link is broken without module
+133,Update options.md,Link is broken without http://
 134,Update Underscore-Methods.md,underscore instead of undercore
 135,DOCS: Fix typo for TextArray Field,
 136,Merge pull request #4813 from jimulle/add-alt-text-to-delete-button,add alt text to delete button
@@ -161,7 +161,7 @@ Index,Message,Description
 160,Make titles for Setting Up sections consistent,
 161,Link to 4.x release history,
 162,Fixed links to configuration pages,
-163,Fixed a typo in Project-Options.md,"The module option appears twice, instead of the 2nd being module."
+163,Fixed a typo in Project-Options.md,"The name option appears twice, instead of the 2nd being brand."
 164,Add Netlify redirects for v3 paths to v4 equivalents,
 165,Adding Google Analytics and Favicons (#4740)," Adding Favicon to Keystone 4 website Added Google Analytics Code to V4 website Removed safari-pinned-tab.svg, which was a black square."
 166,Tweaking the content,
@@ -172,22 +172,22 @@ Index,Message,Description
 171,Adding Favicon to Keystone 4 website,Tested with Chrome and Firefox.
 172,Merge pull request #1 from keystonejs/master,align upstream
 173,Merge pull request #4731 from keystonejs/feature/website-cleanup,Feature/website cleanup
-174,ignore lock files,Signed-off-by: Dominik Wilkowski link
+174,ignore lock files,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
 175,Merge branch 'master' into feature/website-cleanup,
-176,Merge branch 'master' into feature/website-cleanup,Signed-off-by: Dominik Wilkowski link Conflicts: website/src/pages/components/home/ValueProps.js website/src/pages/components/home/WhereNext.js website/src/pages/components/home/header/Header.js yarn.lock
-177,remove lock files,Signed-off-by: Dominik Wilkowski link
+176,Merge branch 'master' into feature/website-cleanup,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com Conflicts: website/src/pages/components/home/ValueProps.js website/src/pages/components/home/WhereNext.js website/src/pages/components/home/header/Header.js yarn.lock
+177,remove lock files,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
 178,FIxing broken links in README.md,FIxing broken links in README.md
-179,bumped version 📣🎉,Signed-off-by: Dominik Wilkowski link
-180,updating package bundle,Signed-off-by: Dominik Wilkowski link
+179,bumped version 📣🎉,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
+180,updating package bundle,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
 181,Reviewed Getting Started documentation (#4721)," FIxed spelling, grammar and broken link issues with the Getting Started documentation. Ensured that Keystone is capitalised everywhere in the docs Set Mongoose docs link to V4"
 182,Merge pull request #4720 from stennie/signin,"Improve sanity checking for signin ""from"" param"
 183,Merge branch 'master' into signin,
 184,Update to multer 1.3.1 and automatically clean uploaded files (#4704),  Update to multer 1.3.1 and automatically clean uploaded files   Fix typo in bindBodyParser   Add missing next() (thanks @ttsirkia!) 
-185,Minor fixes and improvements to the location field type (#4455),  Minor fix to location fields - no reason to depend on the order of address_components coming from Google   Minor fix to location fields - Better handling of module returned from Google API   Minor fix to location fields - no reason to depend on the order of address_components coming from Google   Minor fix to location fields - Better handling of module returned from Google API 
+185,Minor fixes and improvements to the location field type (#4455),  Minor fix to location fields - no reason to depend on the order of address_components coming from Google   Minor fix to location fields - Better handling of address_components returned from Google API   Minor fix to location fields - no reason to depend on the order of address_components coming from Google   Minor fix to location fields - Better handling of address_components returned from Google API 
 186,Merge branch 'master' into signin,
 187,"Improve sanity checking for signin ""from"" param",
-188,fixed typo,Signed-off-by: Dominik Wilkowski link
-189,added semver notations to dependencies,Signed-off-by: Dominik Wilkowski link
+188,fixed typo,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
+189,added semver notations to dependencies,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
 190,Fix #4708: Update Getting Started page,
 191,Remove WIP notes,
 192,Fix #4688: Deprecated File field types have broken docs link,
@@ -197,8 +197,8 @@ Index,Message,Description
 196,,Upgrade to Mongoose 4.13.14: https://github.com/Automattic/mongoose/blob/master/History.md#41314--2018-05-25 Add useMongoClient per http://thecodebarbarian.com/mongoose-4.11-use-mongo-client.html
 197,Add pointer to Keystone 4 beta/RC release notes,
 198,Upgrade qs to 6.5.2,
-199,Update module reference to rc1,
-200,Documented breaking change to module behaviour.,
+199,Update package.json reference to rc1,
+200,Documented breaking change to pre:routes behaviour.,
 201,Added more info on Application updates with required relationships.,
 202,Added letsencrypt configuration docs for #4181,
 203,Fixed typo (#4597),
@@ -213,14 +213,14 @@ Index,Message,Description
 212,Restore/repair S3 image uploading in tinymce,
 213,smooth scroll spped now based on current scroll position,
 214,Added session max age cookie to match keystone.uid cookie expiry,
-215,bumped version to RC1,Signed-off-by: Dominik Wilkowski link
-216,updated packages bundle,Signed-off-by: Dominik Wilkowski link
+215,bumped version to RC1,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
+216,updated packages bundle,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
 217,Remove unused title markdown from README.md,
 218,Include keystone.version in startup message (#4692),
 219,Fix bug in Safari where XHR form submission fails with empty file input (#4673), Provides a fix for a bug in Safari where XHR form submission fails when input[type=file] is empty
-220,Upgrade module dependency,
+220,Upgrade debug dependency,
 221,Update to latest browserify,
-222,Remove --growl from Mocha options; fails on Mocha 4+ unless module is installed,(ref: https://github.com/mochajs/mocha/issues/3088)
+222,Remove --growl from Mocha options; fails on Mocha 4+ unless growl-notify is installed,(ref: https://github.com/mochajs/mocha/issues/3088)
 223,Update deps according to semver,
 224,Fix #4686: CloudinaryImage(s) fields were incorrectly marked as deprecated (#4690),
 225,Tidy home page text & link to current release information,
@@ -232,8 +232,8 @@ Index,Message,Description
 231,Move field type overview to documentation,
 232,Reorganise README sections and add Table of Contents,
 233,Add mention of new File API and link to Contributor Guide,
-234,Remove link to module (currently a v0.3 demo that doesn't cleanly deploy to Heroku),
-235,updating packages bundle,Signed-off-by: Dominik Wilkowski link
+234,Remove link to keystone-starter (currently a v0.3 demo that doesn't cleanly deploy to Heroku),
+235,updating packages bundle,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
 236,Merge pull request #4667 from keystonejs/empty-relationship-fix,Fix for empty relationships submitting no value
 237,Fix for updating single relationship values,
 238,Fix for empty relationships submitting no value,
@@ -259,15 +259,15 @@ Index,Message,Description
 258,Added the typopgrahy plugin into gatsby-config,
 259,Fix the wrong link to typography,
 260,Fix test failure due to password complexity requirement added in 8ecb809,
-261,fixing admin ui tests (thanks to Vito),Signed-off-by: Dominik Wilkowski link
-262,removed commented out tests as there are not meaningful,Signed-off-by: Dominik Wilkowski link
-263,fixing some typos and unnessesary comments,Signed-off-by: Dominik Wilkowski link
-264,fixed #4628,Signed-off-by: Dominik Wilkowski link
-265,fixing one test at a time,Signed-off-by: Dominik Wilkowski link
+261,fixing admin ui tests (thanks to Vito),Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
+262,removed commented out tests as there are not meaningful,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
+263,fixing some typos and unnessesary comments,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
+264,fixed #4628,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
+265,fixing one test at a time,Signed-off-by: Dominik Wilkowski Hi@Dominik-Wilkowski.com
 266,Fix website (#4615), Update website to work
 267,Merge pull request #4169 from saul-mtz/patch-1,Fixes scroll for modals in the Admin UI
 268,Upgrade moment for CVE-2017-18214 (#4592),"For more info, see: https://nvd.nist.gov/vuln/detail/CVE-2017-18214 This is currently triggering github security alerts on all projects using keystone 4.x"
-269,replace knox git dependency with knox-s3 (#4574)," knox-s3 is a fork of knox with one difference: a mime 1.x dependency that avoids breaking changes in mime 2.x this matches the module repo, but is published to npm allows keystone to be installed without git e.g. in a node:slim Docker container  close #4573"
+269,replace knox git dependency with knox-s3 (#4574)," knox-s3 is a fork of knox with one difference: a mime 1.x dependency that avoids breaking changes in mime 2.x this matches the keystonejs/knox repo, but is published to npm allows keystone to be installed without git e.g. in a node:slim Docker container  close #4573"
 270,replace hardcode keystone to path admin variable (#4586),
 271,Merge pull request #4509 from cadriel/feature/file-thumbnails,(feat) implements image thumbnails for the File type
 272,Update Readme.md (#4583),
@@ -277,7 +277,7 @@ Index,Message,Description
 276,Update README.md (#4569),Add field type Code (http://keystonejs.com/docs/database/#fieldtypes-code)
 277,fix paginate to return on count error (#4167),
 278,Deprecate currency setting (#4132),
-279,Fix autocleanup for cloudinary fixes 3476 (#4205),  Update module to respect autocleanup   Fixes autocleanup for cloudinaryimages   Remove completed TODOs 
+279,Fix autocleanup for cloudinary fixes 3476 (#4205),  Update cloudinaryimage to respect autocleanup   Fixes autocleanup for cloudinaryimages   Remove completed TODOs 
 280,Merge pull request #4387 from frapan/fix-custom-nav-links,Fix custom nav links
 281,Merge pull request #4397 from jyrkive/required-number-with-default,Fix: model with required field that defaults to 0 can't be saved
 282,v4.0.0-beta.8,
@@ -289,7 +289,7 @@ Index,Message,Description
 288,Merge pull request #4453 from keystonejs/easy-upgrades,Bumping all packages that have minor and patch updates available
 289,"Revert ""Merge branch 'jm-fork' into master""","This reverts commit 80087815d86b2f38f47ef39b97531eb09be3df8f, reversing changes made to f08baa4fb4084b7ec9f356d313dcfd6d7d7d0f8b."
 290,Merge branch 'jm-fork' into master,
-291,Fix Password module breaking tests related to security updates,
+291,Fix Password validateInput breaking tests related to security updates,
 292,Add packages.js build,
 293,Merge branch 'master' into easy-upgrades,Conflicts: package.json yarn.lock
 294,Documentation about customizing the navigation bar,
@@ -312,10 +312,10 @@ Index,Message,Description
 311,Fixing file extention,
 312,Add some functionality to prevent macro injection via CSV export,
 313,"Fixing CSRF by reverting the (well meaning) changes made in PR 3756 (https://github.com/keystonejs/keystone/pull/3756). I don't know if this will resurface issue 3420 (https://github.com/keystonejs/keystone/issues/3420), which the PR apparently addressed.",
-314,Changes to the few dependencies that were depending on mime@2.x:, knox has been replaced with keystonejs/knox as the package is not being maintained anymore and has a module for module superagent@3.6.0 uses mime@1.3.6 (which is compatible with node <=6.x)
+314,Changes to the few dependencies that were depending on mime@2.x:, knox has been replaced with keystonejs/knox as the package is not being maintained anymore and has a * for mime superagent@3.6.0 uses mime@1.3.6 (which is compatible with node <=6.x)
 315,Merge branch 'master' into easy-upgrades,
 316,Merge pull request #4457 from keystonejs/molomby/linting-errors,"Fixing some ""Prop types declarations should be sorted alphabetically"" lint errors"
-317,"Fixing some ""Prop types declarations should be sorted alphabetically"" (react/sort-prop-types) errors, allowing module to run",
+317,"Fixing some ""Prop types declarations should be sorted alphabetically"" (react/sort-prop-types) errors, allowing npm run lint to run",
 318,Merge branch 'master' into easy-upgrades,Conflicts: package.json
 319,Removing old aphropdite references,
 320,Updating last of the minor and patch packages,
@@ -329,7 +329,7 @@ Index,Message,Description
 328,Removing redundant import,
 329,Merge pull request #4447 from keystonejs/fix-eslint,Fix eslint errors when running e2e tests
 330,Removing commented out PropTypes import,
-331,Removing module from server/initViewEngine,
+331,Removing path from server/initViewEngine,
 332,Commenting out redundant code in www dir,
 333,Merge pull request #3995 from keystonejs/greenkeeper-babel-polyfill-6.23.0,Update babel-polyfill to version 6.23.0 🚀
 334,Merge branch 'master' into greenkeeper-babel-polyfill-6.23.0,
@@ -339,7 +339,7 @@ Index,Message,Description
 338,Merge branch 'master' into patch-1,
 339,Merge pull request #4175 from keystonejs/cloudinary-respect-secure-in-admin,Cloudinary admin url update: fixes #2724
 340,Merge pull request #4444 from petertdinh/patch-2,fix:module-name in import statement in EditForm.js
-341,fix:module-name in import statement in EditForm.js,It was working before but the module was extraneous and redundant.
+341,fix:module-name in import statement in EditForm.js,It was working before but the ./ was extraneous and redundant.
 342,Merge pull request #4441 from petertdinh/patch-1,fix:typo in handleError in screens/Item/index.js
 343,fix:typo in handleError in screens/Item/index.js,
 344,Merge pull request #4140 from keystonejs/safe-require,Use safeRequire instead of manual try-catch requires
@@ -406,7 +406,7 @@ Index,Message,Description
 405,Update maxAge of cookie to reflect time in milliseconds (#1),"maxAge is in milliseconds. The value was missing a multiplication that made the cookie expire after about 15 minute and not 10 day, as I believe the author intended. This was felt mainly on mobile devices where the browser closes frequently."
 406,Make file field a link when it has a href, File may not have a href if url flag is not set in its schema
 407,Merge pull request #4301 from keystonejs/fix/embedly-type-update,Ensure embedly type does not update with null values when no changes have been made
-408,"Update default views folder so it's relative to the current project, instead of being module at the root of the filesystem.",
+408,"Update default views folder so it's relative to the current project, instead of being /views at the root of the filesystem.",
 409,Merge pull request #4346 from CAYdenberg/issue-4340,Fix failing e2e tests
 410,Disable the testLocationField.js,
 411,chore(package): update react-images to version 0.5.4,https://greenkeeper.io/
@@ -431,7 +431,7 @@ Index,Message,Description
 430,chore(package): update enzyme to version 2.8.2,https://greenkeeper.io/
 431,Document autocleanup for cloudinary,
 432,docs: Formatting and accuracy update,
-433,Cloudinary loads admin images using specified secureness,"Changes: Cloudinary fields pass down module property with their module call. When a url is created, the secure property is added."
+433,Cloudinary loads admin images using specified secureness,"Changes: Cloudinary fields pass down secure property with their getOptions call. When a url is created, the secure property is added."
 434,chore(package): update updtr to version 1.0.0,https://greenkeeper.io/
 435,Fixes scroll for modals in the Admin UI,"Fixes the scroll problem, related with issues #3712, #3822 and #4025"
 436,progress commit;,lots to clean up still
@@ -654,7 +654,7 @@ Index,Message,Description
 653,Adding req to post signin hook,
 654,chore(package): update eslint to version 3.15.0 (#3966),https://greenkeeper.io/
 655,Adding req to singin hook,See PR #3950
-656,Merge pull request #3950 from OskarKlintrot/patch-2,Passing module to signin hooks to make it possible to add custom validation
+656,Merge pull request #3950 from OskarKlintrot/patch-2,Passing req to signin hooks to make it possible to add custom validation
 657,"Adjustments made to account for query.search, additional adjustments made to enable correct query state navigation within the same list collection, relevant pending tests completed",
 658,fix popout animation flicker,
 659,replace Aphrodite with Glamor,
@@ -663,16 +663,16 @@ Index,Message,Description
 662,tests added,
 663,chore(package): update mongoose to version 4.8.1 (#3963),https://greenkeeper.io/
 664,chore(package): update cloudinary to version 1.6.0,https://greenkeeper.io/
-665,Exception with the JSON download & Fix,"Hi! Firstly can I say going through this codebase is a joy, I've known of keystone for awhile and tinkered with it in my spare time - its great to see how its evolved.  I found that this was throwing an exception when you click to download data as json. you can reproduce the bug at http://demo.keystonejs.com/keystone/posts download > json > download the server hangs with no response...  this fixes the issue, the flow is now similar with the CSV download. Which is where I pinched the 'list-to-array' require from. Its now fixed for this scenario. A few other points I have noted for discussion: - Do we also want it to be a json file download or json response? - we should probably also have an exception handler to return 500 from express for anything else? - I notice the user can enter ""password"" into the query string and reveal the hash, is this expected behaviour? I assume its safe under a users logged in session - I've noticed the require for 'baby-parse' is within the handler? do we want to hang the server on request? https://github.com/keystonejs/keystone/blob/master/admin/server/api/list/download.js#L9 If you're after any more help on issues or more info on this bug, I'd be more than happy to help!  Thanks  Mike Description of changes I've added the missing check for ""is a string"" if so then convert to an array which done by the third-party dependency 'list-to-array'. Testing a note: I got this selenium error before I made changes on the branch, this has actually prevented me from getting the selenium tests to pass.  module"
+665,Exception with the JSON download & Fix,"Hi! Firstly can I say going through this codebase is a joy, I've known of keystone for awhile and tinkered with it in my spare time - its great to see how its evolved.  I found that this was throwing an exception when you click to download data as json. you can reproduce the bug at http://demo.keystonejs.com/keystone/posts download > json > download the server hangs with no response...  this fixes the issue, the flow is now similar with the CSV download. Which is where I pinched the 'list-to-array' require from. Its now fixed for this scenario. A few other points I have noted for discussion: - Do we also want it to be a json file download or json response? - we should probably also have an exception handler to return 500 from express for anything else? - I notice the user can enter ""password"" into the query string and reveal the hash, is this expected behaviour? I assume its safe under a users logged in session - I've noticed the require for 'baby-parse' is within the handler? do we want to hang the server on request? https://github.com/keystonejs/keystone/blob/master/admin/server/api/list/download.js#L9 If you're after any more help on issues or more info on this bug, I'd be more than happy to help!  Thanks  Mike Description of changes I've added the missing check for ""is a string"" if so then convert to an array which done by the third-party dependency 'list-to-array'. Testing a note: I got this selenium error before I made changes on the branch, this has actually prevented me from getting the selenium tests to pass.  Timed out while waiting for element <.primary-navbar [data-section-label=""octicon-sign-out""]> to be present for 60000 milliseconds.  - expected ""visible"" but got: ""not found""     at Object.after (/Users/MikeJames/projects/keystone-play/keystone/test/e2e/adminUI/tests/group006Fields/commonFieldTestUtils.js:13:22)"
 666,chore(package): update supertest to version 3.0.0 (#3958),https://greenkeeper.io/
 667,Merge pull request #3956 from keystonejs/greenkeeper-mongoose-4.8.0,Update mongoose to version 4.8.0 🚀
 668,chore(package): update mongoose to version 4.8.0,https://greenkeeper.io/
 669,chore(package): update superagent to version 3.4.1 (#3955),https://greenkeeper.io/
 670,chore(package): update express to version 4.14.1 (#3954),https://greenkeeper.io/
 671,chore(package): update mongoose to version 4.7.9 (#3952),https://greenkeeper.io/
-672,Passing module to signin hooks,
+672,Passing req to signin hooks,
 673,chore(package): update proxyquire to version 1.7.11 (#3948),https://greenkeeper.io/
-674,Use cross-env to export on multiple platforms (#3947),  Use cross-env to export on multiple platforms   add cross-env to module 
+674,Use cross-env to export on multiple platforms (#3947),  Use cross-env to export on multiple platforms   add cross-env to npm run build 
 675,chore(package): update superagent to version 3.4.0 (#3943),https://greenkeeper.io/
 676,chore(package): update browserify-shim to version 3.8.13 (#3940),https://greenkeeper.io/
 677,chore(package): update keystone-nightwatch-e2e to version 0.2.14 (#3939),https://greenkeeper.io/
@@ -688,7 +688,7 @@ Index,Message,Description
 687,chore(package): update mongoose to version 4.7.8,https://greenkeeper.io/
 688,write keystone bundles to disk,"this will expose a keystone config option that will allow a developer to tell keystone to write (admin.js, fields.js, signin.js) to a file in the static directory this means that keystone won't need to recompile these files between server boots. this brings the boot time down from 20s on every launch to around 3-5s if the files are already compiled and available. this additional mode is compatible with the previous strategy of storing each bundle in a variable in the closure which it will still do in order to enable the watchify workflow. this mode is enabled by default, and can be disabled by explicitly setting 'cache admin bundles' to false"
 689,app state entirely refactored,
-690,"Minor improvement to the handling of text indexes. Addresses the (hopefully?) unusual case where module is enabled for a list but the collection has an existing text index that isn't described by the list. In this scenario, ensureTextIndex() will log the issue to stderr and the text search will use the existing index. This might produce unexpected search behaviour.. or might be exactly what the app builder intended; we don't know.",
+690,"Minor improvement to the handling of text indexes. Addresses the (hopefully?) unusual case where searchUsesTextIndex is enabled for a list but the collection has an existing text index that isn't described by the list. In this scenario, ensureTextIndex() will log the issue to stderr and the text search will use the existing index. This might produce unexpected search behaviour.. or might be exactly what the app builder intended; we don't know.",
 691,Merge pull request #3920 from keystonejs/greenkeeper-babel-polyfill-6.22.0,Update babel-polyfill to version 6.22.0 🚀
 692,Merge branch 'master' into greenkeeper-babel-polyfill-6.22.0,
 693,Merge pull request #3921 from keystonejs/greenkeeper-babel-preset-react-6.22.0,Update babel-preset-react to version 6.22.0 🚀
@@ -744,7 +744,7 @@ Index,Message,Description
 743,chore(package): update superagent to version 3.3.2 (#3878),https://greenkeeper.io/
 744,Progress commit,
 745,chore(package): update react-redux to version 5.0.2,https://greenkeeper.io/
-746,Allow HTTP/2 with letsencrypt (#3828)," Allow HTTP/2 with letsencrypt  For some reason, module forces the module option, which inhibits module from offering HTTP/2.  lint"
+746,Allow HTTP/2 with letsencrypt (#3828)," Allow HTTP/2 with letsencrypt  For some reason, letsencrypt forces the NPNProtocols option, which inhibits spdy from offering HTTP/2.  lint"
 747,Switch to updated version of keystone-nightwatch-e2e (#3866),  Switch to updated version of keystone-nightwatch-e2e   Additional KNE version bump   Debug KNE bump   One more   Final version bump (removes debugging) 
 748,Merge pull request #3831 from gemscng/master_Jed,Allow pre:admin configuration.
 749,Merge pull request #3874 from keystonejs/greenkeeper-eslint-3.13.1,Update eslint to version 3.13.1 🚀
@@ -817,7 +817,7 @@ Index,Message,Description
 816,Merge pull request #3778 from keystonejs/greenkeeper-react-engine-4.2.1,Update react-engine to version 4.2.1 🚀
 817,Merge pull request #3787 from keystonejs/greenkeeper-eslint-3.12.1,Update eslint to version 3.12.1 🚀
 818,Merge pull request #3791 from keystonejs/greenkeeper-debug-2.4.1,Update debug to version 2.4.1 🚀
-819,Merge pull request #3797 from AurelioDeRosa/patch-3, hide save and reset buttons when module hide entire footer when module and module
+819,Merge pull request #3797 from AurelioDeRosa/patch-3, hide save and reset buttons when noedit hide entire footer when noedit and nodelete
 820,Hide Show and Reset buttons when noedit: true,Fixes #3796 Fixes #3644
 821,chore(package): update debug to version 2.4.1,https://greenkeeper.io/
 822,chore(package): update react-redux to version 5.0.0,https://greenkeeper.io/
@@ -1012,7 +1012,7 @@ Index,Message,Description
 1011,Merge pull request #3588 from keystonejs/greenkeeper-mocha-3.1.1,Update mocha to version 3.1.1 🚀
 1012,Merge branch 'master' into jossmac/0.4/elemental-refactor,Conflicts: admin/client/App/screens/List/components/ListManagement.js admin/public/js/packages.js fields/types/html/HtmlField.js
 1013,chore(package): update mocha to version 3.1.1,https://greenkeeper.io/
-1014,temp fixes for DateFilter;, support module by exposing a method by the same name on . Also implemented a companion module method. replace focus attempts on mount with module on inputs access to refs are wrapped in a module to ensure the UI is rendered disable direct input (only changes via module) to ensure valid dates. less than ideal…  @jedwatson this component needs review/re-write
+1014,temp fixes for DateFilter;, support focus() by exposing a method by the same name on . Also implemented a companion blur() method. replace focus attempts on mount with autoFocus on inputs access to refs are wrapped in a setTimeout() to ensure the UI is rendered disable direct input (only changes via <DayPicker />) to ensure valid dates. less than ideal…  @jedwatson this component needs review/re-write
 1015,tidy up error messages,
 1016,fix react warning,
 1017,fix react warning when no image,
@@ -1042,7 +1042,7 @@ Index,Message,Description
 1041,Merge pull request #3569 from benkroeger/fix-3545,clone Keystone.csrf.header before passing to xhr
 1042,chore(package): update react-day-picker to version 2.5.0,https://greenkeeper.io/
 1043,chore(package): update watch to version 0.19.3,https://greenkeeper.io/
-1044,update handler handles having no req,"Currently if module is passed no arguments, it will cause the process to fail in an error, as we later check req.user and req.files. This change means we will continue to return undefined unless there is a req.user ora req.files, which was the previous behaviour. Additionally, req is set as a variable earlier, so am checking the function-local variable."
+1044,update handler handles having no req,"Currently if getUpdateHandler is passed no arguments, it will cause the process to fail in an error, as we later check req.user and req.files. This change means we will continue to return undefined unless there is a req.user ora req.files, which was the previous behaviour. Additionally, req is set as a variable earlier, so am checking the function-local variable."
 1045,clone Keystone.csrf.header before passing to xhr,fixes #3454
 1046,Bump keystone-nightwatch-e2e dependency.,
 1047,Leverage the latest PO api refactoring.,
@@ -1186,10 +1186,10 @@ Index,Message,Description
 1185,Switching _.isString for typeof x === string,
 1186,Fixing double == operator,
 1187,Switching _.isFunction for typeof x === function,
-1188,Renaming initDatabase to initDatabaseConfig for clarity,"I think module was misleading - this doesn’t handle the connection or actual database at all, just defaults the database connection config"
-1189,consistent module behaviour,
-1190,UrlField: fix module behaviour,
-1191,RelationshipField: fix module behaviour,
+1188,Renaming initDatabase to initDatabaseConfig for clarity,"I think initDatabase was misleading - this doesn’t handle the connection or actual database at all, just defaults the database connection config"
+1189,consistent noedit behaviour,
+1190,UrlField: fix noedit behaviour,
+1191,RelationshipField: fix noedit behaviour,
 1192,Nit: fixing comment,
 1193,Updating bundled TinyMCE,
 1194,Merge remote-tracking branch 'origin/master',
@@ -1197,7 +1197,7 @@ Index,Message,Description
 1196,progress commit,
 1197,Merge pull request #3462 from keystonejs/greenkeeper-ejs-2.5.2,Update ejs to version 2.5.2 🚀
 1198,Fixing link to upgrade guide,
-1199,support custom module on horizontal forms,
+1199,support custom labelWidth on horizontal forms,
 1200,property violation warnings,
 1201,Merge branch 'master' into jossmac/0.4/elemental-refactor,Conflicts: admin/public/js/packages.js
 1202,Merge remote-tracking branch 'origin/master',
@@ -1211,7 +1211,7 @@ Index,Message,Description
 1210,Changed the input validation routines for datetime and boolean type. Fixes #3460.,
 1211,Merge pull request #3458 from mikehazell/master,Handle mongo error in ensureTextIndex
 1212,progress commit,
-1213,Handle mongo error in ensureTextIndex,Setting module on a Model would cause keystone to crash on first launch while initialising the database.
+1213,Handle mongo error in ensureTextIndex,Setting searchUsesTextIndex: true on a Model would cause keystone to crash on first launch while initialising the database.
 1214,v4.0.0-beta.2,
 1215,Updating bundled packages,
 1216,create simple centering component,
@@ -1362,7 +1362,7 @@ Index,Message,Description
 1361,Fix Embedly field default value,
 1362,Add markdown field default value,"With the changes in #3393, the fields were fixed except for the Markdown field."
 1363,Fix hook errors (again),"The changes in #3322 broke the hook error fixes introduced in #3343 These changes fix it again, but we need to look into a better way to discern custom errors from general database errors for the full release. cc @JedWatson"
-1364,Fix filter popout closing when any button is pressed,"I have no idea why this code was there. The filter popout was closing because module was always undefined – we simply did't pass anything in from module! (and never have) I also have no idea what this code is doing there and why this only showed up now (probably due to some bug fix in the past few days), but as far as a I can tell from digging through the code this is good to remove. Closes #404"
+1364,Fix filter popout closing when any button is pressed,"I have no idea why this code was there. The filter popout was closing because this.props.isOpen was always undefined – we simply did't pass anything in from ListHeaderToolbar! (and never have) I also have no idea what this code is doing there and why this only showed up now (probably due to some bug fix in the past few days), but as far as a I can tell from digging through the code this is good to remove. Closes #404"
 1365,Merge pull request #3322 from keystonejs/updatehandler-rewrite,Updatehandler rewrite
 1366,Merge pull request #3396 from keystonejs/sortable-namefield,"Make name field sort-, filter- and columnable"
 1367,UpdateHandler: options argument should not be required,
@@ -1402,7 +1402,7 @@ Index,Message,Description
 1401,Close mobile nav when clicking on item,"Really annoying behaviour on the mobile nav, when you clicked on a new list the overlaid nav would just stay there."
 1402,"Removing the ""Select All"" button for now",
 1403,Remove unnecessary console.log,
-1404,Display error when going to invalid list path,"Previously going to module would throw an error in the console and show a blank page. (!) Really bad behaviour, now properly shows ""List not found"" and links back to the home page. This is currently almost unstyled, just like the item not found page. We need to sit down after the beta release (cc @jossmac) and put something nice there, maybe some sort of illustration?"
+1404,Display error when going to invalid list path,"Previously going to /keystone/gibberishnonexistantlist24qfvxz would throw an error in the console and show a blank page. (!) Really bad behaviour, now properly shows ""List not found"" and links back to the home page. This is currently almost unstyled, just like the item not found page. We need to sit down after the beta release (cc @jossmac) and put something nice there, maybe some sort of illustration?"
 1405,chore(package): update nightwatch to version 0.9.8,https://greenkeeper.io/
 1406,Fix database errors not displaying,
 1407,Merge branch 'master' into updatehandler-rewrite,Conflicts: lib/list.js
@@ -1421,8 +1421,8 @@ Index,Message,Description
 1420,Merge branch 'master' into redux-fixes-pt-3,
 1421,Merge pull request #3372 from keystonejs/admin-cleanup,Add keyboard shortcut for Create Modal
 1422,Fix field controlled input warning,"Removes ""FormInput is changing an uncontrolled input of type text to be controlled."" warning. (this used to happen with multiple fields that rendered text inputs, like the URL field. This solution fixes it across the board as far as I have found!)"
-1423,Fix CreateForm propType warning,"Removes ""Warning: Failed prop type: Invalid prop module of type module supplied to module, expected module."" warning."""
-1424,Fix BooleanField propType warning,"Removes ""Failed prop type: Invalid prop module of type module supplied to module, expected module."" warning."""
+1423,Fix CreateForm propType warning,"Removes ""Warning: Failed prop type: Invalid prop label of type boolean supplied to FormField, expected string."" warning."""
+1424,Fix BooleanField propType warning,"Removes ""Failed prop type: Invalid prop onChange of type boolean supplied to Checkbox, expected function."" warning."""
 1425,Properly setup propTypes of NumberArrayFilter,"Gets rid of ""Invalid value passed to oneOf: Expected it to be an instance of Array""!"
 1426,Fix tests,
 1427,Hide create button and block create modal for nocreates,Closes #3284
@@ -1465,7 +1465,7 @@ Index,Message,Description
 1464,Bulk packages update inc. React 15.3.1,
 1465,Merge pull request #3358 from keystonejs/fix-proptype-warnings,Get rid of ModalBody children propType warnings
 1466,Removing dead code and unused packages after Storage updates,
-1467,Alias some old options to their new counterparts and warn,"There are a few API differences between the old module and the new module, this commit aliases some of the old ones to the new ones (where applicable) and logs descriptive warnings where not applicable. I used the module method so the user would see stack traces of where they actually used the old options. This does not actually get thrown, it will only log those warnings!"
+1467,Alias some old options to their new counterparts and warn,"There are a few API differences between the old Keystone.Email and the new keystone-email, this commit aliases some of the old ones to the new ones (where applicable) and logs descriptive warnings where not applicable. I used the new Error(...).stack method so the user would see stack traces of where they actually used the old options. This does not actually get thrown, it will only log those warnings!"
 1468,Cleaning up keystone.View,
 1469,Get rid of ModalBody children propType warnings,
 1470,Merge pull request #3293 from keystonejs/express-router-support,Adding support for binding express.Router with keystone.set('routes')
@@ -1511,8 +1511,8 @@ Index,Message,Description
 1510,"Adding automatic creation of text indexes based on search fields (progress commit, not finished)",
 1511,Make sure e2e run green (#3321),"  test(e2e): fix some failing tests and some refactoring to introduce a showMoreFields function in the forms.   test(e2e): use selenium server from npm.   test(e2e): update the README.   Fix occasional sauce_connect errors?   Run e2e in its own travis job   Split e2e into separate jobs by group. Run test-cov and lint in own jobs.   Don't run e2e after unit tests   test(e2e): fix some failing tests and some refactoring to introduce a showMoreFields function in the forms.   test(e2e): use selenium server from npm.   test(e2e): update the README.   Add custom tags to EditForm to enable e2e testing.   test(e2e): fix some failing tests and some refactoring to introduce a showMoreFields function in the forms.   Fix occasional sauce_connect errors?   Run e2e in its own travis job   Split e2e into separate jobs by group. Run test-cov and lint in own jobs.   Don't run e2e after unit tests   Fixed react error (#3327)   .cc @webteckie who notified me of this   Test File not LocalFile, remove LocalFileFields for now   [e2e] Add attributes and update selectors. Should make groups 1-4 pass.   [e2e] Fix cloudinaryImageMultiple Field test   test(e2e): test updates and some refactoring.   Backout unneeded change.   test(e2e):  Disable DateTime test until issue is fixed.   test(e2e):  address some merge issues as well as make the test more resilient to delays of the signin and home screen. "
 1512,chore(package): update letsencrypt-express to version 2.0.2,https://greenkeeper.io/
-1513,Merge pull request #3331 from phucpnt/fix/ArrayField,fix (ArrayField): fix issue missing module when removing item
-1514,fix (ArrayField): fix issue missing module when removing item,
+1513,Merge pull request #3331 from phucpnt/fix/ArrayField,fix (ArrayField): fix issue missing _ when removing item
+1514,fix (ArrayField): fix issue missing _ when removing item,
 1515,Merge pull request #3326 from keystonejs/greenkeeper-watch-0.19.2,Update watch to version 0.19.2 🚀
 1516,Merge pull request #3328 from keystonejs/greenkeeper-nightwatch-0.9.7,Update nightwatch to version 0.9.7 🚀
 1517,chore(package): update nightwatch to version 0.9.7,https://greenkeeper.io/
@@ -1546,7 +1546,7 @@ Index,Message,Description
 1545,CloudinaryImagesField: Fixing field paths,
 1546,Ensuring CloudinaryImage upload keys contain the field type,
 1547,Merge branch 'master' into cloudinary-update,
-1548,Ensuring File upload keys contain the field type,"This guarantees uniqueness when different field types share the same path (i.e. with nested Lists) cc/ @wmertens The previous fix could cause problems because the fully qualified module can contain characters that bodyParser extrapolates into nested data, or an array, and we need these fields to be present in the top level of the module object regardless of where they are referenced in a nested / repeating data structure."
+1548,Ensuring File upload keys contain the field type,"This guarantees uniqueness when different field types share the same path (i.e. with nested Lists) cc/ @wmertens The previous fix could cause problems because the fully qualified inputName can contain characters that bodyParser extrapolates into nested data, or an array, and we need these fields to be present in the top level of the req.files object regardless of where they are referenced in a nested / repeating data structure."
 1549,Processing multiple images uploaded in a single field,
 1550,Fixing reference to this in closure,
 1551,Cleaning up comments,
@@ -1569,10 +1569,10 @@ Index,Message,Description
 1568,Add first lib/storage doc,
 1569,Merge branch 'master' into cloudinary-update,
 1570,Merge remote-tracking branch 'origin/cloudinary-update' into cloudinary-update,
-1571,update internal Lightbox with module,
+1571,update internal Lightbox with react-images,
 1572,use HiddenFileInput for CloudinaryImagesField,
 1573,Merge pull request #3295 from Yaska/dateLink,Make DateColumn linkable
-1574,Removing module option from the default cloudinary folders,
+1574,Removing cloudinary prefix option from the default cloudinary folders,
 1575,Make DateColumn linkable,
 1576,Merge pull request #3248 from keystonejs/redux-fixes,Redux fixes
 1577,Adding support for binding express.Router,
@@ -1598,7 +1598,7 @@ Index,Message,Description
 1597,Fixing req.body / req.files merge in new API endpoints,
 1598,Minor cleanup in CloudinaryImagesType.js,
 1599,prepare ButtonGroup component,
-1600,remove unnecessary module utility;,supported by aphrodite: https://github.com/Khan/aphrodite#conditionally-applying-styles
+1600,remove unnecessary cssClassNames utility;,supported by aphrodite: https://github.com/Khan/aphrodite#conditionally-applying-styles
 1601,cleanup Drilldown components,
 1602,cleanup ResponsiveText state,
 1603,prepare and introduce Container component,
@@ -1698,7 +1698,7 @@ Index,Message,Description
 1697,Fix location field geo latitude/longitude display issue.,Fix location field geo latitude/longitude display issue.
 1698,test(e2e): restore e2e to passing state.,Figure out all issues with getting e2e to run green. Figure out all issues with getting e2e to run green. test(e2e): try to fix issue running in travis ci.
 1699,chore(package): update mongoose to version 4.5.8,https://greenkeeper.io/
-1700,Fixes #3250 by binding proper module (#3251),
+1700,Fixes #3250 by binding proper this (#3251),
 1701,fixed comment typo,
 1702,addressed linting issue,
 1703,adjustment to store subscription in admin/client/App/store.js in the admin folder to address search update issues,
@@ -2011,7 +2011,7 @@ Index,Message,Description
 2010,add explorer for Money,
 2011,add readme for Money,
 2012,only show readme UI when applicable,
-2013,Added module to module,
+2013,Added babel-preset-stage-2 to package.json,
 2014,Updating common packages bundle,
 2015,Color isn't needed in the client packages anymore,Nice work @jossmac - that’s dropped 45K from our common bundle :D
 2016,Adding specs for Textarray field,
@@ -2046,7 +2046,7 @@ Index,Message,Description
 2045,chore(package): update xhr to version 2.2.1,https://greenkeeper.io/
 2046,Test Home component,
 2047,Export the unconnected HomeView,Otherwise tests would be hard to do
-2048,Add babel-preset-stage-2,"For some reason Mocha cannot load files that use module (spread operator), so we apply babel-preset-stage-2 to transpile them to compatible ES5 code."
+2048,Add babel-preset-stage-2,"For some reason Mocha cannot load files that use ... (spread operator), so we apply babel-preset-stage-2 to transpile them to compatible ES5 code."
 2049,Merge pull request #3131 from dariasamo/maxcharoption,Max characters validation added
 2050,Merge pull request #3132 from keystonejs/greenkeeper-enzyme-2.4.0,Update enzyme to version 2.4.0 🚀
 2051,Merge pull request #3128 from keystonejs/enhancement/filter-labels,Enhancement: Filter Labels
@@ -2224,7 +2224,7 @@ Index,Message,Description
 2223,Merge pull request #3078 from kilida/patch-1,Repeated subexpressions in DomParser.js
 2224,Merge pull request #3079 from keystonejs/greenkeeper-mongoose-4.5.2,Update mongoose to version 4.5.2 🚀
 2225,chore(package): update mongoose to version 4.5.2,https://greenkeeper.io/
-2226,Repeated subexpressions in DomParser.js,"module is repeated. Based on the comment on line 132, looks like this should be module?"
+2226,Repeated subexpressions in DomParser.js,"sibling.name === 'ul' is repeated. Based on the comment on line 132, looks like this should be ol?"
 2227,Test UserInfo Component,
 2228,Test LoginForm Component,
 2229,Merge pull request #3076 from keystonejs/greenkeeper-color-0.11.3,Update color to version 0.11.3 🚀
@@ -2274,7 +2274,7 @@ Index,Message,Description
 2273,Fix order of logging middleware in createApp,
 2274,Updating changelog,
 2275,"Allowing locals setting to specify pretty option, fixes #2614",
-2276,Merge pull request #3040 from wangshijun/master,Add custom module support for morgan log middleware
+2276,Merge pull request #3040 from wangshijun/master,Add custom token support for morgan log middleware
 2277,Merge pull request #3046 from keystonejs/greenkeeper-eslint-config-keystone-2.4.0,Update eslint-config-keystone to version 2.4.0 🚀
 2278,Merge pull request #3053 from keystonejs/greenkeeper-mongoose-4.5.1,Update mongoose to version 4.5.1 🚀
 2279,chore(package): update mongoose to version 4.5.1,https://greenkeeper.io/
@@ -2349,7 +2349,7 @@ Index,Message,Description
 2348,chore(package): update nightwatch to version 0.9.3,https://greenkeeper.io/
 2349,Merge pull request #3007 from TSFoster/master,Fix bug in fullscreen TinyMCE
 2350,Merge pull request #3005 from keystonejs/greenkeeper-codeclimate-test-reporter-0.3.2,Update codeclimate-test-reporter to version 0.3.2 🚀
-2351,Fix bug in fullscreen TinyMCE,Lower module's module by 1 so it's below fullscreen editor
+2351,Fix bug in fullscreen TinyMCE,Lower .EditForm__footer's z-index by 1 so it's below fullscreen editor
 2352,chore(package): update codeclimate-test-reporter to version 0.3.2,https://greenkeeper.io/
 2353,Merge pull request #2997 from keystonejs/fix-issue-2883,Fix issue with the secondary nav bar disappearing.
 2354,Merge pull request #2996 from keystonejs/fix-localfile-field-error,Fix error during creation of a localfile field.
@@ -2487,10 +2487,10 @@ Index,Message,Description
 2486,Defer loading babelify/browserify packages until build is requested,
 2487,Adding npm run test-react to travis scripts,
 2488,Merge pull request #2880 from suryagh/react-test,React component unit tests
-2489,Add Pull Request Template (#2891),  Add Pull Request Template   Update module script and PR Template 
+2489,Add Pull Request Template (#2891),  Add Pull Request Template   Update test-all script and PR Template 
 2490,Merge pull request #2885 from jstockwin/fix-keystone,Fix Keystone adminUI being broken
 2491,Fix Keystone adminUI being broken,
-2492,react test: change test-utils to enzyme,changed the mocha module to module since there are only few specs at this point
+2492,react test: change test-utils to enzyme,changed the mocha --reporter to spec since there are only few specs at this point
 2493,Merge pull request #2882 from keystonejs/0.4/jossmac/fix-toolbar-alignment,Fix UI Alignment / Positioning
 2494,e2e array field tests (#2884),  test(e2e): Add numberarray field e2e tests   test(e2e): Improve datearray css selectors   test(e2e): Add textarray field e2e tests 
 2495,toolbar: fix alignment of back + search,
@@ -2582,7 +2582,7 @@ Index,Message,Description
 2581,chore(package): update juice to version 1.11.0,https://greenkeeper.io/
 2582,Merge pull request #2809 from jstockwin/validation-error-fix,Fix validation errors not showing in the admin UI
 2583,Upgrades kerberos package to 0.0.21,Fixes deprecation messages on node 6
-2584,Catch both module and module,
+2584,Catch both ValidationError and ValidationErrors,
 2585,Removing e2e tests for now,"They are breaking after the refactor, and I want to keep our CI clean while we fix them so incoming PRs are at least validated against the unit tests. Let’s re-enable them as soon as they’re up to date."
 2586,This doesn't actually install npm@3,
 2587,Removing old home view (has been refactored),
@@ -2665,7 +2665,7 @@ Index,Message,Description
 2664,Fix outdated packages,
 2665,Merge branch 'master' into single-page-adminui,
 2666,test(e2e): refactor item ux test to use page objects.  Other misc changes as a result.,
-2667,modified x-array items behavior consistent with #2721,note: I did not see the issue in question with: module and module
+2667,modified x-array items behavior consistent with #2721,note: I did not see the issue in question with: CloudinaryImages and LocalFiles
 2668,test(e2e): fix select field ux test.,
 2669,test(e2e): Fix code field's assertInput command (#2758),
 2670,chore(package): update embedly to version 2.0.1,https://greenkeeper.io/
@@ -2729,7 +2729,7 @@ Index,Message,Description
 2728,Merge pull request #2719 from keystonejs/greenkeeper-react-15.0.2,Update react to version 15.0.2 🚀
 2729,Add ProductPains to README,
 2730,remove trailing space,
-2731,modified relationship-type's update-item method behavior:,"Delete the module if the module not present in module object. This should fix the issue where - presently the last item cannot be removed, because the data object will not contain the empty item."
+2731,modified relationship-type's update-item method behavior:,"Delete the field if the path not present in data object. This should fix the issue where - presently the last item cannot be removed, because the data object will not contain the empty item."
 2732,chore(package): update react-dom to version 15.0.2,https://greenkeeper.io/
 2733,chore(package): update react to version 15.0.2,https://greenkeeper.io/
 2734,Merge pull request #2716 from jstockwin/testing-fixes,Add missing return statements
@@ -3303,7 +3303,7 @@ Index,Message,Description
 3302,chore(package): update updtr to version 0.1.8,http://greenkeeper.io/
 3303,Merge pull request #2465 from suryagh/2229,Fixed issue #2427 - wysiwyg cloudinary image upload https
 3304,Merge pull request #2464 from webteckie/random-fixes,Fix alignment of item view elements in firefox.
-3305,Fixed issue #2427 - wysiwyg cloudinary image upload https,Fixed #2427. The module does return both the module and module urls to the uploaded image. Modified the code to return module url to the client if module option is set to module
+3305,Fixed issue #2427 - wysiwyg cloudinary image upload https,Fixed #2427. The cloudinary uploader does return both the secure and non-secure urls to the uploaded image. Modified the code to return secure url to the client if cloudinary secure option is set to true
 3306,Fix alignment of item view elements in firefox.,
 3307,Merge pull request #2462 from webteckie/admin-custom-style-config,Add support for admin UI custom styling
 3308,Address comments re: 'Add support for admin UI custom styling.',
@@ -3434,7 +3434,7 @@ Index,Message,Description
 3433,Merge pull request #2416 from webteckie/random-fixes,Make sure that unit tests run with a new db.
 3434,Merge pull request #2415 from suryagh/fix-2229,Fix issue #2229: [0.4] Searching does not reset paging in list view
 3435,Make sure that unit tests run with a new db.  This is more of a problem with local environments as sometimes stale data in the database cause tests to fail resulting in long troubleshooting sessions!,
-3436,Fix issue #2229: [0.4] Searching does not reset paging in list view,"Modified the query to module, only if the module is greater than module"
+3436,Fix issue #2229: [0.4] Searching does not reset paging in list view,"Modified the query to skip, only if the result count is greater than skip count"
 3437,Merge pull request #2413 from keystonejs/greenkeeper-react-dnd-2.1.3,Update react-dnd to version 2.1.3 🚀
 3438,chore(package): update react-dnd to version 2.1.3,http://greenkeeper.io/
 3439,test(e2e): fix a failing test.  Also update the db name to be associated with the port number in case of running multiple test server instances.,
@@ -3543,7 +3543,7 @@ Index,Message,Description
 3542,Fix name fields rendered twice,
 3543,Merge pull request #2359 from victoriafrench/issue/2339,issue where md is not defined on value during initial creation
 3544,Merge pull request #2366 from victoriafrench/issue/2287,Build failure fix
-3545,"lodash does not have a module function, switched to module. Fixed test case where the selector for the Admin Name Field should have been looking at the 11th child not the 12th.",
+3545,"lodash does not have a where function, switched to filter. Fixed test case where the selector for the Admin Name Field should have been looking at the 11th child not the 12th.",
 3546,Merge pull request #2365 from victoriafrench/issue/2287,missing lodash migration
 3547,missing lodash migration,
 3548,removed junk code,
@@ -3564,7 +3564,7 @@ Index,Message,Description
 3563,Fixing textarray.updateItem,
 3564,Adding validateInput and validateRequiredInput for textarray fields,
 3565,Cleaning up TextArray field type,
-3566,Fixing incorrect variable reference in GeoPoint field type,The incorrect module reference was obscured because it follows a module operator
+3566,Fixing incorrect variable reference in GeoPoint field type,The incorrect values reference was obscured because it follows a typeof operator
 3567,Merge pull request #2356 from keystonejs/greenkeeper-history-2.0.1,Update history to version 2.0.1 🚀
 3568,Merge pull request #2352 from keystonejs/greenkeeper-babel-plugin-transform-object-rest-spread-6.6.4,Update babel-plugin-transform-object-rest-spread to version 6.6.4 🚀
 3569,Merge pull request #2353 from keystonejs/greenkeeper-babel-core-6.6.4,Update babel-core to version 6.6.4 🚀
@@ -3635,7 +3635,7 @@ Index,Message,Description
 3634,Removing invalid tests,These don’t work and are just cluttering the package. To be reviewed later.
 3635,Simplifying test directory structure,
 3636,Adding deprecated notes to inputIsValid methods in fields,
-3637,Removing module task from the track tests,Accidentally reverted @webteckie’s change when resolving conflicts
+3637,Removing dropAllIndexes task from the track tests,Accidentally reverted @webteckie’s change when resolving conflicts
 3638,Using object-assign package for node 0.12 compatibility,
 3639,Merge remote-tracking branch 'origin/master',Conflicts: test/unitTests/track.test.js
 3640,Adding tests for the datetime field type,
@@ -3774,7 +3774,7 @@ Index,Message,Description
 3773,Responding with all errors from list.updateItem,Also returns the new standard API error format for pass-through implementation in endpoints
 3774,Rethinking the standard apiError response middleware for the Admin server,
 3775,Removing useless line in apiError,
-3776,Updating Admin API to use new updateItem signature,These now combine req.body and req.files to create the module argument; seems safe given these will be coming from a multipart form anyway.
+3776,Updating Admin API to use new updateItem signature,These now combine req.body and req.files to create the data argument; seems safe given these will be coming from a multipart form anyway.
 3777,Separating data and options arguments in list.updateItem,Allows a simpler public API. The options argument is now optional.
 3778,Merge pull request #2290 from keystonejs/greenkeeper-react-color-1.3.7,Update react-color to version 1.3.7 🚀
 3779,chore(package): update react-color to version 1.3.7,http://greenkeeper.io/
@@ -3923,7 +3923,7 @@ Index,Message,Description
 3922,Merge pull request #2188 from keystonejs/greenkeeper-react-0.14.7,Update react to version 0.14.7 🚀
 3923,Merge pull request #2190 from keystonejs/greenkeeper-react-color-1.3.6,Update react-color to version 1.3.6 🚀
 3924,Fix: Issue #2162,.updateItem wasn't updated to be async in keystone.createItems. This is used by the shorthard update script syntax and therefore was only throwing errors when applying updates with that syntax.
-3925,Remove duplicates,style pass twice to image and causes error on iOS
+3925,Remove duplicates,style pass twice to  and causes error on iOS
 3926,Delete redundant function,Delete redundant function downloadItems from CurrentListStore.js
 3927,Merge remote-tracking branch 'keystonejs/master',
 3928,chore(package): update react-color to version 1.3.6,http://greenkeeper.io/
@@ -4036,7 +4036,7 @@ Index,Message,Description
 4035,Pagination Functional Tests, Updated Travis config to install MongoDB 3.0.
 4036,Pagination Functional Tests,Changed quoting on username and password to double-quotes.
 4037,Pagination Functional Tests, Updated Travis CI config to add test user to database
-4038,Pagination Functional Tests,"Added simple ""Post"" model with a multi-key, weighted index. Added test and assertions for list.paginate to ensure no existing functionality has been affected by the addition of the module and module modifications. Added test and assertions for a paginated result set that includes an module that adds metadata to the result."
+4038,Pagination Functional Tests,"Added simple ""Post"" model with a multi-key, weighted index. Added test and assertions for list.paginate to ensure no existing functionality has been affected by the addition of the optionalExpression and countQuery modifications. Added test and assertions for a paginated result set that includes an optionalExpression that adds metadata to the result."
 4039,Removing redundant npm script,
 4040,Updating ESLint: rules are off by default now,
 4041,Merge remote-tracking branch 'upstream/master',
@@ -4102,7 +4102,7 @@ Index,Message,Description
 4101,Fixing whitespace for #2057,
 4102,Merge pull request #2057 from ericelliott/master,Add Universal React routing support
 4103,correct styles and drop on page to dev mode,
-4104,PR feedback - module,
+4104,PR feedback - react routes,
 4105,chore(package): update react-addons-css-transition-group to version 0.14.6,http://greenkeeper.io/
 4106,chore(package): update react-dom to version 0.14.6,http://greenkeeper.io/
 4107,chore(package): update react to version 0.14.6,http://greenkeeper.io/
@@ -4121,7 +4121,7 @@ Index,Message,Description
 4120,Merge branch 'master' into greenkeeper-fs-extra-0.26.4,Conflicts: package.json
 4121,Merge pull request #2052 from snowkeeper/expression,dependsOn expression matching
 4122,chore(package): update fs-extra to version 0.26.4,http://greenkeeper.io/
-4123,Express is a factory,Express is a factory. No need for module here. See every express doc: module
+4123,Express is a factory,Express is a factory. No need for new here. See every express doc: js var express = require('express'); var app = express();
 4124,Merge pull request #2 from ericelliott/deps,Update deps.
 4125,Update deps.,
 4126,Merge pull request #1 from ericelliott/component-routes,Component routes
@@ -4235,8 +4235,8 @@ Index,Message,Description
 4234,"Updating common packages with the right Elemental version, fixes #1973",
 4235,Updating elemental to 0.5.8,
 4236,Updating packages bundle,
-4237,Merge pull request #1971 from jonathanp/reactdom,Replace deprecated module with module
-4238,Replace deprecated module,…with module
+4237,Merge pull request #1971 from jonathanp/reactdom,Replace deprecated React.findDOMNode with ReactDOM.findDOMNode
+4238,Replace deprecated React.findDOMNode,…with ReactDOM.findDOMNode
 4239,Code cleanup,
 4240,Merge pull request #1962 from pswoodworth/master,changed NumberField to allow input of negative numbers
 4241,Merge pull request #1964 from jeffreypriebe/styles/tinymce-icons-hr,Added horizontal rule style to TinyMCE icons.
@@ -4261,7 +4261,7 @@ Index,Message,Description
 4260,Merge pull request #1952 from keystonejs/greenkeeper-react-color-1.3.0,Update react-color to version 1.3.0 🚀
 4261,Merge pull request #1953 from ericelliott/universal-render,Universal render
 4262,Merge master.,
-4263,Pass Keystone module setting to Express,
+4263,Pass Keystone view setting to Express,
 4264,chore(package): update react-color to version 1.3.0,http://greenkeeper.io/
 4265,Merge pull request #1950 from keystonejs/greenkeeper-mongoose-4.3.0,Update mongoose to version 4.3.0 🚀
 4266,chore(package): update mongoose to version 4.3.0,http://greenkeeper.io/
@@ -4271,7 +4271,7 @@ Index,Message,Description
 4270,chore(package): update updtr to version 0.1.6,http://greenkeeper.io/
 4271,chore(package): update mongoose to version 4.2.10,http://greenkeeper.io/
 4272,Merge pull request #1938 from jonathanp/confirmation-dialog-fix,Use entrance/exit animations for the confirmation dialog
-4273,Use entrance/exit animations for the confirmation dialog,Use the same animations as in the module modal
+4273,Use entrance/exit animations for the confirmation dialog,Use the same animations as in the CreateForm modal
 4274,Merge pull request #1933 from keystonejs/greenkeeper-history-1.15.0,Update history to version 1.15.0 🚀
 4275,chore(package): update history to version 1.15.0,http://greenkeeper.io/
 4276,Updating common packages bundle,
@@ -4307,20 +4307,20 @@ Index,Message,Description
 4306,Resize cloudinary images before render. Resolves #1662,
 4307,Autamte dependency maintenance.,"After this PR, we'll want to turn on Greenkeeper.io. └[∵┌]└[ ∵ ]┘[┐∵]┘"
 4308,Merge pull request #1820 from jonathanp/custom-admin-path,Support for using a custom admin path
-4309,Add custom admin path support to module,
+4309,Add custom admin path support to RelatedItemsList,
 4310,Use ES2015 string interpolation,
 4311,Add support for custom admin path,
-4312,Merge pull request #1899 from jonathanp/confirmation-dialog,module
+4312,Merge pull request #1899 from jonathanp/confirmation-dialog,ConfirmationDialog
 4313,Merge pull request #1900 from jonathanp/cloudinary-thumbnail,Show thumbnails when available in the admin UI instead of whole images
 4314,Show thumbnails when available in the admin UI instead of whole images,
 4315,Add confirmation dialog on mass delete on the list view,
-4316,Remove module component that doesn't seem to be in use,
+4316,Remove ItemsTable component that doesn't seem to be in use,
 4317,Add confirmation dialog on item delete on the list view,
-4318,Add support for different confirm button types in module,
-4319,Merge pull request #1889 from jonathanp/confirmation-dialog,Move the confirmation dialog from module to own reusable component
+4318,Add support for different confirm button types in ConfirmationDialog,
+4319,Merge pull request #1889 from jonathanp/confirmation-dialog,Move the confirmation dialog from EditForm to own reusable component
 4320,Merge pull request #1890 from adnasa/lib-list-redundant,Removed redudant code
 4321,Removed redudant code,
-4322,Move the confirmation dialog from module to own reusable component,
+4322,Move the confirmation dialog from EditForm to own reusable component,
 4323,Adding note about demo site upgrade,
 4324,Adding color and react-color to common packages,
 4325,Fixing devWriteDisc,
@@ -4360,12 +4360,12 @@ Index,Message,Description
 4359,Merge pull request #1876 from jacargentina/fix-1798,"Markdown fields: added posibility of configure marked options, fixed #1798"
 4360,keystone-content-page: Cleaned up the Page class code,
 4361,Fix circular reference saving documents containing markdown field with markedOptions,
-4362,Merge pull request #1877 from jonathanp/remove-underscore-dependency,Remove module dependency in a couple of files
+4362,Merge pull request #1877 from jonathanp/remove-underscore-dependency,Remove underscore dependency in a couple of files
 4363,Allow passing extra options to CloudinaryImages for methods just like in CloudinaryImage,
-4364,Remove module dependency in module,
-4365,Remove module dependency in module,
-4366,Refactor module,
-4367,Remove module dependency in module,
+4364,Remove underscore dependency in types/Fields,
+4365,Remove underscore dependency in HtmlField,
+4366,Refactor evalDependsOn,
+4367,Remove underscore dependency in evalDependsOn,
 4368,Markdown fields: added posibility of configure marked options,
 4369,"Implementing delete item via API on the item view, fixes #1856",
 4370,Updating packages,
@@ -4382,14 +4382,14 @@ Index,Message,Description
 4381,PrimaryNav: move front link alongside sign out link,
 4382,Cleaning up client/views/item.js and EditForm Component,
 4383,Cleaning up client/views/list.js,
-4384,Merge pull request #1859 from jonathanp/remove-unused-components,Remove module and module that doesn't seem to be in use
-4385,Merge pull request #1858 from jonathanp/proptypes,Fixes module for the components
-4386,Remove module and module that doesn't seem to be in use,
-4387,Fix module for the components,
-4388,Merge pull request #1852 from jonathanp/confirm-delete-on-editform,Prompt the user for confirmation before deleting/resetting on module
+4384,Merge pull request #1859 from jonathanp/remove-unused-components,Remove Radio and RadioGroup that doesn't seem to be in use
+4385,Merge pull request #1858 from jonathanp/proptypes,Fixes propTypes for the components
+4386,Remove Radio and RadioGroup that doesn't seem to be in use,
+4387,Fix propTypes for the components,
+4388,Merge pull request #1852 from jonathanp/confirm-delete-on-editform,Prompt the user for confirmation before deleting/resetting on EditForm
 4389,Merge pull request #1851 from jonathanp/remove-redundant-scroll-fix,Remove redundant body scroll fix
 4390,Merge pull request #1850 from terenzeyuen/master,Fix to issue select menu being overlapped
-4391,Prompt the user for confirmation before deleting/resetting on module,Fixes #1650
+4391,Prompt the user for confirmation before deleting/resetting on EditForm,Fixes #1650
 4392,Remove redundant body scroll fix,This is already handled in the Elemental UI Modal component Reference: https://github.com/elementalui/elemental/commit/224741dbd6ad15620cd342f4f97cf350dcee1e8a
 4393,Fixing select implementation in UpdateForm,
 4394,Hide the new Management UI unless in dev mode,
@@ -4403,11 +4403,11 @@ Index,Message,Description
 4402,Bumping browserify-shim (should fix travis build),
 4403,Merge pull request #1843 from jeffreypriebe/bugfix/cloudinary-publicid,Fixing a bug introduced in 9d28478 on CloudinaryImages
 4404,Bugfix from 9d28478 (CloudinaryImagesType - filenameAsPublicID).,
-4405,Merge pull request #1838 from jonathanp/arrow-functions,Replace module's with arrow functions
-4406,Remove the module keyword in favor of arrow functions,
+4405,Merge pull request #1838 from jonathanp/arrow-functions,Replace function's with arrow functions
+4406,Remove the function keyword in favor of arrow functions,
 4407,RelatedItemsList should be separate from views/item,
-4408,Merge pull request #1832 from jonathanp/replace-bind-with-arrow-funcs,Replace module with arrow functions
-4409,Replace module with arrow functions,
+4408,Merge pull request #1832 from jonathanp/replace-bind-with-arrow-funcs,Replace .bind() with arrow functions
+4409,Replace .bind() with arrow functions,
 4410,Merge pull request #1831 from jonathanp/remove-unused-references,Remove unused references
 4411,Fixing incorrect collapse logic in Location fields,
 4412,Remove unused references,
@@ -4425,8 +4425,8 @@ Index,Message,Description
 4424,Gracefully handling invalid relationship definitions,
 4425,Merge remote-tracking branch 'keystonejs/master',
 4426,Updating Babel & ESLint,
-4427,Merge pull request #1825 from jonathanp/remove-redundant-exports,Remove redundant module/module
-4428,Remove redundant module/module,
+4427,Merge pull request #1825 from jonathanp/remove-redundant-exports,Remove redundant module.exports/exports
+4428,Remove redundant module.exports/exports,
 4429,Merge pull request #1791 from jonathanp/blur-search-input-on-esc,Blur search input field on escape key press
 4430,Merge pull request #1822 from snowkeeper/relationship,Fix eslint error for double quotes
 4431,Merge pull request #1823 from snowkeeper/dateType,DateType Filter
@@ -4436,9 +4436,9 @@ Index,Message,Description
 4435,Merge pull request #1821 from snowkeeper/filterheight,correct popout body max-height
 4436,correct popout body max-height,
 4437,Merge pull request #1819 from jonathanp/bulk-delete-support,Support for bulk deleting items
-4438,Merge pull request #1818 from jonathanp/select-in-modal-css-fix,Fix z-index issue in module component in module
+4438,Merge pull request #1818 from jonathanp/select-in-modal-css-fix,Fix z-index issue in Select component in UpdateForm
 4439,Add support for bulk deleting items,
-4440,Fix z-index issue in module component in module,
+4440,Fix z-index issue in Select component in UpdateForm,
 4441,remove extra onHttpServerCreated fireEvent,
 4442,Merge remote-tracking branch 'keystonejs/master',
 4443,Merge pull request #1811 from w01fgang/relationshipFieldFix,RelationshipFieldFix
@@ -4450,12 +4450,12 @@ Index,Message,Description
 4449,Fixing invalid IIFE in JSX for Babel 6,
 4450,Adding simpleValue prop for react-select@1.0.0,Fixes issue with dependsOn (@jossmac)
 4451,Merge pull request #1809 from jonathanp/remove-underscore-dependency,Remove dependency on underscore
-4452,Remove dependency on underscore by replacing module with module,
+4452,Remove dependency on underscore by replacing _.findWhere with [].find,
 4453,Merge branch 'master' into blur-search-input-on-esc,
 4454,Merge pull request #1807 from gmmeyer/master,Sign in is broken (master)
 4455,fixes tests to match new login method,
 4456,better login protection,
-4457,Merge pull request #1805 from jonathanp/edit-form-refactor,Refactor module in module
+4457,Merge pull request #1805 from jonathanp/edit-form-refactor,Refactor renderFormElements in EditForm
 4458,Merge pull request #1806 from ReadmeCritic/master,Update redirects in Readme
 4459,Merge pull request #1804 from jonathanp/es2015-method-syntax,ES2015 method syntax
 4460,Merge pull request #1803 from jonathanp/es2015-modules,ES2015 module import syntax for loading dependencies
@@ -4471,26 +4471,26 @@ Index,Message,Description
 4470,Fixing invalid ID in DateInput component,
 4471,Fixing PropType warnings in DateField,
 4472,"use local assets for ""octicons"" icon font",
-4473,Refactor module in module,
+4473,Refactor renderFormElements in EditForm,
 4474,Use the ES2015 method syntax,
 4475,Use the ES2015 module import syntax for loading dependencies,
-4476,Remove no-op module in module,
+4476,Remove no-op componentDidUpdate in EditFormHeader,
 4477,Merge branch 'master' into blur-search-input-on-esc,
 4478,DayPicker: better styling of focus states,
 4479,Merge pull request #1801 from jonathanp/remove-implicit-state-mutation,Remove direct mutation of state and props in React components
 4480,Merge pull request #1795 from jonathanp/remove-unused-variables,Removed unused variables
-4481,Merge pull request #1800 from jonathanp/replace-object-assign-with-underscore,Use module instead of module in Node code
-4482,Remove direct mutation of props in module,
-4483,Remove direct mutation of props in module,
+4481,Merge pull request #1800 from jonathanp/replace-object-assign-with-underscore,Use _.extend instead of Object.assign in Node code
+4482,Remove direct mutation of props in FooterBar,
+4483,Remove direct mutation of props in CreateForm,
 4484,Remove direct state mutation in React components,
-4485,Replace deprecated module call with module,
+4485,Replace deprecated getDOMNode() call with ReactDOM.findDOMNode(),
 4486,Add require('react') needed for JSX,
-4487,Use module instead of module in Node code,…to support environments without ES2015 support
+4487,Use _.extend instead of Object.assign in Node code,…to support environments without ES2015 support
 4488,Fixing linter errors in DateFilter component,
 4489,Merge pull request #1789 from kumo/modal-error-fix,Using error keys to map error messages (#1711)
 4490,Merge pull request #1787 from megheaiulian/master,Missing debug and underscore
 4491,Merge pull request #1792 from jonathanp/close-mobile-navigation-on-esc,Hide mobile navigation on escape key press
-4492,Merge pull request #1783 from jonathanp/remove-underscore-extend,Replace module with module
+4492,Merge pull request #1783 from jonathanp/remove-underscore-extend,Replace _.extend with Object.assign
 4493,Merge pull request #1779 from jonathanp/refactor-dashboard-icons-generation,Refactor admin UI dashboard icons class generation
 4494,Merge remote-tracking branch 'keystonejs/master',
 4495,customise day picker styles,
@@ -4504,34 +4504,34 @@ Index,Message,Description
 4503,Merge pull request #1794 from jonathanp/add-missing-underscore,Add missing require('underscore')
 4504,fix typo,
 4505,[WIP] DateFilter add calendar input,
-4506,DateInput: use moment's module,
+4506,DateInput: use moment's isSame,
 4507,DayPicker styles: fix assets,
 4508,Add missing require('underscore'),
 4509,Remove unused variables,
 4510,Add missing require('underscore'),
 4511,Merge remote-tracking branch 'keystonejs/master',
 4512,Hide mobile navigation menu on escape key press,
-4513,Refactor module in module by breaking it out into module and module,
+4513,Refactor toggleMenu in MobileNavigation by breaking it out into showMenu and hideMenu,
 4514,Remove more unused code for search input visibility toggling,
 4515,Blur search input field on escape key press,
 4516,Use Object.assign instead of underscore,
 4517,Focus the focus target in the create form modal when opening the modal,
-4518,Fix reference errors in module,
+4518,Fix reference errors in ListView.getStateFromStore,
 4519,Using error keys to map error messages,
 4520,Set correct debug key,
 4521,Remove unused code for search input visibility toggling,Since the toggling of the visibility of the search input field is (very elegantly) handled by CSS this commit removes some no longer needed code.
 4522,Missing debug and underscore,
 4523,Remove superfluous ternary operator,
-4524,Use module instead of module in server side code to support old Node versions,
+4524,Use _.extend instead of Object.assign in server side code to support old Node versions,
 4525,Merge pull request #1780 from jonathanp/add-missing-debug,Add missing require('debug')
 4526,Merge pull request #1781 from jonathanp/align-require-calls,Align require calls
 4527,Merge pull request #1784 from kumo/create-fix,Check if param value is defined in filtersFromUrlParams (#1723)
 4528,Ensure that value is defined,
 4529,Adding error logging to api/list/get and making req.query.expandRelationshipFields more robust,
 4530,Adding logError middleware for the admin API,
-4531,Replace module with module,
+4531,Replace _.extend with Object.assign,
 4532,Add missing require('debug'),
-4533,Align require calls,Align the require calls by colons in module to match the style in module and module
+4533,Align require calls,Align the require calls by colons in columns.js to match the style in fields.js and filters.js
 4534,Merge pull request #1778 from jonathanp/master,Remove dependency on underscore
 4535,Refactor admin UI dashboard icons class generation,
 4536,Remove dependency on underscore,
@@ -4549,7 +4549,7 @@ Index,Message,Description
 4548,Check for isMounted() before async setState(),
 4549,Allowing filter components to reset their height after mount,
 4550,Cleaning up completed filters,
-4551,Updating to new use of module in elemental,
+4551,Updating to new use of autofocus in elemental,
 4552,"Updating Elemental UI & build, fixes focus issues with form inputs",
 4553,Implementing server-side location field filtering,
 4554,Fixing the location field filter,
@@ -5110,7 +5110,7 @@ Index,Message,Description
 5109,Updating packages,
 5110,Linter is no longer WIP :),
 5111,Merge pull request #1601 from keystonejs/morenoh149-patch-contributing,Update CONTRIBUTING.md
-5112,Update CONTRIBUTING.md,module removed. Style script no longer present in package.json
+5112,Update CONTRIBUTING.md,npm run style removed. Style script no longer present in package.json
 5113,Fixing linter errors,Because @jossmac is a nice guy
 5114,Separating Items List into its own component,
 5115,add react-day-picker,
@@ -5511,7 +5511,7 @@ Index,Message,Description
 5510,Merge pull request #1472 from NullEntity/patch-1,Update required Elemental version
 5511,Merge pull request #1475 from SlashmanX/master,Fix height property for TextArea not being used
 5512,Fix height property for TextArea not being used,
-5513,Update required Elemental version,The 0.9.9 Elemental version doesn't build giving module on list.less:67. I'm also adding a ~ so npm will upgrade to any minor version.
+5513,Update required Elemental version,The 0.9.9 Elemental version doesn't build giving Error: .u-text-truncate is undefined on list.less:67. I'm also adding a ~ so npm will upgrade to any minor version.
 5514,api: access NOT allowed,
 5515,Fixed bug in images upload public id assignment,
 5516,More var statement block cleanup,
@@ -5530,7 +5530,7 @@ Index,Message,Description
 5529,Updating dependencies,
 5530,More consistent var statement blocks,
 5531,Merge pull request #1458 from keystonejs/hm-money-empty-string,Add support for empty string in Money Fieldtype
-5532,Add support for empty string in Money Fieldtype, fixes https://github.com/keystonejs/keystone/issues/1457 '' is a valid Money value if the field is module '' is not a valid Money value
+5532,Add support for empty string in Money Fieldtype, fixes https://github.com/keystonejs/keystone/issues/1457 '' is a valid Money value if the field is required '' is not a valid Money value
 5533,"Added property specs for publicID, folder, and filenameAsPublicID so that they remain available in the type",
 5534,Enable use of 'select' and 'selectPrefix' options in CloudinaryImage type.,
 5535,Merge pull request #1 from keystonejs/master,Update from upstream repo
@@ -5612,20 +5612,20 @@ Index,Message,Description
 5611,add popout styles,
 5612,lighten breadcrumb divider,
 5613,remove old form styles,
-5614,Merge pull request #1378 from creynders/extra-hooks,"Extra hooks: module, module and module"
-5615,Add module hook,
-5616,Add module hook,
-5617,Add module hook,
+5614,Merge pull request #1378 from creynders/extra-hooks,"Extra hooks: updates, signin and signout"
+5615,Add signin hook,
+5616,Add signout hook,
+5617,Add updates hook,
 5618,Docs have been moved into their own repo,
 5619,Introducing parseFormat option for Date field types,
 5620,Improving DateArray tests,
 5621,Cleaning up fields test,
 5622,Bumping version in readme,
-5623,Merge pull request #1407 from JohnnyEstilles/feature/logger-options,Adding optional module feature
+5623,Merge pull request #1407 from JohnnyEstilles/feature/logger-options,Adding optional logger options feature
 5624,fix: breadcrumb implementation,
-5625,Fixing module error caused my missing trailing space,
-5626,Adding docs for module,
-5627,Adding module and passing to module during `mount(),
+5625,Fixing unexpected text | error caused my missing trailing space,
+5626,Adding docs for logger options,
+5627,Adding logger options and passing to morgan() during `mount(),
 5628,Resolving issues from merge w/ master,
 5629,Merge branch 'master' into react-list,Conflicts:     templates/views/list.jade
 5630,Fixing Michael's attribution,
@@ -5744,10 +5744,10 @@ Index,Message,Description
 5743,Updating packages build,
 5744,Using react-alt-text from npm,
 5745,Fixing packages build path,
-5746,docs: update module and module setting documentation,
-5747,docs: update module setting documentation,
-5748,docs: update module setting documentation,
-5749,docs: update module setting documentation,
+5746,docs: update static and static options setting documentation,
+5747,docs: update compress setting documentation,
+5748,docs: update favicon setting documentation,
+5749,docs: update logger setting documentation,
 5750,update name field to use elemental components,
 5751,remove .container from the base layout - reapply where applicable,
 5752,update name field to use FormField component,
@@ -5829,7 +5829,7 @@ Index,Message,Description
 5828,Fix linting errors,
 5829,Fix minor bug with S3filetype hook call and reformat mount hook call,
 5830,Updating eslint and react plugin,
-5831,Merge pull request #1346 from creynders/grappling-hook,Swap module for module
+5831,Merge pull request #1346 from creynders/grappling-hook,Swap prepost for grappling-hook
 5832,Allow 'pre:routes' middleware to be grappling-hook middleware (but still compatible with express),
 5833,Swap prepost for grappling-hook,
 5834,"index: sort imports, remove unnecessary whitespace",
@@ -5975,7 +5975,7 @@ Index,Message,Description
 5974,Merge pull request #1244 from tivac/keystone-is-old,"Remove ""new"" from Readme"
 5975,"Keystone is pretty stable, remove ""new""",Gives the wrong impression IMO.
 5976,"Adding list history feature, fixes #137 fixes #244",
-5977,Fixing module error,
+5977,Fixing signinWithUser is not defined error,
 5978,Merge pull request #1230 from weekwood/s3_custom_header_doc_zh,add s3 custom header doc zh
 5979,Merge pull request #1234 from tivac/markdown-collapse,Re-override shouldCollapse for Markdown fields
 5980,Re-override shouldCollapse for Markdown fields,This change was originally in e8beaeb7ba63daa2faa66965c6b6c4987577e3ba but got lost in the merges after it.
@@ -6073,9 +6073,9 @@ Index,Message,Description
 6072,Updating css,
 6073,Merge pull request #1166 from tivac/#525-per-field-tinymce-options,Allow wysiwyg option to be an object of options
 6074,Merge pull request #1161 from tivac/codemirror-config,Configure codemirror via model
-6075,Override shouldCollapse in ArrayField.js,This lets module do the right thing for any *Array fields. Using the default module implementation in Field.js doesn't work when the value is an array. Fixes #1111
+6075,Override shouldCollapse in ArrayField.js,This lets collapse: true do the right thing for any *Array fields. Using the default shouldCollapse implementation in Field.js doesn't work when the value is an array. Fixes #1111
 6076,Example says .set() but code says .options(),So I made the example match the code.
-6077,Allow wysiwyg option to be an object of options,"By making this change it allows you to specify editor config options on a per-field basis. Since even an empty object is truthy none of the code around checking for field validity needs to change and we can simply pass the value through. The React component does have to do an module check now but it's a small change. Had to rework the module function to take the module object option into account (via module) and then changed references to the merged result throughout the function. Very little else actually needed to change though. I've tested against global options, fields wit no options, and fields with customized options all in the same model to try and rule out any pass-by-reference issues and don't see anything. If someone can think of a sufficiently-complicated test-case I could use that this breaks on I'd love to see it. This change has me a bit paranoid. Fixes #525"
+6077,Allow wysiwyg option to be an object of options,"By making this change it allows you to specify editor config options on a per-field basis. Since even an empty object is truthy none of the code around checking for field validity needs to change and we can simply pass the value through. The React component does have to do an _isObject check now but it's a small change. Had to rework the getOptions function to take the wysiwyg object option into account (via _.defaults) and then changed references to the merged result throughout the function. Very little else actually needed to change though. I've tested against global options, fields wit no options, and fields with customized options all in the same model to try and rule out any pass-by-reference issues and don't see anything. If someone can think of a sufficiently-complicated test-case I could use that this breaks on I'd love to see it. This change has me a bit paranoid. Fixes #525"
 6078,[s3file] remove logging,
 6079,[s3file] use correct _.each() iteratee argument syntax when list is an object,
 6080,[s3file] convert spaces to tabs to reduce diff noise,
@@ -6083,8 +6083,8 @@ Index,Message,Description
 6082,Merge pull request #1165 from tivac/#101-many-wont-collapse,"Fix ""Many"" Relationships not collapsing"
 6083,[s3file] support custom headers,
 6084,Merge pull request #2 from keystonejs/master,Merge with keystone/master
-6085,Override shouldCollapse on relationship fields,"Because a many relationship field doesn't have a simple value (it's an array) the default module in module returns a bogus value. I have overriden module in module so that it now can fork its response based on a single/many relationship. The single relationship path is the same, while a many relationship will use the module of value instead. Also fixed a few JSHint errors in generally non-scary ways (add a module on line 79, some semicolons)."
-6086,Add back lang/language support,"-Changed module to module in the config so it's more obvious what you are configuring and what the specific rules are. - Removed mime code/test, I don't see anything that used it. - Added tests for field instatiation logic and obect merging"
+6085,Override shouldCollapse on relationship fields,"Because a many relationship field doesn't have a simple value (it's an array) the default shouldCollapse() in Field.js returns a bogus value. I have overriden shouldCollapse() in RelationshipField.js so that it now can fork its response based on a single/many relationship. The single relationship path is the same, while a many relationship will use the .length of value instead. Also fixed a few JSHint errors in generally non-scary ways (add a var on line 79, some semicolons)."
+6086,Add back lang/language support,"-Changed editor to codemirror in the config so it's more obvious what you are configuring and what the specific rules are. - Removed mime code/test, I don't see anything that used it. - Added tests for field instatiation logic and obect merging"
 6087,Fix for validationErrors beeing overwritten,
 6088,Updating build,
 6089,Fixing styling of related item links,
@@ -6092,16 +6092,16 @@ Index,Message,Description
 6091,Manually merging #1045 (markdown field fixes),
 6092,Resolving code style issues with markdown field,
 6093,Merge pull request #1134 from creynders/temp_fix_noedit_relationships,Temporary fix for linking non-editable relationship fields with multiple...
-6094,Merge pull request #1147 from creynders/fix_1147,Allow asynchronous callbacks for module methods in fields
+6094,Merge pull request #1147 from creynders/fix_1147,Allow asynchronous callbacks for value methods in fields
 6095,Update docs on asynchronous  callbacks for fields,
-6096,Allow module field options to be asynchronous,
+6096,Allow value field options to be asynchronous,
 6097,Merge pull request #1155 from pswoodworth/master,added uploadimage back into tinymce plugins
 6098,Merge pull request #1153 from creynders/fix_1153,Asyncdi minor tweaks and fixes
 6099,Merge pull request #1162 from creynders/fix_1162,Contributing guide shows outdated instructions
 6100,Update build instructions to reflect changes,"In #1149 most build tasks were moved from make to npm, this updates the contributing guide to reflect those changes"
 6101,Update test based on PR changes,
 6102,Fix mime type calculation,Which I just broke.
-6103,Plumb codemirror config via model,"Codemirror has a million options, so trying to add support for each and every one seems like a losing battle. Instead add the module field that is a codemirror config object. Also inverted a conditional to remove some indentation that just confuses things because I can't help myself. Fixes #834 Fixes #835 Fixes #934 (Assuming this PR gets accepted)"
+6103,Plumb codemirror config via model,"Codemirror has a million options, so trying to add support for each and every one seems like a losing battle. Instead add the editor field that is a codemirror config object. Also inverted a conditional to remove some indentation that just confuses things because I can't help myself. Fixes #834 Fixes #835 Fixes #934 (Assuming this PR gets accepted)"
 6104,added uploadimage back into tinymce plugins,
 6105,Test whether error is thrown for anything else but a function on creating Wrapper,
 6106,Pass error to callback,
@@ -6112,11 +6112,11 @@ Index,Message,Description
 6111,Merge pull request #1149 from tivac/npm-scripts,Tasks as NPM scripts
 6112,Tasks as NPM scripts,"Because Makefiles are prejudiced against windows users. Reqired adding rimraf as a devDependency but that's not the worst thing in the world. Travis config file changes are somewhat speculative at this point, but I can tweak once Travis blows up."
 6113,Merge pull request #1146 from tivac/markdown-respect-height,Markdown respects height config
-6114,Markdown respects height config,"Told markdown it should respect the module option that was already being managed on the server but not sent to the client. Then passed it through to the markdown editor so it'd respect it. Also taught markdown fields how not to be wysiwyg (though they default to wysiwyg, is that the right behavior? It's the backwards-compatible behavior at least). Doing this required slightly more work than a usual option to maintain backcompat but isn't super-scary or anything. Height is also maintained when wysiwyg is disabled. Also sending module down to the client. It was in the docs but as far as I can tell it wasn't plumbed through in the React component for markdown fields. Only supporting module for now since that is all that is in the docs."
+6114,Markdown respects height config,"Told markdown it should respect the height option that was already being managed on the server but not sent to the client. Then passed it through to the markdown editor so it'd respect it. Also taught markdown fields how not to be wysiwyg (though they default to wysiwyg, is that the right behavior? It's the backwards-compatible behavior at least). Doing this required slightly more work than a usual option to maintain backcompat but isn't super-scary or anything. Height is also maintained when wysiwyg is disabled. Also sending toolbarOptions down to the client. It was in the docs but as far as I can tell it wasn't plumbed through in the React component for markdown fields. Only supporting toolbarOptions.hiddenButtons for now since that is all that is in the docs."
 6115,Merge pull request #1145 from tivac/markdown-controls-disappearing,Fix markdown fields losing controls when hidden
-6116,Fix markdown fields losing controls when hidden,"Because of how controls are rendered when hidden (shortcutted by returning null) if you hide a markdown input & reshow it doesn't get the markdown editor applied to it again. Prior to this commit that was only happening in module, which happens the first time a component is rendered. This change abstracts out the markdown editor instantiation a bit so that it's easy to add it to the module lifecycle method as well. Now the component will re-attach the textarea when a markdown field is reshown after being hidden. This also breaks out the module as it wasn't necessary to be defined every time module executed. It also moves the functionality of module inline to markdown editor instantiation as it's no longer complicated enough to justify its own function."
+6116,Fix markdown fields losing controls when hidden,"Because of how controls are rendered when hidden (shortcutted by returning null) if you hide a markdown input & reshow it doesn't get the markdown editor applied to it again. Prior to this commit that was only happening in componentDidMount, which happens the first time a component is rendered. This change abstracts out the markdown editor instantiation a bit so that it's easy to add it to the componentDidUpdate lifecycle method as well. Now the component will re-attach the textarea when a markdown field is reshown after being hidden. This also breaks out the headingCallback() as it wasn't necessary to be defined every time buttonsToAdd() executed. It also moves the functionality of buttonsToAdd() inline to markdown editor instantiation as it's no longer complicated enough to justify its own function."
 6117,Merge pull request #1144 from tivac/collapsed-markdown,Markdown fields don't honor collapse config
-6118,Override shouldCollapse for Markdown fields,Since the module for a markdown field is an object the default module check in module returns the wrong value. This provides an overridden implementation that comprehends the object version of module and uses the module field as the conditional.
+6118,Override shouldCollapse for Markdown fields,Since the this.props.value for a markdown field is an object the default !this.props.value check in shouldCollapse() returns the wrong value. This provides an overridden implementation that comprehends the object version of this.props.value and uses the md field as the conditional.
 6119,Added tests,
 6120,Use props.data.name instead of rendering name on the fly,
 6121,Update docs on localfile filename option,
@@ -6256,7 +6256,7 @@ Index,Message,Description
 6255,adding 'app' and 'mongoose' options to keystone,
 6256,Clean up Makefile,
 6257,Merge branch 'master' of github.com:keystonejs/keystone,
-6258,"Add module make task that was incorrectly removed, just call module in the module task and change module to just call module instead of using make for windows users",
+6258,"Add test-spec make task that was incorrectly removed, just call mocha in the test task and change npm test to just call mocha instead of using make for windows users",
 6259,Removing current status notes now 0.3.0 is out,
 6260,Adding note for changes wiki page to changelog,
 6261,Merge pull request #1035 from keystonejs/morenoh149-patch-2,Update README.md
@@ -6518,14 +6518,14 @@ Index,Message,Description
 6517,Updating build,
 6518,Code consistency,
 6519,Merge pull request #880 from webteckie/master,Log mongoose validation errors generated during createItems(improvement)
-6520,Merge pull request #882 from creynders/patch-1,Remove duplicate module statement
+6520,Merge pull request #882 from creynders/patch-1,Remove duplicate require('async') statement
 6521,Merge pull request #881 from r3dm/addCanAccessKeystoneComment,Add can access keystone comment
 6522,Merge pull request #878 from wuhaixing/master,Translate docs/views into chinese
-6523,Remove duplicate module statement,
+6523,Remove duplicate require('async') statement,
 6524,reword and fix some styles,
 6525,added note to the docs on virtal methods,
 6526,added comments to help debug signin bugs,
-6527,Log mongoose validation errors generated during createItems(improvement).,"At least, on windows keystone has issues generating mongoose validation errors when they happen during createItems.  To address this issue createItems errors need to be logged very early on within its own module and not back in the updates module where the process.exit() happens since it has higher priority than logging and thus most times preempts any logging that may still be queued up.  The code arrangement provided by this PR ensures the best consistent results. With the updated changes, if a validation or other error or occurs createItems will log an error.  For example: module With the updated changes, if a createItems error occurs the updates module will log a final error.  For example: module If createItems succeeds then you get the usual.  For example: module"
+6527,Log mongoose validation errors generated during createItems(improvement).,"At least, on windows keystone has issues generating mongoose validation errors when they happen during createItems.  To address this issue createItems errors need to be logged very early on within its own module and not back in the updates module where the process.exit() happens since it has higher priority than logging and thus most times preempts any logging that may still be queued up.  The code arrangement provided by this PR ensures the best consistent results. With the updated changes, if a validation or other error or occurs createItems will log an error.  For example: { [ValidationError: Validation failed]   message: 'Validation failed',   name: 'ValidationError',   errors:    { startTime:       { [ValidatorError: Path `startTime` is required.]         message: 'Path `startTime` is required.',         name: 'ValidatorError',         path: 'startTime',         type: 'required',         value: undefined } },   model: 'Event',   data:    { name: 'Test Booking 1',      status: 'pending',      endTime:       { _isAMomentObject: true,         _isUTC: false,         _pf: [Object],         _locale: [Object],         _d: Thu Jan 08 2015 21:29:37 GMT-0500 (Eastern Standard Time) },      __ref: 'Event_1',      __doc:       { endTime: Thu Jan 08 2015 21:29:37 GMT-0500 (Eastern Standard Time),         name: 'Test Booking 1',         type: 'none',         repeat: 'none',         status: 'pending',         guests: [],         allDay: false,         listName: 'Event',         _id: 54af3d139844182c0ff75cea } } } Trace: ValidationError: Path `startTime` is required.     at model.Document.invalidate (c:\reDist\node_modules\keystone\node_modules\mongoose\lib\document.js:1021:32)     at c:\reDist\node_modules\keystone\node_modules\mongoose\lib\document.js:970:16     at validate (c:\reDist\node_modules\keystone\node_modules\mongoose\lib\schematype.js:610:7)     at c:\reDist\node_modules\keystone\node_modules\mongoose\lib\schematype.js:627:9     at Array.forEach (native)     at SchemaDate.SchemaType.doValidate (c:\reDist\node_modules\keystone\node_modules\mongoose\lib\schematype.js:614:19)     at c:\reDist\node_modules\keystone\node_modules\mongoose\lib\document.js:968:9     at process._tickCallback (node.js:419:13)     at c:\reDist\node_modules\keystone\lib\core\createItems.js:295:13     at c:\avp\node_modules\async\lib\async.js:544:30     at c:\avp\node_modules\async\lib\async.js:151:21     at c:\avp\node_modules\async\lib\async.js:151:21     at c:\reDist\node_modules\keystone\lib\core\createItems.js:120:7     at handleError (c:\reDist\node_modules\keystone\node_modules\mongoose\node_modules\hooks\hooks.js:92:18)     at _next (c:\reDist\node_modules\keystone\node_modules\mongoose\node_modules\hooks\hooks.js:34:22)     at fnWrapper (c:\reDist\node_modules\keystone\node_modules\mongoose\node_modules\hooks\hooks.js:159:8)     at complete (c:\reDist\node_modules\keystone\node_modules\mongoose\lib\document.js:986:5)     at c:\reDist\node_modules\keystone\node_modules\mongoose\lib\document.js:977:20  With the updated changes, if a createItems error occurs the updates module will log a final error.  For example: ------------------------------------------------  avp: Update 0.0.1-avp failed with errors:  ValidationError: Path `startTime` is required.  If createItems succeeds then you get the usual.  For example: ------------------------------------------------ avp: Successfully applied update 0.0.1-avp.  Successfully created:  *   2 Users *   8 Events"
 6528,"item toolbar: green create link, more obvious intention",
 6529,modal: add a fun little animate in,also: - tidied up fields on smaller devices - brighter create button - more luxurious interior padding on the modal
 6530,modal: output the name of the item being created as the title,
@@ -6555,7 +6555,7 @@ Index,Message,Description
 6554,Make field file names consistent,
 6555,Merge pull request #862 from jdr0dn3y/patch-2,Added MONGODB_URL to the configuration options
 6556,Merge pull request #870 from webteckie/master,Log mongoose validation errors generated during createItems
-6557,Log mongoose validation errors generated during createItems.,"Without the changes and if there is a mongoose validation error I get the following: module With the changes and if there is a mongoose validation error I get something like the following, which is a huge help in troubleshooting: module"
+6557,Log mongoose validation errors generated during createItems.,"Without the changes and if there is a mongoose validation error I get the following: ------------------------------------------------ An error occurred applying updates, bailing on Keystone init.  Error details:  With the changes and if there is a mongoose validation error I get something like the following, which is a huge help in troubleshooting: { [ValidationError: Validation failed]   message: 'Validation failed',   name: 'ValidationError',   errors:    { startTime:       { [ValidatorError: Path `startTime` is required.]         message: 'Path `startTime` is required.',         name: 'ValidatorError',         path: 'startTime',         type: 'required',         value: undefined } },   model: 'Event',   data:    { name: 'Test Booking 1',      status: 'pending',      endTime:       { _isAMomentObject: true,         _isUTC: false,         _pf: [Object],         _locale: [Object],         _d: Tue Jan 06 2015 19:09:37 GMT-0500 (Eastern Standard Time) },      __ref: 'Event_1',      __doc:       { endTime: Tue Jan 06 2015 19:09:37 GMT-0500 (Eastern Standard Time),         name: 'Test Booking 1',         type: 'none',         repeat: 'none',         status: 'pending',         guests: [],         allDay: false,         listName: 'Event',         _id: 54ac7943a2751ad02b12ed57 } } }"
 6558,Merge pull request #867 from r3dm/fixPersist,Throw error if express app doesn't have necessary middlewares
 6559,Updating build,
 6560,Adding ID and Create button to Item Toolbar,
@@ -6659,9 +6659,9 @@ Index,Message,Description
 6658,Add Appveyor CI,
 6659,check for valid options object,
 6660,check for valid object,
-6661,Merge pull request #818 from metasansana/fix-add-item-button,Make module button work for array fields.
+6661,Merge pull request #818 from metasansana/fix-add-item-button,Make addItem button work for array fields.
 6662,check for valid option object,
-6663,Make module button work for array fields.,It logged an error to console before.
+6663,Make addItem button work for array fields.,It logged an error to console before.
 6664,Don't tell people to require 0.3 until it's released!,
 6665,Updating development instructions for React,
 6666,Reinstating search toggle in Item view,
@@ -6745,8 +6745,8 @@ Index,Message,Description
 6744,"Removing unnecessary if, fixes #786",
 6745,Merge branch 'react' of https://github.com/keystonejs/keystone into react,
 6746,Merge branch 'master' into react,
-6747,Merge pull request #798 from sebmck/static-options,Add module option
-6748,Add module option - closes #763,
+6747,Merge pull request #798 from sebmck/static-options,Add static options option
+6748,Add static options option - closes #763,
 6749,Cleaning up HTML Editor and implementing height option,
 6750,sync with upstream,
 6751,Fixes #787 (error thrown without user list registered),
@@ -6855,7 +6855,7 @@ Index,Message,Description
 6854,Merge pull request #757 from snowkeeper/email,Email - updated argument handler to work without callback
 6855,Merge pull request #760 from sebmck/unknown-list,Throw a ReferenceError on unknown list
 6856,Adds appversion rendering to footer,
-6857,Throw a ReferenceError on unknown list in module,
+6857,Throw a ReferenceError on unknown list in keystone.list,
 6858,v0.2.35,
 6859,Updating changelog,
 6860,Merge pull request #758 from d-pac/fix_admin,Fix #751 broken admin links
@@ -7053,7 +7053,7 @@ Index,Message,Description
 7052,"Fixing previous value population in initial fields, fixes #622",
 7053,Supporting default value in the initial textarea form,
 7054,Cleanup,
-7055,"Fixing noedit in initial field templates, fixes #625",Fields set to module are always editable in the initial form when module.
+7055,"Fixing noedit in initial field templates, fixes #625",Fields set to noedit: true are always editable in the initial form when initial: true.
 7056,Merge pull request #616 from JohnnyEstilles/feature/csrf-in-http-headers,Added support for CSRF in HTTP headers
 7057,Merge pull request #615 from JohnnyEstilles/feature/cloudinaryimages-folders,Adding CloudinaryImages folders
 7058,added check for req.headers ... for unit testing with empty object,
@@ -7335,7 +7335,7 @@ Index,Message,Description
 7334,"Fixing process.exit call on update errors, see #463",
 7335,Styles rebuild,
 7336,Fixing filtering issues with select fields. Cleaning filters for output.,
-7337,"Adding docs for list option module, fixes #487",
+7337,"Adding docs for list option hidden, fixes #487",
 7338,Merge pull request #478 from JohnnyEstilles/fixing-issue-398-recalculate-total-after-delete,"Fix for issue #398, AdminUI: Recalculate total after delete"
 7339,Merge pull request #482 from trollixx/fix-300,Fix validation of required fields (fixes #300)
 7340,Merge pull request #485 from Globegitter/patch-1,Updated Readme to set production environment
@@ -7394,7 +7394,7 @@ Index,Message,Description
 7393,Merge pull request #461 from JohnnyEstilles/fix-sortorder-initial-value,Fixing initial sortOrder value on sortable List
 7394,modifying implementation if relationship filters in the ui,
 7395,Fixing initial sortOrder on a sortable List,When added a document to a list we should use max.sortOrder instead of max.count to determine the initial sortOrder value.
-7396,Switching default 'remove' button behaviour for #459,Now defaults to deleting if the module option is true
+7396,Switching default 'remove' button behaviour for #459,Now defaults to deleting if the autoCleanup option is true
 7397,Changing uploadReplace option to autoCleanup for #459,
 7398,Cleaning up CloudinaryImage form.jade,
 7399,Fixing item.get(paths.exists) from #459,
@@ -7556,7 +7556,7 @@ Index,Message,Description
 7555,Merge pull request #390 from balupton/stacktraces,Output stack traces with error logs
 7556,Added the possibility to switch to code in readonly wysiwygs,
 7557,Output stack traces with error logs,
-7558,"Added recent searches code, needs browserify","@JedWatson can you add browserify for the module file, link should do the trick"
+7558,"Added recent searches code, needs browserify","@JedWatson can you add browserify for the public/js/views/list.js file, this should do the trick"
 7559,Updated to use query filter. Needs query filter built locally.,
 7560,Merge pull request #382 from kesla/mongoose-prefix,make it possible to prefix mongo models
 7561,Added read-only tinyMCE when noedit is true,
@@ -7592,7 +7592,7 @@ Index,Message,Description
 7591,Fixing a braino in lib/view.js,
 7592,Adding tests for keystone.View class,
 7593,Improving asyncdi spec,
-7594,Suppressing console.log calls when the module option is false,
+7594,Suppressing console.log calls when the logger option is false,
 7595,"Adding support for req, res arguments to view.render() callback, fixes #363",
 7596,Adding supertest,
 7597,"Cleaning up the View class, fixes #364",
@@ -7619,7 +7619,7 @@ Index,Message,Description
 7618,Implemented and documented color field type,
 7619,Merge pull request #362 from balupton/issue-346,Implemented #346
 7620,Fixed some regressions, Fixes address query string not being generated correctly Fixed spacing issue with header items (due to trailing whitespace removal)
-7621,Implemented #346,"Changes:  Linted module and module Added between filtering to date, datetime, money, and number field types Added some utility styles provided by @jossmac Removed trailing whitespaces for modified files Simplified logic for parsing list field input values and generating a query string from them Simplified logic for generating queries from filters a little bit, simplified a little bit for location  Tested:  That filters correctly pass and fail for numbers and dates Have not tested changes yet on location, money, and date time fields that were also touched by the optimisations"
+7621,Implemented #346,"Changes:  Linted lib/list.js and public/js/view/list.js Added between filtering to date, datetime, money, and number field types Added some utility styles provided by @jossmac Removed trailing whitespaces for modified files Simplified logic for parsing list field input values and generating a query string from them Simplified logic for generating queries from filters a little bit, simplified a little bit for location  Tested:  That filters correctly pass and fail for numbers and dates Have not tested changes yet on location, money, and date time fields that were also touched by the optimisations"
 7622,Add coverage report and default gulp task.,
 7623,Clearer editorconfig definition around indentation,"Not all editors have auto-detection enabled, so good to have the expectations clearly defined, those expectations being:  tabs by default 2 spaces for json (npm really dislikes anything else)"
 7624,Added more complete jshint options,https://github.com/JedWatson/keystone/issues/333#issuecomment-43159223
@@ -7648,7 +7648,7 @@ Index,Message,Description
 7647,Adding a note about dependencies to the Changelog,
 7648,Updating dependencies,
 7649,Updated Changelog,
-7650,"Adding note about the module option to the database docs, fixes #336",
+7650,"Adding note about the nav option to the database docs, fixes #336",
 7651,Fixing issues with custom columns in the CSV Download,
 7652,Adding new argument for custom toCSV method: row,
 7653,Adding named arguments map to asyncdi library,
@@ -7811,7 +7811,7 @@ Index,Message,Description
 7810,Updating changelog,
 7811,v0.2.10,
 7812,Fixing whitespace for new Jade version,
-7813,Fixing module >> module in docs,
+7813,Fixing Azure File >> AzureFile in docs,
 7814,Updating changelog,
 7815,v0.2.9,
 7816,Updating changelog,
@@ -8169,7 +8169,7 @@ Index,Message,Description
 8168,More configuration docs,
 8169,Cleanup,
 8170,Adding configuration documentation (in progress),
-8171,Updating the Email class to be compatible with name fields when users are passed as the module option,
+8171,Updating the Email class to be compatible with name fields when users are passed as the to option,
 8172,Setting the UpdateHandler in the Admin UI to log errors,
 8173,Updating the database docs for the s3file fieldtype,
 8174,v0.1.49,

@@ -2,10 +2,10 @@ Index,Release Note
 1,"Major Updates
 
 This includes Git v2.33.0.vfs.0.0.
-The merge strategy default is changed from module to module which should present significant performance improvements for commands such as git merge, git rebase, and git cherry-pick. Huge thanks to external contributor @newren for creating this new merge strategy!
+The merge strategy default is changed from recursive to ort which should present significant performance improvements for commands such as git merge, git rebase, and git cherry-pick. Huge thanks to external contributor @newren for creating this new merge strategy!
 The build system was rewritten from scratch to simplify the process and use a more recent version of .NET.
 After this release is promoted to a full release on GitHub, it will be available for installation via winget.
-The module command is deprecated. Future upgrades will require using winget or installing directly from the releases page.
+The gvfs upgrade command is deprecated. Future upgrades will require using winget or installing directly from the releases page.
 A case where FastFetch would not download a small number of files has been fixed.
 
 Pull Requests
@@ -173,9 +173,9 @@ Pull Requests
 "
 8,"Major Changes
 
-This is a security release on top of link.
-Includes link.
-The module versions of Git were bundling old packages from git-for-windows/build-extra, so they included versions with known security flaws. None of these had known problems in use with Git, but other software or scripts might use those packages, so it is safest to update them.
+This is a security release on top of VFS for Git 1.0.20156.1.
+Includes Git v2.27.0.vfs.1.0.
+The .vfs. versions of Git were bundling old packages from git-for-windows/build-extra, so they included versions with known security flaws. None of these had known problems in use with Git, but other software or scripts might use those packages, so it is safest to update them.
 
 Pull Requests
 
@@ -189,10 +189,10 @@ Pull Requests
 9,"Major Changes
 
 Includes Git v2.27.0
-Fixes an issue where module restarts in a loop when Powershell is not found on the module.
-We have link including a new link
-A link allows updating USN journals, which is needed when using BuildXL with VFS for Git.
-Bug Fix: Fixes a bug with module that causes versions v1.0.20112.1 from upgrading from private feeds.
+Fixes an issue where GVFS.Service restarts in a loop when Powershell is not found on the PATH.
+We have new documentation including a new troubleshooting guide!
+A new config setting allows updating USN journals, which is needed when using BuildXL with VFS for Git.
+Bug Fix: Fixes a bug with gvfs upgrade that causes versions v1.0.20112.1 from upgrading from private feeds.
 
 Pull Requests
 
@@ -280,7 +280,7 @@ Improvements to the installation to more gracefully recover from an uninstallati
 Fixes mounting on RS4 machines
 Other bug fixes, engineering improvements, and test reliability fixes.
 
-See the link"
+See the full change log"
 16,"Release Notes
 
 Large improvements to git checkout performance when there are many folder placeholders.
@@ -290,7 +290,7 @@ Upgrade supports an anonymous endpoint to decouple rollouts to different enginee
 Improvements to the installation to more gracefully recover from an uninstallation of VFS for Git and subsequent
 Other bug fixes, engineering improvements, and test reliability fixes.
 
-See the link"
+See the full change log"
 17,"Release notes:
 - Fixed several incorrect interactions with credentials
   - Now scopes credential.useHttpPath to just dev.azure.com hostname
@@ -300,7 +300,7 @@ See the link"
   - Correlate trace2 stream with VFS for Git stream with the Git session ID.
   - Break down update placeholders timings so we can see where time is spend during checkout.
 - Fixes a copy failure when copying the upgrade tool to its temporary location.
-See the link"
+See the full change log"
 18,Update components included with internal distribution
 19,Includes fixes to config settings for internal users only
 20,"Release notes:
@@ -313,35 +313,35 @@ See the link"
   - Break down update placeholders timings so we can see where time is spend during checkout.
 - Many smaller bug fixes"
 21,"Bug fixes:
-- Consume new GCM to fix module behavior
+- Consume new GCM to fix git credential erase behavior
 - Properly reacquire credentials during nuget upgrader
 - Disable commit-graph verify for performance concerns"
 22,"Bug fixes:
-* module could fail if its background processes were launched in an existing enlistment.
-* module would run slowly if the objects directory had more than 2048 packfiles.
-* Improve error message from module if the Git installation could not be found."
+* gvfs upgrade could fail if its background processes were launched in an existing enlistment.
+* git multi-pack-index verify would run slowly if the objects directory had more than 2048 packfiles.
+* Improve error message from gvfs upgrade if the Git installation could not be found."
 23,"New Features:
 - Upgrade supports NuGet feeds as a distribution source.
 - Post-index-change hook will help ensure consistency between Git and VFS for Git's reckoning of the state of the repository, and eliminate a class of bugs.
 - VFS for Git now supports anonymous access for public repositories.
-- module learned how to take --files-list.
+- gvfs prefetch learned how to take --files-list.
 Performance and Reliability
 - ""Sparse"" push algorithm should improve performance of pushes where only a small cone of a repository is modified.
 - Multi-threaded index reads will improve load time of large .git/index
-- Built-in module is on by default.
-- No-op module performance is dramatically improved
+- Built-in git rebase is on by default.
+- No-op gvfs prefetch --hydrate performance is dramatically improved
 - Commit-graph and multi-pack-index are validated after writing to eliminate corruption scenarios
 - Multiple mount process reliability bugs have been squashed.
 - VFS for Git will performance maintenance in the background. This release will pack loose objects in .gvfsCache into packfiles. 
 General Improvments
 - Log files now include UTC offset.
 - Other bug fixes
-Please see the link."
+Please see the full change log."
 24,This release is identical to the previous. It was published to test upgrade.
 25,"New Features
 - VFS for Git will check the GitHub releases for the configured ring and prompt occasionally when running Git commands in a VFS for Git repository. To configure your ring, use the new gvfs config verb, like:
-module
-VFS for Git will check in the background for an available upgrade. If one is available, a message will be shown periodically to the user in the post-command hook to run module to install the new version.
+gvfs config upgrade.ring [""fast"", ""slow"", ""none""]
+VFS for Git will check in the background for an available upgrade. If one is available, a message will be shown periodically to the user in the post-command hook to run gvfs upgrade to install the new version.
 - In the future, VFS for Git will automatically upgrade as new bits become available in the configured ring, eliminating the need to run gvfs upgrade to 
 Performance Improvements
 - Upgraded to Git 2.19. This version brings with it improvements to unpack_trees to speed up checkout, merge, reset, and rebase.
@@ -391,7 +391,7 @@ Perf improvements:
 - The installer now unmounts and remounts existing repos automatically
 - GVFS no longer forces an antivirus exclusion. This was a relic from long ago when the gvflt driver and the Defender driver used to interfere with each other, but antivirus is no longer GVFS's concern.
 - Added better diagnostic info in the GVFS logs when there are network errors
-- module now supports an option to avoid doing its ahead/behind calculations. This allows the user to decide if they want to skip that overhead if all they care about is the status of the working directory.
+- git status now supports an option to avoid doing its ahead/behind calculations. This allows the user to decide if they want to skip that overhead if all they care about is the status of the working directory.
 Bug fixes:
 - Lots of bug fixes to make GVFS's file writes (e.g. to its database files) more reliable, even in the face of power loss
 - GVFS can now recover from corrupted git object files (e.g. caused by a torn write), by re-downloading them whenever git asks for an object. The assumption is that git would not be asking GVFS for it if the object was valid.

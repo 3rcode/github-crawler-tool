@@ -1,79 +1,17 @@
 Index,Release Note
 1,"Added
-Android
-
-Add themed icon.
-Add DNS content blockers.
-
-Changed
-Android
-
-Clarify some of the error messages throughout the app.
-Increase WireGuard key rotation interval to 14 days.
-Change the DNS/MTU input to rely on dialogs in order to improve the UX on some devices.
-Hide ""Buy more credit"" buttons in the default release build published to Google Play, our website
-  and GitHub. The buttons are still visible for F-Droid builds.
-
-Fixed
-Android
-
-Fix adaptive app icon which previously had a displaced nose and some other oddities.
-Fix app version sometimes missing in the settings menu.
-"
-2,"This release is for desktop only.
-Added
-
-Log select settings on each connection attempt.
-
-Changed
-
-Update Electron from 21.1.1 to 23.2.0.
-
-macOS
-
-Change macOS app signing key and certificates. Replace those issued to Amagicom AB (the parent
-  company of Mullvad VPN AB) with new certificates issued directly to Mullvad VPN AB.
-
-Deprecated
-Linux
-
-Deprecated support for Debian 10. This also means dropping support for glibc older
-  than 2.31 and Linux kernels older than 5.10.
-
-Fixed
-
-Fix location search in desktop app only searching for English location names.
-Fix automatic WireGuard key rotation not being initialized correctly when not running the GUI.
-Fix duplicated notifications in some situations.
-Fix notification setting being inverted. When non-important notifications were disabled it instead
-  disabled important ones and showed non-important ones.
-Work around issues with PQ and multihop caused by fragmentation in the tunnel. The workaround
-  doesn't fix fragmentation issues in general but prevents the PSK exchange packets from being
-  fragmented by setting an explicit maximum segment size.
-
-macOS
-
-Fix tray window behaviour when opening mission control and switching between full-screen
-  workspaces.
-
-Linux
-
-Fix RPM package containing unecessary files causing conflicts with other electron-builder based
-  packages.
-"
-3,"Added
 
 Add Kyber1024 KEM algorithm into the Post-Quantum secure key exchange algorithm. This means the
   Quantum-resistant-tunnels feature now mixes both Classic McEliece and Kyber for added protection.
 Add notification dot to tray icon and system notification throttling.
 Add troubleshooting information to some in-app notifications.
 Add setting for quantum resistant tunnels to the desktop GUI.
-Enable module for the socket used by WireGuard over TCP. Improves latency and performance.
+Enable TCP_NODELAY for the socket used by WireGuard over TCP. Improves latency and performance.
 
 Changed
 
 Update the Post-Quantum secure key exchange gRPC client to use the stabilized
-  module endpoint
+  PskExchangeV1 endpoint
 Add ""auto"" setting for the quantum-resistant tunnel feature, and make it the default. If it was
   previously set to off, it will now be set to auto instead. That currently means the same thing as
   ""off"", but this might change in the future.
@@ -99,19 +37,19 @@ Fix close to expiry notification not showing unless app is opened once within th
 Retry if PQ PSK negotiation fails for any reason.
 Fix accumulated tunnel state notifications sometimes displayed after suspend.
 "
-4,"Added
+2,"Added
 
 Add Kyber1024 KEM algorithm into the Post-Quantum secure key exchange algorithm. This means the
   Quantum-resistant-tunnels feature now mixes both Classic McEliece and Kyber for added protection.
 Add notification dot to tray icon and system notification throttling.
 Add troubleshooting information to some in-app notifications.
 Add setting for quantum resistant tunnels to the desktop GUI.
-Enable module for the socket used by WireGuard over TCP. Improves latency and performance.
+Enable TCP_NODELAY for the socket used by WireGuard over TCP. Improves latency and performance.
 
 Changed
 
 Update the Post-Quantum secure key exchange gRPC client to use the stabilized
-  module endpoint
+  PskExchangeV1 endpoint
 Add ""auto"" setting for the quantum-resistant tunnel feature, and make it the default. If it was
   previously set to off, it will now be set to auto instead. That currently means the same thing as
   ""off"", but this might change in the future.
@@ -136,7 +74,7 @@ Fix close to expiry notification not showing unless app is opened once within th
 Retry if PQ PSK negotiation fails for any reason.
 Fix accumulated tunnel state notifications sometimes displayed after suspend.
 "
-5,"This release is for desktop only.
+3,"This release is for desktop only.
 Fixed
 Windows
 
@@ -145,8 +83,8 @@ Fix service not starting when LSA protection is enabled (which is the default on
 Fix some issues with setting system DNS by using SetInterfaceDnsSettings when it's available (on
   Windows 10, version 1809 and above).
 "
-6,"This release is for desktop only.
-Here is a list of all changes since last stable release link.
+4,"This release is for desktop only.
+Here is a list of all changes since last stable release 2022.5.
 Added
 
 Add quit button to tray context menu on Linux and Window.
@@ -165,7 +103,7 @@ Fixed
 When a country is selected, and the constraints only match relays that are not included on the
   country level, select those relays anyway.
 Fix regression where WireGuard relays were connected to over OpenVPN after a couple of failed
-  attempts, when the tunnel type was set to module.
+  attempts, when the tunnel type was set to any.
 Fix missing connect timeout when connecting to a WireGuard relay over TCP. 
 Fix failure to apply firewall rules that could occur when connecting timed out. 
 Fix sorting of devices in the ""too many devices""-view to properly sort on device creation time.
@@ -193,7 +131,7 @@ Windows
 Ignore adapters that have no valid GUID when removing obsolete Wintun interfaces during install.
   Previously, the installer would abort.
 Revert to using netsh for DNS config, as some Windows builds did not deal with changes correctly.
-  module can be used to override this.
+  TALPID_DNS_MODULE can be used to override this.
 Fix deadlock that could occur when the default route changed while initializing split tunneling.
 
 Removed
@@ -207,7 +145,7 @@ Windows
 DNS loopback traffic is no longer blocked. Note that local resolvers are still unable to forward
   queries to servers that would normally be blocked.
 "
-7,"Fixed
+5,"Fixed
 
 Fix sorting of devices in the ""too many devices""-view to properly sort on device creation time.
 
@@ -218,7 +156,7 @@ Improved reliability of the connectivity check workaround by adding an extra cap
 Show ""Mullvad VPN"" in the Login Items UI instead of ""Amagicom AB"". 
 Detect whether users need to approve the launch daemon in the Login Items UI.
 "
-8,"Added
+6,"Added
 
 Add quit button to tray context menu on Linux and Window.
 Add search bar to location list in desktop app. 
@@ -236,7 +174,7 @@ Fixed
 When a country is selected, and the constraints only match relays that are not included on the
   country level, select those relays anyway.
 Fix regression where WireGuard relays were connected to over OpenVPN after a couple of failed
-  attempts, when the tunnel type was set to module.
+  attempts, when the tunnel type was set to any.
 Fix missing connect timeout when connecting to a WireGuard relay over TCP. 
 Fix failure to apply firewall rules that could occur when connecting timed out. 
 
@@ -255,7 +193,7 @@ Windows
 Ignore adapters that have no valid GUID when removing obsolete Wintun interfaces during install.
   Previously, the installer would abort.
 Revert to using netsh for DNS config, as some Windows builds did not deal with changes correctly.
-  module can be used to override this.
+  TALPID_DNS_MODULE can be used to override this.
 Fix deadlock that could occur when the default route changed while initializing split tunneling.
 
 Removed
@@ -269,12 +207,12 @@ Windows
 DNS loopback traffic is no longer blocked. Note that local resolvers are still unable to forward
   queries to servers that would normally be blocked.
 "
-9,"Added
+7,"Added
 
 Add privacy policy link in settings
 Add initial privacy consent which is showed on each start until approved
 "
-10,"This release is for Android only. Here's a list of the changes since last stable release link:
+8,"This release is for Android only. Here's a list of the changes since last stable release android/2022.1:
 Added
 Android
 
@@ -311,8 +249,8 @@ Android
 Prevent location request responses from being received outside the tunnel when in the connected
   state.
 "
-11,"This release is for desktop only.
-Here is a list of all changes since last stable release link.
+9,"This release is for desktop only.
+Here is a list of all changes since last stable release 2022.4.
 Added
 
 Add obfuscation settings under ""WireGuard settings"".
@@ -337,7 +275,7 @@ Prune bridges far away from the selected relay.
 Stay connected when desktop app is killed or crashes. The only situation where the app now
   disconnects on quit is when the user presses the quit button.
 Update Electron from 18.0.3 to 19.0.13.
-Expand allowed range of multicast destinations to include all of module (administratively
+Expand allowed range of multicast destinations to include all of 239.0.0.0/8 (administratively
   scoped addresses), when local network sharing is enabled.
 Default to selecting Sweden as the entry location when using WireGuard multihop. Previously,
   a random location was used.
@@ -345,14 +283,14 @@ Experimental: Upgrade the support for quantum-resistant WireGuard tunnels to a n
 
 Windows
 
-Remove dependency on module. Call module to flush the DNS cache.
+Remove dependency on ipconfig.exe. Call DnsFlushResolverCache to flush the DNS cache.
 Upgrade Wintun to 0.14.1.
 
 Linux
 
-The daemon binary and systemd unit file will now be placed in module and
-  module respectively, to aid with starting the system service on systems where
-  module isn't mounted during early boot.
+The daemon binary and systemd unit file will now be placed in /usr/bin/ and
+  /usr/lib/systemd/system respectively, to aid with starting the system service on systems where
+  /opt isn't mounted during early boot.
 
 Fixed
 
@@ -382,12 +320,12 @@ Security
 When the system service is being shut down and the target state is secured, maintain the
   blocking firewall rules. Unless it's possible to deduce that the system isn't shutting down and the
   system service is being stopped by the user intentionally. This is to prevent leaks that might
-  occur during system shutdown. Fixes 2022 Mullvad app audit issue item module.
+  occur during system shutdown. Fixes 2022 Mullvad app audit issue item MUL22-02.
 
 Windows
 
 Upgrade win-split-tunnel driver to version 1.2.2.0. Fixes incomplete validation of input buffers
-  that could result in out-of-bounds reads. Fixes 2022 Mullvad app audit issue item module.
+  that could result in out-of-bounds reads. Fixes 2022 Mullvad app audit issue item MUL22-01.
 
 Linux
 
@@ -395,7 +333,7 @@ Added traffic blocking during early boot, before the daemon starts, to prevent l
   that the system service starts after a networking daemon has already configured a network
   interface.
 "
-12,"Added
+10,"Added
 
 Add custom option to WireGuard port selector.
 
@@ -412,7 +350,7 @@ Linux
 
 Fix app crashing immediately when using some icon themes.
 "
-13,"Added
+11,"Added
 
 Add obfuscation settings under ""WireGuard settings"".
 
@@ -436,21 +374,21 @@ Prune bridges far away from the selected relay.
 Stay connected when desktop app is killed or crashes. The only situation where the app now
   disconnects on quit is when the user presses the quit button.
 Update Electron from 18.0.3 to 19.0.13.
-Expand allowed range of multicast destinations to include all of module (administratively
+Expand allowed range of multicast destinations to include all of 239.0.0.0/8 (administratively
   scoped addresses), when local network sharing is enabled.
 Default to selecting Sweden as the entry location when using WireGuard multihop. Previously,
   a random location was used.
 
 Windows
 
-Remove dependency on module. Call module to flush the DNS cache.
+Remove dependency on ipconfig.exe. Call DnsFlushResolverCache to flush the DNS cache.
 Upgrade Wintun to 0.14.1.
 
 Linux
 
-The daemon binary and systemd unit file will now be placed in module and
-  module respectively, to aid with starting the system service on systems where
-  module isn't mounted during early boot.
+The daemon binary and systemd unit file will now be placed in /usr/bin/ and
+  /usr/lib/systemd/system respectively, to aid with starting the system service on systems where
+  /opt isn't mounted during early boot.
 
 Fixed
 
@@ -475,12 +413,12 @@ Security
 When the system service is being shut down and the target state is secured, maintain the
   blocking firewall rules. Unless it's possible to deduce that the system isn't shutting down and the
   system service is being stopped by the user intentionally. This is to prevent leaks that might
-  occur during system shutdown. Fixes 2022 Mullvad app audit issue item module.
+  occur during system shutdown. Fixes 2022 Mullvad app audit issue item MUL22-02.
 
 Windows
 
 Upgrade win-split-tunnel driver to version 1.2.2.0. Fixes incomplete validation of input buffers
-  that could result in out-of-bounds reads. Fixes 2022 Mullvad app audit issue item module.
+  that could result in out-of-bounds reads. Fixes 2022 Mullvad app audit issue item MUL22-01.
 
 Linux
 
@@ -488,7 +426,7 @@ Added traffic blocking during early boot, before the daemon starts, to prevent l
   that the system service starts after a networking daemon has already configured a network
   interface.
 "
-14,"Changed
+12,"Changed
 Android
 
 Refresh device data when opening the account view to ensure the local data is up-to-date and that
@@ -504,7 +442,7 @@ Fix crash during some view transitions.
 Fix disabled login button on login failure. Instead, the login button will now still be enabled
   on login failures to let the user re-attempt the login.
 "
-15,"Added
+13,"Added
 Windows
 
 Windows daemon now looks up the MTU on the default interface and uses this MTU instead of the
@@ -520,7 +458,7 @@ Lower the max MTU from the automatic MTU detection down to 1380,
   This solves issues where the physical interface MTU was set higher than it could
   actually transport.
 "
-16,"Added
+14,"Added
 Android
 
 Add device management to the Android app. This simplifies knowing which device is which and adds 
@@ -553,9 +491,9 @@ Android
 Prevent location request responses from being received outside the tunnel when in the connected
   state.
 "
-17,"This release is for desktop only.
-This release is identical to link."
-18,"Fixed
+15,"This release is for desktop only.
+This release is identical to 2022.3-beta3."
+16,"Fixed
 
 Fix showing incompatible relay filtering options in desktop app. The filtering options are now
   dependent on the other filters.
@@ -575,14 +513,14 @@ Fix potential leak window when stopping the service and auto-connect is enabled 
   require VPN is disabled. When stopped, usually due to a reboot, the daemon would disconnect
   before entering a blocking state.
 "
-19,"This release is a small bugfix release that only affects Windows. Linux and macOS has no changes at all in this release, compared to module.
+17,"This release is a small bugfix release that only affects Windows. Linux and macOS has no changes at all in this release, compared to 2022.3-beta1.
 Fixed
 Windows
 
 Fix DNS issue on non-English Windows installations. Don't parse the output of ipconfig.exe
   to determine if the tool succeeded.
 "
-20,"Added
+18,"Added
 
 Add option to filter relays by ownership in the desktop apps.
 Experimental: Add support for quantum-resistant PSK exchange to the CLI.
@@ -612,8 +550,8 @@ Fix issue where local name resolution fails. This requires users to ensure that 
   interfaces are configured correctly to use local custom DNS.
 Configure DNS correctly when the DNS client service is disabled or not responding.
 "
-21,"This release is for desktop only.
-Here is a list of all changes since last stable release link.
+19,"This release is for desktop only.
+Here is a list of all changes since last stable release 2022.1.
 Added
 
 Extend DNS blocking with the following new categories: ""Adult content"" and ""gambling"".
@@ -634,12 +572,12 @@ Add toggle for split tunneling state.
 
 Changed
 
-Update settings format to module.
-Move WireGuard TCP obfuscation settings into module command in CLI.
+Update settings format to v6.
+Move WireGuard TCP obfuscation settings into mullvad obfuscation command in CLI.
 Decrease the size of fonts, some icons and other design elements in the desktop app. This makes it
   possible to fit more into the same area and makes text easier to read.
 Don't block the tunnel state machine while starting the tunnel monitor. This also means that
-  the machine will not transition directly from the module to the module state
+  the machine will not transition directly from the disconnected to the disconnecting state
   if an error occurs.
 Change behavior of escape key in the desktop app. It now navigates backwards one step instead of
   to the main view. To navigate back to the main view Shift+Escape can be used.
@@ -648,7 +586,7 @@ Randomize bridge selection with a bias in favor of close bridges.
 Make login field keep previous value when submitting an incorrect account number in desktop app.
 Decrease the time it takes to connect to WireGuard relays by sending an ICMP packet immediately.
 Pause API interactions when the daemon has not been used for 3 days.
-Simplified output of module command.
+Simplified output of mullvad status command.
 List devices on an account sorted by creation date, oldest to newest, instead of alphabetically.
 
 Fixed
@@ -658,7 +596,7 @@ Fix scrollbar no longer responsive and usable when covered by other elements.
 Improve tunnel bypass for the API sometimes not working in the connecting state.
 Fix resource leak caused by location check.
 Fix issue where sockets didn't close after disconnecting from WireGuard servers over TCP
-  by updating module to 0.2.
+  by updating udp-over-tcp to 0.2.
 Parse old account history formats correctly when they are empty.
 Use suspend-aware timers for relay list updates and version checks on all platforms.
 Don't attempt to use bridges when using OpenVPN over UDP and bridge mode is set to auto.
@@ -685,7 +623,7 @@ Windows
 Update split tunnel driver to 1.2.1.0. This fixes potential DNS leaks seen when excluding at least
   one application.
 "
-22,"Added
+20,"Added
 
 Include creation timestamp for devices in the CLI.
 
@@ -697,7 +635,7 @@ Fixed
 
 Fix logout failing if the API cannot be reached in the GUI.
 "
-23,"Added
+21,"Added
 
 Extend DNS blocking with the following new categories: ""Adult content"" and ""gambling"".
 Obfuscate traffic to the Mullvad API using bridges if it cannot be reached directly.
@@ -716,12 +654,12 @@ Add toggle for split tunneling state.
 
 Changed
 
-Update settings format to module.
-Move WireGuard TCP obfuscation settings into module command in CLI.
+Update settings format to v6.
+Move WireGuard TCP obfuscation settings into mullvad obfuscation command in CLI.
 Decrease the size of fonts, some icons and other design elements in the desktop app. This makes it
   possible to fit more into the same area and makes text easier to read.
 Don't block the tunnel state machine while starting the tunnel monitor. This also means that
-  the machine will not transition directly from the module to the module state
+  the machine will not transition directly from the disconnected to the disconnecting state
   if an error occurs.
 Change behavior of escape key in the desktop app. It now navigates backwards one step instead of
   to the main view. To navigate back to the main view Shift+Escape can be used.
@@ -730,7 +668,7 @@ Randomize bridge selection with a bias in favor of close bridges.
 Make login field keep previous value when submitting an incorrect account number in desktop app.
 Decrease the time it takes to connect to WireGuard relays by sending an ICMP packet immediately.
 Pause API interactions when the daemon has not been used for 3 days.
-Simplified output of module command.
+Simplified output of mullvad status command.
 
 Fixed
 
@@ -739,7 +677,7 @@ Fix scrollbar no longer responsive and usable when covered by other elements.
 Improve tunnel bypass for the API sometimes not working in the connecting state.
 Fix resource leak caused by location check.
 Fix issue where sockets didn't close after disconnecting from WireGuard servers over TCP
-  by updating module to 0.2.
+  by updating udp-over-tcp to 0.2.
 Parse old account history formats correctly when they are empty.
 Use suspend-aware timers for relay list updates and version checks on all platforms.
 Don't attempt to use bridges when using OpenVPN over UDP and bridge mode is set to auto.
@@ -765,8 +703,8 @@ Windows
 Update split tunnel driver to 1.2.1.0. This fixes potential DNS leaks seen when excluding at least
   one application.
 "
-24,"This release is for desktop only.
-Here is a list of all changes since last stable release link.
+22,"This release is for desktop only.
+Here is a list of all changes since last stable release 2021.6.
 Added
 
 Add information about the always on kill switch in the desktop app.
@@ -789,8 +727,8 @@ Gradually increase the WireGuard connectivity check timeout, lowering the timeou
   few attempts.
 Stop preferring OpenVPN when bridge mode is enabled.
 CLI command for setting a specific server by hostname is no longer case sensitive.
-  Example: module should now work.
-Update the default Shadowsocks password to module and cipher to module in the CLI
+  Example: mullvad relay set hostname SE9-WIREGUARD should now work.
+Update the default Shadowsocks password to mullvad and cipher to aes-256-gcm in the CLI
   when using it to configure a custom Shadowsocks bridge. The Mullvad bridges recently changed
   these parameters on port 443 (which is the default port).
 
@@ -811,10 +749,10 @@ Drop support for pre-Windows 10 systems.
 
 Fixed
 
-Always kill module if the tunnel monitor fails to start when using bridges.
-Show relay location constraint correctly in the CLI when it is set to module.
+Always kill sslocal if the tunnel monitor fails to start when using bridges.
+Show relay location constraint correctly in the CLI when it is set to any.
 Prevent gRPC from trying to run the app-daemon IPC communication through a HTTP proxy when the
-  environment variable module is set. This caused the app to fail to connect to the daemon.
+  environment variable http_proxy is set. This caused the app to fail to connect to the daemon.
 Disable built-in DNS resolver in Electron. Prevents Electron from establishing connections to
   DNS servers set in system network preferences.
 Fix tray context menu showing or executing wrong actions, using wrong language or in other
@@ -830,7 +768,7 @@ macOS
 Resolve issues with the app blocking internet connectivity after sleep or when connecting to new
   wireless networks.
 Fix issue where the app would get stuck in offline state after a reboot or a reinstall by using
-  module instead of relying on module API to infer whether the host is
+  route monitor instead of relying on SCNetworkReachability API to infer whether the host is
   offline.
 
 Windows
@@ -853,13 +791,13 @@ Security
 
 Restrict which applications are allowed to communicate with the API while in a blocking state.
   This prevents malicious scripts on websites from trying to do so. On Windows, only
-  module and module executables are allowed to reach the API,
+  mullvad-problem-report.exe and mullvad-daemon.exe executables are allowed to reach the API,
   whereas on Linux and macOS only root processes are able to reach the API.
 Enable ""Always require VPN"" by default if the settings cannot be parsed. This reduces the number
   of errors that lead to the daemon unexpectedly starting into non-blocking mode.
 "
-25,"This release is for Android only.
-Here is a list of all changes since last stable release link.
+23,"This release is for Android only.
+Here is a list of all changes since last stable release 2021.1.
 Added
 Android
 
@@ -908,7 +846,7 @@ Fix status bar having the wrong color after logging out.
 Fix app sometimes crashing during startup on Android TVs.
 Fix app crash caused by quick settings tile.
 "
-26,"Added
+24,"Added
 
 Show warning message when blocking internet while logged out, and make it possible to unblock the
   connection from the login view.
@@ -926,7 +864,7 @@ Security
 Enable ""Always require VPN"" by default if the settings cannot be parsed. This reduces the number
   of errors that lead to the daemon unexpectedly starting into non-blocking mode.
 "
-27,"Added
+25,"Added
 
 Add information about the always on kill switch in the desktop app.
 Add WireGuard multihop setting and entry location selection to desktop app.
@@ -946,8 +884,8 @@ Gradually increase the WireGuard connectivity check timeout, lowering the timeou
   few attempts.
 Stop preferring OpenVPN when bridge mode is enabled.
 CLI command for setting a specific server by hostname is no longer case sensitive.
-  Example: module should now work.
-Update the default Shadowsocks password to module and cipher to module in the CLI
+  Example: mullvad relay set hostname SE9-WIREGUARD should now work.
+Update the default Shadowsocks password to mullvad and cipher to aes-256-gcm in the CLI
   when using it to configure a custom Shadowsocks bridge. The Mullvad bridges recently changed
   these parameters on port 443 (which is the default port).
 
@@ -968,10 +906,10 @@ Drop support for pre-Windows 10 systems.
 
 Fixed
 
-Always kill module if the tunnel monitor fails to start when using bridges.
-Show relay location constraint correctly in the CLI when it is set to module.
+Always kill sslocal if the tunnel monitor fails to start when using bridges.
+Show relay location constraint correctly in the CLI when it is set to any.
 Prevent gRPC from trying to run the app-daemon IPC communication through a HTTP proxy when the
-  environment variable module is set. This caused the app to fail to connect to the daemon.
+  environment variable http_proxy is set. This caused the app to fail to connect to the daemon.
 Disable built-in DNS resolver in Electron. Prevents Electron from establishing connections to
   DNS servers set in system network preferences.
 Fix tray context menu showing or executing wrong actions, using wrong language or in other
@@ -982,7 +920,7 @@ macOS
 Resolve issues with the app blocking internet connectivity after sleep or when connecting to new
   wireless networks.
 Fix issue where the app would get stuck in offline state after a reboot or a reinstall by using
-  module instead of relying on module API to infer whether the host is
+  route monitor instead of relying on SCNetworkReachability API to infer whether the host is
   offline.
 
 Windows
@@ -1005,20 +943,20 @@ Security
 
 Restrict which applications are allowed to communicate with the API while in a blocking state.
   This prevents malicious scripts on websites from trying to do so. On Windows, only
-  module and module executables are allowed to reach the API,
+  mullvad-problem-report.exe and mullvad-daemon.exe executables are allowed to reach the API,
   whereas on Linux and macOS only root processes are able to reach the API.
 "
-28,"Fixed
+26,"Fixed
 Android
 
 Fix app crash caused by quick settings tile.
 "
-29,"Fixed
+27,"Fixed
 Android
 
 Fix app sometimes crashing during startup on Android TVs.
 "
-30,"Added
+28,"Added
 Android
 
 Add toggle for Split tunneling view to be able to show system apps
@@ -1064,13 +1002,13 @@ Fix quick-settings tile sometimes showing the wrong tunnel state.
 Fix TV-only apps not appearing in the Split Tunneling screen.
 Fix status bar having the wrong color after logging out.
 "
-31,"Except the below, this is identical to link, see that change log for all changes since last stable release.
+29,"Except the below, this is identical to 2021.6-beta1, see that change log for all changes since last stable release.
 Fixed
 
 Fix the font for Russian. Issue introduced in 2021.6-beta1.
   Bundle a version of Source Sans Pro containing Cyrillic.
 "
-32,"Added
+30,"Added
 Windows
 
 Add black monochromatic tray icon for Windows when using light color for tray.
@@ -1125,21 +1063,21 @@ Linux
 Greatly simplify behavior around custom DNS when using systemd-resolved, by not setting DNS config on interfaces other
   than our tunnel interface.
 "
-33,"This release is for desktop only.
-This release is identical to link except that it has translations for new texts in the UI."
-34,"This release only has changes for macOS.
+31,"This release is for desktop only.
+This release is identical to 2021.5-beta2 except that it has translations for new texts in the UI."
+32,"This release only has changes for macOS.
 Fixed
 macOS
 
 Fix issue with getting PF status due to an ABI change on macOS 12 Beta 9.
 "
-35,"Added
+33,"Added
 
 Added possibility to filter locations by provider in the desktop app.
 Add ability to use WireGuard over TCP towards all relays via the desktop CLI. However,
   this service is not yet available on all relays. At the time of writing, this only
-  works towards module, module and module.
-Add GUI environment variable module. If set to module, GUI
+  works towards se6-wireguard, se9-wireguard and se17-wireguard.
+Add GUI environment variable MULLVAD_DISABLE_UPDATE_NOTIFICATION. If set to 1, GUI
   notification will be disabled when an update is available. This is not intended to be set by
   normal users.
 Add setting for changing between IPv4 and IPv6 for the connection to WireGuard servers on
@@ -1227,12 +1165,12 @@ Fix erasing wireguard MTU value in some scenarious.
 Fix initial state of Split tunneling excluded apps list. Previously it was not notified the daemon
 properly after initialization.
 "
-36,"This release is for desktop only.
-This release is identical to link except that it has translations for new texts in the UI."
-37,"This release is for desktop only.
+34,"This release is for desktop only.
+This release is identical to 2021.4-beta1 except that it has translations for new texts in the UI."
+35,"This release is for desktop only.
 Added
 
-When module is set, only allow the specified group to access the
+When MULLVAD_MANAGEMENT_SOCKET_GROUP is set, only allow the specified group to access the
   management interface UDS socket. This means that only users in that group can use the CLI and GUI.
 Support WireGuard over TCP for custom VPN relays in the CLI. (Our relays don't support this yet).
 Make app native on Apple Silicon.
@@ -1250,14 +1188,14 @@ Added support of adaptive icons (available only from Android 8).
 Changed
 
 Upgrade OpenVPN from 2.5.0 to 2.5.1.
-Replace CLI command module with the new command module.
-Upgrade wireguard-go to module (Windows: v0.3.14)
+Replace CLI command mullvad custom-dns with the new command mullvad dns.
+Upgrade wireguard-go to 20210521230051 (Windows: v0.3.14)
 
 Linux
 
-Only allow packets with the mark set to module to communicate with the relay server.
+Only allow packets with the mark set to 0x6d6f6c65 to communicate with the relay server.
   Previously, bridges were expected to run as root instead.
-Use an ICMP socket instead of relying on a module binary in module to establish if a tunnel is
+Use an ICMP socket instead of relying on a ping binary in $PATH to establish if a tunnel is
   working.
 
 Android
@@ -1279,7 +1217,7 @@ Do not try to parse an empty account history.
 
 Windows
 
-Prevent tray icons from being extracted to module directory.
+Prevent tray icons from being extracted to %TEMP% directory.
 Fix failure to create Wintun adapter due to a residual network interface by upgrading Wintun to
   0.10.4.
 Wait indefinitely for IP interfaces to attach to the tunnel device to prevent early timeouts,
@@ -1288,7 +1226,7 @@ Prevent Microsoft Store from dropping packets in WireGuard tunnels.
 
 Linux
 
-Fix find module in module instead of using hardcoded path.
+Fix find mullvad-vpn.desktop in XDG_DATA_DIRS instead of using hardcoded path.
 
 MacOS
 
@@ -1312,24 +1250,24 @@ Linux
 Drop packets being forwarded unless they are approved by the same rules as incoming or outgoing
   traffic.
 "
-38,"This release is for Android only.
-This release is identical to link."
-39,"This release is for desktop only.
-This release is identical to link."
-40,"This release is for Windows only.
+36,"This release is for Android only.
+This release is identical to 2021.1-beta1."
+37,"This release is for desktop only.
+This release is identical to 2021.3-beta2."
+38,"This release is for Windows only.
 This release has no functional changes compared to 2021.3-beta1. The only
 difference is that the installer and the binaries are signed with our
 new code signing certificate. The old one is expiring.
 The new certificate is brand new and Windows does not really trust it yet.
 So there might be warnings when installing this for a while."
-41,"This release is for desktop only.
+39,"This release is for desktop only.
 Added
 
 Preserve log of old daemon instance when upgrading on Desktop.
 
 Linux
 
-Always enable module config option when connecting to allow policty based routing.
+Always enable src_valid_mark config option when connecting to allow policty based routing.
 
 Changed
 
@@ -1347,7 +1285,7 @@ Fix incorrectly displayed ""inconsistent version"" text in settings if disconnec
 
 Linux
 
-Further improve offline monitor to properly receive module.
+Further improve offline monitor to properly receive ENETUNREACH.
 
 Android
 
@@ -1358,8 +1296,8 @@ Security
 Always reconnect appropriately after an upgrade. Previously, installing the app twice in
   succession, with auto-connect disabled, would cause it to re-launch in the disconnected state.
 "
-42,"This release is for Android only. From now on, Android releases will have this new header format
-that is the same as the git tag they receive: module.
+40,"This release is for Android only. From now on, Android releases will have this new header format
+that is the same as the git tag they receive: android/<version>.
 Added
 
 Enable isolation of the Electron renderer process to protect against potentially malicious third
@@ -1415,9 +1353,9 @@ Android
 
 Fix input area sometimes disappearing when returning to the Login screen.
 "
-43,"This release is for desktop only.
-This release is identical to link, see that change log for all changes since last stable release."
-44,"Fixed
+41,"This release is for desktop only.
+This release is identical to 2021.2-beta1, see that change log for all changes since last stable release."
+42,"Fixed
 Linux
 
 Fix crash when trying to apply IPv6 routes for OpenVPN when IPv6 is disabled.
@@ -1429,12 +1367,12 @@ Windows
 Fix failure when Wintun adapter name conflicts with that of a non-Wintun adapter.
 Fix detection of SetupAPI patch when not installed by KB2921916.
 "
-45,"Fixed
+43,"Fixed
 
 Fix crash on desktop when entering problem report view when using an outdated app version.
 
-The rest is identical to link, see that change log and previous betas for all changes since last stable release."
-46,"Fixed
+The rest is identical to 2021.1-beta2, see that change log and previous betas for all changes since last stable release."
+44,"Fixed
 
 Make it impossible to apply an empty list of custom DNS server IPs. 
   Stops the daemon from getting stuck in the offline state on macOS.
@@ -1444,12 +1382,12 @@ Windows
 Only load and unload the Wintun driver once instead of on every connection.
   Will hopefully fix an issue where it gave an error
 "
-47,"This release is for desktop only.
+45,"This release is for desktop only.
 Added
 
 Add header containing OS version to version-check API call to enable OS specific compatibility and
   vulnerability checks.
-Add module environment variable to allow users to disable offline
+Add TALPID_DISABLE_OFFLINE_MONITOR environment variable to allow users to disable offline
   detection.
 
 Android
@@ -1499,14 +1437,14 @@ Linux
 
 Prevent the private tunnel IPv6 address from being detectable on a local network when using
   OpenVPN by correctly applying the fix for
-  link.
+  CVE-2019-14899.
 
 Windows
 
 Deny network access to the OpenVPN plugin pipe, which allowed for anonymous write access when
   passwordless file sharing was enabled.
 "
-48,"This release is for desktop only. Most actual changes are listed in the changelog for link.
+46,"This release is for desktop only. Most actual changes are listed in the changelog for android/2020.8-beta1.
 Added
 Android
 
@@ -1523,12 +1461,12 @@ Android
 Fix login appearing to be cancelled after leaving the login screen while logging in.
 Fix login input area missing some times when opening the login screen.
 "
-49,"This release is for Android only.
+47,"This release is for Android only.
 Added
 
 Improve accessibility in the desktop app. UI elements now have the correct role
   and are labeled to allow usage of a screen reader.
-Add module flag to module, module and module CLI subcommands to make the CLI wait
+Add --wait flag to connect, disconnect and reconnect CLI subcommands to make the CLI wait
   for the target state to be reached before exiting.
 Navigate back to the main view when escape is pressed.
 Add support for custom DNS resolvers on Windows, macOS and Linux. For now only resolvers in the
@@ -1545,7 +1483,7 @@ Never use DNS to get the IP to contact the Mullvad API over. Instead a list of I
   to pick a way to reach the API. This avoids censored/fake DNS responses and increases the
   likelihood to be able to talk to the API.
 Remove WireGuard keys during uninstallation after the firewall is unlocked.
-Rename CLI subcommand module to module.
+Rename CLI subcommand mullvad relay set relay to mullvad relay set hostname.
 Upgrade OpenVPN from 2.4.9 to 2.5.0.
 Upgrade Electron from 8.5.2 to Electron 11.0.2.
 Upgrade wireguard-go to v0.0.20201118.
@@ -1612,20 +1550,20 @@ Set search domains in NetworkManager's DNS configuration, resolving issues where
   is used to manage DNS via systemd-resolved.
 Fix incorrect version string in .deb installer causing downgrade warnings when upgrading from beta
   to stable.
-Fix memory leak in firewall code via updating module dependency.
-Handle IPv6 traffic correctly using module when there is no default route to any
+Fix memory leak in firewall code via updating nftnl dependency.
+Handle IPv6 traffic correctly using mullvad-exclude when there is no default route to any
   non-tunnel interface.
 Fix issues managing DNS when dnsmasq is used with NetworkManager.
 Fix issues with managing kernel WireGuard device via NetworkManager.
 Disable NetworkManager's connectivity check before applying firewall rules to avoid triggering
-  NetworkManager's link
+  NetworkManager's bug
 
 Security
 
 Restore the last target state if the daemon crashes. Previously, if auto-connect and
   ""Always require VPN"" were disabled, the service would reset the firewall upon starting back up,
   even if the tunnel was up when the crash occurred.
-Add firewall rules for module, i.e. split tunneling, that disallow all traffic in the
+Add firewall rules for mullvad-exclude, i.e. split tunneling, that disallow all traffic in the
   tunnel other than non-custom DNS traffic. This prevents leaks into the tunnel.
 Force OpenVPN to use TLS 1.3 or newer.
 
@@ -1634,15 +1572,15 @@ Windows
 Block all traffic received or sent before the BFE service and daemon service have started during
   boot, if ""Always require VPN"" or auto-connect is enabled.
 "
-50,"This release is identical to link, see that change log and link for all changes since last stable release.
+48,"This release is identical to 2020.7-beta2, see that change log and 2020.7-beta1 for all changes since last stable release.
 This release has no differences for Windows and macOS compared to 2020.6. This release is just to address a number of DNS, routing and other networking issues present on Linux in version 2020.6."
-51,"This release is for desktop only. It only has changes for Linux
+49,"This release is for desktop only. It only has changes for Linux
 Fixed
 Linux
 
 Parse routes more permissively and log parsing errors less verbosely.
 "
-52,"This release is for desktop only. It only has changes for Linux.
+50,"This release is for desktop only. It only has changes for Linux.
 Fixed
 Linux
 
@@ -1658,9 +1596,9 @@ When NetworkManager is managing /etc/resolv.conf but ultimately using systemd-re
   systemd-resolved directly to manage DNS. 
 Only use WireGuard kernel implementation if DNS isn't managed via NetworkManager.
 "
-53,"This release is for desktop only.
-Except for updated GUI translations, the rest is identical to link, see that change log for all changes since last stable release."
-54,"This release is for desktop only.
+51,"This release is for desktop only.
+Except for updated GUI translations, the rest is identical to 2020.6-beta3, see that change log for all changes since last stable release."
+52,"This release is for desktop only.
 Added
 Linux
 
@@ -1692,16 +1630,16 @@ Mark the VPN connection as not metered, so that Android properly reports if the 
 
 Linux
 
-Fix split tunneling rules preventing module from performing DNS lookups for excluded
+Fix split tunneling rules preventing systemd-resolved from performing DNS lookups for excluded
   processes.
-Honor routes other than the default route with module. This is mainly to improve
+Honor routes other than the default route with mullvad-exclude. This is mainly to improve
   routing within LANs.
 
 Security
 
 Stop resetting the firewall after an upgrade to not leak after an upgrade.
 "
-55,"Added
+53,"Added
 
 Save application logs to file.
 Add button to reconnect the tunnel.
@@ -1723,12 +1661,12 @@ Remove the WireGuard key from the account inside the VPN tunnel during the log o
 Turn off WireGuard backend when there are no active network interfaces available. Saves battery.
 Switch from JSON-RPC to REST communication protocol when talking to Mullvad API servers.
 "
-56,"This release is for Android only.
+54,"This release is for Android only.
 Added
 
-Add CLI command to set the location constraint via module.
+Add CLI command to set the location constraint via mullvad relay set relay HOSTNAME.
 Add a provider relay constraint, which restricts relay selection to a given hosting provider.
-Include hosting providers in the CLI for module and module.
+Include hosting providers in the CLI for mullvad relay list and mullvad bridge list.
 
 Changed
 
@@ -1752,7 +1690,7 @@ Fix check for update versions and check for support for current version.
 Fix crash that could happen when leaving the Select Location screen.
 Don't show out-of-time notification for newly created accounts.
 "
-57,"This release is Android only.
+55,"This release is Android only.
 Added
 
 Show system notification when account has expired.
@@ -1793,7 +1731,7 @@ Display causes of firewall errors in the GUI.
 
 Linux
 
-Allow users to specify module controller mountpoint via module. The
+Allow users to specify net_cls controller mountpoint via TALPID_NET_CLS_MOUNT_DIR. The
   specified mountpoint will only be used if the controller isn't mounted already.
 
 Fixed
@@ -1805,7 +1743,7 @@ Forward firewall errors to the GUI in the connecting state, instead of showing a
 Windows
 
 Fix window flickering by disabling window animations.
-Fix WireGuard not connecting if IPv6 is disabled in the adapter or OS. module would time out
+Fix WireGuard not connecting if IPv6 is disabled in the adapter or OS. libwg would time out
   waiting for an IPv6 interface to become available.
 
 Android
@@ -1819,16 +1757,16 @@ Fix toggle switch sometimes getting stuck.
 
 Linux
 
-Fix module DNS management by not parsing module.
+Fix systemd-resolved DNS management by not parsing /etc/resolv.conf.
 Fix issue where DNS configuration would not be reset when NetworkManager was used and the daemon
   was stopped ungracefully. This persisted after reboots.
 "
-58,"Added
+56,"Added
 
 Add Korean, Polish and Thai languages to the desktop app.
 
-The rest is identical to link, see that change log for all changes since last stable release."
-59,"Added
+The rest is identical to 2020.5-beta2, see that change log for all changes since last stable release."
+57,"Added
 Android
 
 Add buttons to buy credit and redeem voucher in Account screen.
@@ -1841,7 +1779,7 @@ Send an ICMP reject message or TCP reset packet when blocking outgoing packets t
 
 macOS
 
-Use module to help determine connectivity of host. Helps bring the app online
+Use SCNetworkReachability to help determine connectivity of host. Helps bring the app online
   faster when the computer wakes up from sleep.
 
 Android
@@ -1877,8 +1815,8 @@ Fix app sometimes leaving Welcome screen prematurely after creating an account.
 Windows
 
 Fix race in network adapter monitor that could result in data corruption and crashes.
-Upgrade module dependency to stop daemon from crashing when the management interface named pipes
-  were accessed with module and some web browsers.
+Upgrade miow dependency to stop daemon from crashing when the management interface named pipes
+  were accessed with accesschk.exe and some web browsers.
 Fix race that may rarely occur during install when obtaining the GUID of a newly created TAP
   adapter.
 
@@ -1887,25 +1825,25 @@ Security
 Tighten the firewall rules that were allowing traffic to the relay server over the physical
   network interface. On Linux and macOS now only processes running under root are allowed to send
   traffic to this port and IP. On Windows only the Mullvad VPN binaries are allowed to send.
-  This fixes audit ticket module.
+  This fixes audit ticket MUL-02-002.
 
 Windows
 
 Tighten the firewall rule allowing traffic on port 53 to the relay server IP on the physical
   interfaces if the VPN tunnel is established on port 53 to only allow UDP. This fixes
-  audit ticket module.
-Deny access to the management interface named pipe for the module group.
-  This makes the named pipe no longer accessible under the module network share.
-  This fixes audit ticket module.
+  audit ticket MUL-02-004.
+Deny access to the management interface named pipe for the NT AUTHORITY\NETWORK group.
+  This makes the named pipe no longer accessible under the IPC$ network share.
+  This fixes audit ticket MUL-02-007.
 
 Android
 
 Ignore touch events when another view is shown on top of the app in order to prevent tapjacking
-  attacks. Fixes audit ticket module.
+  attacks. Fixes audit ticket MUL-02-003.
 Prevent screens showing potentially sensitive data from being recorded. Fixes audit
-  ticket module.
+  ticket MUL-02-003.
 "
-60,"This release is Android only
+58,"This release is Android only
 Added
 
 Add a new Let's Encrypt root certificate.
@@ -1951,13 +1889,13 @@ Fix account expiration date disappearing in some circumstances.
 Fix notification reappearing after quitting the application.
 Retry when fetching account expiration fails.
 "
-61,"This release is for desktop only. This release is identical to link.
+59,"This release is for desktop only. This release is identical to 2020.4-beta4.
 For the changes since last stable release see the changelogs for all the betas since then:
-* link.
-* link.
-* link.
-* link."
-62,"Fixed
+* 2020.4-beta1.
+* 2020.4-beta2.
+* 2020.4-beta3.
+* 2020.4-beta4."
+60,"Fixed
 
 Fix bogus or absent update notifications on the desktop app due to incorrect deserialization of a 
   struct sent from the daemon.
@@ -1971,7 +1909,7 @@ Windows
 
 Remove all log files on uninstall. Clear install.log on upgrades.
 "
-63,"Added
+61,"Added
 
 Add shell completions for the mullvad CLI. Installed for bash and zsh on Linux and zsh on macOS.
 
@@ -2017,8 +1955,8 @@ Android
 Fix failure to create tunnel when app is started with auto-connect enabled. This would sometimes
   lead to a traffic leak.
 "
-64,"This release is desktop (Windows, macOS and Linux) only.
-Please note that a lot of desktop changes happened in link but the binaries were never published. So see that changelog also for the full list of changes since the last desktop release.
+62,"This release is desktop (Windows, macOS and Linux) only.
+Please note that a lot of desktop changes happened in 2020.4-beta1 but the binaries were never published. So see that changelog also for the full list of changes since the last desktop release.
 Added
 
 Add possibility to create account in the desktop app.
@@ -2030,10 +1968,10 @@ Add WireGuard MTU setting.
 
 Changed
 
-Allow module instead of module in the firewall when local network sharing is enabled.
+Allow fc00::/7 instead of fd00::/8 in the firewall when local network sharing is enabled.
   Should unblock all unique local addresses.
 Upgrade from Electron 7 to Electron 8.
-Formalize what operating system versions we support in the link. In practice
+Formalize what operating system versions we support in the readme. In practice
   this means dropped support for Android 5 and 6 and Fedora 28 and 29 right away, Ubuntu 16.04
   support will end as soon as Ubuntu 20.04 comes out.
 
@@ -2042,14 +1980,14 @@ Windows
 Windows 7 only: Address packet loss issues with OpenVPN on some systems by reverting the TAP
   adapter driver to an older NDIS 5 driver.
 "
-65,"Initial release for iOS (iPhone). Supports...
+63,"Initial release for iOS (iPhone). Supports...
 * Establishing WireGuard tunnels
 * Selecting and changing location and servers
 * See account expiry
 * Purchase more VPN time via in-app purchases
 * See the current WireGuard key in use and how long it has been used
 * Generate a new WireGuard key to replace the old"
-66,"This release is Android only
+64,"This release is Android only
 Added
 
 Add signal handlers on Linux, macOS and Android to better log critical faults with the daemon.
@@ -2105,21 +2043,21 @@ When upgrading or reinstalling while connected, exit the daemon in a blocking st
 
 Windows
 
-Fix issue in daemon where the module setting was sometimes not honored when
+Fix issue in daemon where the block_when_disconnected setting was sometimes not honored when
   stopping the daemon. I.e. traffic could flow freely after the daemon was stopped.
 
 Android
 
 Fix issue where IPv6 traffic could leak outside of the tunnel.
 "
-67,"This release is identical to link, see that change log for all changes since last stable release."
-68,"Security
+65,"This release is identical to 2020.3-beta1, see that change log for all changes since last stable release."
+66,"Security
 
 Fix stack overflow caused by WireGuard key rotation timers. When the daemon crashed it was
   restarted automatically. But it did not connect (depending on settings), leaving a leak.
 "
-69,"This release is identical to link, see that change log for all changes since last stable release."
-70,"Added
+67,"This release is identical to 2020.2-beta1, see that change log for all changes since last stable release."
+68,"Added
 
 Add reconnect button to the desktop app.
 Add monochrome option for the tray icon on Windows and Linux.
@@ -2171,8 +2109,8 @@ Prevent DNS leak that could happen while connected if ""Local network sharing"" 
   and the device had a default DNS resolver on the local private network. This issue was
   only present in the 2020.1 release.
 "
-71,"This release is identical to link, see that change log for all changes since last stable release."
-72,"Added
+69,"This release is identical to 2020.1-beta1, see that change log for all changes since last stable release."
+70,"Added
 
 Add translations for Finnish and Danish.
 Copy WireGuard key when clicking on it.
@@ -2187,7 +2125,7 @@ Increase OpenVPN ping timeout from 20 to 25 seconds. Might make working tunnels 
   a bit less frequently.
 Use traffic data from WireGuard to infer connectivity, instead of continuously pinging.
   Should improve stability of the connection and reduce power use.
-Update module to module
+Update wireguard-go to v0.0.20200121
 Remove WireGuard keys from accounts when they are removed from the local account history.
 Upgrade from Electron 6 to Electron 7.
 Disable WireGuard protocol option if there's no WireGuard key.
@@ -2195,8 +2133,8 @@ Disable WireGuard protocol option if there's no WireGuard key.
 Android
 
 Wait for traffic to be routed through the tunnel device before advertising blocked state.
-Connect automatically if module is started with an intent which
-  has the module action. Effectively, this should enable
+Connect automatically if MullvadVpnService is started with an intent which
+  has the android.net.VpnService action. Effectively, this should enable
   Always On behavior on Android versions where it's supported.
 Allow notification to be dismissed when the UI is not shown and the tunnel is disconnected.
 
@@ -2224,14 +2162,14 @@ Fix occasional failure to shut down the old daemon process during installation b
 Make WireGuard work with IPv6 enabled even if there is no functioning TAP adapter for OpenVPN.
 Restart daemon when coming back from system hibernation with terminated user session, since
   it's perceived as a cold boot from the user's perspective, so the app should act accordingly.
-Change the optimization level for releases from the default value to module, as a temporary fix for
+Change the optimization level for releases from the default value to s, as a temporary fix for
   the system service crashing on Windows for newer CPU models.
 
 Android
 
-Fix notification message to not show module version when version check cache is stale right
+Fix notification message to not show null version when version check cache is stale right
   after an update.
-Fix module pointer exception when connectivity event intent has no network info.
+Fix null pointer exception when connectivity event intent has no network info.
 Fix fast loop trying to fetch location and preventing the device from sleeping. This should
   improve battery life in some cases.
 Fix crash when starting the app right after quitting it.
@@ -2245,8 +2183,8 @@ Fix showing new key as invalid immediately after regeneration.
 
 Linux
 
-DNS management with static module will now work even when no
-  module exists.
+DNS management with static /etc/resolv.conf will now work even when no
+  /etc/resolv.conf exists.
 
 Security
 
@@ -2256,7 +2194,7 @@ Add automatic key rotation for WireGuard (every 7 days by default). This limits 
 
 Windows
 
-Stop OpenVPN from loading module on start. This file was being loaded when an
+Stop OpenVPN from loading C:\etc\ssl\openssl.cnf on start. This file was being loaded when an
   OpenVPN tunnel was being created. Any user could create the file, and the process loading it runs
   as the SYSTEM user. Since the config file allows loading arbitrary code, it was an attack vector
   allowing local unprivileged users to run code as SYSTEM.
@@ -2266,7 +2204,7 @@ macOS
 Limit macOS firewall rules to only allow UDP packets in the rules meant to enable being a DHCPv4
   server when local network sharing is enabled.
 "
-73,"Fixed
+71,"Fixed
 
 Fix improved WireGuard port selection
 
@@ -2280,15 +2218,15 @@ Fix bug that prohibited WireGuard from working over port 53.
 Security
 Linux
 
-Stop link by dropping all packets destined
+Stop CVE-2019-14899 by dropping all packets destined
   for the tunnel IP coming in on some other interface than the tunnel.
 
-The rest is identical to link, see that change log for all changes since last stable release."
-74,"Added
+The rest is identical to 2019.10-beta2, see that change log for all changes since last stable release."
+72,"Added
 
-Add module subcommand to the CLI to specify what tunnel protocol
+Add mullvad relay set tunnel-protocol subcommand to the CLI to specify what tunnel protocol
   to use.
-Add module subcommand to the CLI to make the app pick a new server and reconnect.
+Add mullvad reconnect subcommand to the CLI to make the app pick a new server and reconnect.
 
 Windows
 
@@ -2314,7 +2252,7 @@ Windows
 
 Use a larger icon in notifications on Windows 10.
 Only update DNS settings if updating would change the effective settings. This is a work-around
-  to avoid invoking module unnecessarily and getting stuck in associated hangs.
+  to avoid invoking netsh unnecessarily and getting stuck in associated hangs.
 Don't restart the service immediately if it aborts several times in a row. Leave a window of ten
   minutes to allow for addressing the issue.
 Upgrade libsodium from 1.0.17 to 1.0.18.
@@ -2324,8 +2262,8 @@ Fixed
 Linux
 
 Improve stability on Linux by using the routing netlink socket in its own thread.
-When trying to use module for managing DNS, the daemon will check if
-  module is running and misconfigured.
+When trying to use resolvconf for managing DNS, the daemon will check if
+  dnsmasq is running and misconfigured.
 Improve stability on Linux by simplifying route management code.
 
 Windows
@@ -2350,7 +2288,7 @@ Force OpenVPN to use TLS 1.2 or newer, and limit the TLS 1.3 ciphers to only the
   The Mullvad servers have never allowed any insecure ciphers, so this was not really a problem.
   Just one extra safety precaution.
 "
-75,"This release is for Android only.
+73,"This release is for Android only.
 Added
 Android
 
@@ -2360,17 +2298,17 @@ WireGuard key fragment has been made more similar to its desktop counterpart.
 Fixed
 
 Fix bad file descriptor errors caused by sending a file descriptor between the daemon and the
-  module library.
+  wireguard-go library.
 Recreate tun device after a fixed number of connection attempts on the same tun device. Breaks
   infinite reconnection loops on broken tun devices.
 "
-76,"Added
+74,"Added
 
 Add ability to submit vouchers from the CLI.
 
 Linux
 
-Add a symlink for module directly in module. So the tool is available.
+Add a symlink for mullvad-problem-report directly in /usr/bin. So the tool is available.
 
 Windows
 
@@ -2380,7 +2318,7 @@ Install the OpenVPN certificate to avoid the TAP adapter driver installation war
 Changed
 Windows
 
-Rename the module tool to module.
+Rename the problem-report tool to mullvad-problem-report.
 
 Fixed
 
@@ -2390,10 +2328,10 @@ Use authenticated URL to go to account page from expired account view.
 
 macOS
 
-Remove module and module symlinks from module on uninstall.
+Remove mullvad and mullvad-problem-report symlinks from /usr/local/bin on uninstall.
 
-The rest is identical to link, see that change log for all changes since last stable release."
-77,"Added
+The rest is identical to 2019.9-beta1, see that change log for all changes since last stable release."
+75,"Added
 
 Add ability to change the desktop GUI language from within Settings.
 Add ability to create new accounts from the CLI.
@@ -2415,11 +2353,11 @@ Allow logging in without connectivity.
 Changed
 
 Account and WireGuard keys links in the App will now log the user in automatically.
-Update FAQ URL to module.
+Update FAQ URL to https://mullvad.net/help/tag/mullvad-app/.
 
 Removed
 
-Remove support for module environment variable.
+Remove support for MULLVAD_LOCALE environment variable.
 
 Android
 
@@ -2427,7 +2365,7 @@ Remove connect action button in notification when logged out.
 
 Fixed
 
-Fix module to trigger a relay list download even if the existing cache is new.
+Fix mullvad relay update to trigger a relay list download even if the existing cache is new.
 Don't include problem-report arguments in error logging. Stops user email from ending up in the
   log file on error.
 Fix handling of tunnel file descriptor for WireGuard. Duplicating and closing it correctly.
@@ -2444,9 +2382,9 @@ Windows
 More adjustments in online/offline detection logic. Should prevent more users from being stuck
   in the offline state. Should also make the app notice network disconnects faster.
 "
-78,"Updated translations for new strings in the app
-The rest is identical to link, see that change log for all changes since last stable release."
-79,"Added
+76,"Updated translations for new strings in the app
+The rest is identical to 2019.8-beta1, see that change log for all changes since last stable release."
+77,"Added
 
 Add ability to replace the WireGuard key with a new one. Allows manual key rotation.
 Show age of currently set WireGuard key.
@@ -2463,13 +2401,13 @@ WireGuard key page now shows a label explaining why buttons are disabled when in
 WireGuard key generation will try to replace old key if one exists.
 Show banner about new app versions only if current platform has changes in latest release.
 Don't make a GeoIP lookup by default in CLI status command. Add --location flag for enabling it.
-Sort relay locations and hostnames with natural sorting. Meaning module will show up after module.
+Sort relay locations and hostnames with natural sorting. Meaning se10 will show up after se2.
 Show inactive relays as disabled instead of hiding them completely from location selection list.
 Upgrade Electron from version 4 to version 6.
 
 Windows
 
-Change uninstaller registry key name from module to a generated GUID.
+Change uninstaller registry key name from Mullvad VPN to a generated GUID.
 
 Fixed
 
@@ -2483,7 +2421,7 @@ Respect localization when sorting the relay locations list.
 
 macOS
 
-Unregister the app properly from the OS when running the bundled module script.
+Unregister the app properly from the OS when running the bundled uninstall.sh script.
 
 Linux
 
@@ -2494,7 +2432,7 @@ Windows
 
 Removed logic that implemented monitoring and enforcement of DNS settings.
 "
-80,"Added
+78,"Added
 
 Add more details to the block reason shown in GUI when the daemon fails to generate tunnel
   parameters.
@@ -2504,13 +2442,13 @@ Fixed
 Check and adjust relay and bridge constraints when they are updated, so no incompatible
   combinations are used.
 
-The rest is identical to link, see that change log for all changes since last stable release."
-81,"Added
+The rest is identical to 2019.7-beta1, see that change log for all changes since last stable release."
+79,"Added
 
 Add new settings page for generating and verifying wireguard keys.
 Automatically generate and upload WireGuard keys on Linux and macOS.
 Allow activating and using WireGuard from the GUI under advanced settings on Linux and macOS.
-Add module CLI command for removing settings, logs and clearing the cache.
+Add factory-reset CLI command for removing settings, logs and clearing the cache.
 
 Changed
 
@@ -2520,7 +2458,7 @@ Upgrade wireguard-go library to v0.0.20190805.
 
 Fixed
 
-Mark CLI module argument as required to avoid a crash.
+Mark CLI bridge set state argument as required to avoid a crash.
 The VPN service on Windows will now be restarted when it crashes.
 Retry to connect when WireGuard tunnel fails due to a bad file descriptor.
 
@@ -2528,12 +2466,12 @@ Linux
 
 Improve resolv.conf based DNS management to detect changes to file.
 "
-82,"Added
+80,"Added
 
 Add simplified Chinese translations.
 
-The rest is identical to link, see that change log for all changes since last stable release."
-83,"Added
+The rest is identical to 2019.6-beta1, see that change log for all changes since last stable release."
+81,"Added
 
 Add a switch to turn off system notifications under Preferences in the GUI.
 
@@ -2561,11 +2499,11 @@ Linux
 Fix some netlink packet parsing error in DNS handling.
 Improve offline check so if it fails, it always fails as online.
 "
-84,"
+82,"
 Add Norwegian translations
 
-The rest is identical to link, see that change log for all changes since last stable release."
-85,"Added
+The rest is identical to 2019.5-beta1, see that change log for all changes since last stable release."
+83,"Added
 
 Add support for roaming between connections when using wireguard.
 Allow mDNS/discover to 239.255.255.251 when local network sharing is enabled. This change fixes
@@ -2593,7 +2531,7 @@ CLI commands that are just intermediate commands, and require another level of s
 
 Removed
 
-Remove the module subcommand in the CLI. Instead get help with the module long flag.
+Remove the help subcommand in the CLI. Instead get help with the --help long flag.
 
 Fixed
 
@@ -2613,11 +2551,11 @@ Add better offline detection.
 
 Linux
 
-Fix module detection by better checking module symlinks.
+Fix systemd-resolved detection by better checking /etc/resolv.conf symlinks.
 Improve detection of whether NetworkManager is the preferred DNS solution.
 "
-86,"This release is identical to link, see that change log for all changes since last stable release."
-87,"Added
+84,"This release is identical to 2019.4-beta1, see that change log for all changes since last stable release."
+85,"Added
 
 When IPv6 is enabled, get both exit IP versions from am.i.mullvad.net and show.
 Add translations for country and city names in the relay list and map.
@@ -2639,12 +2577,12 @@ Windows
 Make the firewall rules permanent until reboot, or until the daemon removes them. Should make
   the kill switch active even if the daemon dies unexpectedly.
 "
-88,"Fixed
+86,"Fixed
 Windows
 
 Correct dependencies on installer logger plugin to resolve installation issues on Windows 7/8.
 "
-89,"Removed
+87,"Removed
 
 Remove the Mullvad OpenVPN intermediate transition CA. Used when transitioning from the old to
   the new root CA. Now the app only bundles and trust the new Mullvad root CA valid until 2028.
@@ -2653,8 +2591,8 @@ Fixed
 
 Read the relay list from cache only if it's newer than the version bundled in the app.
 
-The rest is identical to link, see that change log for all changes since last stable release."
-90,"Added
+The rest is identical to 2019.2-beta1, see that change log for all changes since last stable release."
+88,"Added
 
 Integrate initial Shadowsocks proxy support. Accessible via CLI.
 Add initial Wireguard support on macOS and Linux. Accessible via CLI.
@@ -2689,11 +2627,11 @@ Increase the timeout to the Mullvad API from 5 to 10 seconds.
 
 Linux
 
-Increase module DBus RPC timeout from 1 second to 3 seconds.
+Increase NetworkManager DBus RPC timeout from 1 second to 3 seconds.
 Improve notification look by adding application name and icon.
 "
-91,This release is identical to 2019.1-beta1
-92,"Added
+89,This release is identical to 2019.1-beta1
+90,"Added
 
 Handle ""block when disconnected"" extra kill-switch level in the GUI, showing the disconnected
   state as blocked when appropriate and also having a toggle switch for the setting in the Advanced
@@ -2726,7 +2664,7 @@ Fixed
 
 Stop GUI from glitching during the short reconnect state.
 Dismiss notifications automatically after four seconds in all platforms.
-Fix error printed from the CLI when issuing module.
+Fix error printed from the CLI when issuing relay update.
 Fix relay list update interval. Should now handle sleep better.
 Prevent GUI from sending connect commands to the daemon every time it establishes a connection to
   it. Only send connect once (if auto-connect is enabled.)
@@ -2752,14 +2690,14 @@ Linux
 Poll netfilter to verify firewall rules were added correctly. On Ubuntu 14.04 netfilter did not
   return any error, but it also ignored the rules the daemon tried to add.
 "
-93,This release is identical to 2018.6-beta1
-94,"Added
+91,This release is identical to 2018.6-beta1
+92,"Added
 
-CLI command module that triggers an update of the relay list in the daemon.
+CLI command relay update that triggers an update of the relay list in the daemon.
 Add extra level of kill-switch called ""block when disconnected"". Blocks all network traffic even
   in the disconnected state. Not activated by default and can be changed via the CLI subcommand
-  module.
-Ability to debug firewall rules on macOS with the module variable.
+  block-when-disconnected.
+Ability to debug firewall rules on macOS with the TALPID_FIREWALL_DEBUG variable.
 
 macOS
 
@@ -2796,7 +2734,7 @@ Update installer to not rely on WMI when enumerating network adapters.
 Increase timeout waiting for OpenVPN to shut down cleanly.
 Sign the bundled openvpn.exe binary. Should make some anti-virus software complain less.
 "
-95,"Changed
+93,"Changed
 
 Replace OpenVPN root CA certificate bundled with the app to the new Mullvad root CA.
 
@@ -2805,7 +2743,7 @@ Linux
 
 Improve packaging on RPM based distros by re-enabling the daemon after an upgrade
 "
-96,"Added
+94,"Added
 
 Fall back and try to connect over TCP port 443 if protocol is set to automatic and two attempts
   with UDP fail in a row. If that also fails, alternate between UDP and TCP with random ports.
@@ -2818,7 +2756,7 @@ Allow DHCPv6 in the firewall.
 Fixed
 
 Pick new random relay for each reconnect attempt instead of just retrying with the same one.
-Make the module tool fall back to the bundled API IP if DNS resolution fails.
+Make the problem-report tool fall back to the bundled API IP if DNS resolution fails.
 
 macOS
 
@@ -2841,11 +2779,11 @@ Linux
 Block all traffic to DNS servers other than the correct one in the tunnel. Stops potential DNS
   leaks when ""Local network sharing"" was enabled and DNS management failed.
 "
-97,"Fixed
+95,"Fixed
 
 Fix so changing the OpenVPN mssfix setting triggers setting up a new tunnel with the new setting.
 "
-98,"Fixed
+96,"Fixed
 
 Place Mssfix setting inside scrollable area.
 Fix so mssfix can be unset. Previously emptying the textbox did nothing.
@@ -2857,7 +2795,7 @@ The app will have its window resized correctly when display scaling settings are
 Fixed systemd-resolved DNS management. Skip using it as the DNS manager if it's running in
   consumer mode.
 "
-99,"Added
+97,"Added
 
 Allow configuration of OpenVPN mssfix option with GUI (under Advanced Settings).
 
@@ -2874,7 +2812,7 @@ Changed
 Auto-hide scrollbars on macOS only, leaving them visible on other platforms.
 Instead of showing the public IP of the device in the UI, we show the hostname of the VPN server
   the app is connected to. Or nothing if not connected anywhere.
-Passing module to OpenVPN to decrease the time the daemon
+Passing --connect-timeout 30 to OpenVPN to decrease the time the daemon
   will wait until it tries to reconnect again in the case of a broken TCP connection.
 Increase timeout parameter to OpenVPN from 15 to 20 seconds. Should make active VPN tunnels drop
   less frequent when on unstable networks.
@@ -2883,11 +2821,11 @@ Make the quit button visible without needing to scroll down in the settings view
 
 Linux
 
-Move CLI binary to module as to have the CLI binary in the user's module by default.
+Move CLI binary to /usr/bin/ as to have the CLI binary in the user's PATH by default.
 
 Removed
 
-Remove module argument to OpenVPN. Disables any possibility of establishing a VPN tunnel
+Remove --comp-lzo argument to OpenVPN. Disables any possibility of establishing a VPN tunnel
   with compression.
 
 Fixed
@@ -2897,7 +2835,7 @@ Use different method for identifying network interfaces during installation. Sho
   installation errors.
 Properly restore DNS settings on network interfaces. Fixes issue #352.
 "
-100,"Added
+98,"Added
 
 Allow packets to the fe80::/10 and fe02::/16 IPv6 networks when local network sharing is enabled.
   Should allow IPv6 over the LAN, and mDNS host discovery which in turn should allow Apple AirDrop
@@ -2910,8 +2848,8 @@ Add support for DNS configuration using resolvconf.
 Changed
 
 Logging in no longer requires a connection with the Mullvad API server.
-Replace repeated module followed by module notifications with a single
-  module notification.
+Replace repeated Disconnecting followed by Connecting notifications with a single
+  Reconnecting notification.
 
 Fixed
 
@@ -2923,22 +2861,22 @@ Improve tray icon response time by disabling the double click handling.
 Security
 
 Prevent Electron from executing/navigating to files being drag-and-dropped onto the app GUI. This
-  fixes link
+  fixes MUL-01-001
 "
-101,"Changed
+99,"Changed
 macOS
 
-Move the CLI binary (module) back into the module directory. A bug caused the app to not 
+Move the CLI binary (mullvad) back into the Resources/ directory. A bug caused the app to not 
   be signed if it was placed in the app root directory.
 
 Security
 Windows
 
-Lock the installation directory to module. This prevents potential local
-  privilege escalation by ensuring all binaries executed by the module user, as part of the 
+Lock the installation directory to C:\Program Files\Mullvad VPN. This prevents potential local
+  privilege escalation by ensuring all binaries executed by the SYSTEM user, as part of the 
   Mullvad system service, are stored where unprivileged users can't modify them.
 "
-102,"Added
+100,"Added
 
 Add option to enable or disable IPv6 on the tunnel interface. It's disabled by default.
 Log panics in the daemon to the log file.
@@ -2964,13 +2902,13 @@ Changed
 
 The ""Buy more credit"" button is changed to open a dedicated account login page instead of one
   having a create account form first.
-The CLI command to list relays is now shorter, module instead of
-  module.
+The CLI command to list relays is now shorter, mullvad relay list instead of
+  mullvad relay list locations.
 Replace WebSockets with Unix domain sockets/Named pipes for IPC. The location
-  of the socket can be controlled with module.
+  of the socket can be controlled with MULLVAD_RPC_SOCKET_PATH.
 Update the relay list if it's out of date when the daemon starts.
-Move the CLI binary (module) on macOS and Linux up one level, so it's installed directly into
-  the app installation directory instead of the module directory.
+Move the CLI binary (mullvad) on macOS and Linux up one level, so it's installed directly into
+  the app installation directory instead of the resource directory.
 
 Fixed
 
@@ -2996,8 +2934,8 @@ Windows
 Failing to restore DNS settings on daemon start does not make the daemon exit with an error, just
   log the error and continue.
 "
-103,This stable release is identical to 2018.2-beta3
-104,"Added
+101,This stable release is identical to 2018.2-beta3
+102,"Added
 
 Create a new UI log file for every UI execution session, and preserve the log from the previous
   session.
@@ -3013,14 +2951,14 @@ Account tokens are now required to have at least ten digits.
 
 macOS
 
-Rename directores for settings, logs and cache from module to module.
+Rename directores for settings, logs and cache from mullvad-daemon to mullvad-vpn.
 
 Windows
 
 Use local user directory to store system service settings and GUI electron cache, instead of the
   roaming user directory.
-Where the system service would use module it now just uses
-  module
+Where the system service would use %LOCALAPPDATA%\Mullvad\Mullvad VPN\ it now just uses
+  %LOCALAPPDATA%\Mullvad VPN\
 
 Fixed
 
@@ -3029,7 +2967,7 @@ Ignore empty strings as redaction requests in the problem report tool, to avoid 
 Previously logged in users won't be going through login view when restarting the app, instead
   will be taken straight to main view.
 "
-105,"Added
+103,"Added
 
 Bundle the root CA signing the API and only trust that single one, limiting
   trust to a single root CA
@@ -3070,31 +3008,31 @@ Loosen up firewall rules to allow incoming requests on tunnel interface.
 Properly stop the service, announcing errors to the system, in the event of initialization or
   runtime error.
 "
-106,"Added
+104,"Added
 
 Refresh account expiration when account view becomes visible.
-Add module subcommand to manage tunnel specific options in the CLI.
-Add support for passing the module argument to OpenVPN tunnels.
+Add tunnel subcommand to manage tunnel specific options in the CLI.
+Add support for passing the --mssfix argument to OpenVPN tunnels.
 Add details to mullvad CLI interface error for when it doesn't trust the RPC file.
 Include the last two OpenVPN logs in problem reports instead of only the last.
 Prevent two instances of the daemon to run at the same time.
 Add CLI command for fetching latest app versions and verifies whether the running version is
   supported.
-Add module subcommand in the CLI to show information about current versions.
+Add version subcommand in the CLI to show information about current versions.
 Add a flag to daemon to print log entries to standard output without timestamps.
 Filter out and ignore DNS lookup results for api.mullvad.net that are bogus (private etc.)
 Bundle the Mullvad API IP address with the app and introduce a disk cache fallback method for
   when DNS resolution fails.
-Automatic rotation of the daemon log. The existing log is renamed to module on daemon
+Automatic rotation of the daemon log. The existing log is renamed to daemon.old.log on daemon
   startup.
-Add module subcommand in the CLI to continuously monitor the tunnel state.
+Add status listen subcommand in the CLI to continuously monitor the tunnel state.
 Log errors present in initialization sequence to the log file.
 
 macOS
 
 Add colors to terminal output.
 Warn if daemon is running as a non-root user.
-Make the pkg installer uninstall any module version of the app before installing itself.
+Make the pkg installer uninstall any <=2018.1 version of the app before installing itself.
 
 Changed
 
@@ -3102,25 +3040,25 @@ Changed ""Contact support"" label to ""Report a problem"" in settings menu
 Change all occurrences of ""MullvadVPN"" into ""Mullvad VPN"", this affects
   paths and window captions etc.
 Improve account token hint to be the same length as an expected token.
-Update module binary to automatically collect log files in predefined known Mullvad log
+Update problem-report binary to automatically collect log files in predefined known Mullvad log
   directories.
 Replaced previously bundled OpenVPN 2.4.4 with statically linked 2.4.6 version containing
   Mullvad patches for faster connect and other improvements.
 Increase the OpenVPN receive and send buffers from 524288 to 1048576 bytes (1MiB).
 Make the log, cache, settings and RPC address directories configurable via the following
-  environment variables: module, module, module and
-  module.
+  environment variables: MULLVAD_LOG_DIR, MULLVAD_CACHE_DIR, MULLVAD_SETTINGS_DIR and
+  MULLVAD_RPC_ADDRESS_PATH.
 
 macOS
 
 The installer changed from dmg to pkg format.
 The daemon is installed as a launchd daemon and started on install and on boot.
-Move daemon logs to module, settings to module and cache to
-  module.
+Move daemon logs to /var/log/mullvad-daemon/, settings to /etc/mullvad-daemon/ and cache to
+  /var/root/Library/Caches/mullvad-daemon/.
 
 Removed
 
-Remove the module command from the CLI.
+Remove the shutdown command from the CLI.
 
 Fixed
 
@@ -3135,7 +3073,7 @@ Fix ""Out of time"" screen status icon position.
 If necessary, create parent directories for RPC connection info file and tunnel log.
 Fix error message when attempting to login when the daemon isn't running .
 "
-107,"Changed
+105,"Changed
 
 Redact all account numbers in the account number history from problem reports instead of only the
   currently logged in one.
@@ -3147,7 +3085,7 @@ Fix a memory leak in the problem report collection routine.
 Fix an issue when viewing a problem report brought up a dialog to choose the application to open
   the file.
 "
-108,"[2018.1-beta10] - 2018-02-13
+106,"[2018.1-beta10] - 2018-02-13
 Added
 
 Show the app version in the settings view.
@@ -3164,12 +3102,12 @@ Security
 
 Update the CRL with newly revoked server certificates.
 "
-109,"[2018.1-beta9] - 2018-01-30
+107,"[2018.1-beta9] - 2018-01-30
 Added
 
 Uses the https://am.i.mullvad.net/ service to figure out location and public IP of the device.
   The app then shows this information in the unsecured state.
-Argument to the daemon, module, that allows customizing where it will look for
+Argument to the daemon, --resource-dir <path>, that allows customizing where it will look for
   needed resource files.
 A very stylish map now indicates where you are connecting through.
 
@@ -3180,7 +3118,7 @@ Fixed a bug where the problem report tool would redact some things in the logs w
 Show a better error message when api.mullvad.net is unreachable.
 Fix bug getting daemon state on frontend start instead of assuming it.
 "
-110,"[2018.1-beta8] - 2018-01-09
+108,"[2018.1-beta8] - 2018-01-09
 Added
 
 ""Allow LAN"" setting that configures if the app should allow communication to the LAN (private
@@ -3202,7 +3140,7 @@ Removed
 
 Remove the unsafe Camellia and Seed ciphers from the list of allowed OpenVPN ciphers.
 "
-111,"[2017.1-beta7] - 2017-12-13
+109,"[2017.1-beta7] - 2017-12-13
 Added
 
 Buffer size and fast-io parameters to OpenVPN. Can double the speed on high latency connections.
@@ -3220,7 +3158,7 @@ Show the VPN GUI on all macOS workspaces, not only the one where it was started.
 
 Changed
 
-Renamed daemon binary from module to module.
+Renamed daemon binary from mullvadd to mullvad-daemon.
 
 Security
 
