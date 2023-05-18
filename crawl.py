@@ -6,7 +6,7 @@ from markdown import markdown
 import re
 
 
-github_token = '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'
+github_token = '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'
 headers = {
     'Authorization': f'token {github_token}',
     'Accept': 'application/vnd.github.v3+json'
@@ -73,6 +73,27 @@ def markdown_to_text(markdown_string):
     text = ''.join(soup.findAll(string=True))
 
     return text
+
+def markdown_to_text_abstract(markdown_string):
+    # md -> html -> text 
+    html = markdown(markdown_string)
+
+    soup = BeautifulSoup(html, "html.parser")
+    # Replace code tag with 'module' as abstraction
+    for code in soup.find_all('code'):
+        code.string = 'module'
+
+    # Replace image tag with 'image' as abstraction
+    for image in soup.find_all('img'):
+        image.string = 'image'
+
+    # Replace link tag with 'link' as abstraction
+    for link in soup.find_all('a'):
+        link.string = 'link'
+    # Extract text
+    text = ''.join(soup.findAll(string=True))
+    return text
+
 
 
 if __name__ == '__main__':
