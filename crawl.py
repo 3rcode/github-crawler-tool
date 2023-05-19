@@ -3,10 +3,10 @@ import pandas as pd
 import os
 from bs4 import BeautifulSoup
 from markdown import markdown
-import re
+import regex as re
 
 
-github_token = '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'
+github_token = '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'
 headers = {
     'Authorization': f'token {github_token}',
     'Accept': 'application/vnd.github.v3+json'
@@ -63,33 +63,30 @@ def crawl_commit(owner, repo):
 
 def markdown_to_text(markdown_string):
     """ Converts a markdown string to plaintext """
-
-    # md -> html -> text since BeautifulSoup can extract text cleanly
+    if not markdown_string:
+        return ''
+    # md -> html -> text 
     html = markdown(markdown_string)
     soup = BeautifulSoup(html, "html.parser")
-
-
     # Extract text    
     text = ''.join(soup.findAll(string=True))
-
     return text
 
 def markdown_to_text_abstract(markdown_string):
     # md -> html -> text 
+    if not markdown_string:
+        return ''
+    # Replace link with 'link' as abstraction
+    markdown_string = re.sub(r'(?|(?<txt>(?<url>(?:ht|f)tps?://\S+(?<=\P{P})))|\(([^)]+)\)\[(\g<url>)\])', 'link', markdown_string)
+    
     html = markdown(markdown_string)
 
     soup = BeautifulSoup(html, "html.parser")
+
     # Replace code tag with 'module' as abstraction
     for code in soup.find_all('code'):
         code.string = 'module'
 
-    # Replace image tag with 'image' as abstraction
-    for image in soup.find_all('img'):
-        image.string = 'image'
-
-    # Replace link tag with 'link' as abstraction
-    for link in soup.find_all('a'):
-        link.string = 'link'
     # Extract text
     text = ''.join(soup.findAll(string=True))
     return text
@@ -117,21 +114,32 @@ if __name__ == '__main__':
             release_notes = crawl_release_notes(owner, repo)
             print('Crawl releases done')
             release_notes = [markdown_to_text(release) for release in release_notes]
+            release_notes_abstract = [markdown_to_text_abstract(release) for release in release_notes]
             idx = range(1, len(release_notes) + 1)
-            release_notes_df = pd.DataFrame({'Index': idx, 'Release Note': release_notes})
+            release_notes_df = pd.DataFrame({'Index': idx, 'Release Note': release_notes, 
+                                             'Release Note With Abstraction': release_notes_abstract})
             
             commits = crawl_commit(owner, repo)
             print('Crawl commits done')
             commits = [markdown_to_text(commit) for commit in commits]
+            commits_abstract = [markdown_to_text_abstract(commit) for commit in commits]
             messages = []
             descriptions = []
+            messages_abstract = []
+            descriptions_abstract = []
             for commit in commits:
                 message, description = get_commit_message(commit)
                 messages.append(message)
                 descriptions.append(description)
 
+            for commit in commits_abstract:
+                message_abstract, description_abstract = get_commit_message(commit)
+                messages_abstract.append(message_abstract)
+                descriptions_abstract.append(description_abstract)
+
             idx = range(1, len(messages) + 1)
-            commits_df = pd.DataFrame({'Index': idx, 'Message': messages, 'Description': descriptions})
+            commits_df = pd.DataFrame({'Index': idx, 'Message': messages, 'Description': descriptions,
+                                       'Message Abstract': messages_abstract, 'Description Abstract': descriptions_abstract})
 
             # Check dataframe
 
@@ -151,6 +159,9 @@ if __name__ == '__main__':
 
             corpus_repo_training.loc[i, 'Crawl status'] = 'Done'
             corpus_repo_training.to_csv(corpus_path, index=False)
+
+
+
 
 
     
