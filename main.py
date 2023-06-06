@@ -1,9 +1,8 @@
 import spacy
-# import nltk
 import numpy as np
 import pandas as pd
 import os
-# import re
+# import random
 from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM, Embedding
 from sklearn.model_selection import train_test_split
@@ -46,6 +45,7 @@ def create_dictionary(commits):
         Dictionary of words.
 
     """
+    print("Creating dictionary")
     word_count = {}
     for commit in commits:
         lst_words = commit.split(' ')
@@ -114,7 +114,7 @@ if __name__ == '__main__':
     for subdir, dirs, files in os.walk(data_path):
         repos.extend(dirs)
     X = np.asarray([])
-    y = np.asarray([])
+    y = np.asarray([]) 
     for repo in repos:
         path = os.path.join(data_path, repo, 'labeled_commits.csv')
         commit, label = load_data(path)
@@ -136,12 +136,12 @@ if __name__ == '__main__':
 
         top_words = len(word2idx) + 1
         embedding_vector_length = 300
-        # classify_model = build_model(top_words, embedding_vector_length, max_commit_length)
-        classify_model = load_model('models/lstm_model')
+        classify_model = build_model(top_words, embedding_vector_length, max_commit_length)
+        # classify_model = load_model('models/standard_model')
         # Check build_model function
         print(classify_model.summary())
-        # classify_model.fit(X_train, y_train, epochs=3, batch_size=64) 
-        # classify_model.save('models/lstm_model')
+        classify_model.fit(X_train, y_train, epochs=3, batch_size=64) 
+        classify_model.save('models/standard_model')
         scores = classify_model.evaluate(X_val, y_val, verbose=0)
         print("Accuracy: %.2f%%" % (scores[1] * 100))
         preds = classify_model.predict(X_val)
@@ -163,7 +163,7 @@ if __name__ == '__main__':
         score = f1_score(y_val, y_pred)
         print(f"F1 score: {score}")
     
-    naive_bayes(X, y)
+    LSTM_model(X, y)
     
 
 

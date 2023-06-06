@@ -1,0 +1,699 @@
+Index,Message,Description,Message Abstract,Description Abstract
+1,fix: pass CPU targets as cmd args (#804)," Sysimages built with CPU targets as env var, tend to ignore them and result segfaults,  when relocated to the target machine",fix: pass CPU targets as cmd args (#804),"Sysimages built with CPU targets as env var, tend to ignore them and result segfaults,  when relocated to the target machine"
+2,Mention uuid too in error (#733),Co-authored-by: Kristoffer Carlsson kcarlsson89@gmail.com,Mention uuid too in error (#733),Co-authored-by: Kristoffer Carlsson kcarlsson89@gmail.com
+3,"Allow the create_app function to accept and propagate the script::Union{Nothing, String} kwarg (#788)",,"Allow the create_app function to accept and propagate the script::Union{Nothing, String} kwarg (#788)",
+4,"Some fixes to precompile ""replay"" (#805)",,"Some fixes to precompile ""replay"" (#805)",
+5,Build and run MyLib (#732),Co-authored-by: Kristoffer Carlsson kcarlsson89@gmail.com,Build and run MyLib (#732),Co-authored-by: Kristoffer Carlsson kcarlsson89@gmail.com
+6,fail early if both incremental and filter_stdlibs (#800),,fail early if both incremental and filter_stdlibs (#800),
+7,Fix two typos (#797),Signed-off-by: Alexander Seiler seileralex@gmail.com,Fix two typos (#797),Signed-off-by: Alexander Seiler seileralex@gmail.com
+8,suggest using Plots.init() (#750),This solves issue in https://discourse.julialang.org/t/plots-do-not-display-unless-i-call-gui-when-using-custom-sysimage/92207 Co-authored-by: Dilum Aluthge dilum@aluthge.com,suggest using Plots.init() (#750),This solves issue in link Co-authored-by: Dilum Aluthge dilum@aluthge.com
+9,bump version (#782),,bump version (#782),
+10,propagate build flags into sysimg (#774),"This removes the enforced -O and g levels, and propogates the passed arguments to the entire build. We filter a few arguments from the base sysimg to prevent some failures and avoid known bugs.",propagate build flags into sysimg (#774),"This removes the enforced -O and g levels, and propogates the passed arguments to the entire build. We filter a few arguments from the base sysimg to prevent some failures and avoid known bugs."
+11,clarify that project arg should be a path. (#773),,clarify that project arg should be a path. (#773),
+12,use micromamba_jll rather than MKL_jll to test lazy artifacts (#772),,use micromamba_jll rather than MKL_jll to test lazy artifacts (#772),
+13,README: Fix the CI status badge (#777),,README: Fix the CI status badge (#777),
+14,CI: add the ci_started job (#776),,CI: add the ci_started job (#776),
+15,CI: Combine the tests and the docs into a single CI workflow (#775),,CI: Combine the tests and the docs into a single CI workflow (#775),
+16,"Test suite: on Julia 1.6, remove LLVMExtra_jll from the MyApp/Project.toml file (#771)",  Skip broken tests on 1.6 CI   Update runtests.jl   Remove some CI jobs while debugging this PR   Update Project.toml   Update runtests.jl   Update test.yml   Apply suggestions from code review   Co-authored-by: Ian Butterworth i.r.butterworth@gmail.com  Co-authored-by: Ian Butterworth i.r.butterworth@gmail.com,"Test suite: on Julia 1.6, remove LLVMExtra_jll from the MyApp/Project.toml file (#771)",Skip broken tests on 1.6 CI Update runtests.jl Remove some CI jobs while debugging this PR Update Project.toml Update runtests.jl Update test.yml Apply suggestions from code review Co-authored-by: Ian Butterworth i.r.butterworth@gmail.com Co-authored-by: Ian Butterworth i.r.butterworth@gmail.com
+17,Call get_compiler_cmd() at the beginning of create_sysimage and create_app (#770),Co-authored-by: Ian Butterworth i.r.butterworth@gmail.com Co-authored-by: Ian Butterworth i.r.butterworth@gmail.com,Call get_compiler_cmd() at the beginning of create_sysimage and create_app (#770),Co-authored-by: Ian Butterworth i.r.butterworth@gmail.com Co-authored-by: Ian Butterworth i.r.butterworth@gmail.com
+18,Drop 1.7 CI. Limit concurrency to leave CI space for org (#764),,Drop 1.7 CI. Limit concurrency to leave CI space for org (#764),
+19,PackageCompiler v2.1.4 (#763),,PackageCompiler v2.1.4 (#763),
+20,Fixes for 1.10 (#762),Fixes https://github.com/JuliaLang/PackageCompiler.jl/issues/761,Fixes for 1.10 (#762),Fixes link
+21,Patch bump. Set CI timeout to 90 mins (#760),,Patch bump. Set CI timeout to 90 mins (#760),
+22,Fix 1.9 (#757),Co-authored-by: Kristoffer Carlsson kcarlsson89@gmail.com Closes https://github.com/JuliaLang/PackageCompiler.jl/issues/755,Fix 1.9 (#757),Co-authored-by: Kristoffer Carlsson kcarlsson89@gmail.com Closes link
+23,Grammar (#758),,Grammar (#758),
+24,Add an inner testsets to help find failures (#754),,Add an inner testsets to help find failures (#754),
+25,Run CI on 1.9-nightly (#753),,Run CI on 1.9-nightly (#753),
+26,bump version (#749),,bump version (#749),
+27,Add script kwarg to create_library to enable running of custom Julia code (#748),,Add script kwarg to create_library to enable running of custom Julia code (#748),
+28,PackageCompiler v2.1.1 (#745),,PackageCompiler v2.1.1 (#745),
+29,Monitor for low free memory during sysimage generation (#740),Fixes https://github.com/JuliaLang/PackageCompiler.jl/issues/739,Monitor for low free memory during sysimage generation (#740),Fixes link
+30,"Factor out the ""find compiler"" logic into a separate get_compiler_cmd function (#731)","  Factor out the ""find compiler"" logic into a separate get_compiler_cmd function   Bump the version from ""2.0.11"" to ""2.1.0"" ","Factor out the ""find compiler"" logic into a separate get_compiler_cmd function (#731)","Factor out the ""find compiler"" logic into a separate get_compiler_cmd function Bump the version from ""2.0.11"" to ""2.1.0"""
+31,Reinstate RelocatableFolders compat & patch bump (#729),,Reinstate RelocatableFolders compat & patch bump (#729),
+32,remove use of jl_set_value on 1.9. fix UndefVarError for new nightly error formatting (#709),Co-authored-by: Ian Butterworth i.r.butterworth@gmail.com,remove use of jl_set_value on 1.9. fix UndefVarError for new nightly error formatting (#709),Co-authored-by: Ian Butterworth i.r.butterworth@gmail.com
+33,Merge pull request #728 from JuliaLang/ib/bump,,Merge pull request #728 from JuliaLang/ib/bump,
+34,PackageCompiler 2.0.10,,PackageCompiler 2.0.10,
+35,Support RelocatableFolders v1 (#722),,Support RelocatableFolders v1 (#722),
+36,CI: change '~1.8.0-0' to '1.8' (#723),,CI: change '~1.8.0-0' to '1.8' (#723),
+37,Don't check the docs/Manifest.toml file into source control,,Don't check the docs/Manifest.toml file into source control,
+38,run CI on julia 1.8 (#707),  run CI on julia 1.8   Disable CI on '1' (redundant) ,run CI on julia 1.8 (#707),run CI on julia 1.8 Disable CI on '1' (redundant)
+39,Fix an incorrect warning message (#715),,Fix an incorrect warning message (#715),
+40,Add concurrency control to GitHub workflow runs (#712),,Add concurrency control to GitHub workflow runs (#712),
+41,Bump version,,Bump version,
+42,also bundle certificate (#711), also bundle certificate  should fix https://github.com/JuliaLang/MbedTLS.jl/pull/219#issuecomment-1206080455,also bundle certificate (#711),also bundle certificate should fix link
+43,check if manifest file exists instead of if manifest empty (#705),Theoretically you could compile a package with an empty manifest,check if manifest file exists instead of if manifest empty (#705),Theoretically you could compile a package with an empty manifest
+44,bump version,,bump version,
+45,fix lazy artifacts (#696),,fix lazy artifacts (#696),
+46,Fix a few typos (#701),"also expand OSes, arguably easier to understand",Fix a few typos (#701),"also expand OSes, arguably easier to understand"
+47,also test on LTS and nightly,,also test on LTS and nightly,
+48,Update CompatHelper.yml (#684),,Update CompatHelper.yml (#684),
+49,"Fix the message in create_sysimg_object_file to correctly say ""incremental"" or ""nonincremental"" (#694)",,"Fix the message in create_sysimg_object_file to correctly say ""incremental"" or ""nonincremental"" (#694)",
+50,bump version,,bump version,
+51,add support for dynamic artifact selection (#690),,add support for dynamic artifact selection (#690),
+52,Fix formatting of executables keyword in docstring (#679),,Fix formatting of executables keyword in docstring (#679),
+53,fix accidental removal of Base.@ccallable from library function,,fix accidental removal of Base.@ccallable from library function,
+54,Bump version to 2.0.5,,Bump version to 2.0.5,
+55,Fix windows library filename (#655),"  Fix library name on Windows   The name was accidentally changed to sys.dll in a previous refactor   Also rename get_sysimg_file -> get_library_filename.  It used to   be used to get the sysimg filename for create_app and create_lib,   but now it's only used by create_lib.   Remove extra whitespace ",Fix windows library filename (#655),"Fix library name on Windows The name was accidentally changed to sys.dll in a previous refactor Also rename get_sysimg_file -> get_library_filename.  It used to   be used to get the sysimg filename for create_app and create_lib,   but now it's only used by create_lib. Remove extra whitespace"
+56,make package test work without an installed General registry (#646),,make package test work without an installed General registry (#646),
+57,bump patch version,,bump patch version,
+58,add precompile statements for functions called from main in apps (#649),remove dependency on at-eval in main,add precompile statements for functions called from main in apps (#649),remove dependency on at-eval in main
+59,bump patch version,,bump patch version,
+60,use debug libs when Julia is debug build (#644),,use debug libs when Julia is debug build (#644),
+61,Typo (#642), Typo  [skip ci]  Upper case,Typo (#642),Typo [skip ci] Upper case
+62,remove old docs for ccall in app entry points,,remove old docs for ccall in app entry points,
+63,add a note about removing @ccallable for apps,,add a note about removing @ccallable for apps,
+64,Bump patch version,,Bump patch version,
+65,use abspath (#636),,use abspath (#636),
+66,bump patch version,,bump patch version,
+67,Fix typo in docs: use correct default cpu target (#633),"A very small typo, but it's annoying because it means the user could think they were asked to pass ""nativea"" instead of ""native"".",Fix typo in docs: use correct default cpu target (#633),"A very small typo, but it's annoying because it means the user could think they were asked to pass ""nativea"" instead of ""native""."
+68,fix doc typo (#632),,fix doc typo (#632),
+69,Fix code block on apps documentation (#631),,Fix code block on apps documentation (#631),
+70,"syimage -> sysimage in ""Upgrading from..."" section (#628)",,"syimage -> sysimage in ""Upgrading from..."" section (#628)",
+71,fix link,,fix link,
+72,release 2.0,,release 2.0,
+73,fix bug when the same artifact was used more than once in the project (#626),,fix bug when the same artifact was used more than once in the project (#626),
+74,also run CI on release branches,,also run CI on release branches,
+75,Ensure app_libdir path before cp (#624),,Ensure app_libdir path before cp (#624),
+76,fix regression in create_library and update test to cover it (#622),,fix regression in create_library and update test to cover it (#622),
+77,strengthen null pointer checks in julia_init.c (#620),,strengthen null pointer checks in julia_init.c (#620),
+78,only print artifact size if we actually bundled something (#621),,only print artifact size if we actually bundled something (#621),
+79,warn for create_library and create_app on non-official builds (#617),,warn for create_library and create_app on non-official builds (#617),
+80,call entry points in apps using the julia runtime (#619),,call entry points in apps using the julia runtime (#619),
+81,add support for creating multiple executables for an app (#618),,add support for creating multiple executables for an app (#618),
+82,some general autumn cleaning (#612), some general autumn cleaning,some general autumn cleaning (#612),some general autumn cleaning
+83,print some info about bundled artifacts (#609),,print some info about bundled artifacts (#609),
+84,Add a spinner for long running commands (#607),,Add a spinner for long running commands (#607),
+85,"fall back to gcc/clang if g++/clang++ not avaiable, but warn about it (#608)"," fall back to gcc/clang if g++/clang++ not avaiable, but warn about it","fall back to gcc/clang if g++/clang++ not avaiable, but warn about it (#608)","fall back to gcc/clang if g++/clang++ not avaiable, but warn about it"
+86,simplify init of apps (#597),,simplify init of apps (#597),
+87,fix broken line,,fix broken line,
+88,improve documentation (#604),,improve documentation (#604),
+89,use g++/clang++ for sysimage (#602),this replicates what Julia itself does,use g++/clang++ for sysimage (#602),this replicates what Julia itself does
+90,"use O3 for sysimage, like Julia itself does (#603)",,"use O3 for sysimage, like Julia itself does (#603)",
+91,fixup artifact format (#599),,fixup artifact format (#599),
+92,"if first argument to create_sysimage is left out, include all packages in project (#553)",,"if first argument to create_sysimage is left out, include all packages in project (#553)",
+93,fix an off by one in julia-args parsing (#596),,fix an off by one in julia-args parsing (#596),
+94,"remove calling libsupport_init, this is done automatically by julia_init (#583)",,"remove calling libsupport_init, this is done automatically by julia_init (#583)",
+95,prevent accidentally picking up packages outside the project when creating a sysimage (#559),,prevent accidentally picking up packages outside the project when creating a sysimage (#559),
+96,add upgrade note for lazy artifacts (#595),[ci skip],add upgrade note for lazy artifacts (#595),[ci skip]
+97,make include_lazy_artifacts default to false (#550),,make include_lazy_artifacts default to false (#550),
+98,require packages to make their entry functions for app ccallable (#574),,require packages to make their entry functions for app ccallable (#574),
+99,add upgrade guide,,add upgrade guide,
+100,remove support for replacing default sysimage,,remove support for replacing default sysimage,
+101,turn off nightly test since they are broken,they can be reactivated once we make a push to support nightly,turn off nightly test since they are broken,they can be reactivated once we make a push to support nightly
+102,bump version for start on 2.0,,bump version for start on 2.0,
+103,bump version,,bump version,
+104,use a file to run the sysimage code in (#594),this avoids command line length limits on certain OSs,use a file to run the sysimage code in (#594),this avoids command line length limits on certain OSs
+105,Fix a typo while gathering dependencies from Manifest.toml (#593),,Fix a typo while gathering dependencies from Manifest.toml (#593),
+106,revert accidental version bump,,revert accidental version bump,
+107,bump minor version,,bump minor version,
+108,allow loading stdlibs in the precompile process (#590),,allow loading stdlibs in the precompile process (#590),
+109,fixup regression in precompilation before creating sysimage (#589),,fixup regression in precompilation before creating sysimage (#589),
+110,improve artifact bundling (#587),,improve artifact bundling (#587),
+111,Bump patch version,,Bump patch version,
+112,only initialize Random on 1.6 (#586),,only initialize Random on 1.6 (#586),
+113,run CI on 1.7 (#584),,run CI on 1.7 (#584),
+114,bump minor version,,bump minor version,
+115,initialize RNGs in sysimage process (#579),,initialize RNGs in sysimage process (#579),
+116,fix library used for creating sysimage on debug builds of Julia (#580),,fix library used for creating sysimage on debug builds of Julia (#580),
+117,bundle Julia executable and Project.toml to get Distributed working (#572), bundle Julia executable and project to get Distributed working,bundle Julia executable and Project.toml to get Distributed working (#572),bundle Julia executable and project to get Distributed working
+118,fix relocatability of PackageCompiler (#575),,fix relocatability of PackageCompiler (#575),
+119,store the precompile statements from the precompile execution scripts (#571),,store the precompile statements from the precompile execution scripts (#571),
+120,allow passing on flags with the compiler (#568),,allow passing on flags with the compiler (#568),
+121,add doc string for base_sysimage (#401),,add doc string for base_sysimage (#401),
+122,include transitive dependencies into sysimage by default (#567), include transitive dependencies into sysimage by default,include transitive dependencies into sysimage by default (#567),include transitive dependencies into sysimage by default
+123,fix link to stable,,fix link to stable,
+124,bump minor version,,bump minor version,
+125,allow passing standard julia arguments to apps (#565), allow passing standard julia arguments to apps,allow passing standard julia arguments to apps (#565),allow passing standard julia arguments to apps
+126,call create_sysimage with a vector for packages (#566),,call create_sysimage with a vector for packages (#566),
+127,modernize TagBot setup,,modernize TagBot setup,
+128,delete spurious file (#564),,delete spurious file (#564),
+129,"Use strcpy, strcat instead of strncpy in julia_init.c (#561)", gcc was complaining that the size limit was based on the source   length.,"Use strcpy, strcat instead of strncpy in julia_init.c (#561)",gcc was complaining that the size limit was based on the source   length.
+130,use LazyArtifacts for lazy artifacts (#560),,use LazyArtifacts for lazy artifacts (#560),
+131,fix assumption that Pkg is loadable in a different project (#557),,fix assumption that Pkg is loadable in a different project (#557),
+132,fix some grammar (#548),,fix some grammar (#548),
+133,add the possiblity of giving arguments to the process making the sysimage (#551), add the possibility of giving arguments to the process making the sysimage,add the possiblity of giving arguments to the process making the sysimage (#551),add the possibility of giving arguments to the process making the sysimage
+134,update versions for documentation generation (#556),,update versions for documentation generation (#556),
+135,update to the more advanced but correct way of dealing with Varargs (#555),,update to the more advanced but correct way of dealing with Varargs (#555),
+136,give packages as strings instead of symbols (#552),,give packages as strings instead of symbols (#552),
+137,remove unused function (#549),,remove unused function (#549),
+138,remove warn when detecting dependency on Requires.jl (#547),,remove warn when detecting dependency on Requires.jl (#547),
+139,remove reference to upgrading from old PackageCompiler,,remove reference to upgrading from old PackageCompiler,
+140,remove upgrade notes (#543),,remove upgrade notes (#543),
+141,remove more pre 1.6 code and simplify kwarg passing (#542),,remove more pre 1.6 code and simplify kwarg passing (#542),
+142,"hide the ""devdocs"" in the manual (#541)",,"hide the ""devdocs"" in the manual (#541)",
+143,Remove keyword defaults from inner _create_app function (#533),This forces the caller to specify all keyword arguments. (Created because a recent pull request missed one of these.),Remove keyword defaults from inner _create_app function (#533),This forces the caller to specify all keyword arguments. (Created because a recent pull request missed one of these.)
+144,update to new syntax for JULIA_DEFINE_FAST_TLS (#540),,update to new syntax for JULIA_DEFINE_FAST_TLS (#540),
+145,remove some old code now that we only support julia 1.6+ (#539),,remove some old code now that we only support julia 1.6+ (#539),
+146,bump version,,bump version,
+147,Merge pull request #538 from JuliaLang/kc/rpath,put the sysimage for apps inside lib and slightly tweak rpath,Merge pull request #538 from JuliaLang/kc/rpath,put the sysimage for apps inside lib and slightly tweak rpath
+148,Merge pull request #537 from JuliaLang/kc/manifest,dev PackageCompiler in MyLib/build,Merge pull request #537 from JuliaLang/kc/manifest,dev PackageCompiler in MyLib/build
+149,put the sysimage for apps inside lib and slightly tweak rpath,this allows the sysimage in create_library to not live in a folder called lib which is sometimes useful,put the sysimage for apps inside lib and slightly tweak rpath,this allows the sysimage in create_library to not live in a folder called lib which is sometimes useful
+150,dev PackageCompiler in MyLib/build,,dev PackageCompiler in MyLib/build,
+151,Remove Manifest.toml from MyLib/build (#536),"This ensures that we will always use the most recent version of PackageCompiler, rather than the version in Manifest.toml.",Remove Manifest.toml from MyLib/build (#536),"This ensures that we will always use the most recent version of PackageCompiler, rather than the version in Manifest.toml."
+152,Fix compiler warning in julia_init.c during create_library() (#535),"For strncpy, the length should be based on the length of the destination, not the length of the source. (In this case, the length of the detination was determined based on the length of the source, so it wasn't a problem in reality, but it's easy enough to silence the compiler warning.)",Fix compiler warning in julia_init.c during create_library() (#535),"For strncpy, the length should be based on the length of the destination, not the length of the source. (In this case, the length of the detination was determined based on the length of the source, so it wasn't a problem in reality, but it's easy enough to silence the compiler warning.)"
+153,bump version,,bump version,
+154,Disable autoprecomp during project instantiation (#531)," This was previously done for one call to instantiate(), but not to a second   call.  Without this, precompilation is failing for most packages   in create_app() or create_lib().",Disable autoprecomp during project instantiation (#531),"This was previously done for one call to instantiate(), but not to a second   call.  Without this, precompilation is failing for most packages   in create_app() or create_lib()."
+155,Add missing include_lazy_artifacts parameter (#530),,Add missing include_lazy_artifacts parameter (#530),
+156,bump version,,bump version,
+157,Add include_lazy_artifacts flag to create_app (issues/464). (#529),Co-authored-by: Sacha Verweij sacha.verweij@alumni.stanford.edu Co-authored-by: Rob Vermaas rob.vermaas@gmail.com,Add include_lazy_artifacts flag to create_app (issues/464). (#529),Co-authored-by: Sacha Verweij sacha.verweij@alumni.stanford.edu Co-authored-by: Rob Vermaas rob.vermaas@gmail.com
+158,Update documentation and example about shared libraries (#527), Update documentation and example about shared libraries,Update documentation and example about shared libraries (#527),Update documentation and example about shared libraries
+159,add the docs for create_library to the manual (#523),,add the docs for create_library to the manual (#523),
+160,modernize documentation GHA (#524),,modernize documentation GHA (#524),
+161,fix name to julia-internal-debug (#482),,fix name to julia-internal-debug (#482),
+162,update CI badge,,update CI badge,
+163,bump version,,bump version,
+164,Add create_library function (#490),"  Add create_library function   Similar to create_app, this function facilitates the creation of   C shared library bundles using Julia.  As with apps, it generates a directory tree with required shared   libraries and artifacts. In contrast with apps, the julia system image is the main artifact   generated, and its name should be set to the expected name of   the library you're creating. One downside of this implementation is that any binaries linking   to this shared library may need help finding it at runtime.  The   methods for doing so are system dependent.",Add create_library function (#490),"Add create_library function Similar to create_app, this function facilitates the creation of   C shared library bundles using Julia. As with apps, it generates a directory tree with required shared   libraries and artifacts. In contrast with apps, the julia system image is the main artifact   generated, and its name should be set to the expected name of   the library you're creating. One downside of this implementation is that any binaries linking   to this shared library may need help finding it at runtime.  The   methods for doing so are system dependent."
+165,bump version,,bump version,
+166,Fix: Incorrect tree hash in Artifacts.toml (#520),,Fix: Incorrect tree hash in Artifacts.toml (#520),
+167,Bump version,,Bump version,
+168,Add 32 bit Windows gcc artifact (#516), Add 32 bit Windows gcc artifact,Add 32 bit Windows gcc artifact (#516),Add 32 bit Windows gcc artifact
+169,bump version,,bump version,
+170,Adapt to changes in Pkg.Operation method signatures under Julia 1.7. (#512),,Adapt to changes in Pkg.Operation method signatures under Julia 1.7. (#512),
+171,use Pkg.precompile instead of loading packages to ensure they are precompiled (#505),,use Pkg.precompile instead of loading packages to ensure they are precompiled (#505),
+172,be more explicit about where the file precompile_plots.jl is located,,be more explicit about where the file precompile_plots.jl is located,
+173,"Remove 1.5.2 CI, re-run on 1.6 (#497)", run on version 1  Co-authored-by: Kristoffer Carlsson kcarlsson89@gmail.com,"Remove 1.5.2 CI, re-run on 1.6 (#497)",run on version 1 Co-authored-by: Kristoffer Carlsson kcarlsson89@gmail.com
+174,"Allow the precompile script to write to stdout, and fence output. (#485)"," Run the precompile script to not silence stdout.  Since print statements in a user's precompile script are controlled by them, it's useful to allow the user to decide whether or not they want to emit stdout output when running their precompile script. This kind of output can be useful for diagnosing why the build failed and for printing status messages during execution, etc.   Add precompile output fences   Add newlines before and after precompile execution fences ","Allow the precompile script to write to stdout, and fence output. (#485)","Run the precompile script to not silence stdout. Since print statements in a user's precompile script are controlled by them, it's useful to allow the user to decide whether or not they want to emit stdout output when running their precompile script. This kind of output can be useful for diagnosing why the build failed and for printing status messages during execution, etc. Add precompile output fences Add newlines before and after precompile execution fences"
+175,Add 1.6 beta1 to CI (#493),,Add 1.6 beta1 to CI (#493),
+176,bump version (#491),,bump version (#491),
+177,Merge pull request #476 from ianshmean/ib/artifact_app,Fix empty sysimage test on 1.5.3. Fix app test on nightly,Merge pull request #476 from ianshmean/ib/artifact_app,Fix empty sysimage test on 1.5.3. Fix app test on nightly
+178,add a note to the devdocs that they are in fact devdocs (#481),,add a note to the devdocs that they are in fact devdocs (#481),
+179,Reword and link to an explanation of type-piracy (#477),,Reword and link to an explanation of type-piracy (#477),
+180,instantiate during create_app,,instantiate during create_app,
+181,delete app manifest,,delete app manifest,
+182,clear atexit hooks during sysimage build,,clear atexit hooks during sysimage build,
+183,rm artifacts too,,rm artifacts too,
+184,Streaming read of precompile statement files (#454),,Streaming read of precompile statement files (#454),
+185,bump version,,bump version,
+186,Update for 1.6 linking and handle stdlibs that aren't in the sysimage (#471),  differentiate stdlibs in sysimage from those that aren't   link to julia-internal on 1.6   guard a bit more 1.6 code   fix STLIB path on windows ,Update for 1.6 linking and handle stdlibs that aren't in the sysimage (#471),differentiate stdlibs in sysimage from those that aren't link to julia-internal on 1.6 guard a bit more 1.6 code fix STLIB path on windows
+187,RIP travis,,RIP travis,
+188,Add github actions tests (#472),  add github actions tests   explicitly test 1.5.2 & 1.5.3 to check against last travis run on 1.5.2 ,Add github actions tests (#472),add github actions tests explicitly test 1.5.2 & 1.5.3 to check against last travis run on 1.5.2
+189,also call init_active_project when required (#460),,also call init_active_project when required (#460),
+190,stop testing on 1.3,,stop testing on 1.3,
+191,bump version,,bump version,
+192,Fix insufficient escaping (#459),  Fix insufficient escaping.   Minor doc fix. ,Fix insufficient escaping (#459),Fix insufficient escaping. Minor doc fix.
+193,Merge pull request #448 from JuliaLang/omus-patch-1,Update Travis CI badge,Merge pull request #448 from JuliaLang/omus-patch-1,Update Travis CI badge
+194,stop testing on 1.4,,stop testing on 1.4,
+195,bump version,,bump version,
+196,improve vararg precompilation statements (#447),,improve vararg precompilation statements (#447),
+197,Update Travis CI badge,,Update Travis CI badge,
+198,fix a very small typo. (#435),,fix a very small typo. (#435),
+199,Correct spelling in sysimages.md (#426),"Replace ""where"" with ""were"" in sysimages.md.",Correct spelling in sysimages.md (#426),"Replace ""where"" with ""were"" in sysimages.md."
+200,Ensure @artifact is skipped on non-windows platforms (#443),"Because newer @artifact macros do more work at compile-time, we need to use a compile-time if statement here to avoid running the macro at all on non-windows systems. Fixes #442",Ensure @artifact is skipped on non-windows platforms (#443),"Because newer @artifact macros do more work at compile-time, we need to use a compile-time if statement here to avoid running the macro at all on non-windows systems. Fixes #442"
+201,Do not recommend replacing the default sysimage (#439)," Do not recommend replacing the default sysimage  Due to various issues with compatibility with other packages, do not recommend replacing the default sysimage. Propose alternatives such as an alias.",Do not recommend replacing the default sysimage (#439),"Do not recommend replacing the default sysimage Due to various issues with compatibility with other packages, do not recommend replacing the default sysimage. Propose alternatives such as an alias."
+202,Add Julia 1.5 to test matrix (#440),,Add Julia 1.5 to test matrix (#440),
+203,Fixed a typo (#430),replace_defalt -> replace_default,Fixed a typo (#430),replace_defalt -> replace_default
+204,Correct spelling in sysimages.md (#422),"Replace ""where"" with ""were"" in sysimages.md.",Correct spelling in sysimages.md (#422),"Replace ""where"" with ""were"" in sysimages.md."
+205,bump version,,bump version,
+206,Use import to precompile packages (instead of using using) (#421),,Use import to precompile packages (instead of using using) (#421),
+207,Merge pull request #420 from JuliaLang/sf/older_hash,Use older hash,Merge pull request #420 from JuliaLang/sf/older_hash,Use older hash
+208,Use older hash,Older Julias use a flawed hashing algorithm; for now we need to continue to use it.  The Pkg and Storage servers will work around it properly.,Use older hash,Older Julias use a flawed hashing algorithm; for now we need to continue to use it.  The Pkg and Storage servers will work around it properly.
+209,Update Project.toml,,Update Project.toml,
+210,Fix tree hash for win64 compiler shard (#395),  Fix tree hash for win64 compiler shard   Update windows compiler shard to point to this repository   Use skip=no hash ,Fix tree hash for win64 compiler shard (#395),Fix tree hash for win64 compiler shard Update windows compiler shard to point to this repository Use skip=no hash
+211,Allow passing a custom c program to create_app() (#415)," Allow passing a custom c program to create_app()  This will support users who need to set arbitrary julia jl_options for julia_init. For example, configuring the binary to always run with -O1 or --compile=min. It will of course then also support any other arbitrary changes to the C program a user may want to make.  Treat c_driver_program() as relative to the caller's pwd.",Allow passing a custom c program to create_app() (#415),"Allow passing a custom c program to create_app() This will support users who need to set arbitrary julia jl_options for julia_init. For example, configuring the binary to always run with -O1 or --compile=min. It will of course then also support any other arbitrary changes to the C program a user may want to make. Treat c_driver_program() as relative to the caller's pwd."
+212,fix typo 'julia-q' -> 'julia -q' (#414),,fix typo 'julia-q' -> 'julia -q' (#414),
+213,add a warning that PackageCompiler requires a bit of background knowl… (#408),  add a warning that PackageCompiler requires a bit of background knowledge   Update docs/src/index.md   Co-authored-by: Fredrik Ekre ekrefredrik@gmail.com  Update docs/src/index.md  Co-authored-by: Rafael Fourquet fourquet.rafael@gmail.com Co-authored-by: Fredrik Ekre ekrefredrik@gmail.com Co-authored-by: Rafael Fourquet fourquet.rafael@gmail.com,add a warning that PackageCompiler requires a bit of background knowl… (#408),add a warning that PackageCompiler requires a bit of background knowledge Update docs/src/index.md Co-authored-by: Fredrik Ekre ekrefredrik@gmail.com Update docs/src/index.md Co-authored-by: Rafael Fourquet fourquet.rafael@gmail.com Co-authored-by: Fredrik Ekre ekrefredrik@gmail.com Co-authored-by: Rafael Fourquet fourquet.rafael@gmail.com
+214,Fix typo in sysimages_part_1.md (#407),,Fix typo in sysimages_part_1.md (#407),
+215,Docs: Higher level overview of functionality (#397),"This aims to use a more workflow-based approach -- that is, lead with they why instead of the what.",Docs: Higher level overview of functionality (#397),"This aims to use a more workflow-based approach -- that is, lead with they why instead of the what."
+216,cp -> mv (#399),Otherwise MyApp will be there preventing a mkdir MyApp,cp -> mv (#399),Otherwise MyApp will be there preventing a mkdir MyApp
+217,typo (#398),,typo (#398),
+218,Clean up formatting in upgrade.md (#387),Remove some bad newlines,Clean up formatting in upgrade.md (#387),Remove some bad newlines
+219,[docs] Fix link in apps.md (#386),Link was not previously clickable,[docs] Fix link in apps.md (#386),Link was not previously clickable
+220,remove debug libraries (#384),,remove debug libraries (#384),
+221,use a set to collect artifact paths to remove duplicates (#382), use a set to collect artifact paths to remove duplicates,use a set to collect artifact paths to remove duplicates (#382),use a set to collect artifact paths to remove duplicates
+222,bump version,,bump version,
+223,Use dirname in stead of ../.. on the executable name. (#380),"Using the relative path (../..) concatenated to the executable is not a valid path. We noticed this when the compiled application opened an external julia process, which tried to run a mkpath on the DEPOT_PATH, which was set (via environment in src/embedded.c) to the concatenated path, resulting in a obscure error: ERROR: IOError: mkdir: file already exists (EEXIST)",Use dirname in stead of ../.. on the executable name. (#380),"Using the relative path (../..) concatenated to the executable is not a valid path. We noticed this when the compiled application opened an external julia process, which tried to run a mkpath on the DEPOT_PATH, which was set (via environment in src/embedded.c) to the concatenated path, resulting in a obscure error: ERROR: IOError: mkdir: file already exists (EEXIST)"
+224,bump version,,bump version,
+225,create new_sysimage_source_path in temp folder (#367),Co-authored-by: Matsievskiy S.V matsievskiysv@gmail.com,create new_sysimage_source_path in temp folder (#367),Co-authored-by: Matsievskiy S.V matsievskiysv@gmail.com
+226,Allow user to specify a custom binary name (#349), Allow user to specify a custom app name,Allow user to specify a custom binary name (#349),Allow user to specify a custom app name
+227,fix the example showing how to get the path to an artifact (#363),,fix the example showing how to get the path to an artifact (#363),
+228,Update LICENSE file for GitHub detection (#359),,Update LICENSE file for GitHub detection (#359),
+229,fix breakage in 1.4 rc2 (#358),,fix breakage in 1.4 rc2 (#358),
+230,Bump patch version,,Bump patch version,
+231,also abspath the precompile execution file (#353),,also abspath the precompile execution file (#353),
+232,(close the bracket in error message (#347),[skip ci],(close the bracket in error message (#347),[skip ci]
+233,fix typo error in code to create sysimage (#346),,fix typo error in code to create sysimage (#346),
+234,add some upgrade notes for pre 1.0 PackageCompiler (#343),,add some upgrade notes for pre 1.0 PackageCompiler (#343),
+235,Fix plots example code block (#328),  Update plots.md   Use --sysimage in plots example   Update plots.md ,Fix plots example code block (#328),Update plots.md Use --sysimage in plots example Update plots.md
+236,Require that Travis passes on nightly (#342),,Require that Travis passes on nightly (#342),
+237,WIP: fix package on 1.4 (#339),  fix package on 1.4   properly create a project for testing ,WIP: fix package on 1.4 (#339),fix package on 1.4 properly create a project for testing
+238,use a unique name for the custom sysimage file (#340),  use a unique name for the custom sysimage file   Update PackageCompiler.jl   Update PackageCompiler.jl ,use a unique name for the custom sysimage file (#340),use a unique name for the custom sysimage file Update PackageCompiler.jl Update PackageCompiler.jl
+239,be more correct when it comes to env handling (#338),,be more correct when it comes to env handling (#338),
+240,Grammar/typo (#331),[skip ci],Grammar/typo (#331),[skip ci]
+241,Some very minor improvements to the docstring of create_app (#334),,Some very minor improvements to the docstring of create_app (#334),
+242,Typos (#330),[skp ci],Typos (#330),[skp ci]
+243,Rewrite maximum call in base sysimg.jl to fix error when stdlibs is e… (#325),  Rewrite maximum call in base sysimg.jl to fix error when stdlibs is empty.   Add a test for generating an empty sysimage. ,Rewrite maximum call in base sysimg.jl to fix error when stdlibs is e… (#325),Rewrite maximum call in base sysimg.jl to fix error when stdlibs is empty. Add a test for generating an empty sysimage.
+244,Run Travis on Julia nightly (but allow tests to fail on Julia nightly) (#313),,Run Travis on Julia nightly (but allow tests to fail on Julia nightly) (#313),
+245,Build documentation on tag as well (#309),,Build documentation on tag as well (#309),
+246,fix a typo,,fix a typo,
+247,Re-enable TagBot on this repository (#312),,Re-enable TagBot on this repository (#312),
+248,"Travis: In the after_success step, submit to Codecov (#314)",,"Travis: In the after_success step, submit to Codecov (#314)",
+249,fix badges,,fix badges,
+250,"On Travis x86, install GCC 8 (#315)","  Travis: On Linux x86, manually install GCC 8   Update .travis.yml ","On Travis x86, install GCC 8 (#315)","Travis: On Linux x86, manually install GCC 8 Update .travis.yml"
+251,Merge pull request #304 from JuliaLang/kc/packagecompilerx,Total rewrite of the package (aka make PackageCompilerX the new PackageCompiler),Merge pull request #304 from JuliaLang/kc/packagecompilerx,Total rewrite of the package (aka make PackageCompilerX the new PackageCompiler)
+252,add back authors to LICENSE file,Co-Authored-By: Dilum Aluthge dilum@aluthge.com,add back authors to LICENSE file,Co-Authored-By: Dilum Aluthge dilum@aluthge.com
+253,Some fixes for documentation build and deployment (#307),  JuliaComputing -> JuliaLang   Build documentation on correct conditions   push to master and pull request based on master,Some fixes for documentation build and deployment (#307),JuliaComputing -> JuliaLang Build documentation on correct conditions push to master and pull request based on master
+254,Add default value (no packages) to create_sysimage. (#306),,Add default value (no packages) to create_sysimage. (#306),
+255,Allow PRs to push preview documentation (#305),,Allow PRs to push preview documentation (#305),
+256,use better defaults for march and cpu target (#105),,use better defaults for march and cpu target (#105),
+257,rename PackageCompilerX to PackageCompiler,,rename PackageCompilerX to PackageCompiler,
+258,update Project uuid and version,,update Project uuid and version,
+259,Try fix arm64 (#100), add arm64 to travis,Try fix arm64 (#100),add arm64 to travis
+260,add an option to include a script into the sysimage (#103),,add an option to include a script into the sysimage (#103),
+261,Allow user to customize cpu_target in create_app (#101),Co-authored-by: Dilum Aluthge dilum@aluthge.com,Allow user to customize cpu_target in create_app (#101),Co-authored-by: Dilum Aluthge dilum@aluthge.com
+262,tweak how default sysimage is replaced on Windows (#95),  tweak how default sysimage is replaced   tweak   mv instead of cp and rm ,tweak how default sysimage is replaced on Windows (#95),tweak how default sysimage is replaced tweak mv instead of cp and rm
+263,Use artifacts on windows to get the compiler (#91), artifacts for windows compiler,Use artifacts on windows to get the compiler (#91),artifacts for windows compiler
+264,set BINDIR in output process (#92),,set BINDIR in output process (#92),
+265,add a note to say to use official binaries,,add a note to say to use official binaries,
+266,use travis for building docs (#88),,use travis for building docs (#88),
+267,Docs: Document how to use a package's test suite to generate precompile statements,,Docs: Document how to use a package's test suite to generate precompile statements,
+268,Add cpu_target to the docstrings of create_app and create_sysimage,tweak docstring,Add cpu_target to the docstrings of create_app and create_sysimage,tweak docstring
+269,fixup links after repo move (#87),,fixup links after repo move (#87),
+270,fix highlighting,,fix highlighting,
+271,fixup docs for create_app,,fixup docs for create_app,
+272,add some langauge keys to code blocks,,add some langauge keys to code blocks,
+273,add a DOCUMENTER_KEY to github workflow,,add a DOCUMENTER_KEY to github workflow,
+274,Add some flags to be more correct on 32 bit (#58),,Add some flags to be more correct on 32 bit (#58),
+275,bump Documenter version,,bump Documenter version,
+276,add a Plots.jl example (#82),  add a Plots.jl example   more ,add a Plots.jl example (#82),add a Plots.jl example more
+277,require 1.3.1,,require 1.3.1,
+278,Don't show failed to execute messages by default (#79),,Don't show failed to execute messages by default (#79),
+279,change to just use using (#77),,change to just use using (#77),
+280,fix path to sysimg (#74),,fix path to sysimg (#74),
+281,fix depot path (#75),,fix depot path (#75),
+282,fix precompilation path (#73),,fix precompilation path (#73),
+283,use compilecache instead of using in output process (#71), use compilecache instead of using in output process,use compilecache instead of using in output process (#71),use compilecache instead of using in output process
+284,dont run full Base init and do some cleanup (#70),,dont run full Base init and do some cleanup (#70),
+285,do not try bundle artifacts that dont have an entry for our system (#69),,do not try bundle artifacts that dont have an entry for our system (#69),
+286,improve testing (#60), improve testing,improve testing (#60),improve testing
+287,Documentation: typos and wording in apps.md (#66),Fixes some typos and clarifies some wording in docs/src/apps.md.,Documentation: typos and wording in apps.md (#66),Fixes some typos and clarifies some wording in docs/src/apps.md.
+288,fix typos (#65),,fix typos (#65),
+289,fix order of check (#64),,fix order of check (#64),
+290,update Documenter,,update Documenter,
+291,Deploy docs with GitHub actions (#62)," Revert ""remove github documenter workflow""  This reverts commit dacb45b00005325fc5a04efa62a7646e3bc2c054.   do not run documenter on travis   pretty urls ",Deploy docs with GitHub actions (#62),"Revert ""remove github documenter workflow"" This reverts commit dacb45b00005325fc5a04efa62a7646e3bc2c054. do not run documenter on travis pretty urls"
+292,remove github documenter workflow,,remove github documenter workflow,
+293,some proof reading (#61),,some proof reading (#61),
+294,Update intro.md,,Update intro.md,
+295,Update index.md,,Update index.md,
+296,Update README.md,,Update README.md,
+297,add docstrings (#59),  add docstrings   add some more ,add docstrings (#59),add docstrings add some more
+298,Developer docs (#57),  import the blog posts   wip   move blogposts to docs   some tweaks ,Developer docs (#57),import the blog posts wip move blogposts to docs some tweaks
+299,Update Project.toml,,Update Project.toml,
+300,Windows ci (#56), enable windows CI,Windows ci (#56),enable windows CI
+301,workaround julia#34076 (#54),  workaround julia#34076   fix typo ,workaround julia#34076 (#54),workaround julia#34076 fix typo
+302,WIP on making app work on windows. (#55),  wip make app work on windows   wip win   test artifact load path   realpath ,WIP on making app work on windows. (#55),wip make app work on windows wip win test artifact load path realpath
+303,fix some links,,fix some links,
+304,improvements to cpu targets (#43),  improvements to cpu targets   more   more   remove precompile from testing due to https://github.com/JuliaLang/julia/issues/34076 ,improvements to cpu targets (#43),improvements to cpu targets more more remove precompile from testing due to link
+305,CompatHelper: only update root manifest (#50),,CompatHelper: only update root manifest (#50),
+306,Create CompatHelper.yml (#48),,Create CompatHelper.yml (#48),
+307,add a mention that this is still WIP,,add a mention that this is still WIP,
+308,fix a typo (#41),,fix a typo (#41),
+309,docs: fix typo (#40),,docs: fix typo (#40),
+310,fix typo in docs,,fix typo in docs,
+311,fix support,,fix support,
+312,add docs for apps (#37),,add docs for apps (#37),
+313,Initial work on docs (#34),,Initial work on docs (#34),
+314,try not use rpath to local julia install on linux (#23),Don't add an rpath to local absolute path,try not use rpath to local julia install on linux (#23),Don't add an rpath to local absolute path
+315,only include needed stdlibs in apps (#25),  wip only using needed stdlibs   only include needed stdlibs in apps   make default off ,only include needed stdlibs in apps (#25),wip only using needed stdlibs only include needed stdlibs in apps make default off
+316,fix on macos (#21),,fix on macos (#21),
+317,add option to compile with incremental=false and set to default (#19),,add option to compile with incremental=false and set to default (#19),
+318,add an audit function (#17),,add an audit function (#17),
+319,Implement a create app function that bundles everything needed to run it. (#13),,Implement a create app function that bundles everything needed to run it. (#13),
+320,start with an create_app function,,start with an create_app function,
+321,fix windows,,fix windows,
+322,fixups,,fixups,
+323,use Travis for docs (#8),,use Travis for docs (#8),
+324,add an example (#7),,add an example (#7),
+325,some generalizations,,some generalizations,
+326,allow for multiple packages,,allow for multiple packages,
+327,use gcc for now,,use gcc for now,
+328,implement support for precompile file (#5), implement support for precompile file,implement support for precompile file (#5),implement support for precompile file
+329,test build script from PackageCompiler (#1),make a hardcoded app,test build script from PackageCompiler (#1),make a hardcoded app
+330,Files generated by PkgTemplates,,Files generated by PkgTemplates,
+331,clear everything out,,clear everything out,
+332,Merge pull request #303 from JuliaTagBot/master,Install TagBot as a GitHub Action,Merge pull request #303 from JuliaTagBot/master,Install TagBot as a GitHub Action
+333,Install TagBot as a GitHub Action,,Install TagBot as a GitHub Action,
+334,Merge pull request #302 from mcabbott/patch-1,Allow WinRPM 1.0,Merge pull request #302 from mcabbott/patch-1,Allow WinRPM 1.0
+335,allow WinRPM 1.0,https://github.com/JuliaPackaging/WinRPM.jl/pull/177,allow WinRPM 1.0,link
+336,tagging,,tagging,
+337,Merge pull request #285 from jheinen/master,Update static_julia.jl,Merge pull request #285 from jheinen/master,Update static_julia.jl
+338,Merge pull request #294 from aminya/master,Using WinRPM 0.4.3,Merge pull request #294 from aminya/master,Using WinRPM 0.4.3
+339,Merge pull request #275 from j-fu/master,Allow to precompile Makie by fixing issue #271,Merge pull request #275 from j-fu/master,Allow to precompile Makie by fixing issue #271
+340,Julia 1.3 CI test,,Julia 1.3 CI test,
+341,Using WinRPM 0.4.3,Should fix https://github.com/JuliaLang/PackageCompiler.jl/issues/293.,Using WinRPM 0.4.3,Should fix link.
+342,Update static_julia.jl,,Update static_julia.jl,
+343,Merge pull request #284 from stanleyjs/patch-1,Add hashbang to juliac.jl,Merge pull request #284 from stanleyjs/patch-1,Add hashbang to juliac.jl
+344,Add hashbang to juliac.jl ,Right now you need to use julia juliac.jl <args>.  Simply adding this hashbang should make it so one can symlink the compiler into a directory on their $PATH and call it using ln juliac.jl -T $some_path_dir.  They may need to chmod a+x juliac.jl,Add hashbang to juliac.jl ,Right now you need to use julia juliac.jl .  Simply adding this hashbang should make it so one can symlink the compiler into a directory on their $PATH and call it using ln juliac.jl -T $some_path_dir.  They may need to chmod a+x juliac.jl
+345,Merge pull request #279 from asinghvi17/patch-3,Update build process with better placed info messages,Merge pull request #279 from asinghvi17/patch-3,Update build process with better placed info messages
+346,Add installation instructions for GCC on MacOS and Linux,,Add installation instructions for GCC on MacOS and Linux,
+347,Update build process with better placed info messages,,Update build process with better placed info messages,
+348,Update src/snooping.jl,"Suggestion by @asinghvi17, seems to work as well. Co-Authored-By: Anshul Singhvi asinghvi17@simons-rock.edu",Update src/snooping.jl,"Suggestion by @asinghvi17, seems to work as well. Co-Authored-By: Anshul Singhvi asinghvi17@simons-rock.edu"
+349,Allow to precompile Makie by fixing issue #271 according,to https://github.com/JuliaLang/PackageCompiler.jl/issues/271#issuecomment-532443430,Allow to precompile Makie by fixing issue #271 according,to link
+350,Merge pull request #264 from kdheepak/kd/disable-startup-file,"Add startup_file = ""no"" to run_julia",Merge pull request #264 from kdheepak/kd/disable-startup-file,"Add startup_file = ""no"" to run_julia"
+351,"Add startup_file = ""no"" to run_julia",,"Add startup_file = ""no"" to run_julia",
+352,Merge pull request #263 from taylormcd/patch-2,add force=true when replacing system image,Merge pull request #263 from taylormcd/patch-2,add force=true when replacing system image
+353,add force=true when replacing system image,fixes #253,add force=true when replacing system image,fixes #253
+354,Create FUNDING.yml,,Create FUNDING.yml,
+355,Merge pull request #237 from travigd/master,Update build_sysimg to match docstring.,Merge pull request #237 from travigd/master,Update build_sysimg to match docstring.
+356,Merge pull request #244 from JuliaLang/sd-tag,get ready for release,Merge pull request #244 from JuliaLang/sd-tag,get ready for release
+357,add ArgParse as test dependency,,add ArgParse as test dependency,
+358,remove binbuilder artifact,,remove binbuilder artifact,
+359,delete require,,delete require,
+360,use Project.toml,,use Project.toml,
+361,Update build_sysimg to match docstring.,,Update build_sysimg to match docstring.,
+362,Merge pull request #219 from NHDaly/verbose_print_snoopfile,Add verbose println for snoop w/ name of snoopfile,Merge pull request #219 from NHDaly/verbose_print_snoopfile,Add verbose println for snoop w/ name of snoopfile
+363,Merge pull request #218 from JuliaLang/sd-include,make include well behaved,Merge pull request #218 from JuliaLang/sd-include,make include well behaved
+364,Add verbose println for snoop w/ name of snoopfile,,Add verbose println for snoop w/ name of snoopfile,
+365,include in anonymous module,,include in anonymous module,
+366,Merge pull request #213 from tkf/hooks,Avoid serializing Base.repl_hooks and Base.package_callbacks,Merge pull request #213 from tkf/hooks,Avoid serializing Base.repl_hooks and Base.package_callbacks
+367,Try not to serialize disable_library_threading_hooks,,Try not to serialize disable_library_threading_hooks,
+368,Try not to serialize Base.repl_hooks,,Try not to serialize Base.repl_hooks,
+369,Try not to serialize Base.package_callbacks,,Try not to serialize Base.package_callbacks,
+370,Merge pull request #196 from asinghvi17/as/readme,Add some warnings about the dangers of PackageCompiler,Merge pull request #196 from asinghvi17/as/readme,Add some warnings about the dangers of PackageCompiler
+371,Add some warnings about the dangers of PackageCompiler,,Add some warnings about the dangers of PackageCompiler,
+372,Merge pull request #191 from CompGeoInc/pkg-snoopfile,Add support for snoopfiles in packages and blacklisting of packages,Merge pull request #191 from CompGeoInc/pkg-snoopfile,Add support for snoopfiles in packages and blacklisting of packages
+373,Add support for snoopfiles in packages and blacklisting of packages during snooping,,Add support for snoopfiles in packages and blacklisting of packages during snooping,
+374,"Test on Julia 1.1, allow failures on nightly. (#183)",,"Test on Julia 1.1, allow failures on nightly. (#183)",
+375,Update README.md,,Update README.md,
+376,Merge pull request #179 from JuliaLang/sd-manifest,copy & merge package manifest,Merge pull request #179 from JuliaLang/sd-manifest,copy & merge package manifest
+377,fix tests,,fix tests,
+378,remove unused functions,,remove unused functions,
+379,add fix for unregistered packages,,add fix for unregistered packages,
+380,copy & merge package manifest,,copy & merge package manifest,
+381,Merge pull request #177 from tlienart/patch-1,typo fix in docstring,Merge pull request #177 from tlienart/patch-1,typo fix in docstring
+382,Merge pull request #176 from musm/patch-1,use === for comparisons to nothing,Merge pull request #176 from musm/patch-1,use === for comparisons to nothing
+383,typo fix in docstring,,typo fix in docstring,
+384,Update system_image.jl,,Update system_image.jl,
+385,use === for comparisons to nothing,,use === for comparisons to nothing,
+386,Merge pull request #175 from JuliaLang/sd-precompile_toml,precompile toml,Merge pull request #175 from JuliaLang/sd-precompile_toml,precompile toml
+387,Merge branch 'master' into sd-precompile_toml,,Merge branch 'master' into sd-precompile_toml,
+388,remove chmod,,remove chmod,
+389,Merge pull request #174 from raphbacher/patch-1,Writing permission for Project.toml,Merge pull request #174 from raphbacher/patch-1,Writing permission for Project.toml
+390,refactor,,refactor,
+391,activate toml in precompile as well,,activate toml in precompile as well,
+392,Update pkg.jl,add writing permission when copying Project.toml from .julia/packages,Update pkg.jl,add writing permission when copying Project.toml from .julia/packages
+393,Merge pull request #173 from JuliaLang/sd-pgkcompile,get back compile_package,Merge pull request #173 from JuliaLang/sd-pgkcompile,get back compile_package
+394,remove isnothing,,remove isnothing,
+395,use @vtjnash way to deal with recursive deps,,use @vtjnash way to deal with recursive deps,
+396,remove unused,,remove unused,
+397,remove debug + print less,,remove debug + print less,
+398,fix snooping for other parts of PackageCompiler,,fix snooping for other parts of PackageCompiler,
+399,get back compile_package,,get back compile_package,
+400,Merge pull request #172 from asinghvi17/patch-1,Add compile_incremental to exports,Merge pull request #172 from asinghvi17/patch-1,Add compile_incremental to exports
+401,Add compile_incremental to exports,,Add compile_incremental to exports,
+402,add incremental compilation + improve snooping,  fix snooping   fix precompile file   fixes to compile more   rename   fix remaining issues   do the snoopy thingy   add cleaner incremental solution   escape correctly   don't rebuild for snooping   fix typo   fix broadcast   work with non toml packages   clean up snoop + incremental - fix bugs   fix some more bugs:   add docstrings   add the packages we need to manifest   add tests   better tests + fixes for tests   remove failing tests   remove more   fix tests   fix tests   correctly include pgk compiler   fix windows bugs   no success   Update src/incremental.jl   Co-Authored-By: SimonDanisch sdanisch@gmail.com  Apply suggestions from code review  Co-Authored-By: SimonDanisch sdanisch@gmail.com   cosmetics   correctly implement run_julia   fix flags   fix tags + add multi package compile   use correct flags   use package toml   parse test REQUIRE even if toml is present   allow snoop file to error   fix atexit   use sysimgfolder idiomatically   also add packages from toml   fix bug + easier reuse ,add incremental compilation + improve snooping,fix snooping fix precompile file fixes to compile more rename fix remaining issues do the snoopy thingy add cleaner incremental solution escape correctly don't rebuild for snooping fix typo fix broadcast work with non toml packages clean up snoop + incremental - fix bugs fix some more bugs: add docstrings add the packages we need to manifest add tests better tests + fixes for tests remove failing tests remove more fix tests fix tests correctly include pgk compiler fix windows bugs no success Update src/incremental.jl Co-Authored-By: SimonDanisch sdanisch@gmail.com Apply suggestions from code review Co-Authored-By: SimonDanisch sdanisch@gmail.com cosmetics correctly implement run_julia fix flags fix tags + add multi package compile use correct flags use package toml parse test REQUIRE even if toml is present allow snoop file to error fix atexit use sysimgfolder idiomatically also add packages from toml fix bug + easier reuse
+403,Merge pull request #167 from NHDaly/julia_cmd_flexibility-v1.1,Fix for julia v1.1: allow Base.julia_cmd() to contain unexpected flags (adds future-compatibility),Merge pull request #167 from NHDaly/julia_cmd_flexibility-v1.1,Fix for julia v1.1: allow Base.julia_cmd() to contain unexpected flags (adds future-compatibility)
+404,Merge branch 'master' into julia_cmd_flexibility-v1.1,,Merge branch 'master' into julia_cmd_flexibility-v1.1,
+405,Display the broken julia_cmd on error so the user can identify the problem (#166),,Display the broken julia_cmd on error so the user can identify the problem (#166),
+406,Set --code-coverage=none in spawned julia process.,,Set --code-coverage=none in spawned julia process.,
+407,Pass julia_cmd as arg for clarity,,Pass julia_cmd as arg for clarity,
+408,"Allow editing julia_cmds with any structure, for forward-compatibility with Julia flag changes",,"Allow editing julia_cmds with any structure, for forward-compatibility with Julia flag changes",
+409,Display the broken julia_cmd on error so the user can identify the problem,,Display the broken julia_cmd on error so the user can identify the problem,
+410,Fix juliaprog is nothing in static_julia (#157),,Fix juliaprog is nothing in static_julia (#157),
+411,Fix --cc-flag to allow multiple flags (#150),,Fix --cc-flag to allow multiple flags (#150),
+412,Fix a typo: JULIAC_PROGRAMLIBNAME (#143),,Fix a typo: JULIAC_PROGRAMLIBNAME (#143),
+413,package and precompile paths should be given as tuples (#130),,package and precompile paths should be given as tuples (#130),
+414,Update Travis CI configuration,,Update Travis CI configuration,
+415,Update TODO comments,,Update TODO comments,
+416,Change --Release flag behavior (#127),,Change --Release flag behavior (#127),
+417,Fix Pkg.dir deprecation (#126),,Fix Pkg.dir deprecation (#126),
+418,Fix deprecations (#124),,Fix deprecations (#124),
+419,Remove temporary note on Julia v0.7 support,,Remove temporary note on Julia v0.7 support,
+420,Merge pull request #116 from vtjnash/lucatrv-move-to-julia07,Move to Julia 1.0,Merge pull request #116 from vtjnash/lucatrv-move-to-julia07,Move to Julia 1.0
+421,fix text formatting for -J info message,,fix text formatting for -J info message,
+422,fix UB issues with #123,,fix UB issues with #123,
+423,add try/catch for all precompile.jl,,add try/catch for all precompile.jl,
+424,add --sysroot to gcc,it seems that gcc is not installed quite how it expects to be add --sysroot to help it find itself,add --sysroot to gcc,it seems that gcc is not installed quite how it expects to be add --sysroot to help it find itself
+425,gcc doesn't work unless it's in the PATH on Windows,,gcc doesn't work unless it's in the PATH on Windows,
+426,Update and rename appveyor.yml to .appveyor.yml,,Update and rename appveyor.yml to .appveyor.yml,
+427,update SnoopCompile incantation for v1.0,"and update Pkg references, to only use packages in the test Manifest and update SnoopCompile/precompile.jl file isolation for v1.0",update SnoopCompile incantation for v1.0,"and update Pkg references, to only use packages in the test Manifest and update SnoopCompile/precompile.jl file isolation for v1.0"
+428,Use ArgParse and SnoopCompile for testing,,Use ArgParse and SnoopCompile for testing,
+429,Fix snooping functions,,Fix snooping functions,
+430,Fix replace syntax,,Fix replace syntax,
+431,Update using statements,,Update using statements,
+432,Set 'Travis CI' and 'AppVeyor' to test on Julia 1.0,,Set 'Travis CI' and 'AppVeyor' to test on Julia 1.0,
+433,Update all flags for Julia 1.0,,Update all flags for Julia 1.0,
+434,Fix Base.Test deprecation,,Fix Base.Test deprecation,
+435,Fix remove_destination deprecation,,Fix remove_destination deprecation,
+436,Fix Base.STDOUT deprecation,,Fix Base.STDOUT deprecation,
+437,Use Serialization,,Use Serialization,
+438,Update hello.jl example,,Update hello.jl example,
+439,Remove legacy code,,Remove legacy code,
+440,Update @info messages,,Update @info messages,
+441,Update @warn messages,,Update @warn messages,
+442,Update error messages,,Update error messages,
+443,Require Julia 0.7,,Require Julia 0.7,
+444,Merge pull request #123 from lucatrv/phlavenk-ph,Add init-shared flag,Merge pull request #123 from lucatrv/phlavenk-ph,Add init-shared flag
+445,Code tweaks,,Code tweaks,
+446,bugfix image compilation,,bugfix image compilation,
+447,Add shared_init keyword,,Add shared_init keyword,
+448,Merge pull request #121 from JackDunnNZ/jd/cpu,Add cpu_target kwarg to compile_package,Merge pull request #121 from JackDunnNZ/jd/cpu,Add cpu_target kwarg to compile_package
+449,Update documentation and message strings,,Update documentation and message strings,
+450,Add cpu_target kwarg to compile_package,Fixes #118,Add cpu_target kwarg to compile_package,Fixes #118
+451,Add note to start of the README: 0.7 isn't supported yet (#120),,Add note to start of the README: 0.7 isn't supported yet (#120),
+452,Merge pull request #107 from noahstier/SyntaxFix,fix try/catch syntax for 1.0,Merge pull request #107 from noahstier/SyntaxFix,fix try/catch syntax for 1.0
+453,update fix try/catch syntax for 1.0,,update fix try/catch syntax for 1.0,
+454,fix try/catch syntax for 1.0,,fix try/catch syntax for 1.0,
+455,Add Julia v0.7 comments (#105),,Add Julia v0.7 comments (#105),
+456,Update README.md,,Update README.md,
+457,Export build_shared_lib function,,Export build_shared_lib function,
+458,Add --Release flag (#103),,Add --Release flag (#103),
+459,Fix shared library loading issue when renaming builddir (#102),,Fix shared library loading issue when renaming builddir (#102),
+460,Change --copy-file flag,,Change --copy-file flag,
+461,Add --copy-files flag,,Add --copy-files flag,
+462,Add --release flag (#99),,Add --release flag (#99),
+463,Improve --snoopfile flag implementation (#98),,Improve --snoopfile flag implementation (#98),
+464,Add --snoopfile flag (#97),,Add --snoopfile flag (#97),
+465,Set all flag defaults in static_julia.jl (#96),,Set all flag defaults in static_julia.jl (#96),
+466,"Add cc,cc_flags to build_executable,build_shared_lib apis (#95)",,"Add cc,cc_flags to build_executable,build_shared_lib apis (#95)",
+467,Add compiler_flags.jl to avoid running julia-config.jl (#94),,Add compiler_flags.jl to avoid running julia-config.jl (#94),
+468,Merge pull request #93 from lucatrv/fix-platform-checks,Fix platform checks,Merge pull request #93 from lucatrv/fix-platform-checks,Fix platform checks
+469,Fix platform checks,,Fix platform checks,
+470,Merge pull request #92 from lucatrv/improve-program.c-test,Improve program.c test,Merge pull request #92 from lucatrv/improve-program.c-test,Improve program.c test
+471,Improve program.c test,,Improve program.c test,
+472,Merge pull request #91 from lucatrv/fix-debug-flag,Fix --debug flag,Merge pull request #91 from lucatrv/fix-debug-flag,Fix --debug flag
+473,Merge pull request #90 from lucatrv/save-precompiled-modules-locally,Save precompiled modules locally with Julia v0.7,Merge pull request #90 from lucatrv/save-precompiled-modules-locally,Save precompiled modules locally with Julia v0.7
+474,Fix --debug flag,,Fix --debug flag,
+475,Save precompiled modules locally with Julia v0.7,,Save precompiled modules locally with Julia v0.7,
+476,Merge pull request #88 from NHDaly/julia_v0.7_support,Get static_julia working for simple files on julia v0.7!,Merge pull request #88 from NHDaly/julia_v0.7_support,Get static_julia working for simple files on julia v0.7!
+477,"Fix ""julia_v07 not defined""",,"Fix ""julia_v07 not defined""",
+478,Restore Julia v0.6 support,,Restore Julia v0.6 support,
+479,Fix -all_load/--whole-archive for mac vs windows/linux,,Fix -all_load/--whole-archive for mac vs windows/linux,
+480,Merge pull request #89 from lucatrv/improve-julia07-support,Improve Julia v0.7 support,Merge pull request #89 from lucatrv/improve-julia07-support,Improve Julia v0.7 support
+481,Improve Julia v0.7 support,,Improve Julia v0.7 support,
+482,"v0.7: Use -Wl,-all_load on mac and -Wl,-whole-archive otherwise.",,"v0.7: Use -Wl,-all_load on mac and -Wl,-whole-archive otherwise.",
+483,Add Base.init() to v0.7 compilation,,Add Base.init() to v0.7 compilation,
+484,Update julia initialization lines for 0.7 static compilation.,"This calls Base.init_load_path() and Base.init_depot_path() to initialize those, which allows finding installed Packages. It then calls Sys.__init__() which seems to be necessary to import built-in Modules like using Test.",Update julia initialization lines for 0.7 static compilation.,"This calls Base.init_load_path() and Base.init_depot_path() to initialize those, which allows finding installed Packages. It then calls Sys.init() which seems to be necessary to import built-in Modules like using Test."
+485,Fix tests for julia v0.7 for static_julia,,Fix tests for julia v0.7 for static_julia,
+486,Add flag to fix linking shared lib for julia v0.7.,"Building a sysimg is slightly different in julia v0.7:  1. Julia now emits a .a file with the --output-o flag.  2. When linking that .a into a shared library, the compiler might  strip all the code it doesn't think is being used, so you need to tell  it not to with -Wl,-all_load. This commit updates static_julia to reflect those changes.",Add flag to fix linking shared lib for julia v0.7.,"Building a sysimg is slightly different in julia v0.7:  1. Julia now emits a .a file with the --output-o flag.  2. When linking that .a into a shared library, the compiler might  strip all the code it doesn't think is being used, so you need to tell  it not to with -Wl,-all_load. This commit updates static_julia to reflect those changes."
+487,Fix julia v0.7 change: LOAD_CACHE_PATH->DEPOT_PATH.,,Fix julia v0.7 change: LOAD_CACHE_PATH->DEPOT_PATH.,
+488,Merge pull request #57 from NHDaly/PROGRAM_FILE,Set PROGRAM_FILE global via argv[0].,Merge pull request #57 from NHDaly/PROGRAM_FILE,Set PROGRAM_FILE global via argv[0].
+489,Add test that program.c sets up ARGS correctly.,"Tests PROGRAM_FILE, Base.ARGS and Core.ARGS are initialized correctly by program.c.",Add test that program.c sets up ARGS correctly.,"Tests PROGRAM_FILE, Base.ARGS and Core.ARGS are initialized correctly by program.c."
+490,Make program.c set ARGS and PROGRAM_FILE via argv.,"The repl sets ARGS and PROGRAM_FILE via code in Base._start(), which isn't called by compiled programs. This commit adds logic to program.c to set Core.ARGS, Base.ARGS (the global ARGS), and PROGRAM_FILE, all in exactly the same way as the REPL. It then passes a reference to Base.ARGS as the argument to julia_main(ARGS). This replicates the behavior from the repl which sets:   PROGRAM_FILE = argv[0]   Base.ARGS = argv[1:argc]   Core.ARGS = argv[0:argc]",Make program.c set ARGS and PROGRAM_FILE via argv.,"The repl sets ARGS and PROGRAM_FILE via code in Base._start(), which isn't called by compiled programs. This commit adds logic to program.c to set Core.ARGS, Base.ARGS (the global ARGS), and PROGRAM_FILE, all in exactly the same way as the REPL. It then passes a reference to Base.ARGS as the argument to julia_main(ARGS). This replicates the behavior from the repl which sets:   PROGRAM_FILE = argv[0]   Base.ARGS = argv[1:argc]   Core.ARGS = argv[0:argc]"
+491,Merge pull request #77 from NHDaly/patch-1,Add README section on how to build a lib/exe,Merge pull request #77 from NHDaly/patch-1,Add README section on how to build a lib/exe
+492,Update README.md,,Update README.md,
+493,Add README section on how to build a lib/exe,"Add sections to the README explaining how to go about building a shared lib or an executable. Mainly, my goal here was to point out that if a user doesn't specify a custom c program, they need to define julia_main().",Add README section on how to build a lib/exe,"Add sections to the README explaining how to go about building a shared lib or an executable. Mainly, my goal here was to point out that if a user doesn't specify a custom c program, they need to define julia_main()."
+494,Merge pull request #73 from lucatrv/improve-rmtemp,Improve rmtemp implementation,Merge pull request #73 from lucatrv/improve-rmtemp,Improve rmtemp implementation
+495,Print removed temporary files,,Print removed temporary files,
+496,Add rmtemp function,,Add rmtemp function,
+497,Merge pull request #72 from tkoolen/tk/path-fixes,Fix path of precompiled.jl and library as included from julia_main.jl,Merge pull request #72 from tkoolen/tk/path-fixes,Fix path of precompiled.jl and library as included from julia_main.jl
+498,Update build_executable test.,Make it so that test actually passes in a path as the snoopfile argument (instead of nothing). Make it so that test would trigger error described in https://github.com/JuliaLang/PackageCompiler.jl/pull/72 before the fix.,Update build_executable test.,Make it so that test actually passes in a path as the snoopfile argument (instead of nothing). Make it so that test would trigger error described in link before the fix.
+499,Fix path of precompiled.jl and library as included in julia_main.jl,,Fix path of precompiled.jl and library as included in julia_main.jl,
+500,Merge pull request #70 from lucatrv/improve-builddir,Do not change directory when building,Merge pull request #70 from lucatrv/improve-builddir,Do not change directory when building
+501,Update joinpath abspath normpath calls,,Update joinpath abspath normpath calls,
+502,Do not change directory when running tests,,Do not change directory when running tests,
+503,Fix gcc -install_name on macOS to use basename().,Fixes the installed name for .dylibs built on macOS to put the library next to the executable.,Fix gcc -install_name on macOS to use basename().,Fixes the installed name for .dylibs built on macOS to put the library next to the executable.
+504,"Switch ""build_executable"" and ""juliac"" testsets.","The ""build_executable"" testset should run before ""juliac"", since they both test the same executable-building functionality, but ""juliac"" also tests the command-line interface. More practically: this ""juliac"" command doesn't get its stdout printed, so you can't tell why it broke: @test success(`$julia $juliac -vosej $jlfile $cfile --builddir $builddir`) success suppresses the output. This commit simply switches the order so that the cause of test failures will easier to diagnose on Travis.","Switch ""build_executable"" and ""juliac"" testsets.","The ""build_executable"" testset should run before ""juliac"", since they both test the same executable-building functionality, but ""juliac"" also tests the command-line interface. More practically: this ""juliac"" command doesn't get its stdout printed, so you can't tell why it broke: @test success(module) success suppresses the output. This commit simply switches the order so that the cause of test failures will easier to diagnose on Travis."
+505,Do not change directory when building,,Do not change directory when building,
+506,Merge pull request #69 from JuliaLang/sd/07,Sd/07,Merge pull request #69 from JuliaLang/sd/07,Sd/07
+507,Resolve merge conflicts,,Resolve merge conflicts,
+508,remove makie tests,,remove makie tests,
+509,updates from master,,updates from master,
+510,"make 0,7 work",,"make 0,7 work",
+511,Merge pull request #67 from lucatrv/fix-sys-module-julia07,Fix Sys module issue in Julia v0.7,Merge pull request #67 from lucatrv/fix-sys-module-julia07,Fix Sys module issue in Julia v0.7
+512,Fix Void deprecation in Julia v0.7,,Fix Void deprecation in Julia v0.7,
+513,Fix Sys module issue in Julia v0.7,,Fix Sys module issue in Julia v0.7,
+514,Code tweaks (#66),,Code tweaks (#66),
+515,Export static_julia function (#65),,Export static_julia function (#65),
+516,Add --rmtemp flag (#64),,Add --rmtemp flag (#64),
+517,Use autodeps option (#63),,Use autodeps option (#63),
+518,Add other Julia compilation flags,,Add other Julia compilation flags,
+519,"Add --builddir and --outname flags, remove builddir argument (#61)",,"Add --builddir and --outname flags, remove builddir argument (#61)",
+520,Define all flags default values in static_julia(),,Define all flags default values in static_julia(),
+521,Add --cc flag to allow custom system C compiler,,Add --cc flag to allow custom system C compiler,
+522,Code tweaks (#58),,Code tweaks (#58),
+523,Merge pull request #55 from NHDaly/manual_JULIA_HOME,Fix JULIA_HOME manually for all builds.,Merge pull request #55 from NHDaly/manual_JULIA_HOME,Fix JULIA_HOME manually for all builds.
+524,Merge pull request #56 from NHDaly/patch-1,s/SimonDanisch/JuliaLang/ in README build statuses,Merge pull request #56 from NHDaly/patch-1,s/SimonDanisch/JuliaLang/ in README build statuses
+525,s/SimonDanisch/JuliaLang/ in README build statuses,"Fixed build status chips to use this repo instead of the old repo, SimonDanisch/PackageCompiler.jl This commit boosts test coverage by 9% 😝",s/SimonDanisch/JuliaLang/ in README build statuses,"Fixed build status chips to use this repo instead of the old repo, SimonDanisch/PackageCompiler.jl This commit boosts test coverage by 9% 😝"
+526,Fix JULIA_HOME manually for all builds.,"Add calls to manually initialize JULIA_HOME per discussion in #47. After this change, users shouldn't have to worry about setting JULIA_HOME manually themselves.",Fix JULIA_HOME manually for all builds.,"Add calls to manually initialize JULIA_HOME per discussion in #47. After this change, users shouldn't have to worry about setting JULIA_HOME manually themselves."
+527,Reenable --precompiled=yes module optimization. (#50),"--compilecache and --precompiled were originally disabled to fix a segfault, but only disabling --compilecache is sufficient to fix that problem. This commit reenables --precompiled=yes as long as the build is not using a custom cpu_target. See this discussion for more details: https://github.com/JuliaLang/PackageCompiler.jl/issues/47#issuecomment-379528765",Reenable --precompiled=yes module optimization. (#50),"--compilecache and --precompiled were originally disabled to fix a segfault, but only disabling --compilecache is sufficient to fix that problem. This commit reenables --precompiled=yes as long as the build is not using a custom cpu_target. See this discussion for more details: link"
+528,Keep builddir relative to user's cwd. (#46),"Before this change, a user-specified builddir would be evaluated as relative to the juliaprog file. After this change, the builddir would be relative to user's terminal's cwd. Example: $ cd ~/myApp $ julia ~/.julia/v0.6/PackageCompiler/juliac.jl -vaej test/mytest.jl ~/.julia/v0.6/PackageCompiler/examples/program.c build Before: build directory = ~/myApp/test/build After: build directory = ~/myApp/build",Keep builddir relative to user's cwd. (#46),"Before this change, a user-specified builddir would be evaluated as relative to the juliaprog file. After this change, the builddir would be relative to user's terminal's cwd. Example: $ cd ~/myApp $ julia ~/.julia/v0.6/PackageCompiler/juliac.jl -vaej test/mytest.jl ~/.julia/v0.6/PackageCompiler/examples/program.c build Before: build directory = ~/myApp/test/build After: build directory = ~/myApp/build"
+529,Merge pull request #44 from TsurHerman/master,precompile and compilecache turned off,Merge pull request #44 from TsurHerman/master,precompile and compilecache turned off
+530,aarch64,,aarch64,
+531,Add --cc-flags option to allow custom compiler flags (#41),Allows the user to specify compiler flags to be passed to cc for building the shared object and the final executable.,Add --cc-flags option to allow custom compiler flags (#41),Allows the user to specify compiler flags to be passed to cc for building the shared object and the final executable.
+532,fix #42 (#43),,fix #42 (#43),
+533,fix julia home forcibly,,fix julia home forcibly,
+534,force no-compilecache /precompile,,force no-compilecache /precompile,
+535,make -C pass --precompiled=no --compilecache=no to julia. (#40),"You cannot start julia with -Ctarget where target != your native target without specifying --precompiled=no. Otherwise Julia will complain that its sysimg doesn't match the target it's running under. And you cannot import any precompiled packages if they were precompiled for the wrong target, so we must turn off using precompiled images via  --compilecache=no. This change will allow you to invoke juliac.jl -Ctarget for targets other than your native target.",make -C pass --precompiled=no --compilecache=no to julia. (#40),"You cannot start julia with -Ctarget where target != your native target without specifying --precompiled=no. Otherwise Julia will complain that its sysimg doesn't match the target it's running under. And you cannot import any precompiled packages if they were precompiled for the wrong target, so we must turn off using precompiled images via  --compilecache=no. This change will allow you to invoke juliac.jl -Ctarget for targets other than your native target."
+536,build from vanilla backup image (#38),  build from vanilla backup image   turn debug nothing into bool   get debug from julia   fix tests ,build from vanilla backup image (#38),build from vanilla backup image turn debug nothing into bool get debug from julia fix tests
+537,test on windows (#32),  test on windows   add flag for win32 ,test on windows (#32),test on windows add flag for win32
+538,Merge pull request #33 from lucatrv/do-not-sync-julia-sysimage,Do not sync Julia system image to build directory,Merge pull request #33 from lucatrv/do-not-sync-julia-sysimage,Do not sync Julia system image to build directory
+539,Do not sync Julia system image to build directory,,Do not sync Julia system image to build directory,
+540,"Fix ""return 0""",,"Fix ""return 0""",
+541,Add action checks,,Add action checks,
+542,Change arguments order,,Change arguments order,
+543,Improve Julia v0.7 support and other code tweaks (#30),  Improve example   Improve Julia v0.7 support and other code tweaks ,Improve Julia v0.7 support and other code tweaks (#30),Improve example Improve Julia v0.7 support and other code tweaks
+544,fix test error on metadata (#28),,fix test error on metadata (#28),
+545,Fix line endings (#23),,Fix line endings (#23),
+546,Carry -g & -O through to the gcc commands also. (#22)," Carry -g & -O through to the gcc commands also.  Before this commit, those flags only affect the julia parts of the script (building object file). This commit changes juliac to also pass -g and -O to gcc when building a shared library or executable.  Oops, also pass debug flag in src/system_image.jl's build_shared().  Also carry debug value through when calling build_shared() in compile_system_image if debug == true. Skips optmization, since there's flag for it in system_image.jl.",Carry -g & -O through to the gcc commands also. (#22),"Carry -g & -O through to the gcc commands also. Before this commit, those flags only affect the julia parts of the script (building object file). This commit changes juliac to also pass -g and -O to gcc when building a shared library or executable. Oops, also pass debug flag in src/system_image.jl's build_shared(). Also carry debug value through when calling build_shared() in compile_system_image if debug == true. Skips optmization, since there's flag for it in system_image.jl."
+547,Merge pull request #20 from JuliaLang/sd/tests,add tests and build_executable,Merge pull request #20 from JuliaLang/sd/tests,add tests and build_executable
+548,fix macos,,fix macos,
+549,fix contain/ismatch,,fix contain/ismatch,
+550,add docs,,add docs,
+551,add tests for building executable,,add tests for building executable,
+552,export new functions,,export new functions,
+553,add function for building executables,,add function for building executables,
+554,offer exutable_ext as an api,,offer exutable_ext as an api,
+555,use build shared and propper julia,,use build shared and propper julia,
+556,get ready for building a juliac executable,,get ready for building a juliac executable,
+557,ifdef windows not necessary with mingw,,ifdef windows not necessary with mingw,
+558,go a bit lighter on dependencies,,go a bit lighter on dependencies,
+559,test juliac,,test juliac,
+560,add unicodeplots to require,,add unicodeplots to require,
+561,add warning for non native sysimg,,add warning for non native sysimg,
+562,Merge pull request #19 from JuliaLang/sd/nativeimage,add back option to build native image,Merge pull request #19 from JuliaLang/sd/nativeimage,add back option to build native image
+563,add back option to build native image,,add back option to build native image,
+564,Merge pull request #18 from JuliaLang/sd/combine,combine PackageCompiler with static-julia,Merge pull request #18 from JuliaLang/sd/combine,combine PackageCompiler with static-julia
+565,refactor,,refactor,
+566,use old name for script,,use old name for script,
+567,better compat + fix WinRPM path,,better compat + fix WinRPM path,
+568,try to fix win32,,try to fix win32,
+569,modify + merge efforts,,modify + merge efforts,
+570,merge files from static-julia,,merge files from static-julia,
+571,Merge branch 'master' of github.com:SimonDanisch/PackageCompiler.jl,,Merge branch 'master' of github.com:SimonDanisch/PackageCompiler.jl,
+572,Add Julia v0.7 support (#58),"  Update author information   Change ""--auto"" into ""--autodeps""   Code tweaks   Add Julia v0.7 support ",Add Julia v0.7 support (#58),"Update author information Change ""--auto"" into ""--autodeps"" Code tweaks Add Julia v0.7 support"
+573,Update README.md,,Update README.md,
+574,add documentation,,add documentation,
+575,Merge pull request #13 from SimonDanisch/sd/fixes,fix #12,Merge pull request #13 from SimonDanisch/sd/fixes,fix #12
+576,fix #12,,fix #12,
+577,Avoid need to change program.c by providing lib name. (#55)," Avoid need to change program.c by providing name.  Changes juliac.jl to provide the name of the created shared lib (""libhello"") to the c preprocessor as a macro, via ""-D"". This way you do not need to modify the provided program.c when compiling a new julia program. Addresses issue #3.   fix: Also use macro for libname in program2.c   Update README to reflect macro defined libname.   Remove references from README to changing the image name manually in program.c. Add note about the availability of the image lib name in the C preprocessor macro.  Rename lib-name macro variable; remove default val.  s/JULIA_LIB_NAME/JULIAC_JL_PROGRAM_LIBNAME/g; Remove default value. The libname must be provided on the commandline via -DJULIAC_JL_PROGRAM_LIBNAME=""libname"".",Avoid need to change program.c by providing lib name. (#55),"Avoid need to change program.c by providing name. Changes juliac.jl to provide the name of the created shared lib (""libhello"") to the c preprocessor as a macro, via ""-D"". This way you do not need to modify the provided program.c when compiling a new julia program. Addresses issue #3. fix: Also use macro for libname in program2.c Update README to reflect macro defined libname. Remove references from README to changing the image name manually in program.c. Add note about the availability of the image lib name in the C preprocessor macro. Rename lib-name macro variable; remove default val. s/JULIA_LIB_NAME/JULIAC_JL_PROGRAM_LIBNAME/g; Remove default value. The libname must be provided on the commandline via -DJULIAC_JL_PROGRAM_LIBNAME=""libname""."
+578,Merge pull request #54 from lucatrv/build-only-explicitly-requested-targets,Build only explicitly requested targets by default,Merge pull request #54 from lucatrv/build-only-explicitly-requested-targets,Build only explicitly requested targets by default
+579,Build only explicitly requested targets by default,,Build only explicitly requested targets by default,
+580,"Build "".o"" and "".ji"" files in ""tmp_v$VERSION"" folder",,"Build "".o"" and "".ji"" files in ""tmp_v$VERSION"" folder",
+581,"Add ""--compile"" flag",,"Add ""--compile"" flag",
+582,Merge pull request #53 from lucatrv/add-sysimage-flag,"Add ""--sysimage"" flag",Merge pull request #53 from lucatrv/add-sysimage-flag,"Add ""--sysimage"" flag"
+583,"Add ""--sysimage"" flag",,"Add ""--sysimage"" flag",
+584,"Verify format of ""Base.julia_cmd()""",,"Verify format of ""Base.julia_cmd()""",
+585,"Require ""cprog"" only when building an executable",,"Require ""cprog"" only when building an executable",
+586,Merge pull request #51 from lucatrv/add-julia-compilation-flags,Add Julia compilation flags,Merge pull request #51 from lucatrv/add-julia-compilation-flags,Add Julia compilation flags
+587,Add Julia compilation flags,,Add Julia compilation flags,
+588,Code tweaks,,Code tweaks,
+589,Merge pull request #9 from xiaodaigh/patch-1,minor typo,Merge pull request #9 from xiaodaigh/patch-1,minor typo
+590,minor typo,,minor typo,
+591,Merge pull request #8 from PallHaraldsson/patch-2,More typos,Merge pull request #8 from PallHaraldsson/patch-2,More typos
+592,More typos,[skip ci],More typos,[skip ci]
+593,Update build_sysimg.jl,,Update build_sysimg.jl,
+594,Merge pull request #7 from andyferris/patch-1,Typos in README.md,Merge pull request #7 from andyferris/patch-1,Typos in README.md
+595,Merge pull request #6 from Ken-B/patch-1,typo in readme link to julia issue,Merge pull request #6 from Ken-B/patch-1,typo in readme link to julia issue
+596,Typos in README.md,,Typos in README.md,
+597,typo in readme link to julia issue,,typo in readme link to julia issue,
+598,add trouble shooting,,add trouble shooting,
+599,Update README.md,,Update README.md,
+600,Merge pull request #4 from SimonDanisch/sd/cleanup,"fixes, multiple packages, more modularity",Merge pull request #4 from SimonDanisch/sd/cleanup,"fixes, multiple packages, more modularity"
+601,allow failure for 0.7,,allow failure for 0.7,
+602,add missing folders,,add missing folders,
+603,better paths,,better paths,
+604,better file handling,,better file handling,
+605,add unicode fun,,add unicode fun,
+606,ability to precompile multiple packages,,ability to precompile multiple packages,
+607,"try catch, build multiple packages",,"try catch, build multiple packages",
+608,Merge pull request #40 from JuliaComputing/jn/updates,various updates,Merge pull request #40 from JuliaComputing/jn/updates,various updates
+609,address #3,,address #3,
+610,Merge pull request #50 from mauro3/m3/no-juliarc,Added a --startup-file=no,Merge pull request #50 from mauro3/m3/no-juliarc,Added a --startup-file=no
+611,Added a --startup-file=no,,Added a --startup-file=no,
+612,Merge pull request #2 from SimonDanisch/sd/tests,add tests,Merge pull request #2 from SimonDanisch/sd/tests,add tests
+613,fix mkdir -> mkpath,,fix mkdir -> mkpath,
+614,add tests,,add tests,
+615,Merge branch 'master' of github.com:SimonDanisch/PackageCompiler.jl,,Merge branch 'master' of github.com:SimonDanisch/PackageCompiler.jl,
+616,fix #1,,fix #1,
+617,Update README.md,,Update README.md,
+618,improve build process,,improve build process,
+619,improve build options/process,,improve build options/process,
+620,ignore so etc,,ignore so etc,
+621,make snoop reusable,,make snoop reusable,
+622,fix all kind of issues,,fix all kind of issues,
+623,add build for gcc,,add build for gcc,
+624,fix problems with invalid precompile statemtents,,fix problems with invalid precompile statemtents,
+625,initial commit,,initial commit,
+626,PackageCompiler.jl generated files.,license:  MIT authors:  SimonDanisch years:    2017 user:     SimonDanisch  Julia Version 0.6.1 [0d7248e*],PackageCompiler.jl generated files.,license:  MIT authors:  SimonDanisch years:    2017 user:     SimonDanisch Julia Version 0.6.1 [0d7248e*]
+627,initial empty commit,,initial empty commit,
+628,Add mailmap,,Add mailmap,
+629,enable creation and usage of .ji cache files,,enable creation and usage of .ji cache files,
+630,copy symlinks properly,,copy symlinks properly,
+631,resolve executable image_file relative to binary,(instead of the working directory) and accelerate threading (on v0.7+),resolve executable image_file relative to binary,(instead of the working directory) and accelerate threading (on v0.7+)
+632,fix code selection paths for macOS,,fix code selection paths for macOS,
+633,Merge pull request #37 from lucatrv/add_cprog_argument,"Add ""cprog"" optional argument",Merge pull request #37 from lucatrv/add_cprog_argument,"Add ""cprog"" optional argument"
+634,"Add ""cprog"" optional argument",,"Add ""cprog"" optional argument",
+635,Merge pull request #29 from lucatrv/refine_build_flags_and_messages,Refine build flags and messages,Merge pull request #29 from lucatrv/refine_build_flags_and_messages,Refine build flags and messages
+636,As discussed in #30 show help example,,As discussed in #30 show help example,
+637,Merge pull request #30 from timholy/patch-1,Fix formatting of build examples,Merge pull request #30 from timholy/patch-1,Fix formatting of build examples
+638,Fix formatting of build examples,,Fix formatting of build examples,
+639,Change module name to Hello,,Change module name to Hello,
+640,The old J2C stuff is not relevant anymore.,,The old J2C stuff is not relevant anymore.,
+641,Remove program.jl - superseded by hello.jl,,Remove program.jl - superseded by hello.jl,
+642,Refine build flags,,Refine build flags,
+643,Refine build messages,,Refine build messages,
+644,Redo #27,,Redo #27,
+645,Merge pull request #24 from lucatrv/choose_builddir_and_output_files,Choose builddir and output files,Merge pull request #24 from lucatrv/choose_builddir_and_output_files,Choose builddir and output files
+646,Merge pull request #28 from JuliaComputing/revert-27-master,"Revert ""mingw-w64 support on windows""",Merge pull request #28 from JuliaComputing/revert-27-master,"Revert ""mingw-w64 support on windows"""
+647,"Revert ""mingw-w64 support on windows""",,"Revert ""mingw-w64 support on windows""",
+648,Merge pull request #27 from phlavenk/master,mingw-w64 support on windows,Merge pull request #27 from phlavenk/master,mingw-w64 support on windows
+649,mingw-w64 support on windows,,mingw-w64 support on windows,
+650,Add clean option,,Add clean option,
+651,Choose builddir and output files,,Choose builddir and output files,
+652,Merge pull request #19 from lucatrv/function_main,Add function 'main()',Merge pull request #19 from lucatrv/function_main,Add function 'main()'
+653,Add function 'main()',,Add function 'main()',
+654,Merge pull request #18 from lucatrv/use_unicodeplots,Use 'UnicodePlots' instead of 'Gadfly' in 'hello.jl',Merge pull request #18 from lucatrv/use_unicodeplots,Use 'UnicodePlots' instead of 'Gadfly' in 'hello.jl'
+655,Use 'UnicodePlots' instead of 'Gadfly' in 'hello.jl',,Use 'UnicodePlots' instead of 'Gadfly' in 'hello.jl',
+656,Merge pull request #15 from lucatrv/feature/different-directories,"Use different directories for script, program, and compilation",Merge pull request #15 from lucatrv/feature/different-directories,"Use different directories for script, program, and compilation"
+657,Update 'README.md',,Update 'README.md',
+658,"Use different directories for script, program, and compilation",,"Use different directories for script, program, and compilation",
+659,Merge pull request #14 from lucatrv/feature/simplify-and-print-commands,Simplify and print commands,Merge pull request #14 from lucatrv/feature/simplify-and-print-commands,Simplify and print commands
+660,Simplify and print commands,,Simplify and print commands,
+661,Merge pull request #13 from lucatrv/feature/auto-detect-julia-paths,Auto detect Julia paths,Merge pull request #13 from lucatrv/feature/auto-detect-julia-paths,Auto detect Julia paths
+662,Run 'juliac.jl' with just one argument,,Run 'juliac.jl' with just one argument,
+663,Remove 'julia_pkgdir' and simplify Julia compile command,,Remove 'julia_pkgdir' and simplify Julia compile command,
+664,Remove 'JULIA_EXE' and 'julia_install_path',,Remove 'JULIA_EXE' and 'julia_install_path',
+665,Remove unneeded 'DIR_NAME',,Remove unneeded 'DIR_NAME',
+666,Remove unneeded 'LIB_PATH',,Remove unneeded 'LIB_PATH',
+667,Merge pull request #12 from lucatrv/hotfix/multi-platform-support,"Multi platform support, fixes issues #7 #8 #9",Merge pull request #12 from lucatrv/hotfix/multi-platform-support,"Multi platform support, fixes issues #7 #8 #9"
+668,Add '*.exe' to '.gitignore',,Add '*.exe' to '.gitignore',
+669,"Add gcc flag '-Wl,--export-all-symbols' when building 'SO_FILE' on Windows",,"Add gcc flag '-Wl,--export-all-symbols' when building 'SO_FILE' on Windows",
+670,"Remove 'SYS_LIB', not needed as already included in 'Base.julia_cmd()'",,"Remove 'SYS_LIB', not needed as already included in 'Base.julia_cmd()'",
+671,As discussed in #7,,As discussed in #7,
+672,Merge pull request #7 from rawlik/macos_extension,Make the syslib extension .dylib on apple.,Merge pull request #7 from rawlik/macos_extension,Make the syslib extension .dylib on apple.
+673,Merge pull request #6 from rawlik/julia_home,Make JULIA_HOME the default installation directory.,Merge pull request #6 from rawlik/julia_home,Make JULIA_HOME the default installation directory.
+674,Make JULIA_HOME the default installation directory.,,Make JULIA_HOME the default installation directory.,
+675,Make the syslib extension .dylib on apple.,,Make the syslib extension .dylib on apple.,
+676,Merge pull request #4 from tkoolen/pkg-dir,Use Pkg.dir() by default instead of ~/.julia,Merge pull request #4 from tkoolen/pkg-dir,Use Pkg.dir() by default instead of ~/.julia
+677,Use Pkg.dir()/.. instead of ~/.julia,,Use Pkg.dir()/.. instead of ~/.julia,
+678,Update README.md,Fix #2.  Obviously we need to set things up so that these restrictions can be lifted.,Update README.md,Fix #2.  Obviously we need to set things up so that these restrictions can be lifted.
+679,Update README.md,Fix #1,Update README.md,Fix #1
+680,Update README.md,,Update README.md,
+681,Update README.md,,Update README.md,
+682,update .gitignore,,update .gitignore,
+683,Add README. Various 0.6 related fixes.,,Add README. Various 0.6 related fixes.,
+684,Merge branch 'master' of github.com:JuliaComputing/static-julia,,Merge branch 'master' of github.com:JuliaComputing/static-julia,
+685,Add hello.jl and the juliac.jl driver script,,Add hello.jl and the juliac.jl driver script,
+686,Remove the compile=all stuff since it doesn't work well.,,Remove the compile=all stuff since it doesn't work well.,
+687,Make the scripts work for 0.6,,Make the scripts work for 0.6,
+688,Get a hello.jl working example.,,Get a hello.jl working example.,
+689,fix --sysimage flag name,,fix --sysimage flag name,
+690,expand readme as a markdown document and add inline comments on example source files,,expand readme as a markdown document and add inline comments on example source files,
+691,fix darwin rpaths,,fix darwin rpaths,
+692,"improve README with more consistent paths, and minor formatting cleanup",,"improve README with more consistent paths, and minor formatting cleanup",
+693,add c wrapper program for direct usage of castech_legacy program,,add c wrapper program for direct usage of castech_legacy program,
+694,feed full debug info through msvc so we get function names in backtraces,"plus it appears to crash the debugger, so i guess it is useful as an anti-disassembler?",feed full debug info through msvc so we get function names in backtraces,"plus it appears to crash the debugger, so i guess it is useful as an anti-disassembler?"
+695,update README for recent improvements to llvm-cbe,,update README for recent improvements to llvm-cbe,
+696,add msvc compiler command line,,add msvc compiler command line,
+697,add simple test program example,,add simple test program example,
+698,add README,,add README,

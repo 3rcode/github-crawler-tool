@@ -1,0 +1,878 @@
+Index,Commit Message Abstract,Score Abstract,Corresponding Changelog Sentence Abstract,Commit Desription Abstract,Label
+1,Merge pull request #96 from dbpolito/patch-3,0.6038762,Merge tags from payload (#843),,0
+2,Merge branch 'metrics-options' of link into metrics-options,0.4344071,Merge tags from payload (#843),Respect the prefers-color-scheme setting Added a scheme toggler update deps Co-authored-by: Taylor Otwell taylor@laravel.com,0
+3,Merge pull request #917 from mmachatschek/support_php8,0.59081626,Support PHP 8 (#917),,0
+4,New horizon & laravel version,0.5680284,Optimized Horizon SVG logo (#489),Refreshes tags periodically Compile Assets Update index.vue Co-authored-by: nunomaduro nunomaduro@users.noreply.github.com Co-authored-by: Taylor Otwell taylor@laravel.com,0
+5,Merge pull request #62 from matthijs110/patch-1,0.6049416,Merge tags from payload (#843),,0
+6,Merge pull request #481 from driesvints/fix-incorrect-processes-count,0.77715015,Fix incorrect processes count (#481),,1
+7,Remove unnecessary type attribute,0.51785815,Remove unnecessary register method (7134324),,0
+8,Fix 7.3 build,0.57354885,Fix failed jobs retrying (7d28272),,0
+9,Merge pull request #390 from browner12/patch-2,0.58380747,Merge tags from payload (#843),Bump webpack from 5.74.0 to 5.76.1 Bumps webpack from 5.74.0 to 5.76.1. - Release notes - Commits updated-dependencies: - dependency-name: webpack   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Apply fixes from StyleCI Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com Co-authored-by: StyleCI Bot bot@styleci.io,0
+10,Merge pull request #60 from laravel/avoid/redis/keys,0.496813,Merge tags from payload (#843),,0
+11,fix failed raw jobs display,0.7444465,Fix Failed Jobs page showing no results when failed jobs do exist (#511),,1
+12,Alphabetically sort jobs/queues for metrics (#1083),1.0000002,Alphabetically sort jobs/queues for metrics (#1083),,1
+13,"Added ""Attempts"" to jobs lists.",0.63733906,Add try/catch for failed-jobs (#880),,0
+14,Bump jquery from 3.4.1 to 3.5.0,0.6202283,Bump minimum Laravel version (#954)﻿,,0
+15,show date in timestamps,0.6220144,Use provided timezone for delay due (aa69357),,0
+16,Merge branch 'config-job-expiry' of link into halaei-config-job-expiry,0.47218525,Merge tags from payload (#843),adds autoScalingStrategy option changes autoScalingStrategy property to runtime style fix formatting move property fix variable Update SupervisorOptions.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+17,Add signal option to horizon:purge (e.g. SIGKILL) (#1226),0.88207114,Add signal option to horizon:purge (e.g. SIGKILL) by @crishoj in link,,1
+18,Remove useless variables,0.663926,Remove unused functions (#722),add cancelled status to batch overview use badge class Update index.vue Co-authored-by: Taylor Otwell taylor@laravel.com,0
+19,Merge pull request #832 from CharbelJ/patch-3,0.58045375,Merge tags from payload (#843),Adds type checking Update .gitattributes Update static-analysis.yml,0
+20,update phpdoc,0.71402264,Bump minimum PHP version to PHP 7.3 (ca9ddda),,1
+21,Flatten assets directory.,0.49381134,Compiled assets (1dcbb96),,0
+22,Merge pull request #787 from ahinkle/chronos_2.X,0.52023655,Merge tags from payload (#843),,0
+23,Set default value for job $payload['pushedAt'] when retrying (#1211),0.8529744,Set default value for job $payload['pushedAt'] when retrying by @stevebauman in link,,1
+24,Update ProvisioningPlan.php,0.7079059,Add some PHP 8.1 fixes (#1100)﻿,,1
+25,another attempt on horizon orphans,0.42962378,"Revert ""Prevent horizon:purge from killing too many processes"" (#831)",,0
+26,Correct dashboard failed jobs metric,0.8178437,Allow custom dashboard failed jobs metric period (#644),,1
+27,Merge pull request #31 from lucasmichot/feature/master/worker,0.5805319,Fix worker command binding (3b53310),,0
+28,change to bootstrap4,0.51340586,Bump minimum Laravel version (#954)﻿,,0
+29,Fix for table headers in the Monitoring tab to match the data which is presented to the user. (#1137),0.92987204,Fix for table headers in the Monitoring tab to match the data that is presented to the user by @dylan7778 in link,,1
+30,change chart.js intersect mode to false (#1133),0.88390887,change chart.js intersect mode to false by @swist666 in link,A fresh coat of paint Compile Assets fix silenced viewbox Co-authored-by: jessarcher jessarcher@users.noreply.github.com Co-authored-by: Taylor Otwell taylor@laravel.com,1
+31,Support for non-standard PHP binary,0.6978887,Support PHP 8 (#917),move sileneced logic to job payload move fixtures and payload test to feature fix tests styling make methods protected,0
+32,Only show the pagination when there are failed jobs,0.6884041,Fix Failed Jobs page showing no results when failed jobs do exist (#511),,0
+33,Merge pull request #942 from laravel/dependabot/npm_and_yarn/highlight.js-10.4.1,0.59531784,Merge tags from payload (#843),,0
+34,Merge pull request #312 from halaei/fix-uglify-options,0.53913283,Merge tags from payload (#843),"Currently, all pages show 50 jobs per page. Only the Monitored Tags page is limited to 3 jobs per page. In my opinion, this makes little sense and especially if you want to monitor a lot more jobs, it is very difficult to find the right jobs or to get an overview of the last jobs that have been run.",0
+35,Merge pull request #165 from mattiasgeniar/1.0,0.60636216,Merge tags from payload (#843),,0
+36,Merge pull request #692 from vigneshgurusamy/dormant-recent-tags,0.66180265,Merge tags from payload (#843),,0
+37,Fixes not being able to install horizon with Laravel 5.6,0.71149224,Removed support for Laravel 5.5 & 5.6 (8a92e09),Update tests.yml Update composer.json Update composer.json,1
+38,Bump follow-redirects from 1.14.5 to 1.14.8 (#1117),0.60337836,Bump axios to v1.x by @ankurk91 in link,Bumps json5 from 1.0.1 to 1.0.2. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: json5   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+39,Hide retry failed jobs button if no jobs failed (#1097),0.99864817,Hide Retry failed jobs button if no jobs failed (#1097),,1
+40,Merge pull request #294 from josiasmontag/patch-1,0.6332568,Merge tags from payload (#843),,0
+41,Merge branch 'metrics-options' of link into bert-w-metrics-options,0.46905464,Merge tags from payload (#843),Silenced jobs wip formatting Compile Assets Compile Assets Co-authored-by: Taylor Otwell taylor@laravel.com Co-authored-by: taylorotwell taylorotwell@users.noreply.github.com,0
+42,Make horizon work with strict content-security-policy (#1138),0.86229193,Make horizon work with strict content-security-policy by @Grldk in link,,1
+43,Resolve issue with php strict type (#1110),0.7563137,Resolve issue with php strict type by @farmani in link,,1
+44,Fix jobs per minute over estimation,0.9599091,Fix jobs per minute over estimation (#502),,1
+45,wording,0.4130532,﻿,Update syntaxhighlight.scss Add value-undefined style Lint Fix,0
+46,Merge pull request #767 from themsaid/completedJobs,0.53620267,Merge tags from payload (#843),,0
+47,Bump acorn from 6.4.0 to 6.4.1,0.5641754,Bump axios to v1.x by @ankurk91 in link,,0
+48,Merge pull request #627 from themsaid/autoscalingCeiling,0.5763022,Merge tags from payload (#843),,0
+49,Merge branch 'patch-1' of link into sixlive-patch-1,0.5004838,Merge tags from payload (#843),add signal option (e.g. SIGKILL) formatting Co-authored-by: Taylor Otwell taylor@laravel.com,0
+50,fix tags display,0.66752625,Another way for tags displaying & collapsible panels (#754),,0
+51,wrap several commands in a pipe,0.42543784,Add commands to pause and continue supervisors (#914),Don't tolerate negative $maxUpShift Fix autoscaling letting processes hit 0 Fix autoscaling letting processes hit 0,0
+52,Allow deleting of Tags which contain forward slashes (Fixes #1093) (#1196),0.9228569,Allow deleting of Tags which contain forward slashes (Fixes #1093) by @sgotre in link,,1
+53,Merge branch 'master' of link into cretueusebiu-master,0.37288573,"When register, keep the original Redis options, only overwrite prefix by @nthsky in link","Bumps loader-utils to 2.0.4 and updates ancestor dependencies loader-utils, loader-utils and resolve-url-loader. These dependencies need to be updated together. Updates loader-utils from 2.0.3 to 2.0.4 - Release notes - Changelog - Commits Updates loader-utils from 1.4.0 to 2.0.4 - Release notes - Changelog - Commits Updates resolve-url-loader from 3.1.4 to 5.0.0 - Release notes - Changelog - Commits updated-dependencies: - dependency-name: loader-utils   dependency-type: indirect - dependency-name: loader-utils   dependency-type: indirect - dependency-name: resolve-url-loader   dependency-type: direct:development ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com",0
+54,Add feature test to check paged deletion,0.5106217,Fix pagination for recent jobs (#678),,0
+55,more fixes for decimal separator,0.5119834,Properly format numeric values (#606),,0
+56,Update syntax highlighting (#1002),0.9999999,Update syntax highlighting (#1002),Add failing test Use microtime for pushed at timestamp Update test CS fixes,1
+57,Merge pull request #821 from andresayej/4.x,0.5982096,Merge tags from payload (#843),Add missing anchor title for clarity Compile Assets Co-authored-by: stevebauman stevebauman@users.noreply.github.com,0
+58,fix branch-alias,0.4296297,Fix check deleting failed job is actually failed (#894)﻿,,0
+59,Merge pull request #905 from pataar/patch-1,0.5745535,Merge tags from payload (#843),,0
+60,Use pagination and while-loop to delete monitored jobs,0.628403,Clear stopwatch once job is deleted by @taylorotwell in link,,0
+61,clear stopwatch once job is deleted,0.866539,Clear stopwatch once job is deleted by @taylorotwell in link,,1
+62,Merge pull request #372 from BinotaLIU/master,0.5268732,Merge tags from payload (#843),"fix #1093, delete tags which contain forward slashes remove double ; Co-authored-by: Stefan Gotre stefan.gotre@teraone.de",0
+63,rename argument,0.5260875,Changed,"Improves GitHub Workflow Avoid using ^ deps (incompatible with Composer on Windows), while this is not used in Telescope, this repository will be used as reference to setup GitHub Action and I believe we should use the best configuration. Use include instead of exclude wip wip wip",0
+64,remove composer.lock,0.42942116,Removed,,0
+65,Use ubuntu-18.04,0.44391042,Require latest symfony/debug version (72cc3a7),Add exit codes to status command StyleCI,0
+66,Merge pull request #605 from tomswinkels/patch-2,0.5840429,Merge tags from payload (#843),Update .gitattributes Update .gitattributes Co-authored-by: Dries Vints dries@vints.io,0
+67,cs fix implicit null return,0.4266973,Fix missing variable use in anonymous function by @joshuaruesweg in link,,0
+68,Fixed issue where metrics only showed CallQueuedListener,0.5551491,Use callAfterResolving to register QueueManager (#1089)﻿,,0
+69,Bump moment from 2.29.1 to 2.29.2 (#1143),0.59904516,Bump axios to v1.x by @ankurk91 in link,"[5.x] Failed jobs list: Modify job retried tooltip label to include status of last retry [5.x] Failed jobs list: Modify job retried tooltip label to include status of last retry Simplified logic by removing unnecessary checks, since when method is called there will always have been a retry [5.x] Failed jobs list: Modify job retried tooltip label to include status of last retry Updated comment Update index.vue Update index.vue Co-authored-by: Jeandre van Zyl jeandre@sinov8.net Co-authored-by: Taylor Otwell taylor@laravel.com",0
+70,Fix pagination for recent jobs,0.92413646,Fix pagination for recent jobs (#678),,1
+71,Merge pull request #796 from laravel/dependabot/npm_and_yarn/acorn-6.4.1,0.6153542,Merge tags from payload (#843),Bumps moment-timezone from 0.5.33 to 0.5.35. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: moment-timezone   dependency-type: direct:development ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+72,Update PHPDoc variable type,0.62339467,Add some PHP 8.1 fixes (#1100)﻿,,0
+73,Respect the prefers-color-scheme setting (#1275),0.84082043,Respect the prefers-color-scheme setting by @ramonrietdijk in link,Boyscouting WIP: TDD Code style Remove unused event Ignore queues with wait time of 0,1
+74,fix for missing first failed job when searching,0.9505863,Fix for missing first failed job when searching (#593),,1
+75,Use proper date format in changelog,0.46862698,Make Year of readableTimestamp more readable (#535),,0
+76,Updates vue-router.,0.8253356,Updated vue-router to v3.0 (#493),,1
+77,Update _components.panels.less,0.49500665,Another way for tags displaying & collapsible panels (#754),,0
+78,Apply fixes from StyleCI (#662),0.6192729,Fix Layout issues (#821),,0
+79,remove deprecated option,0.6917379,Removed,Bumps moment from 2.29.2 to 2.29.4. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: moment   dependency-type: direct:development ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+80,recompile for production,0.44041762,"Revert ""Prevent horizon:purge from killing too many processes"" (#831)",Bumps terser from 4.8.0 to 4.8.1. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: terser   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+81,Merge pull request #89 from laravel/workloadFixesForNoBalancing,0.6109135,Merge tags from payload (#843),,0
+82,Allow the slack channel to be specified,0.50378525,Add signal option to horizon:purge (e.g. SIGKILL) by @crishoj in link,"when register horizon, keep the original redis options, only overwrite prefix delete space Update Horizon.php Co-authored-by: Taylor Otwell taylor@laravel.com",0
+83,Merge pull request #234 from paulofreitas/badges,0.6389128,Merge tags from payload (#843),,0
+84,Merge pull request #676 from driesvints/fix-tests,0.5831575,Fix findFailed method (#478),,0
+85,recompile assets after JS changes,0.5151031,Reset the retryUntil value (#736),,0
+86,Merge pull request #506 from halaei/prevent-horizontal-scroll,0.52758193,Merge tags from payload (#843),,0
+87,Remove determinePeriod from RedisJobRepository,0.5877401,Fix breaking change with createPayload method on RedisQueue (b79bb27),,0
+88,Update .editorconfig,0.507867,Require latest symfony/debug version (72cc3a7),Automatically compile and commit assets wip wip Re-use workflow wip wip Compile Assets Delete RELEASE.md Co-authored-by: driesvints driesvints@users.noreply.github.com,0
+89,remove unused variable,0.6752122,Remove unused functions (#722),Bumps async from 2.6.3 to 2.6.4. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: async   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+90,[5.x] Unified asset publishing (#1045),0.96417725,Unified asset publishing (#1045)﻿,,1
+91,Require symfony/process,0.80949044,Require symfony/process (f2a214c),"Checking the ""viewHorizon"" gate first before checking if its local environment.",1
+92,[5.x] Add commands to pause and continue supervisors (#914),0.94814634,Add commands to pause and continue supervisors (#914),Bumps moment from 2.29.1 to 2.29.2. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: moment   dependency-type: direct:development ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+93,Merge pull request #863 from laravel/dependabot/npm_and_yarn/lodash-4.17.19,0.6011522,Merge tags from payload (#843),,0
+94,Added fallback font (#964),0.9740068,Add fallback font (#964)﻿,,1
+95,Merge pull request #3 from ntzm/patch-2,0.57080823,Merge tags from payload (#843),,0
+96,Merge pull request #739 from iamgergo/3.0,0.5993395,Merge tags from payload (#843),,0
+97,Bump lodash from 4.17.11 to 4.17.13,0.66444594,Bump minimum Laravel version (#954)﻿,This reverts commit 801506b566eeda9a9bb1b92a199878c59c9cabcb.,0
+98,Use collapse() on collection instead of using array helper.,0.43282652,Accept array format for exponential backoff (#926)﻿,,0
+99,Publish the entire public dir,0.47515336,Unified asset publishing (#1045)﻿,,0
+100,Create .gitattributes,0.44002664,Add autoScalingStrategy option by @cosmastech in link,move contents of horizon div to separate component dont remove google fonts fix assetsAreCurrent,0
+101,fast_termination config and --wait option,0.54844797,Considering queue config parameter 'after_commit' (#948) ,,0
+102,Improves GitHub Actions Workflow (#1193),0.54009724,Improve completed jobs UI (#1064)﻿,,0
+103,update Bootstrap to stable version,0.53168285,Updated version constraints for Laravel 6.0 (b547cb2),,0
+104,Remove unused functions,0.89832747,Remove unused functions (#722),,1
+105,fix encoding,0.81843936,"Fix encoding (ef0c45a, 9e3748e)",,1
+106,Update HorizonCommand.php,0.5956011,Add some PHP 8.1 fixes (#1100)﻿,,0
+107,Use stricter comparisons,0.32871756,Respect the prefers-color-scheme setting by @ramonrietdijk in link,,0
+108,Considering queue config parameter 'after_commit' (#948),1.0,Considering queue config parameter 'after_commit' (#948) ,,1
+109,Merge branch '4.x' into master,0.348022,Add some more defaults to supervisor (#1122),,0
+110,Added test to verify amount of processes goes up for busy queue,0.6270585,"Show workload also per queue when balancing is disabled (#966, b4e8c6a﻿",Forget job timer in case of exception or failed job Remove trailing whitespace,0
+111,Suggest predis instead of requiring it,0.9166836,Suggest predis instead of requiring it (#531),,1
+112,Abstract controller tests,0.38840634,Trigger MasterSupervisorDeployed event (#839),,0
+113,[5.x] Clarify button purpose (#991),0.94205064,Clarify button purpose (#991)﻿,,1
+114,merge master,0.47447473,Custom MasterSupervisor name breaks dashboard (#619),,0
+115,Merge pull request #643 from ivantorgov/master,0.5199764,Merge tags from payload (#843),,0
+116,fix docblocks,0.44480067,Fix worker command binding (3b53310),,0
+117,float scale,0.42604494,Scale to the maxProcesses if timeToClearAll is zero (#718),,0
+118,Enable StyleCI,0.4806546,Add autoScalingStrategy option by @cosmastech in link,Bumps follow-redirects from 1.14.5 to 1.14.8. - Release notes - Commits updated-dependencies: - dependency-name: follow-redirects   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+119,Update .gitattributes,0.5494453,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,Bumps nanoid from 3.1.30 to 3.2.0. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: nanoid   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+120,Merge pull request #802 from vemcogroup/4.x,0.5529691,Merge tags from payload (#843),,0
+121,Apply fixes from StyleCI (#1012),0.6135045,Fix Layout issues (#821),,0
+122,Merge pull request #754 from Cannonb4ll/3.0,0.64135724,Merge tags from payload (#843),,0
+123,user web middleware,0.46694586,Predis v2 support by @driesvints in link,,0
+124,Removes unused layout.blade.php file.,0.48408616,Remove unused functions (#722),,0
+125,Merge pull request #430 from driesvints/update-function-calls,0.5699963,Fix deprecated process calls (#515),,0
+126,Fix issue with maximum processes,0.6828253,Adjust auto scaling to always use the max processes (#627),,0
+127,[3.0] orchestra/testbench doesn't need orchestra/database since Laravel 5.6.0,0.6190835,Removed support for Laravel 5.5 & 5.6 (8a92e09),,0
+128,tweak ordre,0.6060409,Changed,Resolve issue with php strict type related to the issue link Update RedisMetricsRepository.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+129,Show paused status on every master,0.8006997,"Ability to see which masters are paused and only show paused if everything is paused (#929, f9b5aea)",,1
+130,Fix beforeDestroy,0.54211223,"Revert ""Prevent horizon:purge from killing too many processes"" (#831)",,0
+131,Merge pull request #710 from laravel/symfony5,0.57493126,Merge tags from payload (#843),,0
+132,remove shim,0.619437,Removed,,0
+133,Update 'New Tag' placeholder to reflect location of models in Framework 8.x,0.47010463,"Fix php 7.4 tagged model typed props (#732, 025f953)",,0
+134,Merge pull request #278 from francislavoie/patch-1,0.5447949,Merge tags from payload (#843),,0
+135,Simplifying horizon:status implementation,0.77103925,Adding horizon:status command (#545),,1
+136,update expiration values,0.5825921,Update outdated compiled assets (2a420af),,0
+137,[5.x] A fresh coat of paint (#1242),0.81649095,A fresh coat of paint by @jessarcher in link,,1
+138,Merge branch '4.x' into H/rafalglowacz/horizon-purge-killing-processes-of-other-instances,0.645593,Prevent horizon:purge from killing too many processes (#820),,0
+139,Provide an editorconfig file,0.49448338,Implement default environment (#869),,0
+140,cs fix spacing,0.3837217,Reduce bundle size (#1091),,0
+141,Add app_name,0.7174593,Add app name to dashboard (#605),,1
+142,Added missing $queue argument to createPayloadRequest() call to ensure $queue and $data properly retained.,0.61094105,Use callAfterResolving to register QueueManager (#1089)﻿,Create RELEASE.md Update .gitattributes,0
+143,Fixes phpdocs,0.74841315,Add some PHP 8.1 fixes (#1100)﻿,PHP 8.1 support Update phpunit.xml.dist,1
+144,Merge pull request #494 from mvdnbrk/2.0,0.5723297,Merge tags from payload (#843),,0
+145,[5.x] Add secs to y-axis ticks' for clarity (#903),0.9778941,Add secs to y-axis ticks' for clarity (#903)﻿,,1
+146,Merge pull request #578 from laravel/analysis-qMZNYK,0.53430533,Merge tags from payload (#843),,0
+147,[5.x] Make autoscaling rate configurable (#874),0.9417082,"Make autoscaling rate configurable (#874, 9af71de)",Update page title when switching between Pending and Completed views Update index.vue Co-authored-by: Taylor Otwell taylor@laravel.com,1
+148,Refactor storing job references,0.5417408,Ability to view job details in recent jobs overview (#751),,0
+149,fix laravel/horizon#730 php 7.4 uninitialized property type detection,0.56757814,"Fix php 7.4 tagged model typed props (#732, 025f953)",,0
+150,revert test value,0.6144961,Reset the retryUntil value (#736),,0
+151,Compile assets and update versions,0.7433619,Update outdated compiled assets (2a420af),,1
+152,remove less,0.70859945,Removed,,1
+153,Use ::class syntax in EventMap,0.45181167,Trigger MasterSupervisorDeployed event (#839),,0
+154,Update RELEASE.md,0.5480339,Require latest symfony/debug version (72cc3a7),,0
+155,give it more time to terminate,0.6021905,Rename timeoutAt to retryUntil & delay to backoff (6d00eb9),,0
+156,Update page title when switching between Pending and Completed views (#1084),0.9999999,Update page title when switching between Pending and Completed views (#1084)﻿,,1
+157,"Revert ""[4.x] Graceful shutdown on SIGTERM also""",0.51515895,"Ability to see which masters are paused and only show paused if everything is paused (#929, f9b5aea)",,0
+158,use enqueueUsing when pushing delayed jobs (#939),0.9996089,Use enqueueUsing when pushing delayed jobs (#939),Improve completed jobs UI Update preview.vue Update preview.vue Co-authored-by: Taylor Otwell taylor@laravel.com,1
+159,Merge pull request #311 from elghobaty/1.0,0.5980233,Merge tags from payload (#843),,0
+160,Merge pull request #477 from driesvints/fix-decimal-point,0.5780188,Fix findFailed method (#478),,0
+161,public/css and public/js no longer used,0.31671596,Uses PHP Native Type Declarations 🐘 by @nunomaduro in link,Co-authored-by: Hylke de Vries hylke94+git@gmail.com,0
+162,Update Horizon.php,0.62148404,Bump minimum PHP version to PHP 7.3 (ca9ddda),,0
+163,Merge branch 'workload-per-queue' of link into workload-per-queue,0.52557856,"Show workload also per queue when balancing is disabled (#966, b4e8c6a﻿",[5.x] Unified asset publishing Update HorizonServiceProvider.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+164,Bump websocket-extensions from 0.1.3 to 0.1.4,0.55346423,Bump axios to v1.x by @ankurk91 in link,,0
+165,Improve wording of error message (#918),1.0,Improve wording of error message (#918),Use environment variables to set horizon's domain or path. This follows the same pattern used in telescope.,1
+166,Merge pull request #738 from GrahamCampbell/patch-1,0.62655884,Merge tags from payload (#843),,0
+167,update branch alias,0.39535284,Changed default Redis prefix (#643),,0
+168,Build assets,0.66677487,Compiled assets (1dcbb96),Revert app layout pr Apply fixes from StyleCI (#1025),0
+169,Merge pull request #409 from browner12/less-less,0.5550456,Merge tags from payload (#843),,0
+170,Merge pull request #678 from sebdesign/3.0,0.5336074,Merge tags from payload (#843),,0
+171,Bump async from 2.6.3 to 2.6.4 (#1150),0.5966437,Bump axios to v1.x by @ankurk91 in link,,0
+172,Add release instructions (#1090),0.49951643,Add maintenance notice on dashboard (#911),,0
+173,Fix missing variable use in anonymous function (#1244),0.76661164,Fix missing variable use in anonymous function by @joshuaruesweg in link,remove faulty !,1
+174,Apply fixes from StyleCI (#827),0.6513065,Fix Layout issues (#821),,0
+175,Let user choose custom env ,0.90195966,Let user choose custom env (#483),,1
+176,use HTTPS links where appropriate,0.51310885,"Revert ""Make horizon work with strict content-security-policy"" by @driesvints in link",,0
+177,Bump nanoid from 3.1.30 to 3.2.0 (#1118),0.5438744,Bump minimum Laravel version (#954)﻿,,0
+178,Update CHANGELOG.md,0.64041364,Changed,,0
+179,fix balance false display on dashboard,0.91938525,Fix balance false display on dashboard (88c84ac)﻿,,1
+180,Merge pull request #912 from CharbelJ/patch-4,0.5737276,Merge tags from payload (#843),,0
+181,Merge pull request #672 from laravel/dependabot/npm_and_yarn/mixin-deep-1.3.2,0.5834839,Merge tags from payload (#843),,0
+182,Merge pull request #532 from driesvints/fix-no-failing-jobs-problem,0.7114488,Fix no failing jobs problem (#532),,1
+183,set default 'tries' to 1,0.8799118,Set default 'tries' to 1 (#704),,1
+184,"when register, keep the original redis options, only overwrite prefix (#1161)",0.8409264,"When register, keep the original Redis options, only overwrite prefix by @nthsky in link",,1
+185,Merge branch 'no-sleep' of link into halaei-no-sleep,0.47882086,Implement Silenced interface by @driesvints in link,Add Supervisor Rest Option Change argument order to prevent breaking change,0
+186,pending signals,0.5286008,Fix delayed until on pending jobs screen (#907),,0
+187,Merge pull request #448 from ashutoshSce/valid-doctype-declaration,0.5240153,Merge tags from payload (#843),,0
+188,Allow custom dashboard failed jobs metric,0.8617003,Allow custom dashboard failed jobs metric period (#644),Clarify button purpose Update preview.vue Co-authored-by: Taylor Otwell taylor@laravel.com,1
+189,[5.x] Allow any queued class to be silenced (#1241),0.7730974,Allow any queued class to be silenced by @lioneaglesolutions in link,,1
+190,Bump json5 from 1.0.1 to 1.0.2 (#1233),0.57209235,Bump axios to v1.x by @ankurk91 in link,,0
+191,Merge pull request #698 from GrahamCampbell/patch-1,0.6277176,Merge tags from payload (#843),,0
+192,Tweak Horizon Alias,0.5491606,Unhide horizon command  (#878),,0
+193,Update dependencies,0.6070385,Bumped minimum dependencies to Laravel 7.0 (#710),throw exception when minProcesses is set to zero Update ProvisioningPlan.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+194,Merge pull request #814 from joecampo/monitoring-patch-1,0.57723224,Merge tags from payload (#843),,0
+195,Display worker CPU and memory utilization in supervisor list,0.9788819,Display worker CPU and memory utilization in supervisor list (#589),,1
+196,"Revert ""[4.0] Change format""",0.5563929,Revert app layout PR (#1026)﻿,,0
+197,Don't display status icon until stats.status is initialised,0.56766254,Updated overview stats labels on the dashboard (#461),Bumps elliptic from 6.5.3 to 6.5.4. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,0
+198,avoid using redis keys method,0.57446027,Changed default Redis prefix (#643),,0
+199,Rename update-changelog.md to update-changelog.yml,0.53399575,Changed,,0
+200,allow negative nice (for sudo user); better comments about the meaning of nice option,0.5045825,"Add support for Supervisor ""nice"" option (#551, 8d0034b, #556)",,0
+201,Rename phpunit.xml to phpunit.xml.dist,0.42092133,Revert app layout PR (#1026)﻿,,0
+202,Merge pull request #523 from stayallive/patch-1,0.56646705,Merge tags from payload (#843),,0
+203,Stop Failed Jobs showing no results,0.7797701,Fix Failed Jobs page showing no results when failed jobs do exist (#511),,1
+204,Merge pull request #80 from dbpolito/patch-1,0.62020266,Merge tags from payload (#843),,0
+205,formatting,0.57429767,Properly format numeric values (#606),,0
+206,Merge pull request #861 from laravel/driesvints-patch-1,0.6448484,Merge tags from payload (#843),,0
+207,Paginate tagJobs with offset in while loop,0.5291983,Increase perPage variable for monitored tags by @joshuaruesweg in link,,0
+208,clean interval between pages,0.48669633,Update page title when switching between Pending and Completed views (#1084)﻿,,0
+209,Update layout.blade.php,0.6109123,Add some PHP 8.1 fixes (#1100)﻿,,0
+210,Update PendingJobsController.php,0.5943129,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,0
+211,"Removed middle alignment from "".card-table td"".",0.47783446,Fix Layout issues (#821),,0
+212,Merge pull request #252 from themsaid/pr/7168,0.55345106,Merge tags from payload (#843),,0
+213,Merge pull request #293 from themsaid/pr/19470,0.5185941,Merge tags from payload (#843),Bumps axios from 0.19.0 to 0.21.1. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com,0
+214,Add exit codes to status command (#1191),0.79018,Add exit codes to status command by @mbardelmeijer in link,,1
+215,Apply fixes from StyleCI (#761),0.63370955,Fix Layout issues (#821),,0
+216,Increase perPage variable for monitored tags (#1237),0.8808859,Increase perPage variable for monitored tags by @joshuaruesweg in link,,1
+217,isolate tests,0.3278606,Support batches (#844),,0
+218,Automatically compile and commit assets (#1154),0.7564243,Compile assets (57814a0),,1
+219,Remove Axios per component reference,0.5488484,Updated axios to v0.18 (#491),,0
+220,Laravel 5.6 expects the ServiceProvider::$bindings to be public,0.616301,Laravel v10 Support by @driesvints in link,Bumps ini from 1.3.5 to 1.3.7. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,0
+221,Apply fixes from StyleCI (#868),0.6357186,Fix Layout issues (#821),"Existence check was missing for payload tags. If there is no tag in the payload, job is not displayed.",0
+222,Merge branch '3.0',0.38797635,Merge tags from payload (#843),,0
+223,Adding alias to package discover,0.37612048,Set the Horizon environment via command option (#523),Bump highlight.js from 10.1.2 to 10.4.1,0
+224,Upgrades Laravel Mix to v4.,0.7101209,Updated laravel-mix to v4.0 (#490),Bumps highlight.js from 10.1.2 to 10.4.1. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com,1
+225,Merge pull request #424 from halaei/isolate-tests,0.5114389,Merge tags from payload (#843),,0
+226,Merge pull request #404 from laravel/revert-402-dont-wait-for-workers-to-terminate,0.5246912,Use enqueueUsing when pushing delayed jobs (#939),,0
+227,Create pull-requests.yml,0.5829704,"Forcing Vue to use the X-Requested-With header, set to XMLHttpRequest (#642)",,0
+228,fix failed jobs retrying,0.89468884,Fix failed jobs retrying (7d28272),,1
+229,update changelog,0.57584625,Changed,"Because the scheduler had the same amount of time, you can have a race condition that lock isn't over yet.",0
+230,Apply fixes from StyleCI (#825),0.63922995,Fix Layout issues (#821),"This way you can schedule snapshots every minute, every two minutes and set the locking time the same so they can be stored and shown in the horizon dashboard.",0
+231,cs fix style,0.5180932,Fix vue-json-pretty CSS for new classnames by @datpmwork in link,Bumps highlight.js from 9.14.2 to 10.1.2. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+232,"Even easier, just use moment().duration()",0.4685064,Scale to the maxProcesses if timeToClearAll is zero (#718),,0
+233,Merge pull request #86 from wells/patch-add-supervisor,0.58654463,Merge tags from payload (#843),,0
+234,[5.x] Fix delayed until on pending jobs screen (#907),0.9379819,Fix delayed until on pending jobs screen (#907),,1
+235,Merge pull request #556 from halaei/fix-nice-option,0.55112153,Merge tags from payload (#843),,0
+236,dont wait for workers to terminate,0.5954842,Expire monitored jobs (#484),,0
+237,compile for production,0.53948116,Compile assets (57814a0),,0
+238,fix sort,0.5729704,Alphabetically sort jobs/queues for metrics (#1083),,0
+239,Fix method signature,0.5517016,Fix check deleting failed job is actually failed (#894)﻿,,0
+240,Merge pull request #487 from driesvints/cleanup-commands,0.5375564,Merge tags from payload (#843),,0
+241,Revert tags,0.7517545,Revert filtering by tag (#741),,1
+242,Merge pull request #49 from lucasmichot/feature/master/enable-styleci,0.54527247,Merge tags from payload (#843),Update 'New Tag' placeholder to reflect location of models in Framework 8.x,0
+243,add the daemon option back,0.47494277,Add metrics options and dark mode config (#795),,0
+244,Show warning when manifest is outdated,0.9359152,Show warning when manifest is outdated (#783),See discussion outcome in link,1
+245,Remove Lodash (#1246),0.7849212,Remove Lodash by @jessarcher in link,[5.x] Support PHP 8,1
+246,Update phpunit.xml.dist,0.5128205,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,use redis module,0
+247,work,0.52139163,Support worker max-time and max-jobs (#860),,0
+248,Fixed typos,0.5092989,Improve wording of error message (#918),[5.x] Add commands to pause and continue supervisors Allow both full and short supervisor names,0
+249,fix count recent/failed jobs; trim more often,0.7547877,Fix completed jobs count (#910)﻿,,1
+250,Add Laravel 5.8 support,0.84339035,Laravel 5.8 support (292bbc1),,1
+251,Merge pull request #653 from driesvints/fix-6.0-build,0.54025865,Fix deprecated process calls (#515),,0
+252,Merge pull request #272 from dongilbert/resolve-to-app,0.552257,Merge tags from payload (#843),,0
+253,reset the retryUntil value,0.9004886,Reset the retryUntil value (#736),Update CompletedJobsController.php,1
+254,Merge pull request #582 from joecampo/patch-1,0.59243953,Merge tags from payload (#843),,0
+255,Show workload also per queue when balancing is disabled,0.9295926,"Show workload also per queue when balancing is disabled (#966, b4e8c6a﻿",,1
+256,Merge pull request #839 from styxit/event-masterSupervisorDeploy,0.66889524,Trigger MasterSupervisorDeployed event (#839),,0
+257,catch excetion on sending signal,0.47164917,"Throw exception when minProcesses is set to zero (#988, 831a5a8)",,0
+258,Test PHP 8.2 (#1205),0.749425,Support PHP 8 (#917),Update CompletedJobsController.php,1
+259,Merge pull request #593 from kbond/fix-missing-failed-job-search,0.67873526,Fix for missing first failed job when searching (#593),,0
+260,readme',0.38371897,Make Year of readableTimestamp more readable (#535),,0
+261,Merge branch '1.0',0.40108925,Merge tags from payload (#843),[5.x] Add missing force option to horizon:clear Update ClearCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+262,without scores,0.41475117,Check for existence of stats before calling toLocaleString (#469),"This controller gets completed jobs, we should get the total completed jobs and not recent jobs",0
+263,Format numbers on the stats dashboard for better readability,0.9640995,Format numbers on the stats dashboard for better readability (#462),,1
+264,Add maintenance notice on dashboard,0.94531953,Add maintenance notice on dashboard (#911),,1
+265,[5.x] Laravel v10 Support (#1234),0.89036703,Laravel 9 Support (#1112),,1
+266,Don’t need this,0.3318304,Suggest predis instead of requiring it (#531),,0
+267,Merge pull request #123 from laravel/pr/31246,0.60949963,Merge tags from payload (#843),[5.x] Update the badges to use shields.io,0
+268,StyleCI,0.38559785,Respect the prefers-color-scheme setting by @ramonrietdijk in link,,0
+269,Merge pull request #35 from lucasmichot/feature/master/sort-packages,0.6418567,Merge tags from payload (#843),"Since the line chart's y-axis shows ticks without units, this could help clarify that it's in seconds.",0
+270,docblocks spacing,0.4293228,Prevent horizontal scrolling in Dashboard supervisors section (#506),This reverts commit 00afa8f0df0624662caf7198c76f3dae330b6f61.,0
+271,Merge branch '3.0' of link into 3.0,0.43628567,Merge tags from payload (#843),,0
+272,Added pushed at to failedJobs (#1069),0.7165404,Fix wrong value for failedJobs periods (#757),,1
+273,Fix for edge cases when locks aren't released,0.35281914,Fix autobalancer (#651),,0
+274,update readme,0.57604253,Make Year of readableTimestamp more readable (#535),,0
+275,Use router-link on recent jobs's failed jobs anchor tag,0.81283534,Use router-link for recent failed jobs (#466),,1
+276,Merge pull request #688 from ankurk91/patch/mix,0.5911987,Merge tags from payload (#843),,0
+277,Remove unnecessary method,0.6682888,Remove unnecessary register method (7134324),,0
+278,Merge pull request #308 from halaei/feature-float-seconds,0.51798487,Merge tags from payload (#843),,0
+279,Merge pull request #210 from themsaid/bootstrap4,0.57276154,Merge tags from payload (#843),,0
+280,Merge pull request #496 from mvdnbrk/remove-layout-blade-php,0.5431973,Merge tags from payload (#843),,0
+281,add stop-when-empty,0.5388123,"Ability to see which masters are paused and only show paused if everything is paused (#929, f9b5aea)",,0
+282,Fix in tests as well,0.5253468,Fix check deleting failed job is actually failed (#894)﻿,,0
+283,Merge pull request #589 from Cobiro/stats-pr,0.53530973,Merge tags from payload (#843),,0
+284,Remove unnecessary padding from bottom of page,0.5740989,Prevent horizontal scrolling in Dashboard supervisors section (#506),Update upgrade guide Update Update Update UPGRADE.md Co-authored-by: Taylor Otwell taylor@laravel.com,0
+285,Fixes indentation.,0.37460193,Fix autobalancer (#651),,0
+286,Do not test on Laravel 7 for Horizon 3.x,0.62235904,Removed support for Laravel 5.5 & 5.6 (8a92e09),,0
+287,Check if failedJob.reserved_at is set (#1067),0.8611975,Check if failedJob.reserved_at is set before making time calculation (#1067)﻿,,1
+288,Merge pull request #219 from browner12/container-fluid,0.54419315,Merge tags from payload (#843),,0
+289,Fix URL for retrying jobs,0.93739367,Fix URL for retrying jobs (#547),Conflicts: tests/Feature/AddSupervisorTest.php tests/Feature/MetricsTest.php tests/Feature/SupervisorTest.php,1
+290,Update composer.json,0.563899,Require ext-json (5a54d27),,0
+291,"Revert ""Filter recent jobs by tag""",0.82442194,Filter recent jobs by tag (#665),check if parent is still running Update SupervisorCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+292,Tweak Reload behaviour,0.5966438,Fallback array for retried_by by @driesvints in link,,0
+293,Merge pull request #671 from laravel/dependabot/npm_and_yarn/lodash-4.17.13,0.59179455,Merge tags from payload (#843),,0
+294,Create issues.yml,0.50625575,"Forcing Vue to use the X-Requested-With header, set to XMLHttpRequest (#642)",,0
+295,chore: bump axios to v1.x (#1247),0.8170876,Bump axios to v1.x by @ankurk91 in link,,1
+296,add sidebar entry for silenced,0.5147798,Implement Silenced interface by @driesvints in link,Conflicts: CHANGELOG.md config/horizon.php public/app-dark.css public/app.css public/app.js public/mix-manifest.json,0
+297,Prevent pool to receive more than available processes on scaling according to minProcesses config (#1096),0.9419877,Prevent pool to receive more than available processes on scaling (#1096)﻿,,1
+298,PSR-4 : extract fixtures,0.4363279,Support batches (#844),,0
+299,switch to browser time,0.78613156,"Switch to browser timezone (8ee690a, c7a4739)",,1
+300,Add ext-pcntl to composer,0.3767,Let user choose custom env (#483),,0
+301,Compile assets,0.8215742,Compile assets (57814a0),,1
+302,Merge branch 'H/rafalglowacz/horizon-purge-killing-processes-of-other-instances' of link into rafalglowacz-H/rafalglowacz/horizon-purge-killing-processes-of-other-instances,0.5675887,Prevent horizon:purge from killing too many processes (#820),,0
+303,added display=swap to google font (#1121),0.59058857,Add fallback font (#964)﻿,,0
+304,Merge pull request #807 from laravel/ramsey-uuid,0.59455335,Merge tags from payload (#843),,0
+305,formatting and compile,0.4994901,Properly format numeric values (#606),,0
+306,Add /.idea to ignored,0.4185028,Add missing createPayloadArray arg (#516),,0
+307,module,0.369197,Another way for tags displaying & collapsible panels (#754),,0
+308,Vendor Publish only Laravel Horizon,0.5392224,Laravel 9 Support (#1112),wip wip wip wip cooldown tests wip wip wip auto scaler tests wip wip,0
+309,switch from Chronos to Carbon,0.9335507,Switch from Chronos to Carbon (#826),,1
+310,Merge pull request #696 from dwightwatson/publish-master,0.47890845,Merge tags from payload (#843),Implement default environment Refactor defaults to higher level,0
+311,enhance loading failed job retries,0.73440397,Add ability to see if a failed job is retried and/or a retry (573e6a8),,1
+312,revert breaking PR,0.5408189,Revert app layout PR (#1026)﻿,,0
+313,Group api prefix,0.38894388,Merge tags from payload (#843),Bump elliptic from 6.5.2 to 6.5.3,0
+314,no sleep,0.32548517,nan,,0
+315,Merge pull request #813 from laravel/revert-809-patch-1,0.63303065,Merge tags from payload (#843),Bumps elliptic from 6.5.2 to 6.5.3. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,0
+316,Merge pull request #17 from lucasmichot/feature/master/composer-lock,0.5219115,Merge tags from payload (#843),Bump lodash from 4.17.13 to 4.17.19,0
+317,Added Balance Options and Tags section,0.61824274,Another way for tags displaying & collapsible panels (#754),Bumps lodash from 4.17.13 to 4.17.19. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,0
+318,apply renaming to backoff and retryUntil,0.6988884,Reset the retryUntil value (#736),Update tests.yml,0
+319,Merge pull request #57 from lucasmichot/feature/master/tests,0.5252067,Merge tags from payload (#843),,0
+320,Merge pull request #831 from themsaid/pr15030,0.5960579,Merge tags from payload (#843),suppor worker max-time and max-jobs fix tests,0
+321,Introduce functionality to handle configured time periods for recent/failed jobs,0.68401384,Allow custom dashboard failed jobs metric period (#644),Bump websocket-extensions from 0.1.3 to 0.1.4,0
+322,Fix displaying failed job,0.7814918,Fix Failed Jobs page showing no results when failed jobs do exist (#511),Bumps websocket-extensions from 0.1.3 to 0.1.4. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com,1
+323,configurable job expiry,0.7718868,Expire monitored jobs (#484),Batch Support,1
+324,[develop] Support worker max-time and max-jobs (#860),0.9561584,Support worker max-time and max-jobs (#860),Conflicts: CHANGELOG.md,1
+325,Merge pull request #166 from reinink/1.0,0.51141685,Merge tags from payload (#843),Conflicts: CHANGELOG.md,0
+326,Update tests.yml (#1142),0.47042176,Show warning when manifest is outdated (#783),,0
+327,Merge pull request #16 from nunomaduro/master,0.5060291,Merge tags from payload (#843),,0
+328,"Revert ""[3.0] Display worker CPU and memory utilization in supervisor list""",0.93984306,"Reverted ""Display worker CPU and memory utilization in supervisor list"" (#616, #614)",,1
+329,Merge pull request #2 from ntzm/patch-1,0.5702956,Merge tags from payload (#843),[5.x] Merge tags from payload,0
+330,[5.x] Silenced jobs (#1232),0.70429385,Silenced jobs by @driesvints in link,,1
+331,Bump PHPUnit and PHP,0.6663229,Bump minimum PHP version to PHP 7.3 (ca9ddda),,0
+332,Fix failing tests (#1229),0.6514261,Fix check deleting failed job is actually failed (#894)﻿,,0
+333,Merge pull request #87 from iamzozo/master,0.54934067,Merge tags from payload (#843),,0
+334,Merge pull request #94 from robinvdvleuten/patch-1,0.54311574,Merge tags from payload (#843),,0
+335,Merge pull request #619 from lonnylot/issue/custom-basename,0.65192735,Merge tags from payload (#843),,0
+336,Merge pull request #921 from daniel-g-wood/add-tag-placeholder,0.6688331,Merge tags from payload (#843),,0
+337,Update branch alias and orchestra dependency,0.39576262,Update outdated compiled assets (2a420af),,0
+338,Merge pull request #529 from crynobone/patch-2,0.5551541,Merge tags from payload (#843),,0
+339,Merge pull request #498 from mvdnbrk/fix-indentation,0.5646707,Merge tags from payload (#843),,0
+340,Use proper assertions.,0.31247315,﻿,,0
+341,Ensure NPM packages are up-to-date,0.43681604,Require latest symfony/debug version (72cc3a7),,0
+342,merge tags from payload,0.9142654,Merge tags from payload (#843),,1
+343,Test against PHP 7.2,0.69033325,Support PHP 8 (#917),,0
+344,unnecessary param to refreshStatsPeriodically (#1198),0.84473544,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,1
+345,Merge pull request #528 from crynobone/patch-1,0.5624369,Merge tags from payload (#843),,0
+346,Merge pull request #445 from driesvints/fix-7.3-build,0.5612976,Fix findFailed method (#478),,0
+347,Merge pull request #202 from faustbrian/patch-1,0.55129653,Merge tags from payload (#843),Trigger MasterSupervisorDeployed event,0
+348,Merge pull request #30 from lucasmichot/feature/master/psr-4,0.606573,Merge tags from payload (#843),,0
+349,first,0.38085127,﻿,Bump jquery from 3.4.1 to 3.5.0,0
+350,Update gitattributes,0.5318717,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,Bumps jquery from 3.4.1 to 3.5.0. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,0
+351,add assets command,0.5450244,Compiled assets (1dcbb96),,0
+352,Merge pull request #19 from lucasmichot/feature/master/laravel-style,0.5841515,Merge tags from payload (#843),Update PendingJobsController.php,0
+353,These trailing slashes are needed,0.50985557,"Revert ""Prevent horizon:purge from killing too many processes"" (#831)",Update docblock,0
+354,Fix for job rows on monitoring tags screen,0.9567472,"Fix for job rows on monitoring tags screen (#814, 066ada5)",Should this be countPending as it is in the PendingController and you would want to get the total number of pending jobs and not completed job,1
+355,Fix minor typo in ContinueCommand,0.50779283,Add commands to pause and continue supervisors (#914),Conflicts: CHANGELOG.md composer.json,0
+356,debug graph,0.46309486,Updated overview stats labels on the dashboard (#461),,0
+357,Merge pull request #648 from laravel/revert-646-patch-4,0.603938,Merge tags from payload (#843),[4.x] Revert #820,0
+358,Merge branch 'delete-monitored-jobs-using-pagination' of link into gdebrauwer-delete-monitored-jobs-using-pagination,0.5149677,Fix pagination for recent jobs (#678),Update RedisJobRepository.php,0
+359,Fix undefined error,0.6259549,Fix findFailed method (#478),,0
+360,Compress the logo,0.5278084,Optimized Horizon SVG logo (#489),Update docblock to match method name,0
+361,Merge pull request #492 from mvdnbrk/flatten-assets-directory,0.5153804,Merge tags from payload (#843),,0
+362,doc null or mixed return,0.30640048,Remove unnecessary register method (7134324),,0
+363,Tooltip fix for issue #414,0.64498967,Fix Layout issues (#821),,0
+364,Merge pull request #54 from lucasmichot/feature/master/psr4-unit-tests,0.51588726,Merge tags from payload (#843),,0
+365,Changed icon to a gear.,0.44344276,Updated overview stats labels on the dashboard (#461),,0
+366,revert dark mode breaking change,0.8477748,Revert dark mode breaking change (fdfbd5b),[5.x] Switch from Chronos to Carbon,1
+367,Merge pull request #369 from JayBizzle/patch-1,0.5658114,Merge tags from payload (#843),,0
+368,prevent horizon:purge from killing too many processes,0.96805143,Prevent horizon:purge from killing too many processes (#820),,1
+369,Inject dependencies with handle method,0.44673872,Fix missing variable use in anonymous function by @joshuaruesweg in link,[4.x] Chronos 2.0,0
+370,Compile assets (for recent changes).,0.69991386,Compile assets (57814a0),,0
+371,Drop support for old Laravel versions,0.8209198,Removed support for Laravel 5.5 & 5.6 (8a92e09),,1
+372,recompile,0.55796635,Removed,,0
+373,Ensure Autoscaler never reduces processes to less than 1 (#1221),0.89893025,Ensure Autoscaler never reduces processes to less than 1 by @LasseRafn in link,,1
+374,fix nice option,0.59299755,"Add support for Supervisor ""nice"" option (#551, 8d0034b, #556)",[4.x] Fix Layout issues if Tag(s) name is too long for Failed/Completed/Pending Jobs Screens,0
+375,Merge pull request #79 from larsjanssen6/master,0.5675776,Merge tags from payload (#843),,0
+376,[5.x] Update the badges to use shields.io,0.43057227,Add maintenance notice on dashboard (#911),,0
+377,use readableTimestamp method,0.72336096,Make Year of readableTimestamp more readable (#535),,1
+378,update composer,0.51697034,Updated laravel-mix to v4.0 (#490),,0
+379,update matrix,0.5099316,Updated axios to v0.18 (#491),,0
+380,Merge pull request #483 from setkyar/2.0,0.48351738,Fix breaking change with createPayload method on RedisQueue (b79bb27),"This change modifies the master supervisor basename to include the hash of the current directory. The process inspector that determines the processes to kill uses this hash to only look for processes that were created by the Horizon command running in the current Laravel instance's directory, not by all Laravel instances running on the server. This fixes #769.",0
+381,Chronos 1 Â| Chronos 2,0.69722164,Chronos 2.0 (#824),Conflicts: CHANGELOG.md,0
+382,Add secs to y-axis ticks' for clarity (#900),0.9767834,Add secs to y-axis ticks' for clarity (#903)﻿,,1
+383,Bump elliptic from 6.5.3 to 6.5.4,0.5389832,Bump axios to v1.x by @ankurk91 in link,,0
+384,"Checking the ""viewHorizon"" gate first (#1148)",0.8608993,"Checking the ""viewHorizon"" gate first by @marcialpaulg in link",Conflicts: CHANGELOG.md,1
+385,add separate screenf or completed jobs,0.8512846,Add separate screen for completed jobs (#767),,1
+386,Update 1_Bug_report.md,0.53646314,Add maintenance notice on dashboard (#911),,0
+387,Trigger MasterSupervisorDeployed event,0.95540667,Trigger MasterSupervisorDeployed event (#839),[4.x] Fix for job rows on monitoring tags screen,1
+388,Styleci fixes,0.57970345,Fix Layout issues (#821),,0
+389,Introduced a Horizon.basePath property and updated all http calls to use it instead of Horizon.path,0.5927303,Allow Horizon to be used on a subdomain without a subfolder (#749),"Revert ""[4.x] Graceful shutdown on SIGTERM also""",0
+390,Add some PHP 8.1 fixes (#1100),1.0000002,Add some PHP 8.1 fixes (#1100)﻿,,1
+391,Only show the pagination when there are recent jobs,0.7369496,Fix pagination for recent jobs (#678),[4.x] Graceful shutdown on SIGTERM also,1
+392,Merge pull request #68 from laravel/useWebMiddleware,0.5937519,Merge tags from payload (#843),,0
+393,wip,0.4012273,nan,,0
+394,Merge pull request #651 from SDekkers/fix-autobalancer,0.7356732,Fix autobalancer (#651),This can be useful when run horizon in docker for example.  Docker by default send SIGTERM on stop container,1
+395,"Revert ""dont wait for workers to terminate""",0.5231648,Expire monitored jobs (#484),[4.x] Support ramsey/uuid v4,0
+396,add missing period,0.432506,Fix wrong value for failedJobs periods (#757),,0
+397,Merge branch 'master' of link into develop,0.35512137,Merge tags from payload (#843),,0
+398,float times,0.47241265,Use provided timezone for delay due (aa69357),,0
+399,"Revert ""Support Laravel 5.7.2 - add missing option stop-when-empty""",0.72673607,Removed support for Laravel 5.5 & 5.6 (8a92e09),Conflicts: CHANGELOG.md,1
+400,[3.x] Add 'view details' to tag-jobs screen,0.90457505,Add 'view details' to tag-jobs screen (#775),,1
+401,Update .styleci.yml,0.51579213,New UI (#522),,0
+402,use custom Chart JS options,0.54650533,change chart.js intersect mode to false by @swist666 in link,,0
+403,Update function calls,0.5421529,Fix deprecated process calls (#515),[4.x] Align design with Pending/Completed jobs screen,0
+404,recompile assets,0.5405731,Compiled assets (1dcbb96),,0
+405,Use v-text for display of period text on dashboard,0.42359936,Show paused supervisors on dashboard (#1052)﻿,Update monitoring screen to reflect changes of v4 for completed/pending screen pages.,0
+406,Throw an exception in case of invalid Redis connection,0.6696293,Use 'default' connection as a default redis connection (#765),,0
+407,Merge pull request #867 from laravel/dependabot/npm_and_yarn/elliptic-6.5.3,0.63169754,Merge tags from payload (#843),,0
+408,Fix v-else typo,0.45521784,Improve wording of error message (#918),,0
+409,use a single redis connection,0.76846355,Use 'default' connection as a default redis connection (#765),Conflicts: CHANGELOG.md,1
+410,allow horizon route to be configurable,0.6799754,Set the Horizon environment via command option (#523),,0
+411,separate queue notification details from where queueing on,0.5726315,Use callAfterResolving to register QueueManager (#1089)﻿,,0
+412,"Revert ""Add secs to y-axis ticks' for clarity (#900)"" (#902)",0.9364391,Add secs to y-axis ticks' for clarity (#903)﻿,Bump acorn from 6.4.0 to 6.4.1,1
+413,add support for breaking change,0.44298097,Add support for setting workers name (#840),Bumps acorn from 6.4.0 to 6.4.1. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,0
+414,Merge pull request #1 from matthijs110/patch-2,0.60996294,Merge tags from payload (#843),,0
+415,Merge branch 'php-binary' of link into billmn-php-binary,0.5663661,Resolve issue with php strict type by @farmani in link,,0
+416,Test on phpredis,0.33096653,Suggest predis instead of requiring it (#531),,0
+417,Fix deprecated process calls,0.9341268,Fix deprecated process calls (#515),,1
+418,Reduce bundle size (#1091),1.0,Reduce bundle size (#1091),,1
+419,Fix default current working directory when creating a Symfony Process object.,0.42925793,Implement default environment (#869),"This change modifies the master supervisor basename to include the hash of the current directory. The process inspector that determines the processes to kill uses this hash to only look for processes that were created by the Horizon command running in the current Laravel instance's directory, not by all Laravel instances running on the server. This fixes #769.",0
+420,add metrics options and dark mode config,0.9573785,Add metrics options and dark mode config (#795),Upgrade to Chronos 2.x,1
+421,Styling fixes,0.616222,Fix Layout issues (#821),[4.x] Show warning when manifest is outdated,0
+422,Update update-changelog.yml,0.5201147,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,0
+423,clean loading variables,0.4087768,Handle js phpunserialize not working with closures (9c3a75a),,0
+424,Update README.md (#1170),0.5382049,Make Year of readableTimestamp more readable (#535),Conflicts: CHANGELOG.md,0
+425,Merge pull request #702 from piotrgrabowskielastique/master,0.4935015,Merge tags from payload (#843),,0
+426,Update CHANGELOG,0.66969,Changed,,0
+427,Repair assumption about default key prefix length,0.46577287,Changed default Redis prefix (#643),,0
+428,[5.x] Revert app layout pr (#1026),0.93201244,Revert app layout PR (#1026)﻿,,1
+429,Updated mockery/mockery dependency,0.45359147,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,0
+430,Upgrade to Chronos 2.x,0.7715783,Chronos 2.0 (#824),,1
+431,Merge pull request #764 from mvdnbrk/3.0,0.5876524,Merge tags from payload (#843),,0
+432,compile production,0.5085488,Compile assets (57814a0),,0
+433,Merge pull request #172 from browner12/favicon,0.54373735,Merge tags from payload (#843),,0
+434,Add missing spaces in vue component methods,0.4111282,Add margin to retries table and make exceptions stacktrace responsive (ff625c5),Conflicts: CHANGELOG.md,0
+435,Merge branch '3.0' of link,0.4756301,Merge tags from payload (#843),,0
+436,Update .gitattributes (#1188),0.50250566,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,0
+437,add default scaling strategy,0.67424226,Adjust auto scaling to always use the max processes (#627),,0
+438,Align design with Pending/Completed jobs page,0.8406725,Align design with Pending/Completed jobs screen (#802),,1
+439,Ability to see if a job is delayed,0.9158952,Ability to see if a job is delayed (#755),,1
+440,Resolve dependencies correctly for worker,0.61677396,Fix worker command binding (3b53310),[4.x] Upgrade guide,0
+441,Github templates,0.39801142,Another way for tags displaying & collapsible panels (#754),,0
+442,Merge pull request #473 from mvdnbrk/2.0,0.56186116,Merge tags from payload (#843),,0
+443,Updates axios to v0.18.,0.8959307,Updated axios to v0.18 (#491),,1
+444,Use Proper assertions,0.31061858,Suggest predis instead of requiring it (#531),,0
+445,revert incomplete feature,0.53462267,Reset the retryUntil value (#736),,0
+446,refactor,0.52653396,Revert filtering by tag (#741),Conflicts: public/app.js public/mix-manifest.json,0
+447,Update templates,0.5206748,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,0
+448,Rename asset command,0.4903564,"When register, keep the original Redis options, only overwrite prefix by @nthsky in link",,0
+449,Replace trait,0.52711904,Changed,,0
+450,fix uglify options,0.43749702,Fix Layout issues (#821),"Fix v-else for the Job's ""completed at""",0
+451,Merge pull request #240 from teraone/sgotre-patch-1,0.60946804,Merge tags from payload (#843),,0
+452,fix,0.5598592,Fix check deleting failed job is actually failed (#894)﻿,,0
+453,Fix deprecation errors for PHP 8.2 (#1270),0.8840817,Fix deprecation errors for PHP 8.2 by @AntonCooper in link,,1
+454,Add silenced job detail view,0.6853914,Ability to view job details in recent jobs overview (#751),,0
+455,"Organized tags better, added collapse",0.59831274,Merge tags from payload (#843),Fix delayed message error when time zone is not UTC,0
+456,fix recent jobs screen,0.9541599,Fix recent jobs screen (1ab5749),,1
+457,Do not test on 6.0,0.43469948,Show warning when manifest is outdated (#783),,0
+458,Merge pull request #642 from SDekkers/request_xmlhttprequest,0.60601777,Merge tags from payload (#843),,0
+459,Merge pull request #173 from uber1337/adding_named_routes,0.5790166,Add ability to configure route domain setting (#550),Conflicts: .travis.yml,0
+460,Improve assertions (#884),0.4803186,Improve wording of error message (#918),[3.x] Switch to Github Actions,0
+461,[5.0] Check if parent is still running (#881),0.97047246,Check if parent is still running (#881),,1
+462,Merge pull request #527 from fitztrev/3.0,0.5582833,Merge tags from payload (#843),[4.x] Add 'view details' to tag-jobs screen,0
+463,[5.x] Update upgrade guide (#885),0.52199864,Updated laravel-mix to v4.0 (#490),,0
+464,Updated AutoScaler::numberOfWorkersPerQueue() to not use ternary statements,0.5478803,Ensure Autoscaler never reduces processes to less than 1 by @LasseRafn in link,,0
+465,Merge pull request #469 from michaeldyrynda/2.0,0.5561223,Merge tags from payload (#843),In addition to the awesome PR #751  we just add the missing view details link to the monitoring tags screen to be able to view details of a monitored job.,0
+466,use a fluid container,0.27924746,Prevent pool to receive more than available processes on scaling (#1096)﻿,,0
+467,enable tooltips,0.46616584,Set the Horizon environment via command option (#523),,0
+468,different approach for termination,0.4685917,"Revert ""Prevent horizon:purge from killing too many processes"" (#831)",,0
+469,Merge pull request #741 from laravel/revert-filtering-by-tag,0.7561352,Revert filtering by tag (#741),,1
+470,Fix docblocks.,0.447101,Fix worker command binding (3b53310),[4.x] Add separate screen for completed jobs,0
+471,[5.6] Support block_for config option,0.48787427,Predis v2 support by @driesvints in link,,0
+472,"Revert ""Added route middleware to config file; Updated registerRoutes to use config value or default to web;""",0.5850748,Add ability to configure route domain setting (#550),,0
+473,Revert Changes,0.7583645,Changed,,1
+474,Add license file,0.41004267,Add ability to configure route domain setting (#550),[3.x] Use 'default' connection as a default redis connection,0
+475,update gitignore,0.4311763,Require latest symfony/debug version (72cc3a7),,0
+476,Update pull-requests.yml,0.5291078,"Forcing Vue to use the X-Requested-With header, set to XMLHttpRequest (#642)",,0
+477,Bump moment from 2.29.2 to 2.29.4 (#1163),0.5951537,Bump axios to v1.x by @ankurk91 in link,,0
+478,Merge pull request #410 from browner12/bootstrap-stable,0.54233694,Merge tags from payload (#843),,0
+479,Switch to Github Actions,0.34401548,Clear stopwatch once job is deleted by @taylorotwell in link,Update CHANGELOG,0
+480,panel-content overflow-x from scroll to auto,0.5467214,Prevent horizontal scrolling in Dashboard supervisors section (#506),,0
+481,Merge pull request #70 from yakidahan/master,0.48561883,Merge tags from payload (#843),[3.x] Allow trimming completed jobs,0
+482,Typo Fix,0.4686644,Improve wording of error message (#918),,0
+483,Update to Symfony 5,0.68691707,Require latest symfony/debug version (72cc3a7),,0
+484,Use 'default' connection as config default,0.78285456,Use 'default' connection as a default redis connection (#765),,1
+485,Merge pull request #749 from shabushabu/root-subdomain,0.501363,Merge tags from payload (#843),Conflicts: CHANGELOG.md,0
+486,fix failed job retries table,0.7877618,Fix failed jobs retrying (7d28272),,1
+487,Merge pull request #21 from nunomaduro/master,0.5151975,Merge tags from payload (#843),,0
+488,monitoring screen,0.604465,"Fix for job rows on monitoring tags screen (#814, 066ada5)",Fix wrong value for failedJobs periods,0
+489,Empty message if loading finished and result set is empty,0.4799605,Set lastPushed when executing the delayed enqueue closure (#951)﻿,,0
+490,Bump Symfony dependencies,0.50410354,Bump axios to v1.x by @ankurk91 in link,,0
+491,Update upgrade guide,0.53996116,Update outdated compiled assets (2a420af),,0
+492,add files,0.47171095,Add missing createPayloadArray arg (#516),,0
+493,Fallback array for retried_by (#1166),0.8511463,Fallback array for retried_by by @driesvints in link,,1
+494,[3.0] Add matrix to travis to tests against all supported version.,0.38022858,Add metrics options and dark mode config (#795),,0
+495,Merge pull request #55 from lucasmichot/feature/master/param-spacing,0.58568084,Merge tags from payload (#843),,0
+496,Another way for tags displaying and collapsable panels,0.9296049,Another way for tags displaying & collapsible panels (#754),This reverts commit 78f83ead467f764fd6aeb1f626ae7db44d6e86f2.,1
+497,Bump highlight.js from 9.14.2 to 10.1.2 (#932),0.5650337,Bump axios to v1.x by @ankurk91 in link,,0
+498,Added route middleware to config file; Updated registerRoutes to use config value or default to web;,0.620736,Add ability to configure route domain setting (#550),,0
+499,Require latest symfony/debug component version,0.90957165,Require latest symfony/debug version (72cc3a7),Conflicts: CHANGELOG.md resources/js/screens/recentJobs/index.vue,1
+500,allow trimming completed jobs,0.9180646,Allow trimming of completed jobs (#720),,1
+501,fix style,0.6552049,Fix Layout issues (#821),,0
+502,Merge pull request #144 from jericopulvera/master,0.5415821,Merge tags from payload (#843),[3.x] Another way for tags displaying & collapsable panels,0
+503,revert change,0.68891394,Changed,,0
+504,Add exception context on failed jobs (#1115),1.0,Add exception context on failed jobs (#1115),,1
+505,Properly format numeric values,0.9071235,Properly format numeric values (#606),,1
+506,Update .gitattributes file,0.48829803,Update outdated compiled assets (2a420af),,0
+507,use human time in overview,0.4204282,Use provided timezone for delay due (aa69357),,0
+508,adjust configuration for 5.8 default configuration,0.87410295,Adjust configuration for 5.8 default configuration (f1f830e),This reverts commit 317bf602b53678cc0ae2e770b767282a461c9782.,1
+509,Add Mail Notifications,0.4817565,Add exit codes to status command by @mbardelmeijer in link,,0
+510,Bump terser from 4.8.0 to 4.8.1 (#1162),0.5956751,Bump minimum Laravel version (#954)﻿,,0
+511,Added the pause SVG in front of the supervisor name when the supervisor itself is paused (#1052),0.7107738,Show paused supervisors on dashboard (#1052)﻿,,1
+512,Merge branch 'scaleMaxInitially' of link into 3.0,0.44929597,Merge tags from payload (#843),,0
+513,Merge pull request #491 from mvdnbrk/update-axios,0.5723067,Merge tags from payload (#843),Conflicts: CHANGELOG.md,0
+514,Merge branch 'installation-improvement' of link into mad-web-installation-improvement,0.38692975,Merge tags from payload (#843),,0
+515,"Revert ""Make horizon work with strict content-security-policy (#1138)"" (#1141)",0.8859687,"Revert ""Make horizon work with strict content-security-policy"" by @driesvints in link",,1
+516,Add horizon:assets rename to upgrade guide,0.5909327,Update outdated compiled assets (2a420af),Allow Horizon to be used on a subdomain without a subfolder,0
+517,Merge pull request #261 from zjrosen1/fix/undefined-tags,0.60611486,Merge tags from payload (#843),,0
+518,Merge branch 'horizon_status' of link into dbpolito-horizon_status,0.5872389,Adding horizon:status command (#545),Conflicts: CHANGELOG.md,0
+519,Implement past hour / failed past hour labels in the Vue component,0.49611494,Use provided timezone for delay due (aa69357),,0
+520,Merge pull request #58 from laravel/bug/balancing,0.6094345,Merge tags from payload (#843),,0
+521,Merge pull request #478 from driesvints/fix-find-failed,0.7110988,Fix findFailed method (#478),[3.x] Revert filtering by tag,1
+522,block_for should default to null,0.37629628,Allow any queued class to be silenced by @lioneaglesolutions in link,This reverts commit 1604d36dc5bcb10a01e987cd77af7970c113856d.,0
+523,add test tags are correctly determined for listeners,0.48765758,Increase perPage variable for monitored tags by @joshuaruesweg in link,This reverts commit e39a9c2a89c8942b272b7277103cf43cf6687486.,0
+524,Graceful shutdown on SIGTERM also,0.5093196,Ensure Autoscaler never reduces processes to less than 1 by @LasseRafn in link,This reverts commit 0c11871891cd5126a8b3540dea8c75d8b663b6dc.,0
+525,first commit,0.40250084,Considering queue config parameter 'after_commit' (#948) ,[3.0] Fix docblocks,0
+526,Merge pull request #488 from driesvints/cleanup-redis-job-repository,0.5714388,Fix URL for retrying jobs (#547),,0
+527,attempt to convert to utf8,0.51974094,"Fix encoding (ef0c45a, 9e3748e)",[3.0] Manual code style fixes,0
+528,Fix checking parent id (#989),1.0000001,Fix checking parent id (#989)﻿,,1
+529,code format,0.5597917,Properly format numeric values (#606),,0
+530,tweak,0.72565585,Changed,Conflicts: CHANGELOG.md,1
+531,Merge branch 'master' of link into newUI,0.4430478,Implement Silenced interface by @driesvints in link,,0
+532,Remove unnecessary register method,0.8974259,Remove unnecessary register method (7134324),,1
+533,move contents of horizon div to separate component,0.8032228,Move contents of #horizon to separate component (#1022)﻿,Reset the retryUntil value,1
+534,[5.x] Adds type checking (#1250),0.49171302,Update syntax highlighting (#1002),,0
+535,fix worker command binding,0.9126004,Fix worker command binding (3b53310),,1
+536,fix typos,0.5065898,Improve wording of error message (#918),,0
+537,Merge pull request #516 from deichholz/fix/add-missing-payload-array-arg,0.6355399,Merge tags from payload (#843),,0
+538,Update deprecated composer.lock version,0.4843293,Require latest symfony/debug version (72cc3a7),,0
+539,[5.x] Improve completed jobs UI (#1064),0.94714046,Improve completed jobs UI (#1064)﻿,,1
+540,[5.x] Failed job list: Modify job retry tooltip label to include status of last job retry (#1182),0.90196025,Failed job list: Modify job retry tooltip label to include status of last job retry by @Jevz in link,,1
+541,Bump elliptic from 6.5.2 to 6.5.3,0.5509071,Bump axios to v1.x by @ankurk91 in link,,0
+542,Modify StyleCI,0.44138446,Adjust configuration for 5.8 default configuration (f1f830e),,0
+543,Ability to ignore long waits for queue (#1172),0.8253186,Ability to ignore long waits for queue by @jasonmccreary in link,,1
+544,Updated style,0.5840452,Changed,[3.x] Remove unused functions,0
+545,Register resolving method in register instead of boot,0.6352156,Remove unnecessary register method (7134324),,0
+546,PHP 8.1 support (#1088),0.9263537,Support PHP 8 (#917),,1
+547,Merge pull request #776 from laravel/github-actions,0.5116295,Merge tags from payload (#843),,0
+548,Fixes laravel/horizon#618,0.6433433,Unhide horizon command  (#878),[3.x] Test on 7.4,0
+549,Optimizes the Horizon SVG logo.,0.94369686,Optimized Horizon SVG logo (#489),,1
+550,fix test + added one for new status check,0.54744804,Add maintenance notice on dashboard (#911),,0
+551,sort job retries latest date first,0.66515774,Filter recent jobs by tag (#665),,0
+552,fix style issues,0.7571498,Fix Layout issues (#821),,1
+553,Apply fixes from StyleCI (#1023),0.6051419,Fix Layout issues (#821),,0
+554,fix status for large batches,0.85774255,Fix status for large batches (58b71c1)﻿,,1
+555,Merge pull request #149 from laravel/pr/31355,0.57713664,Merge tags from payload (#843),,0
+556,Merge pull request #13 from JamesForks/compress-svg,0.5128928,Merge tags from payload (#843),,0
+557,Merge branch 'fix_memory_config' into 5.x,0.476718,Fix misleading memory limit config (#908),,0
+558,Merge pull request #847 from laravel/dependabot/npm_and_yarn/websocket-extensions-0.1.4,0.65287745,Merge tags from payload (#843),,0
+559,update travis configs,0.47750783,Require latest symfony/debug version (72cc3a7),Conflicts: .travis.yml,0
+560,Reduce bundle size,0.9279702,Reduce bundle size (#1091),,1
+561,Matrix build,0.33970976,Another way for tags displaying & collapsible panels (#754),[4.x] Update to Symfony 5,0
+562,Update CompletedJobsController.php,0.55202436,Add some PHP 8.1 fixes (#1100)﻿,,0
+563,Built JS and CSS for production,0.48198605,Fix vue-json-pretty CSS for new classnames by @datpmwork in link,,0
+564,Update and rename 1_Bug_report.md to 1_Bug_report.yml,0.4273401,Set default 'tries' to 1 (#704),,0
+565,Support PHP 8,0.915823,Support PHP 8 (#917),,1
+566,Drop Laravel 5.8 support,0.87766755,Removed support for Laravel 5.5 & 5.6 (8a92e09),Conflicts: .travis.yml composer.json,1
+567,Fix findFailed method,0.91225135,Fix findFailed method (#478),,1
+568,Merge pull request #197 from pdbreen/prefix,0.56686354,Merge tags from payload (#843),,0
+569,Use env to set domain and path (#1030),0.95856667,Use env. to set config domain and path (#1030)﻿,Conflicts: CHANGELOG.md,1
+570,fix tests,0.6024547,Fix check deleting failed job is actually failed (#894)﻿,,0
+571,"Revert ""New horizon & laravel version""",0.5723556,Updated laravel-mix to v4.0 (#490),,0
+572,Drop support for 5.7,0.53225327,Removed support for Laravel 5.5 & 5.6 (8a92e09),"[4.x] Added ""Attempts"" to jobs lists.",0
+573,"Use Chronos, seeing as it is available. Tweak value handling slighly.",0.530949,Chronos 2.0 (#824),,0
+574,Merge pull request #147 from laravel/pr/12024,0.58959496,Merge tags from payload (#843),,0
+575,Update README.md,0.53168344,Make Year of readableTimestamp more readable (#535),[3.0] set default 'tries' to 1,0
+576,Added tooltip to the delayed badge,0.53987575,Add maintenance notice on dashboard (#911),"trying a Job more than 1 time can have unintended side effects, and for the less experienced developer, defaulting to 3 tries could cause problems. my opinion would be that we default to 1 try, and allow the developer who understands the considerations for running a Job multiple times to increase this if they like.",0
+577,Update resources/views/layout.blade.php,0.63105226,Add some PHP 8.1 fixes (#1100)﻿,,0
+578,[5.x] Throw exception when minProcesses is set to zero (#988),0.9589623,"Throw exception when minProcesses is set to zero (#988, 831a5a8)","Added ""Reserved"" icon to indicate which job is being processed.",1
+579,FQN,0.41071817,Require symfony/process (f2a214c),,0
+580,Proper docblock type,0.41139925,Respect the prefers-color-scheme setting by @ramonrietdijk in link,[3.0] Update .styleci.yml,0
+581,Update MonitorMasterSupervisorMemory.php,0.6279329,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,0
+582,Fix storing floats in Redis,0.9510964,Fix storing floats in Redis (#477),Conflicts: CHANGELOG.md,1
+583,Merge pull request #220 from browner12/fix-favicon,0.53900206,Merge tags from payload (#843),,0
+584,"Revert ""Fix pagination for recent jobs""",0.8575729,Fix pagination for recent jobs (#678),[4.x] Rename asset command,1
+585,Add ext-json to composer.json,0.68271583,Require ext-json (5a54d27),,0
+586,[5.x] Add missing force option to horizon:clear (#909),0.95857155,Add missing force option to horizon:clear (#909),[3.x] Set same ttl for tags as same as recent jobs,1
+587,Bump lodash from 4.17.13 to 4.17.19,0.66299295,Bump minimum Laravel version (#954)﻿,,0
+588,Merge pull request #4 from Dylan-DPC/patch-1,0.52746874,Merge tags from payload (#843),,0
+589,single database setup,0.41324672,Compiled assets (1dcbb96),,0
+590,Merge pull request #836 from laravel/dependabot/npm_and_yarn/jquery-3.5.0,0.61700195,Merge tags from payload (#843),,0
+591,Merge pull request #843 from themsaid/pr18619,0.58957076,Merge tags from payload (#843),[3.x] Fix webpack config to use terser,0
+592,Merge pull request #765 from BinarCode/fix-default-default-config,0.56278086,Merge tags from payload (#843),,0
+593,Merge pull request #106 from padarom/patch-1,0.63541883,Merge tags from payload (#843),Conflicts: CHANGELOG.md,0
+594,Apply fixes from StyleCI (#875),0.6194243,Fix Layout issues (#821),,0
+595,Merge pull request #721 from laravel/php74,0.5888035,Fix deprecation errors for PHP 8.2 by @AntonCooper in link,,0
+596,update composer.json,0.56956667,Require ext-json (5a54d27),,0
+597,"Forcing Vue to use the X-Requested-With header, set to XMLHttpRequest",0.96937704,"Forcing Vue to use the X-Requested-With header, set to XMLHttpRequest (#642)",Fix pagination for recent jobs,1
+598,Merge pull request #722 from laravel/update-datetime-functions,0.5465503,Add cancelled status to batch overview by @markvaneijk in link,"This fixes a bug that was introduced by #665, where the next/previous pagination buttons were not working on the recent jobs page.",0
+599,Ensure that a job's id is not false,0.4640752,Expire monitored jobs (#484),Conflicts: CHANGELOG.md,0
+600,Added name to catch-all route,0.63292086,Rename variable to match route (4822955)﻿,,0
+601,Changed default Redis prefix,0.91810995,Changed default Redis prefix (#643),,1
+602,fix with microtime in different locales,0.4352268,Fix status for large batches (58b71c1)﻿,,0
+603,Merge pull request #493 from mvdnbrk/update-vue-router,0.61297494,Updated vue-router to v3.0 (#493),[3.x] Fix test suite,0
+604,Merge pull request #218 from gabriel-caruso/update-mockery,0.55577,Merge tags from payload (#843),,0
+605,Manual code style fixes,0.57703096,Fix Layout issues (#821),,0
+606,Update dev dependencies,0.5793646,Bumped minimum dependencies to Laravel 7.0 (#710),Bump lodash from 4.17.11 to 4.17.13,0
+607,Merge pull request #485 from driesvints/display-errors-for-failed-process-killing,0.62924606,Fix deprecated process calls (#515),Bump mixin-deep from 1.3.1 to 1.3.2,0
+608,Use proper return types,0.37455878,Properly format numeric values (#606),Bumps mixin-deep from 1.3.1 to 1.3.2. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,0
+609,Merge pull request #462 from michaeldyrynda/chore/format-dashboard-stat-integers,0.5517792,Format numbers on the stats dashboard for better readability (#462),Bumps lodash from 4.17.11 to 4.17.13. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,0
+610,allow setting workers name,0.8112905,Add support for setting workers name (#840),Filter recent jobs by tag,1
+611,fix conflicts,0.47185937,Fix no failing jobs problem (#532),,0
+612,Add try/catch for failed-jobs (#880),1.0000002,Add try/catch for failed-jobs (#880),,1
+613,[5.x] Refreshes tags periodically (#1274),0.7257781,Refreshes tags periodically by @nunomaduro in link,,1
+614,Merge pull request #269 from hxnk/fix-queueing-notifications,0.49634993,Add cancelled status to batch overview by @markvaneijk in link,,0
+615,Update web.php,0.72252864,Add some PHP 8.1 fixes (#1100)﻿,Conflicts: CHANGELOG.md,1
+616,Add upgrade guide,0.50455385,Add maintenance notice on dashboard (#911),,0
+617,Merge pull request #830 from CharbelJ/patch-2,0.5796894,Merge tags from payload (#843),,0
+618,Prefer non-deprecated CreatesApplication,0.44993255,Fix breaking change with createPayload method on RedisQueue (b79bb27),,0
+619,Merge pull request #416 from gordonzero/1.0,0.54444045,Merge tags from payload (#843),,0
+620,FIX: div tag is not closed (#1082),0.5826863,Fix missing tag check in payload (#945)﻿,,0
+621,Remove timezone config,0.6336932,"Switch to browser timezone (8ee690a, c7a4739)",Conflicts: .travis.yml composer.json,0
+622,Replace deprecated PHPUnit functionality,0.6238729,Add some PHP 8.1 fixes (#1100)﻿,[3.0] Make sure 6.0 build passes,0
+623,Add Horizon command to clear queue,0.9273243,"Add Horizon command to clear queue (#892, 05e3a1c)",,1
+624,Update config.yml,0.54019326,Updated laravel-mix to v4.0 (#490),,0
+625,Use proper param spacing,0.37983412,Prevent horizontal scrolling in Dashboard supervisors section (#506),,0
+626,Update test suite,0.4775459,Require latest symfony/debug version (72cc3a7),,0
+627,Merge branch '2.0',0.34128237,Require symfony/process (f2a214c),,0
+628,Bump loader-utils and resolve-url-loader (#1218),0.5621556,Bump axios to v1.x by @ankurk91 in link,,0
+629,Forget job timer in case of exception or failed job (#1127),0.8608792,Forget job timer in case of exception or failed job by @Namoshek in link,,1
+630,Sort packages,0.60914147,Alphabetically sort jobs/queues for metrics (#1083),,0
+631,work on readme,0.5337595,Make Year of readableTimestamp more readable (#535),,0
+632,Bump mixin-deep from 1.3.1 to 1.3.2,0.55752766,Bump minimum Laravel version (#954)﻿,Conflicts: CHANGELOG.md,0
+633,Merge pull request #736 from themsaid/retryUntil,0.6373946,Reset the retryUntil value (#736),,0
+634,compile assets,0.8101158,Compile assets (57814a0),[3.0] Fix autobalancer,1
+635,fix a few docblock issues,0.50956976,Fix Layout issues (#821),,0
+636,Merge pull request #614 from laravel/revert-606-format-numeric-values,0.5750465,Merge tags from payload (#843),,0
+637,Update .travis.yml,0.53955734,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,0
+638,use callAfterResolving to register QueueManager (#1089),0.99975806,Use callAfterResolving to register QueueManager (#1089)﻿,[3.0] Allow custom dashboard failed jobs metric period,1
+639,Merge branch 'try-signal' of link into halaei-try-signal,0.45143324,Add signal option to horizon:purge (e.g. SIGKILL) by @crishoj in link,"Revert ""[4.0] Change format""",0
+640,Check that stat exists before calling toLocaleString on it - fixes #467,0.8540642,Check for existence of stats before calling toLocaleString (#469),,1
+641,Display error when posix_kill fails,0.4644441,"Throw exception when minProcesses is set to zero (#988, 831a5a8)",[4.0] Change format,0
+642,Fix constraint,0.5044028,Ensure Autoscaler never reduces processes to less than 1 by @LasseRafn in link,,0
+643,Compile Assets,0.78815234,Compile assets (57814a0),,1
+644,Drop PHP 7.1 support,0.7636219,Support PHP 8 (#917),,1
+645,Merge pull request #61 from laravel/wrapInPipe,0.61774254,Merge tags from payload (#843),"Better format, the default app_name already set in the app config.",0
+646,Fix Purge always reporting 1 orphan process issue,0.63039577,Fix incorrect processes count (#481),Conflicts: CHANGELOG.md,0
+647,Merge pull request #720 from themsaid/completedJobsTrimming,0.5849385,Merge tags from payload (#843),,0
+648,Merge pull request #535 from setkyar/patch-1,0.5300026,Merge tags from payload (#843),,0
+649,[5.x] Implement default environment (#869),0.9210239,Implement default environment (#869),"Add config('horizon.trim.recent_failed') to control the dashboard ""Failed Jobs"" metric period. By default, it will be the past 7 days.",1
+650,supervisor nice option,0.7792958,"Add support for Supervisor ""nice"" option (#551, 8d0034b, #556)",[4.0] Changed default Redis prefix,1
+651,Fix colliding method name,0.45861942,Merge tags from payload (#843),,0
+652,Merge branch 'metrics-proposal' into 5.x,0.3873944,Adjust configuration for 5.8 default configuration (f1f830e),"Forcing Vue to use the X-Requested-With header, set to XMLHttpRequest",0
+653,Merge pull request #1 from laravel/phpredisSupport,0.6099391,Fix deprecation errors for PHP 8.2 by @AntonCooper in link,,0
+654,[5.x] Add cancelled status to batch overview (#1255),0.7973894,Add cancelled status to batch overview by @markvaneijk in link,,1
+655,Merge pull request #484 from driesvints/fix-incorrect-processes-count,0.76635206,Fix incorrect processes count (#481),,1
+656,fix path to favicon,0.42271957,Updated vue-router to v3.0 (#493),,0
+657,update config file,0.55266714,Require latest symfony/debug version (72cc3a7),,0
+658,Bump axios from 0.19.0 to 0.21.1,0.719898,Bump axios to v1.x by @ankurk91 in link,,1
+659,Merge pull request #221 from elghobaty/master,0.52392775,Merge tags from payload (#843),,0
+660,Order imports alphabetically,0.60363966,Alphabetically sort jobs/queues for metrics (#1083),,0
+661,Merge branch 'master' of github.com:laravel/horizon,0.37281793,Make horizon work with strict content-security-policy by @Grldk in link,,0
+662,Chronos 2.0,0.91106355,Chronos 2.0 (#824),"[3.0] Correct dashboard ""Failed Jobs Past 7 Days"" metric",1
+663,Merge pull request #783 from andresayej/4.x,0.59172076,Merge tags from payload (#843),"DashboardStatsController returns a count filtered by config('horizon.trim.recent') [default 1 hour] but the duration label is using config('horizon.trim.failed') [default 7 days]. Change the count to cover 7 days, matching total rows under tab ""Failed Jobs"".",0
+664,Merge pull request #775 from danijelk/patch-1,0.55586374,Merge tags from payload (#843),,0
+665,Allow Spaces in Queue Names,0.43488586,Considering queue config parameter 'after_commit' (#948) ,[3.0] Adjust auto scaling to always use the max processes,0
+666,Merge branch 'patch-1' of link into davidpiesse-patch-1,0.51156867,Merge tags from payload (#843),,0
+667,Merge pull request #778 from qiutuleng/3.0,0.47390914,Merge tags from payload (#843),,0
+668,Added env helper to prefix configuration,0.67327714,Use env. to set config domain and path (#1030)﻿,Custom MasterSupervisor name breaks dashboard,0
+669,[develop] Support batches (#844),0.87064874,Support batches (#844),,1
+670,Merge pull request #29 from lucasmichot/feature/master/tests,0.5245182,Merge tags from payload (#843),,0
+671,fix style issue,0.7527851,Fix Layout issues (#821),,1
+672,Drop 6.x support,0.5293147,Removed support for Laravel 5.5 & 5.6 (8a92e09),,0
+673,config: add some more defaults to supervisor (#1122),0.9577782,Add some more defaults to supervisor (#1122),,1
+674,"Grey badge, tooltip human readable time",0.47573358,Make Year of readableTimestamp more readable (#535),"Revert ""[3.0] Display worker CPU and memory utilization in supervisor list""",0
+675,Merge pull request #704 from browner12/patch-2,0.58875245,Merge tags from payload (#843),,0
+676,Ignore PHPUnit cache file,0.4781807,Fix deprecation errors for PHP 8.2 by @AntonCooper in link,,0
+677,Prevent horizontal scrolling in Dashboard supervisors section,0.98246825,Prevent horizontal scrolling in Dashboard supervisors section (#506),"Revert ""[3.0] Properly format numeric values""",1
+678,Rename resources/assets/js/pages/Monitoring/index.vue to .../Index.vue,0.41212317,Fix vue-json-pretty CSS for new classnames by @datpmwork in link,,0
+679,"Revert ""Remove mixed assets""",0.5781536,Removed,,0
+680,Merge pull request #36 from lucasmichot/feature/master/npm-bis,0.62395775,Merge tags from payload (#843),[3.0] Properly format numeric values,0
+681,Bump webpack from 5.74.0 to 5.76.1 (#1258),0.7157959,Bump minimum Laravel version (#954)﻿,,1
+682,Merge pull request #396 from austintoddj/patch-1,0.60513055,Merge tags from payload (#843),[3.0] Add app_name in dashboard,0
+683,"Revert ""Fixed issue where metrics only showed CallQueuedListener""",0.53642726,Use callAfterResolving to register QueueManager (#1089)﻿,Co-Authored-By: Dries Vints dries.vints@gmail.com,0
+684,Horizon::night() move to boot(),0.95671076,Horizon::night() move to boot()(#537),Co-Authored-By: Dries Vints dries.vints@gmail.com,1
+685,Laravel 9 support (#1112),0.9988151,Laravel 9 Support (#1112),Added app_name cron app config,1
+686,Only be paused if everything is paused,0.7725451,"Ability to see which masters are paused and only show paused if everything is paused (#929, f9b5aea)",,1
+687,Fix doc block,0.4431145,Fix status for large batches (58b71c1)﻿,,0
+688,tweaking readme,0.6019032,Make Year of readableTimestamp more readable (#535),,0
+689,Merge pull request #201 from pborreli/typos,0.5539204,Merge tags from payload (#843),,0
+690,Use fixtures for Unit tests,0.46930397,"Metrics snapshot config proposal and fix for race condition (#936, 59221e9)﻿",,0
+691,Replace string helpers,0.42359057,Allow deleting of Tags which contain forward slashes (Fixes #1093) by @sgotre in link,[3.0] Display worker CPU and memory utilization in supervisor list,0
+692,Updated tests to reflect new behavior defaulting to the min amount of processes with an empty queue,0.60815316,"Show workload also per queue when balancing is disabled (#966, b4e8c6a﻿",,0
+693,Update branch alias,0.40339702,Changed default Redis prefix (#643),[3.0] Fix for missing first failed job when searching,0
+694,Merge pull request #130 from laravel/pr/494,0.59447235,Merge tags from payload (#843),,0
+695,Merge pull request #616 from laravel/revert-589-stats-pr,0.56794286,Merge tags from payload (#843),,0
+696,Merge pull request #102 from theomessin/master,0.55373204,Merge tags from payload (#843),,0
+697,Merge pull request #489 from mvdnbrk/optimize-logo,0.5659095,Merge tags from payload (#843),,0
+698,Temporary workaround in test,0.47325274,Add ability to see if a failed job is retried and/or a retry (573e6a8),,0
+699,[3.0] Make Year of readableTimestamp more readable,0.93569607,Make Year of readableTimestamp more readable (#535),,1
+700,Switch to laravel-mix,0.7408806,Updated laravel-mix to v4.0 (#490),[3.0] Fix false jobs causing front-end not to display them,1
+701,Add missing anchor title for clarity (#1212),0.8343341,Add missing anchor title for clarity by @stevebauman in link,,1
+702,Merge pull request #824 from sojeda/feature/upgradeChronos,0.5359205,Merge tags from payload (#843),,0
+703,Added pushed at to detail screen,0.5774519,Add 'view details' to tag-jobs screen (#775),[3.0] Modify StyleCI,0
+704,Filter recent jobs by tag,0.9310083,Filter recent jobs by tag (#665),Apply fixes from StyleCI,1
+705,Update RedisJobRepository.php,0.6693114,Fix breaking change with createPayload method on RedisQueue (b79bb27),,0
+706,Merge pull request #387 from laravel/revert-385-bugfix-workcommand,0.5702581,Merge tags from payload (#843),,0
+707,Merge pull request #376 from chrislentz/chrislentz-patch-1,0.59589994,Merge tags from payload (#843),,0
+708,Removing empty lines for StyleCI,0.46128672,Allow deleting of Tags which contain forward slashes (Fixes #1093) by @sgotre in link,,0
+709,Add horizon:forget command to delete a failed job (#896),0.9999999,Add horizon:forget command to delete a failed job (#896),,1
+710,Create update-changelog.md,0.5069505,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,0
+711,Change to JS PHP unserialize to prevent DB queries,0.4946254,Resolve issue with php strict type by @farmani in link,,0
+712,Merge pull request #40 from lucasmichot/feature/master/stricter-comparisons,0.6076379,Merge tags from payload (#843),,0
+713,fix import jquery,0.48094338,Fix breaking change with createPayload method on RedisQueue (b79bb27),[3.0] Fix nice option,0
+714,Merge pull request #428 from MaxGiting/patch-1,0.63054895,Merge tags from payload (#843),,0
+715,Merge branch 'clearqueue_command' into 5.x,0.390684,Merge tags from payload (#843),,0
+716,Merge pull request #547 from aaronhuisinga/3.0,0.56680304,Merge tags from payload (#843),,0
+717,Merge pull request #52 from laravel/singleDatabaseSetup,0.5885488,Merge tags from payload (#843),,0
+718,rename restart to terminate,0.56977373,Reset the retryUntil value (#736),,0
+719,Apply fixes from StyleCI,0.52650225,Fix Layout issues (#821),,0
+720,[5.x] Fix misleading memory limit config,0.8857621,Fix misleading memory limit config (#908),,1
+721,"Fixed #622, added a return statement when timeToClearPerQueue = 0, to return minProcesses",0.6605625,Scale to the maxProcesses if timeToClearAll is zero (#718),,0
+722,Expire monitored jobs,0.93768847,Expire monitored jobs (#484),,1
+723,Rename readme.md to README.md,0.5075263,Make Year of readableTimestamp more readable (#535),,0
+724,Remove mixed assets,0.5650357,Removed,,0
+725,"Revert ""[3.0] Properly format numeric values""",0.796306,Properly format numeric values (#606),,1
+726,Merge pull request #359 from jerguslejko/slug,0.5266204,Merge tags from payload (#843),,0
+727,merge 3.0,0.55153996,Updated laravel-mix to v4.0 (#490),,0
+728,Apply fixes from StyleCI (#737),0.6225245,Fix Layout issues (#821),,0
+729,Re-arrange dependencies,0.3791715,Adjust configuration for 5.8 default configuration (f1f830e),,0
+730,Update composer.json (#954),0.58582556,Require ext-json (5a54d27),[3.0] Fix URL for retrying jobs,0
+731,keep failed job label consistent,0.59518135,Failed job list: Modify job retry tooltip label to include status of last job retry by @Jevz in link,"Horizon 3.0 added a config option for defining the Horizon path. The route for retrying failed jobs it still hardcoded to the defaualt ""horizon"" path.",0
+732,Fix webpack config to use terser,0.45961386,Reduce bundle size (#1091),,0
+733,drop php7.2,0.7231817,Bump minimum PHP version to PHP 7.3 (ca9ddda),,1
+734,Merge pull request #826 from browner12/carbon,0.55288625,Merge tags from payload (#843),,0
+735,"Revert ""Set same ttl for tags as same as recent jobs""",0.9111295,Set same ttl for tags as same as recent jobs (#692),,1
+736,Merge pull request #809 from zorn-v/patch-1,0.53473413,Merge tags from payload (#843),,0
+737,Set the Horizon environment via command option,0.9418529,Set the Horizon environment via command option (#523),,1
+738,Merge pull request #169 from ntzm/use-class-syntax,0.5350361,Merge tags from payload (#843),,0
+739,Merge pull request #39 from lucasmichot/feature/master/fix-before-destroy,0.56775874,Merge tags from payload (#843),,0
+740,Merge pull request #95 from ellisio/patch-1,0.6660337,Merge tags from payload (#843),,0
+741,fix test,0.60451794,Fix check deleting failed job is actually failed (#894)﻿,,0
+742,Merge pull request #606 from bonzai/format-numeric-values,0.5796472,Merge tags from payload (#843),,0
+743,Merge pull request #107 from lasselehtinen/master,0.5595621,Merge tags from payload (#843),,0
+744,Made view param optional,0.4923142,Update page title when switching between Pending and Completed views (#1084)﻿,,0
+745,Update tests.yml,0.4410699,Updated laravel-mix to v4.0 (#490),Horizon::night() move to boot(),0
+746,Merge pull request #185 from halaei/fix-jquery-import,0.5886183,Merge tags from payload (#843),,0
+747,Merge branch 'mail-notifications' of link into ThibaudDauce-mail-notifications,0.44902557,Merge tags from payload (#843),[3.0] Make Year of readableTimestamp more readable,0
+748,Merge pull request #59 from calebporzio/add-missing-spaces,0.5780908,Merge tags from payload (#843),,0
+749,"Fix the build, suggest phpredis.",0.4648208,Add some PHP 8.1 fixes (#1100)﻿,[3.0] Fix no failing jobs problem,0
+750,Add ability to configure route domain setting,0.9386647,Add ability to configure route domain setting (#550),[4.0] Suggest predis instead of requiring it,1
+751,Respect Laravel style,0.5785068,Laravel v10 Support by @driesvints in link,,0
+752,Fix syntax error,0.62999034,Improve wording of error message (#918),When a failed job is ready to be displayed the startingAt needs to be taken into account of being '0'. It'll later be added by 1 in the implementation below so we need to start with a -1 instead. Fixes link,0
+753,Merge pull request #665 from sebdesign/3.0,0.53788143,Merge tags from payload (#843),,0
+754,Fix incorrect processes count,0.9160205,Fix incorrect processes count (#481),Co-Authored-By: ThomHurks thomhurks@gmail.com,1
+755,Merge pull request #466 from swalker2/fix-failed-recent-jobs-link,0.60560465,Fix URL for retrying jobs (#547),Added predis to the dev dependencies so the build works Also suggest ext-redis so people can choose,0
+756,Fix wrong value for failedJobs periods,0.9324892,Fix wrong value for failedJobs periods (#757),[3.0] orchestra/testbench doesn't need orchestra/database since Laravel 5.6.0,1
+757,Update compile-assets.yml,0.5920007,Update outdated compiled assets (2a420af),[3.0] Add matrix to travis to tests against all supported version.,0
+758,adding named routes,0.6562098,Rename variable to match route (4822955)﻿,"Just like laravel/framework which suggests predis (and people can choose to use phpredis instead), Horizon should suggest it so people using phpredis do not needlessly install a dependency. Horizon relies on the redis config in config/database.php anyway, and trusts that the user correctly fills in that information. Requiring the user to install phpredis or predis herself is no different from what other parts of Laravel using Redis already do.",0
+759,Merge pull request #633 from derekmd/dashboard-7-day-failed-job-count,0.6717434,"Correct dashboard ""Failed Jobs Past 7 Days"" metric (#633)",[3.0] Directories public/css and public/js no longer used,0
+760,chore: remove redundant null (#1135),0.683701,Remove unused functions (#722),,0
+761,slugify hostname,0.42875564,Fix for table headers in the Monitoring tab to match the data that is presented to the user by @dylan7778 in link,,0
+762,Merge pull request #644 from derekmd/dashboard-failed-job-count-config-filter,0.58437717,Fix check deleting failed job is actually failed (#894)﻿,,0
+763,Merge pull request #323 from dbpolito/avoid_server_perf_issues,0.5318586,Merge tags from payload (#843),,0
+764,Updated tests,0.436594,Changed,,0
+765,Update job-row.vue,0.664734,Failed job list: Modify job retry tooltip label to include status of last job retry by @Jevz in link,,0
+766,Merge pull request #233 from hewerthomn/1.0,0.5136496,Merge tags from payload (#843),,0
+767,Ability to view recent job detail,0.9016824,Ability to view job details in recent jobs overview (#751),[2.0] Set the Horizon environment via command option,1
+768,Bump moment-timezone from 0.5.33 to 0.5.35 (#1180),0.6017338,Use provided timezone for delay due (aa69357),,0
+769,Compile,0.5520432,Compile assets (57814a0),[3.0] New UI,0
+770,Set same ttl for tags as same as recent jobs,0.9578126,Set same ttl for tags as same as recent jobs (#692),,1
+771,Add middleware to the config,0.4739698,Adjust configuration for 5.8 default configuration (f1f830e),,0
+772,Another attempt,0.4657134,Add try/catch for failed-jobs (#880),,0
+773,Merge pull request #537 from kawax/night,0.45449072,Merge tags from payload (#843),,0
+774,Merge pull request #302 from TobiasFroberg/1.0,0.56431925,Merge tags from payload (#843),,0
+775,Merge pull request #461 from michaeldyrynda/2.0,0.5546514,Merge tags from payload (#843),,0
+776,Update 1_Bug_report.yml,0.49583662,Add maintenance notice on dashboard (#911),,0
+777,Merge branch 'proc_nice' of link into halaei-proc_nice,0.447433,Merge tags from payload (#843),,0
+778,Merge pull request #394 from browner12/patch-2,0.587286,Merge tags from payload (#843),,0
+779,Apply fixes from StyleCI (#615),0.6193298,Fix Layout issues (#821),,0
+780,try...catch,0.49899602,Add try/catch for failed-jobs (#880),,0
+781,Merge branch 'dont-wait-option' of link into halaei-dont-wait-option,0.48385406,Implement Silenced interface by @driesvints in link,,0
+782,Bump ini from 1.3.5 to 1.3.7,0.6128006,Bump axios to v1.x by @ankurk91 in link,,0
+783,Merge pull request #249 from carusogabriel/patch-1,0.6323384,Merge tags from payload (#843),,0
+784,expire supervisors list,0.7342198,Expire monitored jobs (#484),Add missing createPayloadArray arg,1
+785,Support Laravel 5.7.2 - add missing option stop-when-empty,0.6985425,Removed support for Laravel 5.5 & 5.6 (8a92e09),[3.0] Fix deprecated process calls,0
+786,Merge pull request #780 from NGT-11/3.0,0.60059667,Merge tags from payload (#843),,0
+787,Merge pull request #9 from johnpaulmedina/master,0.5453179,Add cancelled status to batch overview by @markvaneijk in link,,0
+788,Merge pull request #51 from lucasmichot/feature/master/docblocks,0.5823281,Merge tags from payload (#843),,0
+789,Add missing project badges,0.5048729,Fix missing tag check in payload (#945)﻿,,0
+790,Update horizon.php,0.6240876,Bump minimum PHP version to PHP 7.3 (ca9ddda),,0
+791,Update changelog,0.5805052,Changed,,0
+792,Merge pull request #34 from lucasmichot/feature/master/editorconfig,0.5865643,Merge tags from payload (#843),,0
+793,now even more like the other screen,0.49791092,Align design with Pending/Completed jobs screen (#802),,0
+794,Merge pull request #757 from LKaemmerling/patch-1,0.60660994,Merge tags from payload (#843),,0
+795,add favicon to dashboard,0.58435595,Add app name to dashboard (#605),,0
+796,Merge pull request #385 from mathiasmoser/bugfix-workcommand,0.5484578,Merge tags from payload (#843),,0
+797,Merge pull request #511 from derekmd/fix-failed-jobs-empty-results,0.71377254,Fix Failed Jobs page showing no results when failed jobs do exist (#511),,1
+798,Merge branch '4.x',0.36468464,Merge tags from payload (#843),,0
+799,Move booting of services (#990),1.0000001,Move booting of services (#990),,1
+800,Make sure 6.0 build passes,0.5099715,Updated version constraints for Laravel 6.0 (b547cb2),,0
+801,add test with typed props,0.40368986,"Fix php 7.4 tagged model typed props (#732, 025f953)",,0
+802,Update to Mix v6 (#994),0.7125245,Updated laravel-mix to v4.0 (#490),,1
+803,Adds types to stubs (#1206),0.4753354,Add some more defaults to supervisor (#1122),,0
+804,Change usages of resolve to app to avoid conflicts with hoaproject\Websocket,0.5066373,Revert app layout PR (#1026)﻿,,0
+805,Merge pull request #522 from themsaid/newUI,0.54585433,Merge tags from payload (#843),,0
+806,Fix expected exceptions,0.60815835,Add exception context on failed jobs (#1115),,0
+807,Add support for phpredis,0.53076446,Suggest predis instead of requiring it (#531),[2.0] Fix Failed Jobs page showing no results when failed jobs do exist,0
+808,[5.x] Fix vue-json-pretty CSS for new classnames (#1231),0.8163872,Fix vue-json-pretty CSS for new classnames by @datpmwork in link,,1
+809,update version constraints,0.63834953,Updated version constraints for Laravel 6.0 (b547cb2),The response.data.jobs Ajax payload is sometimes a JavaScript object instead of an array due to a PHP associative array being returned. Ensure the job items are in a 0-indexed array.,0
+810,Merge pull request #129 from ntzm/slack-channel,0.49162775,Merge tags from payload (#843),,0
+811,Adding horizon:status command,0.95761555,Adding horizon:status command (#545),,1
+812,Use Arr::pluck() directly.,0.44147497,Add missing createPayloadArray arg (#516),[2.0] Prevent horizontal scrolling in Dashboard supervisors section,0
+813,Cleanup,0.47533643,Removed,[2.0] Fix jobs per minute over estimation,0
+814,Test on 7.4,0.40749744,Bump minimum PHP version to PHP 7.3 (ca9ddda),,0
+815,Require POSIX extension,0.36929226,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,0
+816,"Remove trailing slashes, on Apache this triggers the .htaccess logic that considers requests with a trailing slash are directories.",0.49305278,Allow deleting of Tags which contain forward slashes (Fixes #1093) by @sgotre in link,,0
+817,compile and fix retry error,0.57642245,Add ability to see if a failed job is retried and/or a retry (573e6a8),,0
+818,Merge pull request #910 from CharbelJ/patch-4,0.5797777,Merge tags from payload (#843),Updates changelog.,0
+819,fix a few things,0.51668805,Fix autobalancer (#651),[2.0] Removes unused layout.blade.php file.,0
+820,pump versions,0.39107242,Require latest symfony/debug version (72cc3a7),[2.0] Remove array helpers,0
+821,Added support to specific the redis connection prefix,0.72133356,Changed default Redis prefix (#643),[2.0] Fixes indentation.,1
+822,rename variable to match route,0.93159735,Rename variable to match route (4822955)﻿,,1
+823,document nice (#877),0.53514993,"Add support for Supervisor ""nice"" option (#551, 8d0034b, #556)",,0
+824,add ability to see if a failed job is retried and/or a retry,0.95508015,Add ability to see if a failed job is retried and/or a retry (573e6a8),,1
+825,Merge branch 'master' into develop,0.31097496,Custom MasterSupervisor name breaks dashboard (#619),,0
+826,update docblock,0.48958766,Unnecessary param to refreshStatsPeriodically by @peterlupu in link,,0
+827,Merge pull request #577 from laravel/styleci,0.5826609,Merge tags from payload (#843),[2.0] Updates axios to v0.18.,0
+828,Apply fixes from StyleCI (#770),0.6242276,Fix Layout issues (#821),[2.0] Flatten assets directory.,0
+829,[5.x] Add Supervisor Rest Option (#992),0.944445,Add Supervisor Rest Option (#992)﻿,[2.0] Updates vue-router to v3.0.,1
+830,compile,0.49230343,Compile assets (57814a0),,0
+831,Avoid Server Perf Issues,0.43804666,Ensure Autoscaler never reduces processes to less than 1 by @LasseRafn in link,,0
+832,Option to set custom snapshot locking time,0.47886866,Rename timeoutAt to retryUntil & delay to backoff (6d00eb9),,0
+833,Add word break class with new compiled assets,0.4604614,Compile assets (57814a0),[2.0] Optimize logo,0
+834,Merge pull request #646 from tomswinkels/patch-4,0.5910772,Merge tags from payload (#843),,0
+835,Bump highlight.js from 10.1.2 to 10.4.1,0.5577872,Bump axios to v1.x by @ankurk91 in link,,0
+836,[5.x] Add autoScalingStrategy option (#1254),0.7664149,Add autoScalingStrategy option by @cosmastech in link,,1
+837,use provided timezone for delay due,0.93887734,Use provided timezone for delay due (aa69357),[2.0] Inject dependencies with handle method in commands,1
+838,Merge pull request #515 from driesvints/fix-deprecated-process-calls,0.7803824,Fix deprecated process calls (#515),[2.0] Refactor storing job references,1
+839,Merge pull request #313 from halaei/enable-tooltip,0.57289875,Merge tags from payload (#843),,0
+840,Merge pull request #439 from andreybolonin/patch-1,0.6016301,Merge tags from payload (#843),This refactor allows to re-use the logic to set look-up references for job through one method instead of three.,0
+841,Update UPGRADE.md,0.5402805,Updated laravel-mix to v4.0 (#490),Now that commands can make use of method injection on their handle method we can use this instead of app calls everywhere. This gives better type-hinting and overall cleans up the internals quite a bit.,0
+842,Update branch-alias,0.41397154,Changed default Redis prefix (#643),[2.0] Expire monitored jobs,0
+843,fix check deleting failed job is actually failed (#894),0.9972511,Fix check deleting failed job is actually failed (#894)﻿,[2.0] Display error when posix_kill fails,1
+844,Change badge label,0.48116943,Update syntax highlighting (#1002),"At the moment when the posix_kill call for various commands fails the developer is left in the dark as to why this might be. By displaying the error it could give them an indication where to look for (file permissions, etc).",0
+845,Merge pull request #782 from laravel/upgrade-guide,0.5972284,Updated laravel-mix to v4.0 (#490),This commit fixes the problem where completed jobs which were monitored by a tag are stored indefinitely and end up filling up the DB and cause the system to run out of memory. The main problem at hand was that these jobs were never cleaned up. By adding the max TTL and TrimMonitoredJobs listener the monitored jobs will be cleaned up after the given amount of time. By default this is set to 7 days. The listener itself will run one time each day. Fixes link,0
+846,fix styleci,0.6333492,Fix Layout issues (#821),[2.0] Fix incorrect processes count,0
+847,Fix missing tag existence in payload (#945),0.90049636,Fix missing tag check in payload (#945)﻿,[2.0] Let user choose custom env,1
+848,alpha ordering,0.45545673,Alphabetically sort jobs/queues for metrics (#1083),"I have 2 Horizon servers which handle different supervisor. For example, currently I have to use like the following and I need to update my .env file environment as workerOne and workerTwo separately.  php 'workerOne' => [     'supervisor-1' => [         'connection' => 'redis',         'queue' => ['default'],         'balance' => 'simple',         'processes' => 10,         'tries' => 3,     ], ] 'workerTwo' => [     'supervisor-2' => [         'connection' => 'redis',         'queue' => ['default'],         'balance' => 'simple',         'processes' => 10,         'tries' => 3,     ], ] What happened was some worker check .env environment as well. So, I got environment sharing problems. Can we use separately? If that's open for PR. I would submit.",0
+849,Test on 7.0,0.38456133,Bump minimum PHP version to PHP 7.3 (ca9ddda),"On the Current Workload page, there was an incorrect reference to the stats object which caused an incorrect count to be shown. Fixes link",0
+850,Merge pull request #41 from barryvdh/patch-1,0.5797535,Merge tags from payload (#843),[2.0] Fix storing floats in Redis,0
+851,Merge pull request #28 from AlaaAttya/master,0.51485,Merge tags from payload (#843),Redis will only accept floats with a point decimal sign and not a comma decimal sign. The sign is determined by the system's locale setting (LC_NUMERIC) and if set to one that prefers a comma will cause Redis to store the float as a string instead of a comma. This change will make sure that before a float is stored it's always made sure that any comma is changed to a point. This was already done in some other parts of the system. Fixes link,0
+852,remove typo,0.55650496,Removed,[2.0] Fix findFailed method,0
+853,Merge pull request #497 from mvdnbrk/array-helpers,0.574905,Merge tags from payload (#843),"The findFailed method was returning all kind of results, not just failed jobs.",0
+854,add rest,0.649527,Add Supervisor Rest Option (#992)﻿,,0
+855,Show the time it takes before the queue is empty,0.65618265,Ability to ignore long waits for queue by @jasonmccreary in link,formatting,0
+856,"Created horizon:install command and own service provider with authorization gate, that should be exported into the application structure.",0.6568994,Set the Horizon environment via command option (#523),Removes double empty line.,0
+857,Fix PHPUnit methods,0.74707353,Add some PHP 8.1 fixes (#1100)﻿,[2.0] Check that stat exists before calling toLocaleString on it - fixes #467,1
+858,Merge pull request #502 from halaei/fix-jobs-per-min-over-estimate,0.68922865,Fix jobs per minute over estimation (#502),,0
+859,Merge branch 'H/rafalglowacz/horizon-purge-killing-processes-of-other-instances-v4' into H/rafalglowacz/horizon-purge-killing-processes-of-other-instances,0.60614926,Prevent horizon:purge from killing too many processes (#820),[2.0] Use router-link on recent jobs's failed jobs link,0
+860,Merge branch 'master' of link into phpredisSupport,0.4354388,Handle js phpunserialize not working with closures (9c3a75a),,0
+861,Implement Silenced interface (#1236),0.7334622,Implement Silenced interface by @driesvints in link,[2.0] Handle configured 'trim' values in dashboard,1
+862,drop ramsey/uuid 3.x,0.7264783,Support ramsey/uuid v4 (#807),,1
+863,Merge pull request #531 from ThomHurks/patch-2,0.57579064,Merge tags from payload (#843),,0
+864,add tooltip on tags column,0.6070251,Another way for tags displaying & collapsible panels (#754),,0
+865,Fix delayed message error when time zone is not UTC,0.77537954,Use provided timezone for delay due (aa69357),[2.0] Format numbers on the stats dashboard for better readability,1
+866,Updates changelog.,0.60377675,Changed,,0
+867,add travis file,0.4681858,Add missing createPayloadArray arg (#516),Added memory usage to the config,0
+868,Add new screens,0.62393993,Add separate screen for completed jobs (#767),Make the memory usage configurable,0
+869,use a single max call,0.556032,Scale to the maxProcesses if timeToClearAll is zero (#718),,0
+870,fix monitoried failed jobs screen,0.8416511,Fix recent jobs screen (1ab5749),,1
+871,Removes the duplicated semicolon,0.46282357,Removed,,0
+872,fix valid doctype declaration,0.4288985,Resolve issue with php strict type by @farmani in link,,0
+873,Merge pull request #402 from halaei/dont-wait-for-workers-to-terminate,0.50649244,Fix pending jobs count (#832),,0
+874,Merge pull request #42 from lucasmichot/feature/master/use-proper-assertions,0.5585751,Merge tags from payload (#843),,0
+875,unhide horizon command (#878),0.99659216,Unhide horizon command  (#878),,1
+876,accept array format for exponential backoff (#926),0.9988626,Accept array format for exponential backoff (#926)﻿,,1
+877,Merge branch 'master' of link,0.41930342,Merge tags from payload (#843),fixed invalid doctype declaration,0

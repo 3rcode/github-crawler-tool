@@ -1,0 +1,624 @@
+Index,Release Note,Release Note With Abstraction
+1,"6.1.1 (2023-05-16)
+Bug Fixes
+
+types: methods should be string array (#1550) (41b2f77)
+","6.1.1 (2023-05-16)
+Bug Fixes
+types: methods should be string array (#1550) (41b2f77)"
+2,"6.1.0 (2023-05-03)
+Features
+
+added mimeTypeDefault option (#1527) (503d290)
+added modifyResponseData option (#1529) (35dac70)
+
+Bug Fixes
+
+don't use memory-fs when writeToDisk is true (#1537) (852245e)
+faster startup time (f5f033b)
+","6.1.0 (2023-05-03)
+Features
+added mimeTypeDefault option (#1527) (503d290)
+added modifyResponseData option (#1529) (35dac70)
+Bug Fixes
+don't use memory-fs when writeToDisk is true (#1537) (852245e)
+faster startup time (f5f033b)"
+3,"6.0.2 (2023-03-19)
+Bug Fixes
+
+make webpack optional peerDep (#1488) (81c39ba)
+","6.0.2 (2023-03-19)
+Bug Fixes
+make webpack optional peerDep (#1488) (81c39ba)"
+4,"6.0.1 (2022-11-28)
+Bug Fixes
+
+update schema for index and methods properties (#1397) (cda328e)
+","6.0.1 (2022-11-28)
+Bug Fixes
+update schema for index and methods properties (#1397) (cda328e)"
+5,"6.0.0 (2022-11-20)
+⚠ BREAKING CHANGES
+
+minimum supported webpack version is 5.0.0
+minimum supported Nodejs version is 14.15.0
+","6.0.0 (2022-11-20)
+⚠ BREAKING CHANGES
+minimum supported webpack version is 5.0.0
+minimum supported Nodejs version is 14.15.0"
+6,"5.3.3 (2022-05-18)
+Bug Fixes
+
+types for Request and Response (#1271) (eeb8aa8)
+","5.3.3 (2022-05-18)
+Bug Fixes
+types for Request and Response (#1271) (eeb8aa8)"
+7,"5.3.2 (2022-05-17)
+Bug Fixes
+
+node types (#1195) (d68ab36)
+compatibility with Node.js 18
+","5.3.2 (2022-05-17)
+Bug Fixes
+node types (#1195) (d68ab36)
+compatibility with Node.js 18"
+8,"5.3.1 (2022-02-01)
+Bug Fixes
+
+types (#1187) (0f82e1d)
+","5.3.1 (2022-02-01)
+Bug Fixes
+types (#1187) (0f82e1d)"
+9,"5.3.0 (2021-12-16)
+Features
+
+added types (a2fa77f)
+removed cjs wrapper (#1146) (b6d53d3)
+","5.3.0 (2021-12-16)
+Features
+added types (a2fa77f)
+removed cjs wrapper (#1146) (b6d53d3)"
+10,"5.2.2 (2021-11-17)
+Chore
+
+update schema-utils package to 4.0.0 version
+","5.2.2 (2021-11-17)
+Chore
+update schema-utils package to 4.0.0 version"
+11,"5.2.1 (2021-09-25)
+
+internal release, no visible changes and features
+","5.2.1 (2021-09-25)
+internal release, no visible changes and features"
+12,"5.2.0 (2021-09-24)
+Features
+
+allow array for headers option (#1042) (5a6a3f0)
+","5.2.0 (2021-09-24)
+Features
+allow array for headers option (#1042) (5a6a3f0)"
+13,"5.1.0 (2021-09-09)
+Features
+
+don't read full file if Range header is present (e8b21f0)
+output more information on errors (#1024) (7df9e44)
+
+Bug Fixes
+
+reduced package size by removing mem package (#1027) (0d55268)
+","5.1.0 (2021-09-09)
+Features
+don't read full file if Range header is present (e8b21f0)
+output more information on errors (#1024) (7df9e44)
+Bug Fixes
+reduced package size by removing mem package (#1027) (0d55268)"
+14,"5.0.0 (2021-06-02)
+⚠ BREAKING CHANGES
+
+minimum supported Node.js version is 12.13.0 (#928) (4cffeff)
+","5.0.0 (2021-06-02)
+⚠ BREAKING CHANGES
+minimum supported Node.js version is 12.13.0 (#928) (4cffeff)"
+15,"4.3.0 (2021-05-19)
+Features
+
+add getFilenameFromUrl to API (#911) (1edc726)
+","4.3.0 (2021-05-19)
+Features
+add getFilenameFromUrl to API (#911) (1edc726)"
+16,"4.2.0 (2021-05-10)
+Features
+
+allow the headers option to accept function (#897) (966afb3)
+","4.2.0 (2021-05-10)
+Features
+allow the headers option to accept function (#897) (966afb3)"
+17,"4.1.0 (2021-01-15)
+Features
+
+added the stats option (376cdba)
+","4.1.0 (2021-01-15)
+Features
+added the stats option (376cdba)"
+18,"4.0.4 (2021-01-13)
+Bug Fixes
+
+compatibility with webpack@4 (#816) (acdfd4d)
+","4.0.4 (2021-01-13)
+Bug Fixes
+compatibility with webpack@4 (#816) (acdfd4d)"
+19,"4.0.3 (2021-01-12)
+Bug Fixes
+
+output stats to stdout instead stderr, how does webpack-cli, if you need hide stats from output please use { stats: false } or { stats: 'none' } (4de0f97)
+colors are working for stats (4de0f97)
+schema description (#783) (f9ce2b2)
+skip Content-type header on unknown types (#809) (5c9eee5)
+","4.0.3 (2021-01-12)
+Bug Fixes
+output stats to stdout instead stderr, how does webpack-cli, if you need hide stats from output please use { stats: false } or { stats: 'none' } (4de0f97)
+colors are working for stats (4de0f97)
+schema description (#783) (f9ce2b2)
+skip Content-type header on unknown types (#809) (5c9eee5)"
+20,"3.7.3 (2020-12-15)
+Bug Fixes
+
+peer dependencies with webpack@5 (#798) (71b2bdf)
+","3.7.3 (2020-12-15)
+Bug Fixes
+peer dependencies with webpack@5 (#798) (71b2bdf)"
+21,"4.0.2 (2020-11-10)
+Bug Fixes
+
+compatibility with the headers option (#763) (7c4cac5)
+","4.0.2 (2020-11-10)
+Bug Fixes
+compatibility with the headers option (#763) (7c4cac5)"
+22,"4.0.1 (2020-11-09)
+Bug Fixes
+
+compatibility with connect (b83a1db)
+","4.0.1 (2020-11-09)
+Bug Fixes
+compatibility with connect (b83a1db)"
+23,"4.0.0 (2020-10-28)
+⚠ BREAKING CHANGES
+
+export in CommonJS format
+
+Bug Fixes
+
+compatibility with new webpack@5 API (#737) (f6054a0)
+handle the auto value of the publicPath option (9b4c5ec)
+support webpack@5 (#702) (9ccc327)
+","4.0.0 (2020-10-28)
+⚠ BREAKING CHANGES
+export in CommonJS format
+Bug Fixes
+compatibility with new webpack@5 API (#737) (f6054a0)
+handle the auto value of the publicPath option (9b4c5ec)
+support webpack@5 (#702) (9ccc327)"
+24,"4.0.0-rc.3 (2020-07-14)
+
+internal improvements
+","4.0.0-rc.3 (2020-07-14)
+internal improvements"
+25,"4.0.0-rc.2 (2020-06-30)
+Bug Fixes
+
+prefer mime type option over built-in (#670) (7fa2c15)
+","4.0.0-rc.2 (2020-06-30)
+Bug Fixes
+prefer mime type option over built-in (#670) (7fa2c15)"
+26,"4.0.0-rc.1 (2020-02-20)
+Bug Fixes
+
+missing options.json file (#589) (41d6264)
+","4.0.0-rc.1 (2020-02-20)
+Bug Fixes
+missing options.json file (#589) (41d6264)"
+27,"4.0.0-rc.0 (2020-02-19)
+Bug Fixes
+
+respect output.path and output.publicPath options from the configuration
+respect the stats option from the configuration
+respect the watchOptions option from the configuration
+the writeToDisk option now correctly works in multi-compiler mode
+the outputFileSystem option now correctly works in multi-compiler mode
+respect [hash]/[fullhash] in output.path and output.publicPath
+handle exceptions for filesystem operations
+the Content-Type header doesn't have charset=utf-8 value for custom MIME types and MIME types which can be non utf-8
+
+Features
+
+validate options
+migrate on the webpack logger
+migrate on the memfs package
+improve performance
+
+BREAKING CHANGES
+
+minimum supported Node.js version is 10.13.0
+the default value of the option publicPath is taken from the value of the output.publicPath option from the configuration (webpack.config.js)
+the stats option was removed, the default value of the stats option is taken from the value of the stats option from the configuration (webpack.config.js)
+the watchOptions was removed, the default value of the watchOptions option is taken from the value of the watchOptions option from the configuration (webpack.config.js)
+the Content-Type header doesn't have charset=utf-8 value for custom MIME types and MIME types which can be non utf-8
+the fs option was renamed to the outputFileSystem option
+the lazy option was removed without replacement
+the logger, logLevel and logTime options were removed without replacement. You can setup the level value using { infrastructureLogging: { level: 'warn' } }, please read https://webpack.js.org/configuration/other-options/#infrastructurelogging. You can use the infrastructurelog (infrastructureLog in webpack@5) hook to customize logs. The log property in the middleware context was renamed to logger
+the mimeTypes option first requires you to specify an extension and then a content-type - { mimeTypes: { phtml: 'text/html' } }
+the force option from the mimeTypes option was removed without replacement 
+the reporter option was removed without replacement
+the getFilenameFromUrl method was removed from the API
+the middleware locals now under res.locals.webpack - use res.locals.webpack.stats for access stats and res.locals.webpack.outputFileSystem to access outputFileSystem
+","4.0.0-rc.0 (2020-02-19)
+Bug Fixes
+respect output.path and output.publicPath options from the configuration
+respect the stats option from the configuration
+respect the watchOptions option from the configuration
+the writeToDisk option now correctly works in multi-compiler mode
+the outputFileSystem option now correctly works in multi-compiler mode
+respect [hash]/[fullhash] in output.path and output.publicPath
+handle exceptions for filesystem operations
+the Content-Type header doesn't have charset=utf-8 value for custom MIME types and MIME types which can be non utf-8
+Features
+validate options
+migrate on the webpack logger
+migrate on the memfs package
+improve performance
+BREAKING CHANGES
+minimum supported Node.js version is 10.13.0
+the default value of the option publicPath is taken from the value of the output.publicPath option from the configuration (webpack.config.js)
+the stats option was removed, the default value of the stats option is taken from the value of the stats option from the configuration (webpack.config.js)
+the watchOptions was removed, the default value of the watchOptions option is taken from the value of the watchOptions option from the configuration (webpack.config.js)
+the Content-Type header doesn't have charset=utf-8 value for custom MIME types and MIME types which can be non utf-8
+the fs option was renamed to the outputFileSystem option
+the lazy option was removed without replacement
+the logger, logLevel and logTime options were removed without replacement. You can setup the level value using { infrastructureLogging: { level: 'warn' } }, please read link. You can use the infrastructurelog (infrastructureLog in webpack@5) hook to customize logs. The log property in the middleware context was renamed to logger
+the mimeTypes option first requires you to specify an extension and then a content-type - { mimeTypes: { phtml: 'text/html' } }
+the force option from the mimeTypes option was removed without replacement 
+the reporter option was removed without replacement
+the getFilenameFromUrl method was removed from the API
+the middleware locals now under res.locals.webpack - use res.locals.webpack.stats for access stats and res.locals.webpack.outputFileSystem to access outputFileSystem"
+28,"3.7.2 (2019-09-28)
+Bug Fixes
+
+compatibility with webpack@5 (#473) (63da9ae)
+memory leak when writeToDisk used (#472) (6730076)
+","3.7.2 (2019-09-28)
+Bug Fixes
+compatibility with webpack@5 (#473) (63da9ae)
+memory leak when writeToDisk used (#472) (6730076)"
+29,"3.7.1 (2019-09-03)
+Bug Fixes
+
+directly used mkdirp instead of through Webpack (#436) (dff39a1)
+displayStats only logged (#427) (98deaf4)
+the writeToFile option has compatibility with webpack@5 (#459) (5c90e1e)
+","3.7.1 (2019-09-03)
+Bug Fixes
+directly used mkdirp instead of through Webpack (#436) (dff39a1)
+displayStats only logged (#427) (98deaf4)
+the writeToFile option has compatibility with webpack@5 (#459) (5c90e1e)"
+30,"3.7.0 (2019-05-15)
+Features
+
+support HEAD method by default (#398) (ec3d5eb)
+","3.7.0 (2019-05-15)
+Features
+support HEAD method by default (#398) (ec3d5eb)"
+31,"
+3.6.2 (2019-04-03)
+Bug Fixes
+
+check existence of res.getHeader and set the correct Content-Type (#385) (56dc705)
+","3.6.2 (2019-04-03)
+Bug Fixes
+check existence of res.getHeader and set the correct Content-Type (#385) (56dc705)"
+32,"3.6.1 (2019-03-06)
+Bug Fixes
+
+do not overwrite Content-Type if header already exists (#377) (b2a6fed)
+","3.6.1 (2019-03-06)
+Bug Fixes
+do not overwrite Content-Type if header already exists (#377) (b2a6fed)"
+33,"3.6.0 (2019-02-19)
+Features
+
+configurable file system via options.fs (#370) (1762cb3)
+","3.6.0 (2019-02-19)
+Features
+configurable file system via options.fs (#370) (1762cb3)"
+34,"
+3.5.2 (2019-02-06)
+Bug Fixes
+
+don't add charset to usdz file type (#357) (b135b3d)
+","3.5.2 (2019-02-06)
+Bug Fixes
+don't add charset to usdz file type (#357) (b135b3d)"
+35,"
+3.5.1 (2019-01-17)
+Bug Fixes
+
+remove querystring from filenames when writing to disk (#361) (90d0d94)
+","3.5.1 (2019-01-17)
+Bug Fixes
+remove querystring from filenames when writing to disk (#361) (90d0d94)"
+36,"
+3.5.0 (2019-01-04)
+Bug Fixes
+
+middleware: do not add 'null' to Content-Type (#355) (cf4d7a9)
+
+Features
+
+allow to redefine mimeTypes (possible to use force option) (#349) (e56a181)
+","3.5.0 (2019-01-04)
+Bug Fixes
+middleware: do not add 'null' to Content-Type (#355) (cf4d7a9)
+Features
+allow to redefine mimeTypes (possible to use force option) (#349) (e56a181)"
+37,"2018-09-24
+Bug Fixes
+
+index: don't modify the default behavior for unhandledRejection (#340) (f0a8e3e)
+middleware: replace url-join with path.posix.join (#334) (d75802b)
+","2018-09-24
+Bug Fixes
+index: don't modify the default behavior for unhandledRejection (#340) (f0a8e3e)
+middleware: replace url-join with path.posix.join (#334) (d75802b)"
+38,"2018-09-10
+Features
+
+middleware: expose the memory filesystem (response.locals.fs) (#337) (f9a138e)
+","2018-09-10
+Features
+middleware: expose the memory filesystem (response.locals.fs) (#337) (f9a138e)"
+39,"2018-08-23
+Bug Fixes
+
+package: 18 security vulnerabilities (#329) (5951de9)
+
+Features
+
+middleware: add methods option (options.methods) (#319) (fe6bb86)
+","2018-08-23
+Bug Fixes
+package: 18 security vulnerabilities (#329) (5951de9)
+Features
+middleware: add methods option (options.methods) (#319) (fe6bb86)"
+40,"Bugfixes
+
+Excluded outputPath from URI escaping to fix #297. (#303)
+fix: fixes #290 - MultiCompiler exception with writeToDisk (#301)
+","Bugfixes
+Excluded outputPath from URI escaping to fix #297. (#303)
+fix: fixes #290 - MultiCompiler exception with writeToDisk (#301)"
+41,"Updates
+
+refactor: use chalk from webpack-log (#293)
+","Updates
+refactor: use chalk from webpack-log (#293)"
+42,"Bugfixes
+
+fix(package): add chalk to peerDeps (#292)
+","Bugfixes
+fix(package): add chalk to peerDeps (#292)"
+43,"Bugfixes
+
+On windows path spaces should resolve to %20 (#288)
+fixes #282. credit @cexoso. in certain edge situations res.locals is undefined (d26c67c)
+
+Features
+
+Allow Writing Files to Disk (#287) 
+","Bugfixes
+On windows path spaces should resolve to %20 (#288)
+fixes #282. credit @cexoso. in certain edge situations res.locals is undefined (d26c67c)
+Features
+Allow Writing Files to Disk (#287) "
+44,"Updates
+
+Webpack 4 (#267)
+remove watchOffset option in favor of time-fix-plugin
+
+Breaking Changes
+
+Introduces full support for webpack v4 and removes support for lesser versions.
+The watchOffset option has been removed and the README has been updated with alternative means of accomplishing the same result for this module and webpack v4. 
+middleware.webpack now returns a Promise that should be handled with .then when needing to perform other actions, like adding additional middleware.
+","Updates
+Webpack 4 (#267)
+remove watchOffset option in favor of time-fix-plugin
+Breaking Changes
+Introduces full support for webpack v4 and removes support for lesser versions.
+The watchOffset option has been removed and the README has been updated with alternative means of accomplishing the same result for this module and webpack v4. 
+middleware.webpack now returns a Promise that should be handled with .then when needing to perform other actions, like adding additional middleware."
+45,"Updates
+
+Implemented webpack-log, removed dependencies related to the previous logging implementation.
+","Updates
+Implemented webpack-log, removed dependencies related to the previous logging implementation."
+46,Publish to correct package.json.,Publish to correct package.json.
+47,"This major release introduces a comprehensive refactor of the codebase and move to leverage more ES6 as supported by Node 6+. It also introduced a number of breaking changes, as outlined below.
+Node Version Support
+webpack-dev-middleware version 2 and higher will only support Node 6.x and higher. Active
+LTS for Node 4.x ended October 31st, 2017 and entered maintenance on that date.
+Likewise, the version 1.x branch of webpack-dev-middleware will enter maintenance on
+that date.
+Informative Changes
+
+logging is now handled by log-level and follows the same patterns as
+webpack-dev-server.
+
+Breaking Changes
+
+watchDelay option was previous deprecated and has now been removed.
+reportTime option renamed to logTime
+noInfo option removed in favor of setting a logLevel higher than 'info'
+quiet option removed in favor of logLevel: 'silent'
+reporter signature changed to reporter(middlewareOptions, reporterOptions)
+","This major release introduces a comprehensive refactor of the codebase and move to leverage more ES6 as supported by Node 6+. It also introduced a number of breaking changes, as outlined below.
+Node Version Support
+webpack-dev-middleware version 2 and higher will only support Node 6.x and higher. Active
+LTS for Node 4.x ended October 31st, 2017 and entered maintenance on that date.
+Likewise, the version 1.x branch of webpack-dev-middleware will enter maintenance on
+that date.
+Informative Changes
+logging is now handled by log-level and follows the same patterns as
+webpack-dev-server.
+Breaking Changes
+watchDelay option was previous deprecated and has now been removed.
+reportTime option renamed to logTime
+noInfo option removed in favor of setting a logLevel higher than 'info'
+quiet option removed in favor of logLevel: 'silent'
+reporter signature changed to reporter(middlewareOptions, reporterOptions)"
+48,"Bugfixes
+
+serve .wasm files as application/wasm (without charset) (#230)
+","Bugfixes
+serve .wasm files as application/wasm (without charset) (#230)"
+49,"Updates
+
+update mime package to avoid security vulnerability (#231)
+","Updates
+update mime package to avoid security vulnerability (#231)"
+50,"Updates
+
+Test updates for Node 8 and Sinon
+
+Features
+
+Added optional time output for logging
+
+Bugfixes
+
+Stop serving index.html if options.index is falsy 
+Use querystring.unescape to fallback to safer equivalent that does not throw on malformed URIs
+","Updates
+Test updates for Node 8 and Sinon
+Features
+Added optional time output for logging
+Bugfixes
+Stop serving index.html if options.index is falsy 
+Use querystring.unescape to fallback to safer equivalent that does not throw on malformed URIs"
+51,"Updates
+
+Webpack@3 Support
+Koa@2 Support
+
+Features
+
+add mimeTypes option
+
+Bugfixes
+
+Use options.log, warn and error for messages
+serverSideRendering example corrected
+added support for multi-compiler configuration
+","Updates
+Webpack@3 Support
+Koa@2 Support
+Features
+add mimeTypes option
+Bugfixes
+Use options.log, warn and error for messages
+serverSideRendering example corrected
+added support for multi-compiler configuration"
+52,"Security fix:
+This version contains a security fix, which is also breaking change if you have an insecure configuration.
+We are releasing this breaking change as patch version to protect you from attacks.
+Sorry if this breaks your setup, but the fix is easy.
+We removed setting Access-Control-Allow-Origin to * be default. This allowed evil websites to access your assets.
+Instead we ask you to set Access-Control-Allow-Origin manually to your host if required in your setup.
+Use the headers option to do so.
+js
+middleware(compiler, {
+    headers: {
+        ""Access-Control-Allow-Origin"": ""your-host""
+    }
+})
+Read more about CORS here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+Bugfixes:
+
+Remove Access-Control-Allow-Origin = * default
+","Security fix:
+This version contains a security fix, which is also breaking change if you have an insecure configuration.
+We are releasing this breaking change as patch version to protect you from attacks.
+Sorry if this breaks your setup, but the fix is easy.
+We removed setting Access-Control-Allow-Origin to * be default. This allowed evil websites to access your assets.
+Instead we ask you to set Access-Control-Allow-Origin manually to your host if required in your setup.
+Use the headers option to do so.
+js
+middleware(compiler, {
+    headers: {
+        ""Access-Control-Allow-Origin"": ""your-host""
+    }
+})
+Read more about CORS here: link
+Bugfixes:
+Remove Access-Control-Allow-Origin = * default"
+53,"
+Files with non-ascii names were not getting served (#171).
+",Files with non-ascii names were not getting served (#171).
+54,"
+You probably have seen the infamous message webpack: bundle is now (IN)VALID. a lot of times. This has now been changed to more clear messages, clearly indicating when compiling and when done compiling, it will tell you if it was successful or with errors (#164).
+","You probably have seen the infamous message webpack: bundle is now (IN)VALID. a lot of times. This has now been changed to more clear messages, clearly indicating when compiling and when done compiling, it will tell you if it was successful or with errors (#164)."
+55,"
+Allow latest webpack 2.2.0-rc.0 as peer dependency (#160).
+Fix error handling for plugins (#157).
+Update memory-fs dependency to 0.4.1.
+Refactoring to make it easier to support other frameworks then Express in the future (#140).
+","Allow latest webpack 2.2.0-rc.0 as peer dependency (#160).
+Fix error handling for plugins (#157).
+Update memory-fs dependency to 0.4.1.
+Refactoring to make it easier to support other frameworks then Express in the future (#140)."
+56,"
+Enforce UTF-8 in requests. This fixes a lot of issues with special characters (#136).
+",Enforce UTF-8 in requests. This fixes a lot of issues with special characters (#136).
+57,"The last few releases had a few bugs in them that shouldn't have reached stable. We're working hard on adding enough tests to prevent these kind of failures.
+- Fix for output.path check with node < 0.12 (38ff513).
+- Fix for output.path check on Windows with node < 5.0 (38ff513).
+- Fix exception when using the deprecated watchDelay option (#131).","The last few releases had a few bugs in them that shouldn't have reached stable. We're working hard on adding enough tests to prevent these kind of failures.
+- Fix for output.path check with node < 0.12 (38ff513).
+- Fix for output.path check on Windows with node < 5.0 (38ff513).
+- Fix exception when using the deprecated watchDelay option (#131)."
+58,"
+Add a nice error message when output.path in the webpack config is relative.
+Expose stats when using the advanced API (#127).
+Make log & warn functions replaceable (#124).
+Fix protocol-relative urls with publicPath (#129).
+","Add a nice error message when output.path in the webpack config is relative.
+Expose stats when using the advanced API (#127).
+Make log & warn functions replaceable (#124).
+Fix protocol-relative urls with publicPath (#129)."
+59,"
+Fix exception thrown when using webpack array config (#125).
+",Fix exception thrown when using webpack array config (#125).
+60,"
+Add tests for everything (#121)!
+Use valid license for npm (af6243b).
+Instantiate the in-memory filesystem only once, meaning it can be shared when using multiple middleware instances with one webpack config (#120).
+When sending requests with a Range header, the status code would not always be correct (cedc09f).
+Middleware would not work with a proxy (#80).
+Add index option (default: index.html) to customize the file used as index for a directory (#123).
+","Add tests for everything (#121)!
+Use valid license for npm (af6243b).
+Instantiate the in-memory filesystem only once, meaning it can be shared when using multiple middleware instances with one webpack config (#120).
+When sending requests with a Range header, the status code would not always be correct (cedc09f).
+Middleware would not work with a proxy (#80).
+Add index option (default: index.html) to customize the file used as index for a directory (#123)."
+61,"
+Add reporter option for custom logs (#91).
+Add serverSideRender option to help support server-side rendering (#118).
+Set statusCode to 200 for served files (#94).
+Fix waitUntilValid callback always being called immediately when using MultiCompiler (#100).
+Fix range support not working (#116).
+Only use middleware for GET requests (#96).
+","Add reporter option for custom logs (#91).
+Add serverSideRender option to help support server-side rendering (#118).
+Set statusCode to 200 for served files (#94).
+Fix waitUntilValid callback always being called immediately when using MultiCompiler (#100).
+Fix range support not working (#116).
+Only use middleware for GET requests (#96)."

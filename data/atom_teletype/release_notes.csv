@@ -1,0 +1,52 @@
+Index,Release Note,Release Note With Abstraction
+1,Fixed an using Teletype in Atom 1.28.0-beta0 and newer (#382),Fixed an using Teletype in Atom 1.28.0-beta0 and newer (#382)
+2,Fixed an issue that would sometimes occur when closing the WebRTC connection (#368),Fixed an issue that would sometimes occur when closing the WebRTC connection (#368)
+3,Fixed an issue that could occur when a guest puts their computer to sleep while participating in a portal (#354),Fixed an issue that could occur when a guest puts their computer to sleep while participating in a portal (#354)
+4,"Teletype 0.13.0 makes it easier to know which cursor belongs to which collaborator. When displaying a collaborator's cursor, Teletype now shows the collaborator's cursor color next to their avatar. (#365)","Teletype 0.13.0 makes it easier to know which cursor belongs to which collaborator. When displaying a collaborator's cursor, Teletype now shows the collaborator's cursor color next to their avatar. (#365)"
+5,"
+Fixed an issue that could occur when existing portal participants are performing actions while a new participant is joining (https://github.com/atom/teletype/issues/360)
+Fixed an issue that prevented mouse clicks from placing the cursor on certain lines while participating in a portal (https://github.com/atom/teletype/issues/362)
+","Fixed an issue that could occur when existing portal participants are performing actions while a new participant is joining (link)
+Fixed an issue that prevented mouse clicks from placing the cursor on certain lines while participating in a portal (link)"
+6,Fixed an issue that could occur when attempting to join a portal that no longer exists while also trying to share a portal (#357),Fixed an issue that could occur when attempting to join a portal that no longer exists while also trying to share a portal (#357)
+7,"
+Update guest workspaces when host renames a shared file (https://github.com/atom/teletype/issues/147)
+Improve handling (hopefully 🤞) of potential race condition when joining a portal with poor network connectivity (#233, https://github.com/atom/teletype-client/pull/58)
+","Update guest workspaces when host renames a shared file (link)
+Improve handling (hopefully 🤞) of potential race condition when joining a portal with poor network connectivity (#233, link)"
+8,"URLs are pretty great. And now your portals have URLs, too.
+Invite coworkers or friends to collaborate by sending them your portal URL. Collaborators can follow that link to join your portal and start coding together with you in real time. 👩‍💻:atom:🔗:atom:👨‍💻","URLs are pretty great. And now your portals have URLs, too.
+Invite coworkers or friends to collaborate by sending them your portal URL. Collaborators can follow that link to join your portal and start coding together with you in real time. 👩‍💻:atom:🔗:atom:👨‍💻"
+9,"With Teletype 0.10.0, you'll now enjoy a streamlined view of your collaborators' avatars inside the editor. (https://github.com/atom/teletype/pull/332)
+All avatars now appear in the bottom right corner. Additionally, you'll now see a collaborator's avatar even when they switch their focus to something outside the portal. For example, if a guest starts editing a file that's not associated with the portal, you'll continue to see the guest's avatar, but it will have a reduced opacity to indicate reduced portal activity from that guest.
+","With Teletype 0.10.0, you'll now enjoy a streamlined view of your collaborators' avatars inside the editor. (link)
+All avatars now appear in the bottom right corner. Additionally, you'll now see a collaborator's avatar even when they switch their focus to something outside the portal. For example, if a guest starts editing a file that's not associated with the portal, you'll continue to see the guest's avatar, but it will have a reduced opacity to indicate reduced portal activity from that guest."
+10,Allow guests to use fuzzy-finder to open any remote editor shared by the host. Please note that this currently requires using an Atom dev build. Full support for this functionality will ship in a future beta version of Atom. (https://github.com/atom/teletype/pull/323),Allow guests to use fuzzy-finder to open any remote editor shared by the host. Please note that this currently requires using an Atom dev build. Full support for this functionality will ship in a future beta version of Atom. (link)
+11,"
+Clean up guest's workspace when host closes portal (i.e., automatically close the tabs that were associated with the portal) (https://github.com/atom/teletype/pull/319)
+Fix bug that would occasionally cause participants to see incorrectly-positioned cursors for other participants (https://github.com/atom/teletype/pull/326)
+","Clean up guest's workspace when host closes portal (i.e., automatically close the tabs that were associated with the portal) (link)
+Fix bug that would occasionally cause participants to see incorrectly-positioned cursors for other participants (link)"
+12,"
+Improve experience and help users report diagnostics for debugging package initialization errors (#317, #309)
+Prevent unnecessary console error when sharing a portal (#311)
+","Improve experience and help users report diagnostics for debugging package initialization errors (#317, #309)
+Prevent unnecessary console error when sharing a portal (#311)"
+13,Update Teletype for compatibility with the upcoming release of Atom 1.25 (#301),Update Teletype for compatibility with the upcoming release of Atom 1.25 (#301)
+14,"
+Improve positioning of collaborator avatars for workspaces with multiple panes (#283)
+Offer to reload the package when initialization fails due to network connectivity issues (#287)
+","Improve positioning of collaborator avatars for workspaces with multiple panes (#283)
+Offer to reload the package when initialization fails due to network connectivity issues (#287)"
+15,"With Teletype 0.4.0, collaborators can now save buffers on the host. (#270) 💾📡🌟
+Also in this release:
+
+Improve UX of the sign-in form (#248)
+Provide quick access to Atom's package updates UI when prompting user to update Teletype due to a protocol change (#271)
+Properly dispose of portals when deactivating the package (#279)
+","With Teletype 0.4.0, collaborators can now save buffers on the host. (#270) 💾📡🌟
+Also in this release:
+Improve UX of the sign-in form (#248)
+Provide quick access to Atom's package updates UI when prompting user to update Teletype due to a protocol change (#271)
+Properly dispose of portals when deactivating the package (#279)"
+16,"With Teletype 0.3.0, you can now share and edit multiple files simultaneously during your real-time coding sessions. (#262)","With Teletype 0.3.0, you can now share and edit multiple files simultaneously during your real-time coding sessions. (#262)"

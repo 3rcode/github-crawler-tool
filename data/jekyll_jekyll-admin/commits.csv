@@ -1,0 +1,1488 @@
+Index,Message,Description,Message Abstract,Description Abstract
+1,Update CI status badge (#682),,Update CI status badge (#682),
+2,Process site only if not in watch mode (#700),,Process site only if not in watch mode (#700),
+3,Bump :gem: version,,Bump :gem: version,
+4,Processes site when writing files (#629),,Processes site when writing files (#629),
+5,Delete misplaced workflow config file,,Delete misplaced workflow config file,
+6,Add workflow to build gem and store as artifact,Artifact gets deleted after 15 days,Add workflow to build gem and store as artifact,Artifact gets deleted after 15 days
+7,Add workflow to build gem and store as artifact,Artifact gets deleted after 15 days,Add workflow to build gem and store as artifact,Artifact gets deleted after 15 days
+8,Relax version constraints on Sinatra libraries (#680),To allow using newer versions of Sinatra libraries. Additionally add gem rack-test as development dependency.,Relax version constraints on Sinatra libraries (#680),To allow using newer versions of Sinatra libraries. Additionally add gem rack-test as development dependency.
+9,Improve testing experience on AppVeyor (#679), Bump Ruby version Switch Node version after installing Ruby deps Install 64Bit NodeJS,Improve testing experience on AppVeyor (#679),Bump Ruby version Switch Node version after installing Ruby deps Install 64Bit NodeJS
+10,Set up Continuous Integration via GH Actions (#678), Set up Continuous Integration via GH Actions Disable closing of opened pipes on GitHub Actions Delete TravisCI configuration,Set up Continuous Integration via GH Actions (#678),Set up Continuous Integration via GH Actions Disable closing of opened pipes on GitHub Actions Delete TravisCI configuration
+11,Release v0.11.0 (#618),  Bump versions   Add release to package.json scripts ,Release v0.11.0 (#618),Bump versions Add release to package.json scripts
+12,Add option to change homepage (#617),  Add option to change homepage   Fix typo   Add other routes for homepage as well ,Add option to change homepage (#617),Add option to change homepage Fix typo Add other routes for homepage as well
+13,Fix vulnerabilities via npm audit (#612),,Fix vulnerabilities via npm audit (#612),
+14,Clean up implementation of ducks (#572),,Clean up implementation of ducks (#572),
+15,Bundle kramdown-parser-gfm gem when necessary,,Bundle kramdown-parser-gfm gem when necessary,
+16,Bump elliptic from 6.5.2 to 6.5.3 (#604),Bumps elliptic from 6.5.2 to 6.5.3. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,Bump elliptic from 6.5.2 to 6.5.3 (#604),Bumps elliptic from 6.5.2 to 6.5.3. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com
+17,Reduce Ruby 2.7 deprecation warnings (#603),,Reduce Ruby 2.7 deprecation warnings (#603),
+18,Release :gem: v0.10.2,,Release :gem: v0.10.2,
+19,Allow default metadata fields to be overridden and edited in place (#597),"This allows a user to see the default fields for a new or existing document, choose to ""override"" the defaults, and revert back to the default at any time.",Allow default metadata fields to be overridden and edited in place (#597),"This allows a user to see the default fields for a new or existing document, choose to ""override"" the defaults, and revert back to the default at any time."
+20,Release v0.10.1 (#592),  Bump versions   Update snapshots ,Release v0.10.1 (#592),Bump versions Update snapshots
+21,Temporarily disable gathering test coverage stats,,Temporarily disable gathering test coverage stats,
+22,Check file type before accessing its extension (#590),"Since directories do not have extname, when switched to index listing, FilePreview was throwing an error saying file.extname is undefined. Fixed it by checking file type before accessing extname.",Check file type before accessing its extension (#590),"Since directories do not have extname, when switched to index listing, FilePreview was throwing an error saying file.extname is undefined. Fixed it by checking file type before accessing extname."
+23,Allow searching without enter key press (#589),,Allow searching without enter key press (#589),
+24,Run all tests as part of the build process,,Run all tests as part of the build process,
+25,Use Unix line-endings on stylesheets and partials,,Use Unix line-endings on stylesheets and partials,
+26,Fix test:cover script definition,,Fix test:cover script definition,
+27,Compute coverage after successful CI builds,,Compute coverage after successful CI builds,
+28,Integrate react-scripts (#573),  Add react-scripts & adjust scripts accordingly   Remove config files already handled by react-scripts   Update public resources   Fix build script   Rename fileMocks.js as setupTests.js which is a name react-scripts looks for   Fix font awesome paths   Fix tests   Start api   Add script for bundle analyzer   Use env file   Set CI to false   Revert setting CI to false   Fix eslint warnings   Fix bundlesize build paths   Increase maxSize for css.map files   Use relative_path for alt   Use config overrides   Add public_url   Remove node-sass from dependencies   Fix array-callback-return warning   Move build folder rather than changing its path   Remove old build folder   Disable bundle analyzer   Fix header snapshots   Add test:CI script   Update yarn.lock   Update react-scripts   Clean build folder before build ,Integrate react-scripts (#573),Add react-scripts & adjust scripts accordingly Remove config files already handled by react-scripts Update public resources Fix build script Rename fileMocks.js as setupTests.js which is a name react-scripts looks for Fix font awesome paths Fix tests Start api Add script for bundle analyzer Use env file Set CI to false Revert setting CI to false Fix eslint warnings Fix bundlesize build paths Increase maxSize for css.map files Use relative_path for alt Use config overrides Add public_url Remove node-sass from dependencies Fix array-callback-return warning Move build folder rather than changing its path Remove old build folder Disable bundle analyzer Fix header snapshots Add test:CI script Update yarn.lock Update react-scripts Clean build folder before build
+29,Release :gem: v0.10.0 (#586),,Release :gem: v0.10.0 (#586),
+30,"Prevent unexpected file overwrites for collections, drafts and pages (#582)","For collections, drafts and pages, return HTTP 404 if a resource being created or renamed into will overwrite an existing item. Additionally, log a warning in the terminal as to why the front-end dispatched an error-notification. Co-authored-by: Ashwin Maroli ashmaroli@users.noreply.github.com","Prevent unexpected file overwrites for collections, drafts and pages (#582)","For collections, drafts and pages, return HTTP 404 if a resource being created or renamed into will overwrite an existing item. Additionally, log a warning in the terminal as to why the front-end dispatched an error-notification. Co-authored-by: Ashwin Maroli ashmaroli@users.noreply.github.com"
+31,Render advanced metafield for categories (#588),,Render advanced metafield for categories (#588),
+32,Use the front matter defaults computed by Jekyll (#585),"Jekyll already computes front matter defaults by comparing against path and type for a given resource. However, the front-end port is still necessary for ""(**/)new"" routes, as the resource-path is undefined by default.",Use the front matter defaults computed by Jekyll (#585),"Jekyll already computes front matter defaults by comparing against path and type for a given resource. However, the front-end port is still necessary for ""(**/)new"" routes, as the resource-path is undefined by default."
+33,Add a utility method to compute meta field type (#587),,Add a utility method to compute meta field type (#587),
+34,Render pointer cursor on hovering over accordion,,Render pointer cursor on hovering over accordion,
+35,Initialize a new advanced metadata field for tags (#389), create and delete tags create new tags by pressing comma or spacebar or enter keys delete the last tag by pressing backspace key delete a tag by clicking on the x   prevent creating duplicate tags render suggestions based on tags already in use in another post in the Site,Initialize a new advanced metadata field for tags (#389),create and delete tags create new tags by pressing comma or spacebar or enter keys delete the last tag by pressing backspace key delete a tag by clicking on the x prevent creating duplicate tags render suggestions based on tags already in use in another post in the Site
+36,Add missing classname attribute,,Add missing classname attribute,
+37,Fix horizontal margins for buttons in a row,,Fix horizontal margins for buttons in a row,
+38,Render a layout-picker to select layouts (#558),Utilize DropdownList component from react-widgets package to allow selecting layout for a page from a list of available layouts for the site.,Render a layout-picker to select layouts (#558),Utilize DropdownList component from react-widgets package to allow selecting layout for a page from a list of available layouts for the site.
+39,Remove unused variable,,Remove unused variable,
+40,Accept additional arguments in script/test-server (#584),This allows for overriding defaults. For example: ./script/test-server --host 127.0.0.1 --port 4000 Signed-off-by: alzeih alzeih@users.noreply.github.com,Accept additional arguments in script/test-server (#584),This allows for overriding defaults. For example: ./script/test-server --host 127.0.0.1 --port 4000 Signed-off-by: alzeih alzeih@users.noreply.github.com
+41,Fix broken link to CONTRIBUTING.md (#583),,Fix broken link to CONTRIBUTING.md (#583),
+42,Add MarkdownPageBody component (#567),"The template for children of <div className=""content-body""/> is the same for DraftEdit, DocumentEdit, PageEdit, and CreateMarkdownPage. So DRY those repeated logic with a new component.",Add MarkdownPageBody component (#567),"The template for children of  is the same for DraftEdit, DocumentEdit, PageEdit, and CreateMarkdownPage. So DRY those repeated logic with a new component."
+43,Bump react-widgets to v4.4 (#551), Bumps the major-version of the package. momentLocalizer is now in a separate package — react-widgets-moment CSS bundled in the package has changed selectors and attributes as well. Therefore overrides at our end has been altered to maintain existing aesthetics.,Bump react-widgets to v4.4 (#551),Bumps the major-version of the package. momentLocalizer is now in a separate package — react-widgets-moment CSS bundled in the package has changed selectors and attributes as well. Therefore overrides at our end has been altered to maintain existing aesthetics.
+44,Remove unused variable assignment,,Remove unused variable assignment,
+45,Allow selecting static files in MarkdownEditor (#565),"This adds a new button to the MarkdownEditor (with icon paperclip). Clicking the button triggers the staticfilepicker modal. On selecting a file the editor gets updated depending on the file extension, If an image file was selected, Markdown image tag is inserted else a Markdown link tag is inserted. Irrespective of the file-type selected, the injected Markdown includes the static-file's relative_path enclosed in a Liquid object with Jekyll's relative_url filter. For example, if static-file assets/logo.png is selected, then the inserted Markdown will be: ![]({{ 'assets/logo.png' | relative_url }})",Allow selecting static files in MarkdownEditor (#565),"This adds a new button to the MarkdownEditor (with icon paperclip). Clicking the button triggers the staticfilepicker modal. On selecting a file the editor gets updated depending on the file extension, If an image file was selected, Markdown image tag is inserted else a Markdown link tag is inserted. Irrespective of the file-type selected, the injected Markdown includes the static-file's relative_path enclosed in a Liquid object with Jekyll's relative_url filter. For example, if static-file assets/logo.png is selected, then the inserted Markdown will be:"
+46,Import site metadata into admin interface (#543),"To allow selecting existing categories, layouts and tags via the interface. The idea is to fetch the data related to above every time a page / draft / document is created / edited so that the Metafields component always reflects the latest status (i.e. a category added to one post will be available for the next post being edited).",Import site metadata into admin interface (#543),"To allow selecting existing categories, layouts and tags via the interface. The idea is to fetch the data related to above every time a page / draft / document is created / edited so that the Metafields component always reflects the latest status (i.e. a category added to one post will be available for the next post being edited)."
+47,Activating Open Collective (#526),  Added financial contributors to the README   Update README.md   Moved Financial Contributors to the end of the badges. ,Activating Open Collective (#526),Added financial contributors to the README Update README.md Moved Financial Contributors to the end of the badges.
+48,Bump some frontend devDependencies (#579), node-sass to 4.13.0. (Adds support for upto Node 13) eslint-plugin-import to 2.20.1. eslint-plugin-react to 7.18.3 webpack to 4.41.6.,Bump some frontend devDependencies (#579),node-sass to 4.13.0. (Adds support for upto Node 13) eslint-plugin-import to 2.20.1. eslint-plugin-react to 7.18.3 webpack to 4.41.6.
+49,Use fetch wrapper for DELETE requests to dispatch (#578),Using the wrapper with slight modifications will bring consistency with GET and PUT requests that are sent via respective wrappers.,Use fetch wrapper for DELETE requests to dispatch (#578),Using the wrapper with slight modifications will bring consistency with GET and PUT requests that are sent via respective wrappers.
+50,Move exported function to end of file,,Move exported function to end of file,
+51,Remove duplicate styles b/w datagui and metafields (#577),Directives in metafields.scss and datagui.scss overlap considerably. This commit removes that overlap. datagui styles now mainly involve changes to colors and some very minor adjustments.,Remove duplicate styles b/w datagui and metafields (#577),Directives in metafields.scss and datagui.scss overlap considerably. This commit removes that overlap. datagui styles now mainly involve changes to colors and some very minor adjustments.
+52,Use Yarn to manage dependencies (#576),"Since we already check-in yarn.lock to the repository, it would be better if CI builds used the same set.",Use Yarn to manage dependencies (#576),"Since we already check-in yarn.lock to the repository, it would be better if CI builds used the same set."
+53,Reduce syntax-highlighting support in MDEditor (#568),In order to avoid bloating the production bundle.js with rarely used languages.,Reduce syntax-highlighting support in MDEditor (#568),In order to avoid bloating the production bundle.js with rarely used languages.
+54,Add default branch for case statement,,Add default branch for case statement,
+55,Use variable after it has been defined,,Use variable after it has been defined,
+56,Enable ESLint rule eqeqeq (#575),To enforce use of the type-safe equality operators === and !== instead of their regular counterparts == and !=,Enable ESLint rule eqeqeq (#575),To enforce use of the type-safe equality operators === and !== instead of their regular counterparts == and !=
+57,Enable ESLint rule no-unused-vars (#574),,Enable ESLint rule no-unused-vars (#574),
+58,Export translations aggregate as a default module (#550),To simplify implementing a language-selector in a future release.,Export translations aggregate as a default module (#550),To simplify implementing a language-selector in a future release.
+59,Enforce unix-style line-endings for *.js files (#571),So that bundle's sourcemap doesn't include \r\n when built on Windows,Enforce unix-style line-endings for *.js files (#571),So that bundle's sourcemap doesn't include \r\n when built on Windows
+60,Bump some frontend devDependencies (#570),"babel-polyfill to 6.26.0 enzyme to >= 2.9.1, < 3.0.0, eslint to >= 6.8.0, < 7.0.0, eslint-plugin-import to >= 2.19.1, < 3.0.0 eslint-plugin-react to >= 7.17.0, < 8.0.0 webpack to >= 4.41.4, < 5.0.0",Bump some frontend devDependencies (#570),"babel-polyfill to 6.26.0 enzyme to >= 2.9.1, < 3.0.0, eslint to >= 6.8.0, < 7.0.0, eslint-plugin-import to >= 2.19.1, < 3.0.0 eslint-plugin-react to >= 7.17.0, < 8.0.0 webpack to >= 4.41.4, < 5.0.0"
+61,Prefer ES6 object-properties-shorthand syntax (#569),"Replace { 'foo': foo, 'bar': bar } and { foo: foo, bar: bar } with terser { foo, bar }",Prefer ES6 object-properties-shorthand syntax (#569),"Replace { 'foo': foo, 'bar': bar } and { foo: foo, bar: bar } with terser { foo, bar }"
+62,Document getDocumentTitle helper and fix test,,Document getDocumentTitle helper and fix test,
+63,Mock window.confirm() in container-view tests (#563),So that actions.delete<type> is tested properly.,Mock window.confirm() in container-view tests (#563),So that actions.delete is tested properly.
+64,Render <button> when href attr will be undefined (#557),"<a> tag with an undefined href attribute is not a link per se and therefore the target attribute on such an element is redundant as well. In such circumstances, <Button/> should generate an HTML <button> element. With this change Button component requires either to or an onClick prop to render an element.",Render  when href attr will be undefined (#557)," tag with an undefined href attribute is not a link per se and therefore the target attribute on such an element is redundant as well. In such circumstances,  should generate an HTML  element. With this change Button component requires either to or an onClick prop to render an element."
+65,Bump some frontend devDependencies (#553)," Bumps coveralls, nock, prettier Removes unused devDeps mocha and jsdom from package.json Bump npm-run-all to v4.1.5 for security reasons",Bump some frontend devDependencies (#553),"Bumps coveralls, nock, prettier Removes unused devDeps mocha and jsdom from package.json Bump npm-run-all to v4.1.5 for security reasons"
+66,Extract static-file picker logic into a component (#560),In order to:   - remove modal state from MetaSimple component.   - facilitate wiring into MarkdownEditor in future.,Extract static-file picker logic into a component (#560),In order to:   - remove modal state from MetaSimple component.   - facilitate wiring into MarkdownEditor in future.
+67,Add CreateMarkdownPage component (#561),"To contain repeated render logic in DraftNew.js, DocumentNew.js, PageNew.js. However, this leaves the parent components as just shells that handle saving the draft and their own respective lifecycle methods which cannot be tested with just a shallow render. (mount is currently not possible since there isn't a mechanism to pass a mock-store to the Metafields nested inside the CreateMarkdownPage component.)",Add CreateMarkdownPage component (#561),"To contain repeated render logic in DraftNew.js, DocumentNew.js, PageNew.js. However, this leaves the parent components as just shells that handle saving the draft and their own respective lifecycle methods which cannot be tested with just a shallow render. (mount is currently not possible since there isn't a mechanism to pass a mock-store to the Metafields nested inside the CreateMarkdownPage component.)"
+68,Lock Rubygems on Travis to v3.0.6 (#562),Rubygems 3.1 is buggy and is being patched incrementally.,Lock Rubygems on Travis to v3.0.6 (#562),Rubygems 3.1 is buggy and is being patched incrementally.
+69,Update markdown-editor preview styles,By using a sample page demonstrating various Markdown features and its rendered output as reference,Update markdown-editor preview styles,By using a sample page demonstrating various Markdown features and its rendered output as reference
+70,Convert DataGUI into a bona fide component (#546),"In order to minimize repeated logic. Currently on master, DataGUI is just Metafields rendered with prop dataview: true and the inputs for editing data file path being additionally implemented for both DataFileNew and DataFileEdit. Another internal change is to use input elements' ref value on save instead of setting the parent component's state and then reading from that value.",Convert DataGUI into a bona fide component (#546),"In order to minimize repeated logic. Currently on master, DataGUI is just Metafields rendered with prop dataview: true and the inputs for editing data file path being additionally implemented for both DataFileNew and DataFileEdit. Another internal change is to use input elements' ref value on save instead of setting the parent component's state and then reading from that value."
+71,Remove unused action (#559),The action got left behind and became redundant as surrounding code got refactored across multiple releases.,Remove unused action (#559),The action got left behind and became redundant as surrounding code got refactored across multiple releases.
+72,Return static file's relative_path not http_url (#555),So that the user doesn't have to manually remove http://localhost:4000/ from the value returned by the image-picker modal,Return static file's relative_path not http_url (#555),So that the user doesn't have to manually remove link/ from the value returned by the image-picker modal
+73,Add a utility function to compute view page title (#556),To avoid duplicating logic and have a consistent pattern in the title of various views.,Add a utility function to compute view page title (#556),To avoid duplicating logic and have a consistent pattern in the title of various views.
+74,Colorize inline code in MarkdownEditor,,Colorize inline code in MarkdownEditor,
+75,Mark lint-staged as a front-end devDependency (#552),instead of being listed as a dependency,Mark lint-staged as a front-end devDependency (#552),instead of being listed as a dependency
+76,"Add categories, tags, layouts to fixture site (#554)","To allow testing their utilization via the interface. Also adds a couple of static files to the fixture collection ""puppies""","Add categories, tags, layouts to fixture site (#554)","To allow testing their utilization via the interface. Also adds a couple of static files to the fixture collection ""puppies"""
+77,Add Accordion component (#532),Extracting the accordion currently in the Sidebar component into a separate stateful component will prevent Sidebar from re-rendering each time the accordion is opened and closed. Co-Authored-By: Mert Kahyaoğlu mertkahyaoglu93@gmail.com,Add Accordion component (#532),Extracting the accordion currently in the Sidebar component into a separate stateful component will prevent Sidebar from re-rendering each time the accordion is opened and closed. Co-Authored-By: Mert Kahyaoğlu mertkahyaoglu93@gmail.com
+78,Refactor MetaButtons (#549),"Apart from simplifying the render() function, there are some other changes included in this proposal:     - MetaButtons now use an internal state to determine the dropdown visibility -- the class no longer uses props onDropdownFocus and onDropdownBlur to toggle showing-dropdown className on the parent wrapper -- the class is attached to the dropdown trigger button itself.     - The dropdown trigger toggles dropdown visibility -- the dropdown gets hidden on both  clicking the focused trigger and on the trigger losing focus.",Refactor MetaButtons (#549),"Apart from simplifying the render() function, there are some other changes included in this proposal:     - MetaButtons now use an internal state to determine the dropdown visibility -- the class no longer uses props onDropdownFocus and onDropdownBlur to toggle showing-dropdown className on the parent wrapper -- the class is attached to the dropdown trigger button itself.     - The dropdown trigger toggles dropdown visibility -- the dropdown gets hidden on both  clicking the focused trigger and on the trigger losing focus."
+79,Add a status bar to Editor component (#538),Display the Editor's mode in the status bar as an uppercased string,Add a status bar to Editor component (#538),Display the Editor's mode in the status bar as an uppercased string
+80,Reduce log output from webpack-dev-middleware,,Reduce log output from webpack-dev-middleware,
+81,Add StaticMetaFields component (#548),"To render default front matter for the requested page / document. The input fields from this component are readonly and cannot be interacted with. In order to override a default front matter value, add a new metadata field in the non-static container.",Add StaticMetaFields component (#548),"To render default front matter for the requested page / document. The input fields from this component are readonly and cannot be interacted with. In order to override a default front matter value, add a new metadata field in the non-static container."
+82,Migrate to webpack v4 (#502),,Migrate to webpack v4 (#502),
+83,Use existing instance of Jekyll::Configuration (#539),Reduce memory usage and additionally Jekyll's logger won't output an extra Configuration file: <config file path> message to the terminal.,Use existing instance of Jekyll::Configuration (#539),Reduce memory usage and additionally Jekyll's logger won't output an extra Configuration file:  message to the terminal.
+84,Remove unnecessary moment.js locales from bundle (#537),,Remove unnecessary moment.js locales from bundle (#537),
+85,Improve front-end test coverage (#547),,Improve front-end test coverage (#547),
+86,Use Icon component to render icons,,Use Icon component to render icons,
+87,Add Icon component to render icons consistently (#544),,Add Icon component to render icons consistently (#544),
+88,Compact switch statement in Button component (#542),by using bracket-notation to dynamically interpolate property key. Co-Authored-By: Mert Kahyaoğlu mertkahyaoglu93@gmail.com,Compact switch statement in Button component (#542),by using bracket-notation to dynamically interpolate property key. Co-Authored-By: Mert Kahyaoğlu mertkahyaoglu93@gmail.com
+89,Render icons in Button based on the type prop (#541),"Most of the buttons have their icons fixed for a given type to ease UX. For example, delete type buttons are always rendered with the trash icon, or the view buttons are always rendered with the eye icon and similarly the save buttons are always rendered with the save (floppy) icon. So instead of having to repeatedly pass the icon-name as a prop for the same Button type, it is better if the Button component determined the icon based on the current type. Nevertheless, the existing behavior of passing icon as a prop is still valid to allow rendering a variant of the button with a different icon if such a need arises.",Render icons in Button based on the type prop (#541),"Most of the buttons have their icons fixed for a given type to ease UX. For example, delete type buttons are always rendered with the trash icon, or the view buttons are always rendered with the eye icon and similarly the save buttons are always rendered with the save (floppy) icon. So instead of having to repeatedly pass the icon-name as a prop for the same Button type, it is better if the Button component determined the icon based on the current type. Nevertheless, the existing behavior of passing icon as a prop is still valid to allow rendering a variant of the button with a different icon if such a need arises."
+90,Invoke Breadcrumbs consistently,,Invoke Breadcrumbs consistently,
+91,Use Jekyll::PageWithoutAFile instead of our class (#518),Jekyll::PageWithoutAFile is available since Jekyll 3.7.0,Use Jekyll::PageWithoutAFile instead of our class (#518),Jekyll::PageWithoutAFile is available since Jekyll 3.7.0
+92,Allow publishing drafts via the interface (#534),,Allow publishing drafts via the interface (#534),
+93,Remove redundant true passed as prop values (#536),,Remove redundant true passed as prop values (#536),
+94,Add Explorer component to render resource indexes (#514),"The front end for routes /pages, /drafts and /data are virtually identical. The implementation however consists of multiple components with repeated code. All of that repeated logic has been extracted into a new component, named Explorer.",Add Explorer component to render resource indexes (#514),"The front end for routes /pages, /drafts and /data are virtually identical. The implementation however consists of multiple components with repeated code. All of that repeated logic has been extracted into a new component, named Explorer."
+95,Move common function in ducks to utility module (#535),"At the time the filter function was written for data files, the latter resources didn't have a name property. However, now they do. But on modifying the function to filter by filename, it became evident that the functions defined in ducks for pages, drafts and data files are now identical and can therefore be extracted as a utility function.",Move common function in ducks to utility module (#535),"At the time the filter function was written for data files, the latter resources didn't have a name property. However, now they do. But on modifying the function to filter by filename, it became evident that the functions defined in ducks for pages, drafts and data files are now identical and can therefore be extracted as a utility function."
+96,Add missing static file upload-tip,,Add missing static file upload-tip,
+97,Refactor Breadcrumbs component (#533), Define splat parameter with a default value of '' Optimize by reducing conditional branches and iterations,Refactor Breadcrumbs component (#533),Define splat parameter with a default value of '' Optimize by reducing conditional branches and iterations
+98,Validate current resource type when creating them,,Validate current resource type when creating them,
+99,Use relative_path field in Document component,,Use relative_path field in Document component,
+100,Integrate bundlesize into test-suite (#531),,Integrate bundlesize into test-suite (#531),
+101,Add directory support for static files (#408),,Add directory support for static files (#408),
+102,Add relative_path field in API response (#521),"For resources that respond to relative_path calls, expose the value after stripping away any leading slashes and special dirnames from them. Refer private method JekyllAdmin::APIable#relative_path_for_api for examples.",Add relative_path field in API response (#521),"For resources that respond to relative_path calls, expose the value after stripping away any leading slashes and special dirnames from them. Refer private method JekyllAdmin::APIable#relative_path_for_api for examples."
+103,Optimize API Hash objects (#528)," Normalize API structure with a template  API_SCAFFOLD is the base hash with each key pointing to a nil value.   When merged with the API generated via calling #hash_for_api, the   values of the base API will get updated. Therefore, the first two keys   of the final api hash from calling #to_api will always be ""name"" and   ""path"".   The url fields (""http_url"", ""api_url"", and collections' ""entries_url"")   are injected towards the end so that they are always the last keys of   the api hash.  Don't allocate new Hash objects for every merge",Optimize API Hash objects (#528),"Normalize API structure with a template API_SCAFFOLD is the base hash with each key pointing to a nil value.   When merged with the API generated via calling #hash_for_api, the   values of the base API will get updated. Therefore, the first two keys   of the final api hash from calling #to_api will always be ""name"" and   ""path"".   The url fields (""http_url"", ""api_url"", and collections' ""entries_url"")   are injected towards the end so that they are always the last keys of   the api hash. Don't allocate new Hash objects for every merge"
+104,Load monkey patches after loading major actors,To ensure that autoloaded classes from upstream have been loaded by the time they're referenced by the monkey patches,Load monkey patches after loading major actors,To ensure that autoloaded classes from upstream have been loaded by the time they're referenced by the monkey patches
+105,Strip leading slash from data file's path (#527),Since it is redundant and two path segments are joined at the back end via File.join which inserts the slash when generating an absolute path.,Strip leading slash from data file's path (#527),Since it is redundant and two path segments are joined at the back end via File.join which inserts the slash when generating an absolute path.
+106,Ensure a blank line at end of document (#519),"Currently, editing a page / document via the MarkdownEditor interface removes the blank line at the end of the file. This change ensures that a blank line is injected if it has been removed or doesn't exist otherwise.",Ensure a blank line at end of document (#519),"Currently, editing a page / document via the MarkdownEditor interface removes the blank line at the end of the file. This change ensures that a blank line is injected if it has been removed or doesn't exist otherwise."
+107,Refactor JekyllAdmin::Directory (#522),"  Use strings as keys for #to_liquid hash   Provides consistency with other datatypes that uses a Hash with string keys. Moreover string    literals are automatically frozen now. Therefore, they're as performant as using symbols.   Use constants to avoid creating objects repeatedly   Creating the same array on every call / iteration is wasteful. String literals are now frozen   automatically. So they need not be stashed in a constant   Improve readability of constructor   Pathname.new(nil) is an invalid usage. So technically all of the named parameters except   :content_type is a required parameter. But content_type being nil doesn't make sense so that   should be a required parameter as well.   Base of a directory is its main container   For pages, it would be site.source   For posts, it would be site.source + collections_dir + '_posts'.  Similarly for other documents, it   would be the path upto their respective collection's root directory,   Memoize relative_path method   To avoid re-evaluation on every request to a given API URL. The to_liquid method is not    memoized instead so that modified_time is picked up properly. ",Refactor JekyllAdmin::Directory (#522),"Use strings as keys for #to_liquid hash   Provides consistency with other datatypes that uses a Hash with string keys. Moreover string    literals are automatically frozen now. Therefore, they're as performant as using symbols. Use constants to avoid creating objects repeatedly   Creating the same array on every call / iteration is wasteful. String literals are now frozen   automatically. So they need not be stashed in a constant Improve readability of constructor   Pathname.new(nil) is an invalid usage. So technically all of the named parameters except   :content_type is a required parameter. But content_type being nil doesn't make sense so that   should be a required parameter as well. Base of a directory is its main container   For pages, it would be site.source   For posts, it would be site.source + collections_dir + '_posts'.  Similarly for other documents, it   would be the path upto their respective collection's root directory, Memoize relative_path method   To avoid re-evaluation on every request to a given API URL. The to_liquid method is not    memoized instead so that modified_time is picked up properly."
+108,Manipulate Metrics/PerceivedComplexity as required,"Metrics/PerceivedComplexity cop as configured via 'rubocop-jekyll' reports just one offense. So, it is better to toggle the cop for just that one offense instead of altering it for all files.",Manipulate Metrics/PerceivedComplexity as required,"Metrics/PerceivedComplexity cop as configured via 'rubocop-jekyll' reports just one offense. So, it is better to toggle the cop for just that one offense instead of altering it for all files."
+109,Minor style corrections for MarkdownEditor,,Minor style corrections for MarkdownEditor,
+110,Remove redundant RuboCop configuration,,Remove redundant RuboCop configuration,
+111,Rename normalize.css to normalize.scss,"Since valid CSS is also valid SCSS, changing the extension will not have any detrimental effect on the generated CSS file, but will however remove the deprecation warning from LibSass regarding the import of a *.css file.",Rename normalize.css to normalize.scss,"Since valid CSS is also valid SCSS, changing the extension will not have any detrimental effect on the generated CSS file, but will however remove the deprecation warning from LibSass regarding the import of a *.css file."
+112,Fix code element font-size in CodeMirror headings,CSS rules override those that are defined for the same selector earlier in the cascade.,Fix code element font-size in CodeMirror headings,CSS rules override those that are defined for the same selector earlier in the cascade.
+113,Reduce line-length in documentation's index page,,Reduce line-length in documentation's index page,
+114,Improve documentation source and styles,,Improve documentation source and styles,
+115,Improve Markdown editor styling (#525),,Improve Markdown editor styling (#525),
+116,Style metafields similar to DataGUI styles (#524),So that the section takes up lesser vertical space and additionally mirrors how users would edit front matter on text-editors.,Style metafields similar to DataGUI styles (#524),So that the section takes up lesser vertical space and additionally mirrors how users would edit front matter on text-editors.
+117,Add complex front matter to fixture page,,Add complex front matter to fixture page,
+118,Filter away virtual pages that output to HTML file (#520),To stop rendering routes to virtual pages—those that do not have a physical presence within the source directory. Such page objects are always generated via a plugin.,Filter away virtual pages that output to HTML file (#520),To stop rendering routes to virtual pages—those that do not have a physical presence within the source directory. Such page objects are always generated via a plugin.
+119,Simplify loading individual namespace route maps (#516),,Simplify loading individual namespace route maps (#516),
+120,Allow custom labels for collections in sidebar (#515),Set a sidebar_label key in the collection's metadata to the desired string and it shall be rendered as provided.,Allow custom labels for collections in sidebar (#515),Set a sidebar_label key in the collection's metadata to the desired string and it shall be rendered as provided.
+121,Point AppVeyor badge to Jekyll Org's account,Also have it reflect just the status of the master branch instead of the status of the latest build.,Point AppVeyor badge to Jekyll Org's account,Also have it reflect just the status of the master branch instead of the status of the latest build.
+122,Add documentation for self-hosting (#505),,Add documentation for self-hosting (#505),
+123,Expose data file's basename as attribute name (#512),"This provides JekyllAdmin::DataFile instances parity with primitives from Jekyll. Jekyll::Page, Jekyll::Document, Jekyll::StaticFile instances exposes their basename with extension via Liquid and therefore the API here as either :name or :basename",Expose data file's basename as attribute name (#512),"This provides JekyllAdmin::DataFile instances parity with primitives from Jekyll. Jekyll::Page, Jekyll::Document, Jekyll::StaticFile instances exposes their basename with extension via Liquid and therefore the API here as either :name or :basename"
+124,Move babel and eslint configs into separate files (#513),,Move babel and eslint configs into separate files (#513),
+125,Add version as global from package.json (#510), Add version from package.json as global Add VERSION to jest globals,Add version as global from package.json (#510),Add version from package.json as global Add VERSION to jest globals
+126,Don't run tests as part of npm start task,,Don't run tests as part of npm start task,
+127,Improve test coverage for Button component,,Improve test coverage for Button component,
+128,Compute data file's extname just once (#511),,Compute data file's extname just once (#511),
+129,Freeze Ruby string literals with the pragma (#509), Freeze all string literals with frozen_string_literal: true magic comment. Require at least Ruby 2.3.0 as we now use String#+@ from Ruby 2.3.0.,Freeze Ruby string literals with the pragma (#509),Freeze all string literals with frozen_string_literal: true magic comment. Require at least Ruby 2.3.0 as we now use String#+@ from Ruby 2.3.0.
+130,Create FUNDING.yml,,Create FUNDING.yml,
+131,Have Datafiles.js be consistent with similar views,,Have Datafiles.js be consistent with similar views,
+132,Allow drawing tables easily in the Markdown editor (#508),,Allow drawing tables easily in the Markdown editor (#508),
+133,Update appveyor badge,,Update appveyor badge,
+134,Update installing gem for appveyor,,Update installing gem for appveyor,
+135,Update ruby version for appveyor,,Update ruby version for appveyor,
+136,Refresh aesthetics of admin interface (#507), Reduce size of container headers and table cells to allow     rendering more content in the viewport. Replace gradients and shadows with a modern flat aethetic. Reduce rounded-corners to a more subtle presence. Buttons     remain at current 4px rounded-corners. Remove irrelevant mixin statements. Improve staticfile-preview aesthetics,Refresh aesthetics of admin interface (#507),Reduce size of container headers and table cells to allow     rendering more content in the viewport. Replace gradients and shadows with a modern flat aethetic. Reduce rounded-corners to a more subtle presence. Buttons     remain at current 4px rounded-corners. Remove irrelevant mixin statements. Improve staticfile-preview aesthetics
+137,Modernize styling of notification messages (#506),,Modernize styling of notification messages (#506),
+138,Collapse collection items in Sidebar (#503), Renders as the first item in the Sidebar giving it ample space to     expand downwards. Renders a counter showing count of items within panel when collapsed Renders link to 'Posts' separately,Collapse collection items in Sidebar (#503),Renders as the first item in the Sidebar giving it ample space to     expand downwards. Renders a counter showing count of items within panel when collapsed Renders link to 'Posts' separately
+139,Allow use in sites with custom collections_dir (#504),,Allow use in sites with custom collections_dir (#504),
+140,Generate pretty JSON at /_api/**/* (#328),To improve readability especially during development,Generate pretty JSON at /_api/*/ (#328),To improve readability especially during development
+141,Fix latest offenses picked by rubocop-performance,,Fix latest offenses picked by rubocop-performance,
+142,RuboCop: Exclude ruby files in vendor directory,,RuboCop: Exclude ruby files in vendor directory,
+143,"Revert ""Travis: Explicitly install gems to vendor/bundle""",This reverts commit 9a86587639e614988abf959d025874e9a063cf35.,"Revert ""Travis: Explicitly install gems to vendor/bundle""",This reverts commit 9a86587639e614988abf959d025874e9a063cf35.
+144,Travis: Explicitly install gems to vendor/bundle,,Travis: Explicitly install gems to vendor/bundle,
+145,Release :gem: v0.9.0,,Release :gem: v0.9.0,
+146,Upgrade Node dependencies across semver-minor (#500),The only exception being node-sass which requires a major version-bump to support Node 10,Upgrade Node dependencies across semver-minor (#500),The only exception being node-sass which requires a major version-bump to support Node 10
+147,Update Jekyll server monkey-patch to mirror Core (#499)," Mark the methods as private since #start_up_webrick is a private method   in the upstream command class From Jekyll 3.7 onwards, local variable server is an instance_variable   in the overridden method upstream",Update Jekyll server monkey-patch to mirror Core (#499),"Mark the methods as private since #start_up_webrick is a private method   in the upstream command class From Jekyll 3.7 onwards, local variable server is an instance_variable   in the overridden method upstream"
+148,Adjust gemspec to allow use with Jekyll 4.0 (#492), Allow use with Jekyll 4.0 Allow testing with specific Jekyll versions,Adjust gemspec to allow use with Jekyll 4.0 (#492),Allow use with Jekyll 4.0 Allow testing with specific Jekyll versions
+149,Use rubocop-jekyll to enforce Jekyll's styles (#497),To stop inheriting rubocop.yml from the latest version of Jekyll as that may cause false CI failures for PRs in this project. Miscellaneous developmental changes include: - adding support for Bundler 2.0 - dropping test coverage for EOL Ruby 2.3 and older.,Use rubocop-jekyll to enforce Jekyll's styles (#497),To stop inheriting rubocop.yml from the latest version of Jekyll as that may cause false CI failures for PRs in this project. Miscellaneous developmental changes include: - adding support for Bundler 2.0 - dropping test coverage for EOL Ruby 2.3 and older.
+150,Fix plugin name in documentation (#496),,Fix plugin name in documentation (#496),
+151,Fix URL to docs about installing plugins (#495),,Fix URL to docs about installing plugins (#495),
+152,Merge pull request #488 from coliff/patch-2,HTTPS and update links in README,Merge pull request #488 from coliff/patch-2,HTTPS and update links in README
+153,HTTPS and update links in README,,HTTPS and update links in README,
+154,Merge pull request #486 from lexoyo/master,"The data files are getting deleted when editing in Raw Editor, fix #482",Merge pull request #486 from lexoyo/master,"The data files are getting deleted when editing in Raw Editor, fix #482"
+155,fixed order of data files in the tests,,fixed order of data files in the tests,
+156,"The data files are getting deleted when editing in Raw Editor, fix #482",,"The data files are getting deleted when editing in Raw Editor, fix #482",
+157,Merge pull request #485 from RDIL/patch-1,Add meta charset tag,Merge pull request #485 from RDIL/patch-1,Add meta charset tag
+158,Add meta charset tag,,Add meta charset tag,
+159,Merge pull request #470 from jekyll/release,Release v0.8.1,Merge pull request #470 from jekyll/release,Release v0.8.1
+160,remove siteleaf ad,,remove siteleaf ad,
+161,up snapshot,,up snapshot,
+162,release v0.8.1,,release v0.8.1,
+163,Merge pull request #468 from jamesluberda/livereload-support,support livereload when jekyll-admin is installed,Merge pull request #468 from jamesluberda/livereload-support,support livereload when jekyll-admin is installed
+164,deleted test folder to resolve rspec example failure,,deleted test folder to resolve rspec example failure,
+165,upgraded rubocop to 0.57.2; added two cop configuration changes to .rubocop.yml,,upgraded rubocop to 0.57.2; added two cop configuration changes to .rubocop.yml,
+166,added livereload call to server startup,,added livereload call to server startup,
+167,Merge pull request #455 from eltrino/master,Added auth options to fetch calls,Merge pull request #455 from eltrino/master,Added auth options to fetch calls
+168,Added auth options to fetch calls,,Added auth options to fetch calls,
+169,Merge pull request #452 from jekyll/version,Release 0.8.0,Merge pull request #452 from jekyll/version,Release 0.8.0
+170,update snapshot,,update snapshot,
+171,release version,,release version,
+172,Merge pull request #448 from PeterDaveHelloKitchen/optimize-png-image,Re-compress logo image,Merge pull request #448 from PeterDaveHelloKitchen/optimize-png-image,Re-compress logo image
+173,Optimize PNG images losslessly via Google zopflipng,,Optimize PNG images losslessly via Google zopflipng,
+174,Merge pull request #446 from DirtyF/patch-1,Update Copyright notice,Merge pull request #446 from DirtyF/patch-1,Update Copyright notice
+175,Update LICENSE,,Update LICENSE,
+176,Merge pull request #438 from JohannesMP/master,Add Config Page to Documentation,Merge pull request #438 from JohannesMP/master,Add Config Page to Documentation
+177,Added configs page and updated sidebar,,Added configs page and updated sidebar,
+178,replaced deprecated 'gems' config with 'plugins',,replaced deprecated 'gems' config with 'plugins',
+179,Merge pull request #434 from coliff/patch-1,correct capitalisation of JavaScript,Merge pull request #434 from coliff/patch-1,correct capitalisation of JavaScript
+180,correct capitalisation of JavaScript,,correct capitalisation of JavaScript,
+181,Merge pull request #431 from gkal19/master,add: ptBr.js,Merge pull request #431 from gkal19/master,add: ptBr.js
+182,add: ptBr.js,Added Brazilian Portuguese translation,add: ptBr.js,Added Brazilian Portuguese translation
+183,Merge pull request #424 from jekyll/snapshot,Add snapshot tests,Merge pull request #424 from jekyll/snapshot,Add snapshot tests
+184,fix tests,,fix tests,
+185,fix spec test,,fix spec test,
+186,add root level containers tests,,add root level containers tests,
+187,init,,init,
+188,Merge pull request #423 from jekyll/prop-types,Babel Bump & Prop Types & Lint,Merge pull request #423 from jekyll/prop-types,Babel Bump & Prop Types & Lint
+189,more cleanup,,more cleanup,
+190,use openDropzone method,,use openDropzone method,
+191,fix drafts document title,,fix drafts document title,
+192,more prettier,,more prettier,
+193,class properties,,class properties,
+194,init,activate lint-staged init,init,activate lint-staged init
+195,Merge pull request #421 from jekyll/ducks,Implement Ducks: Modular Redux,Merge pull request #421 from jekyll/ducks,Implement Ducks: Modular Redux
+196,delete actionTypes,,delete actionTypes,
+197,Merge remote-tracking branch 'origin/master' into ducks,,Merge remote-tracking branch 'origin/master' into ducks,
+198,revert _config.yml,,revert _config.yml,
+199,Merge pull request #367 from ashmaroli/drafts-api,Add support for editing drafts via admin interface,Merge pull request #367 from ashmaroli/drafts-api,Add support for editing drafts via admin interface
+200,Add documentation on handling draft resources,,Add documentation on handling draft resources,
+201,Merge branch 'master' into drafts-api,,Merge branch 'master' into drafts-api,
+202,lint & comments,,lint & comments,
+203,short-hand functions,,short-hand functions,
+204,implement ducks,,implement ducks,
+205,Merge pull request #420 from scottmathson/patch-1,"Updating depreciated ""gems"" to ""plugins""",Merge pull request #420 from scottmathson/patch-1,"Updating depreciated ""gems"" to ""plugins"""
+206,"Updating depreciated ""gems"" to ""plugins""",,"Updating depreciated ""gems"" to ""plugins""",
+207,Merge pull request #419 from jekyll/release,Release 0.7.0,Merge pull request #419 from jekyll/release,Release 0.7.0
+208,update docs,,update docs,
+209,release 0.7.0,,release 0.7.0,
+210,Merge pull request #415 from jekyll/race,Bring watch back,Merge pull request #415 from jekyll/race,Bring watch back
+211,Merge branch 'master' into race,,Merge branch 'master' into race,
+212,disable frozen strings,,disable frozen strings,
+213,environment check,,environment check,
+214,Merge remote-tracking branch 'origin/master' into race,,Merge remote-tracking branch 'origin/master' into race,
+215,Merge pull request #396 from ashmaroli/data-dir-patch,support directories for data files more robustly,Merge pull request #396 from ashmaroli/data-dir-patch,support directories for data files more robustly
+216,Merge branch 'master' into data-dir-patch,,Merge branch 'master' into data-dir-patch,
+217,Merge pull request #416 from Strangehill/add-spanish-strings,add Spanish localization strings,Merge pull request #416 from Strangehill/add-spanish-strings,add Spanish localization strings
+218,add Spanish localization strings,,add Spanish localization strings,
+219,Merge branch 'race' of https://github.com/jekyll/jekyll-admin into race,,Merge branch 'race' of link into race,
+220,remove require comment,,remove require comment,
+221,Merge branch 'master' into race,,Merge branch 'master' into race,
+222,site.process when deleting,,site.process when deleting,
+223,temporary read in dev mode,,temporary read in dev mode,
+224,Merge pull request #413 from BlueWombat/master,Changed Danish translations to something more sensible,Merge pull request #413 from BlueWombat/master,Changed Danish translations to something more sensible
+225,Changed Danish translations to something more sensible,,Changed Danish translations to something more sensible,
+226,Merge pull request #411 from jekyll/release,Release v0.6.0,Merge pull request #411 from jekyll/release,Release v0.6.0
+227,release 0.6.0,,release 0.6.0,
+228,Merge pull request #410 from jekyll/focus,Autofocus to newly created metafield,Merge pull request #410 from jekyll/focus,Autofocus to newly created metafield
+229,Merge pull request #406 from ashmaroli/static-gem-sticker,Tag static files from a theme-gem with a sticker,Merge pull request #406 from ashmaroli/static-gem-sticker,Tag static files from a theme-gem with a sticker
+230,Merge branch 'master' into static-gem-sticker,,Merge branch 'master' into static-gem-sticker,
+231,even simpler,,even simpler,
+232,simplify detecting new metafield,,simplify detecting new metafield,
+233,rename 'gems' to 'plugins',,rename 'gems' to 'plugins',
+234,add new_field_count proptype,,add new_field_count proptype,
+235,use select,,use select,
+236,focus to newly created metafield,,focus to newly created metafield,
+237,Merge pull request #407 from jekyll/title,Show current page title in browser tab,Merge pull request #407 from jekyll/title,Show current page title in browser tab
+238,test rendering theme-indicator,,test rendering theme-indicator,
+239,show title instead of filename,,show title instead of filename,
+240,consistent labels,,consistent labels,
+241,show current view title in browser tab,,show current view title in browser tab,
+242,do not call site.process twice,,do not call site.process twice,
+243,move conditions to outside of return function,,move conditions to outside of return function,
+244,tag static files from a theme-gem with a sticker,,tag static files from a theme-gem with a sticker,
+245,Merge pull request #405 from ashmaroli/write-file-mode,Write files with binary mode,Merge pull request #405 from ashmaroli/write-file-mode,Write files with binary mode
+246,write files with binary mode,,write files with binary mode,
+247,Merge branch 'master' of https://github.com/jekyll/jekyll-admin into data-dir-patch,,Merge branch 'master' of link into data-dir-patch,
+248,Merge pull request #398 from ashmaroli/floating-side-buttons,fix side-buttons to viewport,Merge pull request #398 from ashmaroli/floating-side-buttons,fix side-buttons to viewport
+249,fix side-buttons to viewport,,fix side-buttons to viewport,
+250,Merge pull request #395 from ashmaroli/disable-push-builds,Build only commits to default branch,Merge pull request #395 from ashmaroli/disable-push-builds,Build only commits to default branch
+251,support directories for data files more robustly,,support directories for data files more robustly,
+252,build only commits to default branch,,build only commits to default branch,
+253,Merge pull request #393 from jekyll/release,Release 0.5.1,Merge pull request #393 from jekyll/release,Release 0.5.1
+254,release 0.5.1,,release 0.5.1,
+255,Merge pull request #392 from ashmaroli/no-watch-warn,Warn user that --watch has been disabled,Merge pull request #392 from ashmaroli/no-watch-warn,Warn user that --watch has been disabled
+256,warn user that --watch has been disabled,,warn user that --watch has been disabled,
+257,DataGUI: Fix DatePicker & StaticFilePicker CSS (#385), DataGUI: Fix DatePicker & StaticFilePicker CSS,DataGUI: Fix DatePicker & StaticFilePicker CSS (#385),DataGUI: Fix DatePicker & StaticFilePicker CSS
+258,Use single quotes in JS files (#375), use single quotes,Use single quotes in JS files (#375),use single quotes
+259,update and lint frontend changes,,update and lint frontend changes,
+260,minor improvements to backend,,minor improvements to backend,
+261,Merge branch 'master' into drafts-api,,Merge branch 'master' into drafts-api,
+262,release 0.5.0 (#368),,release 0.5.0 (#368),
+263,Format metadata object (#378), format metadata object,Format metadata object (#378),format metadata object
+264,Merge pull request #383 from jekyll/fix-filepicker,Remove shouldComponentUpdate from MetaSimple component,Merge pull request #383 from jekyll/fix-filepicker,Remove shouldComponentUpdate from MetaSimple component
+265,remove shouldComponentUpdate,This is not needed after switching to controlled inputs. This also blocks showing staticfilepicker modal on state change,remove shouldComponentUpdate,This is not needed after switching to controlled inputs. This also blocks showing staticfilepicker modal on state change
+266,Update docs style (#379), update docs style,Update docs style (#379),update docs style
+267,add missing hotkeys for create views (#382),,add missing hotkeys for create views (#382),
+268,Merge pull request #381 from jekyll/readme-note,Update readme about new Jekyll Admin option,Merge pull request #381 from jekyll/readme-note,Update readme about new Jekyll Admin option
+269,restart appveyor,,restart appveyor,
+270,update readme,,update readme,
+271,Merge pull request #349 from ashmaroli/data-directories,Support editing data files in sub-directories,Merge pull request #349 from ashmaroli/data-directories,Support editing data files in sub-directories
+272,have the toggleButton and saveButton switch places,,have the toggleButton and saveButton switch places,
+273,Merge branch 'master' into data-directories,,Merge branch 'master' into data-directories,
+274,Merge pull request #376 from ashmaroli/error-style,Style messages from Errors,Merge pull request #376 from ashmaroli/error-style,Style messages from Errors
+275,Merge branch 'master' into error-style,,Merge branch 'master' into error-style,
+276,Merge pull request #377 from ashmaroli/notfound-fix,Fix returning  when a data file is empty,Merge pull request #377 from ashmaroli/notfound-fix,Fix returning  when a data file is empty
+277,add missing semicolon,,add missing semicolon,
+278,update errors.spec,,update errors.spec,
+279,fix returning  when a data file is empty,,fix returning  when a data file is empty,
+280,style messages from <Errors />,,style messages from ,
+281,fix data type conversion via DataGUI,,fix data type conversion via DataGUI,
+282,Merge branch 'master' into data-directories,,Merge branch 'master' into data-directories,
+283,Merge pull request #373 from ashmaroli/app-config-feed,send extracted config hash to main container components,Merge pull request #373 from ashmaroli/app-config-feed,send extracted config hash to main container components
+284,Merge branch 'master' into app-config-feed,,Merge branch 'master' into app-config-feed,
+285,minor fixes,,minor fixes,
+286,Merge pull request #374 from ashmaroli/toggle-labels,add locale-specific labels for toggleButton,Merge pull request #374 from ashmaroli/toggle-labels,add locale-specific labels for toggleButton
+287,test some additional statements,,test some additional statements,
+288,add locale-specific labels for toggleButton,,add locale-specific labels for toggleButton,
+289,update front end views,,update front end views,
+290,remove API support to access data files without extensions as a YAML file,,remove API support to access data files without extensions as a YAML file,
+291,limit directory traversal to child directories,,limit directory traversal to child directories,
+292,fix tests,,fix tests,
+293,modify params.splat in Datafiles view based on context,,modify params.splat in Datafiles view based on context,
+294,limit directory traversal to deeper levels,,limit directory traversal to deeper levels,
+295,send config hash,,send config hash,
+296,minor fixes,,minor fixes,
+297,Merge pull request #371 from jekyll/datefix,Support 24-hour clock for DateTimePicker,Merge pull request #371 from jekyll/datefix,Support 24-hour clock for DateTimePicker
+298,add some conditional rendering,,add some conditional rendering,
+299,Merge branch 'master' into drafts-api,,Merge branch 'master' into drafts-api,
+300,lock changing datafile type in GUI mode to YAML and JSON,,lock changing datafile type in GUI mode to YAML and JSON,
+301,respect am/pm rule,,respect am/pm rule,
+302,update spec files,,update spec files,
+303,Merge branch 'master' into data-directories,,Merge branch 'master' into data-directories,
+304,Support hiding sidebar links (#361), support hiding sidebar links,Support hiding sidebar links (#361),support hiding sidebar links
+305,Merge pull request #370 from jekyll/fix-error,Fix undefined config.content error,Merge pull request #370 from jekyll/fix-error,Fix undefined config.content error
+306,fix undefined defaults error,,fix undefined defaults error,
+307,Merge pull request #362 from ashmaroli/data-create-gui,Add GUI support to DataFileNew,Merge pull request #362 from ashmaroli/data-create-gui,Add GUI support to DataFileNew
+308,Merge branch 'master' of https://github.com/jekyll/jekyll-admin,,Merge branch 'master' of link,
+309,update docs,,update docs,
+310,dispatch save action when fieldChanged,,dispatch save action when fieldChanged,
+311,update spec files,,update spec files,
+312,render frontend,,render frontend,
+313,foundation for frontend support,,foundation for frontend support,
+314,redefine relative_path w.r.t to '_drafts/',,redefine relative_path w.r.t to '_drafts/',
+315,include only documents that output to html,,include only documents that output to html,
+316,exclude root level directories without drafts,,exclude root level directories without drafts,
+317,Merge branch 'master' into data-create-gui,,Merge branch 'master' into data-create-gui,
+318,activate or deactivate save button based on input state,,activate or deactivate save button based on input state,
+319,Merge pull request #365 from ashmaroli/no-trim-values,Don't trim spaces from metadata value-field,Merge pull request #365 from ashmaroli/no-trim-values,Don't trim spaces from metadata value-field
+320,add spec file for drafts API,,add spec file for drafts API,
+321,add API support for drafts,,add API support for drafts,
+322,add drafts to fixture site,,add drafts to fixture site,
+323,Merge branch 'master' into data-create-gui,,Merge branch 'master' into data-create-gui,
+324,Merge branch 'master' into no-trim-values,,Merge branch 'master' into no-trim-values,
+325,Merge pull request #366 from ashmaroli/configuration-gui,Add GUI Editor to Configuration view,Merge pull request #366 from ashmaroli/configuration-gui,Add GUI Editor to Configuration view
+326,update test files,,update test files,
+327,rename GUI container as DataGUI,,rename GUI container as DataGUI,
+328,refactor put action for data files,,refactor put action for data files,
+329,bind (this) to functions in the constructor,,bind (this) to functions in the constructor,
+330,alert on leaving GUI with unsaved fields,,alert on leaving GUI with unsaved fields,
+331,bind (this) to functions in the constructor,,bind (this) to functions in the constructor,
+332,trim  value onBlur,,trim  value onBlur,
+333,update spec file for actions,,update spec file for actions,
+334,refactor putDataFile function,,refactor putDataFile function,
+335,update spec file for actions,,update spec file for actions,
+336,update spec files,,update spec files,
+337,update documentation,,update documentation,
+338,add GUI editor to Configuration,,add GUI editor to Configuration,
+339,don't trim spaces from metadata value-field,,don't trim spaces from metadata value-field,
+340,maintain cross-browser style consistency,,maintain cross-browser style consistency,
+341,add HotKeys support to GUI,,add HotKeys support to GUI,
+342,update spec file,,update spec file,
+343,update docs,,update docs,
+344,lock data file creation to just YAML and JSON files, separate elements for basename and extension normalize file extensions: all data files created via the GUI will     either have .yml or .json extension,lock data file creation to just YAML and JSON files,separate elements for basename and extension normalize file extensions: all data files created via the GUI will     either have .yml or .json extension
+345,update spec file DataFileNew view,,update spec file DataFileNew view,
+346,add DataGUI to DataFileNew,,add DataGUI to DataFileNew,
+347,Merge branch 'master' into 'data-directories',,Merge branch 'master' into 'data-directories',
+348,Merge branch 'master' of https://github.com/jekyll/jekyll-admin,,Merge branch 'master' of link,
+349,Merge pull request #360 from ashmaroli/gui-plus,Extend and lock current GUI support to just YAML and JSON data files,Merge pull request #360 from ashmaroli/gui-plus,Extend and lock current GUI support to just YAML and JSON data files
+350,make spec file for DataFileEdit consistent with similar view specs,,make spec file for DataFileEdit consistent with similar view specs,
+351,improve helper function and test for dotfile paths,,improve helper function and test for dotfile paths,
+352,improve helper function and test it,,improve helper function and test it,
+353,Merge branch 'master' into 'gui-plus',,Merge branch 'master' into 'gui-plus',
+354,"Editor.prop(""type"") instead of (""ext"")",,"Editor.prop(""type"") instead of (""ext"")",
+355,get extension from file instead of API,,get extension from file instead of API,
+356,Merge branch 'master' into 'data-directories',,Merge branch 'master' into 'data-directories',
+357,Merge branch 'master' into 'data-directories',,Merge branch 'master' into 'data-directories',
+358,Merge branch 'master' of https://github.com/jekyll/jekyll-admin,,Merge branch 'master' of link,
+359,Merge pull request #359 from jekyll/jest,Migrate to Jest,Merge pull request #359 from jekyll/jest,Migrate to Jest
+360,remove unused vars,,remove unused vars,
+361,replace exist with truthy,,replace exist with truthy,
+362,fix errors,,fix errors,
+363,Merge branch 'master' into jest,,Merge branch 'master' into jest,
+364,Merge branch 'master' of https://github.com/jekyll/jekyll-admin,,Merge branch 'master' of link,
+365,Merge pull request #337 from jekyll/defaults,Support frontmatter defaults in the front end,Merge pull request #337 from jekyll/defaults,Support frontmatter defaults in the front end
+366,fix tests,,fix tests,
+367,fix css bug,,fix css bug,
+368,fix tests,,fix tests,
+369,lock GUI Editor Support to only YAML and JSON data files,,lock GUI Editor Support to only YAML and JSON data files,
+370,extend GUI Editor support to JSON data files,,extend GUI Editor support to JSON data files,
+371,support proper syntax highlighting for JSON data in Editor,"Currently JSON data is also displayed with ""yaml"" mode in the Editor. With this commit, JSON data will be displayed under ""json"" mode while every other data file type (YAML, CSV, TSV) will have ""yaml"" as the mode.",support proper syntax highlighting for JSON data in Editor,"Currently JSON data is also displayed with ""yaml"" mode in the Editor. With this commit, JSON data will be displayed under ""json"" mode while every other data file type (YAML, CSV, TSV) will have ""yaml"" as the mode."
+372,add multiple data file types,,add multiple data file types,
+373,Merge remote-tracking branch 'origin/master' into defaults,,Merge remote-tracking branch 'origin/master' into defaults,
+374,Merge branch 'master' of https://github.com/jekyll/jekyll-admin,,Merge branch 'master' of link,
+375,Merge pull request #354 from ashmaroli/data-gui,Add GUI support for editing Data files,Merge pull request #354 from ashmaroli/data-gui,Add GUI support for editing Data files
+376,use content for defaults,,use content for defaults,
+377,controlled inputs,,controlled inputs,
+378,Merge branch 'master' into defaults,,Merge branch 'master' into defaults,
+379,Merge branch 'master' into data-gui,,Merge branch 'master' into data-gui,
+380,make MetaSimple controlled component,,make MetaSimple controlled component,
+381,disable eslint forbid-prop-types,,disable eslint forbid-prop-types,
+382,back to npm,,back to npm,
+383,travis coverall,,travis coverall,
+384,fix test paths & install coveralls,,fix test paths & install coveralls,
+385,specify test folder,,specify test folder,
+386,disable unused-vars lint,,disable unused-vars lint,
+387,move babel config to package.json,,move babel config to package.json,
+388,fix eslint errors,,fix eslint errors,
+389,migrate to jest,,migrate to jest,
+390,add coveralls badge,,add coveralls badge,
+391,move eslint config to package.json,,move eslint config to package.json,
+392,update documentation,,update documentation,
+393,update sample data file for better testing,,update sample data file for better testing,
+394,include raw_content as well,,include raw_content as well,
+395,include title and path for datafiles,,include title and path for datafiles,
+396,reuse Metafields,,reuse Metafields,
+397,Undo reverse diff,,Undo reverse diff,
+398,reverse diff DataGUI and MetaFields,,reverse diff DataGUI and MetaFields,
+399,toggled render based on state directly,,toggled render based on state directly,
+400,maintain consistency and trim unnecessary code,,maintain consistency and trim unnecessary code,
+401,Beautify DataGUI,,Beautify DataGUI,
+402,Merge pull request #358 from jekyll/replace-slug,Replace slug module with a custom function to reduce bundle size,Merge pull request #358 from jekyll/replace-slug,Replace slug module with a custom function to reduce bundle size
+403,add missing turkish characters,,add missing turkish characters,
+404,replace slug module with a custom function,,replace slug module with a custom function,
+405,Merge pull request #357 from jekyll/bundle-analyzer,Webpack Bundle Analyzer,Merge pull request #357 from jekyll/bundle-analyzer,Webpack Bundle Analyzer
+406,go static (no --watch support),,go static (no --watch support),
+407,bundle analyzer,,bundle analyzer,
+408,improve accessibility for deep nested objects,,improve accessibility for deep nested objects,
+409,change btn-toggle color to chocolate,,change btn-toggle color to chocolate,
+410,Merge pull request #356 from jekyll/reset,Reset state on failed fetchs,Merge pull request #356 from jekyll/reset,Reset state on failed fetchs
+411,Merge branch 'master' into reset,,Merge branch 'master' into reset,
+412,Merge pull request #355 from ashmaroli/gitignore-patch,Ignore npm-debug logs with additional extension,Merge pull request #355 from ashmaroli/gitignore-patch,Ignore npm-debug logs with additional extension
+413,maintain consistency with existing views,,maintain consistency with existing views,
+414,reset state on failed fetchs,,reset state on failed fetchs,
+415,ignore npm-debug logs with additional extension,e.g. ignore npm-debug.log.653637,ignore npm-debug logs with additional extension,e.g. ignore npm-debug.log.653637
+416,set editor as the default source for PUT action,,set editor as the default source for PUT action,
+417,update example data file to manually test GUI View,,update example data file to manually test GUI View,
+418,update DataFileEdit to toggle between multiple views,,update DataFileEdit to toggle between multiple views,
+419,update metadata components,,update metadata components,
+420,add label for toggle-button,,add label for toggle-button,
+421,initialize DataGUI based on Metafields,,initialize DataGUI based on Metafields,
+422,update Buttons to support multiple views,,update Buttons to support multiple views,
+423,update datafiles action to support multiple views,,update datafiles action to support multiple views,
+424,use relative_path in InputPath for DataFileEdit,,use relative_path in InputPath for DataFileEdit,
+425,note for node version,,note for node version,
+426,add nodejs version to issue template,,add nodejs version to issue template,
+427,edit placeholder,,edit placeholder,
+428,Merge branch 'master' into data-directories,,Merge branch 'master' into data-directories,
+429,getDirectory from splats parameter,,getDirectory from splats parameter,
+430,Merge pull request #351 from ashmaroli/raw-config,Support editing raw config file via admin interface,Merge pull request #351 from ashmaroli/raw-config,Support editing raw config file via admin interface
+431,Merge branch 'master' into 'data-directories',,Merge branch 'master' into 'data-directories',
+432,empty commit to fix CI,,empty commit to fix CI,
+433,Merge branch 'master' into 'raw-config',,Merge branch 'master' into 'raw-config',
+434,update spec for Configuration view,,update spec for Configuration view,
+435,Merge pull request #350 from mikefowler/add-save-key-handler,Add support for standard save keyboard shortcut,Merge pull request #350 from mikefowler/add-save-key-handler,Add support for standard save keyboard shortcut
+436,update docs,,update docs,
+437,update spec files for Configuration and related,,update spec files for Configuration and related,
+438,fix lapses in Configuration frontend,,fix lapses in Configuration frontend,
+439,Add support for standard save keyboard shortcut,"Adds support for the standard ""Save"" keyboard shortcut: Command+s on OSX, or Ctrl+s on Linux and Windows. This change introduces a new dependency, react-hotkeys, which will make it trivial to add additional keyboard shortcuts in the future. Fixes #304",Add support for standard save keyboard shortcut,"Adds support for the standard ""Save"" keyboard shortcut: Command+s on OSX, or Ctrl+s on Linux and Windows. This change introduces a new dependency, react-hotkeys, which will make it trivial to add additional keyboard shortcuts in the future. Fixes #304"
+440,support editing raw config file,,support editing raw config file,
+441,appease Travis,,appease Travis,
+442,Update documentation,,Update documentation,
+443,appease travis?,,appease travis?,
+444,update API to exclude directories that do not contain data files,,update API to exclude directories that do not contain data files,
+445,update test files,,update test files,
+446,update DataFile containers,,update DataFile containers,
+447,update Breadcrumbs and InputPath, hrefs for data file folders require a trailing slash to differentiate     from data files without an extension. separate datafiles to render Data Files instead of Datafiles,update Breadcrumbs and InputPath,hrefs for data file folders require a trailing slash to differentiate     from data files without an extension. separate datafiles to render Data Files instead of Datafiles
+448,update datafiles actions,,update datafiles actions,
+449,update frontend routes,,update frontend routes,
+450,export updated API to frontend,,export updated API to frontend,
+451,test if API supports renaming data files,,test if API supports renaming data files,
+452,update specs,,update specs,
+453,store extension within data file id,,store extension within data file id,
+454,extend dataFilesAPI to support CRUD on data files recursively,,extend dataFilesAPI to support CRUD on data files recursively,
+455,Redefine paths for DataFile objects,read from the id attribute for path generation  redefine relative_path from the data_file_id by stripping away data_dir in the file id. redefine absolute_path here to include subdirectories based on splat params. point path to the data file id instead of returning the same data from relative_path as previously. consistent resource_path,Redefine paths for DataFile objects,read from the id attribute for path generation redefine relative_path from the data_file_id by stripping away data_dir in the file id. redefine absolute_path here to include subdirectories based on splat params. point path to the data file id instead of returning the same data from relative_path as previously. consistent resource_path
+456,redefine DataFile.all to match files recursively,,redefine DataFile.all to match files recursively,
+457,typo fix,,typo fix,
+458,Merge pull request #345 from jekyll/image-picker,Metadata StaticFilePicker,Merge pull request #345 from jekyll/image-picker,Metadata StaticFilePicker
+459,add Dropzone component to docs,,add Dropzone component to docs,
+460,update docs,,update docs,
+461,delete unused functions & imports,,delete unused functions & imports,
+462,static file picker,,static file picker,
+463,Merge pull request #343 from jekyll/case-insensitive,Allow previewing images with uppercase filenames,Merge pull request #343 from jekyll/case-insensitive,Allow previewing images with uppercase filenames
+464,allow previewing images with uppercase filenames,,allow previewing images with uppercase filenames,
+465,Merge pull request #342 from gkal19/master,ES6 applied in some files,Merge pull request #342 from gkal19/master,ES6 applied in some files
+466,ES6 in /src/reducers/ folder,,ES6 in /src/reducers/ folder,
+467,ES6 in src/utils/tests/metadata.spec.js,,ES6 in src/utils/tests/metadata.spec.js,
+468,ES6 in src/utils/metadata.js,,ES6 in src/utils/metadata.js,
+469,ES6 in src/utils/helpers.js,,ES6 in src/utils/helpers.js,
+470,Merge pull request #339 from ashmaroli/metafield-patch,Strip trailing and leading whitespace in Metafield keys and values,Merge pull request #339 from ashmaroli/metafield-patch,Strip trailing and leading whitespace in Metafield keys and values
+471,Merge branch 'master' of https://github.com/jekyll/jekyll-admin into metafield-patch,,Merge branch 'master' of link into metafield-patch,
+472,move trimming to reducer,,move trimming to reducer,
+473,fix rubocop,,fix rubocop,
+474,lock rubocop version,,lock rubocop version,
+475,trim trailing and leading whitespace from metafield values as well,,trim trailing and leading whitespace from metafield values as well,
+476,trim trailing and leading whitespace from metafield keys,,trim trailing and leading whitespace from metafield keys,
+477,fix ruby tests,,fix ruby tests,
+478,delete .orig file,,delete .orig file,
+479,merge conflicts,,merge conflicts,
+480,Merge pull request #334 from jekyll/release,Release 0.4.1,Merge pull request #334 from jekyll/release,Release 0.4.1
+481,Merge branch 'master' into release,,Merge branch 'master' into release,
+482,Merge pull request #336 from jekyll/unicode,Fix travis,Merge pull request #336 from jekyll/unicode,Fix travis
+483,fix rubocop,,fix rubocop,
+484,replace unicode temporarily,,replace unicode temporarily,
+485,release 0.4.1,,release 0.4.1,
+486,detach not disabled,,detach not disabled,
+487,Merge pull request #332 from jekyll/highlight,Add syntax highlighting to markdown editor,Merge pull request #332 from jekyll/highlight,Add syntax highlighting to markdown editor
+488,do not touch test file,,do not touch test file,
+489,syntax highlighting,,syntax highlighting,
+490,Merge pull request #331 from jekyll/docs,Document #320,Merge pull request #331 from jekyll/docs,Document #320
+491,document #320,,document #320,
+492,Merge pull request #327 from buren/sv-lang,Add sv locale,Merge pull request #327 from buren/sv-lang,Add sv locale
+493,Add Swedish translation,,Add Swedish translation,
+494,Merge pull request #326 from DirtyF/locale-fr,add locale FR-fr,Merge pull request #326 from DirtyF/locale-fr,add locale FR-fr
+495,add locale FR-fr,,add locale FR-fr,
+496,Merge pull request #325 from BlueWombat/master,Translated current English language constants to Danish,Merge pull request #325 from BlueWombat/master,Translated current English language constants to Danish
+497,Translated current English language constants to Danish,,Translated current English language constants to Danish,
+498,Merge pull request #320 from jekyll/prevent-race-condition-on-change,"When updating a document or page, read item by itself",Merge pull request #320 from jekyll/prevent-race-condition-on-change,"When updating a document or page, read item by itself"
+499,Merge pull request #324 from ashmaroli/test-watch-admin,test --watch with this plugin,Merge pull request #324 from ashmaroli/test-watch-admin,test --watch with this plugin
+500,test --watch with this plugin,,test --watch with this plugin,
+501,revert changes to lib/jekyll/commands/serve.rb,,revert changes to lib/jekyll/commands/serve.rb,
+502,Merge branch 'master' into prevent-race-condition-on-change,,Merge branch 'master' into prevent-race-condition-on-change,
+503,"-f, not -9",,"-f, not -9",
+504,Merge pull request #323 from jekyll/file-path-helpers,Create PathHelper and FileHelper mixins to abstract path and file logic,Merge pull request #323 from jekyll/file-path-helpers,Create PathHelper and FileHelper mixins to abstract path and file logic
+505,stop server before starting just in case,,stop server before starting just in case,
+506,remove lib/jekyll/command.rb,,remove lib/jekyll/command.rb,
+507,directory_path should be private,,directory_path should be private,
+508,add entries url to collection hash,,add entries url to collection hash,
+509,use FileHelper and PathHelper for DataFile methods,,use FileHelper and PathHelper for DataFile methods,
+510,add some missing tests,,add some missing tests,
+511,autoload ALL THE THINGS!,,autoload ALL THE THINGS!,
+512,centralize file manipulation methods in file helper,,centralize file manipulation methods in file helper,
+513,correct rubocop offenses;,,correct rubocop offenses;,
+514,move path helper methods to its own module,,move path helper methods to its own module,
+515,DRY up removing the site source,,DRY up removing the site source,
+516,slightly less abstraction,,slightly less abstraction,
+517,centralize path manipulation methods in server.rb,,centralize path manipulation methods in server.rb,
+518,Use accurate method names; add the || for the page server back.,,Use accurate method names; add the || for the page server back.,
+519,Use ensure_* helper methods and use this more robust method as a fallback to the old way.,,Use ensure_* helper methods and use this more robust method as a fallback to the old way.,
+520,"When updating a document or page, read item by itself","This prevents a race condition with another thread calling site.process. Before, site.process had to complete before the response would be correct, which is quite unreliable. Instead, use the appropriate Jekyll classes to read the item.","When updating a document or page, read item by itself","This prevents a race condition with another thread calling site.process. Before, site.process had to complete before the response would be correct, which is quite unreliable. Instead, use the appropriate Jekyll classes to read the item."
+521,Use @ashmaroli's approach to monkey patching the build command to disable watch,,Use @ashmaroli's approach to monkey patching the build command to disable watch,
+522,"actually, actually disable watch",,"actually, actually disable watch",
+523,directory_path should be private,,directory_path should be private,
+524,add entries url to collection hash,,add entries url to collection hash,
+525,use FileHelper and PathHelper for DataFile methods,,use FileHelper and PathHelper for DataFile methods,
+526,add some missing tests,,add some missing tests,
+527,autoload ALL THE THINGS!,,autoload ALL THE THINGS!,
+528,centralize file manipulation methods in file helper,,centralize file manipulation methods in file helper,
+529,correct rubocop offenses;,,correct rubocop offenses;,
+530,move path helper methods to its own module,,move path helper methods to its own module,
+531,DRY up removing the site source,,DRY up removing the site source,
+532,slightly less abstraction,,slightly less abstraction,
+533,centralize path manipulation methods in server.rb,,centralize path manipulation methods in server.rb,
+534,Merge branch 'master' into prevent-race-condition-on-change,,Merge branch 'master' into prevent-race-condition-on-change,
+535,Use accurate method names; add the || for the page server back.,,Use accurate method names; add the || for the page server back.,
+536,Merge pull request #319 from ashmaroli/verbose-test-files,Improve spec site fixture,Merge pull request #319 from ashmaroli/verbose-test-files,Improve spec site fixture
+537,lets keep fixtures minimalistic,,lets keep fixtures minimalistic,
+538,Use ensure_* helper methods and use this more robust method as a fallback to the old way.,,Use ensure_* helper methods and use this more robust method as a fallback to the old way.,
+539,update spec files in sync with new file tree,,update spec files in sync with new file tree,
+540,Edit contents in test posts,,Edit contents in test posts,
+541,"When updating a document or page, read item by itself","This prevents a race condition with another thread calling site.process. Before, site.process had to complete before the response would be correct, which is quite unreliable. Instead, use the appropriate Jekyll classes to read the item.","When updating a document or page, read item by itself","This prevents a race condition with another thread calling site.process. Before, site.process had to complete before the response would be correct, which is quite unreliable. Instead, use the appropriate Jekyll classes to read the item."
+542,add a data file to test onScroll margins,,add a data file to test onScroll margins,
+543,test rendering comments in config file.,,test rendering comments in config file.,
+544,add a couple of sample svg files,,add a couple of sample svg files,
+545,rename test posts within subdirectories,,rename test posts within subdirectories,
+546,rename test posts at root of _posts/,,rename test posts at root of _posts/,
+547,Merge pull request #318 from wraybowling/patch-1,Added SVG to file preview,Merge pull request #318 from wraybowling/patch-1,Added SVG to file preview
+548,Added SVG to file preview,Fixes #317,Added SVG to file preview,Fixes #317
+549,Merge pull request #314 from jekyll/spellcheck,Disable markdown spellchecker,Merge pull request #314 from jekyll/spellcheck,Disable markdown spellchecker
+550,Merge branch 'master' into spellcheck,,Merge branch 'master' into spellcheck,
+551,disable spellchecker,,disable spellchecker,
+552,update yarn.lock,,update yarn.lock,
+553,Merge pull request #313 from jakebruemmer/patch-1,Spelling fix on CONTRIBUTING.md,Merge pull request #313 from jakebruemmer/patch-1,Spelling fix on CONTRIBUTING.md
+554,Spelling fix on CONTRIBUTING.md,Added an n. to the end of the 7th numbered line for the Submitting a pull request via Git command line section.,Spelling fix on CONTRIBUTING.md,Added an n. to the end of the 7th numbered line for the Submitting a pull request via Git command line section.
+555,Merge pull request #310 from jekyll/release,Release v0.4.0,Merge pull request #310 from jekyll/release,Release v0.4.0
+556,bump versions,,bump versions,
+557,Merge pull request #309 from ashmaroli/interface-update,Interface update,Merge pull request #309 from ashmaroli/interface-update,Interface update
+558,reduce contrast of CodeMirror text from black to a dark-gray,,reduce contrast of CodeMirror text from black to a dark-gray,
+559,fix styles for form,"  currently, hovering a textarea element nested under .input-title and     .input-path results in a lower-contrast color and switches to a high-     contrast black in active state. This commit fixes this behaviour to     increase in contrast from normal state > hover state > active state.   currently, .input-title text-area and input-path text-area shares     many styles. This commit groups those shared styles. ",fix styles for form,"currently, hovering a textarea element nested under .input-title and     .input-path results in a lower-contrast color and switches to a high-     contrast black in active state. This commit fixes this behaviour to     increase in contrast from normal state > hover state > active state. currently, .input-title text-area and input-path text-area shares     many styles. This commit groups those shared styles."
+560,fix size of / in breadcrumbs,,fix size of / in breadcrumbs,
+561,Merge pull request #308 from ashmaroli/interface-update,Interface update,Merge pull request #308 from ashmaroli/interface-update,Interface update
+562,Bump react-ace and specify scrollMargin array,"This allows us to emulate css-padding to a certain extent. The downside being its only activated by an onscroll function, ergo, only default padding until the user scrolls by a pixel at least.",Bump react-ace and specify scrollMargin array,"This allows us to emulate css-padding to a certain extent. The downside being its only activated by an onscroll function, ergo, only default padding until the user scrolls by a pixel at least."
+563,"import with ""double-quotes""",,"import with ""double-quotes""",
+564,add icons for files to maintain consistency,,add icons for files to maintain consistency,
+565,Merge pull request #307 from ivantsepp/master,Only allow files that render to HTML to be written as a Page,Merge pull request #307 from ivantsepp/master,Only allow files that render to HTML to be written as a Page
+566,Only allow files that render to HTML to be written as a Page,"Addresses #204 and #205. We are writing files that are considered Jekyll Pages but since #210 change, we should not allow the API to write anything that does not render to HTML",Only allow files that render to HTML to be written as a Page,"Addresses #204 and #205. We are writing files that are considered Jekyll Pages but since #210 change, we should not allow the API to write anything that does not render to HTML"
+567,Merge pull request #300 from jekyll/logger,Bring Redux Logger back,Merge pull request #300 from jekyll/logger,Bring Redux Logger back
+568,logger is back,,logger is back,
+569,Merge pull request #299 from jekyll/dir-date,Make directory dates cross-browser,Merge pull request #299 from jekyll/dir-date,Make directory dates cross-browser
+570,make directory dates cross-browser,,make directory dates cross-browser,
+571,Merge pull request #298 from jekyll/webpack,Migrate to Webpack 2,Merge pull request #298 from jekyll/webpack,Migrate to Webpack 2
+572,add sh back,,add sh back,
+573,migrate to webpack 2,also bumps deps,migrate to webpack 2,also bumps deps
+574,eslint self closing components,,eslint self closing components,
+575,Merge pull request #296 from jekyll/errors,Clear errors before unmounting,Merge pull request #296 from jekyll/errors,Clear errors before unmounting
+576,extra linting,,extra linting,
+577,clear errors before unmounting,,clear errors before unmounting,
+578,Merge pull request #293 from jekyll/ss,Update screenshot,Merge pull request #293 from jekyll/ss,Update screenshot
+579,update screenshot,,update screenshot,
+580,init,,init,
+581,fix docs header size,,fix docs header size,
+582,Merge pull request #291 from jekyll/tooltip,Add tooltip to path input about autogenerating,Merge pull request #291 from jekyll/tooltip,Add tooltip to path input about autogenerating
+583,wrap yaml front matter in metadata tooltip with b tag,,wrap yaml front matter in metadata tooltip with b tag,
+584,move input-title class to wrapper element,"by doing this, we can style the children elements easily",move input-title class to wrapper element,"by doing this, we can style the children elements easily"
+585,style b tag,,style b tag,
+586,add some shadow to tooltips,,add some shadow to tooltips,
+587,add a tooltip to InputPath,,add a tooltip to InputPath,
+588,Merge pull request #290 from jekyll/fix-datafiles,Fix invalid ref prop for InputPath,Merge pull request #290 from jekyll/fix-datafiles,Fix invalid ref prop for InputPath
+589,delete unused ref props,,delete unused ref props,
+590,fix InputPath's ref name,causes a bug while creating a datafile,fix InputPath's ref name,causes a bug while creating a datafile
+591,Merge pull request #281 from jekyll/index-api,List files & directories for collection & page APIs,Merge pull request #281 from jekyll/index-api,List files & directories for collection & page APIs
+592,pass filenames into metafields,this was causing a bug where directory names were prepended twice,pass filenames into metafields,this was causing a bug where directory names were prepended twice
+593,fix sanitized_path,,fix sanitized_path,
+594,simplify determining folder paths that contain pages,,simplify determining folder paths that contain pages,
+595,update docs,,update docs,
+596,include extension for name field,,include extension for name field,
+597,make TYPE symbol,,make TYPE symbol,
+598,add comments for initialize method,,add comments for initialize method,
+599,revert unused dir field,,revert unused dir field,
+600,apply api changes to pages & collections,,apply api changes to pages & collections,
+601,adjust datafile views as per edited breadcrumbs,,adjust datafile views as per edited breadcrumbs,
+602,make NotFound stateless component,,make NotFound stateless component,
+603,support directory search,,support directory search,
+604,separate path input from breadcrumbs,,separate path input from breadcrumbs,
+605,add title label,,add title label,
+606,apply new api constants to datafiles & staticfiles,,apply new api constants to datafiles & staticfiles,
+607,alter front-end api constants,,alter front-end api constants,
+608,alter front-end routes,,alter front-end routes,
+609,use relative paths for put route,,use relative paths for put route,
+610,fix typo,,fix typo,
+611,fix dir field,,fix dir field,
+612,add more tests for subdirectories,,add more tests for subdirectories,
+613,fix rubocop: TrailingCommaInLiteral,,fix rubocop: TrailingCommaInLiteral,
+614,update test files,,update test files,
+615,remove second branding,npm startcallstest-server` which also has branding,remove second branding,npm startcallstest-server` which also has branding
+616,fix collection test,,fix collection test,
+617,change order,,change order,
+618,shorten page index endpoint,,shorten page index endpoint,
+619,add dir and name attributes to document,,add dir and name attributes to document,
+620,finalize api,,finalize api,
+621,add tests,,add tests,
+622,finalize test files,,finalize test files,
+623,ruby style fix,,ruby style fix,
+624,Merge remote-tracking branch 'origin/master' into index-api,,Merge remote-tracking branch 'origin/master' into index-api,
+625,fix tests,,fix tests,
+626,rename test folder for tests,,rename test folder for tests,
+627,add trailing slash to pages,,add trailing slash to pages,
+628,"make splat, content_type and base attr_reader",,"make splat, content_type and base attr_reader",
+629,delete include_content option,,delete include_content option,
+630,fix sorting documents,,fix sorting documents,
+631,Merge pull request #286 from ashmaroli/docs-patch,Minor documentation edits,Merge pull request #286 from ashmaroli/docs-patch,Minor documentation edits
+632,other minor changes,,other minor changes,
+633,use relative_url filter,,use relative_url filter,
+634,use badges,,use badges,
+635,bump docs version,,bump docs version,
+636,Merge pull request #285 from jekyll/release,Release v0.3.0,Merge pull request #285 from jekyll/release,Release v0.3.0
+637,display version in the header,,display version in the header,
+638,bump version,,bump version,
+639,Merge pull request #282 from jekyll/abstraction,Frontend Improvements,Merge pull request #282 from jekyll/abstraction,Frontend Improvements
+640,add favicon,,add favicon,
+641,put meta-button attributes in one place,,put meta-button attributes in one place,
+642,fix tests,,fix tests,
+643,fix firefox/safari dropdown bug,,fix firefox/safari dropdown bug,
+644,optional splats for root level files,,optional splats for root level files,
+645,use forwardable and alias_method,,use forwardable and alias_method,
+646,Merge branch 'master' into abstraction,,Merge branch 'master' into abstraction,
+647,Merge pull request #284 from jekyll/appveyor2,Appveyor fix,Merge pull request #284 from jekyll/appveyor2,Appveyor fix
+648,install bundler before trying to configure it,,install bundler before trying to configure it,
+649,revert the other changes,,revert the other changes,
+650,downgrade bundler to v0.13.x,,downgrade bundler to v0.13.x,
+651,dont use vendor/bundle,,dont use vendor/bundle,
+652,try running bundle update first,,try running bundle update first,
+653,"try caching the gems, not the output",,"try caching the gems, not the output",
+654,output bundler path before running tests,,output bundler path before running tests,
+655,verbose bundler output please,,verbose bundler output please,
+656,try setting the bundler path globally,,try setting the bundler path globally,
+657,downgrade to 22,,downgrade to 22,
+658,abstract ruby version to env var,,abstract ruby version to env var,
+659,update constants doc,,update constants doc,
+660,localization,,localization,
+661,update yarn,,update yarn,
+662,remove unused class,,remove unused class,
+663,apply components to containers,,apply components to containers,
+664,implement Errors component,,implement Errors component,
+665,implement generic Button component,,implement generic Button component,
+666,update docs,,update docs,
+667,posts are at the top by default in sidebar,,posts are at the top by default in sidebar,
+668,edit breadcrumbs to support data files,"With the option of editable, now breadcrumbs can display an input or a label",edit breadcrumbs to support data files,"With the option of editable, now breadcrumbs can display an input or a label"
+669,"remove brace, increase editor font size",removing brace saves ~300kb,"remove brace, increase editor font size",removing brace saves ~300kb
+670,remove extra sass imports,,remove extra sass imports,
+671,add classnames package,,add classnames package,
+672,list files & directories for collection & page api,,list files & directories for collection & page api,
+673,test files,,test files,
+674,Merge pull request #280 from jekyll/encoding,Fix encoding bug,Merge pull request #280 from jekyll/encoding,Fix encoding bug
+675,fix tests,,fix tests,
+676,Merge branch 'master' into encoding,,Merge branch 'master' into encoding,
+677,Merge pull request #279 from jekyll/fix-upload-windows,Fix uploading files on Windows,Merge pull request #279 from jekyll/fix-upload-windows,Fix uploading files on Windows
+678,read raw_content in UTF-8,,read raw_content in UTF-8,
+679,write files with binary mode option,,write files with binary mode option,
+680,Merge pull request #278 from ashmaroli/tooltip,add a tooltip to 'New metadata field' link,Merge pull request #278 from ashmaroli/tooltip,add a tooltip to 'New metadata field' link
+681,use defined variables,,use defined variables,
+682,add a tooltip to 'new metafields' link,,add a tooltip to 'new metafields' link,
+683,Merge pull request #277 from jekyll/docs,Documentation: Add Github & current version links to site header,Merge pull request #277 from jekyll/docs,Documentation: Add Github & current version links to site header
+684,add github link & current version to header,,add github link & current version to header,
+685,delete unused mixing,,delete unused mixing,
+686,Merge pull request #273 from jekyll/date,Fix auto-generating filenames,Merge pull request #273 from jekyll/date,Fix auto-generating filenames
+687,Merge branch 'master' into date,,Merge branch 'master' into date,
+688,Merge pull request #274 from ashmaroli/new-btn-label,conditionally alter new button label,Merge pull request #274 from ashmaroli/new-btn-label,conditionally alter new button label
+689,delete props,,delete props,
+690,use const,,use const,
+691,add test,,add test,
+692,use lowercase,,use lowercase,
+693,conditionally alter button-label,,conditionally alter button-label,
+694,update docs,,update docs,
+695,fix auto-generating filenames,,fix auto-generating filenames,
+696,update moment.js,,update moment.js,
+697,Merge pull request #271 from jekyll/docs,Remake: Documentation site,Merge pull request #271 from jekyll/docs,Remake: Documentation site
+698,"add listener to menu icon, not logo",,"add listener to menu icon, not logo",
+699,delete duplicate file,,delete duplicate file,
+700,move scripts to the end of body,,move scripts to the end of body,
+701,fix splitter width,,fix splitter width,
+702,mobile friendly,,mobile friendly,
+703,shorten sidebar,,shorten sidebar,
+704,highlight active links,,highlight active links,
+705,add highlight,,add highlight,
+706,markdown styling,,markdown styling,
+707,reflect the front end design in docs,,reflect the front end design in docs,
+708,create collection frontend,,create collection frontend,
+709,Merge pull request #269 from jekyll/tools,Suppress noisy webpack output,Merge pull request #269 from jekyll/tools,Suppress noisy webpack output
+710,suppress noisy webpack output,,suppress noisy webpack output,
+711,Merge pull request #267 from ashmaroli/brace-theme,Use 'monokai' theme in Editor component,Merge pull request #267 from ashmaroli/brace-theme,Use 'monokai' theme in Editor component
+712,use 'monokai' theme,,use 'monokai' theme,
+713,Merge pull request #266 from jekyll/license,Update LICENSE,Merge pull request #266 from jekyll/license,Update LICENSE
+714,fix package.json version,,fix package.json version,
+715,update license,,update license,
+716,Merge pull request #265 from jekyll/refactor,Code Refactoring,Merge pull request #265 from jekyll/refactor,Code Refactoring
+717,use ternary operator,,use ternary operator,
+718,function refactoring,,function refactoring,
+719,implement a utility function for getting filename from path,,implement a utility function for getting filename from path,
+720,Merge pull request #264 from jekyll/active-route,Use nested routes for react-router,Merge pull request #264 from jekyll/active-route,Use nested routes for react-router
+721,nested routes,,nested routes,
+722,Merge pull request #262 from jekyll/prune-state,Prune frontend state tree,Merge pull request #262 from jekyll/prune-state,Prune frontend state tree
+723,Merge remote-tracking branch 'origin/master' into prune-state,,Merge remote-tracking branch 'origin/master' into prune-state,
+724,Merge pull request #261 from jekyll/time,Show time if it is set in post list,Merge pull request #261 from jekyll/time,Show time if it is set in post list
+725,remove toString,,remove toString,
+726,remove fetch headers,,remove fetch headers,
+727,update docs,,update docs,
+728,prune collection state,,prune collection state,
+729,"after deletion, request index",,"after deletion, request index",
+730,show time if it is set,,show time if it is set,
+731,Merge pull request #260 from jekyll/up-editor,Bump ace editor,Merge pull request #260 from jekyll/up-editor,Bump ace editor
+732,update ace editor,,update ace editor,
+733,Merge pull request #254 from jekyll/documents-sort,Sort documents by date reverse chronologically,Merge pull request #254 from jekyll/documents-sort,Sort documents by date reverse chronologically
+734,Merge branch 'master' into documents-sort,,Merge branch 'master' into documents-sort,
+735,Merge pull request #256 from jekyll/minor-changes,Minor improvements for the front end,Merge pull request #256 from jekyll/minor-changes,Minor improvements for the front end
+736,inline comments,,inline comments,
+737,additional code styling for imports,,additional code styling for imports,
+738,delete empty function block,,delete empty function block,
+739,fix title check,,fix title check,
+740,fix editor test warning,"fixes: Warning: Failed prop type: Invalid prop value of type object supplied to ReactAce, expected string.",fix editor test warning,"fixes: Warning: Failed prop type: Invalid prop value of type object supplied to ReactAce, expected string."
+741,use es6 function shortcuts,,use es6 function shortcuts,
+742,delete unused variable,,delete unused variable,
+743,replace inline delete message with the function for file preview component,,replace inline delete message with the function for file preview component,
+744,delete unused import,,delete unused import,
+745,react-router fix,this issue is fixed with react-router v3.0.0,react-router fix,this issue is fixed with react-router v3.0.0
+746,simplify dom,,simplify dom,
+747,add missing content required message,,add missing content required message,
+748,Merge branch 'master' into documents-sort,,Merge branch 'master' into documents-sort,
+749,Merge pull request #255 from jekyll/datafiles,Use raw_content for PUT requests to support other formats,Merge pull request #255 from jekyll/datafiles,Use raw_content for PUT requests to support other formats
+750,use raw content for editor content,,use raw content for editor content,
+751,generic prop name for editor content,,generic prop name for editor content,
+752,update docs,,update docs,
+753,do not compare timezone,,do not compare timezone,
+754,do not sort documents in the front end,,do not sort documents in the front end,
+755,add ruby test,,add ruby test,
+756,sort documents by date reverse chronologically,,sort documents by date reverse chronologically,
+757,Merge pull request #252 from jekyll/new-version,Release v0.2.0,Merge pull request #252 from jekyll/new-version,Release v0.2.0
+758,v0.2.0,,v0.2.0,
+759,Add npm dependency checker (#253), add dependency badge,Add npm dependency checker (#253),add dependency badge
+760,Merge pull request #251 from jekyll/test-warnings,Fix test warnings,Merge pull request #251 from jekyll/test-warnings,Fix test warnings
+761,fix test warnings,,fix test warnings,
+762,Merge pull request #250 from jekyll/deprecate-documents,Deprecate documents endpoint completely,Merge pull request #250 from jekyll/deprecate-documents,Deprecate documents endpoint completely
+763,fix tests,,fix tests,
+764,delete deprecated documents endpoint,,delete deprecated documents endpoint,
+765,Merge pull request #249 from jekyll/react-router,Update react-router to remove deprecation warnings in the console,Merge pull request #249 from jekyll/react-router,Update react-router to remove deprecation warnings in the console
+766,update react-router,,update react-router,
+767,Merge pull request #248 from jekyll/messages,Separate frontend messages into a file,Merge pull request #248 from jekyll/messages,Separate frontend messages into a file
+768,add notification & validation messages,,add notification & validation messages,
+769,ruby: put empty method on a single line.,,ruby: put empty method on a single line.,
+770,replace inline messages,,replace inline messages,
+771,implement message functions,,implement message functions,
+772,add docs,,add docs,
+773,Merge pull request #240 from jekyll/confirm-navigation,Confirm navigation if there are unsaved changes,Merge pull request #240 from jekyll/confirm-navigation,Confirm navigation if there are unsaved changes
+774,Merge remote-tracking branch 'origin/confirm-navigation' into confirm-navigation,,Merge remote-tracking branch 'origin/confirm-navigation' into confirm-navigation,
+775,reset editorChanged and updated states after any other action,,reset editorChanged and updated states after any other action,
+776,Merge remote-tracking branch 'origin/master' into confirm-navigation,,Merge remote-tracking branch 'origin/master' into confirm-navigation,
+777,better message,,better message,
+778,Merge branch 'master' into confirm-navigation,,Merge branch 'master' into confirm-navigation,
+779,Merge pull request #239 from jekyll/spellchecker,Enable spell checker for markdown editor,Merge pull request #239 from jekyll/spellchecker,Enable spell checker for markdown editor
+780,confirm navigation if not saved,,confirm navigation if not saved,
+781,delete unnecessary option,,delete unnecessary option,
+782,enable spellchecker,,enable spellchecker,
+783,Merge pull request #235 from jekyll/stub-index,Stub index for integration test,Merge pull request #235 from jekyll/stub-index,Stub index for integration test
+784,skip integration tests on windows,,skip integration tests on windows,
+785,metafields design tweaks (#234),,metafields design tweaks (#234),
+786,Merge pull request #237 from ashmaroli/css-fix,fix z-index bug in classname meta-buttons,Merge pull request #237 from ashmaroli/css-fix,fix z-index bug in classname meta-buttons
+787,fix .meta-buttons z-index,,fix .meta-buttons z-index,
+788,stub index for integration test,,stub index for integration test,
+789,Add toolbar save icon for markdown editor (#233), add toolbar save icon for markdown editor,Add toolbar save icon for markdown editor (#233),add toolbar save icon for markdown editor
+790,Merge branch 'Crunch09-improve_monkeypatch',,Merge branch 'Crunch09-improve_monkeypatch',
+791,add quick monkey patch integration test,,add quick monkey patch integration test,
+792,disable blocklength rubocop,,disable blocklength rubocop,
+793,Merge branch 'master' into improve_monkeypatch,,Merge branch 'master' into improve_monkeypatch,
+794,Bump deps (#231), Bump deps & edit package.json fields,Bump deps (#231),Bump deps & edit package.json fields
+795,Merge pull request #230 from jekyll/yarn,Add yarn.lock file,Merge pull request #230 from jekyll/yarn,Add yarn.lock file
+796,add yarn.lock file,,add yarn.lock file,
+797,monkeypatch start_up_webrick instead of process,we need to require jekyll ~> 3.3 for start_up_webrick to be present,monkeypatch start_up_webrick instead of process,we need to require jekyll ~> 3.3 for start_up_webrick to be present
+798,Merge pull request #225 from ashmaroli/css-override,update css for 'date' metafield,Merge pull request #225 from ashmaroli/css-override,update css for 'date' metafield
+799,Merge pull request #226 from jekyll/simplemde,Use original SimpleMDE,Merge pull request #226 from jekyll/simplemde,Use original SimpleMDE
+800,Merge branch 'master' into simplemde,,Merge branch 'master' into simplemde,
+801,add code mirror fallback dependency,,add code mirror fallback dependency,
+802,remove webpack provideplugins,,remove webpack provideplugins,
+803,shoutout siteleaf,,shoutout siteleaf,
+804,use original simplemde,,use original simplemde,
+805,fix build message path,,fix build message path,
+806,update css for date metafield,,update css for date metafield,
+807,Merge pull request #224 from jekyll/auto-filename,Autogenerate filename from title if not given,Merge pull request #224 from jekyll/auto-filename,Autogenerate filename from title if not given
+808,delete test file,,delete test file,
+809,use node-slug,,use node-slug,
+810,remove extra variable,,remove extra variable,
+811,Auto-generate filename from slug if not given,,Auto-generate filename from slug if not given,
+812,remove default filename for posts,,remove default filename for posts,
+813,add slugify helper function,,add slugify helper function,
+814,Merge pull request #192 from ashmaroli/win-package,Update package to allow running script on windows,Merge pull request #192 from ashmaroli/win-package,Update package to allow running script on windows
+815,update package to allow running script on windows,,update package to allow running script on windows,
+816,Merge pull request #216 from jekyll/release-0.1.1,Release v0.1.1,Merge pull request #216 from jekyll/release-0.1.1,Release v0.1.1
+817,release 0.1.1,,release 0.1.1,
+818,Merge pull request #215 from jekyll/design-tweaks,Design tweaks,Merge pull request #215 from jekyll/design-tweaks,Design tweaks
+819,revert metafields design & fix icon margins,,revert metafields design & fix icon margins,
+820,minor design improvements,,minor design improvements,
+821,Merge pull request #189 from ashmaroli/admin-style,Update front-end to a sleek interface,Merge pull request #189 from ashmaroli/admin-style,Update front-end to a sleek interface
+822,Merge pull request #194 from ashmaroli/issue-template,New Issue Template,Merge pull request #194 from ashmaroli/issue-template,New Issue Template
+823,Merge pull request #210 from jekyll/html-only,Pages endpoint should only return files that render to HTML.,Merge pull request #210 from jekyll/html-only,Pages endpoint should only return files that render to HTML.
+824,Merge pull request #180 from jekyll/empty-title,Show slug for document listing just in case title is empty,Merge pull request #180 from jekyll/empty-title,Show slug for document listing just in case title is empty
+825,Merge branch 'master' into empty-title,,Merge branch 'master' into empty-title,
+826,Merge pull request #195 from ashmaroli/typos-fix,Fix typos in documentation,Merge pull request #195 from ashmaroli/typos-fix,Fix typos in documentation
+827,update screenshot in README,,update screenshot in README,
+828,update admin style to sleek new interface,,update admin style to sleek new interface,
+829,fix typos in api.md,,fix typos in api.md,
+830,fix typos in architecture.md,,fix typos in architecture.md,
+831,fix typos in development.md,,fix typos in development.md,
+832,Merge pull request #214 from jekyll/frontend-documents,Deprecate collections/collection/documents/endpoint,Merge pull request #214 from jekyll/frontend-documents,Deprecate collections/collection/documents/endpoint
+833,update docs,,update docs,
+834,make fixtures match with API,,make fixtures match with API,
+835,deprecate fetchDocuments,,deprecate fetchDocuments,
+836,Merge branch 'master' into html-only,,Merge branch 'master' into html-only,
+837,Merge pull request #212 from jekyll/gitignore,gitignore .DS_Store,Merge pull request #212 from jekyll/gitignore,gitignore .DS_Store
+838,gitignore .DS_Store,,gitignore .DS_Store,
+839,Merge pull request #211 from jekyll/documents-index,Expose documents on collection index,Merge pull request #211 from jekyll/documents-index,Expose documents on collection index
+840,expose doucments on collection index,,expose doucments on collection index,
+841,Pages endpoint should only return files that render to HTML.,Fixes #151.,Pages endpoint should only return files that render to HTML.,Fixes #151.
+842,update issue template to add a note,,update issue template to add a note,
+843,New Issue Template,,New Issue Template,
+844,Merge pull request #198 from jekyll/edit-url,Redirect when the filename changes,Merge pull request #198 from jekyll/edit-url,Redirect when the filename changes
+845,redirect when the filename changes,,redirect when the filename changes,
+846,Merge pull request #182 from codegaze/save-button-inactive-fix,Added inactive state class to save button,Merge pull request #182 from codegaze/save-button-inactive-fix,Added inactive state class to save button
+847,Fixed inactive button opacity,,Fixed inactive button opacity,
+848,Fixed class spaces & updated test,,Fixed class spaces & updated test,
+849,Merge branch 'master' of https://github.com/jekyll/jekyll-admin into save-button-inactive-fix,,Merge branch 'master' of link into save-button-inactive-fix,
+850,Added btn-inactive status to view,,Added btn-inactive status to view,
+851,Merge pull request #191 from jekyll/invalid-filename,Add validation for invalid filenames,Merge pull request #191 from jekyll/invalid-filename,Add validation for invalid filenames
+852,add tests,,add tests,
+853,better date matcher,,better date matcher,
+854,fix typo in test description,,fix typo in test description,
+855,Merge remote-tracking branch 'origin/master' into invalid-filename,,Merge remote-tracking branch 'origin/master' into invalid-filename,
+856,add validation for invalid filenames,,add validation for invalid filenames,
+857,Merge pull request #188 from ashmaroli/issue-template,Comment out hints in Issue Template,Merge pull request #188 from ashmaroli/issue-template,Comment out hints in Issue Template
+858,comment out hints,,comment out hints,
+859,Merge pull request #185 from jekyll/fix-put-config,Fix updating configuration,Merge pull request #185 from jekyll/fix-put-config,Fix updating configuration
+860,remove unused import,,remove unused import,
+861,add tests,,add tests,
+862,fix put config,,fix put config,
+863,Added inactive state class to save button,,Added inactive state class to save button,
+864,Merge pull request #181 from codegaze/readme-windows-update,Added Windows Development helper note,Merge pull request #181 from codegaze/readme-windows-update,Added Windows Development helper note
+865,Added Windows Development helper note,,Added Windows Development helper note,
+866,show slug if title is empty,,show slug if title is empty,
+867,Merge pull request #179 from toddmotto/patch-1,chore(readme): Fix typo,Merge pull request #179 from toddmotto/patch-1,chore(readme): Fix typo
+868,chore(readme): Fix typo,,chore(readme): Fix typo,
+869,Merge pull request #178 from codegaze/default-post-title,Added date to breadcrumb input default value/placeholder,Merge pull request #178 from codegaze/default-post-title,Added date to breadcrumb input default value/placeholder
+870,Merge pull request #177 from jekyll/issue-template,Add issue template,Merge pull request #177 from jekyll/issue-template,Add issue template
+871,Removed unused variables,,Removed unused variables,
+872,Added date to breadcrumb input default value/placeholder,,Added date to breadcrumb input default value/placeholder,
+873,add issue template,,add issue template,
+874,fix install instructions,,fix install instructions,
+875,Merge pull request #174 from jekyll/awesome-release,Initial release,Merge pull request #174 from jekyll/awesome-release,Initial release
+876,initial release,,initial release,
+877,Merge pull request #159 from jekyll/safari-datetime,Fix Safari datetime parsing,Merge pull request #159 from jekyll/safari-datetime,Fix Safari datetime parsing
+878,Merge branch 'master' into safari-datetime,,Merge branch 'master' into safari-datetime,
+879,Merge pull request #170 from jekyll/ci-build,Build the front end in CI,Merge pull request #170 from jekyll/ci-build,Build the front end in CI
+880,Merge branch 'master' into ci-build,,Merge branch 'master' into ci-build,
+881,Merge branch 'master' of https://github.com/jekyll/jekyll-admin,,Merge branch 'master' of link,
+882,add note about API being subject to change,,add note about API being subject to change,
+883,dont also run npm test,,dont also run npm test,
+884,Merge branch 'codegaze-windows-mkdir-fix' into ci-build,,Merge branch 'codegaze-windows-mkdir-fix' into ci-build,
+885,Updated package.json to the latest master version,,Updated package.json to the latest master version,
+886,Added mkdirp dependency and 'create-dist' script,,Added mkdirp dependency and 'create-dist' script,
+887,Merge pull request #117 from jekyll/future-posts,Support for posts in the future,Merge pull request #117 from jekyll/future-posts,Support for posts in the future
+888,build frontend in ci,,build frontend in ci,
+889,Merge branch 'master' into future-posts,,Merge branch 'master' into future-posts,
+890,Merge branch 'master' into safari-datetime,,Merge branch 'master' into safari-datetime,
+891,Merge pull request #169 from DirtyF/remove-disclaimer,Remove disclaimer for initial release,Merge pull request #169 from DirtyF/remove-disclaimer,Remove disclaimer for initial release
+892,Remove disclaimer for initial release,,Remove disclaimer for initial release,
+893,Merge branch 'master' into safari-datetime,,Merge branch 'master' into safari-datetime,
+894,Merge pull request #167 from jekyll/use-httpurl,Use http_url for preview links,Merge pull request #167 from jekyll/use-httpurl,Use http_url for preview links
+895,fix fixture http_url s,,fix fixture http_url s,
+896,show action names in listing,,show action names in listing,
+897,use http_url instead of url,,use http_url instead of url,
+898,Merge pull request #166 from jekyll/include-urls-in-response,Create new URLable module to include API URL and HTTP URLs in each response,Merge pull request #166 from jekyll/include-urls-in-response,Create new URLable module to include API URL and HTTP URLs in each response
+899,properly require addressable/uri,,properly require addressable/uri,
+900,fix typo in code comment,,fix typo in code comment,
+901,add tests for URLable,,add tests for URLable,
+902,update data file specs to expect urls,,update data file specs to expect urls,
+903,make resource_path private,,make resource_path private,
+904,run rubocop,,run rubocop,
+905,spike out adding html_url and api_url to resources,,spike out adding html_url and api_url to resources,
+906,Merge remote-tracking branch 'origin/master' into safari-datetime,,Merge remote-tracking branch 'origin/master' into safari-datetime,
+907,Merge pull request #135 from DirtyF/no-result-messages,Slightly better messages when search fail,Merge pull request #135 from DirtyF/no-result-messages,Slightly better messages when search fail
+908,fix safari datetime,,fix safari datetime,
+909,Merge pull request #155 from jekyll/datetimepicker,Fix datetime picker,Merge pull request #155 from jekyll/datetimepicker,Fix datetime picker
+910,Merge branch 'master' into datetimepicker,,Merge branch 'master' into datetimepicker,
+911,Merge pull request #154 from jekyll/remove-adjacent,Exclude next/previous contents from indexes,Merge pull request #154 from jekyll/remove-adjacent,Exclude next/previous contents from indexes
+912,Merge branch 'master' into datetimepicker,,Merge branch 'master' into datetimepicker,
+913,fix datepicker,,fix datepicker,
+914,guard against the file not existing,,guard against the file not existing,
+915,revert version bump,,revert version bump,
+916,exclude next/previous from indexes,,exclude next/previous from indexes,
+917,Merge pull request #153 from jekyll/appveyor,WIP: Windows tests,Merge pull request #153 from jekyll/appveyor,WIP: Windows tests
+918,dont run rubocop on appveyor,,dont run rubocop on appveyor,
+919,add appveyor status to readme,,add appveyor status to readme,
+920,Merge branch 'master' into appveyor,,Merge branch 'master' into appveyor,
+921,try gsubbing the other way,,try gsubbing the other way,
+922,remove extra fixture,,remove extra fixture,
+923,actually gsub,,actually gsub,
+924,normalize expected index line endings,,normalize expected index line endings,
+925,remove debug output,,remove debug output,
+926,fix for colleciton path on windows,,fix for colleciton path on windows,
+927,more debug output,,more debug output,
+928,try running tests in parallel,,try running tests in parallel,
+929,use script/cibuild,,use script/cibuild,
+930,try using shell script to bootstrap,,try using shell script to bootstrap,
+931,output page path,,output page path,
+932,Merge pull request #152 from jekyll/readme-gem,Add gem badge to readme.md,Merge pull request #152 from jekyll/readme-gem,Add gem badge to readme.md
+933,output document path,,output document path,
+934,add gem badge to readme.md,,add gem badge to readme.md,
+935,Merge branch 'master' into appveyor,,Merge branch 'master' into appveyor,
+936,use node 6.x,,use node 6.x,
+937,cache node_modules,,cache node_modules,
+938,expand appveyor.yml,,expand appveyor.yml,
+939,dont use shell scripts,,dont use shell scripts,
+940,Merge pull request #138 from jekyll/no-index-contents,Remove file contents from all indexes,Merge pull request #138 from jekyll/no-index-contents,Remove file contents from all indexes
+941,add appveyor.yml,,add appveyor.yml,
+942,Merge branch 'master' into no-index-contents,,Merge branch 'master' into no-index-contents,
+943,Merge pull request #144 from jekyll/notifications,Notification System,Merge pull request #144 from jekyll/notifications,Notification System
+944,Merge branch 'master' into no-index-contents,,Merge branch 'master' into no-index-contents,
+945,Merge branch 'master' into notifications,,Merge branch 'master' into notifications,
+946,Merge pull request #147 from jekyll/staticfiles-images,Load static files directly from Jekyll server,Merge pull request #147 from jekyll/staticfiles-images,Load static files directly from Jekyll server
+947,load static files directly from Jekyll server,,load static files directly from Jekyll server,
+948,Merge branch 'master' into notifications,,Merge branch 'master' into notifications,
+949,Merge pull request #146 from jekyll/fix-datafile,Fix bug where creating a nameless datafile zeros its content,Merge pull request #146 from jekyll/fix-datafile,Fix bug where creating a nameless datafile zeros its content
+950,pass empty string as an initial value for a new data file,,pass empty string as an initial value for a new data file,
+951,fix data file test,,fix data file test,
+952,add a notification if invalid yaml provided for a data file,,add a notification if invalid yaml provided for a data file,
+953,add notification for failed upload,,add notification for failed upload,
+954,implement notification system,,implement notification system,
+955,update docs,,update docs,
+956,delete message state,,delete message state,
+957,notify when a file uploaded,,notify when a file uploaded,
+958,catch JSON parse error,,catch JSON parse error,
+959,add react-notification-system package,,add react-notification-system package,
+960,remove file contents from all indexes,,remove file contents from all indexes,
+961,More generic message - props @Crunch09,,More generic message - props @Crunch09,
+962,bump to 0.1.0.pre2,,bump to 0.1.0.pre2,
+963,Merge branch 'master' of https://github.com/jekyll/jekyll-admin,,Merge branch 'master' of link,
+964,fix root routes list,,fix root routes list,
+965,Merge pull request #134 from jekyll/gemspec,Include compiled front end in built gem,Merge pull request #134 from jekyll/gemspec,Include compiled front end in built gem
+966,set version to 0.1.0.pre,,set version to 0.1.0.pre,
+967,Slightly better messages when search fail,,Slightly better messages when search fail,
+968,prefix edit link path with docs/,,prefix edit link path with docs/,
+969,add disclaimer back in,,add disclaimer back in,
+970,Merge pull request #132 from jekyll/pre-release-docs-refresh,Prepare the docs for outside contributors,Merge pull request #132 from jekyll/pre-release-docs-refresh,Prepare the docs for outside contributors
+971,Merge in master,,Merge in master,
+972,Merge pull request #133 from jekyll/frontend-docs,Update docs,Merge pull request #133 from jekyll/frontend-docs,Update docs
+973,include public dir in built gem,,include public dir in built gem,
+974,ignore built gems,,ignore built gems,
+975,exclude more files from built gem,,exclude more files from built gem,
+976,update docs,,update docs,
+977,Merge pull request #131 from jekyll/release-tooling,Add script/release,Merge pull request #131 from jekyll/release-tooling,Add script/release
+978,update dist path,,update dist path,
+979,add release script,,add release script,
+980,add lib/jekyll-admin/public to gitignore,,add lib/jekyll-admin/public to gitignore,
+981,git ignore lib/jekyll-admin/public,,git ignore lib/jekyll-admin/public,
+982,Merge pull request #130 from jekyll/be-root,Move frontend to root folder,Merge pull request #130 from jekyll/be-root,Move frontend to root folder
+983,update license,,update license,
+984,rubocop: exclude node_modules,,rubocop: exclude node_modules,
+985,fix script/bootstrap,,fix script/bootstrap,
+986,delete return-to-pwd script,,delete return-to-pwd script,
+987,rubocop: exclude src folder,,rubocop: exclude src folder,
+988,fix scripts,,fix scripts,
+989,fix static_server build path,,fix static_server build path,
+990,move front-end to root,,move front-end to root,
+991,delete license and readme.md,,delete license and readme.md,
+992,ignore node_modules,,ignore node_modules,
+993,Merge pull request #129 from jekyll/empty-fields,Do not add empty metadata fields,Merge pull request #129 from jekyll/empty-fields,Do not add empty metadata fields
+994,do not add empty metadata fields,,do not add empty metadata fields,
+995,Merge pull request #127 from jekyll/tidy-up,Tidy up the frontend,Merge pull request #127 from jekyll/tidy-up,Tidy up the frontend
+996,show filename when deleting a static file,,show filename when deleting a static file,
+997,add title to _config.yml,,add title to _config.yml,
+998,tidy up the project,,tidy up the project,
+999,Merge pull request #125 from jekyll/frontend-data-file-object,Follow API changes for Data Files,Merge pull request #125 from jekyll/frontend-data-file-object,Follow API changes for Data Files
+1000,Merge remote-tracking branch 'origin/master' into frontend-data-file-object,,Merge remote-tracking branch 'origin/master' into frontend-data-file-object,
+1001,Merge pull request #126 from jekyll/clear-sidebar,Remove plugins & git links from sidebar,Merge pull request #126 from jekyll/clear-sidebar,Remove plugins & git links from sidebar
+1002,remove plugins & git links from sidebar,,remove plugins & git links from sidebar,
+1003,fix test description,,fix test description,
+1004,follow updated datafiles api,,follow updated datafiles api,
+1005,fix tests,,fix tests,
+1006,Merge pull request #118 from jekyll/data-file-object,Make data files their own object,Merge pull request #118 from jekyll/data-file-object,Make data files their own object
+1007,Merge branch 'data-file-object' of https://github.com/jekyll/jekyll-admin into data-file-object,,Merge branch 'data-file-object' of link into data-file-object,
+1008,Merge branch 'master' into data-file-object,,Merge branch 'master' into data-file-object,
+1009,Merge pull request #122 from jekyll/static-files,Front-end: Static files,Merge pull request #122 from jekyll/static-files,Front-end: Static files
+1010,Merge branch 'master' into static-files,,Merge branch 'master' into static-files,
+1011,warn if any file is being overwritten,,warn if any file is being overwritten,
+1012,re-call the index after delete and upload operations,,re-call the index after delete and upload operations,
+1013,view static files in a new tab,,view static files in a new tab,
+1014,Merge pull request #124 from DirtyF/master,fix link to development docs,Merge pull request #124 from DirtyF/master,fix link to development docs
+1015,Link to development docs on Github,,Link to development docs on Github,
+1016,delete logo.png,,delete logo.png,
+1017,fix link to development docs,,fix link to development docs,
+1018,"fix architechture permalink, props @dirtyf",,"fix architechture permalink, props @dirtyf",
+1019,fix baseurl,,fix baseurl,
+1020,Merge pull request #123 from jekyll/docs-site,Publish docs as Jekyll site,Merge pull request #123 from jekyll/docs-site,Publish docs as Jekyll site
+1021,publish docs as Jekyll site,,publish docs as Jekyll site,
+1022,add tests,,add tests,
+1023,add manual upload link,,add manual upload link,
+1024,remove unused action type,,remove unused action type,
+1025,add file preview component,,add file preview component,
+1026,add container component,,add container component,
+1027,add reducer,,add reducer,
+1028,add actions,,add actions,
+1029,add sass files,,add sass files,
+1030,don't allow dragging images in dropzone,,don't allow dragging images in dropzone,
+1031,fix sidebar link,,fix sidebar link,
+1032,add action types,,add action types,
+1033,add endpoints,,add endpoints,
+1034,add static files route,,add static files route,
+1035,add react-dropzone dependency,,add react-dropzone dependency,
+1036,Merge remote-tracking branch 'origin/master' into static-files,,Merge remote-tracking branch 'origin/master' into static-files,
+1037,Merge pull request #121 from jekyll/binary-static-files,Don't try to parse YAML front matter of static files (which may be binary),Merge pull request #121 from jekyll/binary-static-files,Don't try to parse YAML front matter of static files (which may be binary)
+1038,dont try to parse front matter of binary files,,dont try to parse front matter of binary files,
+1039,add failing test with binary file,,add failing test with binary file,
+1040,Merge remote-tracking branch 'origin/master' into static-files,,Merge remote-tracking branch 'origin/master' into static-files,
+1041,Merge pull request #120 from jekyll/base64-static,Update static file API to expect base64 encoded files,Merge pull request #120 from jekyll/base64-static,Update static file API to expect base64 encoded files
+1042,update static file API to expect base64 encoded files,,update static file API to expect base64 encoded files,
+1043,Merge remote-tracking branch 'origin/master' into static-files,,Merge remote-tracking branch 'origin/master' into static-files,
+1044,Merge branch 'master' into data-file-object,,Merge branch 'master' into data-file-object,
+1045,update comment,,update comment,
+1046,update data file request parameters,,update data file request parameters,
+1047,Merge pull request #103 from jekyll/data-files,Front-end: Data files,Merge pull request #103 from jekyll/data-files,Front-end: Data files
+1048,disable save button after validation error,,disable save button after validation error,
+1049,prepare files,,prepare files,
+1050,validate datafiles form,,validate datafiles form,
+1051,make data files their own object,,make data files their own object,
+1052,Merge master,,Merge master,
+1053,force future to true,,force future to true,
+1054,add failing test for future posts,,add failing test for future posts,
+1055,also guard against static and data files not existing after writing,,also guard against static and data files not existing after writing,
+1056,guard against files not existing after write,,guard against files not existing after write,
+1057,Merge pull request #115 from DirtyF/no-gem-install-yet,Add a disclaimer for the current installation process,Merge pull request #115 from DirtyF/no-gem-install-yet,Add a disclaimer for the current installation process
+1058,Merge pull request #111 from jekyll/validation,Better form validation,Merge pull request #111 from jekyll/validation,Better form validation
+1059,add disclaimer for installation,Fix #113,add disclaimer for installation,Fix #113
+1060,use breadcrumbs for data files' filename,,use breadcrumbs for data files' filename,
+1061,use title case for breadcrumbs,,use title case for breadcrumbs,
+1062,improve test descriptions,,improve test descriptions,
+1063,remove dev notes and fix doc,,remove dev notes and fix doc,
+1064,better validation,,better validation,
+1065,fix displaying filename after creation,,fix displaying filename after creation,
+1066,tests,,tests,
+1067,redirect after creation,,redirect after creation,
+1068,dispatch change action when filename and editor change,,dispatch change action when filename and editor change,
+1069,add note for Editor component,,add note for Editor component,
+1070,Merge remote-tracking branch 'origin/master' into data-files,,Merge remote-tracking branch 'origin/master' into data-files,
+1071,Merge pull request #109 from jekyll/fix-data-files-again,Refactor data file handling,Merge pull request #109 from jekyll/fix-data-files-again,Refactor data file handling
+1072,refactor data file handling,,refactor data file handling,
+1073,Merge branch 'master' into data-files,,Merge branch 'master' into data-files,
+1074,create and edit datafiles,,create and edit datafiles,
+1075,Merge pull request #107 from jekyll/data-file-extension,Data files should default to .yml extension,Merge pull request #107 from jekyll/data-file-extension,Data files should default to .yml extension
+1076,add test for extensioned data files,,add test for extensioned data files,
+1077,allow data files to be sent with and without an extension,,allow data files to be sent with and without an extension,
+1078,fix route path for new datafile,,fix route path for new datafile,
+1079,generic prop name,,generic prop name,
+1080,fix deleting from state,,fix deleting from state,
+1081,create a data file for listing,,create a data file for listing,
+1082,add routes,,add routes,
+1083,add reducer,,add reducer,
+1084,add list component,,add list component,
+1085,edit sidebar link,,edit sidebar link,
+1086,add api endpoints,,add api endpoints,
+1087,add action types constants,,add action types constants,
+1088,add actions,,add actions,
+1089,Merge pull request #102 from jekyll/sort-documents,Sort documents by date,Merge pull request #102 from jekyll/sort-documents,Sort documents by date
+1090,sort documents by date,,sort documents by date,
+1091,Merge remote-tracking branch 'origin/master' into sort-documents,,Merge remote-tracking branch 'origin/master' into sort-documents,
+1092,"Revert ""sort documents by date""",This reverts commit ee88eb2f460253c32907f32585ed264d345a74b2.,"Revert ""sort documents by date""",This reverts commit ee88eb2f460253c32907f32585ed264d345a74b2.
+1093,Merge pull request #101 from jekyll/fix-search,Fix searching documents/pages,Merge pull request #101 from jekyll/fix-search,Fix searching documents/pages
+1094,sort documents by date,,sort documents by date,
+1095,fix tests,,fix tests,
+1096,fix search,,fix search,
+1097,make InputSearch component generic,,make InputSearch component generic,
+1098,Merge pull request #97 from jekyll/not-found,Not found page,Merge pull request #97 from jekyll/not-found,Not found page
+1099,not found page,,not found page,
+1100,Merge pull request #93 from jekyll/fix-create,Create documents and pages,Merge pull request #93 from jekyll/fix-create,Create documents and pages
+1101,Merge branch 'master' into fix-create,,Merge branch 'master' into fix-create,
+1102,show icons for actions,,show icons for actions,
+1103,add date field to document listing,"When the titles of the listed documents are the same, date fields should be able to distinguish them.",add date field to document listing,"When the titles of the listed documents are the same, date fields should be able to distinguish them."
+1104,fix undefined collection,,fix undefined collection,
+1105,Merge pull request #90 from jekyll/fixture-index,Add index to fixture site,Merge pull request #90 from jekyll/fixture-index,Add index to fixture site
+1106,Merge remote-tracking branch 'origin/master' into fix-create,,Merge remote-tracking branch 'origin/master' into fix-create,
+1107,Merge pull request #92 from jekyll/no-front-matter-fix,Don't blow up when posts or pages dont have front matter,Merge pull request #92 from jekyll/no-front-matter-fix,Don't blow up when posts or pages dont have front matter
+1108,dont blow up when posts dont have front matter,,dont blow up when posts dont have front matter,
+1109,create pages/documents,,create pages/documents,
+1110,fix test description,,fix test description,
+1111,add document and page editing tests,,add document and page editing tests,
+1112,add index to fixture site,,add index to fixture site,
+1113,Merge pull request #89 from jekyll/fix-delete,Fix deleting pages/documents,Merge pull request #89 from jekyll/fix-delete,Fix deleting pages/documents
+1114,Merge branch 'master' into fix-delete,,Merge branch 'master' into fix-delete,
+1115,Merge pull request #88 from jekyll/stub-dist-index-for-tests,Stub public/dist/index.html for Ruby tests,Merge pull request #88 from jekyll/stub-dist-index-for-tests,Stub public/dist/index.html for Ruby tests
+1116,use page fixture's fields for delete test,,use page fixture's fields for delete test,
+1117,fix deleting documents,,fix deleting documents,
+1118,update docs,,update docs,
+1119,Merge branch 'master' into stub-dist-index-for-tests,,Merge branch 'master' into stub-dist-index-for-tests,
+1120,Merge pull request #83 from jekyll/document-all-the-things,Improve documentation,Merge pull request #83 from jekyll/document-all-the-things,Improve documentation
+1121,Merge branch 'master' into document-all-the-things,,Merge branch 'master' into document-all-the-things,
+1122,temporarily stub dist/index for ruby tests,,temporarily stub dist/index for ruby tests,
+1123,Merge pull request #59 from jekyll/fix-put,Fix updating pages/documents,Merge pull request #59 from jekyll/fix-put,Fix updating pages/documents
+1124,replace body and meta keys with raw_content and front_matter,,replace body and meta keys with raw_content and front_matter,
+1125,Merge remote-tracking branch 'origin/master' into fix-put,,Merge remote-tracking branch 'origin/master' into fix-put,
+1126,Merge pull request #85 from jekyll/api-payload-fix,Standarize on raw_content and front_matter keys,Merge pull request #85 from jekyll/api-payload-fix,Standarize on raw_content and front_matter keys
+1127,correct rubocop offenses,,correct rubocop offenses,
+1128,remove unused variable,,remove unused variable,
+1129,Merge branch 'master' into api-payload-fix,,Merge branch 'master' into api-payload-fix,
+1130,Merge branch 'master' into fix-put,,Merge branch 'master' into fix-put,
+1131,remove page and document id from payload,,remove page and document id from payload,
+1132,use filename as id,,use filename as id,
+1133,Merge pull request #86 from jekyll/split-tests,Run Node and Ruby tests in parallel on Travis,Merge pull request #86 from jekyll/split-tests,Run Node and Ruby tests in parallel on Travis
+1134,Merge remote-tracking branch 'origin/master' into fix-put,,Merge remote-tracking branch 'origin/master' into fix-put,
+1135,properly namespace write_file and delete_file helpers,,properly namespace write_file and delete_file helpers,
+1136,stub front end server for ruby testing,,stub front end server for ruby testing,
+1137,single braces,,single braces,
+1138,run node and ruby tests in parallel on Travis,,run node and ruby tests in parallel on Travis,
+1139,fix rubocop offenses,,fix rubocop offenses,
+1140,standarize on raw_content and front_matter keys,,standarize on raw_content and front_matter keys,
+1141,Merge remote-tracking branch 'origin/fix-put' into fix-put,,Merge remote-tracking branch 'origin/fix-put' into fix-put,
+1142,Merge branch 'master' into fix-put,,Merge branch 'master' into fix-put,
+1143,document all the things!,,document all the things!,
+1144,Merge pull request #66 from jekyll/prefix-rename,Support collection folders being prefixed when renaming documents,Merge pull request #66 from jekyll/prefix-rename,Support collection folders being prefixed when renaming documents
+1145,centralize file writing operations,,centralize file writing operations,
+1146,fix naming of static files fixtures,,fix naming of static files fixtures,
+1147,explicitly check for file existence in all cases,,explicitly check for file existence in all cases,
+1148,allow paths to be prefix by collection folder,,allow paths to be prefix by collection folder,
+1149,Merge remote-tracking branch 'origin/master' into fix-put,,Merge remote-tracking branch 'origin/master' into fix-put,
+1150,Merge pull request #60 from jekyll/dev-server,Fix history fallback for dev server,Merge pull request #60 from jekyll/dev-server,Fix history fallback for dev server
+1151,Merge branch 'master' into dev-server,,Merge branch 'master' into dev-server,
+1152,Merge pull request #64 from jekyll/fix-start,"Fix ""start-api"" path in package.json",Merge pull request #64 from jekyll/fix-start,"Fix ""start-api"" path in package.json"
+1153,"fix ""start-api"" path in package.json",,"fix ""start-api"" path in package.json",
+1154,Merge branch 'master' into dev-server,,Merge branch 'master' into dev-server,
+1155,fix rubocop error,,fix rubocop error,
+1156,Merge pull request #62 from jekyll/cleaner-monkey-patch,Clean up monkey patching,Merge pull request #62 from jekyll/cleaner-monkey-patch,Clean up monkey patching
+1157,guard against file not existing in the case of jekyll-redirect-from,,guard against file not existing in the case of jekyll-redirect-from,
+1158,set env flag as early as possible,,set env flag as early as possible,
+1159,Merge remote-tracking branch 'origin/master' into fix-put,,Merge remote-tracking branch 'origin/master' into fix-put,
+1160,update test fixture,,update test fixture,
+1161,use front_matterfield for updating,,use front_matterfield for updating,
+1162,clean up monkey patching,,clean up monkey patching,
+1163,Merge remote-tracking branch 'origin/master' into dev-server,,Merge remote-tracking branch 'origin/master' into dev-server,
+1164,Merge pull request #54 from jekyll/namespace-sanity,Namespace as JekyllAdmin,Merge pull request #54 from jekyll/namespace-sanity,Namespace as JekyllAdmin
+1165,update gemspec,,update gemspec,
+1166,use top-level JekyllAdmin namespace,,use top-level JekyllAdmin namespace,
+1167,Merge branch 'master' into namespace-sanity,,Merge branch 'master' into namespace-sanity,
+1168,Merge branch 'master' into dev-server,,Merge branch 'master' into dev-server,
+1169,Merge remote-tracking branch 'origin/master' into fix-put,,Merge remote-tracking branch 'origin/master' into fix-put,
+1170,Merge pull request #61 from jekyll/meta-redux,Include raw front matter in API response,Merge pull request #61 from jekyll/meta-redux,Include raw front matter in API response
+1171,Merge pull request #47 from jekyll/mb-dir-list,Support directory listing for /_api/static_files,Merge pull request #47 from jekyll/mb-dir-list,Support directory listing for /_api/static_files
+1172,clarify test descriptions,,clarify test descriptions,
+1173,use sinatra-json by force output to a hash,,use sinatra-json by force output to a hash,
+1174,"check to_api output, not to_liquid output",,"check to_api output, not to_liquid output",
+1175,use to_api to generate hash for api,,use to_api to generate hash for api,
+1176,Merge branch 'master' into mb-dir-list,,Merge branch 'master' into mb-dir-list,
+1177,Merge remote-tracking branch 'origin/master' into fix-put,,Merge remote-tracking branch 'origin/master' into fix-put,
+1178,Merge pull request #58 from jekyll/document-rename,Allow pages and collection endpoints to rename files,Merge pull request #58 from jekyll/document-rename,Allow pages and collection endpoints to rename files
+1179,fix test warnings due to missing props,,fix test warnings due to missing props,
+1180,Pull out file_list_dir into its own method,,Pull out file_list_dir into its own method,
+1181,Merge branch 'master' into dev-server,,Merge branch 'master' into dev-server,
+1182,fix history fallback for dev server,,fix history fallback for dev server,
+1183,fix bug generating metafields,,fix bug generating metafields,
+1184,validate title if collection,,validate title if collection,
+1185,remove unnecessary parameters,,remove unnecessary parameters,
+1186,fix updating,,fix updating,
+1187,allow pages and collection endpoints to rename files,,allow pages and collection endpoints to rename files,
+1188,add tests for JekyllAdmin class,,add tests for JekyllAdmin class,
+1189,move hidden files,,move hidden files,
+1190,rename jekyll/admin/public to jekyll-admin/public,,rename jekyll/admin/public to jekyll-admin/public,
+1191,Merge branch 'master' into namespace-sanity,,Merge branch 'master' into namespace-sanity,
+1192,revert jekyll/admin changes,,revert jekyll/admin changes,
+1193,Merge pull request #42 from jekyll/frontend-api,Adapt Frontend to the API,Merge pull request #42 from jekyll/frontend-api,Adapt Frontend to the API
+1194,renaming,,renaming,
+1195,use raw_content for metadata reducer,,use raw_content for metadata reducer,
+1196,fix deleting from edit views,,fix deleting from edit views,
+1197,fix deleting page from state,,fix deleting page from state,
+1198,fix deleting page from state,,fix deleting page from state,
+1199,fix listing styles,,fix listing styles,
+1200,update namespace on script/*,,update namespace on script/*,
+1201,namespace as Jekyll::JekyllAdmin,,namespace as Jekyll::JekyllAdmin,
+1202,fix DELETE request,,fix DELETE request,
+1203,delete ContentTable,,delete ContentTable,
+1204,Merge remote-tracking branch 'origin/master' into frontend-api,,Merge remote-tracking branch 'origin/master' into frontend-api,
+1205,Merge pull request #53 from jekyll/raw-content,"Return raw, unrendered markdown via API",Merge pull request #53 from jekyll/raw-content,"Return raw, unrendered markdown via API"
+1206,Merge remote-tracking branch 'origin/master' into frontend-api,,Merge remote-tracking branch 'origin/master' into frontend-api,
+1207,Merge branch 'master' into raw-content,,Merge branch 'master' into raw-content,
+1208,expose raw content to API,,expose raw content to API,
+1209,Merge pull request #52 from jekyll/raw-config,"Return raw Jekyll config as it appears on disk, not the computed config",Merge pull request #52 from jekyll/raw-config,"Return raw Jekyll config as it appears on disk, not the computed config"
+1210,"return raw jekyll config, not computed config",,"return raw jekyll config, not computed config",
+1211,Merge remote-tracking branch 'origin/master' into frontend-api,,Merge remote-tracking branch 'origin/master' into frontend-api,
+1212,revert title,,revert title,
+1213,add title to config,,add title to config,
+1214,Merge pull request #51 from jekyll/no-defaults-for-document-lists,Dont show front matter defaults on document indexes,Merge pull request #51 from jekyll/no-defaults-for-document-lists,Dont show front matter defaults on document indexes
+1215,dont show front matter defaults on document indexes,,dont show front matter defaults on document indexes,
+1216,format config,,format config,
+1217,Merge remote-tracking branch 'origin/master' into frontend-api,,Merge remote-tracking branch 'origin/master' into frontend-api,
+1218,Merge pull request #50 from jekyll/front-matter-fixes,Properly return documents without frontmatter,Merge pull request #50 from jekyll/front-matter-fixes,Properly return documents without frontmatter
+1219,properly return documents without frontmatter,,properly return documents without frontmatter,
+1220,"Revert ""extend spec site's config""",This reverts commit 4050a258575e6ccd4c21249c4ff06e5b7c19bb55.,"Revert ""extend spec site's config""",This reverts commit 4050a258575e6ccd4c21249c4ff06e5b7c19bb55.
+1221,Merge remote-tracking branch 'origin/master' into frontend-api,,Merge remote-tracking branch 'origin/master' into frontend-api,
+1222,Merge pull request #49 from jekyll/convert-ids,Convert slashed post ids to hyphens,Merge pull request #49 from jekyll/convert-ids,Convert slashed post ids to hyphens
+1223,test for non-dated collection id,,test for non-dated collection id,
+1224,Merge remote-tracking branch 'origin/master' into frontend-api,,Merge remote-tracking branch 'origin/master' into frontend-api,
+1225,Merge branch 'master' into convert-ids,,Merge branch 'master' into convert-ids,
+1226,Merge pull request #43 from jekyll/no-frontmatter-defaults,Return pages and documents without frontmatter defaults,Merge pull request #43 from jekyll/no-frontmatter-defaults,Return pages and documents without frontmatter defaults
+1227,add tests,,add tests,
+1228,convert slashed post ids to hyphens,,convert slashed post ids to hyphens,
+1229,add test collection document to spec site,,add test collection document to spec site,
+1230,extend spec site's config,,extend spec site's config,
+1231,pass routes as prop,,pass routes as prop,
+1232,consistent naming for event callbacks,,consistent naming for event callbacks,
+1233,remove screenshots,,remove screenshots,
+1234,add headers for fetch api,,add headers for fetch api,
+1235,Add static file deep delete test,,Add static file deep delete test,
+1236,Add some read/write tests,,Add some read/write tests,
+1237,Use ! instead of not,,Use ! instead of not,
+1238,Automatically get splat instead of having more LOC,,Automatically get splat instead of having more LOC,
+1239,Ensure that the server returns a 404 for bad filenames,,Ensure that the server returns a 404 for bad filenames,
+1240,Support directory listing for /_api/static_files,Fixes #39.,Support directory listing for /_api/static_files,Fixes #39.
+1241,serve pages and documents without frontmatter defaults,,serve pages and documents without frontmatter defaults,
+1242,fix tests,,fix tests,
+1243,rename error state with message  for consistency,,rename error state with message  for consistency,
+1244,remove open:dist command,,remove open:dist command,
+1245,update docs,,update docs,
+1246,capitalize Sidebar collection names,,capitalize Sidebar collection names,
+1247,add request action types,,add request action types,
+1248,fix PUT params,,fix PUT params,
+1249,remove ContentNew,,remove ContentNew,
+1250,fix content path to be validated,,fix content path to be validated,
+1251,add missing '&',,add missing '&',
+1252,Merge remote-tracking branch 'origin/master' into frontend-api,,Merge remote-tracking branch 'origin/master' into frontend-api,
+1253,fix tests after collection endpoints change,,fix tests after collection endpoints change,
+1254,Merge pull request #36 from jekyll/dont-redirect-after-write,Don't redirect CORS requests after write operations,Merge pull request #36 from jekyll/dont-redirect-after-write,Don't redirect CORS requests after write operations
+1255,simplify collection endpoints,,simplify collection endpoints,
+1256,linting,,linting,
+1257,remove duplicate props from breadcrumbs,,remove duplicate props from breadcrumbs,
+1258,adapt components to api,,adapt components to api,
+1259,adapt actions to api,,adapt actions to api,
+1260,Merge pull request #40 from jekyll/docs,Add development and API docs,Merge pull request #40 from jekyll/docs,Add development and API docs
+1261,add development and API docs,,add development and API docs,
+1262,static files should return objects rather than redirecting,,static files should return objects rather than redirecting,
+1263,dont redirect CORS requests after write,,dont redirect CORS requests after write,
+1264,Merge pull request #34 from jekyll/namespace,Use sinatra-namespace to DRY things up a bit,Merge pull request #34 from jekyll/namespace,Use sinatra-namespace to DRY things up a bit
+1265,remove state.md,,remove state.md,
+1266,remove state.md,,remove state.md,
+1267,use real api on start,,use real api on start,
+1268,remove mock api,,remove mock api,
+1269,adapt Sidebar to api,,adapt Sidebar to api,
+1270,implement search input component,,implement search input component,
+1271,do not show actual errors temporarily,,do not show actual errors temporarily,
+1272,fix port,,fix port,
+1273,Merge remote-tracking branch 'origin/master' into frontend-api,,Merge remote-tracking branch 'origin/master' into frontend-api,
+1274,rename post with put,,rename post with put,
+1275,make API constants function,,make API constants function,
+1276,use sinatra-namespace to DRY things up a bit,,use sinatra-namespace to DRY things up a bit,
+1277,Merge pull request #33 from jekyll/cors-preflight-fix,Properly respond to CORS preflight checks,Merge pull request #33 from jekyll/cors-preflight-fix,Properly respond to CORS preflight checks
+1278,allow delete method,,allow delete method,
+1279,properly respond to cors preflight checks,,properly respond to cors preflight checks,
+1280,Merge pull request #32 from jekyll/remove-fixture-gemfile,remove fixture gemfile,Merge pull request #32 from jekyll/remove-fixture-gemfile,remove fixture gemfile
+1281,remove fixture gemfile,,remove fixture gemfile,
+1282,Merge pull request #31 from jekyll/cors,Set CORS headers in development,Merge pull request #31 from jekyll/cors,Set CORS headers in development
+1283,correct rubocop offenses,,correct rubocop offenses,
+1284,allow CORS headers,,allow CORS headers,
+1285,Merge pull request #28 from jekyll/server-fixes,WIP: Server fixes,Merge pull request #28 from jekyll/server-fixes,WIP: Server fixes
+1286,Merge branch 'master' into server-fixes,,Merge branch 'master' into server-fixes,
+1287,Merge pull request #26 from jekyll/serve-admin,Front-end served from /admin,Merge pull request #26 from jekyll/serve-admin,Front-end served from /admin
+1288,Merge branch 'master' into server-fixes,,Merge branch 'master' into server-fixes,
+1289,process site after write operations,,process site after write operations,
+1290,Merge branch 'master' into serve-admin,,Merge branch 'master' into serve-admin,
+1291,Merge pull request #27 from jekyll/always-return-index,Always return index,Merge pull request #27 from jekyll/always-return-index,Always return index
+1292,"Revert ""spec/fixtures/site/Gemfile.lock file is not ignored""",This reverts commit 35fcd58248067b425c43c3a88c504b351cc1de41.,"Revert ""spec/fixtures/site/Gemfile.lock file is not ignored""",This reverts commit 35fcd58248067b425c43c3a88c504b351cc1de41.
+1293,"return the raw config, not the defaulted config",,"return the raw config, not the defaulted config",
+1294,properly ensure static file exists,,properly ensure static file exists,
+1295,DRY up document body and page body,,DRY up document body and page body,
+1296,ensure data files exists,,ensure data files exists,
+1297,use Jekyll.sanitized_path to calculate paths on disk,,use Jekyll.sanitized_path to calculate paths on disk,
+1298,git ignore spec/fixtures/site/Gemfile.lock,,git ignore spec/fixtures/site/Gemfile.lock,
+1299,always return the index for any non-asset path,,always return the index for any non-asset path,
+1300,render index for all other non-existing routes,,render index for all other non-existing routes,
+1301,specify a prefix for /admin,,specify a prefix for /admin,
+1302,Merge branch 'master' into serve-admin,,Merge branch 'master' into serve-admin,
+1303,add admin prefix to webpack publicPath,,add admin prefix to webpack publicPath,
+1304,add admin prefix to styles.css,,add admin prefix to styles.css,
+1305,add admin prefix to bundle.js,,add admin prefix to bundle.js,
+1306,fix routes,,fix routes,
+1307,add admin prefix to component links,,add admin prefix to component links,
+1308,do not start dist server,,do not start dist server,
+1309,remove index.html from public,,remove index.html from public,
+1310,spec/fixtures/site/Gemfile.lock file is not ignored,,spec/fixtures/site/Gemfile.lock file is not ignored,
+1311,simplify root endpoint logic,,simplify root endpoint logic,
+1312,remove duplicative 404,,remove duplicative 404,
+1313,add  && npm run open:dist back to the npm run build step,,add  && npm run open:dist back to the npm run build step,
+1314,build frontend before running ruby tests,,build frontend before running ruby tests,
+1315,Use sinatra to serve the public folder,"Otherwise, requests to /admin would return a Jekyll 404 and requests to /admin/ would return a webrick index. What we really want it /admin/ and /admin/ to both return /public/dist/index.html. This could also set things like cache headers more easily down the line.",Use sinatra to serve the public folder,"Otherwise, requests to /admin would return a Jekyll 404 and requests to /admin/ would return a webrick index. What we really want it /admin/ and /admin/ to both return /public/dist/index.html. This could also set things like cache headers more easily down the line."
+1316,update documentation,,update documentation,
+1317,run rubocop,,run rubocop,
+1318,Merge branch 'master' of https://github.com/jekyll/jekyll-admin,,Merge branch 'master' of link,
+1319,spike out server,,spike out server,
+1320,Merge pull request #21 from jekyll/reuse,Code Reuse,Merge pull request #21 from jekyll/reuse,Code Reuse
+1321,do not fetch again after deletion,Now we filter the deleted content from the state instead of fetching remaining ones.,do not fetch again after deletion,Now we filter the deleted content from the state instead of fetching remaining ones.
+1322,add fetch wrappers for reusing,,add fetch wrappers for reusing,
+1323,update fake.json,,update fake.json,
+1324,make function docs inline,,make function docs inline,
+1325,Merge pull request #19 from jekyll/content-edit,Complete Content Editing,Merge pull request #19 from jekyll/content-edit,Complete Content Editing
+1326,prepare creating content,,prepare creating content,
+1327,fix tests broken after validation,,fix tests broken after validation,
+1328,fix validation helper,,fix validation helper,
+1329,fix post filenames,,fix post filenames,
+1330,fix bug where empty title makes the input invisible,,fix bug where empty title makes the input invisible,
+1331,make breadcrumbs more generic,,make breadcrumbs more generic,
+1332,form validation,,form validation,
+1333,fix fake.json,,fix fake.json,
+1334,update post ids,,update post ids,
+1335,input title: add placeholder and resize vertical only,,input title: add placeholder and resize vertical only,
+1336,add collection_name to fake.json,,add collection_name to fake.json,
+1337,use textarea-autosize instead of contenteditable,react-contenteditable has a bug where blur event triggers onChange event and input value may contain html characters.,use textarea-autosize instead of contenteditable,react-contenteditable has a bug where blur event triggers onChange event and input value may contain html characters.
+1338,remove favicon from dev,,remove favicon from dev,
+1339,renaming: replace update and put with post,,renaming: replace update and put with post,
+1340,add default fields for metadata reducer,,add default fields for metadata reducer,
+1341,store published as true if not provided in meta,,store published as true if not provided in meta,
+1342,remove unused storeContentFields,,remove unused storeContentFields,
+1343,add checked prop to prototypes,,add checked prop to prototypes,
+1344,test change actions of edit form,,test change actions of edit form,
+1345,fix checkbox prop,"If there is no published field in meta, pass false to checked prop which means it is published by default",fix checkbox prop,"If there is no published field in meta, pass false to checked prop which means it is published by default"
+1346,add published field to fake.json,,add published field to fake.json,
+1347,remove unnecessary prop type,,remove unnecessary prop type,
+1348,style error messages,,style error messages,
+1349,update reducers,,update reducers,
+1350,add document sample to components' fixtures,,add document sample to components' fixtures,
+1351,rename CollectionNew to DocumentNew,,rename CollectionNew to DocumentNew,
+1352,add validated action type,,add validated action type,
+1353,update edit containers,,update edit containers,
+1354,minor fixes,,minor fixes,
+1355,update ContentEdit,"ContentEdit now enables Save button when an input changes. When updated, changes the text of Save button to “Saved”. It shows error messages if some of the fields are not validated.",update ContentEdit,"ContentEdit now enables Save button when an input changes. When updated, changes the text of Save button to “Saved”. It shows error messages if some of the fields are not validated."
+1356,fix filename input,,fix filename input,
+1357,validation utility,,validation utility,
+1358,update PUT actions,"PUT actions now validates inputs. If valid, updates the content. Otherwise, dispatch validation error action.",update PUT actions,"PUT actions now validates inputs. If valid, updates the content. Otherwise, dispatch validation error action."
+1359,add path to fake.json,,add path to fake.json,
+1360,update docs,,update docs,
+1361,renaming stuff,,renaming stuff,
+1362,add actions and reducers for controlled edit components,,add actions and reducers for controlled edit components,
+1363,move metafields container to containers folder,,move metafields container to containers folder,
+1364,remove unused underscore,,remove unused underscore,
+1365,remove search test which moved to utils,,remove search test which moved to utils,
+1366,controllable edit components,,controllable edit components,
+1367,update utility actions,,update utility actions,
+1368,update routes for id,,update routes for id,
+1369,rename setupMetadata,,rename setupMetadata,
+1370,add form validation helper functions,,add form validation helper functions,
+1371,replace page_id and document_id with id,,replace page_id and document_id with id,
+1372,remove Link from editor test,,remove Link from editor test,
+1373,component for editable content title,,component for editable content title,
+1374,implement getValue method for Checkbox,,implement getValue method for Checkbox,
+1375,get path directly from ref,,get path directly from ref,
+1376,use mixin for transition,,use mixin for transition,
+1377,Merge pull request #18 from jekyll/tests,Add missing DOM tests,Merge pull request #18 from jekyll/tests,Add missing DOM tests
+1378,Merge branch 'master' into tests,,Merge branch 'master' into tests,
+1379,add configuration test,,add configuration test,
+1380,move tests to their own folders,,move tests to their own folders,
+1381,add metafields tests,,add metafields tests,
+1382,remove coveralls,,remove coveralls,
+1383,remove .travis.yml,,remove .travis.yml,
+1384,add Configuration & Editor tests,,add Configuration & Editor tests,
+1385,setup browser globals,,setup browser globals,
+1386,remove mocha-jsdom,,remove mocha-jsdom,
+1387,Merge pull request #17 from jekyll/rubocop,Add Rubocop,Merge pull request #17 from jekyll/rubocop,Add Rubocop
+1388,Merge branch 'master' into rubocop,,Merge branch 'master' into rubocop,
+1389,Merge pull request #12 from jekyll/metafields,Metafields for Front Matter,Merge pull request #12 from jekyll/metafields,Metafields for Front Matter
+1390,create dedicated script/fmt script,,create dedicated script/fmt script,
+1391,try installing node manually,,try installing node manually,
+1392,try specifying the build as node,,try specifying the build as node,
+1393,lessen bundler dependency,,lessen bundler dependency,
+1394,have travis use a ruby build,,have travis use a ruby build,
+1395,bundle install during bootstrap,,bundle install during bootstrap,
+1396,"style ""remove field"" button",,"style ""remove field"" button",
+1397,do not sort objects,,do not sort objects,
+1398,run rubocop before npm,,run rubocop before npm,
+1399,add rubocop to script/cibuild,,add rubocop to script/cibuild,
+1400,correct existing rubocop offenses,,correct existing rubocop offenses,
+1401,properly exclude subdirs of the public dir,,properly exclude subdirs of the public dir,
+1402,add rubocop.yml,,add rubocop.yml,
+1403,add rubocop to gemspec,,add rubocop to gemspec,
+1404,add project details to gemspec and readme,,add project details to gemspec and readme,
+1405,update components documentation,,update components documentation,
+1406,include styles from node_modules for production,,include styles from node_modules for production,
+1407,separate breadcrumbs style,,separate breadcrumbs style,
+1408,separate vendor styles,,separate vendor styles,
+1409,Show datepicker if field key is date,,Show datepicker if field key is date,
+1410,update styles,,update styles,
+1411,capitalize should return empty if the string is undefined,,capitalize should return empty if the string is undefined,
+1412,update fixtures,,update fixtures,
+1413,remove date & path from sidebar,,remove date & path from sidebar,
+1414,editable breadcrumbs for path field,,editable breadcrumbs for path field,
+1415,add path to mock api,,add path to mock api,
+1416,add metafields documentation,,add metafields documentation,
+1417,fix path,,fix path,
+1418,Merge remote-tracking branch 'origin/master' into metafields,,Merge remote-tracking branch 'origin/master' into metafields,
+1419,fix styles,,fix styles,
+1420,add metafields tests,,add metafields tests,
+1421,update test fixtures for metafields,,update test fixtures for metafields,
+1422,add helper functions for metadata reducer,,add helper functions for metadata reducer,
+1423,update metafield components, rename folder as metadata use Sortable.js for drag and drop sort,update metafield components,rename folder as metadata use Sortable.js for drag and drop sort
+1424,use redux for metafields,,use redux for metafields,
+1425,Merge pull request #14 from jekyll/travis-badge,Add Travis badge to README,Merge pull request #14 from jekyll/travis-badge,Add Travis badge to README
+1426,Merge branch 'master' into travis-badge,,Merge branch 'master' into travis-badge,
+1427,add travis badge to readme,,add travis badge to readme,
+1428,Merge pull request #13 from jekyll/add-travis-yml,Set up Travis,Merge pull request #13 from jekyll/add-travis-yml,Set up Travis
+1429,cache npm,,cache npm,
+1430,set node version,,set node version,
+1431,have travis use script/bootstrap and script/cibuild,,have travis use script/bootstrap and script/cibuild,
+1432,add scripts to rule them all,,add scripts to rule them all,
+1433,add .travis.yml,,add .travis.yml,
+1434,add lodash for deep cloning,,add lodash for deep cloning,
+1435,"eslint: allow react prop type ""any""",,"eslint: allow react prop type ""any""",
+1436,use string as error until the server,,use string as error until the server,
+1437,use react-contenteditable for title's input,,use react-contenteditable for title's input,
+1438,update .gitignore,,update .gitignore,
+1439,add metadata to state.md,,add metadata to state.md,
+1440,update mock api for metafields,,update mock api for metafields,
+1441,use sortablejs instead of react-dnd,,use sortablejs instead of react-dnd,
+1442,allow setState for eslint,,allow setState for eslint,
+1443,convert metafields,,convert metafields,
+1444,drag and drop for metafields,,drag and drop for metafields,
+1445,use stage-0,,use stage-0,
+1446,Merge pull request #10 from jekyll/frontend,Frontend: Editing,Merge pull request #10 from jekyll/frontend,Frontend: Editing
+1447,add styles,,add styles,
+1448,other route templates,,other route templates,
+1449,implement metadata fields,,implement metadata fields,
+1450,implement containers for editing,,implement containers for editing,
+1451,implement helper components for editing,,implement helper components for editing,
+1452,implement ContentEdit for generic editing,,implement ContentEdit for generic editing,
+1453,Merge pull request #9 from jekyll/frontend,Frontend: Listing,Merge pull request #9 from jekyll/frontend,Frontend: Listing
+1454,add styles,,add styles,
+1455,implement ContentTable for generic listing,,implement ContentTable for generic listing,
+1456,add ability to search content by title,add search action and reducer,add ability to search content by title,add search action and reducer
+1457,fold posts into collections,,fold posts into collections,
+1458,Merge pull request #8 from jekyll/frontend,Frontend: Configuration,Merge pull request #8 from jekyll/frontend,Frontend: Configuration
+1459,implement reducers for listing,,implement reducers for listing,
+1460,implement actions for listing,,implement actions for listing,
+1461,implement components for listing contents,,implement components for listing contents,
+1462,Merge pull request #7 from jekyll/frontend,Front-end: general updates,Merge pull request #7 from jekyll/frontend,Front-end: general updates
+1463,add styles,,add styles,
+1464,redirect to '/pages' initially,,redirect to '/pages' initially,
+1465,implement helper components,,implement helper components,
+1466,implement helper functions,,implement helper functions,
+1467,implement components for configuration,,implement components for configuration,
+1468,create configuration reducer,,create configuration reducer,
+1469,create actions for configuration,,create actions for configuration,
+1470,test main containers,,test main containers,
+1471,implement main containers,,implement main containers,
+1472,add favicon,,add favicon,
+1473,update routes,,update routes,
+1474,add redux state tree,,add redux state tree,
+1475,update readme,,update readme,
+1476,update dependencies,,update dependencies,
+1477,mock missing API endpoints,,mock missing API endpoints,
+1478,update documentation,,update documentation,
+1479,add front-end screenshots,,add front-end screenshots,
+1480,Merge pull request #4 from jekyll/init-frontend,init front-end,Merge pull request #4 from jekyll/init-frontend,init front-end
+1481,init front-end,,init front-end,
+1482,Merge pull request #2 from jekyll/front-end,init front-end,Merge pull request #2 from jekyll/front-end,init front-end
+1483,init front-end,,init front-end,
+1484,Merge pull request #1 from jekyll/rush-skills/init,Initialize the project directory,Merge pull request #1 from jekyll/rush-skills/init,Initialize the project directory
+1485,Merge branch 'init' of https://github.com/rush-skills/jekyll-admin into rush-skills/init,,Merge branch 'init' of link into rush-skills/init,
+1486,Init jekyll-admin,,Init jekyll-admin,
+1487,Initial commit,,Initial commit,

@@ -1,84 +1,116 @@
-Index,Release Note
+Index,Release Note,Release Note With Abstraction
 1,"12.2.9 (2023-01-10)
 Bug Fixes
 
 typescript: add missing import (#1783) (229a01c)
-"
+","12.2.9 (2023-01-10)
+Bug Fixes
+typescript: add missing import (#1783) (229a01c)"
 2,"12.2.8 (2022-09-05)
 Bug Fixes
 
 Make probot receive support complex Probot apps (#1714) (eff5553)
-"
+","12.2.8 (2022-09-05)
+Bug Fixes
+Make probot receive support complex Probot apps (#1714) (eff5553)"
 3,"12.2.7 (2022-08-29)
 Bug Fixes
 
 receive: --base-url option and GHE_HOST (#1719) (68c9b91)
-"
+","12.2.7 (2022-08-29)
+Bug Fixes
+receive: --base-url option and GHE_HOST (#1719) (68c9b91)"
 4,"12.2.6 (2022-08-29)
 Bug Fixes
 
 deps: upgrade octokit/types to v7.1.1 (#1724) (be45120)
-"
+","12.2.6 (2022-08-29)
+Bug Fixes
+deps: upgrade octokit/types to v7.1.1 (#1724) (be45120)"
 5,"12.2.5 (2022-06-30)
 Bug Fixes
 
 remove update-notifier (#1706) (05297fb), closes /github.com/probot/probot/issues/1102#issuecomment-570598406
-"
+","12.2.5 (2022-06-30)
+Bug Fixes
+remove update-notifier (#1706) (05297fb), closes /github.com/probot/probot/issues/1102#issuecomment-570598406"
 6,"12.2.4 (2022-06-01)
 Bug Fixes
 
 logging of first octokit instance is not set (#1676) - thanks @kammerjaeger @markjm (646b6a9)
-"
+","12.2.4 (2022-06-01)
+Bug Fixes
+logging of first octokit instance is not set (#1676) - thanks @kammerjaeger @markjm (646b6a9)"
 7,"12.2.3 (2022-05-25)
 Bug Fixes
 
 deps: bump eventsource from 1.1.0 to 2.0.2 (7fd06d6)
-"
+","12.2.3 (2022-05-25)
+Bug Fixes
+deps: bump eventsource from 1.1.0 to 2.0.2 (7fd06d6)"
 8,"12.2.2 (2022-03-08)
 Bug Fixes
 
 Replaced hbs with express-handlebars (#1659) (420f886)
-"
+","12.2.2 (2022-03-08)
+Bug Fixes
+Replaced hbs with express-handlebars (#1659) (420f886)"
 9,"12.2.1 (2022-01-19)
 Bug Fixes
 
 security: bump minimal version of hbs (#1638) (dd9f5ae)
-"
+","12.2.1 (2022-01-19)
+Bug Fixes
+security: bump minimal version of hbs (#1638) (dd9f5ae)"
 10,"12.2.0 (2022-01-11)
 Features
 
 customize account name for manifest creation flow using GH_ORG environment variable (#1606) (992b480)
-"
+","12.2.0 (2022-01-11)
+Features
+customize account name for manifest creation flow using GH_ORG environment variable (#1606) (992b480)"
 11,"12.1.4 (2022-01-03)
 Bug Fixes
 
 types: export ApplicationFunction (#1631) (073f087)
-"
+","12.1.4 (2022-01-03)
+Bug Fixes
+types: export ApplicationFunction (#1631) (073f087)"
 12,"12.1.3 (2021-12-08)
 Bug Fixes
 
 log json in production (#1598) (bb068d9)
-"
+","12.1.3 (2021-12-08)
+Bug Fixes
+log json in production (#1598) (bb068d9)"
 13,"12.1.2 (2021-11-29)
 Bug Fixes
 
 typescript: add types for context.{repo,issue,pullRequest} (#1622) (638a3b2)
-"
+","12.1.2 (2021-11-29)
+Bug Fixes
+typescript: add types for context.{repo,issue,pullRequest} (#1622) (638a3b2)"
 14,"12.1.1 (2021-09-01)
 Bug Fixes
 
 update ioredis to non-vulnerable version (#1589) (f02c549)
-"
+","12.1.1 (2021-09-01)
+Bug Fixes
+update ioredis to non-vulnerable version (#1589) (f02c549)"
 15,"9.14.2 (2021-07-07)
 Bug Fixes
 
 Do not crash when suspended in v9 (#1571) (b2694d5)
-"
+","9.14.2 (2021-07-07)
+Bug Fixes
+Do not crash when suspended in v9 (#1571) (b2694d5)"
 16,"12.1.0 (2021-07-03)
 Features
 
 website: 11ty 🚀 (#1516) (7a43e9e)
-"
+","12.1.0 (2021-07-03)
+Features
+website: 11ty 🚀 (#1516) (7a43e9e)"
 17,"12.0.0 (2021-06-24)
 Features
 
@@ -90,6 +122,13 @@ remove '*' event
 app.webhooks.middleware has been removed in @octokit/webhooks v9
 removes the webhookPath option on new Probot({}) for the webhooks middleware
 
+Co-authored-by: wolfy1339 webmaster@wolfy1339.com","12.0.0 (2021-06-24)
+Features
+update @octokit/webhooks to v9 (#1559) (4b3ae0e)
+BREAKING CHANGES
+remove '*' event
+app.webhooks.middleware has been removed in @octokit/webhooks v9
+removes the webhookPath option on new Probot({}) for the webhooks middleware
 Co-authored-by: wolfy1339 webmaster@wolfy1339.com"
 18,"BREAKING CHANGES
 
@@ -97,97 +136,137 @@ remove '*' event
 app.webhooks.middleware has been removed in @octokit/webhooks v9
 removes the webhookPath option on new Probot({}) for the webhooks middleware
 
+Co-authored-by: wolfy1339 webmaster@wolfy1339.com","BREAKING CHANGES
+remove '*' event
+app.webhooks.middleware has been removed in @octokit/webhooks v9
+removes the webhookPath option on new Probot({}) for the webhooks middleware
 Co-authored-by: wolfy1339 webmaster@wolfy1339.com"
 19,"11.4.1 (2021-06-07)
 Bug Fixes
 
 support setting baseUrl on Octokit constructor instead of Probot constructor (#1552) (453ddd2)
-"
+","11.4.1 (2021-06-07)
+Bug Fixes
+support setting baseUrl on Octokit constructor instead of Probot constructor (#1552) (453ddd2)"
 20,"11.4.0 (2021-06-01)
 Features
 
 logger: custom message key (#1546) (01c2006)
-"
+","11.4.0 (2021-06-01)
+Features
+logger: custom message key (#1546) (01c2006)"
 21,"11.3.2 (2021-05-29)
 Bug Fixes
 
 skip smee setup by setting NO_SMEE_SETUP to ""true""  (#1544) (acd47a6)
-"
+","11.3.2 (2021-05-29)
+Bug Fixes
+skip smee setup by setting NO_SMEE_SETUP to ""true""  (#1544) (acd47a6)"
 22,"11.3.1 (2021-05-28)
 Bug Fixes
 
 setup: do not enter setup mode if HOST environment variable is set (#1538) (4d70d69)
-"
+","11.3.1 (2021-05-28)
+Bug Fixes
+setup: do not enter setup mode if HOST environment variable is set (#1538) (4d70d69)"
 23,"11.3.0 (2021-04-29)
 Features
 
 deprecate usage of the ""*"" event name (#1518) (474b773)
-"
+","11.3.0 (2021-04-29)
+Features
+deprecate usage of the ""*"" event name (#1518) (474b773)"
 24,"11.2.4 (2021-04-27)
 Bug Fixes
 
 run: await server.load() (#1517) (8cc1590)
-"
+","11.2.4 (2021-04-27)
+Bug Fixes
+run: await server.load() (#1517) (8cc1590)"
 25,"11.2.3 (2021-04-26)
 Bug Fixes
 
 Update to Contributor Covenant v2 (#1515) (72b0531)
-"
+","11.2.3 (2021-04-26)
+Bug Fixes
+Update to Contributor Covenant v2 (#1515) (72b0531)"
 26,"11.2.2 (2021-04-23)
 Bug Fixes
 
 add workaround for ""appId option is required"" when in setup mode (#1513) (e11b91e)
-"
+","11.2.2 (2021-04-23)
+Bug Fixes
+add workaround for ""appId option is required"" when in setup mode (#1513) (e11b91e)"
 27,"11.2.1 (2021-04-21)
 Bug Fixes
 
 bump @octokit/plugin-rest-endpoint-methods to v5 (#1511) (9342caf)
-"
+","11.2.1 (2021-04-21)
+Bug Fixes
+bump @octokit/plugin-rest-endpoint-methods to v5 (#1511) (9342caf)"
 28,"11.2.0 (2021-04-20)
 Features
 
 Add dark mode to builtin pages (#1509) (ce96884)
-"
+","11.2.0 (2021-04-20)
+Features
+Add dark mode to builtin pages (#1509) (ce96884)"
 29,"11.1.1 (2021-04-20)
 Bug Fixes
 
 update design of probot landing page (#1508) (0e37427)
-"
+","11.1.1 (2021-04-20)
+Bug Fixes
+update design of probot landing page (#1508) (0e37427)"
 30,"11.1.0 (2021-03-01)
 Features
 
 add onAny and onError methods from @octokit/webhooks (#1480) (9a24f9d)
-"
+","11.1.0 (2021-03-01)
+Features
+add onAny and onError methods from @octokit/webhooks (#1480) (9a24f9d)"
 31,"11.0.6 (2021-02-04)
 Bug Fixes
 
 deps: pin version of @octokit/webhooks (#1472) (cd14dd4)
-"
+","11.0.6 (2021-02-04)
+Bug Fixes
+deps: pin version of @octokit/webhooks (#1472) (cd14dd4)"
 32,"11.0.5 (2021-01-20)
 Bug Fixes
 
 clarify error message in case of invalid app authentication (#1465) thanks @eXpire163 (5f1831b)
-"
+","11.0.5 (2021-01-20)
+Bug Fixes
+clarify error message in case of invalid app authentication (#1465) thanks @eXpire163 (5f1831b)"
 33,"11.0.4 (2021-01-17)
 Bug Fixes
 
 TypeScript: fix description of context.pullRequest method (#1461) (a5779ff)
-"
+","11.0.4 (2021-01-17)
+Bug Fixes
+TypeScript: fix description of context.pullRequest method (#1461) (a5779ff)"
 34,"11.0.3 (2021-01-14)
 Bug Fixes
 
 correctly import (transpiled) app function for run and receive (#1457) thanks @ZauberNerd (2275698)
-"
+","11.0.3 (2021-01-14)
+Bug Fixes
+correctly import (transpiled) app function for run and receive (#1457) thanks @ZauberNerd (2275698)"
 35,"11.0.2 (2021-01-14)
 Bug Fixes
 
 typescript: remove options.webhookProxy from Probot constructor (#1459) (01bb678)
-"
+","11.0.2 (2021-01-14)
+Bug Fixes
+typescript: remove options.webhookProxy from Probot constructor (#1459) (01bb678)"
 36,"11.0.1 (2020-12-17)
 Bug Fixes
 
 import app functions transpiled from TypeScript (#1448) (3356845)
-"
+","11.0.1 (2020-12-17)
+Bug Fixes
+import app functions transpiled from TypeScript (#1448) (3356845)"
 37,"BREAKING CHANGES
 For a smooth upgrade, make sure to update to the latest Probot v10 version first (npm install probot@10), run your tests, and address all deprecation messages. Nearly all removed APIs have previously been deprecated.
 
@@ -259,27 +338,63 @@ probot.webhook has been removed. Use probot.webhooks instead
 createProbot(options) no longer supports any keys besides overrides, defaults, or env
 options.throttleOptions has been removed. Set options.Octokit to ProbotOctokit.defaults({ throttle }) instead
 import { Application } from probot has been removed. Use import { Probot } from probot instead, the APIs are the same
-"
+","BREAKING CHANGES
+For a smooth upgrade, make sure to update to the latest Probot v10 version first (npm install probot@10), run your tests, and address all deprecation messages. Nearly all removed APIs have previously been deprecated.
+deprecated context.octokit.* have been removed via @octokit/plugin-rest-endpoint-methods v4
+probot.server property removed. Build your own server instead using import { Server } from ""probot""
+probot.load() is now asynchronous and no longer returns the instance
+express-async-errors is no longer used.
+Probot constructor parameter no longer supported in createNodeMiddleware(app, { Probot }). Pass a probot instance instead: createNodeMiddleware(app, { probot })
+getOptions() has been removed. Use { probot: createProbot() } instead
+probot.load(appFn) no longer accepts appFn to be a path string. Pass the actual function instead.
+probot.setup() removed. Use the new Server class instead:
+module
+If you have more than one app function, combine them in a function instead
+module
+probot.start() / probot.stop() removed. Use the new Server class instead:
+module
+REDIS_URL is ignored when using Probot constructor. Use new Probot({ redisConfig: redis://... }) instead
+Probot constructor no longer reads environment variables. Pass options instead, or import { createProbot } from ""probot"" instead
+Probot.run() has been removed. Use import { run} from ""probot"" instead
+context.github has been removed. Use context.octokit instead
+context.event has been removed. Use context.name instead
+app.route() has been removed. Use the getRouter() argument from the app function instead: (app, { getRouter }) => { ... }
+app.router has been removed. Use getRouter() from the app function instead: (app, { getRouter }) => { ... }
+probot.logger has been removed. Use probot.log instead
+new Probot({ id }) has been removed. Use new Probot({ appId }) instead
+new Probot({ cert }) has been removed. Use new Probot({ privateKey }) instead
+probot.webhook has been removed. Use probot.webhooks instead
+createProbot(options) no longer supports any keys besides overrides, defaults, or env
+options.throttleOptions has been removed. Set options.Octokit to ProbotOctokit.defaults({ throttle }) instead
+import { Application } from probot has been removed. Use import { Probot } from probot instead, the APIs are the same"
 38,"BREAKING CHANGES
 
 ({ app, getRouter }) => {}  is now (app, { getRouter })
 
-see https://github.com/probot/probot/pull/1441 and discussion at https://github.com/probot/probot/issues/1286#issuecomment-744094299"
+see https://github.com/probot/probot/pull/1441 and discussion at https://github.com/probot/probot/issues/1286#issuecomment-744094299","BREAKING CHANGES
+({ app, getRouter }) => {}  is now (app, { getRouter })
+see link and discussion at link"
 39,"10.19.0 (2020-12-15)
 Features
 
 un-deprecate (app) => {}. Deprecate ({ app, getRouter }) => {} in favor of (app, { getRouter }) => {} (#1441) (42b043e), closes /github.com/probot/probot/issues/1286#issuecomment-744094299
-"
+","10.19.0 (2020-12-15)
+Features
+un-deprecate (app) => {}. Deprecate ({ app, getRouter }) => {} in favor of (app, { getRouter }) => {} (#1441) (42b043e), closes /github.com/probot/probot/issues/1286#issuecomment-744094299"
 40,"11.0.0-beta.3 (2020-12-13)
 Features
 
 typescript: export ApplicationFunctionOptions type (ef56ffb), closes #issuecomment-731488088
-"
+","11.0.0-beta.3 (2020-12-13)
+Features
+typescript: export ApplicationFunctionOptions type (ef56ffb), closes #issuecomment-731488088"
 41,"11.0.0-beta.2 (2020-12-09)
 Bug Fixes
 
 remove deprecation messages about no longer used environment variables ""IGNORED_ACCOUNTS"" and ""DISABLE_STATS"" (b699d7f)
-"
+","11.0.0-beta.2 (2020-12-09)
+Bug Fixes
+remove deprecation messages about no longer used environment variables ""IGNORED_ACCOUNTS"" and ""DISABLE_STATS"" (b699d7f)"
 42,"BREAKING CHANGES
 For a smooth upgrade, make sure to update to the latest Probot v10 version first, run your tests, and address all deprecation messages. Nearly all removed APIs have previously been deprecated.
 
@@ -352,7 +467,36 @@ probot.webhook has been removed. Use probot.webhooks instead
 createProbot(options) no longer supports any keys besides overrides, defaults, or env
 options.throttleOptions has been removed. Set options.Octokit to ProbotOctokit.defaults({ throttle }) instead
 import { Application } from probot has been removed. Use import { Probot } from probot instead, the APIs are the same
-"
+","BREAKING CHANGES
+For a smooth upgrade, make sure to update to the latest Probot v10 version first, run your tests, and address all deprecation messages. Nearly all removed APIs have previously been deprecated.
+deprecated context.octokit.* have been removed via @octokit/plugin-rest-endpoint-methods v4
+probot.server property removed. Build your own server instead using import { Server } from ""probot""
+probot.load() is now asynchronous and no longer returns the instance
+express-async-errors is no longer used.
+Probot constructor parameter no longer supported in createNodeMiddleware(app, { Probot }). Pass a probot instance instead: createNodeMiddleware(app, { probot })
+getOptions() has been removed. Use { probot: createProbot() } instead
+probot.load(appFn) no longer accepts appFn to be a path string. Pass the actual function instead.
+probot.setup() removed. Use the new Server class instead:
+module
+If you have more than one app function, combine them in a function instead
+module
+probot.start() / probot.stop() removed. Use the new Server class instead:
+module
+REDIS_URL is ignored when using Probot constructor. Use new Probot({ redisConfig: redis://... }) instead
+Probot constructo no longer reads environment variables. Pass options instead, or import { createProbot } from ""probot"" instead
+Probot.run() has been removed. Use import { run} from ""probot"" instead
+context.github has been removed. Use context.octokit instead
+context.event has been removed. Use context.name instead
+app.route() has been removed. Use the getRouter() argument from the app function instead: ({ app, getRouter }) => { ... }
+(app) => {} is no longer supported. Use ({ app }) => {} instead
+app.router has been removed. Use getRouter() from the app function instead: ({ app, getRouter }) => { ... }
+probot.logger has been removed. Use probot.log instead
+new Porbot({ id }) has been removed. Use new Porbot({ appId }) instead
+new Porbot({ cert }) has been removed. Use new Porbot({ privateKey }) instead
+probot.webhook has been removed. Use probot.webhooks instead
+createProbot(options) no longer supports any keys besides overrides, defaults, or env
+options.throttleOptions has been removed. Set options.Octokit to ProbotOctokit.defaults({ throttle }) instead
+import { Application } from probot has been removed. Use import { Probot } from probot instead, the APIs are the same"
 43,"Features
 
 createProbot()  (#1431) (d315f0c)
@@ -373,32 +517,56 @@ Bug Fixes
 `createProbot() without options (8c01e90)
 load app function only once when using createNodeMiddleware (#1432) (60b702b)
 server: log error requests as [METHOD] /[PATH] [STATUS] - [NUM]ms, e.g POST / 500 - 123ms (9d767e1)
-"
+","Features
+createProbot()  (#1431) (d315f0c)
+new Probot({ appId }) (a94fdca)
+Probot.version, Probot.defaults() (2ff5d21)
+run(appFn, { env }) (3d90806)
+createNodeMiddleware (bdbe94e)
+use new Server class when using probot run binary (8a3599d)
+Deprecations
+probot.load() (3d4b363)
+probot.start() / probot.stop() / probot.setup() (7a8f268)
+Deprecates new Probot({ id }) (a94fdca)
+Bug Fixes
+`createProbot() without options (8c01e90)
+load app function only once when using createNodeMiddleware (#1432) (60b702b)
+server: log error requests as [METHOD] /[PATH] [STATUS] - [NUM]ms, e.g POST / 500 - 123ms (9d767e1)"
 44,"10.18.0-beta.5 (2020-12-08)
 Bug Fixes
 
 load app function only once when using createNodeMiddleware (#1432) (4a1031e)
-"
+","10.18.0-beta.5 (2020-12-08)
+Bug Fixes
+load app function only once when using createNodeMiddleware (#1432) (4a1031e)"
 45,"10.18.0-beta.4 (2020-12-07)
 Bug Fixes
 
 `createProbot() without options (ea54df3)
-"
+","10.18.0-beta.4 (2020-12-07)
+Bug Fixes
+`createProbot() without options (ea54df3)"
 46,"10.18.0-beta.3 (2020-12-07)
 Features
 
 createProbot(), createNodeMiddleware(app, { probot }). Deprecates getOptions, createNodeMiddleware(app, { Probot }) (#1431) (50a26fa)
-"
+","10.18.0-beta.3 (2020-12-07)
+Features
+createProbot(), createNodeMiddleware(app, { probot }). Deprecates getOptions, createNodeMiddleware(app, { Probot }) (#1431) (50a26fa)"
 47,"10.18.0-beta.2 (2020-12-06)
 Bug Fixes
 
 app.route() with (app) => {} app function (#1430) (66b8bf1)
-"
+","10.18.0-beta.2 (2020-12-06)
+Bug Fixes
+app.route() with (app) => {} app function (#1430) (66b8bf1)"
 48,"10.17.3 (2020-12-06)
 Bug Fixes
 
 app.route() with (app) => {} app function (#1430) (d203219)
-"
+","10.17.3 (2020-12-06)
+Bug Fixes
+app.route() with (app) => {} app function (#1430) (d203219)"
 49,"Features
 new exports 
 
@@ -421,17 +589,35 @@ deprecate probot.start() / probot.stop() / probot.setup() (adcc9a7)
 Bug Fixes
 
 server: log error requests as [METHOD] /[PATH] [STATUS] - [NUM]ms, e.g POST / 500 - 123ms (a055ee8)
-"
+","Features
+new exports 
+getOptions({ env, defaults, overrides }) (c97d990)
+createNodeMiddleware (63066a3)
+new APIs
+new Probot({ appId }) (7e3f1e6)
+Probot.version, Probot.defaults() (75a3868)
+run(appFn, { env }) (bde0b13)
+use new Server class when using probot run binary (5b593cb)
+Deprecations
+deprecate new Probot({ id }) ([7e3f1e6](link
+deprecate probot.load() (03b290a)
+deprecate probot.start() / probot.stop() / probot.setup() (adcc9a7)
+Bug Fixes
+server: log error requests as [METHOD] /[PATH] [STATUS] - [NUM]ms, e.g POST / 500 - 123ms (a055ee8)"
 50,"10.17.2 (2020-11-22)
 Bug Fixes
 
 remove GHE_HOST deprecation message when using probot run cli (#1423) (0ec5f23), closes #1422
-"
+","10.17.2 (2020-11-22)
+Bug Fixes
+remove GHE_HOST deprecation message when using probot run cli (#1423) (0ec5f23), closes #1422"
 51,"10.17.1 (2020-11-20)
 Bug Fixes
 
 set default log level correctly to ""info"" (49153b8)
-"
+","10.17.1 (2020-11-20)
+Bug Fixes
+set default log level correctly to ""info"" (49153b8)"
 52,"10.17.0 (2020-11-20)
 Features
 
@@ -441,86 +627,124 @@ new Probot({ logLevel }). Deprecates LOG_LEVEL when using Probot constructor (7c
 deprecate INSTALLATION_TOKEN_TTL (dfc59fc)
 deprecate LOG_FORMAT, LOG_LEVEL_IN_STRING, SENTRY_DSN environment variables when using Probot constructor. Pass a custom log instance instead: (514c764)
 deprecate REDIS_URL environment variable when using with the Probot constructor. Use new Probot({ redisConfig: ""redis://..."" }) instead (1dbd999)
-"
+","10.17.0 (2020-11-20)
+Features
+import { run } from ""probot"". Deprecates Probot.run() (f35b58a)
+new Probot({ baseUrl }). Deprecates GHE_HOST / GHE_PROTOCOL when using with the Probot constructor (7abbef7)
+new Probot({ logLevel }). Deprecates LOG_LEVEL when using Probot constructor (7c46218)
+deprecate INSTALLATION_TOKEN_TTL (dfc59fc)
+deprecate LOG_FORMAT, LOG_LEVEL_IN_STRING, SENTRY_DSN environment variables when using Probot constructor. Pass a custom log instance instead: (514c764)
+deprecate REDIS_URL environment variable when using with the Probot constructor. Use new Probot({ redisConfig: ""redis://..."" }) instead (1dbd999)"
 53,"10.16.0 (2020-11-18)
 Features
 
 use @probot/get-private-key (#1414) (47d9f3a), closes #1309
-"
+","10.16.0 (2020-11-18)
+Features
+use @probot/get-private-key (#1414) (47d9f3a), closes #1309"
 54,"10.15.0 (2020-11-18)
 Features
 
 context.octokit. Deprecates context.github (#1413) (0527b98)
-"
+","10.15.0 (2020-11-18)
+Features
+context.octokit. Deprecates context.github (#1413) (0527b98)"
 55,"10.14.1 (2020-11-16)
 Bug Fixes
 
 deps: update @octokit/core to latest (#1412) (9351df4)
-"
+","10.14.1 (2020-11-16)
+Bug Fixes
+deps: update @octokit/core to latest (#1412) (9351df4)"
 56,"10.14.0 (2020-11-12)
 Features
 
 deprecate { Application } export. Use { Probot } instead, it has the same APIs now. (#1408) (0e52e05)
-"
+","10.14.0 (2020-11-12)
+Features
+deprecate { Application } export. Use { Probot } instead, it has the same APIs now. (#1408) (0e52e05)"
 57,"10.13.0 (2020-11-12)
 Features
 
 probot.on() / probot.receive() / probot.auth() (#1407) (1812cfe)
-"
+","10.13.0 (2020-11-12)
+Features
+probot.on() / probot.receive() / probot.auth() (#1407) (1812cfe)"
 58,"10.12.0 (2020-11-12)
 Features
 
 getRouter argument for app function (({ app, getRouter }) => {}) (#1406) (de3adc1)
-"
+","10.12.0 (2020-11-12)
+Features
+getRouter argument for app function (({ app, getRouter }) => {}) (#1406) (de3adc1)"
 59,"10.11.0 (2020-11-11)
 Features
 
 (app) => {} is now ({ app }) => {} (#1405) (4bfae5a)
-"
+","10.11.0 (2020-11-11)
+Features
+(app) => {} is now ({ app }) => {} (#1405) (4bfae5a)"
 60,"10.10.2 (2020-11-11)
 Bug Fixes
 
 stop using .webhooks.on(""*"", handler) in favor of `.webhooks.onAny(handler) (ab6fcb1)
-"
+","10.10.2 (2020-11-11)
+Bug Fixes
+stop using .webhooks.on(""*"", handler) in favor of `.webhooks.onAny(handler) (ab6fcb1)"
 61,"10.10.1 (2020-11-01)
 Bug Fixes
 
 correct payload type by omitting context keys (#1389) (2b30518)
-"
+","10.10.1 (2020-11-01)
+Bug Fixes
+correct payload type by omitting context keys (#1389) (2b30518)"
 62,"10.10.0 (2020-10-28)
 Features
 
 use octokit-auth-probot (#1392) (8ba3a8e)
-"
+","10.10.0 (2020-10-28)
+Features
+use octokit-auth-probot (#1392) (8ba3a8e)"
 63,"10.9.5 (2020-10-26)
 Bug Fixes
 
 use webhooks.onError() instead of deprecated webhooks.on(""error"", ...) (#1390) (a5b36b3)
-"
+","10.9.5 (2020-10-26)
+Bug Fixes
+use webhooks.onError() instead of deprecated webhooks.on(""error"", ...) (#1390) (a5b36b3)"
 64,"10.9.4 (2020-10-22)
 Bug Fixes
 
 typescript: TypeScript issues TS2305,TS2707,TS7006 (41ee70c), closes #1387
-"
+","10.9.4 (2020-10-22)
+Bug Fixes
+typescript: TypeScript issues TS2305,TS2707,TS7006 (41ee70c), closes #1387"
 65,"10.9.3 (2020-10-08)
 Bug Fixes
 
 types: set correct type for context passed to event handler (#1378) (05abeef), closes #r501871740
-"
+","10.9.3 (2020-10-08)
+Bug Fixes
+types: set correct type for context passed to event handler (#1378) (05abeef), closes #r501871740"
 66,"10.9.2 (2020-10-08)
 Bug Fixes
 
 typescript: adapt for latest @octokit/webhooks (#1374) (630d78e)
-"
+","10.9.2 (2020-10-08)
+Bug Fixes
+typescript: adapt for latest @octokit/webhooks (#1374) (630d78e)"
 67,"Bug Fixes
 
 do not overwrite options.throttle passed to {Octokit: ProbotOctokit.defaults(options)} (#1373) (9483546)
-"
+","Bug Fixes
+do not overwrite options.throttle passed to {Octokit: ProbotOctokit.defaults(options)} (#1373) (9483546)"
 68,"10.9.0 (2020-09-29)
 Features
 
 deprecate new Application({ throttleOptions }) (#1365) (f537204)
-"
+","10.9.0 (2020-09-29)
+Features
+deprecate new Application({ throttleOptions }) (#1365) (f537204)"
 69,"10.8.1 (2020-09-28)
 Bug Fixes
 
@@ -539,124 +763,186 @@ After
 js
   nock(""https://api.github.com"")
     .get(""/repos/wip/app/contents/.github%2Fwip.yml"")
+    .reply(200, ""terms: 🚧"");","10.8.1 (2020-09-28)
+Bug Fixes
+use @probot/octokit-plugin-config for context.config (#1362) (a235671)
+If you mocked http requests for configuration files, you will have to adapt them. Instead of returning a JSON response with a { content } object, where content is a base64 encoded version of your raw configuration, you can now return the content without encoding directly. Example
+Before
+js
+  nock(""link"")
+    .get(""/repos/wip/app/contents/.github%2Fwip.yml"")
+    .reply(200, {
+      content: Buffer.from(""terms: 🚧"").toString(""base64""),
+    });
+After 
+js
+  nock(""link"")
+    .get(""/repos/wip/app/contents/.github%2Fwip.yml"")
     .reply(200, ""terms: 🚧"");"
 70,"10.8.0 (2020-09-19)
 Features
 
 add restart message (#1353) (a03c610)
-"
+","10.8.0 (2020-09-19)
+Features
+add restart message (#1353) (a03c610)"
 71,"10.7.1 (2020-09-18)
 Bug Fixes
 
 remove redundant v from Node.js version log string (#1352) (dc4cd53)
-"
+","10.7.1 (2020-09-18)
+Bug Fixes
+remove redundant v from Node.js version log string (#1352) (dc4cd53)"
 72,"10.7.0 (2020-09-18)
 Features
 
 setup: support registration using an existing GitHub app (#1345) (d907bbd)
-"
+","10.7.0 (2020-09-18)
+Features
+setup: support registration using an existing GitHub app (#1345) (d907bbd)"
 73,"10.6.0 (2020-09-18)
 Features
 
 export WebhookPayloadWithRepository (#1348) (31fdd61)
-"
+","10.6.0 (2020-09-18)
+Features
+export WebhookPayloadWithRepository (#1348) (31fdd61)"
 74,"10.5.0 (2020-09-18)
 Features
 
 log Node.js version at startup (#1346) (86b0408)
-"
+","10.5.0 (2020-09-18)
+Features
+log Node.js version at startup (#1346) (86b0408)"
 75,"10.4.1 (2020-09-18)
 Bug Fixes
 
 use custom host in new welcome message (#1347) (235e308)
-"
+","10.4.1 (2020-09-18)
+Bug Fixes
+use custom host in new welcome message (#1347) (235e308)"
 76,"10.4.0 (2020-09-18)
 Features
 
 add HOST/--host option (#1335) (ed7a513)
-"
+","10.4.0 (2020-09-18)
+Features
+add HOST/--host option (#1335) (ed7a513)"
 77,"10.3.0 (2020-09-17)
 Features
 
 increase readability of welcome message at setup (#1343) (240e77c)
-"
+","10.3.0 (2020-09-17)
+Features
+increase readability of welcome message at setup (#1343) (240e77c)"
 78,"10.2.0 (2020-09-07)
 Features
 
 sentry: set user ID to installation.id and username to repository owner login (when present) (#1337) (4cf7de9)
-"
+","10.2.0 (2020-09-07)
+Features
+sentry: set user ID to installation.id and username to repository owner login (when present) (#1337) (4cf7de9)"
 79,"10.1.5 (2020-09-07)
 Bug Fixes
 
 remove redundant string in deprecation warning (#1336) (e0760b0)
-"
+","10.1.5 (2020-09-07)
+Bug Fixes
+remove redundant string in deprecation warning (#1336) (e0760b0)"
 80,"10.1.4 (2020-09-06)
 Bug Fixes
 
 prevent double new lines when using LOG_FORMAT=json (86c1973)
-"
+","10.1.4 (2020-09-06)
+Bug Fixes
+prevent double new lines when using LOG_FORMAT=json (86c1973)"
 81,"10.1.3 (2020-09-03)
 Bug Fixes
 
 ""Cannot find module ../lib/private-key"" error when running probot receive (#1332) (d671d82)
-"
+","10.1.3 (2020-09-03)
+Bug Fixes
+""Cannot find module ../lib/private-key"" error when running probot receive (#1332) (d671d82)"
 82,"10.1.2 (2020-09-01)
 Bug Fixes
 
 trigger release to update docs on probot.github.com (4c88da9)
-"
+","10.1.2 (2020-09-01)
+Bug Fixes
+trigger release to update docs on probot.github.com (4c88da9)"
 83,"v10 release notes
 This is the first stable release for v10. See all breaking changes and new features at
 https://github.com/probot/probot/releases/tag/v10.0.0
 Bug Fixes
 
 app.auth(installationId) returns octokit instance with all required installation authentication settings (#1326) (410302f)
-"
+","v10 release notes
+This is the first stable release for v10. See all breaking changes and new features at
+link
+Bug Fixes
+app.auth(installationId) returns octokit instance with all required installation authentication settings (#1326) (410302f)"
 84,"9.15.1 (2020-09-01)
 Bug Fixes
 
 revert bad v9.15.0 release (d3a8594)
-"
-85,"bad release, sorry"
+","9.15.1 (2020-09-01)
+Bug Fixes
+revert bad v9.15.0 release (d3a8594)"
+85,"bad release, sorry","bad release, sorry"
 86,"10.1.0 (2020-08-28)
 Features
 
 log Probot version at startup (#1321) (c59fbcc)
-"
+","10.1.0 (2020-08-28)
+Features
+log Probot version at startup (#1321) (c59fbcc)"
 87,"9.14.1 (2020-08-21)
 Bug Fixes
 
 revert ""v9.14.0"" (#1314) (e3f6cf5)
-"
+","9.14.1 (2020-08-21)
+Bug Fixes
+revert ""v9.14.0"" (#1314) (e3f6cf5)"
 88,"9.14.0 (2020-08-21)
 Features
 
 v10 (#1310) (ee65669)
-"
+","9.14.0 (2020-08-21)
+Features
+v10 (#1310) (ee65669)"
 89,"Bug Fixes
 
 throttleOption defaults and REDIS_URL configuration (#1313) (84d4371)
-"
+","Bug Fixes
+throttleOption defaults and REDIS_URL configuration (#1313) (84d4371)"
 90,"9.13.2 (2020-08-20)
 Bug Fixes
 
 revert v9.13.1 (83b625b)
-"
+","9.13.2 (2020-08-20)
+Bug Fixes
+revert v9.13.1 (83b625b)"
 91,"10.0.0-beta.36 (2020-08-18)
 Bug Fixes
 
 package: remove ""prepare"" step (9b79924)
-"
+","10.0.0-beta.36 (2020-08-18)
+Bug Fixes
+package: remove ""prepare"" step (9b79924)"
 92,"10.0.0-beta.35 (2020-08-18)
 Bug Fixes
 
 package: debugging version replacements as part of automated release process ... so sorry for the noise UGH (7753758)
-"
+","10.0.0-beta.35 (2020-08-18)
+Bug Fixes
+package: debugging version replacements as part of automated release process ... so sorry for the noise UGH (7753758)"
 93,"10.0.0-beta.34 (2020-08-18)
 Bug Fixes
 
 package: debugging version replacements as part of automated release process ... so sorry for the noise (fa297bf)
-"
+","10.0.0-beta.34 (2020-08-18)
+Bug Fixes
+package: debugging version replacements as part of automated release process ... so sorry for the noise (fa297bf)"
 94,"Breaking changes
 
 @octokit/rest has been updated from v16 to v17. See release notes. Important: If you currently mocked context.github.* methods in your test, replace these with http mocks using nock instead, otherwise your tests will create methods that no longer exist and you will see errors in production although your tests passed. See https://github.com/wip/app/pull/238 for an example
@@ -703,57 +989,109 @@ use a single Octokit instance with JWT auth
 Bug Fixes
 
 use JWT auth for marketplace endpoints
-"
+","Breaking changes
+@octokit/rest has been updated from v16 to v17. See release notes. Important: If you currently mocked context.github. methods in your test, replace these with http mocks using nock instead, otherwise your tests will create methods that no longer exist and you will see errors in production although your tests passed. See link for an example
+URL parameters are now always encoded when using context.github. methods. For example, if you use context.github.repos.getContent( owner, repo, path ) make sure to not encode the value for path. Also if you were mocking http requests in your tests, replace e.g. repos/octocat/hello-world/contents/.github/config.yml with repos/octocat/hello-world/contents/.github%2Fconfig.yml
+require Node 10.21+
+Logging: an object with extra information must be passed as first argument. Passing it as last argument is no longer supported.
+before
+js
+  context.log.info('something happened', {extra: 'info'})
+after
+js
+  context.log.info({extra: 'info'}, 'something happened')
+The logging output changed. Before, probot used bunyan with all kind of hacks and customizations for its log output. Now we use pino. We still do the formatting and sending errors to Sentry in the same process, but the logic is now encapsulated in @probot/pino. We might decouple it in future as part of making Probot more suitable for serverless/function environments
+context.issue() now returns .issue_number instead of .number. Use context.pullRequest() for octokit.pulls.* method calls.
+registry_package event was renamed to package
+The probot package no longer exports Octokit. Use ProbotOctokit instead.
+js
+  const { ProbotOctokit, ProbotOctokitCore } = require('probot')
+- Probot no longer accepts options.throttlingOptions. In order to disable throttling for testing, set options.Octokit to ProbotOctokit.defaults({ retry: { enabled: false }, throttle: { enabled: false } }):
+module
+- Undocumented & untested APIs removed
+  -probot.errorHandler-probot.httpServer-app.log.targethas been removed.
+  -routeroption forApplicationcontructor:new Application({ router })`
+Features
+Significant lower memory usage
+update to @octokit/rest to v17
+update to @octokit/webhooks to v7
+context.pullRequest()
+probot.log (probot.logger is now deprecated)
+probot.stop() (Replaces undocumented probot.httpServer)
+replace bunyan with pino for logging
+use a single Octokit instance with JWT auth
+Bug Fixes
+use JWT auth for marketplace endpoints"
 95,"10.0.0-beta.33 (2020-08-17)
 Bug Fixes
 
 package: attempt to fix version replacements using semantic-release-plugin-update-version-in-files (7f90d96)
-"
+","10.0.0-beta.33 (2020-08-17)
+Bug Fixes
+package: attempt to fix version replacements using semantic-release-plugin-update-version-in-files (7f90d96)"
 96,"10.0.0-beta.32 (2020-08-17)
 Bug Fixes
 
 un-deprecated .log() calls to ease transition to Probot v10 (4e7884e)
-"
+","10.0.0-beta.32 (2020-08-17)
+Bug Fixes
+un-deprecated .log() calls to ease transition to Probot v10 (4e7884e)"
 97,"10.0.0-beta.31 (2020-08-16)
 Bug Fixes
 
 log AggregateErrors separately. Do not log errors from @octokit/webhooks twice (#1307) (53089f5)
-"
+","10.0.0-beta.31 (2020-08-16)
+Bug Fixes
+log AggregateErrors separately. Do not log errors from @octokit/webhooks twice (#1307) (53089f5)"
 98,"10.0.0-beta.30 (2020-08-15)
 Bug Fixes
 
 update @octokit/webhooks to latest (65d5386)
-"
+","10.0.0-beta.30 (2020-08-15)
+Bug Fixes
+update @octokit/webhooks to latest (65d5386)"
 99,"10.0.0-beta.29 (2020-08-14)
 Bug Fixes
 
 remove removal messages about LOG_FORMAT, LOG_LEVEL_IN_STRING, and SENTRY_DSN (bd46959)
-"
+","10.0.0-beta.29 (2020-08-14)
+Bug Fixes
+remove removal messages about LOG_FORMAT, LOG_LEVEL_IN_STRING, and SENTRY_DSN (bd46959)"
 100,"10.0.0-beta.28 (2020-08-14)
 Bug Fixes
 
 bring back LOG_FORMAT, LOG_LEVEL_IN_STRING, and SENTRY_DSN  (#1304) (3c0b3ec)
-"
+","10.0.0-beta.28 (2020-08-14)
+Bug Fixes
+bring back LOG_FORMAT, LOG_LEVEL_IN_STRING, and SENTRY_DSN  (#1304) (3c0b3ec)"
 101,"10.0.0-beta.27 (2020-08-13)
 Features
 
 deprecate probot.log(), app.log(), and context.log() in favor of .log.info() (#1303) (3f2d5fd)
-"
+","10.0.0-beta.27 (2020-08-13)
+Features
+deprecate probot.log(), app.log(), and context.log() in favor of .log.info() (#1303) (3f2d5fd)"
 102,"10.0.0-beta.26 (2020-08-13)
 Bug Fixes
 
 log error thrown in async app function (f8a1ac8)
-"
+","10.0.0-beta.26 (2020-08-13)
+Bug Fixes
+log error thrown in async app function (f8a1ac8)"
 103,"10.0.0-beta.25 (2020-08-12)
 Bug Fixes
 
 remove ProbotOctokitCore (#1302) (44ccf7e)
-"
+","10.0.0-beta.25 (2020-08-12)
+Bug Fixes
+remove ProbotOctokitCore (#1302) (44ccf7e)"
 104,"10.0.0-beta.24 (2020-08-12)
 Features
 
 probot.log. probot.logger is now deprecated (#1301) (2bacd14)
-"
+","10.0.0-beta.24 (2020-08-12)
+Features
+probot.log. probot.logger is now deprecated (#1301) (2bacd14)"
 105,"10.0.0-beta.23 (2020-08-12)
 Bug Fixes
 
@@ -768,72 +1106,106 @@ BREAKING CHANGES
 LOG_FORMAT is no longer support. If NODE_ENV is set to anything but ""development"", the output for each log is JSON, otherwise the output uses a formatted string
 ""LOG_LEVEL_IN_STRING"" has been removed in v10. Pipe the output to pino-text-level-transport instead. Example: NODE_ENV=production probot run index.js | pino-text-level-transport
 ""SENTRY_DSN"" has been removed in v10. Use pino-sentry instead and make sure to set NODE_ENV. Example: NODE_ENV=production probot run index.js | pino-sentry
-"
+","10.0.0-beta.23 (2020-08-12)
+Bug Fixes
+install latest @octokit/webhooks (524ffda)
+Features
+use pino for logging (9085aed)
+BREAKING CHANGES
+LOG_FORMAT is no longer support. If NODE_ENV is set to anything but ""development"", the output for each log is JSON, otherwise the output uses a formatted string
+""LOG_LEVEL_IN_STRING"" has been removed in v10. Pipe the output to pino-text-level-transport instead. Example: NODE_ENV=production probot run index.js | pino-text-level-transport
+""SENTRY_DSN"" has been removed in v10. Use pino-sentry instead and make sure to set NODE_ENV. Example: NODE_ENV=production probot run index.js | pino-sentry"
 106,"10.0.0-beta.22 (2020-08-10)
 Bug Fixes
 
 package: install @octokit/webhooks from https://github.com/octokit/webhooks.js/pull/199 for debugging / part 4 (09bafc8)
-"
+","10.0.0-beta.22 (2020-08-10)
+Bug Fixes
+package: install @octokit/webhooks from link for debugging / part 4 (09bafc8)"
 107,"10.0.0-beta.21 (2020-08-09)
 Bug Fixes
 
 package: install @octokit/webhooks from https://github.com/octokit/webhooks.js/pull/199 for debugging / part 3 (d4e4e03)
-"
+","10.0.0-beta.21 (2020-08-09)
+Bug Fixes
+package: install @octokit/webhooks from link for debugging / part 3 (d4e4e03)"
 108,"10.0.0-beta.20 (2020-08-09)
 Bug Fixes
 
 package: install @octokit/webhooks from https://github.com/octokit/webhooks.js/pull/199 for debugging / part 2 (ae28085)
-"
+","10.0.0-beta.20 (2020-08-09)
+Bug Fixes
+package: install @octokit/webhooks from link for debugging / part 2 (ae28085)"
 109,"10.0.0-beta.19 (2020-08-08)
 Bug Fixes
 
 package: install @octokit/webhooks from https://github.com/octokit/webhooks.js/pull/199 for debugging (610d800)
-"
+","10.0.0-beta.19 (2020-08-08)
+Bug Fixes
+package: install @octokit/webhooks from link for debugging (610d800)"
 110,"10.0.0-beta.18 (2020-08-07)
 Bug Fixes
 
 package: update @octokit/auth-app to the latest version (48d64bd)
-"
+","10.0.0-beta.18 (2020-08-07)
+Bug Fixes
+package: update @octokit/auth-app to the latest version (48d64bd)"
 111,"10.0.0-beta.17 (2020-08-05)
 Bug Fixes
 
 use JWT auth for marketplace endpoints (79f4e81)
-"
+","10.0.0-beta.17 (2020-08-05)
+Bug Fixes
+use JWT auth for marketplace endpoints (79f4e81)"
 112,"10.0.0-beta.16 (2020-08-05)
 Bug Fixes
 
 replace promise-events with @octokit/webhooks (#1293) (9456050)
-"
+","10.0.0-beta.16 (2020-08-05)
+Bug Fixes
+replace promise-events with @octokit/webhooks (#1293) (9456050)"
 113,"10.0.0-beta.15 (2020-08-01)
 Bug Fixes
 
 remove undocumented probot.errorHandler API (6ce651d)
-"
+","10.0.0-beta.15 (2020-08-01)
+Bug Fixes
+remove undocumented probot.errorHandler API (6ce651d)"
 114,"10.0.0-beta.14 (2020-08-01)
 Features
 
 probot.stop(). Removes undocumented probot.httpServer (40e600d)
-"
+","10.0.0-beta.14 (2020-08-01)
+Features
+probot.stop(). Removes undocumented probot.httpServer (40e600d)"
 115,"10.0.0-beta.13 (2020-08-01)
 Features
 
 deprecate createProbot (#1291) (339e29a)
-"
+","10.0.0-beta.13 (2020-08-01)
+Features
+deprecate createProbot (#1291) (339e29a)"
 116,"10.0.0-beta.12 (2020-07-31)
 Features
 
 update to latest @octokit/webhooks (#1290) (0263a3b)
-"
+","10.0.0-beta.12 (2020-07-31)
+Features
+update to latest @octokit/webhooks (#1290) (0263a3b)"
 117,"10.0.0-beta.11 (2020-07-30)
 Bug Fixes
 
 log request status in octokit request logging (#1288) (322aeda)
-"
+","10.0.0-beta.11 (2020-07-30)
+Bug Fixes
+log request status in octokit request logging (#1288) (322aeda)"
 118,"10.0.0-beta.10 (2020-07-30)
 Bug Fixes
 
 prevent error.code deprecation message (#1287) (14a3035)
-"
+","10.0.0-beta.10 (2020-07-30)
+Bug Fixes
+prevent error.code deprecation message (#1287) (14a3035)"
 119,"10.0.0-beta.9 (2020-07-28)
 Features
 
@@ -842,37 +1214,53 @@ context.pullRequest() (#1275) (eb9469e)
 BREAKING CHANGES
 
 context.issue() now returns .issue_number instead of .number
-"
+","10.0.0-beta.9 (2020-07-28)
+Features
+context.pullRequest() (#1275) (eb9469e)
+BREAKING CHANGES
+context.issue() now returns .issue_number instead of .number"
 120,"10.0.0-beta.8 (2020-07-28)
 Bug Fixes
 
 regression in probot@10.0.0-beta.7 (78b0c6e)
-"
+","10.0.0-beta.8 (2020-07-28)
+Bug Fixes
+regression in probot@10.0.0-beta.7 (78b0c6e)"
 121,"10.0.0-beta.7 (2020-07-28)
 Bug Fixes
 
 merge Octokit Installation auth options with App default auth options (8a93205)
-"
+","10.0.0-beta.7 (2020-07-28)
+Bug Fixes
+merge Octokit Installation auth options with App default auth options (8a93205)"
 122,"10.0.0-beta.6 (2020-07-25)
 Bug Fixes
 
 use a single Octokit instance with JWT auth (#1282) (1be877e)
-"
+","10.0.0-beta.6 (2020-07-25)
+Bug Fixes
+use a single Octokit instance with JWT auth (#1282) (1be877e)"
 123,"10.0.0-beta.5 (2020-07-24)
 Bug Fixes
 
 read GHE_HOST configuration and set baseUrl for Octokit instances at a single place (#1281) (90d28a0)
-"
+","10.0.0-beta.5 (2020-07-24)
+Bug Fixes
+read GHE_HOST configuration and set baseUrl for Octokit instances at a single place (#1281) (90d28a0)"
 124,"10.0.0-beta.4 (2020-07-24)
 Bug Fixes
 
 replace cache-manager with lru-cache and @octokit/auth-apps internal (#1279) (b8867c2)
-"
+","10.0.0-beta.4 (2020-07-24)
+Bug Fixes
+replace cache-manager with lru-cache and @octokit/auth-apps internal (#1279) (b8867c2)"
 125,"10.0.0-beta.3 (2020-07-24)
 Bug Fixes
 
 address deprecation messages from @octokit/webhooks (cc4493f)
-"
+","10.0.0-beta.3 (2020-07-24)
+Bug Fixes
+address deprecation messages from @octokit/webhooks (cc4493f)"
 126,"10.0.0-beta.2 (2020-07-24)
 Features
 
@@ -881,7 +1269,11 @@ update to @octokit/webhooks v7 (#1276) (79ade73)
 BREAKING CHANGES
 
 registry_package event was renamed to package
-"
+","10.0.0-beta.2 (2020-07-24)
+Features
+update to @octokit/webhooks v7 (#1276) (79ade73)
+BREAKING CHANGES
+registry_package event was renamed to package"
 127,"10.0.0-beta.1 (2020-07-22)
 Features
 
@@ -900,114 +1292,167 @@ const probot = new Probot({
 ``
 * Theprobotpackage no longer exportsOctokit. UseProbotOctokitorProbotOctokitCore` instead.
 js
+const { ProbotOctokit, ProbotOctokitCore } = require('probot')","10.0.0-beta.1 (2020-07-22)
+Features
+update @octokit/rest to v17 (fc4f587), closes #1250
+BREAKING CHANGES
+require Node 10.21+
+Probot no longer accepts options.throttlingOptions. In order to disable throttling for testing, set options.Octokit to ProbotOctokitCore. ProbotOctokitCore is the Octokit Constructor used internally by Probot, minus the retry & throttling plugins.
+module
+* Theprobotpackage no longer exportsOctokit. UseProbotOctokitorProbotOctokitCore` instead.
+js
 const { ProbotOctokit, ProbotOctokitCore } = require('probot')"
 128,"9.13.0 (2020-07-21)
 Features
 
 throttleOptions for Probot constructor (#1272) (ac86ffb)
-"
+","9.13.0 (2020-07-21)
+Features
+throttleOptions for Probot constructor (#1272) (ac86ffb)"
 129,"9.12.0 (2020-07-20)
 Features
 
 GET /probot/stats is deprecated and will be removed in v10 (#1268) (1c31415)
-"
+","9.12.0 (2020-07-20)
+Features
+GET /probot/stats is deprecated and will be removed in v10 (#1268) (1c31415)"
 130,"9.11.7 (2020-07-12)
 Bug Fixes
 
 handle ""port in use"" (#1260) (1445abe)
-"
+","9.11.7 (2020-07-12)
+Bug Fixes
+handle ""port in use"" (#1260) (1445abe)"
 131,"9.11.6 (2020-07-10)
 Bug Fixes
 
 TypeScript: context.config() type (#1252) (8f62659)
-"
+","9.11.6 (2020-07-10)
+Bug Fixes
+TypeScript: context.config() type (#1252) (8f62659)"
 132,"9.11.5 (2020-06-04)
 Bug Fixes
 
 add runtime types as dependencies (#1241) (48a5b08), closes #759
-"
+","9.11.5 (2020-06-04)
+Bug Fixes
+add runtime types as dependencies (#1241) (48a5b08), closes #759"
 133,"9.11.4 (2020-05-28)
 Bug Fixes
 
 package: npm audit (e2a87f8)
-"
+","9.11.4 (2020-05-28)
+Bug Fixes
+package: npm audit (e2a87f8)"
 134,"9.11.3 (2020-04-12)
 Bug Fixes
 
 quotation marks in setup description (#1175) (2fdb253)
-"
+","9.11.3 (2020-04-12)
+Bug Fixes
+quotation marks in setup description (#1175) (2fdb253)"
 135,"9.11.2 (2020-03-25)
 Bug Fixes
 
 github: Octokit is optional (6aeeabc)
-"
+","9.11.2 (2020-03-25)
+Bug Fixes
+github: Octokit is optional (6aeeabc)"
 136,"9.11.1 (2020-03-23)
 Bug Fixes
 
 github: provide default ProbotOctokit (#1169) (0bb1d19)
-"
+","9.11.1 (2020-03-23)
+Bug Fixes
+github: provide default ProbotOctokit (#1169) (0bb1d19)"
 137,"9.11.0 (2020-03-20)
 Features
 
 const { GitHubAPI } = require('probot') (#1165) (982e411)
-"
+","9.11.0 (2020-03-20)
+Features
+const { GitHubAPI } = require('probot') (#1165) (982e411)"
 138,"9.10.2 (2020-03-14)
 Bug Fixes
 
 package: update commander to version 5.0.0 (694f4fd)
-"
+","9.10.2 (2020-03-14)
+Bug Fixes
+package: update commander to version 5.0.0 (694f4fd)"
 139,"9.10.1 (2020-03-12)
 Bug Fixes
 
 Revert ""feat: mention that app must be activated after install (#1155)"" (45a21fc)
-"
+","9.10.1 (2020-03-12)
+Bug Fixes
+Revert ""feat: mention that app must be activated after install (#1155)"" (45a21fc)"
 140,"9.10.0 (2020-03-11)
 Features
 
 mention that app must be activated after install (#1155) (05c9240)
-"
+","9.10.0 (2020-03-11)
+Features
+mention that app must be activated after install (#1155) (05c9240)"
 141,"9.9.8 (2020-03-09)
 Bug Fixes
 
 remove unused dependencies (#1151) (a3fc918)
-"
+","9.9.8 (2020-03-09)
+Bug Fixes
+remove unused dependencies (#1151) (a3fc918)"
 142,"9.9.7 (2020-03-04)
 Bug Fixes
 
 package: update is-base64 to version 1.1.0 (#1148) (787932b)
-"
+","9.9.7 (2020-03-04)
+Bug Fixes
+package: update is-base64 to version 1.1.0 (#1148) (787932b)"
 143,"9.9.6 (2020-02-24)
 Bug Fixes
 
 package: update uuid to version 7.0.0 (#1146) (c6551d0)
-"
+","9.9.6 (2020-02-24)
+Bug Fixes
+package: update uuid to version 7.0.0 (#1146) (c6551d0)"
 144,"9.9.5 (2020-02-21)
 Bug Fixes
 
 package: update cache-manager to version 3.0.0 (fbf6031)
-"
+","9.9.5 (2020-02-21)
+Bug Fixes
+package: update cache-manager to version 3.0.0 (fbf6031)"
 145,"9.9.4 (2020-02-07)
 Bug Fixes
 
 trigger release to publish latest version to npm (c5c8158)
-"
+","9.9.4 (2020-02-07)
+Bug Fixes
+trigger release to publish latest version to npm (c5c8158)"
 146,"9.9.1 (2020-01-16)
 Bug Fixes
 
 package: update @octokit/plugin-retry to version 3.0.1 (0b53898), closes #1110
 package: update @octokit/plugin-throttling to version 3.0.0 (de0aa01)
-"
+","9.9.1 (2020-01-16)
+Bug Fixes
+package: update @octokit/plugin-retry to version 3.0.1 (0b53898), closes #1110
+package: update @octokit/plugin-throttling to version 3.0.0 (de0aa01)"
 147,"9.9.0 (2020-01-06)
 Features
 
 configure update-notifier (804f62b)
-"
+","9.9.0 (2020-01-06)
+Features
+configure update-notifier (804f62b)"
 148,"9.8.1 (2020-01-02)
 Bug Fixes
 
 cli: fixup invalid args validation (#1099) (e0d3072)
 Add publish-docs stage to Travis build (#1100) (f90057e)
-"
+","9.8.1 (2020-01-02)
+Bug Fixes
+cli: fixup invalid args validation (#1099) (e0d3072)
+Add publish-docs stage to Travis build (#1100) (f90057e)"
 149,"9.8.0 (2019-12-25)
 Bug Fixes
 
@@ -1016,63 +1461,90 @@ Limit webhook-event-check to known events in /app response (#1092) (28a4d43)
 Features
 
 warn on passing in unknown commands (f368013)
-"
+","9.8.0 (2019-12-25)
+Bug Fixes
+Limit webhook-event-check to known events in /app response (#1092) (28a4d43)
+Features
+warn on passing in unknown commands (f368013)"
 150,"9.7.0 (2019-12-19)
 Features
 
 Initial webhook-event-check feature (#1078) (d8aa4e0)
-"
+","9.7.0 (2019-12-19)
+Features
+Initial webhook-event-check feature (#1078) (d8aa4e0)"
 151,"9.6.6 (2019-11-18)
 Bug Fixes
 
 update bunyan-format and remove earlier type assertion patch (61c05ea)
-"
+","9.6.6 (2019-11-18)
+Bug Fixes
+update bunyan-format and remove earlier type assertion patch (61c05ea)"
 152,"9.6.5 (2019-11-18)
 Bug Fixes
 
 assert stream type (d35e3b7)
-"
+","9.6.5 (2019-11-18)
+Bug Fixes
+assert stream type (d35e3b7)"
 153,"9.6.4 (2019-11-05)
 Bug Fixes
 
 adapt for @octokit/plugin-enterprise-compatibility@^1.2.1 (af2be40)
-"
+","9.6.4 (2019-11-05)
+Bug Fixes
+adapt for @octokit/plugin-enterprise-compatibility@^1.2.1 (af2be40)"
 154,"9.6.3 (2019-11-02)
 Bug Fixes
 
 Use return value of this instead of a class (#1060) (9cf0f98)
-"
+","9.6.3 (2019-11-02)
+Bug Fixes
+Use return value of this instead of a class (#1060) (9cf0f98)"
 155,"9.6.2 (2019-11-01)
 Bug Fixes
 
 package: update commander to version 4.0.0 (15e28d5)
-"
+","9.6.2 (2019-11-01)
+Bug Fixes
+package: update commander to version 4.0.0 (15e28d5)"
 156,"9.6.1 (2019-10-30)
 Bug Fixes
 
 Correctly retry requests after hitting rate or abuse limits (b9bb412)
 typescript: add done callback to Paginate interface (3053278)
-"
+","9.6.1 (2019-10-30)
+Bug Fixes
+Correctly retry requests after hitting rate or abuse limits (b9bb412)
+typescript: add done callback to Paginate interface (3053278)"
 157,"9.6.0 (2019-10-23)
 Features
 
 throw errors during startup if NODE_ENV is production and the application is not in a usable state (#1046) (ca3d2f8)
-"
+","9.6.0 (2019-10-23)
+Features
+throw errors during startup if NODE_ENV is production and the application is not in a usable state (#1046) (ca3d2f8)"
 158,"9.5.3 (2019-10-12)
 Bug Fixes
 
 update insecure dependencies (ed1cdf7)
-"
+","9.5.3 (2019-10-12)
+Bug Fixes
+update insecure dependencies (ed1cdf7)"
 159,"9.5.2 (2019-10-09)
 Bug Fixes
 
 read environment variables before initiating logging (#1036) (c5f7a32)
-"
+","9.5.2 (2019-10-09)
+Bug Fixes
+read environment variables before initiating logging (#1036) (c5f7a32)"
 160,"9.5.1 (2019-10-07)
 Bug Fixes
 
 package: update deepmerge to version 4.1.0 (422f7da)
-"
+","9.5.1 (2019-10-07)
+Bug Fixes
+package: update deepmerge to version 4.1.0 (422f7da)"
 161,"9.5.0 (2019-09-19)
 Bug Fixes
 
@@ -1081,171 +1553,240 @@ config: handle cases when .github/<app name>.yml is not a file, but a directory,
 Features
 
 @octokit/rest v16.29.0. Besides new methods also plenty of new Typescript definitions (61be0fd)
-"
+","9.5.0 (2019-09-19)
+Bug Fixes
+config: handle cases when .github/.yml is not a file, but a directory, symlink or submodule (31c3602)
+Features
+@octokit/rest v16.29.0. Besides new methods also plenty of new Typescript definitions (61be0fd)"
 162,"9.4.0 (2019-09-12)
 Features
 
 add LOG_LEVEL_IN_STRING to set bunyan-format levelInString option (#1015) (bf354ff)
-"
+","9.4.0 (2019-09-12)
+Features
+add LOG_LEVEL_IN_STRING to set bunyan-format levelInString option (#1015) (bf354ff)"
 163,"9.3.4 (2019-09-09)
 Bug Fixes
 
 update @octokit/graphql to v4 (#1006) (27cecb0)
-"
+","9.3.4 (2019-09-09)
+Bug Fixes
+update @octokit/graphql to v4 (#1006) (27cecb0)"
 164,"9.3.3 (2019-09-02)
 Bug Fixes
 
 package: update is-base64 to version 1.0.0 (95978f5)
-"
+","9.3.3 (2019-09-02)
+Bug Fixes
+package: update is-base64 to version 1.0.0 (95978f5)"
 165,"9.3.2 (2019-08-18)
 Bug Fixes
 
 package: update dotenv to version 8.1.0 (fd24686)
-"
+","9.3.2 (2019-08-18)
+Bug Fixes
+package: update dotenv to version 8.1.0 (fd24686)"
 166,"9.3.1 (2019-08-11)
 Bug Fixes
 
 package: update commander to version 3.0.0 (1867b39)
-"
+","9.3.1 (2019-08-11)
+Bug Fixes
+package: update commander to version 3.0.0 (1867b39)"
 167,"9.3.0 (2019-08-05)
 Features
 
 Implement probot-config on context.config (#619) (3f0491f)
-"
+","9.3.0 (2019-08-05)
+Features
+Implement probot-config on context.config (#619) (3f0491f)"
 168,"9.2.20 (2019-07-24)
 Bug Fixes
 
 update hbs dependency to ^4.0.4 (#973) (de79aab)
-"
+","9.2.20 (2019-07-24)
+Bug Fixes
+update hbs dependency to ^4.0.4 (#973) (de79aab)"
 169,"9.2.19 (2019-07-12)
 Bug Fixes
 
 package: update @octokit/app to version 4.0.0 (e59aba5)
-"
+","9.2.19 (2019-07-12)
+Bug Fixes
+package: update @octokit/app to version 4.0.0 (e59aba5)"
 170,"9.2.18 (2019-07-12)
 Bug Fixes
 
 package: update @octokit/graphql to version 3.0.1 (a3ee78a)
-"
+","9.2.18 (2019-07-12)
+Bug Fixes
+package: update @octokit/graphql to version 3.0.1 (a3ee78a)"
 171,"9.2.17 (2019-07-12)
 Bug Fixes
 
 package: update @octokit/graphql to version 3.0.0 (9d1878d)
-"
+","9.2.17 (2019-07-12)
+Bug Fixes
+package: update @octokit/graphql to version 3.0.0 (9d1878d)"
 172,"9.2.16 (2019-07-09)
 Bug Fixes
 
 package: update @octokit/graphql to version 2.1.3 (b2d7ead)
-"
+","9.2.16 (2019-07-09)
+Bug Fixes
+package: update @octokit/graphql to version 2.1.3 (b2d7ead)"
 173,"9.2.15 (2019-06-12)
 Bug Fixes
 
 package: bump @octokit/app dependency (#944) (05af801)
-"
+","9.2.15 (2019-06-12)
+Bug Fixes
+package: bump @octokit/app dependency (#944) (05af801)"
 174,"9.2.14 (2019-06-11)
 Bug Fixes
 
 package: update supports-color to version 7.0.0 (fc282f3)
-"
+","9.2.14 (2019-06-11)
+Bug Fixes
+package: update supports-color to version 7.0.0 (fc282f3)"
 175,"9.2.13 (2019-05-24)
 Bug Fixes
 
 typescript: use typescript [@deprecated](https://github.com/deprecated) tag for context.github.query (#938) (ade14ae)
-"
+","9.2.13 (2019-05-24)
+Bug Fixes
+typescript: use typescript @deprecated tag for context.github.query (#938) (ade14ae)"
 176,"9.2.12 (2019-05-22)
 Bug Fixes
 
 package: update @octokit/app to version 3.0.0 (232ce07)
-"
+","9.2.12 (2019-05-22)
+Bug Fixes
+package: update @octokit/app to version 3.0.0 (232ce07)"
 177,"9.2.11 (2019-05-17)
 Bug Fixes
 
 package: update @octokit/graphql to version 2.1.2 (aa16435)
-"
+","9.2.11 (2019-05-17)
+Bug Fixes
+package: update @octokit/graphql to version 2.1.2 (aa16435)"
 178,"9.2.10 (2019-05-03)
 Bug Fixes
 
 package: update dotenv to version 8.0.0 (c335748)
-"
+","9.2.10 (2019-05-03)
+Bug Fixes
+package: update dotenv to version 8.0.0 (c335748)"
 179,"9.2.9 (2019-04-28)
 Bug Fixes
 
 typescript: log.child options (#924) (6f75599)
-"
+","9.2.9 (2019-04-28)
+Bug Fixes
+typescript: log.child options (#924) (6f75599)"
 180,"9.2.8 (2019-04-24)
 Bug Fixes
 
 remove deprecation message on /probot/stats endpoint (93d6899)
-"
+","9.2.8 (2019-04-24)
+Bug Fixes
+remove deprecation message on /probot/stats endpoint (93d6899)"
 181,"9.2.7 (2019-04-22)
 Bug Fixes
 
 Support GitHub Enterprise Server in GitHub App Manifest flow implementation (#902) (66a3b14)
-"
+","9.2.7 (2019-04-22)
+Bug Fixes
+Support GitHub Enterprise Server in GitHub App Manifest flow implementation (#902) (66a3b14)"
 182,"9.2.6 (2019-04-18)
 Bug Fixes
 
 update js-yaml (#916) (e831d3e)
-"
+","9.2.6 (2019-04-18)
+Bug Fixes
+update js-yaml (#916) (e831d3e)"
 183,"9.2.5 (2019-04-15)
 Bug Fixes
 
 check if err.message exists (#914) (9cc6131)
-"
+","9.2.5 (2019-04-15)
+Bug Fixes
+check if err.message exists (#914) (9cc6131)"
 184,"7.5.3 (2019-04-12)
 Bug Fixes
 
 normalize payload string before verifying signature (via update to latest @octokit/webhooks) (91cf5b0)
-"
+","7.5.3 (2019-04-12)
+Bug Fixes
+normalize payload string before verifying signature (via update to latest @octokit/webhooks) (91cf5b0)"
 185,"Bug Fixes
 
 Update dependencies (#870) (a135244)
-"
+","Bug Fixes
+Update dependencies (#870) (a135244)"
 186,"9.2.4 (2019-04-11)
 Bug Fixes
 
 package: bump @octokit/app (#910) (ecae3fc)
-"
+","9.2.4 (2019-04-11)
+Bug Fixes
+package: bump @octokit/app (#910) (ecae3fc)"
 187,"9.2.3 (2019-04-11)
 Bug Fixes
 
 propagate errors to @octokit/webhooks (#907) (de871e1)
-"
+","9.2.3 (2019-04-11)
+Bug Fixes
+propagate errors to @octokit/webhooks (#907) (de871e1)"
 188,"9.2.2 (2019-04-09)
 Bug Fixes
 
 package: update @octokit/graphql to version 2.1.1 (89a27c6), closes #903
-"
+","9.2.2 (2019-04-09)
+Bug Fixes
+package: update @octokit/graphql to version 2.1.1 (89a27c6), closes #903"
 189,"9.2.1 (2019-04-06)
 Bug Fixes
 
 package: update @octokit/webhooks to version 6.0.0 (172a0b3)
-"
+","9.2.1 (2019-04-06)
+Bug Fixes
+package: update @octokit/webhooks to version 6.0.0 (172a0b3)"
 190,"9.2.0 (2019-04-03)
 Features
 
 Update @octokit/rest to 16.23.2 (#901) (23e8eab)
-"
+","9.2.0 (2019-04-03)
+Features
+Update @octokit/rest to 16.23.2 (#901) (23e8eab)"
 191,"9.1.1 (2019-03-27)
 Bug Fixes
 
 package: update semver to version 6.0.0 (fd63724), closes #897
-"
+","9.1.1 (2019-03-27)
+Bug Fixes
+package: update semver to version 6.0.0 (fd63724), closes #897"
 192,"9.1.0 (2019-03-25)
 Features
 
 typescript: export type OnCallback (#896) (036ee3b)
-"
+","9.1.0 (2019-03-25)
+Features
+typescript: export type OnCallback (#896) (036ee3b)"
 193,"9.0.2 (2019-03-19)
 Bug Fixes
 
 package: update @octokit/graphql to version 2.0.2 (e584124)
-"
+","9.0.2 (2019-03-19)
+Bug Fixes
+package: update @octokit/graphql to version 2.0.2 (e584124)"
 194,"9.0.1 (2019-03-13)
 Bug Fixes
 
 package: update dotenv to version 7.0.0 (28ead7e)
-"
+","9.0.1 (2019-03-13)
+Bug Fixes
+package: update dotenv to version 7.0.0 (28ead7e)"
 195,"Breaking changes
 
 ⚠️ all previously deprecated methods have been removed. Make sure you address all deprecation messages you see with Probot v7 before upgrading.
@@ -1324,64 +1865,155 @@ package: update pkg-conf to version 3.0.0 (b77e06c)
 remove unnecessary escaping in private key error message  (#862) (8c47d1f)
 Update dependencies (#870) (d32ce60)
 typescript: @octokit/webhooks import (#854) (30ac1a4)
-"
+","Breaking changes
+⚠️ all previously deprecated methods have been removed. Make sure you address all deprecation messages you see with Probot v7 before upgrading.
+context.github.query(): Changes in errors thrown due to GraphQL errors
+error.name is now GraphqlError, was GraphQLQueryError
+error.query is now error.request.query
+preview headers that are not required to use an API are no longer set automatically. Set using {headers: { accept: ''}
+.gitdata.getTags() has been removed. Use .git.listRefs({namespace: tags}) instead
+Methods for undocumented endpoints have been removed.
+Instead of octokit.users.getById({id}) use octokit.request('GET /user/:id', {id})
+Instead of octokit.repos.getById({id}) use octokit.request('GET /repositories/:id', {id})
+octokit.enterprise.* methods have been removed. Use your own @ocotkit/rest instance and install the @octokit/enterprise-rest plugin
+octokit.issues.addLabels sends labels parameter with ""labels"" namespace instead of sending the array in the request body root. This is not supported by GitHub Enterprise 2.15 or older. You have several options.
+Use the @octokit/enterprise-compatibility plugin
+Use the @octokit/enterprise-rest plugin loading all routes for the GHE version you want to support
+Use octokit.request() directly:
+js
+octokit.request('/repos/:owner/:repo/issues/:number/labels', {
+  owner,
+  repo,
+  number,
+  data: ['label1', 'label2']
+})
+* The milestone parameter is no longer validated using a regex as it cannot be derived from octokit/routes
+* error.status is now the response status code number. The status text is no longer returned
+* Deprecated event.event property is no longer supported. Use event.name instead
+* Deprecated new Probot({catchErrors}) has been removed
+* probot simulate hase been removed, use probot receive instead
+Features
+Pagination: the .paginate API from @octokit/rest.js is now used
+.paginate(options, mapFn) now accepts the request options, just like ocotkit.request.
+.paginate.iterator(options) allows for async iteration.
+Custom requests using octokit.request & octokit.request.endpoint.
+Improved Typescript definitions for context.github
+add constructor option for redis config (#846) (4bbf29c), closes #845
+Add overloads for all Webhook events (#858) (19fb9d2)
+Cluster support for request throttling (86f5312)
+moar Typescript foo (fa9a228)
+new github.paginate API, github.paginate.iterator() (e0868f1)
+new throttling & automated retries (c6cbc97)
+options.Octokit to pass custom Octokit version (#840) (9b11084)
+standalone run command (#751) (bd42feb)
+Deprecations
+context.github.query() is now context.github.graphql()
+context.github.query(query, variables, headers) is now context.github.graphql(query, options). options.headers is passed as headers. Other options are passed as variables, with the exception of method, baseUrl, url, headers, request, and query.
+context.github.paginate(promise, mapFn) is now context.github.paginate(requestOptions, mapFn). Example:
+Before
+js
+  const allIssues = await context.github.paginate(
+    context.github.issues.getAll(context.repo())
+  )
+After
+js
+  const allIssues = await context.github.paginate(
+    context.github.issues.getAll.endpoint.merge(context.repo())
+  )
+Bug Fixes
+create only a single redis connection when REDIS_URL is set (6638331)
+error.code => error.status (#871) (596a42d)
+make .issues.addLabels() compatible with current GHE versions (aa1c570)
+make smee-client requirement optional again (#868) (1581315)
+pass baseUrl option to @octokit/app (#839) (eab6851)
+remove deprecated ""simulate"" command (57587b8)
+remove deprecated catchErrors constructor option (f46c41c)
+remove handling deprecated .event property (1f76ec6)
+logging: error.status is the new error.code. The old error.status is no more (2918249)
+package: update pkg-conf to version 3.0.0 (b77e06c)
+remove unnecessary escaping in private key error message  (#862) (8c47d1f)
+Update dependencies (#870) (d32ce60)
+typescript: @octokit/webhooks import (#854) (30ac1a4)"
 196,"8.0.2 (2019-03-03)
 Bug Fixes
 
 error.code => error.status (#871) (f360c5f)
-"
+","8.0.2 (2019-03-03)
+Bug Fixes
+error.code => error.status (#871) (f360c5f)"
 197,"8.0.1 (2019-03-03)
 Bug Fixes
 
 make smee-client requirement optional again (#868) (99784f3)
-"
+","8.0.1 (2019-03-03)
+Bug Fixes
+make smee-client requirement optional again (#868) (99784f3)"
 198,"🤦‍♂️We did a little 💩
-We released both v8.0.0 and v9.0.0 at the same time. Please update directly to v9. See changelogs at https://github.com/probot/probot/releases/tag/v9.0.0"
+We released both v8.0.0 and v9.0.0 at the same time. Please update directly to v9. See changelogs at https://github.com/probot/probot/releases/tag/v9.0.0","🤦‍♂️We did a little 💩
+We released both v8.0.0 and v9.0.0 at the same time. Please update directly to v9. See changelogs at link"
 199,"8.0.0-beta.12 (2019-03-03)
 Bug Fixes
 
 package: update pkg-conf to version 3.0.0 (faefc44)
-"
+","8.0.0-beta.12 (2019-03-03)
+Bug Fixes
+package: update pkg-conf to version 3.0.0 (faefc44)"
 200,"7.5.1 (2019-03-03)
 Bug Fixes
 
 Update dependencies (#870) (d32ce60)
-"
+","7.5.1 (2019-03-03)
+Bug Fixes
+Update dependencies (#870) (d32ce60)"
 201,"8.0.0-beta.11 (2019-02-28)
 Features
 
 Add overloads for all Webhook events (#858) (e367c81)
-"
+","8.0.0-beta.11 (2019-02-28)
+Features
+Add overloads for all Webhook events (#858) (e367c81)"
 202,"8.0.0-beta.10 (2019-02-27)
 Bug Fixes
 
 remove unnecessary escaping in private key error message  (#862) (9dd9a15)
-"
+","8.0.0-beta.10 (2019-02-27)
+Bug Fixes
+remove unnecessary escaping in private key error message  (#862) (9dd9a15)"
 203,"8.0.0-beta.9 (2019-02-20)
 Features
 
 standalone run command (#751) (067966f)
-"
+","8.0.0-beta.9 (2019-02-20)
+Features
+standalone run command (#751) (067966f)"
 204,"8.0.0-beta.8 (2019-02-16)
 Features
 
 options.Octokit to pass custom Octokit version (#840) (bae8285)
-"
+","8.0.0-beta.8 (2019-02-16)
+Features
+options.Octokit to pass custom Octokit version (#840) (bae8285)"
 205,"8.0.0-beta.7 (2019-02-14)
 Bug Fixes
 
 typescript: @octokit/webhooks import (#854) (8f949e2)
-"
+","8.0.0-beta.7 (2019-02-14)
+Bug Fixes
+typescript: @octokit/webhooks import (#854) (8f949e2)"
 206,"8.0.0-beta.6 (2019-02-07)
 Features
 
 add constructor option for redis config (#846) (1c71952), closes #845
-"
+","8.0.0-beta.6 (2019-02-07)
+Features
+add constructor option for redis config (#846) (1c71952), closes #845"
 207,"8.0.0-beta.5 (2019-01-31)
 Bug Fixes
 
 pass baseUrl option to @octokit/app (#839) (dc59207)
-"
+","8.0.0-beta.5 (2019-01-31)
+Bug Fixes
+pass baseUrl option to @octokit/app (#839) (dc59207)"
 208,"8.0.0-beta.4 (2019-01-30)
 Bug Fixes
 
@@ -1394,17 +2026,29 @@ BREAKING CHANGES
 Deprecated event.event property is no longer handled. Use event.name instead
 Deprecated new Probot({catchErrors}) has been removed
 probot simulate hase been removed, use probot receive instead
-"
+","8.0.0-beta.4 (2019-01-30)
+Bug Fixes
+remove deprecated ""simulate"" command (739e3a1)
+remove deprecated catchErrors constructor option (4a740ce)
+remove handling deprecated .event property (a3fb089)
+BREAKING CHANGES
+Deprecated event.event property is no longer handled. Use event.name instead
+Deprecated new Probot({catchErrors}) has been removed
+probot simulate hase been removed, use probot receive instead"
 209,"8.0.0-beta.3 (2019-01-27)
 Bug Fixes
 
 create only a single redis connection when REDIS_URL is set (e1d7873)
-"
+","8.0.0-beta.3 (2019-01-27)
+Bug Fixes
+create only a single redis connection when REDIS_URL is set (e1d7873)"
 210,"8.0.0-beta.2 (2019-01-26)
 Features
 
 Cluster support for request throttling (37938d2)
-"
+","8.0.0-beta.2 (2019-01-26)
+Features
+Cluster support for request throttling (37938d2)"
 211,"BREAKING CHANGES
 
 context.github.query(): Changes in errors thrown due to GraphQL errors
@@ -1475,7 +2119,57 @@ make .issues.addLabels() compatible with current GHE versions (d41c422)
 Build System
 
 package: @octokit/rest v16, @octokit/graphql, octokit-pagination-methods (a8f39d0)
-"
+","BREAKING CHANGES
+context.github.query(): Changes in errors thrown due to GraphQL errors
+error.name is now GraphqlError, was GraphQLQueryError
+error.query is now error.request.query
+all previously deprecated methods have been removed
+preview headers that are not required to use an API are no longer set automatically. Set using {headers: { accept: ''}
+.gitdata.getTags() has been removed. Use .gitdata.listRefs({namespace: tags}) instead
+Methods for undocumented endpoints have been removed.
+Instead of octokit.users.getById({id}) use octokit.request('GET /user/:id', {id})
+Instead of octokit.repos.getById({id}) use octokit.request('GET /repositories/:id', {id})
+octokit.enterprise.* methods have been removed. Use your own @ocotkit/rest instance and install the @octokit/enterprise-rest plugin
+octokit.issues.addLabels sends labels parameter with ""labels"" namespace instead of sending the array in the request body root. This is not supported by GitHub Enterprise 2.15 or older. You have several options.
+Use the @octokit/enterprise-compatibility plugin
+Use the @octokit/enterprise-rest plugin loading all routes for the GHE version you want to support
+Use octokit.request() directly:
+js
+octokit.request('/repos/:owner/:repo/issues/:number/labels', {
+  owner,
+  repo,
+  number,
+  data: ['label1', 'label2']
+})
+* The milestone parameter is no longer validated using a regex as it cannot be derived from octokit/routes
+* error.status is now the response status code number. The status text is no longer returned
+Deprecations
+context.github.query() is now context.github.graphql()
+context.github.query(query, variables, headers) is now context.github.graphql(query, options). options.headers is passed as headers. Other options are passed as variables, with the exception of method, baseUrl, url, headers, request, and query.
+context.github.paginate(promise, mapFn) is now context.github.paginate(requestOptions, mapFn). Example:
+Before
+js
+  const allIssues = await context.github.paginate(
+    context.github.issues.getAll(context.repo())
+  )
+After
+js
+  const allIssues = await context.github.paginate(
+    context.github.issues.getAll.endpoint.merge(context.repo())
+  )
+Features
+Pagination: the .paginate API from @octokit/rest.js is now used
+.paginate(options, mapFn) now accepts the request options, just like ocotkit.request.
+.paginate.iterator(options) allows for async iteration.
+Custom requests using octokit.request & octokit.request.endpoint.
+Improved Typescript definitions for context.github
+new github.paginate API, github.paginate.iterator() (153a3fa)
+new throttling & automated retries (6f06f82)
+Bug Fixes
+logging: error.status is the new error.code. The old error.status is no more (3b3d656)
+make .issues.addLabels() compatible with current GHE versions (d41c422)
+Build System
+package: @octokit/rest v16, @octokit/graphql, octokit-pagination-methods (a8f39d0)"
 212,"🐣  Features
 
 Prefill Glitch app name as GitHub app name for app manifests (#742) @yeskunall
@@ -1505,6 +2199,29 @@ Fix URL for Serverless GCF repository (#805) @pgoodjohn
 fix: Update year to 2019 (#812) @MarvinJWendt
 Add pull reminders badge to README (#814) @abinoda
 
+See full changelog","🐣  Features
+Prefill Glitch app name as GitHub app name for app manifests (#742) @yeskunall
+🐜  Bug Fixes
+Fix typings for stats app (#728) @wolfy1339
+Update dotenv to the latest version 🚀 (#781) @greenkeeper[bot]
+Update @types/jsonwebtoken to the latest version 🚀 (#757) @greenkeeper[bot]
+PRIVATE_KEY_PATH error handling (#778) (#782) @NikhilM98
+Use path.resolve instead of path.join to resolve payload paths. (#785) @krtx 
+Removed allowed failure configuration for node 10 (#802) @brwne
+Typescript: Fixed GitHubAPI.paginate callback signature (#775) @Eddman
+Typescript: Fix webhook payload definition (#793) @gimenete
+Typescript: Fix Webhooks class constructor (#798) @wolfy1339 
+🎰  Others
+Fix misspellings of receive (#783) @FalconWiz
+Update simulating-webhooks.md (#796) @mayank23 
+Fix link to ""Create the GitHub App"" (#786) @chadfawcett
+Fix link to ""probot-metadata"" extension (#787) @chadfawcett
+Added package-lock.json #769 (#791) @HaydenMeloche 
+Spelling (#800) @jsoref
+Fix sample code for serverless deployment (#807) @kentaro-m
+Fix URL for Serverless GCF repository (#805) @pgoodjohn
+fix: Update year to 2019 (#812) @MarvinJWendt
+Add pull reminders badge to README (#814) @abinoda
 See full changelog"
 213,"Improvements
 
@@ -1516,11 +2233,21 @@ Allow starting probot without token or id/cert (#738) @bkeepers
 Do not require token on probot-receive (#754) @gimenete
 Include version in manifest (#763) @wilhelmklopp 
 
+See full changelog","Improvements
+Docs: #739 @bkeepers, #740 @JasonEtco, #741 @yeskunall, #698 @bdougie, #734 @hiimbex, #756 @hiimbex, #752 @TimonVS, #773 @matchai
+Tests/Typescript improvements: #696 @macklinu, #704 @macklinu, #718 @TimonVS, #710 @bobvanderlinden
+Version updates: #750, #768 @gr2m - updating Octokit to v15.18
+Recent updates/Fixes:
+Allow starting probot without token or id/cert (#738) @bkeepers
+Do not require token on probot-receive (#754) @gimenete
+Include version in manifest (#763) @wilhelmklopp 
 See full changelog"
 214,"Fixes
 
 Allow starting probot without token or id/cert (#738) @bkeepers
 
+See full changelog","Fixes
+Allow starting probot without token or id/cert (#738) @bkeepers
 See full changelog"
 215,"Improvements
 
@@ -1529,6 +2256,11 @@ Deprecate probot simulate in favor of probot receive (#726, #730) @gimenete, @hi
 Update @octokit/rest (#721, #732) @hiimbex
 Wrap pem in quotes to make Glitch happy (#737) @wilhelmklopp
 
+See full changelog","Improvements
+Support for color in terminal logs will now automatically be detected, so no more ugly ASII escape codes in your logs (#708) @gimenete
+Deprecate probot simulate in favor of probot receive (#726, #730) @gimenete, @hiimbex
+Update @octokit/rest (#721, #732) @hiimbex
+Wrap pem in quotes to make Glitch happy (#737) @wilhelmklopp
 See full changelog"
 216,"Improvements
 
@@ -1541,7 +2273,12 @@ Tests updates
 chore(tests): convert serializers test to TypeScript (#695) @macklinu
 Resolve Jest transform option deprecation warning (#694) @macklinu 
 See full changelog
-"
+","Improvements
+It's now easier to get started building your first Probot App thanks to support for GitHub App Manifests. Check out link to learn more! (#650, #700, #701) by @wilhelmklopp, @bkeepers, and @hiimbex 
+Tests updates
+chore(tests): convert serializers test to TypeScript (#695) @macklinu
+Resolve Jest transform option deprecation warning (#694) @macklinu 
+See full changelog"
 217,"Improvements
 
 Remove duplicated word (#682) @borNfreee
@@ -1551,6 +2288,11 @@ Security Update
 Require @octokit/webhooks@^5.0.2 (#691) @gr2m
 See Release notes for more info: https://github.com/octokit/webhooks.js/releases/tag/v5.0.2
 
+See full changelog","Improvements
+Remove duplicated word (#682) @borNfreee
+Security Update
+Require @octokit/webhooks@^5.0.2 (#691) @gr2m
+See Release notes for more info: link
 See full changelog"
 218,"Improvements
 
@@ -1561,6 +2303,13 @@ Many more improvements to our TypeScript support, including:
 Rewriting some tests: #676 @gupsho, #664 @AditShah
 Fix GraphQL in TypeScript (#667) @tcbyrd
 
+See full changelog","Improvements
+Update octokit/rest and tests to use /app/installations (#681) @hiimbex
+This deprecation warning caused this update
+Some docs updates #669 @bkeepers, #671 @augustogoulart 
+Many more improvements to our TypeScript support, including:
+Rewriting some tests: #676 @gupsho, #664 @AditShah
+Fix GraphQL in TypeScript (#667) @tcbyrd
 See full changelog"
 219,"Improvements
 
@@ -1601,12 +2350,31 @@ Adding typescript option to create-probot-app command (#630) @mousavian
 Add probot-messages (#657) @hiimbex
 
 
+See full changelog","Improvements
+If a webhook received from GitHub is not using the same value configured for WEBHOOK_SECRET you'll now see a more helpful error message telling you how to fix it. (#621, #647) @hiimbex
+By default, installation tokens are cached for 59 minutes. You can now change that by setting INSTALLATION_TOKEN_TTL (#638) @tommilligan
+PRIVATE_KEY can now be a base64 encoded string, which make it a little easier to set in some deployment environments (#624) @tcbyrd
+Many more improvements to our TypeScript support, including: 
+Set the proper response type when making a GraphQL query with context.github.query() (#667) @tcbyrd
+Making cacheErrors option optional (#616) @BPScott
+Improve typing of Context (#617) @BPScott
+Extract type declarations for @octokit/webhooks (#626) @bkeepers
+Rewriting some tests in TypeScript (#614, #625, #629, #656, #660) @kentaro-m, @yawningphantom, @karol-majewski
+Update versions for a few dependencies:
+update bottleneck to version 2.8.0 (#661) @bkeepers
+update ts-jest to version 23.1.4 (#662) @bkeepers
+Documentation: 
+Bring testing docs in line with probot/template (#627) @wilhelmklopp
+Adding typescript option to create-probot-app command (#630) @mousavian
+Add probot-messages (#657) @hiimbex
 See full changelog"
 220,"Bug Fixes
 
 Fixes a bug with context.event #611 
 Updates @octokit/rest
-"
+","Bug Fixes
+Fixes a bug with context.event #611 
+Updates @octokit/rest"
 221,"Improvements
 
 
@@ -1639,11 +2407,23 @@ const robot = createRobot()
 const { Application } = require('probot')
 const app = new Application()
 ```
+You can also use app.load(myProbotApp) instead of myProbotApp(robot), which is common in tests.","Improvements
+Probot has been rewritten in TypeScript. Overall, you should see no significant difference between 6.2.0 and 7.0.0 and you can continue writing your apps in plain ol' JavaScript if you'd like. Writing Probot apps in TypeScript is still experimental, but if you'd like to help us improve the experience, please check out link and open pull requests to improve TypeScript support.
+Rename robot to app (#542)
+A lot of documentation improvements, including docs on Environment Configuration
+See the blog post for more info about this release.
+Fixes
+Fix path to GraphQL API when using GitHub Enterprise. Now you can use Probot to make GraphQL requests against your GitHub Enterprise instance (#580)
+Fix deprecation warning from Octokit.js for response.meta (#550)
+Migrating from 6 to 7
+If you're using the probot run command, then there should only be one major breaking change for your test suite. createRobot is now a class, Application:
+module
 You can also use app.load(myProbotApp) instead of myProbotApp(robot), which is common in tests."
 222,"Fixes
 
 Check for ignored account before fetching all repositories. (#567)
-"
+","Fixes
+Check for ignored account before fetching all repositories. (#567)"
 223,"Heads Up!: There's a regression in octokit/rest.js that causes an error when Probot starts up and may break some apps. An upstream fix is in progress and we'll push out a new release as soon as it's ready. https://github.com/probot/probot/issues/537
 New Features
 
@@ -1658,6 +2438,16 @@ Improvements
 🕵️‍♀️ Throw informative error if payload is missing repository when calling context.repo() (#508)
 👌 Add a favicon to the https://localhost:3000/probot default page. It's the little things. (#483)
 
+View full changelog","Heads Up!: There's a regression in octokit/rest.js that causes an error when Probot starts up and may break some apps. An upstream fix is in progress and we'll push out a new release as soon as it's ready. link
+New Features
+🎉 Support for the Checks API thanks to the latest @octokit/rest (^15.6.0). Check out the API docs and look to move your app to this awesome new API (#533)
+⛔️ Add IGNORED_ACCOUNTS environment variable to ignore spammy/abusive users. (#513)
+Improvements
+💥 Fixes to allow receiving events like installation.deleted and marketplace_purchase aren't associated with an active installation. See unauthenticated events for more information (#475, #536)
+🙉 Move webhook event logs to debug level since you may not find these helpful once your app is humming along in production. (#478)
+🔬 Allow initializing the GitHub client without options for those loading the client directly. (#479)
+🕵️‍♀️ Throw informative error if payload is missing repository when calling context.repo() (#508)
+👌 Add a favicon to the link default page. It's the little things. (#483)
 View full changelog"
 224,"Enhancements
 
@@ -1677,6 +2467,12 @@ Switched from github-webhook-handler to @octokit/webhooks. You shouldn't notice 
 Updated @octokit/rest to version 15.2.0
 
 
+See full changelog","Enhancements
+Do you love Probot and GraphQL? Well good news for you! Now you can use them together! Be warned: this is experimental. See the docs to get started and share your feedback. (#472)
+An error will now be raised if there are several .pem files in your app directory. Set PRIVATE_KEY_PATH to specify which one you want to use. (#441)
+Updated Node.js minimum version required to 8.3.0. This was a requirement for apps to run before, but the check was only looking for 7.7. (#464)
+Switched from github-webhook-handler to @octokit/webhooks. You shouldn't notice any changes, but let us know if your app has any weird symptoms (#462)
+Updated @octokit/rest to version 15.2.0
 See full changelog"
 225,"Breaking Changes
 
@@ -1701,6 +2497,17 @@ Need persistence in your app? We've got some docs to help you out! (#242)
 Looking to contribute to Probot? We've started labeling issues good-first-issue, so check them out.
 
 
+See full changelog","Breaking Changes
+Migrate to @octokit/rest.js, which is the latest version of the node-github client. There shouldn't be any noticeable changes, but since @octokit/rest is a complete rewrite of the node-github internals, we're marking this a breaking change just to be safe. (#400)
+Improvements
+Allow setting name on logger components. (#355)
+js
+robot.on('issues.opened', context => {
+  const log = context.log.child({name: 'my-issue-thingy'});
+});
+Community
+Need persistence in your app? We've got some docs to help you out! (#242)
+Looking to contribute to Probot? We've started labeling issues good-first-issue, so check them out.
 See full changelog"
 226,"Breaking Changes
 
@@ -1725,11 +2532,25 @@ Extensions
 
 Check out the Config extension  for sharing configs between between repositories from the team at Sentry. (#390)
 
+View full changelog","Breaking Changes
+The new webhook proxy introduced in 4.0 is now the default (#391). Support for localtunnel has been removed and will no longer work in development. To update your existing Probot app to use the new webhook proxy in development:
+Go to smee.io and click Start a new channel. Set WEBHOOK_PROXY_URL in your .env to the URL that you are redirected to.
+Update your GitHub App to deliver webhooks to the webhook proxy URL.
+Run $ npm install --save-dev smee-client to install the new client
+Run $ npm uninstall localtunnel to remove the old client
+Run $ npm start and your app should work just like it did before! 🎉 
+See the development docs for more information. If you still want to use localtunnel, you can install it manually and run lt --port 3000.
+Enhancements
+Properly handle async errors in express. (#384)
+Add DISABLE_STATS option to disable the /probot/stats endpoint that is available by default. For popular apps, this endpoint can be expensive to generate. (#392)
+Extensions
+Check out the Config extension  for sharing configs between between repositories from the team at Sentry. (#390)
 View full changelog"
 227,"Improvements
 
 Add early termination to paginate method (#329). Check out the pagination docs for more information.
-"
+","Improvements
+Add early termination to paginate method (#329). Check out the pagination docs for more information."
 228,"Improvements
 
 
@@ -1754,32 +2575,48 @@ The default log level is now info for robot.log(msg). Set LOG_LEVEL=debug or tra
 Probot now uses hbs internally instead of ejs (#325). If you are using res.render('my-ejs-file') and depending on probot for the ejs setup, you'll now need to pull in ejs yourself.
 
 
+View the full changelog","Improvements
+GitHub Enterprise Support (#331). See the docs on using GitHub Enterprise docs to get started.
+Lots of logging improvements (#320), including adding context.log for logging in your event handlers (#321), req.log for logging in HTTP requests (#322), and improved logging of GitHub API requests (#351). See the logging docs for more information.
+Add support for a new and experimental webhook proxy (#359). Go to link and click Start a new channel. Use that URL as your Webhook URL in your GitHub App, and set WEBHOOK_PROXY_URL to that URL in your .env (along with DISABLE_TUNNEL=true). This new webhook proxy service will likely replace localtunnel in 5.0.
+Update the node-github client to version 12.0.3 (#340)
+Breaking Changes
+The default log level is now info for robot.log(msg). Set LOG_LEVEL=debug or trace in your .env to see more verbose logging from Probot internals.
+Probot now uses hbs internally instead of ejs (#325). If you are using res.render('my-ejs-file') and depending on probot for the ejs setup, you'll now need to pull in ejs yourself.
 View the full changelog"
 229,"
 3.0.3 (2017-11-21)
 Bug Fixes
 
 Move unhandled rejection listener to cli scripts (#339) (f8abe25)
-"
+","3.0.3 (2017-11-21)
+Bug Fixes
+Move unhandled rejection listener to cli scripts (#339) (f8abe25)"
 230,"
 3.0.2 (2017-11-02)
 Bug Fixes
 
 use posix join for context.config to fix issue on Windows (#311) (f508dfa)
-"
+","3.0.2 (2017-11-02)
+Bug Fixes
+use posix join for context.config to fix issue on Windows (#311) (f508dfa)"
 231,"
 3.0.1 (2017-10-31)
 Bug Fixes
 
 use lowercase username for localtunnel (#310) (833a34e)
-"
+","3.0.1 (2017-10-31)
+Bug Fixes
+use lowercase username for localtunnel (#310) (833a34e)"
 232,"
 3.0.0 (2017-10-17)
 Features
 
 /probot homepage (#279) (5d29945)
-"
-233,BREAKING CHANGE: probot run without any arguments will no longer autoload apps named probot-*.
+","3.0.0 (2017-10-17)
+Features
+/probot homepage (#279) (5d29945)"
+233,BREAKING CHANGE: probot run without any arguments will no longer autoload apps named probot-*.,BREAKING CHANGE: probot run without any arguments will no longer autoload apps named probot-*.
 234,"
 Add DISABLE_TUNNEL environment variable to disable localtunnel (#260)
-"
+",Add DISABLE_TUNNEL environment variable to disable localtunnel (#260)

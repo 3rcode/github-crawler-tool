@@ -1,0 +1,205 @@
+Index,Release Note,Release Note With Abstraction
+1,,
+2,"This changelog contains an incremental change after Jenkins 2.190.1. Multiple releases are included.
+📦 Jenkins Core updates
+
+Update to Jenkins 2.235.1 (changelog) 
+
+🚀 New features and improvements
+
+Add OpenJ9 images for Java 1.8 and Java 11 (#890) @dzmitrykashlach 
+Publish CentOS 7 and 8 images (#906) @ArnauSistach
+Add git-lfs to all images (#880) @flokli
+Publish versioned LTS tags so that images can be uodated by Dependabot (#958) @j3parker
+
+🐛 Bug Fixes
+
+
+936 Added tzdata package (#937) @krufab
+
+
+📝 Documentation updates
+
+Fix typos and grammar (#951) @jurnho
+
+👻 Maintenance
+
+Increase build timeouts (#914) @slide
+Fix test issues (#910) @slide
+Update Shellcheck 0.7.0 (#931) @ducksecops
+Do not build containers on Wednesdays during EU daytime (#920) @daniel-beck
+Create a CODEOWNERS file (#911) @oleg-nenashev
+Temporarily disable arm32v7 (#961) @slide
+
+NOTE: This is an experimental changelog. See this page for more info","This changelog contains an incremental change after Jenkins 2.190.1. Multiple releases are included.
+📦 Jenkins Core updates
+Update to Jenkins 2.235.1 (changelog) 
+🚀 New features and improvements
+Add OpenJ9 images for Java 1.8 and Java 11 (#890) @dzmitrykashlach 
+Publish CentOS 7 and 8 images (#906) @ArnauSistach
+Add git-lfs to all images (#880) @flokli
+Publish versioned LTS tags so that images can be uodated by Dependabot (#958) @j3parker
+🐛 Bug Fixes
+936 Added tzdata package (#937) @krufab
+📝 Documentation updates
+Fix typos and grammar (#951) @jurnho
+👻 Maintenance
+Increase build timeouts (#914) @slide
+Fix test issues (#910) @slide
+Update Shellcheck 0.7.0 (#931) @ducksecops
+Do not build containers on Wednesdays during EU daytime (#920) @daniel-beck
+Create a CODEOWNERS file (#911) @oleg-nenashev
+Temporarily disable arm32v7 (#961) @slide
+NOTE: This is an experimental changelog. See this page for more info"
+3," Optional: add a release summary here 
+📦 Jenkins Core updates
+
+Update to Jenkins 2.190.1 (changelog). This is a security release! 2.176.4 includes the same security patches for the previous LTS baseline
+","Optional: add a release summary here 
+📦 Jenkins Core updates
+Update to Jenkins 2.190.1 (changelog). This is a security release! 2.176.4 includes the same security patches for the previous LTS baseline"
+4," Optional: add a release summary here 
+📦 Jenkins Core updates
+
+Update to Jenkins 2.176.4 (changelog). This is a security release!
+
+👻 Maintenance
+
+Look further back to handle LTS.4/LTS.1 dual release days (#886) @daniel-beck
+
+NOTE: This is an experimental changelog. See this page for more info","Optional: add a release summary here 
+📦 Jenkins Core updates
+Update to Jenkins 2.176.4 (changelog). This is a security release!
+👻 Maintenance
+Look further back to handle LTS.4/LTS.1 dual release days (#886) @daniel-beck
+NOTE: This is an experimental changelog. See this page for more info"
+5," Optional: add a release summary here 
+📦 Jenkins Core updates
+
+Update to Jenkins 2.176.3 (changelog) 
+
+🚀 New features and improvements
+
+
+709, #861 - Make the REF_DIR configurable in plugin installation scripts (#866) @slide
+
+
+857 - Make the Jenkins WAR path configurable by the JENKINS_WAR env property (#873) @MRamonLeon
+
+
+📝 Documentation updates
+
+Introduce Docker Packaging changelogs (#856) @oleg-nenashev
+
+👻 Maintenance
+
+Update the default Jenkins version for development (#869) @jbnetfr
+
+NOTE: This is an experimental changelog. See this page for more info","Optional: add a release summary here 
+📦 Jenkins Core updates
+Update to Jenkins 2.176.3 (changelog) 
+🚀 New features and improvements
+709, #861 - Make the REF_DIR configurable in plugin installation scripts (#866) @slide
+857 - Make the Jenkins WAR path configurable by the JENKINS_WAR env property (#873) @MRamonLeon
+📝 Documentation updates
+Introduce Docker Packaging changelogs (#856) @oleg-nenashev
+👻 Maintenance
+Update the default Jenkins version for development (#869) @jbnetfr
+NOTE: This is an experimental changelog. See this page for more info"
+6,"Release date: 2019-07-17. This is an experimental changelog for a historical release. See this Dev list thread for more info
+📦 Jenkins Core updates
+
+Update to Jenkins 2.176.2 (changelog) 
+
+🚀 New features and improvements
+
+Introduce new CentOS image with JDK 8 (#826) @ArnauSistach
+Add a default value for COPY_REFERENCE_FILE_LOG in jenkins.sh (#847) @dsathyan
+
+🐛 Bug Fixes
+
+Fix resolution of incrementals version specifications in install-plugins.sh (#834) @halkeye 
+Slim image: Remove call to sed and added necessary packages to apt-get install (#837) @slide 
+","Release date: 2019-07-17. This is an experimental changelog for a historical release. See this Dev list thread for more info
+📦 Jenkins Core updates
+Update to Jenkins 2.176.2 (changelog) 
+🚀 New features and improvements
+Introduce new CentOS image with JDK 8 (#826) @ArnauSistach
+Add a default value for COPY_REFERENCE_FILE_LOG in jenkins.sh (#847) @dsathyan
+🐛 Bug Fixes
+Fix resolution of incrementals version specifications in install-plugins.sh (#834) @halkeye 
+Slim image: Remove call to sed and added necessary packages to apt-get install (#837) @slide "
+7,"Release date: 2019-06-10. This is an experimental changelog for a historical release. See this Dev list thread for more info
+📦 Jenkins Core updates
+
+Update to Jenkins 2.176.1 (changelog) 
+
+🚀 New features and improvements
+
+Always update OS packages when building Debian, Slim and Debian/Java11 images(#824) @jvz
+
+🚦 Tests
+
+Add Java 11 image testing to the CI Pipeline (#827) @batmat 
+","Release date: 2019-06-10. This is an experimental changelog for a historical release. See this Dev list thread for more info
+📦 Jenkins Core updates
+Update to Jenkins 2.176.1 (changelog) 
+🚀 New features and improvements
+Always update OS packages when building Debian, Slim and Debian/Java11 images(#824) @jvz
+🚦 Tests
+Add Java 11 image testing to the CI Pipeline (#827) @batmat "
+8,"Release date: 2019-05-09. This is an experimental changelog for a historical release. See this Dev list thread for more info
+📦 Jenkins Core updates
+
+Update to Jenkins 2.164.3 (changelog) 
+
+🚀 New features and improvements
+
+Always upgrade plugins on startup when PLUGINS_FORCE_UPGRADE is true (#577) @Triqqo @carlossg 
+
+🐛 Bug Fixes
+
+
+814 - Prevent unbound variable error in install-plugins.sh (#815) @lelandsindttouchnet
+
+","Release date: 2019-05-09. This is an experimental changelog for a historical release. See this Dev list thread for more info
+📦 Jenkins Core updates
+Update to Jenkins 2.164.3 (changelog) 
+🚀 New features and improvements
+Always upgrade plugins on startup when PLUGINS_FORCE_UPGRADE is true (#577) @Triqqo @carlossg 
+🐛 Bug Fixes
+814 - Prevent unbound variable error in install-plugins.sh (#815) @lelandsindttouchnet"
+9,"Release date: 2019-04-10. This is an experimental changelog for a historical release. See this Dev list thread for more info
+📦 Jenkins Core updates
+
+Update to Jenkins 2.164.2 (changelog) 
+
+🐛 Bug Fixes
+
+Initialize the agent port on startup instead of waiting till the job loading ends (#805) @hpedrorodrigues 
+","Release date: 2019-04-10. This is an experimental changelog for a historical release. See this Dev list thread for more info
+📦 Jenkins Core updates
+Update to Jenkins 2.164.2 (changelog) 
+🐛 Bug Fixes
+Initialize the agent port on startup instead of waiting till the job loading ends (#805) @hpedrorodrigues "
+10,"Release date: 2019-03-13. This is an experimental changelog for a historical release. See this Dev list thread for more info
+📦 Jenkins Core updates
+
+Update to Jenkins 2.164.1 (changelog) 
+
+🚀 New features and improvements
+
+Allow install-plugins.sh to take a url as an option (#799) @techlunacy
+
+🚦 Internal changes
+
+
+686 - Add experimental packaging scripts for multi-architecture Docker images (#750, #806) @jmreicha  @imdurgadas
+
+","Release date: 2019-03-13. This is an experimental changelog for a historical release. See this Dev list thread for more info
+📦 Jenkins Core updates
+Update to Jenkins 2.164.1 (changelog) 
+🚀 New features and improvements
+Allow install-plugins.sh to take a url as an option (#799) @techlunacy
+🚦 Internal changes
+686 - Add experimental packaging scripts for multi-architecture Docker images (#750, #806) @jmreicha  @imdurgadas"

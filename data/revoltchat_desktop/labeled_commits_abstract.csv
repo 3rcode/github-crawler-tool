@@ -1,0 +1,83 @@
+Index,Commit Message Abstract,Score Abstract,Corresponding Changelog Sentence Abstract,Commit Desription Abstract,Label
+1,fix: a bug with clicking icon in dock,0.68616617,- fix: wrong app icon (#95),"Updated package.json to build proper DMG electron-builder v22 -> v23 to fix builds on macOS 12.3+ Made sure to use Python3 when building for future-proofing (Re-)Update dependencies accidentally downgraded Fix universal macOS builds, testing fixed workflow Remove extra x86/ARM-only builds for macOS Update checkout@v2 -> checkout@v3 Remove Linux ia32 build because Electron isn't available for ia32 (This would prevent you from building the Linux version at all) Clean up Linux workflow (uses new upload-artifact@v3 featuers) Polish Linux/Windows workflows Fix Windows workflow not publishing instaler Update actions to Node.js 16 in publism.yml Quick change, publish the Windows Appx builds I seem to have forgotten a single backslash",0
+2,Attempt to create PKGBUILD and fix icons.,0.66071963,- Fix AppX icons,close link,0
+3,feat: update yarn & make dmg file build with background by default,0.49217772,- feat(ci): generate DMG rather than ZIP,[skip ci],0
+4,fix: use getConfig() instead of store.getConfig,0.9035514,- fix: use getConfig() instead of store.getConfig to prevent error on quit,[skip ci],1
+5,feat(ci): generate a DMG rather than a ZIP (#57),0.94824135,- feat(ci): generate DMG rather than ZIP,,1
+6,chore: update commit hash,0.32676992,Note: assets marked as DO_NOT_USE have not been tested and likely won't work,,0
+7,Add Discord RPC.,0.99999994,Add Discord RPC.,,1
+8,chore: add dmg build to release CI [skip ci],0.6613583,- feat(ci): generate DMG rather than ZIP,,0
+9,fix: update URL in RPC,0.6053381,- Update Discord RPC,,0
+10,fix: use electron17,0.33985692,- fix: wrong app icon (#95),,0
+11,fix: correctly restore from tray on 2nd start,0.88275564,- fix: correctly restore from tray icon on second instance start,,1
+12,chore: bump version,0.42007783,Add hardware acceleration toggle.,,0
+13,ci: update global workflows (#45),0.503926,- Automate CI for publishing new releases.,,0
+14,fix: missing taskbar icon and fixed name in notifications (#54),0.6606381,- fix: wrong app icon (#95),,0
+15,Contributor line is not needed apparently.,0.2240406,Add Discord RPC.,,0
+16,feat: tray icon / minimise to tray config,0.7929435,- feat: allow minimising the app to the tray,,1
+17,chore: enable yarn berry,0.36155167,- feat: add spell check,,0
+18,Finalise(?) PKGBUILD for revolt-desktop-git,0.63328403,"If you are on Arch Linux, install revolt-desktop-git.",,0
+19,ci: Created local '.github/workflows/triage_pr.yml' from remote 'workflows/triage_pr.yml',0.3582904,- Automate CI for publishing new releases.,,0
+20,Fix version.,0.47917974,- Update Discord RPC,,0
+21,merge: pull request #123 from xhayper/patch-1,0.46132493,- feat: prevent launching multiple instances (link),,0
+22,Add submodule file.,0.43965617,Add Discord RPC.,closes #86,0
+23,Add auto updater.,0.7001276,- Windows (Setup) (has auto-updates),,1
+24,chore(ci): try to publish through CI,0.671008,- Automate CI for publishing new releases.,,0
+25,fix(readme): don't include submodules for start,0.46169516,- fix: artifact like shapes on start (link),,0
+26,Merge pull request #21 from KeepSOBP/patch-1,0.4486056,- fix: use getConfig() instead of store.getConfig to prevent error on quit,,0
+27,Update desktop entry and add launch script.,0.5412694,- Change default settings,New DMG workflow for macOS Trying new icons Reverted icon changes,0
+28,Rename from Private to Public beta,0.37437716,- Change default settings,,0
+29,chore(ci): passthrough token,0.37905413,- feat(ci): generate DMG rather than ZIP,,0
+30,feat: add restart button to tray icon,0.8708372,- fix: restart from tray icon,closes #8,1
+31,Remove artifact.,0.33261067,- fix: artifact like shapes on start (link),closes #14,0
+32,ci: Synced local '.github/workflows/triage_pr.yml' with remote 'workflows/triage_pr.yml',0.34177312,- Automate CI for publishing new releases.,closes #2 closes #63 closes #40 closes #17,0
+33,Add AppX logos.,0.7738886,- Fix AppX icons,closes #82,1
+34,fix: revolt-desktop appearing instead of Revolt,0.5572157,"If you are on Arch Linux, install revolt-desktop-git.",,0
+35,chore: switch to yarn v3 (#71),0.36049467,- fix: artifact like shapes on start (link),,0
+36,fix: linux build,0.5790235,- Linux (tar.gz),,0
+37,"Add LICENSE, closes #23.",0.28456426,Add Discord RPC.,,0
+38,feat: use monochrome tray icon and fix tray icon on macOS (Fixes #88) (#91),0.98553276,- feat: use monochrome tray icon and fix tray icon on macOS (#91),,1
+39,docs: Update Readme format to be consistent with other Revolt projects (#51),0.4064724,- Automate CI for publishing new releases.,,0
+40,Add min size and remember changes.,0.4266914,- Change default settings,,0
+41,Initial Commit.,0.27881032,- fix: artifact like shapes on start (link),,0
+42,feat: improvment to package (read desc),0.52910596,- feat(ci): generate DMG rather than ZIP,,0
+43,"feat: handle ""CTRL + ="" for zoom",0.88872176,"- feat: allow zooming in with ""CTRL + ="" (link)",,1
+44,Initial Commit,0.30359736,- fix: artifact like shapes on start (link),,0
+45,fix: move appx icons to correct directory,0.7973378,- Fix AppX icons,,1
+46,"Toggle RPC, closes #26.",0.5479247,- Update Discord RPC,,0
+47,chore: update publish.yml,0.53824854,- Automate CI for publishing new releases.,,0
+48,Temporarily remove.,0.33171833,- Change default settings,,0
+49,Fix shell script file name.,0.3493486,- Linux (tar.gz),,0
+50,feat: add background colour to window,0.35245532,- fix: bundle window icon correctly,,0
+51,ci: new publish workflow (#106),0.6539418,- Automate CI for publishing new releases.,,0
+52,Bump version.,0.44071585,Add hardware acceleration toggle.,Co-authored-by: web-flow noreply@github.com,0
+53,"Not having a good time, this is the last one.",0.29282582,nan,,0
+54,Update README,0.4698798,- Linux (AppImage) (has auto-updates),,0
+55,fix: correct icon bundling,0.88581085,- fix: bundle window icon correctly,,1
+56,feat: update background for dmg,0.55892074,- Mac (dmg),,0
+57,Auto-start support and titlebar actions.,0.45177722,- Windows (Setup) (has auto-updates),,0
+58,fix: restart from tray icon (closes #87),0.93182945,- fix: restart from tray icon,,1
+59,chore: replace discord-rpc dependency,0.70073384,- Update Discord RPC,,1
+60,Add desktop file.,0.46848005,- Change default settings,,0
+61,feat: add spell check,0.9847425,- feat: add spell check,,1
+62,fix(ci): always run and on tag,0.48268846,- fix: use getConfig() instead of store.getConfig to prevent error on quit,,0
+63,Test AppX.,0.5615007,- Fix AppX icons,,0
+64,Add publish scripts.,0.5876037,- Automate CI for publishing new releases.,Add hardware acceleration toggle.,0
+65,fix: switch to ts-ignore from ts-expect-error,0.36109674,- fix: use getConfig() instead of store.getConfig to prevent error on quit,,0
+66,Update scripts.,0.51465863,- Linux (AppImage) (has auto-updates),,0
+67,ci: synced local '.github/workflows/triage_pr.yml' with remote 'workflows/triage_pr.yml',0.35272324,- Automate CI for publishing new releases.,,0
+68,feat: only allow one instance / fmt code,0.4659622,- feat: prevent launching multiple instances (link),,0
+69,ci: Synced local '.github/workflows/triage_issue.yml' with remote 'workflows/triage_issue.yml',0.3308468,- feat: prevent launching multiple instances (link),,0
+70,fix: wrong app icon (#95),0.99468505,- fix: wrong app icon (#95),,1
+71,Update pkgbuild.,0.50428516,- Update Discord RPC,,0
+72,"revert: ""ci: new publish workflow (#106)"" (#112)",0.6463962,- Automate CI for publishing new releases.,,0
+73,feat(ci): add workflow for auto-compiling (#44),0.56110185,- Automate CI for publishing new releases.,,0
+74,fix: remove windows-specific dependency,0.5501002,- Windows (Setup) (has auto-updates),,0
+75,feat: add node: prefix to node package,0.4270898,- feat: add a tray icon (link),,0
+76,Add contributor tag.,0.3721048,- feat: add spell check,,0
+77,Add version back.,0.4247169,Add Discord RPC.,,0
+78,fix: macOS not showing BG,0.54431105,This release actually includes a DMG build for macOS.,,0
+79,remove: pacman build,0.328579,- Update Discord RPC,,0
+80,ci: create proper DMG through package.json (#113),0.60184485,- feat(ci): generate DMG rather than ZIP,,0
+81,ci: synced local '.github/workflows/triage_issue.yml' with remote 'workflows/triage_issue.yml',0.3348107,- fix: use getConfig() instead of store.getConfig to prevent error on quit,,0
+82,Changes to AppX config,0.736285,- Fix AppX icons,,1

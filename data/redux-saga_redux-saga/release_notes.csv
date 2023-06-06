@@ -1,0 +1,1305 @@
+Index,Release Note,Release Note With Abstraction
+1,"Patch Changes
+
+
+#2372 2cccf48 Thanks @neurosnap! - Added a channel property to the SagaMiddlewareOptions to reflect its runtime support.
+
+
+Updated dependencies [2cccf48]:
+
+@redux-saga/core@1.2.3
+
+
+","Patch Changes
+2372 2cccf48 Thanks @neurosnap! - Added a channel property to the SagaMiddlewareOptions to reflect its runtime support.
+Updated dependencies [2cccf48]:
+@redux-saga/core@1.2.3"
+2,"Patch Changes
+
+#2372 2cccf48 Thanks @neurosnap! - Added a channel property to the SagaMiddlewareOptions to reflect its runtime support.
+","Patch Changes
+2372 2cccf48 Thanks @neurosnap! - Added a channel property to the SagaMiddlewareOptions to reflect its runtime support."
+3,"Patch Changes
+
+
+#2340 345b828 Thanks @neurosnap! - throttle now accepts a channel as originally intended
+
+
+Updated dependencies [345b828]:
+
+@redux-saga/core@1.2.2
+
+
+","Patch Changes
+2340 345b828 Thanks @neurosnap! - throttle now accepts a channel as originally intended
+Updated dependencies [345b828]:
+@redux-saga/core@1.2.2"
+4,"Patch Changes
+
+#2340 345b828 Thanks @neurosnap! - throttle now accepts a channel as originally intended
+","Patch Changes
+2340 345b828 Thanks @neurosnap! - throttle now accepts a channel as originally intended"
+5,"Patch Changes
+
+
+#2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+
+
+Updated dependencies [2466c79]:
+
+@redux-saga/core@1.2.1
+
+
+","Patch Changes
+2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+Updated dependencies [2466c79]:
+@redux-saga/core@1.2.1"
+6,"Patch Changes
+
+#2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+","Patch Changes
+2324 2466c79 Thanks @neurosnap! - Add LICENSE file"
+7,"Patch Changes
+
+#2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+","Patch Changes
+2324 2466c79 Thanks @neurosnap! - Add LICENSE file"
+8,"Patch Changes
+
+
+#2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+
+
+Updated dependencies [2466c79]:
+
+@redux-saga/symbols@1.1.3
+@redux-saga/types@1.2.1
+
+
+","Patch Changes
+2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+Updated dependencies [2466c79]:
+@redux-saga/symbols@1.1.3
+@redux-saga/types@1.2.1"
+9,"Patch Changes
+
+#2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+","Patch Changes
+2324 2466c79 Thanks @neurosnap! - Add LICENSE file"
+10,"Patch Changes
+
+
+#2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+
+
+Updated dependencies [2466c79]:
+
+@redux-saga/is@1.1.3
+
+
+","Patch Changes
+2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+Updated dependencies [2466c79]:
+@redux-saga/is@1.1.3"
+11,"Patch Changes
+
+
+#2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+
+
+Updated dependencies [2466c79]:
+
+@redux-saga/symbols@1.1.3
+@redux-saga/types@1.2.1
+
+
+","Patch Changes
+2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+Updated dependencies [2466c79]:
+@redux-saga/symbols@1.1.3
+@redux-saga/types@1.2.1"
+12,"Patch Changes
+
+
+#2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+
+
+Updated dependencies [2466c79]:
+
+@redux-saga/symbols@1.1.3
+
+
+","Patch Changes
+2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+Updated dependencies [2466c79]:
+@redux-saga/symbols@1.1.3"
+13,"Patch Changes
+
+#2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+","Patch Changes
+2324 2466c79 Thanks @neurosnap! - Add LICENSE file"
+14,"Patch Changes
+
+
+#2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+
+
+Updated dependencies [2466c79]:
+
+@redux-saga/deferred@1.2.1
+@redux-saga/delay-p@1.2.1
+@redux-saga/is@1.1.3
+@redux-saga/symbols@1.1.3
+@redux-saga/types@1.2.1
+
+
+","Patch Changes
+2324 2466c79 Thanks @neurosnap! - Add LICENSE file
+Updated dependencies [2466c79]:
+@redux-saga/deferred@1.2.1
+@redux-saga/delay-p@1.2.1
+@redux-saga/is@1.1.3
+@redux-saga/symbols@1.1.3
+@redux-saga/types@1.2.1"
+15,"Minor Changes
+
+
+#2295 bed4458 Thanks @lourd! - Adds type inference for result of task returned from runSaga and SagaMiddleware.run
+
+
+#2296 612cae8 Thanks @lourd! - Updates Channel type to eliminate void-emitting pitfall
+
+
+#2308 8207e33 Thanks @Andarist, @neurosnap! - exports field has been added to the package.json manifest. It limits what files can be imported from a package but we've tried our best to allow importing all the files that were considered to be a part of the public API.
+This should fix the compatibility with Node.js ESM support.
+
+
+Patch Changes
+
+
+#2261 5ae6578 Thanks @neurosnap! - Require CpsCallback in all functions passed to the cps effect creator. This fixes a regression caused by TS 4.0 changing the behavior around spreading never into tuple types
+
+
+#2004 20f22a8 Thanks @gilbsgilbs! - A generic type has been added to the Task interface and that should be preferred over using a generic parameter in Task#result and Task#toPromise.
+
+
+#2068 586179c Thanks @mikabytes! - Added warnings when using take(channelOrPattern) incorrectly with more than one parameter. It helps to surface problem with take(ACTION_A, ACTION_B) being used instead of take([ACTION_A, ACTION_B]).
+
+
+Updated dependencies [bed4458, 612cae8, 5ae6578, 979b8b4, 20f22a8, 586179c]:
+
+@redux-saga/core@1.2.0
+
+
+","Minor Changes
+2295 bed4458 Thanks @lourd! - Adds type inference for result of task returned from runSaga and SagaMiddleware.run
+2296 612cae8 Thanks @lourd! - Updates Channel type to eliminate void-emitting pitfall
+2308 8207e33 Thanks @Andarist, @neurosnap! - exports field has been added to the package.json manifest. It limits what files can be imported from a package but we've tried our best to allow importing all the files that were considered to be a part of the public API.
+This should fix the compatibility with Node.js ESM support.
+Patch Changes
+2261 5ae6578 Thanks @neurosnap! - Require CpsCallback in all functions passed to the cps effect creator. This fixes a regression caused by TS 4.0 changing the behavior around spreading never into tuple types
+2004 20f22a8 Thanks @gilbsgilbs! - A generic type has been added to the Task interface and that should be preferred over using a generic parameter in Task#result and Task#toPromise.
+2068 586179c Thanks @mikabytes! - Added warnings when using take(channelOrPattern) incorrectly with more than one parameter. It helps to surface problem with take(ACTION_A, ACTION_B) being used instead of take([ACTION_A, ACTION_B]).
+Updated dependencies [bed4458, 612cae8, 5ae6578, 979b8b4, 20f22a8, 586179c]:
+@redux-saga/core@1.2.0"
+16,"Minor Changes
+
+
+#2295 bed4458 Thanks @lourd! - Adds type inference for result of task returned from runSaga and SagaMiddleware.run
+
+
+#2296 612cae8 Thanks @lourd! - Updates Channel type to eliminate void-emitting pitfall
+
+
+Patch Changes
+
+
+#2004 20f22a8 Thanks @gilbsgilbs! - A generic type has been added to the Task interface and that should be preferred over using a generic parameter in Task#result and Task#toPromise.
+
+
+#2270 d2579a2 Thanks @Methuselah96! - Inlined Redux Action type to fix compatibility with strict package managers.
+
+","Minor Changes
+2295 bed4458 Thanks @lourd! - Adds type inference for result of task returned from runSaga and SagaMiddleware.run
+2296 612cae8 Thanks @lourd! - Updates Channel type to eliminate void-emitting pitfall
+Patch Changes
+2004 20f22a8 Thanks @gilbsgilbs! - A generic type has been added to the Task interface and that should be preferred over using a generic parameter in Task#result and Task#toPromise.
+2270 d2579a2 Thanks @Methuselah96! - Inlined Redux Action type to fix compatibility with strict package managers."
+17,"Patch Changes
+
+
+#2297 fdca798 Thanks @lourd! - Adds missing isAborted method to mock task and deprecates its setRunning method
+
+
+Updated dependencies [bed4458, 612cae8, 20f22a8, d2579a2]:
+
+@redux-saga/types@1.2.0
+
+
+","Patch Changes
+2297 fdca798 Thanks @lourd! - Adds missing isAborted method to mock task and deprecates its setRunning method
+Updated dependencies [bed4458, 612cae8, 20f22a8, d2579a2]:
+@redux-saga/types@1.2.0"
+18,"Minor Changes
+
+
+#2308 8207e33 Thanks @Andarist, @neurosnap! - exports field has been added to the package.json manifest. It limits what files can be imported from a package but we've tried our best to allow importing all the files that were considered to be a part of the public API.
+This should fix the compatibility with Node.js ESM support.
+
+
+Patch Changes
+
+#2293 2d2214e Thanks @neurosnap! - Fixed an issue with arguments that exceed the maximum value for the internally-used setTimeout. Previously it could overflow based on the input that was too big and thus a timeout could resolve immediately.
+","Minor Changes
+2308 8207e33 Thanks @Andarist, @neurosnap! - exports field has been added to the package.json manifest. It limits what files can be imported from a package but we've tried our best to allow importing all the files that were considered to be a part of the public API.
+This should fix the compatibility with Node.js ESM support.
+Patch Changes
+2293 2d2214e Thanks @neurosnap! - Fixed an issue with arguments that exceed the maximum value for the internally-used setTimeout. Previously it could overflow based on the input that was too big and thus a timeout could resolve immediately."
+19,"Minor Changes
+
+
+#2308 8207e33 Thanks @Andarist, @neurosnap! - exports field has been added to the package.json manifest. It limits what files can be imported from a package but we've tried our best to allow importing all the files that were considered to be a part of the public API.
+This should fix the compatibility with Node.js ESM support.
+
+","Minor Changes
+2308 8207e33 Thanks @Andarist, @neurosnap! - exports field has been added to the package.json manifest. It limits what files can be imported from a package but we've tried our best to allow importing all the files that were considered to be a part of the public API.
+This should fix the compatibility with Node.js ESM support."
+20,"Minor Changes
+
+
+#2295 bed4458 Thanks @lourd! - Adds type inference for result of task returned from runSaga and SagaMiddleware.run
+
+
+#2296 612cae8 Thanks @lourd! - Updates Channel type to eliminate void-emitting pitfall
+
+
+#2308 8207e33 Thanks @Andarist, @neurosnap! - exports field has been added to the package.json manifest. It limits what files can be imported from a package but we've tried our best to allow importing all the files that were considered to be a part of the public API.
+This should fix the compatibility with Node.js ESM support.
+
+
+Patch Changes
+
+
+#2261 5ae6578 Thanks @neurosnap! - Require CpsCallback in all functions passed to the cps effect creator. This fixes a regression caused by TS 4.0 changing the behavior around spreading never into tuple types
+
+
+#2004 20f22a8 Thanks @gilbsgilbs! - A generic type has been added to the Task interface and that should be preferred over using a generic parameter in Task#result and Task#toPromise.
+
+
+#2068 586179c Thanks @mikabytes! - Added warnings when using take(channelOrPattern) incorrectly with more than one parameter. It helps to surface problem with take(ACTION_A, ACTION_B) being used instead of take([ACTION_A, ACTION_B]).
+
+
+Updated dependencies [bed4458, 612cae8, 979b8b4, 20f22a8, d2579a2, 2d2214e]:
+
+@redux-saga/types@1.2.0
+@redux-saga/deferred@1.2.0
+@redux-saga/delay-p@1.2.0
+
+
+","Minor Changes
+2295 bed4458 Thanks @lourd! - Adds type inference for result of task returned from runSaga and SagaMiddleware.run
+2296 612cae8 Thanks @lourd! - Updates Channel type to eliminate void-emitting pitfall
+2308 8207e33 Thanks @Andarist, @neurosnap! - exports field has been added to the package.json manifest. It limits what files can be imported from a package but we've tried our best to allow importing all the files that were considered to be a part of the public API.
+This should fix the compatibility with Node.js ESM support.
+Patch Changes
+2261 5ae6578 Thanks @neurosnap! - Require CpsCallback in all functions passed to the cps effect creator. This fixes a regression caused by TS 4.0 changing the behavior around spreading never into tuple types
+2004 20f22a8 Thanks @gilbsgilbs! - A generic type has been added to the Task interface and that should be preferred over using a generic parameter in Task#result and Task#toPromise.
+2068 586179c Thanks @mikabytes! - Added warnings when using take(channelOrPattern) incorrectly with more than one parameter. It helps to surface problem with take(ACTION_A, ACTION_B) being used instead of take([ACTION_A, ACTION_B]).
+Updated dependencies [bed4458, 612cae8, 979b8b4, 20f22a8, d2579a2, 2d2214e]:
+@redux-saga/types@1.2.0
+@redux-saga/deferred@1.2.0
+@redux-saga/delay-p@1.2.0"
+21,Fixes resolving TS types for redux-saga/effects,Fixes resolving TS types for redux-saga/effects
+22,"This release is bringing improved TS typings - allowed by TS@3.6. Thanks, @gilbsgilbs for working on this 👍 
+For more on this please read https://github.com/redux-saga/redux-saga/pull/1892#issue-297396449","This release is bringing improved TS typings - allowed by TS@3.6. Thanks, @gilbsgilbs for working on this 👍 
+For more on this please read link"
+23,"Breaking changes:
+- channel and actionChannel have default buffer of buffers.expanding()
+- errors thrown during put execution are no longer caught and swallowed, you need to catch them manually
+- signature of join & cancel, they both accept now a single task descriptor or an array of those (previously they have accepted variadic length of arguments)
+- removed some deprecated APIs - takeEvery, takeLatest, throttle from the redux-saga entry point (they are and were importable from redux-saga/effects), takem, put.sync and executing array of effects, there is explicit API for this for already some time - all effect
+- changed API of runSaga  - it no longer accepts subscribe option, you should create a channel (preferably stdChannel), pass it as channel argument to the runSaga API and communicate with through it with take and put methods
+- refactored shape of the effect objects to { [IO]: true, type, payload }
+- removed asEffect, effect types are public, effect shapes are stable, so if for whatever reason you want to do some effect inspection you can just check them without us providing additional helpers for it
+- removed logError, use only onError option (it's signature is onError(error, { sagaStack }))
+- END will now finish the race effects
+- task.done getter was changed to be task.toPromise method
+- channels private getters (__takers__ and __closed__) got removed
+- delay became an effect
+- redux-saga/utils got removed, exports available exclusively there got moved to separate packages - @redux-saga/deferred, @redux-saga/delay-p, @redux-saga/is, @redux-saga/symbols & @redux-saga/testing-utils
+- eventChannel does no longer accept matcher argument - it was a hacky way to support previous implementation of stdChannel
+- {effects, utils} can't imported from 'redux-saga' anymore
+- most runtime type checks got hidden behing development checks, inputs might not be validated in production (failed validation resulted in error being thrown anyway)
+- detach helper returns a new effect instead of mutating the input one
+- we have stopped interpreting effects returned from fork, this shouldn't affect any real-life code, affected patterns look like this fork(() => effectCreator()) and fork(takeEvery, 'type', fn)
+- TS typings got revamped - they require TS@>3.1 now
+New:
+- babel-plugin-redux-saga - can be used to enhance stack traces of thrown errors
+- multicastChannel - no buffering, notify all pending takers, multicastChannel#take(cb, matcher = matchers.wildard)
+- support for yield take(multicastChannel, pattern)
+- internal stdChannel got reworked to be a singleton object (it is wrapped multicastChannel's instance'), also it is an exported API to support new runSaga's signature - this should also result in being a small perf boost
+- effectMiddlewares - useful especially for testing, you can intercept/hijack any effect and resolve it on your own - passing it very redux-style to the next middleware (last being redux-saga itself). How it might be used can be checked here.
+- takeLeading effect - it takes ""leading"" action and ignores all incoming ones of the same type while the ""leading"" is still handled (useful for things debouncing)
+- retry effect with the signature of retry(maxTries, delayLength, worker, ...args)
+- debounce effect with the signature of debounce(delayLength, pattern, worker, ...args)
+- new rootSagaStarted hook for saga monitor
+- added dev warning about dispatching frozen actions, for scheduling purposes we are using Object.defineProperty on actions dispatched with put effect, so we have to be able to mutate the action object
+- added dev warning about using async generators, they are not supported by redux-saga
+- CommonJS entries are proxied now. This means that process.env.NODE_ENV is read only once and based on that value the appropriate bundle (development or production) is loaded conditionally with require. process.env is slow in node.js so this should improve performance a little bit.
+- isRoot property on Task (you probably won't ever need to use it, it's internal)
+Fixes:
+- keeping single stdChannel in the internals allowed to fix 2 bugs with missed actions (see #707 and #1146)
+- onError should get called now even if you throw non-Errors in your code.
+- we suspend the scheduler before running a root saga, so it should behave the same as forked sagas in terms of scheduling
+- small memory leak for closed actionChannels
+- issue with joiner not ending in cancelled state when joining cancelled task ","Breaking changes:
+- channel and actionChannel have default buffer of buffers.expanding()
+- errors thrown during put execution are no longer caught and swallowed, you need to catch them manually
+- signature of join & cancel, they both accept now a single task descriptor or an array of those (previously they have accepted variadic length of arguments)
+- removed some deprecated APIs - takeEvery, takeLatest, throttle from the redux-saga entry point (they are and were importable from redux-saga/effects), takem, put.sync and executing array of effects, there is explicit API for this for already some time - all effect
+- changed API of runSaga  - it no longer accepts subscribe option, you should create a channel (preferably stdChannel), pass it as channel argument to the runSaga API and communicate with through it with take and put methods
+- refactored shape of the effect objects to { [IO]: true, type, payload }
+- removed asEffect, effect types are public, effect shapes are stable, so if for whatever reason you want to do some effect inspection you can just check them without us providing additional helpers for it
+- removed logError, use only onError option (it's signature is onError(error, { sagaStack }))
+- END will now finish the race effects
+- task.done getter was changed to be task.toPromise method
+- channels private getters (takers and closed) got removed
+- delay became an effect
+- redux-saga/utils got removed, exports available exclusively there got moved to separate packages - @redux-saga/deferred, @redux-saga/delay-p, @redux-saga/is, @redux-saga/symbols & @redux-saga/testing-utils
+- eventChannel does no longer accept matcher argument - it was a hacky way to support previous implementation of stdChannel
+- {effects, utils} can't imported from 'redux-saga' anymore
+- most runtime type checks got hidden behing development checks, inputs might not be validated in production (failed validation resulted in error being thrown anyway)
+- detach helper returns a new effect instead of mutating the input one
+- we have stopped interpreting effects returned from fork, this shouldn't affect any real-life code, affected patterns look like this fork(() => effectCreator()) and fork(takeEvery, 'type', fn)
+- TS typings got revamped - they require TS@>3.1 now
+New:
+- babel-plugin-redux-saga - can be used to enhance stack traces of thrown errors
+- multicastChannel - no buffering, notify all pending takers, multicastChannel#take(cb, matcher = matchers.wildard)
+- support for yield take(multicastChannel, pattern)
+- internal stdChannel got reworked to be a singleton object (it is wrapped multicastChannel's instance'), also it is an exported API to support new runSaga's signature - this should also result in being a small perf boost
+- effectMiddlewares - useful especially for testing, you can intercept/hijack any effect and resolve it on your own - passing it very redux-style to the next middleware (last being redux-saga itself). How it might be used can be checked here.
+- takeLeading effect - it takes ""leading"" action and ignores all incoming ones of the same type while the ""leading"" is still handled (useful for things debouncing)
+- retry effect with the signature of retry(maxTries, delayLength, worker, ...args)
+- debounce effect with the signature of debounce(delayLength, pattern, worker, ...args)
+- new rootSagaStarted hook for saga monitor
+- added dev warning about dispatching frozen actions, for scheduling purposes we are using Object.defineProperty on actions dispatched with put effect, so we have to be able to mutate the action object
+- added dev warning about using async generators, they are not supported by redux-saga
+- CommonJS entries are proxied now. This means that process.env.NODE_ENV is read only once and based on that value the appropriate bundle (development or production) is loaded conditionally with require. process.env is slow in node.js so this should improve performance a little bit.
+- isRoot property on Task (you probably won't ever need to use it, it's internal)
+Fixes:
+- keeping single stdChannel in the internals allowed to fix 2 bugs with missed actions (see #707 and #1146)
+- onError should get called now even if you throw non-Errors in your code.
+- we suspend the scheduler before running a root saga, so it should behave the same as forked sagas in terms of scheduling
+- small memory leak for closed actionChannels
+- issue with joiner not ending in cancelled state when joining cancelled task "
+24,"This is first (and very likely last 😉) release candidate version 🎉. We expect no more breaking changes before releasing stable v1 (truth to be told there were not many breaking changes during whole beta process - the API is mostly the same).
+Added:
+- isRoot property on Task (you probably won't ever need to use it, it's internal)
+- dev warning for using delay effect incorrectly
+Changed:
+- sagaStack was refactored - onError call signature is now onError(error, { sagaStack })
+Removed:
+- removed logError, use only onError option
+- removed redux-saga/utils entirely, move of those are moved to separate packages
+Fixed:
+- issue with joiner not ending in cancelled state when joining cancelled task 
+Improved:
+- many docs improvements
+- revamped TS typings (thanks to @aikoven)
+Many thanks once more to @restrry and @shinima who made it possible with their contributions.","This is first (and very likely last 😉) release candidate version 🎉. We expect no more breaking changes before releasing stable v1 (truth to be told there were not many breaking changes during whole beta process - the API is mostly the same).
+Added:
+- isRoot property on Task (you probably won't ever need to use it, it's internal)
+- dev warning for using delay effect incorrectly
+Changed:
+- sagaStack was refactored - onError call signature is now onError(error, { sagaStack })
+Removed:
+- removed logError, use only onError option
+- removed redux-saga/utils entirely, move of those are moved to separate packages
+Fixed:
+- issue with joiner not ending in cancelled state when joining cancelled task 
+Improved:
+- many docs improvements
+- revamped TS typings (thanks to @aikoven)
+Many thanks once more to @restrry and @shinima who made it possible with their contributions."
+25,"This is rather a smaller release, but some things have changed or got improved.
+Added:
+- new rootSagaStarted hook for saga monitor
+Changed:
+- we reverted changing effect types to Symbols, this previous change has caused some problems and we came to conclusion that strings are ""good enough"" for us
+- detach helper returns a new effect instead of mutating the input one
+- we suspend the scheduler before running a root saga, so it should behave the same as forked sagas in terms of scheduling
+Removed:
+- asEffect, it shouldn't be used, effect types are public, effect shapes are stable, so if for whatever reason you want to do some effect inspection you can just check them without us providing additional helpers for it
+Fixed:
+- we have stopped interpreting effects returned from fork, this shouldn't affect any real-life code, affected patterns look like this fork(() => effectCreator()) and fork(takeEvery, 'type', fn)
+- small memory leak for closed actionChannels
+Polished:
+- added dev warning about dispatching frozen actions, for scheduling purposes we are using Object.defineProperty on actions dispatched with put effect, so we have to be able to mutate the action object
+- added dev warning about using async generators, they are not supported by redux-saga
+- we are reusing @babel/runtime helpers, this has helped us to remove some bytes from our bundles
+- CommonJS entries are proxied now. This means that process.env.NODE_ENV is read only once and based on that value the appropriate bundle (development or production) is loaded conditionally with require. process.env is slow in node.js so this should improve performance a little bit.","This is rather a smaller release, but some things have changed or got improved.
+Added:
+- new rootSagaStarted hook for saga monitor
+Changed:
+- we reverted changing effect types to Symbols, this previous change has caused some problems and we came to conclusion that strings are ""good enough"" for us
+- detach helper returns a new effect instead of mutating the input one
+- we suspend the scheduler before running a root saga, so it should behave the same as forked sagas in terms of scheduling
+Removed:
+- asEffect, it shouldn't be used, effect types are public, effect shapes are stable, so if for whatever reason you want to do some effect inspection you can just check them without us providing additional helpers for it
+Fixed:
+- we have stopped interpreting effects returned from fork, this shouldn't affect any real-life code, affected patterns look like this fork(() => effectCreator()) and fork(takeEvery, 'type', fn)
+- small memory leak for closed actionChannels
+Polished:
+- added dev warning about dispatching frozen actions, for scheduling purposes we are using Object.defineProperty on actions dispatched with put effect, so we have to be able to mutate the action object
+- added dev warning about using async generators, they are not supported by redux-saga
+- we are reusing @babel/runtime helpers, this has helped us to remove some bytes from our bundles
+- CommonJS entries are proxied now. This means that process.env.NODE_ENV is read only once and based on that value the appropriate bundle (development or production) is loaded conditionally with require. process.env is slow in node.js so this should improve performance a little bit."
+26,"This release is highly motivated by our 2 new core members @restrry & @shinima. They have put a lot of work into creating PRs & helping others with their issues.
+We've recently extracted some modular packages, you can see @redux-saga/deferred, @redux-saga/delay-p, @redux-saga/is & @redux-saga/symbols. At the same time we've managed to shave off some bytes from the core build - according to some tests of our we've managed remove over 1kb, but your YMMV ofc.
+Added:
+- retry effect with the signature of retry(maxTries, delayLength, worker, ...args)
+- debounce effect with the signature of debounce(delayLength, pattern, worker, ...args)
+Changed:
+- {effects, utils} aren't imported from 'redux-saga' anymore. import them from  redux-saga/effects, redux-saga/utils
+- is helper should be imported from @redux-saga/is.
+- delay function (not effect!) should be imported from @redux-saga/delay-p
+- signature of join & cancel, they both accept now a single task descriptor or an array of those (previously they have accepted variadic length of arguments)
+- refactored shape of the effect objects to { [IO]: true, type, payload }, their structure should be treated as opaque anyway, so we hope this doesn't break anyone
+- END will now finish the race effects","This release is highly motivated by our 2 new core members @restrry & @shinima. They have put a lot of work into creating PRs & helping others with their issues.
+We've recently extracted some modular packages, you can see @redux-saga/deferred, @redux-saga/delay-p, @redux-saga/is & @redux-saga/symbols. At the same time we've managed to shave off some bytes from the core build - according to some tests of our we've managed remove over 1kb, but your YMMV ofc.
+Added:
+- retry effect with the signature of retry(maxTries, delayLength, worker, ...args)
+- debounce effect with the signature of debounce(delayLength, pattern, worker, ...args)
+Changed:
+- {effects, utils} aren't imported from 'redux-saga' anymore. import them from  redux-saga/effects, redux-saga/utils
+- is helper should be imported from @redux-saga/is.
+- delay function (not effect!) should be imported from @redux-saga/delay-p
+- signature of join & cancel, they both accept now a single task descriptor or an array of those (previously they have accepted variadic length of arguments)
+- refactored shape of the effect objects to { [IO]: true, type, payload }, their structure should be treated as opaque anyway, so we hope this doesn't break anyone
+- END will now finish the race effects"
+27,"Error handling
+Let's face it. Errors coming from redux-saga were unreadable and made finding a root cause of the problem really difficult. We really want to improve this situation and with this release (thanks to @restrry's amazing contribution) we start to log ""saga stacks"" along with original errors. This works similar to what React already does with its ""component stacks"". Just look at this one:
+
+You can even enhance those stacks with file names and line numbers by using in development our new babel-plugin-redux-saga (also thanks to @restrry). Let us know if there are any issues with this or if we can make them even more useful!
+Also onError should get called now even if you throw non-Errors in your code.
+Beside that few things have changed, you can read more about them below.
+Added:
+- takeLeading effect - it takes ""leading"" action and ignores all incoming ones of the same type while the ""leading"" is still handled (useful for things debouncing)
+- redux@4 got in supported range (this will let npm dedupe redux in node_modules, keep in mind though that we only depend on compose from that package)
+Changed: 
+- delay became an effect, you still can import delay util from redux-saga/utils though","Error handling
+Let's face it. Errors coming from redux-saga were unreadable and made finding a root cause of the problem really difficult. We really want to improve this situation and with this release (thanks to @restrry's amazing contribution) we start to log ""saga stacks"" along with original errors. This works similar to what React already does with its ""component stacks"". Just look at this one:
+You can even enhance those stacks with file names and line numbers by using in development our new babel-plugin-redux-saga (also thanks to @restrry). Let us know if there are any issues with this or if we can make them even more useful!
+Also onError should get called now even if you throw non-Errors in your code.
+Beside that few things have changed, you can read more about them below.
+Added:
+- takeLeading effect - it takes ""leading"" action and ignores all incoming ones of the same type while the ""leading"" is still handled (useful for things debouncing)
+- redux@4 got in supported range (this will let npm dedupe redux in node_modules, keep in mind though that we only depend on compose from that package)
+Changed: 
+- delay became an effect, you still can import delay util from redux-saga/utils though"
+28,"I must say that this release probably wouldn't be possible without community sponsors - both organizations and individual backers.
+I'm not saying that money given by the community has helped, but it is a nice incentive to work and a token of appreciation. Somehow the fact alone that people are sending money towards us got me lately back on track, going, writing some code, pushing things forward towards v1 release.
+Note that the money is not what you have most valuable to offer for OSS projects - your time is way more valuable. If you want some feature to get implemented, bug to be fixed or just want to help - please reach out to a project's maintainer, maybe ask for pointers about code internals so you can start working easier. OSS is done by regular people like you and most projects' code is not magic, everything can be figured out and you can get comfortable with it.
+Maintaining a popular project (over 10k ⭐️⭐️⭐️!) is not an easy task to do. Truth to be told you do not even have to write code to get exhausted. Answering issues, replying to people's demands etc is time and energy consuming.
+I'd want to think that at least in those areas I've maintained the package well - nearly every question gets answered and it gets answered within days. I've helped people fix their broken code, I've suggested how their apps can be structured, how to solve particular problems.
+However GitHub is not really a place where (most of such) questions should be asked. Whenever you consider asking a question on any project's GitHub, please consider if it is the right place to ask. There are many places you can get help from the community, such as obviously StackOverflow. In terms of redux-saga additionally you can reach out to the community on our gitter channel and redux-saga reactiflux's channel. 
+New:
+- multicastChannel - no buffering, notify all pending takers, multicastChannel#take(cb, matcher = matchers.wildard)
+- support for yield take(multicastChannel, pattern)
+- internal stdChannel got reworked to be a singleton object (it is wrapped multicastChannel's instance'), also it is an exported API to support new runSaga's signature - this should also result in being a small perf boost
+- effectMiddlewares - useful especially for testing, you can intercept/hijack any effect and resolve it on your own - passing it very redux-style to the next middleware (last being redux-saga itself). How it might be used can be checked here. Many thanks to @eloytoro for this feature
+Breaking changes:
+- channel and actionChannel have default buffer of buffers.expanding()
+- errors thrown during put execution are no longer caught and swallowed, you need to catch them manually
+- eventChannel does no longer accept matcher argument - it was a hacky way to support previous implementation of stdChannel
+- exported util of arrayOfDeffered got renamed to the correct arrayOfDeferred
+- internal util of sym tries to use Symbol if it's available, this mainly breaks effects' ""shape"" - types no longer are simple strings, although no code should make any assumptions about effects' shape anyway
+- removed some deprecated APIs - takeEvery, takeLatest, throttle from the redux-saga entry point (they are and were importable from redux-saga/effects), takem, put.sync and executing array of effects, there is explicit API for this for already some time - all effect
+- changed API of runSaga  - it no longer accepts subscribe option, you should create a channel (preferably stdChannel), pass it as channel argument to the runSaga API and communicate with through it with take and put methods
+- most runtime type checks got hidden behing development checks, inputs might not be validated in production (failed validation resulted in error being thrown anyway)
+- task.done getter was changed to be task.toPromise method
+- channels private getters (__takers__ and __closed__) got removed
+Bug fixes:
+- keeping single stdChannel in the internals allowed to fix 2 bugs with missed actions (see #707 and #1146), cc @gajus
+Internals:
+- We have started to use babel@7-beta, hopefully it won't break anything. I've investigated differences between outputs and everything seems to be ok, but you never know ;) This should result in a little bit smaller and a little bit more performant code.","I must say that this release probably wouldn't be possible without community sponsors - both organizations and individual backers.
+I'm not saying that money given by the community has helped, but it is a nice incentive to work and a token of appreciation. Somehow the fact alone that people are sending money towards us got me lately back on track, going, writing some code, pushing things forward towards v1 release.
+Note that the money is not what you have most valuable to offer for OSS projects - your time is way more valuable. If you want some feature to get implemented, bug to be fixed or just want to help - please reach out to a project's maintainer, maybe ask for pointers about code internals so you can start working easier. OSS is done by regular people like you and most projects' code is not magic, everything can be figured out and you can get comfortable with it.
+Maintaining a popular project (over 10k ⭐️⭐️⭐️!) is not an easy task to do. Truth to be told you do not even have to write code to get exhausted. Answering issues, replying to people's demands etc is time and energy consuming.
+I'd want to think that at least in those areas I've maintained the package well - nearly every question gets answered and it gets answered within days. I've helped people fix their broken code, I've suggested how their apps can be structured, how to solve particular problems.
+However GitHub is not really a place where (most of such) questions should be asked. Whenever you consider asking a question on any project's GitHub, please consider if it is the right place to ask. There are many places you can get help from the community, such as obviously StackOverflow. In terms of redux-saga additionally you can reach out to the community on our gitter channel and redux-saga reactiflux's channel. 
+New:
+- multicastChannel - no buffering, notify all pending takers, multicastChannel#take(cb, matcher = matchers.wildard)
+- support for yield take(multicastChannel, pattern)
+- internal stdChannel got reworked to be a singleton object (it is wrapped multicastChannel's instance'), also it is an exported API to support new runSaga's signature - this should also result in being a small perf boost
+- effectMiddlewares - useful especially for testing, you can intercept/hijack any effect and resolve it on your own - passing it very redux-style to the next middleware (last being redux-saga itself). How it might be used can be checked here. Many thanks to @eloytoro for this feature
+Breaking changes:
+- channel and actionChannel have default buffer of buffers.expanding()
+- errors thrown during put execution are no longer caught and swallowed, you need to catch them manually
+- eventChannel does no longer accept matcher argument - it was a hacky way to support previous implementation of stdChannel
+- exported util of arrayOfDeffered got renamed to the correct arrayOfDeferred
+- internal util of sym tries to use Symbol if it's available, this mainly breaks effects' ""shape"" - types no longer are simple strings, although no code should make any assumptions about effects' shape anyway
+- removed some deprecated APIs - takeEvery, takeLatest, throttle from the redux-saga entry point (they are and were importable from redux-saga/effects), takem, put.sync and executing array of effects, there is explicit API for this for already some time - all effect
+- changed API of runSaga  - it no longer accepts subscribe option, you should create a channel (preferably stdChannel), pass it as channel argument to the runSaga API and communicate with through it with take and put methods
+- most runtime type checks got hidden behing development checks, inputs might not be validated in production (failed validation resulted in error being thrown anyway)
+- task.done getter was changed to be task.toPromise method
+- channels private getters (takers and closed) got removed
+Bug fixes:
+- keeping single stdChannel in the internals allowed to fix 2 bugs with missed actions (see #707 and #1146), cc @gajus
+Internals:
+- We have started to use babel@7-beta, hopefully it won't break anything. I've investigated differences between outputs and everything seems to be ok, but you never know ;) This should result in a little bit smaller and a little bit more performant code."
+29,"
+added detach helper - this is used internally now by spawn to mark fork effect as detached, got exported and might be used in userland, it's useful for creating i.e. detached takeEvery
+```js
+import { detach } from 'redux-saga'
+import { takeEvery } from 'redux-saga/effects'
+
+// ...
+yield detach(takeEvery(ACTION_A, mightThrowSaga))
+``
+- typings fordetachgot added thanks to @aikoven 
+- removed#PUREannotations from the source code, adding them automatically with [annotate-pure-calls babel's plugin](https://github.com/Andarist/babel-plugin-annotate-pure-calls)
+- madesagaStackproperty non-enumerable (this is attached sometimes byredux-saga` to the thrown Errors)
+- unified internally error logging
+- removed annoying ""saga has been cancelled"" logs, didn't find a valid use case for them","added detach helper - this is used internally now by spawn to mark fork effect as detached, got exported and might be used in userland, it's useful for creating i.e. detached takeEvery
+```js
+import { detach } from 'redux-saga'
+import { takeEvery } from 'redux-saga/effects'
+// ...
+yield detach(takeEvery(ACTION_A, mightThrowSaga))
+module to the thrown Errors)
+- unified internally error logging
+- removed annoying ""saga has been cancelled"" logs, didn't find a valid use case for them"
+30,"TS Typings
+- made take and put effects redeclarable (thanks to @Rokt33r)
+- marked overloaded put.sync as deprecated","TS Typings
+- made take and put effects redeclarable (thanks to @Rokt33r)
+- marked overloaded put.sync as deprecated"
+31,"TS Typings
+- optional cancel property on CpsCallback (thanks to @dannsam) 
+- support for non-strict effect combinators (thanks to @aikoven 
+- type definitions for util's cloneableGenerator function (thanks to @zyml) ","TS Typings
+- optional cancel property on CpsCallback (thanks to @dannsam) 
+- support for non-strict effect combinators (thanks to @aikoven 
+- type definitions for util's cloneableGenerator function (thanks to @zyml) "
+32,"
+added pure functions annotations (for few deprecation warnings) so they can be better tree-shaken now. more can be read here, thanks to @iamakulov
+","added pure functions annotations (for few deprecation warnings) so they can be better tree-shaken now. more can be read here, thanks to @iamakulov"
+33,"
+fixed middleware's context not being passed to the root sagas (thanks @VictorQueiroz)
+",fixed middleware's context not being passed to the root sagas (thanks @VictorQueiroz)
+34,"
+fixed problem with yielding falsy values - normally all non-interpretable yields are just injected back to your saga (const two = yield 2), however yielding falsy values prevented yielding saga to continue
+","fixed problem with yielding falsy values - normally all non-interpretable yields are just injected back to your saga (const two = yield 2), however yielding falsy values prevented yielding saga to continue"
+35,"
+reverted using Symbols for some internal properties - this caused 2 redux-saga version to be incompatible, effects from one couldnt be interpreted by the other one
+","reverted using Symbols for some internal properties - this caused 2 redux-saga version to be incompatible, effects from one couldnt be interpreted by the other one"
+36,"Things published already under recent patch versions, but without public release noted:
+- got redux-saga/effects and redux-saga/utils working properly for webpack2 and rollup users (or any other bundle which recognizes jsnext:main/module entry). Thanks to @Ephys. How was it achieved can be seen here. Neat trick which I think is not publicly known and it was an issue for quite some time and also allowed me to help fixing this in some other libraries.
+- fixed join(...tasks) implementation, its not accepting an array of tasks, but rather a variadic number of tasks as arguments
+- implemented cancel(...tasks) in similar manner 
+- implemented possibility for self cancellation, this means you can now yield cancel() inside a task and handle both cancel(task) + self cancellation via cancel() within the same finally block
+- fixed internal scheduler and its recursive nature, now its trampolining and cannot cause stack's overflow, thanks to @pbadenski and @wilsaj
+- added getContext and setContext effects (thanks for the idea to @aikoven). It's not properly documented yet, but its a feature which allows sharing context properties across tasks without need to import them in each file or passing them explicitly through arguments. The feature is implemented as dynamic scoping which should sounds familiar for JS devs. In general you cannot share a context property from a child task to the parent, its only passed 'down'. You can read more in related issue and PR till its not documented.
+- got rid of createSagaMiddleware({ onerror }) which got into library because of a typo and we have supported it for some time, please use onError instead
+New in this release:
+- refactored runSaga API, runSaga(iterator, storeInterface) got depreacted in favor of runSaga(storeInterface, saga, ...args). It allowed us to leverage the change internally so now sagaMiddleware.run became partially applied runSaga, they wont now go out of sync (in the past changes and bug fixes had to implemented in both of them).
+- cloneableGenerator utils, which can ease ur unit testing when logic branching is needed, thanks to @nihaux 
+- call([obj, 'method']) - now you can pass a string as method's name which should be called on the passed context
+- all effect - explicit effect for parallel effects, which is exactly what we had been supporting by accepting yielded arrays, so the latter is become deprecated now in favor of this explicitness which nicely maps to the Promise.all API. Please use this from now on
+- improved TS typings, thanks to @aikoven for his continous support in this matter
+Bug fixes:
+- fixed issue with eventChannels not closing automatically upon emitting END, thanks to @baldwmic
+In the meantime we have also:
+- got us https://redux-saga.js.org/ domain, thanks to @baldwmic
+- got us a rolluped UMD build, which is way smaller than the one which was produced by a webpack, thanks to the so called 'flat-bundling'
+- got us a logo! Thanks to @thekarland
+","Things published already under recent patch versions, but without public release noted:
+- got redux-saga/effects and redux-saga/utils working properly for webpack2 and rollup users (or any other bundle which recognizes jsnext:main/module entry). Thanks to @Ephys. How was it achieved can be seen here. Neat trick which I think is not publicly known and it was an issue for quite some time and also allowed me to help fixing this in some other libraries.
+- fixed join(...tasks) implementation, its not accepting an array of tasks, but rather a variadic number of tasks as arguments
+- implemented cancel(...tasks) in similar manner 
+- implemented possibility for self cancellation, this means you can now yield cancel() inside a task and handle both cancel(task) + self cancellation via cancel() within the same finally block
+- fixed internal scheduler and its recursive nature, now its trampolining and cannot cause stack's overflow, thanks to @pbadenski and @wilsaj
+- added getContext and setContext effects (thanks for the idea to @aikoven). It's not properly documented yet, but its a feature which allows sharing context properties across tasks without need to import them in each file or passing them explicitly through arguments. The feature is implemented as dynamic scoping which should sounds familiar for JS devs. In general you cannot share a context property from a child task to the parent, its only passed 'down'. You can read more in related issue and PR till its not documented.
+- got rid of createSagaMiddleware({ onerror }) which got into library because of a typo and we have supported it for some time, please use onError instead
+New in this release:
+- refactored runSaga API, runSaga(iterator, storeInterface) got depreacted in favor of runSaga(storeInterface, saga, ...args). It allowed us to leverage the change internally so now sagaMiddleware.run became partially applied runSaga, they wont now go out of sync (in the past changes and bug fixes had to implemented in both of them).
+- cloneableGenerator utils, which can ease ur unit testing when logic branching is needed, thanks to @nihaux 
+- call([obj, 'method']) - now you can pass a string as method's name which should be called on the passed context
+- all effect - explicit effect for parallel effects, which is exactly what we had been supporting by accepting yielded arrays, so the latter is become deprecated now in favor of this explicitness which nicely maps to the Promise.all API. Please use this from now on
+- improved TS typings, thanks to @aikoven for his continous support in this matter
+Bug fixes:
+- fixed issue with eventChannels not closing automatically upon emitting END, thanks to @baldwmic
+In the meantime we have also:
+- got us link/ domain, thanks to @baldwmic
+- got us a rolluped UMD build, which is way smaller than the one which was produced by a webpack, thanks to the so called 'flat-bundling'
+- got us a logo! Thanks to @thekarland"
+37,"Fixes
+
+take effect supporting Symbol types again - thanks to @iMoses 
+","Fixes
+take effect supporting Symbol types again - thanks to @iMoses "
+38,"This small update allows you to integrate better with some other redux libraries, like redux-actions and redux-act.
+For the users of those it is now possible to omit maintaining action constants only for the sake's of redux-saga and they can use created actions as patterns for the take effect like this:
+``` javascript
+import { createAction } from 'redux-actions'
+const increment = createAction('INCREMENT', amount => amount) // typeof increment === 'function'
+// ...
+yield take(increment)
+```
+It means that you can pass an action creator function with custom .toString() method on it and it can be checked by redux-saga against dispatched actions' types.
+Special thanks for this goes to @thezanke 
+Also - finally the build for rollup should be fixed (public export of CHANNEL_END got fixed).","This small update allows you to integrate better with some other redux libraries, like redux-actions and redux-act.
+For the users of those it is now possible to omit maintaining action constants only for the sake's of redux-saga and they can use created actions as patterns for the take effect like this:
+module
+It means that you can pass an action creator function with custom .toString() method on it and it can be checked by redux-saga against dispatched actions' types.
+Special thanks for this goes to @thezanke 
+Also - finally the build for rollup should be fixed (public export of CHANNEL_END got fixed)."
+39,"This small update allows you to integrate better with some other redux libraries, like redux-batched-actions.
+From now on you can intercept what's being dispatched before it's emitted into the saga, which will allow for using take just like everybody else, instead of playing with the pattern argument.
+The argument you need to pass to the middleware is a higher-order function which will first take out built-in emit function as the argument and return a 'middleware' function to process dispatched actions.
+Example usage:
+javascript
+createSagaMiddleware({
+ emitter: emit => action => {
+   if (Array.isArray(action)) {
+     action.forEach(emit);
+     return
+   }
+   emit(action)
+ }
+});
+More can be read in our docs
+Great thanks to the @pbadenski for implementing the feature.","This small update allows you to integrate better with some other redux libraries, like redux-batched-actions.
+From now on you can intercept what's being dispatched before it's emitted into the saga, which will allow for using take just like everybody else, instead of playing with the pattern argument.
+The argument you need to pass to the middleware is a higher-order function which will first take out built-in emit function as the argument and return a 'middleware' function to process dispatched actions.
+Example usage:
+javascript
+createSagaMiddleware({
+ emitter: emit => action => {
+   if (Array.isArray(action)) {
+     action.forEach(emit);
+     return
+   }
+   emit(action)
+ }
+});
+More can be read in our docs
+Great thanks to the @pbadenski for implementing the feature."
+40,"Just a small patch version with:
+- join(...tasks) - this effect creator will accept array of tasks from now on, it's just a shorthand (more obvious one) for tasks.map(join)
+- take(array) - array can be now of mixed types - strings and predicate functions so this is possible now yield take(['ACTION_A', ac => ac.payload])
+- added TS typings for helpers' effect creators from the redux-saga/effects, that means takeEvery, takeLatest, throttle (thanks to @mcrawshaw)","Just a small patch version with:
+- join(...tasks) - this effect creator will accept array of tasks from now on, it's just a shorthand (more obvious one) for tasks.map(join)
+- take(array) - array can be now of mixed types - strings and predicate functions so this is possible now yield take(['ACTION_A', ac => ac.payload])
+- added TS typings for helpers' effect creators from the redux-saga/effects, that means takeEvery, takeLatest, throttle (thanks to @mcrawshaw)"
+41,"This release contains mostly deprecations, but only a mild ones. Mainly few things got better, more descriptive names to indicate their behaviour and helpers got their way into effects. Of course as those are deprecations only, we are still planning to support old APIs for a time being, but as those do not require much change in the code they old versions will get removed eventually.
+New features:
+- permitting saga monitors to only hook the functions they want (thanks to @skellock)
+Fixes:
+- refactored moment of actions emitting to saga internals, so not only standard middleware benefits from the recent (and possibly future) scheduling fixed, but also the runSaga API
+Deprecations:
+- put.sync got renamed to put.resolve
+- takem got renamed to take.maybe
+- createSagaMiddleware({ onerror }) got fixed in the code (was documented as onError) and should be used from now on as docs suggested - createSagaMiddleware({ onError }) (thanks to @kuy)
+- all built-in helpers (takeEvery, takeLatest, throttle) got their respective counterparts in redux-saga/effects module, which should confuse people less and be more newcomers-friendly
+``` javascript
+import { takeEvery } from 'redux-saga/effects'
+// ...
+yield* takeEvery('ACTION', worker) // this WON'T work, as effect is just an object
+const task = yield takeEvery('ACTION', worker) // this WILL work like charm
+
+import { takeEvery } from 'redux-saga'
+// ...
+yield* takeEvery('ACTION', worker) // this will continue to work for now
+const task = yield takeEvery('ACTION', worker) // and so will this
+```
+Also few typings were fixed, thanks to @yenshih, @CarsonF and @aikoven for veryfing.
+And last (but not least) great thanks and much appreciation to everyone who has contributed to improving the docs!
+Happy Christmas.","This release contains mostly deprecations, but only a mild ones. Mainly few things got better, more descriptive names to indicate their behaviour and helpers got their way into effects. Of course as those are deprecations only, we are still planning to support old APIs for a time being, but as those do not require much change in the code they old versions will get removed eventually.
+New features:
+- permitting saga monitors to only hook the functions they want (thanks to @skellock)
+Fixes:
+- refactored moment of actions emitting to saga internals, so not only standard middleware benefits from the recent (and possibly future) scheduling fixed, but also the runSaga API
+Deprecations:
+- put.sync got renamed to put.resolve
+- takem got renamed to take.maybe
+- createSagaMiddleware({ onerror }) got fixed in the code (was documented as onError) and should be used from now on as docs suggested - createSagaMiddleware({ onError }) (thanks to @kuy)
+- all built-in helpers (takeEvery, takeLatest, throttle) got their respective counterparts in redux-saga/effects module, which should confuse people less and be more newcomers-friendly
+``` javascript
+import { takeEvery } from 'redux-saga/effects'
+// ...
+yield* takeEvery('ACTION', worker) // this WON'T work, as effect is just an object
+const task = yield takeEvery('ACTION', worker) // this WILL work like charm
+import { takeEvery } from 'redux-saga'
+// ...
+yield* takeEvery('ACTION', worker) // this will continue to work for now
+const task = yield takeEvery('ACTION', worker) // and so will this
+```
+Also few typings were fixed, thanks to @yenshih, @CarsonF and @aikoven for veryfing.
+And last (but not least) great thanks and much appreciation to everyone who has contributed to improving the docs!
+Happy Christmas."
+42,"This release includes an Improved saga monitor API (see #609). 
+- notifies the monitor when root sagas are started by sagaMiddleware.run or runSaga.
+- added actionDispatched trigger to the monitor contract. We need this in order to figure out saga/take effects that reacted to a given action. Also added a silent flag SAGA_ACTION (non enumerable property) added to distinguish actions dispatched by sagas from others.
+Other changes
+- New scheduler to handle synchronous & deeply nested forks/puts (see #622)
+- Browser build is now on cdnjs (thanks to @ian4hu & @pvnr0082t) ","This release includes an Improved saga monitor API (see #609). 
+- notifies the monitor when root sagas are started by sagaMiddleware.run or runSaga.
+- added actionDispatched trigger to the monitor contract. We need this in order to figure out saga/take effects that reacted to a given action. Also added a silent flag SAGA_ACTION (non enumerable property) added to distinguish actions dispatched by sagas from others.
+Other changes
+- New scheduler to handle synchronous & deeply nested forks/puts (see #622)
+- Browser build is now on cdnjs (thanks to @ian4hu & @pvnr0082t) "
+43,"
+fixed issue with uncaught errors in reducers/helpers/etc causing a saga to terminate if caused by a put effect (thanks to @michaelgilley)
+fixed issue with races sometimes dropping buffered items in channels
+added a possibility to attach cancel callback to cps effect (thanks to @alxandr)
+fixed some TS typings (thanks to @jupl)
+allowing sagaMonitor to be used in react-native (thanks to @benhughes)
+","fixed issue with uncaught errors in reducers/helpers/etc causing a saga to terminate if caused by a put effect (thanks to @michaelgilley)
+fixed issue with races sometimes dropping buffered items in channels
+added a possibility to attach cancel callback to cps effect (thanks to @alxandr)
+fixed some TS typings (thanks to @jupl)
+allowing sagaMonitor to be used in react-native (thanks to @benhughes)"
+44,"Changes
+
+Added new effect flush (API docs). It can be used to clear buffered items in the channel and geting them back in a batch in the saga (thanks to @Andarist)
+Added a new helper throttle (API docs)(thanks to @Andarist)
+Added a new buffer type expanding (API docs) (thanks to @Andarist) . This new type also fixes the breaking change that was introduced by v0.11.1 with the new internal buffer implementation (see #511 [only if you need more details]).
+
+TL/DR: Use buffer.fixed(limit) when you need a bounded buffer (will throw an error when the untaked messages exceed the buffer limit). Use buffer.expanding(limit) when you need an auto expanding buffer.
+- createSagaMiddleware supports a new (optional) option: onError API docs to detect uncaught exceptions from Sagas (thanks to @secobarbital)
+- Saga helpers (takeEvery, takeLatest, throttle) are now non blocking (thanks to @Andarist).
+Saga helpers return Iterator objects. In previous versions they were treated just like other Iterators and Promises in redux-saga, the Saga calling a helper (either via yield or yield*) will block until the Iterator returns. But since Saga helpers never return (because they are looping forever ) this will also cause the calling Saga to block forever. So in previous versions, if you wanted to call a helper in a non blocking way you had to use the fork effect
+``` js
+function* saga1() { ... }
+function* saga2() { ... }
+function* mainSaga() {
+  yield fork(takeEvery, 'ACTION_1', saga1)
+  yield fork(takeLatest, 'ACTION_2', saga2)
+}
+```
+With this change, redux-saga handles the helpers like forks when used with yield which mean you can call them directly like this
+``` js
+function* mainSaga() {
+  const task1 = yield takeEvery('ACTION_1', saga1)
+  const task2 = yield takeLatest('ACTION_2', saga2)
+}
+```
+Note this will not work when used with the delegation form yield*: eg yield* takeEvery(...) will block the Generator. This is due to how yield* works in Generators in JavaScript and can't be handled by redux-saga.
+- Add Chinese Traditional translation (thanks to @neighborhood999)
+- fixed bug log() not compatible with IE9 (thanks to @cyrilluce)","Changes
+Added new effect flush (API docs). It can be used to clear buffered items in the channel and geting them back in a batch in the saga (thanks to @Andarist)
+Added a new helper throttle (API docs)(thanks to @Andarist)
+Added a new buffer type expanding (API docs) (thanks to @Andarist) . This new type also fixes the breaking change that was introduced by v0.11.1 with the new internal buffer implementation (see #511 [only if you need more details]).
+TL/DR: Use buffer.fixed(limit) when you need a bounded buffer (will throw an error when the untaked messages exceed the buffer limit). Use buffer.expanding(limit) when you need an auto expanding buffer.
+- createSagaMiddleware supports a new (optional) option: onError API docs to detect uncaught exceptions from Sagas (thanks to @secobarbital)
+- Saga helpers (takeEvery, takeLatest, throttle) are now non blocking (thanks to @Andarist).
+Saga helpers return Iterator objects. In previous versions they were treated just like other Iterators and Promises in redux-saga, the Saga calling a helper (either via yield or yield) will block until the Iterator returns. But since Saga helpers never return (because they are looping forever ) this will also cause the calling Saga to block forever. So in previous versions, if you wanted to call a helper in a non blocking way you had to use the fork effect
+module
+With this change, redux-saga handles the helpers like forks when used with yield which mean you can call them directly like this
+module
+Note this will not work when used with the delegation form yield: eg yield takeEvery(...) will block the Generator. This is due to how yield works in Generators in JavaScript and can't be handled by redux-saga.
+- Add Chinese Traditional translation (thanks to @neighborhood999)
+- fixed bug log() not compatible with IE9 (thanks to @cyrilluce)"
+45,"A patch release including some fixes
+- fix V8 issue when yield*ing saga helpers
+- Fix issue with ES build (thanks @Andarist)
+- Fix issues with Error handling","A patch release including some fixes
+- fix V8 issue when yield*ing saga helpers
+- Fix issue with ES build (thanks @Andarist)
+- Fix issues with Error handling"
+46,"
+fix #360 : added option logger to customize logging (see  API docs for createSagaMiddleware)
+fix #398 : es build to properly use jsnext:main field (thanks to @mgmcdermott)
+
+Breaking change in the signature of runSaga
+The monitor argument is removed. Starting from this release, you must provide the monitor as a sagaMonitor key in the option argument. runSaga supports also the logger option
+diff
+runSaga(iterator, {
+  subscribe: ...,
+  dispatch: ...,
+  getState: ...,
++ sagaMonitor: monitor,
++ logger: ...
+},
+- monitor
+)","fix #360 : added option logger to customize logging (see  API docs for createSagaMiddleware)
+fix #398 : es build to properly use jsnext:main field (thanks to @mgmcdermott)
+Breaking change in the signature of runSaga
+The monitor argument is removed. Starting from this release, you must provide the monitor as a sagaMonitor key in the option argument. runSaga supports also the logger option
+diff
+runSaga(iterator, {
+  subscribe: ...,
+  dispatch: ...,
+  getState: ...,
++ sagaMonitor: monitor,
++ logger: ...
+},
+- monitor
+)"
+47,"
+Fix Synchronous puts behaviors to be consistent with pre 0.10 releases
+
+This restores the pre 0.10 behavior for handling puts whose result is a Promise (i.e. dispatch an action which will be handled by a middleware and returns a Promise). In pre 0.10 releases, the put doesn't wait for the returned promise to resolve; 
+Starting from this release
+1. put doesn't block waiting the returned promise to resolve
+2. In order to wait for the returned Promise, use the variant put.sync(...) which will wait until the Promise resolve (or rejects) before resuming
+For background see #336
+Other changes
+- fix Symbol handling in take's patterns and takeEvery/takeLatest  (thanks to @jscinoz)","Fix Synchronous puts behaviors to be consistent with pre 0.10 releases
+This restores the pre 0.10 behavior for handling puts whose result is a Promise (i.e. dispatch an action which will be handled by a middleware and returns a Promise). In pre 0.10 releases, the put doesn't wait for the returned promise to resolve; 
+Starting from this release
+1. put doesn't block waiting the returned promise to resolve
+2. In order to wait for the returned Promise, use the variant put.sync(...) which will wait until the Promise resolve (or rejects) before resuming
+For background see #336
+Other changes
+- fix Symbol handling in take's patterns and takeEvery/takeLatest  (thanks to @jscinoz)"
+48,"Yep! Already another patch (got #314 merged just after releasing 0.10.3). Changes:
+- Make delay cancellable (#314 thanks to @aikoven, Also thanks @itinance for issuing #327). ","Yep! Already another patch (got #314 merged just after releasing 0.10.3). Changes:
+- Make delay cancellable (#314 thanks to @aikoven, Also thanks @itinance for issuing #327). "
+49,"Changes
+- Enhanced sagaMonitor to work in Node environment (#317 thanks to @sompylasar)
+- fix #287 weird error stack trace and error printing
+- fix #316 Compare END action by string type, not by reference, to allow middleware-transformed actions
+- fix #298 Long error messages should be cut in production","Changes
+- Enhanced sagaMonitor to work in Node environment (#317 thanks to @sompylasar)
+- fix #287 weird error stack trace and error printing
+- fix #316 Compare END action by string type, not by reference, to allow middleware-transformed actions
+- fix #298 Long error messages should be cut in production"
+50,Fixed issue with the re-scheduling nested puts from forked childs (see #277 (comment)),Fixed issue with the re-scheduling nested puts from forked childs (see #277 (comment))
+51,"A patch release fixing some issues
+- fix Rejected Promise does not throw inside Generators if rejected with an undefined error #283
+- Only check eventChannel matcher if defined #273 (thanks @secobarbital)
+- Fixes issues of taking puts nested inside a fork call (forked child puts before fork Effect returns) #277
+- Updated docs, added a section on channels
+- Fixed cancellable-counter example","A patch release fixing some issues
+- fix Rejected Promise does not throw inside Generators if rejected with an undefined error #283
+- Only check eventChannel matcher if defined #273 (thanks @secobarbital)
+- Fixes issues of taking puts nested inside a fork call (forked child puts before fork Effect returns) #277
+- Updated docs, added a section on channels
+- Fixed cancellable-counter example"
+52,"This is a major release. Make sure to read the following notes because there are some breaking changes
+Middleware API
+It's no longer possible to start the Sagas in the applyMiddleware phase. Starting from this version Sagas must be started using the sagaMiddleware.run(saga, ...args) method. For a background see #235
+Before this release, we used the following to start Sagas
+``` javascript
+import { createStore, applyMiddleware } from 'redux'
+import createSagaMiddleware from 'redux-saga'
+import reducer from './reducers'
+import rootSaga from './sagas'
+const store = createStore(
+  reducer,
+  applyMiddleware(createSagaMiddleware(rootSaga))
+)
+```
+This is no longer valid. Instead you'll have to use the following
+``` javascript
+import { createStore, applyMiddleware } from 'redux'
+import createSagaMiddleware from 'redux-saga'
+import reducer from './reducers'
+import rootSaga from './sagas'
+const sagaMiddleware = createSagaMiddleware()
+const store = createStore(
+  reducer,
+  applyMiddleware(sagaMiddleware)
+)
+sagaMiddleware.run(rootSaga)
+```
+Also see examples for an alternative way which enahnces the store with a runSaga method
+Other changes
+Removed deprecated getState argument passed to Sagas. You can use the select Effect to get the store state
+New fork model
+In prior release, all forked tasks were detached from their parents. The parent Saga terminates as soon as its own body of instructions is fully executed and errors from forked tasks do not propagate up to their parents which in some situations caused errors from forks to be swallowed. Also cancellation of a Parent task do not automatically propagate to child tasks, which means one have to maintain the list of running tasks manually and take care of cancelling them if the parent was cancelled
+This new release includes a new fork model. By default, all forked tasks are attached to their parents. The whole parent + direct and indirect children form an execution tree (vs execution path in sequential programming). This implies new semantics from the prior releases
+- A parent task will terminate only if : 1- it terminates its own body and 2- all forked tasks are terminated (this can be handy for Server Side rendering scenarios, see real-world example in the repo)
+- Cancellation of a parent automatically propagates to child tasks, this means effectively the cancellation of the whole execution tree.
+- Errors can now also bubble from forked tasks: Any uncaught error from a fork will propagate up to the parent and aborts the whole execution tree. The benefit is that errors are no longer swallowed. Also errors are now logged with entire execution tree
+
+To create detached forks which follow the old model. You can use the new effect spawn.
+Cancellation as a 'third State' (no longer throw on the Generator)
+The release introduces a new model for Cancellation propagation. In prior releases, Cancellation of a task throws a SagaCancellationException inside the cancelled task. Starting from this release, Cancellations no longer throw inside cancelled tasks. This means that special cancellation handling no longer interfere with Error handling. In prior release, any try/catch block needed this chek
+javascript
+function* saga() {
+  try {
+     yield call(someApi)
+     yield put(SuccessAction())
+  } catch(err) {
+    // ensure this is not a Cancellation error before handling the error
+    // We do not want to dispatch an Error on cancellations
+    if(!isCancel(err))
+      yield put(ErrorAction())
+  }
+}
+Starting with this release; the check is no longer necessary. If you want to react to cancellations, you can do it inside finally block. A new effect cancelled() is provided to check if the Saga has been cancelled
+javascript
+function* saga() {
+  try {
+     yield call(someApi)
+     yield put(SuccessAction())
+  } catch(err) {
+     yield put(ErrorAction())
+  } finally {
+     if(yield cancelled()) {
+       // logic proper to cancellation
+    }
+  }
+}
+So SagaCancellationException class and isCancelError function were removed.
+Also Cancellation are now simply logged using console.info in dev mode instead of warnings
+For background see #266 
+Support for Channels and Event channels
+The redux-saga concurrency model introduces a new abstraction channel. You can now use take and put with other sources than the Store actions. Esp. eventChannel allows sagas to take from external event sources. You can find a simple example in the cancellable-counter repo example. For more info see API docs.
+Introdcution of the special action END (support SSR and Universal Sagas)
+This release introduces a special action END which can be used to notify that an event source has terminated. You can also dispatch an END to notify Sagas that no more Store actions will be fired. This can be handy in Server Side rendering to break the while(true) loop inside watchers.The real-world example in the repo shows a possible ways to implement universal Sagas and SSR.
+END actions are automatically handled by the middleware and cause a Saga blocked on a take effect to automatically terminate (but it'll still wait for its forked tasks which provides support for SSR). To catch END values you can use the new Effect takem (aka takeMaybe). Using takem you get the explicit END so you can handle it manually. See #255 for more infos
+Changes in the Monitoring API
+Monitor actions are no longer fired by default in dev mode. To activate monitoring, you'll have to pass the {sagaMonitor} option explicitly to the middleware factory. Also monitor events are now dispatched to the Saga monitor via direct method calls instead of dispatching actions to the Store. See repo examples for usage examples.
+Other changes
+
+It's now possible to have parallel takes (yield [take(...), take(...)]
+Added delay(ms, [val]) function
+Fixed issue with interleaved synchronous dispatches (see #235)
+runSaga: remove deprecated StoreIO
+Task object gets a new property:isCancelled
+Fixed Regenerator runtime in lib/dist #252
+Fixed takeEvery doesn't work when action type is a Symbol #246
+","This is a major release. Make sure to read the following notes because there are some breaking changes
+Middleware API
+It's no longer possible to start the Sagas in the applyMiddleware phase. Starting from this version Sagas must be started using the sagaMiddleware.run(saga, ...args) method. For a background see #235
+Before this release, we used the following to start Sagas
+module
+This is no longer valid. Instead you'll have to use the following
+module
+Also see examples for an alternative way which enahnces the store with a runSaga method
+Other changes
+Removed deprecated getState argument passed to Sagas. You can use the select Effect to get the store state
+New fork model
+In prior release, all forked tasks were detached from their parents. The parent Saga terminates as soon as its own body of instructions is fully executed and errors from forked tasks do not propagate up to their parents which in some situations caused errors from forks to be swallowed. Also cancellation of a Parent task do not automatically propagate to child tasks, which means one have to maintain the list of running tasks manually and take care of cancelling them if the parent was cancelled
+This new release includes a new fork model. By default, all forked tasks are attached to their parents. The whole parent + direct and indirect children form an execution tree (vs execution path in sequential programming). This implies new semantics from the prior releases
+- A parent task will terminate only if : 1- it terminates its own body and 2- all forked tasks are terminated (this can be handy for Server Side rendering scenarios, see real-world example in the repo)
+- Cancellation of a parent automatically propagates to child tasks, this means effectively the cancellation of the whole execution tree.
+- Errors can now also bubble from forked tasks: Any uncaught error from a fork will propagate up to the parent and aborts the whole execution tree. The benefit is that errors are no longer swallowed. Also errors are now logged with entire execution tree
+To create detached forks which follow the old model. You can use the new effect spawn.
+Cancellation as a 'third State' (no longer throw on the Generator)
+The release introduces a new model for Cancellation propagation. In prior releases, Cancellation of a task throws a SagaCancellationException inside the cancelled task. Starting from this release, Cancellations no longer throw inside cancelled tasks. This means that special cancellation handling no longer interfere with Error handling. In prior release, any try/catch block needed this chek
+javascript
+function saga() {
+  try {
+     yield call(someApi)
+     yield put(SuccessAction())
+  } catch(err) {
+    // ensure this is not a Cancellation error before handling the error
+    // We do not want to dispatch an Error on cancellations
+    if(!isCancel(err))
+      yield put(ErrorAction())
+  }
+}
+Starting with this release; the check is no longer necessary. If you want to react to cancellations, you can do it inside finally block. A new effect cancelled() is provided to check if the Saga has been cancelled
+javascript
+function saga() {
+  try {
+     yield call(someApi)
+     yield put(SuccessAction())
+  } catch(err) {
+     yield put(ErrorAction())
+  } finally {
+     if(yield cancelled()) {
+       // logic proper to cancellation
+    }
+  }
+}
+So SagaCancellationException class and isCancelError function were removed.
+Also Cancellation are now simply logged using console.info in dev mode instead of warnings
+For background see #266 
+Support for Channels and Event channels
+The redux-saga concurrency model introduces a new abstraction channel. You can now use take and put with other sources than the Store actions. Esp. eventChannel allows sagas to take from external event sources. You can find a simple example in the cancellable-counter repo example. For more info see API docs.
+Introdcution of the special action END (support SSR and Universal Sagas)
+This release introduces a special action END which can be used to notify that an event source has terminated. You can also dispatch an END to notify Sagas that no more Store actions will be fired. This can be handy in Server Side rendering to break the while(true) loop inside watchers.The real-world example in the repo shows a possible ways to implement universal Sagas and SSR.
+END actions are automatically handled by the middleware and cause a Saga blocked on a take effect to automatically terminate (but it'll still wait for its forked tasks which provides support for SSR). To catch END values you can use the new Effect takem (aka takeMaybe). Using takem you get the explicit END so you can handle it manually. See #255 for more infos
+Changes in the Monitoring API
+Monitor actions are no longer fired by default in dev mode. To activate monitoring, you'll have to pass the {sagaMonitor} option explicitly to the middleware factory. Also monitor events are now dispatched to the Saga monitor via direct method calls instead of dispatching actions to the Store. See repo examples for usage examples.
+Other changes
+It's now possible to have parallel takes (yield [take(...), take(...)]
+Added delay(ms, [val]) function
+Fixed issue with interleaved synchronous dispatches (see #235)
+runSaga: remove deprecated StoreIO
+Task object gets a new property:isCancelled
+Fixed Regenerator runtime in lib/dist #252
+Fixed takeEvery doesn't work when action type is a Symbol #246"
+53,"A small patch with the following merges
+- Fixes 'yield* takeEvery causing 'not a function' error'. (issue #197)
+- Better error printing in non-browser environments (PR #194)
+- Added ""jsnext:main"" entry to package.json for ES2015 module import (PR #204)
+- Improved logging in sagaMonitor for takeEvery and takeLatest. Now if you do a yield takeEvery(...) (instead of yield* takeEvery(...)). You'll get a better logging (previously sagaMonitor logged 'anonymous')
+","A small patch with the following merges
+- Fixes 'yield takeEvery causing 'not a function' error'. (issue #197)
+- Better error printing in non-browser environments (PR #194)
+- Added ""jsnext:main"" entry to package.json for ES2015 module import (PR #204)
+- Improved logging in sagaMonitor for takeEvery and takeLatest. Now if you do a yield takeEvery(...) (instead of yield takeEvery(...)). You'll get a better logging (previously sagaMonitor logged 'anonymous')"
+54,This patch fixes the createMockTask result to be conform to the API of Task object (see #182),This patch fixes the createMockTask result to be conform to the API of Task object (see #182)
+55,This patch fixes synchronous errors handling (see #152 and #165),This patch fixes synchronous errors handling (see #152 and #165)
+56,"This patch removes all Symbol references from the source code. Some reported issues were related to buggy/incomplete/absent Symbol support which caused subtle and hard to track bugs on  the source code.
+The lib uses now simple namespaced strings to identify internal constants","This patch removes all Symbol references from the source code. Some reported issues were related to buggy/incomplete/absent Symbol support which caused subtle and hard to track bugs on  the source code.
+The lib uses now simple namespaced strings to identify internal constants"
+57,"Well, perhaps this is the fastest patch in the release history.
+So following the advice of @gaearon. I decided to drop the getState effect and only keep select. To get the entire Store's state, simply use yield select() without arguments
+Before (in the previous v0.9.0) to get the entire state we used
+``` javascript
+import { getState } from 'redux-saga/effects'
+function* saga() {
+  // No longer valid with 0.9.1
+  yield getState()
+} 
+```
+Now (with 0.9.1) to get the entire state we use
+``` javascript
+import { select } from 'redux-saga/effects'
+function* saga() {
+  // get the entire state
+  yield select()
+} 
+```
+Other changes
+
+Using the getState() param passed to the root Sagas is now deprecated (this is the getState argument passed to the root Sagas started by the middleware, not to confound with the dropped getState effect above)
+Fixed SagaMonitor example code to support logging select effects
+","Well, perhaps this is the fastest patch in the release history.
+So following the advice of @gaearon. I decided to drop the getState effect and only keep select. To get the entire Store's state, simply use yield select() without arguments
+Before (in the previous v0.9.0) to get the entire state we used
+module
+Now (with 0.9.1) to get the entire state we use
+module
+Other changes
+Using the getState() param passed to the root Sagas is now deprecated (this is the getState argument passed to the root Sagas started by the middleware, not to confound with the dropped getState effect above)
+Fixed SagaMonitor example code to support logging select effects"
+58,"This release add support for 2 new Effects (thanks to @gaearon and @slorber)
+- yield select(selector, ...args) allows a Saga to query some state slice using the provided selector function (Api docs)
+- yield getState() same as select but retrieves the entire state (Api docs)","This release add support for 2 new Effects (thanks to @gaearon and @slorber)
+- yield select(selector, ...args) allows a Saga to query some state slice using the provided selector function (Api docs)
+- yield getState() same as select but retrieves the entire state (Api docs)"
+59,This patch fixes #118. The implementation of argument passing to forked tasks in takeEvery/takeLatest didn't match the specs in docs and examples,This patch fixes #118. The implementation of argument passing to forked tasks in takeEvery/takeLatest didn't match the specs in docs and examples
+60,"And yet another patch release
+- Added missed utils top level export for utils. So now we can do import redux-saga/utils","And yet another patch release
+- Added missed utils top level export for utils. So now we can do import redux-saga/utils"
+61,"Features
+The release adds 2 helper functions takeEvery and takeLatest to handle the common case concurrency scenarios
+For the reasons behind this addition see https://github.com/yelouafi/redux-saga/issues/70#issuecomment-182401477
+You can find the docs of the functions here
+http://yelouafi.github.io/redux-saga/docs/basics/UsingSagaHelpers.html
+http://yelouafi.github.io/redux-saga/docs/advanced/Concurrency.html
+http://yelouafi.github.io/redux-saga/docs/api/index.html#saga-helpers
+There is a breaking change in this release
+The path import for Effects has changed from redux-saga to redux-saga/effects
+Before
+javascript
+import {  take, put, call, ... } from 'redux-saga'
+After
+javascript
+import {  take, put, call, ... } from 'redux-saga/effects'
+Other changes
+added a helper function isCancelError to simplify test of Cancellation Exception
+Instead of 
+``` javascript
+import { isCancelError } from 'redux-saga'
+function* saga() {
+  try {
+     ...
+  } catch(error) {
+     if(isCance(error) 
+        // error is an instance of SagaCancellationException
+  }
+}
+```","Features
+The release adds 2 helper functions takeEvery and takeLatest to handle the common case concurrency scenarios
+For the reasons behind this addition see link
+You can find the docs of the functions here
+link
+link
+link
+There is a breaking change in this release
+The path import for Effects has changed from redux-saga to redux-saga/effects
+Before
+javascript
+import {  take, put, call, ... } from 'redux-saga'
+After
+javascript
+import {  take, put, call, ... } from 'redux-saga/effects'
+Other changes
+added a helper function isCancelError to simplify test of Cancellation Exception
+Instead of 
+module"
+62,"Features
+This release adds new support to dynamically running Sagas after the applyMiddleware phase.
+In previous releases, the library provided the runSaga method to start Sagas dynamically. However, there were some issues due to how runSaga was implemented (related issues #48, #76)
+In this release, the library provides a new method (thanks to @gaearon) to attach Sagas dynamically to the Store.
+Migration
+(see API docs for detailed infos)
+Before
+In previous releases, you had to create a storeIO and passes it to runSaga
+configureStore.js
+``` javascript
+import createSagaMiddleware from 'redux-saga'
+import reducer from './path/to/reducer'
+import startupSagas from './path/to/sagas'
+export default function configureStore(initialState) {
+  // Note: passing middleware as the last argument to createStore requires redux@>=3.1.0
+  return createStore(
+    reducer,
+    initialState,
+    applyMiddleware(/ other middleware, /createSagaMiddleware(...startupSagas ))
+  )
+}
+```
+someModule.js
+``` javascript
+import {runSaga, storeIO} from 'redux-saga'
+import configureStore from './configureStore '
+import dynamicSaga from './path/to/dynamicSaga'
+const store = configureStore()
+const task = runSaga(
+  dynamicSaga(store.getState),
+  storeIO(store)
+)
+```
+
+After
+Starting from this release, you export the saga middleware itself and uses its run method
+configureStore.js
+``` javascript
+import createSagaMiddleware from 'redux-saga'
+import reducer from './path/to/reducer'
+import startupSagas from './path/to/sagas'
+// export the middleware
+export const sagaMiddleware = createSagaMiddleware(...startupSagas)
+export default function configureStore(initialState) {
+  // Note: passing middleware as the last argument to createStore requires redux@>=3.1.0
+  return createStore(
+    reducer,
+    initialState,
+    applyMiddleware(/ other middleware, / sagaMiddleware)
+  )
+}
+```
+someModule.js
+``` javascript
+import { sagaMiddleware } from './configureStore'
+import dynamicSaga from './path/to/dynamicSaga'
+sagaMiddleware.run(dynamicSaga)
+```
+Other changes
+
+Task descriptor enhanced with a new cancel method
+Throw an Error if the Saga was provided an undefined action
+The documentation is now using GitBook thanks to @cef62
+","Features
+This release adds new support to dynamically running Sagas after the applyMiddleware phase.
+In previous releases, the library provided the runSaga method to start Sagas dynamically. However, there were some issues due to how runSaga was implemented (related issues #48, #76)
+In this release, the library provides a new method (thanks to @gaearon) to attach Sagas dynamically to the Store.
+Migration
+(see API docs for detailed infos)
+Before
+In previous releases, you had to create a storeIO and passes it to runSaga
+configureStore.js
+module
+someModule.js
+module
+After
+Starting from this release, you export the saga middleware itself and uses its run method
+configureStore.js
+module
+someModule.js
+module
+Other changes
+Task descriptor enhanced with a new cancel method
+Throw an Error if the Saga was provided an undefined action
+The documentation is now using GitBook thanks to @cef62"
+63,Include fix #71 'yield [] should return immediately an empty array instead of blocking forever' (thanks to @slorber ) ,Include fix #71 'yield [] should return immediately an empty array instead of blocking forever' (thanks to @slorber ) 
+64,"This release include a new generator driver core that doesnt rely on promises. This should get rid of annoying issues related to Saga missing events. 
+The new implementation uses only callback notification to handle synchronous actions. It means now even when you dispatch multiple actions concecutively in a synchrnous way, Sagas waiting for those action wont miss anyone. It means also that Saga starts immediately and do not miss actions fired at startup (no more requestAnimationFrame tricks are required).
+For more background see the explanation on this issue. This release should fixe #50 and #55
+Other Changes
+- Uncaught SagaCancellationExceptions are no longer bubbled to parents. This was necessary to make yield cancel(...) have true non blocking semantics. Once we cancel a task, we move immediately to the next step. If the cancelled task omits to catch its cancellation error, a warning message will be printed on the console (only in dev mode).
+- Fixed 'Infinite loop when using take('*')'  (#61)
+- Uncaught cancellation exception are logged into the console only in dev mode (process.env.NODE_ENV set to 'development')
+- Monitor actions are also dispatched only in dev mode
+- new function createMockTask to mock results of fork effects. With this function, it is now possible to test generators using fork like this
+``` javascript
+import test from 'tape';
+import { take, fork, cancel } from 'redux-saga'
+import { createMockTask } from 'redux-saga/lib/testUtils'
+const types = { GET_DATA: 'GET_DATA'}
+function callApi() { ... }
+export function* getData () {
+  let task
+  while (true) {
+    let { data } = yield take(types.GET_DATA)
+    task && task.isRunning() ? yield cancel(task) : null
+    task = yield fork(callApi, data)
+  }
+}
+test('getData', assert => {
+const it = getData()
+assert.deepEqual( it.next().value, take(types.GET_DATA) )
+const mockData = {data: 'xyz'}
+  const mockAction = {type: types.GET_DATA, data: mockData }
+// resume the generator with mockAction
+  // since task is null, we expect yield null
+  assert.deepEqual( it.next(mockAction).value, fork(callApi, mockData ) )
+// mock fork result
+  const mockTask = createMockTask()
+// resume the generator with mock task
+  assert.deepEqual( it.next(mockTask).value, take(types.GET_DATA) )
+// simulate a task ending
+  mockTask.setRunning(false)
+// now expect a cancel
+  assert.deepEqual( it.next(mockAction).value, cancel(mockTask) )
+assert.end()
+})
+```","This release include a new generator driver core that doesnt rely on promises. This should get rid of annoying issues related to Saga missing events. 
+The new implementation uses only callback notification to handle synchronous actions. It means now even when you dispatch multiple actions concecutively in a synchrnous way, Sagas waiting for those action wont miss anyone. It means also that Saga starts immediately and do not miss actions fired at startup (no more requestAnimationFrame tricks are required).
+For more background see the explanation on this issue. This release should fixe #50 and #55
+Other Changes
+- Uncaught SagaCancellationExceptions are no longer bubbled to parents. This was necessary to make yield cancel(...) have true non blocking semantics. Once we cancel a task, we move immediately to the next step. If the cancelled task omits to catch its cancellation error, a warning message will be printed on the console (only in dev mode).
+- Fixed 'Infinite loop when using take('*')'  (#61)
+- Uncaught cancellation exception are logged into the console only in dev mode (process.env.NODE_ENV set to 'development')
+- Monitor actions are also dispatched only in dev mode
+- new function createMockTask to mock results of fork effects. With this function, it is now possible to test generators using fork like this
+module"
+65,"Features
+
+call, cps and fork both support providing 'this' context for invoking instance methods
+
+Fixes
+
+take will now throw an error if provided with an argument and that argument is undefined. (see #35.  thanks @tgriesser) 
+
+Also migrated examples to webpack. All build infrastructure use webpack","Features
+call, cps and fork both support providing 'this' context for invoking instance methods
+Fixes
+take will now throw an error if provided with an argument and that argument is undefined. (see #35.  thanks @tgriesser) 
+Also migrated examples to webpack. All build infrastructure use webpack"
+66,"
+Fixed issue: apply not exported from the main module
+",Fixed issue: apply not exported from the main module
+67,"Features
+
+Task cancellation support. Thanks to @aikoven for this one. (issue #14).
+Saga monitoring support (The sagaMonitor in the examples folder implements a simple logger. You can print a trace of the sagas control flow in the console by dispatching a LOG_EFFECT action. You can play with the repo  examples by typing store.dispatch({type: 'LOG_EFFECT'}) in the console.
+
+Below a screenshot from the counter example.
+
+- Support for starting Sagas dynamically (issues #5 and #13)
+- new yield apply(context, fn, args) effect for calling function with this context  (issue #27)
+- Support for umd builds Thanks to @cef62 ","Features
+Task cancellation support. Thanks to @aikoven for this one. (issue #14).
+Saga monitoring support (The sagaMonitor in the examples folder implements a simple logger. You can print a trace of the sagas control flow in the console by dispatching a LOG_EFFECT action. You can play with the repo  examples by typing store.dispatch({type: 'LOG_EFFECT'}) in the console.
+Below a screenshot from the counter example.
+
+Support for starting Sagas dynamically (issues #5 and #13)
+new yield apply(context, fn, args) effect for calling function with this context  (issue #27)
+Support for umd builds Thanks to @cef62 
+"
+68,,
+69,,
+70,,

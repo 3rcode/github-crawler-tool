@@ -1,0 +1,892 @@
+Index,Commit Message Abstract,Score Abstract,Corresponding Changelog Sentence Abstract,Commit Desription Abstract,Label
+1,Fix tests,0.70178384,Fix actingAsClient testing method (#1119),,1
+2,Merge pull request #421 from lucasmichot/feature/3.0/composer,0.5285082,Fix migrations tag publish (#832),This reverts commit a75f0a92136a6cf91e5c6755374f77bf4b30c411.,0
+3,Merge pull request #1069 from jessarcher/support-xsrf-token-header,0.5417483,Accept requests with the encrypted X-XSRF-TOKEN HTTP header (#1069),,0
+4,Update author email,0.49443552,Update docblock by @mnabialek in link,Added provider guard to Password Grant Client. Add argument provider in InstallCommand formatting Co-authored-by: Taylor Otwell taylor@laravel.com,0
+5,Accept requests with the encrypted X-XSRF-TOKEN HTTP header,0.9734372,Accept requests with the encrypted X-XSRF-TOKEN HTTP header (#1069),,1
+6,Add responses for destroy methods,0.92983735,Add responses for destroy methods (#942),,1
+7,static setter for revoking other tokens,0.6721129,Revoke refresh tokens when auth tokens get revoked (#1186),,0
+8,[10.x] Allow to use custom authorization server response (#1521),0.9507262,Allow to use custom authorization server response (#1521)﻿,,1
+9,Some style fixes.,0.5787356,Changed,,0
+10,Update PurgeCommand.php (#1586),0.837728,Update PurgeCommand.php by @fatoskurtishi in link,Allow lcobucci/jwt v5 Temp change to see why CI no likey Update composer.json Update composer.json Fixes Update composer.json,1
+11,Merge pull request #832 from yamenarahman/7.0,0.4922235,Fix migrations tag publish (#832),,0
+12,allow tokens to be flushed,0.69037557,Revoke refresh tokens when auth tokens get revoked (#1186),,0
+13,DocBlocks,0.72922224,Fix AccessToken docblock (#996),,1
+14,Merge pull request #1149 from crynobone/phpunit-update,0.55000186,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,,0
+15,Do not auto increment AuthCode ID,0.95087296,Do not auto increment AuthCode ID (#929),,1
+16,Merge pull request #913 from driesvints/change-client-id-column-types,0.61462367,Use unsignedInteger column type for client_id columns (47f0021),,0
+17,updated firebase/php-jwt dependency,0.8101611,Upgrade firebase/php-jwt to ^6.0 by @prufrock in link,,1
+18,Fix maxlength for token names (#1300),1.0000001,Fix maxlength for token names (#1300),,1
+19,Merge pull request #855 from vitorbari/add-client-credentials-any-scope-middleware,0.63154584,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+20,Merge pull request #230 from themsaid/switchToUsingAxios,0.53673905,Fix migrations tag publish (#832),,0
+21,Changing client command to insert personal access client via model instead of raw,0.69073385,"Add user relationship to client model (#851, 3213be8)",,0
+22,Merge pull request #90 from etelford/etelford-use-model-when-creating-oauth-clients,0.57438374,"Add user relationship to client model (#851, 3213be8)",This reverts commit db543b0cc13ed3f56f1bffda04707fbe2a8c7ab5.,0
+23,Merge pull request #8 from oyed/patch-1,0.5280986,Allow access to HTTP response status code on OAuthServerException (#1148),,0
+24,"Tweak client command to be able to generate ""regular"" clients.",0.563439,Update ClientCommand to support public clients (#1151),This reverts commit 08b1dabfdddbdf2472ef193609f75f475208ec90.,0
+25,Let Passport support inherited parent scopes.,0.9181931,Let Passport support inherited parent scopes (#1068),,1
+26,Merge pull request #920 from themsaid/pr/17313,0.534819,Fix migrations tag publish (#832),Co-authored-by: tony tony.wang@sjfood.com,0
+27,Remove nightly builds,0.5205258,Removed,Implements authorization view response contract that allows for being overridden with custom views Updated namespace Updated namespace Moved individual arguments to an array of parameters and one argument Removed authorize return type Remove old return statement Add IntelliJ IDE files to gitignore Formatting Update tests Update rest of tests with new response class Style fixes and make sure parameters pushed to authorization view are in an array. Remove parameters from authorization view function Update .gitignore Update src/Contracts/AuthorizationViewResponse.php Co-authored-by: Choraimy Kroonstuiver 3661474+axlon@users.noreply.github.com Update src/Http/Responses/AuthorizationViewResponse.php Co-authored-by: Choraimy Kroonstuiver 3661474+axlon@users.noreply.github.com Updated doc block return types formatting remove extra line Co-authored-by: Dries Vints dries@vints.io Co-authored-by: Choraimy Kroonstuiver 3661474+axlon@users.noreply.github.com Co-authored-by: Taylor Otwell taylor@laravel.com,0
+28,use diactoros 2.0 and psr-http-factory,0.9469299,Use diactoros 2.0 and psr-http-factory (aadf603),Co-authored-by: Chris Page chris@motocom.co.uk,1
+29,add additional argument for authorize method,0.606497,Allow to use custom authorization server response (#1521)﻿,,0
+30,Move third argument to newline,0.416622,Fix str_replace error when third parameter ($subject) is null (#1511)﻿,,0
+31,Adding options,0.4947294,Add ability to customize the RefreshToken (#966),,0
+32,Add password grant feature tests,0.5230411,Pass user identifier through to finalize scopes in personal access grant by @GrahamCampbell in link,,0
+33,Rename testsuite name,0.60692805,Rename property (#920),,0
+34,Type cast key length to int,0.47742543,Add key type to refresh token model (e400c2b),Get model PK instead of forcibly id column Get model PK instead of forcibly id column in tests Get model PK instead of forcibly id column in command Get model PK instead of forcibly id column in repository Get model PK instead of forcibly id column in Passport stub extending from model Fix namespace order Get model PK instead of forcibly id column in blade,0
+35,Bump league server dependency,0.94012004,Bump league server dependency (#1237),,1
+36,Decorate UserProvider with custom class,0.507385,Make $userId nullable in ClientRepository->createPersonalAccessClient by @bram-pkg in link,Update ClientCommand.php's user_id description We get a fair amount of confused passport users on the laravel discord wondering what this user_id is even for. It might help to indicate that the input is optional. Update ClientCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+37,Get authenticated user from the guard (#1617),0.83661175,Get authenticated user from the guard by @hafezdivandari in link,,1
+38,Minor documentation tweak to UPGRADE.md (#1526),0.57264477,Update docblock by @mnabialek in link,,0
+39,Merge pull request #1011 from matt-allan/improve-flaky-tests,0.5875336,Remove deprecated functionality and simplify some feature tests by @driesvints in link,,0
+40,Merge pull request #11 from lucasmichot/feature/master/cs-fix,0.5468536,Fix resolveInheritedScopes (#1207),,0
+41,Merge pull request #1311 from ankurk91/patch/guzzle-7,0.493595,Fix migrations tag publish (#832),,0
+42,Merge pull request #285 from xel1045/fixes/use-get-auth-password,0.4956779,Allow authenticated client to be retrieved from the guard by @axlon in link,,0
+43,Merge pull request #413 from vigneshgurusamy/refactor-client-repo,0.54419094,"Revert ""[11.x] Add Provider Guard to ClientRepository for Personal Access Clients"" by @driesvints in link",,0
+44,Added firebase 5.0 as possible dependency,0.5692234,Upgrade firebase/php-jwt to ^6.0 by @prufrock in link,,0
+45,Use correct namespaces in docblocks,0.6320136,Fix doc block types by @hafezdivandari in link,,0
+46,use app helper,0.82691014,Use app helper (3d1e6bb),,1
+47,wording,0.34339088,Changed,,0
+48,Merge pull request #331 from halaei/fix-missing-scope-exceptions,0.5523526,Fix migrations tag publish (#832),Test on PHP 8.2 Update composer.json,0
+49,Merge pull request #1078 from freezer278/add-key-type-to-token-model,0.48763093,Add key type to refresh token model (e400c2b),,0
+50,Merge pull request #874 from carusogabriel/phpunit-7,0.5513569,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,,0
+51,Set up CircleCI config,0.4417807,Implement personal access client config (#1260),,0
+52,Merge pull request #486 from tonning/fix-creating-fresh-api-token,0.51757634,mergeConfigFrom already checked if app is running with config cached (#1205),,0
+53,Merge pull request #919 from themsaid/pr/17149,0.506349,Fix migrations tag publish (#832),I get a lot confused when I use this command it always return seven days :) now return hours instead of days.,0
+54,tweaks to password impl,0.47945112,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)",Support prompting login when redirecting for authorization use fragment on redirect uri for implicit grant bind StatefulGuard formatting Co-authored-by: Taylor Otwell taylor@laravel.com,0
+55,Scope controller.,0.47109827,Support a default scope when no scope was requested by the client (#879),,0
+56,feat: allow grant types to be restricted for a client,0.5528288,Allow '*' scope to be used with Client Credentials (#949),,0
+57,use bcrypt,0.6005065,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)",,0
+58,feat: tests for ClientRepository::handlesGrant(),0.66592795,Fix actingAsClient testing method (#1119),,0
+59,remove php70,0.6673639,Dropped support for PHP 7.1 (3c830ac),,0
+60,formatting and commenting,0.34894267,Fix doc block types by @hafezdivandari in link,,0
+61,Change server Property type in CheckClientCredentialForAnyScope Middleware,0.89073,Change server property type in CheckClientCredentialForAnyScope (#1034),Support prompting re-consent Update AuthorizationController.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+62,Merge pull request #32 from lucasmichot/feature/master/docblocks-spacing,0.632692,Fix doc block types by @hafezdivandari in link,,0
+63,Merge pull request #26 from lucasmichot/feature/master/reformat-signature,0.517861,Fix migrations tag publish (#832),Allow for bootstrapping without loading routes Update Passport.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+64,Fix BridgeRefreshTokenRepository test,0.5964594,Rework HandlesOAuthErrors trait to middleware (#937),Custom days and hours to passport purge command lint fix formatting Co-authored-by: Ruben Garcia ruben.garcia@personio.de Co-authored-by: Taylor Otwell taylor@laravel.com,0
+65,Update 2016_06_01_000001_create_oauth_auth_codes_table.php,0.6140857,Fix auth codes table customization (#1044),,0
+66,Merge pull request #1068 from lucasmichot/feature/7.0/inherited-parent-scopes-support,0.5715257,Let Passport support inherited parent scopes (#1068),Drop JWT v3 wip,0
+67,[11.x] Stub client on guard when calling Passport::actingAsClient() (#1519),0.92497694,Stub client on guard when calling Passport::actingAsClient() by @axlon in link,Passport v11 upgrade guide Update UPGRADE.md Co-authored-by: Taylor Otwell taylorotwell@gmail.com,1
+68,Fixed validation to fallback if provider is not defined,0.6048837,Initial support for multiple providers (#1220),,0
+69,Merge pull request #673 from iflamed/patch-1,0.5407466,Fix migrations tag publish (#832),,0
+70,Fix first scope checkbox,0.5345568,Support a default scope when no scope was requested by the client (#879),,0
+71,Fix docblocks,0.7800551,Fix AccessToken docblock (#996),Conflicts: CHANGELOG.md src/Guards/TokenGuard.php,1
+72,Use ubuntu-18.04,0.40547574,Allow installs of zend-diactoros 2 (c0c3fca),Fix scope inheritance when using Passport::actingAs() Update Passport.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+73,Merge pull request #1126 from gdebrauwer/fix-upgrade-to-8.0-guide,0.54174685,Fix migrations tag publish (#832),,0
+74,revoke old tokens when new one issued for app,0.76569664,Revoke refresh tokens when auth tokens get revoked (#1186),,1
+75,adds missing tr tags for table headers,0.5035647,Apply table responsive on table class (#1318),,0
+76,Fix tests (#1469),0.70775783,Fix actingAsClient testing method (#1119),,1
+77,Merge pull request #765 from ethaligan/6.0,0.49712372,Fix migrations tag publish (#832),,0
+78,Apply fixes from StyleCI (#1005),0.5807779,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+79,Use dedicated assertCount assertion,0.45254463,Add actingAsClient method for tests (#1083),,0
+80,[9.x] Implement passport:hash command (#1238),0.96174026,Implement passport:hash command (#1238),,1
+81,Fix some comments and docblocks.,0.6842443,Update docblock by @mnabialek in link,,0
+82,Merge branch '4.0',0.31929246,"Merge default Passport configuration (#1039, e260c86)",The firebase/php-jwt recently had to make breaking changes to resolve a security flaw in their library. This change upgrades that library and fixes the code that broke with the upgrade.,0
+83,Update .editorconfig,0.5613406,Update docblock by @mnabialek in link,,0
+84,Apply fixes from StyleCI (#1004),0.5530788,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+85,Merge branch 'add-models-database-connection-config' into 9.x,0.61871994,"Allow to change Models database connection (#1255, 7ab3bdb)",,0
+86,tweak csrf handling based on main repo changes,0.5116787,Change server property type in CheckClientCredentialForAnyScope (#1034),,0
+87,Fixing deny response with multiple redirect uris,0.6463786,Allow multiple redirects when creating clients (#928),,0
+88,Update 2016_06_01_000005_create_oauth_personal_access_clients_table.php,0.6267749,Update ClientCommand.php's user_id description by @Smoggert in link,,0
+89,Change identifier of user id by return of method getAuthIdentifier(),0.60617614,Nonstandard ID in the token's relationship with the user (#1267),"When using this factory in feature tests with $this->withoutDeprecationHandling(); call the test fails as the deprecation gets converted to an exception: Since fakerphp/faker 1.14: Accessing property ""company"" is deprecated, use ""company()"" instead.",0
+90,Accept * scope as valid when verifying client_credentials,0.7797637,Allow '*' scope to be used with Client Credentials (#949),,1
+91,password grant can be long lived since first party,0.49820295,Allow setting expiration of personal access tokens (#919),"Update UPGRADE.md I just went through the steps of upgrading passport from v8 to v10 and hit a minor snag that could have been solved by a tweak to the documentation. When upgrading from v8 to v9 it says place two Passport static calls ""within the boot method of your AppServiceProvider"" When upgrading from v9 to v10 it says you can remove the calls from your AuthServiceProvider. I don't claim to know where those calls belonged in the first place, so this proposal just updates the documentation to list them both. Update UPGRADE.md Co-authored-by: Taylor Otwell taylor@laravel.com",0
+92,Adds type checking (#1640),0.54048026,Add key type to refresh token model (e400c2b),Conflicts: CHANGELOG.md,0
+93,Update ClientCommand.php,0.7807288,Update ClientCommand.php's user_id description by @Smoggert in link,,1
+94,Apply fixes from StyleCI (#1292),0.5647168,Fix resolveInheritedScopes (#1207),Allow token guard client to be set programmatically Set the client on the TokenGuard when mocking the client Apply fixes from StyleCI,0
+95,Merge pull request #7 from JayBizzle/patch-1,0.5025664,Fix migrations tag publish (#832),Conflicts: CHANGELOG.md,0
+96,Merge pull request #277 from raftalks/2.0,0.5680259,Fix migrations tag publish (#832),"Allow to use custom authorization server response Update src/Passport.php Remove direct initialisation as ""null"" Co-authored-by: Dries Vints dries@vints.io Update Passport.php Co-authored-by: Dries Vints dries@vints.io Co-authored-by: Taylor Otwell taylor@laravel.com",0
+97,Use mounted instead of ready,0.3419385,Implement personal access client config (#1260),,0
+98,Add changelog,0.55104303,Add ability to customize the RefreshToken (#966),Laravel 9 support Update composer.json Update tests.yml,0
+99,"Revert ""Revert ""Added AuthenticationException to extend the behaviour of Laravel's default exception handler (#1633)""""",0.91231996,"Re-apply ""Added AuthenticationException to extend the behaviour of Laravel's default exception handler"" by @driesvints in link",,1
+100,merge old 1.0 changes,0.48734522,Replace deprecated package and namespaces (#1158),,0
+101,Merge pull request #1222 from pkostic/8.x,0.50870574,Fix migrations tag publish (#832),,0
+102,Do not return anything for void method,0.68385,Prevent passing empty string variable to retrieveById method (#861) ,"fix: Internal method return types, php 8.1 tests compatibility",0
+103,Merge pull request #1236 from laravel/remove-old-jwt-versions,0.7072763,Drop support for old JWT versions (#1236),,1
+104,Fix build for PHP 5.6,0.6638827,Support PHP 8.0 (#1387),,0
+105,Merge pull request #504 from krzysztofengineer/master,0.4572568,Fix migrations tag publish (#832),Conflicts: CHANGELOG.md tests/Feature/PassportTestCase.php,0
+106,Update .gitattributes,0.5401797,Update docblock by @mnabialek in link,,0
+107,Merge pull request #1361 from siarheipashkevich/unnecessary-return,0.5057516,Fix migrations tag publish (#832),Fix str_replace error when third parameter ($subject) is null in PHP 8.1.0 str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /var/www/html/vendor/laravel/passport/src/PassportServiceProvider.php line 268 Use single quotes to fix style error,0
+108,Merge pull request #72 from samgreenwood/phpseclib,0.5806755,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,Allow authenticated client to be retrieved from the guard Make token guard macroable Use previously resolved client when available Add tests ensuring client and user are only pulled from the database once,0
+109,Fix the --name option on the ClientCommand.,0.57743806,Update ClientCommand.php's user_id description by @Smoggert in link,Update test for Laravel 9 wip wip,0
+110,Merge pull request #291 from baileylo/patch-2,0.48209018,Fix migrations tag publish (#832),Conflicts: CHANGELOG.md src/Passport.php,0
+111,tweak blade view,0.5338576,Replaced helpers with Blade directives (#939),,0
+112,Update PassportClientFactory.php,0.6952692,Improve passport:install command (#1294),Added Passport custom encryption key Refactored encryptUsing method StyleCI fixes formatting Co-authored-by: Taylor Otwell taylor@laravel.com,0
+113,Merge pull request #666 from iget-master/alternative-fix,0.4954973,Fix migrations tag publish (#832),,0
+114,Added guard handling to cookie handling too,0.65177846,"Fix cookie handling for security release (#1322, 75f1ad2)",PHP 8.1 support,0
+115,Passport v11 upgrade guide (#1561),0.7476139,Improve passport:install command (#1294),,1
+116,Revert contract dependency change,0.47647083,Changed,Conflicts: CHANGELOG.md,0
+117,Merge branch 'enable-client-credentials' of link into themsaid-enable-client-credentials,0.5315697,Allow overriding the AccessToken class by @hafezdivandari in link,,0
+118,Import missing class,0.44986492,Fix migrations tag publish (#832),,0
+119,Shows the client secret and id in the console,0.5955715,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)","Ensure client model factory always creates models with a primary key, even when events are disabled Update ClientFactory.php Co-authored-by: Taylor Otwell taylor@laravel.com",0
+120,Merge pull request #1169 from KieronWiltshire/8.x,0.46539965,Fix migrations tag publish (#832),,0
+121,Remove old static personal client methods (#1325),0.99999994,Remove old static personal client methods (#1325),,1
+122,Merge pull request #939 from andrewgorpenko/master,0.513931,Fix migrations tag publish (#832),Fix link to documentation,0
+123,Merge pull request #1148 from crynobone/access-oauth2-server-response-status-code,0.6736695,Allow access to HTTP response status code on OAuthServerException (#1148),,0
+124,Client credentials middleware should allow any valid client (#1125),0.99585146,Client credentials middleware should allow any valid client (#1132),,1
+125,Merge pull request #813 from mvdnbrk/flatten-resources-assets-dir,0.55066806,resources/assets directory was flattened (#813),Refactor routes to dedicated file Update web.php Apply fixes from StyleCI (#1465) formatting Co-authored-by: Taylor Otwell taylorotwell@gmail.com,0
+126,tweak wording,0.61374533,Changed,,0
+127,Use a renderable exception for OAuth errors,0.9436525,Use a renderable exception for OAuth errors (#1066),,1
+128,Merge pull request #41 from JamesForks/disable-xdebug,0.46118063,Fix AccessToken docblock (#996),,0
+129,Merge pull request #2 from vinkla/phpunit,0.57666826,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,use real keys in tests revert composer change reset position of loadKeysFrom() function,0
+130,Support disabling prompt when redirecting for authorization (#1569),0.8223366,Support disabling prompt when redirecting for authorization by @hafezdivandari in link,,1
+131,update change log,0.54226863,Changed,,0
+132,added unit tests for CheckClientCredentials,0.6522135,Add actingAsClient method for tests (#1083),,0
+133,Throw AuthorizationException if user doesn't have scope,0.65177166,Support a default scope when no scope was requested by the client (#879),Conflicts: CHANGELOG.md,0
+134,Add 'actingAsClient' static method to 'Passport' class,0.6854334,Fix scope inheritance when using Passport::actingAs() by @axlon in link,,0
+135,Merge branch 'flush',0.31128502,mergeConfigFrom already checked if app is running with config cached (#1205),,0
+136,Implement personal access client config,0.9149213,Implement personal access client config (#1260),,1
+137,Add user relationship to client model.,0.9001466,"Add user relationship to client model (#851, 3213be8)",,1
+138,Fix StyleCI issues,0.5011671,Fix doc block types by @hafezdivandari in link,,0
+139,Use model attribute getter to return plain secret,0.4199304,Cast returned client identifier value to string (#1091),,0
+140,[10.x] Update the badges to use shields.io,0.42387688,Upgrade to league/oauth2-server 8.0 (97e3026),,0
+141,Merge pull request #1070 from driesvints/prepare-for-release,0.47429714,Fix migrations tag publish (#832),,0
+142,Merge pull request #966 from driesvints/refresh-token-updates,0.50253385,Add ability to customize the RefreshToken (#966),Use ubuntu-18.04,0
+143,Merge pull request #875 from carusogabriel/assert-count,0.52852255,Fix migrations tag publish (#832),,0
+144,Drop support for Laravel 5.6 & 5.7,0.881978,Dropped support for Laravel 5.8 (654cc09),Conflicts: CHANGELOG.md,1
+145,Fix typo on param doc,0.5293819,Fix doc block types by @hafezdivandari in link,,0
+146,fix readme,0.53206176,Fix binding (e3478de)﻿,Backport support for phpseclib v2 Apply fixes from StyleCI (#1417),0
+147,Allow timestamps on Token model (#1425),0.8640091,Allow timestamps on Token model by @driesvints in link,Conflicts: CHANGELOG.md,1
+148,Fix revocal of refresh tokens,0.8071426,Revoke refresh tokens when auth tokens get revoked (#1186),,1
+149,Remove Composer caching for CircleCI,0.40394193,Remove Vue components (#1352)﻿,,0
+150,Merge branch 'patrickbrouwers-feature/allow-other-user-providers' into 2.0,0.4850321,Initial support for multiple providers (#1220),Conflicts: CHANGELOG.md,0
+151,Merge remote-tracking branch 'upstream/6.0' into restrict-grant-types,0.4386804,Refactor routes to dedicated file by @driesvints in link,,0
+152,Tweak php setup.,0.59726024,Dropped support for PHP 7.1 (3c830ac),This reverts commit 985577cec359d57df15ac641bfaed84fdc222824.,0
+153,"Redirect denied authorization callbacks to the redirect_uri in the authorization request if it is one of the redirect_uris configured for the client; otherwise, use the first redirect_uri configured for the client.",0.6710456,Allow multiple redirects when creating clients (#928),Delete invalid refresh tokens Delete refresh tokens referring to non-existing access tokens. Use whereDoesntHave() instead Add test for purge command Update description and output of command Update PurgeCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+154,Fix @param type,0.4754965,Fix auth codes table customization (#1044),,0
+155,Merge pull request #550 from norvek/hotfix/client-id-type,0.45888466,Add the ability to retrieve current client (#854),PHP 8 Support Update JWT usage Try out dev versions of jwt Use vcs Try composer token Update phpunit xml Fix test for JWT 3.4 Try git url Bind JWT Parser to container for 4.x Add deprecation notice Use configuration object Use new token interface Update composer.json Update workflow Co-authored-by: Luís Cobucci lcobucci@gmail.com,0
+156,Merge pull request #873 from andreybolonin/patch-1,0.5506597,Fix migrations tag publish (#832),,0
+157,Change to forceFill. Fixes #908. (#1266),0.6133575,Fix resolveInheritedScopes (#1207),,0
+158,Add middleware CheckClientCredentialsForAnyScope,0.9477496,Add middleware CheckClientCredentialsForAnyScope (#855),[10.x] Update the badges to use shields.io,1
+159,Merge pull request #1192 from laravel/clear-session-instances,0.52366954,Add the ability to retrieve current client (#854),,0
+160,Merge pull request #91 from ryun/1.0,0.46050972,Fix migrations tag publish (#832),remove unnecessary return form service provider,0
+161,Apply some code formatting,0.5424797,Fix auth codes table customization (#1044),,0
+162,Merge branch '4.0' into 5.0,0.36452663,Allow lcobucci/jwt v5 and cleaned up version constraints by @GrahamCampbell in link,,0
+163,Allow multiple redirects when creating clients,0.93938434,Allow multiple redirects when creating clients (#928),,1
+164,update branch alias,0.41251877,Update docblock by @mnabialek in link,Use newFactory to properly reference factory Update composer.json,0
+165,Merge branch 'user-key' of link into kevindierkx-user-key,0.46809638,Make $userId nullable in ClientRepository->createPersonalAccessClient by @bram-pkg in link,,0
+166,Allow PHPUnit 9 (#1328),0.8392098,PHP 8 Support (#1373),,1
+167,Add Passport config,0.7691122,"Merge default Passport configuration (#1039, e260c86)",,1
+168,Merge branch '9.x' into master,0.37691522,Remove old 5.9 constraints (58eb99c),Update README.md Update UPGRADE.md Co-authored-by: Taylor Otwell taylor@laravel.com,0
+169,use HTTPS links where appropriate,0.53155863,Drop PHP 7.x and Laravel v8 by @driesvints in link,,0
+170,Drop PHP 7.x and Laravel v8 (#1558),0.88745284,Drop PHP 7.x and Laravel v8 by @driesvints in link,,1
+171,Merge pull request #1186 from laravel/revoke-refresh-tokens,0.5352703,Remove deprecated properties by @driesvints in link,,0
+172,Merge pull request #1 from patrickkivits/patrickkivits-patch-1,0.47134864,Fix migrations for Laravel 9.x by @ricky-perchpeek in link,,0
+173,tweak how password grant works,0.5009818,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)",feat: add factory state method for client credentials grant test: add pass/fail tests for client credentials grant style: trailing comma,0
+174,"Revert ""[11.x] Add Provider Guard to ClientRepository for Personal Access Clients (#1655)"" (#1658)",0.8934251,"Revert ""[11.x] Add Provider Guard to ClientRepository for Personal Access Clients"" by @driesvints in link",,1
+175,Update CHANGELOG.md,0.64041364,Changed,Support Laravel 8 Fix factories Apply fixes from StyleCI (#1337) fix tests Co-authored-by: Taylor Otwell taylorotwell@gmail.com,0
+176,Apply fixes from StyleCI (#1321),0.5647522,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+177,added $keyType = 'string' to Token model,0.71471065,Add key type to refresh token model (e400c2b),,1
+178,Apply fixes from StyleCI (#1081),0.5645034,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+179,"fix: Internal method return types, php 8.1 tests compatibility",0.6849925,PHP 8 Support (#1373),,0
+180,Merge pull request #1158 from michael-ow/8.x,0.4858032,Fix migrations tag publish (#832),,0
+181,Merge pull request #269 from thejsninja/bugfix/catch-axios-error,0.52183926,Fix ClientRepository doc blocks by @axlon in link,,0
+182,Swap out Connection with TokenRepository,0.62470734,Revoke refresh tokens when auth tokens get revoked (#1186),,0
+183,Use Illuminate Response so that middlewares can always work,0.54258204,Add abstract CheckCredentials middleware and allows to create (#1127),,0
+184,Merge pull request #635 from skollro/patch-1,0.57247853,Fix migrations tag publish (#832),Conflicts: CHANGELOG.md,0
+185,Update DenyAuthorizationControllerTest.php,0.56482285,Allow to use custom authorization server response (#1521)﻿,,0
+186,Merge pull request #735 from laravel/5.0,0.5342544,Fix migrations tag publish (#832),,0
+187,Merge pull request #9 from lucasmichot/feature/master/remove-unused-imports,0.5410979,Fix migrations tag publish (#832),fix cookie handling for security release,0
+188,fix doc blocks,0.718541,Fix AccessToken docblock (#996),,1
+189,formatting,0.40468824,Fix auth codes table customization (#1044),,0
+190,change method name,0.65523434,Rename property (#920),Conflicts: CHANGELOG.md,0
+191,Merge branch '9.x',0.39806455,Remove old 5.9 constraints (58eb99c),,0
+192,[11.x] Custom days and hours to passport purge command (#1563),0.88053334,Custom days and hours to passport purge command by @rubengg86 in link,,1
+193,Add new controller.,0.42262918,Add key type to refresh token model (e400c2b),,0
+194,Merge branch 'renderable-exception' of link into matt-allan-renderable-exception,0.5281445,"Re-apply ""Added AuthenticationException to extend the behaviour of Laravel's default exception handler"" by @driesvints in link",Update tests.yml,0
+195,Merge pull request #1112 from gdebrauwer/check-client-credentials-use-psr,0.5548333,Update dependencies for PSR request (#1201),,0
+196,Fix incorrect comment,0.4832828,Change wasRecentlyCreated to false (#979),Conflicts: CHANGELOG.md,0
+197,fix user check,0.5554304,Modify UserRepository to check for 'findAndValidateForPassport' method (#1144),,0
+198,Merge pull request #861 from yaroslawww/patch-1,0.5610156,Fix migrations tag publish (#832),,0
+199,refactor: move tests to correct class,0.46615803,Remove deprecated functionality and simplify some feature tests by @driesvints in link,,0
+200,Merge pull request #283 from themsaid/1.0merge,0.56009436,Fix migrations tag publish (#832),Conflicts: CHANGELOG.md,0
+201,Use proper package name,0.54365915,Replace deprecated package and namespaces (#1158),,0
+202,Merge pull request #115 from Shkeats/patch-2,0.48055547,Fix migrations tag publish (#832),Allow guzzle v7,0
+203,Merge pull request #18 from tomschlick/patch-1,0.55591285,Fix migrations tag publish (#832),,0
+204,Merge pull request #388 from halaei/fix-revoke-deleted-token,0.5530421,Fix migrations tag publish (#832),,0
+205,feat: require a secret for client_credentials grant,0.68427956,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)",,0
+206,Removed unused import,0.619972,Removed,,0
+207,Updated CheckScopesTest to check for AuthorizationException not AuthenticationException.,0.5919557,Fix actingAsClient testing method (#1119),,0
+208,Fix test asserting error response,0.71547914,Fix actingAsClient testing method (#1119),,1
+209,Apply fixes from StyleCI (#1041),0.5543344,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+210,Merge branch '3.0',0.36668685,Rework HandlesOAuthErrors trait to middleware (#937),,0
+211,clean up code,0.4931885,Update PurgeCommand.php by @fatoskurtishi in link,Fix typo on param doc,0
+212,prepare for laravel56 and bootstrap4,0.6186601,Dropped support for Laravel 5.8 (654cc09),,0
+213,Fix a docblock,0.7838938,Fix AccessToken docblock (#996),correct test name,1
+214,Create pull-requests.yml,0.4395211,Add ext-json dependency (#940),,0
+215,Fix doc block for withAccessToken() (#1620),0.86906004,Fix doc block for withAccessToken() by @axlon in link,Conflicts: CHANGELOG.md,1
+216,update wording,0.5644078,Changed,,0
+217,Use avoid using deprecated PHPUnit annotation.,0.54467845,Uses PHP Native Type Declarations 🐘 by @nunomaduro in link,,0
+218,Merge pull request #738 from jstoone/fix-return-type-of-relation,0.5690109,Add ext-json dependency (#940),,0
+219,Alias HasherContract,0.693776,Use Hasher interface instead of HashManager (#1157),,0
+220,Merge branch 'alexbilbie-2.0',0.33914307,"Allow to change Models database connection (#1255, 7ab3bdb)",Conflicts: CHANGELOG.md,0
+221,Change wasRecentlyCreated to false,0.90180266,Change wasRecentlyCreated to false (#979),,1
+222,feat: tests for restricting client grant types,0.53851134,Allow '*' scope to be used with Client Credentials (#949),,0
+223,Add method to reset client secret,0.62346864,Implement personal access client config (#1260),,0
+224,use AuthCode model to persist new authcode,0.93528545,Authcode model is now used for persisting new authcodes (#808),,1
+225,Made whereRevoked consistent,0.8747329,Made whereRevoked consistent (#868),,1
+226,Use bigInteger column type for user_id columns,0.9735569,Use bigInteger column type for user_id columns (#1057),,1
+227,[7.0] Update to PHPUnit 7,0.7402201,Update to phpseclib v3 (#1410)﻿,Update UPGRADE.md Update UPGRADE.md Co-authored-by: Taylor Otwell taylor@laravel.com,1
+228,Merge pull request #1 from vinkla/patch-1,0.49864262,Fix migrations tag publish (#832),,0
+229,Allow super-user scope on password grant.,0.5469477,Pass user identifier through to finalize scopes in personal access grant by @GrahamCampbell in link,Match name of personal access token methods to config,0
+230,Merge pull request #46 from JamesForks/travis-no-suggest,0.44210273,Custom authorization view response by @JonErickson in link,The config values included in passport.php don't match those shown in the upgrade guide for personal access tokens in v9.1. This matches the values with those in the config file.,0
+231,Merge branch 'patch-1' of link into baileylo-patch-1,0.4481444,Fix binding (e3478de)﻿,,0
+232,[10.x] Add purging of invalid refresh tokens to command (#1396),0.76705277,Revoke refresh tokens when auth tokens get revoked (#1186),Implement secret modal Add upgrade note on vue assets Revert change Update UPGRADE.md Co-authored-by: Taylor Otwell taylor@laravel.com,1
+233,Merge pull request #1091 from strongholdmedia/feature/support-mysql-native-prepares,0.47033903,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,,0
+234,Merge pull request #1001 from matt-allan/fix-cookie-token-comment,0.52917945,mergeConfigFrom already checked if app is running with config cached (#1205),Warn about one-time-hashed-secret Update ClientCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+235,Use proper return type in command,0.3844561,Improve token guard return type by @axlon in link,,0
+236,Merge pull request #783 from robinvdvleuten/6.0,0.48759383,Fix migrations tag publish (#832),,0
+237,Merge branch 'feature/add-implicit-flow' of link into RyanTheAllmighty-feature/add-implicit-flow,0.50576425,Revert model DB connection customization by @driesvints in link,,0
+238,Merge pull request #933 from imanghafoori1/clean_up,0.53530955,Fix migrations tag publish (#832),,0
+239,Adding foreign keys to Client model relationships,0.630492,"Add user relationship to client model (#851, 3213be8)",Conflicts: CHANGELOG.md,0
+240,Default provider to users if exists otherwise null,0.4973649,Initial support for multiple providers (#1220),,0
+241,add install command,0.45156297,Allow installs of zend-diactoros 2 (c0c3fca),,0
+242,Merge pull request #595 from ahalimkara/patch-1,0.5191269,Fix migrations tag publish (#832),,0
+243,Don't test on hhvm,0.35089487,Don't serialize by default (29e9d53),,0
+244,Merge pull request #170 from heisian/patch-1,0.5144722,Fix migrations tag publish (#832),,0
+245,Fix auth codes table customization,0.94311523,Fix auth codes table customization (#1044),,1
+246,Update phpunit.xml.dist,0.52817035,Replace deprecated package and namespaces (#1158),,0
+247,Add Laravel 5.8 support,0.84043354,Laravel 9 Support (#1516),,1
+248,Remove hard-coded model key name in favour of Model::getKeyName(),0.5409039,Ensure client model factory always creates models with a primary key (#1492﻿,,0
+249,Small fixes,0.4669705,Fix resolveInheritedScopes (#1207),,0
+250,Merge pull request #1261 from aaronhuisinga/9.x,0.49963206,Fix migrations tag publish (#832),Update UPGRADE.md Update UPGRADE.md Co-authored-by: Taylor Otwell taylor@laravel.com,0
+251,Call the validation...,0.44606626,Fix actingAsClient testing method (#1119),,0
+252,[11.x] Get model PK instead of forcibly id column (#1626),0.8219807,Get model PK instead of forcibly id column by @lucaspanik in link,Implement passport:hash command Skip records which are already hashed Fix client command when hashing secrets Use password_get_info Update HashCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+253,Revoke refresh tokens as well,0.84673166,Revoke refresh tokens when auth tokens get revoked (#1186),,1
+254,Enable Client credentials grant,0.6977508,Client credentials middleware should allow any valid client (#1132),[9.x] Drop support for old JWT versions,0
+255,Remove dangling import,0.547635,Removed,[9.x] Bump league server dependency,0
+256,Merge pull request #620 from aliselcuk/patch-1,0.5227846,Fix migrations tag publish (#832),,0
+257,Merge pull request #724 from designmynight/protect-client-credentials-grant,0.50094986,Allow to use custom authorization server response (#1521)﻿,,0
+258,Fix resolveInheritedScopes.,0.9287332,Fix resolveInheritedScopes (#1207),,1
+259,[8.x] PHP 8 Support (#1373),0.9760884,PHP 8 Support (#1373),,1
+260,working on default value,0.48921838,Automatic configuration of client UUIDs (#1231),,0
+261,styleCI fixes,0.50658685,Fix doc block types by @hafezdivandari in link,,0
+262,Cache Composer dependencies,0.45572656,Bump league server dependency (#1237),Conflicts: CHANGELOG.md src/Client.php,0
+263,fix all spacing issues,0.4446292,Fix maxlength for token names (#1300),,0
+264,Merge pull request #744 from patrickkivits/6.0,0.4730706,Fix migrations tag publish (#832),Automatic configuration of client UUIDs via passport:install --uuids,0
+265,Customisable Authentication Model,0.5993567,Improve authenticateViaBearerToken() performance by @alecpl in link,,0
+266,Update Client.php,0.8208201,Update to phpseclib v3 (#1410)﻿,,1
+267,Tests for Controller Traits,0.51856273,Add actingAsClient method for tests (#1083),,0
+268,Merge pull request #1003 from crynobone/use-facade-resolved,0.50226504,Fix resolveInheritedScopes (#1207),,0
+269,Merge pull request #141 from gorog/guard-cookie,0.48461875,"Fix cookie handling for security release (#1322, 75f1ad2)",,0
+270,Apply fixes from StyleCI (#1082),0.5702641,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+271,add @throws docblock,0.70414186,Update docblock by @mnabialek in link,,1
+272,Test ScopeController class,0.5646186,Add actingAsClient method for tests (#1083),,0
+273,Merge pull request #38 from JamesForks/drop-last-used-at,0.43385932,Custom authorization view response by @JonErickson in link,,0
+274,Merge pull request #1237 from laravel/update-league-server-dependency,0.59937274,Bump league server dependency (#1237),Conflicts: CHANGELOG.md src/Http/Middleware/CheckClientCredentials.php src/Http/Middleware/CheckClientCredentialsForAnyScope.php,0
+275,Assert that exception is thrown when personal access client is missing,0.7840622,"Personal client exception (#831, 7bb53d1)",,1
+276,Fix implicit flow athorization denied redirect,0.5884016,Allow multiple redirects when creating clients (#928),Fix 500 Internal Server Error response on validating recently deleted client,0
+277,implement custom grant for personal access tokens,0.70598924,Allow setting expiration of personal access tokens (#919),,1
+278,Merge pull request #525 from antimech/patch-1,0.50703895,Fix migrations tag publish (#832),,0
+279,Added missing parentheses,0.35108685,Fix str_replace error when third parameter ($subject) is null (#1511)﻿,,0
+280,Have PersonalAccessTokenFactoryTestModelStub extend Token instead of Model,0.6055374,Indicate current token can be TransientToken by @axlon in link,,0
+281,Use anonymous migrations (#1531),0.8189709,Use anonymous migrations by @mmachatschek in link,,1
+282,configurable route options,0.66388845,Add names to routes for re-usability (#846),Co-Authored-By: Dries Vints dries@vints.io,0
+283,Replaced helpers with Blade directives,0.94380665,Replaced helpers with Blade directives (#939),,1
+284,Merge pull request #182 from Modelizer/user-relation,0.6866838,"Add user relationship to client model (#851, 3213be8)",,0
+285,Remove unused imports,0.594525,Removed,,0
+286,Merge branch 'billriess/8.x',0.40686548,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+287,Merge pull request #13 from lucasmichot/feature/master/composer-prefer-dist,0.50553876,Allow lcobucci/jwt v5 and cleaned up version constraints by @GrahamCampbell in link,Conflicts: CHANGELOG.md,0
+288,[11.x] Allow for bootstrapping without loading routes (#1564),0.79240507,Allow for bootstrapping without loading routes by @axlon in link,,1
+289,Update composer.json,0.51578534,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,[8.x] Fix resolveInheritedScopes.,0
+290,[10.x] Use Real Keys in Tests (#1450),0.47814122,Add actingAsClient method for tests (#1083),,0
+291,Update to phpseclib v3 (#1410),1.0,Update to phpseclib v3 (#1410)﻿,,1
+292,Merge pull request #1157 from X-Coder264/use-hasher-interface-instead-of-hash-manager,0.61447966,Use Hasher interface instead of HashManager (#1157),,0
+293,Merge pull request #1171 from Orrison/clientFactory,0.5480798,Fix create client call (aff9d09),,0
+294,Merge pull request #271 from nueko/master,0.45004833,Fix migrations tag publish (#832),,0
+295,Get AuthCode table from model instead of hardcoding,0.75861084,Change auth code table to the model's table (#865),Conflicts: CHANGELOG.md,1
+296,Create issues.yml,0.4561574,Rework HandlesOAuthErrors trait to middleware (#937),,0
+297,"[10.x] Ensure client model factory always creates models with a primary key, even when events are disabled (#1492)",0.92199945,Ensure client model factory always creates models with a primary key (#1492﻿,[8.x] mergeConfigFrom() already check if app is running with config cached.,1
+298,Add key type to refresh token model,0.9004507,Add key type to refresh token model (e400c2b),link,1
+299,Use only one PSR7 implementation (#1330),0.99022645,Use only one PSR 7 implementation (#1330),Conflicts: CHANGELOG.md,1
+300,Merge pull request #1193 from Ilyes512/small-cleanup,0.48160353,Update PurgeCommand.php by @fatoskurtishi in link,,0
+301,Update HandlesOAuthErrors.php,0.69484335,Update to phpseclib v3 (#1410)﻿,,0
+302,Merge pull request #93 from JesseObrien/fix/personal_access_client_model,0.6421423,"Add user relationship to client model (#851, 3213be8)",,0
+303,Merge pull request #412 from vigneshgurusamy/extend-token-repo,0.50756073,Fix migrations tag publish (#832),,0
+304,Merge pull request #3 from vinkla/patch-2,0.50347155,Fix migrations tag publish (#832),[8.x] GitHub actions,0
+305,Remove useless variable,0.5403787,Remove deprecated functionality (#1235),,0
+306,Fix: wrong array index filenames,0.4521181,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,,0
+307,[9.x] Warn about one-time-hashed-secret (#1259),0.9672853,Warn about one-time-hashed-secret (#1259),,1
+308,Merge pull request #758 from Donovan-H/6.0,0.45922488,Allow lcobucci/jwt v5 and cleaned up version constraints by @GrahamCampbell in link,,0
+309,module,0.40284222,Implement secret modal (#1258),,0
+310,update version,0.57681865,Update version constraints for Laravel 6.0 (609b5e8),[8.x] Joined config publish registering with the rest of the publish regist…,0
+311,Laravel v9 support (#1516),0.98102593,Laravel 9 Support (#1516),Conflicts: CHANGELOG.md,1
+312,Merge branch '7.0',0.36364365,Fix resolveInheritedScopes (#1207),,0
+313,Feature: Adding Purge command,0.70802367,Use custom models in purge command if set (#1316),[8.x] Forget session keys on invalid match,1
+314,wording change,0.68027085,Changed,,0
+315,Make refresh model configurable,0.6820439,Add ability to customize the RefreshToken (#966),,0
+316,Update ScopeController.php,0.6482979,Update to phpseclib v3 (#1410)﻿,[8.x] Implement auth token for access requests,0
+317,Allow clients to skip the authorization prompt,0.8381622,Allow first party clients to skip the authorization prompt (#1022),,1
+318,Add new refresh token repository,0.72535765,Revoke refresh tokens when auth tokens get revoked (#1186),,1
+319,Merge branch 'master' into hotfix/merge-changes,0.38649514,Rework HandlesOAuthErrors trait to middleware (#937),[8.x] Revoke refresh tokens as well,0
+320,Use non-salted SHA-256 hashing to store client secrets,0.68400675,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)",,0
+321,added scopes check to client credentials grant type,0.69492126,Pass user identifier through to finalize scopes in personal access grant by @GrahamCampbell in link,[8.x] Add tests for getting the access token with the password grant,0
+322,Move Model instantiation to repository,0.44187474,Use custom models in purge command if set (#1316),,0
+323,[10.x] Support Laravel 8 (#1336),0.87179494,Laravel 9 Support (#1516),,1
+324,Use model methods in trait and mock,0.4478437,Add actingAsClient method for tests (#1083),,0
+325,Merge pull request #710 from adriaanzon/5.0,0.51950383,Fix migrations tag publish (#832),,0
+326,Allow binding token repository instance,0.5930564,Fix actingAsClient token relation (#1268),,0
+327,Rate Limit the /oauth/token route,0.4612178,Let OAuth2 server handle the denying response by @hafezdivandari in link,[8.x] Add a Passport Client factory to Passport publishing,0
+328,Fix check.,0.49615353,Fix actingAsClient testing method (#1119),,0
+329,Update ClientCommand.php's user_id description (#1619),0.88294697,Update ClientCommand.php's user_id description by @Smoggert in link,Signed-off-by: Kevin Ullyott ullyott.kevin@gmail.com,1
+330,Update route() docblock,0.7842986,Update docblock by @mnabialek in link,Signed-off-by: Kevin Ullyott ullyott.kevin@gmail.com,1
+331,Merge pull request #465 from joelshepherd/3.0,0.48622394,Fix migrations tag publish (#832),,0
+332,A fresh token should also be returned on JsonResponse classes,0.6064346,Improve token guard return type by @axlon in link,[8.x] Shouldn't the migrations use bigIncrements and indexes on relationships?,0
+333,Merge pull request #252 from Aferz/2.0,0.49349785,Fix migrations tag publish (#832),,0
+334,Merge pull request #598 from MichaelDeBoey/patch-1,0.50017023,Fix migrations tag publish (#832),,0
+335,Fix many docblocks.,0.6615059,Fix AccessToken docblock (#996),,0
+336,Merge pull request #422 from CasperLaiTW/3.0,0.52672917,Fix migrations tag publish (#832),,0
+337,Sets search mode to boolean for revoked field,0.4028911,Modify UserRepository to check for 'findAndValidateForPassport' method (#1144),,0
+338,Test against PHP 7.2,0.66784275,PHP 8 Support (#1373),Conflicts: CHANGELOG.md,0
+339,Merge pull request #941 from driesvints/import-test-namespaces,0.53714776,Fix migrations tag publish (#832),,0
+340,Merge pull request #513 from robinvdvleuten/4.0,0.515386,Fix migrations for Laravel 9.x by @ricky-perchpeek in link,,0
+341,Add ServerRequestInterface typehint,0.6966675,Change server property type in CheckClientCredentialForAnyScope (#1034),,0
+342,"Add create(), revokeAccessToken(), and isAccessTokenRevoked() methods. Type hint Token on save().",0.59943503,Add ability to customize the RefreshToken (#966),,0
+343,Switch from getKey() to getAuthIdentifier() to be match Laravel core,0.97054935,Switch from getKey() to getAuthIdentifier() to match Laravel core (#1134),,1
+344,Add support for EncryptCookies middleware (#1628),0.8559489,Add support for EncryptCookies middleware by @axlon in link,"In order to more easily purge expired or revoked access tokens, auth codes an refresh tokens, I've created a purge command. This command can then be scheduled to run on any given interval or run manually when needed.",1
+345,"Added support for custom primary keys on user model, resolves: #106",0.6375654,Ensure client model factory always creates models with a primary key (#1492﻿,[8.x] Add tests for Passport::actingAs and Passport::actingAsClient,0
+346,Rework HandlesOAuthErrors trait to middleware,0.9627298,Rework HandlesOAuthErrors trait to middleware (#937),[9.x] Use Hasher interface instead of HashManager,1
+347,Use phpseclib for generating keys,0.5391133,Update to phpseclib v3 (#1410)﻿,[8.x] Replace deprecated package and namespaces,0
+348,first,0.32542914,Allow first party clients to skip the authorization prompt (#1022),,0
+349,Merge pull request #952 from ejunker/patch-1,0.51558703,Fix binding (e3478de)﻿,,0
+350,Fixed omitted space that made style check fail,0.40490204,Fix doc block types by @hafezdivandari in link,,0
+351,Fix wrong attribute value once again,0.5471384,Fix str_replace error when third parameter ($subject) is null (#1511)﻿,,0
+352,Merge pull request #519 from antimech/patch-2,0.49110794,Fix migrations tag publish (#832),,0
+353,Change oauth to passport prefix,0.6058713,"Merge default Passport configuration (#1039, e260c86)",,0
+354,add option to enable,0.48429894,Add ability to customize the RefreshToken (#966),,0
+355,Update Upgrade Guide,0.5698863,Upgrade to league/oauth2-server 8.0 (97e3026),,0
+356,allow customizing migrations,0.5155724,Use anonymous migrations by @mmachatschek in link,,0
+357,"Fix error display, use axios error response correctly.",0.49626723,Rework HandlesOAuthErrors trait to middleware (#937),,0
+358,fix formatting,0.48752052,Fix doc block types by @hafezdivandari in link,,0
+359,[10.x] Fix Faker deprecations (#1530),0.7427025,Fix Faker deprecations by @X-Coder264 in link,[8.x] Update ClientCommand to support public clients,1
+360,Replace fire() with dispatch(),0.90173244,Replace fire() with dispatch() (#952),,1
+361,Get proper errors field from JSON response,0.5605631,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,,0
+362,Update tests.yml (#1540),0.58668756,Fix actingAsClient testing method (#1119),,0
+363,Remove Guzzle dependency (#1327),1.0,Remove Guzzle dependency (#1327)﻿,Conflicts: CHANGELOG.md,1
+364,Update ClientRepository.php,0.807517,Update to phpseclib v3 (#1410)﻿,,1
+365,[10.x] Add custom encryption key for JWT tokens (#1501),0.9792014,Add custom encryption key for JWT tokens (#1501),Conflicts: tests/CheckClientCredentialsForAnyScopeTest.php tests/CheckClientCredentialsTest.php,1
+366,feat: tests for grant types restriction,0.42077497,Add actingAsClient method for tests (#1083),,0
+367,adapt for laravel breakingc hange,0.46998602,Fix binding (e3478de)﻿,[8.x] Modify UserRepository to check for 'findAndValidateForPassport' method,0
+368,Add .styleci.yml to .gitattributes,0.44829905,Fix doc block types by @hafezdivandari in link,,0
+369,Merge pull request #1044 from afilippov1985/fix-auth-codes-table-customization,0.594978,Fix migrations tag publish (#832),,0
+370,Style fixes,0.49836183,Fix auth codes table customization (#1044),,0
+371,Alternative fix to #632,0.61187106,Fix resolveInheritedScopes (#1207),Allow access to HTTP response status code on OAuthServerException.,0
+372,Merge pull request #846 from d8vjork/7.0,0.49464136,Fix migrations tag publish (#832),,0
+373,Remove unneeded use,0.6408384,Removed,,0
+374,Merge pull request #715 from robinvdvleuten/6.0,0.49383768,Fix AccessToken docblock (#996),,0
+375,remove unused import,0.61197615,Removed,Use avoid using deprecated PHPUnit annotation.,0
+376,Merge pull request #929 from driesvints/fix-incrementing-bug,0.5539015,Fix migrations tag publish (#832),"The @expectedException, @expectedExceptionCode, @expectedExceptionMessage, and @expectedExceptionMessageRegExp annotations are deprecated. They will be removed in PHPUnit 9. Refactor your test to use expectException(), expectExceptionCode(), expectExceptionMessage(), or expectExceptionMessageRegExp() instead. Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com",0
+377,Remove Vue components (#1352),1.0000002,Remove Vue components (#1352)﻿,Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com,1
+378,Reuse find() method on client repository,0.6983219,Modify UserRepository to check for 'findAndValidateForPassport' method (#1144),,0
+379,Add tests for making crypto keys,0.63274264,Add custom encryption key for JWT tokens (#1501),,0
+380,Nonstandard ID in the token's relationship with the user (#1267),0.9999999,Nonstandard ID in the token's relationship with the user (#1267),,1
+381,Fix lint issues,0.5091454,Rework HandlesOAuthErrors trait to middleware (#937),Explicitly disable public static check to use hashed secrets when running all tests,0
+382,upgrade,0.55234444,Changed,,0
+383,Revert model DB connection customization (#1412),0.8858502,Revert model DB connection customization by @driesvints in link,,1
+384,Update 1_Bug_report.md,0.5124181,Fix migrations tag publish (#832),,0
+385,Added redirect_uri and user_id options to cli,0.6623798,Add new URI Rule to validate URI and use it to RedirectRule. by @victorbalssa in link,,0
+386,Merge pull request #669 from cmmarslender/5.0,0.51399755,Fix migrations tag publish (#832),,0
+387,Update AuthCode.php (#1644),0.6925752,Fix auth codes table customization (#1044),,0
+388,Merge pull request #523 from doctorallen/4.0,0.5494415,Fix AccessToken docblock (#996),,0
+389,Some composer adjustments.,0.44663554,Changed,,0
+390,Merge pull request #159 from livingos/fix-scopes-storage,0.5015537,Fix migrations tag publish (#832),,0
+391,Rename phpunit file,0.58114946,Replace deprecated package and namespaces (#1158),[9.x] Switch from getKey() to getAuthIdentifier() to match Laravel core,0
+392,wip,0.36216602,Bump league server dependency (#1237),,0
+393,clean up formatting,0.39312252,Replace deprecated package and namespaces (#1158),[8.x] Test on PHP 7.4,0
+394,Allow guzzle v7,0.70006704,Guzzle 7 support (#1311),,1
+395,Merge pull request #1470 from ricardogobbosouza/patch-1,0.58107936,Fix migrations tag publish (#832),[8.x] Format docs,0
+396,Update .styleci.yml,0.49562192,Allow lcobucci/jwt v5 and cleaned up version constraints by @GrahamCampbell in link,,0
+397,Use the correct types for test mocks,0.5273725,Add actingAsClient method for tests (#1083),,0
+398,Added another option to UserRepository so Password Grant can ask model to verify password.,0.5701846,Pass user identifier through to finalize scopes in personal access grant by @GrahamCampbell in link,,0
+399,Merge pull request #1134 from kaptk2/master,0.47304899,Fix migrations tag publish (#832),[9.x] Client credentials middleware should allow any valid client (#1125),0
+400,Fix creating fresh api token,0.6173245,Revoke refresh tokens when auth tokens get revoked (#1186),,0
+401,change key location,0.58051956,Remove foreign keys (20e9b66),,0
+402,Returning revoke result,0.59047383,Made whereRevoked consistent (#868),Conflicts: CHANGELOG.md,0
+403,remove formatting changes,0.54143834,Removed,,0
+404,Apply fixes from StyleCI (#1092),0.5688231,Add middleware CheckClientCredentialsForAnyScope (#855),[8.x] Update 'upgrade to 8.0' guide to remove mention of included upgrade migration,0
+405,Use caret for constraints,0.8921492,Use caret for constraints (d906804),[8.x] Add abstract CheckCredentials middleware and allows to create,1
+406,Add the ability to retrieve current client,0.91710687,Add the ability to retrieve current client (#854),Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com,1
+407,Moved provider check to bearer token only (#1246),0.9999999,Moved provider check to bearer token only (#1246),custom implementation of middleware if needed. Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com,1
+408,formatting and fix test,0.58317095,Fix actingAsClient testing method (#1119),,0
+409,Merge pull request #770 from sindicatoesp/patch-1,0.57230854,Fix migrations tag publish (#832),,0
+410,Fix the docblock,0.785169,Fix AccessToken docblock (#996),[8.x] Fix 'actingAsClient' testing method,1
+411,Namespace tests,0.43930832,Add actingAsClient method for tests (#1083),,0
+412,Merge pull request #4 from morloderex/patch-1,0.5187279,Fix migrations tag publish (#832),,0
+413,Apply fixes from StyleCI (#1242),0.56385916,Fix resolveInheritedScopes (#1207),,0
+414,Create PassportTestCase,0.6701819,Add a Passport Client factory to Passport publishing (#1171),"Revert ""[9.x] Use psr request attributes in 'check client credentials' middleware""",0
+415,[11.x] Support prompting re-consent when redirecting for authorization (#1567),0.85297894,Support prompting re-consent when redirecting for authorization by @hafezdivandari in link,,1
+416,Add styleci config,0.45848832,Add middleware CheckClientCredentialsForAnyScope (#855),[9.x] Use psr request attributes in 'check client credentials' middleware,0
+417,Fix docblocks spacing,0.601359,Fix doc block types by @hafezdivandari in link,,0
+418,Update update-changelog.yml,0.49797148,Upgrade firebase/php-jwt to ^6.0 by @prufrock in link,,0
+419,"Cleaned up returns, removed redundant code",0.58487135,Remove deprecated functionality (#1235),Use 'oauth_scopes' and 'oauth_client_id' attributes in psr request,0
+420,Added user relationship in token model.,0.7169306,Nonstandard ID in the token's relationship with the user (#1267),,1
+421,Fix link to documentation,0.62754333,Update docblock by @mnabialek in link,,0
+422,Merge pull request #1322 from laravel/cookie-fixes,0.56099486,Fix migrations tag publish (#832),,0
+423,Update CHANGELOG,0.66968995,Changed,[8.x] Update Upgrade Guide,0
+424,delete the laravel_token cookie on logout,0.5293585,Remove deprecated properties by @driesvints in link,,0
+425,Update comment to include $response,0.5104046,Update ClientCommand.php's user_id description by @Smoggert in link,,0
+426,Apply fixes from StyleCI (#1198),0.55950105,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+427,Allow to change Models database connection,0.8886984,"Allow to change Models database connection (#1255, 7ab3bdb)",,1
+428,StyleCI + validation tweak,0.518087,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+429,Throw exception if there are no personal access clients,0.74817324,"Personal client exception (#831, 7bb53d1)",,1
+430,Fixed small typo in command option description,0.34072897,Replaced helpers with Blade directives (#939),,0
+431,Update PHPUnit methods,0.7457769,Update to phpseclib v3 (#1410)﻿,,1
+432,Implement auth token for access requests,0.95446193,Implement auth token for access requests (#1188),,1
+433,Merge branch 'protect-client-credentials-grant' into restrict-grant-types,0.48931995,Allow '*' scope to be used with Client Credentials (#949),,0
+434,Merge pull request #1362 from pataar/patch-1,0.53940815,Fix migrations tag publish (#832),,0
+435,Merge pull request #39 from JamesForks/fix-docblock,0.6319866,Fix AccessToken docblock (#996),,0
+436,Merge pull request #566 from themsaid/pr/21689,0.5008565,Fix migrations tag publish (#832),,0
+437,[10.x] Client Credentials Feature tests (#1341),0.607994,Allow '*' scope to be used with Client Credentials (#949),,0
+438,Github templates,0.44370085,Allow lcobucci/jwt v5 and cleaned up version constraints by @GrahamCampbell in link,,0
+439,Some code style fixes.,0.5952641,Fix auth codes table customization (#1044),,0
+440,Bump dependencies,0.70692754,Bump league server dependency (#1237),Conflicts: CHANGELOG.md,1
+441,Improve passport:install command (#1294),1.0,Improve passport:install command (#1294),,1
+442,Merge pull request #1201 from laravel/github-actions,0.51450384,Fix migrations for Laravel 9.x by @ricky-perchpeek in link,,0
+443,Update templates,0.5251092,Add ability to customize the RefreshToken (#966),[7.x] Cast returned client identifier value to string,0
+444,fix,0.62506014,Fix resolveInheritedScopes (#1207),,0
+445,Fixed tests,0.6844449,Fix actingAsClient testing method (#1119),,0
+446,Merge pull request #927 from driesvints/fix-refresh-tokens-revoke-check,0.5674689,Rework HandlesOAuthErrors trait to middleware (#937),,0
+447,CS fixes,0.49295038,Fix resolveInheritedScopes (#1207),,0
+448,Merge pull request #45 from nueko/patch-1,0.50706613,Fix migrations tag publish (#832),[7.x] 'actingAsClient' method for tests,0
+449,Merge pull request #1115 from laravel/revert-1112-check-client-credentials-use-psr,0.59460956,"Revert ""[11.x] Add Provider Guard to ClientRepository for Personal Access Clients"" by @driesvints in link",,0
+450,Fix str_replace error when third parameter ($subject) is null (#1511),1.0000002,Fix str_replace error when third parameter ($subject) is null (#1511)﻿,Conflicts: CHANGELOG.md,1
+451,Flattens resources/assets directory.,0.8090975,resources/assets directory was flattened (#813),,1
+452,Merge pull request #184 from laravel/rateLimit,0.51496905,Fix migrations tag publish (#832),,0
+453,Tweak travis config,0.4675058,Fix doc block for withAccessToken() by @axlon in link,Conflicts: src/Bridge/AccessToken.php src/Bridge/AuthCodeRepository.php src/Guards/TokenGuard.php src/Http/Controllers/HandlesOAuthErrors.php src/Http/Middleware/CheckClientCredentials.php src/Http/Middleware/CheckClientCredentialsForAnyScope.php tests/AccessTokenControllerTest.php tests/AuthorizationControllerTest.php tests/BridgeAccessTokenRepositoryTest.php tests/BridgeRefreshTokenRepositoryTest.php tests/CheckClientCredentialsForAnyScopeTest.php tests/CheckClientCredentialsTest.php tests/HandlesOAuthErrorsTest.php tests/PassportTest.php,0
+454,Using array_wrap instead of is_array and conditional operator,0.34599906,Uses PHP Native Type Declarations 🐘 by @nunomaduro in link,,0
+455,Merge pull request #1151 from chinloyal/8.x,0.5160318,Fix resolveInheritedScopes (#1207),,0
+456,Merge pull request #78 from strebl/fix-scope-checkboxes,0.5200597,Fix migrations tag publish (#832),,0
+457,"Revert ""[10.x] Add purging of invalid refresh tokens to command (#1396)"" (#1397)",0.77275044,Revoke refresh tokens when auth tokens get revoked (#1186),,1
+458,Resolve test failures,0.6662565,Fix actingAsClient testing method (#1119),,0
+459,Updated required constructor parameter,0.4793026,Use newFactory to properly reference factory (#1349),,0
+460,Always remove xdebug,0.5415087,Removed,added $keyType = 'string' to Token model,0
+461,Merge pull request #1421 from laravel/ubuntu,0.53382915,Fix migrations for Laravel 9.x by @ricky-perchpeek in link,,0
+462,allow overriding the AccessToken class (#1638),0.77925605,Allow overriding the AccessToken class by @hafezdivandari in link,,1
+463,Merge pull request #1144 from gdebrauwer/find-and-validate-for-passport-password-grant,0.5731662,"Merge default Passport configuration (#1039, e260c86)",,0
+464,check if configuration is cached,0.63769317,mergeConfigFrom already checked if app is running with config cached (#1205),,0
+465,Merge pull request #133 from uxweb/fix-client-command-name-option,0.56927854,Automatic configuration of client UUIDs (#1231),Conflicts: .travis.yml composer.json,0
+466,CreateFreshApiToken doesn't issue a token,0.6171442,Revoke refresh tokens when auth tokens get revoked (#1186),[7.0] Prepare for 6.0 release,0
+467,Merge pull request #10 from lucasmichot/feature/master/missing-require,0.49246204,Fix migrations tag publish (#832),,0
+468,Also fix spacing.,0.42119312,Fix maxlength for token names (#1300),,0
+469,Registering purge command,0.6620604,Use custom models in purge command if set (#1316),Conflicts: CHANGELOG.md composer.json,0
+470,Provide hasher to constructor in test,0.5672903,Use Hasher interface instead of HashManager (#1157),,0
+471,Merge pull request #396 from bachilli/patch-1,0.516878,Fix migrations tag publish (#832),,0
+472,Cleanup tests,0.46102858,Fix actingAsClient testing method (#1119),,0
+473,add force flag to install,0.42337537,forceFill new auth code attributes (#1266),[7.0] Accept requests with the encrypted X-XSRF-TOKEN HTTP header,0
+474,Update pull-requests.yml,0.49239245,Add the ability to retrieve current client (#854),Mistakenly copied from VerifyCsrfMiddleware,0
+475,Add test for both program flows,0.51900375,Add actingAsClient method for tests (#1083),This brings Laravel\Passport\Guards\TokenGuard in line with Illuminate\Foundation\Http\VerifyCsrfToken.,0
+476,rename events,0.61770177,Rename property (#920),,0
+477,Fix model docblocks,0.70159304,Fix doc block for withAccessToken() by @axlon in link,,1
+478,Remove unused import,0.600022,Removed,,0
+479,Merge pull request #1290 from PanjiNamjaElf/9.x,0.50528276,Fix migrations tag publish (#832),,0
+480,Apply fixes from StyleCI (#1014),0.5629944,Add middleware CheckClientCredentialsForAnyScope (#855),[7.0] Let Passport support inherited parent scopes.,0
+481,Merge pull request #718 from robinvdvleuten/patch-1,0.52248025,Fix migrations tag publish (#832),,0
+482,Use Hasher interface instead of HashManager,0.9635082,Use Hasher interface instead of HashManager (#1157),,1
+483,Let OAuth2 server handle denying the request (#1572),0.8395392,Let OAuth2 server handle the denying response by @hafezdivandari in link,Resolve test failures,1
+484,Pass user identifier through to finalize scopes in personal access grant (#1650),0.9091574,Pass user identifier through to finalize scopes in personal access grant by @GrahamCampbell in link,,1
+485,Merge pull request #558 from gabriel-caruso/master,0.49106026,Fix migrations tag publish (#832),,0
+486,Merge pull request #494 from msonowal/patch-1,0.540987,Fix migrations tag publish (#832),Conflicts: CHANGELOG.md,0
+487,Add refresh token model,0.7594417,Add key type to refresh token model (e400c2b),,1
+488,Merge pull request #942 from driesvints/status-code-destroy-methods,0.61720836,Add responses for destroy methods (#942),,0
+489,Update readme.md,0.5398272,Update docblock by @mnabialek in link,[7.0] Use bigInteger column type for user_id columns,0
+490,Replace deprecated package and namespaces,0.9377868,Replace deprecated package and namespaces (#1158),,1
+491,Merge pull request #901 from driesvints/unify-namespaces,0.55974424,Remove deprecated properties by @driesvints in link,,0
+492,Add names to routes for reusability,0.92384243,Add names to routes for re-usability (#846),,1
+493,Update ConvertsPsrResponses.php,0.69326407,Update to phpseclib v3 (#1410)﻿,,0
+494,Merge pull request #464 from rscafi/fix-relationship,0.57233405,Fix resolveInheritedScopes (#1207),,0
+495,add files,0.50914794,Refactor routes to dedicated file by @driesvints in link,,0
+496,Don't allow tokens that have been pruned,0.6536633,Revoke refresh tokens when auth tokens get revoked (#1186),,0
+497,Drop unecessary elses,0.5929204,Removed,,0
+498,Improve return types even further,0.45569718,Improve token guard return type by @axlon in link,,0
+499,Merge pull request #556 from gabriel-caruso/update-mockery,0.5335361,Fix migrations tag publish (#832),,0
+500,Merge pull request #25 from lucasmichot/feature/master/useless-imports,0.58515596,Fix migrations tag publish (#832),,0
+501,Make name optional question,0.8875812,Make name an optional question (#926),[7.0] Make passport:keys only generate keys when needed.,1
+502,revert change,0.688914,Changed,This can significantly speed up tests that call artisan passport:install by avoiding work whose results will be discarded anyway (see link for an example where this is recommended).,0
+503,Fix create client call,0.839257,Fix create client call (aff9d09),,1
+504,Match name of personal access token methods to config,0.59157383,Implement personal access client config (#1260),,0
+505,Update gitignore file,0.5109693,Update docblock by @mnabialek in link,[8.0] Fix auth codes table customization,0
+506,sort client list ascending,0.3891096,Add the ability to retrieve current client (#854),,0
+507,Expire in 1 year by default,0.6689197,Refactor expiry dates to intervals (#1500)﻿,,0
+508,Apply table responsive on table class (#1318),1.0000001,Apply table responsive on table class (#1318),,1
+509,Add hashed client secrets tests,0.7076144,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)",Fix exception will thrown if token belongs to first party clients,1
+510,add tests,0.6611185,Add actingAsClient method for tests (#1083),,0
+511,Drop support for PHP 7.1,0.86687744,Dropped support for PHP 7.1 (3c830ac),,1
+512,update formatting and fix tests,0.5852917,Fix actingAsClient testing method (#1119),,0
+513,"Personal access tokens can't get ""*"" scope (2.0)",0.6132086,Allow setting expiration of personal access tokens (#919),[7.0] Change server Property type in CheckClientCredentialForAnyScope,0
+514,[11.x] Allow lcobucci/jwt v5 and cleaned up version constraints (#1649),0.8801817,Allow lcobucci/jwt v5 and cleaned up version constraints by @GrahamCampbell in link,,1
+515,Merge pull request #1155 from X-Coder264/feature-tests,0.5839751,Fix Faker deprecations by @X-Coder264 in link,,0
+516,Merge pull request #1136 from iamgergo/8.x,0.5474651,Fix migrations tag publish (#832),[7.0] Allow first party clients to skip the authorization prompt,0
+517,Remove deprecated variable,0.6551516,Remove deprecated functionality (#1235),,0
+518,[11.x] Fix scope inheritance when using Passport::actingAs() (#1551),0.8723681,Fix scope inheritance when using Passport::actingAs() by @axlon in link,Use the expected user and client objects instead of strings,1
+519,Merge branch '7.0' into testing-acting-as-client,0.5385461,Fix actingAsClient testing method (#1119),,0
+520,Update TokenGuard.php,0.6367421,Update to phpseclib v3 (#1410)﻿,[7.0] Clear the container between tests & bind necessary mocks,0
+521,fix bypass auth screen if we already have a token,0.641374,Revoke refresh tokens when auth tokens get revoked (#1186),,0
+522,fix migrations tag publish,0.90894896,Fix migrations tag publish (#832),,1
+523,support configuring refresh times,0.56948566,Refactor expiry dates to intervals (#1500)﻿,,0
+524,Merge pull request #950 from Chitaric/patch-1,0.5466254,mergeConfigFrom already checked if app is running with config cached (#1205),,0
+525,Update constraints,0.5905703,Remove old 5.9 constraints (58eb99c),,0
+526,Joined config publish registering with the rest of the publish registries,0.45542905,Add a Passport Client factory to Passport publishing (#1171),,0
+527,Add ext-json dependency,0.9368167,Add ext-json dependency (#940),,1
+528,Check if client is set when validating,0.59763885,Allow authenticated client to be retrieved from the guard by @axlon in link,,0
+529,Clean up docblocs,0.5750154,Update docblock by @mnabialek in link,,0
+530,AuthCode does not have timestamps,0.72382176,Removed deprecated dates property from AuthCode model by @siarheipashkevich in link,,1
+531,Merge pull request #164 from dmitov/1.0,0.44351727,Fix migrations tag publish (#832),,0
+532,Customize Key Storage Location,0.4918108,Remove foreign keys (20e9b66),Use Facade::resolved() before extending passport guard.,0
+533,Test refresh token model configuration,0.6812799,Revoke refresh tokens when auth tokens get revoked (#1186),This allows alternative implementation of auth to be able to use with passport without hacking around PackageManifest. Based on PR made to laravel/framework#26824 Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com,0
+534,[11.x] Support prompting login when redirecting for authorization (#1577),0.79449105,Support prompting login when redirecting for authorization by @hafezdivandari in link,Conflicts: composer.json tests/HandlesOAuthErrorsTest.php,1
+535,Remove foreign keys,0.9127593,Remove foreign keys (20e9b66),[7.0] Fix incorrect comment in TokenGuard::getTokenViaCookie,1
+536,Update authorize.blade.php,0.6605801,Update to phpseclib v3 (#1410)﻿,,0
+537,Use new version syntax,0.5099708,Replace deprecated package and namespaces (#1158),,0
+538,"Upgrade to ""league/oauth2-server"" version 7.",0.8758762,Upgrade to league/oauth2-server 8.0 (97e3026),OAuth2 Server did an update to their error responses format: link,1
+539,Fix ClientRepository::revoked() for deleted clients,0.5999954,Remove old static personal client methods (#1325),Fix AccessToken docblock,0
+540,Spacing and docblocks,0.536277,Fix doc block types by @hafezdivandari in link,,0
+541,Merge pull request #280 from nueko/patch-1,0.50539154,Fix migrations tag publish (#832),,0
+542,[10.x] Upgrade guide (#1345),0.58051693,Upgrade to league/oauth2-server 8.0 (97e3026),,0
+543,Forget session keys on invalid match,0.95849204,Forget session keys on invalid match (#1192),,1
+544,Merge default Passport configuration,0.8905958,"Merge default Passport configuration (#1039, e260c86)",,1
+545,update versions,0.5750401,Update version constraints for Laravel 6.0 (609b5e8),,0
+546,Merge pull request #1064 from matt-allan/resolve-test-failures,0.55333525,Rework HandlesOAuthErrors trait to middleware (#937),,0
+547,Return empty responses,0.5084244,Prevent passing empty string variable to retrieveById method (#861) ,,0
+548,Add in implicit grant type,0.48227525,Pass user identifier through to finalize scopes in personal access grant by @GrahamCampbell in link,[7.0] Tweak Travis setup,0
+549,Cast returned identifier value to string,0.8689918,Cast returned client identifier value to string (#1091),,1
+550,Update docblock (#1588),0.77704394,Update docblock by @mnabialek in link,,1
+551,Merge pull request #940 from driesvints/add-ext-json-to-composer,0.6739256,Add ext-json dependency (#940),,0
+552,Support multiple redirect uri,0.71110415,Add new URI Rule to validate URI and use it to RedirectRule. by @victorbalssa in link,We don't commit the composer.lock file so this won't work.,1
+553,Add force option to hash command (#1251),1.0,Add force option to hash command (#1251),[7.0] Change wasRecentlyCreated to false,1
+554,[11.x] Remove deprecated functionality and simplify some feature tests (#1559),0.81856537,Remove deprecated functionality and simplify some feature tests by @driesvints in link,,1
+555,Change logo to work on Dark Theme (#1481),0.38480276,Fix auth codes table customization (#1044),[7.0] Circleci,0
+556,Merge pull request #1127 from crynobone/abstract-check-credentials,0.49430463,Fix AccessToken docblock (#996),,0
+557,Make passport:keys only generate keys when needed.,0.60775304,Remove foreign keys (20e9b66),,0
+558,Apply fixes from StyleCI (#1291),0.57411635,Fix resolveInheritedScopes (#1207),The core framework fixed this same bug with the core actingAs method but it seems it was missed for Passport! Check this PR for more details: link,0
+559,Publish the passport-factories,0.7876543,Add a Passport Client factory to Passport publishing (#1171),[7.0] Add matrix to travis to tests against all supported version.,1
+560,Check scope test on CheckClientCredentials,0.6161561,Fix actingAsClient testing method (#1119),Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com,0
+561,Allow Passport to integrate with other user providers,0.71882856,"Merge default Passport configuration (#1039, e260c86)",Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com,1
+562,Refactor expiry dates to intervals (#1500),0.99999976,Refactor expiry dates to intervals (#1500)﻿,constraint. Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com,1
+563,Add auth guard to routes (#1603),0.7935479,Add auth guard to routes by @hafezdivandari in link,,1
+564,Drop Laravel 5.8 support,0.88932633,Dropped support for Laravel 5.8 (654cc09),,1
+565,Use custom models in purge command if set (#1316),0.9999999,Use custom models in purge command if set (#1316),[7.0] Add nightly build,1
+566,Mock 'TokenRepository' property in 'actingAsClient' testing method,0.6718402,Fix actingAsClient testing method (#1119),,0
+567,fix hashing name,0.60939306,Use Hasher interface instead of HashManager (#1157),,0
+568,Removes _token input,0.6049253,Remove deprecated properties by @driesvints in link,,0
+569,fix tests,0.70458627,Fix actingAsClient testing method (#1119),,1
+570,Fixes from StyleCI,0.5242478,Fix doc block types by @hafezdivandari in link,,0
+571,Merge pull request #596 from ahalimkara/patch-2,0.51687086,Fix migrations tag publish (#832),[8.0] Customize RefreshToken,0
+572,Stop Composer from suggesting things,0.3171739,Don't serialize by default (29e9d53),,0
+573,Merge pull request #996 from cweiske/patch-1,0.5489615,Fix AccessToken docblock (#996),,0
+574,Merge pull request #986 from laravel/tweak-ci-setup,0.5200786,mergeConfigFrom already checked if app is running with config cached (#1205),,0
+575,Test KeysCommand for when keys already exists,0.49648818,Forget session keys on invalid match (#1192),,0
+576,Merge pull request #495 from S-anasol/patch-1,0.48582932,Fix migrations tag publish (#832),,0
+577,Remove circleci config,0.4892935,Removed,,0
+578,Update 2016_06_01_000002_create_oauth_access_tokens_table.php,0.61194515,Allow access to HTTP response status code on OAuthServerException (#1148),,0
+579,Merge pull request #116 from bhosie/bhosie_parkershepherd-patch-1,0.5195056,Fix migrations tag publish (#832),,0
+580,Merge pull request #573 from carusogabriel/patch-1,0.5755465,Fix migrations tag publish (#832),,0
+581,Merge pull request #407 from lucasmichot/feature/2.0/code-style-fixes,0.56527996,Fix migrations tag publish (#832),,0
+582,[11.x] Allow authenticated client to be retrieved from the guard (#1508),0.8159723,Allow authenticated client to be retrieved from the guard by @axlon in link,,1
+583,Updating firebast/jwt versions to include 3.0 for google/auth compatibility,0.69585264,Upgrade firebase/php-jwt to ^6.0 by @prufrock in link,,0
+584,Fix displaying secret in Vue component (#1244),0.9999998,Fix displaying secret in Vue component (#1244),,1
+585,[10.x] Backport phpseclib v2 (#1418),0.972039,Backport phpseclib v2 (#1418)﻿,,1
+586,Add Orchestra Testbench package,0.4019016,Add actingAsClient method for tests (#1083),Replace fire() with dispatch(),0
+587,Make model classes configurable,0.51762545,Use custom models in purge command if set (#1316),fire() was deprecated and dispatch() should be used. Also \Illuminate\Contracts\Events\Dispatcher has dispatch() but not fire(),0
+588,Merge pull request #980 from laravel/circleci,0.5028428,Fix migrations tag publish (#832),[7.0] Allow '*' scope to be used with Client Credentials,0
+589,Add ability to define encryption keys in config,0.6603173,Add custom encryption key for JWT tokens (#1501),[7.0] Changed the way to get action path from url() to route(),0
+590,"Revert ""Added AuthenticationException to extend the behaviour of Laravel's default exception handler (#1633)""",0.9288482,"Re-apply ""Added AuthenticationException to extend the behaviour of Laravel's default exception handler"" by @driesvints in link","If we use second parameter for register routes default views are broken Passport::routes(false, [""prefix"" => ""something""]);",1
+591,Add missing return types,0.47063696,Fix str_replace error when third parameter ($subject) is null (#1511)﻿,,0
+592,Merge pull request #639 from ready2order/firebase-5.0,0.5006444,mergeConfigFrom already checked if app is running with config cached (#1205),,0
+593,Fix HashCommand,0.8290457,Fix HashCommand (bedf02c),[7.0] Import namespaces in test suite,1
+594,"Allow ""*"" to be used for scopes when generating Client Credentials access token",0.8367019,Allow '*' scope to be used with Client Credentials (#949),,1
+595,Merge pull request #1205 from crynobone/patch-2,0.52056706,Fix migrations tag publish (#832),[7.0] Add ext-json dependency,0
+596,Merge pull request #304 from corbosman/2.0,0.50928116,mergeConfigFrom already checked if app is running with config cached (#1205),[7.0] Add responses for destroy methods,0
+597,Allow public clients,0.7597779,"Add support for ""public"" clients (#1065)",,1
+598,Merge branch 'hotfix/merge-changes' into 2.0,0.42592207,Rework HandlesOAuthErrors trait to middleware (#937),,0
+599,[11.x] Refactor routes to dedicated file (#1464),0.80904716,Refactor routes to dedicated file by @driesvints in link,This adds proper responses and HTTP statuses for the destroy methods on success. Fixes link,1
+600,Use SHA-256 hashing for client secrets,0.72033745,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)",,1
+601,Mock TokenRepository instead of Connection,0.6314695,Fix actingAsClient token relation (#1268),Replaced helpers with Blade directives,0
+602,Fix exception will thrown if token belongs to first party clients issue #691,0.96728104,Fix exception will thrown if token belongs to first party clients (#1040),,1
+603,Upgrade to league/oauth2-server 8.0,0.9600808,Upgrade to league/oauth2-server 8.0 (97e3026),,1
+604,Update dev dependencies,0.63250464,Update dependencies for PSR request (#1201),,0
+605,Remove deprecated properties (#1560),0.7776966,Remove deprecated functionality (#1235),,1
+606,[11.x] Add Provider Guard to ClientRepository for Personal Access Clients (#1655),0.87875545,Add Provider Guard to ClientRepository for Personal Access Clients by @michaelnabil230 in link,,1
+607,fix bs4 upgrade,0.45135304,Upgrade to league/oauth2-server 8.0 (97e3026),The benefit this gives is that it allows developers to overwrite the middleware and implement their own handling of errors if they want to. Fixes link,0
+608,fix conflicts,0.6007294,Fix resolveInheritedScopes (#1207),,0
+609,Fix AccessToken docblock,0.9479931,Fix AccessToken docblock (#996),[7.0] Remove dangling import,1
+610,Use getAuthPassword instead of assuming the password column name,0.50714993,Allow authenticated client to be retrieved from the guard by @axlon in link,,0
+611,rename method,0.75298,Rename property (#920),,1
+612,Merge pull request #974 from crynobone/patch-1,0.52423745,Fix migrations tag publish (#832),[7.0] Allow multiple redirects when creating clients,0
+613,Add nightly builds,0.4013141,Add ability to customize the RefreshToken (#966),[7.0] Do not auto increment AuthCode ID,0
+614,Add upgrade guide,0.49533007,Upgrade to league/oauth2-server 8.0 (97e3026),This follows the same rule as the Token model. Both don't have auto incrementing IDs so we should set this to false. Fixes link,0
+615,[10.x] Use newFactory to properly reference factory (#1349),0.9681874,Use newFactory to properly reference factory (#1349),"This change allows for multiple redirects in a comma separated list when adding them through the ClientController. It makes use of a custom validation rule which will separate the urls by the comma and run the url validator rule over each one individually. Except for link individually, the value of link would be allowed as well. I took the approach of a custom validation rule because it seemed the most flexible in terms of implementing the custom logic. It allows for re-using Laravel's url validation rule. Fixes link",1
+616,Merge pull request #1034 from alshf89/alshf,0.5355963,Fix create client call (aff9d09),[7.0] Fix revoked refresh token check,0
+617,Merge pull request #926 from ankurk91/patch/c,0.4766323,Fix migrations tag publish (#832),"When a check if performed to determine if a refresh token is revoked or not, it's unnecessary to also check if its corresponding access token is revoked. It's perfectly possible to issue a new access token if the old access token is either revoked or pruned as long as the refresh token is valid. Fixes link",0
+618,Use correct sequence for methods,0.3496952,Add actingAsClient method for tests (#1083),[7.0] Make name an optional question,0
+619,Fix wrong attribute value,0.5407467,Fix str_replace error when third parameter ($subject) is null (#1511)﻿,,0
+620,Remove extra @param,0.47022086,Removed,,0
+621,Update config.yml,0.5399185,Allow lcobucci/jwt v5 and cleaned up version constraints by @GrahamCampbell in link,"When using passport:client commands, add redirect_uri and user_id options. Useful for automated builds.",0
+622,Added support for creating client credentials grant clients via artisan command,0.56479704,Pass user identifier through to finalize scopes in personal access grant by @GrahamCampbell in link,Rename property,0
+623,Small typo,0.29983953,Change wasRecentlyCreated to false (#979),,0
+624,fix key pass,0.5993984,Remove foreign keys (20e9b66),Allow setting expiration of personal access tokens,0
+625,Merge branch 'allow-public-clients' of link into matt-allan-allow-public-clients,0.5799245,"Add support for ""public"" clients (#1065)",,0
+626,Merge pull request #1040 from alshf89/alshf,0.5436115,Fix create client call (aff9d09),,0
+627,Clear the container between tests & bind necessary mocks,0.5365602,Remove deprecated functionality and simplify some feature tests by @driesvints in link,,0
+628,laravel10 The Eloquent model's deprecated $dates property has been removed.application should now use the $casts property (#1636),0.6807068,Removed deprecated dates property from RefreshToken model by @siarheipashkevich in link,This is because the client id autoincrements. We don't add foreign key indexes ourselves but if you try to add them afterwards you'll have to first change the column type of the client_id columns because otherwise they don't match the increments column. We can immediately use the proper type in the migrations here.,0
+629,Merge pull request #745 from robbytaylor/fix-hardcoded-model-key-name,0.48826417,Ensure client model factory always creates models with a primary key (#1492﻿,[8.0] Use unsignedInteger column type for client_id columns,0
+630,Merge pull request #1512 from rubengg86/php_8.1_internal_method_return_types,0.6256705,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,,0
+631,Merge pull request #1188 from laravel/auth-token,0.54666483,Fix migrations tag publish (#832),,0
+632,Send CryptKey instance to oauth2 with new permission check disabled.,0.5295427,Add custom encryption key for JWT tokens (#1501),This is because the client id autoincrements. We don't add foreign key indexes ourselves but if you try to add them afterwards you'll have to first change the column type of the client_id columns because otherwise they don't match the increments column. We can immediately use the proper type in the migrations here.,0
+633,Merge pull request #296 from qrazi/feature/fix_docblock_authorizationcontroller,0.6502314,Fix AccessToken docblock (#996),,0
+634,A non existing token should return true for revoked,0.70275927,Revoke refresh tokens when auth tokens get revoked (#1186),[7.0] Namespace tests,1
+635,Using assertSame to make assertion equals strict (#1343),0.47790587,Add actingAsClient method for tests (#1083),,0
+636,Merge pull request #1207 from lucasmichot/feature/8.x/cleanup-resolveInheritedScopes,0.7378094,Fix resolveInheritedScopes (#1207),,1
+637,remove require,0.7541715,Removed,[7.0] Cleanup commands,1
+638,Use dropIfExists() instead of drop(),0.43115658,Use unsignedInteger column type for client_id columns (47f0021),,0
+639,Allow access to HTTP response status code.,0.79852563,Allow access to HTTP response status code on OAuthServerException (#1148),,1
+640,Correct return type of tokens relation.,0.6263212,Nonstandard ID in the token's relationship with the user (#1267),,0
+641,Add casts and dates.,0.39577863,Allow timestamps on Token model by @driesvints in link,,0
+642,More fix.,0.5171453,Changed,,0
+643,Set actingAsClient token client as proper relationship,0.7542979,Fix actingAsClient token relation (#1268),,1
+644,Update composer.json (#1615),0.55009997,Drop support for old JWT versions (#1236),,0
+645,Update .travis.yml,0.5716697,Update docblock by @mnabialek in link,,0
+646,Merge remote-tracking branch 'origin/master',0.43555668,Refactor routes to dedicated file by @driesvints in link,,0
+647,Updated to PHPUnit 6,0.7486758,Update to phpseclib v3 (#1410)﻿,,1
+648,Merge pull request #408 from lucasmichot/feature/2.0/docblocks,0.64830136,Fix AccessToken docblock (#996),,0
+649,dont serialize by default,0.84024054,Don't serialize by default (29e9d53),,1
+650,Add index to access_token_id column,0.61263025,Allow overriding the AccessToken class by @hafezdivandari in link,,0
+651,Refactor to sqlite tests,0.5288515,Fix actingAsClient testing method (#1119),,0
+652,Fix $userId type (#1422),0.5707439,Automatic configuration of client UUIDs (#1231),Use dedicated assertCount assertion,0
+653,Update const to use uppercase and use illuminate/contracts for,0.48290932,Add abstract CheckCredentials middleware and allows to create (#1127),[7.0] Update to PHPUnit 7,0
+654,Merge pull request #55 from anibalospina/master,0.5338702,Fix migrations tag publish (#832),,0
+655,fix link,0.6016879,Fix binding (e3478de)﻿,,0
+656,Merge pull request #1494 from laravel/php81,0.6089505,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,add php 7.3,0
+657,Tweak how clients are stored.,0.5648226,"Add user relationship to client model (#851, 3213be8)",,0
+658,Drop support for old JWT versions,0.93701315,Drop support for old JWT versions (#1236),,1
+659,Merge pull request #1314 from laravel/driesvints-patch-1,0.56590676,Fix migrations tag publish (#832),[7.0] Made whereRevoked consistent (Taylor's way),0
+660,Update 2016_06_01_000004_create_oauth_clients_table.php,0.6000747,Update ClientCommand.php's user_id description by @Smoggert in link,,0
+661,working on authorize view,0.6758411,Custom authorization view response by @JonErickson in link,[7.0] Change auth code table to the model's table,0
+662,Merge pull request #29 from lucasmichot/feature/master/model-docblocks,0.59700036,Fix ClientRepository doc blocks by @axlon in link,,0
+663,Update 2016_06_01_000003_create_oauth_refresh_tokens_table.php,0.57819664,Update to phpseclib v3 (#1410)﻿,Update TokenGuard.php,0
+664,Reformat command signature,0.49273974,Add ability to customize the RefreshToken (#966),,0
+665,Merge pull request #181 from bhosie/patch-revoke-other,0.49035674,Fix migrations tag publish (#832),"Prevent passing empty string variable to retrieveById method. If use middleware 'auth:api' but pass BearerToken form 'grant_type' => 'client_credentials'. PostgreSql will throw exception: ""SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: \""\"" (SQL: select * from \""users\"" where \""id\"" =  limit 1) It is preferable to transfer null to return 401 (Unauthenticated) in this case",0
+666,Switch to using axios for laravel 5.4,0.47371268,Replaced helpers with Blade directives (#939),[7.0] Add middleware CheckClientCredentialsForAnyScope,0
+667,Merge pull request #1049 from MrMage/patch-1,0.5556382,Fix migrations tag publish (#832),,0
+668,Change revoked field to be searched by boolean,0.43103254,Modify UserRepository to check for 'findAndValidateForPassport' method (#1144),"This commit adds the ability to retrieve the current client from the request, just like the current user is retrieved. I chose to do this in the TokenGuard class since this class uses the same logic to retrieve the current active user. Usage could be as follows: $client = $tokenGuard->client($request); One of the biggest reasons for adding this is that there isn't any way at the moment to retrieve the current client from the request. By adding this, users can use the client to further perform authorization actions or check the creator of the client and subsequently limit resources bases on either one of those two. This is especially helpful for client credentials grant requests where you simply don't have an active user. This way you can still limit resources if you want based on either the client or its creator. This commit is fully BC. No methods have been renamed, only added. The ones that have been modified still behave in the same way as before but only have some parts extracted to other methods so their code could be re-used. This solves the following long outstanding issue: link",0
+669,Prefer stable dependencies,0.48072517,Remove Guzzle dependency (#1327)﻿,[7.0] Add names to routes for reusability,0
+670,Merge pull request #1287 from corbosman/9.x,0.48945242,mergeConfigFrom already checked if app is running with config cached (#1205),,0
+671,ability to export sample components,0.4816935,Add a Passport Client factory to Passport publishing (#1171),,0
+672,Format code,0.5701437,Fix auth codes table customization (#1044),,0
+673,Merge pull request #498 from rscafi/bump-coverage,0.5272475,Bump league server dependency (#1237),,0
+674,Merge branch '10.x',0.37767977,"Merge default Passport configuration (#1039, e260c86)",fix migrations tag publish,0
+675,Merge pull request #28 from lucasmichot/feature/master/casts-and-dates,0.5249079,Fix deprecated $dates property by @TonyWong9527 in link,,0
+676,Order imports alphabetically,0.23852488,Change auth code table to the model's table (#865),,0
+677,Update license file,0.47302324,Update dependencies for PSR request (#1201),,0
+678,Merge pull request #27 from lucasmichot/feature/master/useless-variable,0.49790734,Fix migrations tag publish (#832),,0
+679,Deprecate pruning and revoking tokens,0.64205754,Revoke refresh tokens when auth tokens get revoked (#1186),use HTTPS links where appropriate,0
+680,Merge pull request #216 from gauravmak/master,0.47142154,Fix migrations tag publish (#832),"both of these links redirect to HTTPS sites, so let's just send them directly there.",0
+681,Allow installs of zend-diactoros 2,0.9212104,Allow installs of zend-diactoros 2 (c0c3fca),[7.0] Flattens resources/assets directory.,1
+682,trim string,0.43303198,Fix maxlength for token names (#1300),,0
+683,support a default scope when no scope was requested by the client,0.94891655,Support a default scope when no scope was requested by the client (#879),Authcode model should be used for persisting new authcode,1
+684,fixing the validateForPassportPasswordGrant() method bug,0.6607677,Modify UserRepository to check for 'findAndValidateForPassport' method (#1144),,0
+685,fix conficts,0.64384305,Fix resolveInheritedScopes (#1207),,0
+686,fix cookie handling for security release,0.9201081,"Fix cookie handling for security release (#1322, 75f1ad2)",,1
+687,Optionally skip if no auth_token is provided,0.54259783,Implement auth token for access requests (#1188),,0
+688,[9.x] Implement secret modal (#1258),0.95641446,Implement secret modal (#1258),,1
+689,DocBlocks and formatting,0.66530776,Fix doc block types by @hafezdivandari in link,,0
+690,Improve mockery usage with exceptions,0.34042612,Add responses for destroy methods (#942),,0
+691,Update styleci,0.5110848,Add ability to customize the RefreshToken (#966),,0
+692,Added guard handling to CreateFreshApiToken,0.6338569,Add ability to customize the RefreshToken (#966),,0
+693,Merge pull request #1119 from gdebrauwer/fix-actingasclient-testing-method,0.66832453,Fix actingAsClient testing method (#1119),Respect session's same_site configuration,0
+694,remove duplicate method,0.54405713,Removed,,0
+695,Add missing composer require,0.36859155,Allow installs of zend-diactoros 2 (c0c3fca),,0
+696,no need for soft deletes,0.45841038,Remove Guzzle dependency (#1327)﻿,Update authorize.blade.php,0
+697,add getValidToken for client by user,0.70054024,Make $userId nullable in ClientRepository->createPersonalAccessClient by @bram-pkg in link,the application might not be in root folder,1
+698,Update tests of 'check client credentials (of any scope)' middlewares,0.7681872,Client credentials middleware should allow any valid client (#1132),Unique scopes on AuthorizationController,1
+699,Merge branch '6.0' of link into amrfayad-6.0,0.45248806,"Allow to change Models database connection (#1255, 7ab3bdb)",The parseScopes method now returns an array of unique scopes.,0
+700,add --length option to passport install commit to specify private key length,0.45716617,Add a Passport Client factory to Passport publishing (#1171),Fix key length issue on passport:install,0
+701,Add keytype to auth code model,0.69422674,Fix auth codes table customization (#1044),Prevents 'private key length is too short' error on passport:install,0
+702,Merge pull request #928 from driesvints/redirect-rule,0.5976292,Allow multiple redirects when creating clients (#928),,0
+703,Merge pull request #392 from TimWolla/security-client-revoke,0.52298486,"Revert ""[11.x] Add Provider Guard to ClientRepository for Personal Access Clients"" by @driesvints in link",,0
+704,Update RefreshToken.php (#1645),0.6888154,Update to phpseclib v3 (#1410)﻿,,0
+705,Merge pull request #1099 from laravel/upgrade-guide,0.5802283,Fix migrations for Laravel 9.x by @ricky-perchpeek in link,,0
+706,Merge pull request #896 from driesvints/cleanup-client-command,0.5538255,Add the ability to retrieve current client (#854),,0
+707,add actingAs method for testing,0.8675009,Add actingAsClient method for tests (#1083),,1
+708,Update branch alias,0.42341343,Replace deprecated package and namespaces (#1158),,0
+709,Merge pull request #156 from lbausch/patch-1,0.53708714,Fix migrations tag publish (#832),,0
+710,Rename 1_Bug_report.md to 1_Bug_report.yml,0.45286018,Fix migrations tag publish (#832),Allow for URI with already existing query string,0
+711,dark mode logo,0.34492785,Implement secret modal (#1258),Remove hard-coded model key name in favour of Model::getKeyName(),0
+712,Fixes CS.,0.49417675,Fix resolveInheritedScopes (#1207),,0
+713,Make Passport work with Laravel Auto Discover,0.72417456,Move AuthenticationException into the scope of Laravel Passport by @chrispage1 in link,Adds test for authorization denied with existing query string,1
+714,fix a few bugs,0.5956191,Fix resolveInheritedScopes (#1207),Remove private key length from config,0
+715,Merge branch 'artisan-client-credentials' of link into robbytaylor-artisan-client-credentials,0.39771375,Revert model DB connection customization by @driesvints in link,Add private key length as argument to the CLI command,0
+716,"Adding ""force"" option so the keys are not overwritten",0.5362505,Add key type to refresh token model (e400c2b),Add private key length as argument to the CLI command,0
+717,[ADD] new URI Rule to validate URI and use it to RedirectRule (#1544),0.89310277,Add new URI Rule to validate URI and use it to RedirectRule. by @victorbalssa in link,Formatting,1
+718,Test on PHP 8.2 (#1592),0.7360527,Support PHP 8.0 (#1387),,1
+719,remove comment,0.6431419,Removed,,0
+720,PHP 8.1 support,0.9216324,Support PHP 8.0 (#1387),Correct return type of tokens relation.,1
+721,Add the loss row class,0.47548538,Apply table responsive on table class (#1318),,0
+722,Update ClientCommand to support public clients,0.95060027,Update ClientCommand to support public clients (#1151),Check if config function is exists,1
+723,Remove phpunit file,0.58272314,Removed,Add private key length in config file to control the length generated private key,0
+724,Merge pull request #397 from nmfzone/patch-1,0.5460155,Fix migrations tag publish (#832),Add private key length in config file to control the length generated private key,0
+725,Merge pull request #409 from lucasmichot/feature/2.0/laravel-style-fix,0.5654938,Fix migrations tag publish (#832),Add private key length in .env file to control the length generated private key,0
+726,missing scope exception instead of authentication exception,0.611708,Support a default scope when no scope was requested by the client (#879),merge changes from 5.0 into 6.0,0
+727,Merge remote-tracking branch 'origin/1.0' into 1.0,0.44408417,Fix migrations tag publish (#832),feat: add array cast for grant_types,0
+728,"Docs, remove unused import",0.50326675,Replace deprecated package and namespaces (#1158),,0
+729,Match property sequence,0.40423426,Made whereRevoked consistent (#868),,0
+730,Upgrade firebase/php-jwt to ^6.0 (#1538),0.9216404,Upgrade firebase/php-jwt to ^6.0 by @prufrock in link,,1
+731,Fix exception on deleted client auth,0.67411005,"Personal client exception (#831, 7bb53d1)",refactor: move tests to correct class,0
+732,Merge pull request #562 from patrickcarlohickman/promote-private-to-protected,0.44687688,"Revert ""[11.x] Add Provider Guard to ClientRepository for Personal Access Clients"" by @driesvints in link",,0
+733,Merge pull request #972 from driesvints/add-nightly-build,0.48388445,Bump league server dependency (#1237),,0
+734,hide some error messages,0.4657511,Fix migrations tag publish (#832),,0
+735,update branch aliasa,0.38826722,Replace deprecated package and namespaces (#1158),,0
+736,style: correct NBSP for regular spaces (#1339),0.42987493,Fix maxlength for token names (#1300),Protect client credentials grant,0
+737,Added AuthenticationException to extend the behaviour of Laravel's default exception handler (#1633),0.92394644,"Re-apply ""Added AuthenticationException to extend the behaviour of Laravel's default exception handler"" by @driesvints in link",,1
+738,"Only set Authorization header, rather than replacing all headers with just Authorization header",0.537951,Support disabling prompt when redirecting for authorization by @hafezdivandari in link,,0
+739,Updated to league/oauth2-server for upstream security patches,0.695382,Upgrade to league/oauth2-server 8.0 (97e3026),,0
+740,Update 'upgrade' guide to remove mention of included upgrade migration,0.4948454,Fix migrations tag publish (#832),,0
+741,Apply fixes from StyleCI,0.54393476,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+742,Merge pull request #1083 from gdebrauwer/testing-acting-as-client,0.5640094,mergeConfigFrom already checked if app is running with config cached (#1205),Fixed invalid static property $client,0
+743,Updated mockery in composer.json,0.4566847,Fix jsonSerialize PHP 8.1 issue (#1512)﻿,,0
+744,StyleCI fixes,0.48223424,Fix doc block types by @hafezdivandari in link,,0
+745,Rename readme.md to README.md,0.36629748,Changed,,0
+746,Fix revoked refresh token check,0.8282442,Revoke refresh tokens when auth tokens get revoked (#1186),Make model classes configurable,1
+747,Merge pull request #608 from carusogabriel/fix-php-docs,0.57018286,Fix ClientRepository doc blocks by @axlon in link,,0
+748,Fixes syntax,0.5064057,Fix binding (e3478de)﻿,,0
+749,Merge pull request #821 from browner12/patch-1,0.58568287,Fix migrations tag publish (#832),Use dropIfExists() instead of drop(),0
+750,Merge branch 'master' of link,0.46542564,Revert model DB connection customization by @driesvints in link,,0
+751,[9.x] Update UPGRADE.md (#1240),0.58442104,Upgrade to league/oauth2-server 8.0 (97e3026),Bump up minimum php version required,0
+752,Merge pull request #731 from designmynight/restrict-grant-types,0.4883783,Allow to use custom authorization server response (#1521)﻿,This is currently wrong as illuminate/contracts v5.6 requires at least php7.1.,0
+753,Adds types to migrations (#1594),0.5320307,Fix migrations tag publish (#832),,0
+754,Update 'check client credentials (for any scopes)' middlewares,0.81898475,Client credentials middleware should allow any valid client (#1132),,1
+755,Add null user check,0.54798514,Make $userId nullable in ClientRepository->createPersonalAccessClient by @bram-pkg in link,,0
+756,Merge branch '2.0' of link into chris-moreton-2.0,0.45731717,Allow lcobucci/jwt v5 and cleaned up version constraints by @GrahamCampbell in link,,0
+757,[11.x] Custom authorization view response (#1629),0.77008426,Allow to use custom authorization server response (#1521)﻿,,1
+758,support the password grant,0.54074526,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)",,0
+759,Fix scope validation.,0.59911346,Support a default scope when no scope was requested by the client (#879),Add the loss row class,0
+760,Use newer Github actions (#1329),0.4776702,Drop support for old JWT versions (#1236),Fix a css bug,0
+761,Merge pull request #1132 from JuanDMeGon/master,0.50318754,Fix migrations tag publish (#832),"Only set Authorization header, rather than replacing all headers...",0
+762,Merge pull request #949 from philcross/fix_client_credentials_superuser_scope,0.4916312,Fix resolveInheritedScopes (#1207),,0
+763,Remove deprecated functionality (#1235),0.9999998,Remove deprecated functionality (#1235),Alternative fix to Issue #632,1
+764,Update tests.yml,0.54332554,Fix actingAsClient testing method (#1119),,0
+765,make column nullable,0.52280545,Use unsignedInteger column type for client_id columns (47f0021),,0
+766,No more duplicate scopes,0.47743,Replaced helpers with Blade directives (#939),,0
+767,remove unnecessary return form service provider,0.5534096,Remove old static personal client methods (#1325),,0
+768,fix doc types (#1647),0.6127947,Fix doc block types by @hafezdivandari in link,,0
+769,CSRF check can be disabled,0.46235174,Add middleware CheckClientCredentialsForAnyScope (#855),Added firebase 5.0 as possible dependency,0
+770,Fixes scopes error in issue #148,0.5752382,Fix resolveInheritedScopes (#1207),,0
+771,Prepare for 6.0 release,0.50181794,Update version constraints for Laravel 6.0 (609b5e8),Passport::actingAs returns the user,0
+772,Add whitelist for coverage report,0.34254152,Initial support for multiple providers (#1220),,0
+773,[9.x] Update UPGRADE.md (#1265),0.56604314,Upgrade to league/oauth2-server 8.0 (97e3026),,0
+774,Merge branch '7.0' into use-facade-resolved,0.4144026,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+775,support vue 1 and 2,0.4930545,Guzzle 7 support (#1311),,0
+776,Import namespaces in test suite,0.48662966,Replace deprecated package and namespaces (#1158),Fix @param type,0
+777,feat: add array cast for grant_types,0.42266405,Pass user identifier through to finalize scopes in personal access grant by @GrahamCampbell in link,,0
+778,Add tests for CreateFreshApiToken,0.5768697,Add actingAsClient method for tests (#1083),Remove extra @param,0
+779,Merge branch 'master' of github.com:kaptk2/passport,0.4768973,"Merge default Passport configuration (#1039, e260c86)",,0
+780,Merge pull request #61 from lucasmichot/feature/master/bump-psr-http-message-bridge,0.5033936,Bump league server dependency (#1237),,0
+781,Bump symfony/psr-http-message-bridge version,0.52766955,Use diactoros 2.0 and psr-http-factory (aadf603),,0
+782,Add ActingAsClientTest and resolve storage_path function conflict,0.60874045,Fix actingAsClient testing method (#1119),,0
+783,tweak formatting and vars,0.4497421,Fix auth codes table customization (#1044),,0
+784,Disable xdebug,0.5195979,Remove Guzzle dependency (#1327)﻿,,0
+785,update spacing,0.46550083,Fix maxlength for token names (#1300),Always remove xdebug,0
+786,"fix: update broken tests, move to correct class",0.6045854,Fix actingAsClient testing method (#1119),In addition to laravel/framework#20329,0
+787,Allow for URI with already existing query string,0.6765782,Add new URI Rule to validate URI and use it to RedirectRule. by @victorbalssa in link,Just user shouldn't be depend on ->report result..,0
+788,Do not use returns for client create methods,0.6001916,Remove old static personal client methods (#1325),,0
+789,Improve token guard return type (#1579),0.7687172,Improve token guard return type by @axlon in link,Returning revoke result,1
+790,Remove empty line,0.53933954,Removed,,0
+791,Update HandleOAuthErrors.php,0.6859505,Update to phpseclib v3 (#1410)﻿,,0
+792,add --length option to passport install command to specify private key length,0.4907005,Add a Passport Client factory to Passport publishing (#1171),Need to know the result of resolve function result to proceed.,0
+793,tweak formatting,0.5327578,Add ability to customize the RefreshToken (#966),,0
+794,Merge pull request #185 from laravel/1Year,0.49607822,Fix migrations tag publish (#832),Test against PHP 7.2,0
+795,Allow 5.9 installs,0.53388286,Allow installs of zend-diactoros 2 (c0c3fca),,0
+796,Merge pull request #704 from clementblanco/patch-1,0.5819058,Fix migrations tag publish (#832),Hide some error messages on production,0
+797,Support refresh tokens.,0.74921477,Revoke refresh tokens when auth tokens get revoked (#1186),,1
+798,Merge pull request #1022 from matt-allan/skip-authorization,0.5332284,Allow to use custom authorization server response (#1521)﻿,,0
+799,Update UserRepository to check/use 'findAndValidateForPassport' method on user model,0.9370412,Modify UserRepository to check for 'findAndValidateForPassport' method (#1144),,1
+800,Update 1_Bug_report.yml,0.48626342,Fix migrations tag publish (#832),,0
+801,Passport::actingAs returns the user,0.6393473,Fix scope inheritance when using Passport::actingAs() by @axlon in link,Changed private properties and functions to protected.,0
+802,update alias,0.47436434,Update docblock by @mnabialek in link,,0
+803,Update OAuthServerException.php,0.76068455,Allow access to HTTP response status code on OAuthServerException (#1148),[5.0] Update to PHPUnit 6,1
+804,Create update-changelog.yml,0.53912365,Add ability to customize the RefreshToken (#966),,0
+805,Fixed invalid static property $client,0.6094387,Remove old static personal client methods (#1325),[4.0] Updated mockery in composer.json,0
+806,StyleCI suggestion,0.3554443,Add middleware CheckClientCredentialsForAnyScope (#855),,0
+807,Fix AuthCode model relationship with Client,0.73928535,Authcode model is now used for persisting new authcodes (#808),Cast to string the 'identifier' field for Client.,1
+808,Merge pull request #144 from mlanin-forks/master,0.47835922,Fix migrations tag publish (#832),"The AuthCodeGrant class gets the client identifier of the object obtained from the client repository and compare it with the client_id from request, however the comparison is made using 'not identical' operator which fails due to the type obtained from the repository (integer) and the type from the request (string). According to the dock block in League\OAuth2\Server\Entities\Traits\EntityTrait the return type for the getIdentifier method, must be a string.",0
+809,Enable the option of hashing client secrets,0.77710044,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)",,1
+810,[8.x] mergeConfigFrom() already check if app is running with config cached.,0.9426594,mergeConfigFrom already checked if app is running with config cached (#1205),"Fixed a bug where if the response instance was of type Response but the response was already containing a token, it would return true instead of false.",1
+811,no need to revoke other access tokens when a new one is issued,0.77276814,Allow setting expiration of personal access tokens (#919),,1
+812,Merge pull request #12 from lucasmichot/feature/master/AccessToken-docblock,0.72135437,Fix AccessToken docblock (#996),Fix wrong attribute value,1
+813,rename property,0.8471495,Rename property (#920),,1
+814,Update changelog,0.58050513,Changed,,0
+815,fix binding,0.81392,Fix binding (e3478de)﻿,Fixed exception when returning a download response using CreateFreshApiToken middleware,1
+816,Merge pull request #728 from designmynight/protect-client-credentials-grant,0.51079595,Allow to use custom authorization server response (#1521)﻿,,0
+817,Fix updating clients in Vue,0.5873137,Update ClientCommand to support public clients (#1151),,0
+818,Update DenyAuthorizationController.php,0.6033256,Allow to use custom authorization server response (#1521)﻿,Fix wrong attribute value,0
+819,[8.x] Add abstract CheckCredentials middleware and allows to create,0.906808,Add abstract CheckCredentials middleware and allows to create (#1127),,1
+820,Merge pull request #373 from halaei/unused-import,0.5598837,Fix migrations tag publish (#832),Fixed small typo in command option description,0
+821,Merge branch 'et/vuejs2' of link into etelford-et/vuejs2,0.4611394,Fix binding (e3478de)﻿,,0
+822,last_used_at is no longer a column,0.48687562,Made whereRevoked consistent (#868),Get proper errors field from JSON response,0
+823,Re-use functionality in dedicated method,0.49557877,Remove old static personal client methods (#1325),,0
+824,Update CreateFreshApiToken.php,0.6218696,Update to phpseclib v3 (#1410)﻿,,0
+825,Make sure added methods are tested,0.6579631,Add actingAsClient method for tests (#1083),Bump coverage for Controllers and Middlewares,0
+826,Fixed invalid static property $authCode,0.54894465,Fix actingAsClient token relation (#1268),,0
+827,Merge pull request #368 from clarkeash/patch-1,0.52643394,Fix migrations tag publish (#832),,0
+828,Add ActingAsTest,0.663085,Add actingAsClient method for tests (#1083),,0
+829,branch alias,0.3806607,"Allow client credentials secret to be hashed (#1145, ccbcfeb, 1c40ae0)",,0
+830,Test on PHP 7.1,0.6568203,PHP 8 Support (#1373),,0
+831,Implement Github Actions,0.35559353,Use app helper (3d1e6bb),,0
+832,Fix ClientRepository doc blocks (#1587),0.82211256,Fix ClientRepository doc blocks by @axlon in link,,1
+833,Add matrix to travis to tests against all supported version.,0.42752138,Add actingAsClient method for tests (#1083),CreateFreshApiToken doesn't issue a token,0
+834,allow to configure ApiTokenCookie name,0.5310142,Make $userId nullable in ClientRepository->createPersonalAccessClient by @bram-pkg in link,"For some reasons it was removed 3 weeks ago by @rscafi link Maybe mistake, not sure. But current dev version doesn't issue tokens at all.",0
+835,passport:client --password --name=asdf  Throws RuntimeException,0.6141694,Stub client on guard when calling Passport::actingAsClient() by @axlon in link,updated firebase/php-jwt dependency,0
+836,Merge pull request #1137 from laravel/php74,0.59797895,Drop PHP 7.x and Laravel v8 by @driesvints in link,updated firebase/php-jwt dependency which does not have any breaking changes so that it can be useful to use with when the project has 5.0 as dependency for firebase/php-jwt,0
+837,Merge pull request #1181 from X-Coder264/add-feature-tests-for-password-grant,0.55705094,Accept requests with the encrypted X-XSRF-TOKEN HTTP header (#1069),Fix creating fresh api token,0
+838,Cleanup,0.47533637,Removed,Adding back the missing ! in responseShouldReceiveFreshToken. It was some how left out during df5ddb28318a6ffac2cb0c96fc30e045afa2f9b9. Without it a new token will never be set if one has not been set already.,0
+839,Bump up minimum php version required,0.64052534,Support PHP 8.0 (#1387),,0
+840,Merge pull request #203 from erdemkeren/master,0.49175644,Fix migrations tag publish (#832),Use Illuminate Response as a standard so that middlewares can always work,0
+841,Indicate current token can be TransientToken (#1627),0.7972991,Indicate current token can be TransientToken by @axlon in link,,1
+842,Update Token.php,0.66935,Update to phpseclib v3 (#1410)﻿,,0
+843,correct test name,0.4771614,Add actingAsClient method for tests (#1083),CS fixes and minor improvements,0
+844,Unintended removal of contracts require due to testing.,0.42572725,Fix actingAsClient testing method (#1119),,0
+845,Configure Bridge/RefreshTokenRepository to use the new repository,0.55799896,Add ability to customize the RefreshToken (#966),,0
+846,Use --prefer-dist option,0.33564353,Revert model DB connection customization by @driesvints in link,,0
+847,[10.x] Update test for Laravel 9 (#1509),0.7585908,Update version constraints for Laravel 6.0 (609b5e8),Fix AuthCode model relationship with Client,1
+848,fix a few small bugs. update tests,0.57237494,Fix actingAsClient testing method (#1119),Fixing deny response with multiple redirect uris,0
+849,Merge pull request #868 from ArlonAntonius/consistent-revoked,0.5419665,Made whereRevoked consistent (#868),,0
+850,Use unsignedInteger column type for client_id columns,0.9524505,Use unsignedInteger column type for client_id columns (47f0021),,1
+851,Replace string and array helpers,0.4986406,Fix str_replace error when third parameter ($subject) is null (#1511)﻿,,0
+852,refactor and add guard param,0.46404615,Replaced helpers with Blade directives (#939),,0
+853,Add an extra test.,0.4901966,Add actingAsClient method for tests (#1083),,0
+854,Flip method parameters for convention,0.41730514,Change server property type in CheckClientCredentialForAnyScope (#1034),,0
+855,Respect session's same_site configuration,0.49758717,Allow multiple redirects when creating clients (#928),,0
+856,require secret always,0.60145396,Warn about one-time-hashed-secret (#1259),Support multiple redirect uri,0
+857,Update UPGRADE.md,0.5318354,Update docblock by @mnabialek in link,Split url by commas,0
+858,Merge pull request #865 from ArlonAntonius/tablenames,0.5282185,Fix migrations tag publish (#832),[3.0] Some composer adjustments.,0
+859,Update branch-alias,0.4339856,Improve authenticateViaBearerToken() performance by @alecpl in link,,0
+860,A fresh token should only be returned on regular response classes fixes #489,0.6990291,Revoke refresh tokens when auth tokens get revoked (#1186),,0
+861,more formatting reverts,0.47063637,Changed,,0
+862,Update ClientRepository.php (#1642),0.80471265,Update to phpseclib v3 (#1410)﻿,,1
+863,Cast to string the 'identifier' field for Client.,0.845085,Cast returned client identifier value to string (#1091),,1
+864,explicitly set user_id as the field name for relations,0.5783625,"Add user relationship to client model (#851, 3213be8)",,0
+865,"Revert ""[9.x] Use psr request attributes in 'check client credentials' middleware""",0.6737133,Client credentials middleware should allow any valid client (#1132),,0
+866,fix revoke access token when token is deleted,0.7875038,Revoke refresh tokens when auth tokens get revoked (#1186),Allow binding token repository instance,1
+867,setup publishing,0.5315481,Add a Passport Client factory to Passport publishing (#1171),Reuse find() method on client repository,0
+868,Merge pull request #1057 from reishou/enhancement_1056,0.5131145,Fix migrations tag publish (#832),,0
+869,Merge pull request #21 from lucasmichot/feature/develop/HasApiTokens-comments,0.5505549,Fix migrations tag publish (#832),Resolving TopicRespository class via container to aid binding with different implementation.,0
+870,Merge pull request #390 from mhamlet/2.0,0.44855815,Fix migrations tag publish (#832),[2.0] Fix many docblocks.,0
+871,Remove useless imports,0.52887154,Removed,[2.0] Some style fixes.,0
+872,Initial support for multiple providers,0.9310806,Initial support for multiple providers (#1220),,1
+873,Formatting,0.4219812,Fix auth codes table customization (#1044),,0
+874,Use Facade::resolved() before extending passport guard.,0.59123117,Let Passport support inherited parent scopes (#1068),,0
+875,Compare models directly on providers.,0.49814466,Initial support for multiple providers (#1220),,0
+876,Just user shouldn't be depend on ->report result..,0.4203267,Make $userId nullable in ClientRepository->createPersonalAccessClient by @bram-pkg in link,[2.0] Some code style fixes.,0
+877,Private Key Length,0.53305095,Add custom encryption key for JWT tokens (#1501),,0
+878,Use coalesce operator to prevent breaking,0.40640473,Use caret for constraints (d906804),,0
+879,Test on PHP 7.4,0.6527151,Support PHP 8.0 (#1387),Make Passport work with Laravel Auto Discover,0
+880,Merge pull request #82 from JesseObrien/master,0.47881365,Allow lcobucci/jwt v5 and cleaned up version constraints by @GrahamCampbell in link,,0
+881,Merge pull request #808 from yaquawa/authcode,0.5415523,Implement auth token for access requests (#1188),Fix: wrong array index filenames,0
+882,[8.x] Automatic configuration of client uuids (#1231),0.92080474,Automatic configuration of client UUIDs (#1231),Wrong indexes for file locations of SSL keys.,1
+883,Merge pull request #474 from rscafi/fix-response,0.57539916,Fix resolveInheritedScopes (#1207),,0
+884,Improve authenticateViaBearerToken() performance,0.88818085,Improve authenticateViaBearerToken() performance by @alecpl in link,,1
+885,Merge branch '8.x',0.36594772,"Merge default Passport configuration (#1039, e260c86)",This just guards a developer from running the command and overwriting these files which would then cause issues with decryption,0
+886,Merge pull request #472 from rscafi/cs-fixes,0.59420866,Fix resolveInheritedScopes (#1207),Fix ClientRepository::revoked() for deleted clients,0
+887,Merge pull request #155 from livingos/credential-grant-scopes,0.42037556,Pass user identifier through to finalize scopes in personal access grant by @GrahamCampbell in link,,0
+888,just stick with typical grant times,0.38521066,Refactor expiry dates to intervals (#1500)﻿,see laravel/passport#372,0
+889,Changed private properties and functions to protected.,0.39529556,Rename property (#920),,0
+890,Merge pull request #979 from FatBoyXPC/fix-actingas,0.54212356,Fix create client call (aff9d09),This patch makes sure that RefreshTokenRepository::isRefreshTokenRevoked() returns false if: - The refresh token is completely deleted - The refresh token is revoked - The associated access token is revoked The last one ensures that refresh tokens are invalidated if a user revokes access he granted to an application. Fixes #389,0
+891,Create the PassportClientFactory,0.804388,Add a Passport Client factory to Passport publishing (#1171),Adding foreign keys to Client model relationships,1

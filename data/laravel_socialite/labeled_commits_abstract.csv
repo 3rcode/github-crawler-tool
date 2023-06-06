@@ -1,0 +1,635 @@
+Index,Commit Message Abstract,Score Abstract,Corresponding Changelog Sentence Abstract,Commit Desription Abstract,Label
+1,Fix tests,0.41002658,Fix PHP 8.1 issues (#567)﻿,,0
+2,Merge pull request #18 from GrahamCampbell/cs,0.48370558,Add ability to override access token request headers by @JasonTolliver in link,,0
+3,Merge pull request #167 from lucasmichot/feature/2.0/assertions,0.47834182,Fix containter call (#450),,0
+4,Added OpenID scope,0.45696297,Add support for OAuth 2.0 PKCE extension (#518)﻿,,0
+5,make enablePKCE public (#550),0.9995158,Make enablePKCE public (#550)﻿,,1
+6,Use modern phpunit TestCase namesapce.,0.3420946,Use proper localized name (#329),,0
+7,Drop old Laravel versions,0.7748497,Drop Laravel 5.7 support (0bd64ae),,1
+8,Update Facebook Graph API version to v2.4,0.833958,Change default Facebook graph version to 3.3 (#408),,1
+9,Merge pull request #20 from mikedugan/master,0.46102083,Fix containter call (#450),Update composer.json Update tests.yml,0
+10,Merge pull request #261 from kamui545/facebook_30,0.51755583,Revert Facebook picture access token changes (#504)﻿,,0
+11,Merge pull request #254 from paulofreitas/documentation-cleanup,0.46415344,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+12,working on formatting,0.30875158,Add correct encoding and the required state param by @xhezairbey in link,,0
+13,Change IoC bindings.,0.41833282,Add reset methods for Octane (07840c0)﻿,,0
+14,Merge branch 'patch-1' of link into tomhorvat-patch-1,0.47089255,Fix scope separator in Gitlab provider (#512)﻿,,0
+15,Merge pull request #207 from lucasmichot/feature/master/no-fqn,0.47924852,Fix containter call (#450),,0
+16,Merge pull request #154 from GrahamForks/patch-1,0.49679828,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+17,Fix return type.,0.58182055,Fix User return types by @antoinelame in link,,0
+18,just use name,0.45832112,Use proper localized name (#329),,0
+19,Update Graph version to v2.5,0.6413287,Change default Facebook graph version to 3.3 (#408),Test on PHP 8.2 wip Update AbstractUser.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+20,Ensure the state is set,0.41440973,Security,,0
+21,loosen guzzle constraints.,0.47064722,Remove guzzlehttp/guzzle ~5.0 workaround (#448),"Add ability to override access token request headers This moves the currently hardcoded getAccessTokenResponse into their own method.  This allows children providers to construct their own headers as needed. A perfect example of the necessity of this feature is the newer Pinterest v5 API.  In order to exchange the code for an access token, they require an Authorization header composed of a base64 encoded client_id and client_secret.  Without this change, the Pinterest Provider would need to entirely reimplement the getAccessTokenResponse method.  With this change, the Pinterest Provider could simply: php protected function getTokenHeaders() {     return array_merge(         parent::getTokenHeaders(),         [             'Authorization' => 'Basic ' . base64_encode(""{$this->clientId}:{$this->clientSecret}""),         ]     ); } formatting Co-authored-by: Taylor Otwell taylor@laravel.com",0
+22,Merge remote-tracking branch 'origin/2.0' into 2.0,0.422912,Fix scope separator in Gitlab provider (#512)﻿,,0
+23,styleCi patch,0.37460774,add/set approvedScopes in User (#572),Add correct encoding and the required state param. Set default state when stateless. Update TwitterProvider.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+24,Send client fields to Bitbucket,0.48322758,Fix bitbucket provider (#475),,0
+25,add to doc block.,0.40941828,Fix containter call (#450),,0
+26,Fix scope separator in Gitlab provider,0.97530663,Fix scope separator in Gitlab provider (#512)﻿,,1
+27,Merge pull request #206 from lucasmichot/feature/master/no-suggest,0.46712476,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+28,Merge pull request #173 from rick20/2.0,0.43177414,Fix scope separator in Gitlab provider (#512)﻿,,0
+29,add reset methods for octane,0.85512006,Add reset methods for Octane (07840c0)﻿,,1
+30,Merge pull request #6 from adamgoose/master,0.44326144,Add ability to override access token request headers by @JasonTolliver in link,,0
+31,Make buildProvider available for usage.,0.447111,Update provider to use DeferrableProvider instead (#529)﻿,,0
+32,Merge pull request #48 from jaden/docfix,0.4856894,Add ability to override access token request headers by @JasonTolliver in link,,0
+33,getUserByToken app secret proof fix,0.47489396,add/set approvedScopes in User (#572),Update tests.yml Update composer.json,0
+34,wording,0.41305327,﻿,,0
+35,Merge branch 'track-approved-scopes' into 5.x,0.442894,Fix scope separator in Gitlab provider (#512)﻿,,0
+36,Missing docblock,0.43470508,Fix a bug with no LinkedIn image (81adfcc),,0
+37,Added more tests,0.35208306,Add support for OAuth 2.0 PKCE extension (#518)﻿,,0
+38,StyleCI fix,0.38746148,Fix a bug with no LinkedIn image (81adfcc),,0
+39,Merge pull request #251 from gabriel-caruso/composer,0.46656772,Fix containter call (#450),,0
+40,Remove a binding.,0.676896,Removed,,0
+41,Merge pull request #19 from lucasmichot/patch-1,0.48846787,Fix containter call (#450),,0
+42,Fixed identation (#625),0.49993348,add/set approvedScopes in User (#572),[5.x] Use release target branch in changelog compare URL,0
+43,Avoid FQN in code.,0.38837257,Add custom exceptions for providers of One (#440),,0
+44,"Change default graph version, manualy set desired version",0.61985373,Allow to manually set desired Facebook graph version (#408),,0
+45,Merge pull request #148 from lucasmichot/feature/2.0/user-property,0.5042529,Add ability to override access token request headers by @JasonTolliver in link,,0
+46,fix typo.,0.39523697,Changed,,0
+47,Merge pull request #413 from iamgergo/4.0,0.47786772,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+48,Add a note on not including state and response_type,0.41215646,Include grant_type=authorization code in token request parameters (#488)﻿,,0
+49,Merge pull request #78 from barryvdh/patch-1,0.47541857,Add ability to override access token request headers by @JasonTolliver in link,,0
+50,Added support for Facebook popup dialog,0.5938749,Allow to manually set desired Facebook graph version (#408),,0
+51,Update AbstractUser.php,0.5649698,Drop PHP 7.1 support (6e21f1a),,0
+52,Merge pull request #340 from derekmd/google-payload-name-is-optional,0.66002053,Handle Google responses excluding 'name' (#340),,0
+53,Some doccblocks style fixes,0.4617489,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+54,Use ubuntu-18.04,0.40926215,Laravel 6.0 support (#390),,0
+55,Fixing things.,0.47580045,Changed,,0
+56,Always sort require.,0.19918999,﻿,Laravel 9 support,0
+57,Handle 'scope' for Twitter Oauth1 (#548),0.99999994,Handle 'scope' for Twitter Oauth1 (#548)﻿,,1
+58,Merge pull request #533 from laravel/ubuntu,0.44776142,Update Google API urls (#346),,0
+59,Laravel 9 support,0.9367899,Laravel 9 Support (#571),Fixed DocBlock return type Update Provider.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+60,Merge pull request #575 from stefanzweifel/patch-1,0.48216364,Fix containter call (#450),,0
+61,Merge branch '4.0',0.29799634,Add support for OAuth 2.0 PKCE extension (#518)﻿,Co-authored-by: Sergey Lebedev sergey.lebedev@corp.mail.ru,0
+62,Update .editorconfig,0.43840662,Add support for OAuth 2.0 PKCE extension (#518)﻿,Update phpunit.xml.dist,0
+63,Merge pull request #90 from joebenson/patch-1,0.4715036,Add ability to override access token request headers by @JasonTolliver in link,,0
+64,Using Proper Guzzle Client,0.5681273,Support Guzzle 7 (#449),Test against php 8.1,0
+65,Merge pull request #465 from laravel/laravel8,0.52401865,Update Google API urls (#346),,0
+66,Merge pull request #286 from jasonmccreary/gitlab-support,0.6164767,Fix scope separator in Gitlab provider (#512)﻿,,0
+67,Ensure the $user property can be accessed.,0.52206475,Cache User instance to allow $provider->user() to be called multiple times (#498)﻿,,0
+68,formating,0.34081972,Add correct encoding and the required state param by @xhezairbey in link,,0
+69,Also permits phpunit ~5.0,0.50421894,Make enablePKCE public (#550)﻿,"don't use strlen to check $state If $state is null, PHP8.1 will throw a warning with strlen. strlen(): Passing null to parameter #1 ($string) of type string is deprecated. Update AbstractProvider.php Co-authored-by: Taylor Otwell taylor@laravel.com",0
+70,Merge pull request #56 from dexbarrett/github-email,0.4619116,Add ability to override access token request headers by @JasonTolliver in link,,0
+71,Fixed some DocBlocks that had missing sections and wrong types.,0.43303633,Fix scope separator in Gitlab provider (#512)﻿,,0
+72,Merge pull request #166 from lucasmichot/feature/2.0/tests-psr4,0.4331008,Removed support for PHP 7.0 (#311),,0
+73,Add changelog,0.47152963,Changed,,0
+74,Merge pull request #113 from Max13/2.0,0.42872876,Fix containter call (#450),,0
+75,documenting magic method in Socialite facade,0.37644055,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+76,inherit doc,0.30293065,Fix containter call (#450),,0
+77,update docs,0.47604138,Update provider to use DeferrableProvider instead (#529)﻿,Handle 'scope' for Twitter Oauth1 Update TwitterProvider.php Co-authored-by: Diego Sinclair diego@iconosqua.re Co-authored-by: Taylor Otwell taylor@laravel.com,0
+78,fixes repeat typo,0.37652925,Fix User return types by @antoinelame in link,,0
+79,Merge pull request #196 from GrahamCampbell/patch-1,0.51598233,Fix containter call (#450),,0
+80,Merge pull request #455 from laravel/driesvints-patch-1,0.4782435,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+81,Merge pull request #257 from kamui545/phpdoc_redirect,0.5333553,PHP 8.2 support by @driesvints in link,,0
+82,Fixed test: FB api version,0.4191901,Drop PHP 7.1 support (6e21f1a),Use ubuntu-18.04,0
+83,first commit.,0.31810552,﻿,,0
+84,Merge pull request #504 from laravel/revert-picture-endpoint-pr,0.43159977,Add ability to override access token request headers by @JasonTolliver in link,,0
+85,Pull the state from the session,0.36248875,Removed,,0
+86,Upgrade Facebook Graph API version from 2.7 to 2.8.,0.8066374,Change default Facebook graph version to 3.3 (#408),,1
+87,Update .gitattributes,0.55621946,Fix scope separator in Gitlab provider (#512)﻿,,0
+88,Merge branch 'add-refresh-token-simplified' of link into asaph-add-refresh-token-simplified,0.37704068,Fix scope separator in Gitlab provider (#512)﻿,,0
+89,Merge pull request #252 from dericcain/patch-1,0.5201676,Fix containter call (#450),,0
+90,Merge pull request #141 from emmanuelgautier/patch-1,0.46646047,Fix containter call (#450),fix PKCE for token request (follow up on #518) adds test for PKCE token endpoint request make the linter happy,0
+91,fix authcontroller example namespace,0.54888654,Fix User return types by @antoinelame in link,,0
+92,Merge pull request #172 from EveryWell/2.0,0.42376536,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+93,Also tests with PHP >= 5.4,0.66891515,PHP 8 Support (#495)﻿,,0
+94,Merge pull request #202 from lucasmichot/feature/3.0/illuminate-session-store,0.44401875,Add support for OAuth 2.0 PKCE extension (#518)﻿,,0
+95,Tune up PHPunit.,0.5851801,Drop PHP 7.1 support (6e21f1a),Co-authored-by: Dries Vints dries@vints.io,0
+96,Parse the access token.,0.49177456,Add ability to override access token request headers by @JasonTolliver in link,adds the PKCE logic in the core OAuth 2 provider enables PKCE with Google,0
+97,cleaning up some code.,0.4419594,Fix containter call (#450),,0
+98,fix class name.,0.46292505,Use proper localized name (#329),Fix scope separator in Gitlab provider,0
+99,Support Guzzle 7,0.9307848,Support Guzzle 7 (#449),,1
+100,Added link field (profileUrl),0.5949195,Fix User return types by @antoinelame in link,[5.x] Added support for self hosted Gitlab instances,0
+101,Change code to use array_helper,0.36112913,PHP 8 Support (#495)﻿,,0
+102,update change log,0.54226863,Changed,,0
+103,Fixed missing import statement,0.47365105,Fix containter call (#450),,0
+104,Merge pull request #203 from jasonmccreary/bitbucket-fix,0.57679826,Fix bitbucket provider (#475),[5.x] Revert Facebook picture access token changes,0
+105,Merge pull request #187 from teertz/2.0,0.43408877,Fix scope separator in Gitlab provider (#512)﻿,,0
+106,Change $scopeSeparator to a space in BitbucketProvider,0.5759762,Fix scope separator in Gitlab provider (#512)﻿,,0
+107,fix PKCE for token request (#520),0.7180563,Make PKCE opt-in (#523),,1
+108,fix docs,0.5569179,Fix bitbucket provider (#475),,0
+109,cleaning up.,0.33135912,Removed,[5.x] Cache User instance to allow $provider->user() to be called multiple times,0
+110,add/set approvedScopes in User,0.9362823,add/set approvedScopes in User (#572),,1
+111,Bump Graph API version to v2.10,0.6070618,Change default Facebook graph version to 3.3 (#408),"Revert ""Add getRaw method to the User contract""",0
+112,Merge pull request #390 from driesvints/prepare-for-release,0.44092384,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+113,Fix typo.,0.44351524,Changed,Add getRaw method to the User contract,0
+114,Send appsecret_proof on getUserByToken method.,0.5449353,Add app property by @driesvints in link,,0
+115,logo,0.44895834,﻿,,0
+116,Added support for self hosted Gitlab instances,0.64388245,Only use the read_user scope for GitLab by default (#403),,0
+117,Merge pull request #236 from lucasmichot/feature/3.0/docblocks,0.56082153,Remove guzzlehttp/guzzle ~5.0 workaround (#448),[5.x] PHP 8 Support,0
+118,Merge pull request #280 from browner12/patch-1,0.4694115,Fix containter call (#450),,0
+119,bitbucket oauth2,0.56274176,Fix bitbucket provider (#475),,0
+120,Add setting custom request parameters to redirect,0.50781786,Add ability to override access token request headers by @JasonTolliver in link,,0
+121,Fix for hidden email,0.526785,Fix bug with no LinkedIn email addresses (#355),,0
+122,Merge pull request #283 from wgmv/remove_google_plus,0.58055896,Handle Google responses excluding 'name' (#340),,0
+123,Updated StyleCI changes,0.48291987,Changed,,0
+124,Merge pull request #73 from lucasmichot/patch-1,0.49606466,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+125,Override SocialiteServiceProvider::isDeferred() to mark as deferred.,0.9678184,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),[5.x] include grant_type=authorization code in token request parameters,1
+126,Merge pull request #255 from carusogabriel/patch-1,0.54442054,Fix containter call (#450),,0
+127,Fixing Token Client,0.58838403,Add ability to override access token request headers by @JasonTolliver in link,,0
+128,Avoid FQCN and prefer imports.,0.33583042,Add custom exceptions for providers of One (#440),[5.x] Update the badges to use shields.io,0
+129,Allows the caller to set the Client,0.557845,Cache User instance to allow $provider->user() to be called multiple times (#498)﻿,,0
+130,Replaced G+ by OpenID in scopes,0.47177625,Fix scope separator in Gitlab provider (#512)﻿,,0
+131,Merge branch 'master' of github.com:laravel/socialite,0.47921705,Use Authorization header for Github provider (#430),Fix bitbucket,0
+132,Fix section heading level in readme.md,0.36607045,Add ability to override access token request headers by @JasonTolliver in link,,0
+133,Update php versions in .travis.yml,0.5418047,PHP 8.2 support by @driesvints in link,,0
+134,use HTTPS links where appropriate,0.5490885,PHP 8.2 support by @driesvints in link,[5.x] Update UPGRADE.md,0
+135,formatting fixes,0.44893223,Fix containter call (#450),,0
+136,Support Auto-Discovery,0.30413038,Support Guzzle 7 (#449),,0
+137,Bump Graph API version to v3.0,0.65375125,Change default Facebook graph version to 3.3 (#408),Fix guzzle version,0
+138,Support Laravel 8,0.8999064,"Support Laravel 8 (#465, #466)",,1
+139,Fix styling (StyleCI),0.32932764,Fix a bug with no LinkedIn image (81adfcc),[5.x] Update SocialiteManager,0
+140,Update CHANGELOG.md,0.6404136,Changed,,0
+141,pass extra options to config,0.46227363,add/set approvedScopes in User (#572),[5.x] Support Laravel 8,0
+142,Always query and http_build_query when possible (#555),0.45689094,Only use the read_user scope for GitLab by default (#403),,0
+143,Merge pull request #201 from lucasmichot/feature/3.0/fix-bitbucket-provider,0.7039321,Fix bitbucket provider (#475),,1
+144,Update dependencies,0.47627142,Update provider to use DeferrableProvider instead (#529)﻿,,0
+145,Make PHPUnit config .dist,0.53046083,PHP 8.2 support by @driesvints in link,Update tests.yml,0
+146,Update Facebook Graph API version to v2.6,0.8251729,Change default Facebook graph version to 3.3 (#408),,1
+147,adding guzzle 6 support,0.70040405,Support Guzzle 7 (#449),Conflicts: CHANGELOG.md composer.json,1
+148,Adding some readme notes.,0.34006804,Changed,,0
+149,Update SocialiteManager.php (#596),0.5362984,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),[4.x] Fix container call,0
+150,convert to psr2,0.35650885,Make PKCE opt-in (#523),,0
+151,Merge pull request #470 from laravel/update-upgrade-guide,0.52283186,Update Google API urls (#346),,0
+152,formatting,0.33283806,Add correct encoding and the required state param by @xhezairbey in link,,0
+153,Make PKCE opt-in (#523),1.0000001,Make PKCE opt-in (#523),Support Guzzle 7,1
+154,move contracts.,0.3376059,Changed,,0
+155,[5.x] Don't use strlen to check $state (#554),0.40679583,Fix containter call (#450),[4.x] Remove guzzlehttp/guzzle ~5.0 workaround,0
+156,Fix spacing.,0.39138192,Fix scope separator in Gitlab provider (#512)﻿,"This package has required Composer dependency ""guzzlehttp/guzzle"": ""~6.0"" since Socialite 3.0 and Laravel 5.4 (2017 January 15) link guzzlehttp/guzzle 7.x removes property GuzzleHttp\ClientInterface::VERSION: link This removes code no longer called that will cause issues when dependencies are updated to ""guzzlehttp/guzzle"": ""^6.3|^7.0"" like laravel/framework's 6.x & 7.x has now.",0
+157,Apply suggestions from code review,0.3963645,Include grant_type=authorization code in token request parameters (#488)﻿,[4.x] Changes the description of the buildAuthUrlFromBase() method,0
+158,Prepare for Laravel 6.0 release,0.83130276,Laravel 6.0 support (#390),,1
+159,Merge pull request #233 from Daedalus11069/Daedalus11069-bitbucket-scope-delimiter,0.51029927,Fix scope separator in Gitlab provider (#512)﻿,,0
+160,fix method order,0.3981772,Fix containter call (#450),,0
+161,Merge pull request #92 from chako91/patch-1,0.4259807,Add ability to override access token request headers by @JasonTolliver in link,,0
+162,Documentation cleanup,0.43236074,Removed,,0
+163,Remove Laravel\Socialite\One\ProviderInterface as it,0.6009845,Drop Laravel 5.7 support (0bd64ae),[5.x] Add custom exceptions for providers of One,0
+164,Change scope of,0.5068562,Changed,,0
+165,"Added ""avatar_original"" which returns a full size photo instead of 50x50 for Google provider.",0.5099455,Use proper key name for original avatar in Google Provider (5ec0024),,0
+166,Merge branch '3.0',0.31174046,Add support for OAuth 2.0 PKCE extension (#518)﻿,[4.x] Removed array access on the container instance in SocialiteManger.php,0
+167,Add VersionEye dependencies status,0.48217815,Laravel v10 Support by @driesvints in link,,0
+168,Fix #214 for v2.0 branch,0.4974403,Fix bitbucket provider (#475),Replaced deprecated app property in SocialiteManager,0
+169,Create pull-requests.yml,0.5290228,Add ability to override access token request headers by @JasonTolliver in link,,0
+170,Updates LinkedIn OAuth URL,0.5941594,Fix bug with no LinkedIn email addresses (#355),Conflicts: .travis.yml,0
+171,Update SocialiteManager,0.5712149,Change default Facebook graph version to 3.3 (#408),[4.0] Switch to Github Actions,0
+172,Changed isNewUser call to shouldBypassCache,0.5589088,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+173,lint,0.27144548,Laravel v10 Support by @driesvints in link,Conflicts: CHANGELOG.md,0
+174,Missing return value.,0.35960338,Fix containter call (#450),,0
+175,Add original/large avatars,0.50161695,Use proper key name for original avatar in Google Provider (5ec0024),[4.x] use Authorization header instead of using the access_token query parameter,0
+176,Use proper key name,0.58265346,Use proper key name for original avatar in Google Provider (5ec0024),,0
+177,Add twitter location and description fields,0.549169,Add Twitter OAuth2 provider (#574)﻿,[4.0] Remove useless Arr::where call,0
+178,Merge pull request #241 from gpedro/patch-1,0.52279365,Remove guzzlehttp/guzzle ~5.0 workaround (#448),[4.0] Enforce stricter assertions,0
+179,Create provider for Gitlab,0.62834555,Fix scope separator in Gitlab provider (#512)﻿,,0
+180,Merge pull request #80 from rafaelbeckel/patch-1,0.45456398,Add ability to override access token request headers by @JasonTolliver in link,,0
+181,Merge pull request #34 from GrahamForks/patch-1,0.509259,Remove guzzlehttp/guzzle ~5.0 workaround (#448),Fix PHPUnit 8->9 deprectiations messages,0
+182,Merge pull request #145 from lucasmichot/feature/2.0/docsblocks-style-fixes,0.5600134,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+183,Merge pull request #296 from lucasmichot/feature/2.0/arr-helper,0.5073347,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+184,Merge pull request #482 from pataar/patch-1,0.449704,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+185,Merge pull request #299 from lucasmichot/feature/3.0/fix-teardown-visibility,0.54412854,Remove guzzlehttp/guzzle ~5.0 workaround (#448),[4.x] Test on 7.4,0
+186,fix for no filled email in FB,0.57737136,Fix bug with no LinkedIn email addresses (#355),,0
+187,Update phpunit.xml.dist,0.49281004,Update provider to use DeferrableProvider instead (#529)﻿,"[8.x] Fix docs, import contract",0
+188,Make sure the state is truely random,0.24717507,Security,,0
+189,Added docs on stateless auth,0.45878845,Add support for OAuth 2.0 PKCE extension (#518)﻿,Conflicts: CHANGELOG.md,0
+190,Merge pull request #54 from JoeForks/feature/bitbucket,0.5408749,Fix bitbucket provider (#475),,0
+191,removed array access on the container instance in SocialiteManger.php,0.4471218,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),[4.x] Override SocialiteServiceProvider::isDeferred() to mark as deferred.,0
+192,Update docs on retrieving user via token,0.50712585,Add ability to override access token request headers by @JasonTolliver in link,Illuminate\Contracts\Support\DeferrableProvider is only available under 5.8 and above. Since we still supporting 5.7 the only option is to override the method.,0
+193,fix formatting issues,0.39869648,Fix containter call (#450),,0
+194,Merge pull request #177 from charlesyapp/2.0,0.43085742,Remove guzzlehttp/guzzle ~5.0 workaround (#448),"[4.x] Change default graph version, manually set desired version",0
+195,fix facade.,0.4493314,﻿,,0
+196,Merge pull request #279 from browner12/patch-1,0.4911493,Fix containter call (#450),,0
+197,support auto-discovery coming in Laravel 5.5,0.6554539,Laravel 9 Support (#571),,0
+198,[5.x] Laravel v10 Support (#618),0.8888586,Laravel 6.0 support (#390),,1
+199,move method order,0.22481677,Use proper localized name (#329),,0
+200,styleci fix,0.39396894,add/set approvedScopes in User (#572),,0
+201,fix key.,0.41210738,Fix bitbucket provider (#475),,0
+202,Merge pull request #94 from GrahamForks/cs,0.4310954,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+203,Add Twitter OAuth2 provider (#574),1.0,Add Twitter OAuth2 provider (#574)﻿,[3.0] Update .styleci.yml,1
+204,Update composer.json,0.4166897,Add app property by @driesvints in link,,0
+205,Create issues.yml,0.40473747,Fix User return types by @antoinelame in link,[5.x] Only use the read_user scope for GitLab by default,0
+206,Merge pull request #499 from rihardssceredins/feature/user-get-raw,0.5101752,Add ability to override access token request headers by @JasonTolliver in link,"If the user created the application without checking any of the   scope checkboxes, GitLab will implicitly check all the boxes when   submitting the form. This can result in all scopes being granted   to the application, which is very broad. If the user created the application with only the read_user scope   being grantable to applications, Socialite will work correctly out   of the box (without requiring the user to override the scopes being   requested on the Laravel side). This closes #402.",0
+207,Added GitHub and email login and signup,0.51200247,Use Authorization header for Github provider (#430),,0
+208,Merge branch 'github_email' of link into DmitryRomanenko-github_email,0.44057924,Fix bug with no LinkedIn email addresses (#355),,0
+209,Update SocialiteManager.php,0.503665,PHP 8.2 support by @driesvints in link,,0
+210,fix StyleCI fail,0.46052563,Fix a bug with no LinkedIn image (81adfcc),Conflicts: CHANGELOG.md,0
+211,Merge pull request #110 from Max13/2.0,0.45428306,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+212,fixing multiple cs issues,0.41493863,Fix containter call (#450),,0
+213,Merge pull request #3 from adamgoose/master,0.4297901,Add Twitter OAuth 2 fallback call by @driesvints in link,,0
+214,Defaulting to POST requests,0.47262427,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+215,"changed API url to not use google+, updated mapping of user object",0.7578169,Update Google API urls (#346),Conflicts: composer.json,1
+216,shorten note,0.33874893,Changed,[4.0] Prepare for Laravel 6.0 release,0
+217,Remove unused variables.,0.63964343,Removed,,0
+218,Stop using legacy mocking syntax. (#556),0.38776904,Removed,documenting magic method in Socialite facade,0
+219,guzzle options formatting,0.41079476,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+220,fix some code formatting issues,0.50899875,Fix containter call (#450),,0
+221,Merge pull request #139 from SammyK/graph-v2.6,0.4279704,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+222,Merge pull request #150 from lucasmichot/feature/2.0/travis-prefer-dist,0.4582985,Add ability to override access token request headers by @JasonTolliver in link,,0
+223,Merge pull request #35 from rysi3k/master,0.4527334,Make PKCE opt-in (#523),,0
+224,Merge pull request #111 from KerryJones/2.0,0.468321,Add Twitter OAuth 2 fallback call by @driesvints in link,,0
+225,Merge pull request #158 from lucasmichot/feature/2.0/fix-user-access,0.5268116,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+226,Merge pull request #346 from driesvints/update-google-provider,0.68263733,Update Google API urls (#346),[4.0] Update socialite website url,0
+227,Merge pull request #165 from lucasmichot/feature/2.0/sort-composer-require,0.43519711,Fix scope separator in Gitlab provider (#512)﻿,,0
+228,Added missing import,0.3904227,Removed,,0
+229,Test on php 7.1 too,0.64302117,Drop PHP 7.1 support (6e21f1a),,0
+230,Update LinkedInProvider.php,0.5970384,Fix bug with no LinkedIn email addresses (#355),,0
+231,indentation pls,0.278053,﻿,,0
+232,This allows ->user() to be called multiple times. Handy if you want to call it in a form request to do some validation before accessing it in the controller. More info: #490.,0.5996175,Cache User instance to allow $provider->user() to be called multiple times (#498)﻿,,0
+233,Add missing $redirectUrl property definition to AbstractProvider,0.45515367,Fix User return types by @antoinelame in link,[4.0] Fix bug with no LinkedIn email addresses,0
+234,Merge pull request #448 from derekmd/remove-guzzle-5-workaround,0.6063167,Remove guzzlehttp/guzzle ~5.0 workaround (#448),In certain situations it's possible that LinkedIn doesn't returns any email addresses because they're private and not available through the API. At the moment the current provider always expects one so this change allows also to retrieve the user without expecting an email address. Fixes link,0
+235,Send grant_type as POST param,0.66910905,Include grant_type=authorization code in token request parameters (#488)﻿,,0
+236,Test against PHP 7.2,0.6387388,PHP 8 Support (#495)﻿,,0
+237,Enforce consistant use of Arr::get.,0.26466614,Only use the read_user scope for GitLab by default (#403),,0
+238,Merge pull request #169 from lucasmichot/feature/2.0/return-store,0.4711684,Fix containter call (#450),,0
+239,Merge pull request #171 from lucasmichot/patch-1,0.49536404,Fix containter call (#450),This key name was incorrectly changed in link,0
+240,update docs.,0.4706447,Update provider to use DeferrableProvider instead (#529)﻿,,0
+241,Merge pull request #7 from adamgoose/master,0.41852313,Fix containter call (#450),,0
+242,Use stricter assertions,0.28692546,Security,[4.0] Update Google API urls,0
+243,Merge pull request #500 from laravel/revert-499-feature/user-get-raw,0.4971827,Remove guzzlehttp/guzzle ~5.0 workaround (#448),"These updates ensure we're using the latest API urls from Google and continue to provide a working app after the shutdown of the Google+ functionality in March 2019. By changing to the new v3 url for the user info retrieval, some of the keys from the response have changed. I've added the mappings to the old keys for the raw user data so nothing should break. These can be removed in v5.0 of Socialite.",0
+244,Update provider to use DeferrableProvider instead of overriding isDeferred method (#529),0.93629915,Update provider to use DeferrableProvider instead (#529)﻿,,1
+245,Fix StyleCI warnings,0.45426938,Fix a bug with no LinkedIn image (81adfcc),,0
+246,Final cleanup,0.46699905,Removed,,0
+247,Update GithubProvider.php,0.5852299,Use Authorization header for Github provider (#430),,0
+248,readme,0.3251898,Only use the read_user scope for GitLab by default (#403),[4.0] Handle Google responses excluding 'name',0
+249,Revert dependency changes,0.5623085,Changed,It's possible for Google's API response to exclude the 'name' key in its JSON payload.,0
+250,Merge pull request #424 from lucasmichot/feature/4.0/stricter-assertions,0.52130044,Fix containter call (#450),,0
+251,Merge pull request #234 from browner12/patch-1,0.49818274,Fix containter call (#450),[4.0] LinkedIn provider tweaks,0
+252,Bump Graph API version to v2.9,0.61582184,Change default Facebook graph version to 3.3 (#408),,0
+253,Remove note about 5.3,0.55654657,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+254,Allow retrieval of raw user data from AbstractUser,0.46137625,Fix User return types by @antoinelame in link,,0
+255,Merge pull request #179 from legshooter/patch-1,0.4399154,Fix containter call (#450),,0
+256,Merge pull request #475 from kawax/bitbucket,0.564697,Fix bitbucket provider (#475),,0
+257,Using the value helper so a closure can be provided,0.4003448,Fix containter call (#450),When a person hasn't got an image set for their account its images won't be returned as an array. We'll now default to an empty array. Fixes link,0
+258,Read me.,0.3207449,﻿,,0
+259,Merge pull request #404 from GrahamCampbell/patch-1,0.5117359,Fix containter call (#450),,0
+260,fix spacing.,0.3981207,Fix scope separator in Gitlab provider (#512)﻿,,0
+261,Add .styleci.yml to .gitattributes,0.45636928,Add app property by @driesvints in link,Fix mapping Google Userinfo to User Object,0
+262,Update readme,0.4522634,Changed,,0
+263,[5.x] Throw deprecations in CI (#578),0.38231283,Add reset methods for Octane (07840c0)﻿,,0
+264,[5.x] Update the badges to use shields.io,0.37895343,Add support for OAuth 2.0 PKCE extension (#518)﻿,[4.0] Update LinkedIn provider,0
+265,Reworded to be relevant to socialite.,0.37489498,Changed,[4.0] Update dependencies,0
+266,Fix PHPDoc,0.7693164,Fix PHP 8.1 issues (#567)﻿,[4.0] Add changelog and upgrade guide,1
+267,"Revert ""Add getRaw method to the User contract""",0.53186494,Fix User return types by @antoinelame in link,,0
+268,Merge pull request #329 from Crypton33/4.0,0.42229313,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+269,Merge pull request #440 from hareku/custom-exception,0.50680184,Add custom exceptions for providers of One (#440),,0
+270,"Added a configuration option for scope separator and query string encoding type to AbstractProvider.php, making it easier to write your own providers.",0.5201485,PHP 8 Support (#495)﻿,,0
+271,Update 1_Bug_report.md,0.44222006,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+272,Facebook re-request denied permissions.,0.5548781,Revert Facebook picture access token changes (#504)﻿,LinkedIn has suddenly stopped supported the previous endpoint we used to retrieve user profile information so we need to use the new API for authenticating users. Fixes link,0
+273,Updated docs to reflect changes in Auth controllers,0.39590436,Add support for OAuth 2.0 PKCE extension (#518)﻿,,0
+274,Merge pull request #559 from sergiy-petrov/sergiy-petrov-patch-3,0.42969692,Fix scope separator in Gitlab provider (#512)﻿,[3.0] Unify test namespaces,0
+275,Merge pull request #467 from ankurk91/ankurk91-patch-1,0.4278059,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+276,Update BitbucketProvider.php,0.66075313,Fix bitbucket provider (#475),[3.0] Remove note about 5.3,0
+277,Update GoogleProvider.php,0.7256795,Update Google API urls (#346),5.3 isn't supported anymore.,1
+278,Add missing oauth verifier custom exception,0.5082469,Add custom exceptions for providers of One (#440),,0
+279,add missing period,0.27549544,Changed,[3.0] Disable xdebug,0
+280,Fixing namespace,0.4975245,Use proper localized name (#329),,0
+281,Merge pull request #434 from laravel/github-actions,0.4798615,Fix scope separator in Gitlab provider (#512)﻿,[3.0] No need to use array_add() helper.,0
+282,Update .styleci.yml,0.4121931,Add support for OAuth 2.0 PKCE extension (#518)﻿,[4.0] Add ext-json as a composer requirement.,0
+283,Setting some default scopes.,0.43836877,add/set approvedScopes in User (#572),[3.0 ]Use modern phpunit TestCase namespace.,0
+284,remove line.,0.68191326,Removed,[3.0] Fix tearDown visibility.,0
+285,Merge pull request #447 from rafaellaurindo/two-user-docs,0.46386737,Fix scope separator in Gitlab provider (#512)﻿,add php 7.3,0
+286,Merge pull request #218 from ImJustToNy/patch-1,0.49278152,Fix containter call (#450),,0
+287,Line breaks in an array,0.30307084,Fix PHP 8.1 issues (#567)﻿,,0
+288,Merge pull request #304 from driesvints/remove-readme-note,0.49816117,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+289,Merge pull request #130 from gaomd/patch-1,0.445369,Fix containter call (#450),,0
+290,Merge pull request #147 from lucasmichot/feature/2.0/gitattributes,0.57616067,Fix scope separator in Gitlab provider (#512)﻿,,0
+291,Add styleci config,0.4379803,add/set approvedScopes in User (#572),,0
+292,Fix container call,0.71584356,Fix containter call (#450),[3.0] Avoid FQCN and prefer imports.,1
+293,Merge pull request #278 from chrisforrence/fix-twitter-isNewUser-call,0.58399737,Add Twitter OAuth 2 fallback call by @driesvints in link,,0
+294,Adds 'fields' parameter support,0.43613714,Include grant_type=authorization code in token request parameters (#488)﻿,,0
+295,fixed,0.5508409,Changed,Line breaks in an arrays,0
+296,Move auth url parameters to own method.,0.5279729,Fix User return types by @antoinelame in link,,0
+297,Update update-changelog.yml,0.5094233,Update Google API urls (#346),,0
+298,Fix Typo in Exception 'Sociliate' -> 'Socialite',0.36381927,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+299,Merge pull request #103 from industrious-mouse/2.0,0.41449457,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+300,Update CHANGELOG,0.6696899,Changed,,0
+301,Fixing Google Provider,0.6369655,Update Google API urls (#346),,0
+302,Removed YoutubeProvider completely,0.53685725,Removed,,0
+303,Merge pull request #89 from jbruni/patch-1,0.51438296,Add ability to override access token request headers by @JasonTolliver in link,,0
+304,Fixing a few formatting issues.,0.39818433,Fix containter call (#450),[3.0] Line breaks in an array,0
+305,Remove useless variables (#586),0.45736498,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+306,Github templates,0.62548023,Use Authorization header for Github provider (#430),,0
+307,Merge pull request #174 from vitorfavila/2.0,0.4768299,Fix scope separator in Gitlab provider (#512)﻿,Update README.md,0
+308,Bump dependencies,0.4631666,Fix bitbucket provider (#475),Update readme since the Gitlab provider was added in #286,0
+309,Update templates,0.3916337,Add support for OAuth 2.0 PKCE extension (#518)﻿,Create provider for Gitlab,0
+310,CS fixes,0.4335729,Fix containter call (#450),,0
+311,stateless option for oauth2,0.5949422,Add support for OAuth 2.0 PKCE extension (#518)﻿,"changed API url to not use google+, updated mapping of user object",0
+312,Merge pull request #287 from vmitchell85/patch-2,0.51737905,Fix containter call (#450),,0
+313,Use the public method to get the scopes,0.45185104,Make enablePKCE public (#550)﻿,add missing period,0
+314,Update Taylor's email address,0.48743135,Allow OAuth version in the Twitter config by @taylorotwell (68afb03),,0
+315,readme wording,0.29309714,Add correct encoding and the required state param by @xhezairbey in link,use HTTPS links where appropriate,0
+316,Merge pull request #412 from crynobone/patch-1,0.47762796,Fix containter call (#450),"both of these links redirect to HTTPS sites, so let's just send them directly there",0
+317,Expose OAuth2 refresh_token and expires_in when available,0.47916484,Add support for OAuth 2.0 PKCE extension (#518)﻿,[3.1] Changed isNewUser call to shouldBypassCache,0
+318,Fix .git* files.,0.5293176,Fix scope separator in Gitlab provider (#512)﻿,This fixes an issue where the isNewUser method was renamed to shouldBypassCache but not changed here.,0
+319,Fix docblocks.,0.54605925,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+320,Return \Illuminate\Session\Store,0.30789432,Removed,,0
+321,Add a link to Socialite Providers,0.5476394,Add app property by @driesvints in link,,0
+322,Use release target branch in changelog compare URL,0.4578068,Fix User return types by @antoinelame in link,,0
+323,Merge pull request #289 from iliyaZelenko/3.0,0.42206627,Remove guzzlehttp/guzzle ~5.0 workaround (#448),[3.0] FacebookProvider : no need to set data twice,0
+324,Fix bug with no LinkedIn email addresses,0.96068954,Fix bug with no LinkedIn email addresses (#355),[3.0] Fix .git* files.,1
+325,Update pull-requests.yml,0.560865,Update Google API urls (#346),,0
+326,Merge pull request #269 from lucasmichot/feature/3.0/test-class-notation,0.47539577,Fix containter call (#450),,0
+327,Merge pull request #288 from iliyaZelenko/patch-1,0.42946017,Remove guzzlehttp/guzzle ~5.0 workaround (#448),[3.0] Add composer.json homepage and support sections.,0
+328,use singleton method,0.39693886,Add custom exceptions for providers of One (#440),[3.0] Enforce consistant use of Arr::get.,0
+329,Fix tearDown visibility.,0.4504503,Remove guzzlehttp/guzzle ~5.0 workaround (#448),[3.0] Extract Google avatar url.,0
+330,Merge pull request #571 from laravel/develop,0.4660355,Fix scope separator in Gitlab provider (#512)﻿,[3.0] Use ::class notation in tests.,0
+331,Switch to Github Actions,0.5438125,Only use the read_user scope for GitLab by default (#403),[3.0] Upgrade to PHP >= 5.6.4.,0
+332,Merge pull request #272 from lucasmichot/feature/3.0/fix-git-files,0.55084395,Fix scope separator in Gitlab provider (#512)﻿,,0
+333,Merge pull request #149 from lucasmichot/feature/2.0/travis-test-with-php54,0.5489352,Removed support for PHP 7.0 (#311),,0
+334,Delete .styleci.yml,0.5323061,Removed,,0
+335,Add dependency.,0.38361335,﻿,,0
+336,Add ext-json as a composer requirement.,0.3752686,Add app property by @driesvints in link,,0
+337,Merge pull request #109 from Max13/patch-1,0.47229898,Fix containter call (#450),,0
+338,quit testing on 5.4,0.52447593,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+339,switch approved scopes to an array,0.38802615,Fix scope separator in Gitlab provider (#512)﻿,Bump Graph API version to v3.0,0
+340,Use --prefer-dist,0.37324202,Update provider to use DeferrableProvider instead (#529)﻿,,0
+341,Fixed for StyleCi standards,0.40199187,add/set approvedScopes in User (#572),Use Null Coalesce Operator,0
+342,move property,0.3053808,Changed,,0
+343,various fixes,0.5156771,Fix bitbucket provider (#475),Fix PHPDoc,0
+344,Fix PHP 8.1 issues (#567),0.99999994,Fix PHP 8.1 issues (#567)﻿,,1
+345,Update readme.md,0.40660536,Changed,Bump Graph API version to v2.11,0
+346,Merge pull request #450 from laravel/fix-socialite-manager,0.4969398,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+347,use the scopeSeparator,0.6108471,Fix scope separator in Gitlab provider (#512)﻿,,0
+348,Updated method name,0.49022084,Update provider to use DeferrableProvider instead (#529)﻿,Test against PHP 7.2,0
+349,Merge pull request #387 from danieldevsquad/documenting_facade,0.45796365,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+350,Adding response_type,0.51453805,Fix User return types by @antoinelame in link,[3.0] Documentation cleanup,0
+351,Merge pull request #439 from ctwillie/remove-container-array-access-in-socialmanager-class,0.5081988,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+352,chore: passing styleci,0.27150923,Add correct encoding and the required state param by @xhezairbey in link,Added package discovery notes to readme,0
+353,fix style,0.40433386,Changed,Fixed missing import statement,0
+354,Fix tests.,0.37277514,Fix containter call (#450),Error given at L155 because Str is not imported.,0
+355,Include API version in auth url,0.5663613,Update Google API urls (#346),Made it clear that this package takes advantage of package discovery.,0
+356,Merge pull request #265 from lucasmichot/feature/3.0/upgrade-to-php-564,0.6243856,Removed support for PHP 7.0 (#311),[4.0] Updated to PHPUnit 6 and Mockery 1,0
+357,Merge pull request #266 from lucasmichot/feature/3.0/composer-homepage-support,0.5052544,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+358,Merge pull request #488 from aaronpk/oauth2-token-fields,0.535912,Add support for OAuth 2.0 PKCE extension (#518)﻿,,0
+359,Added setRedirectUrl method for dynamic URL redirection,0.49490553,Fix User return types by @antoinelame in link,Support Auto-Discovery,0
+360,Merge pull request #11 from ericnkatz/master,0.4097411,Add ability to override access token request headers by @JasonTolliver in link,,0
+361,Remove useless variable.,0.5790538,Removed,Add information about the new relative path option.,0
+362,remove tokenfields override from providers since it is included in the abstract provider now,0.56975245,Override abstract provider for Twitter's OAuth 2.0 provider (#576),,0
+363,Merge branch 'ceejayoz-patch-1' into 3.0,0.48066658,Add support for OAuth 2.0 PKCE extension (#518)﻿,,0
+364,Merge pull request #176 from mayoz/patch-1,0.44598198,Add custom exceptions for providers of One (#440),,0
+365,Merge pull request #123 from diegocaprioli/2.0,0.52249914,Fix containter call (#450),chore: passing styleci,0
+366,Use ::class notation.,0.45682186,Use proper localized name (#329),,0
+367,Merge pull request #119 from PEKTOP/patch-2,0.508463,Make PKCE opt-in (#523),,0
+368,Update User.php,0.61355555,Fix PHP 8.1 issues (#567)﻿,Bump Graph API version to v2.10,0
+369,Always use session().,0.39993572,Cache User instance to allow $provider->user() to be called multiple times (#498)﻿,,0
+370,Update constraints,0.58093446,Updated version constraints for Laravel 6.0 (3fe71f1),[3.0] Fix docblocks.,0
+371,remove space,0.64788693,Removed,,0
+372,Update FacebookProvider.php,0.65245855,Change default Facebook graph version to 3.3 (#408),support auto-discovery coming in Laravel 5.5,0
+373,Merge pull request #146 from lucasmichot/feature/2.0/editorconfig,0.5086446,Remove guzzlehttp/guzzle ~5.0 workaround (#448),"oops, screwed up the alias for this one.",0
+374,Fixing Token Request,0.6598933,Add ability to override access token request headers by @JasonTolliver in link,,0
+375,Merge pull request #297 from lucasmichot/feature/4.0/ext-json,0.5126182,Add ability to override access token request headers by @JasonTolliver in link,Change $scopeSeparator to a space in BitbucketProvider,0
+376,Merge pull request #161 from KerryJones/2.0,0.472894,Add Twitter OAuth 2 fallback call by @driesvints in link,"In Bitbucket's implementation of OAuth2, the space character is the delimiter for scopes. When trying to request multiple scopes, the request fails with the callback url having error_description appended to it with the value of 'Unknown scope: ', and then a comma-delimited list of scopes.  After that the listed error variable has a value of invalid_scope.",0
+377,Allow overriding the session state string.,0.48409098,Cache User instance to allow $provider->user() to be called multiple times (#498)﻿,Use Illuminate's RedirectResponse instead of Symfony's,0
+378,Merge pull request #300 from andreybolonin/patch-1,0.4844718,Fix containter call (#450),"Illuminate extends Symfony's RedirectResponse with ResponseTrait, which introduces the header() method. By not using Illuminate's RedirectResponse Socialite breaks middlewares that try to add headers to every response (e.g. no-cache headers).",0
+379,Merge pull request #88 from SammyK/graph-api-2.4,0.45424783,Update Google API urls (#346),Update README.md : specify required Laravel version,0
+380,Implement some interfaces from contracts.,0.3834387,Include grant_type=authorization code in token request parameters (#488)﻿,,0
+381,Add an .editorconfig file,0.4749537,add/set approvedScopes in User (#572),required Laravel version,0
+382,include grant_type=authorization code in token request parameters,0.9656248,Include grant_type=authorization code in token request parameters (#488)﻿,[3.0] Let user pass a single scope as a string.,1
+383,Merge pull request #510 from JeroenVanOort/support-self-hosted-gitlab,0.61206806,Fix scope separator in Gitlab provider (#512)﻿,[3.0] Remove useless variable.,0
+384,remove dev dep,0.60034084,Removed,,0
+385,Fix test,0.4176435,Fix PHP 8.1 issues (#567)﻿,,0
+386,Allow Laravel 5.8 installs,0.8436371,Require Laravel 5.7 as minimum version (#311),,1
+387,Merge pull request #185 from geodeveloper/patch-3,0.49141198,Fix scope separator in Gitlab provider (#512)﻿,,0
+388,Merge pull request #298 from lucasmichot/feature/3.0/use-phpunit-testcase-namespace,0.59925807,Removed support for PHP 7.0 (#311),,0
+389,Make AbstractProvider::scopes() more intuitive,0.4454744,Fix scope separator in Gitlab provider (#512)﻿,,0
+390,Merge pull request #310 from driesvints/update-linkedin-provider,0.5186193,Update provider to use DeferrableProvider instead (#529)﻿,Using the value helper so a closure can be provided,0
+391,Matrix build,0.28018123,Fix containter call (#450),,0
+392,Use Null Coalesce Operator,0.38840455,Add reset methods for Octane (07840c0)﻿,Add setScopes method and update documentation,0
+393,Merge pull request #208 from lucasmichot/feature/master/tune-up-phpunit,0.54802054,Removed support for PHP 7.0 (#311),,0
+394,removed unnecessary assignment (#564),0.5653534,Removed,,0
+395,Drop Laravel 5.8 support,0.944951,Drop Laravel 5.7 support (0bd64ae),Update file structure to be more in sync with laravel/framework's,1
+396,Merge pull request #222 from ntzm/update-file-structure,0.3875751,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+397,Use lowercase stdClass.,0.47543234,Use proper localized name (#329),,0
+398,rename method.,0.5554874,Changed,,0
+399,update socialite docs,0.4836315,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+400,No need to set data twice.,0.40259174,Add custom exceptions for providers of One (#440),,0
+401,Update README.md,0.42688307,Changed,,0
+402,Fix import and docblock,0.470168,Fix containter call (#450),Spelling mistake,0
+403,Make the method getState protected,0.40533823,Fix scope separator in Gitlab provider (#512)﻿,,0
+404,Merge pull request #138 from JaoNoctus/patch-1,0.47725934,Add ability to override access token request headers by @JasonTolliver in link,,0
+405,Update TwitterProvider.php,0.6553608,Add Twitter OAuth2 provider (#574)﻿,,0
+406,Replaced deprecated app property with container property in SocialiteManger class,0.55468905,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+407,fix provides.,0.48952088,Fix bitbucket provider (#475),Updated docs to reflect changes in Auth controllers,0
+408,Merge pull request #184 from geodeveloper/patch-2,0.51518345,Fix scope separator in Gitlab provider (#512)﻿,,0
+409,Merge pull request #408 from jdrzejb/feature/change-default-graph-version,0.5656989,Allow to manually set desired Facebook graph version (#408),[3.0] Always sort require.,0
+410,Merge branch '4.0' into master,0.2847798,Add support for OAuth 2.0 PKCE extension (#518)﻿,[3.0] Use ::class notation.,0
+411,Merge pull request #449 from GrahamCampbell/patch-1,0.53034955,Fix containter call (#450),[3.0] No need to suggest packages.,0
+412,Upgrade Facebook Graph API version from 2.6 to 2.7.,0.8021497,Change default Facebook graph version to 3.3 (#408),[3.0] Avoid FQN in code.,1
+413,move method,0.23690027,Changed,[3.0] Tune up PHPunit.,0
+414,Merge pull request #209 from lucasmichot/feature/master/unused-variables,0.5096378,Fix containter call (#450),[3.0] Remove unused variables.,0
+415,Spelling mistake,0.29217845,Changed,,0
+416,Apply fixes from StyleCI (#519),0.52321815,add/set approvedScopes in User (#572),,0
+417,Forces new request if credentials aren't the same as previous request,0.41264117,Add ability to override access token request headers by @JasonTolliver in link,,0
+418,No need to call request has twice (#557),0.5253042,Add custom exceptions for providers of One (#440),,0
+419,Replicate framework license,0.35840228,Add custom exceptions for providers of One (#440),,0
+420,add branch alias.,0.3986941,add/set approvedScopes in User (#572),,0
+421,Merge pull request #77 from barryvdh/linkedin,0.5504752,Add ability to override access token request headers by @JasonTolliver in link,Send client fields to Bitbucket,0
+422,Update GoogleProvider to new Google API and scopes,0.7727115,Update Google API urls (#346),,1
+423,Updated GoogleProvider + New YoutubeProvider,0.59116626,Update Google API urls (#346),,0
+424,Sort composer requirements,0.27067393,Add custom exceptions for providers of One (#440),[3.0] Bitbucket - fix access_token parsing,0
+425,Merge pull request #498 from rihardssceredins/feature/user-cache,0.53220856,add/set approvedScopes in User (#572),[3.0] Always use session().,0
+426,Merge pull request #271 from lucasmichot/feature/3.0/facebook-provider,0.53834975,Change default Facebook graph version to 3.3 (#408),,0
+427,Merge pull request #112 from BostjanOb/master,0.43476248,Add ability to override access token request headers by @JasonTolliver in link,,0
+428,fix conflicts,0.41407594,Fix containter call (#450),"The expected behaviour of $state was to use the getState method. On branch 2.0 this was already implemented, but on 3.0 something was not right and the method is not used. This fixes this issue which allows the session state to be overwritten if needed.",0
+429,Merge pull request #198 from litvinchuk/patch-1,0.4637601,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+430,Add upgrade guide,0.46367428,Add support for OAuth 2.0 PKCE extension (#518)﻿,,0
+431,Merge pull request #168 from JoeForks/travis-badge,0.44263777,Add ability to override access token request headers by @JasonTolliver in link,Update php versions in .travis.yml,0
+432,Update config.yml,0.48271495,Add reset methods for Octane (07840c0)﻿,,0
+433,wip (#621),0.50528127,Support Guzzle 7 (#449),,0
+434,Fix guzzle version,0.68639183,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+435,Merge pull request #232 from TimWolla/redirect-response,0.5172443,Add ability to override access token request headers by @JasonTolliver in link,Test on php 7.1 too,0
+436,Update Google API urls,0.93822634,Update Google API urls (#346),,1
+437,Merge branch '2.0',0.3441126,Add support for OAuth 2.0 PKCE extension (#518)﻿,,0
+438,Merge pull request #512 from jdecool/fix-gitlab-provider,0.66450506,Fix scope separator in Gitlab provider (#512)﻿,,0
+439,Add pretty badges to the readme,0.38040334,add/set approvedScopes in User (#572),,0
+440,Merge pull request #231 from netfox01/3.0,0.46466917,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+441,Merge pull request #245 from bambamboole/master,0.45845684,Fix containter call (#450),,0
+442,Add ability to get basic social user details from an already known access_token,0.48248947,Include access token when requesting Facebook user profile photo (#489),"The Two/AbstractProvider.php has userFromToken($token) to retrieve user profile from a token. While One/AbstractProvider.php doesn’t have this feature, I added userFromTokenAndSecret($token, $secret) to retrieve user profile from the  token and secret. Tested with Twitter.",0
+443,Prefer Arr calls instead of helpers,0.3346194,Fix User return types by @antoinelame in link,,0
+444,Merge pull request #186 from teertz/2.0,0.45919526,Fix scope separator in Gitlab provider (#512)﻿,,0
+445,Merge pull request #227 from robinvdvleuten/redirect-value,0.51192105,Add ability to override access token request headers by @JasonTolliver in link,,0
+446,Merge pull request #423 from lucasmichot/feature/4.0/useless-arr-where,0.53728974,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+447,cs,0.3507905,﻿,Added full-size photo for Google provider,0
+448,Merge pull request #229 from lucasmichot/feature/3.0/scopes,0.5335529,Fix scope separator in Gitlab provider (#512)﻿,,0
+449,docs(2user): fixes method description for build auth url,0.5769519,Fix User return types by @antoinelame in link,,0
+450,Update .travis.yml,0.44827732,Allow OAuth version in the Twitter config by @taylorotwell (68afb03),,0
+451,Remove guzzlehttp/guzzle 5.x workaround,0.9481069,Remove guzzlehttp/guzzle ~5.0 workaround (#448),Upgrade Facebook Graph API version from 2.7 to 2.8.,1
+452,Add correct encoding and the required state param. (#599),0.7855258,Add correct encoding and the required state param by @xhezairbey in link,,1
+453,Use new versioning,0.5027159,Changed,Fix styling (StyleCI),0
+454,fix docblock,0.5329393,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+455,Replaced G+ scopes by Google Sign,0.53888535,Update Google API urls (#346),,0
+456,Merge pull request #8 from adamgoose/master,0.43785778,Add ability to override access token request headers by @JasonTolliver in link,Allow overriding the session state string.,0
+457,Enforce stricter assertions,0.3727035,Security,,0
+458,Drop PHP 7.1 support,0.91395944,Drop PHP 7.1 support (6e21f1a),,1
+459,Exposed the first_name and last_name fields in the LinkedIn user,0.48177862,Fix bug with no LinkedIn email addresses (#355),,0
+460,use Authorization header instead of using the access_token query parameter,0.6590863,Use Authorization header for Github provider (#430),In some scenarios we could override the session state string with another type of encryption. For example an use case will be to store encrypted information into the session state.,0
+461,Merge pull request #91 from GrahamCampbell/patch-1,0.49341887,Fix containter call (#450),Use the public method to get the scopes,0
+462,Fix User return types (#614),0.6847674,Fix User return types by @antoinelame in link,"There may be a scenario when the class can be extended and override the scopes (or add additional ones for example in case of GoogleProvider), example: php <?php use Laravel\Socialite\Two\GoogleProvider; class YoutubeProvider extends GoogleProvider {     public function getScopes()     {         return array_merge(parent::getScopes(), [             'link'         ]);     } } }",0
+463,Merge pull request #268 from lucasmichot/feature/3.0/google-avatar-url,0.6281204,Update Google API urls (#346),fixes repeat typo,0
+464,Merge pull request #295 from lucasmichot/feature/3.0/import,0.46556893,Fix containter call (#450),,0
+465,Merge pull request #210 from dherran/doc-usage-5-4,0.47211394,Fix containter call (#450),,0
+466,Uppercase readme file name,0.31709522,Use proper localized name (#329),,0
+467,Handle Google responses excluding 'name',0.9421319,Handle Google responses excluding 'name' (#340),Upgrade Facebook Graph API version from 2.6 to 2.7.,1
+468,Set default scopes.,0.4357332,add/set approvedScopes in User (#572),,0
+469,PHP 8 Support,0.93635947,PHP 8 Support (#495)﻿,Missing return value.,1
+470,Only use the read_user scope for GitLab by default,0.9572982,Only use the read_user scope for GitLab by default (#403),,1
+471,Enforce stricter comparisons (#585),0.31861135,Add custom exceptions for providers of One (#440),"Added ""link"" field to get user's facebook profile url",0
+472,Make formatConfig public,0.5299692,Make enablePKCE public (#550)﻿,,0
+473,Merge pull request #49 from CupOfTea696/2.0,0.4461898,Add Twitter OAuth 2 fallback call by @driesvints in link,getUserByToken app secret proof fix,0
+474,Merge pull request #205 from lucasmichot/feature/master/class-notation,0.5054904,Fix containter call (#450),Updates LinkedIn OAuth URL,0
+475,Order imports alphabetically,0.260511,Use proper localized name (#329),,0
+476,Merge pull request #2 from adamgoose/master,0.44821244,Add Twitter OAuth 2 fallback call by @driesvints in link,,0
+477,"fix docs, imports",0.42480135,Fix containter call (#450),,0
+478,fix facade namespace,0.42064032,Use proper key name for original avatar in Google Provider (5ec0024),The app secret proof parameter is now sent only if a Facebook app is configured.,0
+479,Spacing.,0.36794776,﻿,Add VersionEye dependencies status,0
+480,"add ""get user profile"" from token and secret",0.66331005,Include access token when requesting Facebook user profile photo (#489),,0
+481,Merge pull request #4 from adamgoose/master,0.4406619,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+482,Merge pull request #414 from laravel/php74,0.5508039,Removed support for PHP 7.0 (#311),Added setRedirectUrl method for dynamic URL redirection,0
+483,Added a note for contributors,0.42074937,add/set approvedScopes in User (#572),Add pretty badges to readme,0
+484,Do not export some files,0.32548913,Add correct encoding and the required state param by @xhezairbey in link,Return \Illuminate\Session\Store,0
+485,LinkedIn name is now retrieved correctly for users with locale other than en_US,0.5048435,Fix bug with no LinkedIn email addresses (#355),Also permits phpunit ~5.0,0
+486,Use ::class notation in tests.,0.3383882,Use proper localized name (#329),,0
+487,Merge pull request #170 from lucasmichot/feature/2.0/phpunit,0.56194335,Removed support for PHP 7.0 (#311),,0
+488,Merge pull request #267 from lucasmichot/feature/3.0/arr-get,0.49684834,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+489,Upgrade to PHP >= 5.6.4.,0.67203623,Drop PHP 7.1 support (6e21f1a),Prefer Arr calls instead of helpers,0
+490,Shorten up line.,0.31931767,Changed,Sort composer requirements,0
+491,Added missing new lines at eof,0.37161264,Add reset methods for Octane (07840c0)﻿,Switch tests to PSR-4,0
+492,Add ability to override access token request headers (#603),0.8872771,Add ability to override access token request headers by @JasonTolliver in link,Use stricter assertions,1
+493,Merge pull request #311 from driesvints/update-dependencies,0.5085738,Update Google API urls (#346),,0
+494,Use RequestOptions constants when calling the request (#582),0.5016736,Fix containter call (#450),,0
+495,Adds type checking (#630),0.43908042,Include grant_type=authorization code in token request parameters (#488)﻿,,0
+496,Merge pull request #105 from SammyK/graph-v2.5,0.44358695,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+497,Merge pull request #76 from mattwells/missing-redirectUrl-property,0.5020524,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+498,Merge pull request #183 from geodeveloper/patch-1,0.508772,Fix scope separator in Gitlab provider (#512)﻿,,0
+499,Add missing temporary credentials custom exception,0.44111755,Add custom exceptions for providers of One (#440),,0
+500,Fixes for StyleCI;,0.39686853,add/set approvedScopes in User (#572),Ensure the $user property can be accessed.,0
+501,Update branch alias,0.37426922,add/set approvedScopes in User (#572),Also test with PHP 7,0
+502,Rename 1_Bug_report.md to 1_Bug_report.yml,0.40428844,Add custom exceptions for providers of One (#440),,0
+503,Fix PHPUnit 8->9 deprectiations messages,0.7204853,Fix PHP 8.1 issues (#567)﻿,,1
+504,Facebook Login is not returning some fields,0.5617126,Include access token when requesting Facebook user profile photo (#489),[2.0] Change the scope of $user,0
+505,update for laravel 5.4,0.6467572,Require Laravel 5.7 as minimum version (#311),,0
+506,Fix a bug with no LinkedIn image,0.9529947,Fix a bug with no LinkedIn image (81adfcc),,1
+507,Change logo to work on Dark Theme (#553),0.40591544,Revert Facebook picture access token changes (#504)﻿,,0
+508,Fix LinkedInProvider for new API,0.65590304,Fix bug with no LinkedIn email addresses (#355),,0
+509,Fixed formatting of Twitter Config from callback_url to callback_uri,0.5414374,Add Twitter OAuth 2 fallback call by @driesvints in link,,0
+510,Merge pull request #306 from driesvints/unify-test-namespaces,0.43048397,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),,0
+511,Fix CI issues,0.48924088,Fix bitbucket provider (#475),Added a note for contributors,0
+512,Remove useless Arr::where call,0.37613982,Fix User return types by @antoinelame in link,,0
+513,fixing conflicts.,0.38693255,Changed,,0
+514,Merge pull request #85 from barryvdh/patch-1,0.44377157,Remove guzzlehttp/guzzle ~5.0 workaround (#448),Use --prefer-dist,0
+515,Fix a docblock (#584),0.5702617,Remove guzzlehttp/guzzle ~5.0 workaround (#448),Do not export some files and folders,0
+516,Switch to PSR-4 for tests,0.30787385,Drop PHP 7.1 support (6e21f1a),,0
+517,Merge pull request #44 from robmazur/patch-1,0.49054694,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+518,Merge pull request #422 from lucasmichot/feature/4.0/fix-phpunit-8-depreciations,0.668985,Removed support for PHP 7.0 (#311),Declare the user propserty,0
+519,Fix mapping Google Response to User Object,0.567142,Update Google API urls (#346),Also tests with PHP >= 5.4,0
+520,Merge pull request #253 from JapSeyz/patch-1,0.44234493,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+521,Override abstract provider for Twitter's OAuth 2.0 provider (#576),1.0000004,Override abstract provider for Twitter's OAuth 2.0 provider (#576),,1
+522,Update Facebook API version to 2.3,0.7593186,Change default Facebook graph version to 3.3 (#408),,1
+523,Update socialite website,0.5634629,Change default Facebook graph version to 3.3 (#408),Some docblocks style fixes,0
+524,Unnecessary spacing,0.28021055,Removed,Add an .editorconfig file,0
+525,Merge pull request #225 from mikeaag/3.0,0.47768837,Fix containter call (#450),,0
+526,OpenID isn't necessary,0.3309306,Make enablePKCE public (#550)﻿,,0
+527,Cleaning.,0.32212448,Removed,,0
+528,Merge pull request #159 from lucasmichot/feature/2.0/user-scope-tests,0.52402276,add/set approvedScopes in User (#572),,0
+529,fix phpdoc,0.76338196,Fix PHP 8.1 issues (#567)﻿,,1
+530,Declaire the user propserty,0.5226993,add/set approvedScopes in User (#572),fix authcontroller example namespace,0
+531,Apply fixes from StyleCI,0.45716447,add/set approvedScopes in User (#572),,0
+532,Merge pull request #36 from crynobone/patch/provider-contract,0.42776757,Fix containter call (#450),Update Facebook Graph API version to v2.6,0
+533,Add setScopes method and update documentation,0.5966472,add/set approvedScopes in User (#572),,0
+534,Updated logic,0.47645107,Changed,Update readme.md,0
+535,Stop testing on 7.0,0.45725793,Drop PHP 7.1 support (6e21f1a),highlight code.,0
+536,Add composer.json homepage and support sections.,0.48127836,Add app property by @driesvints in link,,0
+537,Merge pull request #495 from laravel/php8,0.5950583,PHP 8.2 support by @driesvints in link,Added method to set auth_type=rerequest for re-requesting permissions which were denied earlier.,0
+538,Merge pull request #360 from kpdcdg/4.0,0.44766068,Remove guzzlehttp/guzzle ~5.0 workaround (#448),Fix section heading level in readme.md,0
+539,add docblocks for new PKCE methods,0.5672424,Add support for OAuth 2.0 PKCE extension (#518)﻿,,0
+540,Merge pull request #32 from arhea/master,0.42022842,Add ability to override access token request headers by @JasonTolliver in link,,0
+541,fix test,0.43900007,Fix PHP 8.1 issues (#567)﻿,Signed-off-by: David Thorpe david@carve.io,0
+542,Fixing tests.,0.36555067,Changed,,0
+543,Update tests.yml,0.3837275,Updated version constraints for Laravel 6.0 (3fe71f1),"Use case: when authenticating on a client, and wishing to verify access_token on the server, by passing access_token to server.",0
+544,Provides.,0.61771744,﻿,,0
+545,Add getRaw to the User contract,0.49458164,Use Authorization header for Github provider (#430),,0
+546,rename closures in test,0.39455986,Use proper localized name (#329),Fixed some DocBlocks that had missing sections and wrong types.,0
+547,Fix fixture,0.5917705,Fix bitbucket provider (#475),,0
+548,Merge pull request #312 from driesvints/changelog,0.48048645,Add Twitter OAuth 2 fallback call by @driesvints in link,fix phpdoc,0
+549,Merge pull request #81 from mirzabusatlic/2.0,0.44209498,Fix scope separator in Gitlab provider (#512)﻿,fix StyleCI fail,0
+550,Revert Facebook picture access token changes,0.96850586,Revert Facebook picture access token changes (#504)﻿,,1
+551,Disable xdebug,0.49926496,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+552,No need to use array_add() helper.,0.39921737,PHP 8 Support (#495)﻿,Added OpenID scope,0
+553,Applied StyleCI changes & added doc block,0.3622973,Add support for OAuth 2.0 PKCE extension (#518)﻿,"Without the openid scope, the name of the user isn't returned when G+ is disabled (for Google Apps) or the user isn't registered",0
+554,formatting and various cleaning,0.3609714,Removed,bitbucket oauth2,0
+555,add support for OAuth 2.0 PKCE extension,0.95849967,Add support for OAuth 2.0 PKCE extension (#518)﻿,,1
+556,Updated tests,0.436594,Changed,,0
+557,facebook fix to get rid of tokenless user picture endpoint,0.79592526,Revert Facebook picture access token changes (#504)﻿,,1
+558,protect stateless getter/setter,0.47668803,Security,,0
+559,Using Facade,0.3318115,﻿,Make AbstractProvider::scopes() more intuitive,0
+560,Facebook - Graph API version,0.82040673,Allow to manually set desired Facebook graph version (#408),"Google and Facebook require certain scopes to login correctly so they don't throw an error, which are included by default. However, when a user adds their own scopes, it overrides these scopes that they don't know about. This makes it merge them instead.",1
+561,note on stateless,0.29237372,Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412),Replaced G+ scopes by Google Sign,0
+562,Allow the callback url to be relative,0.47115073,Add ability to override access token request headers by @JasonTolliver in link,"When using Google Sign-in, using G+ is unnecessary and can be blocked with Google Apps. Google+ can be disabled on Google Apps domains, or when enabled, it forces the user to subscribe to G+.",0
+563,Merge pull request #560 from laravel/driesvints-patch-1,0.46831155,Remove guzzlehttp/guzzle ~5.0 workaround (#448),Replaced G+ by OpenID in scopes,0
+564,Merge pull request #239 from SammyK/bump-graph-v2.10,0.46119016,Remove guzzlehttp/guzzle ~5.0 workaround (#448),"Finally, OpenID isn't necessary. These scopes are enough for Google Sign-In",0
+565,allow oauth version in config,0.66301286,Add support for OAuth 2.0 PKCE extension (#518)﻿,"No need to specify anything related to ""Google +"". Some Google Apps accounts may have it disabled or G+ may not be usefull for an account. I have checked the given changes for my own use (Google Apps) and they are working as expected (the mapping is correctly done).",0
+566,Add lastToken method,0.43882608,Add ability to override access token request headers by @JasonTolliver in link,,0
+567,First/last name not always set for Facebook,0.53127205,Include access token when requesting Facebook user profile photo (#489),,0
+568,Create update-changelog.yml,0.45432487,Update Google API urls (#346),,0
+569,fix comment,0.41899014,add/set approvedScopes in User (#572),,0
+570,Merge pull request #258 from carusogabriel/null-coalesce-operator,0.5229757,Fix containter call (#450),Update Graph version to v2.5,0
+571,Added package discovery notes to readme,0.44620818,add/set approvedScopes in User (#572),,0
+572,Move illuminate/contracts from require-dev to require (#583),0.50021553,Update provider to use DeferrableProvider instead (#529)﻿,,0
+573,Merge pull request #93 from GrahamCampbell/patch-1,0.5061114,Fix containter call (#450),,0
+574,Update changelog,0.58050513,Changed,Add the ability to specify which fields to return from the LinkedIn Provider,0
+575,set to 3.0,0.5220784,Updated version constraints for Laravel 6.0 (3fe71f1),Add the ability to specify which fields to return from the LinkedIn Provider,0
+576,Merge pull request #355 from driesvints/fix-bug-with-empty-email-addresses-for-linkedin,0.68515676,Fix bug with no LinkedIn email addresses (#355),Add twitter location and description fields,0
+577,Merge pull request #466 from laravel/update-manager,0.5431273,Update Google API urls (#346),,0
+578,Fixed typo in stateless docs,0.41536844,Fix containter call (#450),,0
+579,Add original picture to LinkedIn,0.7062109,Fix a bug with no LinkedIn image (81adfcc),,1
+580,Updated to PHPUnit 6 and Mockery 1,0.66111547,Drop PHP 7.1 support (6e21f1a),,0
+581,Merge pull request #230 from lucasmichot/feature/3.0/useless-variable,0.5213691,Fix containter call (#450),Many popular OAuth2 providers accept custom request parameters in order to change the behavior of the authentication flow. This change adds the ability to add on arbitrary custom parameters to the initial OAuth request. The use is similar to that of the `scopes' functionality: $provider     ->scopes(['email'])     ->parameters(['key' => 'value'])     ->redirect();,0
+582,Let user pass a single scope as a string.,0.4251446,Handle 'scope' for Twitter Oauth1 (#548)﻿,,0
+583,added some basic docs.,0.3320207,Add support for OAuth 2.0 PKCE extension (#518)﻿,CS Fixes,0
+584,Merge pull request #316 from joshbrown/fix-google-response-object,0.61720824,Update Google API urls (#346),,0
+585,Merge pull request #256 from arsoba/3.0,0.41791368,Update Google API urls (#346),,0
+586,Merge pull request #55 from red-crown/2.0,0.42042527,Add ability to override access token request headers by @JasonTolliver in link,Pull the state from the session,0
+587,Merge pull request #403 from Calinou/gitlab-use-restricted-scope,0.6841161,Fix scope separator in Gitlab provider (#512)﻿,,0
+588,remove use,0.7856817,Removed,,1
+589,cleaned up a bit,0.53157246,Changed,,0
+590,Unify test namespaces,0.37364918,Use proper localized name (#329),,0
+591,Merge pull request #5 from adamgoose/master,0.44613785,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+592,Override of user method in Twitter Provider.,0.6905847,Override abstract provider for Twitter's OAuth 2.0 provider (#576),Facebook Login is not returning some fields,0
+593,Cleanup,0.47533643,Removed,When login with Facebook them is no returning fields: gender and verified.,0
+594,Merge pull request #164 from lucasmichot/feature/2.0/arr,0.4686365,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+595,Merge pull request #204 from lucasmichot/feature/master/sort-require,0.46277046,Fix containter call (#450),Make sure the state is truely random,0
+596,Test on 7.4,0.36319628,Drop PHP 7.1 support (6e21f1a),,0
+597,Merge pull request #58 from AdamBuchen/2.0,0.46532845,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+598,Allow setting custom Guzzle options,0.49494207,Support Guzzle 7 (#449),,0
+599,Adding code-style fix,0.54349446,Fix containter call (#450),Update readme.md,0
+600,Merge pull request #430 from WessamSaeid/use-Authorization-header-for-github-provider,0.73732984,Use Authorization header for Github provider (#430),,1
+601,Add LinkedIn driver,0.59254074,Fix a bug with no LinkedIn image (81adfcc),Adds 'fields' parameter support,0
+602,Factorize Google avatar url.,0.60261285,Use proper key name for original avatar in Google Provider (5ec0024),"Graph API v2.4 requires a fields parameter to return anything beyond id, name, and avatar. This fix sets the default fields to match the default scope request and common user mapping (first_name, last_name, email). Also allows custom fields to be requested instead via the fields() method.",0
+603,Tabs.,0.45735443,﻿,Included LinkedIn and Bitbucket in the services list.,0
+604,Fix scopes.,0.37297451,Fix scope separator in Gitlab provider (#512)﻿,Update Facebook Graph API version to v2.4,0
+605,Applied feedback,0.35907072,Changed,,0
+606,use array get,0.35272568,PHP 8 Support (#495)﻿,,0
+607,Getting proper name off Twiter response,0.54744816,Handle Google responses excluding 'name' (#340),Send grant_type as POST param,0
+608,Bump Graph API version to v2.11,0.6026853,Change default Facebook graph version to 3.3 (#408),Prevent 401 errors on fresh logins,0
+609,Make use of getState method,0.3927853,Fix scope separator in Gitlab provider (#512)﻿,First/last name not always set for Facebook,0
+610,Update UPGRADE.md,0.48125863,Changed,,0
+611,fix order of imports,0.32420063,Fix containter call (#450),Update Facebook API version to 2.3,0
+612,fix composer,0.4471188,Fix containter call (#450),,0
+613,Update branch-alias,0.40986156,add/set approvedScopes in User (#572),Add original/large avatars,0
+614,Added BitBucket provider,0.7653606,Fix bitbucket provider (#475),,1
+615,Merge pull request #38 from JoeForks/fix/some-fixes,0.5013839,Remove guzzlehttp/guzzle ~5.0 workaround (#448),Add original picture to LinkedIn,0
+616,Merge pull request #79 from barryvdh/original-avatars,0.50919855,Revert Facebook picture access token changes (#504)﻿,,0
+617,Merge pull request #160 from lucasmichot/feature/2.0/travis-php-7,0.5736243,Removed support for PHP 7.0 (#311),Make the fields a bit readable + include the original picture in the profile response.,0
+618,Merge pull request #438 from ctwillie/feature/replace-deprecated-app-property-with-container,0.5201232,Fix containter call (#450),Add LinkedIn Provider,0
+619,Merge pull request #52 from DraperStudio/2.0,0.45049864,add/set approvedScopes in User (#572),,0
+620,Test on PHP 8.2 (#607),0.73896766,PHP 8 Support (#495)﻿,Add missing $redirectUrl property definition to AbstractProvider,1
+621,Merge branch 'master' of link into darkwinternight-master,0.3355212,Add ability to override access token request headers by @JasonTolliver in link,,0
+622,Fixed for StyleCI,0.37771273,add/set approvedScopes in User (#572),,0
+623,Fix bitbucket,0.8625892,Fix bitbucket provider (#475),,1
+624,Merge pull request #118 from PEKTOP/patch-1,0.5117413,Make PKCE opt-in (#523),,0
+625,Also test with PHP 7,0.6217043,PHP 8 Support (#495)﻿,Missing docblock,0
+626,Merge pull request #302 from driesvints/disable-xdebug,0.5160846,Remove guzzlehttp/guzzle ~5.0 workaround (#448),,0
+627,Merge pull request #101 from dmvslv/twitter-extra-data,0.51412004,Add Twitter OAuth 2 fallback call by @driesvints in link,,0
+628,No need to suggest packages.,0.28195748,Require Laravel 5.7 as minimum version (#311),,0
+629,Fix CS.,0.4487018,Fix containter call (#450),,0
+630,Fixed DocBlock return type (#565),0.5796616,Fix containter call (#450),,0
+631,art,0.47373524,﻿,,0
+632,Use Illuminate's RedirectResponse instead of Symfony's,0.30783206,Add correct encoding and the required state param by @xhezairbey in link,,0
+633,Update AbstractProvider.php,0.57278985,Drop PHP 7.1 support (6e21f1a),,0
+634,Apply fixes from StyleCI (#391),0.5110676,add/set approvedScopes in User (#572),,0

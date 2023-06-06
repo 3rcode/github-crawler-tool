@@ -1,0 +1,410 @@
+Index,Release Note,Release Note With Abstraction
+1,"IJulia v1.24.0
+Diff since v1.23.3
+Closed issues:
+- support for pdf plot output (#1035)
+- Kernel frequently restarts during sessions (#1037)
+- Unlike in REPL, passing (e, catch_backtrace()) to the @error macro displays unreadable raw stacktrace instead of text representation (#1043)
+- Errors Linking Julia 1.8 and Jupyter Lab 3.3.4-2 (#1050)
+- Permission error when Jupyterhub user launches Julia (#1058)
+- Kernel does not start with Julia 1.9 (#1062)
+Merged pull requests:
+- Correct kernelspec name (#1004) (@jks-liu)
+- Update help link (#1006) (@raphbacher)
+- Replace SimpleLogger with ConsoleLogger (#1045) (@BoZenKhaa)
+- Add Julia svg logo (#1053) (@steff456)","IJulia v1.24.0
+Diff since v1.23.3
+Closed issues:
+- support for pdf plot output (#1035)
+- Kernel frequently restarts during sessions (#1037)
+- Unlike in REPL, passing (e, catch_backtrace()) to the @error macro displays unreadable raw stacktrace instead of text representation (#1043)
+- Errors Linking Julia 1.8 and Jupyter Lab 3.3.4-2 (#1050)
+- Permission error when Jupyterhub user launches Julia (#1058)
+- Kernel does not start with Julia 1.9 (#1062)
+Merged pull requests:
+- Correct kernelspec name (#1004) (@jks-liu)
+- Update help link (#1006) (@raphbacher)
+- Replace SimpleLogger with ConsoleLogger (#1045) (@BoZenKhaa)
+- Add Julia svg logo (#1053) (@steff456)"
+2,"IJulia v1.23.3
+Diff since v1.23.2
+Closed issues:
+- Jupyter Kernels Getting Overwritten (#908)
+- JuliaPro V1.4.2 cannot find Jupyter Notebook previous install  (#942)
+- f(<tab> tries to autocomplete and writes the function definition (#992)
+- won't catch the wrong syntax (#994)
+- IJulia is very slow at first calculation (#995)
+- Display/println order incorrect (#998)
+- Pkg output not showing in Jupyter notebook (#1008)
+- Jupyter notebook fails to open with Julia 1.6.0 kernel  (#1009)
+- IJulia no longer loads shared library dependencies (#1010)
+- What is the meaning of this? (#1011)
+- IJulia not showing output from package manager mode (#1017)
+- IJulia/kernel.jl should not change the global_logger (#1018)
+- IJulia in local environment, dead kernel (#1021)
+- Kernel on Jupyter Notebook constantly dies  (#1022)
+- IJulia fails on 1.7 with Mac M1 (#1027)
+- works in Jupyter Notebook but not in Jupyter Lab (#1029)
+- Error: Could not spawn setenv (#1032)
+- Feature: show methods applicable to object  (methodswith) (#1033)
+- tab completion and unicode not working in Jupyter notebook (#1034)
+Merged pull requests:
+- respect should_complete return value from REPLCompletions.completions (#993) (@stevengj)
+- Fix broken link (#997) (@bluesmoon)
+- flush stdio before display (#999) (@stevengj)
+- Note about default environment (#1007) (@lamorton)
+- Compare kernel.jl files rather than filenames (#1025) (@bluesmoon)","IJulia v1.23.3
+Diff since v1.23.2
+Closed issues:
+- Jupyter Kernels Getting Overwritten (#908)
+- JuliaPro V1.4.2 cannot find Jupyter Notebook previous install  (#942)
+- f( tries to autocomplete and writes the function definition (#992)
+- won't catch the wrong syntax (#994)
+- IJulia is very slow at first calculation (#995)
+- Display/println order incorrect (#998)
+- Pkg output not showing in Jupyter notebook (#1008)
+- Jupyter notebook fails to open with Julia 1.6.0 kernel  (#1009)
+- IJulia no longer loads shared library dependencies (#1010)
+- What is the meaning of this? (#1011)
+- IJulia not showing output from package manager mode (#1017)
+- IJulia/kernel.jl should not change the global_logger (#1018)
+- IJulia in local environment, dead kernel (#1021)
+- Kernel on Jupyter Notebook constantly dies  (#1022)
+- IJulia fails on 1.7 with Mac M1 (#1027)
+- works in Jupyter Notebook but not in Jupyter Lab (#1029)
+- Error: Could not spawn setenv (#1032)
+- Feature: show methods applicable to object  (methodswith) (#1033)
+- tab completion and unicode not working in Jupyter notebook (#1034)
+Merged pull requests:
+- respect should_complete return value from REPLCompletions.completions (#993) (@stevengj)
+- Fix broken link (#997) (@bluesmoon)
+- flush stdio before display (#999) (@stevengj)
+- Note about default environment (#1007) (@lamorton)
+- Compare kernel.jl files rather than filenames (#1025) (@bluesmoon)"
+3,"IJulia v1.23.2
+Diff since v1.23.1
+Closed issues:
+- [feature request] syntax highlight in vscode (#933)
+- Can't Use on OSX (#967)
+- IJulia kernel doesn't work for Julia 1.6 on macOS (#968)
+- No window open in the browser (#970)
+- ZMQ unsatiable constraints (#971)
+- errors thrown from a kernel are not pretty printed (#974)
+- IJulia installs conda by itself (#979)
+- Failed to start the kernel - Jupyter Notebook error (#980)
+- Urgent: Julia on Jupyter notebook, error:keep restarting kernel (#982)
+- Why can only 8 columns be displayed in JupyterLab (#984)
+- redirect_stdio is broken by Julia 1.7 (#986)
+- Unable to download the miniconda while using IJulia (#988)
+Merged pull requests:
+- add nteract to README (#965) (@willingc)
+- Convert uuid4 to a string before using as msg_id (#972) (@bluesmoon)
+- Change uuid to a string in all locations. (#973) (@bluesmoon)
+- fix heartbeat on 1.6 (#985) (@stevengj)
+- Proposed fix for #986. (#989) (@rgobbel)","IJulia v1.23.2
+Diff since v1.23.1
+Closed issues:
+- [feature request] syntax highlight in vscode (#933)
+- Can't Use on OSX (#967)
+- IJulia kernel doesn't work for Julia 1.6 on macOS (#968)
+- No window open in the browser (#970)
+- ZMQ unsatiable constraints (#971)
+- errors thrown from a kernel are not pretty printed (#974)
+- IJulia installs conda by itself (#979)
+- Failed to start the kernel - Jupyter Notebook error (#980)
+- Urgent: Julia on Jupyter notebook, error:keep restarting kernel (#982)
+- Why can only 8 columns be displayed in JupyterLab (#984)
+- redirect_stdio is broken by Julia 1.7 (#986)
+- Unable to download the miniconda while using IJulia (#988)
+Merged pull requests:
+- add nteract to README (#965) (@willingc)
+- Convert uuid4 to a string before using as msg_id (#972) (@bluesmoon)
+- Change uuid to a string in all locations. (#973) (@bluesmoon)
+- fix heartbeat on 1.6 (#985) (@stevengj)
+- Proposed fix for #986. (#989) (@rgobbel)"
+4,"IJulia v1.23.1
+Diff since v1.23.0
+Merged pull requests:
+- Don't use --startup-file=yes (it is default anyways). (#963) (@fredrikekre)","IJulia v1.23.1
+Diff since v1.23.0
+Merged pull requests:
+- Don't use --startup-file=yes (it is default anyways). (#963) (@fredrikekre)"
+5,"IJulia v1.23.0
+Diff since v1.22.0
+Closed issues:
+- Error: syntax: undefined reference in AST (#960)
+Merged pull requests:
+- Allow users to opt out of the default kernel. (#958) (@vchuravy)","IJulia v1.23.0
+Diff since v1.22.0
+Closed issues:
+- Error: syntax: undefined reference in AST (#960)
+Merged pull requests:
+- Allow users to opt out of the default kernel. (#958) (@vchuravy)"
+6,"IJulia v1.22.0
+Diff since v1.21.4
+Closed issues:
+- I can't install IJulia (#952)
+- v1.21.4 breaks IJulia with ""InteractiveUtils not defined"" Error (#955)
+- Error in installing IJulia.jl (#956)
+- Autocomplete DataFrame column names (#957)
+Merged pull requests:
+- Add kwarg julia_cmd to installkernel (to support JupyterHub with containers, etc.) (#948) (@oschulz)","IJulia v1.22.0
+Diff since v1.21.4
+Closed issues:
+- I can't install IJulia (#952)
+- v1.21.4 breaks IJulia with ""InteractiveUtils not defined"" Error (#955)
+- Error in installing IJulia.jl (#956)
+- Autocomplete DataFrame column names (#957)
+Merged pull requests:
+- Add kwarg julia_cmd to installkernel (to support JupyterHub with containers, etc.) (#948) (@oschulz)"
+7,"IJulia v1.21.4
+Diff since v1.21.3
+Merged pull requests:
+- Organize/add docstrings in API docs (#945) (@jlumpe)
+- support repl_ast_transforms in Julia 1.5 (#947) (@stevengj)
+- Load InteractiveUtils from the IJulia namespace in src/kernel.jl. (#951) (@fredrikekre)","IJulia v1.21.4
+Diff since v1.21.3
+Merged pull requests:
+- Organize/add docstrings in API docs (#945) (@jlumpe)
+- support repl_ast_transforms in Julia 1.5 (#947) (@stevengj)
+- Load InteractiveUtils from the IJulia namespace in src/kernel.jl. (#951) (@fredrikekre)"
+8,"IJulia v1.21.3
+Diff since v1.21.2
+Closed issues:
+- Pkg.add(""IJulia"") git proxy error without using proxy (#916)
+- Jupyter notebook freezes after typing ""round""... (#917)
+- Cell content disappears  (#919)
+- Add to startup (#922)
+- Trouble installing IJulia (#923)
+- Typing characters '.0' causes cell to freeze (#924)
+- IJulia doesnt work (#926)
+- Error in utf-8 decoding (#927)
+- IJulia bails on typing ""00"" in jupyter lab 2.1 (#929)
+- Underscore notation for numbers makes number different colours. (#932)
+- Kernel exception on autocomplete (#935)
+- Documentation? (#936)
+- Handling of local y = (x = i) in soft scope (#938)
+- Jupyterlab won't work with Julia 1.5 and Python 3.7.7 (#939)
+Merged pull requests:
+- Add documentation with Documenter.jl (#941) (@jlumpe)
+- Fix the ""dev"" docs badge (#943) (@DilumAluthge)
+- TagBot: use DOCUMENTER_KEY (#944) (@DilumAluthge)","IJulia v1.21.3
+Diff since v1.21.2
+Closed issues:
+- Pkg.add(""IJulia"") git proxy error without using proxy (#916)
+- Jupyter notebook freezes after typing ""round""... (#917)
+- Cell content disappears  (#919)
+- Add to startup (#922)
+- Trouble installing IJulia (#923)
+- Typing characters '.0' causes cell to freeze (#924)
+- IJulia doesnt work (#926)
+- Error in utf-8 decoding (#927)
+- IJulia bails on typing ""00"" in jupyter lab 2.1 (#929)
+- Underscore notation for numbers makes number different colours. (#932)
+- Kernel exception on autocomplete (#935)
+- Documentation? (#936)
+- Handling of local y = (x = i) in soft scope (#938)
+- Jupyterlab won't work with Julia 1.5 and Python 3.7.7 (#939)
+Merged pull requests:
+- Add documentation with Documenter.jl (#941) (@jlumpe)
+- Fix the ""dev"" docs badge (#943) (@DilumAluthge)
+- TagBot: use DOCUMENTER_KEY (#944) (@DilumAluthge)"
+9,"IJulia v1.21.2
+Diff since v1.21.1
+Closed issues:
+- Error installing Jupyter via conda in Win10 (#874)
+- Windows Permission Denied (#878)
+- I bulid Ijulia (#879)
+- Package name should ideally be Jupyter.jl (#904)
+- Deprecation from PyCall.jl (#905)
+- [Solved][Linux] IJulia install error (#906)
+- Zero before another number breaks ijulia (#907)
+- can not start notebook  (#910)
+- @DIR does nto behave as ""expected"" in IJulia (#915)
+Merged pull requests:
+- Install TagBot as a GitHub Action (#901) (@JuliaTagBot)
+- Update [compat] to allow MbedTLS v1 (#912) (@jaakkor2)
+- Set version to 1.21.2, limit tagbot to once per day. (#914) (@fredrikekre)","IJulia v1.21.2
+Diff since v1.21.1
+Closed issues:
+- Error installing Jupyter via conda in Win10 (#874)
+- Windows Permission Denied (#878)
+- I bulid Ijulia (#879)
+- Package name should ideally be Jupyter.jl (#904)
+- Deprecation from PyCall.jl (#905)
+- [Solved][Linux] IJulia install error (#906)
+- Zero before another number breaks ijulia (#907)
+- can not start notebook  (#910)
+- @DIR does nto behave as ""expected"" in IJulia (#915)
+Merged pull requests:
+- Install TagBot as a GitHub Action (#901) (@JuliaTagBot)
+- Update [compat] to allow MbedTLS v1 (#912) (@jaakkor2)
+- Set version to 1.21.2, limit tagbot to once per day. (#914) (@fredrikekre)"
+10,"v1.21.1 (2020-02-08)
+Diff since v1.21.0
+Closed issues:
+
+Tag a release (#898)
+
+Merged pull requests:
+
+use _set_conda_env to launch jupyter (#900) (stevengj)
+","v1.21.1 (2020-02-08)
+Diff since v1.21.0
+Closed issues:
+Tag a release (#898)
+Merged pull requests:
+use _set_conda_env to launch jupyter (#900) (stevengj)"
+11,"v1.21.0 (2020-02-04)
+Diff since v1.20.2
+Closed issues:
+
+ge (#897)
+String interpolation + printf format string = confused syntax highlighter and garbled, uneditable cell (#896)
+Feature Request : Allow IJulia to run on root. (#895)
+error centos 7 libstdc++.so.6: version `GLIBCXX_3.4.20' not found (#894)
+Showing Base.Logicalndex as text/plain throws an error (#892)
+can`t build(""ZMQ"")  Could not list contents of tarball  (#889)
+IJulia attempts to parse string part starting with % as a magic command (#888)
+Typing zero in front of numbers breaks code display and syntax highlighting (#887)
+
+Merged pull requests:
+
+Set version to 1.21.0. (#899) (fredrikekre)
+Add support for vega-lite 4 MIME type (#890) (davidanthoff)
+","v1.21.0 (2020-02-04)
+Diff since v1.20.2
+Closed issues:
+ge (#897)
+String interpolation + printf format string = confused syntax highlighter and garbled, uneditable cell (#896)
+Feature Request : Allow IJulia to run on root. (#895)
+error centos 7 libstdc++.so.6: version modulet build(""ZMQ"")  Could not list contents of tarball  (#889)
+IJulia attempts to parse string part starting with % as a magic command (#888)
+Typing zero in front of numbers breaks code display and syntax highlighting (#887)
+Merged pull requests:
+Set version to 1.21.0. (#899) (fredrikekre)
+Add support for vega-lite 4 MIME type (#890) (davidanthoff)"
+12,"v1.20.2 (2019-11-07)
+Diff since v1.20.1
+Merged pull requests:
+
+Add InlineIOContext with Jupyter property. (#876) (travigd)
+","v1.20.2 (2019-11-07)
+Diff since v1.20.1
+Merged pull requests:
+Add InlineIOContext with Jupyter property. (#876) (travigd)"
+13,"v1.20.1 (2019-11-05)
+Diff since v1.20.0
+Closed issues:
+
+LoadError: Failed to find or install Jupyter 3.0 or later. (#885)
+Can not instal IJulia Packages 1.2.0 (#873)
+Get error in jupyter kernel，but normal in command line (#872)
+ArchGDAL installation Error on windows 10 using Julia 1.2.0 (#871)
+Could not load library “libgit2” (#869)
+How to install kernelspec to $CONDA\_PREFIX/share/jupyter/kernels/? (#865)
+IJulia Install Error (#863)
+IJulia doesn't work with Jupyter --transport=ipc  (#862)
+
+Merged pull requests:
+
+Fix compat bounds for auto-merging, bump version to 1.20.1. (#884) (fredrikekre)
+make work with ipc transport (#868) (marius311)
+","v1.20.1 (2019-11-05)
+Diff since v1.20.0
+Closed issues:
+LoadError: Failed to find or install Jupyter 3.0 or later. (#885)
+Can not instal IJulia Packages 1.2.0 (#873)
+Get error in jupyter kernel，but normal in command line (#872)
+ArchGDAL installation Error on windows 10 using Julia 1.2.0 (#871)
+Could not load library “libgit2” (#869)
+How to install kernelspec to $CONDA_PREFIX/share/jupyter/kernels/? (#865)
+IJulia Install Error (#863)
+IJulia doesn't work with Jupyter --transport=ipc  (#862)
+Merged pull requests:
+Fix compat bounds for auto-merging, bump version to 1.20.1. (#884) (fredrikekre)
+make work with ipc transport (#868) (marius311)"
+14,"v1.20.0 (2019-08-26)
+Diff since v1.19.0
+Closed issues:
+
+Calls to jupyterlab() always ask to install on Windows (#866)
+How does this code work? (#861)
+Number coloring (#860)
+","v1.20.0 (2019-08-26)
+Diff since v1.19.0
+Closed issues:
+Calls to jupyterlab() always ask to install on Windows (#866)
+How does this code work? (#861)
+Number coloring (#860)"
+15,"v1.19.0 (2019-07-27)
+Diff since v1.18.1
+Closed issues:
+
+Syntax highlighting issue in JupyterLab 1.0 (#855)
+References to output value of cells kept indefinitely (#851)
+Interact only works after kernel restart (#850)
+IJulia fails to load JuMP (#848)
+Permissions problems similar to Issue #616 (#845)
+Jupyter display full output results (#844)
+Failed to install IJulia on windows 10 / Julia 1.1.1 (#843)
+add info on nteract to README.md? (#841)
+Error platform_key() is deprecated while building ZMQ and building MbedTLS (#838)
+Does IJulia follow Manifest.toml branch dependencies? (#837)
+Issues concerning installation of Blink and Escher (#836)
+DataFrames.jl show in IJulia (#835)
+
+Merged pull requests:
+
+Fix #855, add required status field for JupyterLab 1.0 (#856) (drewrobson)
+Mention In and Out in README and how to empty them (#853) (MasonProtter)
+Use DEPOT_PATH[1]... to load startup_ijulia.jl (#846) (macd)
+short comment on nteract to README.md (#842) (PaulSoderlind)
+","v1.19.0 (2019-07-27)
+Diff since v1.18.1
+Closed issues:
+Syntax highlighting issue in JupyterLab 1.0 (#855)
+References to output value of cells kept indefinitely (#851)
+Interact only works after kernel restart (#850)
+IJulia fails to load JuMP (#848)
+Permissions problems similar to Issue #616 (#845)
+Jupyter display full output results (#844)
+Failed to install IJulia on windows 10 / Julia 1.1.1 (#843)
+add info on nteract to README.md? (#841)
+Error platform_key() is deprecated while building ZMQ and building MbedTLS (#838)
+Does IJulia follow Manifest.toml branch dependencies? (#837)
+Issues concerning installation of Blink and Escher (#836)
+DataFrames.jl show in IJulia (#835)
+Merged pull requests:
+Fix #855, add required status field for JupyterLab 1.0 (#856) (drewrobson)
+Mention In and Out in README and how to empty them (#853) (MasonProtter)
+Use DEPOT_PATH[1]... to load startup_ijulia.jl (#846) (macd)
+short comment on nteract to README.md (#842) (PaulSoderlind)"
+16,Fix lines/cols in displaysize (475dcbe615fd8f0ec50887fa1e56be6f57409403).,Fix lines/cols in displaysize (475dcbe615fd8f0ec50887fa1e56be6f57409403).
+17,"Set --project=@. (#820). New vega mime type (#821).  Various fixes (#813, #819).","Set --project=@. (#820). New vega mime type (#821).  Various fixes (#813, #819)."
+18,Interrupt messages on Windows (#804) and warning for incorrect kernel path (#809).,Interrupt messages on Windows (#804) and warning for incorrect kernel path (#809).
+19,Respect environment variables XDG_DATA_HOME and JUPYTER_DATA_DIR during build (#796).,Respect environment variables XDG_DATA_HOME and JUPYTER_DATA_DIR during build (#796).
+20,Fix #794.,Fix #794.
+21,Slight fix to handling of environment variables for jupyter subcommands (137aed4c98a4be788b6a73df2ef74c2667be5611).,Slight fix to handling of environment variables for jupyter subcommands (137aed4c98a4be788b6a73df2ef74c2667be5611).
+22,"PR #791: Jupyter is no longer required for package installation (fixes #692).   Also added jupyterlab() function to launch JupyterLab, and added an env keyword to installkernel to provide control over the kernel environment.","PR #791: Jupyter is no longer required for package installation (fixes #692).   Also added jupyterlab() function to launch JupyterLab, and added an env keyword to installkernel to provide control over the kernel environment."
+23,Fix #776,Fix #776
+24,"MIME fixes (#771, #773), store prefs in depot path (#760), fix IPython ""magic"" error reporting (#769).","MIME fixes (#771, #773), store prefs in depot path (#760), fix IPython ""magic"" error reporting (#769)."
+25,Custom MIME display (#755).,Custom MIME display (#755).
+26,Startup file (#745).,Startup file (#745).
+27,Fix 0.7 deprecation in Interact code.,Fix 0.7 deprecation in Interact code.
+28,"Drop Julia 0.6 support, use the ZMQ 1.0 API (#729).","Drop Julia 0.6 support, use the ZMQ 1.0 API (#729)."
+29,"Support pkg commands in 0.7 (#715), use soft global scope in 0.7 (#720), unique completions (#712).","Support pkg commands in 0.7 (#715), use soft global scope in 0.7 (#720), unique completions (#712)."
+30,"Fix shell mode (#703), Revise (#708), and history (#706).","Fix shell mode (#703), Revise (#708), and history (#706)."
+31,Fix more 0.7 deprecations.,Fix more 0.7 deprecations.
+32,Fix REPL-like ? help.,Fix REPL-like ? help.
+33,0.7 compatibility,0.7 compatibility
+34,"Drop Julia 0.5 (#642), redirect fixes (#641), JupyterLab fixes, module-evaluation control (#651), compatibility with ZMQ.jl master.","Drop Julia 0.5 (#642), redirect fixes (#641), JupyterLab fixes, module-evaluation control (#651), compatibility with ZMQ.jl master."
+35,"vega-lite display (#621, #611), IJulia.qtconsole() (#620), 0.7 fixes, display of arbitrary MIME types is now passed through to notebook.","vega-lite display (#621, #611), IJulia.qtconsole() (#620), 0.7 fixes, display of arbitrary MIME types is now passed through to notebook."
+36,Fix Julia 0.7 depwarns and problem with tab completion in latest Jupyter.,Fix Julia 0.7 depwarns and problem with tab completion in latest Jupyter.
+37,,
+38,"IJulia.installkernel function, syntax highlighter updates, build script update for Debian, 0.7 compatibility.","IJulia.installkernel function, syntax highlighter updates, build script update for Debian, 0.7 compatibility."
+39,,
+40,"Julia 0.6 fixes, dropping Julia 0.4, switching to MbedTLS instead of Nettle.","Julia 0.6 fixes, dropping Julia 0.4, switching to MbedTLS instead of Nettle."
+41,Fixes bug in configuring IJulia for a non-Conda Jupyter (#502).,Fixes bug in configuring IJulia for a non-Conda Jupyter (#502).
+42,"Makes Conda the default during installation (#501), IJulia.history() function analogous to IPython %history (#500), improved Julia 0.6 compatibility.","Makes Conda the default during installation (#501), IJulia.history() function analogous to IPython %history (#500), improved Julia 0.6 compatibility."
+43,Includes a bunch of patches from @JobJob to enable some great new Interact features. Enables colorful output patch https://github.com/JuliaLang/IJulia.jl/pull/470 from @KristofferC and build fixes from @simonbyrne ,Includes a bunch of patches from @JobJob to enable some great new Interact features. Enables colorful output patch link from @KristofferC and build fixes from @simonbyrne 

@@ -1,10 +1,14 @@
-Index,Release Note
+Index,Release Note,Release Note With Abstraction
 1,"Minor fixes and a new feature:
 
 update references to keystone-tinymce, thanks @BarryThePenguin
 new pre:adminroutes hook, thanks @pixtron
 fix for URL fields in noedit mode
 
+Note this release replaces v4.2.0","Minor fixes and a new feature:
+update references to keystone-tinymce, thanks @BarryThePenguin
+new pre:adminroutes hook, thanks @pixtron
+fix for URL fields in noedit mode
 Note this release replaces v4.2.0"
 2,"Minor fixes, including:
 
@@ -12,8 +16,34 @@ Unit tests running again after 4.1.0 (still working on e2e tests)
 Boolean fields work correctly when default: true in set, thanks @ttsirkia 
 Colour field bug introduced in 4.1.0 is fixed
 Documentation fixes, thanks @WenWu92, @tomjnsn , @stsourlidakis
-"
+","Minor fixes, including:
+Unit tests running again after 4.1.0 (still working on e2e tests)
+Boolean fields work correctly when default: true in set, thanks @ttsirkia 
+Colour field bug introduced in 4.1.0 is fixed
+Documentation fixes, thanks @WenWu92, @tomjnsn , @stsourlidakis"
 3,"Full changelog
+All these people contributed to improving the docs and README.md: @nathsimpson, @stennie, @gverni, @andreicioromila, @codyspate, @lvntruong, @ebrahimamer, @jimulle, @kennedybaird, @laurenskling, @clement-dev, @Vultraz, @sverrisson, @agmt5989, @itzaks, @d400800, @Eyecone, @basilvetas, @cheng306  and @JedWatson 
+Updated the Keystone 4 website (thanks @tuan23, @dominikwilkowski and @nathsimpson )
+Add alt test to delete button in ListManagement (#4813, thanks @jimulle )
+Fixed incorrectly named API method label (#4825, thanks @Vultraz )
+Fix UTC DateColumn value display (#4841, thanks @alsoicode)
+Added option to hide Today button in Date field (#4869, thanks @marcin-lawrowski)
+Fixed dependsOn setting when applied to a boolean field set to false by default (#4867, thanks @marcin-lawrowski )
+Allow custom error message in deleteItem (#4683, thanks @RecuencoJones )
+Return a 500 error when item.remove fails (#4832, thanks @laurenskling )
+Build S3 upload name when not present (#4871, thanks @Tathanen )
+Make urlField support thumb option. (#4856, thanks @gemscng )
+Moved from letsencrypt-express to greenlock-express (#4885, thanks @akopcz2)
+Removed kerberos (#4888, thanks @larrybolt )
+Make TinyMCE a real dependency (#4897 & #4887, thanks @gautamsi and @JedWatson )
+Fix NumberColumn for money formatting be independent from path name (#4912, thanks @realThinhIT)
+Add _req_user to removed item so you can use this in the remove pre/post hook (#4831, thanks @laurenskling )
+Add support for language cookie options (#4921, thanks @Hsn723 )
+Upgrade to Babel 7 (#4802, thanks ashmore11)
+Fixing deprecated isMounted usage (thanks @JedWatson )
+Upgraded dependencies (thanks @JedWatson )
+Cannot clear Relationship field (without many set to true) (#4711, thanks @JedWatson )
+Fixing Money field propTypes warning (thanks @JedWatson )","Full changelog
 All these people contributed to improving the docs and README.md: @nathsimpson, @stennie, @gverni, @andreicioromila, @codyspate, @lvntruong, @ebrahimamer, @jimulle, @kennedybaird, @laurenskling, @clement-dev, @Vultraz, @sverrisson, @agmt5989, @itzaks, @d400800, @Eyecone, @basilvetas, @cheng306  and @JedWatson 
 Updated the Keystone 4 website (thanks @tuan23, @dominikwilkowski and @nathsimpson )
 Add alt test to delete button in ListManagement (#4813, thanks @jimulle )
@@ -56,8 +86,49 @@ Documentation updates:
  * Documented breaking change to pre:routes behaviour (thanks @blargity)
  * Added more info on Application updates with required relationships (thanks @blargity)
  * Fix incorrect ""Edit this page"" links (thanks @stennie)
+ * Fix API doc 404s for deprecated File field types (thanks @stennie)","Keystone 4.0.0 GA 🎉 
+Full Changelog | Documentation | Developer support | Bugs & feature suggestions | KeystoneJS Slack
+Bug fixes and improvements:
+ * Minor fixes and improvements to the location field type (#4455, thanks @molomby)
+ * Improve sanity checking for signin ""from"" param (#4720, thanks @Noviny)
+ * Update z-index of color chooser (#4256, thanks @TuurDutoit)
+ * Restore/repair s3 image uploaded in tinymce (#4594, thanks @Tathanen)
+ * Smooth scroll speed now based on current scroll position (#4635, thanks @AntonyMayer)
+ * Added session max age cookie to match keystone.uid cookie expiry (#4565, thanks @millsy)
+Dependency updates:
+ * Update multer from 0.1.8 to 1.3.1 and automatically clean uploaded files (#4704, thanks @jedwatson)
+ * Update mongoose from  4.9.2 to  4.13.14 (#4701, thanks @stennie)
+ * Update qs from 4.0.0 to 6.5.2 (#4700, thanks @stennie)
+ * Add semver notations to dependencies (#4719, thanks @dominikwilkowski)
+Documentation updates:
+ * Update Getting Started page (#4708, thanks @stennie)
+ * Review & update Setting Up tutorials (#4721, thanks @nathansimpsondesign)
+ * Documented breaking change to pre:routes behaviour (thanks @blargity)
+ * Added more info on Application updates with required relationships (thanks @blargity)
+ * Fix incorrect ""Edit this page"" links (thanks @stennie)
  * Fix API doc 404s for deprecated File field types (thanks @stennie)"
 5,"Full Changelog | Documentation | Developer support | Bugs & feature suggestions | KeystoneJS Slack
+Bug fixes and improvements:
+ * Fix problem saving models with empty file fields in Safari (#4656, thanks @erikvdplas)
+ * Include Keystone.version in startup message (#4692, thanks @stennie)
+Dependency updates:
+ * A number of dependencies were updated to address warnings & deprecations:
+    * Update babel-core from 6.26.0 to 6.26.3
+    * Update brfs from 1.4.3 to 2.0.0
+    * Update browserify from 13.3.0 to 16.2.2
+    * Update cloudinary from 1.9.0 to 1.11.0
+    * Update debug from 2.6.8 to 3.1.0
+    * Update lodash from 4.17.4 to 4.17.10
+    * Update react-color from 2.13.8 to 2.14.1
+    * Update react-engine from 4.3.0 to 4.5.1
+    * Update superagent from 3.6.3 to 3.8.3
+Documentation updates:
+ * CloudinaryImage(s) fields were incorrectly marked as deprecated (#4686)
+ * Reorganise README and add table of contents
+ * Remove link to keystone-starter (outdated v0.3 demo)
+ * Use https links where available
+Testing and CI:
+ * Remove --growl from Mocha options","Full Changelog | Documentation | Developer support | Bugs & feature suggestions | KeystoneJS Slack
 Bug fixes and improvements:
  * Fix problem saving models with empty file fields in Safari (#4656, thanks @erikvdplas)
  * Include Keystone.version in startup message (#4692, thanks @stennie)
@@ -105,18 +176,173 @@ Documentation updates:
  * Fix typos in  yo-generator.md and application-updates.md  (#4581 & #4582, thanks @gsklee)
 Testing and CI:
  * Fix failing e2e and CI tests (#4643, thanks @dominikwilkowski, @vitalbone, and @stennie)
+ * Remove EOL Node releases from Travis testing (#4652)","Full Changelog | Documentation | Developer support | Bugs & feature suggestions | KeystoneJS Slack
+Bug fixes and improvements:
+ * Fix scrolling for modals in the Admin UI when content overflows (#4169, thanks @saul-mtz)
+ * Show color swatch on color field (#4662, thanks @mikehazell )
+ * Add new fields and call to the iFramely API instead of oEmbed (#4617, thanks @ticidesign)
+ * Add missing DayPicker-WeekdaysRow styling (#4601, thanks @jsundquist )
+ * Add iFramely field type (#4600, thanks @vitalbone)
+ * Replace hardcoded path breaking custom keystone.adminPath (#4586, thanks @radames)
+ * Fix for deleting the last relationship reference in > beta.5 (#4332, thanks @JedWatson)
+ * Implement image thumbnails for the File type (#4509, thanks @cadriel)
+ * Fix paginate to return on count error (#4167, thanks @ramonfritsch)
+ * Deprecate currency setting for Money fields (#4132, thanks @Noviny)
+ * Fix autocleanup for cloudinary fixes (#4205, thanks @Noviny)
+ * Fix custom nav links (#4387, thanks @frapan)
+ * Fix: model with required field that defaults to 0 can't be saved (#4397, thanks @jyrkive)
+Dependency updates:
+ * Upgrade Moment to address CVE-2017-18214 (#4592, thanks @DeviaVir)
+ * Optional: v2.0.0 release of keystone-storage-adapter-s3 which replaces knox with the official AWS JavaScript SDK (thanks @mikehazell)
+Documentation updates:
+ * Fix typography and Gatsby configuration (thanks @tuan23)
+ * Add documentation about customizing the navigation bar  (thanks Francesco Panciroli)
+ * Update Readme with Keystone 4 documentation references (#4666, thanks @stennie)
+ * Fix grammar in password field description (#4583, thanks @petertdinh)
+ * Fix typos in  yo-generator.md and application-updates.md  (#4581 & #4582, thanks @gsklee)
+Testing and CI:
+ * Fix failing e2e and CI tests (#4643, thanks @dominikwilkowski, @vitalbone, and @stennie)
  * Remove EOL Node releases from Travis testing (#4652)"
 7,"v4.0.0-beta.8
 Full Changelog
 
 Upgrade marked dependency from 0.3.6 to 0.3.9 (addresses CVE-2017-1000427), thanks Vito Belgiorno-Zegna
-"
+","v4.0.0-beta.8
+Full Changelog
+Upgrade marked dependency from 0.3.6 to 0.3.9 (addresses CVE-2017-1000427), thanks Vito Belgiorno-Zegna"
 8,"v4.0.0-beta.7
 Full Changelog
 
 Security hardening for sanitizing and escaping raw values (addresses CVE-2017-16570, CVE-2017-15878, and CVE-2017-15879), thanks John Molomby
-"
+","v4.0.0-beta.7
+Full Changelog
+Security hardening for sanitizing and escaping raw values (addresses CVE-2017-16570, CVE-2017-15878, and CVE-2017-15879), thanks John Molomby"
 9,"v4.0.0-beta.5
+Full Changelog
+Fixed bugs:
+- Admin UI renders save toolbar when noedit option is set on list #3644
+- Sub Menu randomly goes missing? #2883
+- [0.4] Keystone does not like String _id field #2234
+Closed issues:
+- Contact form 500 server error..  #3895
+- Dynamic Default Value #3885
+- node-sass not found. #3873
+- Cloudinary select fields break other Relationship fields when using select: true #3848
+- noedit URL fields are editable in initial create dialog #3841
+- Heroku Deployment Broken on 4.0.0-beta.4 (Node-sass & Node 6) #3835
+- Initial project setup error #3830
+- Keystonejs Show all posts created from specific year #3819
+- Get ObjectID by using key #3814
+- Kerberos causing 'npm install' to fail #3808
+- v4 is support Types.LocalFiles ? #3807
+- [4.0.0-beta.4] bug in displaying related models in admin UI #3805
+- Debug Mode #3799
+- Hide the Save button when noedit: true #3796
+- Error 500 at demo site  #3792
+- Models with Type String Being Ignored #3783
+- 4.0 Beta 4 - track {createdBy: 'author'} returns null #3780
+- sill doParallel extract 709 #3779
+-  KeyStoneJs hangs after starting on Redat7.1 #3770
+- how can I enable comment for post #3769
+- jade to pug deprecation #3751
+- Admin UI: item page RelatedItemsList not loaded #3739
+- 500 Error During CRUD #3735
+- Requesting npm version bump for 4.0.0 beta #3685
+- Roxy Fileman - a file browser #3677
+- Error when npm install kerberos@0.0.21  #3657
+- Post created, but fails to show details #3649
+- Admin UI: packages.js:165 Uncaught SyntaxError: Unexpected string #3642
+- Couldn't find preset ""react-app"" relative to directory ""/app"" while parsing file: /app/node_modules/redux-saga/effects.js #3624
+- Field type code does not respect noedit: true  #3619
+- Keystone doesn't work with server side react-router #3618
+- pug engine is not found #3610
+- Running Out of Memory on Small Servers #3609
+- App/site-wide Cloudinary image folder name #3504
+- Admin API: Update List Item Broken Due to CSRF Issue #3420
+Merged pull requests:
+- Retry e2e travis job once upon failure #3935 (webteckie)
+- Update mongoose to version 4.7.8 🚀 #3933 (greenkeeperio-bot)
+- Minor improvement to the handling of text indexes #3932 (molomby)
+- Update express-session to version 1.15.0 🚀 #3931 (greenkeeperio-bot)
+- Update enzyme to version 2.7.1 🚀 #3930 (greenkeeperio-bot)
+- fix(0.12 regression): remove arrow functions #3928 (bassjacob)
+- Update eslint to version 3.14.0 🚀 #3927 (greenkeeperio-bot)
+- Update babel-core to version 6.22.1 🚀 #3923 (greenkeeperio-bot)
+- Update babel-preset-stage-2 to version 6.22.0 🚀 #3922 (greenkeeperio-bot)
+- Update babel-preset-react to version 6.22.0 🚀 #3921 (greenkeeperio-bot)
+- Update babel-polyfill to version 6.22.0 🚀 #3920 (greenkeeperio-bot)
+- Update babel-preset-es2015 to version 6.22.0 🚀 #3919 (greenkeeperio-bot)
+- Update babel-plugin-transform-object-assign to version 6.22.0 🚀 #3918 (greenkeeperio-bot)
+- Update react-router to version 3.0.2 🚀 #3915 (greenkeeperio-bot)
+- Update redux-thunk to version 2.2.0 🚀 #3914 (greenkeeperio-bot)
+- Update body-parser to version 1.16.0 🚀 #3912 (greenkeeperio-bot)
+- Update letsencrypt-express to version 2.0.6 🚀 #3910 (greenkeeperio-bot)
+- Feature/healthchecks #3907 (bassjacob)
+- Replacing DB connection error event listener; allows recovery after DB connection failure #3906 (molomby)
+- Update redux-saga to version 0.14.3 🚀 #3902 (greenkeeperio-bot)
+- Update react-markdown to version 2.4.4 🚀 #3900 (greenkeeperio-bot)
+- Update object-assign to version 4.1.1 🚀 #3898 (greenkeeperio-bot)
+- Update mongoose to version 4.7.7 🚀 #3894 (greenkeeperio-bot)
+- Update mime-types to version 2.1.14 🚀 #3893 (greenkeeperio-bot)
+- Disable test functionality that does not seem to work well with latest browsers #3891 (webteckie)
+- Update must to version 0.13.4 🚀 #3890 (greenkeeperio-bot)
+- Fix(AdminUI) multiline Textarea noedit display #3888 (adrien-k)
+- Update react-markdown to version 2.4.3 🚀 #3883 (greenkeeperio-bot)
+- Update must to version 0.13.3 🚀 #3882 (greenkeeperio-bot)
+- Update superagent to version 3.3.2 🚀 #3878 (greenkeeperio-bot)
+- Update react-redux to version 5.0.2 🚀 #3876 (greenkeeperio-bot)
+- Update eslint to version 3.13.1 🚀 #3874 (greenkeeperio-bot)
+- Switch to updated version of keystone-nightwatch-e2e #3866 (jstockwin)
+- Update eslint-plugin-react to version 6.9.0 🚀 #3864 (greenkeeperio-bot)
+- Update redux-saga to version 0.14.2 🚀 #3863 (greenkeeperio-bot)
+- Ensure travis fails if e2e fails #3862 (jstockwin)
+- Update KNE version, start sauce_conncet manually #3858 (jstockwin)
+- Update eslint to version 3.13.0 🚀 #3855 (greenkeeperio-bot)
+- Update react to version 15.4.2 🚀 #3854 (greenkeeperio-bot)
+- Update react-dom to version 15.4.2 🚀 #3853 (greenkeeperio-bot)
+- Update react-addons-test-utils to version 15.4.2 🚀 #3852 (greenkeeperio-bot)
+- Update react-addons-css-transition-group to version 15.4.2 🚀 #3851 (greenkeeperio-bot)
+- fixes Cloudinary select fields break other Relationship fields when using select: true (#3848) #3849 (autoboxer)
+- Update react-color to version 2.11.1 🚀 #3847 (greenkeeperio-bot)
+- write keystone bundles to disk #3842 (bassjacob)
+- Update browserify to version 13.3.0 🚀 #3840 (greenkeeperio-bot)
+- Update mongoose to version 4.7.6 🚀 #3837 (greenkeeperio-bot)
+- Add filters to url params #3836 (Noviny)
+- Update lodash to version 4.17.4 🚀 #3833 (greenkeeperio-bot)
+- Update sinon to version 1.17.7 🚀 #3832 (greenkeeperio-bot)
+- Allow pre:admin configuration. #3831 (gemscng)
+- Update cloudinary to version 1.5.0 🚀 #3829 (greenkeeperio-bot)
+- Allow HTTP/2 with letsencrypt #3828 (wmertens)
+- Update debug to version 2.6.0 🚀 #3827 (greenkeeperio-bot)
+- Update vkey to version 1.0.1 🚀 #3826 (greenkeeperio-bot)
+- Update enzyme to version 2.7.0 🚀 #3818 (greenkeeperio-bot)
+- Update numeral to version 2.0.4 🚀 #3817 (greenkeeperio-bot)
+- Update debug to version 2.5.1 🚀 #3816 (greenkeeperio-bot)
+- WYSIWYG Editor doesn't refresh for dependsOn #3812 (AurelioDeRosa)
+- [Nested Lists] formatting #3810 (brianjd)
+- Update superagent to version 3.3.1 🚀 #3809 (greenkeeperio-bot)
+- Hide Save button when noedit: true #3797 (AurelioDeRosa)
+- Update debug to version 2.4.1 🚀 #3791 (greenkeeperio-bot)
+- fix(relationship-field): change button type #3789 (pavethiran)
+- Update react-redux to version 5.0.0 🚀 #3788 (greenkeeperio-bot)
+- Update eslint to version 3.12.1 🚀 #3787 (greenkeeperio-bot)
+- Update superagent to version 3.2.1 🚀 #3785 (greenkeeperio-bot)
+- Fix RelatedItemsList.js never loading related items #3782 (jstockwin)
+- Update react-engine to version 4.2.1 🚀 #3778 (greenkeeperio-bot)
+- [Nested Lists] Adds className and visual offset for list field for better UX. #3775 (jeremyzahner)
+- Update babel-polyfill to version 6.20.0 🚀 #3773 (greenkeeperio-bot)
+- Update babel-core to version 6.20.0 🚀 #3772 (greenkeeperio-bot)
+- Update mongoose to version 4.7.2 🚀 #3768 (greenkeeperio-bot)
+- Update numeral to version 2.0.1 🚀 #3767 (greenkeeperio-bot)
+- Webpackify Enable HMR for Signin & Fix react-hot-loader >= v3.0.0-beta.6 #3765 (jeremyzahner)
+- Update react-color to version 2.10.0 🚀 #3763 (greenkeeperio-bot)
+- Update ejs to version 2.5.5 🚀 #3762 (greenkeeperio-bot)
+- Update eslint-plugin-react to version 6.8.0 🚀 #3757 (greenkeeperio-bot)
+- Update csrf.js, fixes #3420 #3756 (uhhhh2)
+- Update moment to version 2.17.1 🚀 #3755 (greenkeeperio-bot)
+- Don't cache relationship options, fixes #3598 #3599 (LiquidHelium)
+- update handler handles having no req #3568 (Noviny)
+- Guide about how to build a blog with Keystone #3480 (ostruzina)","v4.0.0-beta.5
 Full Changelog
 Fixed bugs:
 - Admin UI renders save toolbar when noedit option is set on list #3644
@@ -374,6 +600,138 @@ Merged pull requests:
 - Update mocha to version 3.1.0 🚀 #3530 (greenkeeperio-bot)
 - Update es6-promise to version 4.0.2 🚀 #3527 (greenkeeperio-bot)
 - Update lodash to version 4.16.2 🚀 #3523 (greenkeeperio-bot)
+- Elemental Refactor #3472 (jossmac)","v4.0.0-beta.4
+Full Changelog
+Fixed bugs:
+- Saving TextArray fields with noedit: true loses data #3575
+- Relationship link to linked model page is broken #3528
+- Admin Pagination on a sortable list #3494
+- Restore support for CloudinaryImage publicId option #3440
+- 4.0-Beta-1: Updating password generates 500 error #3428
+- Management mode ""Select all"" only selects current page #3374
+- SSL: Make ""force"" actually work #3623 (wmertens)
+Closed issues:
+- Static Files 404 after Page Reload Every Time (ex: public/styles/site.css) #3692
+- node keystone error #3655
+- Admin API: Nested Objects Not Accessible On Returned Lists #3652
+- yo keystone command not found #3651
+- Proposal for array type #3646
+- Cannot overwrite model once compiled issue #3645
+- Unable to configure nav bar in Admin UI for CamelCase model names #3641
+- 0.3.x - set specific versions to dependencies #3640
+- Hi,  How I can use field Types.File for multiple files upload feature? #3620
+- version 4.0.0-beta.1  does not work in heroku #3593
+- regex not work in query of Keystonejs #3566
+- Documentation: There is no description about ""TextArray"" Type. #3562
+- WYSIWYG Editor doesn't refresh for dependsOn. (4.0.0-beta.3) #3551
+- Keystone admin loads very slowly after restart in production [bug] #3548
+- [4-beta.3] Creating a new item often fails.  #3545
+- Pagination doesn't work with deleting #3541
+- sortContext isn't implemented in v4 #3521
+- [v4.0.0-beta.2] initial noedit fields don't work #3495
+Merged pull requests:
+- Update react-color to version 2.9.0 🚀 #3753 (greenkeeperio-bot)
+- Update uglify-js to version 2.7.5 🚀 #3748 (greenkeeperio-bot)
+- Adding custom getData for password fields #3747 (JedWatson)
+- Update ejs to version 2.5.3 🚀 #3746 (greenkeeperio-bot)
+- Update eslint to version 3.11.1 🚀 #3745 (greenkeeperio-bot)
+- Update superagent to version 3.1.0 🚀 #3744 (greenkeeperio-bot)
+- Update eslint to version 3.11.0 🚀 #3743 (greenkeeperio-bot)
+- Update cloudinary to version 1.4.6 🚀 #3742 (greenkeeperio-bot)
+- Update cloudinary to version 1.4.5 🚀 #3741 (greenkeeperio-bot)
+- Update mocha to version 3.2.0 🚀 #3740 (greenkeeperio-bot)
+- Update numeral to version 1.5.6 🚀 #3738 (greenkeeperio-bot)
+- Update xhr to version 2.3.1 🚀 #3737 (greenkeeperio-bot)
+- Update mongoose to version 4.7.0 🚀 #3736 (greenkeeperio-bot)
+- Add missing x-ua-compatible meta tag #3733 (AurelioDeRosa)
+- Update react to version 15.4.1 🚀 #3732 (greenkeeperio-bot)
+- Update react-dom to version 15.4.1 🚀 #3731 (greenkeeperio-bot)
+- Update react-addons-test-utils to version 15.4.1 🚀 #3730 (greenkeeperio-bot)
+- Update async to version 2.1.4 🚀 #3727 (greenkeeperio-bot)
+- Update moment to version 2.17.0 🚀 #3726 (greenkeeperio-bot)
+- Update numeral to version 1.5.5 🚀 #3725 (greenkeeperio-bot)
+- Update xhr to version 2.3.0 🚀 #3723 (greenkeeperio-bot)
+- Update method-override to version 2.3.7 🚀 #3721 (greenkeeperio-bot)
+- [0.4]align handling in create api with update api #3720 (gemscng)
+- Update debug to version 2.3.3 🚀 #3717 (greenkeeperio-bot)
+- Update serve-favicon to version 2.3.2 🚀 #3711 (greenkeeperio-bot)
+- Update react-images to version 0.5.2 🚀 #3710 (greenkeeperio-bot)
+- Update errorhandler to version 1.5.0 🚀 #3704 (greenkeeperio-bot)
+- Update mongoose to version 4.6.8 🚀 #3700 (greenkeeperio-bot)
+- Update react-redux to version 4.4.6 🚀 #3697 (greenkeeperio-bot)
+- Update mongoose to version 4.6.7 🚀 #3687 (greenkeeperio-bot)
+- Update updtr to version 0.2.3 🚀 #3686 (greenkeeperio-bot)
+- Update debug to version 2.3.2 🚀 #3683 (greenkeeperio-bot)
+- Update aphrodite to version 1.1.0 🚀 #3679 (greenkeeperio-bot)
+- Update debug to version 2.3.0 🚀 #3678 (greenkeeperio-bot)
+- Update react-color to version 2.4.2 🚀 #3673 (greenkeeperio-bot)
+- Update scmp to version 1.0.2 🚀 #3671 (greenkeeperio-bot)
+- [WIP] Nested Lists #3668 (brianjd)
+- Update react-router-redux to version 4.0.7 🚀 #3667 (greenkeeperio-bot)
+- Update mongoose to version 4.6.6 🚀 #3666 (greenkeeperio-bot)
+- Get the e2e tests passing again #3665 (jstockwin)
+- Update scmp to version 1.0.1 🚀 #3663 (greenkeeperio-bot)
+- Update updtr to version 0.2.2 🚀 #3661 (greenkeeperio-bot)
+- Update babel-core to version 6.18.2 🚀 #3659 (greenkeeperio-bot)
+- Update fs-extra to version 1.0.0 🚀 #3656 (greenkeeperio-bot)
+- Update lodash to version 4.16.5 🚀 #3654 (greenkeeperio-bot)
+- Update express-session to version 1.14.2 🚀 #3653 (greenkeeperio-bot)
+- Fixes issue where host is undefined #3650 (LorbusChris)
+- E2e updates #3643 (webteckie)
+- Added documentation on uploading files. #3639 (blargity)
+- Update react-engine to version 4.2.0 🚀 #3637 (greenkeeperio-bot)
+- Update babel-preset-stage-2 to version 6.18.0 🚀 #3635 (greenkeeperio-bot)
+- Update babel-preset-es2015 to version 6.18.0 🚀 #3634 (greenkeeperio-bot)
+- Update babel-core to version 6.18.0 🚀 #3633 (greenkeeperio-bot)
+- Update mongoose to version 4.6.5 🚀 #3631 (greenkeeperio-bot)
+- Update uglify-js to version 2.7.4 🚀 #3630 (greenkeeperio-bot)
+- More improvements around e2e framework API consistency #3628 (webteckie)
+- Update browserify to version 13.1.1 🚀 #3627 (greenkeeperio-bot)
+- Update react-color to version 2.4.0 🚀 #3626 (greenkeeperio-bot)
+- Update supertest to version 2.0.1 🚀 #3622 (greenkeeperio-bot)
+- Update enzyme to version 2.5.1 🚀 #3615 (greenkeeperio-bot)
+- Update mongoose to version 4.6.4 🚀 #3613 (greenkeeperio-bot)
+- Update async to version 2.1.2 🚀 #3611 (greenkeeperio-bot)
+- Update express-request-language to version 1.1.8 🚀 #3608 (greenkeeperio-bot)
+- Update react-color to version 2.3.4 🚀 #3602 (greenkeeperio-bot)
+- Update letsencrypt-express to version 2.0.5 🚀 #3601 (greenkeeperio-bot)
+- Update async to version 2.1.1 🚀 #3596 (greenkeeperio-bot)
+- Support letsencrypt-express v2 #3594 (wmertens)
+- Update mocha to version 3.1.2 🚀 #3591 (greenkeeperio-bot)
+- Update mocha to version 3.1.1 🚀 #3588 (greenkeeperio-bot)
+- Update aphrodite to version 0.6.0 🚀 #3587 (greenkeeperio-bot)
+- Reimplement sortContext option #3585 (andrewlinfoot)
+- Refactor home screen tests #3584 (webteckie)
+- Update react-color to version 2.3.3 🚀 #3581 (greenkeeperio-bot)
+- New group for app level testing and misc refactoring #3579 (webteckie)
+- Update watch to version 1.0.1 🚀 #3577 (greenkeeperio-bot)
+- Update lodash to version 4.16.4 🚀 #3576 (greenkeeperio-bot)
+- Update react-day-picker to version 2.5.0 🚀 #3574 (greenkeeperio-bot)
+- Update watch to version 0.19.3 🚀 #3570 (greenkeeperio-bot)
+- clone Keystone.csrf.header before passing to xhr #3569 (benkroeger)
+- Leverage the latest PO api refactoring. #3561 (webteckie)
+- Update es6-promise to version 4.0.5 🚀 #3560 (greenkeeperio-bot)
+- Update codeclimate-test-reporter to version 0.4.0 🚀 #3558 (greenkeeperio-bot)
+- Update lodash to version 4.16.3 🚀 #3557 (greenkeeperio-bot)
+- Update es6-promise to version 4.0.4 🚀 #3556 (greenkeeperio-bot)
+- Update redux-saga to version 0.12.0 🚀 #3555 (greenkeeperio-bot)
+- Fix TinyMCE not showing bug in Html field when using new dependsOn format #3551 #3554 (stuartforster)
+- Update babel-preset-stage-2 to version 6.17.0 🚀 #3553 (greenkeeperio-bot)
+- Update babel-core to version 6.17.0 🚀 #3552 (greenkeeperio-bot)
+- Update core-assert to version 0.2.1 🚀 #3547 (greenkeeperio-bot)
+- Re-implement management mode ""Select All"", fixes #3374 #3546 (jstockwin)
+- Update sanitize-filename to version 1.6.1 🚀 #3544 (greenkeeperio-bot)
+- Fix re-ordering over multiple pages. Fixes #3494 #3543 (jstockwin)
+- Fix deleting items over multiple pages. Fixes #3541 #3542 (jstockwin)
+- Fix relationship links #3540 (jstockwin)
+- Update babel-preset-stage-2 to version 6.16.0 🚀 #3539 (greenkeeperio-bot)
+- Update babel-preset-react to version 6.16.0 🚀 #3538 (greenkeeperio-bot)
+- Update babel-preset-es2015 to version 6.16.0 🚀 #3537 (greenkeeperio-bot)
+- Update babel-core to version 6.16.0 🚀 #3536 (greenkeeperio-bot)
+- test(e2e): use improved po api #3531 (jstockwin)
+- Update mocha to version 3.1.0 🚀 #3530 (greenkeeperio-bot)
+- Update es6-promise to version 4.0.2 🚀 #3527 (greenkeeperio-bot)
+- Update lodash to version 4.16.2 🚀 #3523 (greenkeeperio-bot)
 - Elemental Refactor #3472 (jossmac)"
 11,"v4.0.0-beta.3
 Full Changelog
@@ -418,8 +776,86 @@ Merged pull requests:
 - Update react-router to version 2.8.0 🚀 #3470 (greenkeeperio-bot)
 - Update ejs to version 2.5.2 🚀 #3462 (greenkeeperio-bot)
 - Fixed the validateRequiredInput in the DateTime type. #3461 (johanjordaan)
+- Handle mongo error in ensureTextIndex #3458 (mikehazell)","v4.0.0-beta.3
+Full Changelog
+Fixed bugs:
+- [0.4] Create form with noedit set on the List #3466
+- Required DateTime and Boolean Fields not Validated Correctly #3460
+- [4.0.0-beta] Created At/Updated At times are not properly formatted.  #3456
+-  4.0-Beta-1: Location field does not get geo coordinates from google APIs  #3430
+- Replace jade with pug #2610
+Closed issues:
+- Fields with a filter of a relationship breaks filtering in columns #3512
+- Cannot get /keystone #3501
+- Relationships dropdown not displaying all elements #3493
+- Frontend use of CloudinaryImages after update #3492
+- Warning: connect.session() MemoryStore is not designed for a production environment, #3478
+- Using cloudinary causes blog posts to display [img] tags instead of image #3477
+- Warning from Chrome re: TinyMCE #3471
+- BUG: Admin UI intermittently does not display as categories  #3468
+- How to do auto close arc with codemirror editor? #3467
+Merged pull requests:
+- Update react-router-redux to version 4.0.6 🚀 #3518 (greenkeeperio-bot)
+- Update cloudinary to version 1.4.3 🚀 #3517 (greenkeeperio-bot)
+- Update react-color to version 2.3.1 🚀 #3516 (greenkeeperio-bot)
+- resolve issue #3512 #3513 (Noviny)
+- Update mongoose to version 4.6.1 🚀 #3511 (greenkeeperio-bot)
+- Update superagent to version 2.3.0 🚀 #3510 (greenkeeperio-bot)
+- Update browserify-middleware to version 7.1.0 🚀 #3509 (greenkeeperio-bot)
+- Update react to version 15.3.2 🚀 #3508 (greenkeeperio-bot)
+- Update react-addons-test-utils to version 15.3.2 🚀 #3507 (greenkeeperio-bot)
+- Update lodash to version 4.16.0 🚀 #3503 (greenkeeperio-bot)
+- Update sinon to version 1.17.6 🚀 #3502 (greenkeeperio-bot)
+- test(e2e): Use the new Admin UI List Screen Page Object API #3500 (webteckie)
+- Update mime-types to version 2.1.12 🚀 #3499 (greenkeeperio-bot)
+- Update react-color to version 2.3.0 🚀 #3497 (greenkeeperio-bot)
+- Add API File and Image Guide #3496 (christroutner)
+- Update cloudinary to version 1.4.2 🚀 #3491 (greenkeeperio-bot)
+- Update express-request-language to version 1.1.7 🚀 #3490 (greenkeeperio-bot)
+- Update es6-promise to version 3.3.1 🚀 #3485 (greenkeeperio-bot)
+- Update react-router to version 2.8.1 🚀 #3481 (greenkeeperio-bot)
+- Update moment to version 2.15.0 🚀 #3479 (greenkeeperio-bot)
+- Fixed the multiple calls to open event in openDataseConnection. #3474 #3475 (johanjordaan)
+- Update react-router to version 2.8.0 🚀 #3470 (greenkeeperio-bot)
+- Update ejs to version 2.5.2 🚀 #3462 (greenkeeperio-bot)
+- Fixed the validateRequiredInput in the DateTime type. #3461 (johanjordaan)
 - Handle mongo error in ensureTextIndex #3458 (mikehazell)"
 12,"v4.0.0-beta.2
+Full Changelog
+Implemented enhancements:
+- Add flexibility for CSV exporting #3435
+- Display fields of relationship field in Admin UI? #3417
+- Nested lists addendum #3403 (wmertens)
+Fixed bugs:
+- Field errors in s3 file upload #3345
+- download/export of Markdown fields is empty if HTML doesn't exist #3001
+- UpdateItem: fix error callbacks #3419 (wmertens)
+Closed issues:
+- Issue upgrading project to Keystone 4.0 #3454
+- 4.0 Beta 1 - Pre/Post save hook, this._user and createdBy returns undefined #3446
+- Unable to rename User model #3445
+- Admin API: Non-Admin users can not get(/keystone/api/{list}) #3438
+- v4.0.0-beta Cannot find module underscore on fresh npm install #3432
+- How can I create a new page in Admin UI? #3424
+- Admin API: /api/session does not follow spec #3421
+- Happy Birthday Jed! 🎉 #3412
+- e2e: refactor #3359
+- Version 0.4.0 #1612
+Merged pull requests:
+- Update redux to version 3.6.0 🚀 #3455 (greenkeeperio-bot)
+- Update mongoose to version 4.6.0 🚀 #3451 (greenkeeperio-bot)
+- include user object in updateItem options #3450 (benkroeger)
+- Keystone nightwatch e2e #3449 (jstockwin)
+- Use common prototypeMethods from keystone-storage-namefunctions package #3444 (JedWatson)
+- removed call to populate createdBy and updatedBy fields in api/item/get #3443 (mikehazell)
+- Add generateFilename api for CloudinaryImage #3441 (andrewlinfoot)
+- New CSV Features #3436 (JedWatson)
+- E2e refactor #3429 (webteckie)
+- redux-saga@0.11.1 #3426 (greenkeeperio-bot)
+- Update keystone-email to version 1.0.5 🚀 #3423 (greenkeeperio-bot)
+- Update react-color to version 2.2.6 🚀 #3422 (greenkeeperio-bot)
+- Update babel-preset-es2015 to version 6.14.0 🚀 #3418 (greenkeeperio-bot)
+- Update babel-core to version 6.14.0 🚀 #3416 (greenkeeperio-bot)","v4.0.0-beta.2
 Full Changelog
 Implemented enhancements:
 - Add flexibility for CSV exporting #3435
@@ -747,8 +1183,311 @@ Merged pull requests:
 - Update body-parser to version 1.15.2 🚀 #3056 (greenkeeperio-bot)
 - Update uglify-js to version 2.6.3 🚀 #3055 (greenkeeperio-bot)
 - New Storage API + File FieldType #3052 (JedWatson)
+- Fix array fields behaviour #2865 #2933 (jstockwin)","v4.0.0-beta.1
+Full Changelog
+Implemented enhancements:
+- Close ConfirmationModal with ESC #3375
+- add to Color field property color format (default: 'hex', 'rgb', 'rgba', 'hsl') #3166
+- Resolve Filter Labels in the Admin UI #3122
+- Review .eslintrc #1797
+- New List / Item Update method #1705
+- Add support for nodemailer #250
+Fixed bugs:
+- When navigation back from item view go to same page #3407
+- Filters can't be filled in, modal disappears on keypress #3404
+- Links to relationships are HTML links #3381
+- TinyMCE throws when navigating away from item #3379
+- CloudinaryImageField throws an error when creating a new item #3378
+- Modal renders raw HTML #3376
+- Navigating back to list sometimes hangs #3369
+- Module error in v0.4.0-alpha #3365
+- Removing ?search for URL in Lists doesn't clear the search #3357
+- Search fires request with every keypress #3338
+- error building - Unknown plugin ""add-module-exports"" #3329
+- [0.4] admin double tapping loadItem calls, triple tapping on a direct load to  keystone/list?search=xyz URI #3310
+- [0.4] It is possible to create an item in nocreate list #3284
+- Move selenium out of repo #3275
+- Search box disappears after not founding something #3260
+- Boolean field lost field-type and for attributes #3227
+- Error on signin #3222
+- TypeError: Cannot supply flags when constructing one RegExp from another #3207
+- [0.4] Cannot create new items #3203
+- Exception happen if col.type is id #3190
+- Navigating to /keystone/signin throws error #3184
+- Columns.unrecognised is not defined. #3157
+- ArrayField #3130
+- Emptying search box clears UI when empty search #3117
+- Editor custom admin path is not set #3112
+- res.apiError is not a function after commit #22076e6c2be4df #3111
+- Unable to edit boolean values v0.3.19 #3050
+- [v0.4] Boolean fields with noedit:false and hidden:true do not retain value #3029
+- Option createInline: true breaks admin ui #3028
+- unable to send emails with twig (and possibly other template engines besides jade) #3020
+- Cannot edit items if property type is Types.Html #2998
+- Keystone.email rewrites to: argument #2984
+- [v0.4] Loading forever in list screen without default columns #2945
+- Relationship links are broken #2940
+- getUpdateHandler returns incorrect errors from validation #2923
+- The ui with TextArray type doesn't work well. #2865
+- TinyMCE Spellchecker Plugin 404 #2818
+- Node 6 support: node-bufferstream #2807
+- Upgrade react-color #2804
+- Error: Cannot find module 'connect-mongo/es5' #2775
+- Sign in redirects don't work on test server restart #2773
+- 0.4: email error validation popup #1867
+- Email helper fails when utilizing Nunjucks templates + Fix #1663
+- Handle popout position based on viewport dimensions #1647
+- Keystone Admin UI not always loading CSS #1295
+- Putting TextArray/NumberArray field on initial true blocks creation dialog in AdminUI #1031
+- Make DateColumn linkable #3295 (wmertens)
+- Allow select type to link to item in column #3289 (wmertens)
+- Fix #3207 #3211 (jannispl)
+Closed issues:
+- Uncaught ReferenceError: babelHelpers is not defined #3367
+- Got ""error building FieldTypes:..."" with latest keystone(0.4.0-alph) #3350
+- UpdateHandler Update for 0.4 #3319
+- Replace keystone.Email with keystone-email package #3303
+- how to add rbac for keystone? #3299
+- Add hoooks to allow customization of the admin #3298
+- Why Admin UI loading slowly, how to solve? #3297
+- Possible bug regarding the ""nav"" config object #3287
+- [0.4] Add keystone to an existing Express app, /keystone route returns 404 #3271
+- Cloudinaryimage/s fields need to be updated to new spec #3269
+- File field doesn't reset state after upload #3268
+- Broken version on npm (0.3.22?) #3263
+- node_modules size #3259
+- TypeError: Cannot read property 'assert' of undefined #3250
+- fields.js:7784 Uncaught ReferenceError: _ is not defined #3241
+- Add READMEs to applicable fields #3192
+- how to use v 4.0 #3179
+- Admin interface / Babel transform-class-properties error #3178
+- Deploy to Heroku button not working #3176
+- Path the admin files are hardcoded #3168
+- Replace Jade Admin UI Templates with EJS #3155
+- Question about keystone core #3153
+- 请问keystone有没有自身的角色管理系统，如果没有，需要怎么做 #3148
+- How to add a user role management #3147
+- Admin interface errors #3143
+- How set right timezone? #3140
+- Remove opinionated server-side React rendering #3096
+- [v0.4] Incorrect error on accessing ID on admin UI #3092
+- Sauce labs configuration is breaking build #3057
+- Knox in KeystoneJS  throws  error code 307 for amazon S3   #3054
+- Minified exception in admin UI #3042
+- npm start stops with ReferenceError: bind is not defined #3010
+- Admin UI: Lookup values for related collection #2992
+- signin csrf error #2982
+- Sort from the owner side of a relationship #2979
+- pre:routes middleware not working in admin pages #2974
+- keystone.routes missing in alpha? #2817
+- MailChimp instead of Mandrill #2769
+- Admin Interface Cleanup #2652
+- Render HTML5 input element types: color, date, time #2636
+- _req_user is undefined on pre/post remove hooks #1857
+- Refactor out field type switch statements #1150
+Merged pull requests:
+- Fix focus on item view #3414 (mxstbr)
+- Fix autocreates #3411 (mxstbr)
+- Link to previous list page from item view breadcrumb #3409 (mxstbr)
+- Add markdown and embedly field default value #3408 (mxstbr)
+- Fix hook errors (again) #3406 (mxstbr)
+- Fix filter popout closing when any button is pressed #3405 (mxstbr)
+- Update express-session to version 1.14.1 🚀 #3402 (greenkeeperio-bot)
+- Make name field sort-, filter- and columnable #3396 (mxstbr)
+- Making tracking fields visible (enables columns and filtering) #3395 (JedWatson)
+- Update mongoose to version 4.5.10 🚀 #3394 (greenkeeperio-bot)
+- Fix field defaults #3393 (JedWatson)
+- Fix deleting multiple items at once #3392 (mxstbr)
+- Close mobile nav when clicking on item #3391 (mxstbr)
+- Remove unnecessary console.log #3390 (mxstbr)
+- Display error when going to invalid list path #3389 (mxstbr)
+- Update nightwatch to version 0.9.8 🚀 #3388 (greenkeeperio-bot)
+- Better keyboard handling #3387 (mxstbr)
+- Fix ConfirmationDialog on ListView showing raw HTML #3386 (mxstbr)
+- Make links to related lists client-side #3385 (mxstbr)
+- Fix warnings #3382 (mxstbr)
+- Add keyboard shortcut for Create Modal #3372 (mxstbr)
+- Fix all the redux bugs #3371 (mxstbr)
+- Update keystone-email to version 1.0.1 🚀 #3370 (greenkeeperio-bot)
+- Update istanbul to version 0.4.5 🚀 #3368 (greenkeeperio-bot)
+- fix: popout animation flicker #3366 (jossmac)
+- Update react-images to version 0.5.1 🚀 #3364 (greenkeeperio-bot)
+- CreateForm: use autoFocus and don't crash #3363 (wmertens)
+- Update react-router to version 2.7.0 🚀 #3362 (greenkeeperio-bot)
+- Get rid of ModalBody children propType warnings #3358 (mxstbr)
+- include react-images in packages.js #3352 (benkroeger)
+- Remove e2e chrome drivers from repo, and update readme #3351 (jstockwin)
+- Fix pagination #3349 (mxstbr)
+- switch to aphrodite/no-important #3346 (benkroeger)
+- Redux fixes Round 2 #3344 (gwyneplaine)
+- Fix pre:validate errors not displaying #3343 (mxstbr)
+- Switch Keystone.Email to use keystone-email package #3342 (mxstbr)
+- test(e2e):  refactor #3341 (webteckie)
+- Update uglify-js to version 2.7.3 🚀 #3339 (greenkeeperio-bot)
+- Update uglify-js to version 2.7.2 🚀 #3336 (greenkeeperio-bot)
+- Add ability to quickly select all or no columns for download #3335 (mxstbr)
+- Full text search #3334 (mxstbr)
+- Update letsencrypt-express to version 2.0.2 🚀 #3332 (greenkeeperio-bot)
+- fix (ArrayField): fix issue missing _ when removing item #3331 (phucpnt)
+- Update nightwatch to version 0.9.7 🚀 #3328 (greenkeeperio-bot)
+- Fixed react error #3327 (mxstbr)
+- Update watch to version 0.19.2 🚀 #3326 (greenkeeperio-bot)
+- Updatehandler rewrite #3322 (JedWatson)
+- Make sure e2e run green #3321 (webteckie)
+- Update mongoose to version 4.5.9 🚀 #3315 (greenkeeperio-bot)
+- Update uglify-js to version 2.7.1 🚀 #3314 (greenkeeperio-bot)
+- List refactor #3311 (jossmac)
+- Update superagent to version 2.2.0 🚀 #3309 (greenkeeperio-bot)
+- Update react-engine to version 4.1.0 🚀 #3305 (greenkeeperio-bot)
+- Update lodash to version 4.15.0 🚀 #3304 (greenkeeperio-bot)
+- Max character option added for password field #3302 (ostruzina)
+- Document keystone.Storage and FS adapter #3301 (mxstbr)
+- Adding support for binding express.Router with keystone.set('routes') #3293 (JedWatson)
+- Adding missing docs for geoPoint, dateArray and numberArray #3292 (ostruzina)
+- Update lodash to version 4.14.2 🚀 #3290 (greenkeeperio-bot)
+- Update mocha to version 3.0.2 🚀 #3288 (greenkeeperio-bot)
+- Update babel-preset-es2015 to version 6.13.2 🚀 #3286 (greenkeeperio-bot)
+- Update babel-core to version 6.13.2 🚀 #3285 (greenkeeperio-bot)
+- Update Cloudinary Fields #3283 (mxstbr)
+- Implement smooth scrolling after updating an item #3280 (dariasamo)
+- Correctly show new filename when upload has finished #3279 (mxstbr)
+- Removed most of azure from dependancies #3274 (josephg)
+- disable ""back url"" icon in main navigation via config #3270 (benkroeger)
+- Update mocha to version 3.0.1 🚀 #3266 (greenkeeperio-bot)
+- Update elemental to version 0.6.1 🚀 #3265 (greenkeeperio-bot)
+- Field type readme files updated with information from current docs #3261 (ostruzina)
+- Relationship Field: Fix inline create popup close #3258 (wmertens)
+- Make sure e2e run green #3256 (webteckie)
+- Update mongoose to version 4.5.8 🚀 #3253 (greenkeeperio-bot)
+- Fixes #3250 by binding proper this #3251 (dbachko)
+- Redux fixes #3248 (gwyneplaine)
+- Update mocha to version 3.0.0 🚀 #3247 (greenkeeperio-bot)
+- Add lodash import to RelationshipField, resolve #3241 #3244 (chrisslater)
+- Update react-day-picker to version 2.4.1 🚀 #3243 (greenkeeperio-bot)
+- Update react-day-picker to version 2.4.0 🚀 #3242 (greenkeeperio-bot)
+- Update nightwatch to version 0.9.6 🚀 #3240 (greenkeeperio-bot)
+- Update react-engine to version 4.0.1 🚀 #3239 (greenkeeperio-bot)
+- Update marked to version 0.3.6 🚀 #3238 (greenkeeperio-bot)
+- Update react-router to version 2.6.1 🚀 #3237 (greenkeeperio-bot)
+- Update react-addons-css-transition-group to version 15.3.0 🚀 #3236 (greenkeeperio-bot)
+- react-addons-test-utils@15.3.0 breaks build 🚨 #3235 (greenkeeperio-bot)
+- Update react to version 15.3.0 🚀 #3234 (greenkeeperio-bot)
+- Update react-dom to version 15.3.0 🚀 #3233 (greenkeeperio-bot)
+- fix linter errors, I'm a little OCD #3230 (pr1ntr)
+- Bugfix-3112 Admin path added to editable options #3229 (jankei)
+- implement fix to determine whether input param is string or object an… #3226 (pr1ntr)
+- Update react-color to version 2.2.2 🚀 #3224 (greenkeeperio-bot)
+- Update sinon to version 1.17.5 🚀 #3219 (greenkeeperio-bot)
+- Feature/password complexity #3218 (dariasamo)
+- Update elemental to version 0.6.0 🚀 #3217 (greenkeeperio-bot)
+- Update react-color to version 2.2.1 🚀 #3216 (greenkeeperio-bot)
+- Update browserify to version 13.1.0 🚀 #3215 (greenkeeperio-bot)
+- Update embedly to version 2.1.0 🚀 #3214 (greenkeeperio-bot)
+- ejs@2.5.1 breaks build ⚠️ #3213 (greenkeeperio-bot)
+- Use autoFocus where possible #3212 (wmertens)
+- Removing hardcoded keystone references in the API #3210 (jannispl)
+- Update mongoose to version 4.5.7 🚀 #3208 (greenkeeperio-bot)
+- Fix getting data from create form #3206 (wmertens)
+- Update lodash to version 4.14.0 🚀 #3204 (greenkeeperio-bot)
+- Update mongoose to version 4.5.6 🚀 #3202 (greenkeeperio-bot)
+- Update range_check to version 1.4.0 🚀 #3201 (greenkeeperio-bot)
+- Update async to version 2.0.1 🚀 #3198 (greenkeeperio-bot)
+- Update rimraf to version 2.5.4 🚀 #3197 (greenkeeperio-bot)
+- Fix Fields for using new API [WiP] #3196 (wmertens)
+- Update xhr to version 2.2.2 🚀 #3195 (greenkeeperio-bot)
+- Fix relationship inital display on v0.3.x #3194 (mxstbr)
+- Add close database connection function #3191 (Noviny)
+- ItemsTableRow to handles 'id' columns #3188 (Noviny)
+- Update aphrodite to version 0.5.0 🚀 #3185 (greenkeeperio-bot)
+- Update must to version 0.13.2 🚀 #3181 (greenkeeperio-bot)
+- Update codemirror to version 5.17.0 🚀 #3177 (greenkeeperio-bot)
+- Update react-router to version 2.6.0 🚀 #3174 (greenkeeperio-bot)
+- connect-mongo: Reuse the mongoose connection #3172 (wmertens)
+- Update mongoose to version 4.5.5 🚀 #3171 (greenkeeperio-bot)
+- Get path from admin path parameter #3169 (jankei)
+- Fix user display in footer #3167 (mxstbr)
+- Allow local connections without forcing SSL #3165 (wmertens)
+- Update semver to version 5.3.0 🚀 #3161 (greenkeeperio-bot)
+- Added minimum character validation #3159 (ostruzina)
+- Temporarily skip failing test #3156 (jstockwin)
+- Update blacklist to version 1.1.4 🚀 #3152 (greenkeeperio-bot)
+- Update mongoose to version 4.5.4 🚀 #3146 (greenkeeperio-bot)
+- Fix GitHub brand typo #3144 (montogeek)
+- Let's Encrypt support for v0.3 #3142 (wmertens)
+- Add README to admin/client #3141 (mxstbr)
+- Update react to version 15.2.1 🚀 #3139 (greenkeeperio-bot)
+- react-addons-test-utils@15.2.1 breaks build ⚠️ #3138 (greenkeeperio-bot)
+- Update react-dom to version 15.2.1 🚀 #3137 (greenkeeperio-bot)
+- Update react-addons-css-transition-group to version 15.2.1 🚀 #3136 (greenkeeperio-bot)
+- Update enzyme to version 2.4.1 🚀 #3135 (greenkeeperio-bot)
+- Update xhr to version 2.2.1 🚀 #3134 (greenkeeperio-bot)
+- 🔒 Add automated Let's Encrypt support 🎉 #3133 (wmertens)
+- Update enzyme to version 2.4.0 🚀 #3132 (greenkeeperio-bot)
+- Max characters validation added #3131 (dariasamo)
+- Testing #3129 (mxstbr)
+- Enhancement: Filter Labels #3128 (jossmac)
+- Fields explorer #3125 (JedWatson)
+- Changing case sensitivity of ""exact"" filters to fix performance issues on large lists #3123 (molomby)
+- Update less-middleware to version 2.2.0 🚀 #3120 (greenkeeperio-bot)
+- More tests #3119 (mxstbr)
+- Update react-day-picker to version 2.3.3 🚀 #3118 (greenkeeperio-bot)
+- Update moment to version 2.14.1 🚀 #3116 (greenkeeperio-bot)
+- Update moment to version 2.14.0 🚀 #3115 (greenkeeperio-bot)
+- Update rimraf to version 2.5.3 🚀 #3114 (greenkeeperio-bot)
+- Update uglify-js to version 2.7.0 🚀 #3113 (greenkeeperio-bot)
+- Update express-session to version 1.14.0 🚀 #3110 (greenkeeperio-bot)
+- Update react to version 15.2.0 🚀 #3107 (greenkeeperio-bot)
+- react-addons-test-utils@15.2.0 breaks build 🚨 #3106 (greenkeeperio-bot)
+- Update react-dom to version 15.2.0 🚀 #3105 (greenkeeperio-bot)
+- Update react-addons-css-transition-group to version 15.2.0 🚀 #3104 (greenkeeperio-bot)
+- Update react-router to version 2.5.2 🚀 #3103 (greenkeeperio-bot)
+- Update react-engine to version 4.0.0 🚀 #3101 (greenkeeperio-bot)
+- More testing #3100 (mxstbr)
+- Update react-day-picker to version 2.3.2 🚀 #3099 (greenkeeperio-bot)
+- Update mongoose to version 4.5.3 🚀 #3098 (greenkeeperio-bot)
+- Fine-tune uglify settings #3097 (wmertens)
+- Update react-day-picker to version 2.3.1 🚀 #3095 (greenkeeperio-bot)
+- Address more review comments.  Fix the link for the Reference Field c… #3093 (webteckie)
+- Update updtr to version 0.2.1 🚀 #3091 (greenkeeperio-bot)
+- Update embedly to version 2.0.2 🚀 #3090 (greenkeeperio-bot)
+- Update semver to version 5.2.0 🚀 #3089 (greenkeeperio-bot)
+- #3011 | Fix Date format option bug #3085 (autoboxer)
+- Update babel-preset-react to version 6.11.1 🚀 #3084 (greenkeeperio-bot)
+- Update babel-preset-react to version 6.11.0 🚀 #3082 (greenkeeperio-bot)
+- Update nightwatch to version 0.9.5 🚀 #3080 (greenkeeperio-bot)
+- Update mongoose to version 4.5.2 🚀 #3079 (greenkeeperio-bot)
+- Repeated subexpressions in DomParser.js #3078 (kilida)
+- First admin interface tests #3077 (mxstbr)
+- Update color to version 0.11.3 🚀 #3076 (greenkeeperio-bot)
+- Update react-router to version 2.5.1 🚀 #3074 (greenkeeperio-bot)
+- Update updtr to version 0.2.0 🚀 #3073 (greenkeeperio-bot)
+- Update semver to version 5.1.1 🚀 #3072 (greenkeeperio-bot)
+- Update react-router to version 2.5.0 🚀 #3070 (greenkeeperio-bot)
+- Update cloudinary to version 1.4.1 🚀 #3069 (greenkeeperio-bot)
+- Update uglify-js to version 2.6.4 🚀 #3066 (greenkeeperio-bot)
+- Update babel-core to version 6.10.4 🚀 #3065 (greenkeeperio-bot)
+- Update color to version 0.11.2 🚀 #3064 (greenkeeperio-bot)
+- Update watch to version 0.19.1 🚀 #3062 (greenkeeperio-bot)
+- Update eslint to version 2.13.1 🚀 #3061 (greenkeeperio-bot)
+- Update istanbul to version 0.4.4 🚀 #3060 (greenkeeperio-bot)
+- Implement item not found error handling #3059 (mxstbr)
+- Update codemirror to version 5.16.0 🚀 #3058 (greenkeeperio-bot)
+- Update body-parser to version 1.15.2 🚀 #3056 (greenkeeperio-bot)
+- Update uglify-js to version 2.6.3 🚀 #3055 (greenkeeperio-bot)
+- New Storage API + File FieldType #3052 (JedWatson)
 - Fix array fields behaviour #2865 #2933 (jstockwin)"
 14,"v0.3.21 (2016-06-19)
+Full Changelog
+Fixed bugs:
+- Error when non-existent IDs requested #2846
+Closed issues:
+- Unable to configure Jade options #2614
+Merged pull requests:
+- Update mongoose to version 4.5.1 🚀 #3053 (greenkeeperio-bot)
+- Update eslint-plugin-react to version 5.2.2 🚀 #3051 (greenkeeperio-bot)
+- Update eslint to version 2.13.0 🚀 #3049 (greenkeeperio-bot)
+- Update eslint-config-keystone to version 2.4.0 🚀 #3046 (greenkeeperio-bot)
+- Add custom token support for morgan log middleware #3040 (wangshijun)","v0.3.21 (2016-06-19)
 Full Changelog
 Fixed bugs:
 - Error when non-existent IDs requested #2846
@@ -983,5 +1722,228 @@ Merged pull requests:
 - modified x-array items behavior to be consistent with #2721 #2763 (suryagh)
 - Update embedly to version 2.0.1 🚀 #2761 (greenkeeperio-bot)
 - test(e2e): Fix code field's assertInput command #2758 (jstockwin)
+- [WIP] Admin Interface Refactor #2566 (mxstbr)","v0.3.20 (2016-06-17)
+Full Changelog
+Implemented enhancements:
+- 0.4:  CodeMirror support enhancement plan #1979
+Fixed bugs:
+- Cannot find module '../../fields/types/wysiwyg/trueColumn #3033
+- [0.4] Admin UI 404 polls backend #3013
+- fileName option ignored for Types.LocalFile ? #2991
+- [v0.3] Boolean fields with noedit:false and hidden:true do not retain value #2946
+- [0.4] dependsOn does not initialize correctly in create dialog #2929
+- Inherited list model items do not correct data #2917
+- Models can't have a field named list #2871
+- DateArrays don't work when set to initial #2858
+- Option createInline: true breaks admin ui #2855
+- [0.4] WYSIWYG editor breaks in Firefox if shown and hidden twice #2834
+- Reordering of sortable Lists is broken #2831
+- Fields pull in all of lodash #2828
+- Create Keystone Unexpected token error. #2820
+- Validation errors don't show in the admin ui #2808
+- Keystone.lists.map is not a function #2803
+- Update kerberos to 0.0.21 for node 6.0 #2798
+- Password errors are less informative #2782
+- Node 6 support #2759
+- Signin redirect not working #2753
+- No 'for' property set in the datetime html #2715
+- Date resets in Datetime field on admin panel #2401
+- [0.4]:  the % pipe does not work for registered default columns #2040
+- User session does not survive browser close #1895
+- [0.4] Implement column width configuration via Schema #1853
+- DateTime field type timezone bug #1345
+Closed issues:
+- Ability to set the admin key of a list to something other than 'name' #3034
+- format option not working for Datetime type #3030
+- Image upload failed - Amazon returned Http Code: 307 #3024
+- Admin bundle pulls in loadash (despite it being excluded) #3023
+- Update on 0.4 branch #3022
+- No Field type for multiple string inputs used as tagging #3017
+- format option not working for Date type #3011
+- Deply to heroku #3009
+- Angular 2 and sailsjs support #3006
+- Crash on fresh install #3004
+- Boolean set to false if set as hidden! Serious Bug. #2999
+- DateTime through TimeZone #2995
+- Reorder or sort uploaded files in Admin UI #2990
+- how to add sitemap in keystonejs? #2988
+- Error Start on Window OS #2985
+- Relationships and Polymorphism (Inherits functionality too limited) #2978
+- When changing view to twig during yo install the view engine is still set to jade. #2967
+- .contains is not a function on S3FileType #2966
+- relative path for static files in subpages  #2956
+- move auth from cookie to token #2952
+- Cloudinary image album delete not working #2951
+- Customize admin ui with current react-router structure #2948
+- Error on saving boolean required fields through admin UI #2939
+- Installation failed with ""yo keystone"" #2930
+- Invalid name: ""@jedwatson/react-color"" #2927
+- Task 'watch:lint' is not in your gulpfile #2924
+- fs: re-evaluating native module sources is not supported. graceful-fs #2922
+- Cloudinary Image not Displaying #2920
+- 'Deploy to heroku' fails with Application Error, App crahshed #2916
+- Option to stop Less compiling for admin UI in production #2896
+- Deploying on Elastic Beanstalk #2893
+- ### #2892
+- ### #2890
+- npm start doesn't work #2889
+- LocalFiles field incorrectly handles multiple files upload #2876
+- Jumpy Nav #2874
+- UI Alignment #2873
+- MissingSchemaError: Schema hasn't been registered for model ""content"". #2869
+- KeystoneJS watch:lint is not in your gulpfile #2851
+- Cloudinary Images not updating when save. #2849
+- Preview pages/content #2848
+- Field Types should be loaded from the external bundle #2840
+- Date in admin ui resetting on save #2836
+- /admin/public/js/packages.js #2830
+- How to debug Keystone.js #2819
+- Proposal: keystone.group(pathExpression,pathController); #2815
+- Problem with required initial noedit fields #2814
+- Better documentation/error handling regarding relationship paths #2812
+- Change Admin UI login image #2800
+- easy way to re-enable email functionality #2799
+- Display virtual properties in admin #2792
+- Foundation generated app.css throws server error #2787
+- UX/Security on fresh installation (yo generator) #2786
+- RFC: replace swig with Twig.js #2784
+- error loading bson cpp module with non root user, even when started as sudo #2779
+- dependsOn with Types.Boolean and nested fields. #2778
+- mailgun support defaulting to jade, ignoring ""custom engine"" #2767
+- possible to store an array of child list items in a list, and have the child list hidden from admin interface? #2766
+- post:routes hook missing #2756
+- Item list column widths #1660
+Merged pull requests:
+- Update eslint-plugin-react to version 5.2.1 🚀 #3048 (greenkeeperio-bot)
+- Update express to version 4.14.0 🚀 #3047 (greenkeeperio-bot)
+- Update nightwatch to version 0.9.4 🚀 #3045 (greenkeeperio-bot)
+- Update codeclimate-test-reporter to version 0.3.3 🚀 #3039 (greenkeeperio-bot)
+- Supports showing pdf thumbnails in the AdminUI #3037 (danielmahon)
+- Update mongoose to version 4.5.0 🚀 #3036 (greenkeeperio-bot)
+- Fix Datetime format option #3032 (autoboxer)
+- Fix date and datearray e2e tests #3027 (jstockwin)
+- Misc fixes to CloudinaryImagesType.js #3025 (jstockwin)
+- Fixes problem with cloudinary.url formats #3021 (danielmahon)
+- Update eslint to version 2.12.0 🚀 #3019 (greenkeeperio-bot)
+- Update eslint-config-keystone to version 2.3.1 🚀 #3018 (greenkeeperio-bot)
+- Update eslint-config-keystone to version 2.3.0 🚀 #3014 (greenkeeperio-bot)
+- #3011 | Fix Date format option bug #3012 (autoboxer)
+- Update nightwatch to version 0.9.3 🚀 #3008 (greenkeeperio-bot)
+- Fix bug in fullscreen TinyMCE #3007 (TSFoster)
+- Update codeclimate-test-reporter to version 0.3.2 🚀 #3005 (greenkeeperio-bot)
+- Fix issue with the secondary nav bar disappearing. #2997 (webteckie)
+- Fix error during creation of a localfile field. #2996 (webteckie)
+- Misc fixes and improvements #2994 (webteckie)
+- Fix bug while checking for allowed S3 filetypes #2989 (TSFoster)
+- Set next list upon transitioning to another item #2986 (webteckie)
+- Update bytes to version 2.4.0 🚀 #2983 (greenkeeperio-bot)
+- Log a more useful message if an invalid list default column is specified #2977 (webteckie)
+- Update eslint to version 2.11.1 🚀 #2976 (greenkeeperio-bot)
+- Update history to version 3.0.0 🚀 #2975 (greenkeeperio-bot)
+- Add 'list' to the list of reserved words #2973 (webteckie)
+- #2561 | Inherited Users can't log in #2972 (autoboxer)
+- Update babel-core to version 6.9.1 🚀 #2971 (greenkeeperio-bot)
+- Replace double slashes with single ones when mounting keystone on existing express app #2970 (johnnycrab)
+- Update nightwatch to version 0.9.1 🚀 #2965 (greenkeeperio-bot)
+- Configurable codemirror bundle path #2964 (webteckie)
+- Fix drag & drop of lists on admin UI #2963 (TSFoster)
+- Update eslint to version 2.11.0 🚀 #2962 (greenkeeperio-bot)
+- Replace options() from keystone-utils with .defaults #2960 (geloescht)
+- Fix no default columns #2959 (geloescht)
+- Update cookie-parser to version 1.4.3 🚀 #2958 (greenkeeperio-bot)
+- Cookie signin persistent across subdomains #2955 (jacargentina)
+- Fix checkKeystoneReady() when using KEYSTONEJS_PORT env variable por … #2953 (jacargentina)
+- Fix typo in RelationshipField (fixes #2855) #2950 (geloescht)
+- Add e2e testing to demonstrate #2945 #2947 (jstockwin)
+- Update mocha to version 2.5.3 🚀 #2944 (greenkeeperio-bot)
+- Update nightwatch to version 0.9.0 🚀 #2938 (greenkeeperio-bot)
+- Update juice to version 2.0.0 🚀 #2935 (greenkeeperio-bot)
+- Check blacklisted lists when deleting resources #2934 (fidelisrafael)
+- Update mocha to version 2.5.2 🚀 #2932 (greenkeeperio-bot)
+- Fix dependson initial #2931 (geloescht)
+- Style and improve GH templates #2928 (creynders)
+- Update lodash to version 4.13.1 🚀 #2925 (greenkeeperio-bot)
+- Update mocha to version 2.5.1 🚀 #2921 (greenkeeperio-bot)
+- Update lodash to version 4.13.0 🚀 #2918 (greenkeeperio-bot)
+- test(e2e): Add relationship field e2e testing #2914 (jstockwin)
+- react test for ItemsTableValue component #2912 (suryagh)
+- Update mongoose to version 4.4.19 🚀 #2911 (greenkeeperio-bot)
+- Update updtr to version 0.1.15 🚀 #2909 (greenkeeperio-bot)
+- Update method-override to version 2.3.6 🚀 #2908 (greenkeeperio-bot)
+- Update react to version 15.1.0 🚀 #2907 (greenkeeperio-bot)
+- Update cookie-parser to version 1.4.2 🚀 #2906 (greenkeeperio-bot)
+- react-addons-test-utils@15.1.0 breaks build 🚨 #2905 (greenkeeperio-bot)
+- Update react-dom to version 15.1.0 🚀 #2904 (greenkeeperio-bot)
+- Update react-addons-css-transition-group to version 15.1.0 🚀 #2903 (greenkeeperio-bot)
+- Update codemirror to version 5.15.2 🚀 #2902 (greenkeeperio-bot)
+- E2e timeout increase #2901 (jstockwin)
+- test(e2e): Slightly refactor group001 e2e tests #2900 (jstockwin)
+- E2e testing geopoint #2899 (jstockwin)
+- Update codemirror to version 5.15.0 🚀 #2897 (greenkeeperio-bot)
+- Update react-router to version 2.4.1 🚀 #2895 (greenkeeperio-bot)
+- Fix timezone handling for Datetime field #2894 (geloescht)
+- Add Pull Request Template #2891 (jstockwin)
+- Fix Keystone adminUI being broken #2885 (jstockwin)
+- e2e array field tests #2884 (jstockwin)
+- Fix UI Alignment / Positioning #2882 (jossmac)
+- Fix jumpy primary navigation #2881 (jossmac)
+- React component unit tests #2880 (suryagh)
+- Update babel-preset-es2015 to version 6.9.0 🚀 #2879 (greenkeeperio-bot)
+- Add Region to S3 Image URL #2878 (alechewitt)
+- Update babel-core to version 6.9.0 🚀 #2877 (greenkeeperio-bot)
+- test(e2e): Refactor boolean field e2e tests #2875 (jstockwin)
+- Update react-engine to version 3.4.1 🚀 #2870 (greenkeeperio-bot)
+- Remove tinyMCE in HtmlField when dependsOn is disabled #2868 (geloescht)
+- Update eslint to version 2.10.2 🚀 #2867 (greenkeeperio-bot)
+- test(e2e): Added money field e2e tests #2866 (jstockwin)
+- test(e2e): Rename verifyUI to assertUI #2864 (jstockwin)
+- test(e2e): Add workaround for selenium failure #2863 (geloescht)
+- test(e2e): Added date array e2e tests #2862 (jstockwin)
+- Add Issue Template #2859 (morenoh149)
+- test(e2e): Added local file field e2e testing #2857 (jstockwin)
+- test(e2e): Add cloudinary field e2e tests #2856 (jstockwin)
+- test(e2e): add ui tests for edit form #2854 (jstockwin)
+- Update eslint to version 2.10.1 🚀 #2853 (greenkeeperio-bot)
+- test(e2e): Group UX and UI field tests #2852 (jstockwin)
+- test(e2e): Add location and key field tests #2850 (jstockwin)
+- Update react-engine to version 3.4.0 🚀 #2845 (greenkeeperio-bot)
+- test(e2e): Disable markdown preview tests to fix travis #2844 (jstockwin)
+- test(e2e): Wait for item page after save #2843 (jstockwin)
+- Update mongoose to version 4.4.17 🚀 #2842 (greenkeeperio-bot)
+- test(e2e): Fix markdown field tests? #2841 (jstockwin)
+- Fixed #2584: initExpressApp can receive the express app #2839 (jacargentina)
+- Update updtr to version 0.1.14 🚀 #2838 (greenkeeperio-bot)
+- Update compression to version 1.6.2 🚀 #2835 (greenkeeperio-bot)
+- Remove date assert e2e tests, re-enable travis e2e #2833 (jstockwin)
+- mailgun-js@0.7.11 breaks build ⚠️ #2832 (greenkeeperio-bot)
+- es6-promise@3.2.1 breaks build ⚠️ #2829 (greenkeeperio-bot)
+- juice@1.11.0 breaks build ⚠️ #2823 (greenkeeperio-bot)
+- Upgrades kerberos package to 0.0.21 #2821 (vkammerer)
+- Fix validation on noedit initial fields #2816 (jstockwin)
+- redux-thunk@2.1.0 breaks build ⚠️ #2813 (greenkeeperio-bot)
+- Add datetime for field #2811 (jstockwin)
+- Fix validation errors not showing in the admin UI #2809 (jstockwin)
+- Fix #2803 Keystone.lists.map is not a function #2806 (jacargentina)
+- Update eslint-plugin-react to version 5.1.1 🚀 #2802 (greenkeeperio-bot)
+- Update mongoose to version 4.4.16 🚀 #2797 (greenkeeperio-bot)
+- Signin redirect not working #2753 #2796 (jdr0dn3y)
+- Update lodash to version 4.12.0 🚀 #2794 (greenkeeperio-bot)
+- hex encode token so that it does not contain special characters #2793 (suryagh)
+- Update keystone-utils to version 0.4.0 🚀 #2791 (greenkeeperio-bot)
+- Cleanup key field tests #2790 (mxstbr)
+- Update keystone-utils to version 0.3.6 🚀 #2789 (greenkeeperio-bot)
+- test(e2e): Update password validation messages #2788 (jstockwin)
+- Fix validation errors in the admin interface #2783 (mxstbr)
+- test(e2e): Fixed url and password field ux tests #2781 (jstockwin)
+- Update mongoose to version 4.4.15 🚀 #2780 (greenkeeperio-bot)
+- Fix e2e testing #2777 (jstockwin)
+- Update browserify to version 13.0.1 🚀 #2776 (greenkeeperio-bot)
+- Update updtr to version 0.1.13 🚀 #2774 (greenkeeperio-bot)
+- Update body-parser to version 1.15.1 🚀 #2770 (greenkeeperio-bot)
+- Update keystone-utils to version 0.3.5 🚀 #2765 (greenkeeperio-bot)
+- test(e2e): Add testing for password field #2764 (jstockwin)
+- modified x-array items behavior to be consistent with #2721 #2763 (suryagh)
+- Update embedly to version 2.0.1 🚀 #2761 (greenkeeperio-bot)
+- test(e2e): Fix code field's assertInput command #2758 (jstockwin)
 - [WIP] Admin Interface Refactor #2566 (mxstbr)"
-16,"This was wrongly tagged, be556a732328d30f72ecb211305704019c69f956 is the real release commit! Sorry for the confusion!"
+16,"This was wrongly tagged, be556a732328d30f72ecb211305704019c69f956 is the real release commit! Sorry for the confusion!","This was wrongly tagged, be556a732328d30f72ecb211305704019c69f956 is the real release commit! Sorry for the confusion!"

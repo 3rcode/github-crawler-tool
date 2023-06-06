@@ -1,0 +1,1476 @@
+Index,Release Note,Release Note With Abstraction
+1,"Fixed
+
+Fix focus styles showing up when using the mouse (#2347)
+Disable ComboboxInput when its Combobox is disabled (#2375)
+Add FocusTrap event listeners once document has loaded (#2389)
+Don't scroll-lock <Dialog> when wrapping transition isn't showing (#2422)
+Ensure DOM ref is properly handled in the RadioGroup component (#2424)
+
+Added
+
+Add form prop to form-like components such as RadioGroup, Switch, Listbox, and Combobox (#2356)
+","Fixed
+Fix focus styles showing up when using the mouse (#2347)
+Disable ComboboxInput when its Combobox is disabled (#2375)
+Add FocusTrap event listeners once document has loaded (#2389)
+Don't scroll-lock  when wrapping transition isn't showing (#2422)
+Ensure DOM ref is properly handled in the RadioGroup component (#2424)
+Added
+Add form prop to form-like components such as RadioGroup, Switch, Listbox, and Combobox (#2356)"
+2,"Fixed
+
+Add ESM and types paths to package.json for Tailwind CSS plugin (#2382)
+","Fixed
+Add ESM and types paths to package.json for Tailwind CSS plugin (#2382)"
+3,"Fixed
+
+Fix focus styles showing up when using the mouse (#2347)
+Fix ""Can't perform a React state update on an unmounted component."" when using the Transition component (#2374)
+Add FocusTrap event listeners once document has loaded (#2389)
+Fix className hydration for <Transition appear> (#2390)
+Improve Combobox types to improve false positives (#2411)
+Merge className correctly when it’s a function (#2412)
+
+Added
+
+Add form prop to form-like components such as RadioGroup, Switch, Listbox, and Combobox (#2356)
+","Fixed
+Fix focus styles showing up when using the mouse (#2347)
+Fix ""Can't perform a React state update on an unmounted component."" when using the Transition component (#2374)
+Add FocusTrap event listeners once document has loaded (#2389)
+Fix className hydration for  (#2390)
+Improve Combobox types to improve false positives (#2411)
+Merge className correctly when it’s a function (#2412)
+Added
+Add form prop to form-like components such as RadioGroup, Switch, Listbox, and Combobox (#2356)"
+4,"Fixed
+
+Enable native label behavior for <Switch> where possible (#2265)
+Allow root containers from the Dialog component in the FocusTrap component (#2322)
+Cleanup internal TypeScript types (#2329)
+Fix restore focus to buttons in Safari, when Dialog component closes (#2326)
+Ensure hooks in the FocusTrap component only apply when mounted (#2331)
+","Fixed
+Enable native label behavior for  where possible (#2265)
+Allow root containers from the Dialog component in the FocusTrap component (#2322)
+Cleanup internal TypeScript types (#2329)
+Fix restore focus to buttons in Safari, when Dialog component closes (#2326)
+Ensure hooks in the FocusTrap component only apply when mounted (#2331)"
+5,"Fixed
+
+Ensure Transition component completes if nothing is transitioning (#2318)
+Enable native label behavior for <Switch> where possible (#2265)
+Allow root containers from the Dialog component in the FocusTrap component (#2322)
+Fix XYZPropsWeControl and cleanup internal TypeScript types (#2329)
+Fix invalid warning when using multiple Popover.Button components inside a Popover.Panel (#2333)
+Fix restore focus to buttons in Safari, when Dialog component closes (#2326)
+","Fixed
+Ensure Transition component completes if nothing is transitioning (#2318)
+Enable native label behavior for  where possible (#2265)
+Allow root containers from the Dialog component in the FocusTrap component (#2322)
+Fix XYZPropsWeControl and cleanup internal TypeScript types (#2329)
+Fix invalid warning when using multiple Popover.Button components inside a Popover.Panel (#2333)
+Fix restore focus to buttons in Safari, when Dialog component closes (#2326)"
+6,"Fixed
+
+Ensure the main tree and parent Dialog components are marked as inert (#2290)
+Fix nested Popover components not opening (#2293)
+Fix change event incorrectly getting called on blur (#2296)
+Fix Dialog cleanup when the Dialog becomes hidden (#2303)
+","Fixed
+Ensure the main tree and parent Dialog components are marked as inert (#2290)
+Fix nested Popover components not opening (#2293)
+Fix change event incorrectly getting called on blur (#2296)
+Fix Dialog cleanup when the Dialog becomes hidden (#2303)"
+7,"Added
+
+Add explicit props types for every component (#2282)
+
+Fixed
+
+Ensure the main tree and parent Dialog components are marked as inert (#2290)
+Fix nested Popover components not opening (#2293)
+Make React types more compatible with other libraries (#2282)
+Fix Dialog cleanup when the Dialog becomes hidden (#2303)
+","Added
+Add explicit props types for every component (#2282)
+Fixed
+Ensure the main tree and parent Dialog components are marked as inert (#2290)
+Fix nested Popover components not opening (#2293)
+Make React types more compatible with other libraries (#2282)
+Fix Dialog cleanup when the Dialog becomes hidden (#2303)"
+8,"Fixed
+
+Don’t fire afterLeave event more than once for a given transition (#2267)
+Move aria-multiselectable to [role=listbox] in the Combobox component (#2271)
+Re-focus Combobox.Input when a Combobox.Option is selected (#2272)
+Ensure we reset the activeOptionIndex if the active option is unmounted (#2274)
+Start cleanup phase of the Dialog component when going into the Closing state (#2264)
+","Fixed
+Don’t fire afterLeave event more than once for a given transition (#2267)
+Move aria-multiselectable to [role=listbox] in the Combobox component (#2271)
+Re-focus Combobox.Input when a Combobox.Option is selected (#2272)
+Ensure we reset the activeOptionIndex if the active option is unmounted (#2274)
+Start cleanup phase of the Dialog component when going into the Closing state (#2264)"
+9,"Fixed
+
+Ensure we handle null values for the dataRef correctly (#2258)
+Move aria-multiselectable to [role=listbox] in the Combobox component (#2271)
+Re-focus Combobox.Input when a Combobox.Option is selected (#2272)
+Ensure we reset the activeOptionIndex if the active option is unmounted (#2274)
+Improve Ref type for forwarded Switch's ref (#2277)
+Start cleanup phase of the Dialog component when going into the Closing state (#2264)
+","Fixed
+Ensure we handle null values for the dataRef correctly (#2258)
+Move aria-multiselectable to [role=listbox] in the Combobox component (#2271)
+Re-focus Combobox.Input when a Combobox.Option is selected (#2272)
+Ensure we reset the activeOptionIndex if the active option is unmounted (#2274)
+Improve Ref type for forwarded Switch's ref (#2277)
+Start cleanup phase of the Dialog component when going into the Closing state (#2264)"
+10,"Fixed
+
+Revert ""Use the import * as React from 'react' pattern (#2242)
+","Fixed
+Revert ""Use the import * as React from 'react' pattern (#2242)"
+11,"Fixed
+
+Don't break overflow when multiple dialogs are open at the same time (#2215)
+","Fixed
+Don't break overflow when multiple dialogs are open at the same time (#2215)"
+12,"Fixed
+
+Fix SSR tab hydration when using Strict Mode in development (#2231)
+Don't break overflow when multiple dialogs are open at the same time (#2215)
+Fix ""This Suspense boundary received an update before it finished hydrating"" error in the Disclosure component (#2238)
+Use the import * as React from 'react' pattern (#2242)
+","Fixed
+Fix SSR tab hydration when using Strict Mode in development (#2231)
+Don't break overflow when multiple dialogs are open at the same time (#2215)
+Fix ""This Suspense boundary received an update before it finished hydrating"" error in the Disclosure component (#2238)
+Use the import * as React from 'react' pattern (#2242)"
+13,"Fixed
+
+Ensure disabled=""false"" is not incorrectly passed to the underlying DOM Node (#2138)
+Fix arrow key handling in Tab (after DOM order changes) (#2145)
+Fix Tab key with non focusable elements in Popover.Panel (#2147)
+Don’t overwrite classes during SSR when rendering fragments (#2173)
+Improve Combobox accessibility (#2153)
+Fix crash when reading headlessuiFocusGuard of relatedTarget in the FocusTrap component (#2203)
+Fix FocusTrap in Dialog when there is only 1 focusable element (#2172)
+Improve Tabs wrapping around when controlling the component and overflowing the selectedIndex (#2213)
+Fix shadow-root bug closing Dialog containers (#2217)
+
+Added
+
+Allow setting tabIndex on the Tab.Panel (#2214)
+
+Changed
+
+Adjust SSR detection mechanism (#2102)
+","Fixed
+Ensure disabled=""false"" is not incorrectly passed to the underlying DOM Node (#2138)
+Fix arrow key handling in Tab (after DOM order changes) (#2145)
+Fix Tab key with non focusable elements in Popover.Panel (#2147)
+Don’t overwrite classes during SSR when rendering fragments (#2173)
+Improve Combobox accessibility (#2153)
+Fix crash when reading headlessuiFocusGuard of relatedTarget in the FocusTrap component (#2203)
+Fix FocusTrap in Dialog when there is only 1 focusable element (#2172)
+Improve Tabs wrapping around when controlling the component and overflowing the selectedIndex (#2213)
+Fix shadow-root bug closing Dialog containers (#2217)
+Added
+Allow setting tabIndex on the Tab.Panel (#2214)
+Changed
+Adjust SSR detection mechanism (#2102)"
+14,"Fixed
+
+Fix SSR tab rendering on React 17 (#2102)
+Fix arrow key handling in Tab (after DOM order changes) (#2145)
+Fix false positive warning about using multiple <Popover.Button> components (#2146)
+Fix Tab key with non focusable elements in Popover.Panel (#2147)
+Fix false positive warning when using <Popover.Button /> in React 17 (#2163)
+Fix failed to removeChild on Node bug (#2164)
+Don’t overwrite classes during SSR when rendering fragments (#2173)
+Improve Combobox accessibility (#2153)
+Fix crash when reading headlessuiFocusGuard of relatedTarget in the FocusTrap component (#2203)
+Fix FocusTrap in Dialog when there is only 1 focusable element (#2172)
+Improve Tabs wrapping around when controlling the component and overflowing the selectedIndex (#2213)
+Fix shadow-root bug closing Dialog containers (#2217)
+
+Added
+
+Allow setting tabIndex on the Tab.Panel (#2214)
+","Fixed
+Fix SSR tab rendering on React 17 (#2102)
+Fix arrow key handling in Tab (after DOM order changes) (#2145)
+Fix false positive warning about using multiple  components (#2146)
+Fix Tab key with non focusable elements in Popover.Panel (#2147)
+Fix false positive warning when using  in React 17 (#2163)
+Fix failed to removeChild on Node bug (#2164)
+Don’t overwrite classes during SSR when rendering fragments (#2173)
+Improve Combobox accessibility (#2153)
+Fix crash when reading headlessuiFocusGuard of relatedTarget in the FocusTrap component (#2203)
+Fix FocusTrap in Dialog when there is only 1 focusable element (#2172)
+Improve Tabs wrapping around when controlling the component and overflowing the selectedIndex (#2213)
+Fix shadow-root bug closing Dialog containers (#2217)
+Added
+Allow setting tabIndex on the Tab.Panel (#2214)"
+15,"Fixed
+
+Improve scroll restoration after Dialog closes (b20e48dd)
+","Fixed
+Improve scroll restoration after Dialog closes (b20e48dd)"
+16,"Fixed
+
+Improve scroll restoration after Dialog closes (b20e48dd)
+","Fixed
+Improve scroll restoration after Dialog closes (b20e48dd)"
+17,"Fixed
+
+Fix regression where displayValue crashes (#2087)
+Fix displayValue syncing when Combobox.Input is unmounted and re-mounted in different trees (#2090)
+Fix FocusTrap escape due to strange tabindex values (#2093)
+Improve scroll locking on iOS (#2100, 28234b0e)
+","Fixed
+Fix regression where displayValue crashes (#2087)
+Fix displayValue syncing when Combobox.Input is unmounted and re-mounted in different trees (#2090)
+Fix FocusTrap escape due to strange tabindex values (#2093)
+Improve scroll locking on iOS (#2100, 28234b0e)"
+18,"Fixed
+
+Fix regression where displayValue crashes (#2087)
+Fix displayValue syncing when Combobox.Input is unmounted and re-mounted in different trees (#2090)
+Fix FocusTrap escape due to strange tabindex values (#2093)
+Improve scroll locking on iOS (#2100, 28234b0e)
+","Fixed
+Fix regression where displayValue crashes (#2087)
+Fix displayValue syncing when Combobox.Input is unmounted and re-mounted in different trees (#2090)
+Fix FocusTrap escape due to strange tabindex values (#2093)
+Improve scroll locking on iOS (#2100, 28234b0e)"
+19,"Fixed
+
+Reset form-like components when the parent <form> resets (#2004)
+Ensure Popover doesn't crash when focus is going to window (#2019)
+Ensure shift+home and shift+end works as expected in the ComboboxInput component (#2024)
+Improve syncing of the ComboboxInput value (#2042)
+Fix crash when using multiple mode without value prop (uncontrolled) for Listbox and Combobox components (#2058)
+Allow passing in your own id prop (#2060)
+Add null as a valid type for Listbox and Combobox in Vue (#2064, #2067)
+Improve SSR for Tabs in Vue (#2068)
+Ignore pointer events in Listbox, Menu, and Combobox when cursor hasn't moved (#2069)
+Allow clicks inside dialog panel when target is inside shadow root (#2079)
+","Fixed
+Reset form-like components when the parent  resets (#2004)
+Ensure Popover doesn't crash when focus is going to window (#2019)
+Ensure shift+home and shift+end works as expected in the ComboboxInput component (#2024)
+Improve syncing of the ComboboxInput value (#2042)
+Fix crash when using multiple mode without value prop (uncontrolled) for Listbox and Combobox components (#2058)
+Allow passing in your own id prop (#2060)
+Add null as a valid type for Listbox and Combobox in Vue (#2064, #2067)
+Improve SSR for Tabs in Vue (#2068)
+Ignore pointer events in Listbox, Menu, and Combobox when cursor hasn't moved (#2069)
+Allow clicks inside dialog panel when target is inside shadow root (#2079)"
+20,"Fixed
+
+Reset form-like components when the parent <form> resets (#2004)
+Add warning when using <Popover.Button /> multiple times (#2007)
+Ensure Popover doesn't crash when focus is going to window (#2019)
+Ensure shift+home and shift+end works as expected in the Combobox.Input component (#2024)
+Improve syncing of the Combobox.Input value (#2042)
+Fix crash when using multiple mode without value prop (uncontrolled) for Listbox and Combobox components (#2058)
+Apply enter and enterFrom classes in SSR for Transition component (#2059)
+Allow passing in your own id prop (#2060)
+Fix Dialog unmounting problem due to incorrect transitioncancel event in the Transition component on Android (#2071)
+Ignore pointer events in Listbox, Menu, and Combobox when cursor hasn't moved (#2069)
+Allow clicks inside dialog panel when target is inside shadow root (#2079)
+","Fixed
+Reset form-like components when the parent  resets (#2004)
+Add warning when using  multiple times (#2007)
+Ensure Popover doesn't crash when focus is going to window (#2019)
+Ensure shift+home and shift+end works as expected in the Combobox.Input component (#2024)
+Improve syncing of the Combobox.Input value (#2042)
+Fix crash when using multiple mode without value prop (uncontrolled) for Listbox and Combobox components (#2058)
+Apply enter and enterFrom classes in SSR for Transition component (#2059)
+Allow passing in your own id prop (#2060)
+Fix Dialog unmounting problem due to incorrect transitioncancel event in the Transition component on Android (#2071)
+Ignore pointer events in Listbox, Menu, and Combobox when cursor hasn't moved (#2069)
+Allow clicks inside dialog panel when target is inside shadow root (#2079)"
+21,"Fixed
+
+Move tailwindcss to devDependencies (#2040)
+","Fixed
+Move tailwindcss to devDependencies (#2040)"
+22,"Fixed
+
+Expose close function for Menu and MenuItem components (#1897)
+Fix useOutsideClick, add improvements for ShadowDOM (#1914)
+Prevent default slot warning when using a component for as prop (#1915)
+Fire <ComboboxInput>'s @change handler when changing the value internally (#1916)
+","Fixed
+Expose close function for Menu and MenuItem components (#1897)
+Fix useOutsideClick, add improvements for ShadowDOM (#1914)
+Prevent default slot warning when using a component for as prop (#1915)
+Fire 's @change handler when changing the value internally (#1916)"
+23,"Fixed
+
+Fix <Popover.Button as={Fragment} /> crash (#1889)
+Expose close function for Menu and Menu.Item components (#1897)
+Fix useOutsideClick, add improvements for ShadowDOM (#1914)
+Fire <Combobox.Input>'s onChange handler when changing the value internally (#1916)
+Add client-only to mark everything as client components (#1981)
+
+Added
+
+Warn when changing components between controlled and uncontrolled (#1878)
+","Fixed
+Fix  crash (#1889)
+Expose close function for Menu and Menu.Item components (#1897)
+Fix useOutsideClick, add improvements for ShadowDOM (#1914)
+Fire 's onChange handler when changing the value internally (#1916)
+Add client-only to mark everything as client components (#1981)
+Added
+Warn when changing components between controlled and uncontrolled (#1878)"
+24,"Fixed
+
+Call displayValue with a v-model of ref(undefined) on ComboboxInput (#1865)
+Improve Portal detection for Popover components (#1842)
+Fix crash when children are undefined (#1885)
+Fix useOutsideClick swallowing events inside ShadowDOM (#1876)
+Fix Tab incorrectly activating on focus event (#1887)
+","Fixed
+Call displayValue with a v-model of ref(undefined) on ComboboxInput (#1865)
+Improve Portal detection for Popover components (#1842)
+Fix crash when children are undefined (#1885)
+Fix useOutsideClick swallowing events inside ShadowDOM (#1876)
+Fix Tab incorrectly activating on focus event (#1887)"
+25,"Fixed
+
+Improve Portal detection for Popover components (#1842)
+Fix useOutsideClick swallowing events inside ShadowDOM (#1876)
+Fix Tab incorrectly activating on focus event (#1887)
+","Fixed
+Improve Portal detection for Popover components (#1842)
+Fix useOutsideClick swallowing events inside ShadowDOM (#1876)
+Fix Tab incorrectly activating on focus event (#1887)"
+26,"Fixed
+
+Prevent option selection in ComboboxInput while composing (#1850)
+Ensure we handle the static prop in TabPanel components correctly (#1856)
+","Fixed
+Prevent option selection in ComboboxInput while composing (#1850)
+Ensure we handle the static prop in TabPanel components correctly (#1856)"
+27,"Fixed
+
+Prevent option selection in Combobox.Input while composing (#1850)
+Ensure we handle the static prop in Tab.Panel components correctly (#1856)
+","Fixed
+Prevent option selection in Combobox.Input while composing (#1850)
+Ensure we handle the static prop in Tab.Panel components correctly (#1856)"
+28,"Fixed
+
+Improve iOS scroll locking (#1830)
+Ensure Tab order stays consistent, and the currently active Tab stays active (#1837)
+","Fixed
+Improve iOS scroll locking (#1830)
+Ensure Tab order stays consistent, and the currently active Tab stays active (#1837)"
+29,"Fixed
+
+Improve iOS scroll locking (#1830)
+Add <fieldset disabled> check to radio group options in React (#1835)
+Ensure Tab order stays consistent, and the currently active Tab stays active (#1837)
+Ensure Combobox.Label is properly linked when rendered after Combobox.Button and Combobox.Input components (#1838)
+Remove forceRerender from Tab component (#1846)
+","Fixed
+Improve iOS scroll locking (#1830)
+Add  check to radio group options in React (#1835)
+Ensure Tab order stays consistent, and the currently active Tab stays active (#1837)
+Ensure Combobox.Label is properly linked when rendered after Combobox.Button and Combobox.Input components (#1838)
+Remove forceRerender from Tab component (#1846)"
+30,"Added
+
+Add by prop for Listbox, Combobox and RadioGroup (#1482, #1717, #1814, #1815)
+Make form components uncontrollable (#1683)
+Add @headlessui/tailwindcss plugin (#1487)
+
+Fixed
+
+Fixed SSR support on Deno (#1671)
+Don’t close dialog when opened during mouse up event (#1667)
+Don’t close dialog when drag ends outside dialog (#1667)
+Fix outside clicks to close dialog when nested, unopened dialogs are present (#1667)
+Close Menu component when using tab key (#1673)
+Resync input when display value changes (#1679, #1755)
+Ensure controlled Tabs don't change automagically (#1680)
+Improve outside click on Safari iOS (#1712)
+Improve event handler merging (#1715)
+Fix incorrect scrolling to the bottom when opening a Dialog (#1716)
+Don't overwrite element.focus() on <PopoverPanel> (#1719)
+Improve Combobox re-opening keyboard issue on mobile (#1732)
+Only select the active option when using ""singular"" mode when pressing <tab> in the Combobox component (#1750)
+Only restore focus to the MenuButton if necessary when activating a MenuOption (#1782)
+Don't scroll when wrapping around in focus trap (#1789)
+Improve accessibility when announcing ListboxOption and ComboboxOption components (#1812)
+Expose the value from the Combobox and Listbox components slot (#1822)
+Improve scroll lock on iOS (#1824)
+","Added
+Add by prop for Listbox, Combobox and RadioGroup (#1482, #1717, #1814, #1815)
+Make form components uncontrollable (#1683)
+Add @headlessui/tailwindcss plugin (#1487)
+Fixed
+Fixed SSR support on Deno (#1671)
+Don’t close dialog when opened during mouse up event (#1667)
+Don’t close dialog when drag ends outside dialog (#1667)
+Fix outside clicks to close dialog when nested, unopened dialogs are present (#1667)
+Close Menu component when using tab key (#1673)
+Resync input when display value changes (#1679, #1755)
+Ensure controlled Tabs don't change automagically (#1680)
+Improve outside click on Safari iOS (#1712)
+Improve event handler merging (#1715)
+Fix incorrect scrolling to the bottom when opening a Dialog (#1716)
+Don't overwrite element.focus() on  (#1719)
+Improve Combobox re-opening keyboard issue on mobile (#1732)
+Only select the active option when using ""singular"" mode when pressing  in the Combobox component (#1750)
+Only restore focus to the MenuButton if necessary when activating a MenuOption (#1782)
+Don't scroll when wrapping around in focus trap (#1789)
+Improve accessibility when announcing ListboxOption and ComboboxOption components (#1812)
+Expose the value from the Combobox and Listbox components slot (#1822)
+Improve scroll lock on iOS (#1824)"
+31,"Fixed
+
+Fix bracket order of not variants (#1621)
+","Fixed
+Fix bracket order of not variants (#1621)"
+32,"Added
+
+Add by prop for Listbox, Combobox and RadioGroup (#1482, #1717, #1814, #1815)
+Make form components uncontrollable (#1683)
+Add @headlessui/tailwindcss plugin (#1487)
+
+Fixed
+
+Fixed SSR support on Deno (#1671)
+Don’t close dialog when opened during mouse up event (#1667)
+Don’t close dialog when drag ends outside dialog (#1667)
+Fix outside clicks to close dialog when nested, unopened dialogs are present (#1667)
+Close Menu component when using tab key (#1673)
+Resync input when display value changes (#1679, #1755)
+Ensure controlled Tabs don't change automagically (#1680)
+Don't scroll lock when a Transition + Dialog is mounted but hidden (#1681)
+Allow Popover close to be passed directly to onClick handlers (#1696)
+Improve outside click on Safari iOS (#1712)
+Improve event handler merging (#1715)
+Fix incorrect scrolling to the bottom when opening a Dialog (#1716)
+Improve Combobox re-opening keyboard issue on mobile (#1732)
+Ensure Disclosure.Panel is properly linked (#1747)
+Only select the active option when using ""singular"" mode when pressing <tab> in the Combobox component (#1750)
+Improve the types of the Combobox component (#1761)
+Only restore focus to the Menu.Button if necessary when activating a Menu.Option (#1782)
+Don't scroll when wrapping around in focus trap (#1789)
+Fix Transition component's incorrect cleanup and order of events (#1803)
+Ensure enter transitions work when using unmount={false} (#1811)
+Improve accessibility when announcing Listbox.Option and Combobox.Option components (#1812)
+Fix ref stealing from children (#1820)
+Expose the value from the Combobox and Listbox components render prop (#1822)
+Improve scroll lock on iOS (#1824)
+Fix maximum call stack size exceeded error on Tab component when using as={Fragment} (#1826)
+Fix ""blank"" screen on initial load of Transition component (#1823)
+","Added
+Add by prop for Listbox, Combobox and RadioGroup (#1482, #1717, #1814, #1815)
+Make form components uncontrollable (#1683)
+Add @headlessui/tailwindcss plugin (#1487)
+Fixed
+Fixed SSR support on Deno (#1671)
+Don’t close dialog when opened during mouse up event (#1667)
+Don’t close dialog when drag ends outside dialog (#1667)
+Fix outside clicks to close dialog when nested, unopened dialogs are present (#1667)
+Close Menu component when using tab key (#1673)
+Resync input when display value changes (#1679, #1755)
+Ensure controlled Tabs don't change automagically (#1680)
+Don't scroll lock when a Transition + Dialog is mounted but hidden (#1681)
+Allow Popover close to be passed directly to onClick handlers (#1696)
+Improve outside click on Safari iOS (#1712)
+Improve event handler merging (#1715)
+Fix incorrect scrolling to the bottom when opening a Dialog (#1716)
+Improve Combobox re-opening keyboard issue on mobile (#1732)
+Ensure Disclosure.Panel is properly linked (#1747)
+Only select the active option when using ""singular"" mode when pressing  in the Combobox component (#1750)
+Improve the types of the Combobox component (#1761)
+Only restore focus to the Menu.Button if necessary when activating a Menu.Option (#1782)
+Don't scroll when wrapping around in focus trap (#1789)
+Fix Transition component's incorrect cleanup and order of events (#1803)
+Ensure enter transitions work when using unmount={false} (#1811)
+Improve accessibility when announcing Listbox.Option and Combobox.Option components (#1812)
+Fix ref stealing from children (#1820)
+Expose the value from the Combobox and Listbox components render prop (#1822)
+Improve scroll lock on iOS (#1824)
+Fix maximum call stack size exceeded error on Tab component when using as={Fragment} (#1826)
+Fix ""blank"" screen on initial load of Transition component (#1823)"
+33,"Fixed
+
+Prevent cancelling transitions due to focus trap (#1664)
+","Fixed
+Prevent cancelling transitions due to focus trap (#1664)"
+34,"Fixed
+
+Fix getting Vue dom elements (#1610)
+Ensure CMD+Backspace works in nullable mode for Combobox component (#1617)
+Properly merge incoming props with own props (#1651)
+Ensure PopoverPanel can be used inside <transition> (#1653)
+","Fixed
+Fix getting Vue dom elements (#1610)
+Ensure CMD+Backspace works in nullable mode for Combobox component (#1617)
+Properly merge incoming props with own props (#1651)
+Ensure PopoverPanel can be used inside  (#1653)"
+35,"Fixed
+
+Ensure CMD+Backspace works in nullable mode for Combobox component (#1617)
+","Fixed
+Ensure CMD+Backspace works in nullable mode for Combobox component (#1617)"
+36,"Fixed
+
+Support <slot> children when using as=""template"" (#1548)
+Improve outside click of Dialog component (#1546)
+Detect outside clicks from within <iframe> elements (#1552)
+Only render the Dialog on the client (#1566)
+Improve Combobox input cursor position (#1574)
+Fix scrolling issue in Tab component when using arrow keys (#1584)
+Fix missing aria-expanded for ComboboxInput component (#1605)
+","Fixed
+Support  children when using as=""template"" (#1548)
+Improve outside click of Dialog component (#1546)
+Detect outside clicks from within  elements (#1552)
+Only render the Dialog on the client (#1566)
+Improve Combobox input cursor position (#1574)
+Fix scrolling issue in Tab component when using arrow keys (#1584)
+Fix missing aria-expanded for ComboboxInput component (#1605)"
+37,"Fixed
+
+Fix incorrect transitionend/transitioncancel events for the Transition component (#1537)
+Improve outside click of Dialog component (#1546)
+Detect outside clicks from within <iframe> elements (#1552)
+Improve Combobox input cursor position (#1574)
+Fix scrolling issue in Tab component when using arrow keys (#1584)
+","Fixed
+Fix incorrect transitionend/transitioncancel events for the Transition component (#1537)
+Improve outside click of Dialog component (#1546)
+Detect outside clicks from within  elements (#1552)
+Improve Combobox input cursor position (#1574)
+Fix scrolling issue in Tab component when using arrow keys (#1584)"
+38,"Fixed
+
+Ensure Escape propagates correctly in Combobox component (#1511)
+Remove leftover code in Combobox component (#1514)
+","Fixed
+Ensure Escape propagates correctly in Combobox component (#1511)
+Remove leftover code in Combobox component (#1514)"
+39,"Fixed
+
+Ensure Escape propagates correctly in Combobox component (#1511)
+Remove leftover code in Combobox component (#1514)
+Fix event handlers with arity > 1 (#1515)
+Fix transition enter bug (#1519)
+Fix render prop data in RadioGroup component (#1522)
+","Fixed
+Ensure Escape propagates correctly in Combobox component (#1511)
+Remove leftover code in Combobox component (#1514)
+Fix event handlers with arity > 1 (#1515)
+Fix transition enter bug (#1519)
+Fix render prop data in RadioGroup component (#1522)"
+40,"Fixed
+
+Allow to override the type on the ComboboxInput (#1476)
+Ensure the the <PopoverPanel focus> closes correctly (#1477)
+Only render the FocusSentinel if required in the Tabs component (#1493)
+","Fixed
+Allow to override the type on the ComboboxInput (#1476)
+Ensure the the  closes correctly (#1477)
+Only render the FocusSentinel if required in the Tabs component (#1493)"
+41,"Fixed
+
+Allow to override the type on the Combobox.Input (#1476)
+Ensure the the <Popover.Panel focus> closes correctly (#1477)
+Only render the FocusSentinel if required in the Tabs component (#1493)
+Ensure the Transition stops once DOM Nodes are hidden (#1500)
+","Fixed
+Allow to override the type on the Combobox.Input (#1476)
+Ensure the the  closes correctly (#1477)
+Only render the FocusSentinel if required in the Tabs component (#1493)
+Ensure the Transition stops once DOM Nodes are hidden (#1500)"
+42,"Added
+
+Add @headlessui/tailwindcss plugin (#1487)
+","Added
+Add @headlessui/tailwindcss plugin (#1487)"
+43,"Fixed
+
+Ensure DialogPanel exposes its ref (#1404)
+Ignore Escape when event got prevented in Dialog component (#1424)
+Improve FocusTrap behaviour (#1432)
+Simplify Popover Tab logic by using sentinel nodes instead of keydown event interception (#1440)
+Ensure the PopoverPanel is clickable without closing the Popover (#1443)
+Improve ""Scroll lock"" scrollbar width for Dialog component (#1457)
+Don’t throw when SSR rendering internal portals in Vue (#1459)
+","Fixed
+Ensure DialogPanel exposes its ref (#1404)
+Ignore Escape when event got prevented in Dialog component (#1424)
+Improve FocusTrap behaviour (#1432)
+Simplify Popover Tab logic by using sentinel nodes instead of keydown event interception (#1440)
+Ensure the PopoverPanel is clickable without closing the Popover (#1443)
+Improve ""Scroll lock"" scrollbar width for Dialog component (#1457)
+Don’t throw when SSR rendering internal portals in Vue (#1459)"
+44,"Fixed
+
+Fix closing of Popover.Panel in React 18 (#1409)
+Ignore Escape when event got prevented in Dialog component (#1424)
+Improve FocusTrap behaviour (#1432)
+Simplify Popover Tab logic by using sentinel nodes instead of keydown event interception (#1440)
+Ensure the Popover.Panel is clickable without closing the Popover (#1443)
+Improve ""Scroll lock"" scrollbar width for Dialog component (#1457)
+Make the ref optional in the Popover component (#1465)
+Ensure the ref is forwarded on the Transition.Child component (#1473)
+","Fixed
+Fix closing of Popover.Panel in React 18 (#1409)
+Ignore Escape when event got prevented in Dialog component (#1424)
+Improve FocusTrap behaviour (#1432)
+Simplify Popover Tab logic by using sentinel nodes instead of keydown event interception (#1440)
+Ensure the Popover.Panel is clickable without closing the Popover (#1443)
+Improve ""Scroll lock"" scrollbar width for Dialog component (#1457)
+Make the ref optional in the Popover component (#1465)
+Ensure the ref is forwarded on the Transition.Child component (#1473)"
+45,"Fixed
+
+Manually passthrough attrs for Combobox, Listbox and TabsGroup component (#1372)
+Fix enter transitions in Vue (#1395)
+","Fixed
+Manually passthrough attrs for Combobox, Listbox and TabsGroup component (#1372)
+Fix enter transitions in Vue (#1395)"
+46,"Fixed
+
+Fix hydration issue with Tab component (#1393)
+","Fixed
+Fix hydration issue with Tab component (#1393)"
+47,"Fixed
+
+Make sure that the input syncs when the combobox closes (#1137)
+Ensure that you can close the Combobox initially (#1148)
+Fix Dialog usage in Tab component (#1149)
+Ensure links are triggered inside PopoverPanel components (#1153)
+Fix hover scroll issue in Listbox, Combobox and Menu components (#1161)
+Guarantee DOM sort order when performing Listbox, Combobox and Menu actions (#1168)
+Improve outside click support (#1175)
+Reset ComboboxInput when the value gets reset (#1181)
+Adjust active item/option index on Listbox, Combobox and Menu components (#1184)
+Fix re-focusing element after close (#1186)
+Fix Dialog cycling (#553)
+Only activate the Tab on mouseup (#1192)
+Ignore ""outside click"" on removed elements (#1193)
+Remove focus() from Listbox.Option (#1218)
+Improve some internal code (#1221)
+Don't drop initial character when searching in Combobox (#1223)
+Use ownerDocument instead of document (#1158)
+Fix, re-expose el from each component (#1230)
+Ensure focus trapping plays well with the Tab and Dialog components (#1231)
+Improve syncing of ComboboxInput value (#1248)
+Fix tree-shaking support (#1247)
+Stop propagation on the PopoverButton (#1263)
+Fix incorrect closing while interacting with third party libraries in Dialog component (#1268)
+Mimic browser select on focus when navigating via Tab (#1272)
+Resolve initialFocusRef correctly (#1276)
+Ensure that there is always an active option in the Combobox (#1279, #1281)
+Support classic form submissions in RadioGroup, Switch and Combobox components (#1285)
+Fix nullable prop for Vue (2b109548b1a94a30858cf58c8f525554a1c12cbb)
+Prefer incoming open prop over OpenClosed state (#1360)
+
+Added
+
+Add classic form submission compatibility via new hidden inputs (#1214)
+Add multiple value support to Listbox and Combobox components (#1243, #1355)
+Add support for clearing the value of a Combobox (#1295)
+Add DialogPanel to resolve issues when scrolling long dialogs that use DialogOverlay (#1333)
+
+
+Changes that might affect you
+Migrating from DialogOverlay to DialogPanel
+In previous versions of Headless UI, closing a dialog was handled by a click handler that lived on the DialogOverlay component, so as long as your overlay was rendered behind your panel, clicking outside the panel would close the dialog.
+This created an issue with scrollable dialogs, because it became easy to accidentally position your overlay on top of the scrollbar, which made it impossible to click the scrollbar without closing the dialog. You also couldn't scroll the dialog when your mouse was hovering over the overlay — only when your mouse was hovering over the actual panel.
+We've fixed this in Headless UI v1.6 by adding a dedicated DialogPanel component, and changing how ""click outside"" is handled. Now, if you're using a DialogPanel, the dialog is closed any time you click any element outside of it, rather than closing only when a DialogOverlay is explicitly clicked.
+If you're using DialogOverlay and not using DialogPanel, everything will continue to work exactly as it did before (including the bug I described above) to preserve backwards compatibility, but we highly encourage you to migrate to using DialogPanel, and to stop using DialogOverlay, instead using a simple div element:
+```diff
+  <Dialog
+    :open=""isOpen""
+    @close=""closeModal""
+    class=""fixed inset-0 flex items-center justify-center ...""
+
+
+
+
+
+
+
+
+
+Payment successful
+ ... 
+
+
+
+```
+
+Read through the updated Dialog documentation for more examples of using DialogPanel.
+Multiple value support for Listbox and Combobox
+If you have been using the insiders build for the new multiple value support for the Listbox and/or Combobox component, then you will have to add a new multiple prop to those components to tell the component that you are using multiple values. Previously this was automatically detected based on whether you were passing an array to the value prop or not.
+diff
+-  <Listbox v-model=""selectedPeople"" />
++  <Listbox v-model=""selectedPeople"" multiple />","Fixed
+Make sure that the input syncs when the combobox closes (#1137)
+Ensure that you can close the Combobox initially (#1148)
+Fix Dialog usage in Tab component (#1149)
+Ensure links are triggered inside PopoverPanel components (#1153)
+Fix hover scroll issue in Listbox, Combobox and Menu components (#1161)
+Guarantee DOM sort order when performing Listbox, Combobox and Menu actions (#1168)
+Improve outside click support (#1175)
+Reset ComboboxInput when the value gets reset (#1181)
+Adjust active item/option index on Listbox, Combobox and Menu components (#1184)
+Fix re-focusing element after close (#1186)
+Fix Dialog cycling (#553)
+Only activate the Tab on mouseup (#1192)
+Ignore ""outside click"" on removed elements (#1193)
+Remove focus() from Listbox.Option (#1218)
+Improve some internal code (#1221)
+Don't drop initial character when searching in Combobox (#1223)
+Use ownerDocument instead of document (#1158)
+Fix, re-expose el from each component (#1230)
+Ensure focus trapping plays well with the Tab and Dialog components (#1231)
+Improve syncing of ComboboxInput value (#1248)
+Fix tree-shaking support (#1247)
+Stop propagation on the PopoverButton (#1263)
+Fix incorrect closing while interacting with third party libraries in Dialog component (#1268)
+Mimic browser select on focus when navigating via Tab (#1272)
+Resolve initialFocusRef correctly (#1276)
+Ensure that there is always an active option in the Combobox (#1279, #1281)
+Support classic form submissions in RadioGroup, Switch and Combobox components (#1285)
+Fix nullable prop for Vue (2b109548b1a94a30858cf58c8f525554a1c12cbb)
+Prefer incoming open prop over OpenClosed state (#1360)
+Added
+Add classic form submission compatibility via new hidden inputs (#1214)
+Add multiple value support to Listbox and Combobox components (#1243, #1355)
+Add support for clearing the value of a Combobox (#1295)
+Add DialogPanel to resolve issues when scrolling long dialogs that use DialogOverlay (#1333)
+Changes that might affect you
+Migrating from DialogOverlay to DialogPanel
+In previous versions of Headless UI, closing a dialog was handled by a click handler that lived on the DialogOverlay component, so as long as your overlay was rendered behind your panel, clicking outside the panel would close the dialog.
+This created an issue with scrollable dialogs, because it became easy to accidentally position your overlay on top of the scrollbar, which made it impossible to click the scrollbar without closing the dialog. You also couldn't scroll the dialog when your mouse was hovering over the overlay — only when your mouse was hovering over the actual panel.
+We've fixed this in Headless UI v1.6 by adding a dedicated DialogPanel component, and changing how ""click outside"" is handled. Now, if you're using a DialogPanel, the dialog is closed any time you click any element outside of it, rather than closing only when a DialogOverlay is explicitly clicked.
+If you're using DialogOverlay and not using DialogPanel, everything will continue to work exactly as it did before (including the bug I described above) to preserve backwards compatibility, but we highly encourage you to migrate to using DialogPanel, and to stop using DialogOverlay, instead using a simple div element:
+```diff
+  <Dialog
+    :open=""isOpen""
+    @close=""closeModal""
+    class=""fixed inset-0 flex items-center justify-center ...""
+Payment successful
+ ... 
+```
+Read through the updated Dialog documentation for more examples of using DialogPanel.
+Multiple value support for Listbox and Combobox
+If you have been using the insiders build for the new multiple value support for the Listbox and/or Combobox component, then you will have to add a new multiple prop to those components to tell the component that you are using multiple values. Previously this was automatically detected based on whether you were passing an array to the value prop or not.
+diff
+-  
++  "
+48,"Fixed
+
+Ensure that you can add the ref prop to all components (#1116)
+Ensure links are triggered inside Popover.Panel components (#1153)
+Improve SSR for Tab component (#1155)
+Fix hover scroll issue in Listbox, Combobox and Menu components (#1161)
+Guarantee DOM sort order when performing Listbox, Combobox and Menu actions (#1168)
+Fix <Transition> flickering issue (#1118)
+Improve outside click support (#1175)
+Ensure that appear prop on the <Transition> component works regardless of multiple rerenders (#1179)
+Reset Combobox.Input when the value gets reset (#1181)
+Fix double beforeEnter callback on the <Transition> component caused by SSR (#1183)
+Adjust active item/option index on Listbox, Combobox and Menu components (#1184)
+Only activate the Tab on mouseup (#1192)
+Ignore ""outside click"" on removed elements (#1193)
+Remove focus() from Listbox.Option (#1218)
+Improve some internal code (#1221)
+Use ownerDocument instead of document (#1158)
+Ensure focus trapping plays well with the Tab and Dialog components (#1231)
+Improve syncing of Combobox.Input value (#1248)
+Fix tree-shaking support (#1247)
+Stop propagation on the Popover.Button (#1263)
+Fix incorrect active option in the Listbox and Combobox components (#1264)
+Properly merge incoming props (#1265)
+Fix incorrect closing while interacting with third party libraries in Dialog component (#1268)
+Mimic browser select on focus when navigating the Tab component (#1272)
+Ensure that there is always an active option in the Combobox (#1279, #1281)
+Support classic form submissions in RadioGroup, Switch and Combobox components (#1285)
+Add React 18 compatibility (#1326)
+Fix open/closed state issue in Dialog (#1360)
+
+Added
+
+Add classic form submission compatibility via new hidden inputs (#1214)
+Add multiple value support to Listbox and Combobox components (#1243, #1355)
+Add support for clearing the value of a Combobox (#1295)
+Add Dialog.Panel to resolve issues when scrolling long dialogs that use Dialog.Overlay (#1333)
+
+
+Changes that might affect you
+Migrating from Dialog.Overlay to Dialog.Panel
+In previous versions of Headless UI, closing a dialog was handled by a click handler that lived on the Dialog.Overlay component, so as long as your overlay was rendered behind your panel, clicking outside the panel would close the dialog.
+This created an issue with scrollable dialogs, because it became easy to accidentally position your overlay on top of the scrollbar, which made it impossible to click the scrollbar without closing the dialog. You also couldn't scroll the dialog when your mouse was hovering over the overlay — only when your mouse was hovering over the actual panel.
+We've fixed this in Headless UI v1.6 by adding a dedicated Dialog.Panel component, and changing how ""click outside"" is handled. Now, if you're using a Dialog.Panel, the dialog is closed any time you click any element outside of it, rather than closing only when a Dialog.Overlay is explicitly clicked.
+If you're using Dialog.Overlay and not using Dialog.Panel, everything will continue to work exactly as it did before (including the bug I described above) to preserve backwards compatibility, but we highly encourage you to migrate to using Dialog.Panel, and to stop using Dialog.Overlay, instead using a simple div element:
+```diff
+  <Dialog
+    open={isOpen}
+    onClose={closeModal}
+    className=""fixed inset-0 flex items-center justify-center ...""
+
+
+
+
+
+
+
+
+
+Payment successful
+      {/ ... /}
+
+
+
+```
+
+Read through the updated Dialog documentation for more examples of using Dialog.Panel.
+Multiple value support for Listbox and Combobox
+If you have been using the insiders build for the new multiple value support for the Listbox and/or Combobox component, then you will have to add a new multiple prop to those components to tell the component that you are using multiple values. Previously this was automatically detected based on whether you were passing an array to the value prop or not.
+diff
+-  <Listbox value={selectedPeople} onChange={setSelectedPeople} />
++  <Listbox value={selectedPeople} onChange={setSelectedPeople} multiple />","Fixed
+Ensure that you can add the ref prop to all components (#1116)
+Ensure links are triggered inside Popover.Panel components (#1153)
+Improve SSR for Tab component (#1155)
+Fix hover scroll issue in Listbox, Combobox and Menu components (#1161)
+Guarantee DOM sort order when performing Listbox, Combobox and Menu actions (#1168)
+Fix  flickering issue (#1118)
+Improve outside click support (#1175)
+Ensure that appear prop on the  component works regardless of multiple rerenders (#1179)
+Reset Combobox.Input when the value gets reset (#1181)
+Fix double beforeEnter callback on the  component caused by SSR (#1183)
+Adjust active item/option index on Listbox, Combobox and Menu components (#1184)
+Only activate the Tab on mouseup (#1192)
+Ignore ""outside click"" on removed elements (#1193)
+Remove focus() from Listbox.Option (#1218)
+Improve some internal code (#1221)
+Use ownerDocument instead of document (#1158)
+Ensure focus trapping plays well with the Tab and Dialog components (#1231)
+Improve syncing of Combobox.Input value (#1248)
+Fix tree-shaking support (#1247)
+Stop propagation on the Popover.Button (#1263)
+Fix incorrect active option in the Listbox and Combobox components (#1264)
+Properly merge incoming props (#1265)
+Fix incorrect closing while interacting with third party libraries in Dialog component (#1268)
+Mimic browser select on focus when navigating the Tab component (#1272)
+Ensure that there is always an active option in the Combobox (#1279, #1281)
+Support classic form submissions in RadioGroup, Switch and Combobox components (#1285)
+Add React 18 compatibility (#1326)
+Fix open/closed state issue in Dialog (#1360)
+Added
+Add classic form submission compatibility via new hidden inputs (#1214)
+Add multiple value support to Listbox and Combobox components (#1243, #1355)
+Add support for clearing the value of a Combobox (#1295)
+Add Dialog.Panel to resolve issues when scrolling long dialogs that use Dialog.Overlay (#1333)
+Changes that might affect you
+Migrating from Dialog.Overlay to Dialog.Panel
+In previous versions of Headless UI, closing a dialog was handled by a click handler that lived on the Dialog.Overlay component, so as long as your overlay was rendered behind your panel, clicking outside the panel would close the dialog.
+This created an issue with scrollable dialogs, because it became easy to accidentally position your overlay on top of the scrollbar, which made it impossible to click the scrollbar without closing the dialog. You also couldn't scroll the dialog when your mouse was hovering over the overlay — only when your mouse was hovering over the actual panel.
+We've fixed this in Headless UI v1.6 by adding a dedicated Dialog.Panel component, and changing how ""click outside"" is handled. Now, if you're using a Dialog.Panel, the dialog is closed any time you click any element outside of it, rather than closing only when a Dialog.Overlay is explicitly clicked.
+If you're using Dialog.Overlay and not using Dialog.Panel, everything will continue to work exactly as it did before (including the bug I described above) to preserve backwards compatibility, but we highly encourage you to migrate to using Dialog.Panel, and to stop using Dialog.Overlay, instead using a simple div element:
+```diff
+  <Dialog
+    open={isOpen}
+    onClose={closeModal}
+    className=""fixed inset-0 flex items-center justify-center ...""
+Payment successful
+      {/ ... /}
+```
+Read through the updated Dialog documentation for more examples of using Dialog.Panel.
+Multiple value support for Listbox and Combobox
+If you have been using the insiders build for the new multiple value support for the Listbox and/or Combobox component, then you will have to add a new multiple prop to those components to tell the component that you are using multiple values. Previously this was automatically detected based on whether you were passing an array to the value prop or not.
+diff
+-  
++  "
+49,"Fixed
+
+Ensure correct order when conditionally rendering MenuItem, ListboxOption and RadioGroupOption (#1045)
+Improve typeahead search logic (#1051)
+Improve overall codebase, use modern tech like esbuild and TypeScript 4! (#1055)
+Improve build files (#1078)
+Ensure typeahead stays on same item if it still matches (#1098)
+
+Added
+
+Add Combobox component (#1047, #1099, #1101, #1104, #1106, #1109)
+","Fixed
+Ensure correct order when conditionally rendering MenuItem, ListboxOption and RadioGroupOption (#1045)
+Improve typeahead search logic (#1051)
+Improve overall codebase, use modern tech like esbuild and TypeScript 4! (#1055)
+Improve build files (#1078)
+Ensure typeahead stays on same item if it still matches (#1098)
+Added
+Add Combobox component (#1047, #1099, #1101, #1104, #1106, #1109)"
+50,"Fixed
+
+Ensure correct order when conditionally rendering Menu.Item, Listbox.Option and RadioGroup.Option (#1045)
+Improve controlled Tabs behaviour (#1050)
+Improve typeahead search logic (#1051)
+Improve overall codebase, use modern tech like esbuild and TypeScript 4! (#1055)
+Improve build files (#1078)
+Ensure typeahead stays on same item if it still matches (#1098)
+Fix off-by-one frame issue causing flicker (#1111)
+Trigger scrollIntoView effect when position changes (#1113)
+
+Added
+
+Add Combobox component (#1047, #1099, #1101, #1104, #1109)
+","Fixed
+Ensure correct order when conditionally rendering Menu.Item, Listbox.Option and RadioGroup.Option (#1045)
+Improve controlled Tabs behaviour (#1050)
+Improve typeahead search logic (#1051)
+Improve overall codebase, use modern tech like esbuild and TypeScript 4! (#1055)
+Improve build files (#1078)
+Ensure typeahead stays on same item if it still matches (#1098)
+Fix off-by-one frame issue causing flicker (#1111)
+Trigger scrollIntoView effect when position changes (#1113)
+Added
+Add Combobox component (#1047, #1099, #1101, #1104, #1109)"
+51,"Fixes
+
+Fix missing key binding in examples (#1036, #1006)
+Fix slice => splice typo in Tabs component (#1037, #986)
+Ensure correct DOM node order when performing focus actions (#1038)
+
+Added
+
+Allow for TabGroup to be controllable (#909, #970)
+","Fixes
+Fix missing key binding in examples (#1036, #1006)
+Fix slice => splice typo in Tabs component (#1037, #986)
+Ensure correct DOM node order when performing focus actions (#1038)
+Added
+Allow for TabGroup to be controllable (#909, #970)"
+52,"Fixes
+
+Ensure portal root exists in the DOM (#950)
+Ensure correct DOM node order when performing focus actions (#1038)
+
+Added
+
+Allow for Tab.Group to be controllable (#909, #970)
+","Fixes
+Ensure portal root exists in the DOM (#950)
+Ensure correct DOM node order when performing focus actions (#1038)
+Added
+Allow for Tab.Group to be controllable (#909, #970)"
+53,"Fixes
+
+Stop the event from propagating in the Popover component (#798)
+Allow clicking on elements inside a DialogOverlay (#816)
+Fix SSR crash because of useWindowEvent (#817)
+Improve tree shaking (#859)
+Add type=""button"" to Tabs component (#912)
+","Fixes
+Stop the event from propagating in the Popover component (#798)
+Allow clicking on elements inside a DialogOverlay (#816)
+Fix SSR crash because of useWindowEvent (#817)
+Improve tree shaking (#859)
+Add type=""button"" to Tabs component (#912)"
+54,"Fixes
+
+Stop the event from propagating in the Popover component (#798)
+Allow clicking on elements inside a Dialog.Overlay (#816)
+Ensure interactability with Popover.Panel contents when using the static prop (#857)
+Fix initial transition in Transition component (#882)
+","Fixes
+Stop the event from propagating in the Popover component (#798)
+Allow clicking on elements inside a Dialog.Overlay (#816)
+Ensure interactability with Popover.Panel contents when using the static prop (#857)
+Fix initial transition in Transition component (#882)"
+55,"Fixes
+
+Only add type=button to real buttons (#709)
+Add Vue emit types (#679, #712)
+Fix escape bug not closing Dialog after clicking in Dialog (#754)
+Use console.warn instead of throwing an error when there are no focusable elements (#775)
+","Fixes
+Only add type=button to real buttons (#709)
+Add Vue emit types (#679, #712)
+Fix escape bug not closing Dialog after clicking in Dialog (#754)
+Use console.warn instead of throwing an error when there are no focusable elements (#775)"
+56,"Fixes
+
+Only add type=button to real buttons (#709)
+Fix escape bug not closing Dialog after clicking in Dialog (#754)
+Use console.warn instead of throwing an error when there are no focusable elements (#775)
+","Fixes
+Only add type=button to real buttons (#709)
+Fix escape bug not closing Dialog after clicking in Dialog (#754)
+Use console.warn instead of throwing an error when there are no focusable elements (#775)"
+57,"Added
+
+Add new Tabs component (#674, #698)
+Make DisclosureButton close the disclosure inside a DisclosurePanel (#682)
+Add aria-orientation to Listbox, which swaps Up/Down with Left/Right keys (#683)
+Expose close function from the scoped slot for Disclosure, DisclosurePanel, Popover and PopoverPanel (#697)
+","Added
+Add new Tabs component (#674, #698)
+Make DisclosureButton close the disclosure inside a DisclosurePanel (#682)
+Add aria-orientation to Listbox, which swaps Up/Down with Left/Right keys (#683)
+Expose close function from the scoped slot for Disclosure, DisclosurePanel, Popover and PopoverPanel (#697)"
+58,"Added
+
+Add new Tabs component (#674, #698)
+Make Disclosure.Button close the disclosure inside a Disclosure.Panel (#682)
+Add aria-orientation to Listbox, which swaps Up/Down with Left/Right keys (#683)
+Expose close function from the render prop for Disclosure, Disclosure.Panel, Popover and Popover.Panel (#697)
+","Added
+Add new Tabs component (#674, #698)
+Make Disclosure.Button close the disclosure inside a Disclosure.Panel (#682)
+Add aria-orientation to Listbox, which swaps Up/Down with Left/Right keys (#683)
+Expose close function from the render prop for Disclosure, Disclosure.Panel, Popover and Popover.Panel (#697)"
+59,"Added
+
+Ensure that you can use TransitionChild when using implicit Transitions (#503)
+Add new entered prop for Transition and TransitionChild components (#504)
+
+Fixes
+
+Add aria-disabled on disabled RadioGroup.Option components (#543)
+Improve disabled and tabindex prop handling (#512)
+Improve reactivity when destructuring from props (#512)
+Improve aria-expanded logic (#592)
+","Added
+Ensure that you can use TransitionChild when using implicit Transitions (#503)
+Add new entered prop for Transition and TransitionChild components (#504)
+Fixes
+Add aria-disabled on disabled RadioGroup.Option components (#543)
+Improve disabled and tabindex prop handling (#512)
+Improve reactivity when destructuring from props (#512)
+Improve aria-expanded logic (#592)"
+60,"Added
+
+Ensure that you can use Transition.Child when using implicit Transitions (#503)
+Add new entered prop for Transition and Transition.Child components (#504)
+
+Fixes
+
+Add aria-disabled on disabled RadioGroup.Option components (#543)
+Improve disabled and tabindex prop handling (#512)
+Improve React peer dependency version range (#544)
+Improve types for the open prop in the Dialog component (#550)
+Improve aria-expanded logic (#592)
+Remove undocumented :className prop (#607)
+Improve types for Listbox component (#576)
+Remove explicit :class prop (#608)
+Improve tree shaking (#602)
+Improve peer dependencies for react-dom, and for the future version 18 (#622)
+","Added
+Ensure that you can use Transition.Child when using implicit Transitions (#503)
+Add new entered prop for Transition and Transition.Child components (#504)
+Fixes
+Add aria-disabled on disabled RadioGroup.Option components (#543)
+Improve disabled and tabindex prop handling (#512)
+Improve React peer dependency version range (#544)
+Improve types for the open prop in the Dialog component (#550)
+Improve aria-expanded logic (#592)
+Remove undocumented :className prop (#607)
+Improve types for Listbox component (#576)
+Remove explicit :class prop (#608)
+Improve tree shaking (#602)
+Improve peer dependencies for react-dom, and for the future version 18 (#622)"
+61,"Added
+
+Introduce Open/Closed state, to simplify component communication (#466)
+","Added
+Introduce Open/Closed state, to simplify component communication (#466)"
+62,"Added
+
+Introduce Open/Closed state, to simplify component communication (#466)
+
+Fixes
+
+Improve SSR for Dialog (#477)
+Delay focus trap initialization (#477)
+Improve incorrect behaviour for nesting Dialog components (#560)
+
+
+The Open/Closed state unlocks a feature where all our components can interact with each other. This means that you don't need to use the render prop function, and that you also don't need the static prop anymore for transitions. Here is an example in the docs that explains this: https://headlessui.dev/react/menu#transitions","Added
+Introduce Open/Closed state, to simplify component communication (#466)
+Fixes
+Improve SSR for Dialog (#477)
+Delay focus trap initialization (#477)
+Improve incorrect behaviour for nesting Dialog components (#560)
+The Open/Closed state unlocks a feature where all our components can interact with each other. This means that you don't need to use the render prop function, and that you also don't need the static prop anymore for transitions. Here is an example in the docs that explains this: link"
+63,"Fixes
+
+Fix form submission within Dialog (#460)
+Fix TypeScript types for Listbox and Switch (#459, #461)
+","Fixes
+Fix form submission within Dialog (#460)
+Fix TypeScript types for Listbox and Switch (#459, #461)"
+64,"Fixes
+
+Fix form submission within Dialog (#460)
+","Fixes
+Fix form submission within Dialog (#460)"
+65,"Fixes
+
+Improve search, make searching case insensitive (#385)
+Fix unreachable RadioGroup (#401)
+Fix RadioGroupOption value type (#400)
+Fix closing nested Dialog components when pressing Escape (#430)
+
+Added
+
+Add disabled prop to RadioGroup and RadioGroupOption (#401)
+Add defaultOpen prop to the Disclosure component (#447)
+","Fixes
+Improve search, make searching case insensitive (#385)
+Fix unreachable RadioGroup (#401)
+Fix RadioGroupOption value type (#400)
+Fix closing nested Dialog components when pressing Escape (#430)
+Added
+Add disabled prop to RadioGroup and RadioGroupOption (#401)
+Add defaultOpen prop to the Disclosure component (#447)"
+66,"Fixes
+
+Improve search, make searching case insensitive (#385)
+Fix unreachable RadioGroup (#401)
+Fix closing nested Dialog components when pressing Escape (#430)
+
+Added
+
+Add disabled prop to RadioGroup and RadioGroup.Option (#401)
+Add defaultOpen prop to the Disclosure component (#447)
+","Fixes
+Improve search, make searching case insensitive (#385)
+Fix unreachable RadioGroup (#401)
+Fix closing nested Dialog components when pressing Escape (#430)
+Added
+Add disabled prop to RadioGroup and RadioGroup.Option (#401)
+Add defaultOpen prop to the Disclosure component (#447)"
+67,"This is the v1 release of Headless UI - Vue
+We introduced a bunch of new components for this release:
+
+Disclosure
+Dialog
+Popover
+RadioGroup
+Transition
+
+We also created a beautiful new documentation website: https://headlessui.dev/vue
+Changelog:
+Fixes
+
+Fix incorrect DOM node from ref (#249)
+Stop propagating keyboard/mouse events (#282)
+
+Added
+
+Add SwitchDescription component, which adds the aria-describedby to the actual Switch (#220)
+Add Disclosure, DisclosureButton, DisclosurePanel components (#282)
+Add Dialog, DialogOverlay, DialogTitle and DialogDescription components (#282)
+Add Portal and PortalGroup components (#282)
+Add FocusTrap component (#282)
+Add Popover, PopoverButton, PopoverOverlay, PopoverPanel and PopoverGroup components (#282)
+Add RadioGroup, RadioGroupOption, RadioGroupLabel and RadioGroupDescription components (#282)
+Add TransitionRoot and TransitionChild components (#326)
+","This is the v1 release of Headless UI - Vue
+We introduced a bunch of new components for this release:
+Disclosure
+Dialog
+Popover
+RadioGroup
+Transition
+We also created a beautiful new documentation website: link
+Changelog:
+Fixes
+Fix incorrect DOM node from ref (#249)
+Stop propagating keyboard/mouse events (#282)
+Added
+Add SwitchDescription component, which adds the aria-describedby to the actual Switch (#220)
+Add Disclosure, DisclosureButton, DisclosurePanel components (#282)
+Add Dialog, DialogOverlay, DialogTitle and DialogDescription components (#282)
+Add Portal and PortalGroup components (#282)
+Add FocusTrap component (#282)
+Add Popover, PopoverButton, PopoverOverlay, PopoverPanel and PopoverGroup components (#282)
+Add RadioGroup, RadioGroupOption, RadioGroupLabel and RadioGroupDescription components (#282)
+Add TransitionRoot and TransitionChild components (#326)"
+68,"This is the v1 release of Headless UI - React
+We introduced a bunch of new components for this release:
+
+Disclosure
+Dialog
+Popover
+RadioGroup
+
+We also created a beautiful new documentation website: https://headlessui.dev/react
+Changelog:
+Fixes
+
+Fixed outside click not re-focusing the Menu.Button (#220, #256)
+Fixed outside click not re-focusing the Listbox.Button (#220, #256)
+Force focus in Menu.Items and Listbox.Options from within the component itself (#261)
+Stop propagating keyboard/mouse events (#261)
+
+Added
+
+Add Disclosure, Disclosure.Button and Disclosure.Panel components (#220)
+Add Dialog, Dialog.Overlay, Dialog.Tile and Dialog.Description components (#220)
+Add Portal and Portal.Group component (#220)
+Add Switch.Description component, which adds the aria-describedby to the actual Switch (#220)
+Add FocusTrap component (#220)
+Add Popover, Popover.Button, Popover.Overlay, Popover.Panel and Popover.Group components (#220)
+All components that accept a className, can now also receive a function with the renderProp argument (#257)
+Add RadioGroup, RadioGroup.Option, RadioGroup.Label and RadioGroup.Description components (#274)
+","This is the v1 release of Headless UI - React
+We introduced a bunch of new components for this release:
+Disclosure
+Dialog
+Popover
+RadioGroup
+We also created a beautiful new documentation website: link
+Changelog:
+Fixes
+Fixed outside click not re-focusing the Menu.Button (#220, #256)
+Fixed outside click not re-focusing the Listbox.Button (#220, #256)
+Force focus in Menu.Items and Listbox.Options from within the component itself (#261)
+Stop propagating keyboard/mouse events (#261)
+Added
+Add Disclosure, Disclosure.Button and Disclosure.Panel components (#220)
+Add Dialog, Dialog.Overlay, Dialog.Tile and Dialog.Description components (#220)
+Add Portal and Portal.Group component (#220)
+Add Switch.Description component, which adds the aria-describedby to the actual Switch (#220)
+Add FocusTrap component (#220)
+Add Popover, Popover.Button, Popover.Overlay, Popover.Panel and Popover.Group components (#220)
+All components that accept a className, can now also receive a function with the renderProp argument (#257)
+Add RadioGroup, RadioGroup.Option, RadioGroup.Label and RadioGroup.Description components (#274)"
+69,"Fixes
+
+Fix broken behaviour since Vue 3.0.5 (#279)
+","Fixes
+Fix broken behaviour since Vue 3.0.5 (#279)"
+70,"Fixes
+
+Fix incorrect type error unique symbol (#248, #240)
+","Fixes
+Fix incorrect type error unique symbol (#248, #240)"
+71,"Fixes
+
+Fix incorrect types path (d557d50)
+Fix TypeScript render related types (bb68793)
+","Fixes
+Fix incorrect types path (d557d50)
+Fix TypeScript render related types (bb68793)"
+72,"Fixes
+
+Ensure that you can't use Enter to invoke the Switch
+Fix outside click refocus bug (#114)
+Prevent scrolling when refocusing items
+Ensure Switch has type=""button"" (#192)
+Added emits property to Vue components (#199)
+Fix disabled not working when inside a disabled fieldset (#202)
+Trigger ""outside click"" behaviour on mousedown (#212)
+Ensure the active MenuItem is scrolled into view
+Ensure valid Menu accessibility tree (#228)
+
+Added
+
+Add render features + render strategy (static and unmount={true | false}) (#106)
+Add disabled prop to Listbox itself, instead of the ListboxButton (#229)
+","Fixes
+Ensure that you can't use Enter to invoke the Switch
+Fix outside click refocus bug (#114)
+Prevent scrolling when refocusing items
+Ensure Switch has type=""button"" (#192)
+Added emits property to Vue components (#199)
+Fix disabled not working when inside a disabled fieldset (#202)
+Trigger ""outside click"" behaviour on mousedown (#212)
+Ensure the active MenuItem is scrolled into view
+Ensure valid Menu accessibility tree (#228)
+Added
+Add render features + render strategy (static and unmount={true | false}) (#106)
+Add disabled prop to Listbox itself, instead of the ListboxButton (#229)"
+73,"Fixes
+
+Ensure that you can't use Enter to invoke the Switch
+Fix outside click refocus bug (#114)
+Prevent scrolling when refocusing items
+Ensure Switch has type=""button"" (#192)
+Fix useId() hook returning undefined on the client
+Fix disabled not working when inside a disabled fieldset (#202)
+Trigger ""outside click"" behaviour on mousedown (#212)
+Ensure the active MenuItem is scrolled into view
+Ensure valid Menu accessibility tree (#228)
+
+Added
+
+Add Transition events (beforeEnter, afterEnter, beforeLeave and afterLeave) (#57)
+Add render features + render strategy (static and unmount={true | false}) (#106)
+Also changes the API of Transition component.
+We will now always render a div by default (unless you change this using the as={...} prop).
+The render function prop doesn't expose a ref anymore.
+Adds unmount prop to the Transition and Transition.Child components.
+
+
+Add displayName to all contexts (#175)
+Add disabled prop to Listbox itself, instead of the Listbox.Button (#229)
+
+Upgrade Path
+We changed the API of the Transition component to be more inline with the other API's of the various components. We now always render a div for the Transition and Transition.Child component. If you want to use a render function, then we still render a div. The render function also used do expose a ref prop, which is now not the case anymore.
+You can still use the as prop to change the underlying div to another element or component.
+```js
+// From
+<Transition
+  show={true}
+  enter=""..""
+  enterFrom=""..""
+  enterTo=""..""
+  leave=""..""
+  leaveFrom=""..""
+  leaveTo=""..""
+
+{ref => (
+    
+Child
+
+  )}
+
+
+// To (option 1) - Hoist attributes from the first child div to the Transition itself
+<Transition
+  show={true}
+  enter=""..""
+  enterFrom=""..""
+  enterTo=""..""
+  leave=""..""
+  leaveFrom=""..""
+  leaveTo=""..""
+  className=""these classes always apply""
+
+Child
+
+
+// To (option 2) - Add as={Fragment} to the Transition component.
+<Transition
+  as={React.Fragment}
+  show={true}
+  enter=""..""
+  enterFrom=""..""
+  enterTo=""..""
+  leave=""..""
+  leaveFrom=""..""
+  leaveTo=""..""
+
+
+Child
+
+
+
+```","Fixes
+Ensure that you can't use Enter to invoke the Switch
+Fix outside click refocus bug (#114)
+Prevent scrolling when refocusing items
+Ensure Switch has type=""button"" (#192)
+Fix useId() hook returning undefined on the client
+Fix disabled not working when inside a disabled fieldset (#202)
+Trigger ""outside click"" behaviour on mousedown (#212)
+Ensure the active MenuItem is scrolled into view
+Ensure valid Menu accessibility tree (#228)
+Added
+Add Transition events (beforeEnter, afterEnter, beforeLeave and afterLeave) (#57)
+Add render features + render strategy (static and unmount={true | false}) (#106)
+Also changes the API of Transition component.
+We will now always render a div by default (unless you change this using the as={...} prop).
+The render function prop doesn't expose a ref anymore.
+Adds unmount prop to the Transition and Transition.Child components.
+Add displayName to all contexts (#175)
+Add disabled prop to Listbox itself, instead of the Listbox.Button (#229)
+Upgrade Path
+We changed the API of the Transition component to be more inline with the other API's of the various components. We now always render a div for the Transition and Transition.Child component. If you want to use a render function, then we still render a div. The render function also used do expose a ref prop, which is now not the case anymore.
+You can still use the as prop to change the underlying div to another element or component.
+```js
+// From
+<Transition
+  show={true}
+  enter=""..""
+  enterFrom=""..""
+  enterTo=""..""
+  leave=""..""
+  leaveFrom=""..""
+  leaveTo=""..""
+{ref => (
+Child
+)}
+// To (option 1) - Hoist attributes from the first child div to the Transition itself
+<Transition
+  show={true}
+  enter=""..""
+  enterFrom=""..""
+  enterTo=""..""
+  leave=""..""
+  leaveFrom=""..""
+  leaveTo=""..""
+  className=""these classes always apply""
+Child
+// To (option 2) - Add as={Fragment} to the Transition component.
+<Transition
+  as={React.Fragment}
+  show={true}
+  enter=""..""
+  enterFrom=""..""
+  enterTo=""..""
+  leave=""..""
+  leaveFrom=""..""
+  leaveTo=""..""
+Child
+```"
+74,"
+Add Listbox component
+Add Switch component
+","Add Listbox component
+Add Switch component"
+75,"
+Add Listbox component
+Add Switch component
+","Add Listbox component
+Add Switch component"
+76,"
+Fix an issue where you couldn't click on menu items that were links.
+Fix outside click behaviour. If you had multiple menu's, when menu 1 is open, menu 2 is closed and you click on menu button 2 it will open both menu's. This is now fixed.
+Ensure when using keyboard navigation we prevent the default behaviour.
+","Fix an issue where you couldn't click on menu items that were links.
+Fix outside click behaviour. If you had multiple menu's, when menu 1 is open, menu 2 is closed and you click on menu button 2 it will open both menu's. This is now fixed.
+Ensure when using keyboard navigation we prevent the default behaviour."
+77,"
+Fix outside click behaviour. If you had multiple menu's, when menu 1 is open, menu 2 is closed and you click on menu button 2 it will open both menu's. This is now fixed.
+Ensure when using keyboard navigation we prevent the default behaviour.
+","Fix outside click behaviour. If you had multiple menu's, when menu 1 is open, menu 2 is closed and you click on menu button 2 it will open both menu's. This is now fixed.
+Ensure when using keyboard navigation we prevent the default behaviour."
+78,"
+Fix issue where button MenuItem instances didn't properly fire click events
+Don't pass disabled prop through to children, only add aria-disabled
+","Fix issue where button MenuItem instances didn't properly fire click events
+Don't pass disabled prop through to children, only add aria-disabled"
+79,"
+Add tests for onClick handling that wasn't working properly in @headlessui/vue to ensure behavior stays the same in this library
+Don't pass disabled prop through to children, only add aria-disabled
+","Add tests for onClick handling that wasn't working properly in @headlessui/vue to ensure behavior stays the same in this library
+Don't pass disabled prop through to children, only add aria-disabled"
+80,"
+Initial release
+",Initial release
+81,"
+Initial release
+",Initial release

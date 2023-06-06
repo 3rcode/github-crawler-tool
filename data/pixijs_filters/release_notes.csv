@@ -1,0 +1,995 @@
+Index,Release Note,Release Note With Abstraction
+1,":bug: Fixed
+
+Fix getter and setter alpha type in GlowFilter (#380) @viniciusbitt 
+",":bug: Fixed
+Fix getter and setter alpha type in GlowFilter (#380) @viniciusbitt "
+2,":gift: Added
+
+Add HslAdjustmentFilter (#369, #370, #375, #378) @vikpe 
+Add ColorGradientFilter (#362, #373) @vikpe 
+Add knockout setting to OutlineFilter (#372) @vikpe 
+
+🚽 Deprecated
+
+Convert TiltShiftFilter constructor arguments to options (#376) @bigtimebuddy
+Use offset for DropShadowFilter instead of rotation/distance (#377) @bigtimebuddy
+
+:broom: Chores
+
+Chore: Update dependencies (#367) @vikpe 
+Fix actions deprecations, auto-deploy bundle files (#371) @bigtimebuddy 
+Disallow warning with linting (#374) @bigtimebuddy 
+",":gift: Added
+Add HslAdjustmentFilter (#369, #370, #375, #378) @vikpe 
+Add ColorGradientFilter (#362, #373) @vikpe 
+Add knockout setting to OutlineFilter (#372) @vikpe 
+🚽 Deprecated
+Convert TiltShiftFilter constructor arguments to options (#376) @bigtimebuddy
+Use offset for DropShadowFilter instead of rotation/distance (#377) @bigtimebuddy
+:broom: Chores
+Chore: Update dependencies (#367) @vikpe 
+Fix actions deprecations, auto-deploy bundle files (#371) @bigtimebuddy 
+Disallow warning with linting (#374) @bigtimebuddy "
+3,":gift: Added
+
+Output a browser module bundle (#365) @bigtimebuddy 
+
+:bug: Fixed
+
+Fix flipped characters in AsciiFilter, improved sample color (#364) @movAX13h 
+
+:broom: Chores
+
+Chore: Allow using query string to enable filters in the demo application (#361) @vikpe 
+Chore: Allow configuring filter target per filter in screenshot renderer (#363) @vikpe 
+Bump json5 from 2.2.1 to 2.2.3 (#366) @dependabot 
+",":gift: Added
+Output a browser module bundle (#365) @bigtimebuddy 
+:bug: Fixed
+Fix flipped characters in AsciiFilter, improved sample color (#364) @movAX13h 
+:broom: Chores
+Chore: Allow using query string to enable filters in the demo application (#361) @vikpe 
+Chore: Allow configuring filter target per filter in screenshot renderer (#363) @vikpe 
+Bump json5 from 2.2.1 to 2.2.3 (#366) @dependabot "
+4,":gift: Added
+
+Add alpha setting to OutlineFilter (#353) @vikpe 
+Add grayscale setting to DotFilter (#354) @vikpe 
+Add GrayscaleFilter (#356) @vikpe 
+Add alpha setting to GlowFilter (#359) @vikpe 
+
+:broom: Chores
+
+Chore: Update README typos, missing GrayscaleFilter (#357) @bigtimebuddy 
+Chore: Use cross-platform friendly open (#360) @vikpe 
+Chore: Add a green fish to demo application (#358) @vikpe 
+",":gift: Added
+Add alpha setting to OutlineFilter (#353) @vikpe 
+Add grayscale setting to DotFilter (#354) @vikpe 
+Add GrayscaleFilter (#356) @vikpe 
+Add alpha setting to GlowFilter (#359) @vikpe 
+:broom: Chores
+Chore: Update README typos, missing GrayscaleFilter (#357) @bigtimebuddy 
+Chore: Use cross-platform friendly open (#360) @vikpe 
+Chore: Add a green fish to demo application (#358) @vikpe "
+5,":fire: Breaking Changes
+
+Output is ES2017 instead of ES5
+Incompatible with PixiJS v6
+Remove the browser bundles for individual filters
+
+:bug: Fixed
+
+Update all filters links to their own docs (#342) @mauriciomassaia 
+
+Chores
+
+Updates Github Actions dependencies
+Upgrades build tools to use esbuild
+Update Electron for generating screenshots
+Remove PIXI.filters namespace from API docs
+Remove unused packages
+",":fire: Breaking Changes
+Output is ES2017 instead of ES5
+Incompatible with PixiJS v6
+Remove the browser bundles for individual filters
+:bug: Fixed
+Update all filters links to their own docs (#342) @mauriciomassaia 
+Chores
+Updates Github Actions dependencies
+Upgrades build tools to use esbuild
+Update Electron for generating screenshots
+Remove PIXI.filters namespace from API docs
+Remove unused packages"
+6,":bug: Fixed
+
+Fix README.md for CRTFilter (#336) @akiomik
+Fix package name in README.md (#338) @akiomik 
+Fix type annotation for TwistFilter (#340) @akiomik 
+
+🧹  Chores
+
+Add new exports format for Node.js (#337) @bigtimebuddy 
+",":bug: Fixed
+Fix README.md for CRTFilter (#336) @akiomik
+Fix package name in README.md (#338) @akiomik 
+Fix type annotation for TwistFilter (#340) @akiomik 
+🧹  Chores
+Add new exports format for Node.js (#337) @bigtimebuddy "
+7,":bug: Fixed
+
+Replace dat.gui with lil-gui in demo (#310) @georgealways
+Remove publishing hacks and Lerna anti-patterns (#309) @bigtimebuddy 
+Fix CRTFilter allowing non power-of-2 texture bounds correctly (#317) @bradedelman 
+Bump node-fetch from 2.6.1 to 2.6.7 (#318)
+Bump trim-off-newlines from 1.0.1 to 1.0.3 (#319)
+
+🔗  Links
+https://filters.pixijs.download/v4.1.6/pixi-filters.js
+https://filters.pixijs.download/v4.1.6/demo/index.html
+🔍  Compare
+https://github.com/pixijs/pixi-filters/compare/v4.1.5...v4.1.6",":bug: Fixed
+Replace dat.gui with lil-gui in demo (#310) @georgealways
+Remove publishing hacks and Lerna anti-patterns (#309) @bigtimebuddy 
+Fix CRTFilter allowing non power-of-2 texture bounds correctly (#317) @bradedelman 
+Bump node-fetch from 2.6.1 to 2.6.7 (#318)
+Bump trim-off-newlines from 1.0.1 to 1.0.3 (#319)
+🔗  Links
+link
+link
+🔍  Compare
+link"
+8,":bug: Fixed
+
+Update _resolution scope for DropShadow and AdvancedBloom (#307) @mcdenhoed 
+Upgrade docs and template, remove simple explicit types (#308) @bigtimebuddy 
+
+🔗  Links
+https://filters.pixijs.download/v4.1.5/pixi-filters.js
+https://filters.pixijs.download/v4.1.5/demo/index.html
+🔍  Compare
+https://github.com/pixijs/pixi-filters/compare/v4.1.4...v4.1.5",":bug: Fixed
+Update _resolution scope for DropShadow and AdvancedBloom (#307) @mcdenhoed 
+Upgrade docs and template, remove simple explicit types (#308) @bigtimebuddy 
+🔗  Links
+link
+link
+🔍  Compare
+link"
+9,":bug: Fixed
+
+Fix types in pixi-filters package
+
+🔗  Links
+https://filters.pixijs.download/v4.1.4/pixi-filters.js
+https://filters.pixijs.download/v4.1.4/demo/index.html
+🔍  Compare
+https://github.com/pixijs/pixi-filters/compare/v4.1.3...v4.1.4",":bug: Fixed
+Fix types in pixi-filters package
+🔗  Links
+link
+link
+🔍  Compare
+link"
+10,"No code changes
+Testing preprelease publishing with GitHub Actions.
+🔗  Links
+https://filters.pixijs.download/v4.1.3/pixi-filters.js
+https://filters.pixijs.download/v4.1.3/demo/index.html
+🔍  Compare
+https://github.com/pixijs/pixi-filters/compare/v4.1.2...v4.1.3","No code changes
+Testing preprelease publishing with GitHub Actions.
+🔗  Links
+link
+link
+🔍  Compare
+link"
+11,"No code changes
+Testing preprelease publishing with GitHub Actions.","No code changes
+Testing preprelease publishing with GitHub Actions."
+12,"No code changes
+Testing preprelease publishing with GitHub Actions.","No code changes
+Testing preprelease publishing with GitHub Actions."
+13,"🔗  Links
+https://filters.pixijs.download/v4.1.2/pixi-filters.js
+https://filters.pixijs.download/v4.1.2/demo/index.html
+🔍  Compare
+https://github.com/pixijs/pixi-filters/compare/v4.1.1...v4.1.2
+:bug: Fixed
+
+Do not mutate defaults in DropShadowFilter (#303) @a-c-sreedhar-reddy 
+","🔗  Links
+link
+link
+🔍  Compare
+link
+:bug: Fixed
+Do not mutate defaults in DropShadowFilter (#303) @a-c-sreedhar-reddy "
+14,"🔗  Links
+https://filters.pixijs.download/v4.1.1/pixi-filters.js
+https://filters.pixijs.download/v4.1.1/demo/index.html
+🔍  Compare
+https://github.com/pixijs/pixi-filters/compare/v4.1.0...v4.1.1
+:bug: Fixed
+
+Fix GlitchFilter by un-initializing a variable (#300) @miltoncandelero 
+","🔗  Links
+link
+link
+🔍  Compare
+link
+:bug: Fixed
+Fix GlitchFilter by un-initializing a variable (#300) @miltoncandelero "
+15,"🔗  Links
+https://filters.pixijs.download/v4.1.0/pixi-filters.js
+https://filters.pixijs.download/v4.1.0/demo/index.html
+🔍  Compare
+https://github.com/pixijs/pixi-filters/compare/v4.0.0...v4.1.0
+:gift: Added
+
+Automatically update padding for MotionBlur on velocity change (#288) @st3v0 
+Add alpha property to ColorOverlayFilter (#287) @gregmax17
+
+✏️  Changed
+
+Changed the repo name from pixi-filters to filters
+Update to npm 7 workspaces, consolidate env on actions (#290) @bigtimebuddy 
+","🔗  Links
+link
+link
+🔍  Compare
+link
+:gift: Added
+Automatically update padding for MotionBlur on velocity change (#288) @st3v0 
+Add alpha property to ColorOverlayFilter (#287) @gregmax17
+✏️  Changed
+Changed the repo name from pixi-filters to filters
+Update to npm 7 workspaces, consolidate env on actions (#290) @bigtimebuddy "
+16,"🔗  Links
+https://filters.pixijs.download/v4.0.0/pixi-filters.js
+https://filters.pixijs.download/v4.0.0/demo/index.html
+🔍  Compare
+https://github.com/pixijs/pixi-filters/compare/v3.2.1...v4.0.0
+🎁  Added
+
+Upgrade to PixiJS v6, build against proper package types
+Updated package source to TypeScript
+Types contain documentation for better dev-experience
+Replace JSDoc with Webdoc
+Update to @pixi/eslint-config
+Removed any deprecated rest arguments on constructors :fire: breaking change
+Ambient typing (e.g. PIXI global object) has been removed :fire: breaking change
+","🔗  Links
+link
+link
+🔍  Compare
+link
+🎁  Added
+Upgrade to PixiJS v6, build against proper package types
+Updated package source to TypeScript
+Types contain documentation for better dev-experience
+Replace JSDoc with Webdoc
+Update to @pixi/eslint-config
+Removed any deprecated rest arguments on constructors :fire: breaking change
+Ambient typing (e.g. PIXI global object) has been removed :fire: breaking change"
+17,This is a no-change release to verify publishing pipeline works correctly.,This is a no-change release to verify publishing pipeline works correctly.
+18,"🔗  Links
+https://filters.pixijs.download/v3.2.1/pixi-filters.js
+https://filters.pixijs.download/v3.2.1/demo/index.html
+🔍  Compare
+https://github.com/pixijs/pixi-filters/compare/v3.2.0...v3.2.1
+🎁  Added
+
+Adds support lowering MAX_KERNEL_SIZE on ZoomBlurFilter (88b9b5b) @bigtimebuddy 
+Add constructor options for TwistFilter (#283) @bigtimebuddy 
+
+:bug: Fixed
+
+Fix link in documentation for ConvolutionFilter (e13ff66) @bigtimebuddy 
+Add default padding of 1 for BevelFilter to correctly apply to rectangles (4fe80dc) @bigtimebuddy 
+","🔗  Links
+link
+link
+🔍  Compare
+link
+🎁  Added
+Adds support lowering MAX_KERNEL_SIZE on ZoomBlurFilter (88b9b5b) @bigtimebuddy 
+Add constructor options for TwistFilter (#283) @bigtimebuddy 
+:bug: Fixed
+Fix link in documentation for ConvolutionFilter (e13ff66) @bigtimebuddy 
+Add default padding of 1 for BevelFilter to correctly apply to rectangles (4fe80dc) @bigtimebuddy "
+19,"🔗 Links
+https://filters.pixijs.download/v3.2.0/pixi-filters.js
+https://filters.pixijs.download/v3.2.0/demo/index.html
+🔍 Compare
+https://github.com/pixijs/pixi-filters/compare/v3.1.1...v3.2.0
+🎁  Added
+
+Add alpha support to Godray filter (#263) @jrod-disco
+Adds auto-padding to KawaseBlurFilter (#275) @LiamMartens
+Add auto-padding based on the outline thickness (#258) @bigtimebuddy 
+
+✏️  Changed
+
+Remove TravisCI, replace with GitHub Actions (#282) @bigtimebuddy 
+
+:bug: Fixed
+
+Small optimization, use internal property instead of setter (#254) @finscn 
+Fix resolution defaults to use FILTER_RESOLUTION (#274) @dev7355608 
+Small cosmetic change with CRTFilter fragment shader (#257) @finscn 
+Fix GlowFilter dependencies, should be peers (#281) @bigtimebuddy 
+Fix clear mode flag to TiltFilter (#280) @bigtimebuddy 
+Fix BloomFilter for PixiJS v5.3.0+ (#279) @bigtimebuddy 
+","🔗 Links
+link
+link
+🔍 Compare
+link
+🎁  Added
+Add alpha support to Godray filter (#263) @jrod-disco
+Adds auto-padding to KawaseBlurFilter (#275) @LiamMartens
+Add auto-padding based on the outline thickness (#258) @bigtimebuddy 
+✏️  Changed
+Remove TravisCI, replace with GitHub Actions (#282) @bigtimebuddy 
+:bug: Fixed
+Small optimization, use internal property instead of setter (#254) @finscn 
+Fix resolution defaults to use FILTER_RESOLUTION (#274) @dev7355608 
+Small cosmetic change with CRTFilter fragment shader (#257) @finscn 
+Fix GlowFilter dependencies, should be peers (#281) @bigtimebuddy 
+Fix clear mode flag to TiltFilter (#280) @bigtimebuddy 
+Fix BloomFilter for PixiJS v5.3.0+ (#279) @bigtimebuddy "
+20,"🔗 Links
+https://filters.pixijs.download/v3.1.1/pixi-filters.js
+https://filters.pixijs.download/v3.1.1/demo/index.html
+🔍 Compare
+https://github.com/pixijs/pixi-filters/compare/v3.1.0...v3.1.1
+:bug: Fixed
+
+Publish exact version of dependencies (#247)
+Support PIXI.filters namespace (#250)
+Publishing Improvements (#248)
+Convert clear to clearModes to be compatible with 5.3.0+ (#252)
+
+👏 Collaborators
+
+Andriej Komoda (@krtr)
+Matt Karl (@bigtimebuddy)
+","🔗 Links
+link
+link
+🔍 Compare
+link
+:bug: Fixed
+Publish exact version of dependencies (#247)
+Support PIXI.filters namespace (#250)
+Publishing Improvements (#248)
+Convert clear to clearModes to be compatible with 5.3.0+ (#252)
+👏 Collaborators
+Andriej Komoda (@krtr)
+Matt Karl (@bigtimebuddy)"
+21,"🔗 Links
+https://filters.pixijs.download/v3.1.0/pixi-filters.js
+https://filters.pixijs.download/v3.1.0/demo/index.html
+🔍 Compare
+https://github.com/pixijs/pixi-filters/compare/v3.0.3...v3.1.0
+✏️ Changed
+
+Import PixiJS as a peer dependency (#221)
+Improve performance of GlowFilter, changed constructor arguments, remove writable distance property (#239)
+js
+// arguments list becomes object for GlowFilter
+const filter = new GlowFilter(distance, outerStrength, innerStrength, color, quality); // OLD
+const filter = new GlowFilter({ distance, outerStrength, innerStrength, color, quality }); // NEW
+Add knockout property for GlowFilter (#233)
+Provide options for bulge-pinch and zoom-blur (#245)
+Adds ColorOverlayFilter (#214)
+
+:bug: Fixed
+
+Fix v5 deprecation warning (#235)
+Fix OutlineFilter doc (#246)
+Remove unncessary if in drop shadow frag shader (#223)
+
+👏 Contributors
+
+Nils Kuhnhenn (@laino)
+Matt Karl (@bigtimebuddy)
+Julian Mourer (@getkey)
+@Mwni 
+Ivan Popelyshev (@ivanpopelyshev)
+Michael Deal (@mudcube)
+Simon Farshid (@Yonom)
+","🔗 Links
+link
+link
+🔍 Compare
+link
+✏️ Changed
+Import PixiJS as a peer dependency (#221)
+Improve performance of GlowFilter, changed constructor arguments, remove writable distance property (#239)
+js
+// arguments list becomes object for GlowFilter
+const filter = new GlowFilter(distance, outerStrength, innerStrength, color, quality); // OLD
+const filter = new GlowFilter({ distance, outerStrength, innerStrength, color, quality }); // NEW
+Add knockout property for GlowFilter (#233)
+Provide options for bulge-pinch and zoom-blur (#245)
+Adds ColorOverlayFilter (#214)
+:bug: Fixed
+Fix v5 deprecation warning (#235)
+Fix OutlineFilter doc (#246)
+Remove unncessary if in drop shadow frag shader (#223)
+👏 Contributors
+Nils Kuhnhenn (@laino)
+Matt Karl (@bigtimebuddy)
+Julian Mourer (@getkey)
+@Mwni 
+Ivan Popelyshev (@ivanpopelyshev)
+Michael Deal (@mudcube)
+Simon Farshid (@Yonom)"
+22,"🐛 Fixed
+
+Fixes issue with browser build and PIXI.utils path (a950f03)
+
+👏 Contributors
+
+Matt Karl (@bigtimebuddy)
+","🐛 Fixed
+Fixes issue with browser build and PIXI.utils path (a950f03)
+👏 Contributors
+Matt Karl (@bigtimebuddy)"
+23,"🐛 Fixed
+
+Fix glitch filter for win7 d3d (#207)
+
+👏 Contributors
+
+Ivan Popelyshev (@ivanpopelyshev)
+","🐛 Fixed
+Fix glitch filter for win7 d3d (#207)
+👏 Contributors
+Ivan Popelyshev (@ivanpopelyshev)"
+24,"🐛 Fixed
+
+Fixes botch release, postversion was not run after tagging v3.0.0.
+","🐛 Fixed
+Fixes botch release, postversion was not run after tagging v3.0.0."
+25,"Changed
+
+Drop support for v4 (#195)
+Removes v4 deprecations
+Creates cjs, esm & iife builds for all filters and bundle
+Use core @pixi/* packages as dependencies so that it can be used with either pixi.js pixi.js-legacy or @pixi/core
+Share typings from bundle
+
+🐛 Fixed
+
+Fix drop shadow filter shift (#204)
+
+Contributors
+
+Matt Karl (@bigtimebuddy)
+Ivan Popelyshev (@ivanpopelyshev)
+","Changed
+Drop support for v4 (#195)
+Removes v4 deprecations
+Creates cjs, esm & iife builds for all filters and bundle
+Use core @pixi/* packages as dependencies so that it can be used with either pixi.js pixi.js-legacy or @pixi/core
+Share typings from bundle
+🐛 Fixed
+Fix drop shadow filter shift (#204)
+Contributors
+Matt Karl (@bigtimebuddy)
+Ivan Popelyshev (@ivanpopelyshev)"
+26,"🐛 Fixed
+
+Fixes AsciiFilter bug due to an old WegGL compiler bug (#194)
+
+👏 Contributors
+
+Nathan Vogel (@nathanvogel)
+","🐛 Fixed
+Fixes AsciiFilter bug due to an old WegGL compiler bug (#194)
+👏 Contributors
+Nathan Vogel (@nathanvogel)"
+27,"🐛 Fixed
+
+Made properties in DropShadowFilterOptions optional to match docs (#178)
+Fixes BulgePinchFilter allows 0 as radius and strength argument (#174)
+Updates ColorMapFilter to support alpha (#182)
+Fixes ZoomBlurFilter for iOS devices, better hash generation (#180)
+Fixes ConvolutionFilter bug for IE11, better defaults (#183)
+Uses more legible color in demo for enabled filter titles (01701ab)
+Fixes GlitchFilter slices update (#186)
+
+:gift: Added
+
+Update Dependencies & Build Tooling (#181)
+Adds support for PixiJS v5 (#181)
+
+👏 Contributors
+
+@zfmarkham
+Dario Fuzinato (@fuzinato)
+@Dairnon 
+@jcyuan 
+Matt Karl (@bigtimebuddy)
+","🐛 Fixed
+Made properties in DropShadowFilterOptions optional to match docs (#178)
+Fixes BulgePinchFilter allows 0 as radius and strength argument (#174)
+Updates ColorMapFilter to support alpha (#182)
+Fixes ZoomBlurFilter for iOS devices, better hash generation (#180)
+Fixes ConvolutionFilter bug for IE11, better defaults (#183)
+Uses more legible color in demo for enabled filter titles (01701ab)
+Fixes GlitchFilter slices update (#186)
+:gift: Added
+Update Dependencies & Build Tooling (#181)
+Adds support for PixiJS v5 (#181)
+👏 Contributors
+@zfmarkham
+Dario Fuzinato (@fuzinato)
+@Dairnon 
+@jcyuan 
+Matt Karl (@bigtimebuddy)"
+28,"🐛 Fixed
+
+Fix DemoApplication resize problem with PixJS v5 (#176)
+
+👏 Contributors
+
+Ivan Popelyshev (@ivanpopelyshev)
+","🐛 Fixed
+Fix DemoApplication resize problem with PixJS v5 (#176)
+👏 Contributors
+Ivan Popelyshev (@ivanpopelyshev)"
+29,"🐛 Fixed
+
+Resolves EOL issues with Windows (#151)
+Fix typo in readme (#153)
+Removes needless BaseTexture code (#156)
+Remove this in dist file (#160)
+Adds support for velocity being an ObservablePoint (#162)
+
+👏 Contributors
+
+Dave Moore (@themoonrat)
+@Deadalusmask 
+@finscn 
+Matt Karl (@bigtimebuddy)
+","🐛 Fixed
+Resolves EOL issues with Windows (#151)
+Fix typo in readme (#153)
+Removes needless BaseTexture code (#156)
+Remove this in dist file (#160)
+Adds support for velocity being an ObservablePoint (#162)
+👏 Contributors
+Dave Moore (@themoonrat)
+@Deadalusmask 
+@finscn 
+Matt Karl (@bigtimebuddy)"
+30,"Overview
+:tada: This release adds two new filters: BevelFilter and ColorMapFilter. BevelFilter can be used to give a light and dark bevel around the contours of an object. ColorMapFilter can be used as a fast alternative for ColorMatrixFilter to apply color adjustments using a source color map texture (inspired by this).
+🎁 Added
+
+Adds BevelFilter #148 
+Adds support for PixiJS v5 filters #149 
+Add filterClamp option to KawaseBlur #144
+Adds ColorMapFilter #136 
+
+🐛 Fixed
+
+Adds missing resolution set for extractFilter in AdvancedBloomFilter #137 
+Fixes the bug about gl_FragColor on iOS #140
+Remove non-constant expressions in global scope #143 
+Use KawaseBlurFilter instead of BlurFilter for DropShadowFilter #138
+
+☝️ Known Issues
+
+DropShadowFilter currently is not supported with v5  #149 
+
+👏 Contributors
+
+@finscn 
+Evgeny Shestakov (@Ewanse)
+Matt Karl (@bigtimebuddy)
+Nikola Pantic (@nikkop)
+","Overview
+:tada: This release adds two new filters: BevelFilter and ColorMapFilter. BevelFilter can be used to give a light and dark bevel around the contours of an object. ColorMapFilter can be used as a fast alternative for ColorMatrixFilter to apply color adjustments using a source color map texture (inspired by this).
+🎁 Added
+Adds BevelFilter #148 
+Adds support for PixiJS v5 filters #149 
+Add filterClamp option to KawaseBlur #144
+Adds ColorMapFilter #136 
+🐛 Fixed
+Adds missing resolution set for extractFilter in AdvancedBloomFilter #137 
+Fixes the bug about gl_FragColor on iOS #140
+Remove non-constant expressions in global scope #143 
+Use KawaseBlurFilter instead of BlurFilter for DropShadowFilter #138
+☝️ Known Issues
+DropShadowFilter currently is not supported with v5  #149 
+👏 Contributors
+@finscn 
+Evgeny Shestakov (@Ewanse)
+Matt Karl (@bigtimebuddy)
+Nikola Pantic (@nikkop)"
+31,"✏️ Changed
+
+Add better select list for fillMode for GlitchFilter demo #134
+
+:clap: Contributors
+
+@finscn 
+","✏️ Changed
+Add better select list for fillMode for GlitchFilter demo #134
+:clap: Contributors
+@finscn "
+32,"Overview
+Introduces a few NEW filters including GlitchFilter, CRTFilter, AdjustmentFilter, ReflectionFilter, KawaseBlurFilter. Big shout-out to @finscn for all his help submitting these filters and pushing along this big release.
+:gift: Added
+
+Adds GlitchFilter #119
+
+Adds KawaseBlurFilter #114
+
+Adds CRTFilter #123
+
+Adds AdjustmentFilter #124 
+
+Adds ReflectionFilter #125
+
+Update GodrayFilter to support non-parallel lights. This changes the constructor arguments from angle, gain, lacunarity, time to options. The options now are the following: #118
+angle number
+center PIXI.Point|Array
+parallel boolean
+gain number
+lacunarity number
+time number
+
+🐛  Fixed
+
+Fixes cross-platform issue with OutlineFilter #126 
+Change the CDN to jsdelivr for static files #127
+Update LICENSE year and author #132 
+Refactor how global PIXI is imported #133
+Fixed copy-paste errors in READMEs and package.json files #133
+
+✏️  Changed
+
+Delete example redirect #129 
+AdvancedBloomFilter uses KawaseBlurFilter instead of Gaussian BlurFilter #131
+
+👏  Contributors
+
+@finscn 
+Matt Karl (@bigtimebuddy)
+","Overview
+Introduces a few NEW filters including GlitchFilter, CRTFilter, AdjustmentFilter, ReflectionFilter, KawaseBlurFilter. Big shout-out to @finscn for all his help submitting these filters and pushing along this big release.
+:gift: Added
+Adds GlitchFilter #119
+Adds KawaseBlurFilter #114
+Adds CRTFilter #123
+Adds AdjustmentFilter #124 
+Adds ReflectionFilter #125
+Update GodrayFilter to support non-parallel lights. This changes the constructor arguments from angle, gain, lacunarity, time to options. The options now are the following: #118
+angle number
+center PIXI.Point|Array
+parallel boolean
+gain number
+lacunarity number
+time number
+🐛  Fixed
+Fixes cross-platform issue with OutlineFilter #126 
+Change the CDN to jsdelivr for static files #127
+Update LICENSE year and author #132 
+Refactor how global PIXI is imported #133
+Fixed copy-paste errors in READMEs and package.json files #133
+✏️  Changed
+Delete example redirect #129 
+AdvancedBloomFilter uses KawaseBlurFilter instead of Gaussian BlurFilter #131
+👏  Contributors
+@finscn 
+Matt Karl (@bigtimebuddy)"
+33,"🐛  Fixed
+
+Disambiguates thickness and quality in OutlineFilter, creates a third optional quality param in constructor. Also, improves outline demo #116
+Fixes mobile bugs of fragment shader in GlowFliter #117
+
+👏  Contributors
+
+@finscn 
+Tianyu Dai (@dtysky)
+","🐛  Fixed
+Disambiguates thickness and quality in OutlineFilter, creates a third optional quality param in constructor. Also, improves outline demo #116
+Fixes mobile bugs of fragment shader in GlowFliter #117
+👏  Contributors
+@finscn 
+Tianyu Dai (@dtysky)"
+34,"Overview
+This release adds two new filters! These are OldFilmFilter, RadialBlurFilter and MotionBlurFilter. All filters have been added to the demo.
+🎁  Added
+
+Adds new RadialBlurFilter #109 
+
+Adds new MotionBlurFilter #99 
+
+Adds new OldFilmFilter #113 
+
+
+✏️  Changed
+
+Optimized the internal build process #110 
+
+🐛  Fixed
+
+Change the order of filters & fix typo #106 
+Fixes the README for drop-shadow #105 
+De-duplicates default vertex in pixi-filters bundle #112
+
+👏  Contributors
+
+@finscn 
+@eXponenta 
+Matt Karl (@bigtimebuddy)
+","Overview
+This release adds two new filters! These are OldFilmFilter, RadialBlurFilter and MotionBlurFilter. All filters have been added to the demo.
+🎁  Added
+Adds new RadialBlurFilter #109 
+Adds new MotionBlurFilter #99 
+Adds new OldFilmFilter #113 
+✏️  Changed
+Optimized the internal build process #110 
+🐛  Fixed
+Change the order of filters & fix typo #106 
+Fixes the README for drop-shadow #105 
+De-duplicates default vertex in pixi-filters bundle #112
+👏  Contributors
+@finscn 
+@eXponenta 
+Matt Karl (@bigtimebuddy)"
+35,":bug: Fixed
+
+Not all filters were passing fourth clear param in applyFilter #103 
+Removed redundant default vertex shaders #102 
+Alphabetized filter list in demo #104 
+Minor performance improvements to DropShadowFilter #101
+
+👏  Contributors
+
+Ivan Popelyshev (@ivanpopelyshev)
+Spencer (@sjfricke)
+Matt Karl (@bigtimebuddy)
+@finscn 
+",":bug: Fixed
+Not all filters were passing fourth clear param in applyFilter #103 
+Removed redundant default vertex shaders #102 
+Alphabetized filter list in demo #104 
+Minor performance improvements to DropShadowFilter #101
+👏  Contributors
+Ivan Popelyshev (@ivanpopelyshev)
+Spencer (@sjfricke)
+Matt Karl (@bigtimebuddy)
+@finscn "
+36,"🐛  Fixed
+
+Remove trailing-white-space #74
+Fixed documentation line-breaks before previews 595729ace06571d3017f397202ae485b5806e7ac
+Support for PixiJS core AlphaFilter #42 
+Fixes Typings with @types/pixi.js #96 
+Refactor GodrayFilter for optimizing #91
+
+🔧  Changed
+
+ZoomBlurFilter, support default infinite outer radius #82 #92
+Build process improvements, like watching, dev releases #86 
+Published filters will no longer contain unminified files in lib folder #86
+Refactored the demo to tools/demo #85 #88
+Moves filters/all to bundle #90
+Refactor ShockwaveFilter to support more options #95
+
+👏  Contributors
+
+@finscn 
+Matt Karl (@bigtimebuddy)
+","🐛  Fixed
+Remove trailing-white-space #74
+Fixed documentation line-breaks before previews 595729ace06571d3017f397202ae485b5806e7ac
+Support for PixiJS core AlphaFilter #42 
+Fixes Typings with @types/pixi.js #96 
+Refactor GodrayFilter for optimizing #91
+🔧  Changed
+ZoomBlurFilter, support default infinite outer radius #82 #92
+Build process improvements, like watching, dev releases #86 
+Published filters will no longer contain unminified files in lib folder #86
+Refactored the demo to tools/demo #85 #88
+Moves filters/all to bundle #90
+Refactor ShockwaveFilter to support more options #95
+👏  Contributors
+@finscn 
+Matt Karl (@bigtimebuddy)"
+37,"Overview
+This release adds three new filters! These are GodrayFilter, AdvancedBloomFilter and MultiColorReplaceFilter. All filters have been added to the demo.
+🎁  Added
+
+Adds new GodrayFilter which produces an effect which is similar to light coming through clouds @pixi/filter-godray #40
+
+Adds new AdvancedBloomFilter which is similar to BloomFilter but with more options to control the look of the bloom @pixi/filter-advanced-bloom #66 #68
+
+Adds new MultiColorReplaceFilter which is like ColorReplaceFilter but supports multiple colors instead of just a single color @pixi/filter-multi-color-replace #64
+
+Support constructor arguments for screenshot configuration #62
+Bloom constructor blur argument can be Array (e.g., [0, 0]) #73
+
+🐛  Fixed
+
+Make sure filters are rebuilt-after version bump so version in comments match #59
+Fixed white-space trailing lints #67 
+
+👏  Contributors: 3
+
+Matt Karl (@bigtimebuddy)
+Ivan Popelyshev (@ivanpopelyshev)
+@finscn 
+","Overview
+This release adds three new filters! These are GodrayFilter, AdvancedBloomFilter and MultiColorReplaceFilter. All filters have been added to the demo.
+🎁  Added
+Adds new GodrayFilter which produces an effect which is similar to light coming through clouds @pixi/filter-godray #40
+Adds new AdvancedBloomFilter which is similar to BloomFilter but with more options to control the look of the bloom @pixi/filter-advanced-bloom #66 #68
+Adds new MultiColorReplaceFilter which is like ColorReplaceFilter but supports multiple colors instead of just a single color @pixi/filter-multi-color-replace #64
+Support constructor arguments for screenshot configuration #62
+Bloom constructor blur argument can be Array (e.g., [0, 0]) #73
+🐛  Fixed
+Make sure filters are rebuilt-after version bump so version in comments match #59
+Fixed white-space trailing lints #67 
+👏  Contributors: 3
+Matt Karl (@bigtimebuddy)
+Ivan Popelyshev (@ivanpopelyshev)
+@finscn "
+38,"🐛  Fixed
+
+Fixes bugs of ZoomBlurFilter with regard to resolution & size #58 
+Updates the ZoomBlur screenshot and documentation
+
+👏  Contributors: 2
+
+@finscn 
+Matt Karl (@bigtimebuddy)
+","🐛  Fixed
+Fixes bugs of ZoomBlurFilter with regard to resolution & size #58 
+Updates the ZoomBlur screenshot and documentation
+👏  Contributors: 2
+@finscn 
+Matt Karl (@bigtimebuddy)"
+39,":gift: Added
+
+Adds additional constructor arguments to BloomFilter quality, resolution, kernelSize #44 
+Adds TypeScript typings for all modules #51
+Adds third constructor argument to SimpleLightmapFilter for alpha #51 
+Adds ZoomBlurFilter to do radial motion blurs #54 
+Adds pause/resume buttons to demo fb491da
+
+🐛  Fixed
+
+Removed debugger statement from examples #47 
+Can now use npm install to bootstrap the repo instead of npm run bootstrap #48
+
+👏  Contributors: 2
+
+Matt Karl (@bigtimebuddy)
+@finscn 
+
+ZoomBlurFilter Demo
+",":gift: Added
+Adds additional constructor arguments to BloomFilter quality, resolution, kernelSize #44 
+Adds TypeScript typings for all modules #51
+Adds third constructor argument to SimpleLightmapFilter for alpha #51 
+Adds ZoomBlurFilter to do radial motion blurs #54 
+Adds pause/resume buttons to demo fb491da
+🐛  Fixed
+Removed debugger statement from examples #47 
+Can now use npm install to bootstrap the repo instead of npm run bootstrap #48
+👏  Contributors: 2
+Matt Karl (@bigtimebuddy)
+@finscn 
+ZoomBlurFilter Demo"
+40,"🐛  Fixed
+
+Fixes SimpleLightmapFilter and adds to examples #39
+Auto-generate screenshot previews #36
+
+👏  Contributors: 2
+
+Matt Karl (@bigtimebuddy)
+Ivan Popelyshev (@ivanpopelyshev)
+","🐛  Fixed
+Fixes SimpleLightmapFilter and adds to examples #39
+Auto-generate screenshot previews #36
+👏  Contributors: 2
+Matt Karl (@bigtimebuddy)
+Ivan Popelyshev (@ivanpopelyshev)"
+41,":bug: Fixed
+
+Better PIXI Namespace Definitions #35 
+Fixes deployment issues and Google Analytics for examples
+",":bug: Fixed
+Better PIXI Namespace Definitions #35 
+Fixes deployment issues and Google Analytics for examples"
+42,"🎁  Added
+
+Adds new filters from pixi-extra-filters repo #30 
+GlowFilter
+OutlineFilter
+SimpleLightmapFilter
+ColorReplaceFilter
+BulgePinchFilter
+Adds new DropShadowFilter #30 
+
+✏️  Changed
+
+Drops support for Bower #30 
+Convert project to use Rollup instead of Browserify #30 
+Convert source code to ES6 #30 
+Improved documentation #30 
+Added explicit constructor arguments (with defaults) for more filters #30 
+
+👏  Contributors: 2
+
+Matt Karl (@bigtimebuddy)
+Ivan Popelyshev (@ivanpopelyshev)
+","🎁  Added
+Adds new filters from pixi-extra-filters repo #30 
+GlowFilter
+OutlineFilter
+SimpleLightmapFilter
+ColorReplaceFilter
+BulgePinchFilter
+Adds new DropShadowFilter #30 
+✏️  Changed
+Drops support for Bower #30 
+Convert project to use Rollup instead of Browserify #30 
+Convert source code to ES6 #30 
+Improved documentation #30 
+Added explicit constructor arguments (with defaults) for more filters #30 
+👏  Contributors: 2
+Matt Karl (@bigtimebuddy)
+Ivan Popelyshev (@ivanpopelyshev)"
+43,"🐛  Fixed
+
+RGBSplitFilter blue value works now #18
+Add CDNJS version badge in README.md #15
+Improved the examples demo #26
+
+👏  Contributors: 3
+
+@JenGL 
+Claire Tsai (@clairetsai818)
+Matt Karl (@bigtimebuddy)
+","🐛  Fixed
+RGBSplitFilter blue value works now #18
+Add CDNJS version badge in README.md #15
+Improved the examples demo #26
+👏  Contributors: 3
+@JenGL 
+Claire Tsai (@clairetsai818)
+Matt Karl (@bigtimebuddy)"
+44,"Changes
+
+Cleaned-up publishing process
+Re-published to NPM with bin folder
+","Changes
+Cleaned-up publishing process
+Re-published to NPM with bin folder"
+45,"Republished, missing bin files.","Republished, missing bin files."
+46,"Fixed
+
+Fixes ""main"" field in package.json
+Updated typos in the README
+","Fixed
+Fixes ""main"" field in package.json
+Updated typos in the README"
+47,"Changes
+
+Adds source-maps and un-minified files to the build files.
+","Changes
+Adds source-maps and un-minified files to the build files."
+48,Initial release,Initial release

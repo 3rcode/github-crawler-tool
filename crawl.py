@@ -6,7 +6,7 @@ from markdown import markdown
 import regex as re
 
 
-github_token = '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'
+github_token = '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'
 headers = {
     'Authorization': f'token {github_token}',
     'Accept': 'application/vnd.github.v3+json'

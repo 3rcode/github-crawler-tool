@@ -1,0 +1,860 @@
+Index,Commit Message Abstract,Score Abstract,Corresponding Changelog Sentence Abstract,Commit Desription Abstract,Label
+1,"Fix ""Join room"" background button on dark theme (#1938)",0.8828551,"Fix ""Join room"" background button on dark theme by @jrafaelsantana in link",,1
+2,Improve dark mode,0.88489527,Dark mode improvements. link,,1
+3,Set messenger locale based on user’s locale (#223),0.63870937,Allow navigation to alternate messenger domains (#816)  1ee6b4c,,0
+4,:arrow_up: electron@0.35.0,0.71579885,Bump Electron to 0.37.2.,,1
+5,Fix schema validation crash (#1037),0.98385054,Fix schema validation crash (#1037)  0937650,Co-authored-by: Dušan Simić dusan.simic1810@gmail.com,1
+6,Fix the emoji picker (#1023),0.9729614,Fix the emoji picker (#1023)  9fd2d67,Fix macOS traffic light buttons Fix draggable area,1
+7,Fix dark mode transparency issue with the conversation contact list dropdown (#398),0.67358613,Fix selected conversation background (#918)  eaf9226,,0
+8,Add Launch at Login setting for macOS and Windows (#774),0.9728677,Add Launch at Login setting for macOS and Windows (#774)  a43e6b5,,1
+9,Temporarily enable electron-debug so Cmd+R works for reloading,0.4884349,Upgrade to Electron v2. link,,0
+10,Don’t show the main window on conversations change (#488),0.7438327,Fix conversation display on small window sizes (#1025)  6331a2e,,1
+11,2.52.4,0.45466837,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+12,Fix some preferences issues (#500),0.5923611,Re-organize the Preferences menu  8ef4f30,,0
+13,"Add ""Don't ask again"" option when confirming whether to paste image from the clipboard (#242)",0.59688914,"Disabled the ""Image paste confirmation"" feature temporarily as its dependency is causing havoc. link",,0
+14,Add option to disable seen/typing indicators (#195),0.7520299,Add option to disable seen/typing indicators (Privacy!) link,,1
+15,2.55.7,0.4259562,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+16,2.0.0-beta.1,0.50102973,Updated Electron to 1.7.9.,,0
+17,Prevent redirecting to other URLs,0.4644832,Fix open links issue by @dusansimic in link,,0
+18,simplify the tray behavior,0.57402456,Simplify the menu implementation.  5a1cb31,,0
+19,Set placeholder text to the correct color on macOS when in dark… (#1012),0.6349314,Add setting to follow system dark mode on macOS (#697)  d81ebdd,,0
+20,use new Electron API to simplify some of the code,0.50026274,Upgrade to Electron v2. link,,0
+21,Add remember option checkbox in private mode dialog (#1289),0.98841625,Add remember option checkbox in private mode dialog (#1289)  9197321,,1
+22,2.32.1,0.47303778,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",This reverts commit 43f41e99a7e0d5fe4356057e2ac059203541bfc7.,0
+23,Change color of timestamp in contact list (#494),0.6224876,Fix contact list styling for inactive window (#865)  ffed2d9,,0
+24,Fix name and link for Homebrew Cask in the readme (#177),0.73370916,Homebrew Cask,,1
+25,Fix description bot card color in dark mode (#796),0.9692292,Fix description bot card color in dark mode (#796)  c88fee2,,1
+26,Close #54 PR: Additional conversation switchers on OS X. Fixes #53,0.6716416,Fix conversation switching keyboard shortcuts.,,0
+27,Update eslint-config-xo-typescript,0.5643478,Rewrite the app in TypeScript (#745)  3ec8c6b,,0
+28,"Fix Touch Bar when on the ""New Message"" view (#718)",0.9753945,"Fix Touch Bar when on the ""New Message"" view (#718)  53a64c4",Keyv package should be removed from Caprine deps before next release (if the root cause of the issue is fixed) because it doesn't actually depend on it. This is there just to fix the issue with keyv ts type definitions not existing in keyv module.,1
+29,Revert to a known good version of electron-builder,0.6591766,Upgrade to Electron 4  2744a35,,0
+30,Temporarily work around Linux icon issue,0.9466511,Temporarily work around Linux icon issue. link,,1
+31,Fix Snap publishing (#1796),0.6288402,Fix camera access in Snap builds (#813)  d13c792,,0
+32,Login screen styling improvements (#714),0.6867736,Improve Workplace login view in dark mode (#940)  f33d1a8,,0
+33,Add @types/facebook-locales (#968),0.50551885,Remove Facebook tracking from copied links (#1169)  74416e6,Co-authored-by: Dušan Simić dusan.simic1810@gmail.com,0
+34,Fix voice message duration text color in dark mode (#1959),0.8665284,Fix voice message duration text color in dark mode by @dusansimic in link,,1
+35,2.52.3,0.4402641,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",Co-authored-by: Dušan Simić dusan.simic1810@gmail.com,0
+36,2.51.2,0.45448107,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",Co-authored-by: Dušan Simić dusan.simic1810@gmail.com,0
+37,2.54.1,0.5218929,Various tweaks (#1267)  4493b08,Co-authored-by: stefanaz2 sfrunza@seneca.ca,0
+38,tweak icon placement in readme,0.58533204,Improve about window information and icon in link,,0
+39,Fix hiding own profile picture in sidebar (#995),0.7116353,- Fix preference toggle when sidebar is hidden (#957)  2e4ad98,Remove default custom styles,1
+40,Add @lefterisgar and @1nikolas as maintainers,0.7013867,Add maintainers in about dialog by @lefterisgar in link,,1
+41,Add git pre-commit script (#741),0.4464803,"Fix keyboard shortcut for ""Insert GIF"" (#1013)  dc11fab",Add rpm spec Move addRepo.sh to deb package dir,0
+42,Add contact list styling for inactive window (#865),0.9162833,Fix contact list styling for inactive window (#865)  ffed2d9,,1
+43,Completely remove old design code (#1893),0.80055046,Completely remove old design code by @lefterisgar in link,,1
+44,Add snap support (#464),0.7265656,Add “removable-media” Snap plug (#978)  648c812,,1
+45,Dark mode: Login CSS cleanup,0.7244885,Improve the dark mode in the login flow (#1049)  5c26e5c,Completely remove old design code Fix lint Remove new design mentions Restore broken functions Fix lint,1
+46,Fix Homebrew install command,0.63184047,Homebrew Cask users can upgrade by running:,,0
+47,:arrow_up: electron,0.6131786,Bump Electron to 0.37.2.,,0
+48,"Fix adaptive, hidden and narrow sidebar",1.0,"Fix adaptive, hidden and narrow sidebar",,1
+49,"Fix ""Attach Files"" keyboard shortcut (#1139)",0.98602676,"Fix ""Attach Files"" keyboard shortcut (#1139)  10a406e",Fixes #1888,1
+50,Drop support for macOS 10.9,0.8985026,macOS: Drop support for macOS 10.9  23f69a5,,1
+51,Re-enable vibrancy support for macOS users (#618),0.96202505,Re-enable vibrancy support for macOS users. ✨  8269ea8,,1
+52,Fix comment typo (#791),0.58859044,Fix styling for removed message in dark mode (#1096)  07c39ac,,0
+53,:arrow_up: electron@0.36.7,0.73072714,Bump Electron to 0.37.2.,,1
+54,"Improve dark mode for ""Quoted text in inline replies""",0.9628716,"Improve dark mode for ""Quoted text in inline replies""  06d78ab",,1
+55,Add ability to force sidebar width (#1170),0.9655056,Add the ability to force sidebar width (#1170)  a6c914e,"Update readme.md Update readme.md Update readme.md Update readme.md Update readme.md Update readme.md Update readme.md Update readme.md Update Arch Linux maintainer Remove the word ""Fedora"" from Copr AppImage, Flatpak & Snap are not universal Finalize Gemfury implementation Add instructions for openSUSE Add Chocolatey installation method Fix APT list name Co-authored-by: Dušan Simić dusan.simic1810@gmail.com Co-authored-by: Dušan Simić dusan.simic1810@gmail.com",1
+56,Add .vscode directory to gitignore,0.48103502,AppImage (Recommended)Needs to be made executable after download.,"Add ""New Room"" option",0
+57,Merge css stylesheets (#1891),0.83478993,Merge css stylesheets by @lefterisgar in link,Fix private mode Fix lint,1
+58,"Fix ""Show Message Buttons"" option (#1881)",0.93707037,"Fix ""Show Message Buttons"" option",,1
+59,Make notifications stay in the Notification Center on macOS (#504),0.75612867,Add support for replying via notifications on macOS (#726)  ed804ae,,1
+60,2.33.0,0.50457305,Various tweaks (#1267)  4493b08,,0
+61,Fix building on Travis,0.3817596,New Maintainers,Fix CSS classes Fix option not being applied after restart Update css selectors to fix preferences modal Co-authored-by: Dušan Simić dusan.simic1810@gmail.com,0
+62,2.50.0,0.4843823,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",Remove code related to old design Fix lint,0
+63,Close #36 PR: Add tray for non-darwin platforms.,0.522632,Upgrade dependencies and add tray menu for Linux and Windows. link,,0
+64,0.2.1,0.47288382,Updated Electron to 1.7.9.,,0
+65,2.45.0,0.50275785,Various tweaks (#1267)  4493b08,,0
+66,Fix notifications (#717),0.9318146,Fix notifications (#717)  f0ea2be,,1
+67,CSS tweaks,0.61467147,Remove all CSS related to old design,,0
+68,Fix concatenation of spell check languages (#1728),0.8622574,Fix spell check languages (#1728)  734ba9b,,1
+69,2.56.1,0.45524,Various tweaks (#1267)  4493b08,,0
+70,Update lockfile version,0.5787237,Update dependencies,,0
+71,2.57.0,0.5597659,Various tweaks (#1267)  4493b08,,0
+72,2.51.0,0.5138043,Various tweaks (#1267)  4493b08,,0
+73,Revert compact mode message icons changes done in #521 (#844),0.6665807,Fix styling for removed message in dark mode (#1096)  07c39ac,Caprine's default window size is too small and the notification appears cropped. This commit makes it fit.,0
+74,Disable hardware acceleration for battery reasons,0.8660103,Disabled hardware acceleration for battery reasons. See #238. link,,1
+75,Update Electron,0.8632606,Updated Electron to 1.7.9.,Fixes #1612,1
+76,CI: Misc improvements,0.504422,Huge thanks to @CvX for contributing most of these fixes 🙌,,0
+77,update CSS classes for messenger changes,0.5720674,Update to the new Messenger icon (2020),,0
+78,"Add todo for ""Autoplay Videos""",0.59039426,Allow disabling video autoplay (#738)  a252ca9,,0
+79,Fix shortcuts (#1851),0.7051141,"Fix ""Attach Files"" keyboard shortcut (#1139)  10a406e",,1
+80,Tweaks for Mac App Store,0.60243374,macOS,,0
+81,Prevent auto-publish of Snap,0.5286371,Fix camera access in Snap builds (#813)  d13c792,"Hides ""Autoplay Videos"" until #1845 is resolved.",0
+82,"Fix ""Show Message Buttons"" for new Messenger UI (#956)",0.97224766,"- Fix ""Show Message Buttons"" for new Messenger UI (#956)  83e3adf",,1
+83,Fix static images paths (#755),0.53868055,Fix the GIF search field background (#1100)  27150a9,,0
+84,2.42.0,0.49695137,Update dependencies,,0
+85,"Fix text color on the ""Active Contacts"" view in dark mode",0.6833657,Blur active contacts in private mode in link,,0
+86,Code cleanup,0.4649104,Completely remove old design code by @lefterisgar in link,,0
+87,Add TouchBar support (#426),0.83993626,Touch Bar support. link,,1
+88,Improve the conversation list selected and unread style,0.9317568,Improve the conversation list selected and unread style.  9312ed4,,1
+89,:arrow_up: electron@0.35.1,0.7139357,Bump Electron to 0.37.2.,,1
+90,Set unread badge for tray (#82),0.6853272,Fix unread badge not always updating (#1360)  ac22f08,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+91,electron-config → electron-store,0.6393508,Upgrade to Electron 4  2744a35,It makes all broken features visible only in development. This helps reduce visual clutter.,0
+92,Fix 'Find Conversations' not working (#663),0.9513208,Fix 'Find Conversations' not working (#663)  5f9cd1e,,1
+93,Use CSS variables (#211),0.43926272,Merge css stylesheets by @lefterisgar in link,,0
+94,menu tweaks,0.69352317,Re-organize the Preferences menu  8ef4f30,,0
+95,2.48.0,0.4852736,Reverted v2.35. It unfortunately had some crashes...,,0
+96,Work around Electron window focus issue (#233),0.5839025,Update to Electron 7 (#1157)  833c42b,,0
+97,Add maintainers in about dialog (#1874),0.8084086,Add maintainers in about dialog by @lefterisgar in link,,1
+98,Dark mode: Fix radio buttons accent,0.8902352,"Dark mode fixes (top gap, icons, radio buttons' accent color)",,1
+99,Fix new room button shortcut (#1946),0.8598108,Fix new room button shortcut by @lefterisgar in link,,1
+100,Add Attach files menu item and keyboard shortcut (#1014),0.9714689,Add Attach files menu item and keyboard shortcut (#1014)  984a298,Increases privacy because tracking cookies are rejected.,1
+101,1.7.0,0.5616261,Updated Electron to 1.7.9.,,0
+102,2.3.0,0.50431097,Update dependencies,,0
+103,improve cask install instruction,0.5745021,$ brew update && brew cask install caprine,,0
+104,Use https to make package.json linters happy,0.43453813,"Fix ""Show Message Buttons"" option by @lefterisgar and @dusansimic in link",,0
+105,Whitelist login.microsoftonline.com for Workchat,0.54962707,Support the workplace.com domain (#860)  0975301,,0
+106,Ligature fix (#167),0.593615,Various tweaks (#1267)  4493b08,Co-authored-by: Michael Quevillon mquevill@nd.edu,0
+107,Allow alert-style notifications on macOS,0.81004643,Add support for replying via notifications on macOS (#726)  ed804ae,Co-authored-by: Nikolas Spiridakis 1nikolas@hotmail.gr Co-authored-by: Nehal Patel nehalvpatels+github@gmail.com,1
+108,Change nvm version to 18,0.4655599,Upgrade to Electron 0.36.6 link,,0
+109,Update to Electron 3,0.84218776,Updated Electron to 1.7.9.,,1
+110,Bump Electron to 21,0.8701674,Bump Electron to 0.37.2.,,1
+111,2.42.1,0.46514568,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+112,Tiny tweak to app issue template,0.60748017,Rewrite the app in TypeScript (#745)  3ec8c6b,,0
+113,Fix disappearing shadow on macOS (#194),0.70841026,Fix setDarkMode loop on macOS (#1247)  1dfe546,,1
+114,Fix styling for removed message in dark mode (#1096),0.98043483,Fix styling for removed message in dark mode (#1096)  07c39ac,,1
+115,minor readme tweak,0.552447,User-interface tweaks and some bug fixes.,,0
+116,Fix preferences selector for removing hide-preferences-window class (#1646),0.59208405,- Fix preference toggle when sidebar is hidden (#957)  2e4ad98,,0
+117,Add menu item to relaunch Caprine (#1410),0.98367304,Add menu item to relaunch Caprine (#1410)  a312084,,1
+118,Fix archive conversation issues (#732),0.96039355,Fix archive conversation issues (#732)  af367be,,1
+119,Dark mode fixes (#1846),0.8493529,Fix dark mode (#1742)  25aee78,,1
+120,Fix notification title for group chats (#637),0.9713502,Fix notification title for group chats.  5361289,,1
+121,Fix some broken things after the Messenger update,0.93237513,Fix some broken things after the latest Messenger update  ecc923f,,1
+122,2.30.0,0.5147991,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+123,Make non-working features invisible for end users,0.8381703,Hide all non-working features,,1
+124,Fix dark mode being disabled on non-macOS systems (#735),0.9732239,Fix dark mode being disabled on non-macOS systems (#735)  21a6bb1,,1
+125,Add installation instructions for Arch Linux to the readme (#612),0.50670266,Linux:,,0
+126,Bump electron and electron-builder,0.76731396,Bump Electron to 0.37.2.,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,1
+127,Resize media and embeds for narrow windows (#1167),0.6923304,Save window bounds after window resize (#1038)  ccf0ab2,,0
+128,Update Electron to 20,0.80413723,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,1
+129,Fix login/logout,0.7509273,Fix regression with login/logout. link,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,1
+130,Support the workplace.com domain (#860),0.9724498,Support the workplace.com domain (#860)  0975301,,1
+131,UI tweaks,0.8171821,UI tweaks  8a558e6,,1
+132,Drop EOL Windows versions,0.45943928,Windows,,0
+133,1.5.0,0.4955576,User-interface improvements (#757)  93d0a1b,,0
+134,Create new room (#1883),0.7084862,Create new room by @lefterisgar in link,,1
+135,Fixed sound/notifications option saving (#523),0.6025162,Add preference to mute call ringtone (#1273)  5daa934,,0
+136,Fix CI build step (#1872),0.70200735,Fix ci build step by @dusansimic in link,,1
+137,Fix names in private mode (#1733),0.95295745,Fix names in private mode (#1733)  8387833,,1
+138,Add a couple of articles about Caprine to the readme,0.546978,Add menu item to relaunch Caprine (#1410)  a312084,,0
+139,Only move the back button on macOS,0.6415818,Change close window behaviour on macOS to the default behaviour instead of hide.  3233498,,0
+140,Notify user when a new update is available,0.89312124,Display a notification when a new update is available,,1
+141,0.4.0,0.5287396,Update dependencies,,0
+142,Use electron-better-ipc instead of the built-in IPC (#1266),0.5643122,Better handling of no internet connection when Caprine starts (#775)  cda87df,,0
+143,bump electron-debug,0.7552742,Bump Electron to 0.37.2.,,1
+144,Fix modal windows (#1757),0.63869476,Fix error on Windows and Linux  04cb6a1,,0
+145,Add preference to mute call ringtone (#1273),0.97451735,Add preference to mute call ringtone (#1273)  5daa934,,1
+146,Fix opened right sidebar in compact mode (#354),0.7641474,"Fix adaptive, hidden and narrow sidebar",,1
+147,Use 'emoji' font alias on Linux for system emoji (#1777),0.70808434,Improve cropping for system emoji on some Linux systems (#1000)  b44a3fb,,1
+148,Work around bug where the screen is black when closing window in full screen on macOS,0.93783224,Work around bug where the screen is black when closing window in full screen on macOS  d27f5af,,1
+149,Fix Facebook logo placement (#974),0.67987525,Remove top Facebook cookie banner  eb331df,,0
+150,Fix playing videos from shared photos (#802),0.9657577,Fix playing videos from shared photos (#802)  d99d592,,1
+151,Add Tomorrow themes for code blocks (#241),0.47841787,Improved scrollbar theme by @mquevill in #1638,,0
+152,Add screenshot of the blocking typing indicator feature,0.60547245,Show tip after enabling Auto Hide Menu Bar (#1125)  76ac982,,0
+153,Close #23 PR: Windows support. Fixes #2,0.6549102,Windows,,0
+154,The isPreferencesOpen function must return boolean (#501),0.3654679,Fix white message bar (#949)  a6ba976,,0
+155,Add FAQ section to the readme,0.5211962,Add maintainers in about dialog by @lefterisgar in link,,0
+156,"Fix scrolling issue with ""Edit Nicknames"" dialog (#191)",0.64174044,Improved scrollbar theme by @mquevill in #1638,,0
+157,Disable Snapcraft build temporarily,0.5864582,Fix camera access in Snap builds (#813)  d13c792,,0
+158,Cleanup #865,0.5028467,Various tweaks (#1267)  4493b08,,0
+159,Add ability to customize the user interface colors and styles (#651),0.9426439,Add ability to customize the user interface colors and styles (#651)  200bf1c,,1
+160,Close #30 PR: Show download progress. Fixes #28,0.5771805,Show download progress (usually on the app icon). link,,0
+161,Update rpm spec,0.6634494,Add rpm spec by @dusansimic in link,,0
+162,Add flashing window on message on Windows (#227),0.6481937,Fix conversation display on small window sizes (#1025)  6331a2e,,0
+163,Insignificant appearance corrections in the dark theme for attachments (#493),0.6670824,Fix styling for removed message in dark mode (#1096)  07c39ac,,0
+164,Fix event bar colors in dark mode (#306),0.6904162,Fix login button color in dark mode,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+165,Add camera plug to Snap build config (#813),0.8382096,Fix camera access in Snap builds (#813)  d13c792,,1
+166,2.11.0,0.5647143,Various tweaks (#1267)  4493b08,,0
+167,Only set the window to transparent on macOS,0.80758387,Change close window behaviour on macOS to the default behaviour instead of hide.  3233498,,1
+168,Fix Facebook Marketplace item in dark mode (#1149),0.63866496,Fix dark mode (#1742)  25aee78,,0
+169,Changed color when blocked (#304),0.6388454,Make the dark mode color less blue and darker.  d67c9fa,,0
+170,Center names in titlebar (#292),0.6304349,Fix too strong chat title bar bottom border (#921)  04115c7,,0
+171,"Fix conversation action shortcuts (mute, archive, delete) (#270)",0.93717605,"Fix conversation action shortcuts (mute, archive, delete). link",,1
+172,Upgrade element-ready package (#923),0.5926007,Update dependencies,,0
+173,minor tweaks,0.73231006,Various tweaks (#1267)  4493b08,,1
+174,Fix 2FA login issue (#1417),0.9872289,Fix 2FA login issue (#1417)  0207464,Co-authored-by: Dušan Simić dusan.simic1810@gmail.com,1
+175,Add vibrancy effect to window on macOS (#163),0.8192859,macOS: Make sidebar vibrancy the default and add opt-in full-window vibrancy (#667)  edc2c5d,,1
+176,Update main screenshot,0.5407974,Automatically reset window position when disconnecting secondary screen (#1280)  dce6cfd,,0
+177,Upgrade to Electron 5,0.81570405,Upgrade to Electron 4  2744a35,,1
+178,CI: Use setup-node action for caching (#1941),0.83615905,CI: Use setup-node action for caching by @lefterisgar in link,,1
+179,Add Fedora install instructions (#1599),0.5467335,Install,,0
+180,"Revert ""Fix voice message duration text color in dark mode (#1959)""",0.81915724,Fix voice message duration text color in dark mode by @dusansimic in link,,1
+181,"Fix group chat ""more people read"" indicator in dark mode (#595)",0.708513,Fix notification title for group chats.  5361289,,1
+182,Fix conversation list on new UI (#1557),0.74007857,Fix “Hide conversation” menu item (#1202)  0b92e74,,1
+183,CI: Run tests on ubuntu-latest,0.5563486,For testing only,,0
+184,0.1.0,0.4962564,Updated Electron to 1.7.9.,Co-authored-by: Dušan Simić dusan.simic1810@gmail.com,0
+185,Add unread count and taskbar overlay icon for Windows (#197),0.93917274,Add unread count and taskbar overlay icon for Windows link,,1
+186,Auto hide the menu bar by default. (#99),0.8274584,Show tip after enabling Auto Hide Menu Bar (#1125)  76ac982,,1
+187,2.57.2,0.4818141,Various tweaks (#1267)  4493b08,,0
+188,Fix unread badge not always updating (#1360),0.9776752,Fix unread badge not always updating (#1360)  ac22f08,,1
+189,1.2.0,0.4900462,Update dependencies,,0
+190,2.55.5,0.4379436,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+191,Readme: Fix APT repo instructions,0.47019765,"New installation options are available, including automatic updates on Debian-based versions using APT. Check the readme for more information.",,0
+192,Fix Always on Top after tray toggling on KDE Plasma (#1150),0.97283053,Fix Always on Top after tray toggling on KDE Plasma (#1150)  2b2be20,,1
+193,Allow disabling video autoplay (#738),0.9703597,Allow disabling video autoplay (#738)  a252ca9,,1
+194,:arrow_up: electron @ 1.4.10,0.6908839,Bump Electron to 0.37.2.,,0
+195,Dark mode: Fix login button color,0.9904932,Fix login button color in dark mode,,1
+196,2.55.0,0.48093116,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+197,Fix dark mode + vibrancy not rendering properly on restart (#635),0.889574,Fix dark mode and vibrancy not rendering properly on restart.  ec5d74d,,1
+198,2.43.0,0.5008726,Update dependencies,,0
+199,Add readme note,0.49152088,"Various improvements to readme by @Danik1601, @dusansimic and @lefterisgar in link",,0
+200,Fix macOS ui (#2014),0.7699323,Fix macOS ui by @dusansimic in link,,1
+201,Follow the system appearance by default on macOS,0.8839071,Follow the system appearance by default on macOS (Only applies to new users)  9b1d1d8,,1
+202,Update xo to 0.39.0 and address lint errors (#1723),0.45874643,Fix some broken things after the latest Messenger update  ecc923f,,0
+203,Welcome @veniversum to the project! 🎉,0.8323109,Welcome @veniversum as a maintainer 🎉,,1
+204,"Fix the ""Show Tray Icon"" preference (#1215)",0.9721533,"Fix the ""Show Tray Icon"" preference (#1215)  b386b23",,1
+205,Fix private mode (#1884),0.9062017,Fix private mode,,1
+206,Eliminate check for darkMode setting (#1653),0.6643679,Fix dark mode (#1742)  25aee78,Fixes #1419,0
+207,Fix next and previous conversation shortcut (#1596),0.7457589,"Fix conversation action shortcuts (mute, archive, delete). link",,1
+208,Fix hidden sidebar and narrow sidebar (#1800),0.8628485,"Fix adaptive, hidden and narrow sidebar",,1
+209,Add option to hide names and avatars (#787),0.8886585,"Add option to hide names and avatars in the UI (You can find it in the ""View"" menu) (#787)  44e9c10",,1
+210,2.23.0,0.5250965,Update dependencies,,0
+211,Remove redundant background containing emoji (#311),0.7069112,Add emoji style setting (#720)  b69f044,,1
+212,Fix selected tab color in emoji picker (#546),0.71539855,Fix the emoji picker (#1023)  9fd2d67,,1
+213,Fix too narrow conversation header (#910),0.9519696,Fix too narrow conversation header (#910)  f8cb7bb,,1
+214,Fix indentation,0.481034,Many bug fixes.,Closes #1363 Fixes #1128 Fixes #1082 Fixes #1361,0
+215,1.3.1,0.48963195,Various tweaks (#1267)  4493b08,,0
+216,Close #44 PR: Add shortcuts for finding and selecting conversations.,0.7910576,Add shortcuts for finding and selecting conversations link,Co-authored-by: Franco fbianconi@gmail.com Co-authored-by: Sindre Sorhus sindresorhus@gmail.com Co-authored-by: Dušan Simić dusan.simic1810@gmail.com,1
+217,Fix right sidebar menus in dark mode (#366),0.7375779,- Fix preference toggle when sidebar is hidden (#957)  2e4ad98,,1
+218,2.49.0,0.5112063,Updated Electron to 1.7.9.,,0
+219,Fix mute notifications (#438),0.7309069,Fix notifications (#717)  f0ea2be,,1
+220,build tweaks,0.7129531,Various tweaks (#1267)  4493b08,,1
+221,OS X 10.9+ required,0.60801464,macOS: Drop support for macOS 10.9  23f69a5,,0
+222,Add support to toggle sidebar (#232),0.81952727,- Fix preference toggle when sidebar is hidden (#957)  2e4ad98,,1
+223,Fix typo,0.56958115,"Fix ""Insert Text"" keyboard shortcut (#1118)  343705e",,0
+224,Use full path to check that CSS file exists (#1633),0.41540554,Fix custom css default file by @dusansimic in link,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+225,Hide additional attributes in private mode (#1618),0.6965386,Fix private mode not hiding all private info (#1374)  9a7978a,,0
+226,Fix dark mode style on different locale (#1572),0.75292003,Dark mode tweak (#971)  8800b60,,1
+227,Remove Facebook tracking from copied links (#1169),0.9878015,Remove Facebook tracking from copied links (#1169)  74416e6,,1
+228,Minor fixes for compact mode (#518),0.5896629,Various styling fixes  32b6bce 406ab6e,,0
+229,Upgrade to Electron v2,0.9434105,Upgrade to Electron v2. link,Workaround electron's location handling on new windows [window.open()],1
+230,Improve highlight for selected conversation (#179),0.9794152,Improve highlight for selected conversation (#179).,Co-authored-by: Daniel Andrei daniel.andrei@ezugi.com,1
+231,add About menu item,0.5410907,Re-organize the Preferences menu  8ef4f30,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+232,Close #38 PR: Fix icon path on Linux. Fixes #37,0.7293519,Temporarily work around Linux icon issue. link,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,1
+233,0.1.1,0.5187876,Various tweaks (#1267)  4493b08,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+234,cleanup #23,0.45121998,New Maintainers,,0
+235,Various styling fixes (#719),0.7283724,Various styling fixes  32b6bce 406ab6e,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,1
+236,use electron-config,0.61063635,Upgrade to Electron v2. link,Co-authored-by: Jarek Radosz jradosz@gmail.com,0
+237,Bump rpm version,0.6492766,Bump Electron to latest release,,0
+238,Add sender color style to group chat (#277),0.7052481,Change selected conversation color. link,,1
+239,2.3.1,0.4898882,Enhancements:,,0
+240,Fix unread count for muted chats (#664),0.9817615,Fix unread count for muted chats (#664)  5529432,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,1
+241,Remove keyv from deps,0.36108318,Disable auto updater on Linux as it doesn't currently work  f0eba4a,,0
+242,Blur active contacts in private mode (#1649),0.86650455,Blur active contacts in private mode in link,Co-authored-by: Jarek Radosz jradosz@gmail.com,1
+243,Hide mute notifications option from messenger.com preferences (#537),0.6759913,Hide new Messenger app banner by @1nikolas in link,,0
+244,Apply dark mode to all new nodes (#1629),0.7156985,Dark mode improvements. link,,1
+245,add context menu,0.58781236,Fix missing tray context menu on Linux (#986)  f0bd1a8,,0
+246,Fix search result & new conversation in dark mode,0.70364916,"Fix ""Find Conversation"" feature",,1
+247,Make the message blurb in contact list more readable in dark mode (#985),0.64887667,Fix contact list styling for inactive window (#865)  ffed2d9,,0
+248,2.52.1,0.46249667,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",the dot before timestamp in the contact list embed URL forward message button,0
+249,Fix dark mode conversation search (#139),0.72196615,Dark mode fixes by @lefterisgar in link,,1
+250,"Fix white plus bar, removed report bug icon (#959)",0.9846723,"- Fix white plus bar, removed report bug icon (#959)  570c490",,1
+251,Fix some dark mode styles (#1126),0.849256,- Fix dark mode UI issues (#958)  e1b3ecb,,1
+252,OS X → macOS,0.86482614,macOS,,1
+253,Add darkmode style for called you/you called icons,0.77347684,"Add dark mode style for ""called you""/""you called"" icons  b2c33c2",,1
+254,Fix menu item label typo,0.5807768,Fix settings menu (#916)  9aa0ca7,,0
+255,"Fix insert buttons (GIF, Sticker, Emoji, Files) shortcuts (#1947)",0.9146929,"Fix insert buttons (GIF, Sticker, Emoji, Files)",,1
+256,"Persist the ""Keep me signed in"" choice (#698)",0.97982323,"Persist the ""Keep me signed in"" choice (#698)  1a5234b",Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,1
+257,Automatically reset window position when disconnecting secondar… (#1280),0.8883632,Automatically reset window position when disconnecting secondary screen (#1280)  dce6cfd,,1
+258,Fix building Caprine on Travis,0.5822204,Fix Caprine for users on the new messenger UI.,,0
+259,Allow navigation to alternate messenger domains (#816),0.9727473,Allow navigation to alternate messenger domains (#816)  1ee6b4c,,1
+260,"Update the menu when setting ""Follow System Appearance""",0.5728309,Follow the system appearance by default on macOS (Only applies to new users)  9b1d1d8,,0
+261,Let Ctrl+1..Ctrl+9 work for Azerty keyboards too (#506),0.63344324,"Fix ""Insert Text"" keyboard shortcut (#1118)  343705e",,0
+262,Fix messages forwarding modal (#91),0.59048223,Fix message buttons not working for some users (#781)  1ca841e,,0
+263,Various dark mode fixes (#308),0.86889094,Dark mode tweak (#971)  8800b60,,1
+264,2.13.0,0.51872253,Various tweaks (#1267)  4493b08,,0
+265,2.41.0,0.52126575,Various tweaks (#1267)  4493b08,,0
+266,Fix dark mode (#1742),0.95586747,Fix dark mode (#1742)  25aee78,,1
+267,2.24.0,0.553152,Update dependencies,,0
+268,Upgrade to Electron 4.0.1,0.8871739,Upgrade to Electron 4  2744a35,,1
+269,Update minor dependencies,0.90942115,Update dependencies,,1
+270,Display prompt for Always on Top setting (#1687),0.6280966,Hide the preferences dialog during startup (#716)  cd6f7e1,,0
+271,Welcome @CvX as a maintainer 🎉,0.75040317,Welcome @veniversum as a maintainer 🎉,,1
+272,Remove shared video bars (#808),0.94703174,Remove shared video bars (#808)  3bb743d,,1
+273,Fix settings menu (#916),0.9391276,Fix settings menu (#916)  9aa0ca7,,1
+274,Add package lockfile,0.5695664,Add Attach files menu item and keyboard shortcut (#1014)  984a298,,0
+275,Readme: Fix APT repo commands,0.46061122,"New installation options are available, including automatic updates on Debian-based versions using APT. Check the readme for more information.",,0
+276,Update donate link,0.5442484,Full Changelog: link,,0
+277,Remove outdated code comment,0.73395413,Remove code related to old design by @lefterisgar in link,I'm tired of always having to fight it.,1
+278,Temporary workaround for #295,0.539437,New Maintainers,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+279,Fix the emoji picker crash (#1255),0.9839371,Fix the emoji picker crash (#1255)  7236196,,1
+280,Workaround for notifications (#1739),0.701439,Fix notifications (#717)  f0ea2be,,1
+281,Fix new message icon alignment (#1145),0.6725683,Fix plus icon in dark mode (#1004)  db36bed,,0
+282,Merge pull request #62 from phamdaniel/single-instance,0.3786527,Fix making and receiving calls (#1325)  b69ed37,,0
+283,Refactor GitHub Actions (#1627),0.5098859,Various tweaks (#1267)  4493b08,,0
+284,Remove keyboard shortcut for vibrancy effect,0.607522,Fix conversation switching keyboard shortcuts.,,0
+285,CI: Major restructuring,0.39126545,Huge thanks to @CvX for contributing most of these fixes 🙌,,0
+286,prevent flash of white on startup when in dark mode,0.6311261,Fix the dark mode on Linux and Windows  081b6ed,,0
+287,Add native OS UI font stack (#152),0.59465235,Change default notification style on macOS to banner.  a8f3708,,0
+288,Bump electron-localshortcut version to 2.0.0 (#234),0.7293446,Bump Electron to latest release,,1
+289,Fix scroll bar in message box (#1444),0.73807055,"Fix Touch Bar when on the ""New Message"" view (#718)  53a64c4",,1
+290,"Respect ""Do Not Disturb"" on macOS (#760)",0.9757278,"Respect ""Do Not Disturb"" on macOS (#760)  88efe46",,1
+291,Fix rich media integration name in dark mode (#400),0.62001693,Improve the dark mode  4b9808c,Messenger.com no longer directly sends pasted attachments.,0
+292,Fix private mode on new design (#1559),0.84929764,Fix private mode,,1
+293,Add linting for new design CSS (#1628),0.568063,Merge css stylesheets by @lefterisgar in link,Closes #1101 Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+294,Login: Do not show outline in input fields,0.4885632,Fix regression with login/logout. link,,0
+295,Upgrade to Electron 4 and other dependencies,0.8508769,Upgrade to Electron 4  2744a35,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,1
+296,Cookies notification: Make accept button visible on smaller windows,0.9281372,Fix cookies notification accept button being hidden on smaller windows,,1
+297,Bump Electron to 0.37.8 and fix deprecated methods (#87),0.8216187,Bump Electron to 0.37.2.,,1
+298,Hide settings icon (#979),0.81690323,- Add setting to hide the tray icon (#946)  61228fa,,1
+299,Bump electron-debug,0.75247693,Bump Electron to 0.37.2.,,1
+300,"Persist ""Toggle Sidebar"" setting after quitting (#321)",0.8134347,"The ""Toggle Sidebar"" option is now persisted between app runs.",,1
+301,2.32.0,0.49383366,Upgrade to Electron v2. link,,0
+302,Update Electron to 1.8.4,0.91652524,Updated Electron to 1.7.9.,,1
+303,Add Show Message Buttons option (#372),0.86835784,"Fix ""Show Message Buttons"" option",,1
+304,Fix the dark mode on Linux and Windows,0.951041,Fix the dark mode on Linux and Windows  081b6ed,,1
+305,Update Electron to version 6.0.6,0.82592106,Updated Electron to 1.7.9.,,1
+306,Access textcontent after null check (#795),0.48836818,Fix duplicated unread notification (#919)  fe67d8c,,0
+307,Make Touch Bar respect private mode even after selecting a new conversation (#1201),0.98846734,Make Touch Bar respect private mode even after selecting a new conversation (#1201)  6134294,,1
+308,Fix auto-updating on macOS,0.67816496,"Going forward, the app will automagically upgrade in the background on macOS and Windows. No need to check back here unless you like reading release notes.",,0
+309,update build instructions - fixes #19,0.5980159,Various tweaks (#1267)  4493b08,,0
+310,2.22.1,0.5046718,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+311,Dark mode tweak (#971),0.9587462,Dark mode tweak (#971)  8800b60,,1
+312,0.6.0,0.5048329,Various tweaks (#1267)  4493b08,Fixes #904,0
+313,DIsable update signature checking on Windows,0.48866773,Fix duplicated unread notification (#919)  fe67d8c,,0
+314,Fix autoscroll on new messages (#1382),0.963089,Fix autoscroll on new messages (#1382)  e94f36e,,1
+315,Import the TouchBar code only on macOS,0.59543616,Add menu bar mode for macOS (#804)  4f1c4df,,0
+316,Upgrade to Electron 6,0.9063671,Upgrade to Electron 6  a7cc69e,,1
+317,fix Electron deprecation warning,0.65530765,Update Electron  19e0423 8ccc556,,0
+318,fix lint issue,0.5416304,Fix error on Windows and Linux  04cb6a1,,0
+319,Update overflow rule to !important (#524),0.44593912,Fix notifications (#717)  f0ea2be,,0
+320,Minor notification tweaks (#945),0.73494077,Fix notifications (#717)  f0ea2be,,1
+321,Add insert emoji shortcut (#259),0.81997,Add option to use native emoji (#731)  2717359,,1
+322,Use JSON schema for the config (#998),0.4817816,Fix schema validation crash (#1037)  0937650,,0
+323,code style,0.5089665,Add ability to customize the user interface colors and styles (#651)  200bf1c,,0
+324,Stop check for new design on DOM ready (#1681),0.5883327,Remove code related to old design by @lefterisgar in link,,0
+325,Fix sending and receiving voice/video calls from within Caprine (#199),0.9468738,Fix sending and receiving voice/video calls from within Caprine link,Fix dialogs crash Add proper config defaults,1
+326,Fix issue with access to camera/microphone,0.9219794,Fix issue with access to camera/microphone  afb1404,,1
+327,Fix Increase Text Size shortcut (#944),0.9616134,Fix Increase Text Size shortcut (#944)  ed720bd,,1
+328,"Hide new ""Install Messenger App"" banner (#1717)",0.87639,Hide new Messenger app banner by @1nikolas in link,,1
+329,slim down the menu boilerplate \o/,0.7039296,Simplify the menu implementation.  5a1cb31,,1
+330,Update Electron website URL,0.8003236,Upgrade to Electron 0.36.6 link,,1
+331,2.55.3,0.44576246,Reverted v2.35. It unfortunately had some crashes...,,0
+332,add @phamdaniel to package.json,0.5052601,Add nvmrc file by @Alex313031 in link,,0
+333,2.55.2,0.45911044,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+334,Fix some styling & add hover effect in dark mode,0.66776466,Dark mode tweaks.,Co-authored-by: Jarek Radosz jradosz@gmail.com Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+335,"Set window title to ""Caprine"" (#1889)",0.7846163,"Set window title to ""Caprine"" by @lefterisgar in link",,1
+336,Add option to turn off badges - fixes #216 (#271),0.7389766,Fix unread badge not always updating (#1360)  ac22f08,,1
+337,Cleanup #169,0.49669573,Various tweaks (#1267)  4493b08,,0
+338,Add an option to disable hardware acceleration (#620),0.9142342,Add setting to disable hardware acceleration.  c8391d2,,1
+339,Fix the @name-popover in the chat input box in dark mode (#188),0.68241334,Fix dark mode style for nickname dialog placeholder (#863)  91b6181,,0
+340,Hide official Messenger banner on Mac (#1685),0.7638411,Hide new Messenger app banner by @1nikolas in link,,1
+341,Actually use the new icon,0.6412528,New app icon 💄✨  709ea23,,0
+342,Improve a type annotation (#1616),0.51641405,Rewrite the app in TypeScript (#745)  3ec8c6b,,0
+343,Various tweaks (#1267),0.942211,Various tweaks (#1267)  4493b08,,1
+344,Update badge on conversations change (#531),0.66989565,Fix badge notification bug when private mode is enabled (#1260)  4c56e81,,0
+345,fix XO lint issue,0.49786714,Fix macOS ui by @dusansimic in link,Fixes #973,0
+346,Combine system appearance and dark mode settings (#1637),0.7773576,User-interface and dark mode improvements,,1
+347,Fix conversation display on small window sizes (#1025),0.9781623,Fix conversation display on small window sizes (#1025)  6331a2e,,1
+348,Run tests on push instead of commit (#746),0.4403105,For testing only,,0
+349,Merge pull request #18 from andremw/patch-1,0.46029058,Fix autoscroll on new messages (#1382)  e94f36e,,0
+350,Merge pull request #29 from iiegor/patch-1,0.4336431,Fix draggable region (#1024)  9a692db,It causes too many problems. Fixes #966,0
+351,bump dependencies,0.5673361,Update dependencies,,0
+352,Upgrade dependencies and fix types,0.8287121,Update dependencies,,1
+353,Fix private mode,1.0000001,Fix private mode,,1
+354,2.55.1,0.4747755,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+355,Add option to disable spell checker (#1369),0.9487378,Add option to disable spell checker (#1369)  e7c37e5,,1
+356,Work around vibrancy issue on macOS (#715),0.9788321,Work around vibrancy issue on macOS (#715)  ba09d90,,1
+357,minor menu refactoring,0.6931702,Simplify the menu implementation.  5a1cb31,,0
+358,Fix white message bar (#949),0.95763224,Fix white message bar (#949)  a6ba976,,1
+359,add @oskarkrawczyk as maintainer ✨🎉,0.5306364,Welcome @veniversum as a maintainer 🎉,,0
+360,"Fix ""Show Message Buttons"" option",1.0000001,"Fix ""Show Message Buttons"" option",,1
+361,Move to TypeScript (#745),0.70376015,Rewrite the app in TypeScript (#745)  3ec8c6b,,1
+362,Fix group-chat name text color in dark mode (#383) (#390),0.72413737,Fix dark mode style for nickname dialog placeholder (#863)  91b6181,,1
+363,2.55.4,0.45963788,Reverted v2.35. It unfortunately had some crashes...,,0
+364,2.19.0,0.519124,Update dependencies,Fix white message bar,0
+365,fix build script,0.5127722,Fix ci build step by @dusansimic in link,,0
+366,cleanup #32,0.48544097,Various tweaks (#1267)  4493b08,,0
+367,2.27.0,0.56389457,Various tweaks (#1267)  4493b08,,0
+368,Electron 5-related updates (#872),0.845127,Update to Electron 7 (#1157)  833c42b,,1
+369,Fix badge notification bug when private mode is enabled (#1260),0.98335683,Fix badge notification bug when private mode is enabled (#1260)  4c56e81,,1
+370,Brighten Workplace login in dark mode (#940),0.89513254,Improve Workplace login view in dark mode (#940)  f33d1a8,,1
+371,Fit image previews when resizing window (#1172),0.72178185,Save window bounds after window resize (#1038)  ccf0ab2,,1
+372,Apply Dark Mode styling to popup dialogs (#76),0.76233846,"Improve dark mode for ""Quoted text in inline replies""  06d78ab",,1
+373,Fix plus icon in dark mode (#1004),0.93585294,Fix plus icon in dark mode (#1004)  db36bed,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,1
+374,Fix dark mode in preferences (#505),0.79260504,Fix dark mode (#1742)  25aee78,,1
+375,Show the Flash Window on Message menu item on Linux too,0.6282843,"Fix ""Show Message Buttons"" option",,0
+376,Add option to launch minimized (#314),0.6096382,Simplify the menu implementation.  5a1cb31,,0
+377,2.2.0,0.49388108,Upgrade to Electron v2. link,,0
+378,Bump dependencies,0.5816431,Update dependencies,"Fixes #911 -issue with settings menu / cmd + , not working due to invalid selector. Backwards support for settings selector for users without the new rollout.",0
+379,Update to the new Messenger icon (2020),1.0,Update to the new Messenger icon (2020),,1
+380,Fix emoji picker (#941),0.9708117,Fix emoji picker (#941)  f7f08f3,,1
+381,Upgrade electron-builder (#240),0.84797776,Upgrade to Electron 4  2744a35,,1
+382,Work around the vibrancy issue (#1070),0.7716507,Fix some vibrancy setting error (#1094)  06304a3,,1
+383,Confirmation before sending image via Cmd/Ctrl+V (#198),0.96367574,Confirmation before sending image via Cmd/Ctrl+V link,,1
+384,2.0.0,0.4917422,Update dependencies,,0
+385,Close #32 PR: Persist window state and hide window on Cmd+W.,0.7009516,Window state is now persisted and closing the window will no longer close the app.,,1
+386,Dark mode fixes,0.8857152,Fix dark mode (#1742)  25aee78,,1
+387,Set attach point for sheets to under the toolbar (#80),0.639411,Add insert sticker shortcut (#1015)  29577c6,,0
+388,"update CSS class for the ""New Conversation"" btn",0.5559037,Improve the conversation list selected and unread style.  9312ed4,,0
+389,Match dark mode color with iMessage's colors (#709),0.9766281,Match dark mode color with iMessage's colors (#709)  5631e2e,,1
+390,"Fix reaction, delete and view image bugs (#1589)",0.6642018,Fix hidden 360 photos (#1199)  de06ad3,,0
+391,Remove redundant scrollbar in message entry (#153),0.6967392,Improved scrollbar theme by @mquevill in #1638,,0
+392,Fix the sticker button in dark mode,0.68845975,Fix login button color in dark mode,,0
+393,Merge pull request #39 from danielhusar/improvements,0.46523216,"Various improvements to readme by @Danik1601, @dusansimic and @lefterisgar in link",,0
+394,Add spell-checking (#1336),0.918617,Add spell-checking (#1336)  1914dab,,1
+395,Show tip after enabling Auto Hide Menu Bar (#1125),0.978881,Show tip after enabling Auto Hide Menu Bar (#1125)  76ac982,,1
+396,remove webSecurity: false,0.43262154,Fix schema validation crash (#1037)  0937650,,0
+397,package.json indentation,0.41606244,"Fix ""Show Message Buttons"" option by @lefterisgar and @dusansimic in link",,0
+398,Migrate darkMode settings in config file (#1665),0.6542859,Dark mode tweaks.,,0
+399,bump deps,0.56570303,Bump Electron to latest release,,0
+400,Fix the preferences window and other overlays (#970),0.9249537,Fix the preferences window and other overlays (#970)  ec3e687,,1
+401,bump electron-packager and simplify build script,0.58900356,Bump Electron to latest release,,0
+402,Meta tweaks,0.58524406,Various tweaks (#1267)  4493b08,,0
+403,Add script for automatic APT repo deployment,0.52088183,"New installation options are available, including automatic updates on Debian-based versions using APT. Check the readme for more information.",,0
+404,Add “removable-media” snap plug (#978),0.97185606,Add “removable-media” Snap plug (#978)  648c812,,1
+405,2.30.1,0.5245146,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",Fixes #857,0
+406,Fix react icon in dark mode (#1084),0.9747395,Fix react icon in dark mode (#1084)  4b95f16,Fixes #809 Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,1
+407,2.30.2,0.50319004,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+408,Remove left and right padding in touch bar buttons (#439),0.67322445,"Fix Touch Bar when on the ""New Message"" view (#718)  53a64c4",,0
+409,use electron-dl,0.5740794,Bump Electron to 0.37.2.,Messenger sets display:none on the settings container through a media query. We're overwriting this using visibility:hidden instead so we can open the menu.,0
+410,Merge pull request #57 from lukyth/fix-darkmode,0.5905192,Dark mode fixes by @lefterisgar in link,,0
+411,Manually specify sized icons for Linux .deb (#1420),0.6880066,Fix app icon for Linux .deb (#1420)  a0a0ae0,Improve the “Missed call” dialog in the dark mode Improve the music widget title color in dark mode Fix the stylelint invocation Fix stylelint issues Tweak the “new Messenger version” banner in dark mode (fixes #835) Tweak the inline replies in dark mode Only modify the text brightness of non-own messages (matches the light mode behavior). Tweak quoted text in the composer in dark mode Tweak reply tags Fix disappearing forward icon on shared links in dark mode Fix a flash after closing settings Also fixes unintentional background color brightness reduction on vibrant views. Fix the white background under the typing indicator (fixes #669) Tweak the link preview in the message composer in full vibrancy mode (fixes #670) Fix Messenger’s squished typing indicator bug,0
+412,Exclude toolbar buttons from draggable region (#237),0.6672738,"Fix adaptive, hidden and narrow sidebar",,0
+413,Fix hidden dialog issue (#2006),0.7614823,Fix “Hide conversation” menu item (#1202)  0b92e74,,1
+414,Fix selected conversation background (#918),0.9458288,Fix selected conversation background (#918)  eaf9226,,1
+415,Fix Search in Conversation menu option (#1546),0.83486307,"Fix ""Find Conversation"" feature",,1
+416,2.15.1,0.53822726,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+417,readme tweaks,0.5562775,"Various improvements to readme by @Danik1601, @dusansimic and @lefterisgar in link",Fixes #707,0
+418,Bump electron to v24,0.8380294,Bump Electron to 0.37.2.,Fixes #580,1
+419,Save window bounds after window resize (#1038),0.9515945,Save window bounds after window resize (#1038)  ccf0ab2,Shared videos had bars on left and rights side. Removing this old fix stops that behavior.,1
+420,simplify the dark mode implementation,0.8078449,User-interface and dark mode improvements,,1
+421,0.5.1,0.39115092,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+422,2.5.0,0.48960054,Update dependencies,,0
+423,simplify menu shortcuts,0.7807847,Simplify the menu implementation.  5a1cb31,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,1
+424,Fix duplicate “Toggle Dark Mode” menu item,0.699689,Fix login button color in dark mode,,0
+425,Fix link previews (#479),0.65866363,Fix open links issue by @dusansimic in link,,0
+426,Create draggable region only on macOS (#1626),0.5801484,Add menu bar mode for macOS (#804)  4f1c4df,,0
+427,Update electron-store and make the config strongly-typed,0.6323887,Upgrade to Electron v2. link,,0
+428,2.13.1,0.5530371,Various tweaks (#1267)  4493b08,Fixes #672 Co-authored-by: Jarek Radosz jradosz@gmail.com,0
+429,2.41.1,0.510527,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",Fixes #699,0
+430,"Dark mode: Fix ""Keep me signed in"" checkbox",0.7044786,Fix login button color in dark mode,,1
+431,Update Electron to version 6.0.3,0.84076715,Updated Electron to 1.7.9.,Co-authored-by: Jarek Radosz jradosz@gmail.com,1
+432,Add insert GIF shortcut (#222),0.78657514,"Fix keyboard shortcut for ""Insert GIF"" (#1013)  dc11fab",Co-authored-by: Jarek Radosz jradosz@gmail.com,1
+433,"Fix ""Hide Names and Avatars"" (#1600)",0.7244385,"Add option to hide names and avatars in the UI (You can find it in the ""View"" menu) (#787)  44e9c10",Fixes #789,1
+434,2.34.0,0.53612375,Various tweaks (#1267)  4493b08,,0
+435,Add Preferences keyboard shortcut to readme (#256),0.69640744,"Fix ""Insert Text"" keyboard shortcut (#1118)  343705e",Caprine on non-macOS platforms could have had their vibrancy config value set incorrectly to full or sidebar.,0
+436,Dark mode: Fix cookies notification icons,0.8967179,Add dark mode to cookies notification,,1
+437,1.6.0,0.4955803,Various tweaks (#1267)  4493b08,,0
+438,:arrow_up: electron@0.34.3,0.7216682,Bump Electron to 0.37.2.,,1
+439,0.1.2,0.45596057,Various tweaks (#1267)  4493b08,We don't (correctly) sign the Windows binaries anyway.,0
+440,Improved scrollbar theme (#1638),0.9101767,Improved scrollbar theme by @mquevill in #1638,,1
+441,Fix issue where people list item color was not selected (#1221),0.97177446,Fix an issue where people list item color was not selected (#1221)  9c11bd5,"Replace colors with existing CSS variables Extract code-blocks CSS to a separate file Fix the “forward message” icon in dark mode Fix message composer icons in light full-vibrancy Revert ""Fix #173 (#174)"" This reverts commit 67f2353133c48779ca7d608269e96a5c7a0ceb41. This CSS rule is no longer needed. Remove unused CSS rules Improve contrast on contact name links Revert “Vertically align “conversation info” buttons.” Messenger fixed this on their side. Our fix has now the opposite effect. Remove an overreaching CSS rule Fix “search in conversation” in dark mode Improve the text color in “Delete message” popup Improve “Message Reactions” popup in dark mode Improve code blocks Tweak deleted messages Tweak link previews Tweak attached files Tweak chat bot menu Fix variation in brightness of message composer icons",1
+442,Try to support 2FA,0.61545074,Fix 2FA login issue (#1417)  0207464,,0
+443,2.52.2,0.46109882,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",Fixes #754,0
+444,Add quit option to app menu and open app from tray upon left click,0.5780883,"The ""Toggle Sidebar"" option is now persisted between app runs.",,0
+445,Fix dark button for New Room (#1799),0.8904964,"Fix ""Create new room"" button in dark mode (#1373)  155a9c7",Fixes #740,1
+446,Crop label on Touch Bar button (#706),0.9800239,Crop label on Touch Bar button (#706)  153557b,,1
+447,Add the ability to copy image address (#1671),0.8564693,Add the ability to copy image address in link,Fixes #751,1
+448,2.51.1,0.48618004,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+449,"Hide ""Autoplay Videos""",0.6712334,Allow disabling video autoplay (#738)  a252ca9,,0
+450,Fix AltGr issue on Windows (#598),0.6604012,Fix error on Windows and Linux  04cb6a1,,0
+451,Check for new version more often (#525),0.58213127,Display a notification when a new update is available,,0
+452,2.57.1,0.53379667,Various tweaks (#1267)  4493b08,,0
+453,electron-prebuilt → electron,0.60401726,Bump Electron to 0.37.2.,,0
+454,Fix Work Chat (#530),0.70645815,Fix Show Message Buttons feature when switching conversations (#803)  766bd9f,,1
+455,2.4.0,0.53938895,Update dependencies,,0
+456,Link to the snap package,0.6525153,Add “removable-media” Snap plug (#978)  648c812,Co-authored-by: Jarek Radosz jradosz@gmail.com,0
+457,Fix mute notifications setting on startup (#420),0.667981,Fix notifications (#717)  f0ea2be,,0
+458,Open conversations from the Dock menu (#470),0.6537446,Display newest conversation at launch (#1135)  89911d5,Fixes #736,0
+459,"Remove ""Allow All Cookies"" button",0.8869783,"Remove ""Allow All Cookies"" button to increase privacy",,1
+460,Fix disabled contact name in dark mode (#1144),0.6567388,Fix dark mode (#1742)  25aee78,,0
+461,"Make ""Allow cookies"" button blue in light theme too",0.64887756,Add dark mode to cookies notification,Co-authored-by: Jarek Radosz jradosz@gmail.com Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+462,Fix dark mode not being set on startup (#1569),0.84727496,Fix dark mode (#1742)  25aee78,Fixes #721  Fixes #724  Fixes #725,1
+463,1.8.0,0.540253,UI improvements 30d83cc 06b7c4e 95d1c9d 5abf9a2,This only applies to new users. This is done to be as native as possible.,0
+464,2.20.0,0.50125766,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+465,0.3.0,0.48735303,Updated Electron to 1.7.9.,,0
+466,Update @typescript-eslint/parser,0.613691,Rewrite the app in TypeScript (#745)  3ec8c6b,,0
+467,2.56.0,0.5142256,Upgrade to Electron v2. link,,0
+468,Update screenshots,0.547572,Show download progress (usually on the app icon). link,Fixes #705,0
+469,Upgrade Electron,0.86782664,Upgrade to Electron 4  2744a35,Fix “Chat bot conversation start” element styling. Fix “typical response type” styling in dark mode. Vertically align “conversation info” buttons. Prevent content shift on hover in “new conversation list” in dark mode. Improve text contrast on message popovers. Improve sticker search input styling in dark mode. Fix button styling throughout the app.,1
+470,2.29.0,0.5138679,Update dependencies,Gets rid of the preferences dialog flash on startup and when changing the “Mute Notifications” setting.,0
+471,Fix shortcuts on non-US locales (#1560),0.5751668,Fix shortcuts by @dusansimic in link,,0
+472,Fix dragging scrollbar when app is zoomed (#962),0.9809652,- Fix dragging scrollbar when app is zoomed (#962)  ed5772b,"Electron’s context isolation is preventing any window.Notification modification done by the preload script (browser.js). This change works around that limitation by first injecting custom window.Notification in the main process using webContents.executeJavaScript and then by passing messages between browser context (Messenger code) and the Isolated Context (Caprine’s browser.js) via window.postMessage/window.addEventListener('message', …). As a bonus, this PR adds support for onclick and onclose Notification events used by Messenger. That allows us to remove selectConversationByImg, since Messenger selects the conversation in the onclick callback! 😃  Fixes #700",1
+473,Readme fix,0.43968993,Bugfixes,,0
+474,Cleanup #172,0.5020993,Various tweaks (#1267)  4493b08,,0
+475,Fix open links in new window issue (#2007),0.79897696,Fix dragging the window. link,,1
+476,Hide banner for Messenger App for Windows (#1621),0.8288741,Hide new Messenger app banner by @1nikolas in link,,1
+477,"Remove moot text from ""Hardware Acceleration"" settings label",0.63330835,Add setting to disable hardware acceleration.  c8391d2,Fixes #704 Closes #708,0
+478,"Fix insert buttons (GIF, Sticker, Emoji, Files)",1.0,"Fix insert buttons (GIF, Sticker, Emoji, Files)",,1
+479,Update Touch Bar screenshot,0.7665607,Touch Bar support. link,,1
+480,readme - move Features to the top,0.47757384,Select log out as last menu item by @mquevill in link,Fixes #694 Fixes #510,0
+481,Dark mode: Fix top gap not being removed,0.70820165,Dark mode fixes by @lefterisgar in link,,1
+482,2.10.0,0.5703136,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+483,use the new API for setting badge count which also works on Ubuntu,0.5816675,Fix badge notification bug when private mode is enabled (#1260)  4c56e81,,0
+484,Hide disabled scroll bar (#1545),0.71553576,- Fix dragging scrollbar when app is zoomed (#962)  ed5772b,Fixes #656,1
+485,2.12.1,0.5168946,deb,,0
+486,Add npm run script for publishing Snap,0.48306972,Add “removable-media” Snap plug (#978)  648c812,As Electron 4 dropped support for it.,0
+487,Fix making and receiving calls (#1325),0.94859135,Fix making and receiving calls (#1325)  b69ed37,,1
+488,Style improvements (#757),0.72215104,User-interface improvements (#757)  93d0a1b,,1
+489,Scale videos down to max width (#1655),0.8615894,Scale videos down to max width in link,,1
+490,CI: A few tweaks,0.6181474,Various tweaks (#1267)  4493b08,Co-authored-by: Sindre Sorhus sindresorhus@gmail.com,0
+491,2.55.6,0.42900473,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",Fixes #641,0
+492,Fix the dark-mode vibrancy login screen,0.90879214,Fix dark mode vibrancy in the login screen  26076e3,,1
+493,Don't run --fix automatically as it won't catch issues on CI,0.5870499,Fix Caprine not starting on some Linux distros,,0
+494,Recompress PNG image losslessly via zopflipng (#424),0.5178524,Fix hidden 360 photos (#1199)  de06ad3,,0
+495,2.31.3,0.4966299,Various tweaks (#1267)  4493b08,,0
+496,Update electron and other dependencies,0.77679217,Upgrade to Electron v2. link,,1
+497,2.8.0,0.4639413,Various tweaks (#1267)  4493b08,,0
+498,Add tip about custom keyboard shortcuts on macOS,0.6397911,Fix conversation switching keyboard shortcuts.,Fixes #654,0
+499,Update settings menu and close button elements (#1815),0.6557611,"Fix ""Show Message Buttons"" option",,0
+500,bump electron-config,0.76612455,Bump Electron to 0.37.2.,,1
+501,"Fix ""Create new room"" button in dark mode (#1373)",0.9866498,"Fix ""Create new room"" button in dark mode (#1373)  155a9c7",,1
+502,Minify images with ImageOptim,0.58950627,Scale videos down to max width in link,,0
+503,Make typing indicator dots white in dark mode (#326),0.6763113,Fix login button color in dark mode,Fixes #626,0
+504,Super minor tweak,0.65224767,Various tweaks (#1267)  4493b08,,0
+505,Fix hidden and narrow sidebar,0.93170834,"Fix adaptive, hidden and narrow sidebar",,1
+506,Fix newline,0.50358456,Fix autoscroll on new messages (#1382)  e94f36e,,0
+507,Fix calling for groups and other locales (#284),0.572034,Fix notification title for group chats.  5361289,,0
+508,Merge pull request #56 from lukyth/fix-darkmode,0.59048176,Dark mode fixes by @lefterisgar in link,Like the native Open panel.,0
+509,Make sure the vibrancy is enabled only on macOS (#788),0.98599595,Make sure the vibrancy is enabled only on macOS (#788)  4466a02,,1
+510,Remove junk,0.47251546,Remove all CSS related to old design,,0
+511,Fix Workchat Bounce/Blink/Badge (#300),0.61125183,Fix message buttons not working for some users (#781)  1ca841e,,0
+512,Fix too strong chat title bar bottom border (#921),0.9863683,Fix too strong chat title bar bottom border (#921)  04115c7,,1
+513,Remove unnecessary lines between items on the conversation list (#920),0.67462707,Improve the conversation list selected and unread style.  9312ed4,,0
+514,Fix search icon dark mode color in right sidebar (#1849),0.87426215,Fix search icon dark mode color in right sidebar by @dusansimic in link,,1
+515,Add CSS linting,0.6358973,Merge css stylesheets by @lefterisgar in link,Fixes #619,0
+516,Remove all CSS related to old design,0.9999999,Remove all CSS related to old design,,1
+517,Disable Facebook link tracking (#226),0.85589397,Remove Facebook tracking from copied links (#1169)  74416e6,,1
+518,2.33.1,0.5080401,Various tweaks (#1267)  4493b08,,0
+519,Fix the GIF search field background (#1100),0.96478856,Fix the GIF search field background (#1100)  27150a9,,1
+520,"Add messenger menu options to the ""View"" menu",0.6667991,"- Fix ""Show Message Buttons"" for new Messenger UI (#956)  83e3adf",,0
+521,Upgrade electron-builder,0.817433,Upgrade to Electron 4  2744a35,,1
+522,"Fix the ""New Conversation"" shortcut and menu item",0.7391776,"Fix conversation action shortcuts (mute, archive, delete). link",,1
+523,2.35.0,0.50133204,Various tweaks (#1267)  4493b08,Closes #613,0
+524,Fix issue with paste confirmation when AlwaysOnTop is activated (#252),0.65237737,"Disabled the ""Image paste confirmation"" feature temporarily as its dependency is causing havoc. link",,0
+525,Add mute notification option (#275),0.7728543,Add preference to mute call ringtone (#1273)  5daa934,,1
+526,Make XO happy,0.28173605,Huge thanks to @CvX for contributing most of these fixes 🙌,,0
+527,Add menu option for Always on Top (#134),0.5777471,- Fix preference toggle when sidebar is hidden (#957)  2e4ad98,Closes #604,0
+528,Add menu bar mode for macOS (#804),0.9446403,Add menu bar mode for macOS (#804)  4f1c4df,,1
+529,0.5.0,0.4839357,Updated Electron to 1.7.9.,,0
+530,Fix setDarkMode loop on macOS (#1247),0.9853226,Fix setDarkMode loop on macOS (#1247)  1dfe546,,1
+531,Show menu bar by default on Linux and Windows and add option to disable that (#302),0.76243794,The menubar on Windows is hidden by default. (Press Alt to toggle it),Fixes #593 Related to #504,1
+532,"Fix keyboard shortcut for ""Insert GIF"" (#1013)",0.9615921,"Fix keyboard shortcut for ""Insert GIF"" (#1013)  dc11fab",,1
+533,Bump verison in spec file,0.5185144,Bump Electron to latest release,Fixes #539,0
+534,Readme tweaks,0.5336543,"Various improvements to readme by @Danik1601, @dusansimic and @lefterisgar in link",,0
+535,2.37.0,0.5834812,Various tweaks (#1267)  4493b08,,0
+536,Remove bottom white line in message box in dark mode (#407),0.7742834,Fix styling for removed message in dark mode (#1096)  07c39ac,,1
+537,Use ultra-dark vibrancy instead of dark,0.54484534,New beautiful vibrancy mode on macOS ⬆️. Works in both dark and light mode. You can toggle it in the View menu.,,0
+538,Close #34 PR: Fix back button position. Fixes #33,0.5797224,Fix too strong chat title bar bottom border (#921)  04115c7,,0
+539,Minor tweaks,0.74320793,Various tweaks (#1267)  4493b08,,1
+540,Dark mode improvements (#225),0.8773838,Dark mode improvements. link,,1
+541,Add insert text shortcut (#356),0.7508173,"Fix ""Insert Text"" keyboard shortcut (#1118)  343705e",Fixes #574,1
+542,some tweaks,0.7660413,Various tweaks (#1267)  4493b08,,1
+543,Add option to block delivery receipts (#793),0.97567815,Add option to block delivery receipts (#793)  6ad22f4,,1
+544,Show profile picture in the Touch Bar (#431),0.6688478,Touch Bar support. link,,0
+545,Fix window resizing/moving issues and add ability to disable vibrancy (#727),0.9712889,Fix window resizing/moving issues and add ability to disable vibrancy (#727)  ff456ff,,1
+546,Dock bounce animation (#169),0.46155345,Improved scrollbar theme by @mquevill in #1638,It's not needed anymore as Messenger doesn't send pasted images right away.,0
+547,tiny bit better compression of dist,0.40353924,Scale videos down to max width in link,,0
+548,Bring back linting on Travis,0.33910894,Lefteris Garyfalakis,,0
+549,2.25.0,0.5137658,Various tweaks (#1267)  4493b08,,0
+550,"Make the login ""Keep me signed in"" checkbox checked by default (#564)",0.7251898,"Persist the ""Keep me signed in"" choice (#698)  1a5234b",,1
+551,Implement ability to resize text,0.7008226,Fix Increase Text Size shortcut (#944)  ed720bd,,1
+552,Add @mquevill as maintainer,0.6432133,Add maintainers in about dialog by @lefterisgar in link,,0
+553,Fixed dark mode overriding code snippet color (#106),0.7213222,Fix styling for removed message in dark mode (#1096)  07c39ac,Fixes #460,1
+554,Move to GitHub Actions,0.42526788,Show download progress (usually on the app icon). link,,0
+555,Enable the repo sponsor button,0.55942005,"Fix ""Show Message Buttons"" option",,0
+556,Add rpm spec (#1896),0.67483306,Add rpm spec by @dusansimic in link,,0
+557,Fix event box colors in dark mode (#361),0.69978523,Match dark mode color with iMessage's colors (#709)  5631e2e,,0
+558,Bump electron-builder,0.7550089,Bump Electron to latest release,,1
+559,2.40.0,0.48790574,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+560,Restore snap publishing (#1870),0.53882074,Fix camera access in Snap builds (#813)  d13c792,Fixes #520,0
+561,Fix new conversation icon on narrow window size (#975),0.8399235,Fix conversation display on small window sizes (#1025)  6331a2e,Due to recent changes to preferences dialog and new options added order of options was changed and that caused Mute notifications option to change sound setting instead of notificaions setting.,1
+562,:arrow_up: electron@1.2.4,0.69292086,Bump Electron to 0.37.2.,,0
+563,1.4.1,0.52124697,User interface improvements (#837)  4fd1739,,0
+564,Fix tray icon (#587),0.9146481,Fix a bug that prevents the tray icon from showing (#1217)  602c8d1,,1
+565,bump electron to 0.37.2,0.98339367,Bump Electron to 0.37.2.,Related to #515,1
+566,Apply dark mode coloring to preference icons (#1844),0.71424615,Match dark mode color with iMessage's colors (#709)  5631e2e,,1
+567,:arrow_up: electron@0.37.1,0.74365413,Bump Electron to 0.37.2.,,1
+568,New app icon 💄✨,0.9194783,New app icon 💄✨  709ea23,"I think it's a mistake to forcibly hide the right panel in compact mode. This prevents users from accessing some important features, such as viewing attachments, discussion settings, and more. It's best to leave the right panel visibility at the discretion of each individual user.",1
+569,Various minor tweaks,0.75883985,Various tweaks (#1267)  4493b08,,1
+570,restore the window if menu actions are triggered when minimized - fixes #16,0.64677745,Fix dragging the window. link,,0
+571,Add some missing menu items to the Linux / Windows menu,0.6387364,Upgrade dependencies and add tray menu for Linux and Windows. link,,0
+572,Add release script,0.5101491,Download,,0
+573,Improve the dark mode,0.9031483,Dark mode improvements. link,,1
+574,Readme improvements,0.59305626,"Various improvements to readme by @Danik1601, @dusansimic and @lefterisgar in link",No idea if it will actually work as I don't use 2FA for Facebook. 495,0
+575,Fix photo info color in dark mode (#333),0.69293904,Fix poll title color in dark mode (#798)  7ef2a2f,,0
+576,2.6.2,0.46550372,Reverted v2.35. It unfortunately had some crashes...,,0
+577,Run the update check immediately at startup too,0.58984005,Enable auto-updates on Linux,,0
+578,Fix radio buttons & right sidebar search icon color in dark mode (#1948),0.9150964,Fix radio buttons & right sidebar search icon color in dark mode by @lefterisgar in link,,1
+579,Fix linting,0.5211202,Many bug fixes.,,0
+580,"Hide the ""Keep the conversation going"" bar",0.69883,Fix “Hide conversation” menu item (#1202)  0b92e74,,0
+581,Fix dots color in dark mode (#1105),0.700984,Fix plus icon in dark mode (#1004)  db36bed,"Changed color of the timestamp in contact list so it would match all other because the background color of contact is now used as an indicator if messages are read or not, the blue color of a timestamp is not needed anymore.",1
+582,2.22.0,0.51683986,Update dependencies,,0
+583,Change default notification style to banner (#631),0.78376615,Change default notification style on macOS to banner.  a8f3708,,1
+584,2.6.0,0.49258938,Reverted v2.35. It unfortunately had some crashes...,,0
+585,"Fix ""say hi with a wave"" in dark mode (#1146)",0.6256701,Fix dark mode vibrancy in the login screen  26076e3,,0
+586,Add keyboard shortcut for switching between Messenger and Workchat (#561),0.7151756,Fix conversation switching keyboard shortcuts.,Fixes #485,1
+587,Fix a couple of visual bugs in compact mode (#521),0.605635,Fix draggable region (#1024)  9a692db,,0
+588,Add option to disable automatic updates,1.0,Add option to disable automatic updates,,1
+589,Improve Snap publish run script,0.52104783,Fix camera access in Snap builds (#813)  d13c792,,0
+590,Fix workaround for notifications (#1822),0.77937317,Fix notifications (#717)  f0ea2be,,1
+591,"Fix ""Insert Text"" keyboard shortcut (#1118)",0.98244774,"Fix ""Insert Text"" keyboard shortcut (#1118)  343705e",,1
+592,Fix Windows icon (#1455),0.863009,Fix the app icon on Windows (#1455)  2d1511c,,1
+593,Improve the dark mode in the login flow (#1049),0.9696853,Improve the dark mode in the login flow (#1049)  5c26e5c,,1
+594,Fix small graphical glitch on message header (#770),0.7222467,Fix too narrow conversation header (#910)  f8cb7bb,Fixes #471,1
+595,Remove disabled paste confirmation prompt code,0.6435193,"Disabled the ""Image paste confirmation"" feature temporarily as its dependency is causing havoc. link",,0
+596,Fix decline button in dark mode (#629),0.7605667,Fix react icon in dark mode (#1084)  4b95f16,Fixes #465,1
+597,Fix selected conversation background color in dark mode (#487),0.73481566,Change selected conversation color. link,,1
+598,Cmd hotkey thread switch (#130),0.5725646,Fix Show Message Buttons feature when switching conversations (#803)  766bd9f,See #416,0
+599,Remove hidden text from being copied,0.49582475,Hide all non-working features,Fixes #457 Fixes #458,0
+600,Don't hide the right sidebar in compact mode (#517),0.79253817,- Fix preference toggle when sidebar is hidden (#957)  2e4ad98,,1
+601,Fix video player width (#382),0.5846777,Scale videos down to max width in link,I had to disable vibrancy mode as there are a lot of issues with it. I also had to enable hardware acceleration again as having it off caused a lot of rendering artifacts.,0
+602,Update class name for app drag region (#453),0.64014435,Fix draggable region (#1024)  9a692db,,0
+603,Fix custom css default file (#1903),0.70677537,Fix custom css default file by @dusansimic in link,,1
+604,Fix dark mode UI issues (#958),0.9381939,- Fix dark mode UI issues (#958)  e1b3ecb,"Config variable notificationsMuted is true if notifications should be muted, not unmuted. There was a bug in if statement in browser.js when it checks config state and real state.",1
+605,Update build docs link (#478),0.60810137,Various tweaks (#1267)  4493b08,,0
+606,Work Chat dark mode: Fix sender color in group chat (#251),0.68339145,Fix styling for removed message in dark mode (#1096)  07c39ac,,0
+607,correctly hide the New message button in compact mode,0.7232374,"Fix ""Show Message Buttons"" option",Fixes #436,1
+608,Display newest conversation at launch (#1135),0.97684705,Display newest conversation at launch (#1135)  89911d5,,1
+609,2.57.3,0.49433023,Various tweaks (#1267)  4493b08,,0
+610,Add emoji style setting (#720),0.95450485,Add emoji style setting (#720)  b69f044,,1
+611,Refactor and simplify the menu implementation,0.8380326,Simplify the menu implementation.  5a1cb31,Closes #394,1
+612,more ES2015ify,0.48447013,Enhancements:,Fixes #428,0
+613,2.16.0,0.5334126,Update dependencies,,0
+614,Remove now optional menu property,0.5865638,The menubar on Windows is hidden by default. (Press Alt to toggle it),,0
+615,Change selected conversation color (#442),0.8493422,Change selected conversation color. link,,1
+616,Fix search close button color in dark mode (#1931),0.81173587,Fix search close button color in dark mode by @dusansimic in link,,1
+617,Add PDF version of the app icon,0.70106673,AppImage (Recommended)Needs to be made executable after download.,,1
+618,fix building window version,0.66822374,Fix resizing the window on Windows and some dark mode UI tweaks.,,0
+619,Fix the New Conversation button overlapping the traffic light controls on macOS (#476),0.6046146,Add menu bar mode for macOS (#804)  4f1c4df,,0
+620,Fix unread message timestamp in dark mode,0.63737786,Fix voice message duration text color in dark mode by @dusansimic in link,,0
+621,remove cask tap step (#122),0.47566187,$ brew update && brew cask install caprine,Fixes #385,0
+622,electron@0.34.0,0.8082284,Bump Electron to 0.37.2.,,1
+623,Switch to electron-builder,0.6733469,Upgrade to Electron 4  2744a35,,0
+624,Hide new Messenger app banner (lefterisgar#2),0.92057204,Hide new Messenger app banner by @1nikolas in link,,1
+625,"Fix ""missed call"" styling in dark mode (#790)",0.7809875,Fix styling for removed message in dark mode (#1096)  07c39ac,,1
+626,"Remove new ""Install Messenger app"" banner (#1899)",0.8819038,"Remove new ""Install Messenger app"" banner by @mquevill in link",,1
+627,New tray icons (#482),0.7837839,- Add setting to hide the tray icon (#946)  61228fa,Fixes #395 Closes #396,1
+628,Add private mode confirmation prompt (#1117),0.97410536,Add private mode confirmation prompt (#1117)  2e8267f,When notifications are enabled the setting is not saved and on each start of Caprine notifications are disabled. This fixes it. Fixes: link Fixes: link,1
+629,Disable broken color space correction in Chromium,0.9051664,Disable broken color space correction in Chromium  f5203b3,,1
+630,Fix preferences selector (#1632),0.599401,Re-organize the Preferences menu  8ef4f30,This prevents the group conversation name from turning black while renaming the conversation.,0
+631,Fix release script,0.56047547,Update dependencies,,0
+632,Remove moot Electron workaround,0.5113304,Bump to Electron 0.37.6 and improve dark mode.,,0
+633,Centered title (#534),0.525779,Fix too strong chat title bar bottom border (#921)  04115c7,,0
+634,Allow negative indexed menu items (#1853),0.49120575,Re-organize the Preferences menu  8ef4f30,,0
+635,Fix new design user menu (#1910),0.78084075,Fix new design user menu by @dusansimic in link,,1
+636,Fix typos,0.5648623,Fix spell check languages (#1728)  734ba9b,Right sidebar menus where white from the light theme. With this commit that is fixed.,0
+637,"Update the ""thumbs up"" mask to have the correct size",0.50369346,User-interface tweaks and some bug fixes.,,0
+638,"Add shortcuts for muting, archiving, and deleting a conversation",0.9356055,Change the shortcuts for Muting/Archiving/Deleting a conversation.,,1
+639,Fix preferences not opening when window width < 700px (#841),0.9527488,Fix preferences not opening when window width < 700px (#841)  ec44260,Fixes #359,1
+640,Fix group notification icons in dark mode (#1147),0.7503096,Fix react icon in dark mode (#1084)  4b95f16,,1
+641,Show restart dialog on the current window (#1617),0.6799574,Add Quit on Window Close setting.  61e176a,,0
+642,2.14.2,0.5150442,Various tweaks (#1267)  4493b08,,0
+643,Add link to the website in the Help menu,0.6089905,link,Fixes #348,0
+644,Readme: Fix APT script link,0.5440001,Fix open links issue by @dusansimic in link,,0
+645,Add Snap publishing to the release script,0.4946019,Add “removable-media” Snap plug (#978)  648c812,,0
+646,Add Debug menu for development,0.59289664,Simplify the menu implementation.  5a1cb31,,0
+647,"Make the ""Toggle dark mode"" option a checkbox (#516)",0.71479857,Fix login button color in dark mode,,1
+648,2.53.0,0.47586015,Reverted v2.35. It unfortunately had some crashes...,,0
+649,Check that CSS file exists (for new design) (#1630),0.5287152,Remove all CSS related to old design,,0
+650,minor menu tweaks,0.64352435,Re-organize the Preferences menu  8ef4f30,,0
+651,UI tweaks (#1142),0.8502933,UI tweaks  8a558e6,,1
+652,Fix poll title color in dark mode (#798),0.9545767,Fix poll title color in dark mode (#798)  7ef2a2f,,1
+653,Support persisting keepMeSignedIn toggled with keyboard (#747),0.98024005,Support persisting keepMeSignedIn toggled with keyboard (#747)  64778d4,,1
+654,2.21.1,0.54389346,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+655,1.1.0,0.46959895,Various tweaks (#1267)  4493b08,,0
+656,Fix missing unread badge (#908),0.97418106,Fix missing unread badge (#908)  16d9e3b,,1
+657,Fix window dragging (#102),0.8268788,Fix dragging the window. link,,1
+658,2.18.0,0.51180685,Reverted v2.35. It unfortunately had some crashes...,Fixes #310,0
+659,Simplify OS checks,0.5236556,Simplify the menu implementation.  5a1cb31,,0
+660,Make the Touch Bar respect private mode (#1138),0.9685647,Make the Touch Bar respect private mode (#1138)  ea8015e,,1
+661,Support retina display (#172),0.69037867,All icons are now retina.,,0
+662,move graphics into a static folder,0.44498163,AppImage (Recommended)Needs to be made executable after download.,,0
+663,2.39.0,0.5435215,Reverted v2.35. It unfortunately had some crashes...,,0
+664,"only restore the window on OS X on ""new message"" click",0.6311001,Change close window behaviour on macOS to the default behaviour instead of hide.  3233498,Workchat window title changed.,0
+665,Fix Caprine features on new UI (#1514),0.82148075,Fix Caprine for users on the new messenger UI.,,1
+666,2.27.1,0.59254694,Various tweaks (#1267)  4493b08,,0
+667,implement temporary workaround for full screen shortcut on OS X,0.58273506,Fix conversation switching keyboard shortcuts.,,0
+668,Fix dark mode (#1437),0.9157966,Fix dark mode (#1742)  25aee78,,1
+669,Fix preference toggle when sidebar is hidden (#957),0.9782885,- Fix preference toggle when sidebar is hidden (#957)  2e4ad98,,1
+670,Bump Electron,0.8441508,Bump Electron to 0.37.2.,,1
+671,Guard macOS-only APIs,0.57038265,macOS,,0
+672,2.6.1,0.45023263,Enhancements:,,0
+673,Remove mention of old removed feature,0.67856467,Remove all CSS related to old design,,0
+674,Remove top Facebook cookie banner,0.938379,Remove top Facebook cookie banner  eb331df,,1
+675,Fix emoji URL (add wildcard) (#756),0.8749301,Fix emoji URL (#756)  50590a7,,1
+676,Fix conversation selectors (#135),0.8018249,"Fix ""Find Conversation"" feature",Related to #258,1
+677,electron@0.33.3,0.79328835,Bump Electron to 0.37.2.,,1
+678,Improve readme,0.54352266,"Various improvements to readme by @Danik1601, @dusansimic and @lefterisgar in link",,0
+679,2.7.1,0.5004641,Various tweaks (#1267)  4493b08,,0
+680,"Fix ""Find Conversation""",0.9565487,"Fix ""Find Conversation"" feature",,1
+681,Fix duplicated unread notification (#919),0.93837315,Fix duplicated unread notification (#919)  fe67d8c,,1
+682,2.25.1,0.5362171,Various tweaks (#1267)  4493b08,,0
+683,2.0.0-beta.2,0.4911879,Updated Electron to 1.7.9.,,0
+684,Add switch logic for Messenger UI (#1489),0.6823844,"- Fix ""Show Message Buttons"" for new Messenger UI (#956)  83e3adf",,0
+685,1.2.1,0.5221397,deb,Modal prevents issue with AlwaysOnTop option,0
+686,Remove code related to old design (#1879),0.8194579,Remove code related to old design by @lefterisgar in link,,1
+687,Add insert sticker shortcut (#1015),0.9725625,Add insert sticker shortcut (#1015)  29577c6,,1
+688,Fix group avatar being squished (#1119),0.9841194,Fix group avatar being squished (#1119)  1bda478,,1
+689,Improve cropping for system emoji on some Linux systems (#1000),0.9629,Improve cropping for system emoji on some Linux systems (#1000)  b44a3fb,,1
+690,Add setting to hide the tray icon (#946),0.96824455,- Add setting to hide the tray icon (#946)  61228fa,,1
+691,Bump electron-builder version (#1768),0.777527,Bump Electron to latest release,See #238,1
+692,CSS tweaks (#837),0.5950166,Remove all CSS related to old design,,0
+693,Change close window behaviour on macOS to the default behaviour instead of hide (#623),0.97735095,Change close window behaviour on macOS to the default behaviour instead of hide.  3233498,,1
+694,2.46.0,0.48708856,Various tweaks (#1267)  4493b08,,0
+695,Make sidebar vibrancy the default and add opt-in full-window vibrancy (#667),0.8621821,macOS: Make sidebar vibrancy the default and add opt-in full-window vibrancy (#667)  edc2c5d,,1
+696,document the background behavior,0.4971852,Hide all non-working features,,0
+697,only set the icon option on Linux,0.74635303,Temporarily work around Linux icon issue. link,,1
+698,Close #59 PR: Changed icons size for Linux KDE (Plasma 4) #58.,0.57157624,Fix app icon for Linux .deb (#1420)  a0a0ae0,,0
+699,add back OS X 10.8+ support by upgrading Electron - fixes #4,0.6303201,Upgrade to Electron v2. link,,0
+700,Fix focus when closing app on macos (#1141),0.9155334,Fix focus when closing app on macOS (#1141)  ed75400,,1
+701,Add search shortcut (#358),0.65029263,Add shortcuts for finding and selecting conversations link,,0
+702,CI: Add Gemfury integration,0.41298553,Fix ci build step by @dusansimic in link,,0
+703,Bump Electron and simplify the menu on macOS,0.6480745,Add menu bar mode for macOS (#804)  4f1c4df,,0
+704,Upgrade dependencies,0.906813,Update dependencies,,1
+705,Dark mode: Fix scrollbar track,0.7193179,- Fix dragging scrollbar when app is zoomed (#962)  ed5772b,Related to #203,1
+706,Add CLI flag to start app minimized (#126),0.9388614,Add CLI flag to start the app minimized.,,1
+707,Add a fallback for missing uiContextualLayerPositioner (#781),0.52712274,Fix too strong chat title bar bottom border (#921)  04115c7,,0
+708,Disable paste protection because of #258,0.61794674,"Disabled the ""Image paste confirmation"" feature temporarily as its dependency is causing havoc. link",,0
+709,Bump rpm spec version,0.6569595,Bump Electron to latest release,,0
+710,Dark mode fixes (#1955),0.8642023,Fix dark mode (#1742)  25aee78,,1
+711,Fix border on links in light and dark mode (#608),0.72901535,Fix dark mode icons by @lefterisgar in link,,1
+712,use new MenuItem roles,0.6163084,Simplify the menu implementation.  5a1cb31,,0
+713,Update dependencies,1.0000001,Update dependencies,,1
+714,Close #65 PR: Allow app to automatically enter Dark-mode. Fixes #48,0.6741595,Fix dark mode (#1742)  25aee78,,0
+715,Fix “Hide conversation” menu item (#1202),0.98065674,Fix “Hide conversation” menu item (#1202)  0b92e74,,1
+716,Fix create room icon color in dark mode (#1937),0.8520011,Fix create room icon color in dark mode by @jrafaelsantana in link,,1
+717,Fix story colors (#503),0.6185553,Fix poll title color in dark mode (#798)  7ef2a2f,,0
+718,Disable ESLint max-params for async arrow function (#1619),0.36127156,Fix autoscroll on new messages (#1382)  e94f36e,,0
+719,Update to Electron 7 (#1157),0.96493816,Update to Electron 7 (#1157)  833c42b,,1
+720,set GTK+3 dark theme when in dark mode,0.673418,Make the dark mode color less blue and darker.  d67c9fa,Fixes #192,0
+721,Cleanup,0.4242408,Many bug fixes.,"We only need it for the vibrancy mode, which is only available on macOS. Fixes #178 Closes #180",0
+722,tweak dark mode,0.9489501,Dark mode tweaks.,,1
+723,improve the error reporting,0.53249913,Fix schema validation crash (#1037)  0937650,,0
+724,Enable auto-updates on Linux,1.0000001,Enable auto-updates on Linux,,1
+725,:arrow_up: electron@1.0.0,0.6985848,Bump Electron to 0.37.2.,,0
+726,Fix attachment and receiver pill background in dark mode (#1933),0.8713871,Fix attachment and receiver pill background in dark mode by @sfrunza13 in link,,1
+727,2.12.0,0.513632,Upgrade to Electron v2. link,,0
+728,Add Quit on Window Close setting (#630),0.9493221,Add Quit on Window Close setting.  61e176a,,1
+729,Fixes typo,0.5312915,Fix spell check languages (#1728)  734ba9b,,0
+730,disable asar temporarily in the Linux build because of #94,0.6020797,Disable auto updater on Linux as it doesn't currently work  f0eba4a,,0
+731,2.7.0,0.5350361,Update dependencies,,0
+732,Temporary workaround for keyv ts definitions issue,0.4040875,Fix conversation switching keyboard shortcuts.,,0
+733,"Fix the ""thumbs up"" mask during animation",0.57758653,"Fix insert buttons (GIF, Sticker, Emoji, Files)",,0
+734,2.31.1,0.5115093,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+735,document dark mode,0.7320359,Dark mode improvements. link,,1
+736,Change background to the correct color (#293),0.715874,Make the dark mode color less blue and darker.  d67c9fa,,1
+737,Fix missing tray context menu on Linux (#986),0.9573059,Fix missing tray context menu on Linux (#986)  f0bd1a8,,1
+738,2.14.0,0.53913796,Various tweaks (#1267)  4493b08,,0
+739,menu improvements,0.690151,Simplify the menu implementation.  5a1cb31,,0
+740,Fix window flash on Linux (#693),0.97032356,Linux: Fix window flash (#693)  4d9203c,,1
+741,2.52.0,0.46539113,Upgrade to Electron v2. link,,0
+742,Remove the white background from the thumbs-up icon (#976),0.703975,"- Fix white plus bar, removed report bug icon (#959)  570c490",,1
+743,bump electron,0.8458327,Bump Electron to 0.37.2.,,1
+744,Fix some text color in darkmode,0.7211472,Fix styling for removed message in dark mode (#1096)  07c39ac,,1
+745,Tweak the DMG,0.45058572,deb,,0
+746,Various improvements to readme (#1885),0.5933309,"Various improvements to readme by @Danik1601, @dusansimic and @lefterisgar in link",,0
+747,Fix privacy & support menu in dark mode (#1113),0.7056762,Fix private mode not hiding all private info (#1374)  9a7978a,,1
+748,Fix preferences opening on startup (#1552),0.7063867,Hide the preferences dialog during startup (#716)  cd6f7e1,,1
+749,don't do anything with the DOM until it's loaded,0.42050785,Fix custom css default file by @dusansimic in link,The normal dark is just too transparent and bright for most surfaces.,0
+750,Remove Prettier,0.61505514,Remove all CSS related to old design,"It's not something people will toggle all the time, in contrast to the Dark Mode.",0
+751,Close #47 PR: Add Dark Mode.,0.7734564,Dark mode improvements.  2a77ba1 link,,1
+752,Fix minor typos in the readme (#638),0.5763306,Fix spell check languages (#1728)  734ba9b,,0
+753,Disable auto updater on Linux,0.8798511,Disable auto updater on Linux as it doesn't currently work  f0eba4a,,1
+754,2.31.0,0.5344061,Various tweaks (#1267)  4493b08,,0
+755,Add Apple Silicon support (#2015),0.809089,Add Apple Silicon support by @dusansimic in link,,1
+756,init,0.6093105,deb,,0
+757,Handle initial network connectivity (#775),0.6726272,Better handling of no internet connection when Caprine starts (#775)  cda87df,,0
+758,Use Prettier,0.44415414,Add ability to customize the user interface colors and styles (#651)  200bf1c,,0
+759,Move the dark mode and vibrancy toggle to the View menu,0.7767092,New beautiful vibrancy mode on macOS ⬆️. Works in both dark and light mode. You can toggle it in the View menu.,,1
+760,2.47.0,0.56222504,Various tweaks (#1267)  4493b08,,0
+761,Persist dark mode independent of system settings,0.72209656,Fix the dark mode on Linux and Windows  081b6ed,In Electron 1.4.13,1
+762,Upgrade Electron to version 6.0.2,0.8374458,Upgrade to Electron 6  a7cc69e,Fixes #146,1
+763,Check the vibrancy config is existing (#1094),0.8266319,Fix some vibrancy setting error (#1094)  06304a3,,1
+764,Update package.json,0.5332954,Update dependencies,,0
+765,Use getIconPath() in tray.setBadge() (#1661),0.5416858,Fix a bug that prevents the tray icon from showing (#1217)  602c8d1,,0
+766,Fix conversation CSS selector (#156),0.6564482,Improve the conversation list selected and unread style.  9312ed4,,0
+767,2.9.0,0.5183307,Updated Electron to 1.7.9.,,0
+768,ensure the title is always the app name,0.46559882,AppImage (Recommended)Needs to be made executable after download.,closes #133 fixes #132,0
+769,Use full flags for electron-builder,0.48628196,Bump to Electron 0.37.6 and improve dark mode.,,0
+770,add missing minimist dependency,0.55190706,Dependencies,,0
+771,remove Electron about dialog icon workaround,0.57144606,"- Fix white plus bar, removed report bug icon (#959)  570c490",,0
+772,Upgrade dependencies.,0.88763267,Upgrade dependencies in the hope to fix auto-updating.,,1
+773,Hide the preferences dialog during the automated action (#716),0.83778685,Hide the preferences dialog during startup (#716)  cd6f7e1,"remap mute, archive, and delete commands so they do not conflict with new thread switching commands add cmd+1 through cmd+9 hotkeys to jump to a conversation Closes link add keyboard shortcuts docs add jump to conversation blurb in features beautify contents to fix tabs vs spaces clean up keyboard short cuts table use radix when parsing int create a new const instead of mutating improve readability of ternary refactor event key check to improve readability remove check for 0 since it should never be passed remove unnecessary plus signs",1
+774,Add nvmrc file (#2017),0.8074151,Add nvmrc file by @Alex313031 in link,,1
+775,Link to website from readme,0.6075356,link,Fixes #64,0
+776,Update readme.md to fix broken link on screenshot (#175),0.6060146,Fix open links issue by @dusansimic in link,the cask core is now included with brew :smile:,0
+777,Close #13 PR: Add Linux support. Fixes #11,0.569332,Fix error on Windows and Linux  04cb6a1,,0
+778,Document setting to close the app when the window is closed (#639),0.71064174,Add Quit on Window Close setting.  61e176a,,1
+779,Improve about window information and icon (#1674),0.8112105,Improve about window information and icon in link,,1
+780,Fix Sticker and Gaming buttons in dark mode (#600),0.6407542,Fix react icon in dark mode (#1084)  4b95f16,,0
+781,Fix chat options padding (#406),0.71580344,Fix too strong chat title bar bottom border (#921)  04115c7,link,1
+782,2.15.0,0.5277084,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+783,Fix sidebar config migration (#1306),0.98182577,Fix sidebar config migration (#1306)  10205a2,,1
+784,Migrate from deprecated APIs,0.45168787,Completely remove old design code by @lefterisgar in link,,0
+785,Fix dark mode for the Please Verify view (#614),0.78931856,Fix dark mode (#1742)  25aee78,,1
+786,Don't open window if it was set to launch as hidden on macOS,0.9450966,No longer opens the window at launch if it was set to launch as hidden on macOS. link,,1
+787,2.54.0,0.5064561,Various tweaks (#1267)  4493b08,,0
+788,Add a temporary workaround for brokend website ui (#1683),0.62968445,User-interface fixes,,0
+789,Call immediately when starting a audio/video call (#330),0.5609976,Fix making and receiving calls (#1325)  b69ed37,,0
+790,2.57.4,0.43018728,Bump Electron to 0.37.2.,to adhere to OS X HIG,0
+791,1.3.0,0.51150024,Updated Electron to 1.7.9.,,0
+792,Fix Travis,0.39955926,Many bug fixes.,,0
+793,Fix hiding search in compact mode (#1781),0.5286652,"Fix ""Find Conversation"" feature",,0
+794,0.2.0,0.4779921,Update dependencies,"the Facebook ping thingy seems to be working fine now Unlike link, this was not actually a security issue, as nodeIntegration was disabled.",0
+795,Correctly reflect activated Bounce Dock on Message option,0.55210185,"Fix ""Show Message Buttons"" option",,0
+796,Fix #173 (#174),0.648998,Various tweaks (#1267)  4493b08,,0
+797,2.17.0,0.5949533,Various tweaks (#1267)  4493b08,,0
+798,Fix vibrancy issue on app refresh (#1250),0.9828558,Fix vibrancy issue on app refresh (#1250)  1598309,Apparently setting backgroundColor in the BrowserWindow didn't completely solve it.,1
+799,Work Chat compatibility (#245),0.56784445,Fix Show Message Buttons feature when switching conversations (#803)  766bd9f,,0
+800,2.26.0,0.4699073,Upgrade to Electron 0.36.6 link,,0
+801,Document that Linux supports Alt to toggle menu bar (#1063),0.64521533,Add Attach files menu item and keyboard shortcut (#1014)  984a298,From: link Fixes #71,0
+802,Make setting dialog usable with small window sizes (#843),0.9303245,Make preferences dialog usable with small window sizes (#843)  a7853f6,,1
+803,Add screenshot for the vibrancy effect,0.6116245,Fix vibrancy issue on app refresh (#1250)  1598309,,0
+804,Update links from http to https (#1847),0.5122398,Full Changelog: link,,0
+805,2.38.0,0.5409384,Reverted v2.35. It unfortunately had some crashes...,,0
+806,Update electron to 7.1.4,0.9349407,Updated Electron to 1.7.9.,,1
+807,1.4.0,0.5257156,User interface improvements (#837)  4fd1739,,0
+808,Link to my Patreon,0.53853786,link,since OS X and the rest is split we can use OS specific shortcuts,0
+809,Fix dark mode icons (#1942),0.80470634,Fix dark mode icons by @lefterisgar in link,to match how it works in Anatine,1
+810,2.44.0,0.51214314,Various tweaks (#1267)  4493b08,,0
+811,Fix dark mode style for nickname dialog placeholder (#863),0.97571254,Fix dark mode style for nickname dialog placeholder (#863)  91b6181,,1
+812,Add support for replying via notifications on macOS (#726),0.97434783,Add support for replying via notifications on macOS (#726)  ed804ae,,1
+813,2.14.1,0.56902874,Various tweaks (#1267)  4493b08,,0
+814,Add dark mode to cookies notification,1.0000001,Add dark mode to cookies notification,,1
+815,Fix admin label in dark mode (#418),0.7305881,Fix dark mode (#1742)  25aee78,,1
+816,Follow-up tweaks to #245,0.79535997,Various tweaks (#1267)  4493b08,,1
+817,Persist maximized state and handle title bar double-click (#1270),0.9703412,Persist maximized state and handle title bar double-click (#1270)  dc392dc,,1
+818,Fix release publishing (#1867),0.49211717,Fix notifications (#717)  f0ea2be,Ref: link,0
+819,Improve polls UI in dark mode (#171),0.6854178,Fix poll title color in dark mode (#798)  7ef2a2f,,0
+820,link to the Anatine app,0.50319403,AppImage (Recommended)Needs to be made executable after download.,Ref: link,0
+821,remove gnome 3 notification bug warning as it was fixed in Electron,0.5990808,"- Fix white plus bar, removed report bug icon (#959)  570c490",,0
+822,2.28.0,0.5054505,Update dependencies,,0
+823,add missing use strict directive,0.38419434,Fix hidden dialog issue by @dusansimic in link,,0
+824,2.1.0,0.48464942,Reverted v2.35. It unfortunately had some crashes...,,0
+825,Make the dark mode color less blue and darker (#634),0.90410936,Make the dark mode color less blue and darker.  d67c9fa,,1
+826,Fix dark mode typing indicator on macOS Mojave (#606),0.81925166,Fix dark mode being disabled on non-macOS systems (#735)  21a6bb1,,1
+827,Fix top gap (#1605),0.5525087,Fix too strong chat title bar bottom border (#921)  04115c7,,0
+828,Fix error on quit caused by Electron race issue (#811),0.75073844,Fix error on quit issue (#811)  0b955cb,,1
+829,Support dark mode for native widgets on macOS,0.72580117,Add setting to follow system dark mode on macOS (#697)  d81ebdd,,1
+830,Fix keyboard shortcut for archiving does not work for group conversations (#419),0.714998,Fix conversation switching keyboard shortcuts.,Fixes #51 Fixes #84 Closes #85,1
+831,Fix hidden 360 photos (#1199),0.97247076,Fix hidden 360 photos (#1199)  de06ad3,,1
+832,fix readme icon,0.5582274,Fix a bug that prevents the tray icon from showing (#1217)  602c8d1,"Fixes #73 This is implemented in the same way as iMessages, in that instead of zooming in and out on the whole interface this will only affect the conversation's text size. Closes #81",0
+833,Fix dark mode on new Messenger UI (#1500),0.7398782,- Fix dark mode UI issues (#958)  e1b3ecb,,1
+834,Fix Show Message Buttons feature when switching conversations (#803),0.96849775,Fix Show Message Buttons feature when switching conversations (#803)  766bd9f,,1
+835,2.31.2,0.47613296,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",,0
+836,2.21.0,0.5380696,Various tweaks (#1267)  4493b08,,0
+837,Only allow a single instance of the app,0.46868986,"Caprine now ensures only one instance can be run at once. If you open Caprine when it's already running, it will just focus the current Caprine instance. And the Caprine dark mode now follows the OS X dark mode.",,0
+838,Fix invisible search dropdown selection indicator color. (#129),0.6825629,Fix search icon dark mode color in right sidebar by @dusansimic in link,no longer activates in production,0
+839,Fix mute notifications not saved (#386),0.6988646,Fix unread count for muted chats (#664)  5529432,,0
+840,Fix auto-updates on Linux,0.91479695,Enable auto-updates on Linux,,1
+841,Fix a bug that prevents the tray icon from showing (#1217),0.98055464,Fix a bug that prevents the tray icon from showing (#1217)  602c8d1,,1
+842,New icon,0.72449934,New app icon 💄✨  709ea23,,1
+843,Add setting to follow system dark mode on macOS (#697),0.9577932,Add setting to follow system dark mode on macOS (#697)  d81ebdd,,1
+844,"Fix ""require admin approval"" dark mode (#1114)",0.73975825,Fix dark mode (#1742)  25aee78,,1
+845,Fix private mode not hiding all private info (#1374),0.9783728,Fix private mode not hiding all private info (#1374)  9a7978a,,1
+846,Fix display of right sidebar icons in dark mode (#1137),0.7491405,Fix plus icon in dark mode (#1004)  db36bed,,1
+847,Use electron-util to simplify some code,0.44529992,"Update Electron to 20 by @1nikolas, @nehalvpatel and @lefterisgar",Only allow a single instance of the app,0
+848,Fix locale detection (#473),0.54691255,Fix draggable region (#1024)  9a692db,,0
+849,Fix open link in new window again,0.8186384,Fix dragging the window. link,,1
+850,"Add ""Show Message Preview in Notifications"" setting (#947)",0.9805218,"- Add ""Show Message Preview in Notifications"" setting (#947)  7d7bc91",,1
+851,Add option to use native emoji (#731),0.9784732,Add option to use native emoji (#731)  2717359,,1
+852,Hide window instead of minimizing when launchMinimized,0.7006979,Change close window behaviour on macOS to the default behaviour instead of hide.  3233498,,1
+853,Fix draggable region (#1024),0.9613648,Fix draggable region (#1024)  9a692db,,1
+854,don't use ... on Website menu item,0.47379246,The menubar on Windows is hidden by default. (Press Alt to toggle it),,0
+855,1.0.0,0.5268128,Various tweaks (#1267)  4493b08,Fix some styling in dark mode,0
+856,1.2.2,0.5353653,deb,Add hover effect when choose people for new conversation Fix people list stacking border Fix for new class name,0
+857,readme - add Homebrew Cask install instructions,0.70694363,Homebrew Cask,"In normal mode, timestamp of unread message has different color from a read one. But in dark mode they have the same color. This commit change a color of unread message timestamp to be similar to the one in normal mode but a little darker.",1
+858,Add link to Product Hunt entry,0.55767876,link,Fix some text color in darkmode,0
+859,Tweaks to ebd04764def37a066f605897a47d94f0d4ad77f4,0.59639,Various tweaks (#1267)  4493b08,,0

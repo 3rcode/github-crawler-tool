@@ -1,501 +1,501 @@
-Index,Message,Description
-1,Support F38 [VPNLINUX-584],
-2,Merge branch 'fix/VPNLINUX-533-move-prod-client-to-v3-folder' into 'develop',Setup new path to CI config and remove F36 references [VPNLINUX-533] See merge request ProtonVPN/linux/v3/linux-app!109
-3,Setup new path to CI config and remove F36 references [VPNLINUX-533],
-4,Merge branch 'fix/VPNLINUX-425-raise-invalid-session-when-api-fails-with-invalid-session' into 'develop',"If at any point a request is made with an invalid session, logout the user [VPNLINUX-425]. See merge request ProtonVPN/linux/linux-app!108"
-5,"If at any point a request is made with an invalid session, logout the user [VPNLINUX-425].",
-6,Merge branch 'feature/drop-f34-35-and-add-f37' into 'develop',Drop F34-35 and add F37 [VPNLINUX-441] See merge request ProtonVPN/linux/linux-app!107
-7,Drop F34-35 and add F37 [VPNLINUX-441],
-8,Merge branch 'release-1.11.0-2' into 'develop',Release 1.11.0 2 See merge request ProtonVPN/linux/linux-app!106
-9,Stop displaying new brand dialog on new login [VPNLINUX-431],
-10,Remove leftovers,
-11,Fix crash when attempting to reach API while connection is running,
-12,Do not reset username/password if login has failed,
-13,Fix crash occuring on Ubuntu 20.04 and simillar distros,
-14,Merge branch 'fix/VPNLINUX-418-refresh-logic' into 'develop',Inform user if session is invalid and logout if so [VPNLINUX-425] See merge request ProtonVPN/linux/linux-app!105
-15,Inform user if session is invalid and logout if so [VPNLINUX-425],
-16,Merge branch 'fix/new-brand-dialog-pop-up-during-app-lifetime' into 'develop',Fix bug where new brand dialog would appear multiple times during app lifetime See merge request ProtonVPN/linux/linux-app!104
-17,Fix bug where new brand dialog would appear multiple times during app lifetime,
-18,Merge branch 'fix/update-icon-for-fedora' into 'develop',Update taskbar icon See merge request ProtonVPN/linux/linux-app!103
-19,Update taskbar icon,
-20,Merge branch 'fix/run-in-threads' into 'develop',Fix bug for GIO versions lower then 2.63.2 See merge request ProtonVPN/linux/linux-app!102
-21,Fix bug for GIO versions lower then 2.63.2,"As per documentation, the run_in_thread was introduced in 2.36 (https://docs.gtk.org/gio/callback.TaskThreadFunc.html), but after discussing with the devs, they actually forgot to implement the attribute for GTask, which meant that if one would try GTask.run_in_thread() on versions between 2.32 and 2.63.1, an exception with AttributeError would occur. Thus a check had to be implemented so that if it identifies and incompatible version, it should fallback to native python threads"
-22,Merge branch 'fix/rpm-changelog' into 'develop',Update rpm changelog See merge request ProtonVPN/linux/linux-app!101
-23,Update rpm changelog,
-24,Merge branch 'fix/VPNLINUX-327-update-strings-and-changelog' into 'develop',Update 'ProtonVPN' to 'Proton VPN' and changelog [VPNLINUX-327] See merge request ProtonVPN/linux/linux-app!100
-25,Update 'ProtonVPN' to 'Proton VPN' and changelog [VPNLINUX-327],
-26,Merge branch 'release-1.8.0-fedora-36' into 'develop',Add f36 support and deprecate f33 See merge request ProtonVPN/linux/linux-app!99
-27,Add f36 support and deprecate f33,
-28,Merge branch 'fix/ui-glitches-and-generic-dialog' into 'develop',Fix UI glitches found in mx linux kde and generic event dialog creation See merge request ProtonVPN/linux/linux-app!96
-29,Fix UI glitches found in mx linux kde and generic event dialog creation,
-30,Merge branch 'fix/login-window-aspect-ration' into 'develop',Fix aspect ration of icon on login window See merge request ProtonVPN/linux/linux-app!95
-31,Fix aspect ration of icon on login window,
-32,Merge branch 'fix/ui-fixes' into 'develop',Fix/ui fixes See merge request ProtonVPN/linux/linux-app!94
-33,"Fix text in welcome to new brand, fix dashboard with and login window width",
-34,Merge branch 'fix/rebranding-issues' into 'develop',Add new brand dialog and fix about dialog and login/logout issue See merge request ProtonVPN/linux/linux-app!93
-35,Update version,
-36,Add new brand dialog and fix about dialog and login/logout issue,"Adjust login window to be displayed vertically Fixed login window bug where upon window launch, clicking on login would get triggered although there was no data in the fields"
-37,Merge branch 'fix/rebranding-issues' into 'develop',Add scroll to quick settings pop-over to prevent UI cuts See merge request ProtonVPN/linux/linux-app!92
-38,Fix issue with quick setting buttons having a top white outline in some distros,
-39,Add scroll to quick settings pop-over to prevent UI cuts,"This issue is due to the fact that GTK popover does no bleed over parent window, thus if the content is wider/taller then the parent window, it'll just cut the popover view. This should be fixed in GTk4 but does not work in GTK3. Source: https://gitlab.gnome.org/GNOME/gtk/-/issues/543"
-40,Fix found UI issues,
-41,Merge branch 'refactor/rebranding' into 'develop',Replace all coulours for variables See merge request ProtonVPN/linux/linux-app!91
-42,Ensure that quick settings off buttons were reverted to white after changing,Ensure that dialog buttons kept the appropriate size
-43,Replace old for new icons and make small changes for new icons,
-44,Update quick settings colours,
-45,Replace all coulours for variables,Improve colouring and remove old css code
-46,Finish rebrand colouring,
-47,Set window default background color,
-48,Update only dashboard window to new colour scheme,
-49,Update css classes and remove pre-defined classes in .ui files,
-50,Update margin for login main box,
-51,Apply new button colours,
-52,Update login UI,
-53,Add new button classes,
-54,Merge branch 'release-1.8.0' into 'develop',Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop' See merge request ProtonVPN/linux/linux-app!90
-55,Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop',Display error message if link buttons at login can not be reached [VPNLINUX-320] See merge request ProtonVPN/linux/linux-app!89
-56,Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop',Display error message if link buttons at login can not be reached [VPNLINUX-320] See merge request ProtonVPN/linux/linux-app!89
-57,Display error message if link buttons at login can not be reached [VPNLINUX-320],
-58,Merge branch 'rebase/from-develop-release-1.7.0-5' into 'develop',Rebase/from develop release 1.7.0 5 See merge request ProtonVPN/linux/linux-app!88
-59,Attempt to fix crash when downgrading,
-60,Fix crash when downgrading account and server list needs to be updated,
-61,Update rel version,
-62,Refresh server list after plan downgrade,
-63,Correctly use Enum for account,
-64,Handle compromised password,
-65,Fix text formatting and selection issues,
-66,Merge branch 'community/tor-typo-fix' into 'develop',Fix Tor case See merge request ProtonVPN/linux/linux-app!86
-67,Fix Tor case,
-68,Merge branch 'typo-fix' into 'develop',fix a typo See merge request ProtonVPN/linux/linux-app!85
-69,fix a typo,“occurred” had been misspelled as “occured”
-70,Merge branch 'improve/VPNLINUX-297-handle-compromised-password' into 'develop',Handle compromised password use case [VPNLINUX-297] See merge request ProtonVPN/linux/linux-app!84
-71,Handle compromised password use case [VPNLINUX-297],
-72,Merge branch 'improve/VPNLINUX-296-handle-oudated-vpn-user-password' into 'develop',Handle username/password Update [VPNLINUX-298] See merge request ProtonVPN/linux/linux-app!83
-73,Handle username/password Update [VPNLINUX-298],
-74,Merge branch 'improve/VPNLINUX-298-handle-plan-downgrade' into 'develop',Handle plan downgrade [VPNLINUX-298] See merge request ProtonVPN/linux/linux-app!82
-75,Handle plan downgrade [VPNLINUX-298],
-76,Merge branch 'improve/VPNLINUX-299-handle-delinquent' into 'develop',Handle delinquent use case [VPNLINUX-299] See merge request ProtonVPN/linux/linux-app!81
-77,Handle delinquent use case [VPNLINUX-299],
-78,Merge branch 'improvement/VPNLINUX-295-handle-max-sessions' into 'develop',Handle max sessions/devices [VPNLINUX-295] See merge request ProtonVPN/linux/linux-app!80
-79,Handle max sessions/devices [VPNLINUX-295],
-80,Merge branch 'fix/missing-import' into 'develop',Fix missing import See merge request ProtonVPN/linux/linux-app!79
-81,Fix missing import,
-82,Merge branch 'rebase/release-1.5.2-fedora-35-from-develop' into 'develop',Rebase/release 1.5.2 fedora 35 from develop See merge request ProtonVPN/linux/linux-app!78
-83,Fix dates in changelog,
-84,Add support for F35 and discontinue F31-32,
-85,Merge branch 'rebase/release-1.5.2-from-develop' into 'develop',Rebase/release 1.5.2 from develop See merge request ProtonVPN/linux/linux-app!77
-86,Update changelogs after rebase,
-87,Update event dialog,
-88,Merge branch 'improve/memory-leak' into 'develop',Further improve memory management See merge request ProtonVPN/linux/linux-app!76
-89,Further improve memory management,
-90,Merge branch 'rebase/release-1.5.1-on-develop' into 'develop',Hotfix: Fix issue with search not working See merge request ProtonVPN/linux/linux-app!75
-91,Hotfix: Fix issue with search not working,
-92,Merge branch 'release-1.5.0' into 'develop',Fix issues when logging out See merge request ProtonVPN/linux/linux-app!74
-93,"Fix typo and issue when switching to secure core servers, the reconneciton was not happening",
-94,Fix issue where quick settings are not updated,
-95,Check for events every 12min,Also create own dashboard state for event notification handling
-96,Move quick settings state update to states file,
-97,Improve code readability,
-98,Fix XML layout blink glitch,
-99,Remove box shadow from gift icon,
-100,Remove new line and add space instead,
-101,Fix issues when logging out,Several issues were occuring after doing a logout following by a login. These issues have now been addressed and are listed below: -Duplication of windows -Application crashing -Duplication of events
-102,Merge branch 'fix/human-verification' into 'develop',Correctly handle exceptions on login and on connect See merge request ProtonVPN/linux/linux-app!73
-103,Correctly handle exceptions on login and on connect,
-104,Merge branch 'fix/VPNLINUX-274-memory-leak' into 'develop',Fix/vpnlinux 274 memory leak See merge request ProtonVPN/linux/linux-app!72
-105,Fix rebase and update changelog,
-106,Fix memory leak,
-107,Merge branch 'feature/VPNLINUX-279-black-friday' into 'develop',Feature/vpnlinux 279 black friday See merge request ProtonVPN/linux/linux-app!71
-108,Update changelog,
-109,Add event notification dot,
-110,Bump version and update changelog,
-111,Check if events need to be loaded on app start,
-112,Create dialog for black-friday,
-113,Merge branch 'release-1.4.1' into 'develop',Add missing dependency for webkit See merge request ProtonVPN/linux/linux-app!70
-114,Add missing dependency for webkit,
-115,Merge branch 'fix/arch-buildpkg' into 'develop',Fix PKGBUILD file See merge request ProtonVPN/linux/linux-app!69
-116,Fix PKGBUILD file,
-117,Merge branch 'feature/VPNLINUX-229-human-verification' into 'develop',Feature/vpnlinux 229 human verification See merge request ProtonVPN/linux/linux-app!68
-118,Remove print and add description to docstring,
-119,Bump version and update changelog,
-120,Add captcha to login,
-121,Create captcha webview,
-122,Basic implementation of human verification dialog,
-123,Merge branch 'release-1.3.0' into 'develop',Fix crash when switching to/from secure-core servers See merge request ProtonVPN/linux/linux-app!67
-124,"Fix typo, update changelog and bump rel version",
-125,Add Enum to kill switch quick setting,
-126,Bump rel version,
-127,Fix issue when switching SC button would not reconnect,
-128,Display troubleshooting dialog when connecting with alt routing disabled,Also it should be displayed when there is no way to reach API
-129,Fix issue where a variable is referenced before assignment,
-130,Update arch docker image to latest,
-131,Bump version,
-132,Skip getting IP if local variables are set,
-133,Factor out classes into own files,
-134,Fix issue with pop-up window,
-135,Fix crash when switching to/from secure-core servers,"The switch mechanism has been greatly improved as now both list views are created on app initalization and are only refreshed/recreated again when server values need to be updated. Since both lists are now stored in memory, switching from one view to another is now much quicker."
-136,Get current location data from library,
-137,Reduce the ammount of times that certain variables were fetched from protonvpn-nm-library,
-138,Fix bug where alt routing setting would not be saved after enabling it via dialog,
-139,Remove leftover comma as it was creating a tuple,
-140,Merge branch 'feature/VPNLINUX-167-troubleshooting-screen' into 'develop',Dislpay troubleshooting dialog See merge request ProtonVPN/linux/linux-app!58
-141,Display troubleshoot dialog at login,
-142,Add extra exception to display troubleshoot dialog,
-143,Update changelog and bump version,
-144,Replace http for https,
-145,Display troubleshoot dialog when attempting to connect and API calls have to be made,
-146,Displays troubleshoot dialog in login screen,
-147,Create troubleshooting dialog,This dialog will provide the user with additional solutions the any possible networking issues
-148,Remove unnecessary comma,
-149,"Create new switch factory and add new objects for grid, switch and label",
-150,Merge branch 'release-1.2.0' into 'develop',Add no-default css class to dashboard buttons See merge request ProtonVPN/linux/linux-app!66
-151,Add no-default css class to dashboard buttons,This class is needed to override default theme changes made by distros
-152,Merge branch 'fix/update-python-nm-lib' into 'develop',Update protonvpn-nm-lib version dependency in setup.py See merge request ProtonVPN/linux/linux-app!65
-153,Update protonvpn-nm-lib version dependency in setup.py,
-154,Merge branch 'fix/update-dependencies' into 'develop',Remove upper version limit for protonvpn-nm-lib See merge request ProtonVPN/linux/linux-app!64
-155,Remove upper version limit for protonvpn-nm-lib,
-156,Merge branch 'fix/unable-to-get-logs' into 'develop',Fix issue where get logs would not work due to new python threading fix See merge request ProtonVPN/linux/linux-app!63
-157,Fix issue where get logs would not work due to new python threading fix,
-158,Merge branch 'community/add-keyword-to-desktop-file' into 'develop',Add Keywords=vpn; to protonvpn.desktop See merge request ProtonVPN/linux/linux-app!62
-159,Add Keywords=vpn; to protonvpn.desktop,"Added Keywords=vpn; for GNOME overview since I often search for ""vpn"" when I'm looking to launch the ProtonVPN app."
-160,Merge branch 'fix/VPNLINUX-261-unable-to-use-after-v1.1.0-7-update' into 'develop',Fix issue with Gio.Task not having run_in_thead method See merge request ProtonVPN/linux/linux-app!61
-161,Fix changelog after rebase,
-162,Add missing deps for docker,
-163,Fix issue with Gio.Task not having run_in_thead method,"Even though the method has been implemented in Gio v2.36, it hasn't been fully implemented due to a typo, until version 2.63.2 The commit to this fix can be found here: https://gitlab.gnome.org/GNOME/glib/-/commit/42369df7c659b3a0f43530bd09288df0cea709b4 Now it checks for the Gio version and implements a custom version of python threading to execute callbacks, simillarly as to Gio.Task, in case the Gio version is not compatible"
-164,Merge branch 'feature/VPNLINUX-249-show-streaming-list-when-pressing-on-streaming-icon-for-each-server' into 'develop',Refactor plus features See merge request ProtonVPN/linux/linux-app!59
-165,Add docstrings and rename method,
-166,Fix bug for users that had to upgrade,"For users that had to upgrade, servers would displays both city label and upgrade button at the same time, making it hard to read. Not the label has been corrected so that it displays only upgrade and it is hidden when overing over a server, which is replaced by a 'upgrade' button."
-167,Display streaming list when clicking on streaming icon on each server,
-168,Simplify code,
-169,Refactor plus features,"PlusFeatures class should behave a simple aggregation of other types of features, while individual country features have to be individually createdin the case of needing to displays only specific features or a specific list with PlusFeatures"
-170,Merge branch 'community/remove-shebang' into 'develop',Remove shebang See merge request ProtonVPN/linux/linux-app!57
-171,Remove shebang,This shebang is not required here and if left on the file it causes openSUSE Build System to trigger a warning in the package build.
-172,Merge branch 'fix/unable-to-update-server-list' into 'develop',Fix issue where server list would not update and app would crash See merge request ProtonVPN/linux/linux-app!56
-173,Fix issue where server list would not update and app would crash,
-174,Merge branch 'fix/VPNLINUX-227-window-icons-not-showing' into 'develop',Fix CSS rule where it would hide all non-classed buttons See merge request ProtonVPN/linux/linux-app!55
-175,Fix CSS rule where it would hide all non-classed buttons,Every button that would not have a custom css class would not display the content. This is part to prevent visual bugs on custom button. The rule has been adjusted so that it only affect custom buttons.
-176,Merge branch 'community/fix-smart-routing-desc' into 'develop',Fix typo in Smart Routing description See merge request ProtonVPN/linux/linux-app!54
-177,Fix typo in Smart Routing description, Fix typo 'difficult-to-server'
-178,Merge branch 'fix/missing-systemd-dependency' into 'develop',Add dependencies for library (docker) testing See merge request ProtonVPN/linux/linux-app!53
-179,Add dependencies for library (docker) testing,
-180,Merge branch 'fix/VPNLINUX-223-utc-timezone-in-logs' into 'develop',Convert log timezone to UTC See merge request ProtonVPN/linux/linux-app!52
-181,Convert log timezone to UTC,
-182,Merge branch 'release-1.1.0' into 'develop',User main context when possible to update UI from within threads See merge request ProtonVPN/linux/linux-app!51
-183,Prepare for shutdown should not disconnect VPN as library manages that automatically,
-184,Fix function idententation,
-185,Use thread context to avoid segmentation fault,
-186,Fix UI flicker when no connection is found,
-187,Fix flake8 compliance,Also added a loading screen when disconnecting
-188,Add menu items to top menu button,
-189,Update changelog and bump rel version,
-190,Prevent window from resizing horizontally when using the resize grip,
-191,Fix UI sizes,
-192,User main context when possible to update UI from within threads,This change should make UI updates more thread-safe
-193,Prevent logout race condition,
-194,Merge branch 'enchancement/VPNLINUX-220-improve-gui-responsiveness' into 'develop',Refactor dashboard view_model and server_list view See merge request ProtonVPN/linux/linux-app!50
-195,Replace python threads for GTask threads,
-196,Update changelog and bump version,
-197,Precent from quick connect and disconnect buttons to be triggered multiple times,
-198,Improve logout UX,"All processes are run in a thread-safe background process This prevents the GUI from freezing and by running in thread-safe mannger, no unexpected crashses should be expected"
-199,Move background process to factory and rename method,
-200,Add missingpackage to Suggests/Optdepends,
-201,Refactor background process so that different backends can be used,Currently both native python threading can be used and also the improved and thread-safe GTask threads
-202,Replace python thread for GTask,"GTask is a native implementaion of threading in GTK. As per documentation, GTask is thread-safe and should be used when possible instead of python native threading implementation as they're not thread-safe"
-203,Update UI update refresh time,
-204,"Refactor dashboard view_model and server_list view so that servers are loaded async, thus preventing UI freeze",
-205,Merge branch 'release-1.0.1' into 'develop',Display message when library is not able to disable connectivity check See merge request ProtonVPN/linux/linux-app!49
-206,Display message when library is not able to disable connectivity check,
-207,Merge branch 'fix/update-package-to-stable' into 'develop',Update package to stable See merge request ProtonVPN/linux/linux-app!48
-208,Update package to stable,
-209,Merge branch 'release-0.8.0' into 'develop',Multiple changes See merge request ProtonVPN/linux/linux-app!47
-210,Fix generate dialog pop-up,The generate logs process will now always display the state of logs generation process
-211,"When connected to secure-core servers, correctly display the country order",
-212,Remove CentOS8 CI jobs,
-213,Merge branch 'fix/python-constant-version' into 'develop',Update python constant version See merge request ProtonVPN/linux/linux-app!46
-214,Update python constant version,
-215,Merge branch 'feature/VPNLINUX-218-generate-logs' into 'develop',Feature/vpnlinux 218 generate logs See merge request ProtonVPN/linux/linux-app!45
-216,"Update library dependency, update changelog and bump version",
-217,Add button to get logs,
-218,Merge branch 'fix/changelog-dates' into 'develop',Fix changelog date See merge request ProtonVPN/linux/linux-app!44
-219,Fix changelog date,
-220,Merge branch 'fix/add-multiple-distro-support' into 'develop',Fix/add multiple distro support See merge request ProtonVPN/linux/linux-app!43
-221,Update rel version,
-222,"Add support for Fedora 31-34 and centos8 for testing, package generation and package publishing",
-223,Merge branch 'fix/add-repo-docs' into 'develop',"Update repo documentation: contributing, copying and updated readme See merge request ProtonVPN/linux/linux-app!42"
-224,Include documentation in manifest and update rel version,
-225,"Update repo documentation: contributing, copying and updated readme",
-226,Merge branch 'ci/docker-image-tags' into 'develop',Change test image tag structure See merge request ProtonVPN/linux/linux-app!41
-227,Use slash instead of dash,
-228,Change test image tag structure,
-229,Merge branch 'fix/update-constant-version' into 'develop',Update constant version See merge request ProtonVPN/linux/linux-app!40
-230,Update constant version,
-231,Merge branch 'fix/update-to-newest-lib-version' into 'develop',"Update library dependency, update changelog and version See merge request ProtonVPN/linux/linux-app!39"
-232,"Update library dependency, update changelog and version",
-233,Merge branch 'fix/change-to-unstable' into 'develop',Change package to unstable See merge request ProtonVPN/linux/linux-app!37
-234,Change package to unstable,
-235,Merge branch 'master' into 'develop',Merge tray crash See merge request ProtonVPN/linux/linux-app!35
-236,Merge branch 'hotfix/fix-crash-if-no-tray-dependencies-are-found' into 'master',Fix crash when dummy indicator is used in abscence of tray dependency See merge request ProtonVPN/linux/linux-app!34
-237,Fix crash when dummy indicator is used in abscence of tray dependency,
-238,Merge branch 'publish-stable' into 'master',Change package to stable See merge request ProtonVPN/linux/linux-app!33
-239,Change package to stable,
-240,Merge branch 'fix/trigger-github-publish-manually' into 'develop',Change to trigger git publish manually See merge request ProtonVPN/linux/linux-app!32
-241,Change to trigger git publish manually,
-242,Merge branch 'rebase/from-release-0.7.1' into 'develop',Rebase/from release 0.7.1 See merge request ProtonVPN/linux/linux-app!31
-243,Update CI jobs and trigger github publish manually,
-244,Update changelog and bump version,
-245,Update GUI and tray after reconnecting to VPN from suspend or network change,
-246,Bump rel version,
-247,Only show message of active kill switch when perman kill switch is on,
-248,Update changelog and bump rel version,
-249,Hide quick connect on login window,
-250,Merge branch 'feature/VPNLINUX-198-support-ubuntu-1804' into 'develop',Feature/vpnlinux 198 support ubuntu 1804 See merge request ProtonVPN/linux/linux-app!30
-251,Update changelog,
-252,Display incompatibility dialog on systems that GUI dependencies can not be met,
-253,Merge branch 'fix/tray-buttons-context-dependent' into 'develop',Tray quick connect and disconnect buttons are context aware See merge request ProtonVPN/linux/linux-app!29
-254,Update changelog,
-255,Tray quick connect and disconnect buttons are context aware,"Disconnect button in tray will only appear when being connected to VPN, and the inverse for the quick-connect"
-256,Merge branch 'fix/VPNLINUX-192-overlay-blocks-top-quick-setting-buttons' into 'develop',Fix/vpnlinux 192 overlay blocks top quick setting buttons See merge request ProtonVPN/linux/linux-app!28
-257,Update changelog and bump version,
-258,Fix quick settings blocking overlay,
-259,Merge branch 'rebase/from-release-0.7.0' into 'develop',Dependency issue fix See merge request ProtonVPN/linux/linux-app!27
-260,Remove hard dependencies for deb and arch,
-261,Dependency issue should now be fixed, GUI should now be able to run without issues on systems where dependencies are not met for the tray
-262,Add indicator/tray packages as recommended,
-263,Add extra dependencies for indicator/tray on fedora,
-264,"Add missing dependency, update changelog and bump rel version",
-265,Merge branch 'fix/improve-logging' into 'develop',Add logging See merge request ProtonVPN/linux/linux-app!26
-266,Add logging,
-267,Merge branch 'feature/VPNLINUX-184-app-tray-indicator' into 'develop',Add system tray icon See merge request ProtonVPN/linux/linux-app!25
-268,Update changelog and bump version,
-269,Add system tray icon,This new feature will allow users to have ProtonVPN always to be running in background
-270,Add indicator/tray class,
-271,Move pattern into patterns folder and updated path,
-272,Add tray icons,
-273,Merge branch 'rebase/from-release-0.6.2' into 'develop',Add space to secure core sub-servers flags and label See merge request ProtonVPN/linux/linux-app!24
-274,Update changelog and bump rel version,
-275,Add space to secure core sub-servers flags and label,Also fix method typo
-276,Merge branch 'fix/cache-streaming-logos' into 'develop',Add streaming logos See merge request ProtonVPN/linux/linux-app!23
-277,Add streaming logos,
-278,Update changelog,
-279,Merge branch 'fix/update-dashboard-servername-when-connected-to-secure-core' into 'develop',"Displays only countries when connected to secure core, on dashboard See merge request ProtonVPN/linux/linux-app!22"
-280,"Displays only countries when connected to secure core, on dashboard",
-281,Merge branch 'fix/displays-message-on-dashboard-if-perma-ks-is-on' into 'develop',Fix/displays message on dashboard if perma ks is on See merge request ProtonVPN/linux/linux-app!21
-282,Update changelog and bump version version,
-283,Add warning message if kill switch is blocking all connections,
-284,Merge branch 'rebase/from-release-0.6.1' into 'develop',Fix quick connect/disconnect glitch See merge request ProtonVPN/linux/linux-app!20
-285,Update changelog and bump version,
-286,Fix quick connect/disconnect glitch,"This is accomplished by creating a second button, thus, one button is used to quick connect and another one to disconnect, although they will never be revealed both at the same time"
-287,Merge branch 'fix/ui-disconnect-labels' into 'develop',Fix/ui disconnect labels See merge request ProtonVPN/linux/linux-app!19
-288,Update changelog,
-289,Remove content instead of hiding label to keep same UI size after disconnecting,
-290,Add timeout for getting the IP,
-291,Merge branch 'fix/VPNLINUX-188-connect-button' into 'develop',Fix connect button glitch See merge request ProtonVPN/linux/linux-app!18
-292,Update changelog and bump version,
-293,Add hover effect for info icon,
-294,Fix connect button glitch,Also improve code readability
-295,Hide button by default,
-296,Add spacing to virtual servers,
-297,Improve code readability,
-298,Merge branch 'fix/VPNLINUX-178-ui-details' into 'develop',Fix UI details See merge request ProtonVPN/linux/linux-app!17
-299,Change from protonvpn property to method,
-300,Update changelog and bump version,
-301,Fix quick connect/disconnect loop,
-302,Attempt to login upon pressing on enter button,
-303,Make server features popover non-resizable,
-304,Add additional custom content to dialog if desired via add_extra_content() method,
-305,Add css with font-sizes,
-306,Simplify connecting overlay information display logic,
-307,Displays appropriate error messaged if login fails,
-308,Fix styling for ambience theme,
-309,Display only countries when connecting to Secure Core servers,Refactor dashbord so that all posssible view reside in one place separate from the dashboard view
-310,Change background color for selected quick setting and fix secure core typo on dropdown,
-311,Merge branch 'feature/VPNLINUX-163-streaming-and-virtual-locations' into 'develop',Implement streaming and virtual location features See merge request ProtonVPN/linux/linux-app!16
-312,Simplify methods and rename class properties,
-313,Update library dependency version,
-314,Remove obsolete property and rename methods,
-315,Add info icon to all country headers,
-316,Add tier chip,
-317,Update changelog and bump version,
-318,Add smart routing icon if all country servers have a host country,
-319,Make all country header text dark gray,
-320,Finish styling of streaming services,
-321,Display streaming services for provided countries,
-322,Sort secure core servers and hide headers for secure core sub-servers,
-323,Add viewport to window so that it can scroll in case it case many features,
-324,Refactor header so that a custom callback can be passed to the info button,
-325,Add background color to list of server names belonging to a country,
-326,Simplify how headers are tracked,
-327,Implement server headers,"Server headers are now displayed. At this point, some styling is still needed and also add the features for the plus servers"
-328,Split server list class in into self-contained componenets,
-329,Implement country headers,-Create new info image icon for plus features -Add host country to server_item -Adapt server_list model and view
-330,Create new button and label classes,
-331,Add css to headers,
-332,Create properties that contain the number of servers per tier,
-333,Only displays features window if info icon is clicked,
-334,Update version string,
-335,Remove button background in certain themes,
-336,Implement new locations top header,This header will be only displayed for Plus users
-337,Create new server features window class,
-338,Create features window and add respective style,
-339,Add css classes,
-340,Add and rename icons,
-341,Merge branch 'fix/crash-on-quit' into 'develop',Fix crash when quitting without a connection See merge request ProtonVPN/linux/linux-app!15
-342,Fix crash when quitting without a connection,
-343,Merge branch 'feature/VPNLINUX-180-desktop-launcher' into 'develop',Feature/vpnlinux 180 desktop launcher See merge request ProtonVPN/linux/linux-app!14
-344,Update changelog and bump rel version,
-345,Correct version number in .spec file,
-346,Add desktop entry for Fedora based systems and update .spec file accordingly,
-347,Update debian img path for desktop file,
-348,Rename file and add constant for filepath,
-349,Create launcher for .deb packages,
-350,Merge branch 'feature/VPNLINUX-182-about-dialog' into 'develop',Feature/vpnlinux 182 about dialog See merge request ProtonVPN/linux/linux-app!13
-351,Correct return displays value,
-352,Update changelog and bump version,
-353,Add about dialog,
-354,Merge branch 'feature/VPNLINUX-173-disable-always-on-ks-in-login-window' into 'develop',Implement disable kill switch in login screen See merge request ProtonVPN/linux/linux-app!10
-355,Update changelog and remove unused class,
-356,Implement disable kill switch in login screen,Refactored dialog class so that multiple dialog types can be used later
-357,Merge branch 'fix/VPNLINUX-155-treat-server-feature-as-bitmap' into 'develop',Fix/vpnlinux 155 treat server feature as bitmap See merge request ProtonVPN/linux/linux-app!12
-358,Update dependencies and changelog,
-359,Implement servers with multi-features aka bitmap,
-360,Expand Flake8 line length,
-361,Merge branch 'feature/VPNLINUX-175-adjust-servers-load' into 'develop',Feature/vpnlinux 175 adjust servers load See merge request ProtonVPN/linux/linux-app!11
-362,Bump version and update changelog,
-363,Display server load with contextual circle colour,
-364,Remove frame borders,
-365,Delete duplicate flag files,
-366,Merge branch 'feature/VPNLINUX-160-implement-search' into 'develop',Implement country search/filter See merge request ProtonVPN/linux/linux-app!9
-367,Update refresh API,
-368,Rename ks from always-on to permanent,
-369,Fix typo,
-370,Bump version and update changelog,
-371,Fix typo,
-372,Implement server search,-grid factory get_child_at method args name have been updated so that they convey a more explicit meaning of what they mean -it's also possible now to get the total ammount of countries and the ammount of servers per country
-373,Reavealer should not expand vertically even if there is enough space,"This change is need since if only a couple of countries are present and/or a couple of servers are displayed, the revealer will attempt to occupy free space, which looks not very good."
-374,Add id to search entry,
-375,Merge branch 'feature/VPNLINUX-162-logout-quit' into 'develop',Implement logout and quit buttons See merge request ProtonVPN/linux/linux-app!8
-376,Add psutil dependency,
-377,Fix secure core typo,
-378,Add logout and quit buttons,
-379,Implement logout button,-Dialog has been refactored so that it can easily accomodate new implementations
-380,Hide start on boot switch and expand logout button,
-381,Only display upgrade button if tier is lower the min required for given feature,
-382,Add missing init file,
-383,Merge branch 'feature/VPNLINUX-144-quick-settings' into 'develop',Add quick-settings buttons See merge request ProtonVPN/linux/linux-app!7
-384,Modify if check,
-385,Rename methods and set to update server list always when switching servers,
-386,Rename collection list; Remove extra 'if' when checking for selected path; Remove upgrade button for killswitch,
-387,Add debug flag,
-388,Improve code readability,
-389,Update changelog and bump version,
-390,Fix issue with labels being too long while connecting to server,
-391,Implement reconnect after changing secure core quick setting,
-392,Add server score property,
-393,Fix issue when speeds could be below 0,
-394,Display secure core servers,
-395,Update all quick settings icons when pressed,
-396,Inlcude large flags in the package,
-397,Fix ui,
-398,Add custom headerbar to login for consistency,
-399,"Refactor how server list is generated, filtered and sorted",
-400,Turn internal variables to private,
-401,Rename files and classes,
-402,Set char width dependant on if the upgrade label is present or not,
-403,Improve logic for detecting when netshield should be displayed as off,
-404,Finish adding the learn more link button,
-405,Create new facotry and improve existing one,
-406,Create new abstract button factory,
-407,UI behaviour now correctly updates when pressing on buttons,"Also, user configurations are correctly updated in the background Only remaining to fix the link button and reconnection flow."
-408,Remove not needed import and add docstring,
-409,Replace img strings for constant icon set dict with enums,
-410,Add to-do for cursor object,
-411,Finish styling quick settings popover,Add new css handler methods
-412,Remove abc meta as the super classes are not abstract classes,
-413,Popover displays and updats content according to button pressed,"The buttons still need to be configured so that they react to if the netshield is enabled or disabled, if ks is enabled or disabled and if secure core is to be displayed or not."
-414,Fix styling issues with different themes,
-415,Change quick settings from model button to ordinary button,-Added popover view ui component and python class -Refactor how grids attach widgets -Factor out background process itno own class so that the implementation can be easily switched to another method
-416,Rename library folder and skip tests in control,
-417,Merge branch 'feature/VPNLINUX-134-country' into 'develop',Feature/vpnlinux 134 country See merge request ProtonVPN/linux/linux-app!6
-418,Remove unncessary css import,
-419,"Users who do not comply with tier requirments, are displayed a prompt to upgrade",
-420,Add dummy object so that methods from image factory can be used,
-421,Fix login window title typo,
-422,Refactor GUI for the latest library refactor which introduces singletons,
-423,Create abstract and concrete factories,These factories were created so that objects can be easily created
-424,Create GTK button factory,
-425,"If country is under maintenance, then the UI wil displays appropriatly","If all servers in a country are under maintenance, then the country will no longer display a button to connect and will instead provide a wrench icon."
-426,Feature: Connect to a country,
-427,Create new server objects so that they can be easily diplayed for the view,
-428,Adapt to new refactored library,
-429,Update dependency,
-430,"Update UI with scrolled window, add icons and update css",
-431,Move flags to appropriate folder,
-432,Merge branch 'refactor/VPNLINUX-125-MVVM' into 'develop',Refactor/vpnlinux 125 mvvm See merge request ProtonVPN/linux/linux-app!4
-433,Apply suggested changes,
-434,Merge branch 'feature/VPNLINUX-138-ci-package-generation' into 'refactor/VPNLINUX-125-MVVM',Feature/vpnlinux 138 ci package generation See merge request ProtonVPN/linux/linux-app!5
-435,Remove duplicate rpm group and add missing .gitkeep for folders,
-436,Fix debian control issue,
-437,Fix rx issues,
-438,Add missing init files,
-439,Rename source folder name,
-440,"Include UI, images and css into manifest",
-441,Add Rx package,
-442,Remove protonvpn-cli references,
-443,Rename test file and update python package name,
-444,Update package name,
-445,Add CI jobs for testing and packaging,
-446,Remove CSS related to Notebook,
-447,Update delay time to 3 seconds,
-448,Add docstrings and bum version,
-449,Removed notebook and added network speed converted,"Since profiles are not going to be initially shipped, there was not need for a GTKNotebook, thus it got removed -A speed converted has been introduced so that it displays the networks speeds as it increases in speeds and correctly converts to appropriate measure"
-450,Add GtkNotebook,"Add buttons for future implementation of GUI features such as netshield, killswitch and secure-core."
-451,Add background process to update server load,Refactor how background glib process are added and removed. Update UI so that the disconnect button display correct colours.
-452,Finish functional dashboard,Still missing notebook for different button and server list
-453,Add sidebar flags,
-454,Finish login MVVM implementation,
-455,Merge branch 'tmp/view-model-example' into 'feature/VPNLINUX-121',MVVM for login screen See merge request ProtonVPN/linux/linux-app!3
-456,Remove duplicate methods,
-457,Showcase MVVM for login screen,
-458,Add logger and rewrite dashboard,
-459,Add connection overlay,
-460,Add label above entry and display it accordingly,
-461,Make window not resizeble,
-462,Add icon to error upon login and updated styling,
-463,Merge branch 'feature/VPNLINUX-120' into 'develop',Feature/vpnlinux 120 See merge request ProtonVPN/linux/linux-app!2
-464,Update version,
-465,Move logic to presenter,
-466,Update styling,
-467,Add working quick connect button,
-468,Fix styling,
-469,Fix visual glitch,"Whenver a window is dragged, a strange border around the window is created whenevr the window is dragger. This issue can be replicated if the App Window has the property double-buffered set to False and the window has a GTKHeaderBar"
-470,Load dashboard with information if user is not connected,
-471,Rename elements and apply flake8,
-472,Add buttons to open preferences and quit app,
-473,Fix styling and flake8 issues,
-474,Add menu and quit button,
-475,Fix styling and flake8 issues,
-476,Add setup.cfg and fix flake8 issues in main.py,
-477,Add initial window and styling for dashboard,
-478,Move icon,
-479,Rename window title to ProtonVPN,
-480,Only start thread if button is enabled,
-481,Update login UI and styling,
-482,Update threading and window management,Dashboard window will be displayed once there is a successfull login and login window will be closed.
-483,Merge branch 'feature/VPNLINUX-115-login-screen' into 'develop',Update version See merge request ProtonVPN/linux/linux-app!1
-484,Update version,
-485,Add spinner,
-486,Add gtkrevealer for a better error displaying UX,
-487,Display overlay after clicking on login button,
-488,Add threading to login button,
-489,Attempt to login user,"If login attempt has failed, a top error banner will display the error message."
-490,Rename class to LoginView,
-491,Implement activate button if there is text in entry,
-492,Add error label,
-493,Need help button complete,Login button is by default disabled
-494,Add possibility to show/hide password,
-495,Applied correct css styling and colouring,
-496,Ingore pycache folders,
-497,Ignore temporary UI files,
-498,Remove egg folder,
-499,Add gitignore,
-500,Initial commit,
+Index,Message,Description,Message Abstract,Description Abstract
+1,Support F38 [VPNLINUX-584],,Support F38 [VPNLINUX-584],
+2,Merge branch 'fix/VPNLINUX-533-move-prod-client-to-v3-folder' into 'develop',Setup new path to CI config and remove F36 references [VPNLINUX-533] See merge request ProtonVPN/linux/v3/linux-app!109,Merge branch 'fix/VPNLINUX-533-move-prod-client-to-v3-folder' into 'develop',Setup new path to CI config and remove F36 references [VPNLINUX-533] See merge request ProtonVPN/linux/v3/linux-app!109
+3,Setup new path to CI config and remove F36 references [VPNLINUX-533],,Setup new path to CI config and remove F36 references [VPNLINUX-533],
+4,Merge branch 'fix/VPNLINUX-425-raise-invalid-session-when-api-fails-with-invalid-session' into 'develop',"If at any point a request is made with an invalid session, logout the user [VPNLINUX-425]. See merge request ProtonVPN/linux/linux-app!108",Merge branch 'fix/VPNLINUX-425-raise-invalid-session-when-api-fails-with-invalid-session' into 'develop',"If at any point a request is made with an invalid session, logout the user [VPNLINUX-425]. See merge request ProtonVPN/linux/linux-app!108"
+5,"If at any point a request is made with an invalid session, logout the user [VPNLINUX-425].",,"If at any point a request is made with an invalid session, logout the user [VPNLINUX-425].",
+6,Merge branch 'feature/drop-f34-35-and-add-f37' into 'develop',Drop F34-35 and add F37 [VPNLINUX-441] See merge request ProtonVPN/linux/linux-app!107,Merge branch 'feature/drop-f34-35-and-add-f37' into 'develop',Drop F34-35 and add F37 [VPNLINUX-441] See merge request ProtonVPN/linux/linux-app!107
+7,Drop F34-35 and add F37 [VPNLINUX-441],,Drop F34-35 and add F37 [VPNLINUX-441],
+8,Merge branch 'release-1.11.0-2' into 'develop',Release 1.11.0 2 See merge request ProtonVPN/linux/linux-app!106,Merge branch 'release-1.11.0-2' into 'develop',Release 1.11.0 2 See merge request ProtonVPN/linux/linux-app!106
+9,Stop displaying new brand dialog on new login [VPNLINUX-431],,Stop displaying new brand dialog on new login [VPNLINUX-431],
+10,Remove leftovers,,Remove leftovers,
+11,Fix crash when attempting to reach API while connection is running,,Fix crash when attempting to reach API while connection is running,
+12,Do not reset username/password if login has failed,,Do not reset username/password if login has failed,
+13,Fix crash occuring on Ubuntu 20.04 and simillar distros,,Fix crash occuring on Ubuntu 20.04 and simillar distros,
+14,Merge branch 'fix/VPNLINUX-418-refresh-logic' into 'develop',Inform user if session is invalid and logout if so [VPNLINUX-425] See merge request ProtonVPN/linux/linux-app!105,Merge branch 'fix/VPNLINUX-418-refresh-logic' into 'develop',Inform user if session is invalid and logout if so [VPNLINUX-425] See merge request ProtonVPN/linux/linux-app!105
+15,Inform user if session is invalid and logout if so [VPNLINUX-425],,Inform user if session is invalid and logout if so [VPNLINUX-425],
+16,Merge branch 'fix/new-brand-dialog-pop-up-during-app-lifetime' into 'develop',Fix bug where new brand dialog would appear multiple times during app lifetime See merge request ProtonVPN/linux/linux-app!104,Merge branch 'fix/new-brand-dialog-pop-up-during-app-lifetime' into 'develop',Fix bug where new brand dialog would appear multiple times during app lifetime See merge request ProtonVPN/linux/linux-app!104
+17,Fix bug where new brand dialog would appear multiple times during app lifetime,,Fix bug where new brand dialog would appear multiple times during app lifetime,
+18,Merge branch 'fix/update-icon-for-fedora' into 'develop',Update taskbar icon See merge request ProtonVPN/linux/linux-app!103,Merge branch 'fix/update-icon-for-fedora' into 'develop',Update taskbar icon See merge request ProtonVPN/linux/linux-app!103
+19,Update taskbar icon,,Update taskbar icon,
+20,Merge branch 'fix/run-in-threads' into 'develop',Fix bug for GIO versions lower then 2.63.2 See merge request ProtonVPN/linux/linux-app!102,Merge branch 'fix/run-in-threads' into 'develop',Fix bug for GIO versions lower then 2.63.2 See merge request ProtonVPN/linux/linux-app!102
+21,Fix bug for GIO versions lower then 2.63.2,"As per documentation, the run_in_thread was introduced in 2.36 (https://docs.gtk.org/gio/callback.TaskThreadFunc.html), but after discussing with the devs, they actually forgot to implement the attribute for GTask, which meant that if one would try GTask.run_in_thread() on versions between 2.32 and 2.63.1, an exception with AttributeError would occur. Thus a check had to be implemented so that if it identifies and incompatible version, it should fallback to native python threads",Fix bug for GIO versions lower then 2.63.2,"As per documentation, the run_in_thread was introduced in 2.36 (link), but after discussing with the devs, they actually forgot to implement the attribute for GTask, which meant that if one would try GTask.run_in_thread() on versions between 2.32 and 2.63.1, an exception with AttributeError would occur. Thus a check had to be implemented so that if it identifies and incompatible version, it should fallback to native python threads"
+22,Merge branch 'fix/rpm-changelog' into 'develop',Update rpm changelog See merge request ProtonVPN/linux/linux-app!101,Merge branch 'fix/rpm-changelog' into 'develop',Update rpm changelog See merge request ProtonVPN/linux/linux-app!101
+23,Update rpm changelog,,Update rpm changelog,
+24,Merge branch 'fix/VPNLINUX-327-update-strings-and-changelog' into 'develop',Update 'ProtonVPN' to 'Proton VPN' and changelog [VPNLINUX-327] See merge request ProtonVPN/linux/linux-app!100,Merge branch 'fix/VPNLINUX-327-update-strings-and-changelog' into 'develop',Update 'ProtonVPN' to 'Proton VPN' and changelog [VPNLINUX-327] See merge request ProtonVPN/linux/linux-app!100
+25,Update 'ProtonVPN' to 'Proton VPN' and changelog [VPNLINUX-327],,Update 'ProtonVPN' to 'Proton VPN' and changelog [VPNLINUX-327],
+26,Merge branch 'release-1.8.0-fedora-36' into 'develop',Add f36 support and deprecate f33 See merge request ProtonVPN/linux/linux-app!99,Merge branch 'release-1.8.0-fedora-36' into 'develop',Add f36 support and deprecate f33 See merge request ProtonVPN/linux/linux-app!99
+27,Add f36 support and deprecate f33,,Add f36 support and deprecate f33,
+28,Merge branch 'fix/ui-glitches-and-generic-dialog' into 'develop',Fix UI glitches found in mx linux kde and generic event dialog creation See merge request ProtonVPN/linux/linux-app!96,Merge branch 'fix/ui-glitches-and-generic-dialog' into 'develop',Fix UI glitches found in mx linux kde and generic event dialog creation See merge request ProtonVPN/linux/linux-app!96
+29,Fix UI glitches found in mx linux kde and generic event dialog creation,,Fix UI glitches found in mx linux kde and generic event dialog creation,
+30,Merge branch 'fix/login-window-aspect-ration' into 'develop',Fix aspect ration of icon on login window See merge request ProtonVPN/linux/linux-app!95,Merge branch 'fix/login-window-aspect-ration' into 'develop',Fix aspect ration of icon on login window See merge request ProtonVPN/linux/linux-app!95
+31,Fix aspect ration of icon on login window,,Fix aspect ration of icon on login window,
+32,Merge branch 'fix/ui-fixes' into 'develop',Fix/ui fixes See merge request ProtonVPN/linux/linux-app!94,Merge branch 'fix/ui-fixes' into 'develop',Fix/ui fixes See merge request ProtonVPN/linux/linux-app!94
+33,"Fix text in welcome to new brand, fix dashboard with and login window width",,"Fix text in welcome to new brand, fix dashboard with and login window width",
+34,Merge branch 'fix/rebranding-issues' into 'develop',Add new brand dialog and fix about dialog and login/logout issue See merge request ProtonVPN/linux/linux-app!93,Merge branch 'fix/rebranding-issues' into 'develop',Add new brand dialog and fix about dialog and login/logout issue See merge request ProtonVPN/linux/linux-app!93
+35,Update version,,Update version,
+36,Add new brand dialog and fix about dialog and login/logout issue,"Adjust login window to be displayed vertically Fixed login window bug where upon window launch, clicking on login would get triggered although there was no data in the fields",Add new brand dialog and fix about dialog and login/logout issue,"Adjust login window to be displayed vertically Fixed login window bug where upon window launch, clicking on login would get triggered although there was no data in the fields"
+37,Merge branch 'fix/rebranding-issues' into 'develop',Add scroll to quick settings pop-over to prevent UI cuts See merge request ProtonVPN/linux/linux-app!92,Merge branch 'fix/rebranding-issues' into 'develop',Add scroll to quick settings pop-over to prevent UI cuts See merge request ProtonVPN/linux/linux-app!92
+38,Fix issue with quick setting buttons having a top white outline in some distros,,Fix issue with quick setting buttons having a top white outline in some distros,
+39,Add scroll to quick settings pop-over to prevent UI cuts,"This issue is due to the fact that GTK popover does no bleed over parent window, thus if the content is wider/taller then the parent window, it'll just cut the popover view. This should be fixed in GTk4 but does not work in GTK3. Source: https://gitlab.gnome.org/GNOME/gtk/-/issues/543",Add scroll to quick settings pop-over to prevent UI cuts,"This issue is due to the fact that GTK popover does no bleed over parent window, thus if the content is wider/taller then the parent window, it'll just cut the popover view. This should be fixed in GTk4 but does not work in GTK3. Source: link"
+40,Fix found UI issues,,Fix found UI issues,
+41,Merge branch 'refactor/rebranding' into 'develop',Replace all coulours for variables See merge request ProtonVPN/linux/linux-app!91,Merge branch 'refactor/rebranding' into 'develop',Replace all coulours for variables See merge request ProtonVPN/linux/linux-app!91
+42,Ensure that quick settings off buttons were reverted to white after changing,Ensure that dialog buttons kept the appropriate size,Ensure that quick settings off buttons were reverted to white after changing,Ensure that dialog buttons kept the appropriate size
+43,Replace old for new icons and make small changes for new icons,,Replace old for new icons and make small changes for new icons,
+44,Update quick settings colours,,Update quick settings colours,
+45,Replace all coulours for variables,Improve colouring and remove old css code,Replace all coulours for variables,Improve colouring and remove old css code
+46,Finish rebrand colouring,,Finish rebrand colouring,
+47,Set window default background color,,Set window default background color,
+48,Update only dashboard window to new colour scheme,,Update only dashboard window to new colour scheme,
+49,Update css classes and remove pre-defined classes in .ui files,,Update css classes and remove pre-defined classes in .ui files,
+50,Update margin for login main box,,Update margin for login main box,
+51,Apply new button colours,,Apply new button colours,
+52,Update login UI,,Update login UI,
+53,Add new button classes,,Add new button classes,
+54,Merge branch 'release-1.8.0' into 'develop',Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop' See merge request ProtonVPN/linux/linux-app!90,Merge branch 'release-1.8.0' into 'develop',Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop' See merge request ProtonVPN/linux/linux-app!90
+55,Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop',Display error message if link buttons at login can not be reached [VPNLINUX-320] See merge request ProtonVPN/linux/linux-app!89,Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop',Display error message if link buttons at login can not be reached [VPNLINUX-320] See merge request ProtonVPN/linux/linux-app!89
+56,Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop',Display error message if link buttons at login can not be reached [VPNLINUX-320] See merge request ProtonVPN/linux/linux-app!89,Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop',Display error message if link buttons at login can not be reached [VPNLINUX-320] See merge request ProtonVPN/linux/linux-app!89
+57,Display error message if link buttons at login can not be reached [VPNLINUX-320],,Display error message if link buttons at login can not be reached [VPNLINUX-320],
+58,Merge branch 'rebase/from-develop-release-1.7.0-5' into 'develop',Rebase/from develop release 1.7.0 5 See merge request ProtonVPN/linux/linux-app!88,Merge branch 'rebase/from-develop-release-1.7.0-5' into 'develop',Rebase/from develop release 1.7.0 5 See merge request ProtonVPN/linux/linux-app!88
+59,Attempt to fix crash when downgrading,,Attempt to fix crash when downgrading,
+60,Fix crash when downgrading account and server list needs to be updated,,Fix crash when downgrading account and server list needs to be updated,
+61,Update rel version,,Update rel version,
+62,Refresh server list after plan downgrade,,Refresh server list after plan downgrade,
+63,Correctly use Enum for account,,Correctly use Enum for account,
+64,Handle compromised password,,Handle compromised password,
+65,Fix text formatting and selection issues,,Fix text formatting and selection issues,
+66,Merge branch 'community/tor-typo-fix' into 'develop',Fix Tor case See merge request ProtonVPN/linux/linux-app!86,Merge branch 'community/tor-typo-fix' into 'develop',Fix Tor case See merge request ProtonVPN/linux/linux-app!86
+67,Fix Tor case,,Fix Tor case,
+68,Merge branch 'typo-fix' into 'develop',fix a typo See merge request ProtonVPN/linux/linux-app!85,Merge branch 'typo-fix' into 'develop',fix a typo See merge request ProtonVPN/linux/linux-app!85
+69,fix a typo,“occurred” had been misspelled as “occured”,fix a typo,“occurred” had been misspelled as “occured”
+70,Merge branch 'improve/VPNLINUX-297-handle-compromised-password' into 'develop',Handle compromised password use case [VPNLINUX-297] See merge request ProtonVPN/linux/linux-app!84,Merge branch 'improve/VPNLINUX-297-handle-compromised-password' into 'develop',Handle compromised password use case [VPNLINUX-297] See merge request ProtonVPN/linux/linux-app!84
+71,Handle compromised password use case [VPNLINUX-297],,Handle compromised password use case [VPNLINUX-297],
+72,Merge branch 'improve/VPNLINUX-296-handle-oudated-vpn-user-password' into 'develop',Handle username/password Update [VPNLINUX-298] See merge request ProtonVPN/linux/linux-app!83,Merge branch 'improve/VPNLINUX-296-handle-oudated-vpn-user-password' into 'develop',Handle username/password Update [VPNLINUX-298] See merge request ProtonVPN/linux/linux-app!83
+73,Handle username/password Update [VPNLINUX-298],,Handle username/password Update [VPNLINUX-298],
+74,Merge branch 'improve/VPNLINUX-298-handle-plan-downgrade' into 'develop',Handle plan downgrade [VPNLINUX-298] See merge request ProtonVPN/linux/linux-app!82,Merge branch 'improve/VPNLINUX-298-handle-plan-downgrade' into 'develop',Handle plan downgrade [VPNLINUX-298] See merge request ProtonVPN/linux/linux-app!82
+75,Handle plan downgrade [VPNLINUX-298],,Handle plan downgrade [VPNLINUX-298],
+76,Merge branch 'improve/VPNLINUX-299-handle-delinquent' into 'develop',Handle delinquent use case [VPNLINUX-299] See merge request ProtonVPN/linux/linux-app!81,Merge branch 'improve/VPNLINUX-299-handle-delinquent' into 'develop',Handle delinquent use case [VPNLINUX-299] See merge request ProtonVPN/linux/linux-app!81
+77,Handle delinquent use case [VPNLINUX-299],,Handle delinquent use case [VPNLINUX-299],
+78,Merge branch 'improvement/VPNLINUX-295-handle-max-sessions' into 'develop',Handle max sessions/devices [VPNLINUX-295] See merge request ProtonVPN/linux/linux-app!80,Merge branch 'improvement/VPNLINUX-295-handle-max-sessions' into 'develop',Handle max sessions/devices [VPNLINUX-295] See merge request ProtonVPN/linux/linux-app!80
+79,Handle max sessions/devices [VPNLINUX-295],,Handle max sessions/devices [VPNLINUX-295],
+80,Merge branch 'fix/missing-import' into 'develop',Fix missing import See merge request ProtonVPN/linux/linux-app!79,Merge branch 'fix/missing-import' into 'develop',Fix missing import See merge request ProtonVPN/linux/linux-app!79
+81,Fix missing import,,Fix missing import,
+82,Merge branch 'rebase/release-1.5.2-fedora-35-from-develop' into 'develop',Rebase/release 1.5.2 fedora 35 from develop See merge request ProtonVPN/linux/linux-app!78,Merge branch 'rebase/release-1.5.2-fedora-35-from-develop' into 'develop',Rebase/release 1.5.2 fedora 35 from develop See merge request ProtonVPN/linux/linux-app!78
+83,Fix dates in changelog,,Fix dates in changelog,
+84,Add support for F35 and discontinue F31-32,,Add support for F35 and discontinue F31-32,
+85,Merge branch 'rebase/release-1.5.2-from-develop' into 'develop',Rebase/release 1.5.2 from develop See merge request ProtonVPN/linux/linux-app!77,Merge branch 'rebase/release-1.5.2-from-develop' into 'develop',Rebase/release 1.5.2 from develop See merge request ProtonVPN/linux/linux-app!77
+86,Update changelogs after rebase,,Update changelogs after rebase,
+87,Update event dialog,,Update event dialog,
+88,Merge branch 'improve/memory-leak' into 'develop',Further improve memory management See merge request ProtonVPN/linux/linux-app!76,Merge branch 'improve/memory-leak' into 'develop',Further improve memory management See merge request ProtonVPN/linux/linux-app!76
+89,Further improve memory management,,Further improve memory management,
+90,Merge branch 'rebase/release-1.5.1-on-develop' into 'develop',Hotfix: Fix issue with search not working See merge request ProtonVPN/linux/linux-app!75,Merge branch 'rebase/release-1.5.1-on-develop' into 'develop',Hotfix: Fix issue with search not working See merge request ProtonVPN/linux/linux-app!75
+91,Hotfix: Fix issue with search not working,,Hotfix: Fix issue with search not working,
+92,Merge branch 'release-1.5.0' into 'develop',Fix issues when logging out See merge request ProtonVPN/linux/linux-app!74,Merge branch 'release-1.5.0' into 'develop',Fix issues when logging out See merge request ProtonVPN/linux/linux-app!74
+93,"Fix typo and issue when switching to secure core servers, the reconneciton was not happening",,"Fix typo and issue when switching to secure core servers, the reconneciton was not happening",
+94,Fix issue where quick settings are not updated,,Fix issue where quick settings are not updated,
+95,Check for events every 12min,Also create own dashboard state for event notification handling,Check for events every 12min,Also create own dashboard state for event notification handling
+96,Move quick settings state update to states file,,Move quick settings state update to states file,
+97,Improve code readability,,Improve code readability,
+98,Fix XML layout blink glitch,,Fix XML layout blink glitch,
+99,Remove box shadow from gift icon,,Remove box shadow from gift icon,
+100,Remove new line and add space instead,,Remove new line and add space instead,
+101,Fix issues when logging out,Several issues were occuring after doing a logout following by a login. These issues have now been addressed and are listed below: -Duplication of windows -Application crashing -Duplication of events,Fix issues when logging out,Several issues were occuring after doing a logout following by a login. These issues have now been addressed and are listed below: -Duplication of windows -Application crashing -Duplication of events
+102,Merge branch 'fix/human-verification' into 'develop',Correctly handle exceptions on login and on connect See merge request ProtonVPN/linux/linux-app!73,Merge branch 'fix/human-verification' into 'develop',Correctly handle exceptions on login and on connect See merge request ProtonVPN/linux/linux-app!73
+103,Correctly handle exceptions on login and on connect,,Correctly handle exceptions on login and on connect,
+104,Merge branch 'fix/VPNLINUX-274-memory-leak' into 'develop',Fix/vpnlinux 274 memory leak See merge request ProtonVPN/linux/linux-app!72,Merge branch 'fix/VPNLINUX-274-memory-leak' into 'develop',Fix/vpnlinux 274 memory leak See merge request ProtonVPN/linux/linux-app!72
+105,Fix rebase and update changelog,,Fix rebase and update changelog,
+106,Fix memory leak,,Fix memory leak,
+107,Merge branch 'feature/VPNLINUX-279-black-friday' into 'develop',Feature/vpnlinux 279 black friday See merge request ProtonVPN/linux/linux-app!71,Merge branch 'feature/VPNLINUX-279-black-friday' into 'develop',Feature/vpnlinux 279 black friday See merge request ProtonVPN/linux/linux-app!71
+108,Update changelog,,Update changelog,
+109,Add event notification dot,,Add event notification dot,
+110,Bump version and update changelog,,Bump version and update changelog,
+111,Check if events need to be loaded on app start,,Check if events need to be loaded on app start,
+112,Create dialog for black-friday,,Create dialog for black-friday,
+113,Merge branch 'release-1.4.1' into 'develop',Add missing dependency for webkit See merge request ProtonVPN/linux/linux-app!70,Merge branch 'release-1.4.1' into 'develop',Add missing dependency for webkit See merge request ProtonVPN/linux/linux-app!70
+114,Add missing dependency for webkit,,Add missing dependency for webkit,
+115,Merge branch 'fix/arch-buildpkg' into 'develop',Fix PKGBUILD file See merge request ProtonVPN/linux/linux-app!69,Merge branch 'fix/arch-buildpkg' into 'develop',Fix PKGBUILD file See merge request ProtonVPN/linux/linux-app!69
+116,Fix PKGBUILD file,,Fix PKGBUILD file,
+117,Merge branch 'feature/VPNLINUX-229-human-verification' into 'develop',Feature/vpnlinux 229 human verification See merge request ProtonVPN/linux/linux-app!68,Merge branch 'feature/VPNLINUX-229-human-verification' into 'develop',Feature/vpnlinux 229 human verification See merge request ProtonVPN/linux/linux-app!68
+118,Remove print and add description to docstring,,Remove print and add description to docstring,
+119,Bump version and update changelog,,Bump version and update changelog,
+120,Add captcha to login,,Add captcha to login,
+121,Create captcha webview,,Create captcha webview,
+122,Basic implementation of human verification dialog,,Basic implementation of human verification dialog,
+123,Merge branch 'release-1.3.0' into 'develop',Fix crash when switching to/from secure-core servers See merge request ProtonVPN/linux/linux-app!67,Merge branch 'release-1.3.0' into 'develop',Fix crash when switching to/from secure-core servers See merge request ProtonVPN/linux/linux-app!67
+124,"Fix typo, update changelog and bump rel version",,"Fix typo, update changelog and bump rel version",
+125,Add Enum to kill switch quick setting,,Add Enum to kill switch quick setting,
+126,Bump rel version,,Bump rel version,
+127,Fix issue when switching SC button would not reconnect,,Fix issue when switching SC button would not reconnect,
+128,Display troubleshooting dialog when connecting with alt routing disabled,Also it should be displayed when there is no way to reach API,Display troubleshooting dialog when connecting with alt routing disabled,Also it should be displayed when there is no way to reach API
+129,Fix issue where a variable is referenced before assignment,,Fix issue where a variable is referenced before assignment,
+130,Update arch docker image to latest,,Update arch docker image to latest,
+131,Bump version,,Bump version,
+132,Skip getting IP if local variables are set,,Skip getting IP if local variables are set,
+133,Factor out classes into own files,,Factor out classes into own files,
+134,Fix issue with pop-up window,,Fix issue with pop-up window,
+135,Fix crash when switching to/from secure-core servers,"The switch mechanism has been greatly improved as now both list views are created on app initalization and are only refreshed/recreated again when server values need to be updated. Since both lists are now stored in memory, switching from one view to another is now much quicker.",Fix crash when switching to/from secure-core servers,"The switch mechanism has been greatly improved as now both list views are created on app initalization and are only refreshed/recreated again when server values need to be updated. Since both lists are now stored in memory, switching from one view to another is now much quicker."
+136,Get current location data from library,,Get current location data from library,
+137,Reduce the ammount of times that certain variables were fetched from protonvpn-nm-library,,Reduce the ammount of times that certain variables were fetched from protonvpn-nm-library,
+138,Fix bug where alt routing setting would not be saved after enabling it via dialog,,Fix bug where alt routing setting would not be saved after enabling it via dialog,
+139,Remove leftover comma as it was creating a tuple,,Remove leftover comma as it was creating a tuple,
+140,Merge branch 'feature/VPNLINUX-167-troubleshooting-screen' into 'develop',Dislpay troubleshooting dialog See merge request ProtonVPN/linux/linux-app!58,Merge branch 'feature/VPNLINUX-167-troubleshooting-screen' into 'develop',Dislpay troubleshooting dialog See merge request ProtonVPN/linux/linux-app!58
+141,Display troubleshoot dialog at login,,Display troubleshoot dialog at login,
+142,Add extra exception to display troubleshoot dialog,,Add extra exception to display troubleshoot dialog,
+143,Update changelog and bump version,,Update changelog and bump version,
+144,Replace http for https,,Replace http for https,
+145,Display troubleshoot dialog when attempting to connect and API calls have to be made,,Display troubleshoot dialog when attempting to connect and API calls have to be made,
+146,Displays troubleshoot dialog in login screen,,Displays troubleshoot dialog in login screen,
+147,Create troubleshooting dialog,This dialog will provide the user with additional solutions the any possible networking issues,Create troubleshooting dialog,This dialog will provide the user with additional solutions the any possible networking issues
+148,Remove unnecessary comma,,Remove unnecessary comma,
+149,"Create new switch factory and add new objects for grid, switch and label",,"Create new switch factory and add new objects for grid, switch and label",
+150,Merge branch 'release-1.2.0' into 'develop',Add no-default css class to dashboard buttons See merge request ProtonVPN/linux/linux-app!66,Merge branch 'release-1.2.0' into 'develop',Add no-default css class to dashboard buttons See merge request ProtonVPN/linux/linux-app!66
+151,Add no-default css class to dashboard buttons,This class is needed to override default theme changes made by distros,Add no-default css class to dashboard buttons,This class is needed to override default theme changes made by distros
+152,Merge branch 'fix/update-python-nm-lib' into 'develop',Update protonvpn-nm-lib version dependency in setup.py See merge request ProtonVPN/linux/linux-app!65,Merge branch 'fix/update-python-nm-lib' into 'develop',Update protonvpn-nm-lib version dependency in setup.py See merge request ProtonVPN/linux/linux-app!65
+153,Update protonvpn-nm-lib version dependency in setup.py,,Update protonvpn-nm-lib version dependency in setup.py,
+154,Merge branch 'fix/update-dependencies' into 'develop',Remove upper version limit for protonvpn-nm-lib See merge request ProtonVPN/linux/linux-app!64,Merge branch 'fix/update-dependencies' into 'develop',Remove upper version limit for protonvpn-nm-lib See merge request ProtonVPN/linux/linux-app!64
+155,Remove upper version limit for protonvpn-nm-lib,,Remove upper version limit for protonvpn-nm-lib,
+156,Merge branch 'fix/unable-to-get-logs' into 'develop',Fix issue where get logs would not work due to new python threading fix See merge request ProtonVPN/linux/linux-app!63,Merge branch 'fix/unable-to-get-logs' into 'develop',Fix issue where get logs would not work due to new python threading fix See merge request ProtonVPN/linux/linux-app!63
+157,Fix issue where get logs would not work due to new python threading fix,,Fix issue where get logs would not work due to new python threading fix,
+158,Merge branch 'community/add-keyword-to-desktop-file' into 'develop',Add Keywords=vpn; to protonvpn.desktop See merge request ProtonVPN/linux/linux-app!62,Merge branch 'community/add-keyword-to-desktop-file' into 'develop',Add Keywords=vpn; to protonvpn.desktop See merge request ProtonVPN/linux/linux-app!62
+159,Add Keywords=vpn; to protonvpn.desktop,"Added Keywords=vpn; for GNOME overview since I often search for ""vpn"" when I'm looking to launch the ProtonVPN app.",Add Keywords=vpn; to protonvpn.desktop,"Added Keywords=vpn; for GNOME overview since I often search for ""vpn"" when I'm looking to launch the ProtonVPN app."
+160,Merge branch 'fix/VPNLINUX-261-unable-to-use-after-v1.1.0-7-update' into 'develop',Fix issue with Gio.Task not having run_in_thead method See merge request ProtonVPN/linux/linux-app!61,Merge branch 'fix/VPNLINUX-261-unable-to-use-after-v1.1.0-7-update' into 'develop',Fix issue with Gio.Task not having run_in_thead method See merge request ProtonVPN/linux/linux-app!61
+161,Fix changelog after rebase,,Fix changelog after rebase,
+162,Add missing deps for docker,,Add missing deps for docker,
+163,Fix issue with Gio.Task not having run_in_thead method,"Even though the method has been implemented in Gio v2.36, it hasn't been fully implemented due to a typo, until version 2.63.2 The commit to this fix can be found here: https://gitlab.gnome.org/GNOME/glib/-/commit/42369df7c659b3a0f43530bd09288df0cea709b4 Now it checks for the Gio version and implements a custom version of python threading to execute callbacks, simillarly as to Gio.Task, in case the Gio version is not compatible",Fix issue with Gio.Task not having run_in_thead method,"Even though the method has been implemented in Gio v2.36, it hasn't been fully implemented due to a typo, until version 2.63.2 The commit to this fix can be found here: link Now it checks for the Gio version and implements a custom version of python threading to execute callbacks, simillarly as to Gio.Task, in case the Gio version is not compatible"
+164,Merge branch 'feature/VPNLINUX-249-show-streaming-list-when-pressing-on-streaming-icon-for-each-server' into 'develop',Refactor plus features See merge request ProtonVPN/linux/linux-app!59,Merge branch 'feature/VPNLINUX-249-show-streaming-list-when-pressing-on-streaming-icon-for-each-server' into 'develop',Refactor plus features See merge request ProtonVPN/linux/linux-app!59
+165,Add docstrings and rename method,,Add docstrings and rename method,
+166,Fix bug for users that had to upgrade,"For users that had to upgrade, servers would displays both city label and upgrade button at the same time, making it hard to read. Not the label has been corrected so that it displays only upgrade and it is hidden when overing over a server, which is replaced by a 'upgrade' button.",Fix bug for users that had to upgrade,"For users that had to upgrade, servers would displays both city label and upgrade button at the same time, making it hard to read. Not the label has been corrected so that it displays only upgrade and it is hidden when overing over a server, which is replaced by a 'upgrade' button."
+167,Display streaming list when clicking on streaming icon on each server,,Display streaming list when clicking on streaming icon on each server,
+168,Simplify code,,Simplify code,
+169,Refactor plus features,"PlusFeatures class should behave a simple aggregation of other types of features, while individual country features have to be individually createdin the case of needing to displays only specific features or a specific list with PlusFeatures",Refactor plus features,"PlusFeatures class should behave a simple aggregation of other types of features, while individual country features have to be individually createdin the case of needing to displays only specific features or a specific list with PlusFeatures"
+170,Merge branch 'community/remove-shebang' into 'develop',Remove shebang See merge request ProtonVPN/linux/linux-app!57,Merge branch 'community/remove-shebang' into 'develop',Remove shebang See merge request ProtonVPN/linux/linux-app!57
+171,Remove shebang,This shebang is not required here and if left on the file it causes openSUSE Build System to trigger a warning in the package build.,Remove shebang,This shebang is not required here and if left on the file it causes openSUSE Build System to trigger a warning in the package build.
+172,Merge branch 'fix/unable-to-update-server-list' into 'develop',Fix issue where server list would not update and app would crash See merge request ProtonVPN/linux/linux-app!56,Merge branch 'fix/unable-to-update-server-list' into 'develop',Fix issue where server list would not update and app would crash See merge request ProtonVPN/linux/linux-app!56
+173,Fix issue where server list would not update and app would crash,,Fix issue where server list would not update and app would crash,
+174,Merge branch 'fix/VPNLINUX-227-window-icons-not-showing' into 'develop',Fix CSS rule where it would hide all non-classed buttons See merge request ProtonVPN/linux/linux-app!55,Merge branch 'fix/VPNLINUX-227-window-icons-not-showing' into 'develop',Fix CSS rule where it would hide all non-classed buttons See merge request ProtonVPN/linux/linux-app!55
+175,Fix CSS rule where it would hide all non-classed buttons,Every button that would not have a custom css class would not display the content. This is part to prevent visual bugs on custom button. The rule has been adjusted so that it only affect custom buttons.,Fix CSS rule where it would hide all non-classed buttons,Every button that would not have a custom css class would not display the content. This is part to prevent visual bugs on custom button. The rule has been adjusted so that it only affect custom buttons.
+176,Merge branch 'community/fix-smart-routing-desc' into 'develop',Fix typo in Smart Routing description See merge request ProtonVPN/linux/linux-app!54,Merge branch 'community/fix-smart-routing-desc' into 'develop',Fix typo in Smart Routing description See merge request ProtonVPN/linux/linux-app!54
+177,Fix typo in Smart Routing description, Fix typo 'difficult-to-server',Fix typo in Smart Routing description,Fix typo 'difficult-to-server'
+178,Merge branch 'fix/missing-systemd-dependency' into 'develop',Add dependencies for library (docker) testing See merge request ProtonVPN/linux/linux-app!53,Merge branch 'fix/missing-systemd-dependency' into 'develop',Add dependencies for library (docker) testing See merge request ProtonVPN/linux/linux-app!53
+179,Add dependencies for library (docker) testing,,Add dependencies for library (docker) testing,
+180,Merge branch 'fix/VPNLINUX-223-utc-timezone-in-logs' into 'develop',Convert log timezone to UTC See merge request ProtonVPN/linux/linux-app!52,Merge branch 'fix/VPNLINUX-223-utc-timezone-in-logs' into 'develop',Convert log timezone to UTC See merge request ProtonVPN/linux/linux-app!52
+181,Convert log timezone to UTC,,Convert log timezone to UTC,
+182,Merge branch 'release-1.1.0' into 'develop',User main context when possible to update UI from within threads See merge request ProtonVPN/linux/linux-app!51,Merge branch 'release-1.1.0' into 'develop',User main context when possible to update UI from within threads See merge request ProtonVPN/linux/linux-app!51
+183,Prepare for shutdown should not disconnect VPN as library manages that automatically,,Prepare for shutdown should not disconnect VPN as library manages that automatically,
+184,Fix function idententation,,Fix function idententation,
+185,Use thread context to avoid segmentation fault,,Use thread context to avoid segmentation fault,
+186,Fix UI flicker when no connection is found,,Fix UI flicker when no connection is found,
+187,Fix flake8 compliance,Also added a loading screen when disconnecting,Fix flake8 compliance,Also added a loading screen when disconnecting
+188,Add menu items to top menu button,,Add menu items to top menu button,
+189,Update changelog and bump rel version,,Update changelog and bump rel version,
+190,Prevent window from resizing horizontally when using the resize grip,,Prevent window from resizing horizontally when using the resize grip,
+191,Fix UI sizes,,Fix UI sizes,
+192,User main context when possible to update UI from within threads,This change should make UI updates more thread-safe,User main context when possible to update UI from within threads,This change should make UI updates more thread-safe
+193,Prevent logout race condition,,Prevent logout race condition,
+194,Merge branch 'enchancement/VPNLINUX-220-improve-gui-responsiveness' into 'develop',Refactor dashboard view_model and server_list view See merge request ProtonVPN/linux/linux-app!50,Merge branch 'enchancement/VPNLINUX-220-improve-gui-responsiveness' into 'develop',Refactor dashboard view_model and server_list view See merge request ProtonVPN/linux/linux-app!50
+195,Replace python threads for GTask threads,,Replace python threads for GTask threads,
+196,Update changelog and bump version,,Update changelog and bump version,
+197,Precent from quick connect and disconnect buttons to be triggered multiple times,,Precent from quick connect and disconnect buttons to be triggered multiple times,
+198,Improve logout UX,"All processes are run in a thread-safe background process This prevents the GUI from freezing and by running in thread-safe mannger, no unexpected crashses should be expected",Improve logout UX,"All processes are run in a thread-safe background process This prevents the GUI from freezing and by running in thread-safe mannger, no unexpected crashses should be expected"
+199,Move background process to factory and rename method,,Move background process to factory and rename method,
+200,Add missingpackage to Suggests/Optdepends,,Add missingpackage to Suggests/Optdepends,
+201,Refactor background process so that different backends can be used,Currently both native python threading can be used and also the improved and thread-safe GTask threads,Refactor background process so that different backends can be used,Currently both native python threading can be used and also the improved and thread-safe GTask threads
+202,Replace python thread for GTask,"GTask is a native implementaion of threading in GTK. As per documentation, GTask is thread-safe and should be used when possible instead of python native threading implementation as they're not thread-safe",Replace python thread for GTask,"GTask is a native implementaion of threading in GTK. As per documentation, GTask is thread-safe and should be used when possible instead of python native threading implementation as they're not thread-safe"
+203,Update UI update refresh time,,Update UI update refresh time,
+204,"Refactor dashboard view_model and server_list view so that servers are loaded async, thus preventing UI freeze",,"Refactor dashboard view_model and server_list view so that servers are loaded async, thus preventing UI freeze",
+205,Merge branch 'release-1.0.1' into 'develop',Display message when library is not able to disable connectivity check See merge request ProtonVPN/linux/linux-app!49,Merge branch 'release-1.0.1' into 'develop',Display message when library is not able to disable connectivity check See merge request ProtonVPN/linux/linux-app!49
+206,Display message when library is not able to disable connectivity check,,Display message when library is not able to disable connectivity check,
+207,Merge branch 'fix/update-package-to-stable' into 'develop',Update package to stable See merge request ProtonVPN/linux/linux-app!48,Merge branch 'fix/update-package-to-stable' into 'develop',Update package to stable See merge request ProtonVPN/linux/linux-app!48
+208,Update package to stable,,Update package to stable,
+209,Merge branch 'release-0.8.0' into 'develop',Multiple changes See merge request ProtonVPN/linux/linux-app!47,Merge branch 'release-0.8.0' into 'develop',Multiple changes See merge request ProtonVPN/linux/linux-app!47
+210,Fix generate dialog pop-up,The generate logs process will now always display the state of logs generation process,Fix generate dialog pop-up,The generate logs process will now always display the state of logs generation process
+211,"When connected to secure-core servers, correctly display the country order",,"When connected to secure-core servers, correctly display the country order",
+212,Remove CentOS8 CI jobs,,Remove CentOS8 CI jobs,
+213,Merge branch 'fix/python-constant-version' into 'develop',Update python constant version See merge request ProtonVPN/linux/linux-app!46,Merge branch 'fix/python-constant-version' into 'develop',Update python constant version See merge request ProtonVPN/linux/linux-app!46
+214,Update python constant version,,Update python constant version,
+215,Merge branch 'feature/VPNLINUX-218-generate-logs' into 'develop',Feature/vpnlinux 218 generate logs See merge request ProtonVPN/linux/linux-app!45,Merge branch 'feature/VPNLINUX-218-generate-logs' into 'develop',Feature/vpnlinux 218 generate logs See merge request ProtonVPN/linux/linux-app!45
+216,"Update library dependency, update changelog and bump version",,"Update library dependency, update changelog and bump version",
+217,Add button to get logs,,Add button to get logs,
+218,Merge branch 'fix/changelog-dates' into 'develop',Fix changelog date See merge request ProtonVPN/linux/linux-app!44,Merge branch 'fix/changelog-dates' into 'develop',Fix changelog date See merge request ProtonVPN/linux/linux-app!44
+219,Fix changelog date,,Fix changelog date,
+220,Merge branch 'fix/add-multiple-distro-support' into 'develop',Fix/add multiple distro support See merge request ProtonVPN/linux/linux-app!43,Merge branch 'fix/add-multiple-distro-support' into 'develop',Fix/add multiple distro support See merge request ProtonVPN/linux/linux-app!43
+221,Update rel version,,Update rel version,
+222,"Add support for Fedora 31-34 and centos8 for testing, package generation and package publishing",,"Add support for Fedora 31-34 and centos8 for testing, package generation and package publishing",
+223,Merge branch 'fix/add-repo-docs' into 'develop',"Update repo documentation: contributing, copying and updated readme See merge request ProtonVPN/linux/linux-app!42",Merge branch 'fix/add-repo-docs' into 'develop',"Update repo documentation: contributing, copying and updated readme See merge request ProtonVPN/linux/linux-app!42"
+224,Include documentation in manifest and update rel version,,Include documentation in manifest and update rel version,
+225,"Update repo documentation: contributing, copying and updated readme",,"Update repo documentation: contributing, copying and updated readme",
+226,Merge branch 'ci/docker-image-tags' into 'develop',Change test image tag structure See merge request ProtonVPN/linux/linux-app!41,Merge branch 'ci/docker-image-tags' into 'develop',Change test image tag structure See merge request ProtonVPN/linux/linux-app!41
+227,Use slash instead of dash,,Use slash instead of dash,
+228,Change test image tag structure,,Change test image tag structure,
+229,Merge branch 'fix/update-constant-version' into 'develop',Update constant version See merge request ProtonVPN/linux/linux-app!40,Merge branch 'fix/update-constant-version' into 'develop',Update constant version See merge request ProtonVPN/linux/linux-app!40
+230,Update constant version,,Update constant version,
+231,Merge branch 'fix/update-to-newest-lib-version' into 'develop',"Update library dependency, update changelog and version See merge request ProtonVPN/linux/linux-app!39",Merge branch 'fix/update-to-newest-lib-version' into 'develop',"Update library dependency, update changelog and version See merge request ProtonVPN/linux/linux-app!39"
+232,"Update library dependency, update changelog and version",,"Update library dependency, update changelog and version",
+233,Merge branch 'fix/change-to-unstable' into 'develop',Change package to unstable See merge request ProtonVPN/linux/linux-app!37,Merge branch 'fix/change-to-unstable' into 'develop',Change package to unstable See merge request ProtonVPN/linux/linux-app!37
+234,Change package to unstable,,Change package to unstable,
+235,Merge branch 'master' into 'develop',Merge tray crash See merge request ProtonVPN/linux/linux-app!35,Merge branch 'master' into 'develop',Merge tray crash See merge request ProtonVPN/linux/linux-app!35
+236,Merge branch 'hotfix/fix-crash-if-no-tray-dependencies-are-found' into 'master',Fix crash when dummy indicator is used in abscence of tray dependency See merge request ProtonVPN/linux/linux-app!34,Merge branch 'hotfix/fix-crash-if-no-tray-dependencies-are-found' into 'master',Fix crash when dummy indicator is used in abscence of tray dependency See merge request ProtonVPN/linux/linux-app!34
+237,Fix crash when dummy indicator is used in abscence of tray dependency,,Fix crash when dummy indicator is used in abscence of tray dependency,
+238,Merge branch 'publish-stable' into 'master',Change package to stable See merge request ProtonVPN/linux/linux-app!33,Merge branch 'publish-stable' into 'master',Change package to stable See merge request ProtonVPN/linux/linux-app!33
+239,Change package to stable,,Change package to stable,
+240,Merge branch 'fix/trigger-github-publish-manually' into 'develop',Change to trigger git publish manually See merge request ProtonVPN/linux/linux-app!32,Merge branch 'fix/trigger-github-publish-manually' into 'develop',Change to trigger git publish manually See merge request ProtonVPN/linux/linux-app!32
+241,Change to trigger git publish manually,,Change to trigger git publish manually,
+242,Merge branch 'rebase/from-release-0.7.1' into 'develop',Rebase/from release 0.7.1 See merge request ProtonVPN/linux/linux-app!31,Merge branch 'rebase/from-release-0.7.1' into 'develop',Rebase/from release 0.7.1 See merge request ProtonVPN/linux/linux-app!31
+243,Update CI jobs and trigger github publish manually,,Update CI jobs and trigger github publish manually,
+244,Update changelog and bump version,,Update changelog and bump version,
+245,Update GUI and tray after reconnecting to VPN from suspend or network change,,Update GUI and tray after reconnecting to VPN from suspend or network change,
+246,Bump rel version,,Bump rel version,
+247,Only show message of active kill switch when perman kill switch is on,,Only show message of active kill switch when perman kill switch is on,
+248,Update changelog and bump rel version,,Update changelog and bump rel version,
+249,Hide quick connect on login window,,Hide quick connect on login window,
+250,Merge branch 'feature/VPNLINUX-198-support-ubuntu-1804' into 'develop',Feature/vpnlinux 198 support ubuntu 1804 See merge request ProtonVPN/linux/linux-app!30,Merge branch 'feature/VPNLINUX-198-support-ubuntu-1804' into 'develop',Feature/vpnlinux 198 support ubuntu 1804 See merge request ProtonVPN/linux/linux-app!30
+251,Update changelog,,Update changelog,
+252,Display incompatibility dialog on systems that GUI dependencies can not be met,,Display incompatibility dialog on systems that GUI dependencies can not be met,
+253,Merge branch 'fix/tray-buttons-context-dependent' into 'develop',Tray quick connect and disconnect buttons are context aware See merge request ProtonVPN/linux/linux-app!29,Merge branch 'fix/tray-buttons-context-dependent' into 'develop',Tray quick connect and disconnect buttons are context aware See merge request ProtonVPN/linux/linux-app!29
+254,Update changelog,,Update changelog,
+255,Tray quick connect and disconnect buttons are context aware,"Disconnect button in tray will only appear when being connected to VPN, and the inverse for the quick-connect",Tray quick connect and disconnect buttons are context aware,"Disconnect button in tray will only appear when being connected to VPN, and the inverse for the quick-connect"
+256,Merge branch 'fix/VPNLINUX-192-overlay-blocks-top-quick-setting-buttons' into 'develop',Fix/vpnlinux 192 overlay blocks top quick setting buttons See merge request ProtonVPN/linux/linux-app!28,Merge branch 'fix/VPNLINUX-192-overlay-blocks-top-quick-setting-buttons' into 'develop',Fix/vpnlinux 192 overlay blocks top quick setting buttons See merge request ProtonVPN/linux/linux-app!28
+257,Update changelog and bump version,,Update changelog and bump version,
+258,Fix quick settings blocking overlay,,Fix quick settings blocking overlay,
+259,Merge branch 'rebase/from-release-0.7.0' into 'develop',Dependency issue fix See merge request ProtonVPN/linux/linux-app!27,Merge branch 'rebase/from-release-0.7.0' into 'develop',Dependency issue fix See merge request ProtonVPN/linux/linux-app!27
+260,Remove hard dependencies for deb and arch,,Remove hard dependencies for deb and arch,
+261,Dependency issue should now be fixed, GUI should now be able to run without issues on systems where dependencies are not met for the tray,Dependency issue should now be fixed,GUI should now be able to run without issues on systems where dependencies are not met for the tray
+262,Add indicator/tray packages as recommended,,Add indicator/tray packages as recommended,
+263,Add extra dependencies for indicator/tray on fedora,,Add extra dependencies for indicator/tray on fedora,
+264,"Add missing dependency, update changelog and bump rel version",,"Add missing dependency, update changelog and bump rel version",
+265,Merge branch 'fix/improve-logging' into 'develop',Add logging See merge request ProtonVPN/linux/linux-app!26,Merge branch 'fix/improve-logging' into 'develop',Add logging See merge request ProtonVPN/linux/linux-app!26
+266,Add logging,,Add logging,
+267,Merge branch 'feature/VPNLINUX-184-app-tray-indicator' into 'develop',Add system tray icon See merge request ProtonVPN/linux/linux-app!25,Merge branch 'feature/VPNLINUX-184-app-tray-indicator' into 'develop',Add system tray icon See merge request ProtonVPN/linux/linux-app!25
+268,Update changelog and bump version,,Update changelog and bump version,
+269,Add system tray icon,This new feature will allow users to have ProtonVPN always to be running in background,Add system tray icon,This new feature will allow users to have ProtonVPN always to be running in background
+270,Add indicator/tray class,,Add indicator/tray class,
+271,Move pattern into patterns folder and updated path,,Move pattern into patterns folder and updated path,
+272,Add tray icons,,Add tray icons,
+273,Merge branch 'rebase/from-release-0.6.2' into 'develop',Add space to secure core sub-servers flags and label See merge request ProtonVPN/linux/linux-app!24,Merge branch 'rebase/from-release-0.6.2' into 'develop',Add space to secure core sub-servers flags and label See merge request ProtonVPN/linux/linux-app!24
+274,Update changelog and bump rel version,,Update changelog and bump rel version,
+275,Add space to secure core sub-servers flags and label,Also fix method typo,Add space to secure core sub-servers flags and label,Also fix method typo
+276,Merge branch 'fix/cache-streaming-logos' into 'develop',Add streaming logos See merge request ProtonVPN/linux/linux-app!23,Merge branch 'fix/cache-streaming-logos' into 'develop',Add streaming logos See merge request ProtonVPN/linux/linux-app!23
+277,Add streaming logos,,Add streaming logos,
+278,Update changelog,,Update changelog,
+279,Merge branch 'fix/update-dashboard-servername-when-connected-to-secure-core' into 'develop',"Displays only countries when connected to secure core, on dashboard See merge request ProtonVPN/linux/linux-app!22",Merge branch 'fix/update-dashboard-servername-when-connected-to-secure-core' into 'develop',"Displays only countries when connected to secure core, on dashboard See merge request ProtonVPN/linux/linux-app!22"
+280,"Displays only countries when connected to secure core, on dashboard",,"Displays only countries when connected to secure core, on dashboard",
+281,Merge branch 'fix/displays-message-on-dashboard-if-perma-ks-is-on' into 'develop',Fix/displays message on dashboard if perma ks is on See merge request ProtonVPN/linux/linux-app!21,Merge branch 'fix/displays-message-on-dashboard-if-perma-ks-is-on' into 'develop',Fix/displays message on dashboard if perma ks is on See merge request ProtonVPN/linux/linux-app!21
+282,Update changelog and bump version version,,Update changelog and bump version version,
+283,Add warning message if kill switch is blocking all connections,,Add warning message if kill switch is blocking all connections,
+284,Merge branch 'rebase/from-release-0.6.1' into 'develop',Fix quick connect/disconnect glitch See merge request ProtonVPN/linux/linux-app!20,Merge branch 'rebase/from-release-0.6.1' into 'develop',Fix quick connect/disconnect glitch See merge request ProtonVPN/linux/linux-app!20
+285,Update changelog and bump version,,Update changelog and bump version,
+286,Fix quick connect/disconnect glitch,"This is accomplished by creating a second button, thus, one button is used to quick connect and another one to disconnect, although they will never be revealed both at the same time",Fix quick connect/disconnect glitch,"This is accomplished by creating a second button, thus, one button is used to quick connect and another one to disconnect, although they will never be revealed both at the same time"
+287,Merge branch 'fix/ui-disconnect-labels' into 'develop',Fix/ui disconnect labels See merge request ProtonVPN/linux/linux-app!19,Merge branch 'fix/ui-disconnect-labels' into 'develop',Fix/ui disconnect labels See merge request ProtonVPN/linux/linux-app!19
+288,Update changelog,,Update changelog,
+289,Remove content instead of hiding label to keep same UI size after disconnecting,,Remove content instead of hiding label to keep same UI size after disconnecting,
+290,Add timeout for getting the IP,,Add timeout for getting the IP,
+291,Merge branch 'fix/VPNLINUX-188-connect-button' into 'develop',Fix connect button glitch See merge request ProtonVPN/linux/linux-app!18,Merge branch 'fix/VPNLINUX-188-connect-button' into 'develop',Fix connect button glitch See merge request ProtonVPN/linux/linux-app!18
+292,Update changelog and bump version,,Update changelog and bump version,
+293,Add hover effect for info icon,,Add hover effect for info icon,
+294,Fix connect button glitch,Also improve code readability,Fix connect button glitch,Also improve code readability
+295,Hide button by default,,Hide button by default,
+296,Add spacing to virtual servers,,Add spacing to virtual servers,
+297,Improve code readability,,Improve code readability,
+298,Merge branch 'fix/VPNLINUX-178-ui-details' into 'develop',Fix UI details See merge request ProtonVPN/linux/linux-app!17,Merge branch 'fix/VPNLINUX-178-ui-details' into 'develop',Fix UI details See merge request ProtonVPN/linux/linux-app!17
+299,Change from protonvpn property to method,,Change from protonvpn property to method,
+300,Update changelog and bump version,,Update changelog and bump version,
+301,Fix quick connect/disconnect loop,,Fix quick connect/disconnect loop,
+302,Attempt to login upon pressing on enter button,,Attempt to login upon pressing on enter button,
+303,Make server features popover non-resizable,,Make server features popover non-resizable,
+304,Add additional custom content to dialog if desired via add_extra_content() method,,Add additional custom content to dialog if desired via add_extra_content() method,
+305,Add css with font-sizes,,Add css with font-sizes,
+306,Simplify connecting overlay information display logic,,Simplify connecting overlay information display logic,
+307,Displays appropriate error messaged if login fails,,Displays appropriate error messaged if login fails,
+308,Fix styling for ambience theme,,Fix styling for ambience theme,
+309,Display only countries when connecting to Secure Core servers,Refactor dashbord so that all posssible view reside in one place separate from the dashboard view,Display only countries when connecting to Secure Core servers,Refactor dashbord so that all posssible view reside in one place separate from the dashboard view
+310,Change background color for selected quick setting and fix secure core typo on dropdown,,Change background color for selected quick setting and fix secure core typo on dropdown,
+311,Merge branch 'feature/VPNLINUX-163-streaming-and-virtual-locations' into 'develop',Implement streaming and virtual location features See merge request ProtonVPN/linux/linux-app!16,Merge branch 'feature/VPNLINUX-163-streaming-and-virtual-locations' into 'develop',Implement streaming and virtual location features See merge request ProtonVPN/linux/linux-app!16
+312,Simplify methods and rename class properties,,Simplify methods and rename class properties,
+313,Update library dependency version,,Update library dependency version,
+314,Remove obsolete property and rename methods,,Remove obsolete property and rename methods,
+315,Add info icon to all country headers,,Add info icon to all country headers,
+316,Add tier chip,,Add tier chip,
+317,Update changelog and bump version,,Update changelog and bump version,
+318,Add smart routing icon if all country servers have a host country,,Add smart routing icon if all country servers have a host country,
+319,Make all country header text dark gray,,Make all country header text dark gray,
+320,Finish styling of streaming services,,Finish styling of streaming services,
+321,Display streaming services for provided countries,,Display streaming services for provided countries,
+322,Sort secure core servers and hide headers for secure core sub-servers,,Sort secure core servers and hide headers for secure core sub-servers,
+323,Add viewport to window so that it can scroll in case it case many features,,Add viewport to window so that it can scroll in case it case many features,
+324,Refactor header so that a custom callback can be passed to the info button,,Refactor header so that a custom callback can be passed to the info button,
+325,Add background color to list of server names belonging to a country,,Add background color to list of server names belonging to a country,
+326,Simplify how headers are tracked,,Simplify how headers are tracked,
+327,Implement server headers,"Server headers are now displayed. At this point, some styling is still needed and also add the features for the plus servers",Implement server headers,"Server headers are now displayed. At this point, some styling is still needed and also add the features for the plus servers"
+328,Split server list class in into self-contained componenets,,Split server list class in into self-contained componenets,
+329,Implement country headers,-Create new info image icon for plus features -Add host country to server_item -Adapt server_list model and view,Implement country headers,-Create new info image icon for plus features -Add host country to server_item -Adapt server_list model and view
+330,Create new button and label classes,,Create new button and label classes,
+331,Add css to headers,,Add css to headers,
+332,Create properties that contain the number of servers per tier,,Create properties that contain the number of servers per tier,
+333,Only displays features window if info icon is clicked,,Only displays features window if info icon is clicked,
+334,Update version string,,Update version string,
+335,Remove button background in certain themes,,Remove button background in certain themes,
+336,Implement new locations top header,This header will be only displayed for Plus users,Implement new locations top header,This header will be only displayed for Plus users
+337,Create new server features window class,,Create new server features window class,
+338,Create features window and add respective style,,Create features window and add respective style,
+339,Add css classes,,Add css classes,
+340,Add and rename icons,,Add and rename icons,
+341,Merge branch 'fix/crash-on-quit' into 'develop',Fix crash when quitting without a connection See merge request ProtonVPN/linux/linux-app!15,Merge branch 'fix/crash-on-quit' into 'develop',Fix crash when quitting without a connection See merge request ProtonVPN/linux/linux-app!15
+342,Fix crash when quitting without a connection,,Fix crash when quitting without a connection,
+343,Merge branch 'feature/VPNLINUX-180-desktop-launcher' into 'develop',Feature/vpnlinux 180 desktop launcher See merge request ProtonVPN/linux/linux-app!14,Merge branch 'feature/VPNLINUX-180-desktop-launcher' into 'develop',Feature/vpnlinux 180 desktop launcher See merge request ProtonVPN/linux/linux-app!14
+344,Update changelog and bump rel version,,Update changelog and bump rel version,
+345,Correct version number in .spec file,,Correct version number in .spec file,
+346,Add desktop entry for Fedora based systems and update .spec file accordingly,,Add desktop entry for Fedora based systems and update .spec file accordingly,
+347,Update debian img path for desktop file,,Update debian img path for desktop file,
+348,Rename file and add constant for filepath,,Rename file and add constant for filepath,
+349,Create launcher for .deb packages,,Create launcher for .deb packages,
+350,Merge branch 'feature/VPNLINUX-182-about-dialog' into 'develop',Feature/vpnlinux 182 about dialog See merge request ProtonVPN/linux/linux-app!13,Merge branch 'feature/VPNLINUX-182-about-dialog' into 'develop',Feature/vpnlinux 182 about dialog See merge request ProtonVPN/linux/linux-app!13
+351,Correct return displays value,,Correct return displays value,
+352,Update changelog and bump version,,Update changelog and bump version,
+353,Add about dialog,,Add about dialog,
+354,Merge branch 'feature/VPNLINUX-173-disable-always-on-ks-in-login-window' into 'develop',Implement disable kill switch in login screen See merge request ProtonVPN/linux/linux-app!10,Merge branch 'feature/VPNLINUX-173-disable-always-on-ks-in-login-window' into 'develop',Implement disable kill switch in login screen See merge request ProtonVPN/linux/linux-app!10
+355,Update changelog and remove unused class,,Update changelog and remove unused class,
+356,Implement disable kill switch in login screen,Refactored dialog class so that multiple dialog types can be used later,Implement disable kill switch in login screen,Refactored dialog class so that multiple dialog types can be used later
+357,Merge branch 'fix/VPNLINUX-155-treat-server-feature-as-bitmap' into 'develop',Fix/vpnlinux 155 treat server feature as bitmap See merge request ProtonVPN/linux/linux-app!12,Merge branch 'fix/VPNLINUX-155-treat-server-feature-as-bitmap' into 'develop',Fix/vpnlinux 155 treat server feature as bitmap See merge request ProtonVPN/linux/linux-app!12
+358,Update dependencies and changelog,,Update dependencies and changelog,
+359,Implement servers with multi-features aka bitmap,,Implement servers with multi-features aka bitmap,
+360,Expand Flake8 line length,,Expand Flake8 line length,
+361,Merge branch 'feature/VPNLINUX-175-adjust-servers-load' into 'develop',Feature/vpnlinux 175 adjust servers load See merge request ProtonVPN/linux/linux-app!11,Merge branch 'feature/VPNLINUX-175-adjust-servers-load' into 'develop',Feature/vpnlinux 175 adjust servers load See merge request ProtonVPN/linux/linux-app!11
+362,Bump version and update changelog,,Bump version and update changelog,
+363,Display server load with contextual circle colour,,Display server load with contextual circle colour,
+364,Remove frame borders,,Remove frame borders,
+365,Delete duplicate flag files,,Delete duplicate flag files,
+366,Merge branch 'feature/VPNLINUX-160-implement-search' into 'develop',Implement country search/filter See merge request ProtonVPN/linux/linux-app!9,Merge branch 'feature/VPNLINUX-160-implement-search' into 'develop',Implement country search/filter See merge request ProtonVPN/linux/linux-app!9
+367,Update refresh API,,Update refresh API,
+368,Rename ks from always-on to permanent,,Rename ks from always-on to permanent,
+369,Fix typo,,Fix typo,
+370,Bump version and update changelog,,Bump version and update changelog,
+371,Fix typo,,Fix typo,
+372,Implement server search,-grid factory get_child_at method args name have been updated so that they convey a more explicit meaning of what they mean -it's also possible now to get the total ammount of countries and the ammount of servers per country,Implement server search,-grid factory get_child_at method args name have been updated so that they convey a more explicit meaning of what they mean -it's also possible now to get the total ammount of countries and the ammount of servers per country
+373,Reavealer should not expand vertically even if there is enough space,"This change is need since if only a couple of countries are present and/or a couple of servers are displayed, the revealer will attempt to occupy free space, which looks not very good.",Reavealer should not expand vertically even if there is enough space,"This change is need since if only a couple of countries are present and/or a couple of servers are displayed, the revealer will attempt to occupy free space, which looks not very good."
+374,Add id to search entry,,Add id to search entry,
+375,Merge branch 'feature/VPNLINUX-162-logout-quit' into 'develop',Implement logout and quit buttons See merge request ProtonVPN/linux/linux-app!8,Merge branch 'feature/VPNLINUX-162-logout-quit' into 'develop',Implement logout and quit buttons See merge request ProtonVPN/linux/linux-app!8
+376,Add psutil dependency,,Add psutil dependency,
+377,Fix secure core typo,,Fix secure core typo,
+378,Add logout and quit buttons,,Add logout and quit buttons,
+379,Implement logout button,-Dialog has been refactored so that it can easily accomodate new implementations,Implement logout button,-Dialog has been refactored so that it can easily accomodate new implementations
+380,Hide start on boot switch and expand logout button,,Hide start on boot switch and expand logout button,
+381,Only display upgrade button if tier is lower the min required for given feature,,Only display upgrade button if tier is lower the min required for given feature,
+382,Add missing init file,,Add missing init file,
+383,Merge branch 'feature/VPNLINUX-144-quick-settings' into 'develop',Add quick-settings buttons See merge request ProtonVPN/linux/linux-app!7,Merge branch 'feature/VPNLINUX-144-quick-settings' into 'develop',Add quick-settings buttons See merge request ProtonVPN/linux/linux-app!7
+384,Modify if check,,Modify if check,
+385,Rename methods and set to update server list always when switching servers,,Rename methods and set to update server list always when switching servers,
+386,Rename collection list; Remove extra 'if' when checking for selected path; Remove upgrade button for killswitch,,Rename collection list; Remove extra 'if' when checking for selected path; Remove upgrade button for killswitch,
+387,Add debug flag,,Add debug flag,
+388,Improve code readability,,Improve code readability,
+389,Update changelog and bump version,,Update changelog and bump version,
+390,Fix issue with labels being too long while connecting to server,,Fix issue with labels being too long while connecting to server,
+391,Implement reconnect after changing secure core quick setting,,Implement reconnect after changing secure core quick setting,
+392,Add server score property,,Add server score property,
+393,Fix issue when speeds could be below 0,,Fix issue when speeds could be below 0,
+394,Display secure core servers,,Display secure core servers,
+395,Update all quick settings icons when pressed,,Update all quick settings icons when pressed,
+396,Inlcude large flags in the package,,Inlcude large flags in the package,
+397,Fix ui,,Fix ui,
+398,Add custom headerbar to login for consistency,,Add custom headerbar to login for consistency,
+399,"Refactor how server list is generated, filtered and sorted",,"Refactor how server list is generated, filtered and sorted",
+400,Turn internal variables to private,,Turn internal variables to private,
+401,Rename files and classes,,Rename files and classes,
+402,Set char width dependant on if the upgrade label is present or not,,Set char width dependant on if the upgrade label is present or not,
+403,Improve logic for detecting when netshield should be displayed as off,,Improve logic for detecting when netshield should be displayed as off,
+404,Finish adding the learn more link button,,Finish adding the learn more link button,
+405,Create new facotry and improve existing one,,Create new facotry and improve existing one,
+406,Create new abstract button factory,,Create new abstract button factory,
+407,UI behaviour now correctly updates when pressing on buttons,"Also, user configurations are correctly updated in the background Only remaining to fix the link button and reconnection flow.",UI behaviour now correctly updates when pressing on buttons,"Also, user configurations are correctly updated in the background Only remaining to fix the link button and reconnection flow."
+408,Remove not needed import and add docstring,,Remove not needed import and add docstring,
+409,Replace img strings for constant icon set dict with enums,,Replace img strings for constant icon set dict with enums,
+410,Add to-do for cursor object,,Add to-do for cursor object,
+411,Finish styling quick settings popover,Add new css handler methods,Finish styling quick settings popover,Add new css handler methods
+412,Remove abc meta as the super classes are not abstract classes,,Remove abc meta as the super classes are not abstract classes,
+413,Popover displays and updats content according to button pressed,"The buttons still need to be configured so that they react to if the netshield is enabled or disabled, if ks is enabled or disabled and if secure core is to be displayed or not.",Popover displays and updats content according to button pressed,"The buttons still need to be configured so that they react to if the netshield is enabled or disabled, if ks is enabled or disabled and if secure core is to be displayed or not."
+414,Fix styling issues with different themes,,Fix styling issues with different themes,
+415,Change quick settings from model button to ordinary button,-Added popover view ui component and python class -Refactor how grids attach widgets -Factor out background process itno own class so that the implementation can be easily switched to another method,Change quick settings from model button to ordinary button,-Added popover view ui component and python class -Refactor how grids attach widgets -Factor out background process itno own class so that the implementation can be easily switched to another method
+416,Rename library folder and skip tests in control,,Rename library folder and skip tests in control,
+417,Merge branch 'feature/VPNLINUX-134-country' into 'develop',Feature/vpnlinux 134 country See merge request ProtonVPN/linux/linux-app!6,Merge branch 'feature/VPNLINUX-134-country' into 'develop',Feature/vpnlinux 134 country See merge request ProtonVPN/linux/linux-app!6
+418,Remove unncessary css import,,Remove unncessary css import,
+419,"Users who do not comply with tier requirments, are displayed a prompt to upgrade",,"Users who do not comply with tier requirments, are displayed a prompt to upgrade",
+420,Add dummy object so that methods from image factory can be used,,Add dummy object so that methods from image factory can be used,
+421,Fix login window title typo,,Fix login window title typo,
+422,Refactor GUI for the latest library refactor which introduces singletons,,Refactor GUI for the latest library refactor which introduces singletons,
+423,Create abstract and concrete factories,These factories were created so that objects can be easily created,Create abstract and concrete factories,These factories were created so that objects can be easily created
+424,Create GTK button factory,,Create GTK button factory,
+425,"If country is under maintenance, then the UI wil displays appropriatly","If all servers in a country are under maintenance, then the country will no longer display a button to connect and will instead provide a wrench icon.","If country is under maintenance, then the UI wil displays appropriatly","If all servers in a country are under maintenance, then the country will no longer display a button to connect and will instead provide a wrench icon."
+426,Feature: Connect to a country,,Feature: Connect to a country,
+427,Create new server objects so that they can be easily diplayed for the view,,Create new server objects so that they can be easily diplayed for the view,
+428,Adapt to new refactored library,,Adapt to new refactored library,
+429,Update dependency,,Update dependency,
+430,"Update UI with scrolled window, add icons and update css",,"Update UI with scrolled window, add icons and update css",
+431,Move flags to appropriate folder,,Move flags to appropriate folder,
+432,Merge branch 'refactor/VPNLINUX-125-MVVM' into 'develop',Refactor/vpnlinux 125 mvvm See merge request ProtonVPN/linux/linux-app!4,Merge branch 'refactor/VPNLINUX-125-MVVM' into 'develop',Refactor/vpnlinux 125 mvvm See merge request ProtonVPN/linux/linux-app!4
+433,Apply suggested changes,,Apply suggested changes,
+434,Merge branch 'feature/VPNLINUX-138-ci-package-generation' into 'refactor/VPNLINUX-125-MVVM',Feature/vpnlinux 138 ci package generation See merge request ProtonVPN/linux/linux-app!5,Merge branch 'feature/VPNLINUX-138-ci-package-generation' into 'refactor/VPNLINUX-125-MVVM',Feature/vpnlinux 138 ci package generation See merge request ProtonVPN/linux/linux-app!5
+435,Remove duplicate rpm group and add missing .gitkeep for folders,,Remove duplicate rpm group and add missing .gitkeep for folders,
+436,Fix debian control issue,,Fix debian control issue,
+437,Fix rx issues,,Fix rx issues,
+438,Add missing init files,,Add missing init files,
+439,Rename source folder name,,Rename source folder name,
+440,"Include UI, images and css into manifest",,"Include UI, images and css into manifest",
+441,Add Rx package,,Add Rx package,
+442,Remove protonvpn-cli references,,Remove protonvpn-cli references,
+443,Rename test file and update python package name,,Rename test file and update python package name,
+444,Update package name,,Update package name,
+445,Add CI jobs for testing and packaging,,Add CI jobs for testing and packaging,
+446,Remove CSS related to Notebook,,Remove CSS related to Notebook,
+447,Update delay time to 3 seconds,,Update delay time to 3 seconds,
+448,Add docstrings and bum version,,Add docstrings and bum version,
+449,Removed notebook and added network speed converted,"Since profiles are not going to be initially shipped, there was not need for a GTKNotebook, thus it got removed -A speed converted has been introduced so that it displays the networks speeds as it increases in speeds and correctly converts to appropriate measure",Removed notebook and added network speed converted,"Since profiles are not going to be initially shipped, there was not need for a GTKNotebook, thus it got removed -A speed converted has been introduced so that it displays the networks speeds as it increases in speeds and correctly converts to appropriate measure"
+450,Add GtkNotebook,"Add buttons for future implementation of GUI features such as netshield, killswitch and secure-core.",Add GtkNotebook,"Add buttons for future implementation of GUI features such as netshield, killswitch and secure-core."
+451,Add background process to update server load,Refactor how background glib process are added and removed. Update UI so that the disconnect button display correct colours.,Add background process to update server load,Refactor how background glib process are added and removed. Update UI so that the disconnect button display correct colours.
+452,Finish functional dashboard,Still missing notebook for different button and server list,Finish functional dashboard,Still missing notebook for different button and server list
+453,Add sidebar flags,,Add sidebar flags,
+454,Finish login MVVM implementation,,Finish login MVVM implementation,
+455,Merge branch 'tmp/view-model-example' into 'feature/VPNLINUX-121',MVVM for login screen See merge request ProtonVPN/linux/linux-app!3,Merge branch 'tmp/view-model-example' into 'feature/VPNLINUX-121',MVVM for login screen See merge request ProtonVPN/linux/linux-app!3
+456,Remove duplicate methods,,Remove duplicate methods,
+457,Showcase MVVM for login screen,,Showcase MVVM for login screen,
+458,Add logger and rewrite dashboard,,Add logger and rewrite dashboard,
+459,Add connection overlay,,Add connection overlay,
+460,Add label above entry and display it accordingly,,Add label above entry and display it accordingly,
+461,Make window not resizeble,,Make window not resizeble,
+462,Add icon to error upon login and updated styling,,Add icon to error upon login and updated styling,
+463,Merge branch 'feature/VPNLINUX-120' into 'develop',Feature/vpnlinux 120 See merge request ProtonVPN/linux/linux-app!2,Merge branch 'feature/VPNLINUX-120' into 'develop',Feature/vpnlinux 120 See merge request ProtonVPN/linux/linux-app!2
+464,Update version,,Update version,
+465,Move logic to presenter,,Move logic to presenter,
+466,Update styling,,Update styling,
+467,Add working quick connect button,,Add working quick connect button,
+468,Fix styling,,Fix styling,
+469,Fix visual glitch,"Whenver a window is dragged, a strange border around the window is created whenevr the window is dragger. This issue can be replicated if the App Window has the property double-buffered set to False and the window has a GTKHeaderBar",Fix visual glitch,"Whenver a window is dragged, a strange border around the window is created whenevr the window is dragger. This issue can be replicated if the App Window has the property double-buffered set to False and the window has a GTKHeaderBar"
+470,Load dashboard with information if user is not connected,,Load dashboard with information if user is not connected,
+471,Rename elements and apply flake8,,Rename elements and apply flake8,
+472,Add buttons to open preferences and quit app,,Add buttons to open preferences and quit app,
+473,Fix styling and flake8 issues,,Fix styling and flake8 issues,
+474,Add menu and quit button,,Add menu and quit button,
+475,Fix styling and flake8 issues,,Fix styling and flake8 issues,
+476,Add setup.cfg and fix flake8 issues in main.py,,Add setup.cfg and fix flake8 issues in main.py,
+477,Add initial window and styling for dashboard,,Add initial window and styling for dashboard,
+478,Move icon,,Move icon,
+479,Rename window title to ProtonVPN,,Rename window title to ProtonVPN,
+480,Only start thread if button is enabled,,Only start thread if button is enabled,
+481,Update login UI and styling,,Update login UI and styling,
+482,Update threading and window management,Dashboard window will be displayed once there is a successfull login and login window will be closed.,Update threading and window management,Dashboard window will be displayed once there is a successfull login and login window will be closed.
+483,Merge branch 'feature/VPNLINUX-115-login-screen' into 'develop',Update version See merge request ProtonVPN/linux/linux-app!1,Merge branch 'feature/VPNLINUX-115-login-screen' into 'develop',Update version See merge request ProtonVPN/linux/linux-app!1
+484,Update version,,Update version,
+485,Add spinner,,Add spinner,
+486,Add gtkrevealer for a better error displaying UX,,Add gtkrevealer for a better error displaying UX,
+487,Display overlay after clicking on login button,,Display overlay after clicking on login button,
+488,Add threading to login button,,Add threading to login button,
+489,Attempt to login user,"If login attempt has failed, a top error banner will display the error message.",Attempt to login user,"If login attempt has failed, a top error banner will display the error message."
+490,Rename class to LoginView,,Rename class to LoginView,
+491,Implement activate button if there is text in entry,,Implement activate button if there is text in entry,
+492,Add error label,,Add error label,
+493,Need help button complete,Login button is by default disabled,Need help button complete,Login button is by default disabled
+494,Add possibility to show/hide password,,Add possibility to show/hide password,
+495,Applied correct css styling and colouring,,Applied correct css styling and colouring,
+496,Ingore pycache folders,,Ingore pycache folders,
+497,Ignore temporary UI files,,Ignore temporary UI files,
+498,Remove egg folder,,Remove egg folder,
+499,Add gitignore,,Add gitignore,
+500,Initial commit,,Initial commit,

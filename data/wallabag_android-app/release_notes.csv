@@ -1,4 +1,4 @@
-Index,Release Note
+Index,Release Note,Release Note With Abstraction
 1,"Changed
 
 @cheywood improved quote style. (#1165)
@@ -28,7 +28,28 @@ Greek (new)
 Portuguese
 Turkish
 Traditional Chinese (new)
-"
+","Changed
+@cheywood improved quote style. (#1165)
+@Strubbl increased max widget counter value. (#1170)
+Fixed
+Fixed offline image caching on Android 10+. (#1118)
+Fixed a problem with deleted article sweeping in some situations. (#909)
+Fixed a problem with long annotations blocking sync. (#1153)
+@scubajeff fixed custom text selection actions. (#1176)
+Jeff Held (@solkaz) fixed a crash during search when certain characters are used. (#1125)
+Maintenance
+Lots of dependency updates (stetho, conscrypt, okhttp, material).
+Taco (@TacoTheDank) improved some code. (#1116)
+Removed legacy code. (#1114)
+Translations
+Czech
+Dutch
+French
+German
+Greek (new)
+Portuguese
+Turkish
+Traditional Chinese (new)"
 2,"Added
 
 Konrad Heidler (@khdlr) added LaTeX rendering (optional) (#1104).
@@ -43,7 +64,15 @@ Fixed
 
 Conscrypt initialization errors are ignored now (#1103).
 Fixed a rare ""Unknown server version"" error (#1075).
-"
+","Added
+Konrad Heidler (@khdlr) added LaTeX rendering (optional) (#1104).
+Added an option to improve search for CJK languages (#1095).
+Changed
+Target SDK version updated to 30 (Android 11) (#1072).
+Updated translations.
+Fixed
+Conscrypt initialization errors are ignored now (#1103).
+Fixed a rare ""Unknown server version"" error (#1075)."
 3,"Added
 
 Olivier Mehani (@shtrom) added a context menu item to add tag from selection. https://github.com/wallabag/android-app/pull/1053
@@ -51,7 +80,10 @@ Olivier Mehani (@shtrom) added a context menu item to add tag from selection. ht
 Fixed
 
 Fixed some crashes on Android 8+. https://github.com/wallabag/android-app/pull/1068
-"
+","Added
+Olivier Mehani (@shtrom) added a context menu item to add tag from selection. link
+Fixed
+Fixed some crashes on Android 8+. link"
 4,"Added
 
 @di72nn made the articles content use lazy-load, which improves performance a bit. This also brings full-text search and advanced queries. A full sync is recommended https://github.com/wallabag/android-app/pull/874 https://github.com/wallabag/android-app/pull/872
@@ -111,17 +143,72 @@ Russian
 Spanish
 Turkish
 Ukrainian
-"
+","Added
+@di72nn made the articles content use lazy-load, which improves performance a bit. This also brings full-text search and advanced queries. A full sync is recommended link link
+@di72nn added experimental support for annotations. This feature is disabled by default until we polish the angles and can be activated in the settings. link
+@di72nn added the possibility to launch a QR code scanner app for easier wallabag credentials setup link
+@di72nn added extra stacktrace details when an error happens and also added a button on the error notification to copy the details to the clipboard link
+@di72nn added two new actions in the settings to help fix queue/synchronization issues : the ability to dump the queue to a local file and the possibility to remove the first queue item found. link
+@The-Compiler introduced an option to inspect chromium webviews to assist debugging link
+Share-menu: favorite/archive/tag articles right after sharing.
+Tags (clickable) are displayed in the article view.
+""Untagged"" list.
+Long-press menu (only for single articles).
+Saving origin URL when adding from other articles.
+Splash screen when starting app link
+Changed
+@di72nn updated their wallabag API wrapper library to the latest version, which brings a few optimizations and compatibility with latest wallabag versions link
+@The-Compiler made the Onxy e-ink devices use the specific e-ink theme link
+@di72nn added a Gradle Wrapper Validation Github Action to prevent bad gradle-wrapper.jar binaries
+Dependencies updates
+Text-to-speech changes
+Better interruption handling.
+Image alt-text is now pronounced.
+Some other changes.
+Limit the number of suggested tags to 50.
+Startup time improvements.
+Fixed
+@di72nn fixed issues with themes in fullscreen view and action bar when watching full screen videos link
+@di72nn fixed a webview crash happening with Android 5 link
+thanks to @Strubbl and @di72nn, the special characters in the title are now HTML decoded link
+@di72nn fixed a sync error when deleting all tags from an article
+Adaptive icon.
+UI should no longer be blocked by database operations.
+Other fixes and improvements
+Various fixes #1004 #1005 #1006 #1011
+Fixed crash on the tags management screen. (@di72nn)
+Fixed annotations. (@di72nn)
+Updated translations
+Basque
+Chinese (Simplified)
+Croatian
+Dutch
+French
+German
+Hungarian
+Italian
+Japanese
+Korean
+Norwegian Bokmål
+Polish
+Russian
+Spanish
+Turkish
+Ukrainian"
 5,"Fixed
 
 Fixed crash on the tags management screen. (@di72nn)
 Fixed annotations. (@di72nn)
-"
+","Fixed
+Fixed crash on the tags management screen. (@di72nn)
+Fixed annotations. (@di72nn)"
 6,"Changes
 
 Limit the number of suggested tags to 50.
 Startup time improvements.
-"
+","Changes
+Limit the number of suggested tags to 50.
+Startup time improvements."
 7,"Added
 
 Splash screen when starting app https://github.com/wallabag/android-app/pull/1008
@@ -129,7 +216,10 @@ Splash screen when starting app https://github.com/wallabag/android-app/pull/100
 Changes
 
 Various fixes #1004 #1005 #1006 #1011
-"
+","Added
+Splash screen when starting app link
+Changes
+Various fixes #1004 #1005 #1006 #1011"
 8,"Replaces version 2.4.0-beta.2, which APK didn't have the latest changes.
 Added
 
@@ -150,7 +240,21 @@ Text-to-speech changes
 Better interruption handling.
 Image alt-text is now pronounced.
 Some other changes.
-"
+","Replaces version 2.4.0-beta.2, which APK didn't have the latest changes.
+Added
+Share-menu: favorite/archive/tag articles right after sharing.
+Tags (clickable) are displayed in the article view.
+""Untagged"" list.
+Long-press menu (only for single articles).
+Saving origin URL when adding from other articles.
+Changes
+Adaptive icon.
+UI should no longer be blocked by database operations.
+Other fixes and improvements
+Text-to-speech changes
+Better interruption handling.
+Image alt-text is now pronounced.
+Some other changes."
 9,"Release was borked, see https://github.com/wallabag/android-app/releases/tag/2.4.0-beta.3
 Added
 
@@ -176,7 +280,24 @@ Text-to-speech changes
 Better interruption handling.
 Image alt-text is now pronounced.
 Some other changes.
-"
+","Release was borked, see link
+Added
+Share-menu: favorite/archive/tag articles right after sharing.
+Tags (clickable) are displayed in the article view.
+""Untagged"" list.
+Long-press menu (only for single articles).
+Saving origin URL when adding from other articles.
+Ability to export logcat to file
+Changes
+Adaptive icon.
+UI should no longer be blocked by database operations.
+A lot of refactoring.
+Fixes
+Fixes to API client credentials management
+Text-to-speech changes
+Better interruption handling.
+Image alt-text is now pronounced.
+Some other changes."
 10,"Added
 
 @di72nn made the articles content use lazy-load, which improves performance a bit. This also brings full-text search and advanced queries. A full sync is recommended https://github.com/wallabag/android-app/pull/874 https://github.com/wallabag/android-app/pull/872
@@ -209,7 +330,31 @@ German
 Norwegian Bokmål
 Chinese (Simplified)
 French
-"
+","Added
+@di72nn made the articles content use lazy-load, which improves performance a bit. This also brings full-text search and advanced queries. A full sync is recommended link link
+@di72nn added experimental support for annotations. This feature is disabled by default until we polish the angles and can be activated in the settings. link
+@di72nn added the possibility to launch a QR code scanner app for easier wallabag credentials setup link
+@di72nn added extra stacktrace details when an error happens and also added a button on the error notification to copy the details to the clipboard link
+@di72nn added two new actions in the settings to help fix queue/synchronization issues : the ability to dump the queue to a local file and the possibility to remove the first queue item found. link
+@The-Compiler introduced an option to inspect chromium webviews to assist debugging link
+Changed
+@di72nn updated their wallabag API wrapper library to the latest version, which brings a few optimizations and compatibility with latest wallabag versions link
+@The-Compiler made the Onxy e-ink devices use the specific e-ink theme link
+@di72nn added a Gradle Wrapper Validation Github Action to prevent bad gradle-wrapper.jar binaries
+Dependencies updates
+Fixed
+@di72nn fixed issues with themes in fullscreen view and action bar when watching full screen videos link
+@di72nn fixed a webview crash happening with Android 5 link
+thanks to @Strubbl and @di72nn, the special characters in the title are now HTML decoded link
+@di72nn fixed a sync error when deleting all tags from an article
+Updated translations
+Russian
+Hungarian
+Polish
+German
+Norwegian Bokmål
+Chinese (Simplified)
+French"
 11,"Version 2.3.0 was started in August 2019 and contained over a hundred commits.
 Added
 
@@ -237,7 +382,26 @@ Fixed
 @NWuensche fixed the highlight color for several themes #808
 @NWuensche made the app use the white logo when using dark themes (#816) and added a setting to disable wrapping long preformated lines (#812).
 A bunch of little fixes (by @di72nn)
-"
+","Version 2.3.0 was started in August 2019 and contained over a hundred commits.
+Added
+@NWuensche added a setting to enable/disable swiping between articles #810
+@di72nn updated the API wrapper, allowing to display the article's publication date and authors, if determined by wallabag. #811
+@di72nn added the Conscrypt Security Provider, allowing us to support TLS 1.3, among other things
+@cloud-oak made it possible to disable the preview image
+Enable Fullscreen Button for Youtube Videos (by @NWuensche)
+Compatibility with wallabag 2.4 (by @di72nn)
+Updated the following translations: Persian, Thai, Italian, French, Dutch, Japanese, Korean, Spanish, Portuguese, Polish
+Changed
+@msfjarvis bumped the app's dependencies and handled the migration to AndroidX #803
+@NWuensche improved the theming system and fixed TTS icons color on dark theme
+Updated deps
+Removed
+Support for Android < 5 has been removed
+@di72nn removed the custom SSL settings option, which was made to activate newer TLS versions on Android < 5, that we don't support anymore.
+Fixed
+@NWuensche fixed the highlight color for several themes #808
+@NWuensche made the app use the white logo when using dark themes (#816) and added a setting to disable wrapping long preformated lines (#812).
+A bunch of little fixes (by @di72nn)"
 12,"Features
 
 Allow to disable the preview image (by @cloud-oak)
@@ -249,30 +413,48 @@ Misc
 A bunch of little fixes (by @di72nn)
 Updated deps
 Updated the following translations: Persian, Thai, Italian, French, Dutch, Japanese, Korean, Spanish, Portuguese, Polish
-"
+","Features
+Allow to disable the preview image (by @cloud-oak)
+Enable Fullscreen Button for Youtube Videos (by @NWuensche)
+Compatibility with wallabag 2.4 (by @di72nn)
+Misc
+A bunch of little fixes (by @di72nn)
+Updated deps
+Updated the following translations: Persian, Thai, Italian, French, Dutch, Japanese, Korean, Spanish, Portuguese, Polish"
 13,"
 @di72nn added the Conscrypt Security Provider, allowing us to support TLS 1.3, among other things
 @di72nn removed the custom SSL settings option, which was made to activate newer TLS versions on Android < 5, that we don't support anymore.
 @NWuensche improved the theming system and fixed TTS icons color on dark theme
 AboutLibraries was automatically bumped to v7.0.3
-"
-14,@NWuensche made the app use the white logo when using dark themes (#816) and added a setting to disable wrapping long preformated lines (#812).
+","@di72nn added the Conscrypt Security Provider, allowing us to support TLS 1.3, among other things
+@di72nn removed the custom SSL settings option, which was made to activate newer TLS versions on Android < 5, that we don't support anymore.
+@NWuensche improved the theming system and fixed TTS icons color on dark theme
+AboutLibraries was automatically bumped to v7.0.3"
+14,@NWuensche made the app use the white logo when using dark themes (#816) and added a setting to disable wrapping long preformated lines (#812).,@NWuensche made the app use the white logo when using dark themes (#816) and added a setting to disable wrapping long preformated lines (#812).
 15,"
 @NWuensche fixed the highlight color for several themes #808
 @NWuensche added a setting to enable/disable swiping between articles #810 
 @di72nn updated the API wrapper, allowing to display the article's publication date and authors, if determined by wallabag. #811 
 @msfjarvis bumped the app's dependencies and handled the migration to AndroidX #803 
 
+Note: We don't do special releases for Android < 5 anymore.","@NWuensche fixed the highlight color for several themes #808
+@NWuensche added a setting to enable/disable swiping between articles #810 
+@di72nn updated the API wrapper, allowing to display the article's publication date and authors, if determined by wallabag. #811 
+@msfjarvis bumped the app's dependencies and handled the migration to AndroidX #803 
 Note: We don't do special releases for Android < 5 anymore."
 16,"Thanks to @di72nn and @NWuensche, the following fixes were added:
+* the app now keeps the set sort order between restarts (#805)
+* shows an appropriate notification when trying to add an article from the share menu when the app hasn't any configured server (#807).","Thanks to @di72nn and @NWuensche, the following fixes were added:
 * the app now keeps the set sort order between restarts (#805)
 * shows an appropriate notification when trying to add an article from the share menu when the app hasn't any configured server (#807)."
 17,"
 @NWuensche fixed a display issue with the 3 dot menu on dark theme (thanks!) #801 
 @di72nn fixed D-pad navigation. #795 
 @Strubbl updated the okhttp (#791) and gradle (#790) deps
-"
-18,"We fixed notifications not being displayed, leading to other issues."
+","@NWuensche fixed a display issue with the 3 dot menu on dark theme (thanks!) #801 
+@di72nn fixed D-pad navigation. #795 
+@Strubbl updated the okhttp (#791) and gradle (#790) deps"
+18,"We fixed notifications not being displayed, leading to other issues.","We fixed notifications not being displayed, leading to other issues."
 19,"Improvements
 
 There's now a dedicated e-ink devices theme (@tenkabuto, @di72nn) separated from the « High contrast » light theme.
@@ -287,7 +469,13 @@ Updates to turkish translations (@Ardakilic)
 
 
 Note: We provide a legacy APK file attached for devices running Android 4.x. The legacy package should also be distributed through Google Play. However, if you're using F-Droid, it will only have the updated version, and we suggest installing the attached legacy APK instead (and investigate upgrading your Android device).
-"
+","Improvements
+There's now a dedicated e-ink devices theme (@tenkabuto, @di72nn) separated from the « High contrast » light theme.
+Fixes
+Translations fixes (@di72nn)
+Translations
+Updates to turkish translations (@Ardakilic)
+Note: We provide a legacy APK file attached for devices running Android 4.x. The legacy package should also be distributed through Google Play. However, if you're using F-Droid, it will only have the updated version, and we suggest installing the attached legacy APK instead (and investigate upgrading your Android device)."
 20,"General
 This version updates the dependencies to the okhttp libraries. That means Android 5.0 is now the minimum Android version for running this app. 
 
@@ -304,7 +492,17 @@ Updates to the following translations were made:
 
 Chinese traditional
 Japanese
-"
+","General
+This version updates the dependencies to the okhttp libraries. That means Android 5.0 is now the minimum Android version for running this app. 
+Note: We provide a legacy APK file attached for devices running Android 4.x. The legacy package should also be distributed through Google Play. However, if you're using F-Droid, it will only have the updated version, and we suggest installing the attached legacy APK instead (and investigate upgrading your Android device).
+Bugfixes
+fix theme Black on black (dark high contrast) to make it consistent (thanks @NWuensche #730)
+fix crash when TTS Enable/Disable and when switching to another app while TTS is running (thanks @tyndare #741)
+fix navbar color in dark themes in Android 9 (@Strubbl #766)
+Translations
+Updates to the following translations were made:
+Chinese traditional
+Japanese"
 21,"New Features
 
 add possibility to scroll towards the bottom to mark article as read (especially useful for e-ink device, configurable via preference, only enabled with physical key presses) (thanks @silberzwiebel  #648) 
@@ -342,6 +540,37 @@ Romanian
 Chinese (Simplified)
 Polish
 
+Thanks a lot to all translators, reviewers, issue reporters and contributors.","New Features
+add possibility to scroll towards the bottom to mark article as read (especially useful for e-ink device, configurable via preference, only enabled with physical key presses) (thanks @silberzwiebel  #648) 
+fullscreen article view (thanks #678 from @silberzwiebel)
+add Share and Copy options for link menu (thanks @NWuensche #677)
+add scrolling via hardware keys in article lists (thanks @silberzwiebel #690)
+tts: automatic switch to article's language (thanks @tyndare  #709)
+add setting to keep screen on while reading an article (thanks @nwuensche #724)
+in setup wizard add option to unhide the password entered (thanks @kpchungdev #725)
+Fixes
+solar theme icon bugfix (@Strubbl #683)
+dependency updates
+several minor bugfixes
+Updated translations
+Spanish
+French
+Norwegian
+Japanese
+Hungarian
+German
+Basque
+English
+Norwegian Bokmål
+Russian
+Aragonese
+Danish
+Occitan
+Persian
+Portuguese
+Romanian
+Chinese (Simplified)
+Polish
 Thanks a lot to all translators, reviewers, issue reporters and contributors."
 22,"New Features
 
@@ -380,6 +609,37 @@ Romanian
 Chinese (Simplified)
 Polish
 
+Thanks a lot to all translators, reviewers, issue reporters and contributors.","New Features
+add possibility to scroll towards the bottom to mark article as read (especially useful for e-ink device, configurable via preference, only enabled with physical key presses) (thanks @silberzwiebel  #648) 
+fullscreen article view (thanks #678 from @silberzwiebel)
+add Share and Copy options for link menu (thanks @NWuensche #677)
+add scrolling via hardware keys in article lists (thanks @silberzwiebel #690)
+tts: automatic switch to article's language (thanks @tyndare  #709)
+add setting to keep screen on while reading an article (thanks @nwuensche #724)
+in setup wizard add option to unhide the password entered (thanks @kpchungdev #725)
+Fixes
+solar theme icon bugfix (@Strubbl #683)
+dependency updates
+several minor bugfixes
+Updated translations
+Spanish
+French
+Norwegian
+Japanese
+Hungarian
+German
+Basque
+English
+Norwegian Bokmål
+Russian
+Aragonese
+Danish
+Occitan
+Persian
+Portuguese
+Romanian
+Chinese (Simplified)
+Polish
 Thanks a lot to all translators, reviewers, issue reporters and contributors."
 23,"New Features
 
@@ -401,7 +661,21 @@ Updated translations
 Spanish
 Basque
 Turkish
-"
+","New Features
+Show reading time for entry in list view
+Show last update time in navigation drawer 
+Add menu entry to copy article url to clipboard
+Multiple format download
+Scroll with PAGE_UP/PAGE_DOWN (e-ink readers)
+Option to disable touch input
+Fixes
+Layout improvements
+UI fixes on links and quotes
+Fix login detection when html is minified on server
+Updated translations
+Spanish
+Basque
+Turkish"
 24,"Features:
 * Added possibility to move database to internal or external storage
 * Show preview picture in article view
@@ -416,8 +690,27 @@ Bugs:
 Translations:
 * French
 * Spanish
+* Hungarian","Features:
+* Added possibility to move database to internal or external storage
+* Show preview picture in article view
+Improvements:
+* Better progress bars
+* Icons and logo should now render better on each theme
+* Better detection of pictures
+* Improve bottom toolbar on article view
+Bugs:
+* Handle server 500 errors with message
+* Fix display of tables, quotes and  elements in all themes
+Translations:
+* French
+* Spanish
 * Hungarian"
 25,"Important changes if you're coming from a 1.x version : This release drops wallabag v1 support. If you need support for wallabag v1, you must build yourself the sources from the v1_legacy branch.
+Changes from beta release: 
+* Added Framabag preset
+* Fix PDF Downloading
+* Translations
+* Other fixes and improvements","Important changes if you're coming from a 1.x version : This release drops wallabag v1 support. If you need support for wallabag v1, you must build yourself the sources from the v1_legacy branch.
 Changes from beta release: 
 * Added Framabag preset
 * Fix PDF Downloading
@@ -428,17 +721,24 @@ Share title with url and option to remove the (via @wallabagapp)
 Better fetching of pictures
 Fixes
 Translation updates
-"
+","Share title with url and option to remove the (via @wallabagapp)
+Better fetching of pictures
+Fixes
+Translation updates"
 27,"
 Ability to change title
 Ability to toggle justified text
 Many fixes and translations
-"
+","Ability to change title
+Ability to toggle justified text
+Many fixes and translations"
 28,"
 Fix migrations
 Small fixes
 Update deps
-"
+","Fix migrations
+Small fixes
+Update deps"
 29,"
 Drops wallabag v1 support : Framabag will not work anymore with this version.
 Full support for wallabag v2 API (https://github.com/di72nn/wallabag-api-wrapper)
@@ -448,18 +748,30 @@ Basic tags support (list by tag, add/modify/delete tags on articles)
 New material UI
 Better notifications
 Other minor changes
-"
+","Drops wallabag v1 support : Framabag will not work anymore with this version.
+Full support for wallabag v2 API (link)
+Faster update mecanism
+Update on startup
+Basic tags support (list by tag, add/modify/delete tags on articles) 
+New material UI
+Better notifications
+Other minor changes"
 30,"
 Fix external storage permission to download pictures on old devices
 Update dependencies
 Update german translation
-"
+","Fix external storage permission to download pictures on old devices
+Update dependencies
+Update german translation"
 31,"
 Translations
 Theme and downloading pictures fixes
 Update dependencies
 Various fixes
-"
+","Translations
+Theme and downloading pictures fixes
+Update dependencies
+Various fixes"
 32,"
 Added image caching.
 Basic search
@@ -467,14 +779,23 @@ Reverse sort order
 Updated Connection Wizard (wallabag.it support).
 Updated translations (added Japanese and updated other languages).
 Fixes and improvements.
-"
+","Added image caching.
+Basic search
+Reverse sort order
+Updated Connection Wizard (wallabag.it support).
+Updated translations (added Japanese and updated other languages).
+Fixes and improvements."
 33,"
 Fix some UI freezes.
 Better handling of network-related errors.
 Better application of runtime settings changes.
 Small bugs
 Up-to-date french and spanish translations
-"
+","Fix some UI freezes.
+Better handling of network-related errors.
+Better application of runtime settings changes.
+Small bugs
+Up-to-date french and spanish translations"
 34,"
 Background service to handle actions offline and sync them when network is available
 Connection wizard
@@ -484,9 +805,20 @@ Automatic sync
 Big changes under the hood
 Bugs and translations
 
+Huge thanks to @di72nn.","Background service to handle actions offline and sync them when network is available
+Connection wizard
+Notifications
+Proper preferences screen
+Automatic sync
+Big changes under the hood
+Bugs and translations
 Huge thanks to @di72nn."
-35,Bump version name for F-Droid users.
+35,Bump version name for F-Droid users.,Bump version name for F-Droid users.
 36,"UPDATED : Fix for self-signed certificates and http2 nginx servers
+- Many fixes & background improvements
+- wallabag unread items widget
+- wallabag can show up as a browser
+- Downloading PDFs of articles","UPDATED : Fix for self-signed certificates and http2 nginx servers
 - Many fixes & background improvements
 - wallabag unread items widget
 - wallabag can show up as a browser
@@ -496,36 +828,62 @@ Many fixes & background improvements
 wallabag unread items widget
 wallabag can show up as a browser
 Downloading PDFs of articles
-"
+","Many fixes & background improvements
+wallabag unread items widget
+wallabag can show up as a browser
+Downloading PDFs of articles"
 38,"
 TTS Speech
 Better guessing of wallabag v2
 About activity
 Fix bugs
 Bump minSdkVersion to 10 (Gingerbread : Android 2.3.4 / Android 2.3.3)
-"
+","TTS Speech
+Better guessing of wallabag v2
+About activity
+Fix bugs
+Bump minSdkVersion to 10 (Gingerbread : Android 2.3.4 / Android 2.3.3)"
 39,"• Fix connexion to wallabag v2.0.1 servers
+• Add token creation to v2","• Fix connexion to wallabag v2.0.1 servers
 • Add token creation to v2"
 40,"• wallabag v2 support !
+• Solarized theme
+• Spanish and German translation
+• Bugs","• wallabag v2 support !
 • Solarized theme
 • Spanish and German translation
 • Bugs"
 41,"
 Fix activity not closing when bagging.
-"
-42,Fix Error when incorrect URL entered.
+",Fix activity not closing when bagging.
+42,Fix Error when incorrect URL entered.,Fix Error when incorrect URL entered.
 43,"
 Fixed bugs on locally added URLs, credentials non input and pictures behind a self-hosted cert.
 Added English and Russian translation
 Improved translations
-"
+","Fixed bugs on locally added URLs, credentials non input and pictures behind a self-hosted cert.
+Added English and Russian translation
+Improved translations"
 44,"
 German and French translations strings
 Fix crash if username or password not set
 Fix Self-signed certificates issue
 Fix HTTP Auth issues with pictures on Android 4.2.2.
-"
+","German and French translations strings
+Fix crash if username or password not set
+Fix Self-signed certificates issue
+Fix HTTP Auth issues with pictures on Android 4.2.2."
 45,"This is the first release of 1.9
+• New interface !
+• sync articles status (favourite,read) from your device to the remote server
+• Login one time and never again !
+• Much faster synchronization
+• open a random article
+• send URLs to server when they were added offline
+• option to accept self-signed certificates
+• high contrast mode
+• HTTP Auth
+• Size of the text and serif/non-serif fonts.","This is the first release of 1.9
 • New interface !
 • sync articles status (favourite,read) from your device to the remote server
 • Login one time and never again !
@@ -541,29 +899,54 @@ Better theming (Dark/Light themes, high contrast themes)
 Option to have serif/non-serif fonts
 Font size
 few improvements
-"
+","Better theming (Dark/Light themes, high contrast themes)
+Option to have serif/non-serif fonts
+Font size
+few improvements"
 47,"
 Brings http mode
 Brings swiping between articles
 Brings night mode
 Corrects bugs
 Translations
-"
+","Brings http mode
+Brings swiping between articles
+Brings night mode
+Corrects bugs
+Translations"
 48,"
 Swipe UI for Unread/Favorite/Archive
 Better status Icons on list of articles (svg)
 Better tests for connexion issues
 Dialogues suggesting to sync if needed
 bugs and translations...
-"
+","Swipe UI for Unread/Favorite/Archive
+Better status Icons on list of articles (svg)
+Better tests for connexion issues
+Dialogues suggesting to sync if needed
+bugs and translations..."
 49,"
 Ready for Android 6.
 Display Favourite and Read icons in list of articles
 Enable viewing of Embeed YouTube vidéos
 View domain and not full url
 Previous and next article buttons
-"
+","Ready for Android 6.
+Display Favourite and Read icons in list of articles
+Enable viewing of Embeed YouTube vidéos
+View domain and not full url
+Previous and next article buttons"
 50,"Huge thanks to victorhaggqvist and di72nn for their work !
+• sync articles status (favourited,read) from your device to the remote server (yes, for real !)
+• save page without having to login each time inside your browser
+• feed credentials no longer have to be input and can automatically be fetched when you provide username and password
+• fast sync option
+• view archived articles and favorited ones
+• open a random article
+• send URLs to server when they were added offline
+• option to accept self-signed certificates
+• high contrast mode
+• limit articles","Huge thanks to victorhaggqvist and di72nn for their work !
 • sync articles status (favourited,read) from your device to the remote server (yes, for real !)
 • save page without having to login each time inside your browser
 • feed credentials no longer have to be input and can automatically be fetched when you provide username and password
@@ -578,15 +961,22 @@ Previous and next article buttons
 Bug fixes
 Adding a Mark as Read button in the action bar
 Switch between « Show all » and « Unread articles » (still not synced)
-"
+","Bug fixes
+Adding a Mark as Read button in the action bar
+Switch between « Show all » and « Unread articles » (still not synced)"
 52,"
 Basic error messages
 material action bar
 bug fixed when spaces in the title
 added url parser to share from any app in android
-"
+","Basic error messages
+material action bar
+bug fixed when spaces in the title
+added url parser to share from any app in android"
 53,"
 UI Improvements
 Images and links now displayed in articles, as well as all kind of html
 finally migrated from inthepoche to wallabag
-"
+","UI Improvements
+Images and links now displayed in articles, as well as all kind of html
+finally migrated from inthepoche to wallabag"

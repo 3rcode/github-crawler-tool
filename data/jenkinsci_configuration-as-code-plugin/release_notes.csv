@@ -1,0 +1,2807 @@
+Index,Release Note,Release Note With Abstraction
+1," Optional: add a release summary here 
+👷 Changes for plugin developers
+
+Update dependency org.jenkins-ci.plugins:plugin to v4.58 (#2254) @renovate
+
+🚦 Tests
+
+Remove integration tests for suspended plugins (#2243) @basil
+
+📦 Dependency updates
+
+Update dependency io.jenkins.tools.bom:bom-2.361.x to v1968 (#2255) @renovate
+Update dependency org.jenkins-ci.plugins:plugin to v4.58 (#2254) @renovate
+Update dependency com.vladsch.flexmark:flexmark-all to v0.64.0 (#2253) @renovate
+Update dependency joda-time:joda-time to v2.12.5 (#2252) @renovate
+Update dependency com.puppycrawl.tools:checkstyle to v10.9.3 (#2247) @renovate
+Update shadwell/k8s-sidecar Docker tag to v0.0.7 (#2246) @renovate
+Update dependency org.apache.maven.plugins:maven-checkstyle-plugin to v3.2.1 (#2245) @renovate
+Update dependency joda-time:joda-time to v2.12.4 (#2244) @renovate
+","Optional: add a release summary here 
+👷 Changes for plugin developers
+Update dependency org.jenkins-ci.plugins:plugin to v4.58 (#2254) @renovate
+🚦 Tests
+Remove integration tests for suspended plugins (#2243) @basil
+📦 Dependency updates
+Update dependency io.jenkins.tools.bom:bom-2.361.x to v1968 (#2255) @renovate
+Update dependency org.jenkins-ci.plugins:plugin to v4.58 (#2254) @renovate
+Update dependency com.vladsch.flexmark:flexmark-all to v0.64.0 (#2253) @renovate
+Update dependency joda-time:joda-time to v2.12.5 (#2252) @renovate
+Update dependency com.puppycrawl.tools:checkstyle to v10.9.3 (#2247) @renovate
+Update shadwell/k8s-sidecar Docker tag to v0.0.7 (#2246) @renovate
+Update dependency org.apache.maven.plugins:maven-checkstyle-plugin to v3.2.1 (#2245) @renovate
+Update dependency joda-time:joda-time to v2.12.4 (#2244) @renovate"
+2," Optional: add a release summary here 
+👷 Changes for plugin developers
+
+Upgrade parent POM from 4.56 to 4.57 (#2242) @basil
+
+👻 Maintenance
+
+Clean up integrations/pom.xml (#2239) @basil
+
+✍ Other changes
+
+Remove more unnecessary dependencies from integrations/ (#2240) @basil
+","Optional: add a release summary here 
+👷 Changes for plugin developers
+Upgrade parent POM from 4.56 to 4.57 (#2242) @basil
+👻 Maintenance
+Clean up integrations/pom.xml (#2239) @basil
+✍ Other changes
+Remove more unnecessary dependencies from integrations/ (#2240) @basil"
+3," Optional: add a release summary here 
+🐛 Bug fixes
+
+Restore JSR 305 annotations (#2238) @basil
+","Optional: add a release summary here 
+🐛 Bug fixes
+Restore JSR 305 annotations (#2238) @basil"
+4," Optional: add a release summary here 
+👷 Changes for plugin developers
+
+Support forthcoming PCT multimodule mode (#2234) @basil
+
+📝 Documentation updates
+
+Add example for matrix-auth version 3.0 (#2174) @human33
+
+👻 Maintenance
+
+Switch to renovate (#2222) @timja
+
+🚦 Tests
+
+fix typo ""avanced"" (#2167) @peterbecich
+Init 2.375 (#2164) @NotMyFault
+
+✍ Other changes
+
+Delete empty SpotBugs excludes filter (#2171) @basil
+Use HTTPS SCM URL (#2166) @basil
+
+📦 Dependency updates
+
+36 changes
+
+* Update Job DSL to 1.82 (#2232) @basil
+* Update dependency com.google.protobuf:protobuf-java to v3.22.2 (#2231) @renovate
+* Update dependency com.amazonaws:aws-java-sdk-sns to v1.12.430 (#2230) @renovate
+* Update dependency com.github.erosb:everit-json-schema to v1.14.2 (#2227) @renovate
+* Update dependency com.amazonaws:aws-java-sdk-sns to v1.12.425 (#2226) @renovate
+* Bump jenkins.version from 2.387 to 2.387.1 (#2225) @github-actions
+* Update dependency org.apache.ivy:ivy to v2.5.1 [SECURITY] (#2223) @renovate
+* build(deps-dev): Bump simple-theme-plugin from 136.v23a_15f86c53d to 146.v0e67db_a_9052e (#2217) @dependabot
+* build(deps): Bump antlr4-runtime from 4.11.1 to 4.12.0 (#2219) @dependabot
+* build(deps-dev): Bump external-workspace-manager from 1.2.3 to 1.3.0 (#2220) @dependabot
+* build(deps): Bump aws-java-sdk-sns from 1.12.286 to 1.12.420 (#2221) @dependabot
+* build(deps): Bump gson from 2.9.1 to 2.10.1 (#2216) @dependabot
+* build(deps): Bump json from 20220320 to 20230227 (#2218) @dependabot
+* build(deps-dev): Bump role-strategy from 555.v8d194cc85b_30 to 587.v2872c41fa_e51 (#2215) @dependabot
+* build(deps): Bump httpcore from 4.4.15 to 4.4.16 (#2210) @dependabot
+* build(deps): Bump protobuf-java from 3.21.7 to 3.22.0 (#2211) @dependabot
+* build(deps-dev): Bump jsoup from 1.15.2 to 1.15.4 (#2212) @dependabot
+* build(deps): Bump atlassian-plugins-core from 7.1.4 to 7.1.5 (#2207) @dependabot
+* Init next LTS line (#2206) @NotMyFault
+* Bump jenkins.version from 2.375.2 to 2.375.3 (#2205) @github-actions
+* build(deps): Bump jackson.version from 2.14.0 to 2.14.2 (#2200) @dependabot
+* build(deps-dev): Bump artifact-manager-s3 from 666.v6c461c3d9824 to 754.vb_5d21c758eb_3 (#2197) @dependabot
+* Bump jenkins.version from 2.375.1 to 2.375.2 (#2194) @github-actions
+* build(deps): Bump maven-checkstyle-plugin from 3.1.2 to 3.2.0 (#2114) @dependabot
+* build(deps): Bump checkstyle from 10.3.3 to 10.5.0 (#2186) @dependabot
+* build(deps-dev): Bump simple-theme-plugin from 103.va_161d09c38c7 to 136.v23a_15f86c53d (#2184) @dependabot
+* build(deps-dev): Bump gitea from 1.4.3 to 1.4.5 in /integrations (#2183) @dependabot
+* build(deps): Bump antlr4-runtime from 4.10.1 to 4.11.1 (#2182) @dependabot
+* build(deps): Bump docker-java from 3.2.13 to 3.2.14 (#2179) @dependabot
+* Bump jenkins.version from 2.375 to 2.375.1 (#2177) @github-actions
+* build(deps): Bump jira from 3.7.1 to 3.8 (#2176) @dependabot
+* build(deps-dev): Bump pipeline-groovy-lib from 612.v84da_9c54906d to 621.vb_44ce045b_582 (#2172) @dependabot
+* build(deps): Bump plexus-utils from 3.4.2 to 3.5.0 (#2162) @dependabot
+* build(deps): Bump jackson.version from 2.13.4 to 2.14.0 (#2161) @dependabot
+* build(deps): Bump kotlin-stdlib.version from 1.7.10 to 1.7.20 (#2163) @dependabot
+* Bump jenkins.version from 2.361.2 to 2.361.3 (#2160) @github-actions
+","Optional: add a release summary here 
+👷 Changes for plugin developers
+Support forthcoming PCT multimodule mode (#2234) @basil
+📝 Documentation updates
+Add example for matrix-auth version 3.0 (#2174) @human33
+👻 Maintenance
+Switch to renovate (#2222) @timja
+🚦 Tests
+fix typo ""avanced"" (#2167) @peterbecich
+Init 2.375 (#2164) @NotMyFault
+✍ Other changes
+Delete empty SpotBugs excludes filter (#2171) @basil
+Use HTTPS SCM URL (#2166) @basil
+📦 Dependency updates
+36 changes
+
+Update Job DSL to 1.82 (#2232) @basil
+Update dependency com.google.protobuf:protobuf-java to v3.22.2 (#2231) @renovate
+Update dependency com.amazonaws:aws-java-sdk-sns to v1.12.430 (#2230) @renovate
+Update dependency com.github.erosb:everit-json-schema to v1.14.2 (#2227) @renovate
+Update dependency com.amazonaws:aws-java-sdk-sns to v1.12.425 (#2226) @renovate
+Bump jenkins.version from 2.387 to 2.387.1 (#2225) @github-actions
+Update dependency org.apache.ivy:ivy to v2.5.1 [SECURITY] (#2223) @renovate
+build(deps-dev): Bump simple-theme-plugin from 136.v23a_15f86c53d to 146.v0e67db_a_9052e (#2217) @dependabot
+build(deps): Bump antlr4-runtime from 4.11.1 to 4.12.0 (#2219) @dependabot
+build(deps-dev): Bump external-workspace-manager from 1.2.3 to 1.3.0 (#2220) @dependabot
+build(deps): Bump aws-java-sdk-sns from 1.12.286 to 1.12.420 (#2221) @dependabot
+build(deps): Bump gson from 2.9.1 to 2.10.1 (#2216) @dependabot
+build(deps): Bump json from 20220320 to 20230227 (#2218) @dependabot
+build(deps-dev): Bump role-strategy from 555.v8d194cc85b_30 to 587.v2872c41fa_e51 (#2215) @dependabot
+build(deps): Bump httpcore from 4.4.15 to 4.4.16 (#2210) @dependabot
+build(deps): Bump protobuf-java from 3.21.7 to 3.22.0 (#2211) @dependabot
+build(deps-dev): Bump jsoup from 1.15.2 to 1.15.4 (#2212) @dependabot
+build(deps): Bump atlassian-plugins-core from 7.1.4 to 7.1.5 (#2207) @dependabot
+Init next LTS line (#2206) @NotMyFault
+Bump jenkins.version from 2.375.2 to 2.375.3 (#2205) @github-actions
+build(deps): Bump jackson.version from 2.14.0 to 2.14.2 (#2200) @dependabot
+build(deps-dev): Bump artifact-manager-s3 from 666.v6c461c3d9824 to 754.vb_5d21c758eb_3 (#2197) @dependabot
+Bump jenkins.version from 2.375.1 to 2.375.2 (#2194) @github-actions
+build(deps): Bump maven-checkstyle-plugin from 3.1.2 to 3.2.0 (#2114) @dependabot
+build(deps): Bump checkstyle from 10.3.3 to 10.5.0 (#2186) @dependabot
+build(deps-dev): Bump simple-theme-plugin from 103.va_161d09c38c7 to 136.v23a_15f86c53d (#2184) @dependabot
+build(deps-dev): Bump gitea from 1.4.3 to 1.4.5 in /integrations (#2183) @dependabot
+build(deps): Bump antlr4-runtime from 4.10.1 to 4.11.1 (#2182) @dependabot
+build(deps): Bump docker-java from 3.2.13 to 3.2.14 (#2179) @dependabot
+Bump jenkins.version from 2.375 to 2.375.1 (#2177) @github-actions
+build(deps): Bump jira from 3.7.1 to 3.8 (#2176) @dependabot
+build(deps-dev): Bump pipeline-groovy-lib from 612.v84da_9c54906d to 621.vb_44ce045b_582 (#2172) @dependabot
+build(deps): Bump plexus-utils from 3.4.2 to 3.5.0 (#2162) @dependabot
+build(deps): Bump jackson.version from 2.13.4 to 2.14.0 (#2161) @dependabot
+build(deps): Bump kotlin-stdlib.version from 1.7.10 to 1.7.20 (#2163) @dependabot
+Bump jenkins.version from 2.361.2 to 2.361.3 (#2160) @github-actions
+"
+5," Optional: add a release summary here 
+🚀 New features and improvements
+
+Replace commons-text with Jenkins plugin (#2147) @NotMyFault
+
+📝 Documentation updates
+
+Updating broken link (#2146) @rahuldimri
+Remove office hours from contributing guide (#2133) @MarkEWaite
+docs: Allow blank issues (#2107) @NotMyFault
+Remove deprecated java.level from docs (#2087) @offa
+
+👻 Maintenance
+
+[Docs] CONTRIBUTING.md Remove java 8 remarks - java 11 works (#2148) @StefanSpieker
+Removed now obsolete spotbugs exclude (#2149) @StefanSpieker
+Initiate new LTS baseline 2.361.x (#2093) @krisstern
+build: Update bom to oldest included version (#2095) @NotMyFault
+
+🚦 Tests
+
+Adding Demo for View-Job-Filters plugin (#1603) @dheerajodha
+fix: Restore broken master branch build (#2108) @NotMyFault
+
+✍ Other changes
+
+Address set-output deprecation (#2155) @NotMyFault
+ci: Build with Java 17 as well (#2096) @NotMyFault
+ci: Build with Java 11 only (#2099) @NotMyFault
+add updatecli for integrations jenkins.version (#2097) @jetersen
+
+📦 Dependency updates
+
+42 changes
+
+* build(deps-dev): Bump maven-plugin from 3.19 to 3.20 (#2158) @dependabot
+* build(deps): Bump aws-java-sdk from 1.12.246-349.v96b_b_f7eb_a_c3c to 1.12.287-357.vf82d85a_6eefd (#2157) @dependabot
+* build(deps): Bump joda-time from 2.12.0 to 2.12.1 (#2156) @dependabot
+* build(deps): Bump joda-time from 2.11.1 to 2.12.0 (#2144) @dependabot
+* build(deps): Bump mercurial from 2.16.2 to 1260.vdfb_723cdcc81 in /integrations (#2154) @dependabot
+* build(deps-dev): Bump github from 1.34.5 to 1.36.0 (#2152) @dependabot
+* build(deps-dev): Bump docker-workflow from 1.29 to 528.v7c193a_0b_e67c (#2153) @dependabot
+* build(deps-dev): Bump ec2 from 1.68 to 2.0.3 (#2143) @dependabot
+* Bump jenkins.version from 2.361.1 to 2.361.2 (#2139) @github-actions
+* build(deps): Bump protobuf-java from 3.21.4 to 3.21.7 (#2134) @dependabot
+* build(deps): Bump netty-bom from 4.1.79.Final to 4.1.81.Final (#2123) @dependabot
+* build(deps): Bump plugin-bom.version from 1580.v47b_429a_c853a to 1607.va_c1576527071 (#2119) @dependabot
+* build(deps): Bump jackson.version from 2.13.3 to 2.13.4 (#2120) @dependabot
+* build(deps-dev): Bump github-branch-source from 1677.v731f745ea_0cf to 1694.vd46793a_c4a_57 (#2118) @dependabot
+* Bump jenkins.version from 2.361 to 2.361.1 (#2117) @github-actions
+* build(deps): Bump joda-time from 2.10.14 to 2.11.1 (#2111) @dependabot
+* build(deps): Bump checkstyle from 9.3 to 10.3.3 (#2112) @dependabot
+* build(deps): Bump aws-java-sdk-sns from 1.12.276 to 1.12.286 (#2109) @dependabot
+* Bump jenkins.version from 2.346.2 to 2.346.3 (#2098) @github-actions
+* Bump plugin from 4.43.1 to 4.46 (#2092) @dependabot
+* Bump role-strategy from 552.v14cb_85499b_89 to 555.v8d194cc85b_30 (#2089) @dependabot
+* Bump error_prone_annotations from 2.14.0 to 2.15.0 (#2091) @dependabot
+* Bump aws-java-sdk-sns from 1.12.273 to 1.12.276 (#2090) @dependabot
+* Bump pipeline-groovy-lib from 598.vcd66b_a_336510 to 612.v84da_9c54906d (#2085) @dependabot
+* Bump protobuf-java from 3.21.3 to 3.21.4 (#2083) @dependabot
+* Bump aws-java-sdk-sns from 1.12.267 to 1.12.273 (#2086) @dependabot
+* Bump artifact-manager-s3 from 633.v4813787e78a_9 to 666.v6c461c3d9824 (#2084) @dependabot
+* Bump gson from 2.9.0 to 2.9.1 (#2082) @dependabot
+* Bump aws-java-sdk-sns from 1.12.267 to 1.12.272 (#2076) @dependabot
+* Bump hashicorp-vault-plugin from 351.vdb_f83a_1c6a_9d to 356.ved18810a_b_828 (#2077) @dependabot
+* Bump role-strategy from 546.ve16648865996 to 552.v14cb_85499b_89 (#2075) @dependabot
+* Bump github from 1.34.4 to 1.34.5 (#2079) @dependabot
+* Bump ldap from 2.10 to 2.11 (#2080) @dependabot
+* Bump config-file-provider from 3.10.0 to 3.11.1 (#2065) @dependabot
+* Bump github-branch-source from 1656.v77eddb_b_e95df to 1677.v731f745ea_0cf (#2073) @dependabot
+* Bump git-changelist-maven-extension from 1.3 to 1.4 (#2071) @dependabot
+* Bump role-strategy from 530.ved5445d4875a_ to 546.ve16648865996 (#2072) @dependabot
+* Bump plugin-bom.version from 1478.v81d3dc4f9a_43 to 1500.ve4d05cd32975 (#2067) @dependabot
+* Bump aws-java-sdk-sns from 1.12.262 to 1.12.267 (#2069) @dependabot
+* Bump protobuf-java from 3.21.2 to 3.21.3 (#2066) @dependabot
+* Bump artifactory from 3.16.3 to 3.17.0 (#2068) @dependabot
+* Bump pipeline-groovy-lib from 593.va_a_fc25d520e9 to 598.vcd66b_a_336510 (#2070) @dependabot
+","Optional: add a release summary here 
+🚀 New features and improvements
+Replace commons-text with Jenkins plugin (#2147) @NotMyFault
+📝 Documentation updates
+Updating broken link (#2146) @rahuldimri
+Remove office hours from contributing guide (#2133) @MarkEWaite
+docs: Allow blank issues (#2107) @NotMyFault
+Remove deprecated java.level from docs (#2087) @offa
+👻 Maintenance
+[Docs] CONTRIBUTING.md Remove java 8 remarks - java 11 works (#2148) @StefanSpieker
+Removed now obsolete spotbugs exclude (#2149) @StefanSpieker
+Initiate new LTS baseline 2.361.x (#2093) @krisstern
+build: Update bom to oldest included version (#2095) @NotMyFault
+🚦 Tests
+Adding Demo for View-Job-Filters plugin (#1603) @dheerajodha
+fix: Restore broken master branch build (#2108) @NotMyFault
+✍ Other changes
+Address set-output deprecation (#2155) @NotMyFault
+ci: Build with Java 17 as well (#2096) @NotMyFault
+ci: Build with Java 11 only (#2099) @NotMyFault
+add updatecli for integrations jenkins.version (#2097) @jetersen
+📦 Dependency updates
+42 changes
+
+build(deps-dev): Bump maven-plugin from 3.19 to 3.20 (#2158) @dependabot
+build(deps): Bump aws-java-sdk from 1.12.246-349.v96b_b_f7eb_a_c3c to 1.12.287-357.vf82d85a_6eefd (#2157) @dependabot
+build(deps): Bump joda-time from 2.12.0 to 2.12.1 (#2156) @dependabot
+build(deps): Bump joda-time from 2.11.1 to 2.12.0 (#2144) @dependabot
+build(deps): Bump mercurial from 2.16.2 to 1260.vdfb_723cdcc81 in /integrations (#2154) @dependabot
+build(deps-dev): Bump github from 1.34.5 to 1.36.0 (#2152) @dependabot
+build(deps-dev): Bump docker-workflow from 1.29 to 528.v7c193a_0b_e67c (#2153) @dependabot
+build(deps-dev): Bump ec2 from 1.68 to 2.0.3 (#2143) @dependabot
+Bump jenkins.version from 2.361.1 to 2.361.2 (#2139) @github-actions
+build(deps): Bump protobuf-java from 3.21.4 to 3.21.7 (#2134) @dependabot
+build(deps): Bump netty-bom from 4.1.79.Final to 4.1.81.Final (#2123) @dependabot
+build(deps): Bump plugin-bom.version from 1580.v47b_429a_c853a to 1607.va_c1576527071 (#2119) @dependabot
+build(deps): Bump jackson.version from 2.13.3 to 2.13.4 (#2120) @dependabot
+build(deps-dev): Bump github-branch-source from 1677.v731f745ea_0cf to 1694.vd46793a_c4a_57 (#2118) @dependabot
+Bump jenkins.version from 2.361 to 2.361.1 (#2117) @github-actions
+build(deps): Bump joda-time from 2.10.14 to 2.11.1 (#2111) @dependabot
+build(deps): Bump checkstyle from 9.3 to 10.3.3 (#2112) @dependabot
+build(deps): Bump aws-java-sdk-sns from 1.12.276 to 1.12.286 (#2109) @dependabot
+Bump jenkins.version from 2.346.2 to 2.346.3 (#2098) @github-actions
+Bump plugin from 4.43.1 to 4.46 (#2092) @dependabot
+Bump role-strategy from 552.v14cb_85499b_89 to 555.v8d194cc85b_30 (#2089) @dependabot
+Bump error_prone_annotations from 2.14.0 to 2.15.0 (#2091) @dependabot
+Bump aws-java-sdk-sns from 1.12.273 to 1.12.276 (#2090) @dependabot
+Bump pipeline-groovy-lib from 598.vcd66b_a_336510 to 612.v84da_9c54906d (#2085) @dependabot
+Bump protobuf-java from 3.21.3 to 3.21.4 (#2083) @dependabot
+Bump aws-java-sdk-sns from 1.12.267 to 1.12.273 (#2086) @dependabot
+Bump artifact-manager-s3 from 633.v4813787e78a_9 to 666.v6c461c3d9824 (#2084) @dependabot
+Bump gson from 2.9.0 to 2.9.1 (#2082) @dependabot
+Bump aws-java-sdk-sns from 1.12.267 to 1.12.272 (#2076) @dependabot
+Bump hashicorp-vault-plugin from 351.vdb_f83a_1c6a_9d to 356.ved18810a_b_828 (#2077) @dependabot
+Bump role-strategy from 546.ve16648865996 to 552.v14cb_85499b_89 (#2075) @dependabot
+Bump github from 1.34.4 to 1.34.5 (#2079) @dependabot
+Bump ldap from 2.10 to 2.11 (#2080) @dependabot
+Bump config-file-provider from 3.10.0 to 3.11.1 (#2065) @dependabot
+Bump github-branch-source from 1656.v77eddb_b_e95df to 1677.v731f745ea_0cf (#2073) @dependabot
+Bump git-changelist-maven-extension from 1.3 to 1.4 (#2071) @dependabot
+Bump role-strategy from 530.ved5445d4875a_ to 546.ve16648865996 (#2072) @dependabot
+Bump plugin-bom.version from 1478.v81d3dc4f9a_43 to 1500.ve4d05cd32975 (#2067) @dependabot
+Bump aws-java-sdk-sns from 1.12.262 to 1.12.267 (#2069) @dependabot
+Bump protobuf-java from 3.21.2 to 3.21.3 (#2066) @dependabot
+Bump artifactory from 3.16.3 to 3.17.0 (#2068) @dependabot
+Bump pipeline-groovy-lib from 593.va_a_fc25d520e9 to 598.vcd66b_a_336510 (#2070) @dependabot
+"
+6," Optional: add a release summary here 
+🚀 New features and improvements
+
+Replace commons-text with Jenkins plugin (#2147) @NotMyFault
+
+📝 Documentation updates
+
+Updating broken link (#2146) @rahuldimri
+Remove office hours from contributing guide (#2133) @MarkEWaite
+docs: Allow blank issues (#2107) @NotMyFault
+Remove deprecated java.level from docs (#2087) @offa
+
+👻 Maintenance
+
+Initiate new LTS baseline 2.361.x (#2093) @krisstern
+build: Update bom to oldest included version (#2095) @NotMyFault
+
+🚦 Tests
+
+Adding Demo for View-Job-Filters plugin (#1603) @dheerajodha
+fix: Restore broken master branch build (#2108) @NotMyFault
+
+✍ Other changes
+
+ci: Build with Java 17 as well (#2096) @NotMyFault
+ci: Build with Java 11 only (#2099) @NotMyFault
+add updatecli for integrations jenkins.version (#2097) @jetersen
+
+📦 Dependency updates
+
+35 changes
+
+* build(deps-dev): Bump ec2 from 1.68 to 2.0.3 (#2143) @dependabot
+* Bump jenkins.version from 2.361.1 to 2.361.2 (#2139) @github-actions
+* build(deps): Bump protobuf-java from 3.21.4 to 3.21.7 (#2134) @dependabot
+* build(deps): Bump netty-bom from 4.1.79.Final to 4.1.81.Final (#2123) @dependabot
+* build(deps): Bump plugin-bom.version from 1580.v47b_429a_c853a to 1607.va_c1576527071 (#2119) @dependabot
+* build(deps): Bump jackson.version from 2.13.3 to 2.13.4 (#2120) @dependabot
+* build(deps-dev): Bump github-branch-source from 1677.v731f745ea_0cf to 1694.vd46793a_c4a_57 (#2118) @dependabot
+* Bump jenkins.version from 2.361 to 2.361.1 (#2117) @github-actions
+* build(deps): Bump joda-time from 2.10.14 to 2.11.1 (#2111) @dependabot
+* build(deps): Bump checkstyle from 9.3 to 10.3.3 (#2112) @dependabot
+* build(deps): Bump aws-java-sdk-sns from 1.12.276 to 1.12.286 (#2109) @dependabot
+* Bump jenkins.version from 2.346.2 to 2.346.3 (#2098) @github-actions
+* Bump plugin from 4.43.1 to 4.46 (#2092) @dependabot
+* Bump role-strategy from 552.v14cb_85499b_89 to 555.v8d194cc85b_30 (#2089) @dependabot
+* Bump error_prone_annotations from 2.14.0 to 2.15.0 (#2091) @dependabot
+* Bump aws-java-sdk-sns from 1.12.273 to 1.12.276 (#2090) @dependabot
+* Bump pipeline-groovy-lib from 598.vcd66b_a_336510 to 612.v84da_9c54906d (#2085) @dependabot
+* Bump protobuf-java from 3.21.3 to 3.21.4 (#2083) @dependabot
+* Bump aws-java-sdk-sns from 1.12.267 to 1.12.273 (#2086) @dependabot
+* Bump artifact-manager-s3 from 633.v4813787e78a_9 to 666.v6c461c3d9824 (#2084) @dependabot
+* Bump gson from 2.9.0 to 2.9.1 (#2082) @dependabot
+* Bump aws-java-sdk-sns from 1.12.267 to 1.12.272 (#2076) @dependabot
+* Bump hashicorp-vault-plugin from 351.vdb_f83a_1c6a_9d to 356.ved18810a_b_828 (#2077) @dependabot
+* Bump role-strategy from 546.ve16648865996 to 552.v14cb_85499b_89 (#2075) @dependabot
+* Bump github from 1.34.4 to 1.34.5 (#2079) @dependabot
+* Bump ldap from 2.10 to 2.11 (#2080) @dependabot
+* Bump config-file-provider from 3.10.0 to 3.11.1 (#2065) @dependabot
+* Bump github-branch-source from 1656.v77eddb_b_e95df to 1677.v731f745ea_0cf (#2073) @dependabot
+* Bump git-changelist-maven-extension from 1.3 to 1.4 (#2071) @dependabot
+* Bump role-strategy from 530.ved5445d4875a_ to 546.ve16648865996 (#2072) @dependabot
+* Bump plugin-bom.version from 1478.v81d3dc4f9a_43 to 1500.ve4d05cd32975 (#2067) @dependabot
+* Bump aws-java-sdk-sns from 1.12.262 to 1.12.267 (#2069) @dependabot
+* Bump protobuf-java from 3.21.2 to 3.21.3 (#2066) @dependabot
+* Bump artifactory from 3.16.3 to 3.17.0 (#2068) @dependabot
+* Bump pipeline-groovy-lib from 593.va_a_fc25d520e9 to 598.vcd66b_a_336510 (#2070) @dependabot
+","Optional: add a release summary here 
+🚀 New features and improvements
+Replace commons-text with Jenkins plugin (#2147) @NotMyFault
+📝 Documentation updates
+Updating broken link (#2146) @rahuldimri
+Remove office hours from contributing guide (#2133) @MarkEWaite
+docs: Allow blank issues (#2107) @NotMyFault
+Remove deprecated java.level from docs (#2087) @offa
+👻 Maintenance
+Initiate new LTS baseline 2.361.x (#2093) @krisstern
+build: Update bom to oldest included version (#2095) @NotMyFault
+🚦 Tests
+Adding Demo for View-Job-Filters plugin (#1603) @dheerajodha
+fix: Restore broken master branch build (#2108) @NotMyFault
+✍ Other changes
+ci: Build with Java 17 as well (#2096) @NotMyFault
+ci: Build with Java 11 only (#2099) @NotMyFault
+add updatecli for integrations jenkins.version (#2097) @jetersen
+📦 Dependency updates
+35 changes
+
+build(deps-dev): Bump ec2 from 1.68 to 2.0.3 (#2143) @dependabot
+Bump jenkins.version from 2.361.1 to 2.361.2 (#2139) @github-actions
+build(deps): Bump protobuf-java from 3.21.4 to 3.21.7 (#2134) @dependabot
+build(deps): Bump netty-bom from 4.1.79.Final to 4.1.81.Final (#2123) @dependabot
+build(deps): Bump plugin-bom.version from 1580.v47b_429a_c853a to 1607.va_c1576527071 (#2119) @dependabot
+build(deps): Bump jackson.version from 2.13.3 to 2.13.4 (#2120) @dependabot
+build(deps-dev): Bump github-branch-source from 1677.v731f745ea_0cf to 1694.vd46793a_c4a_57 (#2118) @dependabot
+Bump jenkins.version from 2.361 to 2.361.1 (#2117) @github-actions
+build(deps): Bump joda-time from 2.10.14 to 2.11.1 (#2111) @dependabot
+build(deps): Bump checkstyle from 9.3 to 10.3.3 (#2112) @dependabot
+build(deps): Bump aws-java-sdk-sns from 1.12.276 to 1.12.286 (#2109) @dependabot
+Bump jenkins.version from 2.346.2 to 2.346.3 (#2098) @github-actions
+Bump plugin from 4.43.1 to 4.46 (#2092) @dependabot
+Bump role-strategy from 552.v14cb_85499b_89 to 555.v8d194cc85b_30 (#2089) @dependabot
+Bump error_prone_annotations from 2.14.0 to 2.15.0 (#2091) @dependabot
+Bump aws-java-sdk-sns from 1.12.273 to 1.12.276 (#2090) @dependabot
+Bump pipeline-groovy-lib from 598.vcd66b_a_336510 to 612.v84da_9c54906d (#2085) @dependabot
+Bump protobuf-java from 3.21.3 to 3.21.4 (#2083) @dependabot
+Bump aws-java-sdk-sns from 1.12.267 to 1.12.273 (#2086) @dependabot
+Bump artifact-manager-s3 from 633.v4813787e78a_9 to 666.v6c461c3d9824 (#2084) @dependabot
+Bump gson from 2.9.0 to 2.9.1 (#2082) @dependabot
+Bump aws-java-sdk-sns from 1.12.267 to 1.12.272 (#2076) @dependabot
+Bump hashicorp-vault-plugin from 351.vdb_f83a_1c6a_9d to 356.ved18810a_b_828 (#2077) @dependabot
+Bump role-strategy from 546.ve16648865996 to 552.v14cb_85499b_89 (#2075) @dependabot
+Bump github from 1.34.4 to 1.34.5 (#2079) @dependabot
+Bump ldap from 2.10 to 2.11 (#2080) @dependabot
+Bump config-file-provider from 3.10.0 to 3.11.1 (#2065) @dependabot
+Bump github-branch-source from 1656.v77eddb_b_e95df to 1677.v731f745ea_0cf (#2073) @dependabot
+Bump git-changelist-maven-extension from 1.3 to 1.4 (#2071) @dependabot
+Bump role-strategy from 530.ved5445d4875a_ to 546.ve16648865996 (#2072) @dependabot
+Bump plugin-bom.version from 1478.v81d3dc4f9a_43 to 1500.ve4d05cd32975 (#2067) @dependabot
+Bump aws-java-sdk-sns from 1.12.262 to 1.12.267 (#2069) @dependabot
+Bump protobuf-java from 3.21.2 to 3.21.3 (#2066) @dependabot
+Bump artifactory from 3.16.3 to 3.17.0 (#2068) @dependabot
+Bump pipeline-groovy-lib from 593.va_a_fc25d520e9 to 598.vcd66b_a_336510 (#2070) @dependabot
+"
+7," Optional: add a release summary here 
+🚀 New features and improvements
+
+Add SystemPropertyLookup resolver to resolve java system properties (#2064) @sboardwell
+","Optional: add a release summary here 
+🚀 New features and improvements
+Add SystemPropertyLookup resolver to resolve java system properties (#2064) @sboardwell"
+8," Optional: add a release summary here 
+🐛 Bug fixes
+
+Drop commons-text API plugin temporarily (#2062) @timja
+
+📦 Dependency updates
+
+44 changes
+
+* Bump aws-java-sdk-sns from 1.12.259 to 1.12.262 (#2060) @dependabot
+* Bump job-dsl from 1.80 to 1.81 (#2061) @dependabot
+* Bump plugin from 4.42 to 4.43.1 (#2058) @dependabot
+* Bump okio from 3.0.0 to 3.2.0 (#2057) @dependabot
+* Bump ldap from 2.8 to 2.10 (#2056) @dependabot
+* Bump aws-global-configuration from 1.7 to 100.v4619b_45d2dfc (#2055) @dependabot
+* Bump artifactory from 3.15.4 to 3.16.3 (#2054) @dependabot
+* Bump aws-java-sdk from 1.12.148-310.v5e3b_c2681d79 to 1.12.246-349.v96b_b_f7eb_a_c3c (#2053) @dependabot
+* Bump antlr4-runtime from 4.9.3 to 4.10.1 (#2052) @dependabot
+* Bump job-dsl from 1.79 to 1.80 (#2050) @dependabot
+* Bump maven-plugin-api from 3.8.5 to 3.8.6 (#2051) @dependabot
+* Bump role-strategy from 3.2.0 to 530.ved5445d4875a_ (#2047) @dependabot
+* Bump jira from 3.7 to 3.7.1 (#2048) @dependabot
+* Bump plugin-bom.version from 1409.v7659b_c072f18 to 1478.v81d3dc4f9a_43 (#2049) @dependabot
+* Bump aws-java-sdk-sns from 1.12.177 to 1.12.259 (#2043) @dependabot
+* Bump protobuf-java from 3.19.4 to 3.21.2 (#2044) @dependabot
+* Bump gitea from 1.4.1 to 1.4.3 (#2042) @dependabot
+* Bump docker-workflow from 1.28 to 1.29 (#2045) @dependabot
+* build: Bump jenkins.version to 2.346.2 (#2046) @NotMyFault
+* Bump pipeline-groovy-lib from 589.vb_a_b_4a_a_8c443c to 593.va_a_fc25d520e9 (#1994) @dependabot
+* Bump everit-json-schema from 1.14.0 to 1.14.1 (#1995) @dependabot
+* Bump maven-model from 3.8.4 to 3.8.6 (#2040) @dependabot
+* Bump bouncycastle-api from 2.25 to 2.26 (#2041) @dependabot
+* Bump jackson.version from 2.13.1 to 2.13.3 (#1990) @dependabot
+* Bump github-oauth from 0.37 to 0.39 (#2039) @dependabot
+* Bump okhttp from 4.9.3 to 4.10.0 (#2038) @dependabot
+* Bump logging-interceptor from 4.9.3 to 4.10.0 (#2037) @dependabot
+* Bump jsoup from 1.14.3 to 1.15.2 (#2036) @dependabot
+* Bump maven-artifact from 3.8.5 to 3.8.6 (#2034) @dependabot
+* Bump azure-keyvault from 131.v867845ef6ae9 to 136.veb1d1296db97 (#1996) @dependabot
+* Bump atlassian-plugins-core from 7.1.3 to 7.1.4 (#2033) @dependabot
+* Bump config-file-provider from 3.9.0 to 3.10.0 (#2032) @dependabot
+* Bump plexus-utils from 3.4.1 to 3.4.2 (#2031) @dependabot
+* Bump github-branch-source from 1598.v91207e9f9b_4a_ to 1656.v77eddb_b_e95df (#2030) @dependabot
+* Bump kotlin-stdlib.version from 1.6.21 to 1.7.10 (#2029) @dependabot
+* Bump joda-time from 2.10.13 to 2.10.14 (#2028) @dependabot
+* Bump plugin from 4.40 to 4.42 (#2027) @dependabot
+* Bump hashicorp-vault-plugin from 336.v182c0fbaaeb7 to 351.vdb_f83a_1c6a_9d (#2025) @dependabot
+* Bump junixsocket.version from 2.4.0 to 2.5.1 (#2026) @dependabot
+* Bump mercurial from 2.16.1 to 2.16.2 (#2024) @dependabot
+* Bump commons-text-api from 1.9-5.v7ea_44fe6061c to 1.9-9.v39a_53e2e0343 (#2023) @dependabot
+* Bump netty-bom from 4.1.74.Final to 4.1.79.Final (#2022) @dependabot
+* Bump lombok from 1.18.22 to 1.18.24 (#2021) @dependabot
+* Bump atlassian-plugins-core from 7.0.0 to 7.1.3 (#2020) @dependabot
+","Optional: add a release summary here 
+🐛 Bug fixes
+Drop commons-text API plugin temporarily (#2062) @timja
+📦 Dependency updates
+44 changes
+
+Bump aws-java-sdk-sns from 1.12.259 to 1.12.262 (#2060) @dependabot
+Bump job-dsl from 1.80 to 1.81 (#2061) @dependabot
+Bump plugin from 4.42 to 4.43.1 (#2058) @dependabot
+Bump okio from 3.0.0 to 3.2.0 (#2057) @dependabot
+Bump ldap from 2.8 to 2.10 (#2056) @dependabot
+Bump aws-global-configuration from 1.7 to 100.v4619b_45d2dfc (#2055) @dependabot
+Bump artifactory from 3.15.4 to 3.16.3 (#2054) @dependabot
+Bump aws-java-sdk from 1.12.148-310.v5e3b_c2681d79 to 1.12.246-349.v96b_b_f7eb_a_c3c (#2053) @dependabot
+Bump antlr4-runtime from 4.9.3 to 4.10.1 (#2052) @dependabot
+Bump job-dsl from 1.79 to 1.80 (#2050) @dependabot
+Bump maven-plugin-api from 3.8.5 to 3.8.6 (#2051) @dependabot
+Bump role-strategy from 3.2.0 to 530.ved5445d4875a_ (#2047) @dependabot
+Bump jira from 3.7 to 3.7.1 (#2048) @dependabot
+Bump plugin-bom.version from 1409.v7659b_c072f18 to 1478.v81d3dc4f9a_43 (#2049) @dependabot
+Bump aws-java-sdk-sns from 1.12.177 to 1.12.259 (#2043) @dependabot
+Bump protobuf-java from 3.19.4 to 3.21.2 (#2044) @dependabot
+Bump gitea from 1.4.1 to 1.4.3 (#2042) @dependabot
+Bump docker-workflow from 1.28 to 1.29 (#2045) @dependabot
+build: Bump jenkins.version to 2.346.2 (#2046) @NotMyFault
+Bump pipeline-groovy-lib from 589.vb_a_b_4a_a_8c443c to 593.va_a_fc25d520e9 (#1994) @dependabot
+Bump everit-json-schema from 1.14.0 to 1.14.1 (#1995) @dependabot
+Bump maven-model from 3.8.4 to 3.8.6 (#2040) @dependabot
+Bump bouncycastle-api from 2.25 to 2.26 (#2041) @dependabot
+Bump jackson.version from 2.13.1 to 2.13.3 (#1990) @dependabot
+Bump github-oauth from 0.37 to 0.39 (#2039) @dependabot
+Bump okhttp from 4.9.3 to 4.10.0 (#2038) @dependabot
+Bump logging-interceptor from 4.9.3 to 4.10.0 (#2037) @dependabot
+Bump jsoup from 1.14.3 to 1.15.2 (#2036) @dependabot
+Bump maven-artifact from 3.8.5 to 3.8.6 (#2034) @dependabot
+Bump azure-keyvault from 131.v867845ef6ae9 to 136.veb1d1296db97 (#1996) @dependabot
+Bump atlassian-plugins-core from 7.1.3 to 7.1.4 (#2033) @dependabot
+Bump config-file-provider from 3.9.0 to 3.10.0 (#2032) @dependabot
+Bump plexus-utils from 3.4.1 to 3.4.2 (#2031) @dependabot
+Bump github-branch-source from 1598.v91207e9f9b_4a_ to 1656.v77eddb_b_e95df (#2030) @dependabot
+Bump kotlin-stdlib.version from 1.6.21 to 1.7.10 (#2029) @dependabot
+Bump joda-time from 2.10.13 to 2.10.14 (#2028) @dependabot
+Bump plugin from 4.40 to 4.42 (#2027) @dependabot
+Bump hashicorp-vault-plugin from 336.v182c0fbaaeb7 to 351.vdb_f83a_1c6a_9d (#2025) @dependabot
+Bump junixsocket.version from 2.4.0 to 2.5.1 (#2026) @dependabot
+Bump mercurial from 2.16.1 to 2.16.2 (#2024) @dependabot
+Bump commons-text-api from 1.9-5.v7ea_44fe6061c to 1.9-9.v39a_53e2e0343 (#2023) @dependabot
+Bump netty-bom from 4.1.74.Final to 4.1.79.Final (#2022) @dependabot
+Bump lombok from 1.18.22 to 1.18.24 (#2021) @dependabot
+Bump atlassian-plugins-core from 7.0.0 to 7.1.3 (#2020) @dependabot
+"
+9," Optional: add a release summary here 
+🚀 New features and improvements
+
+Support JSON formatted secrets in SecretSourceResolver (#2018) @chriskilding
+
+📝 Documentation updates
+
+added demo for Golang Plugin (#2014) @shashwot
+","Optional: add a release summary here 
+🚀 New features and improvements
+Support JSON formatted secrets in SecretSourceResolver (#2018) @chriskilding
+📝 Documentation updates
+added demo for Golang Plugin (#2014) @shashwot"
+10," Optional: add a release summary here 
+🐛 Bug fixes
+
+Fix erroneous removal of secret prefixes in SecretSource (#2007) @chriskilding
+
+📦 Dependency updates
+
+Bump github from 1.34.2 to 1.34.4 (#2011) @dependabot
+","Optional: add a release summary here 
+🐛 Bug fixes
+Fix erroneous removal of secret prefixes in SecretSource (#2007) @chriskilding
+📦 Dependency updates
+Bump github from 1.34.2 to 1.34.4 (#2011) @dependabot"
+11," Optional: add a release summary here 
+🚀 New features and improvements
+
+Depend on commons-text-api (#1979) @sghill
+
+👷 Changes for plugin developers
+
+Update CD template to use re-useable workflow (#2008) @timja
+
+📝 Documentation updates
+
+Add SSH and TimeZone integration tests (#1912) @offa
+Demos - kubernetes - document more options (#1972) @mathieucoavoux
+JENKINS-67371 - Explicit the trust requirement for JCasC (#1954) @Pldi23
+doc: update Docker Cloud examples (#1960) @bguerin
+
+👻 Maintenance
+
+Remove unneeded fallback (#1982) @timja
+Set permissions for GitHub actions (#1964) @naveensrinivasan
+
+🚦 Tests
+
+Add log recorders demo / test (#1301) @timja
+Test against LTS 2.332.3 (#1966) @NotMyFault
+
+✍ Other changes
+
+Use Files.newInputStream() and remove unnecessary Paths.get() call (#2001) @offa
+
+📦 Dependency updates
+
+22 changes
+
+* build: Bump LTS line to point release (#2006) @NotMyFault
+* Bump job-dsl from 1.78.3 to 1.79 (#1998) @dependabot
+* Bump artifact-manager-s3 from 1.18 to 633.v4813787e78a_9 (#1987) @dependabot
+* Bump aws-credentials from 189.v3551d5642995 to 191.vcb_f183ce58b_9 (#1986) @dependabot
+* Bump github-api from 1.301-378.v9807bd746da5 to 1.303-400.v35c2d8258028 (#1989) @dependabot
+* Bump plugin-bom.version from 1289.v5c4b_1c43511b_ to 1409.v7659b_c072f18 (#1988) @dependabot
+* Bump external-workspace-manager from 1.2.2 to 1.2.3 (#1985) @dependabot
+* Bump maven-artifact from 3.8.4 to 3.8.5 (#1936) @dependabot
+* Bump jackson.version from 2.13.1 to 2.13.2 (#1941) @dependabot
+* Bump maven-plugin-api from 3.8.4 to 3.8.5 (#1934) @dependabot
+* Bump docker-plugin from 1.2.8 to 1.2.9 (#1965) @dependabot
+* Bump crowd2 from 2.0.2 to 3.1.2 (#1971) @dependabot
+* Bump maven-plugin from 3.17 to 3.19 (#1983) @dependabot
+* Bump json from 20211205 to 20220320 (#1984) @dependabot
+* Bump error_prone_annotations from 2.11.0 to 2.14.0 (#1974) @dependabot
+* Bump mercurial from 2.16 to 2.16.1 in /integrations (#1981) @dependabot
+* [JENKINS-57023](https://issues.jenkins.io/browse/JENKINS-57023) - Switch dep from `workflow-cps-global-lib` to `pipeline-groovy-lib` (#1973) @jglick
+* Initiate next LTS line 2.346.x (#1970) @NotMyFault
+* Bump jenkins-infra/interesting-category-action from 1.0.0 to 1.1.0 (#1967) @dependabot
+* Bump jenkins-infra/jenkins-maven-cd-action from 1.2.0 to 1.3.0 (#1968) @dependabot
+* Bump actions/checkout from 3.0.1 to 3.0.2 (#1963) @dependabot
+* Bump kotlin-stdlib.version from 1.6.10 to 1.6.21 (#1958) @dependabot
+","Optional: add a release summary here 
+🚀 New features and improvements
+Depend on commons-text-api (#1979) @sghill
+👷 Changes for plugin developers
+Update CD template to use re-useable workflow (#2008) @timja
+📝 Documentation updates
+Add SSH and TimeZone integration tests (#1912) @offa
+Demos - kubernetes - document more options (#1972) @mathieucoavoux
+JENKINS-67371 - Explicit the trust requirement for JCasC (#1954) @Pldi23
+doc: update Docker Cloud examples (#1960) @bguerin
+👻 Maintenance
+Remove unneeded fallback (#1982) @timja
+Set permissions for GitHub actions (#1964) @naveensrinivasan
+🚦 Tests
+Add log recorders demo / test (#1301) @timja
+Test against LTS 2.332.3 (#1966) @NotMyFault
+✍ Other changes
+Use Files.newInputStream() and remove unnecessary Paths.get() call (#2001) @offa
+📦 Dependency updates
+22 changes
+
+build: Bump LTS line to point release (#2006) @NotMyFault
+Bump job-dsl from 1.78.3 to 1.79 (#1998) @dependabot
+Bump artifact-manager-s3 from 1.18 to 633.v4813787e78a_9 (#1987) @dependabot
+Bump aws-credentials from 189.v3551d5642995 to 191.vcb_f183ce58b_9 (#1986) @dependabot
+Bump github-api from 1.301-378.v9807bd746da5 to 1.303-400.v35c2d8258028 (#1989) @dependabot
+Bump plugin-bom.version from 1289.v5c4b_1c43511b_ to 1409.v7659b_c072f18 (#1988) @dependabot
+Bump external-workspace-manager from 1.2.2 to 1.2.3 (#1985) @dependabot
+Bump maven-artifact from 3.8.4 to 3.8.5 (#1936) @dependabot
+Bump jackson.version from 2.13.1 to 2.13.2 (#1941) @dependabot
+Bump maven-plugin-api from 3.8.4 to 3.8.5 (#1934) @dependabot
+Bump docker-plugin from 1.2.8 to 1.2.9 (#1965) @dependabot
+Bump crowd2 from 2.0.2 to 3.1.2 (#1971) @dependabot
+Bump maven-plugin from 3.17 to 3.19 (#1983) @dependabot
+Bump json from 20211205 to 20220320 (#1984) @dependabot
+Bump error_prone_annotations from 2.11.0 to 2.14.0 (#1974) @dependabot
+Bump mercurial from 2.16 to 2.16.1 in /integrations (#1981) @dependabot
+JENKINS-57023 - Switch dep from module to module (#1973) @jglick
+Initiate next LTS line 2.346.x (#1970) @NotMyFault
+Bump jenkins-infra/interesting-category-action from 1.0.0 to 1.1.0 (#1967) @dependabot
+Bump jenkins-infra/jenkins-maven-cd-action from 1.2.0 to 1.3.0 (#1968) @dependabot
+Bump actions/checkout from 3.0.1 to 3.0.2 (#1963) @dependabot
+Bump kotlin-stdlib.version from 1.6.10 to 1.6.21 (#1958) @dependabot
+"
+12," Optional: add a release summary here 
+👷 Changes for plugin developers
+
+Update plugin parent POM and BOM (#1955) @basil
+
+📝 Documentation updates
+
+Update Jenkins Chart Custom Values (#1916) @OmarCherdal1997
+
+👻 Maintenance
+
+add developer label (#1956) @jetersen
+Test with latest LTS 2.332.1 (#1929) @cathychan
+Remove javaLevel (#1931) @basil
+
+📦 Dependency updates
+
+Bump actions/checkout from 3.0.0 to 3.0.1 (#1952) @dependabot
+Bump actions/checkout from 2.4.0 to 3.0.0 (#1947) @dependabot
+Bump codecov/codecov-action from 2 to 3 (#1948) @dependabot
+Bump jenkins.version to 2.332.2 (#1944) @imonteroperez
+Bump github-branch-source from 2.11.4 to 1598.v91207e9f9b_4a_ (#1938) @dependabot
+Bump plugin-bom.version from 1155.v77b_fd92a_26fc to 1198.v387c834fca_1a_ (#1933) @dependabot
+Bump plugin from 4.35 to 4.37 (#1921) @dependabot
+Bump actions/setup-java from 2.5.0 to 3 (#1923) @dependabot
+Bump ec2 from 1.66 to 1.68 (#1925) @dependabot
+Bump aws-java-sdk-sns from 1.12.162 to 1.12.177 (#1932) @dependabot
+","Optional: add a release summary here 
+👷 Changes for plugin developers
+Update plugin parent POM and BOM (#1955) @basil
+📝 Documentation updates
+Update Jenkins Chart Custom Values (#1916) @OmarCherdal1997
+👻 Maintenance
+add developer label (#1956) @jetersen
+Test with latest LTS 2.332.1 (#1929) @cathychan
+Remove javaLevel (#1931) @basil
+📦 Dependency updates
+Bump actions/checkout from 3.0.0 to 3.0.1 (#1952) @dependabot
+Bump actions/checkout from 2.4.0 to 3.0.0 (#1947) @dependabot
+Bump codecov/codecov-action from 2 to 3 (#1948) @dependabot
+Bump jenkins.version to 2.332.2 (#1944) @imonteroperez
+Bump github-branch-source from 2.11.4 to 1598.v91207e9f9b_4a_ (#1938) @dependabot
+Bump plugin-bom.version from 1155.v77b_fd92a_26fc to 1198.v387c834fca_1a_ (#1933) @dependabot
+Bump plugin from 4.35 to 4.37 (#1921) @dependabot
+Bump actions/setup-java from 2.5.0 to 3 (#1923) @dependabot
+Bump ec2 from 1.66 to 1.68 (#1925) @dependabot
+Bump aws-java-sdk-sns from 1.12.162 to 1.12.177 (#1932) @dependabot"
+13," Optional: add a release summary here 
+🐛 Bug fixes
+
+Override merge improvement (#1917) @jonesbusy
+","Optional: add a release summary here 
+🐛 Bug fixes
+Override merge improvement (#1917) @jonesbusy"
+14," Optional: add a release summary here 
+
+Test with 2.332.1 (#1890) @cathychan
+
+🐛 Bug fixes
+
+Don't increment value outside of range when merging files (#1904) @srz-zumix
+
+📦 Dependency updates
+
+Bump docker-java from 3.2.12 to 3.2.13 (#1911) @dependabot
+Bump plugin-bom.version from 1148.v7261f385f859 to 1155.v77b_fd92a_26fc (#1910) @dependabot
+Bump ldap from 2.7 to 2.8 (#1905) @dependabot
+Bump plugin from 4.33 to 4.35 (#1908) @dependabot
+Bump github from 1.34.1 to 1.34.2 (#1906) @dependabot
+Bump jira from 3.6 to 3.7 (#1907) @dependabot
+Bump aws-java-sdk-sns from 1.12.153 to 1.12.162 (#1909) @dependabot
+Bump atlassian-plugins-core from 7.0.0-m03 to 7.0.0 (#1902) @dependabot
+Bump json-smart from 2.4.7 to 2.4.8 (#1897) @dependabot
+Bump netty-bom from 4.1.73.Final to 4.1.74.Final (#1901) @dependabot
+Bump simple-theme-plugin from 0.7 to 103.va_161d09c38c7 (#1900) @dependabot
+Bump gson from 2.8.9 to 2.9.0 (#1891) @dependabot
+Bump aws-credentials from 1.33 to 189.v3551d5642995 (#1892) @dependabot
+Bump maven-plugin from 3.16 to 3.17 (#1894) @dependabot
+Update jenkins.version to 2.319.3 LTS (#1889) @imonteroperez
+Bump artifactory from 3.13.2 to 3.15.4 (#1886) @dependabot
+Bump checkstyle from 9.0 to 9.3 (#1888) @dependabot
+Bump nodejs from 1.4.0 to 1.5.1 (#1887) @dependabot
+Bump atlassian-plugins-core from 4.0.0-m029 to 7.0.0-m03 (#1881) @dependabot
+Bump logging-interceptor from 4.9.2 to 4.9.3 (#1882) @dependabot
+Bump docker-workflow from 1.26 to 1.28 (#1883) @dependabot
+Bump mstestrunner from 1.3.0 to 1.5.0 (#1884) @dependabot
+Bump github-oauth from 0.34 to 0.37 (#1885) @dependabot
+Bump maven-plugin from 3.13 to 3.16 (#1873) @dependabot
+Bump aws-credentials from 1.32 to 1.33 (#1877) @dependabot
+Bump netty-bom from 4.1.72.Final to 4.1.73.Final (#1880) @dependabot
+Bump okhttp from 4.9.2 to 4.9.3 (#1879) @dependabot
+Bump joda-time from 2.10.12 to 2.10.13 (#1878) @dependabot
+Bump github-api from 1.222 to 1.301-378.v9807bd746da5 (#1876) @dependabot
+Bump sonar from 2.13.1 to 2.14 (#1871) @dependabot
+Bump aws-java-sdk-sns from 1.12.89 to 1.12.153 (#1875) @dependabot
+Bump httpasyncclient from 4.1.4 to 4.1.5 (#1874) @dependabot
+Bump config-file-provider from 3.8.1 to 3.9.0 (#1870) @dependabot
+Bump maven-model from 3.8.2 to 3.8.4 (#1869) @dependabot
+Bump annotations from 22.0.0 to 23.0.0 (#1865) @dependabot
+Bump declarative-pipeline.version from 1.9.3 to 2.2064.v5eef7d0982b_e (#1860) @dependabot
+Bump maven-artifact from 3.8.3 to 3.8.4 (#1866) @dependabot
+Bump docker-commons from 1.17 to 1.19 (#1867) @dependabot
+Bump lombok from 1.18.20 to 1.18.22 (#1868) @dependabot
+Bump azure-keyvault from 123.v1aba71c2d365 to 131.v867845ef6ae9 (#1787) @dependabot
+Bump plugin-bom.version from 1117.v62a_f6a_01de98 to 1148.v7261f385f859 (#1864) @dependabot
+Bump symbol-annotation from 1.21 to 1.23 (#1859) @dependabot
+Bump httpcore from 4.4.14 to 4.4.15 (#1861) @dependabot
+Bump protobuf-java from 3.18.2 to 3.19.4 (#1862) @dependabot
+Bump active-directory from 2.25 to 2.25.1 (#1863) @dependabot
+Bump mercurial from 2.15 to 2.16 (#1858) @dependabot
+Bump aws-java-sdk from 1.12.101-300.vc09c7be9cb57 to 1.12.148-310.v5e3b_c2681d79 (#1852) @dependabot
+Bump matrix-auth from 2.6.8 to 3.0.1 (#1853) @dependabot
+Bump error_prone_annotations from 2.10.0 to 2.11.0 (#1854) @dependabot
+Bump job-dsl from 1.77 to 1.78.3 (#1856) @dependabot
+Bump gson from 2.8.8 to 2.8.9 (#1857) @dependabot
+Bump kotlin-stdlib.version from 1.5.31 to 1.6.10 (#1855) @dependabot
+Bump maven-plugin-api from 3.8.1 to 3.8.4 (#1795) @dependabot
+Bump declarative-pipeline.version from 1.9.1 to 1.9.3 (#1803) @dependabot
+Bump kubernetes from 1.30.4 to 1.31.3 (#1834) @dependabot
+Bump ec2 from 1.65 to 1.66 (#1844) @dependabot
+Bump github-branch-source from 2.11.2 to 2.11.4 (#1842) @dependabot
+Bump gitlab-plugin from 1.5.20 to 1.5.28 (#1851) @dependabot
+Bump artifact-manager-s3 from 1.16 to 1.18 (#1818) @dependabot
+
+📝 Documentation updates
+
+doc: add examples for Maven configuration (#1850) @bguerin
+doc: rewrite JDK installation example using AdoptOpenJDK installer (#1849) @bguerin
+update badges (#1848) @jetersen
+docs: examples for pipeline-maven plugin JENKINS-65001 - (#1847) @bguerin
+
+👻 Maintenance
+
+Replace deprecated APIs (#1913) @offa
+Limit concurrency on workflow (#1843) @jetersen
+","Optional: add a release summary here 
+Test with 2.332.1 (#1890) @cathychan
+🐛 Bug fixes
+Don't increment value outside of range when merging files (#1904) @srz-zumix
+📦 Dependency updates
+Bump docker-java from 3.2.12 to 3.2.13 (#1911) @dependabot
+Bump plugin-bom.version from 1148.v7261f385f859 to 1155.v77b_fd92a_26fc (#1910) @dependabot
+Bump ldap from 2.7 to 2.8 (#1905) @dependabot
+Bump plugin from 4.33 to 4.35 (#1908) @dependabot
+Bump github from 1.34.1 to 1.34.2 (#1906) @dependabot
+Bump jira from 3.6 to 3.7 (#1907) @dependabot
+Bump aws-java-sdk-sns from 1.12.153 to 1.12.162 (#1909) @dependabot
+Bump atlassian-plugins-core from 7.0.0-m03 to 7.0.0 (#1902) @dependabot
+Bump json-smart from 2.4.7 to 2.4.8 (#1897) @dependabot
+Bump netty-bom from 4.1.73.Final to 4.1.74.Final (#1901) @dependabot
+Bump simple-theme-plugin from 0.7 to 103.va_161d09c38c7 (#1900) @dependabot
+Bump gson from 2.8.9 to 2.9.0 (#1891) @dependabot
+Bump aws-credentials from 1.33 to 189.v3551d5642995 (#1892) @dependabot
+Bump maven-plugin from 3.16 to 3.17 (#1894) @dependabot
+Update jenkins.version to 2.319.3 LTS (#1889) @imonteroperez
+Bump artifactory from 3.13.2 to 3.15.4 (#1886) @dependabot
+Bump checkstyle from 9.0 to 9.3 (#1888) @dependabot
+Bump nodejs from 1.4.0 to 1.5.1 (#1887) @dependabot
+Bump atlassian-plugins-core from 4.0.0-m029 to 7.0.0-m03 (#1881) @dependabot
+Bump logging-interceptor from 4.9.2 to 4.9.3 (#1882) @dependabot
+Bump docker-workflow from 1.26 to 1.28 (#1883) @dependabot
+Bump mstestrunner from 1.3.0 to 1.5.0 (#1884) @dependabot
+Bump github-oauth from 0.34 to 0.37 (#1885) @dependabot
+Bump maven-plugin from 3.13 to 3.16 (#1873) @dependabot
+Bump aws-credentials from 1.32 to 1.33 (#1877) @dependabot
+Bump netty-bom from 4.1.72.Final to 4.1.73.Final (#1880) @dependabot
+Bump okhttp from 4.9.2 to 4.9.3 (#1879) @dependabot
+Bump joda-time from 2.10.12 to 2.10.13 (#1878) @dependabot
+Bump github-api from 1.222 to 1.301-378.v9807bd746da5 (#1876) @dependabot
+Bump sonar from 2.13.1 to 2.14 (#1871) @dependabot
+Bump aws-java-sdk-sns from 1.12.89 to 1.12.153 (#1875) @dependabot
+Bump httpasyncclient from 4.1.4 to 4.1.5 (#1874) @dependabot
+Bump config-file-provider from 3.8.1 to 3.9.0 (#1870) @dependabot
+Bump maven-model from 3.8.2 to 3.8.4 (#1869) @dependabot
+Bump annotations from 22.0.0 to 23.0.0 (#1865) @dependabot
+Bump declarative-pipeline.version from 1.9.3 to 2.2064.v5eef7d0982b_e (#1860) @dependabot
+Bump maven-artifact from 3.8.3 to 3.8.4 (#1866) @dependabot
+Bump docker-commons from 1.17 to 1.19 (#1867) @dependabot
+Bump lombok from 1.18.20 to 1.18.22 (#1868) @dependabot
+Bump azure-keyvault from 123.v1aba71c2d365 to 131.v867845ef6ae9 (#1787) @dependabot
+Bump plugin-bom.version from 1117.v62a_f6a_01de98 to 1148.v7261f385f859 (#1864) @dependabot
+Bump symbol-annotation from 1.21 to 1.23 (#1859) @dependabot
+Bump httpcore from 4.4.14 to 4.4.15 (#1861) @dependabot
+Bump protobuf-java from 3.18.2 to 3.19.4 (#1862) @dependabot
+Bump active-directory from 2.25 to 2.25.1 (#1863) @dependabot
+Bump mercurial from 2.15 to 2.16 (#1858) @dependabot
+Bump aws-java-sdk from 1.12.101-300.vc09c7be9cb57 to 1.12.148-310.v5e3b_c2681d79 (#1852) @dependabot
+Bump matrix-auth from 2.6.8 to 3.0.1 (#1853) @dependabot
+Bump error_prone_annotations from 2.10.0 to 2.11.0 (#1854) @dependabot
+Bump job-dsl from 1.77 to 1.78.3 (#1856) @dependabot
+Bump gson from 2.8.8 to 2.8.9 (#1857) @dependabot
+Bump kotlin-stdlib.version from 1.5.31 to 1.6.10 (#1855) @dependabot
+Bump maven-plugin-api from 3.8.1 to 3.8.4 (#1795) @dependabot
+Bump declarative-pipeline.version from 1.9.1 to 1.9.3 (#1803) @dependabot
+Bump kubernetes from 1.30.4 to 1.31.3 (#1834) @dependabot
+Bump ec2 from 1.65 to 1.66 (#1844) @dependabot
+Bump github-branch-source from 2.11.2 to 2.11.4 (#1842) @dependabot
+Bump gitlab-plugin from 1.5.20 to 1.5.28 (#1851) @dependabot
+Bump artifact-manager-s3 from 1.16 to 1.18 (#1818) @dependabot
+📝 Documentation updates
+doc: add examples for Maven configuration (#1850) @bguerin
+doc: rewrite JDK installation example using AdoptOpenJDK installer (#1849) @bguerin
+update badges (#1848) @jetersen
+docs: examples for pipeline-maven plugin JENKINS-65001 - (#1847) @bguerin
+👻 Maintenance
+Replace deprecated APIs (#1913) @offa
+Limit concurrency on workflow (#1843) @jetersen"
+15," Optional: add a release summary here 
+👻  Automatic releases are now enabled on merge to master
+This comes with a new version number format, see https://www.jenkins.io/jep/229
+🚀 New features and improvements
+
+Allow configuring CASC Reload Token with environment variable (#1841) @Angelin01
+
+📦 Dependency updates
+
+Bump artifact-manager-s3 from 1.16 to 1.18 (#1818) @dependabot
+Bump protobuf-java from 3.18.1 to 3.18.2 in /integrations (#1824) @dependabot
+Bump netty-bom from 4.1.69.Final to 4.1.72.Final (#1810) @dependabot
+
+📝 Documentation updates
+
+Update documentation for Artifactory Demo (#1813) @lusee88
+Add Gitea demo configuration for jobs (#1791) @justusbunsi
+
+👻 Maintenance
+
+Limit concurrency on workflow (#1843) @jetersen
+Enable CD (#1840) @timja
+Convert to issue template (#1822) @timja
+Fix issues on switch branches due to jpi files (#1816) @imonteroperez
+remove codacy (#1814) @jetersen
+Modernize GH Action CI (#1812) @offa
+Integrate security fix from 1.55.1 (#1831) @Wadeck
+","Optional: add a release summary here 
+👻  Automatic releases are now enabled on merge to master
+This comes with a new version number format, see link
+🚀 New features and improvements
+Allow configuring CASC Reload Token with environment variable (#1841) @Angelin01
+📦 Dependency updates
+Bump artifact-manager-s3 from 1.16 to 1.18 (#1818) @dependabot
+Bump protobuf-java from 3.18.1 to 3.18.2 in /integrations (#1824) @dependabot
+Bump netty-bom from 4.1.69.Final to 4.1.72.Final (#1810) @dependabot
+📝 Documentation updates
+Update documentation for Artifactory Demo (#1813) @lusee88
+Add Gitea demo configuration for jobs (#1791) @justusbunsi
+👻 Maintenance
+Limit concurrency on workflow (#1843) @jetersen
+Enable CD (#1840) @timja
+Convert to issue template (#1822) @timja
+Fix issues on switch branches due to jpi files (#1816) @imonteroperez
+remove codacy (#1814) @jetersen
+Modernize GH Action CI (#1812) @offa
+Integrate security fix from 1.55.1 (#1831) @Wadeck"
+16," Optional: add a release summary here 
+🐛 Bug fixes
+
+Prepare sunset of superseded PNG icons from core (#1802) @NotMyFault
+
+📦 Dependency updates
+
+Test with latest LTS 2.319.1 (#1799) @cathychan
+Bump okio from 2.10.0 to 3.0.0 (#1804) @dependabot
+Bump hashicorp-vault-plugin from 3.0.0 to 336.v182c0fbaaeb7 (#1800) @dependabot
+Bump artifact-manager-s3 from 1.15 to 1.16 (#1777) @dependabot
+Bump maven-artifact from 3.8.2 to 3.8.3 (#1779) @dependabot
+Bump aws-global-configuration from 1.6 to 1.7 (#1778) @dependabot
+Bump aws-java-sdk from 1.11.995 to 1.12.101-300.vc09c7be9cb57 (#1783) @dependabot
+Bump protobuf-java from 3.18.0 to 3.18.1 (#1775) @dependabot
+Bump ec2 from 1.64 to 1.65 (#1776) @dependabot
+Bump netty-bom from 4.1.67.Final to 4.1.69.Final (#1764) @dependabot
+Bump joda-time from 2.10.11 to 2.10.12 (#1760) @dependabot
+Bump plugin from 4.28 to 4.29 (#1774) @dependabot
+Bump aws-credentials from 1.30 to 1.32 (#1773) @dependabot
+Bump kubernetes from 1.30.1 to 1.30.4 (#1771) @dependabot
+Bump okhttp from 4.9.1 to 4.9.2 (#1770) @dependabot
+Bump everit-json-schema from 1.13.0 to 1.14.0 (#1769) @dependabot
+Bump aws-java-sdk-sns from 1.12.75 to 1.12.89 (#1767) @dependabot
+Bump plugin from 4.25 to 4.28 (#1758) @dependabot
+Integration test with Jenkins 2.303.2 (#1756) @bmunozm
+
+📝 Documentation updates
+
+Add a note on reloading from declarative pipelines #1227 (#1675) @fugkco
+
+👻 Maintenance
+
+Test with baseline of next LTS release (#1788) @cathychan
+","Optional: add a release summary here 
+🐛 Bug fixes
+Prepare sunset of superseded PNG icons from core (#1802) @NotMyFault
+📦 Dependency updates
+Test with latest LTS 2.319.1 (#1799) @cathychan
+Bump okio from 2.10.0 to 3.0.0 (#1804) @dependabot
+Bump hashicorp-vault-plugin from 3.0.0 to 336.v182c0fbaaeb7 (#1800) @dependabot
+Bump artifact-manager-s3 from 1.15 to 1.16 (#1777) @dependabot
+Bump maven-artifact from 3.8.2 to 3.8.3 (#1779) @dependabot
+Bump aws-global-configuration from 1.6 to 1.7 (#1778) @dependabot
+Bump aws-java-sdk from 1.11.995 to 1.12.101-300.vc09c7be9cb57 (#1783) @dependabot
+Bump protobuf-java from 3.18.0 to 3.18.1 (#1775) @dependabot
+Bump ec2 from 1.64 to 1.65 (#1776) @dependabot
+Bump netty-bom from 4.1.67.Final to 4.1.69.Final (#1764) @dependabot
+Bump joda-time from 2.10.11 to 2.10.12 (#1760) @dependabot
+Bump plugin from 4.28 to 4.29 (#1774) @dependabot
+Bump aws-credentials from 1.30 to 1.32 (#1773) @dependabot
+Bump kubernetes from 1.30.1 to 1.30.4 (#1771) @dependabot
+Bump okhttp from 4.9.1 to 4.9.2 (#1770) @dependabot
+Bump everit-json-schema from 1.13.0 to 1.14.0 (#1769) @dependabot
+Bump aws-java-sdk-sns from 1.12.75 to 1.12.89 (#1767) @dependabot
+Bump plugin from 4.25 to 4.28 (#1758) @dependabot
+Integration test with Jenkins 2.303.2 (#1756) @bmunozm
+📝 Documentation updates
+Add a note on reloading from declarative pipelines #1227 (#1675) @fugkco
+👻 Maintenance
+Test with baseline of next LTS release (#1788) @cathychan"
+17," Optional: add a release summary here 
+🚀 New features and improvements
+
+Stop hiding credentials configuration category (#1752) @timja
+
+📦 Dependency updates
+
+Bump maven-plugin from 3.12 to 3.13 (#1751) @dependabot
+Bump artifactory from 3.13.1 to 3.13.2 (#1749) @dependabot
+Bump active-directory from 2.24 to 2.25 (#1748) @dependabot
+Bump github-oauth from 0.29 to 0.34 (#1747) @dependabot
+Bump joda-time from 2.10.10 to 2.10.11 (#1746) @dependabot
+Bump kotlin-stdlib.version from 1.5.30 to 1.5.31 (#1740) @dependabot
+Bump aws-java-sdk-sns from 1.12.70 to 1.12.75 (#1744) @dependabot
+Bump bouncycastle-api from 2.24 to 2.25 (#1743) @dependabot
+Bump ec2 from 1.63 to 1.64 (#1742) @dependabot
+Bump aws-java-sdk-sns from 1.12.66 to 1.12.70 (#1735) @dependabot
+Bump docker-java from 3.2.11 to 3.2.12 (#1736) @dependabot
+Bump protobuf-java from 3.17.3 to 3.18.0 (#1737) @dependabot
+","Optional: add a release summary here 
+🚀 New features and improvements
+Stop hiding credentials configuration category (#1752) @timja
+📦 Dependency updates
+Bump maven-plugin from 3.12 to 3.13 (#1751) @dependabot
+Bump artifactory from 3.13.1 to 3.13.2 (#1749) @dependabot
+Bump active-directory from 2.24 to 2.25 (#1748) @dependabot
+Bump github-oauth from 0.29 to 0.34 (#1747) @dependabot
+Bump joda-time from 2.10.10 to 2.10.11 (#1746) @dependabot
+Bump kotlin-stdlib.version from 1.5.30 to 1.5.31 (#1740) @dependabot
+Bump aws-java-sdk-sns from 1.12.70 to 1.12.75 (#1744) @dependabot
+Bump bouncycastle-api from 2.24 to 2.25 (#1743) @dependabot
+Bump ec2 from 1.63 to 1.64 (#1742) @dependabot
+Bump aws-java-sdk-sns from 1.12.66 to 1.12.70 (#1735) @dependabot
+Bump docker-java from 3.2.11 to 3.2.12 (#1736) @dependabot
+Bump protobuf-java from 3.17.3 to 3.18.0 (#1737) @dependabot"
+18," Optional: add a release summary here 
+
+confirm non issue of 1646 (#1705) @jetersen
+
+🚀 New features and improvements
+
+Add a merge strategy extension point for the YAML config (#1218) @LinuxSuRen
+
+📦 Dependency updates
+
+Bump plugin-bom.version from 937.v51fde92016ed to 950.v396cb834de1e (#1733) @dependabot
+Bump jira from 3.5 to 3.6 (#1730) @dependabot
+Bump plugin from 4.24 to 4.25 (#1731) @dependabot
+Bump aws-java-sdk-sns from 1.12.62 to 1.12.66 (#1729) @dependabot
+Bump artifactory from 3.13.0 to 3.13.1 (#1727) @dependabot
+Bump github from 1.33.1 to 1.34.1 (#1722) @dependabot
+Bump bouncycastle-api from 2.23 to 2.24 (#1717) @dependabot
+Bump checkstyle from 8.39 to 9.0 (#1719) @dependabot
+Bump maven-artifact from 3.8.1 to 3.8.2 (#1718) @dependabot
+Bump aws-credentials from 1.29 to 1.30 (#1716) @dependabot
+Bump aws-java-sdk-sns from 1.12.58 to 1.12.62 (#1721) @dependabot
+Bump aws-java-sdk-sns from 1.11.995 to 1.12.58 (#1714) @dependabot
+Bump bouncycastle-api from 2.22 to 2.23 (#1715) @dependabot
+Bump error_prone_annotations from 2.8.1 to 2.9.0 (#1713) @dependabot
+Bump annotations from 15.0 to 22.0.0 (#1709) @dependabot
+Bump plexus-utils from 3.3.0 to 3.4.1 (#1710) @dependabot
+Bump external-workspace-manager from 1.2.0 to 1.2.2 (#1712) @dependabot
+Bump protobuf-java from 3.13.0 to 3.17.3 (#1711) @dependabot
+Bump kotlin-stdlib.version from 1.5.21 to 1.5.30 (#1707) @dependabot
+Bump github-branch-source from 2.5.7 to 2.11.2 (#1708) @dependabot
+Test JCasC against 2.303.1 (#1702) @basil
+Bump jsoup from 1.13.1 to 1.14.2 (#1700) @dependabot
+Bump jsoup from 1.13.1 to 1.14.2 in /integrations (#1699) @dependabot
+Bump gson from 2.8.6 to 2.8.8 (#1698) @dependabot
+Bump vavr from 0.10.3 to 0.10.4 (#1696) @dependabot
+Bump gitlab-plugin from 1.5.13 to 1.5.20 (#1697) @dependabot
+Bump netty-bom from 4.1.66.Final to 4.1.67.Final (#1693) @dependabot
+Bump kotlin-stdlib.version from 1.4.20 to 1.5.21 (#1690) @dependabot
+Bump artifactory from 3.11.2 to 3.13.0 (#1692) @dependabot
+Bump active-directory from 2.23 to 2.24 (#1691) @dependabot
+Bump error_prone_annotations from 2.4.0 to 2.8.1 (#1677) @dependabot
+
+👻 Maintenance
+
+Code improvements (#1728) @offa
+","Optional: add a release summary here 
+confirm non issue of 1646 (#1705) @jetersen
+🚀 New features and improvements
+Add a merge strategy extension point for the YAML config (#1218) @LinuxSuRen
+📦 Dependency updates
+Bump plugin-bom.version from 937.v51fde92016ed to 950.v396cb834de1e (#1733) @dependabot
+Bump jira from 3.5 to 3.6 (#1730) @dependabot
+Bump plugin from 4.24 to 4.25 (#1731) @dependabot
+Bump aws-java-sdk-sns from 1.12.62 to 1.12.66 (#1729) @dependabot
+Bump artifactory from 3.13.0 to 3.13.1 (#1727) @dependabot
+Bump github from 1.33.1 to 1.34.1 (#1722) @dependabot
+Bump bouncycastle-api from 2.23 to 2.24 (#1717) @dependabot
+Bump checkstyle from 8.39 to 9.0 (#1719) @dependabot
+Bump maven-artifact from 3.8.1 to 3.8.2 (#1718) @dependabot
+Bump aws-credentials from 1.29 to 1.30 (#1716) @dependabot
+Bump aws-java-sdk-sns from 1.12.58 to 1.12.62 (#1721) @dependabot
+Bump aws-java-sdk-sns from 1.11.995 to 1.12.58 (#1714) @dependabot
+Bump bouncycastle-api from 2.22 to 2.23 (#1715) @dependabot
+Bump error_prone_annotations from 2.8.1 to 2.9.0 (#1713) @dependabot
+Bump annotations from 15.0 to 22.0.0 (#1709) @dependabot
+Bump plexus-utils from 3.3.0 to 3.4.1 (#1710) @dependabot
+Bump external-workspace-manager from 1.2.0 to 1.2.2 (#1712) @dependabot
+Bump protobuf-java from 3.13.0 to 3.17.3 (#1711) @dependabot
+Bump kotlin-stdlib.version from 1.5.21 to 1.5.30 (#1707) @dependabot
+Bump github-branch-source from 2.5.7 to 2.11.2 (#1708) @dependabot
+Test JCasC against 2.303.1 (#1702) @basil
+Bump jsoup from 1.13.1 to 1.14.2 (#1700) @dependabot
+Bump jsoup from 1.13.1 to 1.14.2 in /integrations (#1699) @dependabot
+Bump gson from 2.8.6 to 2.8.8 (#1698) @dependabot
+Bump vavr from 0.10.3 to 0.10.4 (#1696) @dependabot
+Bump gitlab-plugin from 1.5.13 to 1.5.20 (#1697) @dependabot
+Bump netty-bom from 4.1.66.Final to 4.1.67.Final (#1693) @dependabot
+Bump kotlin-stdlib.version from 1.4.20 to 1.5.21 (#1690) @dependabot
+Bump artifactory from 3.11.2 to 3.13.0 (#1692) @dependabot
+Bump active-directory from 2.23 to 2.24 (#1691) @dependabot
+Bump error_prone_annotations from 2.4.0 to 2.8.1 (#1677) @dependabot
+👻 Maintenance
+Code improvements (#1728) @offa"
+19," Optional: add a release summary here 
+🚀 New features and improvements
+
+Allow reloading configuration with Overall/Manage permission (#1653) @quilicicf
+
+📦 Dependency updates
+
+Bump config-file-provider from 3.7.0 to 3.8.1 (#1680) @dependabot
+Bump bouncycastle-api from 2.21 to 2.22 (#1684) @dependabot
+Bump maven-model from 3.8.1 to 3.8.2 (#1682) @dependabot
+Bump json from 20201115 to 20210307 (#1678) @dependabot
+Bump nodejs from 1.3.3 to 1.4.0 (#1683) @dependabot
+Bump github from 1.31.0 to 1.33.1 (#1686) @dependabot
+Bump maven-plugin from 3.10 to 3.12 (#1667) @dependabot
+Bump everit-json-schema from 1.12.1 to 1.13.0 (#1666) @dependabot
+Bump okio from 2.8.0 to 2.10.0 (#1671) @dependabot
+Bump ldap from 2.4 to 2.7 (#1665) @dependabot
+Bump artifact-manager-s3 from 1.12 to 1.15 (#1670) @dependabot
+Bump role-strategy from 2.16 to 3.2.0 (#1672) @dependabot
+Bump netty-bom from 4.1.61.Final to 4.1.66.Final (#1674) @dependabot
+Bump git-changelist-maven-extension from 1.1 to 1.2 (#1668) @dependabot
+Bump matrix-auth from 2.6.3 to 2.6.8 (#1669) @dependabot
+Bump plugin-bom.version from 919.v3c802a29576e to 923.v08bdc07cd40f (#1673) @dependabot
+Bump azure-keyvault from 2.0 to 123.v1aba71c2d365 (#1633) @dependabot
+Bump ec2 from 1.44 to 1.63 (#1658) @dependabot
+Bump jira from 3.0.8 to 3.5 (#1634) @dependabot
+Bump sonar from 2.7 to 2.13.1 (#1664) @dependabot
+Bump simple-theme-plugin from 0.6 to 0.7 (#1659) @dependabot
+Bump mercurial from 2.12 to 2.15 (#1663) @dependabot
+Bump okhttp from 4.4.1 to 4.9.1 (#1645) @dependabot
+Bump kubernetes from 1.6.4 to 1.30.1 (#1639) @dependabot
+Bump jackson2-api from 2.11.3 to 2.12.4 (#1661) @dependabot
+Bump aws-global-configuration from 1.4 to 1.6 (#1628) @dependabot
+Bump maven-checkstyle-plugin from 3.1.1 to 3.1.2 (#1660) @dependabot
+Bump msbuild from 1.29 to 1.30 (#1625) @dependabot
+Bump docker-workflow from 1.25 to 1.26 (#1662) @dependabot
+Update slack, bom, declarative pipeline, jackson2-api integration tests (#1629) @dependabot
+Bump docker-java from 3.1.5 to 3.2.11 (#1656) @dependabot
+Bump junixsocket.version from 2.2.0 to 2.4.0 (#1655) @dependabot
+Bump bouncycastle-api from 2.17 to 2.21 (#1651) @dependabot
+Bump maven-model from 3.6.3 to 3.8.1 (#1641) @dependabot
+Bump commons-compress from 1.20 to 1.21 in /integrations (#1649) @dependabot
+Bump github-api from 1.116 to 1.222 (#1623) @dependabot
+Bump docker-plugin from 1.1.2 to 1.2.2 (#1621) @dependabot
+Bump httpcore from 4.4.13 to 4.4.14 (#1624) @dependabot
+Bump maven-artifact from 3.5.4 to 3.8.1 (#1615) @dependabot
+Bump maven-plugin from 3.1.2 to 3.10 (#1575) @dependabot
+Bump joda-time from 2.10.6 to 2.10.10 (#1614) @dependabot
+Bump plugin from 4.15 to 4.18 (#1613) @dependabot
+Bump artifactory from 3.4.0 to 3.11.2 (#1610) @basil
+
+📝 Documentation updates
+
+Minor typo fix in readme (#1676) @reggiev
+Clarified Built-In and GitHub Authorizations for Global Matrix Auth Plugin (#1642) @dbeezt
+doc: add infos on reloading with the Jenkins CLI (#1648) @dduportal
+added gitea demo to list of demos (#1566) @MrHassanMurtaza
+Update link in README.md (#1605) @Bakies
+
+👻 Maintenance
+
+Add intellij run configuration (#1657) @timja
+Test with baseline of next LTS release (#1644) @basil
+","Optional: add a release summary here 
+🚀 New features and improvements
+Allow reloading configuration with Overall/Manage permission (#1653) @quilicicf
+📦 Dependency updates
+Bump config-file-provider from 3.7.0 to 3.8.1 (#1680) @dependabot
+Bump bouncycastle-api from 2.21 to 2.22 (#1684) @dependabot
+Bump maven-model from 3.8.1 to 3.8.2 (#1682) @dependabot
+Bump json from 20201115 to 20210307 (#1678) @dependabot
+Bump nodejs from 1.3.3 to 1.4.0 (#1683) @dependabot
+Bump github from 1.31.0 to 1.33.1 (#1686) @dependabot
+Bump maven-plugin from 3.10 to 3.12 (#1667) @dependabot
+Bump everit-json-schema from 1.12.1 to 1.13.0 (#1666) @dependabot
+Bump okio from 2.8.0 to 2.10.0 (#1671) @dependabot
+Bump ldap from 2.4 to 2.7 (#1665) @dependabot
+Bump artifact-manager-s3 from 1.12 to 1.15 (#1670) @dependabot
+Bump role-strategy from 2.16 to 3.2.0 (#1672) @dependabot
+Bump netty-bom from 4.1.61.Final to 4.1.66.Final (#1674) @dependabot
+Bump git-changelist-maven-extension from 1.1 to 1.2 (#1668) @dependabot
+Bump matrix-auth from 2.6.3 to 2.6.8 (#1669) @dependabot
+Bump plugin-bom.version from 919.v3c802a29576e to 923.v08bdc07cd40f (#1673) @dependabot
+Bump azure-keyvault from 2.0 to 123.v1aba71c2d365 (#1633) @dependabot
+Bump ec2 from 1.44 to 1.63 (#1658) @dependabot
+Bump jira from 3.0.8 to 3.5 (#1634) @dependabot
+Bump sonar from 2.7 to 2.13.1 (#1664) @dependabot
+Bump simple-theme-plugin from 0.6 to 0.7 (#1659) @dependabot
+Bump mercurial from 2.12 to 2.15 (#1663) @dependabot
+Bump okhttp from 4.4.1 to 4.9.1 (#1645) @dependabot
+Bump kubernetes from 1.6.4 to 1.30.1 (#1639) @dependabot
+Bump jackson2-api from 2.11.3 to 2.12.4 (#1661) @dependabot
+Bump aws-global-configuration from 1.4 to 1.6 (#1628) @dependabot
+Bump maven-checkstyle-plugin from 3.1.1 to 3.1.2 (#1660) @dependabot
+Bump msbuild from 1.29 to 1.30 (#1625) @dependabot
+Bump docker-workflow from 1.25 to 1.26 (#1662) @dependabot
+Update slack, bom, declarative pipeline, jackson2-api integration tests (#1629) @dependabot
+Bump docker-java from 3.1.5 to 3.2.11 (#1656) @dependabot
+Bump junixsocket.version from 2.2.0 to 2.4.0 (#1655) @dependabot
+Bump bouncycastle-api from 2.17 to 2.21 (#1651) @dependabot
+Bump maven-model from 3.6.3 to 3.8.1 (#1641) @dependabot
+Bump commons-compress from 1.20 to 1.21 in /integrations (#1649) @dependabot
+Bump github-api from 1.116 to 1.222 (#1623) @dependabot
+Bump docker-plugin from 1.1.2 to 1.2.2 (#1621) @dependabot
+Bump httpcore from 4.4.13 to 4.4.14 (#1624) @dependabot
+Bump maven-artifact from 3.5.4 to 3.8.1 (#1615) @dependabot
+Bump maven-plugin from 3.1.2 to 3.10 (#1575) @dependabot
+Bump joda-time from 2.10.6 to 2.10.10 (#1614) @dependabot
+Bump plugin from 4.15 to 4.18 (#1613) @dependabot
+Bump artifactory from 3.4.0 to 3.11.2 (#1610) @basil
+📝 Documentation updates
+Minor typo fix in readme (#1676) @reggiev
+Clarified Built-In and GitHub Authorizations for Global Matrix Auth Plugin (#1642) @dbeezt
+doc: add infos on reloading with the Jenkins CLI (#1648) @dduportal
+added gitea demo to list of demos (#1566) @MrHassanMurtaza
+Update link in README.md (#1605) @Bakies
+👻 Maintenance
+Add intellij run configuration (#1657) @timja
+Test with baseline of next LTS release (#1644) @basil"
+20," Optional: add a release summary here 
+🚀 New features and improvements
+
+Allow multiple YAML sources to be specified (#1600) @basil
+
+👻 Maintenance
+
+Integration test with 2.289 (#1601) @res0nance
+Integration test with Jenkins 2.277.4 (#1598) @bmunozm
+","Optional: add a release summary here 
+🚀 New features and improvements
+Allow multiple YAML sources to be specified (#1600) @basil
+👻 Maintenance
+Integration test with 2.289 (#1601) @res0nance
+Integration test with Jenkins 2.277.4 (#1598) @bmunozm"
+21," Optional: add a release summary here 
+🚀 New features and improvements
+
+Remove guava and guice usage from the plugin - no recursion (#1597) @jglick
+","Optional: add a release summary here 
+🚀 New features and improvements
+Remove guava and guice usage from the plugin - no recursion (#1597) @jglick"
+22," Optional: add a release summary here 
+🐛 Bug fixes
+
+Revert ""Replace Guava's cache with Caffeine."" (#1596) @jtnord
+
+👻 Maintenance
+
+Integration test with Jenkins 2.277.3 (#1591) @MarkEWaite
+","Optional: add a release summary here 
+🐛 Bug fixes
+Revert ""Replace Guava's cache with Caffeine."" (#1596) @jtnord
+👻 Maintenance
+Integration test with Jenkins 2.277.3 (#1591) @MarkEWaite"
+23," Optional: add a release summary here 
+
+Integration test with baseline of next LTS (#1577) @MarkEWaite
+Test with Jenkins 2.263.4 (#1568) @MarkEWaite
+
+📦 Dependency updates
+
+Bump custom-tools-plugin from 0.5 to 0.8 (#1579) @dependabot
+
+📝 Documentation updates
+
+Update broken link in Secrets documentation (#1589) @jvale
+
+👻 Maintenance
+
+Remove guava and guice usage from the plugin (#1594) @jtnord
+","Optional: add a release summary here 
+Integration test with baseline of next LTS (#1577) @MarkEWaite
+Test with Jenkins 2.263.4 (#1568) @MarkEWaite
+📦 Dependency updates
+Bump custom-tools-plugin from 0.5 to 0.8 (#1579) @dependabot
+📝 Documentation updates
+Update broken link in Secrets documentation (#1589) @jvale
+👻 Maintenance
+Remove guava and guice usage from the plugin (#1594) @jtnord"
+24," Optional: add a release summary here 
+🚀 New features and improvements
+
+Add possibility to reload secrets from properties file with JCasC reload (#1556) @tempora-mutantur
+
+🐛 Bug Fixes
+
+Export Float and Double as String (#1561) @schottsfired
+Check only input YAML in doCheck (#1518) @kanata2
+
+📦 Dependency updates
+
+Bump mercurial from 2.10 to 2.12 (#1539) @dependabot
+Bump docker-workflow from 1.24 to 1.25 (#1549) @dependabot
+Bump checkstyle from 8.36.2 to 8.39 (#1548) @dependabot
+Bump plugin from 4.12 to 4.15 (#1547) @dependabot
+Bump job-dsl from 1.74 to 1.77 (#1536) @dependabot
+Bump simple-theme-plugin from 0.5 to 0.6 (#1535) @dependabot
+Bump httpmime from 4.5.10 to 4.5.13 (#1534) @dependabot
+Bump json from 20190722 to 20201115 (#1532) @dependabot
+
+📝 Documentation updates
+
+Clear information about overwriting configuration keys (#1533) @benjaoming
+(docs) update README.md (#1553) @vladdoster
+Fix TOC links (#1542) @sanbornick
+Update links in the README (#1540) @oleg-nenashev
+As the read.md is too long I added some links to connect the subtopics.  (#1538) @NilmaPeiris
+
+👻 Maintenance
+
+Test with Jenkins 2.263.3 (#1558) @MarkEWaite
+Update integration tests to use latest LTS line (#1543) @timja
+","Optional: add a release summary here 
+🚀 New features and improvements
+Add possibility to reload secrets from properties file with JCasC reload (#1556) @tempora-mutantur
+🐛 Bug Fixes
+Export Float and Double as String (#1561) @schottsfired
+Check only input YAML in doCheck (#1518) @kanata2
+📦 Dependency updates
+Bump mercurial from 2.10 to 2.12 (#1539) @dependabot
+Bump docker-workflow from 1.24 to 1.25 (#1549) @dependabot
+Bump checkstyle from 8.36.2 to 8.39 (#1548) @dependabot
+Bump plugin from 4.12 to 4.15 (#1547) @dependabot
+Bump job-dsl from 1.74 to 1.77 (#1536) @dependabot
+Bump simple-theme-plugin from 0.5 to 0.6 (#1535) @dependabot
+Bump httpmime from 4.5.10 to 4.5.13 (#1534) @dependabot
+Bump json from 20190722 to 20201115 (#1532) @dependabot
+📝 Documentation updates
+Clear information about overwriting configuration keys (#1533) @benjaoming
+(docs) update README.md (#1553) @vladdoster
+Fix TOC links (#1542) @sanbornick
+Update links in the README (#1540) @oleg-nenashev
+As the read.md is too long I added some links to connect the subtopics.  (#1538) @NilmaPeiris
+👻 Maintenance
+Test with Jenkins 2.263.3 (#1558) @MarkEWaite
+Update integration tests to use latest LTS line (#1543) @timja"
+25," Optional: add a release summary here 
+🚀 New features and improvements
+
+Add decodeBase64 substitutor for reading base64-encoded variables (#1526) @oleg-nenashev
+Cleanup ""Jenkins master"" term from the warning in the Web UI (#1481) @akatsadimas
+
+📝 Documentation updates
+
+Cleanup master/slave terminology from documentation(#1481) @akatsadimas
+Update the Docker plugin demo to use the ""jenkins/agent"" image instead of the deprecated one (#1464) @oleg-nenashev
+Add more examples to help with BitBucket configurations (#1492) @quentin-lpt
+
+👻 Maintenance
+
+JENKINS-62446 - Test coverage for tool.maven and tool.mavenGlobalConfig (#1525) @aHenryJard
+","Optional: add a release summary here 
+🚀 New features and improvements
+Add decodeBase64 substitutor for reading base64-encoded variables (#1526) @oleg-nenashev
+Cleanup ""Jenkins master"" term from the warning in the Web UI (#1481) @akatsadimas
+📝 Documentation updates
+Cleanup master/slave terminology from documentation(#1481) @akatsadimas
+Update the Docker plugin demo to use the ""jenkins/agent"" image instead of the deprecated one (#1464) @oleg-nenashev
+Add more examples to help with BitBucket configurations (#1492) @quentin-lpt
+👻 Maintenance
+JENKINS-62446 - Test coverage for tool.maven and tool.mavenGlobalConfig (#1525) @aHenryJard"
+26," Optional: add a release summary here 
+
+Cleanup slave terminology from documentation (#1482) @katsadim
+
+🐛 Bug Fixes
+
+Fix admin monitor UI (#1493) @amuniz
+
+📦 Dependency updates
+
+Bump retrofit from 2.6.2 to 2.9.0 (#1506) @dependabot
+Bump checkstyle from 8.32 to 8.36.2 (#1508) @dependabot
+Bump commons-compress from 1.19 to 1.20 (#1510) @dependabot
+Bump httpclient from 4.5.12 to 4.5.13 (#1507) @dependabot
+Bump antlr4-runtime from 4.7 to 4.8-1 (#1501) @dependabot
+Bump commons-codec from 1.14 to 1.15 (#1496) @dependabot
+Bump docker-commons from 1.14 to 1.17 (#1502) @dependabot
+Bump config-file-provider from 3.6.3 to 3.7.0 (#1497) @dependabot
+Bump github-api from 1.114.2 to 1.116 (#1499) @dependabot
+Bump matrix-auth from 2.4 to 2.6.3 (#1503) @dependabot
+Bump docker-workflow from 1.23 to 1.24 (#1504) @dependabot
+Bump parent pom (#1494) @timja
+Bump github from 1.29.5 to 1.31.0 (#1471) @dependabot
+Remove unneeded commons-io (#1488) @dependabot
+Bump pipeline-model-definition from 1.7.0 to 1.7.2 (#1453) @dependabot
+Bump artifact-manager-s3 from 1.1 to 1.12 (#1487) @dependabot
+Bump jackson.version from 2.11.1 to 2.11.3 (#1483) @dependabot
+Bump bom-2.176.x from 9 to  2.222.x 13 (#1490) @dependabot
+Bump azure-keyvault from 1.4 to 2.0 (#1489) @dependabot
+Bump warnings from 5.0.1 to 5.0.2 (#1485) @dependabot
+Bump error_prone_annotations from 2.3.4 to 2.4.0 (#1484) @dependabot
+
+👻 Maintenance
+
+Update Dependabot config file (#1505) @dependabot
+","Optional: add a release summary here 
+Cleanup slave terminology from documentation (#1482) @katsadim
+🐛 Bug Fixes
+Fix admin monitor UI (#1493) @amuniz
+📦 Dependency updates
+Bump retrofit from 2.6.2 to 2.9.0 (#1506) @dependabot
+Bump checkstyle from 8.32 to 8.36.2 (#1508) @dependabot
+Bump commons-compress from 1.19 to 1.20 (#1510) @dependabot
+Bump httpclient from 4.5.12 to 4.5.13 (#1507) @dependabot
+Bump antlr4-runtime from 4.7 to 4.8-1 (#1501) @dependabot
+Bump commons-codec from 1.14 to 1.15 (#1496) @dependabot
+Bump docker-commons from 1.14 to 1.17 (#1502) @dependabot
+Bump config-file-provider from 3.6.3 to 3.7.0 (#1497) @dependabot
+Bump github-api from 1.114.2 to 1.116 (#1499) @dependabot
+Bump matrix-auth from 2.4 to 2.6.3 (#1503) @dependabot
+Bump docker-workflow from 1.23 to 1.24 (#1504) @dependabot
+Bump parent pom (#1494) @timja
+Bump github from 1.29.5 to 1.31.0 (#1471) @dependabot
+Remove unneeded commons-io (#1488) @dependabot
+Bump pipeline-model-definition from 1.7.0 to 1.7.2 (#1453) @dependabot
+Bump artifact-manager-s3 from 1.1 to 1.12 (#1487) @dependabot
+Bump jackson.version from 2.11.1 to 2.11.3 (#1483) @dependabot
+Bump bom-2.176.x from 9 to  2.222.x 13 (#1490) @dependabot
+Bump azure-keyvault from 1.4 to 2.0 (#1489) @dependabot
+Bump warnings from 5.0.1 to 5.0.2 (#1485) @dependabot
+Bump error_prone_annotations from 2.3.4 to 2.4.0 (#1484) @dependabot
+👻 Maintenance
+Update Dependabot config file (#1505) @dependabot"
+27," Optional: add a release summary here 
+📦 Dependency updates
+
+Bump jsoup from 1.12.1 to 1.13.1 (#1447) @dependabot
+Bump joda-time from 2.10.5 to 2.10.6 (#1470) @dependabot
+Bump protobuf-java from 3.11.4 to 3.13.0 (#1467) @dependabot
+Bump netty.version from 4.1.51.Final to 4.1.52.Final (#1459) @dependabot
+Bump vavr from 0.10.2 to 0.10.3 (#1476) @dependabot
+Use jackson api plugin in test harness (#1477) @jetersen
+Bump commons-text from 1.8 to 1.9 (#1458) @dependabot
+Bump mercurial from 2.4 to 2.10 (#1466) @dependabot
+Bump snakeyaml-api from 1.26.3 to 1.26.4 (#1452) @dependabot
+Bump netty.version from 4.1.47.Final to 4.1.51.Final (#1431) @dependabot
+
+📝 Documentation updates
+
+Documentaion section moved up (#1474) @reethikprasad
+Include README details of how to set the CasC config location using Java Property instead of Environment Variable (#1457) @patkinson01
+","Optional: add a release summary here 
+📦 Dependency updates
+Bump jsoup from 1.12.1 to 1.13.1 (#1447) @dependabot
+Bump joda-time from 2.10.5 to 2.10.6 (#1470) @dependabot
+Bump protobuf-java from 3.11.4 to 3.13.0 (#1467) @dependabot
+Bump netty.version from 4.1.51.Final to 4.1.52.Final (#1459) @dependabot
+Bump vavr from 0.10.2 to 0.10.3 (#1476) @dependabot
+Use jackson api plugin in test harness (#1477) @jetersen
+Bump commons-text from 1.8 to 1.9 (#1458) @dependabot
+Bump mercurial from 2.4 to 2.10 (#1466) @dependabot
+Bump snakeyaml-api from 1.26.3 to 1.26.4 (#1452) @dependabot
+Bump netty.version from 4.1.47.Final to 4.1.51.Final (#1431) @dependabot
+📝 Documentation updates
+Documentaion section moved up (#1474) @reethikprasad
+Include README details of how to set the CasC config location using Java Property instead of Environment Variable (#1457) @patkinson01"
+28," Optional: add a release summary here 
+🐛 Bug Fixes
+
+Fix validation message not showing on recent core (#1443) @timja
+
+📦 Dependency updates
+
+Bump jackson.version from 2.11.0 to 2.11.1 (#1430) @dependabot
+","Optional: add a release summary here 
+🐛 Bug Fixes
+Fix validation message not showing on recent core (#1443) @timja
+📦 Dependency updates
+Bump jackson.version from 2.11.0 to 2.11.1 (#1430) @dependabot"
+29," Optional: add a release summary here 
+:boom: Breaking changes
+
+change properties secrets env to SECRETS_FILE (#1435) @jetersen
+
+🚀 New features and improvements
+
+SecretResolver support file and base64 variable expansion (#1408) @jetersen
+
+🐛 Bug Fixes
+
+Escape newSource field when checking it's value via Ajax. (#1402) @haidaraM
+
+📝 Documentation updates
+
+Adding description of escape rule for Groovy scripts in job script (#1414) @iptizer
+Fix a internal link to PLUGINS.md. Fix some typos. (#1434) @atombrella
+Consolidate SecretSource options into secrets.adoc (#1433) @chriskilding
+add crowd2 doc (#1420) @jetersen
+Add link to plugin developers guide from README (#1417) @alb-i986
+Improve README with more detail about hidden directory exclusions (#1410) @skundrik
+
+👻 Maintenance
+
+change properties secrets env to SECRETS_FILE (#1435) @jetersen
+manage docker-commons to avoid load conflcit (#1421) @jetersen
+
+🚦 Tests
+
+Update pipeline-model-definition integration tests to use docker-workflow  (#1416) @dwnusbaum
+Add test for mailer-plugin user property (#1312) @timja
+","Optional: add a release summary here 
+:boom: Breaking changes
+change properties secrets env to SECRETS_FILE (#1435) @jetersen
+🚀 New features and improvements
+SecretResolver support file and base64 variable expansion (#1408) @jetersen
+🐛 Bug Fixes
+Escape newSource field when checking it's value via Ajax. (#1402) @haidaraM
+📝 Documentation updates
+Adding description of escape rule for Groovy scripts in job script (#1414) @iptizer
+Fix a internal link to PLUGINS.md. Fix some typos. (#1434) @atombrella
+Consolidate SecretSource options into secrets.adoc (#1433) @chriskilding
+add crowd2 doc (#1420) @jetersen
+Add link to plugin developers guide from README (#1417) @alb-i986
+Improve README with more detail about hidden directory exclusions (#1410) @skundrik
+👻 Maintenance
+change properties secrets env to SECRETS_FILE (#1435) @jetersen
+manage docker-commons to avoid load conflcit (#1421) @jetersen
+🚦 Tests
+Update pipeline-model-definition integration tests to use docker-workflow  (#1416) @dwnusbaum
+Add test for mailer-plugin user property (#1312) @timja"
+30," Optional: add a release summary here 
+With extension ordinal sorting we now have full control of the load order within Configuration as Code, so now Credentials will be configured first and seed job will be configured last.
+We also added support for root level yaml anchors which needs to be prefixed with x-.
+See the ec2 demo for a good example.
+🚀 New features and improvements
+
+Ignore unknown root elements starting with x- (#1379) @jetersen
+
+🐛 Bug Fixes
+
+Close those file handles 😅 (#1398) @jetersen
+Allow configuring max aliases for a collection (#1375) @jetersen
+sort Attributes and RootElementConfigurator according to Extension ordinal (#1394) @jetersen
+HeteroDescribableConfigurator fix for interface as a target (#1387) @umlublin
+
+📦 Dependency updates
+
+Bump jackson.version from 2.10.3 to 2.11.0 (#1390) @dependabot
+Bump config-file-provider-plugin to 3.6.3 (#1381) @jetersen
+bump terraform to 1.0.10 (#1380) @jetersen
+Bump checkstyle from 8.29 to 8.32 (#1343) @dependabot
+
+📝 Documentation updates
+
+Add apiUri parameter for github enterprise example case (#1397) @solvingj
+Add example of environment variable to readme (#1376) @solvingj
+
+👻 Maintenance
+
+Correct false positive code coverage (#1399) @jetersen
+","Optional: add a release summary here 
+With extension ordinal sorting we now have full control of the load order within Configuration as Code, so now Credentials will be configured first and seed job will be configured last.
+We also added support for root level yaml anchors which needs to be prefixed with x-.
+See the ec2 demo for a good example.
+🚀 New features and improvements
+Ignore unknown root elements starting with x- (#1379) @jetersen
+🐛 Bug Fixes
+Close those file handles 😅 (#1398) @jetersen
+Allow configuring max aliases for a collection (#1375) @jetersen
+sort Attributes and RootElementConfigurator according to Extension ordinal (#1394) @jetersen
+HeteroDescribableConfigurator fix for interface as a target (#1387) @umlublin
+📦 Dependency updates
+Bump jackson.version from 2.10.3 to 2.11.0 (#1390) @dependabot
+Bump config-file-provider-plugin to 3.6.3 (#1381) @jetersen
+bump terraform to 1.0.10 (#1380) @jetersen
+Bump checkstyle from 8.29 to 8.32 (#1343) @dependabot
+📝 Documentation updates
+Add apiUri parameter for github enterprise example case (#1397) @solvingj
+Add example of environment variable to readme (#1376) @solvingj
+👻 Maintenance
+Correct false positive code coverage (#1399) @jetersen"
+31," Optional: add a release summary here 
+🚀 New features and improvements
+
+JENKINS-58093 - Support for LabelAtoms (#1368) @varyvol
+Add support for symbolic linked directories (#1372) @sonarsphere
+
+📦 Dependency updates
+
+Update to 4.0 parent pom (#1362) @timja
+","Optional: add a release summary here 
+🚀 New features and improvements
+JENKINS-58093 - Support for LabelAtoms (#1368) @varyvol
+Add support for symbolic linked directories (#1372) @sonarsphere
+📦 Dependency updates
+Update to 4.0 parent pom (#1362) @timja"
+32," Optional: add a release summary here 
+🐛 Bug Fixes
+
+Fix compatibility with core 2.231 (#1359) @timja
+
+🚀 New features and improvements
+
+set category name to Configuration for Jenkins v2.226+ (#1358) @jetersen
+
+📝 Documentation updates
+
+Improve SecretSource Javadoc (#1302) @chriskilding
+
+👻 Maintenance
+
+Add Gitter Q&A tab to the New Issue dialog (#1344) @oleg-nenashev
+","Optional: add a release summary here 
+🐛 Bug Fixes
+Fix compatibility with core 2.231 (#1359) @timja
+🚀 New features and improvements
+set category name to Configuration for Jenkins v2.226+ (#1358) @jetersen
+📝 Documentation updates
+Improve SecretSource Javadoc (#1302) @chriskilding
+👻 Maintenance
+Add Gitter Q&A tab to the New Issue dialog (#1344) @oleg-nenashev"
+33," Optional: add a release summary here 
+:boom: Breaking changes
+This release includes a minimum version increase for Jenkins core to 2.222 to address a race condition in initialisation. Jenkins core now supports proxy configuration without the need for our custom configurator, but the password field name changed to secretPassword, see the demo if this affects you.
+
+Bump baseline jenkins core to 2.222 for milestones / system read + cleanup (#1293) @timja
+
+🚀 New features and improvements
+
+JENKINS-51856 - Apply configuration before the jobs are loaded (#1262) @fcojfernandez
+Support for additional user attributes (#1309) @timja
+Allow users with Overall/SystemRead permission to view configuration, schema, and documentation (#1296) @timja
+Extract snakeyaml to an API plugin (#1332) @escoem
+
+🐛 Bug Fixes
+
+Allow multiple symbols when importing, exporting first one (#1308) @timja
+Fix classloading in snakeyaml (#1340) @timja
+
+📦 Dependency updates
+
+Bump httpclient from 4.5.10 to 4.5.12 (#1334) @dependabot
+Bump email-ext from 2.66 to 2.69 (#1335) @dependabot
+Bump role-strategy from 2.11 to 2.16 (#1326) @dependabot
+Bump jackson.version from 2.10.2 to 2.10.3 (#1322) @dependabot
+Bump display-url-api from 2.3.1 to 2.3.2 (#1323) @dependabot
+Bump okhttp from 3.12.2 to 4.4.1 (#1310) @dependabot
+Bump maven-model from 3.3.3 to 3.6.3 (#1297) @dependabot
+[Security] Bump netty-handler from 4.1.39.Final to 4.1.45.Final (#1252) @dependabot
+
+📝 Documentation updates
+
+Add integration test for MSTestRunner (#1328) @varyvol
+Add Azure KeyVault to secrets doc (#1321) @timja
+Documentation only: replace JENKINS_ROOT with JENKINS_HOME (#1319) @martinda
+
+👻 Maintenance
+
+Bump baseline jenkins core to 2.222 for milestones / system read + cleanup (#1293) @timja
+
+🚦 Tests
+
+Remove vault integration test (#1338) @timja
+Add integration test for MSTestRunner (#1328) @varyvol
+Validate MSBuild plugin compatibility (#1318) @alecharp
+","Optional: add a release summary here 
+:boom: Breaking changes
+This release includes a minimum version increase for Jenkins core to 2.222 to address a race condition in initialisation. Jenkins core now supports proxy configuration without the need for our custom configurator, but the password field name changed to secretPassword, see the demo if this affects you.
+Bump baseline jenkins core to 2.222 for milestones / system read + cleanup (#1293) @timja
+🚀 New features and improvements
+JENKINS-51856 - Apply configuration before the jobs are loaded (#1262) @fcojfernandez
+Support for additional user attributes (#1309) @timja
+Allow users with Overall/SystemRead permission to view configuration, schema, and documentation (#1296) @timja
+Extract snakeyaml to an API plugin (#1332) @escoem
+🐛 Bug Fixes
+Allow multiple symbols when importing, exporting first one (#1308) @timja
+Fix classloading in snakeyaml (#1340) @timja
+📦 Dependency updates
+Bump httpclient from 4.5.10 to 4.5.12 (#1334) @dependabot
+Bump email-ext from 2.66 to 2.69 (#1335) @dependabot
+Bump role-strategy from 2.11 to 2.16 (#1326) @dependabot
+Bump jackson.version from 2.10.2 to 2.10.3 (#1322) @dependabot
+Bump display-url-api from 2.3.1 to 2.3.2 (#1323) @dependabot
+Bump okhttp from 3.12.2 to 4.4.1 (#1310) @dependabot
+Bump maven-model from 3.3.3 to 3.6.3 (#1297) @dependabot
+[Security] Bump netty-handler from 4.1.39.Final to 4.1.45.Final (#1252) @dependabot
+📝 Documentation updates
+Add integration test for MSTestRunner (#1328) @varyvol
+Add Azure KeyVault to secrets doc (#1321) @timja
+Documentation only: replace JENKINS_ROOT with JENKINS_HOME (#1319) @martinda
+👻 Maintenance
+Bump baseline jenkins core to 2.222 for milestones / system read + cleanup (#1293) @timja
+🚦 Tests
+Remove vault integration test (#1338) @timja
+Add integration test for MSTestRunner (#1328) @varyvol
+Validate MSBuild plugin compatibility (#1318) @alecharp"
+34,":boom: Do not use this release! :boom:
+This release was broken, it caused https://github.com/jenkinsci/configuration-as-code-plugin/issues/1339, fixed in https://github.com/jenkinsci/configuration-as-code-plugin/pull/1340, released in v1.38 🌈",":boom: Do not use this release! :boom:
+This release was broken, it caused link, fixed in link, released in v1.38 🌈"
+35," Optional: add a release summary here 
+🐛 Bug Fixes
+
+Prevent null pointer when exporting file credentials (#1282) @timja
+Stop exporting users and throwing nullpointer (#1280) @timja
+
+📦 Dependency updates
+
+Bump error_prone_annotations from 2.3.3 to 2.3.4 (#1286) @dependabot
+Bump joda-time from 2.10.4 to 2.10.5 (#1283) @dependabot
+Bump httpcore from 4.4.12 to 4.4.13 (#1284) @dependabot
+Upgrade metrics-plugin (#1289) @fcojfernandez
+Bump okio from 1.13.0 to 2.4.3 (#1239) @dependabot
+Bump commons-codec from 1.11 to 1.14 (#1250) @dependabot
+Bump gson from 2.8.0 to 2.8.6 (#1259) @dependabot
+Bump protobuf-java from 3.0.0-beta-2 to 3.11.4 (#1275) @dependabot
+Update the integration test for active-directory (#1274) @fcojfernandez
+Update test to match latest plugin version (#1273) @choeffer
+[Security] Bump checkstyle from 8.26 to 8.29 (#1263) @dependabot
+Bump jackson.version from 2.10.1 to 2.10.2 (#1247) @dependabot
+
+📝 Documentation updates
+
+Add integration test for pipeline-model-definition-plugin (#1276) @fcojfernandez
+Added example for credentials certificate (#1270) @choeffer
+Fix the version specification for Jenkins 2.199 (#1268) @dg-nvm
+It has been renamed to master.componentName (#1256) @jhonmike
+
+👻 Maintenance
+
+Automatically request code reviews from all JCasC plugin developers (#1249) @oleg-nenashev
+Correct spelling of hpi.pluginChangelogUrl tag (#1248) @MarkEWaite
+
+🚦 Tests
+
+Add integration test for pipeline-model-definition-plugin (#1276) @fcojfernandez
+","Optional: add a release summary here 
+🐛 Bug Fixes
+Prevent null pointer when exporting file credentials (#1282) @timja
+Stop exporting users and throwing nullpointer (#1280) @timja
+📦 Dependency updates
+Bump error_prone_annotations from 2.3.3 to 2.3.4 (#1286) @dependabot
+Bump joda-time from 2.10.4 to 2.10.5 (#1283) @dependabot
+Bump httpcore from 4.4.12 to 4.4.13 (#1284) @dependabot
+Upgrade metrics-plugin (#1289) @fcojfernandez
+Bump okio from 1.13.0 to 2.4.3 (#1239) @dependabot
+Bump commons-codec from 1.11 to 1.14 (#1250) @dependabot
+Bump gson from 2.8.0 to 2.8.6 (#1259) @dependabot
+Bump protobuf-java from 3.0.0-beta-2 to 3.11.4 (#1275) @dependabot
+Update the integration test for active-directory (#1274) @fcojfernandez
+Update test to match latest plugin version (#1273) @choeffer
+[Security] Bump checkstyle from 8.26 to 8.29 (#1263) @dependabot
+Bump jackson.version from 2.10.1 to 2.10.2 (#1247) @dependabot
+📝 Documentation updates
+Add integration test for pipeline-model-definition-plugin (#1276) @fcojfernandez
+Added example for credentials certificate (#1270) @choeffer
+Fix the version specification for Jenkins 2.199 (#1268) @dg-nvm
+It has been renamed to master.componentName (#1256) @jhonmike
+👻 Maintenance
+Automatically request code reviews from all JCasC plugin developers (#1249) @oleg-nenashev
+Correct spelling of hpi.pluginChangelogUrl tag (#1248) @MarkEWaite
+🚦 Tests
+Add integration test for pipeline-model-definition-plugin (#1276) @fcojfernandez"
+36," Optional: add a release summary here 
+:boom: Breaking changes
+
+
+917 - Add test-harness module + change json schema test API to return list of errors (#1215) @timja
+
+
+🚀 New features and improvements
+
+Schema Generation for nested yml configurations (#1027) @sladyn98
+Added support to export array config (#1234) @janario
+
+🐛 Bug Fixes
+
+Use system authorization for reloading jcasc (#1214) @timja
+
+📦 Dependency updates
+
+Update parent and incrementals version (#1232) @alecharp
+
+👻 Maintenance
+
+Checkstyle ignore release.properties (#1245) @timja
+Update ci to include code coverage after #1215 (#1241) @casz
+Validate top-level README with the integrations tests #1228 (#1229) @v1v
+
+917 - Add test-harness module + change json schema test API to return list of errors (#1215) @timja
+
+
+🚦 Tests
+
+Trying to diagnose some flaky tests (#1243) @jglick
+Validate jenkins demos with the integrations tests (#1228) @v1v
+Validate LDAP demo with the integrations tests (#1225) @v1v
+Validate gitscm demo with the integrations tests (#1223) @v1v
+Validate terraform demo with the integrations tests (#1224) @v1v
+Validate Kubernetes demo with the integrations framework (#1226) @v1v
+Validate global libraries demo with the integrations framework (#1221) @v1v
+Added test Framework Utility  Functions For the json Schema (#1078) @sladyn98
+","Optional: add a release summary here 
+:boom: Breaking changes
+917 - Add test-harness module + change json schema test API to return list of errors (#1215) @timja
+🚀 New features and improvements
+Schema Generation for nested yml configurations (#1027) @sladyn98
+Added support to export array config (#1234) @janario
+🐛 Bug Fixes
+Use system authorization for reloading jcasc (#1214) @timja
+📦 Dependency updates
+Update parent and incrementals version (#1232) @alecharp
+👻 Maintenance
+Checkstyle ignore release.properties (#1245) @timja
+Update ci to include code coverage after #1215 (#1241) @casz
+Validate top-level README with the integrations tests #1228 (#1229) @v1v
+917 - Add test-harness module + change json schema test API to return list of errors (#1215) @timja
+🚦 Tests
+Trying to diagnose some flaky tests (#1243) @jglick
+Validate jenkins demos with the integrations tests (#1228) @v1v
+Validate LDAP demo with the integrations tests (#1225) @v1v
+Validate gitscm demo with the integrations tests (#1223) @v1v
+Validate terraform demo with the integrations tests (#1224) @v1v
+Validate Kubernetes demo with the integrations framework (#1226) @v1v
+Validate global libraries demo with the integrations framework (#1221) @v1v
+Added test Framework Utility  Functions For the json Schema (#1078) @sladyn98"
+37,"This release includes a feature toggle for delaying the configuration as code configuring until your Jenkins has fully started up, see the documentation here:
+https://github.com/jenkinsci/configuration-as-code-plugin#compatibility-with-jenkins--2199
+ Optional: add a release summary here 
+🚀 New features and improvements
+
+
+280 workaround - Add a configurable delay to avoid race condition in initializer (#1204) @jtnord
+
+Make the io.jenkins.plugins.casc.ConfigurationAsCode API available to plugins (#1203) @escoem
+
+🐛 Bug Fixes
+
+Restore URL and description in plugin POM to fix the plugin documentation (#1207) @timja
+
+📦 Dependency updates
+
+Bump plexus-utils from 3.2.1 to 3.3.0 (#1178) @dependabot
+Bump checkstyle from 8.25 to 8.26 (#1198) @dependabot
+","This release includes a feature toggle for delaying the configuration as code configuring until your Jenkins has fully started up, see the documentation here:
+link
+ Optional: add a release summary here 
+🚀 New features and improvements
+280 workaround - Add a configurable delay to avoid race condition in initializer (#1204) @jtnord
+Make the io.jenkins.plugins.casc.ConfigurationAsCode API available to plugins (#1203) @escoem
+🐛 Bug Fixes
+Restore URL and description in plugin POM to fix the plugin documentation (#1207) @timja
+📦 Dependency updates
+Bump plexus-utils from 3.2.1 to 3.3.0 (#1178) @dependabot
+Bump checkstyle from 8.25 to 8.26 (#1198) @dependabot"
+38," Optional: add a release summary here 
+🚀 New features and improvements
+
+Introduce a SecretSource implementation for .properties file (#1160) @Smasherr
+Add Documentation for Fields in the JSON Schema (#1060) @sladyn98
+
+🐛 Bug Fixes
+
+Fix config file list always contain one item (#1193) @LinuxSuRen
+close yaml reader after use 😰 (#1183) @casz
+Remove misspelled Mapping.putIfNotEmpry in favor of Mapping.putIfNotEmpty (#1163) @bojanfilipovic
+
+📝 Documentation updates
+
+
+1147 - Add Readme to the demos directory (#1157) @wpater
+
+Improve documentation of warnings plugin configuration (#1169) @uhafner
+Move Trigger Configuration Reload to a new feature page #1150 (#1155) @lunodesouza
+
+1149 Invert the LDAP example on the README page (#1156) @wpater
+
+Add demo for the NodeJS plugin (#1153) @Smasherr
+Remove run locally intellij idea cli from main readme add to docs contributing (#1152) @balajipachai
+Move Handling Secrets to a separate page, add docs for CredentialsProvider and encrypted strings (#1143) @oleg-nenashev
+Update plugins developer docs (#1140) @timja
+
+📦 Dependency updates
+
+Bump jsoup from 1.11.3 to 1.12.1 (#1175) @dependabot
+Bump flexmark-all from 0.50.40 to 0.50.42 (#1174) @dependabot
+Bump github from 1.29.3 to 1.29.5 (#1182) @dependabot
+Bump hashicorp-vault-plugin from 2.5.0 to 3.0.0 (#1165) @dependabot
+Bump warnings from 5.0.0 to 5.0.1 (#1164) @dependabot
+Bump plexus-utils from 3.1.0 to 3.2.1 (#1099) @dependabot
+
+👻 Maintenance
+
+fix mvn flags on powershell (#1192) @casz
+Update error message in RoundTripAbstractTest (#1144) @Smasherr
+Validate github demo with the integrations framework (#1109) @v1v
+Updated pom file to set Project description and URL (#1130) @ocristian
+","Optional: add a release summary here 
+🚀 New features and improvements
+Introduce a SecretSource implementation for .properties file (#1160) @Smasherr
+Add Documentation for Fields in the JSON Schema (#1060) @sladyn98
+🐛 Bug Fixes
+Fix config file list always contain one item (#1193) @LinuxSuRen
+close yaml reader after use 😰 (#1183) @casz
+Remove misspelled Mapping.putIfNotEmpry in favor of Mapping.putIfNotEmpty (#1163) @bojanfilipovic
+📝 Documentation updates
+1147 - Add Readme to the demos directory (#1157) @wpater
+Improve documentation of warnings plugin configuration (#1169) @uhafner
+Move Trigger Configuration Reload to a new feature page #1150 (#1155) @lunodesouza
+1149 Invert the LDAP example on the README page (#1156) @wpater
+Add demo for the NodeJS plugin (#1153) @Smasherr
+Remove run locally intellij idea cli from main readme add to docs contributing (#1152) @balajipachai
+Move Handling Secrets to a separate page, add docs for CredentialsProvider and encrypted strings (#1143) @oleg-nenashev
+Update plugins developer docs (#1140) @timja
+📦 Dependency updates
+Bump jsoup from 1.11.3 to 1.12.1 (#1175) @dependabot
+Bump flexmark-all from 0.50.40 to 0.50.42 (#1174) @dependabot
+Bump github from 1.29.3 to 1.29.5 (#1182) @dependabot
+Bump hashicorp-vault-plugin from 2.5.0 to 3.0.0 (#1165) @dependabot
+Bump warnings from 5.0.0 to 5.0.1 (#1164) @dependabot
+Bump plexus-utils from 3.1.0 to 3.2.1 (#1099) @dependabot
+👻 Maintenance
+fix mvn flags on powershell (#1192) @casz
+Update error message in RoundTripAbstractTest (#1144) @Smasherr
+Validate github demo with the integrations framework (#1109) @v1v
+Updated pom file to set Project description and URL (#1130) @ocristian"
+39," Optional: add a release summary here 
+🚀 New features and improvements
+
+Change log level to WARN when configuration sources could not be applied (#1131) @LorisSecuro
+
+🐛 Bug Fixes
+
+Remove gson, use schema library in test scope only. It cause regressions in 1.31 due to binary conflicts with other plugins (#1116) @timja
+
+📝 Documentation updates
+
+README: Change the changelog badge label to make it more explicit (#1132) @oleg-nenashev
+Add another method for configuration reload (#1068) @szandala
+
+📦 Dependency updates
+
+Bump jdom from 1.1.1 to 2.0.2 (#1096) @dependabot
+Bump vault from 1.12.1 to 1.12.2 (#1097) @dependabot
+Bump checkstyle from 8.24 to 8.25 (#1102) @dependabot
+BOM 3 (#1075) @jglick
+Bump netty-codec-http from 4.1.39.Final to 4.1.41.Final (#1064) @dependabot
+
+👻 Maintenance
+
+Validate keycloak demo with the integrations framework (#1111) @v1v
+Validate slack demo with the integrations framework (#1118) @v1v
+Validate statistics-gatherer demo with the integrations framework (#1119) @v1v
+Minor improvements to array creation and one unit test (#1122) @StefanSpieker
+Validate warnings demo with the integrations framework (#1117) @v1v
+Validate external-workspace-manager demo with the integrations framework (#1110) @v1v
+Validate sbt demo with the integrations framework (#1112) @v1v
+Validate simple-theme demo with the integrations framework (#1123) @v1v
+Validate mesos demo with the integrations framework (#1114) @v1v
+Move git tools ITs to the demos (#1108) @v1v
+Validate external-workspace-manager demo with the integrations framework (#1107) @v1v
+Validate proxy demo with the integrations framework (#1106) @v1v
+Move matrix-auth ITs to the demos (#1091) @v1v
+Validate github-oath demo with the integrations framework (#1086) @v1v
+Move JDK  ITs to the demos (#1090) @v1v
+Move mercurial ITs to the demos (#1089) @v1v
+Move jira ITs to the demos (#1088) @v1v
+Validate gitlab demo with the integrations framework (#1087) @v1v
+Validate ec2-plugin demo with the integrations framework (#1085) @v1v
+Validate Artifactory demo within the integrations submodule (#1080) @v1v
+Validate docker-plugin demo with the integrations framework (#1084) @v1v
+Validate config-file-provider demo with the integrations framework (#1083) @v1v
+Validate build_agents demo within the integrations submodule (#1081) @v1v
+BOM 3 (#1075) @jglick
+","Optional: add a release summary here 
+🚀 New features and improvements
+Change log level to WARN when configuration sources could not be applied (#1131) @LorisSecuro
+🐛 Bug Fixes
+Remove gson, use schema library in test scope only. It cause regressions in 1.31 due to binary conflicts with other plugins (#1116) @timja
+📝 Documentation updates
+README: Change the changelog badge label to make it more explicit (#1132) @oleg-nenashev
+Add another method for configuration reload (#1068) @szandala
+📦 Dependency updates
+Bump jdom from 1.1.1 to 2.0.2 (#1096) @dependabot
+Bump vault from 1.12.1 to 1.12.2 (#1097) @dependabot
+Bump checkstyle from 8.24 to 8.25 (#1102) @dependabot
+BOM 3 (#1075) @jglick
+Bump netty-codec-http from 4.1.39.Final to 4.1.41.Final (#1064) @dependabot
+👻 Maintenance
+Validate keycloak demo with the integrations framework (#1111) @v1v
+Validate slack demo with the integrations framework (#1118) @v1v
+Validate statistics-gatherer demo with the integrations framework (#1119) @v1v
+Minor improvements to array creation and one unit test (#1122) @StefanSpieker
+Validate warnings demo with the integrations framework (#1117) @v1v
+Validate external-workspace-manager demo with the integrations framework (#1110) @v1v
+Validate sbt demo with the integrations framework (#1112) @v1v
+Validate simple-theme demo with the integrations framework (#1123) @v1v
+Validate mesos demo with the integrations framework (#1114) @v1v
+Move git tools ITs to the demos (#1108) @v1v
+Validate external-workspace-manager demo with the integrations framework (#1107) @v1v
+Validate proxy demo with the integrations framework (#1106) @v1v
+Move matrix-auth ITs to the demos (#1091) @v1v
+Validate github-oath demo with the integrations framework (#1086) @v1v
+Move JDK  ITs to the demos (#1090) @v1v
+Move mercurial ITs to the demos (#1089) @v1v
+Move jira ITs to the demos (#1088) @v1v
+Validate gitlab demo with the integrations framework (#1087) @v1v
+Validate ec2-plugin demo with the integrations framework (#1085) @v1v
+Validate Artifactory demo within the integrations submodule (#1080) @v1v
+Validate docker-plugin demo with the integrations framework (#1084) @v1v
+Validate config-file-provider demo with the integrations framework (#1083) @v1v
+Validate build_agents demo within the integrations submodule (#1081) @v1v
+BOM 3 (#1075) @jglick"
+40," Optional: add a release summary here 
+🚨 Removed
+
+Remove old jelly schema and usages (#1069) @sladyn98
+
+🚀 New features and improvements
+
+Introduce a new JSON schema generation engine (Beta feature) (#980) @sladyn98
+
+🐛 Bug Fixes
+
+Allow @CheckForNull annotations to override @ParametersAreNonnullByDefault in DataBoundContructor (#1053) @timja
+
+📝 Documentation updates
+
+Reference Javadoc from the Developer documentation page (#1054) @oleg-nenashev
+Add the JSON Schema Documentation page (#1030) @sladyn98
+
+📦 Dependency updates
+
+Bump joda-time from 2.10.3 to 2.10.4 (#1072) @dependabot
+Bump gson from 2.5 to 2.8.5 (#1063) @dependabot
+Bump org.everit.json.schema from 1.3.0 to 1.5.1 (#1065) @dependabot
+Bump io.jenkins.tools.bom:bom from 2.164.2 to 2.176.3 (#1052) @dependabot
+Bump vault from 1.12.0 to 1.12.1 (#1051) @dependabot
+
+👻 Maintenance
+
+Move YAML examples from integration tests to the demos, ensure all demos have test coverage (#1055) @v1v
+JENKINS-57557 - Add integration test with github-branch-source (#1071) @fcojfernandez
+Add GitHub Action CI as a backup CI instance (#986) @jetersen
+","Optional: add a release summary here 
+🚨 Removed
+Remove old jelly schema and usages (#1069) @sladyn98
+🚀 New features and improvements
+Introduce a new JSON schema generation engine (Beta feature) (#980) @sladyn98
+🐛 Bug Fixes
+Allow @CheckForNull annotations to override @ParametersAreNonnullByDefault in DataBoundContructor (#1053) @timja
+📝 Documentation updates
+Reference Javadoc from the Developer documentation page (#1054) @oleg-nenashev
+Add the JSON Schema Documentation page (#1030) @sladyn98
+📦 Dependency updates
+Bump joda-time from 2.10.3 to 2.10.4 (#1072) @dependabot
+Bump gson from 2.5 to 2.8.5 (#1063) @dependabot
+Bump org.everit.json.schema from 1.3.0 to 1.5.1 (#1065) @dependabot
+Bump io.jenkins.tools.bom:bom from 2.164.2 to 2.176.3 (#1052) @dependabot
+Bump vault from 1.12.0 to 1.12.1 (#1051) @dependabot
+👻 Maintenance
+Move YAML examples from integration tests to the demos, ensure all demos have test coverage (#1055) @v1v
+JENKINS-57557 - Add integration test with github-branch-source (#1071) @fcojfernandez
+Add GitHub Action CI as a backup CI instance (#986) @jetersen"
+41," Optional: add a release summary here 
+🐛 Bug Fixes
+
+Fix space in logs (#1049) @timja
+
+📝 Documentation updates
+
+Update Project meetings information and move it to CONTRIBUTING.md (#1029) @oleg-nenashev
+Update job-dsl example as id is required (#1034) @chris-mac
+
+📦 Dependency updates
+
+Bump commons-lang3 from 3.7 to 3.9 (#1011) @dependabot
+Bump hashicorp-vault-plugin from 2.4.0 to 2.5.0 (#1042) @dependabot
+Bump joda-time from 2.9.9 to 2.10.3 (#1046) @dependabot
+Bump vavr from 0.9.2 to 0.10.2 (#1045) @dependabot
+Bump checkstyle from 8.23 to 8.24 (#1043) @dependabot
+Bump maven-checkstyle-plugin from 3.0.0 to 3.1.0 (#1017) @dependabot
+Bump vault from 1.10.6 to 1.12.0 (#1019) @dependabot
+Bump checkstyle from 8.18 to 8.23 (#1014) @dependabot
+
+👻 Maintenance
+
+Use BOM for dependency management inside integrations tests (#1047) @casz
+Dependabot: Ignore Docker, Kubernetes, Declarative Pipeline and Custom Tools plugins which have custom group IDs (#1020) @oleg-nenashev
+","Optional: add a release summary here 
+🐛 Bug Fixes
+Fix space in logs (#1049) @timja
+📝 Documentation updates
+Update Project meetings information and move it to CONTRIBUTING.md (#1029) @oleg-nenashev
+Update job-dsl example as id is required (#1034) @chris-mac
+📦 Dependency updates
+Bump commons-lang3 from 3.7 to 3.9 (#1011) @dependabot
+Bump hashicorp-vault-plugin from 2.4.0 to 2.5.0 (#1042) @dependabot
+Bump joda-time from 2.9.9 to 2.10.3 (#1046) @dependabot
+Bump vavr from 0.9.2 to 0.10.2 (#1045) @dependabot
+Bump checkstyle from 8.23 to 8.24 (#1043) @dependabot
+Bump maven-checkstyle-plugin from 3.0.0 to 3.1.0 (#1017) @dependabot
+Bump vault from 1.10.6 to 1.12.0 (#1019) @dependabot
+Bump checkstyle from 8.18 to 8.23 (#1014) @dependabot
+👻 Maintenance
+Use BOM for dependency management inside integrations tests (#1047) @casz
+Dependabot: Ignore Docker, Kubernetes, Declarative Pipeline and Custom Tools plugins which have custom group IDs (#1020) @oleg-nenashev"
+42," Optional: add a release summary here 
+🐛 Bug Fixes
+
+Secret sources get initialized too late (#1006) @Smasherr
+
+📦 Dependency updates
+
+Bump snakeyaml from 1.23 to 1.25 (#1000) @dependabot
+Bump netty-codec-http from 4.1.17.Final to 4.1.39.Final (#1001) @dependabot
+Bump netty-handler from 4.1.17.Final to 4.1.39.Final (#999) @dependabot
+Bump maven-shade-plugin from 2.3 to 3.2.1 (#1002) @dependabot
+Bump checkstyle from 8.17 to 8.18 (#1009) @dependabot
+remove vault-java-driver dependency inside plugin (#1008) @casz
+
+👻 Maintenance
+
+reduce Travis builds to master and pull requests (#1007) @casz
+switch POM URL to point at GitHub (#1004) @casz
+add dependencies label (#1005) @casz
+","Optional: add a release summary here 
+🐛 Bug Fixes
+Secret sources get initialized too late (#1006) @Smasherr
+📦 Dependency updates
+Bump snakeyaml from 1.23 to 1.25 (#1000) @dependabot
+Bump netty-codec-http from 4.1.17.Final to 4.1.39.Final (#1001) @dependabot
+Bump netty-handler from 4.1.17.Final to 4.1.39.Final (#999) @dependabot
+Bump maven-shade-plugin from 2.3 to 3.2.1 (#1002) @dependabot
+Bump checkstyle from 8.17 to 8.18 (#1009) @dependabot
+remove vault-java-driver dependency inside plugin (#1008) @casz
+👻 Maintenance
+reduce Travis builds to master and pull requests (#1007) @casz
+switch POM URL to point at GitHub (#1004) @casz
+add dependencies label (#1005) @casz"
+43," Optional: add a release summary here 
+🚨 Removed
+
+Moved vault secret source resolver to hashicorp vault plugin (#970) @casz
+
+📝 Documentation updates
+
+Fix broken sonar config (#996) @yogeek
+Add known JCasC extensions to readme (#995) @casz
+Remove the JCasC: Support plugin reference from the seed job documentation (#988) @casz
+Listed External Workspace Manager in yaml demos (#985) @BenjaminBeggs
+
+👻 Maintenance
+
+add breaking change label (#1003) @casz
+Enable Dependabot for the repository (#998) @oleg-nenashev
+JENKINS-45740 - Inject plugin changelog and logo URLs into the plugin manifest (#989) @oleg-nenashev
+Added dev-tools label for the Community Bridge project (#993) @sladyn98
+Add @timja and @oleg-nenashev to the list of maintainers in the plugin metadata (#990) @oleg-nenashev
+report coverage to codacy (#981) @casz
+Fix codacy issues (#977) @casz
+","Optional: add a release summary here 
+🚨 Removed
+Moved vault secret source resolver to hashicorp vault plugin (#970) @casz
+📝 Documentation updates
+Fix broken sonar config (#996) @yogeek
+Add known JCasC extensions to readme (#995) @casz
+Remove the JCasC: Support plugin reference from the seed job documentation (#988) @casz
+Listed External Workspace Manager in yaml demos (#985) @BenjaminBeggs
+👻 Maintenance
+add breaking change label (#1003) @casz
+Enable Dependabot for the repository (#998) @oleg-nenashev
+JENKINS-45740 - Inject plugin changelog and logo URLs into the plugin manifest (#989) @oleg-nenashev
+Added dev-tools label for the Community Bridge project (#993) @sladyn98
+Add @timja and @oleg-nenashev to the list of maintainers in the plugin metadata (#990) @oleg-nenashev
+report coverage to codacy (#981) @casz
+Fix codacy issues (#977) @casz"
+44,"See the Jenkins security advisory here. This is a follow-up to the security fixes in 1.25.
+🐛 Bug Fixes
+
+SECURITY-1497 / CVE-2019-10367 - Prevent exposing secrets as plain text by DataBoundConfigurator in System logs when loading configs
+","See the Jenkins security advisory here. This is a follow-up to the security fixes in 1.25.
+🐛 Bug Fixes
+SECURITY-1497 / CVE-2019-10367 - Prevent exposing secrets as plain text by DataBoundConfigurator in System logs when loading configs"
+45," Optional: add a release summary here 
+🚨 Removed
+
+Remove dependency on the interpolatd library which is no longer used after 1.25 (#972) @oleg-nenashev
+
+🚀 New features and improvements
+
+Reduce logging level for JCasC YAML loading messages (#975) @oleg-nenashev
+
+📝 Documentation updates
+
+Document the YAML export feature and security considerations (#969) @oleg-nenashev
+Update @since in Javadoc for newly introduced APIs (#974) @oleg-nenashev
+Update the mailer-plugin demo (#971) @h1dden-da3m0n
+Issue #965 - Remove the obsolete plugin management section from the JCasC reference generator screenshot (#966) @agarthetiger
+
+👻 Maintenance
+
+Add IDEA code styles to align IDE with Checkstyle requirements (#978) @casz
+Simplify the pull request template and update the checklist (#973) @oleg-nenashev
+","Optional: add a release summary here 
+🚨 Removed
+Remove dependency on the interpolatd library which is no longer used after 1.25 (#972) @oleg-nenashev
+🚀 New features and improvements
+Reduce logging level for JCasC YAML loading messages (#975) @oleg-nenashev
+📝 Documentation updates
+Document the YAML export feature and security considerations (#969) @oleg-nenashev
+Update @since in Javadoc for newly introduced APIs (#974) @oleg-nenashev
+Update the mailer-plugin demo (#971) @h1dden-da3m0n
+Issue #965 - Remove the obsolete plugin management section from the JCasC reference generator screenshot (#966) @agarthetiger
+👻 Maintenance
+Add IDEA code styles to align IDE with Checkstyle requirements (#978) @casz
+Simplify the pull request template and update the checklist (#973) @oleg-nenashev"
+46,"Important security fixes, see the Jenkins security advisory here. This release might be incompatible with previous ones for some use-cases, documentation and mitigation are available below.
+🐛 Bug Fixes
+
+SECURITY-1279 / CVE-2019-10343 - Prevent exposing secrets from some plugins as plain text in System logs when loading configs. @oleg-nenashev
+Known affected plugin configurations: password for UsernamePasswordCredentialsImpl from the Credentials plugin, private key for BasicSSHUserPrivateKey from the SSH Credentials plugin, SMTP password in the Mail Ext Plugin
+SECURITY-1290 / CVE-2019-10344 - Do not allow users without Overall/Administer permission to access instance-specific documentation and JSON schema. @varyvol
+SECURITY-1446 / CVE-2019-10362 - Escape Jenkins system configuration variables to prevent their resolution when importing configs. @fcojfernandez @oleg-nenashev
+See the documentation here
+SECURITY-1458 / CVE-2019-10363 - Prevent exposing secrets from some plugins as plain text in exported YAMLs. @oleg-nenashev
+Known affected plugin configurations: password in the SGE Cloud Plugin
+
+:boom: Breaking changes
+
+Jenkins admins might need to review the configuration YAML files and to manually escape Jenkins internal variable expressions. See the documentation here
+If anonymous API access is used to access configuration specification or JSON Schema,
+  Jenkins admins need to reconfigure the client logic to authenticate as users 
+  with administrative access (e.g. using an access token)
+
+🚦 Tests
+
+SECURITY-1303 / CVE-2019-10345 - Add integration test to verify the fix @oleg-nenashev
+Add LoggerRule asserts to io.jenkins.plugins.casc.misc.Util @oleg-nenashev
+Add exportToString() method for YAML export tesing to JenkinsConfiguredWithCodeRule @oleg-nenashev
+","Important security fixes, see the Jenkins security advisory here. This release might be incompatible with previous ones for some use-cases, documentation and mitigation are available below.
+🐛 Bug Fixes
+SECURITY-1279 / CVE-2019-10343 - Prevent exposing secrets from some plugins as plain text in System logs when loading configs. @oleg-nenashev
+Known affected plugin configurations: password for UsernamePasswordCredentialsImpl from the Credentials plugin, private key for BasicSSHUserPrivateKey from the SSH Credentials plugin, SMTP password in the Mail Ext Plugin
+SECURITY-1290 / CVE-2019-10344 - Do not allow users without Overall/Administer permission to access instance-specific documentation and JSON schema. @varyvol
+SECURITY-1446 / CVE-2019-10362 - Escape Jenkins system configuration variables to prevent their resolution when importing configs. @fcojfernandez @oleg-nenashev
+See the documentation here
+SECURITY-1458 / CVE-2019-10363 - Prevent exposing secrets from some plugins as plain text in exported YAMLs. @oleg-nenashev
+Known affected plugin configurations: password in the SGE Cloud Plugin
+:boom: Breaking changes
+Jenkins admins might need to review the configuration YAML files and to manually escape Jenkins internal variable expressions. See the documentation here
+If anonymous API access is used to access configuration specification or JSON Schema,
+  Jenkins admins need to reconfigure the client logic to authenticate as users 
+  with administrative access (e.g. using an access token)
+🚦 Tests
+SECURITY-1303 / CVE-2019-10345 - Add integration test to verify the fix @oleg-nenashev
+Add LoggerRule asserts to io.jenkins.plugins.casc.misc.Util @oleg-nenashev
+Add exportToString() method for YAML export tesing to JenkinsConfiguredWithCodeRule @oleg-nenashev"
+47," Optional: add a release summary here 
+🚀 New features and improvements
+
+Data Bound Configurator: Pass empty collections to mandatory fields when the attribute is not specified in configuration YAMLs  (#950) @AbhyudayaSharma
+Data Bound Configurator: Take the @ParametersAreNonnullByDefault annotation into account when resolving mandatory fields. Supported scopes: class, package and method (#950) @AbhyudayaSharma
+Print warning when a secret variable cannot be resolved during import (#957) @oleg-nenashev
+Allow Data Bound Configurator to convert and export Sets (#943) @AbhyudayaSharma
+
+🐛 Bug Fixes
+
+Prevent NumberFormatException in system log when exporting the JSON schema (#945) @varyvol
+
+👻 Maintenance
+
+Add an issue template for questions and support requests (#952) @oleg-nenashev
+
+🚦 Tests
+
+JENKINS-52906 - Update JIRA Plugin test dependency to verify the JCasC compatibility and support writing roundtrip tests (#956) @oleg-nenashev
+Fix ToolDefaultPropertiesExportBlacklistTest#export_tool_configuration() when building the plugin on Windows (#946) @casz
+","Optional: add a release summary here 
+🚀 New features and improvements
+Data Bound Configurator: Pass empty collections to mandatory fields when the attribute is not specified in configuration YAMLs  (#950) @AbhyudayaSharma
+Data Bound Configurator: Take the @ParametersAreNonnullByDefault annotation into account when resolving mandatory fields. Supported scopes: class, package and method (#950) @AbhyudayaSharma
+Print warning when a secret variable cannot be resolved during import (#957) @oleg-nenashev
+Allow Data Bound Configurator to convert and export Sets (#943) @AbhyudayaSharma
+🐛 Bug Fixes
+Prevent NumberFormatException in system log when exporting the JSON schema (#945) @varyvol
+👻 Maintenance
+Add an issue template for questions and support requests (#952) @oleg-nenashev
+🚦 Tests
+JENKINS-52906 - Update JIRA Plugin test dependency to verify the JCasC compatibility and support writing roundtrip tests (#956) @oleg-nenashev
+Fix ToolDefaultPropertiesExportBlacklistTest#export_tool_configuration() when building the plugin on Windows (#946) @casz"
+48," Optional: add a release summary here 
+🚀 New features and improvements
+
+support multi-line string export using literal style (#941) @casz
+Allow partial selection in export viewer. (#936) @rudolfwalter
+
+🐛 Bug Fixes
+
+Properly export floating-point values (#940) @rudolfwalter
+","Optional: add a release summary here 
+🚀 New features and improvements
+support multi-line string export using literal style (#941) @casz
+Allow partial selection in export viewer. (#936) @rudolfwalter
+🐛 Bug Fixes
+Properly export floating-point values (#940) @rudolfwalter"
+49," Optional: add a release summary here 
+🚀 New features and improvements
+
+Added Expected params for databound constructor (#930) @sladyn98
+JENKINS-57122 - Add blacklist for defaultProperties on tools (#925) @timja
+
+🐛 Bug Fixes
+
+JENKINS-57604 - HeteroDescribableConfigurator now properly matches descriptors for subclass fields, e.g. for Git plugin's SCM Browsers (#932) @oleg-nenashev
+
+📝 Documentation updates
+
+Fix demo and bump ec2 test version (#931) @res0nance
+Link newbie-friendly issues in CONTRIBUTING.md (#927) @oleg-nenashev
+
+👻 Maintenance
+
+add repo settings (#856) @casz
+
+🚦 Tests
+
+Prevent failure of  ConfigurationAsCodeTest.java#init_test_from_accepted_sources() when building on Windows (#929) @sladyn98
+","Optional: add a release summary here 
+🚀 New features and improvements
+Added Expected params for databound constructor (#930) @sladyn98
+JENKINS-57122 - Add blacklist for defaultProperties on tools (#925) @timja
+🐛 Bug Fixes
+JENKINS-57604 - HeteroDescribableConfigurator now properly matches descriptors for subclass fields, e.g. for Git plugin's SCM Browsers (#932) @oleg-nenashev
+📝 Documentation updates
+Fix demo and bump ec2 test version (#931) @res0nance
+Link newbie-friendly issues in CONTRIBUTING.md (#927) @oleg-nenashev
+👻 Maintenance
+add repo settings (#856) @casz
+🚦 Tests
+Prevent failure of  ConfigurationAsCodeTest.java#init_test_from_accepted_sources() when building on Windows (#929) @sladyn98"
+50,"| WARNING: There are no user-facing changes in the JCasC plugin, the update is not needed |
+| --- |
+📝 Documentation updates
+
+EC2 Plugin v1.42 parameters deprecated  (#920) @rlnchow
+JENKINS-57928 - Add documentation for JMH benchmarks with JCasC (#921) @AbhyudayaSharma
+
+🚦 Tests
+
+JENKINS-57928 - Allow configuring JMH benchmarks using CASC (#921) @AbhyudayaSharma
+","| WARNING: There are no user-facing changes in the JCasC plugin, the update is not needed |
+| --- |
+📝 Documentation updates
+EC2 Plugin v1.42 parameters deprecated  (#920) @rlnchow
+JENKINS-57928 - Add documentation for JMH benchmarks with JCasC (#921) @AbhyudayaSharma
+🚦 Tests
+JENKINS-57928 - Allow configuring JMH benchmarks using CASC (#921) @AbhyudayaSharma"
+51,"Changes
+🐛 Bug Fixes
+
+SECURITY-1303 / CVE-2019-10345 - Fix Proxy credentials masking in system logs and exported configuration YAMLs (#916) @velma
+Fix ProxyConfigurator does not resolve secrets (#916) @velma
+Prevent null pointer when non-first yml file is empty. (#911) @rudolfwalter
+Do not fail Windows-style path validation. (#915) @rudolfwalter
+
+🚦 Tests
+
+JENKINS-57761 - Add abstract test for export/configure roundtrip (#908) @MRamonLeon
+","Changes
+🐛 Bug Fixes
+SECURITY-1303 / CVE-2019-10345 - Fix Proxy credentials masking in system logs and exported configuration YAMLs (#916) @velma
+Fix ProxyConfigurator does not resolve secrets (#916) @velma
+Prevent null pointer when non-first yml file is empty. (#911) @rudolfwalter
+Do not fail Windows-style path validation. (#915) @rudolfwalter
+🚦 Tests
+JENKINS-57761 - Add abstract test for export/configure roundtrip (#908) @MRamonLeon"
+52,"Changes
+🐛 Bug Fixes
+
+Fix node properties export (#905) @timja
+
+📝 Documentation updates
+
+update doc with required version for credentials and role-strategy (#907) @casz
+
+👻 Maintenance
+
+Cleanup references to support plugin after removal (#906) @timja @casz 
+","Changes
+🐛 Bug Fixes
+Fix node properties export (#905) @timja
+📝 Documentation updates
+update doc with required version for credentials and role-strategy (#907) @casz
+👻 Maintenance
+Cleanup references to support plugin after removal (#906) @timja @casz "
+53,"Changes
+We have finished moving all the configurators from Configuration as Code: Support plugin functionality to their dedicated plugins. So the plugin Configuration as Code: Support is now empty plugin and does provide any functionality beyond v1.18, therefore you can freely uninstall the configuration-as-code-support plugin if your using a newer a version of configuration as code above greater or equal to v1.18.
+🚨 Removed
+
+Removed the configurator for Credentials Plugin from Support plugin. Use Credentials 2.2.0+ instead (#863) @jetersen
+Removed the configurator for Role Strategy from Support plugin. Use Role Strategy 2.11+ instead (#897) @jetersen
+
+🐛 Bug Fixes
+
+Ignore setters which rely on Maps (#900) @ndeloof
+Fix 'git' tool export regression introduced in 1.17 (#898) @timja
+","Changes
+We have finished moving all the configurators from Configuration as Code: Support plugin functionality to their dedicated plugins. So the plugin Configuration as Code: Support is now empty plugin and does provide any functionality beyond v1.18, therefore you can freely uninstall the configuration-as-code-support plugin if your using a newer a version of configuration as code above greater or equal to v1.18.
+🚨 Removed
+Removed the configurator for Credentials Plugin from Support plugin. Use Credentials 2.2.0+ instead (#863) @jetersen
+Removed the configurator for Role Strategy from Support plugin. Use Role Strategy 2.11+ instead (#897) @jetersen
+🐛 Bug Fixes
+Ignore setters which rely on Maps (#900) @ndeloof
+Fix 'git' tool export regression introduced in 1.17 (#898) @timja"
+54,"Changes
+🐛 Bug Fixes
+
+use VersionConverter instead of lambda (#889) @casz
+prefer environment variable over global config for config file path (#896) @casz
+Fix role strategy export (#895) @timja
+
+👻 Maintenance
+
+Inherit the global Release Drafter configuration (#894) @oleg-nenashev
+","Changes
+🐛 Bug Fixes
+use VersionConverter instead of lambda (#889) @casz
+prefer environment variable over global config for config file path (#896) @casz
+Fix role strategy export (#895) @timja
+👻 Maintenance
+Inherit the global Release Drafter configuration (#894) @oleg-nenashev"
+55,"Changes
+🚀 Features
+
+Allow triggering reload with pre-shared secret (#712) @torstenwalter
+
+🐛 Bug Fixes
+
+Handle null value on stapler converter (#882) @timja
+","Changes
+🚀 Features
+Allow triggering reload with pre-shared secret (#712) @torstenwalter
+🐛 Bug Fixes
+Handle null value on stapler converter (#882) @timja"
+56,"Changes
+🐛 Bug Fixes
+
+Sort the configuration files for ordered loading of config (#880) @rjbwtr
+
+👻 Maintenance
+
+fix checkstyle on windows (#881) @casz
+
+📝 Documentation updates
+
+Move warning sentence into properties file (#877) @LinuxSuRen
+Improvements for Util class and PLUGINS.md (#875) @darxriggs
+","Changes
+🐛 Bug Fixes
+Sort the configuration files for ordered loading of config (#880) @rjbwtr
+👻 Maintenance
+fix checkstyle on windows (#881) @casz
+📝 Documentation updates
+Move warning sentence into properties file (#877) @LinuxSuRen
+Improvements for Util class and PLUGINS.md (#875) @darxriggs"
+57,"Changes
+🚨 Removed
+
+Remove job-dsl from support plugin (#861) @casz
+  jobs node is moved to job-dsl v1.73
+Remove ssh credentials from support plugin (#862) @casz
+  ssh-credentials v1.16 now supports data binding for direct key
+Remove matrix-auth from support plugin (#845) @daniel-beck
+  Moved to matrix-auth v2.4
+
+🐛 Bug Fixes
+
+More schema fixes (#870) @timja
+
+👻 Maintenance
+
+Cleanup & fix jenkins ci (#874) @casz
+add W.I.P hint in pull request template (#864) @casz
+Update labels usage (#859) @casz
+
+📝 Documentation updates
+
+update docs with requirements for plugins (#869) @casz
+Update plugin export docs (#860) @timja
+  Added some more test helpers for other plugin devs to use
+Adding saml plugin config in demo (#865) @anmolnagpal
+
+🚦 Tests
+
+fix unit test on windows (#857) @casz
+","Changes
+🚨 Removed
+Remove job-dsl from support plugin (#861) @casz
+  jobs node is moved to job-dsl v1.73
+Remove ssh credentials from support plugin (#862) @casz
+  ssh-credentials v1.16 now supports data binding for direct key
+Remove matrix-auth from support plugin (#845) @daniel-beck
+  Moved to matrix-auth v2.4
+🐛 Bug Fixes
+More schema fixes (#870) @timja
+👻 Maintenance
+Cleanup & fix jenkins ci (#874) @casz
+add W.I.P hint in pull request template (#864) @casz
+Update labels usage (#859) @casz
+📝 Documentation updates
+update docs with requirements for plugins (#869) @casz
+Update plugin export docs (#860) @timja
+  Added some more test helpers for other plugin devs to use
+Adding saml plugin config in demo (#865) @anmolnagpal
+🚦 Tests
+fix unit test on windows (#857) @casz"
+58,"Changes
+🚀 Features
+
+Use CSS user-select to achieve easy copy paste of View Export (#853) @casz
+
+👻 Maintenance
+
+🗑️ Codacy markdown issues (#848) @casz
+fix readability alerts reported by LGTM (#849) @casz
+compare collection in Attribute (#814) @casz
+add reverted as an excluded label (#854) @casz
+
+📝 Documentation updates
+
+Add docs for testing export of configuration (#851) @timja
+","Changes
+🚀 Features
+Use CSS user-select to achieve easy copy paste of View Export (#853) @casz
+👻 Maintenance
+🗑️ Codacy markdown issues (#848) @casz
+fix readability alerts reported by LGTM (#849) @casz
+compare collection in Attribute (#814) @casz
+add reverted as an excluded label (#854) @casz
+📝 Documentation updates
+Add docs for testing export of configuration (#851) @timja"
+59,"Changes
+
+We now have a view configuration of jenkins.yml export instead of having to download the configuration, all thanks to @timja.
+We introduced reduced stack traces in the export as well. You no longer have to suffer from scrolling past long stack traces.
+
+🚀 Features
+
+Allow loading of a single file in a hidden folder (#834) @mglazer
+Add view configuration feature, see screenshot (#836) @timja
+add ConfiguredWithCode as class rule (#846) @casz
+
+🐛 Bug Fixes
+
+Fix NPE with some exceptions in form validation (#840) @daniel-beck
+Submit form validation via POST (#842) @daniel-beck
+make export great again by fixing NPE in describe, you should see fewer exceptions (#838) @casz
+fix view configuration button and cleanup css styling (#843) @casz
+Fix ssh-credential to be optional (#847) @casz
+
+👻 Maintenance
+
+use version-template 🎉 (#829) @casz
+updated badges (#830) @casz
+
+📝 Documentation updates
+
+docs prettier formatting & cleanup (#831) @casz
+","Changes
+We now have a view configuration of jenkins.yml export instead of having to download the configuration, all thanks to @timja.
+We introduced reduced stack traces in the export as well. You no longer have to suffer from scrolling past long stack traces.
+🚀 Features
+Allow loading of a single file in a hidden folder (#834) @mglazer
+Add view configuration feature, see screenshot (#836) @timja
+add ConfiguredWithCode as class rule (#846) @casz
+🐛 Bug Fixes
+Fix NPE with some exceptions in form validation (#840) @daniel-beck
+Submit form validation via POST (#842) @daniel-beck
+make export great again by fixing NPE in describe, you should see fewer exceptions (#838) @casz
+fix view configuration button and cleanup css styling (#843) @casz
+Fix ssh-credential to be optional (#847) @casz
+👻 Maintenance
+use version-template 🎉 (#829) @casz
+updated badges (#830) @casz
+📝 Documentation updates
+docs prettier formatting & cleanup (#831) @casz"
+60,"Changes
+🐛 Bug Fixes
+
+fix JSON schema issues (#778) @BlueAndi
+
+👻 Maintenance
+
+add stale (#818) @casz
+
+📝 Documentation updates
+
+Hint what version of config-file-provider is needed for JCasC (#823) @olivergondza
+
+🚦 Tests
+
+Add more test coverage for ProxyConfigurator (#827) @timja
+","Changes
+🐛 Bug Fixes
+fix JSON schema issues (#778) @BlueAndi
+👻 Maintenance
+add stale (#818) @casz
+📝 Documentation updates
+Hint what version of config-file-provider is needed for JCasC (#823) @olivergondza
+🚦 Tests
+Add more test coverage for ProxyConfigurator (#827) @timja"
+61,"Changes
+🚀 Features
+
+Describable will give a warning on multiple implementations of a symbol (#674) @dgarzon
+Support encrypted passwords for local security realm (#788) @mglazer
+Re-parse vault configuration on every configure() call (#810) @fishi0x01
+
+🐛 Bug Fixes
+
+exclude original snakeyaml from the plugin (#819) @casz
+Missing ""$"" added to reference keyword in schema. (#777) @BlueAndi
+fix Job DSL race condition (#780) @casz
+Include only needed classes in test jar (#799) @ingwarsw
+only log deprecation if CASC_VAULT_PATH is present (#786) @casz
+Do not ignore values for DescriptorConfigurator due to load being called on export (#806) @timja
+Keep cloud agents after configuration (#804) @ingwarsw
+fix null pointer on mapping clone (#813) @casz
+
+👻 Maintenance
+
+add Release drafter (#794) @casz
+YAML Sources code cleanup (#792) @casz
+Use NonNull and CheckForNull from SpotBugs (#791) @casz
+add missing annotation (#805) @casz
+add travis ci (#807) @casz
+support building against recent Jenkins LTS and JDK 11 (#808) @casz
+code cleanup (#812) @casz
+Shade snakeyaml instead of vendoring (#816) @casz
+add checkstyle (#815) @casz
+use multiModuleProjectDirectory (#817) @casz
+
+📝 Documentation updates
+
+Update plugin dev guide with ConfiguredAsCode rule (#796) @timja
+Update kubernetes-helm docs (#802) @runzexia
+Demo docs for Sbt tool configuration (#783) @aduprat
+Improve GitHub templates, move changelog to GitHub release tab, cleanup old docs (#803) @casz
+add service account credential to advanced k8s example (#811) @aramse
+
+🚦 Tests
+
+Remove 2 second sleep in vault test (#779) @casz
+Move JDKConfigurator test to integrations (#787) @timja
+","Changes
+🚀 Features
+Describable will give a warning on multiple implementations of a symbol (#674) @dgarzon
+Support encrypted passwords for local security realm (#788) @mglazer
+Re-parse vault configuration on every configure() call (#810) @fishi0x01
+🐛 Bug Fixes
+exclude original snakeyaml from the plugin (#819) @casz
+Missing ""$"" added to reference keyword in schema. (#777) @BlueAndi
+fix Job DSL race condition (#780) @casz
+Include only needed classes in test jar (#799) @ingwarsw
+only log deprecation if CASC_VAULT_PATH is present (#786) @casz
+Do not ignore values for DescriptorConfigurator due to load being called on export (#806) @timja
+Keep cloud agents after configuration (#804) @ingwarsw
+fix null pointer on mapping clone (#813) @casz
+👻 Maintenance
+add Release drafter (#794) @casz
+YAML Sources code cleanup (#792) @casz
+Use NonNull and CheckForNull from SpotBugs (#791) @casz
+add missing annotation (#805) @casz
+add travis ci (#807) @casz
+support building against recent Jenkins LTS and JDK 11 (#808) @casz
+code cleanup (#812) @casz
+Shade snakeyaml instead of vendoring (#816) @casz
+add checkstyle (#815) @casz
+use multiModuleProjectDirectory (#817) @casz
+📝 Documentation updates
+Update plugin dev guide with ConfiguredAsCode rule (#796) @timja
+Update kubernetes-helm docs (#802) @runzexia
+Demo docs for Sbt tool configuration (#783) @aduprat
+Improve GitHub templates, move changelog to GitHub release tab, cleanup old docs (#803) @casz
+add service account credential to advanced k8s example (#811) @aramse
+🚦 Tests
+Remove 2 second sleep in vault test (#779) @casz
+Move JDKConfigurator test to integrations (#787) @timja"
+62,:fire: v1.9 failed due to vendoring of snakeyaml :fire:,:fire: v1.9 failed due to vendoring of snakeyaml :fire:
+63,"🚨 Removed
+
+Remove plugin management beta feature (#769) @timja 
+  this feature was not widely used as it required restarts to be performed for plugins to be usable in a JCasC config file, moved proxy config and documented it
+
+🚀 Features
+
+Add support for recursive file search for CASC_JENKINS_CONFIG (#753)
+  We no longer follow symlinks or hidden files due to this change
+Introduce CASC_VAULT_PATHS to allow multiple vault paths to read from. CASC_VAULT_PATH kept for backward compatibility and offering multipath too now. (#763)
+Added Proxy configuration to jenkins root node (#769)
+Added UpdateCenter configuration to jenkins root node (#769)
+Re-issue expired vault tokens for user/pass and approle authentication. (#770)
+Refresh secrets from vault on each configure() call. (#770)
+
+🚦 Tests
+
+Add Vault integration test! (#764)
+","🚨 Removed
+Remove plugin management beta feature (#769) @timja 
+  this feature was not widely used as it required restarts to be performed for plugins to be usable in a JCasC config file, moved proxy config and documented it
+🚀 Features
+Add support for recursive file search for CASC_JENKINS_CONFIG (#753)
+  We no longer follow symlinks or hidden files due to this change
+Introduce CASC_VAULT_PATHS to allow multiple vault paths to read from. CASC_VAULT_PATH kept for backward compatibility and offering multipath too now. (#763)
+Added Proxy configuration to jenkins root node (#769)
+Added UpdateCenter configuration to jenkins root node (#769)
+Re-issue expired vault tokens for user/pass and approle authentication. (#770)
+Refresh secrets from vault on each configure() call. (#770)
+🚦 Tests
+Add Vault integration test! (#764)"
+64,"🐛 Bug Fixes
+
+fixed secrets always using the default, no matter what (#749)
+add support for specifying vault engine version via CASC_VAULT_ENGINE_VERSION (#746)
+","🐛 Bug Fixes
+fixed secrets always using the default, no matter what (#749)
+add support for specifying vault engine version via CASC_VAULT_ENGINE_VERSION (#746)"
+65,"🚀 Features
+
+Make system environment variables available in the context used for running the JobDSL/groovy code defining the seed job.
+Add support for secrets while defining jobs declarations.
+Add support for Enterprise Vault to store secrets; set CASC_VAULT_NAMESPACE to provide a namespace
+
+🐛 Bug Fixes
+
+fixed an IndexOutOfBounds exception (#688)
+
+📝 Documentation updates
+
+many fixes to documentation and demos
+","🚀 Features
+Make system environment variables available in the context used for running the JobDSL/groovy code defining the seed job.
+Add support for secrets while defining jobs declarations.
+Add support for Enterprise Vault to store secrets; set CASC_VAULT_NAMESPACE to provide a namespace
+🐛 Bug Fixes
+fixed an IndexOutOfBounds exception (#688)
+📝 Documentation updates
+many fixes to documentation and demos"
+66,"🚀 Features
+
+add proper string interpolation for secrets (#699)
+
+📝 Documentation updates
+
+Improve the explanation of CASC_VAULT in README.md
+","🚀 Features
+add proper string interpolation for secrets (#699)
+📝 Documentation updates
+Improve the explanation of CASC_VAULT in README.md"
+67,"
+Add support for Vault appRole authentication method
+",Add support for Vault appRole authentication method
+68,"
+fix regression configuring ssh private key from a secret source
+CLI command renamed as reload-jcasc-configuration to avoid conflict with core CLI
+add terraform demo
+restore support for k8s ConfigMaps mounts (don't recurse in CASC_JENKINS_CONFIG directory)
+added support for localization
+added catching illegal arg exception when using UI form
+","fix regression configuring ssh private key from a secret source
+CLI command renamed as reload-jcasc-configuration to avoid conflict with core CLI
+add terraform demo
+restore support for k8s ConfigMaps mounts (don't recurse in CASC_JENKINS_CONFIG directory)
+added support for localization
+added catching illegal arg exception when using UI form"
+69,"
+[SECURITY-929] Don't dump sensitive data in logs when configuring a value
+[SECURITY] prevent directly entered private key to be exported in plain text
+fix and improve generated documentation
+use BulkChange to avoid repeated calls to save()
+list available attributes when unknown found in YAML to help diagnose mistakes
+log a warning when descriptor with an unexpected design is detected
+","[SECURITY-929] Don't dump sensitive data in logs when configuring a value
+[SECURITY] prevent directly entered private key to be exported in plain text
+fix and improve generated documentation
+use BulkChange to avoid repeated calls to save()
+list available attributes when unknown found in YAML to help diagnose mistakes
+log a warning when descriptor with an unexpected design is detected"
+70,"
+[SECURITY-1124] Never export sensitive Secret
+fix plugin installation
+impersonate as SYSTEM to apply configuration
+removed Beta API annotations
+many fixes to documentation and demos
+","[SECURITY-1124] Never export sensitive Secret
+fix plugin installation
+impersonate as SYSTEM to apply configuration
+removed Beta API annotations
+many fixes to documentation and demos"
+71,"Our initial public release, after some trying times :sweat_smile:
+pre-1.0 alpha and release candidates changelog on wiki","Our initial public release, after some trying times :sweat_smile:
+pre-1.0 alpha and release candidates changelog on wiki"

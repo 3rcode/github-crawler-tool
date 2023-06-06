@@ -1,0 +1,717 @@
+Index,Release Note,Release Note With Abstraction
+1,"What's Changed
+
+Fix mdx1 in Windows by @joshwooding in https://github.com/storybookjs/builder-vite/pull/560
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.4.1...v0.4.2","What's Changed
+Fix mdx1 in Windows by @joshwooding in link
+Full Changelog: link"
+2,"What's Changed
+
+Allow the use of @vitejs/plugin-react-swc by @IanVS in https://github.com/storybookjs/builder-vite/pull/552
+Inject mdx compiler for mdx1 by @IanVS in https://github.com/storybookjs/builder-vite/pull/556
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.4.0...v0.4.1","What's Changed
+Allow the use of @vitejs/plugin-react-swc by @IanVS in link
+Inject mdx compiler for mdx1 by @IanVS in link
+Full Changelog: link"
+3,"What's Changed
+
+Fully support Vite 4, remove @vitejs/plugin-react, update @storybook/mdx1-csf by @IanVS in https://github.com/storybookjs/builder-vite/pull/548
+
+Breaking Changes
+To fully support Vite 4, we've updated our mdx handling to no longer require the use of @vitejs/plugin-react.  This means that non-react projects will no longer be getting that plugin added to their projects, and react projects will need to make sure they include it as a dependency (changes to viteFinal are not required).  
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.3.0...v0.4.0","What's Changed
+Fully support Vite 4, remove @vitejs/plugin-react, update @storybook/mdx1-csf by @IanVS in link
+Breaking Changes
+To fully support Vite 4, we've updated our mdx handling to no longer require the use of @vitejs/plugin-react.  This means that non-react projects will no longer be getting that plugin added to their projects, and react projects will need to make sure they include it as a dependency (changes to viteFinal are not required).
+Full Changelog: link"
+4,"What's Changed
+
+Breaking: Update peer dependencies for Vite 4 by @IanVS in https://github.com/storybookjs/builder-vite/pull/545
+Update README by @IanVS in https://github.com/storybookjs/builder-vite/pull/546
+
+If you'd like to continue using Vite 3, please stick with 0.2.x versions of this package.
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.2.7...v0.3.0","What's Changed
+Breaking: Update peer dependencies for Vite 4 by @IanVS in link
+Update README by @IanVS in link
+If you'd like to continue using Vite 3, please stick with 0.2.x versions of this package.
+Full Changelog: link"
+5,"What's Changed
+
+feat: allow definition of stories in vue files by @tobiasdiez in https://github.com/storybookjs/builder-vite/pull/505
+
+Note: this change is experimental, for use with https://github.com/tobiasdiez/unplugin-storybook-vue
+New Contributors
+
+@tobiasdiez made their first contribution in https://github.com/storybookjs/builder-vite/pull/505
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.2.6...v0.2.7","What's Changed
+feat: allow definition of stories in vue files by @tobiasdiez in link
+Note: this change is experimental, for use with link
+New Contributors
+@tobiasdiez made their first contribution in link
+Full Changelog: link"
+6,"What's Changed
+
+Pin version of react-docgen by @IanVS in https://github.com/storybookjs/builder-vite/pull/531
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.2.5...v0.2.6","What's Changed
+Pin version of react-docgen by @IanVS in link
+Full Changelog: link"
+7,"What's Changed
+
+Fix bail not being defined by @joshwooding in https://github.com/storybookjs/builder-vite/pull/510
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.2.4...v0.2.5","What's Changed
+Fix bail not being defined by @joshwooding in link
+Full Changelog: link"
+8,"What's Changed
+
+Fix vue 2.x selection logic by @IanVS in https://github.com/storybookjs/builder-vite/pull/508
+Re-add typescript check when adding react-docgen-typescript plugin by @joshwooding in https://github.com/storybookjs/builder-vite/pull/509
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.2.3...v0.2.4","What's Changed
+Fix vue 2.x selection logic by @IanVS in link
+Re-add typescript check when adding react-docgen-typescript plugin by @joshwooding in link
+Full Changelog: link"
+9,"What's Changed
+Features
+
+Support vue 2.6 and 2.7 by @IanVS in https://github.com/storybookjs/builder-vite/pull/503
+
+Bug fixes
+
+Make sure mocked actions can be identified in production build by @bodograumann in https://github.com/storybookjs/builder-vite/pull/482
+
+Dependencies / Maintenance
+
+Remove pluginutils from dependencies by @kazuma1989 in https://github.com/storybookjs/builder-vite/pull/470
+Support vite 3.1 by @IanVS in https://github.com/storybookjs/builder-vite/pull/490
+Move examples out of workspaces by @IanVS in https://github.com/storybookjs/builder-vite/pull/502
+fix: add missing peer deps by @adalinesimonian in https://github.com/storybookjs/builder-vite/pull/500
+
+New Contributors
+
+@adalinesimonian made their first contribution in https://github.com/storybookjs/builder-vite/pull/500
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.2.2...v0.2.3","What's Changed
+Features
+Support vue 2.6 and 2.7 by @IanVS in link
+Bug fixes
+Make sure mocked actions can be identified in production build by @bodograumann in link
+Dependencies / Maintenance
+Remove pluginutils from dependencies by @kazuma1989 in link
+Support vite 3.1 by @IanVS in link
+Move examples out of workspaces by @IanVS in link
+fix: add missing peer deps by @adalinesimonian in link
+New Contributors
+@adalinesimonian made their first contribution in link
+Full Changelog: link"
+10,"What's Changed
+
+Avoid vite starting app instead of storybook: https://github.com/storybookjs/builder-vite/pull/464
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.2.1...v0.2.2","What's Changed
+Avoid vite starting app instead of storybook: link
+Full Changelog: link"
+11,"What's Changed
+Fixes
+
+Fix launching app instead of storybook by @IanVS in https://github.com/storybookjs/builder-vite/pull/453
+Fix: pass options read from config file to svelteDocgen by @benmccann in https://github.com/storybookjs/builder-vite/pull/449
+Add @rollup/pluginutils to dependencies by @IanVS in https://github.com/storybookjs/builder-vite/pull/459
+Improve react docgen plugin usage by @IanVS in https://github.com/storybookjs/builder-vite/pull/460
+Remove mock-core-js plugin by @IanVS in https://github.com/storybookjs/builder-vite/pull/461
+Fix react-docgen-typescript in some monorepos by @joshwooding in https://github.com/storybookjs/builder-vite/pull/457
+Ignore applyDecorators in v6 story store by @kvcvc in https://github.com/storybookjs/builder-vite/pull/443
+
+Maintencance
+
+Cleanup dependencies on alphas/betas by @benmccann in https://github.com/storybookjs/builder-vite/pull/444
+Cleanup peerDependencies by @benmccann in https://github.com/storybookjs/builder-vite/pull/445
+
+New Contributors
+
+@kvcvc made their first contribution in https://github.com/storybookjs/builder-vite/pull/443
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.2.0...v0.2.1","What's Changed
+Fixes
+Fix launching app instead of storybook by @IanVS in link
+Fix: pass options read from config file to svelteDocgen by @benmccann in link
+Add @rollup/pluginutils to dependencies by @IanVS in link
+Improve react docgen plugin usage by @IanVS in link
+Remove mock-core-js plugin by @IanVS in link
+Fix react-docgen-typescript in some monorepos by @joshwooding in link
+Ignore applyDecorators in v6 story store by @kvcvc in link
+Maintencance
+Cleanup dependencies on alphas/betas by @benmccann in link
+Cleanup peerDependencies by @benmccann in link
+New Contributors
+@kvcvc made their first contribution in link
+Full Changelog: link"
+12,"What's Changed
+
+[breaking] Read svelte.config.js by @benmccann in https://github.com/storybookjs/builder-vite/pull/428
+[breaking]: Support Vite 3 by @IanVS in https://github.com/storybookjs/builder-vite/pull/394
+fix: Load @sveltejs/vite-plugin-svelte conditionally by @IanVS in https://github.com/storybookjs/builder-vite/pull/434
+
+This version requires Vite 3.  If you are using Vite 2, you'll need to stay on the 0.1.X branch until you're able to upgrade. Vite migration notes can be found at https://github.com/vitejs/vite/blob/main/docs/guide/migration.md.
+In addition, for svelte projects, svelte.config.js will be used automatically in your storybook config.  This means that if you were merging your options into svelteOptions in .storybook/main.cjs previously, you can remove it.  If you need storybook config to be different from your app, you can still use the svelteOptions as an override.
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.39...v0.2.0","What's Changed
+[breaking] Read svelte.config.js by @benmccann in link
+[breaking]: Support Vite 3 by @IanVS in link
+fix: Load @sveltejs/vite-plugin-svelte conditionally by @IanVS in link
+This version requires Vite 3.  If you are using Vite 2, you'll need to stay on the 0.1.X branch until you're able to upgrade. Vite migration notes can be found at link.
+In addition, for svelte projects, svelte.config.js will be used automatically in your storybook config.  This means that if you were merging your options into svelteOptions in .storybook/main.cjs previously, you can remove it.  If you need storybook config to be different from your app, you can still use the svelteOptions as an override.
+Full Changelog: link"
+13,"Note: version 0.1.40 accidentally included breaking changes, which are not included in this version.
+What's Changed
+
+Improve sourcemaps by @ianvs in https://github.com/storybookjs/builder-vite/pull/437
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.39...v0.1.41","Note: version 0.1.40 accidentally included breaking changes, which are not included in this version.
+What's Changed
+Improve sourcemaps by @ianvs in link
+Full Changelog: link"
+14,No changes from v0.2.0-beta.1.  Publishing error.,No changes from v0.2.0-beta.1.  Publishing error.
+15,"What's Changed
+
+Load @sveltejs/vite-plugin-svelte conditionally by @IanVS in https://github.com/storybookjs/builder-vite/pull/434
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.2.0-beta.0...v0.2.0-beta.1","What's Changed
+Load @sveltejs/vite-plugin-svelte conditionally by @IanVS in link
+Full Changelog: link"
+16,"What's Changed
+
+[breaking] Read svelte.config.js by @benmccann in https://github.com/storybookjs/builder-vite/pull/428
+[breaking] Support Vite 3 by @IanVS in https://github.com/storybookjs/builder-vite/pull/394
+
+This version requires Vite 3.  If you are using Vite 2, you'll need to stay on the 0.1.X branch until you're able to upgrade. Vite migration notes can be found at https://github.com/vitejs/vite/blob/main/docs/guide/migration.md.
+In addition, for svelte projects, svelte.config.js will be used automatically in your storybook config.  This means that if you were merging your options into svelteOptions in .storybook/main.cjs previously, you can remove it.  If you need storybook config to be different from your app, you can still use the svelteOptions as an override.
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.39...v0.2.0-beta.0","What's Changed
+[breaking] Read svelte.config.js by @benmccann in link
+[breaking] Support Vite 3 by @IanVS in link
+This version requires Vite 3.  If you are using Vite 2, you'll need to stay on the 0.1.X branch until you're able to upgrade. Vite migration notes can be found at link.
+In addition, for svelte projects, svelte.config.js will be used automatically in your storybook config.  This means that if you were merging your options into svelteOptions in .storybook/main.cjs previously, you can remove it.  If you need storybook config to be different from your app, you can still use the svelteOptions as an override.
+Full Changelog: link"
+17,"What's Changed
+
+Fix markdown import in mdx by @joshwooding in https://github.com/storybookjs/builder-vite/pull/429
+Add .storybook to server.fs.allow by @benmccann in https://github.com/storybookjs/builder-vite/pull/427
+Handle resolve.alias as an array by @IanVS in https://github.com/storybookjs/builder-vite/pull/430
+
+New Contributors
+
+@benmccann made their first contribution in https://github.com/storybookjs/builder-vite/pull/427
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.38...v0.1.39","What's Changed
+Fix markdown import in mdx by @joshwooding in link
+Add .storybook to server.fs.allow by @benmccann in link
+Handle resolve.alias as an array by @IanVS in link
+New Contributors
+@benmccann made their first contribution in link
+Full Changelog: link"
+18,"What's Changed
+
+Support MDXv2 by @joshwooding in https://github.com/storybookjs/builder-vite/pull/377
+
+To enable experimental MDX2 in a project, follow this guide: gist.github.com/shilman/6ff2d7e18db8846e8fc552fb432ae4f6
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.37...v0.1.38","What's Changed
+Support MDXv2 by @joshwooding in link
+To enable experimental MDX2 in a project, follow this guide: gist.github.com/shilman/6ff2d7e18db8846e8fc552fb432ae4f6
+Full Changelog: link"
+19,"What's Changed
+✨ Features
+
+Add support for preact by @maxbeatty in https://github.com/storybookjs/builder-vite/pull/408
+Add composed ""overview"" example that builds/includes all framework examples by @dohooo in https://github.com/storybookjs/builder-vite/pull/404
+Allow setting global args in SB 6.5+ by @IanVS in https://github.com/storybookjs/builder-vite/pull/399
+
+🪲 Bugfixes
+
+Fix react mdx stories by @IanVS in https://github.com/storybookjs/builder-vite/pull/417
+
+📝 Docs
+
+Add webpack/cra migration section to readme by @IanVS in https://github.com/storybookjs/builder-vite/pull/405
+
+🧹 Internal
+
+Avoid cd in scripts by @IanVS in https://github.com/storybookjs/builder-vite/pull/407
+Use an alias for react-dom/client if not installed by @IanVS in https://github.com/storybookjs/builder-vite/pull/410
+
+New Contributors
+
+@maxbeatty made their first contribution in https://github.com/storybookjs/builder-vite/pull/408
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.36...v0.1.37","What's Changed
+✨ Features
+Add support for preact by @maxbeatty in link
+Add composed ""overview"" example that builds/includes all framework examples by @dohooo in link
+Allow setting global args in SB 6.5+ by @IanVS in link
+🪲 Bugfixes
+Fix react mdx stories by @IanVS in link
+📝 Docs
+Add webpack/cra migration section to readme by @IanVS in link
+🧹 Internal
+Avoid cd in scripts by @IanVS in link
+Use an alias for react-dom/client if not installed by @IanVS in link
+New Contributors
+@maxbeatty made their first contribution in link
+Full Changelog: link"
+20,"What's Changed
+
+Svelte: Generate docgen by @j3rem1e in https://github.com/storybookjs/builder-vite/pull/392
+fix: prevent crashing on ""--smoke-test"" by @AriPerkkio in https://github.com/storybookjs/builder-vite/pull/400
+
+Internal
+
+Update Storybook to 6.5.0 in examples by @joshwooding in https://github.com/storybookjs/builder-vite/pull/386
+Disable telemetry in examples by @IanVS in https://github.com/storybookjs/builder-vite/pull/393
+
+New Contributors
+
+@j3rem1e made their first contribution in https://github.com/storybookjs/builder-vite/pull/392
+@AriPerkkio made their first contribution in https://github.com/storybookjs/builder-vite/pull/400
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.35...v0.1.36","What's Changed
+Svelte: Generate docgen by @j3rem1e in link
+fix: prevent crashing on ""--smoke-test"" by @AriPerkkio in link
+Internal
+Update Storybook to 6.5.0 in examples by @joshwooding in link
+Disable telemetry in examples by @IanVS in link
+New Contributors
+@j3rem1e made their first contribution in link
+@AriPerkkio made their first contribution in link
+Full Changelog: link"
+21,"What's Changed
+
+Do not require @storybook/addon-svelte-csf to be installed by @IanVS in https://github.com/storybookjs/builder-vite/pull/388
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.34...v0.1.35","What's Changed
+Do not require @storybook/addon-svelte-csf to be installed by @IanVS in link
+Full Changelog: link"
+22,"What's Changed
+Note: if you use one of the latest versions of @sveltejs/vite-plugin-svelte, you can enable an experimental inspector.  See #382 for details.
+Fixes
+
+Disable HMR for web-components projects by @IanVS in https://github.com/storybookjs/builder-vite/pull/372
+Fix order of MDX stories in sidebar by @joshwooding in https://github.com/storybookjs/builder-vite/pull/378
+Use globalThis instead of global dependency by @IanVS in https://github.com/storybookjs/builder-vite/pull/383
+Fix new stories not appearing in the importFn by @joshwooding in https://github.com/storybookjs/builder-vite/pull/379
+Handle new versions of vite-plugin-svelte by @IanVS in https://github.com/storybookjs/builder-vite/pull/382
+
+Internal
+
+Fix tests not being found when testing lit-ts example on Windows CI by @joshwooding in https://github.com/storybookjs/builder-vite/pull/358
+Bump @storybook/test-runner in react-18 example by @joshwooding in https://github.com/storybookjs/builder-vite/pull/373
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.33...v0.1.34","What's Changed
+Note: if you use one of the latest versions of @sveltejs/vite-plugin-svelte, you can enable an experimental inspector.  See #382 for details.
+Fixes
+Disable HMR for web-components projects by @IanVS in link
+Fix order of MDX stories in sidebar by @joshwooding in link
+Use globalThis instead of global dependency by @IanVS in link
+Fix new stories not appearing in the importFn by @joshwooding in link
+Handle new versions of vite-plugin-svelte by @IanVS in link
+Internal
+Fix tests not being found when testing lit-ts example on Windows CI by @joshwooding in link
+Bump @storybook/test-runner in react-18 example by @joshwooding in link
+Full Changelog: link"
+23,"What's Changed
+
+Warn in console when storyStoreV7 used with .svelte files by @IanVS in https://github.com/storybookjs/builder-vite/pull/363
+Prevent vite:define from replacing in story source by @IanVS in https://github.com/storybookjs/builder-vite/pull/364
+Fix svelte story files not reloading by @IanVS in https://github.com/storybookjs/builder-vite/pull/362
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.32...v0.1.33","What's Changed
+Warn in console when storyStoreV7 used with .svelte files by @IanVS in link
+Prevent vite:define from replacing in story source by @IanVS in link
+Fix svelte story files not reloading by @IanVS in link
+Full Changelog: link"
+24,"What's Changed
+
+Fix exported typescript types for viteFinal
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.31...v0.1.32","What's Changed
+Fix exported typescript types for viteFinal
+Full Changelog: link"
+25,"What's Changed
+
+Respect existing build.rollupOptions by @IanVS in https://github.com/storybookjs/builder-vite/pull/353
+Add ViteFinal types by @dohooo in https://github.com/storybookjs/builder-vite/pull/349
+Add example for Lit TS by @troyvassalotti in https://github.com/storybookjs/builder-vite/pull/350
+Update dependencies in examples by @IanVS in https://github.com/storybookjs/builder-vite/pull/357
+
+New Contributors
+
+@dohooo made their first contribution in https://github.com/storybookjs/builder-vite/pull/349
+@troyvassalotti made their first contribution in https://github.com/storybookjs/builder-vite/pull/350
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.30...v0.1.31","What's Changed
+Respect existing build.rollupOptions by @IanVS in link
+Add ViteFinal types by @dohooo in link
+Add example for Lit TS by @troyvassalotti in link
+Update dependencies in examples by @IanVS in link
+New Contributors
+@dohooo made their first contribution in link
+@troyvassalotti made their first contribution in link
+Full Changelog: link"
+26,"What's Changed
+
+Add custom issue template by @IanVS in https://github.com/storybookjs/builder-vite/pull/347
+Avoid hiding all non-storybook body children by @IanVS in https://github.com/storybookjs/builder-vite/pull/346
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.29...v0.1.30","What's Changed
+Add custom issue template by @IanVS in link
+Avoid hiding all non-storybook body children by @IanVS in link
+Full Changelog: link"
+27,"What's Changed
+
+Allow MDX stories ending with stories.mdx or story.mdx by @IanVS in https://github.com/storybookjs/builder-vite/pull/337
+Prevent FOUC in the iframe while loading by @IanVS in https://github.com/storybookjs/builder-vite/pull/339
+react-docgen: exclude node_modules, make configurable by @IanVS in https://github.com/storybookjs/builder-vite/pull/338
+
+React projects without typescript, or typescript react projects choosing to use react-docgen may see a performance improvement in this release due to no longer processing files in node_modules with docgen.  If you need to customize which files are processed, see https://github.com/storybookjs/builder-vite/pull/338 for an example.
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.28...v0.1.29","What's Changed
+Allow MDX stories ending with stories.mdx or story.mdx by @IanVS in link
+Prevent FOUC in the iframe while loading by @IanVS in link
+react-docgen: exclude node_modules, make configurable by @IanVS in link
+React projects without typescript, or typescript react projects choosing to use react-docgen may see a performance improvement in this release due to no longer processing files in node_modules with docgen.  If you need to customize which files are processed, see link for an example.
+Full Changelog: link"
+28,"What's Changed
+
+Avoid /@fs/ imports for storyStoreV7 by @IanVS in https://github.com/storybookjs/builder-vite/pull/332
+Organize stories in examples by @IanVS in https://github.com/storybookjs/builder-vite/pull/330
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.27...v0.1.28","What's Changed
+Avoid /@fs/ imports for storyStoreV7 by @IanVS in link
+Organize stories in examples by @IanVS in link
+Full Changelog: link"
+29,"What's Changed
+
+Support CSF3 user settable global render by @joshwooding in https://github.com/storybookjs/builder-vite/pull/296
+Support configuration object for stories by @kazuma1989 in https://github.com/storybookjs/builder-vite/pull/182
+Revert ""Do not optimize storybook packages (#323)"" by @IanVS in https://github.com/storybookjs/builder-vite/pull/328
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.26...v0.1.27","What's Changed
+Support CSF3 user settable global render by @joshwooding in link
+Support configuration object for stories by @kazuma1989 in link
+Revert ""Do not optimize storybook packages (#323)"" by @IanVS in link
+Full Changelog: link"
+30,"What's Changed
+
+Correctly import/prebundle V6 store configs by @IanVS in https://github.com/storybookjs/builder-vite/pull/324
+Do not optimize storybook packages, if possible by @IanVS in https://github.com/storybookjs/builder-vite/pull/323
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.25...v0.1.26","What's Changed
+Correctly import/prebundle V6 store configs by @IanVS in link
+Do not optimize storybook packages, if possible by @IanVS in link
+Full Changelog: link"
+31,"What's Changed
+
+chore(docs): update readme to use mergeConfig vite helper function by @benatshippabo in https://github.com/storybookjs/builder-vite/pull/315
+Check for explicit typescript dep by @IanVS in https://github.com/storybookjs/builder-vite/pull/313
+Support React 18 by @IanVS in https://github.com/storybookjs/builder-vite/pull/320
+
+New Contributors
+
+@benatshippabo made their first contribution in https://github.com/storybookjs/builder-vite/pull/315
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.24...v0.1.25","What's Changed
+chore(docs): update readme to use mergeConfig vite helper function by @benatshippabo in link
+Check for explicit typescript dep by @IanVS in link
+Support React 18 by @IanVS in link
+New Contributors
+@benatshippabo made their first contribution in link
+Full Changelog: link"
+32,"What's Changed
+
+Add sourcemap support to @joshwooding/vite-plugin-react-docgen-typescript by @joshwooding in https://github.com/storybookjs/builder-vite/pull/284
+Add sourcemap support to vue-docgen by @joshwooding in https://github.com/storybookjs/builder-vite/pull/309
+Support react-docgen by @IanVS in https://github.com/storybookjs/builder-vite/pull/299
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.23...v0.1.24","What's Changed
+Add sourcemap support to @joshwooding/vite-plugin-react-docgen-typescript by @joshwooding in link
+Add sourcemap support to vue-docgen by @joshwooding in link
+Support react-docgen by @IanVS in link
+Full Changelog: link"
+33,"What's Changed
+
+Rename to @storybook/builder-vite by @shilman in https://github.com/storybookjs/builder-vite/pull/293
+[examples] Update vite and vite plugins by @IanVS in https://github.com/storybookjs/builder-vite/pull/295
+Add migration to readme, other updates by @IanVS in https://github.com/storybookjs/builder-vite/pull/297
+Set up addon channel before importing addons by @IanVS in https://github.com/storybookjs/builder-vite/pull/301
+
+Full Changelog: https://github.com/storybookjs/builder-vite/compare/v0.1.22...v0.1.23","What's Changed
+Rename to @storybook/builder-vite by @shilman in link
+[examples] Update vite and vite plugins by @IanVS in link
+Add migration to readme, other updates by @IanVS in link
+Set up addon channel before importing addons by @IanVS in link
+Full Changelog: link"
+34,"What's Changed
+
+Update vite in examples to 2.9.0-beta.8 by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/288
+Move import of framework module after configs by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/289
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.21...v0.1.22","What's Changed
+Update vite in examples to 2.9.0-beta.8 by @IanVS in link
+Move import of framework module after configs by @IanVS in link
+Full Changelog: link"
+35,"What's Changed
+
+Test built storybooks in CI by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/274
+Fix handling of rejected promises when attempting to close the server by @Codex- in https://github.com/eirslett/storybook-builder-vite/pull/277
+Add '@storybook/react > acorn-jsx' to optimizeDeps by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/280
+Update examples to storybook 6.5.0-alpha.49 by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/275
+
+New Contributors
+
+@Codex- made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/277
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.20...v0.1.21","What's Changed
+Test built storybooks in CI by @IanVS in link
+Fix handling of rejected promises when attempting to close the server by @Codex- in link
+Add '@storybook/react > acorn-jsx' to optimizeDeps by @IanVS in link
+Update examples to storybook 6.5.0-alpha.49 by @IanVS in link
+New Contributors
+@Codex- made their first contribution in link
+Full Changelog: link"
+36,"What's Changed
+
+Use req.query instead of custom parsing. by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/276
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.19...v0.1.20","What's Changed
+Use req.query instead of custom parsing. by @joshwooding in link
+Full Changelog: link"
+37,"This release is necessary to support vite 2.9.0.
+What's Changed
+
+Fix style modules not being resolved from iframe.html (#266) by @Dschungelabenteuer in https://github.com/eirslett/storybook-builder-vite/pull/268
+
+New Contributors
+
+@Dschungelabenteuer made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/268
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.18...v0.1.19","This release is necessary to support vite 2.9.0.
+What's Changed
+Fix style modules not being resolved from iframe.html (#266) by @Dschungelabenteuer in link
+New Contributors
+@Dschungelabenteuer made their first contribution in link
+Full Changelog: link"
+38,"What's Changed
+
+Example singleton client API not yet initialized by @bfanger in https://github.com/eirslett/storybook-builder-vite/pull/254
+Move examples out of packages by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/251
+Allow sub-dependencies in base optimizeDeps.include by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/262
+Fix Node 12 support by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/263
+Fix svelte-preprocess typescript support by @bfanger in https://github.com/eirslett/storybook-builder-vite/pull/259
+Add jest-mock to optimized deps by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/269
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.17...v0.1.18","What's Changed
+Example singleton client API not yet initialized by @bfanger in link
+Move examples out of packages by @joshwooding in link
+Allow sub-dependencies in base optimizeDeps.include by @IanVS in link
+Fix Node 12 support by @joshwooding in link
+Fix svelte-preprocess typescript support by @bfanger in link
+Add jest-mock to optimized deps by @IanVS in link
+Full Changelog: link"
+39,"This release enables support for Chromatic Turbosnap through the use of vite-plugin-turbosnap and the latest chromatic-cli.
+What's Changed
+
+Import story loading module from vite-app virtual module by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/239
+Enable auto-title for non-storyStoreV7 by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/218
+Fix error when no preview file is present. by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/250
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.16...v0.1.17","This release enables support for Chromatic Turbosnap through the use of vite-plugin-turbosnap and the latest chromatic-cli.
+What's Changed
+Import story loading module from vite-app virtual module by @IanVS in link
+Enable auto-title for non-storyStoreV7 by @IanVS in link
+Fix error when no preview file is present. by @joshwooding in link
+Full Changelog: link"
+40,"What's Changed
+
+fix: svelte story regex by @lokshunhung in https://github.com/eirslett/storybook-builder-vite/pull/244
+Fix: svelte by @bfanger in https://github.com/eirslett/storybook-builder-vite/pull/240
+Specify vite cache directory in dev mode as well by @bodograumann in https://github.com/eirslett/storybook-builder-vite/pull/228
+Update known issues by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/230
+Update README.md by @eirslett in https://github.com/eirslett/storybook-builder-vite/pull/229
+
+New Contributors
+
+@bodograumann made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/228
+@lokshunhung made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/244
+@bfanger made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/240
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.15...v0.1.16","What's Changed
+fix: svelte story regex by @lokshunhung in link
+Fix: svelte by @bfanger in link
+Specify vite cache directory in dev mode as well by @bodograumann in link
+Update known issues by @joshwooding in link
+Update README.md by @eirslett in link
+New Contributors
+@bodograumann made their first contribution in link
+@lokshunhung made their first contribution in link
+@bfanger made their first contribution in link
+Full Changelog: link"
+41,"What's Changed
+
+Default Cache Directory Conflict Resolution by @GuyGooL5 in https://github.com/eirslett/storybook-builder-vite/pull/223
+Add react-docgen-typescript by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/226
+
+New Contributors
+
+@GuyGooL5 made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/223
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.14...v0.1.15","What's Changed
+Default Cache Directory Conflict Resolution by @GuyGooL5 in link
+Add react-docgen-typescript by @joshwooding in link
+New Contributors
+@GuyGooL5 made their first contribution in link
+Full Changelog: link"
+42,"What's Changed
+Fixes
+
+Fix params.fileName being null when storyStoreV7 is false by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/216
+
+Internal/Docs
+
+Improving maintainability: ESLint and Prettier by @mrauhu in https://github.com/eirslett/storybook-builder-vite/pull/193
+Improving maintainability: run lint by @mrauhu in https://github.com/eirslett/storybook-builder-vite/pull/196
+Improving maintainability: TypeScript by @mrauhu in https://github.com/eirslett/storybook-builder-vite/pull/195
+Improving maintainability: fix ignore revs by @mrauhu in https://github.com/eirslett/storybook-builder-vite/pull/198
+Improving maintainability: Documentation by @mrauhu in https://github.com/eirslett/storybook-builder-vite/pull/200
+Add CSF3 default render example by @shilman in https://github.com/eirslett/storybook-builder-vite/pull/194
+Add some common issues to README by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/214
+
+Dependencies
+
+Bump @vitejs/plugin-vue to 1.10.2 by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/199
+Remove unfetch import by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/217
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.13...v0.1.14","What's Changed
+Fixes
+Fix params.fileName being null when storyStoreV7 is false by @joshwooding in link
+Internal/Docs
+Improving maintainability: ESLint and Prettier by @mrauhu in link
+Improving maintainability: run lint by @mrauhu in link
+Improving maintainability: TypeScript by @mrauhu in link
+Improving maintainability: fix ignore revs by @mrauhu in link
+Improving maintainability: Documentation by @mrauhu in link
+Add CSF3 default render example by @shilman in link
+Add some common issues to README by @IanVS in link
+Dependencies
+Bump @vitejs/plugin-vue to 1.10.2 by @joshwooding in link
+Remove unfetch import by @joshwooding in link
+Full Changelog: link"
+43,"What's Changed
+
+Fix: all environment variables are exposed to the client by @mrauhu in https://github.com/eirslett/storybook-builder-vite/pull/187
+Avoid forcing prebundle each start by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/189
+
+New Contributors
+
+@mrauhu made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/187
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.12...v0.1.13","What's Changed
+Fix: all environment variables are exposed to the client by @mrauhu in link
+Avoid forcing prebundle each start by @IanVS in link
+New Contributors
+@mrauhu made their first contribution in link
+Full Changelog: link"
+44,"What's Changed
+
+Fix importers[path] is not a function in yarn workspaces by @kazuma1989 in https://github.com/eirslett/storybook-builder-vite/pull/172
+Add optimizeDeps.entries by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/177
+Apply svelteOptions correctly by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/180
+Fix storybook builds and CI by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/181
+
+New Contributors
+
+@kazuma1989 made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/172
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.11...v0.1.12","What's Changed
+Fix importers[path] is not a function in yarn workspaces by @kazuma1989 in link
+Add optimizeDeps.entries by @joshwooding in link
+Apply svelteOptions correctly by @IanVS in link
+Fix storybook builds and CI by @IanVS in link
+New Contributors
+@kazuma1989 made their first contribution in link
+Full Changelog: link"
+45,"What's Changed
+
+Update storybook in examples to ^6.4.0 by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/170
+Fix builder for vite 2.7.0 by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/174
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.10...v0.1.11","What's Changed
+Update storybook in examples to ^6.4.0 by @joshwooding in link
+Fix builder for vite 2.7.0 by @IanVS in link
+Full Changelog: link"
+46,"What's Changed
+
+Fix source-loader-plugin CSF3 compatibility by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/165
+Revert ""Fix package duplication issues by aliasing all storybook packages (#160)"" by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/166
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.9...v0.1.10","What's Changed
+Fix source-loader-plugin CSF3 compatibility by @joshwooding in link
+Revert ""Fix package duplication issues by aliasing all storybook packages (#160)"" by @IanVS in link
+Full Changelog: link"
+47,"What's Changed
+
+Fix package duplication issues by aliasing all storybook packages by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/160
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.8...v0.1.9","What's Changed
+Fix package duplication issues by aliasing all storybook packages by @joshwooding in link
+Full Changelog: link"
+48,"What's Changed
+
+add experimental glimmerx support by @lifeart in https://github.com/eirslett/storybook-builder-vite/pull/136
+Update @vitejs/plugin-react to avoid sourcemap warning by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/153
+Support features.storyStoreV7 by @joshwooding in https://github.com/eirslett/storybook-builder-vite/pull/126
+
+Please note: features.storyStoreV7 is experimental, but can result in faster first-load times.  Svelte components are not yet supported, due to limitations in storybook itself.
+New Contributors
+
+@lifeart made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/136
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.7...v0.1.8","What's Changed
+add experimental glimmerx support by @lifeart in link
+Update @vitejs/plugin-react to avoid sourcemap warning by @IanVS in link
+Support features.storyStoreV7 by @joshwooding in link
+Please note: features.storyStoreV7 is experimental, but can result in faster first-load times.  Svelte components are not yet supported, due to limitations in storybook itself.
+New Contributors
+@lifeart made their first contribution in link
+Full Changelog: link"
+49,"What's Changed (since 0.1.3)
+
+Ensure preview or config file is loaded last by @simenbrekken in https://github.com/eirslett/storybook-builder-vite/pull/133
+Add synchronous-promise as optimized dependencies by @razor1895 in https://github.com/eirslett/storybook-builder-vite/pull/135
+Add Vite source-loader plugin by @simenbrekken in https://github.com/eirslett/storybook-builder-vite/pull/147
+Don't generate source maps for MDX files by @simenbrekken in https://github.com/eirslett/storybook-builder-vite/pull/151
+Update examples to storybook 6.4.0-rc.0 by @IanVS in https://github.com/eirslett/storybook-builder-vite/pull/144
+
+New Contributors
+
+@simenbrekken made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/133
+@razor1895 made their first contribution in https://github.com/eirslett/storybook-builder-vite/pull/135
+
+Full Changelog: https://github.com/eirslett/storybook-builder-vite/compare/v0.1.3...v0.1.7","What's Changed (since 0.1.3)
+Ensure preview or config file is loaded last by @simenbrekken in link
+Add synchronous-promise as optimized dependencies by @razor1895 in link
+Add Vite source-loader plugin by @simenbrekken in link
+Don't generate source maps for MDX files by @simenbrekken in link
+Update examples to storybook 6.4.0-rc.0 by @IanVS in link
+New Contributors
+@simenbrekken made their first contribution in link
+@razor1895 made their first contribution in link
+Full Changelog: link"
+50,"
+Fix rollup warning about sourcemaps from inject-export-order-plugin (https://github.com/eirslett/storybook-builder-vite/pull/117)
+Support storybook feature flags (https://github.com/eirslett/storybook-builder-vite/pull/121)
+Add missing dependencies to optimizeDeps (https://github.com/eirslett/storybook-builder-vite/pull/124)
+Update storybook in examples to 6.4.0-beta.19 (https://github.com/eirslett/storybook-builder-vite/pull/118)
+","Fix rollup warning about sourcemaps from inject-export-order-plugin (link)
+Support storybook feature flags (link)
+Add missing dependencies to optimizeDeps (link)
+Update storybook in examples to 6.4.0-beta.19 (link)"

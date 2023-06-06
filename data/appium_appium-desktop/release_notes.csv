@@ -1,19 +1,25 @@
-Index,Release Note
+Index,Release Note,Release Note With Abstraction
 1,"!! Warning !!
 Appium Desktop is unsupported, no longer maintained, and has known security vulnerabilities. It is advised not to use it at all. See the README for more information. Use at your own risk.
 Changelog
 
 Fixed signature issue in v1.22.3.
 
+No other changes in the functionality level.","!! Warning !!
+Appium Desktop is unsupported, no longer maintained, and has known security vulnerabilities. It is advised not to use it at all. See the README for more information. Use at your own risk.
+Changelog
+Fixed signature issue in v1.22.3.
 No other changes in the functionality level."
 2,"Please use https://github.com/appium/appium-desktop/releases/tag/v1.22.3-4 to avoid codesign problem.
 
 bump the embedded appium version to 1.22.3
 
-Note: On Windows environment, it might get a warning as https://github.com/appium/appium-desktop/issues/1995 . Then, please uninstall the old one and re-install the new one.  If you got a JS error on macOS 12.3, please try https://github.com/appium/appium-desktop#installing-on-macos out, especially the codesign."
+Note: On Windows environment, it might get a warning as https://github.com/appium/appium-desktop/issues/1995 . Then, please uninstall the old one and re-install the new one.  If you got a JS error on macOS 12.3, please try https://github.com/appium/appium-desktop#installing-on-macos out, especially the codesign.","Please use link to avoid codesign problem.
+bump the embedded appium version to 1.22.3
+Note: On Windows environment, it might get a warning as link . Then, please uninstall the old one and re-install the new one.  If you got a JS error on macOS 12.3, please try link out, especially the codesign."
 3,"
 bump the embedded appium version to 1.22.2
-"
+",bump the embedded appium version to 1.22.2
 4,"Since this version, please use https://github.com/appium/appium-inspector as an inspector.
 
 Moved the inspector feature (New session windows section) to https://github.com/appium/appium-inspector
@@ -21,50 +27,66 @@ Bump embedded Appium version to 1.22.0
 The version still expects to have /wd/hub prefix as Remote Path
 
 
-"
+","Since this version, please use link as an inspector.
+Moved the inspector feature (New session windows section) to link
+Bump embedded Appium version to 1.22.0
+The version still expects to have /wd/hub prefix as Remote Path"
 5,"this is a patch release for https://github.com/appium/appium-desktop/pull/1906. This does not include Appium 1.22.0 stuff.
-Please refer to https://github.com/appium/appium-inspector for Appium 1.22 and newer versions."
+Please refer to https://github.com/appium/appium-inspector for Appium 1.22 and newer versions.","this is a patch release for link. This does not include Appium 1.22.0 stuff.
+Please refer to link for Appium 1.22 and newer versions."
 6,"
 Bump Appium version to 1.21.0
-"
+",Bump Appium version to 1.21.0
 7,"
 Feat: add UA in the header like appium-inspector/version
 (Browserstack) Feat: add sessionName in the attach to session dropdown #1694
 Fix: request to remote server not sent in case of fresh installation https://github.com/appium/appium-desktop/pull/1732
 Fix: stale session ids being displayed in the attach to session dropdown #1727
 Fix: attached sessions getting timeout due to inactivity #1726
-"
+","Feat: add UA in the header like appium-inspector/version
+(Browserstack) Feat: add sessionName in the attach to session dropdown #1694
+Fix: request to remote server not sent in case of fresh installation link
+Fix: stale session ids being displayed in the attach to session dropdown #1727
+Fix: attached sessions getting timeout due to inactivity #1726"
 8,"
 fix: getCurrentSessions for cloud providers using Basic Auth https://github.com/appium/appium-desktop/pull/1693
 
 
+The base branch is 1.20.2","fix: getCurrentSessions for cloud providers using Basic Auth link
 The base branch is 1.20.2"
 9,"
 Appium 1.20.2 base
 https://github.com/appium/appium-desktop/pull/1666
 
 
+The base branch is 1.20.0","Appium 1.20.2 base
+link
 The base branch is 1.20.0"
 10,"
 Bump Appium version to 1.20.0
 Update translations
 
+No changes except for the above since AD 1.19.1","Bump Appium version to 1.20.0
+Update translations
 No changes except for the above since AD 1.19.1"
 11,"
 Bump embedded Appium version to 1.20.0-beta.0 diff
-"
+",Bump embedded Appium version to 1.20.0-beta.0 diff
 12,"
 Bump Appium version to 1.19.1
 Update translations
 
+(Inspector is the same as 1.18.3)","Bump Appium version to 1.19.1
+Update translations
 (Inspector is the same as 1.18.3)"
 13,"
 Bump Appium version to 1.19.1
 Update translations
-"
+","Bump Appium version to 1.19.1
+Update translations"
 14,"
 Bump Appium version to 1.19.1
-"
+",Bump Appium version to 1.19.1
 15,"Known issue:
 This version had an issue like https://github.com/appium/appium-desktop/issues/1596
 
@@ -74,21 +96,27 @@ feat: replace internal Appium client from wd to web2driver
 Now, the client can follow W3C spec
 
 
-"
+","Known issue:
+This version had an issue like link
+feat: bump appium version to 1.19.0 beta
+feat: replace internal Appium client from wd to web2driver
+Now, the client can follow W3C spec"
 16,"
 feat: Bump Appium version to 1.18.3
-"
+",feat: Bump Appium version to 1.18.3
 17,"
 feat: Update to Appium 1.18.2
-"
+",feat: Update to Appium 1.18.2
 18,"
 feat: add Sauce Labs Unified Platform endpoint for US #1532
 feat: add jpeg consumer in AD package #1512
 fix: get filePaths #1521
-"
+","feat: add Sauce Labs Unified Platform endpoint for US #1532
+feat: add jpeg consumer in AD package #1512
+fix: get filePaths #1521"
 19,"
 Fix to attaching to an existing session https://github.com/appium/appium-desktop/issues/1505
-"
+",Fix to attaching to an existing session link
 20,"
 Inspector for Web(view) improvements: 
 Add Web(View) notification in Selected Element: #1438
@@ -102,23 +130,34 @@ The Relaxed Security checkbox in the Advanced-tab can disable this
 
 
 Windows 32 bit installer
-"
+","Inspector for Web(view) improvements: 
+Add Web(View) notification in Selected Element: #1438
+Add Web(View) inspector to inspect the HTML-tree: #1443 
+Add new locators for iOS: #1452 
+Get Timings button in element section to confirm their performance #1448
+Automatically download the correct version of ChromeDriver when using a Web or Hybrid app for Android
+The Relaxed Security checkbox in the Advanced-tab can disable this
+Windows 32 bit installer"
 21,"This beta includes:
 
 Appium 1.18.0 beta.1
 Inspector for Web  improvements: https://github.com/appium/appium-desktop/pull/1443 https://github.com/appium/appium-desktop/pull/1438
 Get Timings button in element section to confirm their performance https://github.com/appium/appium-desktop/pull/1448
-"
+","This beta includes:
+Appium 1.18.0 beta.1
+Inspector for Web  improvements: link link
+Get Timings button in element section to confirm their performance link"
 22,"[note]
-This tag is for https://github.com/appium/appium-desktop/pull/1414 to check the Windows environment"
-23,
-24,Please consider using 1.17.1-1 since this version has an issue in HTTPS communication
-25,
-26,Bundles Appium v1.15.1
+This tag is for https://github.com/appium/appium-desktop/pull/1414 to check the Windows environment","[note]
+This tag is for link to check the Windows environment"
+23,,
+24,Please consider using 1.17.1-1 since this version has an issue in HTTPS communication,Please consider using 1.17.1-1 since this version has an issue in HTTPS communication
+25,,
+26,Bundles Appium v1.15.1,Bundles Appium v1.15.1
 27,"
 Bump up Appium to v1.15.0
-"
-28,Bundles Appium 1.15.0 (which supports iOS 13+)
+",Bump up Appium to v1.15.0
+28,Bundles Appium 1.15.0 (which supports iOS 13+),Bundles Appium 1.15.0 (which supports iOS 13+)
 29,"
 feat: Update bundled version of Appium to 1.14.0 
 feat: Intelligently resize screenshot and source tree widths #974
@@ -126,14 +165,22 @@ feat: Make sure formatted caps stays visible in saved caps area #973
 feat: Make sure to save server type change even without setting change #973
 feat: Make configurable ""Get Running Sessions"" #979
 fix:  apply session.server.${providername}.host/port/path/ssl  #983
-"
-30,
+","feat: Update bundled version of Appium to 1.14.0 
+feat: Intelligently resize screenshot and source tree widths #974
+feat: Make sure formatted caps stays visible in saved caps area #973
+feat: Make sure to save server type change even without setting change #973
+feat: Make configurable ""Get Running Sessions"" #979
+fix:  apply session.server.${providername}.host/port/path/ssl  #983"
+30,,
 31,"
 Update Appium to version 1.13.0 #964
 Add 'copy attributes to clipboard"" feature #952
 Russian, Korean and Chinese translations https://crowdin.com/project/appium-desktop
 Add SauceLabs data centers option #966
-"
+","Update Appium to version 1.13.0 #964
+Add 'copy attributes to clipboard"" feature #952
+Russian, Korean and Chinese translations link
+Add SauceLabs data centers option #966"
 32,"
 Features
 🇨🇳 Chinese localization #923
@@ -142,7 +189,13 @@ Fix bug causing search results to not be highlighted #922
 Bump up no new command limit to 24 hours #902
 updateSettings action call was not being properly parsed #911
 Improve performance in cloud by concurrently retrieving source, screenshot and window size #916
-"
+","Features
+🇨🇳 Chinese localization #923
+Fixes
+Fix bug causing search results to not be highlighted #922
+Bump up no new command limit to 24 hours #902
+updateSettings action call was not being properly parsed #911
+Improve performance in cloud by concurrently retrieving source, screenshot and window size #916"
 33,"Bug Fixes
 
 Revert Sentry changes that were causing desired capabilities to not be saved (#904) (8e9adb6)
@@ -161,7 +214,21 @@ Pcloudy (#830) (de0a295)
 Can copy located element to clipboard (1724bc1)
 Stop showing all cloud providers on tab. Make cloud providers individually selectable from a modal (#876) (87624a8)
 Update Appium to 1.12.1
-"
+","Bug Fixes
+Revert Sentry changes that were causing desired capabilities to not be saved (#904) (8e9adb6)
+Fix defect that made ""object"" args not work for capabilities (ef2ff5d)
+Provide more helpful error and success messages (0fe3551)
+Features
+Add actions that can be executed from Appium Desktop (7245fb6)
+Translations
+Japanese translations (#857) (15bfa81)
+Russian translations (#843) (10d6c84)
+New cloud providers
+TestingBot (#862) (88d8f0f)
+Pcloudy (#830) (de0a295)
+Can copy located element to clipboard (1724bc1)
+Stop showing all cloud providers on tab. Make cloud providers individually selectable from a modal (#876) (87624a8)
+Update Appium to 1.12.1"
 34,"This build is no longer available due to a major bug
 This is a minor release with small number of changes. The biggest change being that we've added German localization.
 
@@ -170,91 +237,115 @@ feat: Add optional (opt-in) Sentry logging for crash reports (#795)
 feat: Add Perfecto as cloud provider (#792)
 fix: Fixed regression that was causing file selector in capabilities to not work (#831)
 
+Contributors: @mykola-mokhnach @dpgraham @pschroeder89  @biwkf @UziEilon @jlipps","This build is no longer available due to a major bug
+This is a minor release with small number of changes. The biggest change being that we've added German localization.
+feat: Localize Appium Desktop with some German translation (#827)
+feat: Add optional (opt-in) Sentry logging for crash reports (#795)
+feat: Add Perfecto as cloud provider (#792)
+fix: Fixed regression that was causing file selector in capabilities to not work (#831)
 Contributors: @mykola-mokhnach @dpgraham @pschroeder89  @biwkf @UziEilon @jlipps"
 35,"
 Feature: Upgrade React to v16.x and ANTD to v3.x to get benefits of performance improvements and 
 reduced dependency size (#769)
-"
+","Feature: Upgrade React to v16.x and ANTD to v3.x to get benefits of performance improvements and 
+reduced dependency size (#769)"
 36,"
 Fix: Use forked version of WD to resolve W3C attach problem (see here)
-"
+",Fix: Use forked version of WD to resolve W3C attach problem (see here)
 37,"
 Feature: Upgrade Appium to 1.10 (#753)
 Feature: Add Kobiton into Appium Desktop as a cloud provider (#747)
-"
-38,
-39,Fix: Strip out Emoji characters and replace them with the unicode values to prevent XML parsing error (#691)
+","Feature: Upgrade Appium to 1.10 (#753)
+Feature: Add Kobiton into Appium Desktop as a cloud provider (#747)"
+38,,
+39,Fix: Strip out Emoji characters and replace them with the unicode values to prevent XML parsing error (#691),Fix: Strip out Emoji characters and replace them with the unicode values to prevent XML parsing error (#691)
 40,"
 Update Electron to version 3.0.3 (https://electronjs.org/releases#3.0.0) (#661)
 Fix: Default custom server port to 4723 which is the value in placeholder (#670) 
-"
+","Update Electron to version 3.0.3 (link) (#661)
+Fix: Default custom server port to 4723 which is the value in placeholder (#670) "
 41,"
 Feature: Upgrade to Appium 1.9.1
-"
+",Feature: Upgrade to Appium 1.9.1
 42,"
 Feature: Upgrade to Appium 1.9.0
 Feature: Add relaxed security flag (#607)
 Feature: Add Bitbar to cloud providers (#603)
 Feature: Add React Native testID to strategy mappings (#614)
 Fix: Remove unneeded ipc binding (#612)
-"
+","Feature: Upgrade to Appium 1.9.0
+Feature: Add relaxed security flag (#607)
+Feature: Add Bitbar to cloud providers (#603)
+Feature: Add React Native testID to strategy mappings (#614)
+Fix: Remove unneeded ipc binding (#612)"
 43,"
 Feature: Make ANDROID_HOME and JAVA_HOME settable from the UI
 Feature: Add icon that copies source XML to clipboard
 Fix: Close session window when main window is closed
-"
+","Feature: Make ANDROID_HOME and JAVA_HOME settable from the UI
+Feature: Add icon that copies source XML to clipboard
+Fix: Close session window when main window is closed"
 44,"
 Fix: Use relative coordinates for interactive swiping feature
 Feature: Upgrade to Appium 1.8.1
-"
-45,
+","Fix: Use relative coordinates for interactive swiping feature
+Feature: Upgrade to Appium 1.8.1"
+45,,
 46,"
 Feature: Allow unauthorized SSL and set custom proxy (#469)
-"
+",Feature: Allow unauthorized SSL and set custom proxy (#469)
 47,"
 Fix: Replace electron-builder autoupdater with Zeit Hazel server plus native updater (#435)
-"
+",Fix: Replace electron-builder autoupdater with Zeit Hazel server plus native updater (#435)
 48,"
 Feature: Add Headspin cloud to list of remote server types
 Feature: Add keyboard shortcut to clear terminal logs (#419)
 Fix: Python recording error (#422)
-"
+","Feature: Add Headspin cloud to list of remote server types
+Feature: Add keyboard shortcut to clear terminal logs (#419)
+Fix: Python recording error (#422)"
 49,"
 Revert Electron back to 1.7.11
-"
+",Revert Electron back to 1.7.11
 50,"
 Fix: Build problem from v1.3.0 broke Apple XCUI tests
-"
+",Fix: Build problem from v1.3.0 broke Apple XCUI tests
 51,"
 Feature: Update Appium to 1.7.2
 Fix: Add linux category (#364)
 Fix: 'wd' recording code errors (#363)
-"
+","Feature: Update Appium to 1.7.2
+Fix: Add linux category (#364)
+Fix: 'wd' recording code errors (#363)"
 52,"
 Feature: Highlight elements that user searched for (#344)
 Fix: Remove element not found notification (#350)
-"
+","Feature: Highlight elements that user searched for (#344)
+Fix: Remove element not found notification (#350)"
 53,"
 Fix: Use multiple selector strategies if first one doesn't work (#330)
 Fix: Don't refresh page when element not found, send notification instead
-"
+","Fix: Use multiple selector strategies if first one doesn't work (#330)
+Fix: Don't refresh page when element not found, send notification instead"
 54,"
 Fix: Resolve python recorder errors (#323)
 Fix: Reload source when selected element is stale (#324)
 Fix: Debounce calls to selectElement (#325)
-"
+","Fix: Resolve python recorder errors (#323)
+Fix: Reload source when selected element is stale (#324)
+Fix: Debounce calls to selectElement (#325)"
 55,"
 Fix: Upgraded to Appium 1.7.1 (previously was 1.7.0)
-"
+",Fix: Upgraded to Appium 1.7.1 (previously was 1.7.0)
 56,"
 Feature: Upgrade to Appium version 1.7.1
-"
+",Feature: Upgrade to Appium version 1.7.1
 57,"
 Fix: Swipe SVG was obscured due to CSS (#300)
-"
+",Fix: Swipe SVG was obscured due to CSS (#300)
 58,"
 Fix: In Java boilerplate, show unknown platform if no platform found (#295)
-"
+","Fix: In Java boilerplate, show unknown platform if no platform found (#295)"
 59,"
 Feature: Can run SauceConnect from user interface (#280)
 Feature: Can edit raw desired capabilities JSON string (#267)
@@ -265,13 +356,21 @@ Feature: Write raw logs to file that can be opened by user (#263)
 Fix: Added padding to bottom of source tree (#247)
 Fix: Make selected element card scrollable (#236)
 Fix: Limit number of rendered logs to 1000 (#263)
-"
+","Feature: Can run SauceConnect from user interface (#280)
+Feature: Can edit raw desired capabilities JSON string (#267)
+Feature: Add locator modal to search for elements and perform basic interactions on them (#244)
+Feature: Add interactive swipe and tap (#260)
+Feature: Add HTTPS option, and TO data center options (#262)
+Feature: Write raw logs to file that can be opened by user (#263)
+Fix: Added padding to bottom of source tree (#247)
+Fix: Make selected element card scrollable (#236)
+Fix: Limit number of rendered logs to 1000 (#263)"
 60,"
 Feature: Can run SauceConnect from user interface (#280)
-"
+",Feature: Can run SauceConnect from user interface (#280)
 61,"
 Feature: Can edit raw desired capabilities JSON string (#267)
-"
+",Feature: Can edit raw desired capabilities JSON string (#267)
 62,"
 Feature: Add locator modal to search for elements and perform basic interactions on them (#244)
 Feature: Add interactive swipe and tap (#260)
@@ -280,11 +379,18 @@ Feature: Write raw logs to file that can be opened by user (#263)
 Fix: Added padding to bottom of source tree (#247)
 Fix: Make selected element card scrollable (#236)
 Fix: Limit number of rendered logs to 1000 (#263)
-"
+","Feature: Add locator modal to search for elements and perform basic interactions on them (#244)
+Feature: Add interactive swipe and tap (#260)
+Feature: Add HTTPS option, and TO data center options (#262)
+Feature: Write raw logs to file that can be opened by user (#263)
+Fix: Added padding to bottom of source tree (#247)
+Fix: Make selected element card scrollable (#236)
+Fix: Limit number of rendered logs to 1000 (#263)"
 63,"
 Fix: Scrolling in selected element card (#236)
 Fix: Recorder css and add docs for recorder
-"
+","Fix: Scrolling in selected element card (#236)
+Fix: Recorder css and add docs for recorder"
 64,"
 Feature: Can record actions in Java, JS, Python, and Ruby (#224)
 Feature: Updated to Appium 1.6.5 (#208)
@@ -292,25 +398,33 @@ Feature: Show a list of currently running sessions when attaching sessions (#196
 Fix: Draggable app area and window controls issues in Windows and Linux (#229)
 Fix: Resize inspector if it was previously too small (#225)
 Fix: Pegged ANTD version to prevent errors (#198)
-"
+","Feature: Can record actions in Java, JS, Python, and Ruby (#224)
+Feature: Updated to Appium 1.6.5 (#208)
+Feature: Show a list of currently running sessions when attaching sessions (#196)
+Fix: Draggable app area and window controls issues in Windows and Linux (#229)
+Fix: Resize inspector if it was previously too small (#225)
+Fix: Pegged ANTD version to prevent errors (#198)"
 65,"
 Fix:  Draggable app area and window controls issues in Windows and Linux (#229)
-"
+",Fix:  Draggable app area and window controls issues in Windows and Linux (#229)
 66,"
 Feature: Can record actions in Java, JS, Python, and Ruby (#224)
 Fix: Resize inspector if it was previously too small (#225)
-"
+","Feature: Can record actions in Java, JS, Python, and Ruby (#224)
+Fix: Resize inspector if it was previously too small (#225)"
 67,"
 Fix: Previous version had wrong Appium Version on Mac (1.6.4 instead of 1.6.5)
-"
+",Fix: Previous version had wrong Appium Version on Mac (1.6.4 instead of 1.6.5)
 68,"
 Feature: Updated to Appium 1.6.5 (#208)
 Feature: Show a list of currently running sessions when attaching sessions (#196)
 Fix: Pegged ANTD version to prevent errors (#198) 
-"
+","Feature: Updated to Appium 1.6.5 (#208)
+Feature: Show a list of currently running sessions when attaching sessions (#196)
+Fix: Pegged ANTD version to prevent errors (#198) "
 69,"
 Fix: Handle XPath exception that was being thrown by xpath generation code
-"
+",Fix: Handle XPath exception that was being thrown by xpath generation code
 70,"
 Feature: Link to desired capabilities documentation (#188)
 Feature:  Default to use env variables for SauceLabs and TestObject if credentials not provided through UI (#177)
@@ -319,38 +433,54 @@ Fix: Use fix-path to ensure we get access to binaries on user's shell PATH (#168
 Fix: Remove max-height on .ant-spin so that it centers the spinner
 Fix: Optimize xpath on selected element (#179)
 Fix: Add buttons that scroll source left and right so that XML is not clipped (#183)
-"
+","Feature: Link to desired capabilities documentation (#188)
+Feature:  Default to use env variables for SauceLabs and TestObject if credentials not provided through UI (#177)
+Fix: Do not quit attached session when closing the inspector (#134)
+Fix: Use fix-path to ensure we get access to binaries on user's shell PATH (#168)
+Fix: Remove max-height on .ant-spin so that it centers the spinner
+Fix: Optimize xpath on selected element (#179)
+Fix: Add buttons that scroll source left and right so that XML is not clipped (#183)"
 71,"
 Feature: Set Appium version to 1.6.4
 Fix: Filepath capabilities was being parsed as array, parses it to string 
-"
+","Feature: Set Appium version to 1.6.4
+Fix: Filepath capabilities was being parsed as array, parses it to string "
 72,"
 Feature: When update fails to work automatically, show a link to the releases page
 Feature: Add a simple element finding recommendation to the element detail
 Fix: With logTimestamps set to true, server console timestamps would all update anytime a new one came in
 Fix: When opening up the app after an old version had been installed, any click would cause an error due to inability to read settings files correctly
-"
+","Feature: When update fails to work automatically, show a link to the releases page
+Feature: Add a simple element finding recommendation to the element detail
+Fix: With logTimestamps set to true, server console timestamps would all update anytime a new one came in
+Fix: When opening up the app after an old version had been installed, any click would cause an error due to inability to read settings files correctly"
 73,"
 Feature: When update complete, updater dialog asks user to close Appium instead of restarting it
 Feature: Updater dialog shows Linux users a link to releases page because Linux doesn't support autoupdates
 Fix: Windows waits 20 seconds after first run before checking for updates due to a timing issue with Squirrel.windows
-"
+","Feature: When update complete, updater dialog asks user to close Appium instead of restarting it
+Feature: Updater dialog shows Linux users a link to releases page because Linux doesn't support autoupdates
+Fix: Windows waits 20 seconds after first run before checking for updates due to a timing issue with Squirrel.windows"
 74,"
 Feature: add logging to autoUpdater (#74)
 Fix: improved markup and CSS in update window (#74)
 Fix: when an update is found, pulls release notes from GitHub API and displays them in the update window textarea 
-"
+","Feature: add logging to autoUpdater (#74)
+Fix: improved markup and CSS in update window (#74)
+Fix: when an update is found, pulls release notes from GitHub API and displays them in the update window textarea "
 75,"
 Feature: add ""Attach to Session"" tab on New Session window that allows attaching to an already-running session
 Fix: make 'connectHardwareKeyboard' capability true by default so that sims are interactable via the hardware keyboard when running under an Inspector session (#61)
-"
+","Feature: add ""Attach to Session"" tab on New Session window that allows attaching to an already-running session
+Fix: make 'connectHardwareKeyboard' capability true by default so that sims are interactable via the hardware keyboard when running under an Inspector session (#61)"
 76,"
 Fix: issue where typing into a desired capability box was prevented if the app had not been used before. (#57)
-"
+",Fix: issue where typing into a desired capability box was prevented if the app had not been used before. (#57)
 77,"
 Fix: shell environment was not loaded so drivers dependent on shell path or environment variables could not function (#45)
 Fix: some persistent settings keys were not given defaults and caused issues e.g. saving presets (#52)
-"
+","Fix: shell environment was not loaded so drivers dependent on shell path or environment variables could not function (#45)
+Fix: some persistent settings keys were not given defaults and caused issues e.g. saving presets (#52)"
 78,"Features
 
 Appium GUI application written in Electron, React and Redux
@@ -361,4 +491,12 @@ Can use SauceLabs, TestObject or any other arbitrary remote server to run Appium
 Has an inspector window that allows the user to look at a screenshot and source of a running session
 Can select elements in the source and inspect their attributes
 Can call tap and sendKeys on elements
-"
+","Features
+Appium GUI application written in Electron, React and Redux
+Includes Appium 1.6.4-beta as a dependency
+Runs an  Appium Server with user-specified settings
+Creates new Appium sessions with user-provided desiredCapabilities
+Can use SauceLabs, TestObject or any other arbitrary remote server to run Appium sessions
+Has an inspector window that allows the user to look at a screenshot and source of a running session
+Can select elements in the source and inspect their attributes
+Can call tap and sendKeys on elements"

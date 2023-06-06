@@ -1,0 +1,845 @@
+Index,Release Note,Release Note With Abstraction
+1," Optional: add a release summary here 
+🚀 New features and improvements
+
+JENKINS-54250 - Disable restarting stages in Jenkinsfile optionally (#2332) @pavlovic-ivan
+
+👻 Maintenance
+
+Switch from deprecated useAci syntax to useContainerAgent (#2360) @NotMyFault
+Bump BOM and explicitly depend on caffeine-api to fix LoadingCache.refresh (#2435) @jglick
+
+📦 Dependency updates
+
+24 changes
+
+* Bump jose4j from 0.7.7 to 0.9.3 (#2434) @dependabot
+* Bump jsoup from 1.14.2 to 1.15.3 (#2334) @dependabot
+* Use `io.jenkins.plugins:commons-lang3-api` (#2433) @viceice
+* Upgrade plugin parent POM from 4.53 to 4.57 (#2418) @basil
+* Bump actions/stale from 7 to 8 (#2422) @dependabot
+* Bump moment from 2.19.3 to 2.29.2 in /blueocean-core-js (#2272) @dependabot
+* Bump moment from 2.19.3 to 2.29.2 in /blueocean-dashboard (#2271) @dependabot
+* Bump moment from 2.19.3 to 2.29.2 in /blueocean-web (#2270) @dependabot
+* Bump moment from 2.19.3 to 2.29.2 in /jenkins-design-language (#2269) @dependabot
+* Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-config (#2362) @dependabot
+* Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-executor-info (#2365) @dependabot
+* Bump decode-uri-component from 0.2.0 to 0.2.2 in /jenkins-design-language (#2366) @dependabot
+* Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-web (#2367) @dependabot
+* Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-pipeline-editor (#2368) @dependabot
+* Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-dashboard (#2369) @dependabot
+* Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-core-js (#2370) @dependabot
+* Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-personalization (#2371) @dependabot
+* Bump ua-parser-js from 0.7.19 to 0.7.33 in /blueocean-personalization (#2390) @dependabot
+* Bump ua-parser-js from 0.7.19 to 0.7.33 in /blueocean-pipeline-editor (#2391) @dependabot
+* Bump ua-parser-js from 0.7.19 to 0.7.33 in /blueocean-core-js (#2393) @dependabot
+* Bump ua-parser-js from 0.7.31 to 0.7.33 in /blueocean-executor-info (#2394) @dependabot
+* Bump ua-parser-js from 0.7.19 to 0.7.33 in /blueocean-dashboard (#2392) @dependabot
+* Bump ua-parser-js from 0.7.31 to 0.7.33 in /jenkins-design-language (#2395) @dependabot
+* Bump ua-parser-js from 0.7.19 to 0.7.33 in /blueocean-web (#2389) @dependabot
+","Optional: add a release summary here 
+🚀 New features and improvements
+JENKINS-54250 - Disable restarting stages in Jenkinsfile optionally (#2332) @pavlovic-ivan
+👻 Maintenance
+Switch from deprecated useAci syntax to useContainerAgent (#2360) @NotMyFault
+Bump BOM and explicitly depend on caffeine-api to fix LoadingCache.refresh (#2435) @jglick
+📦 Dependency updates
+24 changes
+
+Bump jose4j from 0.7.7 to 0.9.3 (#2434) @dependabot
+Bump jsoup from 1.14.2 to 1.15.3 (#2334) @dependabot
+Use module (#2433) @viceice
+Upgrade plugin parent POM from 4.53 to 4.57 (#2418) @basil
+Bump actions/stale from 7 to 8 (#2422) @dependabot
+Bump moment from 2.19.3 to 2.29.2 in /blueocean-core-js (#2272) @dependabot
+Bump moment from 2.19.3 to 2.29.2 in /blueocean-dashboard (#2271) @dependabot
+Bump moment from 2.19.3 to 2.29.2 in /blueocean-web (#2270) @dependabot
+Bump moment from 2.19.3 to 2.29.2 in /jenkins-design-language (#2269) @dependabot
+Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-config (#2362) @dependabot
+Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-executor-info (#2365) @dependabot
+Bump decode-uri-component from 0.2.0 to 0.2.2 in /jenkins-design-language (#2366) @dependabot
+Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-web (#2367) @dependabot
+Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-pipeline-editor (#2368) @dependabot
+Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-dashboard (#2369) @dependabot
+Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-core-js (#2370) @dependabot
+Bump decode-uri-component from 0.2.0 to 0.2.2 in /blueocean-personalization (#2371) @dependabot
+Bump ua-parser-js from 0.7.19 to 0.7.33 in /blueocean-personalization (#2390) @dependabot
+Bump ua-parser-js from 0.7.19 to 0.7.33 in /blueocean-pipeline-editor (#2391) @dependabot
+Bump ua-parser-js from 0.7.19 to 0.7.33 in /blueocean-core-js (#2393) @dependabot
+Bump ua-parser-js from 0.7.31 to 0.7.33 in /blueocean-executor-info (#2394) @dependabot
+Bump ua-parser-js from 0.7.19 to 0.7.33 in /blueocean-dashboard (#2392) @dependabot
+Bump ua-parser-js from 0.7.31 to 0.7.33 in /jenkins-design-language (#2395) @dependabot
+Bump ua-parser-js from 0.7.19 to 0.7.33 in /blueocean-web (#2389) @dependabot
+"
+2," Optional: add a release summary here 
+🚀 New features and improvements
+
+JENKINS-70808 - Fix isRestartable by only checking against the curren… (#2416) (#2417) @olamy
+","Optional: add a release summary here 
+🚀 New features and improvements
+JENKINS-70808 - Fix isRestartable by only checking against the curren… (#2416) (#2417) @olamy"
+3,"What's Changed
+
+[JENKINS-70808] Fix isRestartable by only checking against the curren… by @Dohbedoh in https://github.com/jenkinsci/blueocean-plugin/pull/2416
+
+New Contributors
+
+@Dohbedoh made their first contribution in https://github.com/jenkinsci/blueocean-plugin/pull/2416
+
+Full Changelog: https://github.com/jenkinsci/blueocean-plugin/compare/blueocean-parent-1.25.5.1...blueocean-parent-1.25.5.2","What's Changed
+[JENKINS-70808] Fix isRestartable by only checking against the curren… by @Dohbedoh in link
+New Contributors
+@Dohbedoh made their first contribution in link
+Full Changelog: link"
+4,"What's Changed
+
+[JENKINS-70559] Fix class not found exception in ssh Pipeline editor by @MarkEWaite in https://github.com/jenkinsci/blueocean-plugin/pull/2397
+the method is called twice for the same object so at least we can store the result in a field which reduce call by 2 :) (#2408) by @olamy in https://github.com/jenkinsci/blueocean-plugin/pull/2410
+fix some ATH  by @olamy in https://github.com/jenkinsci/blueocean-plugin/pull/2412
+
+Full Changelog: https://github.com/jenkinsci/blueocean-plugin/compare/blueocean-parent-1.27.1...blueocean-parent-1.27.2","What's Changed
+[JENKINS-70559] Fix class not found exception in ssh Pipeline editor by @MarkEWaite in link
+the method is called twice for the same object so at least we can store the result in a field which reduce call by 2 :) (#2408) by @olamy in link
+fix some ATH  by @olamy in link
+Full Changelog: link"
+5,"What's Changed
+
+the method is called twice for the same object so at least we can store the result in a field which reduce call by 2 :) add some caching to avoid expensive call for completed run by @olamy in https://github.com/jenkinsci/blueocean-plugin/pull/2408
+
+Full Changelog: https://github.com/jenkinsci/blueocean-plugin/compare/blueocean-parent-1.25.5...blueocean-parent-1.25.5.1","What's Changed
+the method is called twice for the same object so at least we can store the result in a field which reduce call by 2 :) add some caching to avoid expensive call for completed run by @olamy in link
+Full Changelog: link"
+6," Optional: add a release summary here 
+🐛 Bug fixes
+
+RunSearch.collectRunsParallel returned nondeterministic order (#2386) @jglick
+
+👻 Maintenance
+
+Ceasing to test against non-block-scoped stage (#2385) @jglick
+
+📦 Dependency updates
+
+Bump actions/stale from 6 to 7 (#2378) @dependabot
+","Optional: add a release summary here 
+🐛 Bug fixes
+RunSearch.collectRunsParallel returned nondeterministic order (#2386) @jglick
+👻 Maintenance
+Ceasing to test against non-block-scoped stage (#2385) @jglick
+📦 Dependency updates
+Bump actions/stale from 6 to 7 (#2378) @dependabot"
+7," Optional: add a release summary here 
+🚀 New features and improvements
+
+Require Jenkins 2.361.4 and Java 11 (#2380) @MarkEWaite (#2379) @car-roll 
+","Optional: add a release summary here 
+🚀 New features and improvements
+Require Jenkins 2.361.4 and Java 11 (#2380) @MarkEWaite (#2379) @car-roll "
+8," Optional: add a release summary here 
+🚨 Removed
+
+remove blueocean-autofavorite from aggregator (#2364) @olamy
+
+🚀 New features and improvements
+
+JENKINS-47929 - Extensible run details tabs (#2345) @stuartrowe
+
+📦 Dependency updates
+
+Bump actions/stale from 5 to 6 (#2339) @dependabot
+","Optional: add a release summary here 
+🚨 Removed
+remove blueocean-autofavorite from aggregator (#2364) @olamy
+🚀 New features and improvements
+JENKINS-47929 - Extensible run details tabs (#2345) @stuartrowe
+📦 Dependency updates
+Bump actions/stale from 5 to 6 (#2339) @dependabot"
+9," Optional: add a release summary here 
+🚨 Removed
+
+remove blueocean-jira from aggregator (#2336) @car-roll
+
+👻 Maintenance
+
+fix missing dependency for ATH tests and simplify using -ntp option (#2335) @olamy
+","Optional: add a release summary here 
+🚨 Removed
+remove blueocean-jira from aggregator (#2336) @car-roll
+👻 Maintenance
+fix missing dependency for ATH tests and simplify using -ntp option (#2335) @olamy"
+10," Optional: add a release summary here 
+🐛 Bug fixes
+
+JENKINS-47929 - revert (#2330) as this is causing build failure @olamy
+Fix missing parentheses causing logic bug for tests tab failure count (#2305) @wmcbroomd2d
+
+📝 Documentation updates
+
+Adding Blue Ocean statement (#2325) @basil
+
+👻 Maintenance
+
+Remove powermock usage (#2328) @olamy
+EOL JSR 305 (#2327) @basil
+","Optional: add a release summary here 
+🐛 Bug fixes
+JENKINS-47929 - revert (#2330) as this is causing build failure @olamy
+Fix missing parentheses causing logic bug for tests tab failure count (#2305) @wmcbroomd2d
+📝 Documentation updates
+Adding Blue Ocean statement (#2325) @basil
+👻 Maintenance
+Remove powermock usage (#2328) @olamy
+EOL JSR 305 (#2327) @basil"
+11," Optional: add a release summary here 
+🚨 Removed
+
+Removing instance-identity dependency (#2317) @jglick
+","Optional: add a release summary here 
+🚨 Removed
+Removing instance-identity dependency (#2317) @jglick"
+12," Optional: add a release summary here 
+🚀 New features and improvements
+
+JENKINS-47929 Allow extensible run details tabs (#2268) @stuartrowe  
+
+🐛 Bug fixes
+
+JENKINS-68065 - fix Bitbucket cloud job creation via wizard (#2275) @olamy
+
+👻 Maintenance
+
+Make a comment more inclusive (#2278) @Ladyprowess
+use already built image (#2283) @olamy
+
+✍ Other changes
+
+Merge back 2022-05-17 security fixes (#2286) @daniel-beck
+Revert ""Make a comment more inclusive"" (#2285) @olamy
+Make a comment more inclusive (#2282) @Ladyprowess
+","Optional: add a release summary here 
+🚀 New features and improvements
+JENKINS-47929 Allow extensible run details tabs (#2268) @stuartrowe  
+🐛 Bug fixes
+JENKINS-68065 - fix Bitbucket cloud job creation via wizard (#2275) @olamy
+👻 Maintenance
+Make a comment more inclusive (#2278) @Ladyprowess
+use already built image (#2283) @olamy
+✍ Other changes
+Merge back 2022-05-17 security fixes (#2286) @daniel-beck
+Revert ""Make a comment more inclusive"" (#2285) @olamy
+Make a comment more inclusive (#2282) @Ladyprowess"
+13,Security release see advisory,Security release see advisory
+14,Security release 1.25.4 see advisory,Security release 1.25.4 see advisory
+15," Optional: add a release summary here 
+🚀 New features and improvements
+
+JENKINS-53291 - Fix pipeline editor to work with pipelines in folders (#2217) @sebracs
+
+📦 Dependency updates
+
+Bump handlebars from 3.0.6 to 3.0.8 in /blueocean-web (#2249) @dependabot
+Bump handlebars from 3.0.6 to 3.0.8 in /jenkins-design-language (#2246) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-web (#2240) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-pipeline-editor (#2241) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-dashboard (#2242) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-core-js (#2239) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-personalization (#2243) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /jenkins-design-language (#2244) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-config (#2237) @dependabot
+Bump ua-parser-js from 0.7.19 to 0.7.31 in /jenkins-design-language (#2250) @dependabot
+Bump release-drafter/release-drafter from 5.17.6 to 5.18.1 (#2247) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-executor-info (#2238) @dependabot
+Bump httpclient from 4.5.12 to 4.5.13 in /acceptance-tests/runner/runtime (#2235) @dependabot
+Bump commons-io from 2.6 to 2.7 in /acceptance-tests/runner/runtime (#2236) @dependabot
+Bump release-drafter/release-drafter from 5.17.5 to 5.17.6 (#2234) @dependabot
+Bump path-parse from 1.0.6 to 1.0.7 in /blueocean-executor-info (#2219) @dependabot
+Bump ua-parser-js from 0.7.19 to 0.7.31 in /blueocean-executor-info (#2220) @dependabot
+Bump elliptic from 6.4.1 to 6.5.4 in /blueocean-executor-info (#2221) @dependabot
+Bump handlebars from 3.0.6 to 3.0.8 in /blueocean-executor-info (#2222) @dependabot
+Bump release-drafter/release-drafter from 5.15.0 to 5.17.5 (#2230) @dependabot
+
+👻 Maintenance
+
+Remove parboiled usage (#2252) @raul-arabaolaza
+use setup-java cache (#2233) @olamy
+","Optional: add a release summary here 
+🚀 New features and improvements
+JENKINS-53291 - Fix pipeline editor to work with pipelines in folders (#2217) @sebracs
+📦 Dependency updates
+Bump handlebars from 3.0.6 to 3.0.8 in /blueocean-web (#2249) @dependabot
+Bump handlebars from 3.0.6 to 3.0.8 in /jenkins-design-language (#2246) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-web (#2240) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-pipeline-editor (#2241) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-dashboard (#2242) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-core-js (#2239) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-personalization (#2243) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /jenkins-design-language (#2244) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-config (#2237) @dependabot
+Bump ua-parser-js from 0.7.19 to 0.7.31 in /jenkins-design-language (#2250) @dependabot
+Bump release-drafter/release-drafter from 5.17.6 to 5.18.1 (#2247) @dependabot
+Bump cached-path-relative from 1.0.2 to 1.1.0 in /blueocean-executor-info (#2238) @dependabot
+Bump httpclient from 4.5.12 to 4.5.13 in /acceptance-tests/runner/runtime (#2235) @dependabot
+Bump commons-io from 2.6 to 2.7 in /acceptance-tests/runner/runtime (#2236) @dependabot
+Bump release-drafter/release-drafter from 5.17.5 to 5.17.6 (#2234) @dependabot
+Bump path-parse from 1.0.6 to 1.0.7 in /blueocean-executor-info (#2219) @dependabot
+Bump ua-parser-js from 0.7.19 to 0.7.31 in /blueocean-executor-info (#2220) @dependabot
+Bump elliptic from 6.4.1 to 6.5.4 in /blueocean-executor-info (#2221) @dependabot
+Bump handlebars from 3.0.6 to 3.0.8 in /blueocean-executor-info (#2222) @dependabot
+Bump release-drafter/release-drafter from 5.15.0 to 5.17.5 (#2230) @dependabot
+👻 Maintenance
+Remove parboiled usage (#2252) @raul-arabaolaza
+use setup-java cache (#2233) @olamy"
+16," Optional: add a release summary here 
+
+minor improvment/warning fixes (#2214) @olamy
+
+🐛 Bug fixes
+
+adapt to master terminology change (#2218) @car-roll
+
+👻 Maintenance
+
+Update BOM (#2215) @Vlatombe
+Replace OsUtils.isUnix with Functions.isWindows (#2216) @Vlatombe
+","Optional: add a release summary here 
+minor improvment/warning fixes (#2214) @olamy
+🐛 Bug fixes
+adapt to master terminology change (#2218) @car-roll
+👻 Maintenance
+Update BOM (#2215) @Vlatombe
+Replace OsUtils.isUnix with Functions.isWindows (#2216) @Vlatombe"
+17," Optional: add a release summary here 
+
+no more use of saucelab (#2210) @olamy
+
+🚀 New features and improvements
+
+Collect run thread number higher per default (processor number / 2) (#2211) @olamy
+
+📦 Dependency updates
+
+Bump jackson-core from 2.6.1 to 2.13.0 (#2207) @dependabot
+Bump commons-io from 2.8.0 to 2.11.0 (#2204) @dependabot
+
+📝 Documentation updates
+
+Doing a small change to watch jdk11 CI running (#2208) @aHenryJard
+
+👻 Maintenance
+
+build image upgrade ubuntu base 20.04, jdk11 and maven 3.8.3 (#2209) @olamy
+","Optional: add a release summary here 
+no more use of saucelab (#2210) @olamy
+🚀 New features and improvements
+Collect run thread number higher per default (processor number / 2) (#2211) @olamy
+📦 Dependency updates
+Bump jackson-core from 2.6.1 to 2.13.0 (#2207) @dependabot
+Bump commons-io from 2.8.0 to 2.11.0 (#2204) @dependabot
+📝 Documentation updates
+Doing a small change to watch jdk11 CI running (#2208) @aHenryJard
+👻 Maintenance
+build image upgrade ubuntu base 20.04, jdk11 and maven 3.8.3 (#2209) @olamy"
+18," Optional: add a release summary here 
+🐛 Bug fixes
+
+JENKINS-60995 - Fix downstream build link (#2187) @Vlatombe
+
+📦 Dependency updates
+
+Bump plugin from 4.18 to 4.25 (#2198) @dependabot
+Bump slf4j.version from 1.7.30 to 1.7.32 (#2199) @dependabot
+Bump cloudbees-bitbucket-branch-source from 2.4.4 to 2.9.11 (#2196) @dependabot
+Bump groovy-maven-plugin from 2.0 to 2.1.1 (#2136) @dependabot
+Bump pipeline-milestone-step from 1.3.1 to 1.3.2 (#2175) @dependabot
+Bump jsoup from 1.13.1 to 1.14.2 (#2195) @dependabot
+JENKINS-60995 - Fix downstream build link (#2187) @Vlatombe
+","Optional: add a release summary here 
+🐛 Bug fixes
+JENKINS-60995 - Fix downstream build link (#2187) @Vlatombe
+📦 Dependency updates
+Bump plugin from 4.18 to 4.25 (#2198) @dependabot
+Bump slf4j.version from 1.7.30 to 1.7.32 (#2199) @dependabot
+Bump cloudbees-bitbucket-branch-source from 2.4.4 to 2.9.11 (#2196) @dependabot
+Bump groovy-maven-plugin from 2.0 to 2.1.1 (#2136) @dependabot
+Bump pipeline-milestone-step from 1.3.1 to 1.3.2 (#2175) @dependabot
+Bump jsoup from 1.13.1 to 1.14.2 (#2195) @dependabot
+JENKINS-60995 - Fix downstream build link (#2187) @Vlatombe"
+19,"🐛 Bug Fixes
+
+JENKINS-60995 Fix downstream build link (#2188) @Vlatombe @olamy 
+","🐛 Bug Fixes
+JENKINS-60995 Fix downstream build link (#2188) @Vlatombe @olamy "
+20," Optional: add a release summary here 
+The major changes in this release is the removal of using Guava.
+📦 Dependency updates
+
+Bump powermock.version from 2.0.7 to 2.0.9 (#2155) @dependabot
+Bump wiremock-jre8-standalone from 2.26.3 to 2.28.0 (#2171) @dependabot
+JENKINS-65445 - get rid of Guava as much as possible (#2163) @olamy
+Bump commons-lang3 from 3.11 to 3.12.0 (#2174) @dependabot
+
+👻 Maintenance
+
+JENKINS-65445 - get rid of Guava as much as possible (#2163) @olamy
+Remove JSR-305 annotations from Blue-Ocean and replaced it with Spotbugs. (#2169) @StefanSpieker
+","Optional: add a release summary here 
+The major changes in this release is the removal of using Guava.
+📦 Dependency updates
+Bump powermock.version from 2.0.7 to 2.0.9 (#2155) @dependabot
+Bump wiremock-jre8-standalone from 2.26.3 to 2.28.0 (#2171) @dependabot
+JENKINS-65445 - get rid of Guava as much as possible (#2163) @olamy
+Bump commons-lang3 from 3.11 to 3.12.0 (#2174) @dependabot
+👻 Maintenance
+JENKINS-65445 - get rid of Guava as much as possible (#2163) @olamy
+Remove JSR-305 annotations from Blue-Ocean and replaced it with Spotbugs. (#2169) @StefanSpieker"
+21," Optional: add a release summary here 
+
+Fixed build with: cast to string (#2170) @StefanSpieker
+
+🚀 New features and improvements
+
+Added support for favorites for primary branches names other than ""master"" (#2168) @murraybo
+Increase height of result item label desc in logConsole (#2060) @amritb
+Show ""Run build steps in a container"" from Kubernetes plugin (#2009) @edimarlnx
+
+📦 Dependency updates
+
+Bump mockito-core from 3.3.3 to 3.10.0 (#2172) @dependabot
+Bump frontend-maven-plugin from 1.7.5 to 1.12.0 (#2173) @dependabot
+Bump jose4j from 0.7.6 to 0.7.7 (#2165) @dependabot
+Bump uap-java from 1.5.0 to 1.5.2 (#2159) @dependabot
+Bump ant from 1.9 to 1.11 (#2162) @dependabot
+Bump sonar from 2.9 to 2.13.1 (#2161) @dependabot
+Get rid of sha method from commons-codec (#2154) @olamy
+Bump keen-client-api-java from 5.2.0 to 5.6.0 (#2156) @dependabot
+Bump bom-2.222.x from 26 to 28 (#2157) @dependabot
+Bump jose4j from 0.6.0 to 0.7.6 (#2148) @dependabot
+Bump jsoup from 1.10.3 to 1.13.1 (#2150) @dependabot
+Bump junit from 4.13.1 to 4.13.2 (#2153) @dependabot
+
+👻 Maintenance
+
+JENKINS-65593 - Fix test error for Jenkins >= 2.281 (#2166) @MRamonLeon
+","Optional: add a release summary here 
+Fixed build with: cast to string (#2170) @StefanSpieker
+🚀 New features and improvements
+Added support for favorites for primary branches names other than ""master"" (#2168) @murraybo
+Increase height of result item label desc in logConsole (#2060) @amritb
+Show ""Run build steps in a container"" from Kubernetes plugin (#2009) @edimarlnx
+📦 Dependency updates
+Bump mockito-core from 3.3.3 to 3.10.0 (#2172) @dependabot
+Bump frontend-maven-plugin from 1.7.5 to 1.12.0 (#2173) @dependabot
+Bump jose4j from 0.7.6 to 0.7.7 (#2165) @dependabot
+Bump uap-java from 1.5.0 to 1.5.2 (#2159) @dependabot
+Bump ant from 1.9 to 1.11 (#2162) @dependabot
+Bump sonar from 2.9 to 2.13.1 (#2161) @dependabot
+Get rid of sha method from commons-codec (#2154) @olamy
+Bump keen-client-api-java from 5.2.0 to 5.6.0 (#2156) @dependabot
+Bump bom-2.222.x from 26 to 28 (#2157) @dependabot
+Bump jose4j from 0.6.0 to 0.7.6 (#2148) @dependabot
+Bump jsoup from 1.10.3 to 1.13.1 (#2150) @dependabot
+Bump junit from 4.13.1 to 4.13.2 (#2153) @dependabot
+👻 Maintenance
+JENKINS-65593 - Fix test error for Jenkins >= 2.281 (#2166) @MRamonLeon"
+22," Optional: add a release summary here 
+
+Fix incorrect bundling (#2146) @jtnord
+Check the error details from Bitbucket API response if exist before parsing it (#2141) @LinuxSuRen
+
+📦 Dependency updates
+
+Bump plugin from 4.16 to 4.18 (#2151) @dependabot
+get rid of commons-codec usage (#2152) @olamy
+Bump plugin from 4.16 to 4.17 (#2147) @dependabot
+Bump jacoco.version from 0.8.5 to 0.8.6 (#2144) @dependabot
+Bump blueocean-autofavorite from 1.2.3 to 1.2.4 (#2087) @dependabot
+Bump handy-uri-templates from 2.1.6 to 2.1.8 (#2091) @dependabot
+Bump blueocean-display-url from 2.2.0 to 2.4.1 (#2142) @dependabot
+Bump maven-javadoc-plugin from 3.1.0 to 3.2.0 (#2105) @dependabot
+Bump release-drafter/release-drafter from v5.14.0 to v5.15.0 (#2140) @dependabot
+
+📝 Documentation updates
+
+Update README.md (#2145) @jtnord
+","Optional: add a release summary here 
+Fix incorrect bundling (#2146) @jtnord
+Check the error details from Bitbucket API response if exist before parsing it (#2141) @LinuxSuRen
+📦 Dependency updates
+Bump plugin from 4.16 to 4.18 (#2151) @dependabot
+get rid of commons-codec usage (#2152) @olamy
+Bump plugin from 4.16 to 4.17 (#2147) @dependabot
+Bump jacoco.version from 0.8.5 to 0.8.6 (#2144) @dependabot
+Bump blueocean-autofavorite from 1.2.3 to 1.2.4 (#2087) @dependabot
+Bump handy-uri-templates from 2.1.6 to 2.1.8 (#2091) @dependabot
+Bump blueocean-display-url from 2.2.0 to 2.4.1 (#2142) @dependabot
+Bump maven-javadoc-plugin from 3.1.0 to 3.2.0 (#2105) @dependabot
+Bump release-drafter/release-drafter from v5.14.0 to v5.15.0 (#2140) @dependabot
+📝 Documentation updates
+Update README.md (#2145) @jtnord"
+23," Optional: add a release summary here 
+📦 Dependency updates
+
+Upgrade ath test to use jenkins core 2.222.4 same as one defined in plugin pom (#2139) @olamy
+use slf4j, commons-io, commons-lang, commons-codec version coming from bom and mark them as provided (#2135) @olamy
+Bump commons-io from 2.6 to 2.8.0 (#2133) @dependabot
+Bump parent version 4.16, bom version 25 (#2134) @olamy
+Bump release-drafter/release-drafter from v5.13.0 to v5.14.0 (#2131) @dependabot
+use slf4j 1.7.30 (#2129) @olamy
+Upgrade commons-codec to 1.15 (#2127) @olamy
+Upgrade UA Parser Library (#2123) @rahulsom
+Bump release-drafter/release-drafter from v5.12.1 to v5.13.0 (#2124) @dependabot
+
+👻 Maintenance
+
+Upgrade ath test to use jenkins core 2.222.4 same as one defined in plugin pom (#2139) @olamy
+JENKINS-58732 - Remove docker-workflow dep from blueocean-pipeline-editor - update minimum jenkins core version 2.222.4 (#2132) @jglick
+Minor code cleanup in GitHub Pipeline (#2130) @StefanSpieker
+Minor refactoring in blueocean-commons (#2128) @StefanSpieker
+
+🚦 Tests
+
+Upgrade ath test to use jenkins core 2.222.4 same as one defined in plugin pom (#2139) @olamy
+","Optional: add a release summary here 
+📦 Dependency updates
+Upgrade ath test to use jenkins core 2.222.4 same as one defined in plugin pom (#2139) @olamy
+use slf4j, commons-io, commons-lang, commons-codec version coming from bom and mark them as provided (#2135) @olamy
+Bump commons-io from 2.6 to 2.8.0 (#2133) @dependabot
+Bump parent version 4.16, bom version 25 (#2134) @olamy
+Bump release-drafter/release-drafter from v5.13.0 to v5.14.0 (#2131) @dependabot
+use slf4j 1.7.30 (#2129) @olamy
+Upgrade commons-codec to 1.15 (#2127) @olamy
+Upgrade UA Parser Library (#2123) @rahulsom
+Bump release-drafter/release-drafter from v5.12.1 to v5.13.0 (#2124) @dependabot
+👻 Maintenance
+Upgrade ath test to use jenkins core 2.222.4 same as one defined in plugin pom (#2139) @olamy
+JENKINS-58732 - Remove docker-workflow dep from blueocean-pipeline-editor - update minimum jenkins core version 2.222.4 (#2132) @jglick
+Minor code cleanup in GitHub Pipeline (#2130) @StefanSpieker
+Minor refactoring in blueocean-commons (#2128) @StefanSpieker
+🚦 Tests
+Upgrade ath test to use jenkins core 2.222.4 same as one defined in plugin pom (#2139) @olamy"
+24," Optional: add a release summary here 
+🚨 Removed
+
+JENKINS-50885 - Make JIRA Integration for Blue Ocean plugin (blueocean-jira) optional (#2125) @dwnusbaum
+
+📦 Dependency updates
+
+Upgrade sse-gateway plugin to 1.24 (#2118) @olamy
+","Optional: add a release summary here 
+🚨 Removed
+JENKINS-50885 - Make JIRA Integration for Blue Ocean plugin (blueocean-jira) optional (#2125) @dwnusbaum
+📦 Dependency updates
+Upgrade sse-gateway plugin to 1.24 (#2118) @olamy"
+25," Optional: add a release summary here 
+🚨 Removed
+
+Make executor plugin optional (#2117) @timja
+","Optional: add a release summary here 
+🚨 Removed
+Make executor plugin optional (#2117) @timja"
+26," Optional: add a release summary here 
+🚨 Removed
+
+JENKINS-63979 - tombstone blueocean executor info plugin (#2114) @olamy
+
+🚀 New features and improvements
+
+reduce network usages (#2107) @ugatenio
+
+📦 Dependency updates
+
+Bump release-drafter/release-drafter from v5.11.0 to v5.12.1 (#2115) @dependabot
+Bump junit from 4.13 to 4.13.1 in /acceptance-tests (#2110) @dependabot
+Bump junit from 4.13 to 4.13.1 (#2112) @dependabot
+
+👻 Maintenance
+
+Remove non needed anymore inner class (SECURITY-380 - ) (#2109) @res0nance
+GitHub ath test failure due to default branch change master to main (#2113) @olamy
+Remove unused jquery-detached js dependency (#2111) @fqueiruga
+
+🚦 Tests
+
+GitHub ath test failure due to default branch change master to main (#2113) @olamy
+","Optional: add a release summary here 
+🚨 Removed
+JENKINS-63979 - tombstone blueocean executor info plugin (#2114) @olamy
+🚀 New features and improvements
+reduce network usages (#2107) @ugatenio
+📦 Dependency updates
+Bump release-drafter/release-drafter from v5.11.0 to v5.12.1 (#2115) @dependabot
+Bump junit from 4.13 to 4.13.1 in /acceptance-tests (#2110) @dependabot
+Bump junit from 4.13 to 4.13.1 (#2112) @dependabot
+👻 Maintenance
+Remove non needed anymore inner class (SECURITY-380 - ) (#2109) @res0nance
+GitHub ath test failure due to default branch change master to main (#2113) @olamy
+Remove unused jquery-detached js dependency (#2111) @fqueiruga
+🚦 Tests
+GitHub ath test failure due to default branch change master to main (#2113) @olamy"
+27," Optional: add a release summary here 
+
+Update parent & use recommended jenkins-test-harness (#2108) @jglick
+
+🐛 Bug Fixes
+
+limit fetch call (#2104) @ugatenio
+
+🚦 Tests
+
+Trying to make mock tests pass against Spring Security (#2106) @jglick
+","Optional: add a release summary here 
+Update parent & use recommended jenkins-test-harness (#2108) @jglick
+🐛 Bug Fixes
+limit fetch call (#2104) @ugatenio
+🚦 Tests
+Trying to make mock tests pass against Spring Security (#2106) @jglick"
+28," Optional: add a release summary here 
+
+JENKINS-62669 - Mercurial support going away from Bitbucket (#2080) @jglick
+[JENKINS-62666] Adding a /jwt-auth/jwks endpoint that follows the RFC7517 #2077 @Lucas-C @lenaing 
+Upgrade to okhttp3 @bitwiseman 
+
+🚦 Tests
+
+Changed PowerMock Ignore due to a comflict with SSLSocketFactory (#2102) @joseblas
+Fix PCT failures when running against Jenkins 2.249+ (#2094) @dwnusbaum 
+","Optional: add a release summary here 
+JENKINS-62669 - Mercurial support going away from Bitbucket (#2080) @jglick
+[JENKINS-62666] Adding a /jwt-auth/jwks endpoint that follows the RFC7517 #2077 @Lucas-C @lenaing 
+Upgrade to okhttp3 @bitwiseman 
+🚦 Tests
+Changed PowerMock Ignore due to a comflict with SSLSocketFactory (#2102) @joseblas
+Fix PCT failures when running against Jenkins 2.249+ (#2094) @dwnusbaum "
+29,"
+SECURITY-1961 (Missing permission check in Blue Ocean Plugin)
+SECURITY-1956 (Path traversal vulnerability in Blue Ocean Plugin)
+","SECURITY-1961 (Missing permission check in Blue Ocean Plugin)
+SECURITY-1956 (Path traversal vulnerability in Blue Ocean Plugin)"
+30,"
+SECURITY-1961 (Missing permission check in Blue Ocean Plugin)
+SECURITY-1956 (Path traversal vulnerability in Blue Ocean Plugin)
+","SECURITY-1961 (Missing permission check in Blue Ocean Plugin)
+SECURITY-1956 (Path traversal vulnerability in Blue Ocean Plugin)"
+31,"
+JENKINS-62063 - Fix failure when using pipeline-multibranch-defaults (#2076) @bitwiseman
+",JENKINS-62063 - Fix failure when using pipeline-multibranch-defaults (#2076) @bitwiseman
+32,"Changes
+
+Fix the flaky FavoritesCardsTest ATH Test (#1962) @halkeye
+Test fixes on Java 11
+","Changes
+Fix the flaky FavoritesCardsTest ATH Test (#1962) @halkeye
+Test fixes on Java 11"
+33,"
+JENKINS-61822 - Fix github-api 1.107+ incompatibilities (#2064) @bitwiseman
+Improve Jenkinsfile error handling by removing unnecessary catch block (#2070) @dwnusbaum
+Spelling (#2048) @jsoref
+Fix translation from ""Modificacíon"" to ""Modificación"" (#2066) @gonrial
+README: remove reference to the Blue Ocean roadmap (#2062) @oleg-nenashev
+Use GitHub as the source of documentation (#2063) @zbynek
+Upgrade ubuntu maven (#2061) @olamy
+Upgrade Jira plugin to 3.0.14 (#2059) @olamy
+JENKINS-58732 - Update dependencies to account for moved class (#2056) @Vlatombe
+
+Jenkins Blue Ocean v1.23.0 
+https://github.com/jenkinsci/blueocean-plugin/compare/blueocean-parent-1.22.0...blueocean-parent-1.23.0","JENKINS-61822 - Fix github-api 1.107+ incompatibilities (#2064) @bitwiseman
+Improve Jenkinsfile error handling by removing unnecessary catch block (#2070) @dwnusbaum
+Spelling (#2048) @jsoref
+Fix translation from ""Modificacíon"" to ""Modificación"" (#2066) @gonrial
+README: remove reference to the Blue Ocean roadmap (#2062) @oleg-nenashev
+Use GitHub as the source of documentation (#2063) @zbynek
+Upgrade ubuntu maven (#2061) @olamy
+Upgrade Jira plugin to 3.0.14 (#2059) @olamy
+JENKINS-58732 - Update dependencies to account for moved class (#2056) @Vlatombe
+Jenkins Blue Ocean v1.23.0 
+link"
+34," Optional: add a release summary here 
+
+JENKINS-59291 - upgrade to sse-gateway 1.21 (#2053) @olamy
+
+📝 Documentation updates
+
+Jenkins Design Language: Use GitHub as a source of plugin docs + Remove the confusing link to the JDL2 website (#2055) @oleg-nenashev
+","Optional: add a release summary here 
+JENKINS-59291 - upgrade to sse-gateway 1.21 (#2053) @olamy
+📝 Documentation updates
+Jenkins Design Language: Use GitHub as a source of plugin docs + Remove the confusing link to the JDL2 website (#2055) @oleg-nenashev"
+35," Optional: add a release summary here 
+
+JENKINS-50328 - JENKINS-51066 - Fix bug where pipeline editor ignores custom Jenkinsfile script path. (#2049) @sutrosoftware
+Change to https url for maven download (#2047) @kshultzCB
+RequireUpperBoundDeps jodatime (#2046) @olamy
+Remove dependencies to joda-time (#2041) @veita
+Jenkins 56392 (#2042) @bpedersen2
+Replace wiki URL with github URL in pom files (#2044) @kshultzCB
+Move aggregator ('blueocean') docs into git repository (#2040) @MarkEWaite
+Merge Release/1.20 into master (#2034) @kshultzCB
+
+🚀 New features and improvements
+
+Display separate stages in scripted parallel pipelines (#2024) @countableSet
+","Optional: add a release summary here 
+JENKINS-50328 - JENKINS-51066 - Fix bug where pipeline editor ignores custom Jenkinsfile script path. (#2049) @sutrosoftware
+Change to https url for maven download (#2047) @kshultzCB
+RequireUpperBoundDeps jodatime (#2046) @olamy
+Remove dependencies to joda-time (#2041) @veita
+Jenkins 56392 (#2042) @bpedersen2
+Replace wiki URL with github URL in pom files (#2044) @kshultzCB
+Move aggregator ('blueocean') docs into git repository (#2040) @MarkEWaite
+Merge Release/1.20 into master (#2034) @kshultzCB
+🚀 New features and improvements
+Display separate stages in scripted parallel pipelines (#2024) @countableSet"
+36,"🚀 New features and improvements
+
+JENKINS-39225 - : add i18n Korean support (#2027) @zakaf
+Hacktoberfest - Project URL updated to use Github instead of Wiki (#2028) @ocristian
+
+🐛 Bug Fixes
+
+Ensure header is visible on scroll (#2026) @fredden
+JENKINS-59706 - PipelineRunImpl.getCommitUrl must not loop over historical builds (#2029) @jglick
+Typo in the README.md (#2023) @v1v
+","🚀 New features and improvements
+JENKINS-39225 - : add i18n Korean support (#2027) @zakaf
+Hacktoberfest - Project URL updated to use Github instead of Wiki (#2028) @ocristian
+🐛 Bug Fixes
+Ensure header is visible on scroll (#2026) @fredden
+JENKINS-59706 - PipelineRunImpl.getCommitUrl must not loop over historical builds (#2029) @jglick
+Typo in the README.md (#2023) @v1v"
+37," Optional: add a release summary here 
+
+JENKINS-58085 - Fix issue where stages are shown as waiting to start when they are running/completed (#2017) @dwnusbaum
+validate 'run.causes' is set before checking length (#2020) @kevinushey
+JENKINS-58684 - use sse gateway 1.20 (#2021) @olamy
+Prepare for next release (#2012) @halkeye
+JENKINS-55605 - Remove restriction that prevented clicking/url updating on unfinished nodes, or parallel nodes (#2018) @halkeye
+Update README.md w/ note about installation on macOS (#2016) @heisian
+address error.responseBody is undefined (#2015) @heisian
+
+🐛 Bug Fixes
+
+JENKINS-53352 - fix test whitespace rendering on junit files (#1988) @egonelbre
+","Optional: add a release summary here 
+JENKINS-58085 - Fix issue where stages are shown as waiting to start when they are running/completed (#2017) @dwnusbaum
+validate 'run.causes' is set before checking length (#2020) @kevinushey
+JENKINS-58684 - use sse gateway 1.20 (#2021) @olamy
+Prepare for next release (#2012) @halkeye
+JENKINS-55605 - Remove restriction that prevented clicking/url updating on unfinished nodes, or parallel nodes (#2018) @halkeye
+Update README.md w/ note about installation on macOS (#2016) @heisian
+address error.responseBody is undefined (#2015) @heisian
+🐛 Bug Fixes
+JENKINS-53352 - fix test whitespace rendering on junit files (#1988) @egonelbre"
+38,"🐛 Bug Fixes
+
+JENKINS-58684 Revert sse-gateway to 1.17.
+
+Fix for JENKINS-48035 resulted in causing regression where it leaked threads. We are reverting sse-gateway back to version 1.17 while a new fix in sse-gateway is worked at (#2014) @vivek","🐛 Bug Fixes
+JENKINS-58684 Revert sse-gateway to 1.17.
+Fix for JENKINS-48035 resulted in causing regression where it leaked threads. We are reverting sse-gateway back to version 1.17 while a new fix in sse-gateway is worked at (#2014) @vivek"
+39," Optional: add a release summary here 
+
+JENKINS-51057 - Use see-gateway plugin 1.18 (#1987) @olamy
+Swap code owners with the jenkinsci group so it matches who has access to the project (#1985) @halkeye
+
+🐛 Bug Fixes
+
+JENKINS-48035 - : Fix to register webhook after creating and saving pipeline (#2008) @vivek
+
+📦 Dependency updates
+
+Updated sonar-plugin version (#2011) @vivek
+Bump maven-javadoc-plugin from 2.10.4 to 3.1.0 (#1997) @dependabot-preview
+","Optional: add a release summary here 
+JENKINS-51057 - Use see-gateway plugin 1.18 (#1987) @olamy
+Swap code owners with the jenkinsci group so it matches who has access to the project (#1985) @halkeye
+🐛 Bug Fixes
+JENKINS-48035 - : Fix to register webhook after creating and saving pipeline (#2008) @vivek
+📦 Dependency updates
+Updated sonar-plugin version (#2011) @vivek
+Bump maven-javadoc-plugin from 2.10.4 to 3.1.0 (#1997) @dependabot-preview"
+40,"Changes
+
+Fix response json data of API get SCM repositories in an organization (#1955) @soulseen
+
+🚀 New features and improvements
+
+JENKINS-39203 - Only show blocks containing a WarningAction as unstable (#1954) @dwnusbaum
+
+🐛 Bug Fixes
+
+JENKINS-39203 - Only show blocks containing a WarningAction as unstable (#1954) @dwnusbaum
+Sequential parallel branches appear incorrectly while build in-progress (#1961) @sophistifunk
+
+📦 Dependency updates
+
+Bump maven-jar-plugin from 3.0.2 to 3.1.2 (#1967) @dependabot-preview
+Bump powermock.version from 2.0.0-RC.4 to 2.0.2 (#1972) @dependabot-preview
+","Changes
+Fix response json data of API get SCM repositories in an organization (#1955) @soulseen
+🚀 New features and improvements
+JENKINS-39203 - Only show blocks containing a WarningAction as unstable (#1954) @dwnusbaum
+🐛 Bug Fixes
+JENKINS-39203 - Only show blocks containing a WarningAction as unstable (#1954) @dwnusbaum
+Sequential parallel branches appear incorrectly while build in-progress (#1961) @sophistifunk
+📦 Dependency updates
+Bump maven-jar-plugin from 3.0.2 to 3.1.2 (#1967) @dependabot-preview
+Bump powermock.version from 2.0.0-RC.4 to 2.0.2 (#1972) @dependabot-preview"
+41,"What’s Changed
+🐛 Bug Fixes
+
+JENKINS-57209 - Switch Blueocean's calls to bitbucket API to use UUID instead of nickname since its going away (#1950) @halkeye
+","What’s Changed
+🐛 Bug Fixes
+JENKINS-57209 - Switch Blueocean's calls to bitbucket API to use UUID instead of nickname since its going away (#1950) @halkeye"
+42,"What’s Changed
+🐛 Bug Fixes
+
+https://issues.jenkins-ci.org/browse/JENKINS-57200 - Exit out early if replay's run isn't available so we dont infinite loop (#1957) @halkeye
+","What’s Changed
+🐛 Bug Fixes
+link - Exit out early if replay's run isn't available so we dont infinite loop (#1957) @halkeye"
+43,"What’s Changed
+🚀 Features
+
+JENKINS-55497 - PipelineRunSummary should include a change set (#1919) @stuartrowe
+Upgrade to latest LTS for node and npm (#1922) @halkeye
+[JENKINS-52825] - Add blueocean-executor-info-plugin to the blueocean meta package as a dependancy (#1925) @halkeye
+Fix links in README.md (#1936) @cizezsy
+Enable release-drafter support (#1953) @halkeye
+JENKINS-56672 - Add a link to display artifact in new window (#1951) @rodrigc
+
+🐛 Bug Fixes
+
+JENKINS-51716 Prevent non numeric run id from throwing exception when a run is actually found (#1932) @halkeye
+Fix for JENKINS-56383 without rolling back fix for JENKINS-38339 (#1933) @sophistifunk
+JENKINS-46193 - Add support for filtering out non regressed failures. (#1938) @halkeye
+JENKINS-56773 - Disable Executor plugin by default, and throttle requests for the api for those that have it installed (#1947) @halkeye
+JENKINS-55497 - Add ChangeSet information to its own unique container (#1948) @halkeye
+","What’s Changed
+🚀 Features
+JENKINS-55497 - PipelineRunSummary should include a change set (#1919) @stuartrowe
+Upgrade to latest LTS for node and npm (#1922) @halkeye
+[JENKINS-52825] - Add blueocean-executor-info-plugin to the blueocean meta package as a dependancy (#1925) @halkeye
+Fix links in README.md (#1936) @cizezsy
+Enable release-drafter support (#1953) @halkeye
+JENKINS-56672 - Add a link to display artifact in new window (#1951) @rodrigc
+🐛 Bug Fixes
+JENKINS-51716 Prevent non numeric run id from throwing exception when a run is actually found (#1932) @halkeye
+Fix for JENKINS-56383 without rolling back fix for JENKINS-38339 (#1933) @sophistifunk
+JENKINS-46193 - Add support for filtering out non regressed failures. (#1938) @halkeye
+JENKINS-56773 - Disable Executor plugin by default, and throttle requests for the api for those that have it installed (#1947) @halkeye
+JENKINS-55497 - Add ChangeSet information to its own unique container (#1948) @halkeye"
+44,"Cannot see executors in Blue Ocean UI JENKINS-52825 
+BlueOcean Pipeline View for the Latest Run shows No Changes JENKINS-55497 
+Upgraded to node 10 (Tried to fix Unable to build blueocean-plugin\jenkins-design-language on Windows) JENKINS-56316 
+BlueOcean pipeline UI fails to render stages past the first parallel stage after I upgraded the plugins JENKINS-56383 
+Blueocean stuck in loading JENKINS-51716 
+UI for downstream jobs launched with 'build' step JENKINS-38339 
+Massive log spam due to blue ocean executor info JENKINS-56460 ","Cannot see executors in Blue Ocean UI JENKINS-52825 
+BlueOcean Pipeline View for the Latest Run shows No Changes JENKINS-55497 
+Upgraded to node 10 (Tried to fix Unable to build blueocean-plugin\jenkins-design-language on Windows) JENKINS-56316 
+BlueOcean pipeline UI fails to render stages past the first parallel stage after I upgraded the plugins JENKINS-56383 
+Blueocean stuck in loading JENKINS-51716 
+UI for downstream jobs launched with 'build' step JENKINS-38339 
+Massive log spam due to blue ocean executor info JENKINS-56460 "
+45,HOTFIX - Reverted the fix for JENKINS-38339 which was causing double parallel steps to fail to render JENKINS-56383,HOTFIX - Reverted the fix for JENKINS-38339 which was causing double parallel steps to fail to render JENKINS-56383

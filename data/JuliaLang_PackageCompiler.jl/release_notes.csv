@@ -1,0 +1,1282 @@
+Index,Release Note,Release Note With Abstraction
+1,"PackageCompiler v2.1.5
+Diff since v2.1.4
+Closed issues:
+- Fail early if no compiler can be found? (#677)
+- Tests are failing on Julia 1.6 (#706)
+- Split run_compiler so users can get the location of the compiler? (#716)
+- Check c++ compiler earlier (#727)
+- Avoid redownloading MKL_jll for each testset (#766)
+Merged pull requests:
+- Call get_compiler_cmd() at the beginning of create_sysimage and create_app (#770) (@DilumAluthge)
+- Test suite: on Julia 1.6, remove LLVMExtra_jll from the MyApp/Project.toml file (#771) (@DilumAluthge)
+- use smaller micromamba_jll rather than huge MKL_jll to test lazy artifacts (#772) (@IanButterworth)
+- clarify that project arg should be a path. (#773) (@sjkelly)
+- RFC: propagate build flags into sysimg (#774) (@sjkelly)
+- CI: Combine the tests and the docs into a single CI workflow (#775) (@DilumAluthge)
+- CI: add the ci_started job (#776) (@DilumAluthge)
+- README: Fix the CI status badge (#777) (@DilumAluthge)
+- bump version (#782) (@KristofferC)","PackageCompiler v2.1.5
+Diff since v2.1.4
+Closed issues:
+- Fail early if no compiler can be found? (#677)
+- Tests are failing on Julia 1.6 (#706)
+- Split run_compiler so users can get the location of the compiler? (#716)
+- Check c++ compiler earlier (#727)
+- Avoid redownloading MKL_jll for each testset (#766)
+Merged pull requests:
+- Call get_compiler_cmd() at the beginning of create_sysimage and create_app (#770) (@DilumAluthge)
+- Test suite: on Julia 1.6, remove LLVMExtra_jll from the MyApp/Project.toml file (#771) (@DilumAluthge)
+- use smaller micromamba_jll rather than huge MKL_jll to test lazy artifacts (#772) (@IanButterworth)
+- clarify that project arg should be a path. (#773) (@sjkelly)
+- RFC: propagate build flags into sysimg (#774) (@sjkelly)
+- CI: Combine the tests and the docs into a single CI workflow (#775) (@DilumAluthge)
+- CI: add the ci_started job (#776) (@DilumAluthge)
+- README: Fix the CI status badge (#777) (@DilumAluthge)
+- bump version (#782) (@KristofferC)"
+2,"PackageCompiler v2.1.4
+Diff since v2.1.2
+Closed issues:
+- Segfault while compiling package using a foreign type (#700)
+- RNG not being seeded during precompilation (#755)
+- Failures on julia 1.10.0-DEV (#761)
+Merged pull requests:
+- Run CI on 1.9-nightly (#753) (@IanButterworth)
+- Add an inner testsets to help find failures (#754) (@IanButterworth)
+- Fix 1.9 (#757) (@IanButterworth)
+- Grammar (#758) (@LilithHafner)
+- Patch bump. Set CI timeout to 90 mins (#760) (@IanButterworth)
+- Fixes for 1.10 (#762) (@IanButterworth)
+- PackageCompiler v2.1.4 (#763) (@IanButterworth)","PackageCompiler v2.1.4
+Diff since v2.1.2
+Closed issues:
+- Segfault while compiling package using a foreign type (#700)
+- RNG not being seeded during precompilation (#755)
+- Failures on julia 1.10.0-DEV (#761)
+Merged pull requests:
+- Run CI on 1.9-nightly (#753) (@IanButterworth)
+- Add an inner testsets to help find failures (#754) (@IanButterworth)
+- Fix 1.9 (#757) (@IanButterworth)
+- Grammar (#758) (@LilithHafner)
+- Patch bump. Set CI timeout to 90 mins (#760) (@IanButterworth)
+- Fixes for 1.10 (#762) (@IanButterworth)
+- PackageCompiler v2.1.4 (#763) (@IanButterworth)"
+3,"PackageCompiler v2.1.2
+Diff since v2.1.1
+Merged pull requests:
+- Add script kwarg to create_library to enable running of custom Julia code (#748) (@sharanry)
+- bump version (#749) (@KristofferC)","PackageCompiler v2.1.2
+Diff since v2.1.1
+Merged pull requests:
+- Add script kwarg to create_library to enable running of custom Julia code (#748) (@sharanry)
+- bump version (#749) (@KristofferC)"
+4,"PackageCompiler v2.1.1
+Diff since v2.1.0
+Closed issues:
+- create_app Error: could not find project (#734)
+- Provide more useful info when sysimage generation fails (#739)
+- --compile-all option does not finish (#741)
+Merged pull requests:
+- Monitor for low free memory during sysimage generation (#740) (@IanButterworth)
+- PackageCompiler v2.1.1 (#745) (@IanButterworth)","PackageCompiler v2.1.1
+Diff since v2.1.0
+Closed issues:
+- create_app Error: could not find project (#734)
+- Provide more useful info when sysimage generation fails (#739)
+- --compile-all option does not finish (#741)
+Merged pull requests:
+- Monitor for low free memory during sysimage generation (#740) (@IanButterworth)
+- PackageCompiler v2.1.1 (#745) (@IanButterworth)"
+5,"PackageCompiler v2.1.0
+Diff since v2.0.11
+Merged pull requests:
+- Factor out the ""find compiler"" logic into a separate get_compiler_cmd function (#731) (@DilumAluthge)","PackageCompiler v2.1.0
+Diff since v2.0.11
+Merged pull requests:
+- Factor out the ""find compiler"" logic into a separate get_compiler_cmd function (#731) (@DilumAluthge)"
+6,"PackageCompiler v2.0.11
+Diff since v2.0.10
+Closed issues:
+- nightly (1.9) tests failing (#708)
+Merged pull requests:
+- remove use of jl_set_value on 1.9. fix UndefVarError for new nightly error formatting (#709) (@simonbyrne)
+- Reinstate RelocatableFolders compat & patch bump (#729) (@IanButterworth)","PackageCompiler v2.0.11
+Diff since v2.0.10
+Closed issues:
+- nightly (1.9) tests failing (#708)
+Merged pull requests:
+- remove use of jl_set_value on 1.9. fix UndefVarError for new nightly error formatting (#709) (@simonbyrne)
+- Reinstate RelocatableFolders compat & patch bump (#729) (@IanButterworth)"
+7,"PackageCompiler v2.0.10
+Diff since v2.0.9
+Closed issues:
+- Apps/libraries/sysimages that have no package dependancies trigger unnecessary warning (#692)
+- LLVM error (simd / LoopVectorization) (#724)
+Merged pull requests:
+- run CI on julia 1.8 (#707) (@simonbyrne)
+- Support RelocatableFolders v1 (#722) (@AshlinHarris)
+- CI: change '~1.8.0-0' to '1.8' (#723) (@DilumAluthge)","PackageCompiler v2.0.10
+Diff since v2.0.9
+Closed issues:
+- Apps/libraries/sysimages that have no package dependancies trigger unnecessary warning (#692)
+- LLVM error (simd / LoopVectorization) (#724)
+Merged pull requests:
+- run CI on julia 1.8 (#707) (@simonbyrne)
+- Support RelocatableFolders v1 (#722) (@AshlinHarris)
+- CI: change '~1.8.0-0' to '1.8' (#723) (@DilumAluthge)"
+8,"PackageCompiler v2.0.9
+Diff since v2.0.8
+Closed issues:
+- New warning, possible bug (#713)
+Merged pull requests:
+- Add concurrency control to GitHub workflow runs (#712) (@davidanthoff)
+- Fix an incorrect warning message (#715) (@DilumAluthge)","PackageCompiler v2.0.9
+Diff since v2.0.8
+Closed issues:
+- New warning, possible bug (#713)
+Merged pull requests:
+- Add concurrency control to GitHub workflow runs (#712) (@davidanthoff)
+- Fix an incorrect warning message (#715) (@DilumAluthge)"
+9,"PackageCompiler v2.0.8
+Diff since v2.0.7
+Closed issues:
+- MbedTLS cert.perm is not packaged (#710)
+Merged pull requests:
+- check if manifest file exists instead of if manifest empty (#705) (@simonbyrne)
+- also bundle certificate (#711) (@KristofferC)","PackageCompiler v2.0.8
+Diff since v2.0.7
+Closed issues:
+- MbedTLS cert.perm is not packaged (#710)
+Merged pull requests:
+- check if manifest file exists instead of if manifest empty (#705) (@simonbyrne)
+- also bundle certificate (#711) (@KristofferC)"
+10,"PackageCompiler v2.0.7
+Diff since v2.0.6
+Closed issues:
+- PackageCompiler does not download artifacts for MKL now (#691)
+Merged pull requests:
+- Update CompatHelper.yml (#684) (@JackDunnNZ)
+- Fix the message in create_sysimg_object_file to correctly say ""incremental"" or ""nonincremental"" (#694) (@DilumAluthge)
+- fix lazy artifacts (#696) (@KristofferC)
+- Fix a few typos (#701) (@fingolfin)","PackageCompiler v2.0.7
+Diff since v2.0.6
+Closed issues:
+- PackageCompiler does not download artifacts for MKL now (#691)
+Merged pull requests:
+- Update CompatHelper.yml (#684) (@JackDunnNZ)
+- Fix the message in create_sysimg_object_file to correctly say ""incremental"" or ""nonincremental"" (#694) (@DilumAluthge)
+- fix lazy artifacts (#696) (@KristofferC)
+- Fix a few typos (#701) (@fingolfin)"
+11,"PackageCompiler v2.0.6
+Diff since v2.0.5
+Closed issues:
+- Documentation for libraries still mentions @ccallable (#668)
+- create_sysimage fails on arm64 when using a precompile execution file (#670)
+- Cannot load PyPlot with Julia 1.7.1 and 1.7.2 (#671)
+- Add a (build-flag controlled) option to have the produced binary app support julia flags (#680)
+- Unable to use an app created with packages that pull in LLVM.jl as a dependency (#682)
+- PackageCompiler should use multiple threads (#688)
+Merged pull requests:
+- Fix formatting of executables keyword in docstring (#679) (@blegat)
+- add support for dynamic artifact selection (#690) (@KristofferC)","PackageCompiler v2.0.6
+Diff since v2.0.5
+Closed issues:
+- Documentation for libraries still mentions @ccallable (#668)
+- create_sysimage fails on arm64 when using a precompile execution file (#670)
+- Cannot load PyPlot with Julia 1.7.1 and 1.7.2 (#671)
+- Add a (build-flag controlled) option to have the produced binary app support julia flags (#680)
+- Unable to use an app created with packages that pull in LLVM.jl as a dependency (#682)
+- PackageCompiler should use multiple threads (#688)
+Merged pull requests:
+- Fix formatting of executables keyword in docstring (#679) (@blegat)
+- add support for dynamic artifact selection (#690) (@KristofferC)"
+12,"PackageCompiler v2.0.5
+Diff since v2.0.4
+Closed issues:
+- Error while compiling incremental system image with Flux (#641)
+- Packagecompiler fails on FluxArchitectures on Julia 1.7.0 (#643)
+- tests fail without .julia/registries/General (#645)
+- App cannot run without Julia installed (#650)
+- SysImage output gets stuck in recursive stack trace on 1.7.0 (#651)
+- create_library doesn't create mylib.dll for example on windows (#653)
+- ""unsupported GNU_PROPERTY_TYPE"" warning upon creating sysimage (#654)
+- Compilation fails on Linux ARM64 (#656)
+- Unreasonably large executable size from create_app (#660)
+Merged pull requests:
+- make package test work without an installed General registry (#646) (@KristofferC)
+- Fix windows library filename (#655) (@kmsquire)","PackageCompiler v2.0.5
+Diff since v2.0.4
+Closed issues:
+- Error while compiling incremental system image with Flux (#641)
+- Packagecompiler fails on FluxArchitectures on Julia 1.7.0 (#643)
+- tests fail without .julia/registries/General (#645)
+- App cannot run without Julia installed (#650)
+- SysImage output gets stuck in recursive stack trace on 1.7.0 (#651)
+- create_library doesn't create mylib.dll for example on windows (#653)
+- ""unsupported GNU_PROPERTY_TYPE"" warning upon creating sysimage (#654)
+- Compilation fails on Linux ARM64 (#656)
+- Unreasonably large executable size from create_app (#660)
+Merged pull requests:
+- make package test work without an installed General registry (#646) (@KristofferC)
+- Fix windows library filename (#655) (@kmsquire)"
+13,"PackageCompiler v2.0.4
+Diff since v2.0.3
+Closed issues:
+- Error when using standard library: ""ArgumentError: Package ReSolver does not have Dates in its dependencies"" (#648)
+Merged pull requests:
+- add precompile statements for functions called from main in apps (#649) (@JeffBezanson)","PackageCompiler v2.0.4
+Diff since v2.0.3
+Closed issues:
+- Error when using standard library: ""ArgumentError: Package ReSolver does not have Dates in its dependencies"" (#648)
+Merged pull requests:
+- add precompile statements for functions called from main in apps (#649) (@JeffBezanson)"
+14,"PackageCompiler v2.0.3
+Diff since v2.0.2
+Closed issues:
+- stdatomic.h: No such file or directory (#637)
+- compiler error while building an app (#640)
+Merged pull requests:
+- Typo (#642) (@PallHaraldsson)
+- use debug libs when Julia is debug build (#644) (@jaakkor2)","PackageCompiler v2.0.3
+Diff since v2.0.2
+Closed issues:
+- stdatomic.h: No such file or directory (#637)
+- compiler error while building an app (#640)
+Merged pull requests:
+- Typo (#642) (@PallHaraldsson)
+- use debug libs when Julia is debug build (#644) (@jaakkor2)"
+15,"PackageCompiler v2.0.2
+Diff since v2.0.1
+Closed issues:
+- create_sysimage fails on macOS when one passes file name (e.g. ""sys.dylib"" ) to sysimage_path  (#635)
+Merged pull requests:
+- use abspath (#636) (@terasakisatoshi)","PackageCompiler v2.0.2
+Diff since v2.0.1
+Closed issues:
+- create_sysimage fails on macOS when one passes file name (e.g. ""sys.dylib"" ) to sysimage_path  (#635)
+Merged pull requests:
+- use abspath (#636) (@terasakisatoshi)"
+16,"PackageCompiler v2.0.1
+Diff since v2.0.0
+Closed issues:
+- Allow create_pkg_context with only a Manifest.toml (#629)
+- relative path (#630)
+Merged pull requests:
+- syimage -> sysimage in ""Upgrading from..."" section (#628) (@chriselrod)
+- Fix code block on apps documentation (#631) (@guilhermebodin)
+- Fix doc typo (#632) (@alhirzel)
+- Fix typo in docs: use correct default cpu target (#633) (@ikirill)","PackageCompiler v2.0.1
+Diff since v2.0.0
+Closed issues:
+- Allow create_pkg_context with only a Manifest.toml (#629)
+- relative path (#630)
+Merged pull requests:
+- syimage -> sysimage in ""Upgrading from..."" section (#628) (@chriselrod)
+- Fix code block on apps documentation (#631) (@guilhermebodin)
+- Fix doc typo (#632) (@alhirzel)
+- Fix typo in docs: use correct default cpu target (#633) (@ikirill)"
+17,"PackageCompiler v2.0.0
+PackageCompiler 2.0 comes with a few breaking changes. Read the upgrade guide here
+for instructions on how to upgrade to version 2.0.
+__
+Diff since v1.7.7","PackageCompiler v2.0.0
+PackageCompiler 2.0 comes with a few breaking changes. Read the upgrade guide here
+for instructions on how to upgrade to version 2.0.
+__
+Diff since v1.7.7"
+18,"PackageCompiler v1.7.7
+Diff since v1.7.6
+Closed issues:
+- Multiple executables in an app (#320)
+- Be a bit more careful about what files we bundle in an app / library (#578)
+- Simple app not relocatable in Julia 1.6 (#615)
+- Regression from v1.5.0 to v1.7.6: duplicate copying attempt (#625)
+Merged pull requests:
+- print some info about bundled artifacts (#609) (@KristofferC)
+- some general autumn cleaning (#612) (@KristofferC)
+- warn for create_library and create_app on non-official builds (#617) (@KristofferC)
+- add support for creating multiple executables for an app (#618) (@KristofferC)
+- call entry points in apps using the julia runtime instead of via @ccallable (#619) (@KristofferC)
+- strengthen null pointer checks in julia_init.c (#620) (@KristofferC)
+- only print artifact size if we actually bundled something (#621) (@KristofferC)
+- fix regression in create_library and update test to cover it (#622) (@KristofferC)
+- Ensure app_libdir path exists before cp (#624) (@jpsamaroo)
+- fix bug when the same artifact was used more than once in the project (#626) (@KristofferC)
+- fix bug when the same artifact was used more than once in the project (#627) (@KristofferC)","PackageCompiler v1.7.7
+Diff since v1.7.6
+Closed issues:
+- Multiple executables in an app (#320)
+- Be a bit more careful about what files we bundle in an app / library (#578)
+- Simple app not relocatable in Julia 1.6 (#615)
+- Regression from v1.5.0 to v1.7.6: duplicate copying attempt (#625)
+Merged pull requests:
+- print some info about bundled artifacts (#609) (@KristofferC)
+- some general autumn cleaning (#612) (@KristofferC)
+- warn for create_library and create_app on non-official builds (#617) (@KristofferC)
+- add support for creating multiple executables for an app (#618) (@KristofferC)
+- call entry points in apps using the julia runtime instead of via @ccallable (#619) (@KristofferC)
+- strengthen null pointer checks in julia_init.c (#620) (@KristofferC)
+- only print artifact size if we actually bundled something (#621) (@KristofferC)
+- fix regression in create_library and update test to cover it (#622) (@KristofferC)
+- Ensure app_libdir path exists before cp (#624) (@jpsamaroo)
+- fix bug when the same artifact was used more than once in the project (#626) (@KristofferC)
+- fix bug when the same artifact was used more than once in the project (#627) (@KristofferC)"
+19,"PackageCompiler v1.7.6
+Diff since v1.7.5
+Merged pull requests:
+- Backports release 1 (#610) (@KristofferC)","PackageCompiler v1.7.6
+Diff since v1.7.5
+Merged pull requests:
+- Backports release 1 (#610) (@KristofferC)"
+20,"PackageCompiler v1.7.5
+Diff since v1.7.4
+Closed issues:
+- Show some loading spinner or something while creating sysimages. (#318)
+- The change of compiler in 1.7.4 is breaking situations where one of g++/clang++ isn't installed (#606)
+Merged pull requests:
+- Add a spinner for long running commands (#607) (@KristofferC)
+- fall back to gcc/clang if g++/clang++ not avaiable, but warn about it (#608) (@KristofferC)","PackageCompiler v1.7.5
+Diff since v1.7.4
+Closed issues:
+- Show some loading spinner or something while creating sysimages. (#318)
+- The change of compiler in 1.7.4 is breaking situations where one of g++/clang++ isn't installed (#606)
+Merged pull requests:
+- Add a spinner for long running commands (#607) (@KristofferC)
+- fall back to gcc/clang if g++/clang++ not avaiable, but warn about it (#608) (@KristofferC)"
+21,"PackageCompiler v1.7.4
+Diff since v1.7.3
+Closed issues:
+- Feature request: use the Artifacts system to provide a C compiler on Linux and macOS (#316)
+- Better Documentation for first time users (#404)
+- [Q] How to dump the current session to an image? (#591)
+- Should we link to libm? (#601)
+Merged pull requests:
+- simplify init of apps (#597) (@KristofferC)
+- use g++/clang++ for sysimage (#602) (@KristofferC)
+- use O3 for sysimage, like Julia itself does (#603) (@KristofferC)
+- improve documentation (#604) (@KristofferC)
+- Backports release 1 (#605) (@KristofferC)","PackageCompiler v1.7.4
+Diff since v1.7.3
+Closed issues:
+- Feature request: use the Artifacts system to provide a C compiler on Linux and macOS (#316)
+- Better Documentation for first time users (#404)
+- [Q] How to dump the current session to an image? (#591)
+- Should we link to libm? (#601)
+Merged pull requests:
+- simplify init of apps (#597) (@KristofferC)
+- use g++/clang++ for sysimage (#602) (@KristofferC)
+- use O3 for sysimage, like Julia itself does (#603) (@KristofferC)
+- improve documentation (#604) (@KristofferC)
+- Backports release 1 (#605) (@KristofferC)"
+22,"PackageCompiler v1.7.3
+Diff since v1.7.2
+Closed issues:
+- create_image with packages in Project.toml (#373)
+Merged pull requests:
+- Remove support for replacing default sysimage (#546) (@KristofferC)
+- make include_lazy_artifacts default to false (#550) (@KristofferC)
+- if first argument to create_sysimage is left out, include all packages in project (#553) (@KristofferC)
+- prevent accidentally picking up packages outside the project when creating a sysimage (#559) (@KristofferC)
+- require packages to make their entry functions for app ccallable (#574) (@KristofferC)
+- remove calling libsupport_init, this is done automatically by julia_init (#583) (@KristofferC)
+- add upgrade note for lazy artifacts (#595) (@KristofferC)
+- fix an off by one in julia-args parsing (#596) (@KristofferC)
+- fixup artifact format (#599) (@KristofferC)
+- Backports release 1 (#600) (@KristofferC)","PackageCompiler v1.7.3
+Diff since v1.7.2
+Closed issues:
+- create_image with packages in Project.toml (#373)
+Merged pull requests:
+- Remove support for replacing default sysimage (#546) (@KristofferC)
+- make include_lazy_artifacts default to false (#550) (@KristofferC)
+- if first argument to create_sysimage is left out, include all packages in project (#553) (@KristofferC)
+- prevent accidentally picking up packages outside the project when creating a sysimage (#559) (@KristofferC)
+- require packages to make their entry functions for app ccallable (#574) (@KristofferC)
+- remove calling libsupport_init, this is done automatically by julia_init (#583) (@KristofferC)
+- add upgrade note for lazy artifacts (#595) (@KristofferC)
+- fix an off by one in julia-args parsing (#596) (@KristofferC)
+- fixup artifact format (#599) (@KristofferC)
+- Backports release 1 (#600) (@KristofferC)"
+23,"PackageCompiler v1.7.2
+Diff since v1.7.1
+Closed issues:
+- System image compiled with 1.7 segfaults. (#588)
+- ENAMETOOLONG regression with v1.7.1 (#592)
+Merged pull requests:
+- Fix a typo while gathering dependencies from Manifest.toml (#593) (@zhubonan)
+- use a file to run the sysimage code in (#594) (@KristofferC)","PackageCompiler v1.7.2
+Diff since v1.7.1
+Closed issues:
+- System image compiled with 1.7 segfaults. (#588)
+- ENAMETOOLONG regression with v1.7.1 (#592)
+Merged pull requests:
+- Fix a typo while gathering dependencies from Manifest.toml (#593) (@zhubonan)
+- use a file to run the sysimage code in (#594) (@KristofferC)"
+24,"PackageCompiler v1.7.1
+Diff since v1.7.0
+Merged pull requests:
+- run CI on 1.7 (#584) (@KristofferC)
+- only initialize Random on 1.6 (#586) (@KristofferC)
+- improve artifact bundling (#587) (@KristofferC)
+- fixup regression in precompilation before creating sysimage (#589) (@KristofferC)
+- allow loading stdlibs in the precompile process (#590) (@KristofferC)","PackageCompiler v1.7.1
+Diff since v1.7.0
+Merged pull requests:
+- run CI on 1.7 (#584) (@KristofferC)
+- only initialize Random on 1.6 (#586) (@KristofferC)
+- improve artifact bundling (#587) (@KristofferC)
+- fixup regression in precompilation before creating sysimage (#589) (@KristofferC)
+- allow loading stdlibs in the precompile process (#590) (@KristofferC)"
+25,"PackageCompiler v1.7.0
+Diff since v1.6.0
+Closed issues:
+- How to get parallelism to work? (#84)
+- Strange behaviour while spawning processes (#161)
+- Allow giving a path to a file (in the same directory as a project file) to define an app. (#321)
+- Unable to compile system image in Docker (#296)
+- sysimage with Plots.jl compiled is slow in Atom/Juno IDE (#352)
+- Allow the script argument to be a vector (#370)
+- compiled sysimg is extremely slower when using --project (#427)
+- Plots stops working in REPL on julia 1.5, macos (#428)
+- PackageCompiler turns keyword-argument function into positional arguments (#431)
+- qemu: uncaught target signal 11 (Segmentation fault) - core dumped (#433)
+- call create_sysimage with custom CXX_FLAGS (#462)
+- Multi-stage incremental builds (#488)
+- Rebuild docs (#562)
+- Make PackageCompiler relocatable (#573)
+Merged pull requests:
+- document base_sysimage parameter to create_sysimage (#401) (@grahamgill)
+- include transitive dependencies into sysimage by default (#567) (@KristofferC)
+- allow passing on flags with the explicit compiler (#568) (@KristofferC)
+- store the precompile statements from the precompile execution scripts (#571) (@KristofferC)
+- bundle Julia executable and Project.toml to get Distributed working (#572) (@KristofferC)
+- fix relocatability of PackageCompiler (#575) (@KristofferC)
+- initialize RNGs in sysimage process (#579) (@KristofferC)
+- fix library used for creating sysimage on debug builds of Julia (#580) (@KristofferC)","PackageCompiler v1.7.0
+Diff since v1.6.0
+Closed issues:
+- How to get parallelism to work? (#84)
+- Strange behaviour while spawning processes (#161)
+- Allow giving a path to a file (in the same directory as a project file) to define an app. (#321)
+- Unable to compile system image in Docker (#296)
+- sysimage with Plots.jl compiled is slow in Atom/Juno IDE (#352)
+- Allow the script argument to be a vector (#370)
+- compiled sysimg is extremely slower when using --project (#427)
+- Plots stops working in REPL on julia 1.5, macos (#428)
+- PackageCompiler turns keyword-argument function into positional arguments (#431)
+- qemu: uncaught target signal 11 (Segmentation fault) - core dumped (#433)
+- call create_sysimage with custom CXX_FLAGS (#462)
+- Multi-stage incremental builds (#488)
+- Rebuild docs (#562)
+- Make PackageCompiler relocatable (#573)
+Merged pull requests:
+- document base_sysimage parameter to create_sysimage (#401) (@grahamgill)
+- include transitive dependencies into sysimage by default (#567) (@KristofferC)
+- allow passing on flags with the explicit compiler (#568) (@KristofferC)
+- store the precompile statements from the precompile execution scripts (#571) (@KristofferC)
+- bundle Julia executable and Project.toml to get Distributed working (#572) (@KristofferC)
+- fix relocatability of PackageCompiler (#575) (@KristofferC)
+- initialize RNGs in sysimage process (#579) (@KristofferC)
+- fix library used for creating sysimage on debug builds of Julia (#580) (@KristofferC)"
+26,"PackageCompiler v1.6.0
+Diff since v1.5.0
+Closed issues:
+- Using julia shared libraries as python C exstensions (#25)
+- Juju: statically compiling the static compiler! (#78)
+- Simple C# DLL import fails (#139)
+- init_jl_runtime does not work with Python ctypes (#144)
+- Running PackageCompiler from the package itself (#256)
+- build_executable fails if snoopfile and builddir are on different drives (#291)
+- Provide a log with app (#323)
+- Set julia threads env variable in the wrapper C script? (#324)
+- check what libraries can be excluded when some stdlibs are not in sysimage (#319)
+- More ccall() issues encountered when compiling with Julia 1.4 RC2 (#365)
+- replace_default=true, Windows, fails with unlink permission denied (#377)
+- realloc(): invalid pointer error with a particular combination of package dependencies (#379)
+- fatal error on starting Julia after compiling sys image (#389)
+- Calling a julia function in a sysimage from C (#393)
+- macOS: ""Julia-1.4.app"" is damaged and can't be opened. You should move it to the trash. (#409)
+- Error in devdocs/relocatable_part_3 (#411)
+- EOOR: failed process when create_sysimage (#412)
+- Allow setting julia startup options on executable (#413)
+- Documentation: One too many sys.so (#418)
+- Documentation error: identical command to compile .o and .so  (#419)
+- PackageCompiler broke my julia installation :/ (#424)
+- Error using IJulia (#425)
+- OhMyREPL sysimage breaks VScode language server (#434)
+- MLJBase + PackageCompiler + Distributed => error (#444)
+- Might need to execute Base.package_callbacks (#451)
+- 'Could not spawn setenv' error when creating an app with multiprocessing (#452)
+- Allow setting julia arguments during static compilation (#461)
+- Allow skipping download of lazy artifacts (#464)
+- Crashed precompile damages default system image (#465)
+- Clear the docstrings (#467)
+- Modules using PyCall don't compile in Windows (#468)
+- Show progress during creating system image object file (#504)
+- Error in create_app (#510)
+- VectorizationBase/Hwloc error in latest version (#513)
+- Vararg representation change interaction with Vararg{?, N} workaround (#514)
+- New inactive precompile statement warnings on 1.7+ (unexpectedly?) surfacing (#515)
+- ""showing an error caused an error"" when including files (#517)
+- Error on windows Julia 1.7 beta3 (#521)
+- sysimage compilation has started to error if precompilation fails (#522)
+- Compiler warning on create_library (#532)
+- MyLib example doesn't work (#534)
+- InitError and artifact folder (#544)
+- Julia 1.7beta3, MyApp example, error: expected identifier or ‘(’ before ‘)’ token` (#545)
+- Something strange with parallel precompilation (#554)
+- Using lazy artifact on 1.6 just by loading Pkg is deprecated (#558)
+Merged pull requests:
+- Remove keyword arguments from inner _create_app function (#533) (@kmsquire)
+- remove some old code now that we only support julia 1.6+ (#539) (@KristofferC)
+- update to new syntax for JULIA_DEFINE_FAST_TLS (#540) (@KristofferC)
+- hide the ""devdocs"" in the manual (#541) (@KristofferC)
+- remove more pre 1.6 code and simplify kwarg passing (#542) (@KristofferC)
+- remove upgrade notes (#543) (@KristofferC)
+- remove warn when detecting dependency on Requires.jl (#547) (@KristofferC)
+- fix some grammar (#548) (@KristofferC)
+- remove unused function (#549) (@KristofferC)
+- add the possiblity of giving arguments to the process making the sysimage (#551) (@KristofferC)
+- give packages as strings instead of symbols (#552) (@KristofferC)
+- update to the more advanced but correct way of dealing with Varargs (#555) (@KristofferC)
+- update versions for documentation generation (#556) (@KristofferC)
+- fix assumption that Pkg is loadable in a different project (#557) (@KristofferC)
+- use LazyArtifacts for lazy artifacts (#560) (@KristofferC)
+- Use strcpy, strcat instead of strncpy in julia_init.c (#561) (@kmsquire)
+- delete spurious file (#564) (@KristofferC)
+- allow passing standard julia arguments to apps (#565) (@KristofferC)
+- call create_sysimage with a vector for packages (#566) (@KristofferC)","PackageCompiler v1.6.0
+Diff since v1.5.0
+Closed issues:
+- Using julia shared libraries as python C exstensions (#25)
+- Juju: statically compiling the static compiler! (#78)
+- Simple C# DLL import fails (#139)
+- init_jl_runtime does not work with Python ctypes (#144)
+- Running PackageCompiler from the package itself (#256)
+- build_executable fails if snoopfile and builddir are on different drives (#291)
+- Provide a log with app (#323)
+- Set julia threads env variable in the wrapper C script? (#324)
+- check what libraries can be excluded when some stdlibs are not in sysimage (#319)
+- More ccall() issues encountered when compiling with Julia 1.4 RC2 (#365)
+- replace_default=true, Windows, fails with unlink permission denied (#377)
+- realloc(): invalid pointer error with a particular combination of package dependencies (#379)
+- fatal error on starting Julia after compiling sys image (#389)
+- Calling a julia function in a sysimage from C (#393)
+- macOS: ""Julia-1.4.app"" is damaged and can't be opened. You should move it to the trash. (#409)
+- Error in devdocs/relocatable_part_3 (#411)
+- EOOR: failed process when create_sysimage (#412)
+- Allow setting julia startup options on executable (#413)
+- Documentation: One too many sys.so (#418)
+- Documentation error: identical command to compile .o and .so  (#419)
+- PackageCompiler broke my julia installation :/ (#424)
+- Error using IJulia (#425)
+- OhMyREPL sysimage breaks VScode language server (#434)
+- MLJBase + PackageCompiler + Distributed => error (#444)
+- Might need to execute Base.package_callbacks (#451)
+- 'Could not spawn setenv' error when creating an app with multiprocessing (#452)
+- Allow setting julia arguments during static compilation (#461)
+- Allow skipping download of lazy artifacts (#464)
+- Crashed precompile damages default system image (#465)
+- Clear the docstrings (#467)
+- Modules using PyCall don't compile in Windows (#468)
+- Show progress during creating system image object file (#504)
+- Error in create_app (#510)
+- VectorizationBase/Hwloc error in latest version (#513)
+- Vararg representation change interaction with Vararg{?, N} workaround (#514)
+- New inactive precompile statement warnings on 1.7+ (unexpectedly?) surfacing (#515)
+- ""showing an error caused an error"" when including files (#517)
+- Error on windows Julia 1.7 beta3 (#521)
+- sysimage compilation has started to error if precompilation fails (#522)
+- Compiler warning on create_library (#532)
+- MyLib example doesn't work (#534)
+- InitError and artifact folder (#544)
+- Julia 1.7beta3, MyApp example, error: expected identifier or ‘(’ before ‘)’ token` (#545)
+- Something strange with parallel precompilation (#554)
+- Using lazy artifact on 1.6 just by loading Pkg is deprecated (#558)
+Merged pull requests:
+- Remove keyword arguments from inner _create_app function (#533) (@kmsquire)
+- remove some old code now that we only support julia 1.6+ (#539) (@KristofferC)
+- update to new syntax for JULIA_DEFINE_FAST_TLS (#540) (@KristofferC)
+- hide the ""devdocs"" in the manual (#541) (@KristofferC)
+- remove more pre 1.6 code and simplify kwarg passing (#542) (@KristofferC)
+- remove upgrade notes (#543) (@KristofferC)
+- remove warn when detecting dependency on Requires.jl (#547) (@KristofferC)
+- fix some grammar (#548) (@KristofferC)
+- remove unused function (#549) (@KristofferC)
+- add the possiblity of giving arguments to the process making the sysimage (#551) (@KristofferC)
+- give packages as strings instead of symbols (#552) (@KristofferC)
+- update to the more advanced but correct way of dealing with Varargs (#555) (@KristofferC)
+- update versions for documentation generation (#556) (@KristofferC)
+- fix assumption that Pkg is loadable in a different project (#557) (@KristofferC)
+- use LazyArtifacts for lazy artifacts (#560) (@KristofferC)
+- Use strcpy, strcat instead of strncpy in julia_init.c (#561) (@kmsquire)
+- delete spurious file (#564) (@KristofferC)
+- allow passing standard julia arguments to apps (#565) (@KristofferC)
+- call create_sysimage with a vector for packages (#566) (@KristofferC)"
+27,"PackageCompiler v1.5.0
+Diff since v1.4.1
+Closed issues:
+- Compiler warning on create_library (#532)
+Merged pull requests:
+- Fix compiler warning in julia_init.c during create_library() (#535) (@kmsquire)
+- Remove Manifest.toml from MyLib/build (#536) (@kmsquire)
+- dev PackageCompiler in MyLib/build (#537) (@KristofferC)
+- put the sysimage for apps inside lib and slightly tweak rpath (#538) (@KristofferC)","PackageCompiler v1.5.0
+Diff since v1.4.1
+Closed issues:
+- Compiler warning on create_library (#532)
+Merged pull requests:
+- Fix compiler warning in julia_init.c during create_library() (#535) (@kmsquire)
+- Remove Manifest.toml from MyLib/build (#536) (@kmsquire)
+- dev PackageCompiler in MyLib/build (#537) (@KristofferC)
+- put the sysimage for apps inside lib and slightly tweak rpath (#538) (@KristofferC)"
+28,"PackageCompiler v1.4.1
+Diff since v1.4.0
+Merged pull requests:
+- Add missing include_lazy_artifacts parameter (#530) (@kmsquire)
+- Disable autoprecomp during project instantiation (#531) (@kmsquire)","PackageCompiler v1.4.1
+Diff since v1.4.0
+Merged pull requests:
+- Add missing include_lazy_artifacts parameter (#530) (@kmsquire)
+- Disable autoprecomp during project instantiation (#531) (@kmsquire)"
+29,"PackageCompiler v1.4.0
+Diff since v1.3.0
+Closed issues:
+- Undefined Symbol when loading sysimage (#492)
+- Creating a shared library for a module defined at runtime (#518)
+- docs fail to deploy (#525)
+- Invalid CPU name ""x86_64"" in docker on M1 (#528)
+Merged pull requests:
+- fix name to julia-internal-debug (#482) (@visr)
+- add the docs for create_library to the manual (#523) (@KristofferC)
+- modernize documentation GHA (#524) (@KristofferC)
+- Update documentation and example about shared libraries (#527) (@amontoison)
+- Rebase: Add include_lazy_artifacts flag to create_app (issues/464). (#529) (@KristofferC)","PackageCompiler v1.4.0
+Diff since v1.3.0
+Closed issues:
+- Undefined Symbol when loading sysimage (#492)
+- Creating a shared library for a module defined at runtime (#518)
+- docs fail to deploy (#525)
+- Invalid CPU name ""x86_64"" in docker on M1 (#528)
+Merged pull requests:
+- fix name to julia-internal-debug (#482) (@visr)
+- add the docs for create_library to the manual (#523) (@KristofferC)
+- modernize documentation GHA (#524) (@KristofferC)
+- Update documentation and example about shared libraries (#527) (@amontoison)
+- Rebase: Add include_lazy_artifacts flag to create_app (issues/464). (#529) (@KristofferC)"
+30,"PackageCompiler v1.3.0
+Diff since v1.2.8
+Closed issues:
+- Question: How do we use build_shared_lib function Properly ? (#257)
+- Dynamic Linking for shared library in PackageCompilerX (#350)
+- creating *.dll from Julia code (#392)
+- Inputing file path arguments to compiled package (#519)
+Merged pull requests:
+- Add create_library function (#490) (@kmsquire)","PackageCompiler v1.3.0
+Diff since v1.2.8
+Closed issues:
+- Question: How do we use build_shared_lib function Properly ? (#257)
+- Dynamic Linking for shared library in PackageCompilerX (#350)
+- creating *.dll from Julia code (#392)
+- Inputing file path arguments to compiled package (#519)
+Merged pull requests:
+- Add create_library function (#490) (@kmsquire)"
+31,"PackageCompiler v1.2.8
+Diff since v1.2.7
+Merged pull requests:
+- Fix: Incorrect tree hash in Artifacts.toml (#520) (@vdayanand)","PackageCompiler v1.2.8
+Diff since v1.2.7
+Merged pull requests:
+- Fix: Incorrect tree hash in Artifacts.toml (#520) (@vdayanand)"
+32,"PackageCompiler v1.2.7
+Diff since v1.2.6
+Closed issues:
+- Support x86 on Windows (#511)
+Merged pull requests:
+- Add 32 bit Windows gcc artifact (#516) (@davidanthoff)","PackageCompiler v1.2.7
+Diff since v1.2.6
+Closed issues:
+- Support x86 on Windows (#511)
+Merged pull requests:
+- Add 32 bit Windows gcc artifact (#516) (@davidanthoff)"
+33,"PackageCompiler v1.2.6
+Diff since v1.2.5
+Closed issues:
+- FATAL ERROR when compiling LsqFit.jl (#436)
+- ""undefined symbol"" error with Julia 1.6-DEV when loading system image (#445)
+- Pre-compile Code With Endless Loop Or Tasks (#446)
+- Symbol not found ccalllib_libquadmath (#449)
+- Undefined symbols error with Unitful on Julia 1.6.0-DEV (#456)
+- segfault on Julia v1.5.3 (#466)
+- Precompiling Plots.jl with other packages leads to StackOverflow error inside docker container. (#473)
+- Problem loading sysimage including RoMEPlotting (#478)
+- Undefined symbol error with VectorizationBase 0.14.12 on Julia 1.5.2 (#487)
+- core dumped on Julia v1.6 Beta 1 (#494)
+- Support APE: ""αcτµαlly pδrταblε εxεcµταblε"" binaries (#495)
+- Easier Plots tutorial for beginners? (#496)
+- System image error requiring DataFrames from Gadfly on another machine (#498)
+- Doesn't seem to work with local modules (#499)
+- linker crashs on >2GB library on MacOS (#500)
+- Sysimage creation fails on ubuntu (#501)
+- Sysimage creation fails on Ubuntu  (#502)
+- Allow setting minimum opt level with new --min-optlevel flag (#506)
+- Cant use PyPlot in Julia - LLVM ERROR: Symbols not found: { ccalllib_python38.dll2050 } (#507)
+- Julia 1.5.4: LLVM ERROR: Broken function found, compilation aborted! (#508)
+- Call Julia shared library on Windows (dll) from Python crashes while ok on Linux (#509)
+Merged pull requests:
+- Allow the precompile script to write to stdout. (#485) (@NHDaly)
+- Add 1.6 beta1 to CI (#493) (@IanButterworth)
+- Remove 1.5.2 CI, re-run on 1.6 (#497) (@IanButterworth)
+- use Pkg.precompile instead of loading packages to ensure they are precompiled (#505) (@KristofferC)
+- Adapt to changes in Pkg.Operation method signatures under Julia 1.7. (#512) (@Sacha0)","PackageCompiler v1.2.6
+Diff since v1.2.5
+Closed issues:
+- FATAL ERROR when compiling LsqFit.jl (#436)
+- ""undefined symbol"" error with Julia 1.6-DEV when loading system image (#445)
+- Pre-compile Code With Endless Loop Or Tasks (#446)
+- Symbol not found ccalllib_libquadmath (#449)
+- Undefined symbols error with Unitful on Julia 1.6.0-DEV (#456)
+- segfault on Julia v1.5.3 (#466)
+- Precompiling Plots.jl with other packages leads to StackOverflow error inside docker container. (#473)
+- Problem loading sysimage including RoMEPlotting (#478)
+- Undefined symbol error with VectorizationBase 0.14.12 on Julia 1.5.2 (#487)
+- core dumped on Julia v1.6 Beta 1 (#494)
+- Support APE: ""αcτµαlly pδrταblε εxεcµταblε"" binaries (#495)
+- Easier Plots tutorial for beginners? (#496)
+- System image error requiring DataFrames from Gadfly on another machine (#498)
+- Doesn't seem to work with local modules (#499)
+- linker crashs on >2GB library on MacOS (#500)
+- Sysimage creation fails on ubuntu (#501)
+- Sysimage creation fails on Ubuntu  (#502)
+- Allow setting minimum opt level with new --min-optlevel flag (#506)
+- Cant use PyPlot in Julia - LLVM ERROR: Symbols not found: { ccalllib_python38.dll2050 } (#507)
+- Julia 1.5.4: LLVM ERROR: Broken function found, compilation aborted! (#508)
+- Call Julia shared library on Windows (dll) from Python crashes while ok on Linux (#509)
+Merged pull requests:
+- Allow the precompile script to write to stdout. (#485) (@NHDaly)
+- Add 1.6 beta1 to CI (#493) (@IanButterworth)
+- Remove 1.5.2 CI, re-run on 1.6 (#497) (@IanButterworth)
+- use Pkg.precompile instead of loading packages to ensure they are precompiled (#505) (@KristofferC)
+- Adapt to changes in Pkg.Operation method signatures under Julia 1.7. (#512) (@Sacha0)"
+34,"PackageCompiler v1.2.5
+Diff since v1.2.4
+Closed issues:
+- Error with create_sysimage (#475)
+- Package Statistics not found in current path (#480)
+- LLVM ERROR (#483)
+- tests segfault on Windows, julia 1.6+ (#484)
+Merged pull requests:
+- Streaming read of precompile statement files (#454) (@omus)
+- Fix empty sysimage test on 1.5.3. Fix app test on nightly (#476) (@ianshmean)
+- Reword and link to an explanation of type-piracy (#477) (@rustyconover)
+- add a note to the devdocs that they are in fact devdocs (#481) (@KristofferC)
+- bump version (#491) (@KristofferC)","PackageCompiler v1.2.5
+Diff since v1.2.4
+Closed issues:
+- Error with create_sysimage (#475)
+- Package Statistics not found in current path (#480)
+- LLVM ERROR (#483)
+- tests segfault on Windows, julia 1.6+ (#484)
+Merged pull requests:
+- Streaming read of precompile statement files (#454) (@omus)
+- Fix empty sysimage test on 1.5.3. Fix app test on nightly (#476) (@ianshmean)
+- Reword and link to an explanation of type-piracy (#477) (@rustyconover)
+- add a note to the devdocs that they are in fact devdocs (#481) (@KristofferC)
+- bump version (#491) (@KristofferC)"
+35,"PackageCompiler v1.2.4
+Diff since v1.2.3
+Closed issues:
+- Package CompilerSupportLibraries_jll is required but does not seem to be installed (#470)
+Merged pull requests:
+- also call init_active_project when required (#460) (@KristofferC)
+- Update for 1.6 linking and handle stdlibs that aren't in the sysimage (#471) (@ianshmean)
+- Add github actions tests (#472) (@ianshmean)","PackageCompiler v1.2.4
+Diff since v1.2.3
+Closed issues:
+- Package CompilerSupportLibraries_jll is required but does not seem to be installed (#470)
+Merged pull requests:
+- also call init_active_project when required (#460) (@KristofferC)
+- Update for 1.6 linking and handle stdlibs that aren't in the sysimage (#471) (@ianshmean)
+- Add github actions tests (#472) (@ianshmean)"
+36,"PackageCompiler v1.2.3
+Diff since v1.2.2
+Merged pull requests:
+- Update Travis CI badge (#448) (@omus)
+- Fix insufficient escaping (#459) (@GunnarFarneback)","PackageCompiler v1.2.3
+Diff since v1.2.2
+Merged pull requests:
+- Update Travis CI badge (#448) (@omus)
+- Fix insufficient escaping (#459) (@GunnarFarneback)"
+37,"PackageCompiler v1.2.2
+Diff since v1.2.1
+Closed issues:
+- Travis is failing on master (#388)
+- Get fatal error only when different user executes app (#406)
+- Compatibility with Julia 1.0 (#410)
+- Compilation of indirect dependencies (#423)
+- Missing website (#432)
+- add documentation for compile targets (#437)
+- compiled system image incorrect when building on GitHub Action MacOS-latest with Manifest.toml (#438)
+- Docker image with Julia Sysimage built on Windows does not run on Linux / MacOS (#441)
+- Artifacts stdlib broke artifact""..."" macro ? (#442)
+- Seeing ""Cannot locate artifact 'x86_64-w64-mingw32'"" on Julia nightly (#455)
+Merged pull requests:
+- Correct spelling in sysimages.md (#422) (@derekmahar)
+- Correct spelling in sysimages.md (#426) (@derekmahar)
+- Fixed a typo (#430) (@IljaK91)
+- Fix a very small typo in doc (Missing "".jl""). (#435) (@AtsushiSakai)
+- Do not recommend replacing the default sysimage (#439) (@mkitti)
+- Add Julia 1.5 to test matrix (#440) (@simonbyrne)
+- Ensure @artifact is skipped on non-windows platforms (#443) (@staticfloat)
+- improve vararg precompilation statements (#447) (@KristofferC)","PackageCompiler v1.2.2
+Diff since v1.2.1
+Closed issues:
+- Travis is failing on master (#388)
+- Get fatal error only when different user executes app (#406)
+- Compatibility with Julia 1.0 (#410)
+- Compilation of indirect dependencies (#423)
+- Missing website (#432)
+- add documentation for compile targets (#437)
+- compiled system image incorrect when building on GitHub Action MacOS-latest with Manifest.toml (#438)
+- Docker image with Julia Sysimage built on Windows does not run on Linux / MacOS (#441)
+- Artifacts stdlib broke artifact""..."" macro ? (#442)
+- Seeing ""Cannot locate artifact 'x86_64-w64-mingw32'"" on Julia nightly (#455)
+Merged pull requests:
+- Correct spelling in sysimages.md (#422) (@derekmahar)
+- Correct spelling in sysimages.md (#426) (@derekmahar)
+- Fixed a typo (#430) (@IljaK91)
+- Fix a very small typo in doc (Missing "".jl""). (#435) (@AtsushiSakai)
+- Do not recommend replacing the default sysimage (#439) (@mkitti)
+- Add Julia 1.5 to test matrix (#440) (@simonbyrne)
+- Ensure @artifact is skipped on non-windows platforms (#443) (@staticfloat)
+- improve vararg precompilation statements (#447) (@KristofferC)"
+38,"PackageCompiler v1.2.1
+Diff since v1.2.0
+Merged pull requests:
+- Use older hash (#420) (@staticfloat)
+- Use import to precompile packages (instead of using using) (#421) (@DilumAluthge)","PackageCompiler v1.2.1
+Diff since v1.2.0
+Merged pull requests:
+- Use older hash (#420) (@staticfloat)
+- Use import to precompile packages (instead of using using) (#421) (@DilumAluthge)"
+39,"PackageCompiler v1.2.0
+Diff since v1.1.1
+Closed issues:
+- Feature request: allow julia argument --color=yes in build_executable (#278)
+- PackageCompiler: LLVM ERROR (#295)
+- Cannot build when there are unreadable files in julia_libdir() (#368)
+- julia_main() threw an unhandled exception (#371)
+- ""The remote server returned an error: (404) Not Found (#372)
+- Regression: Fails in Julia 1.5, but worked with PC v1.0.1 (#376)
+- Duplicate Artifacts (#381)
+- Filter out debug symbol libraries on Mac in apps (#383)
+- PackageCompiler tries to copy all system shared libs into package (#385)
+- ERROR: IOError: open: permission denied (EACCES) (#390)
+- mysterious error on building some packages (#391)
+- Documentation for using in Julia 1.1.0 (#394)
+- Consider renaming to AppCompiler.jl (#396)
+- cannot find x86_64-w64-mingw32 (#403)
+- julia/toggleFileLint has no implementation (#405)
+- How do I use --sysimage with many images? (#417)
+Merged pull requests:
+- use a set to collect artifact paths to remove duplicates (#382) (@KristofferC)
+- remove debug libraries when creating app on Mac (#384) (@KristofferC)
+- [docs] Fix link in apps.md (#386) (@OliverEvans96)
+- Clean up formatting in upgrade.md (#387) (@OliverEvans96)
+- Fix tree hash for win64 compiler shard (#395) (@staticfloat)
+- Docs: Higher level overview of functionality (#397) (@mbauman)
+- typo (#398) (@xiaodaigh)
+- cp -> mv (#399) (@xiaodaigh)
+- Fix typo in sysimages_part_1.md (#407) (@paristsai)
+- add a warning that PackageCompiler requires a bit of background knowl… (#408) (@KristofferC)
+- fix typo 'julia-q' -> 'julia -q' (#414) (@p1scescom)
+- Allow passing a custom c program to create_app() (#415) (@NHDaly)","PackageCompiler v1.2.0
+Diff since v1.1.1
+Closed issues:
+- Feature request: allow julia argument --color=yes in build_executable (#278)
+- PackageCompiler: LLVM ERROR (#295)
+- Cannot build when there are unreadable files in julia_libdir() (#368)
+- julia_main() threw an unhandled exception (#371)
+- ""The remote server returned an error: (404) Not Found (#372)
+- Regression: Fails in Julia 1.5, but worked with PC v1.0.1 (#376)
+- Duplicate Artifacts (#381)
+- Filter out debug symbol libraries on Mac in apps (#383)
+- PackageCompiler tries to copy all system shared libs into package (#385)
+- ERROR: IOError: open: permission denied (EACCES) (#390)
+- mysterious error on building some packages (#391)
+- Documentation for using in Julia 1.1.0 (#394)
+- Consider renaming to AppCompiler.jl (#396)
+- cannot find x86_64-w64-mingw32 (#403)
+- julia/toggleFileLint has no implementation (#405)
+- How do I use --sysimage with many images? (#417)
+Merged pull requests:
+- use a set to collect artifact paths to remove duplicates (#382) (@KristofferC)
+- remove debug libraries when creating app on Mac (#384) (@KristofferC)
+- [docs] Fix link in apps.md (#386) (@OliverEvans96)
+- Clean up formatting in upgrade.md (#387) (@OliverEvans96)
+- Fix tree hash for win64 compiler shard (#395) (@staticfloat)
+- Docs: Higher level overview of functionality (#397) (@mbauman)
+- typo (#398) (@xiaodaigh)
+- cp -> mv (#399) (@xiaodaigh)
+- Fix typo in sysimages_part_1.md (#407) (@paristsai)
+- add a warning that PackageCompiler requires a bit of background knowl… (#408) (@KristofferC)
+- fix typo 'julia-q' -> 'julia -q' (#414) (@p1scescom)
+- Allow passing a custom c program to create_app() (#415) (@NHDaly)"
+40,"PackageCompiler v1.1.1
+Diff since v1.1.0
+Closed issues:
+- unable to find entry point (code used to work in 0.6.4) (#369)
+- create_sysimage failures with incremental builds/precompilation on docker (#374)
+- Compiling fails on 1.5, while working on 1.4.0 but is very slow (#375)
+- Test Error for PackageCompiler for v1.3 (#378)
+Merged pull requests:
+- Use dirname in stead of ../.. on the executable name for depot path. (#380) (@rbvermaa)","PackageCompiler v1.1.1
+Diff since v1.1.0
+Closed issues:
+- unable to find entry point (code used to work in 0.6.4) (#369)
+- create_sysimage failures with incremental builds/precompilation on docker (#374)
+- Compiling fails on 1.5, while working on 1.4.0 but is very slow (#375)
+- Test Error for PackageCompiler for v1.3 (#378)
+Merged pull requests:
+- Use dirname in stead of ../.. on the executable name for depot path. (#380) (@rbvermaa)"
+41,"PackageCompiler v1.1.0
+Diff since v1.0.2
+Closed issues:
+- Generated executable is slow (doing JIT?) (#292)
+- Release v1 (#337)
+- create_app() Not Defined. (#355)
+- Pkg.Operations.source_path changed in julia 1.4rc2 (#356)
+- Relocatability warnings on dependent packages (#357)
+- syntax error and warning from packagecompiling CodecZlib (#360)
+- Error using create_app: 'uv.h' not found (on OSX) (#361)
+- Moving the compiled App to a different computer, got an error trying to run artifact (#362)
+- binary built with PackageCompiler v0.6.5 runs faster than v1.0.2? (#364)
+Merged pull requests:
+- Allow user to specify a custom binary name (#349) (@kmsquire)
+- fix brekage in 1.4 rc2 (#358) (@KristofferC)
+- Update LICENSE file for GitHub detection (#359) (@lucatrv)
+- fix the example showing how to get the path to an artifact (#363) (@KristofferC)
+- create new_sysimage_source_path in temp folder (#367) (@seregaxvm)","PackageCompiler v1.1.0
+Diff since v1.0.2
+Closed issues:
+- Generated executable is slow (doing JIT?) (#292)
+- Release v1 (#337)
+- create_app() Not Defined. (#355)
+- Pkg.Operations.source_path changed in julia 1.4rc2 (#356)
+- Relocatability warnings on dependent packages (#357)
+- syntax error and warning from packagecompiling CodecZlib (#360)
+- Error using create_app: 'uv.h' not found (on OSX) (#361)
+- Moving the compiled App to a different computer, got an error trying to run artifact (#362)
+- binary built with PackageCompiler v0.6.5 runs faster than v1.0.2? (#364)
+Merged pull requests:
+- Allow user to specify a custom binary name (#349) (@kmsquire)
+- fix brekage in 1.4 rc2 (#358) (@KristofferC)
+- Update LICENSE file for GitHub detection (#359) (@lucatrv)
+- fix the example showing how to get the path to an artifact (#363) (@KristofferC)
+- create new_sysimage_source_path in temp folder (#367) (@seregaxvm)"
+42,"PackageCompiler v1.0.2
+Diff since v1.0.1
+Closed issues:
+- Pkg.Operations.source_path changed in julia 1.4rc2 (#356)
+Merged pull requests:
+- fix brekage in 1.4 rc2 (#358) (@KristofferC)","PackageCompiler v1.0.2
+Diff since v1.0.1
+Closed issues:
+- Pkg.Operations.source_path changed in julia 1.4rc2 (#356)
+Merged pull requests:
+- fix brekage in 1.4 rc2 (#358) (@KristofferC)"
+43,"PackageCompiler v1.0.1
+Diff since v1.0.0
+Closed issues:
+- ARGS type in new PackageCompilerX (#327)
+- djuliac error while creating executable with PackageCompilerX (#348)
+- using custom sysimage with PyJulia (#351)
+Merged pull requests:
+- (close the bracket in error message (#347) (@visr)
+- also abspath the precompile execution file (#353) (@KristofferC)","PackageCompiler v1.0.1
+Diff since v1.0.0
+Closed issues:
+- ARGS type in new PackageCompilerX (#327)
+- djuliac error while creating executable with PackageCompilerX (#348)
+- using custom sysimage with PyJulia (#351)
+Merged pull requests:
+- (close the bracket in error message (#347) (@visr)
+- also abspath the precompile execution file (#353) (@KristofferC)"
+44,"PackageCompiler v1.0.0
+Diff since v0.6.5
+Closed issues:
+- Channels don't seem to compile (#52)
+- What's the relation between BuildExecutable.jl and PackageCompiler.jl? (#59)
+- REPL modes do not work after compilation (#68)
+- Function default_sysimg_path (#71)
+- Check packages before compile them (#74)
+- Trying to compile Plots dependencies (#75)
+- PackageCompiler will not compile my (simple) Julia program to a static binary due to ArgParse errors (#76)
+- Fails to compile (link DLL) due to undefined symbol __imp__resetstkoflw (#79)
+- process spawning on MacOS (#82)
+- attempt to revert meets type error (#83)
+- Why is this code still seeing a wrong value for JULIA_HOME?  (#85)
+- Blosc library loading error. (#86)
+- Permission Access with PackageCompiler.force_native_image!() (#108)
+- 0.7 compile time doesn't work as well anymore (#110)
+- Unable to compile LanguageServer. Error: snooped.csv: No such file or directory (#117)
+- Idea: generating the snoopfile using the C driver (#125)
+- Issue with Compat (#129)
+- Issue compiling Distances.jl (#131)
+- uncompiled methods for compile-all (#132)
+- fatal: error thrown and no exception handler available. (#137)
+- test dependences not installed (#138)
+- ERROR: MethodError: no method matching normpath when running compile_package on ArgParse (#140)
+- Exe OK but cannot use shared object (#141)
+- Asked for Authontication (#142)
+- sysimg_folder will change after every update (#145)
+- Location of libthriftqt.so Fedora 29 (#146)
+- Tests fail: it tries to execute from /tmp/ (#147)
+- Cannot compile Plots on Windows 10 w/ Julia 1.0 (#151)
+- Compile package with project file (#152)
+- Signalize julia code is being statically compiled (#153)
+- Can't seem to compile base julia 1.0.2 (#154)
+- It keeps saying that it cannot find boot.jl (#155)
+- Cannot generate/compile Julia code to C code (#159)
+- rename [to AOTCompiler ? ] (#160)
+- compiled hello.jl segfault (#163)
+- filepath problems on windows when using builddir and snoopfile (#178)
+- Pkg integration (#180)
+- Interaction error? (#182)
+- Serialization errors (#184)
+- Snooping doesn't record all functions anymore (#188)
+- Possibility to strip libs and executables (#189)
+- Cannot find precompile.jl when using PackageCompiler on local package (#190)
+- Modules' init should be called in imported order (#192)
+- Libopenblas missing on Linux Machine After compile_package sysimg (#193)
+- juliac fails to compile executable: LoadError: ArgumentError: Package REPL not found in current path (#194)
+- CI randomly times out (#197)
+- [Feature request] Skip precompilations that cause segfaults (#198)
+- Fails to compile DataFrames.jl package (#199)
+- Local package using other local package (#200)
+- compile_incremental overwrites (#201)
+- compile_incremental and missing-from-cache errors (#202)
+- Can't build_executable with Julia installed from distribution (#205)
+- Is there a way to find out which packages or which functions has been compiled? (#206)
+- Failed to compile using incremental plot(1:3) (#207)
+- revert() leads to slower system image (#208)
+- Base.Multimedia.displays (#209)
+- Error Requiring UnicodePlots from Plots (#212)
+- Plots+GR failed (#215)
+- Custom compiling Makie on PackageCompiler master fails (#220)
+- force keyword argument has been removed from build_sysimg (#221)
+- toml_path is unused in compile_incremental (#222)
+- Package dependence (#223)
+- Package init methods called multiple times (#225)
+- Failed to compile PyPlot (#226)
+- Failing to deserialize JLD files after packagecompile (#227)
+- JULIA_PROJECT is not respected (#228)
+- include misbehaving (#230)
+- Output byte code? (#232)
+- Unable to run example from readme (#233)
+- Cannot start Julia after force_native_image!()  (#234)
+- deserialization error (#235)
+- Fail to compile package ""BioSequence"" (#236)
+- Cannot compile_incremental Plots (#239)
+- PackageCompiler fails tests (#240)
+- PkgError while creating temporary environment (#242)
+- Sort out PRs (#245)
+- Parallel builds clobber each other (#248)
+- Warning: On Windows, creating symlinks requires administrator privileges (#249)
+- Add the option to skip adding stdlibs to the sysimage  (#251)
+- Windows installation issues (#252)
+- Compiling inside docker under Linux OS works but fails in OS X (#254)
+- Compiling for executable code with compile_incremental (#255)
+- rerunning build_executable gives ERROR: IOError: symlink: file already exists (EEXIST) (#258)
+- Have to run WinRPM.update() manually on fresh install (#260)
+- Error creating EXE for large program (#265)
+- julia segfault when building image (Windows) (#270)
+- Error on Julia 1.2: ERROR: LoadError: FixedPointNumbers is a direct dependency, but does not appear in the manifest. (#271)
+- ""ERROR: LoadError: LoadError: ArgumentError: Package [whatever] not found in current path:"" when build_executable (#272)
+- Error compiling Makie on 1.3.0-rc2 (#276)
+- Random.init() and Base.PCRE.init() may be required in Julia >= 1.3 (#277)
+- ArgParse missing from Project.toml? (#281)
+- Building multiple binaries in parallel is broken (#282)
+- pipeline_error at ./process.jl:813 (#289)
+- compile_incremental(:DataFrames) gives error (#290)
+- Build failure on ARM32 (Raspberry Pi 4B) plus proposed fix (#297)
+- PackageCompiler fails building MKL on Windows (#299)
+- Compiling plots No longer works on NextJournal for Julia 1.3 (#300)
+- Enormous shared library (#301)
+- docs link is broken (#308)
+- Travis badge is broken (#310)
+- Codecov badge is broken (#311)
+- Fix on Julia 1.4 (#317)
+- Travis build config is erroring (#332)
+- Symbol not found errors (#344)
+- Error when Pkg.add(""PackageCompiler""), unable to install 'Expat' (#345)
+Merged pull requests:
+- Allow WinRPM 1.0 (#302) (@mcabbott)
+- Install TagBot as a GitHub Action (#303) (@JuliaTagBot)
+- Total rewrite of the package (aka make PackageCompilerX the new PackageCompiler) (#304) (@KristofferC)
+- Allow PRs to push preview documentation (#305) (@asinghvi17)
+- Add default value (no packages) to create_sysimage. (#306) (@fredrikekre)
+- Some fixes for documentation build and deployment (#307) (@asinghvi17)
+- Build documentation on tag as well (#309) (@asinghvi17)
+- Re-enable TagBot on this repository (#312) (@DilumAluthge)
+- Run Travis on Julia nightly (but allow Travis to fail on Julia nightly) (#313) (@DilumAluthge)
+- Travis: In the after_success step, submit to Codecov (#314) (@DilumAluthge)
+- On Travis x86, install GCC 8 (#315) (@DilumAluthge)
+- Rewrite maximum call in base sysimg.jl to fix error when stdlibs is e… (#325) (@fredrikekre)
+- Fix plots example code block (#328) (@rob-luke)
+- Typos (#330) (@PallHaraldsson)
+- Grammar/typo (#331) (@PallHaraldsson)
+- [documentation] Some very minor improvements to the docstring of create_app (#334) (@DilumAluthge)
+- be more correct when it comes to env handling (#338) (@KristofferC)
+- WIP: fix package on 1.4 (#339) (@KristofferC)
+- use a unique name for the custom sysimage file (#340) (@KristofferC)
+- Require that Travis passes on nightly (#342) (@DilumAluthge)
+- add some upgrade notes for pre 1.0 PackageCompiler (#343) (@KristofferC)
+- fix typo error in code to create sysimage (#346) (@prakhar2b)
+- (close the bracket in error message (#347) (@visr)","PackageCompiler v1.0.0
+Diff since v0.6.5
+Closed issues:
+- Channels don't seem to compile (#52)
+- What's the relation between BuildExecutable.jl and PackageCompiler.jl? (#59)
+- REPL modes do not work after compilation (#68)
+- Function default_sysimg_path (#71)
+- Check packages before compile them (#74)
+- Trying to compile Plots dependencies (#75)
+- PackageCompiler will not compile my (simple) Julia program to a static binary due to ArgParse errors (#76)
+- Fails to compile (link DLL) due to undefined symbol __imp__resetstkoflw (#79)
+- process spawning on MacOS (#82)
+- attempt to revert meets type error (#83)
+- Why is this code still seeing a wrong value for JULIA_HOME?  (#85)
+- Blosc library loading error. (#86)
+- Permission Access with PackageCompiler.force_native_image!() (#108)
+- 0.7 compile time doesn't work as well anymore (#110)
+- Unable to compile LanguageServer. Error: snooped.csv: No such file or directory (#117)
+- Idea: generating the snoopfile using the C driver (#125)
+- Issue with Compat (#129)
+- Issue compiling Distances.jl (#131)
+- uncompiled methods for compile-all (#132)
+- fatal: error thrown and no exception handler available. (#137)
+- test dependences not installed (#138)
+- ERROR: MethodError: no method matching normpath when running compile_package on ArgParse (#140)
+- Exe OK but cannot use shared object (#141)
+- Asked for Authontication (#142)
+- sysimg_folder will change after every update (#145)
+- Location of libthriftqt.so Fedora 29 (#146)
+- Tests fail: it tries to execute from /tmp/ (#147)
+- Cannot compile Plots on Windows 10 w/ Julia 1.0 (#151)
+- Compile package with project file (#152)
+- Signalize julia code is being statically compiled (#153)
+- Can't seem to compile base julia 1.0.2 (#154)
+- It keeps saying that it cannot find boot.jl (#155)
+- Cannot generate/compile Julia code to C code (#159)
+- rename [to AOTCompiler ? ] (#160)
+- compiled hello.jl segfault (#163)
+- filepath problems on windows when using builddir and snoopfile (#178)
+- Pkg integration (#180)
+- Interaction error? (#182)
+- Serialization errors (#184)
+- Snooping doesn't record all functions anymore (#188)
+- Possibility to strip libs and executables (#189)
+- Cannot find precompile.jl when using PackageCompiler on local package (#190)
+- Modules' init should be called in imported order (#192)
+- Libopenblas missing on Linux Machine After compile_package sysimg (#193)
+- juliac fails to compile executable: LoadError: ArgumentError: Package REPL not found in current path (#194)
+- CI randomly times out (#197)
+- [Feature request] Skip precompilations that cause segfaults (#198)
+- Fails to compile DataFrames.jl package (#199)
+- Local package using other local package (#200)
+- compile_incremental overwrites (#201)
+- compile_incremental and missing-from-cache errors (#202)
+- Can't build_executable with Julia installed from distribution (#205)
+- Is there a way to find out which packages or which functions has been compiled? (#206)
+- Failed to compile using incremental plot(1:3) (#207)
+- revert() leads to slower system image (#208)
+- Base.Multimedia.displays (#209)
+- Error Requiring UnicodePlots from Plots (#212)
+- Plots+GR failed (#215)
+- Custom compiling Makie on PackageCompiler master fails (#220)
+- force keyword argument has been removed from build_sysimg (#221)
+- toml_path is unused in compile_incremental (#222)
+- Package dependence (#223)
+- Package init methods called multiple times (#225)
+- Failed to compile PyPlot (#226)
+- Failing to deserialize JLD files after packagecompile (#227)
+- JULIA_PROJECT is not respected (#228)
+- include misbehaving (#230)
+- Output byte code? (#232)
+- Unable to run example from readme (#233)
+- Cannot start Julia after force_native_image!()  (#234)
+- deserialization error (#235)
+- Fail to compile package ""BioSequence"" (#236)
+- Cannot compile_incremental Plots (#239)
+- PackageCompiler fails tests (#240)
+- PkgError while creating temporary environment (#242)
+- Sort out PRs (#245)
+- Parallel builds clobber each other (#248)
+- Warning: On Windows, creating symlinks requires administrator privileges (#249)
+- Add the option to skip adding stdlibs to the sysimage  (#251)
+- Windows installation issues (#252)
+- Compiling inside docker under Linux OS works but fails in OS X (#254)
+- Compiling for executable code with compile_incremental (#255)
+- rerunning build_executable gives ERROR: IOError: symlink: file already exists (EEXIST) (#258)
+- Have to run WinRPM.update() manually on fresh install (#260)
+- Error creating EXE for large program (#265)
+- julia segfault when building image (Windows) (#270)
+- Error on Julia 1.2: ERROR: LoadError: FixedPointNumbers is a direct dependency, but does not appear in the manifest. (#271)
+- ""ERROR: LoadError: LoadError: ArgumentError: Package [whatever] not found in current path:"" when build_executable (#272)
+- Error compiling Makie on 1.3.0-rc2 (#276)
+- Random.init() and Base.PCRE.init() may be required in Julia >= 1.3 (#277)
+- ArgParse missing from Project.toml? (#281)
+- Building multiple binaries in parallel is broken (#282)
+- pipeline_error at ./process.jl:813 (#289)
+- compile_incremental(:DataFrames) gives error (#290)
+- Build failure on ARM32 (Raspberry Pi 4B) plus proposed fix (#297)
+- PackageCompiler fails building MKL on Windows (#299)
+- Compiling plots No longer works on NextJournal for Julia 1.3 (#300)
+- Enormous shared library (#301)
+- docs link is broken (#308)
+- Travis badge is broken (#310)
+- Codecov badge is broken (#311)
+- Fix on Julia 1.4 (#317)
+- Travis build config is erroring (#332)
+- Symbol not found errors (#344)
+- Error when Pkg.add(""PackageCompiler""), unable to install 'Expat' (#345)
+Merged pull requests:
+- Allow WinRPM 1.0 (#302) (@mcabbott)
+- Install TagBot as a GitHub Action (#303) (@JuliaTagBot)
+- Total rewrite of the package (aka make PackageCompilerX the new PackageCompiler) (#304) (@KristofferC)
+- Allow PRs to push preview documentation (#305) (@asinghvi17)
+- Add default value (no packages) to create_sysimage. (#306) (@fredrikekre)
+- Some fixes for documentation build and deployment (#307) (@asinghvi17)
+- Build documentation on tag as well (#309) (@asinghvi17)
+- Re-enable TagBot on this repository (#312) (@DilumAluthge)
+- Run Travis on Julia nightly (but allow Travis to fail on Julia nightly) (#313) (@DilumAluthge)
+- Travis: In the after_success step, submit to Codecov (#314) (@DilumAluthge)
+- On Travis x86, install GCC 8 (#315) (@DilumAluthge)
+- Rewrite maximum call in base sysimg.jl to fix error when stdlibs is e… (#325) (@fredrikekre)
+- Fix plots example code block (#328) (@rob-luke)
+- Typos (#330) (@PallHaraldsson)
+- Grammar/typo (#331) (@PallHaraldsson)
+- [documentation] Some very minor improvements to the docstring of create_app (#334) (@DilumAluthge)
+- be more correct when it comes to env handling (#338) (@KristofferC)
+- WIP: fix package on 1.4 (#339) (@KristofferC)
+- use a unique name for the custom sysimage file (#340) (@KristofferC)
+- Require that Travis passes on nightly (#342) (@DilumAluthge)
+- add some upgrade notes for pre 1.0 PackageCompiler (#343) (@KristofferC)
+- fix typo error in code to create sysimage (#346) (@prakhar2b)
+- (close the bracket in error message (#347) (@visr)"
+45,,
+46,,
+47,,
+48,,
+49,,
+50,,
+51,,
+52,,
+53,"Update code for Julia v1.0, require Julia v0.7, drop Julia v0.6 support.","Update code for Julia v1.0, require Julia v0.7, drop Julia v0.6 support."
+54,,
+55,,
+56,,
+57,,
+58,use kw_args for force and reuse instead of positional arguments,use kw_args for force and reuse instead of positional arguments
+59,Initial release,Initial release

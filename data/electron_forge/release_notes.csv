@@ -1,4 +1,4 @@
-Index,Release Note
+Index,Release Note,Release Note With Abstraction
 1,"New in this Release
 A Vite template is now available in Forge! 🚀 Thanks to @caoxiemeihao for contributing this template and plugin.
 A plugin for Electron Fuses is now available in Forge! 🌟 Thanks to @erikian for contributing this plugin.
@@ -28,7 +28,30 @@ New Contributors
 
 @cpmsmith made their first contribution in https://github.com/electron/forge/pull/3194
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.5...v6.1.1"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.5...v6.1.1","New in this Release
+A Vite template is now available in Forge! 🚀 Thanks to @caoxiemeihao for contributing this template and plugin.
+A plugin for Electron Fuses is now available in Forge! 🌟 Thanks to @erikian for contributing this plugin.
+Features
+feat(template): add vite template by @caoxiemeihao in link
+feat: add Fuses plugin by @erikian in link
+feat(maker-zip): add new macUpdateManifestBaseUrl and macUpdateReleaseNotes options by @MarshallOfSound in link
+What's Changed
+fix: use correct platform paths for artifacts in dryRunResume by @VerteDinde in link
+fix(plugin-vite): start Vite error by @caoxiemeihao in link
+fix(plugin-fuses): resetAdHocDarwinSignature rules on Mac by @erikian in link
+fix(plugin-vite): correctly close vite dev-server by @caoxiemeihao in link
+fix(publisher-s3): Make S3 upload fail non-silently by @cpmsmith in link
+fix: normalize artifact paths in makeResult dryRunResume by @VerteDinde in link
+build(deps): bump webpack from 5.69.1 to 5.76.0 by @dependabot in link
+build: add needed Vite infra details by @VerteDinde in link
+chore: gitignore lerna-debug.log by @erickzhao in link
+docs: update release process guide by @erickzhao in link
+ci: use action-semantic-pull-request by @dsanders11 in link
+ci: fix the build and tests by @erickzhao in link
+ci: run tests in merge queue by @dsanders11 in link
+New Contributors
+@cpmsmith made their first contribution in link
+Full Changelog: link"
 2,"What's Changed
 
 build: update dependencies to clean up yarn audit by @MarshallOfSound in https://github.com/electron/forge/pull/3105
@@ -53,7 +76,27 @@ New Contributors
 @dsanders11 made their first contribution in https://github.com/electron/forge/pull/3138
 @ArekSredzki made their first contribution in https://github.com/electron/forge/pull/3149
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.4...v6.0.5"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.4...v6.0.5","What's Changed
+build: update dependencies to clean up yarn audit by @MarshallOfSound in link
+build: enforce versions are in sync between packages by @MarshallOfSound in link
+build: update dependencies to clean up yarn audit by @MarshallOfSound in link
+build: npm@9 removed the bin command by @MarshallOfSound in link
+fix(core): pass this.config when calling internal hooks by @albertxing in link
+chore: add .gitattributes file for proper handling of line endings by @erikian in link
+build(deps): bump json5 from 1.0.1 to 1.0.2 by @dependabot in link
+fix(cli): use fallback renderer for any DEBUG vars by @erickzhao in link
+fix(package): ensure electron-packager throws if fails by @erickzhao in link
+chore: update repo link from userland migration by @dsanders11 in link
+chore: set @wg-ecosystem as CODEOWNERS by @dsanders11 in link
+ci: create a test:slow script to avoid re-running fast tests in the slow-tests job by @erikian in link
+build(deps): bump http-cache-semantics from 4.1.0 to 4.1.1 by @dependabot in link
+fix(publisher-ers): Update ERS API usage for v2.x by @ArekSredzki in link
+chore(maker-rpm): map arm64 -> aarch64 by @dsanders11 in link
+New Contributors
+@albertxing made their first contribution in link
+@dsanders11 made their first contribution in link
+@ArekSredzki made their first contribution in link
+Full Changelog: link"
 3,"What's Changed
 v6.0.4 is a small release with a lot of internal code cleanup changes. Most importantly for users, this release adds clearer error messages for [object Object] errors that were thrown during the Make step.
 
@@ -76,7 +119,23 @@ New Contributors
 
 @dariusclay made their first contribution in https://github.com/electron/forge/pull/3079
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.3...v6.0.4"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.3...v6.0.4","What's Changed
+v6.0.4 is a small release with a lot of internal code cleanup changes. Most importantly for users, this release adds clearer error messages for [object Object] errors that were thrown during the Make step.
+fix(core): allow the forge.config property in package.json to point to a non-js file by @erikian in link
+docs: fix InternalOptions links in API docs by @erickzhao in link
+fix(all): disallow throwing literals (@typescript-eslint/no-throw-literal) by @erickzhao in link
+fix(publisher-ers): properly publish non-default flavours by @dariusclay in link
+Internal changes
+build: use a single top-level tsc -b for all packages by @erickzhao in link
+docs: explain how to test local code changes with symlinks by @erickzhao in link
+docs: remove mentions of lerna run test in contributing.md by @georgexu99 in link
+build: add preversion to scripts by @georgexu99 in link
+build: add test flag to link Forge commands after running init by @georgexu99 in link
+build: improve lerna publish process by @erickzhao in link
+chore: add husky pre-push script by @georgexu99 in link
+New Contributors
+@dariusclay made their first contribution in link
+Full Changelog: link"
 4,"Electron Forge v6.0.3 is the direct successor to v6.0.1.
 What's Changed
 
@@ -92,9 +151,20 @@ New Contributors
 @caoxiemeihao made their first contribution in https://github.com/electron/forge/pull/3063
 @mahnunchik made their first contribution in https://github.com/electron/forge/pull/1785
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.1...v6.0.3"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.1...v6.0.3","Electron Forge v6.0.3 is the direct successor to v6.0.1.
+What's Changed
+fix(maker-squirrel): do not register the delta nupkg as an artifact when deltas are disabled by @MarshallOfSound in link
+fix(maker-pkg): add targetArch to pkg name by @erickzhao in link
+fix(plugin-webpack): remove define plugin from renderer config by @erickzhao in link
+feat(maker-pkg): allow to override .pkg name by @mahnunchik in link
+build: migrate to lerna from bolt by @georgexu99 in link
+fix(template-webpack): only run asset relocator loader on node_modules folder by @MarshallOfSound in link
+New Contributors
+@caoxiemeihao made their first contribution in link
+@mahnunchik made their first contribution in link
+Full Changelog: link"
 5,"We failed the npm publish for this version so we recommend upgrading directly to v6.0.3.
-"
+",We failed the npm publish for this version so we recommend upgrading directly to v6.0.3.
 6,"What's Changed
 Refactors
 
@@ -107,7 +177,15 @@ Internal Changes
 build: add vscode config for better devxp by @MarshallOfSound in https://github.com/electron/forge/pull/3049
 build: remove codecov by @MarshallOfSound in https://github.com/electron/forge/pull/3044
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.0...v6.0.1"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.0...v6.0.1","What's Changed
+Refactors
+refactor: use listr2 for the package, make and publish commands by @MarshallOfSound in link
+This PR also fixed a long-standing issue where targeting the mas platform in the Package step would actually package for darwin.
+refactor: migrate import command to listr2 by @MarshallOfSound in link
+Internal Changes
+build: add vscode config for better devxp by @MarshallOfSound in link
+build: remove codecov by @MarshallOfSound in link
+Full Changelog: link"
 7,"What's Changed
 Breaking changes
 Forge has spent a considerable time in beta development; this is a list of breaking changes made in recent betas (>= 6.0.0-beta.65), so that users who have been using the later beta versions in their apps can more easily transition to the stable release.
@@ -350,7 +428,240 @@ refactor: typescript projects & docs generation by @clavin in https://github.com
 refactor: consolidate lodash dependencies by @malept in https://github.com/electron/forge/pull/1464
 build(deps): npx browserslist@latest --update-db by @erickzhao in https://github.com/electron/forge/pull/2962
 
-Full Changelog: https://github.com/electron/forge/compare/v5.1.1...v6.0.0"
+Full Changelog: https://github.com/electron/forge/compare/v5.1.1...v6.0.0","What's Changed
+Breaking changes
+Forge has spent a considerable time in beta development; this is a list of breaking changes made in recent betas (>= 6.0.0-beta.65), so that users who have been using the later beta versions in their apps can more easily transition to the stable release.
+A complete list of changes and commits can be found below.
+Config: Changed plugins syntax (#2963)
+The plugins array now takes objects containing an object with properties name and config, rather than tuples containing the plugin name and config.
+This aligns the syntax for this configuration with the publishers and makers arrays.
+diff
+{
+  plugins: [
+-      [
+-        '@electron-forge/plugin-webpack',
+-        { / ... / }
+-      ]
++
++      {
++        name: '@electron-forge/plugin-webpack',
++        config: { / ... / }
++      }
+ ]
+}
+Config: Prefer forge.config.js for new Forge projects (#2991) (#2995)
+We have changed the electron-forge init and electron-forge import commands to create a JavaScript config file rather than a section in package.json. This is to better
+support dynamic build logic that isn't possible with the JSON format. Forge now has better support for alternate configuration syntaxes via rechoir.
+This is a breaking change for any existing third-party templates and plugins:
+- The internal signature of Plugin.getHook(name) has changed to Plugin.getHooks().name.
+- Templates that mutated the Forge config within package.json will need to instantiate their own forge.config.js or forge.config.ts
+Config: Renamed Electron Rebuild config (#2963)
+For consistency with the packagerConfig option for electron-packager, the field to configure @electron/rebuild has now been shortened to rebuildConfig.
+diff
+{
+-  electronRebuildConfig: { / ... / }
++  rebuildConfig: { / ... / }
+}
+Config: Renamed ElectronRebuildConfig (#2963)
+Removed @electron-forge/template-typescript template (#2948)
+This has been removed in favor of the [Webpack + TypeScript Template]. 
+Maker: Upgraded Maker Wix dependency to electron-wix-msi@5.0.0 (3008))
+This upgrade includes a rename from appIconPath to icon in the config (#153). This aligns WiX MSI's icon config with the other makers.
+Build: Upgraded required Node.js to 14 LTS (#2921)
+Package: Upgraded package dependency to electron-packager@17 (#2978)
+The upgrade to Electron Packager 17 introduces the shiny new @electron/osx-sign package for macOS code signing. It's a rewrite of the old electron-osx-sign tool with more sensible defaults.
+To migrate, we recommend seeing if the default packagerConfig.osxSign options work for you and tweaking the default entitlements to your needs. Otherwise, see the @electron/osx-sign MIGRATION.md doc for a 1:1 conversion from the old config options to the new ones.
+Command: Removed lint command (#2964)
+Command: Removed install command (#2958)
+Changelog
+Breaking Changes
+feat!: prefer forge.config.js over package.json config by @erickzhao in link
+refactor!: better internal type safety for hooks by @MarshallOfSound in link
+feat!: upgrade Node.js to 14 LTS by @VerteDinde in link
+feat!: improve forge configuration DX by @MarshallOfSound in link
+feat!: upgrade electron-packager@17 by @erickzhao in link
+feat!(maker-pkg): upgrade to @electron/osx-sign by @erickzhao in link
+feat!(core): add required Forge version for templates by @malept in link
+chore!: remove install command by @erickzhao in link
+chore!: delete lint command by @erickzhao in link
+Features
+feat(plugin-webpack): improve native asset relocation without forking Vercel loader by @timfish in link
+feat(plugin-webpack): add nodeIntegration config for renderers by @malept in link
+feat(plugin-webpack): add devContentSecurityPolicy config option by @malept in link
+feat(webpack-plugin): upgrade to Webpack 5 by @YvanGuidoin in link
+feat: add support for forge.config.ts et. al by @MarshallOfSound in link
+feat(core): allow mutating packageJSON on load by @MarshallOfSound in link
+feat(core): add basic support for non-exact Electron versions by @malept in link
+V6 API by @MarshallOfSound in link
+feat: move create-electron-app into forge by @VerteDinde in link
+feat(publisher-s3): add keyResolver option to allow users to make their own S3 key path by @MarshallOfSound in link
+Typescript :) by @MarshallOfSound in link
+feat(plugin-local-electron): add plugin-local-electron by @MarshallOfSound in link
+feat(generic): add source-map-support for better stacktraces by @malept in link
+feat: use forge.config.ts in the webpack typescript template by @MarshallOfSound in link
+feat(publisher-s3): Add sessionToken and change default fallback by @bboure in link
+feat(core): resolve forge.config.js by default if it exists by @MarshallOfSound in link
+feat(core): allow no config to be present, default to an empty object by @MarshallOfSound in link
+feat(core): use git config to determine author before username by @pd4d10 in link
+feat(core): add ""init --force"" to allow overwriting an existing dir by @malept in link
+feat: add typescript-webpack template by @codebytere in link
+feat: add template for typescript by @codebytere in link
+feat(plugin-webpack): add an option to export webpack compilation stats by @sirgallifrey in link
+feat(core): add platform and arch to generateAssets hook parameters by @timfish in link
+link
+feat(plugin-webpack): allow most webpack-dev-server options to be configurable by @malept in link
+feat(plugin-webpack): allow specifing a seperate webpack config for your preload by @kyruzic in link
+feat: Make autoUpdate and autoLaunch features configurable in MakerWixConfig by @pthompson-asana in link
+feat(template): add a default preload script by @malept in link
+feat: Various improvements for electron/template by @felixrieseberg in link
+feat(cli): add --inspect-brk-electron option by @MOZGIII in link
+feat(publisher-ers): support flavor config by @erickzhao in link
+feat: 🎸 Add packageSourceMaps option to WebpackPluginConfig by @zac-jacobson in link
+feat: allow disabling maker in config by @erickzhao in link
+feat: 🎸 allow specifying alternative tag prefix by @tylerbrandt in link
+feat(plugin-webpack): Allow each entrypoint to specify nodeIntegration by @chetbox in link
+feat: remove preload.js from TypeScript templates by @itsananderson in link
+feat(plugin-webpack): support standalone preload entry points by @erickzhao in link
+feat(webpack-plugin): webpack 5 configuration factory by @erickzhao in link
+feat(publisher-github): add retry support by @malept in link
+feat(publisher-github): add debug support for Octokit by @malept in link
+feat(publisher-bitbucket): initial publish publisher-bitbucket by @lukebatchelor in link
+feat: adds a hook before MSICreator.create() is called by @mako-taco in link
+Fixes
+fix(packager): ""packaging application"" log never stops when building for multiple architectures by @macdja38 in link
+fix: do not proxify class instances in forge config by @MarshallOfSound in link
+fix(core): install @electron-forge/cli to new projects by @malept in link
+fix: ensure webpack typescript template runs by @MarshallOfSound in link
+fix(publish): ignore unnecessary files when publishing to npm by @erikian in link
+fix(publisher-github): remove deprecated option from @octokit/rest params (6.x) by @malept in link
+fix: restore isProd in the webpack  plugin by @MarshallOfSound in link
+fix: use @electron-forge/cli hint for project resolution by @MarshallOfSound in link
+fix(template-base): use minimum instead of exact version when replacing ELECTRON_FORGE/VERSION in templates by @erikian in link
+fix(template-typescript-webpack): clean up forge config code by @erickzhao in link
+fix(template-typescript-webpack): webpack entrypoint extensions by @erickzhao in link
+fix(template-typescript-webpack): properly load forge.config.ts by @erickzhao in link
+fix(plugin-webpack): keep devDependencies, dependencies, optionalDependencies and peerDependencies in the distributed package.json by @erikian in link
+fix(publisher-github): don't reexport Octokit type by @malept in link
+fix(core): init should install the latest caret version of Forge by @malept in link
+fix(maker-deb): return the correct outPath with a prerelease version by @malept in link
+fix(core): show the package manager stderr when installing deps fails by @malept in link
+fix(core): rename maker fixtures so they will get compiled by babel/typescript by @malept in link
+fix(maker-wix): correct path to distributable by @liudonghua123 in link
+fix(maker-dmg): return correct path from dmg maker by @MarshallOfSound in link
+fix(plugin-webpack): fix incorrect PRELOAD_WEBPACK_ENTRY. by @tgds in link
+Upgrade to Electron Packager 13 by @malept in link
+Add simple Importer from Forge 5.x to 6.x by @malept in link
+fix(plugin-webpack): make the PRELOAD_ENTRY variable map to undefined when there is no preload by @MarshallOfSound in link
+fix(template-typescript): add eslint-plugin-import/typescript rules by @unasuke in link
+fix(plugin-webpack): correctly define the asset relocator base dir by @tjquillan in link
+fix(template/typescript-webpack): add ts/tsx to known eslint-plugin-import extensions by @malept in link
+fix(template/typescript-webpack): magic constant is a string & describe it by @malept in link
+fix(core): better error detection for electron-prebuilt-compile  by @malept in link
+fix(plugin-local-electron): bind methods correctly by @malept in link
+fix(webpack-plugin): add web as a target for the renderer process by @malept in link
+fix(maker-squirrel): use executableName for exe when available by @malept in link
+refactor(plugin-webpack): cleanup by @malept in link
+fix(plugin-webpack): throw error if something bad happened in preload compilation by @vhashimotoo in link
+fix(plugin-electronegativity): add parserPlugins option by @vhashimotoo in link
+fix(core): add support for finding electron for npm 7 workspaces by @malept in link
+fix(template-webpack): only use node-loader if the .node files are in native_modules/ by @malept in link
+fix(plugin-webpack): fix deprecation warnings for dev-server@4.0.0 by @malept in link
+link
+fix(core): better errors when maker names are invalid by @malept in link
+fix(core): stops breaking regexps in the config parser by @MarshallOfSound in link
+fix(core): resolve publisher config correctly when given a publisher name by @MarshallOfSound in link
+fix(core): keep track of application restarts and close stdin pipe correctly by @MarshallOfSound in link
+fix: abstract base classes should implement shared type interfaces by @malept in link
+fix: use git to check that you're in a Git repository by @shiftkey in link
+fix(core): be more descriptive when a plugin/maker/publisher module isn't found by @malept in link
+fix(plugin-webpack): throw an error if webpack generates compilation errors when packaging by @malept in link
+fix(plugin-webpack): allow port to be configurable by @malept in link
+Fix Windows CI by @MarshallOfSound in link
+fix(core): use loadFile instead of loadURL in the default template by @malept in link
+fix(plugin-webpack): handle package.json files without config keys by @malept in link
+fix(template-webpack): use css-loader instead of file-loader by @shimaore in link
+build: use Node 12 for the docs stage on Travis CI by @malept in link
+fix(maker): allow Linux makers to run on non-Linux hosts if possible by @malept in link
+fix: ensure that makers do not overwrite existing un-similar outputs by @MarshallOfSound in link
+fix(plugin-webpack): add missing debug level for webpack-dev-middleware by @thateverdmitriy in link
+fix(cli): warn on unknown commands by @malept in link
+fix(maker-base): throw a better error when external binaries are missing by @malept in link
+refactor(publisher-s3): replace the s3 package with just aws-sdk by @malept in link
+fix(maker-windows): handle versions with prerelease information by @malept in link
+fix(web-multi-logger): xterm 4 compatibility by @malept in link
+fix(template-typescript-webpack): adjust ts-loader module rule syntax by @malept in link
+fix(core): find electron when app is in a yarn workspace by @malept in link
+fix(template): stop holding a reference to mainWindow by @malept in link\
+fix(plugin-webpack): lazily load config generator so isProd is set correctly by @malept in link\
+fix(typescript-webpack): remove async=false option from ts-checker to avoid preload compile hang by @malept in link
+fix(core): throw an error when no make targets for the given platform are found by @malept in link
+fix(plugin-webpack): change preload target from electron-renderer to electron-preload by @malept in link
+fix(template-base): update Travis CI config to best practices by @malept in link
+fix(publisher-electron-release-server): throw an exception for 4xx/5xx HTTP status codes by @pierrickouw in link
+fix(core): search for electron in a node_modules folder with electron in it by @vhashimotoo in link
+fix(plugin-webpack): don't specify resolve.modules by default by @kamontat in link
+fix(maker-dmg): add the arch to the default dmg name by @malept in link
+fix(webpack-plugin): Ensure asset relocator injected code works with nodeIntegration disabled by @timfish in link
+fix(template): add plugin:import/electron to TypeScript ESLint config by @malept in link
+fix(template-typescript-webpack): lint tsx files by default by @malept in link
+fix(plugin-webpack): don't show the error message if packagerConfig.ignore is a function by @malept in link
+fix(plugin-webpack): rebuild native modules before packaging  by @malept in link
+fix: replace colors with chalk by @malept in link
+fix(cli): re-add shebang to electron-forge binary by @malept in link
+fix(publisher-electron-release-server): omit RELEASES file when uploading assets by @monsterkrampe in link
+fix(plugin-webpack): validate that the correct entry point is used by @malept in link
+fix: unpin electron-notarize by @malept in link
+fix(publisher-electron-release-server): set knownLength option for asset upload by @monsterkrampe in link
+fix(plugin-webpack): better webpack-dev-server types by @erickzhao in link
+fix: keep stdin unpaused after ora completes by @clavin in link
+fix: add missing exports from packages by @clavin in link
+fix: escape file names for make step by @erickzhao in link
+fix(core): disable the packagerConfig.all option by @malept in link
+fix(cli): use scoped package path in vscode debugger scripts by @jrobeson in link
+fix: search for the top-level node_modules folder when using yarn workspaces by @malept in link
+fix(core): restart app in development via CLI multiple times by @miaowing in link
+refactor: convert from electron-download to @electron/get by @malept in link
+fix(core): update CI templates to Node 8 and other updates by @malept in link
+Move template CSS into a separate file by @malept in link
+fix(plugin-webpack): check that stats is not empty before sending to multi-logger by @malept in link
+fix(plugin-webpack): properly reference index.js in production by @shimaore in link
+fix(plugin-webpack): adjust publicPath in renderer only by @shimaore in link
+fix: pin gh-actions to SHAs, update to remove deprecation warning by @VerteDinde in link
+fix(docs): only publish API docs on v6 tags by @erickzhao in link
+fix(docs): avoid generating Typescript utility types by @erickzhao in link
+fix(docs): only load modules if package has entry point by @erickzhao in link
+fix: generate custom docs sidebar by @VerteDinde in link
+fix(template-typescript-webpack): use new plugin syntax by @georgexu99 in link
+fix(template-webpack): use new plugin syntax by @georgexu99 in link
+fix(template-typescript-webpack): preload file to webpack config by @fredrikj31 in link
+Other Changes
+build: change isBeta back to beta value by @VerteDinde in link
+build: modify ts-ignore for /test & /src by @VerteDinde in link
+build: remove travis and appveyor ci templates by @VerteDinde in link
+V6 Docs by @MarshallOfSound in link
+test: add test to detect forge.config by @VerteDinde in link
+build: add icon property to MakerWixConfig by @VerteDinde in link
+build: fix some yarn audit output by @MarshallOfSound in link
+build: actually enable husky/lint-staged by @MarshallOfSound in link
+build: add rule that enforces named exports over default exports by @MarshallOfSound in link
+refactor: replace indexOf with includes/startsWith where applicable by @malept in link
+refactor(maker): replace zip-folder with cross-zip by @malept in link
+refactor: use listr2 instead of async-ora by @MarshallOfSound in link
+Update electron-release-server docs & refactor some code by @malept in link
+refactor(core): avoid forEach and increase test coverage for forge-config by @malept in link
+refactor(plugin-webpack): move webpack config generation code to its own file by @malept in link
+refactor: create base template & test utils by @malept in link
+refactor(core): remove unused config-fn utility file by @malept in link
+refactor: migrate templates from using tslint to eslint by @malept in link
+refactor: create the ElectronProcess type (ChildProcess + restarted property) by @malept in link
+refactor(template-typescript): use main script to start app by @codebytere in link
+refactor(bump): convert to TypeScript by @malept in link
+refactor(publisher-s3): use AWS-SDK v3 by @malept in link
+refactor: use custom eslint config + prettier instead of airbnb config by @malept in link
+refactor: typescript projects & docs generation by @clavin in link
+refactor: consolidate lodash dependencies by @malept in link
+build(deps): npx browserslist@latest --update-db by @erickzhao in link
+Full Changelog: link"
 8,"What's Changed
 Features
 
@@ -360,7 +671,12 @@ Other Changes
 
 chore: bump packager to 17.1.1 by @VerteDinde in https://github.com/electron/forge/pull/3041
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.74...v6.0.0-beta.75"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.74...v6.0.0-beta.75","What's Changed
+Features
+feat: move create-electron-app into forge by @VerteDinde in link
+Other Changes
+chore: bump packager to 17.1.1 by @VerteDinde in link
+Full Changelog: link"
 9,"What's Changed
 Fixes
 
@@ -370,7 +686,12 @@ Other Changes
 
 spec: add proper package test for webpack ts template by @MarshallOfSound in https://github.com/electron/forge/pull/3040
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.73...v6.0.0-beta.74"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.73...v6.0.0-beta.74","What's Changed
+Fixes
+fix: do not proxify class instances in forge config by @MarshallOfSound in link
+Other Changes
+spec: add proper package test for webpack ts template by @MarshallOfSound in link
+Full Changelog: link"
 10,"What's Changed
 Fixes
 
@@ -380,13 +701,21 @@ Other Changes
 
 chore(utils): make require-search error message clearer by @erickzhao in https://github.com/electron/forge/pull/3037
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.72...v6.0.0-beta.73"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.72...v6.0.0-beta.73","What's Changed
+Fixes
+fix: ensure webpack typescript template runs by @MarshallOfSound in link
+Other Changes
+chore(utils): make require-search error message clearer by @erickzhao in link
+Full Changelog: link"
 11,"What's Changed
 Other Changes
 
 build: modify ts-ignore for /test & /src by @VerteDinde in https://github.com/electron/forge/pull/3036
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.71...v6.0.0-beta.72"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.71...v6.0.0-beta.72","What's Changed
+Other Changes
+build: modify ts-ignore for /test & /src by @VerteDinde in link
+Full Changelog: link"
 12,"What's Changed
 Fixes
 
@@ -411,7 +740,25 @@ New Contributors
 
 @macdja38 made their first contribution in https://github.com/electron/forge/pull/3006
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.70...v6.0.0-beta.71"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.70...v6.0.0-beta.71","What's Changed
+Fixes
+fix: restore isProd in the webpack  plugin by @MarshallOfSound in link
+fix: use @electron-forge/cli hint for project resolution by @MarshallOfSound in link
+fix(template-base): use minimum instead of exact version when replacing ELECTRON_FORGE/VERSION in templates by @erikian in link
+fix(publish): ignore unnecessary files when publishing to npm by @erikian in link
+fix(packager): ""packaging application"" log never stops when building for multiple architectures by @macdja38 in link
+Other Changes
+build: remove travis and appveyor ci templates by @VerteDinde in link
+chore: move from electron-rebuild to @electron/rebuild by @MarshallOfSound in link
+chore: rename typescript-webpack to webpack-typescript by @georgexu99 in link
+chore: update README.md by @VerteDinde in link
+docs: update release process by @georgexu99 in link
+test: add test to detect forge.config by @VerteDinde in link
+refactor: use listr2 instead of async-ora by @MarshallOfSound in link
+refactor: use forge.config.ts in the webpack typescript template by @MarshallOfSound in link
+New Contributors
+@macdja38 made their first contribution in link
+Full Changelog: link"
 13,"What's Changed
 
 docs: generate custom docs sidebar by @VerteDinde in https://github.com/electron/forge/pull/2974
@@ -428,7 +775,21 @@ fix(template-typescript-webpack): webpack entrypoint extensions by @erickzhao in
 fix(template-typescript-webpack): properly load forge.config.ts by @erickzhao in https://github.com/electron/forge/pull/3016
 build: add icon property to MakerWixConfig by @VerteDinde in https://github.com/electron/forge/pull/3017
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.69...v6.0.0-beta.70"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.69...v6.0.0-beta.70","What's Changed
+docs: generate custom docs sidebar by @VerteDinde in link
+refactor: add / use named exports for plugins + makers + publishers by @MarshallOfSound in link
+docs: add READMEs to packages by @georgexu99 in link
+chore: upgrade electron-wix-msi to 4.0.0 by @georgexu99 in link
+build: fix some yarn audit output by @MarshallOfSound in link
+refactor(maker-squirrel): ensure Squirrel.Windows name doesn't contain hyphens by @erickzhao in link
+chore: bump electron-wix-msi to 5.0.0 by @VerteDinde in link
+chore: fix links from userland migration by @georgexu99 in link
+Release 6.0.0 beta.69 by @VerteDinde in link
+fix(template-typescript-webpack): clean up forge config code by @erickzhao in link
+fix(template-typescript-webpack): webpack entrypoint extensions by @erickzhao in link
+fix(template-typescript-webpack): properly load forge.config.ts by @erickzhao in link
+build: add icon property to MakerWixConfig by @VerteDinde in link
+Full Changelog: link"
 14,"What's Changed
 Breaking Changes
 
@@ -455,7 +816,25 @@ New Contributors
 
 @bboure made their first contribution in https://github.com/electron/forge/pull/2984
 
-Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.68...v6.0.0-beta.69"
+Full Changelog: https://github.com/electron/forge/compare/v6.0.0-beta.68...v6.0.0-beta.69","What's Changed
+Breaking Changes
+feat!: prefer forge.config.js over package.json config by @erickzhao in link
+refactor!: better internal type safety for hooks by @MarshallOfSound in link
+Features
+feat(plugin-webpack): support standalone preload entry points by @erickzhao in link
+feat: add support for forge.config.ts et. al by @MarshallOfSound in link
+feat(publisher-s3): Add sessionToken and change default fallback by @bboure in link
+Other Changes
+fix(plugin-webpack): keep devDependencies, dependencies, optionalDependencies and peerDependencies in the distributed package.json by @erikian in link
+fix(template-typescript-webpack): use new plugin syntax by @georgexu99 in link
+fix(template-webpack): use new plugin syntax by @georgexu99 in link
+build: configure import/order eslint rule by @MarshallOfSound in link
+build: actually enable husky/lint-staged by @MarshallOfSound in link
+build: add rule that enforces named exports over default exports by @MarshallOfSound in link
+refactor: rename some constructor params for MakerBase and PublisherBase by @MarshallOfSound in link
+New Contributors
+@bboure made their first contribution in link
+Full Changelog: link"
 15,"What's Changed
 Breaking Changes
 Forge v6.0.0-beta.68 introduces a few breaking changes to the Forge config.
@@ -499,7 +878,44 @@ New Contributors
 
 @georgexu99 made their first contribution in https://github.com/electron-userland/electron-forge/pull/2946
 
-Full Changelog: https://github.com/electron-userland/electron-forge/compare/v6.0.0-beta.67...v6.0.0-beta.68"
+Full Changelog: https://github.com/electron-userland/electron-forge/compare/v6.0.0-beta.67...v6.0.0-beta.68","What's Changed
+Breaking Changes
+Forge v6.0.0-beta.68 introduces a few breaking changes to the Forge config.
+Renamed Electron Rebuild config (link)
+For consistency with the packagerConfig option for electron-packager, the field to configure electron-rebuild has now been shortened to rebuildConfig.
+diff
+{
+-  electronRebuildConfig: { / ... / }
++  rebuildConfig: { / ... / }
+}
+Changed plugin configuration syntax (link)
+The plugins array now takes objects containing an object with properties name and config, rather than tuples containing the plugin name and config.
+This aligns the syntax for this configuration with the publishers and makers arrays.
+diff
+{
+  plugins: [
+-      [
+-        '@electron-forge/plugin-webpack',
+-        { / ... / }
+-      ]
++
++      {
++        name: '@electron-forge/plugin-webpack',
++        config: { / ... / }
++      }
+ ]
+}
+Upgraded Package dependency to electron-packager@17 (link)
+The upgrade to Electron Packager 17 introduces the shiny new @electron/osx-sign package for macOS code signing. It's a rewrite of the old electron-osx-sign tool with more sensible defaults.
+To migrate, we recommend seeing if the default packagerConfig.osxSign options work for you and tweaking the default entitlements to your needs. Otherwise, see the @electron/osx-sign MIGRATION.md doc for a 1:1 conversion from the old config options to the new ones.
+Fixes
+fix(plugin-webpack): better webpack-dev-server types by @erickzhao in link
+Other Changes
+feat(maker-pkg): upgrade to @electron/osx-sign  by @erickzhao in link
+build(deps): npx browserslist@latest --update-db by @erickzhao in link
+New Contributors
+@georgexu99 made their first contribution in link
+Full Changelog: link"
 16,"What's Changed
 
 fix(template-typescript-webpack): preload file to webpack config by @fredrikj31 in https://github.com/electron-userland/electron-forge/pull/2936
@@ -512,7 +928,15 @@ New Contributors
 @itsananderson made their first contribution in https://github.com/electron-userland/electron-forge/pull/2938
 @erikian made their first contribution in https://github.com/electron-userland/electron-forge/pull/2927
 
-Full Changelog: https://github.com/electron-userland/electron-forge/compare/v6.0.0-beta.66...v6.0.0-beta.67"
+Full Changelog: https://github.com/electron-userland/electron-forge/compare/v6.0.0-beta.66...v6.0.0-beta.67","What's Changed
+fix(template-typescript-webpack): preload file to webpack config by @fredrikj31 in link
+feat: remove preload.js from TypeScript templates by @itsananderson in link
+chore: update electron-packager to v16 by @erikian in link
+New Contributors
+@fredrikj31 made their first contribution in link
+@itsananderson made their first contribution in link
+@erikian made their first contribution in link
+Full Changelog: link"
 17,"What's Changed
 
 feat(plugin-webpack): Allow each entrypoint to specify nodeIntegration by @chetbox in https://github.com/electron-userland/electron-forge/pull/2867
@@ -522,7 +946,12 @@ New Contributors
 
 @chetbox made their first contribution in https://github.com/electron-userland/electron-forge/pull/2867
 
-Full Changelog: https://github.com/electron-userland/electron-forge/compare/v6.0.0-beta.65...v6.0.0-beta.66"
+Full Changelog: https://github.com/electron-userland/electron-forge/compare/v6.0.0-beta.65...v6.0.0-beta.66","What's Changed
+feat(plugin-webpack): Allow each entrypoint to specify nodeIntegration by @chetbox in link
+build: update @electron/get to 2.0.0 by @VerteDinde in link
+New Contributors
+@chetbox made their first contribution in link
+Full Changelog: link"
 18,"Bug Fixes
 
 add missing exports from packages (#2920) (460546b7)
@@ -531,7 +960,11 @@ keep stdin unpaused after ora completes (#2904) (aad9c7e4)
 Chores
 
 upgrade Node.js to 14 LTS (#2921) (4dcca1ce)
-"
+","Bug Fixes
+add missing exports from packages (#2920) (460546b7)
+keep stdin unpaused after ora completes (#2904) (aad9c7e4)
+Chores
+upgrade Node.js to 14 LTS (#2921) (4dcca1ce)"
 19,"New Features
 
 cli: add --inspect-brk-electron option (#1328) (c5a6ea17)
@@ -552,11 +985,28 @@ v5 upgrade: default platforms to empty array instead of null (9abc581b)
 publisher-ers:
 set knownLength option for asset upload (#2706) (cf08cd62)
 omit RELEASES file when uploading assets (#2089) (2202dcd3)
-"
+","New Features
+cli: add --inspect-brk-electron option (#1328) (c5a6ea17)
+maker: allow disabling maker in config (#2754) (69777402)
+maker-wix: Make autoUpdate and autoLaunch features configurable in MakerWixConfig (#2620) (bf7d271a)
+publisher-ers: support flavor config (#2766) (6069ebe1)
+publisher-github: allow specifying alternative tag prefix (#2605) (88d9d722)
+template: add a default preload script (#2722) (636e2c5d)
+plugin-webpack:
+allow specifing a seperate webpack config for your preload (#2679) (f5909424)
+webpack 5 configuration factory (#2776) (f4a77741)
+Add packageSourceMaps option to WebpackPluginConfig (#2581) (2bb5e0d8)
+Bug Fixes
+make: escape file names for make step (#2752) (beb93056)
+v5 upgrade: default platforms to empty array instead of null (9abc581b)
+publisher-ers:
+set knownLength option for asset upload (#2706) (cf08cd62)
+omit RELEASES file when uploading assets (#2089) (2202dcd3)"
 20,"Bug Fixes
 
 cli: re-add shebang to electron-forge binary (#2671) (1ca418ec)
-"
+","Bug Fixes
+cli: re-add shebang to electron-forge binary (#2671) (1ca418ec)"
 21,"New Features
 
 publisher-github: add retry support (#2550) (a400066d)
@@ -567,7 +1017,13 @@ replace colors with chalk (#2666) (e909ae83)
 plugin-webpack:
 rebuild native modules before packaging (#2584) (21310bbf)
 validate that the correct entry point is used (#2522) (3de904b6)
-"
+","New Features
+publisher-github: add retry support (#2550) (a400066d)
+Bug Fixes
+replace colors with chalk (#2666) (e909ae83)
+plugin-webpack:
+rebuild native modules before packaging (#2584) (21310bbf)
+validate that the correct entry point is used (#2522) (3de904b6)"
 22,"New Features
 
 publisher-github:  add debug support for Octokit (#2499) (73252c30)
@@ -575,7 +1031,10 @@ publisher-github:  add debug support for Octokit (#2499) (73252c30)
 Bug Fixes
 
 unpin electron-notarize (#2515) (af78353b)
-"
+","New Features
+publisher-github:  add debug support for Octokit (#2499) (73252c30)
+Bug Fixes
+unpin electron-notarize (#2515) (af78353b)"
 23,"Breaking Changes
 
 core:  add required Forge version for templates (#2415) (c094d168)
@@ -596,13 +1055,30 @@ don't specify resolve.modules by default (#2149) (4a992b76)
 don't show the error message if packagerConfig.ignore is a function (#2424) (4b4f16c3)
 template-webpack:  only use node-loader if the .node files are in native_modules/ (#2449) (bd2526b3)
 maker-dmg:  add the arch to the default dmg name (#2431) (0c65f17d)
-"
+","Breaking Changes
+core:  add required Forge version for templates (#2415) (c094d168)
+New Features
+plugin-webpack:  allow most webpack-dev-server options to be configurable (#2444) (699d4862)
+deps:  upgrade to electron-rebuild@^3.1.1 (#2434) (60778998)
+Bug Fixes
+core:
+better errors when maker names are invalid (#2467) (ca41d9ba)
+add support for finding electron for npm 7 workspaces (#2446) (4c601519)
+plugin-webpack:
+fix deprecation warnings for dev-server@4.0.0 (#2457) (99797449)
+don't specify resolve.modules by default (#2149) (4a992b76)
+don't show the error message if packagerConfig.ignore is a function (#2424) (4b4f16c3)
+template-webpack:  only use node-loader if the .node files are in native_modules/ (#2449) (bd2526b3)
+maker-dmg:  add the arch to the default dmg name (#2431) (0c65f17d)"
 24,"Fixed
 
 template-typescript-webpack:  lint tsx files by default (#2403) (c2e6c49f)
 template:  add plugin:import/electron to TypeScript ESLint config (#2399) (f42c962a)
 webpack-plugin:  Ensure asset relocator injected code works with nodeIntegration disabled (#2396) (146fc311)
-"
+","Fixed
+template-typescript-webpack:  lint tsx files by default (#2403) (c2e6c49f)
+template:  add plugin:import/electron to TypeScript ESLint config (#2399) (f42c962a)
+webpack-plugin:  Ensure asset relocator injected code works with nodeIntegration disabled (#2396) (146fc311)"
 25,"New Features
 
 plugin-webpack:
@@ -623,11 +1099,26 @@ Migration Notes
 Due to the new devContentSecurityPolicy, existing projects using Webpack may have to specify a CSP in development.
 Existing projects using Webpack and nodeIntegration: true will have to also set nodeIntegration in the Webpack plugin config.
 Existing projects using Webpack should replace @marshallofsound/webpack-asset-relocator-loader with @vercel/webpack-asset-relocator-loader.
-"
+","New Features
+plugin-webpack:
+improve native asset relocation without forking Vercel loader (#2320)
+add devContentSecurityPolicy config option (#2332)
+add nodeIntegration config for renderers (#2330)
+core:  add platform and arch to generateAssets hook parameters (#2327)
+Bug Fixes
+core:  search for electron in a node_modules folder with electron in it (#2326)
+plugin-electronegativity:  add parserPlugins option (#2323)
+plugin-webpack:  throw error if something bad happened in preload compilation (#2334)
+maker-squirrel:  use executableName for exe when available (#2365)
+Migration Notes
+Due to the new devContentSecurityPolicy, existing projects using Webpack may have to specify a CSP in development.
+Existing projects using Webpack and nodeIntegration: true will have to also set nodeIntegration in the Webpack plugin config.
+Existing projects using Webpack should replace @marshallofsound/webpack-asset-relocator-loader with @vercel/webpack-asset-relocator-loader."
 26,"Bug Fixes
 
 webpack-plugin:  add web as a target for the renderer process (#2285) (9f2bc411)
-"
+","Bug Fixes
+webpack-plugin:  add web as a target for the renderer process (#2285) (9f2bc411)"
 27,"Breaking Changes
 
 Require Node >= 12.13.0 for all packages (#2281) (8fbbad24)
@@ -636,7 +1127,11 @@ webpack-plugin:  upgrade to Webpack 5 (#2225) (564a4451)
 Bug Fixes
 
 plugin-local-electron:  bind methods correctly (#2280) (e60445d7)
-"
+","Breaking Changes
+Require Node >= 12.13.0 for all packages (#2281) (8fbbad24)
+webpack-plugin:  upgrade to Webpack 5 (#2225) (564a4451)
+Bug Fixes
+plugin-local-electron:  bind methods correctly (#2280) (e60445d7)"
 28,"Build dependencies
 
 Upgrade electron-winstaller to ^5.0.0 (https://github.com/electron-userland/electron-forge/commit/e93631a39ac30b36a7239c28ad97a27974318a12)
@@ -650,14 +1145,27 @@ add ts/tsx to known eslint-plugin-import extensions (#2139) (90f122c2)
 plugin-webpack:  correctly define the asset relocator base dir (#2022) (390219fd)
 template-typescript:  add eslint-plugin-import/typescript rules (#2048) (c27ca4bf)
 cli:  don't hardcode the minimum required Node version (#2003) (704db4b1)
-"
+","Build dependencies
+Upgrade electron-winstaller to ^5.0.0 (link)
+Bug fixes
+core:  better error detection for electron-prebuilt-compile (#2268) (fdc82117)
+template/typescript-webpack:
+magic constant is a string w/comments about what it's for (#2166) (f15b5c7a)
+add ts/tsx to known eslint-plugin-import extensions (#2139) (90f122c2)
+plugin-webpack:  correctly define the asset relocator base dir (#2022) (390219fd)
+template-typescript:  add eslint-plugin-import/typescript rules (#2048) (c27ca4bf)
+cli:  don't hardcode the minimum required Node version (#2003) (704db4b1)"
 29,"Fixed
 
 publisher-github:
 use new @octokit .auth property (#1989) (dae97c40)
 don't reexport Octokit type (#1962) (af79fa1c)
 core:  init should install the latest caret version of Forge (#1963) (b1693f09)
-"
+","Fixed
+publisher-github:
+use new @octokit .auth property (#1989) (dae97c40)
+don't reexport Octokit type (#1962) (af79fa1c)
+core:  init should install the latest caret version of Forge (#1963) (b1693f09)"
 30,"New Features
 
 add Electronegativity plugin (#1900) (a6a65cae)
@@ -668,13 +1176,22 @@ Bug Fixes
 template:  remove TS warning while scaffolding TS templates (#1664) (e447adc6)
 plugin-webpack:  prevent the renderer config from overriding its preload config's target (#1853) (8126a736)
 core:  Re-throw non-require errors when using requireSearch (#1876) (301d6e17)
-"
+","New Features
+add Electronegativity plugin (#1900) (a6a65cae)
+core:  add params to the postPackage hook (#1896) (e9a2ba07)
+Bug Fixes
+template:  remove TS warning while scaffolding TS templates (#1664) (e447adc6)
+plugin-webpack:  prevent the renderer config from overriding its preload config's target (#1853) (8126a736)
+core:  Re-throw non-require errors when using requireSearch (#1876) (301d6e17)"
 31,"Bug Fixes
 
 shared-types:  don't use @types/electron-packager (cdeddce2)
 maker-snap:  allow MakerSnapConfig to also be SnapcraftConfig (#1725) (19b64ef5)
 maker-flatpak:  add eu-strip to required external binaries (#1703) (4314e1d5)
-"
+","Bug Fixes
+shared-types:  don't use @types/electron-packager (cdeddce2)
+maker-snap:  allow MakerSnapConfig to also be SnapcraftConfig (#1725) (19b64ef5)
+maker-flatpak:  add eu-strip to required external binaries (#1703) (4314e1d5)"
 32,"New Features
 
 s3:  add options to allow use custom instance (#1601) (38e63d15)
@@ -686,5 +1203,12 @@ core:  overrideTargets inherit the named maker config in the Forge config (#1549
 publisher-electron-release-server:  throw an exception for 4xx/5xx HTTP status codes (#1538) (f223fc8f)
 template-base:  update Travis CI config to best practices (#1539) (a34656b2)
 plugin-webpack:  change preload target from electron-renderer to electron-preload (#1521) (5f1b240f)
-"
-33,Breaking changes are listed on the wiki.
+","New Features
+s3:  add options to allow use custom instance (#1601) (38e63d15)
+Bug Fixes
+cli:  fix the minimum version of Node in the CLI error message (45ac8ddf)
+core:  overrideTargets inherit the named maker config in the Forge config (#1549) (e133b607)
+publisher-electron-release-server:  throw an exception for 4xx/5xx HTTP status codes (#1538) (f223fc8f)
+template-base:  update Travis CI config to best practices (#1539) (a34656b2)
+plugin-webpack:  change preload target from electron-renderer to electron-preload (#1521) (5f1b240f)"
+33,Breaking changes are listed on the wiki.,Breaking changes are listed on the wiki.

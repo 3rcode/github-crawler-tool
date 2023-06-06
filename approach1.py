@@ -2,7 +2,8 @@ import spacy
 import numpy as np
 import pandas as pd
 import os
-# import random
+import yaml
+from yaml.loader import SafeLoader
 from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM, Embedding
 from sklearn.model_selection import train_test_split
@@ -12,26 +13,22 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 nlp = spacy.load('en_core_web_lg')
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-word2idx = {}
 max_commit_length = 30
 
 
-def load_data(file_path):
-    """Load the dataset from file.
-
-    Returns
-    -------
-    tuple
-        (train_data, train_labels), (test_data, test_labels).
-
-    """
+def load_origin_data(file_path):
     df = pd.read_csv(file_path)
     commit = df['Commit Message'].astype(str) + df['Commit Description'].astype(str)
-    label = df['Class']
+    label = df['Label']
     return np.asarray(commit), np.asarray(label)
 
+def load_abstract_data(file_path):
+    df = pd.read_csv(file_path)
+    commit = df['Commit Message Abstract'].astype(str) + df['Commit Desription Abstract'].astype(str) # Note description
+    label = df['Label']
+    return np.asarray(commit), np.asarray(label)
 
-def create_dictionary(commits):
+def create_dictionary(commits, word2idx):
     """Create a dictionary of words from commits.
 
     Parameters
@@ -55,13 +52,11 @@ def create_dictionary(commits):
             else:
                 word_count[word] = 1
     sorted_word_count = sorted(word_count.items(), key=lambda x: x[1], reverse=True)
-    global word2idx
     for idx, (word, count) in enumerate(sorted_word_count):
         word2idx[word] = idx + 1
     word2idx['unk'] = len(word2idx) + 1
 
-
-def convert2vector(commit):
+def convert2vector(commit, word2idx):
     """Convert commit to a vector.
 
     Parameters
@@ -75,7 +70,6 @@ def convert2vector(commit):
         Vector of the commit.
 
     """
-    global word2idx
     vector = []
     commit = commit.split(' ')
     for word in commit:
@@ -88,7 +82,6 @@ def convert2vector(commit):
     else:
         vector = [0] * (max_commit_length - len(vector)) + vector
     return vector
-
 
 def build_model(topwords, embedding_vector_len, input_length):
     """Build the model.
@@ -115,69 +108,129 @@ if __name__ == '__main__':
     X = np.asarray([])
     y = np.asarray([]) 
     
-    # Choose a repo as a test and remove it from training data
-    test_repo = 'vercel_swr' # random.choice(repos)
-    repos.remove(test_repo)
-
-    for repo in repos:
-        path = os.path.join(data_path, repo, 'labeled_commits.csv')
-        commit, label = load_data(path)
-        X = np.concatenate((X, commit), axis=0)
-        y = np.concatenate((y, label), axis=0)
+    test_cases_path = os.path.join(ROOT_DIR, 'test_cases.yaml')
+    test_cases = None
+    with open(test_cases_path, 'r') as f:
+        test_cases = yaml.load(f, Loader=SafeLoader)
     
-    # Check number of dataset
-    print(X[0])
-    print(y[0])
-    
-    # Load commit messages and expected label of commits
-    test_labeled_commit_path = os.path.join(data_path, test_repo, 'labeled_commits.csv')
-    test_commit, test_label = load_data(test_labeled_commit_path)
+    def approach1(test_name, train_repos, test_repos, _type):
+        X_train = [] 
+        X_test = []
+        y_train = []
+        y_test = []
+        file_name = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv' 
+        load_data = load_origin_data if _type == 'origin' else load_abstract_data
 
-    def LSTM_model(X, y):
-        create_dictionary(X)
-        # Check create_dictionary function
-        print(f"Length of dictionary: {len(word2idx)}")
-
-        X = np.asarray([convert2vector(commit) for commit in X])
-        # Check convert to vector function
-        print(X.shape)
-        # print(X[0])
-
-        # X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=1)
-
-        top_words = len(word2idx) + 1
-        embedding_vector_length = 300
-        classify_model = build_model(top_words, embedding_vector_length, max_commit_length)
-        # classify_model = load_model('models/full_data_train_model')
+        for repo in train_repos:
+            path = os.path.join(data_path, repo, file_name)
+            commit, label = load_data(path)
+            X_train = np.concatenate((X_train, commit), axis=0)
+            y_train = np.concatenate((y_train, label), axis=0)
         
-        # Check build_model function
-        print(classify_model.summary())
-        classify_model.fit(X, y, epochs=3, batch_size=64) 
-        classify_model.save('models/test1_model')
+        # Check number of dataset
+        # print(X_train.shape)
+        # print(y_train.shape)
+        
+        # Load commit messages and expected label of commits
+        for repo in test_repos:
+            path = os.path.join(data_path, repo, file_name)
+            commit, label = load_data(path)
+            X_test = np.concatenate((X_test, commit), axis=0)
+            y_test = np.concatenate((y_test, label), axis=0)
+        
+        # print(X_test.shape)
+        # print(y_test.shape)
 
-        # Test model
-        test_commit = np.asarray([convert2vector(commit) for commit in test_commit])
+        def LSTM_model(test_name, _type, X_train, y_train, X_test, y_test):
+            word2idx = {}
+            create_dictionary(X_train, word2idx)
+            # Check create_dictionary function
+            print(f"Length of dictionary: {len(word2idx)}")
 
-        scores = classify_model.evaluate(test_commit, test_label, verbose=0)
-        print("Accuracy: %.2f%%" % (scores[1] * 100))
-        preds = classify_model.predict(test_commit)
-        preds = [1 if x > 0.5 else 0 for x in preds]
-        score = f1_score(test_label, preds)
-        print(f"F1 score: {score}")
+            # X_train = np.asarray([convert2vector(commit, word2idx) for commit in X_train])
+            # Check convert to vector function
+            # print(X_train.shape)
+
+            # top_words = len(word2idx) + 1
+            # embedding_vector_length = 300
+            # classify_model = build_model(top_words, embedding_vector_length, max_commit_length)
+            
+            # Load model
+            model_file = os.path.join(ROOT_DIR, 'models', 'lstm_models', f'{test_name}_{_type}')
+            classify_model = load_model(model_file)
+
+            # Check build_model function
+            print(classify_model.summary())
+            
+            # Train model
+            # classify_model.fit(X_train, y_train, epochs=3, batch_size=64) 
+            
+            # Save model 
+            # model_file = os.path.join(ROOT_DIR, 'models', 'lstm_models', f'{test_name}_{_type}')
+            # classify_model.save(model_file)
+
+            # Test model
+            X_test = np.asarray([convert2vector(commit, word2idx) for commit in X_test])
+            test_size = len(X_test)
+            accuracy = classify_model.evaluate(X_test, y_test, verbose=0)[1] * 100
+            print("Accuracy: %.2f%%" % (accuracy))
+            accuracy = str(int(accuracy * 100) / 100) + '%'
+            y_preds = classify_model.predict(X_test)
+
+            y_preds = [1 if x > 0.5 else 0 for x in y_preds]
+            
+            f1 = f1_score(y_test, y_preds)
+            print(f"F1 score: {f1}")
+            f1 = str(f1)
+
+            result_path = os.path.join(ROOT_DIR, 'LSTM_model.yaml')
+            with open(result_path, 'r') as f:
+                result = yaml.safe_load(f)
+                if result is None:
+                    result = {}
+                result.update({f'{test_name}_{_type}': {'Num Commits': test_size, 'Accuracy': accuracy, 'F1 score': f1}})
+            with open(result_path, 'w') as f:
+                yaml.safe_dump(result, f)
+
+        
+        def naive_bayes(test_name, _type, X_train, y_train, X_test, y_test):
+            vectorizer = TfidfVectorizer()
+            X_train = vectorizer.fit_transform(X_train)
+            y_train = np.asarray(y_train).astype(np.float32)
+            print(f"Num Samples: {X_train.shape[0]}\nNum Features: {X_train.shape[1]}")
+            model = MultinomialNB()
+            model.fit(X_train, y_train)
+            
+            test_size = len(X_test)
+            X_test = vectorizer.transform(X_test)
+            y_test = np.asarray(y_test).astype(np.float32)
+            print(f"Num Test: {X_test.shape[0]}")
+            y_pred = model.predict(X_test)
+            true_pred = sum([y_pred[i] == y_test[i] for i in range(test_size)])
+
+            accuracy = true_pred / test_size
+            print("Accuracy: %.2f%%" % (accuracy * 100))
+            accuracy = str(int(accuracy * 10000) / 100) + '%'
+
+            f1 = f1_score(y_test, y_pred)
+            print(f"F1 score: {f1}")
+            f1 = str(f1)
+
+            result_path = os.path.join(ROOT_DIR, 'naive_bayes.yaml')
+            with open(result_path, 'r') as f:
+                result = yaml.safe_load(f)
+                if result is None:
+                    result = {}
+                result.update({f'{test_name}_{_type}': {'Num Commits': test_size, 'Accuracy': accuracy, 'F1 score': f1}})
+            with open(result_path, 'w') as f:
+                yaml.safe_dump(result, f)
+        
+        LSTM_model(test_name, _type, X_train, y_train, X_test, y_test) 
     
-    def naive_bayes(X, y):
-        vectorizer = TfidfVectorizer()
-        X = vectorizer.fit_transform(X)
-        print(f"Num Samples: {X.shape[0]}\nNum Features: {X.shape[1]}")
-        # X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=1)
-        model = MultinomialNB()
-        model.fit(X, y)
-        test_commit = vectorizer.fit_transform(test_commit)
-        test_size = test_commit.shape[0]
-        y_pred = model.predict(test_commit)
-        true_pred = sum([y_pred[i] == test_label[i] for i in range(test_size)])
-        print("Accuracy: %.2f%%" % (true_pred / test_size * 100))
-        score = f1_score(test_label, y_pred)
-        print(f"F1 score: {score}")
+    for test_case, test_repos in test_cases.items():
+        if test_case in ['test6', 'test7']:
+            train_repos = list(set(repos) - set(test_repos))
+            approach1(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='origin') 
     
-    LSTM_model(X, y)   
+    
+    

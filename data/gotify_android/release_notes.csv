@@ -1,11 +1,15 @@
-Index,Release Note
+Index,Release Note,Release Note With Abstraction
 1,"
 Update app design by @cyb3rko 
 Fix error when refreshing the app by @cyb3rko 
 Fix navigation drawer header when having a long server URL by @cyb3rko 
 Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton 
 Add setting to exclude the message activity from the recent apps by @sgpublic 
-"
+","Update app design by @cyb3rko 
+Fix error when refreshing the app by @cyb3rko 
+Fix navigation drawer header when having a long server URL by @cyb3rko 
+Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton 
+Add setting to exclude the message activity from the recent apps by @sgpublic "
 2,"
 Migrate to Kotlin
 Add native android splash screen
@@ -18,6 +22,16 @@ Update dependencies
 Add fastlane metadata + images
 Rename some texts
 
+Huge thanks to @cyb3rko for implementing most of the changes!","Migrate to Kotlin
+Add native android splash screen
+Add notification permission popup
+Update log view after log is cleared
+Update to Java 11
+Increase minSdkVersion to 23
+Increase targetSdkVersion to 33
+Update dependencies
+Add fastlane metadata + images
+Rename some texts
 Huge thanks to @cyb3rko for implementing most of the changes!"
 3,"
 Change notification icon by @PanderMusubi
@@ -25,57 +39,77 @@ Add compact message layout by @cyb3rko
 Migrate to android view bindings by @cyb3rko
 Improve link colors by @Sternagfonkel
 Change label of foreground notification by @Sternagfonkel
-"
-4,Fix release
+","Change notification icon by @PanderMusubi
+Add compact message layout by @cyb3rko
+Migrate to android view bindings by @cyb3rko
+Improve link colors by @Sternagfonkel
+Change label of foreground notification by @Sternagfonkel"
+4,Fix release,Fix release
 5,"
 Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel)
-"
+",Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel)
 6,"
 Fix crash when polling new messages and the request fails
 Fix crash when sharing, but there is no active user
-"
+","Fix crash when polling new messages and the request fails
+Fix crash when sharing, but there is no active user"
 7,"
 Add client::notification.bigImageUrl extra (#200 by @ngruychev)
 Update dependencies
 Fix APK signing
-"
+","Add client::notification.bigImageUrl extra (#200 by @ngruychev)
+Update dependencies
+Fix APK signing"
 8,"
 Add markdown support in notifications (#184 by @Sternagfonkel)
-"
+",Add markdown support in notifications (#184 by @Sternagfonkel)
 9,"
 Disallow sending messages if no applications exists (#182 by @Sternagfonkel)
 Add support for strike-through in markdown messages (#183 by @Sternagfonkel)
-"
+","Disallow sending messages if no applications exists (#182 by @Sternagfonkel)
+Add support for strike-through in markdown messages (#183 by @Sternagfonkel)"
 10,"
 Improve websocket reconnects
-"
+",Improve websocket reconnects
 11,"
 Fix base64 markdown images
-"
+",Fix base64 markdown images
 12,"
 Update dependencies (https://github.com/gotify/android/commit/4a1eb50d132e7a5b2ffb9a408c66a80725882ab0)
 Add relative/absolute time format setting (#156 by @RemiRigal)
 Fix links inside tables (https://github.com/gotify/android/commit/e7b376a501b3436f7624f727584373612c2c081a)
 Add delete application button (#150 by @p1gp1g)
 Migrate to GitHub actions (#157)
-"
+","Update dependencies (link)
+Add relative/absolute time format setting (#156 by @RemiRigal)
+Fix links inside tables (link)
+Add delete application button (#150 by @p1gp1g)
+Migrate to GitHub actions (#157)"
 13,"
 Allow usage of user certificates (#131 by @KROSF)
 Add long press to copy message (#128 via #135 by @KROSF)
 Fix closed WebSocket connection on timeout (#129 via #137)
 Prevent duplicated WebSocket connections (#137)
-"
+","Allow usage of user certificates (#131 by @KROSF)
+Add long press to copy message (#128 via #135 by @KROSF)
+Fix closed WebSocket connection on timeout (#129 via #137)
+Prevent duplicated WebSocket connections (#137)"
 14,"
 Show app icon in notifications (#106 by @newhinton)
 Delete client on logout (#114)
 Fix scheduled reconnect (#117)
 Add share and push message support (#72 via #122 by @tomasvanagas)
 Fix uncaught exception while parsing message id (#119 via #127 and #125)
-"
+","Show app icon in notifications (#106 by @newhinton)
+Delete client on logout (#114)
+Fix scheduled reconnect (#117)
+Add share and push message support (#72 via #122 by @tomasvanagas)
+Fix uncaught exception while parsing message id (#119 via #127 and #125)"
 15,"
 Add dark mode (#26 via #110)
 Update dependencies (#110)
-"
+","Add dark mode (#26 via #110)
+Update dependencies (#110)"
 16,"
 Fix crash when login url has trailing whitespace (#96 by @leopoldsedev)
 Clear notifications on open app (#62 via #93 by @mzoeller)
@@ -85,18 +119,27 @@ Add delete message undo (#99 by @leopoldsedev)
 Show precise timestamp on click (#90 via #103 by @leopoldsedev)
 Add copy logs button (#57 via #105 by @happymario)
 Support data: image urls in markdown (#107 via #108)
-"
+","Fix crash when login url has trailing whitespace (#96 by @leopoldsedev)
+Clear notifications on open app (#62 via #93 by @mzoeller)
+Add 'no messages' text with explanation how to send messages (#97 by @leopoldsedev)
+Delete messages by swiping (#38 via #99 by @leopoldsedev)
+Add delete message undo (#99 by @leopoldsedev)
+Show precise timestamp on click (#90 via #103 by @leopoldsedev)
+Add copy logs button (#57 via #105 by @happymario)
+Support data: image urls in markdown (#107 via #108)"
 17,"
 Add support for open url on notification click (#66 via #91 by @mzoeller)
-"
+",Add support for open url on notification click (#66 via #91 by @mzoeller)
 18,"
 Cache images to disk (#88 by @dylanparker)
-"
+",Cache images to disk (#88 by @dylanparker)
 19,"
 Fix CVE-2019-11932 by removing the android-gif-drawable-library (#87)
 Update several dependencies (#87)
 Cache images in messages with picasso (#79 via #87)
-"
+","Fix CVE-2019-11932 by removing the android-gif-drawable-library (#87)
+Update several dependencies (#87)
+Cache images in messages with picasso (#79 via #87)"
 20,"
 Messages are now rendered as text/plain by default. In v2.0.6 it was text/markdown.
 
@@ -105,37 +148,53 @@ Use extra property to determine how the message content is rendered (#67)
   See https://gotify.net/docs/msgextras#client-display
 Fixed links in markdown messages (#70 fixed in #71)
 Added support for images and tables in markdown messages (#69 fixed in #71)
-"
+","Messages are now rendered as text/plain by default. In v2.0.6 it was text/markdown.
+Use extra property to determine how the message content is rendered (#67) 
+  See link
+Fixed links in markdown messages (#70 fixed in #71)
+Added support for images and tables in markdown messages (#69 fixed in #71)"
 21,"
 Show full url in connection string (#59 fixed in #60)
 Allow markdown in messages (#49 fixed in #64)
 Make message content copyable (#21 fixed in #64)
-"
+","Show full url in connection string (#59 fixed in #60)
+Allow markdown in messages (#49 fixed in #64)
+Make message content copyable (#21 fixed in #64)"
 22,"
 Fix styling of messages (#37 fixed in #54 by @hugegreenbug)
 Fix not loading images (#47)
 Listen to network changes to prevent unnecessary reconnects (#40 fixed in #41 by @eternal-flame-AD)
 Add android autolink to message item (#39 fixed in #43 by @eternal-flame-AD)
 Support relative image path (#46 by @eternal-flame-AD) see gotify/server#127
-"
+","Fix styling of messages (#37 fixed in #54 by @hugegreenbug)
+Fix not loading images (#47)
+Listen to network changes to prevent unnecessary reconnects (#40 fixed in #41 by @eternal-flame-AD)
+Add android autolink to message item (#39 fixed in #43 by @eternal-flame-AD)
+Support relative image path (#46 by @eternal-flame-AD) see gotify/server#127"
 23,"
 Start Gotify on boot (#25 fixed in #32 by @schwma)
 Make the foreground notification less intrusive (#30 fxied in #33 by @ialokim)
 Allow cleartext traffic (#31 fixed in #34)
 Limit the reconnect timeout https://github.com/gotify/android/commit/7da23cf94a8b3b340fad879bd8a7398184ddefc9
-"
+","Start Gotify on boot (#25 fixed in #32 by @schwma)
+Make the foreground notification less intrusive (#30 fxied in #33 by @ialokim)
+Allow cleartext traffic (#31 fixed in #34)
+Limit the reconnect timeout link"
 24,"
 HTTP2 Support (#24 fixed in #27)
-"
+",HTTP2 Support (#24 fixed in #27)
 25,"
 Support self-signed certificates (#13 fixed in #15 by @gjabell)
 Notification improvements (#18 partly fixed in #16 & #22 by @schwma)
 Add logs button to login (#23)
 Do not start message activity twice (#23)
-"
-26,
-27,
+","Support self-signed certificates (#13 fixed in #15 by @gjabell)
+Notification improvements (#18 partly fixed in #16 & #22 by @schwma)
+Add logs button to login (#23)
+Do not start message activity twice (#23)"
+26,,
+27,,
 28,"
 Remove unused permission (READ_PHONE_STATE)
-"
-29,Initial Release
+",Remove unused permission (READ_PHONE_STATE)
+29,Initial Release,Initial Release

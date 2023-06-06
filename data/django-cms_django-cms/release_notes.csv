@@ -1,0 +1,350 @@
+Index,Release Note,Release Note With Abstraction
+1,"Bugfixes wrt 4.1.0rc2
+
+Menu link is outdated when page moved (#7558)
+Preview button lead to the wrong language (#7558)
+empty actions shown without unwanted spaces (#7545) (#7552) (aee76b492) -- Fabian Braun
+","Bugfixes wrt 4.1.0rc2
+Menu link is outdated when page moved (#7558)
+Preview button lead to the wrong language (#7558)
+empty actions shown without unwanted spaces (#7545) (#7552) (aee76b492) -- Fabian Braun"
+2,"Features:
+
+Graceful plugin exceptions (#7423)
+Reintroduce indicator menus (#7426)
+Add release scripts for develop-4 branch (#7466)
+Icon update (#7494)
+Add setting to redirect slugs to lowercase et al. (#7510)
+Grouper model admin class
+Change TitleExtension to PageContentExtension (#7369)
+Optimize populating page content cache for Page model. (#7177)
+Unified icon font with icons for versioning, moderation and version locking
+Django 4.2, 4.1 and 4.0 support
+Python 3.11, 3.10 support
+Remove patching of PageContent by djangocms-versioning (#7446)
+Utility function get_placeholder_from_slot for PlaceholderRelationField (#7479)
+
+Bug Fixes:
+
+Language switching in page settings (#7507)
+Show language menu in toolbar only if at least two languages are configured (#7508)
+Moving plugins between placeholders, plugin api (#7394)
+Apphooks at endpoints (#7496)
+Fix bug that broke page tree if it contained empty page content
+Fix bug that created new page content not in the displayed language but the browser language
+Remove outdated Django setting SEND_BROKEN_LINK_EMAILS
+Fixed redirect issues when i18n_patterns had prefix_default_language = False
+add release scripts for develop-4 branch (#7466) (ddbc99a53) -- Fabian Braun
+
+Statistics:
+This release includes 145 pull requests, and was created with the help of the following contributors (in alphabetical order):
+
+Fabian Braun (55 pull requests)
+Mark Walker (1 pull request)
+Nebojsa Knezevic ( 1 pull request)
+
+With the review help of the following contributors:
+
+Andrew Aikman
+Fabian Braun
+Mark Walker
+
+Thanks to all contributors for their efforts!","Features:
+Graceful plugin exceptions (#7423)
+Reintroduce indicator menus (#7426)
+Add release scripts for develop-4 branch (#7466)
+Icon update (#7494)
+Add setting to redirect slugs to lowercase et al. (#7510)
+Grouper model admin class
+Change TitleExtension to PageContentExtension (#7369)
+Optimize populating page content cache for Page model. (#7177)
+Unified icon font with icons for versioning, moderation and version locking
+Django 4.2, 4.1 and 4.0 support
+Python 3.11, 3.10 support
+Remove patching of PageContent by djangocms-versioning (#7446)
+Utility function get_placeholder_from_slot for PlaceholderRelationField (#7479)
+Bug Fixes:
+Language switching in page settings (#7507)
+Show language menu in toolbar only if at least two languages are configured (#7508)
+Moving plugins between placeholders, plugin api (#7394)
+Apphooks at endpoints (#7496)
+Fix bug that broke page tree if it contained empty page content
+Fix bug that created new page content not in the displayed language but the browser language
+Remove outdated Django setting SEND_BROKEN_LINK_EMAILS
+Fixed redirect issues when i18n_patterns had prefix_default_language = False
+add release scripts for develop-4 branch (#7466) (ddbc99a53) -- Fabian Braun
+Statistics:
+This release includes 145 pull requests, and was created with the help of the following contributors (in alphabetical order):
+Fabian Braun (55 pull requests)
+Mark Walker (1 pull request)
+Nebojsa Knezevic ( 1 pull request)
+With the review help of the following contributors:
+Andrew Aikman
+Fabian Braun
+Mark Walker
+Thanks to all contributors for their efforts!"
+3,"Bug Fixes:
+
+Remove superfluous curly bracket left behind on PR 7488 (#7529) -- Corentin Bettiol
+Fix admin tests (#6848) for some post requests (#7535) -- Fabian Braun
+
+Statistics:
+This release includes 2 pull requests, and was created thanks to the following contributors (in alphabetical order):
+
+Corentin Bettiol (1 pull request)
+Fabian Braun (1 pull requests)
+
+With the review help of the following contributors:
+
+Fabian Braun
+Vinit Kumar
+
+Thanks to all contributors for their efforts!","Bug Fixes:
+Remove superfluous curly bracket left behind on PR 7488 (#7529) -- Corentin Bettiol
+Fix admin tests (#6848) for some post requests (#7535) -- Fabian Braun
+Statistics:
+This release includes 2 pull requests, and was created thanks to the following contributors (in alphabetical order):
+Corentin Bettiol (1 pull request)
+Fabian Braun (1 pull requests)
+With the review help of the following contributors:
+Fabian Braun
+Vinit Kumar
+Thanks to all contributors for their efforts!"
+4,"Features:
+
+add django 4.2 support (#7481) (5478faa5c) -- Vinit Kumar
+add setting to redirect slugs to lowercase (#7509) (01aedee9f) -- pajowu
+add setting so redirect preserves params (#7489) (dcb9c4b3a) -- Ivo Branco
+add download statistics to readme (#7474) (25b2303f7) -- Fabian Braun
+
+Bug Fixes:
+
+replace ' by ′ in fr translation − no more ""page d\u0027accueil""! (#7488) (b4acc9a6b) -- Corentin Bettiol
+Link both user and group from global page permissions to change form (#7486) (6cb47629b) -- Fabian Braun
+Build docs always from the current local version (#7472) (#7475) (7aaddd45a) -- Fabian Braun
+
+Statistics:
+This release includes 21 pull requests, and was created with the help of the following contributors (in alphabetical order):
+
+Corentin Bettiol (1 pull request)
+Danny Waser (1 pull request)
+Fabian Braun (10 pull requests)
+Ivo Branco (1 pull request)
+Jasper (1 pull request)
+Nihal Rahman (1 pull request)
+Vinit Kumar (3 pull requests)
+pajowu (1 pull request)
+
+With the review help of the following contributors:
+
+Fabian Braun
+Nihal
+Vinit Kumar
+
+Thanks to all contributors for their efforts!","Features:
+add django 4.2 support (#7481) (5478faa5c) -- Vinit Kumar
+add setting to redirect slugs to lowercase (#7509) (01aedee9f) -- pajowu
+add setting so redirect preserves params (#7489) (dcb9c4b3a) -- Ivo Branco
+add download statistics to readme (#7474) (25b2303f7) -- Fabian Braun
+Bug Fixes:
+replace ' by ′ in fr translation − no more ""page d\u0027accueil""! (#7488) (b4acc9a6b) -- Corentin Bettiol
+Link both user and group from global page permissions to change form (#7486) (6cb47629b) -- Fabian Braun
+Build docs always from the current local version (#7472) (#7475) (7aaddd45a) -- Fabian Braun
+Statistics:
+This release includes 21 pull requests, and was created with the help of the following contributors (in alphabetical order):
+Corentin Bettiol (1 pull request)
+Danny Waser (1 pull request)
+Fabian Braun (10 pull requests)
+Ivo Branco (1 pull request)
+Jasper (1 pull request)
+Nihal Rahman (1 pull request)
+Vinit Kumar (3 pull requests)
+pajowu (1 pull request)
+With the review help of the following contributors:
+Fabian Braun
+Nihal
+Vinit Kumar
+Thanks to all contributors for their efforts!"
+5,"4.1.0rc1
+
+Django 4.1 and 4.0 support
+Python 3.10 support
+Fix bug that broke page tree if it contained empty page content
+Fix bug that created new page content not in the displayed language but the browser language
+feat: graceful plugin exceptions. Exceptions when rendering a plugin are caught and logged
+Remove outdated Django setting SEND_BROKEN_LINK_EMAILS
+Introduce dropdown menus in the page tree for status indicators
+add release scripts for develop-4 branch (#7466) (ddbc99a53) 
+","4.1.0rc1
+Django 4.1 and 4.0 support
+Python 3.10 support
+Fix bug that broke page tree if it contained empty page content
+Fix bug that created new page content not in the displayed language but the browser language
+feat: graceful plugin exceptions. Exceptions when rendering a plugin are caught and logged
+Remove outdated Django setting SEND_BROKEN_LINK_EMAILS
+Introduce dropdown menus in the page tree for status indicators
+add release scripts for develop-4 branch (#7466) (ddbc99a53) "
+6,"Features:
+
+add Python 3.11 support for Django CMS (#7422) (3fe1449e6) -- Vinit Kumar
+Support for Django 4.1 (#7404) (777864af3) -- Fabian Braun
+Add support for tel: and mailto: URIs in Advanced Page Settings redirect field (#7370) (0fd058ed3) -- Mark Walker
+Improved dutch translations -- Stefan van den Eertwegh
+
+Bug Fixes:
+
+Prefer titles matching request language (#7144) (06c9a85df) -- Micah Denbraver
+Adds a deprecation warning for SEND_BROKEN_LINK_EMAILS (#7420) (d38f4a1cc) -- Fabian Braun
+Added deprecation warning to get_current_language() (#7410) (2788f75e6) -- Mark Walker
+CMS check management command fixed [#7412] (#7413) (dcf394bd5) -- ton77v
+Changing color scheme resets session settings to defaults (#7407) (fcfe77f63) -- Fabian Braun
+Clear page permission cache on page create (#6866) (e59c179dd) -- G3RB3N
+Unlocalize page and node ids when rendering the page tree in the admin (#7188) (9e3c57946) -- Marco Bonetti
+Allow partially overriding CMS_CACHE_DURATIONS (#7339) (162ff8dd8) -- Qijia Liu
+CMS check management command fixed [#7386] (cdcf260aa) -- Marco Bonetti
+default light mode (#7381) (abc6e6c5b) -- viliammihalik
+Added language to page cache key (#7354) (d5a9f49e6) -- Mark Walker
+
+Refactoring and Cleanups:
+
+Move js API functions to CMS.Helpers to make them available also to the admin site (#7384) (a7f8cd44f) -- Fabian Braun
+
+Statistics:
+This release  was created with the help of the following contributors (in alphabetical order):
+
+Fabian Braun
+G3RB3N
+Marco Benetti
+Mark Walker
+Micah Denbraver
+Qijia Liu
+Stefan van den Eertwegh
+villiammihalik
+Vinit Kumar
+
+With the review help of the following contributors:
+
+Cage Johnson
+Christian Clauss
+Conrad
+Dapo Adedire
+Fabian Braun
+Florian Delizy
+G3RB3N
+Hussein Srour
+Marco Bonetti
+Mark Walker
+Micah Denbraver
+Pankrat
+Patrick Mazulo
+Qijia Liu
+Shivan Sivakumaran
+Simon Krull
+Vinit Kumar
+code-review-doctor
+dependabot[bot]
+fsbraun
+jefe
+ton77v
+viliammihalik
+wesleysima
+
+Thanks to all contributors for their efforts!","Features:
+add Python 3.11 support for Django CMS (#7422) (3fe1449e6) -- Vinit Kumar
+Support for Django 4.1 (#7404) (777864af3) -- Fabian Braun
+Add support for tel: and mailto: URIs in Advanced Page Settings redirect field (#7370) (0fd058ed3) -- Mark Walker
+Improved dutch translations -- Stefan van den Eertwegh
+Bug Fixes:
+Prefer titles matching request language (#7144) (06c9a85df) -- Micah Denbraver
+Adds a deprecation warning for SEND_BROKEN_LINK_EMAILS (#7420) (d38f4a1cc) -- Fabian Braun
+Added deprecation warning to get_current_language() (#7410) (2788f75e6) -- Mark Walker
+CMS check management command fixed [#7412] (#7413) (dcf394bd5) -- ton77v
+Changing color scheme resets session settings to defaults (#7407) (fcfe77f63) -- Fabian Braun
+Clear page permission cache on page create (#6866) (e59c179dd) -- G3RB3N
+Unlocalize page and node ids when rendering the page tree in the admin (#7188) (9e3c57946) -- Marco Bonetti
+Allow partially overriding CMS_CACHE_DURATIONS (#7339) (162ff8dd8) -- Qijia Liu
+CMS check management command fixed [#7386] (cdcf260aa) -- Marco Bonetti
+default light mode (#7381) (abc6e6c5b) -- viliammihalik
+Added language to page cache key (#7354) (d5a9f49e6) -- Mark Walker
+Refactoring and Cleanups:
+Move js API functions to CMS.Helpers to make them available also to the admin site (#7384) (a7f8cd44f) -- Fabian Braun
+Statistics:
+This release  was created with the help of the following contributors (in alphabetical order):
+Fabian Braun
+G3RB3N
+Marco Benetti
+Mark Walker
+Micah Denbraver
+Qijia Liu
+Stefan van den Eertwegh
+villiammihalik
+Vinit Kumar
+With the review help of the following contributors:
+Cage Johnson
+Christian Clauss
+Conrad
+Dapo Adedire
+Fabian Braun
+Florian Delizy
+G3RB3N
+Hussein Srour
+Marco Bonetti
+Mark Walker
+Micah Denbraver
+Pankrat
+Patrick Mazulo
+Qijia Liu
+Shivan Sivakumaran
+Simon Krull
+Vinit Kumar
+code-review-doctor
+dependabot[bot]
+fsbraun
+jefe
+ton77v
+viliammihalik
+wesleysima
+Thanks to all contributors for their efforts!"
+7,"Features:
+
+add Python 3.11 support for Django CMS (#7422) (3fe1449e6) -- Vinit Kumar
+Support for Django 4.1 (#7404) (777864af3) -- Fabian Braun
+Add support for tel: and mailto: URIs in Advanced Page Settings redirect field (#7370) (0fd058ed3) -- Mark Walker
+Improved dutch translations -- Stefan van den Eertwegh
+
+Bug Fixes:
+
+Prefer titles matching request language (#7144) (06c9a85df) -- Micah Denbraver
+Adds a deprecation warning for SEND_BROKEN_LINK_EMAILS (#7420) (d38f4a1cc) -- Fabian Braun
+Added deprecation warning to get_current_language() (#7410) (2788f75e6) -- Mark Walker
+CMS check management command fixed [#7412] (#7413) (dcf394bd5) -- ton77v
+Changing color scheme resets session settings to defaults (#7407) (fcfe77f63) -- Fabian Braun
+Clear page permission cache on page create (#6866) (e59c179dd) -- G3RB3N
+Unlocalize page and node ids when rendering the page tree in the admin (#7188) (9e3c57946) -- Marco Bonetti
+Allow partially overriding CMS_CACHE_DURATIONS (#7339) (162ff8dd8) -- Qijia Liu
+CMS check management command fixed [#7386] (cdcf260aa) -- Marco Bonetti
+default light mode (#7381) (abc6e6c5b) -- viliammihalik
+Added language to page cache key (#7354) (d5a9f49e6) -- Mark Walker
+
+Refactoring and Cleanups:
+
+Move js API functions to CMS.Helpers to make them available also to the admin site (#7384) (a7f8cd44f) -- Fabian Braun
+","Features:
+add Python 3.11 support for Django CMS (#7422) (3fe1449e6) -- Vinit Kumar
+Support for Django 4.1 (#7404) (777864af3) -- Fabian Braun
+Add support for tel: and mailto: URIs in Advanced Page Settings redirect field (#7370) (0fd058ed3) -- Mark Walker
+Improved dutch translations -- Stefan van den Eertwegh
+Bug Fixes:
+Prefer titles matching request language (#7144) (06c9a85df) -- Micah Denbraver
+Adds a deprecation warning for SEND_BROKEN_LINK_EMAILS (#7420) (d38f4a1cc) -- Fabian Braun
+Added deprecation warning to get_current_language() (#7410) (2788f75e6) -- Mark Walker
+CMS check management command fixed [#7412] (#7413) (dcf394bd5) -- ton77v
+Changing color scheme resets session settings to defaults (#7407) (fcfe77f63) -- Fabian Braun
+Clear page permission cache on page create (#6866) (e59c179dd) -- G3RB3N
+Unlocalize page and node ids when rendering the page tree in the admin (#7188) (9e3c57946) -- Marco Bonetti
+Allow partially overriding CMS_CACHE_DURATIONS (#7339) (162ff8dd8) -- Qijia Liu
+CMS check management command fixed [#7386] (cdcf260aa) -- Marco Bonetti
+default light mode (#7381) (abc6e6c5b) -- viliammihalik
+Added language to page cache key (#7354) (d5a9f49e6) -- Mark Walker
+Refactoring and Cleanups:
+Move js API functions to CMS.Helpers to make them available also to the admin site (#7384) (a7f8cd44f) -- Fabian Braun"
