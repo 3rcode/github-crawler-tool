@@ -1,4 +1,3 @@
-import spacy
 import numpy as np
 import pandas as pd
 import os
@@ -10,7 +9,6 @@ from sklearn.metrics import f1_score
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-nlp = spacy.load('en_core_web_lg')
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 word2idx = {}
 max_commit_length = 30

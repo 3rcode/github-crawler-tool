@@ -1,5 +1,16 @@
-Index,Release Note,Release Note With Abstraction
-1,"Here is a list of all changes since last stable release android/2022.3:
+Index,Release Note,Release Note Abstract
+1,"Changed
+Android
+
+Change so that all links and texts leading to the account web page (which also includes a payment
+  flow) are either hidden or leads to the app itself (notification actions) in order to comply with
+  the Google Play payment policies. This doesn't apply to F-Droid builds.
+","Changed
+Android
+Change so that all links and texts leading to the account web page (which also includes a payment
+  flow) are either hidden or leads to the app itself (notification actions) in order to comply with
+  the Google Play payment policies. This doesn't apply to F-Droid builds."
+2,"Here is a list of all changes since last stable release android/2022.3:
 Added
 Android
 
@@ -40,7 +51,7 @@ Android
 Fix adaptive app icon which previously had a displaced nose and some other oddities.
 Fix app version sometimes missing in the settings menu.
 Fix missing payment info in out-of-time view."
-2,"Added
+3,"Added
 Android
 
 Add ""Manage account"" button to the account view.
@@ -55,7 +66,7 @@ Add ""Manage account"" button to the account view.
 Fixed
 Android
 Fix missing payment info in out-of-time view."
-3,"Added
+4,"Added
 Android
 
 Add themed icon.
@@ -90,7 +101,7 @@ Fixed
 Android
 Fix adaptive app icon which previously had a displaced nose and some other oddities.
 Fix app version sometimes missing in the settings menu."
-4,"This release is for desktop only.
+5,"This release is for desktop only.
 Added
 
 Log select settings on each connection attempt.
@@ -159,71 +170,6 @@ Fix issue where app stopped responding on ARM Macs.
 Linux
 Fix RPM package containing unecessary files causing conflicts with other electron-builder based
   packages."
-5,"Added
-
-Add Kyber1024 KEM algorithm into the Post-Quantum secure key exchange algorithm. This means the
-  Quantum-resistant-tunnels feature now mixes both Classic McEliece and Kyber for added protection.
-Add notification dot to tray icon and system notification throttling.
-Add troubleshooting information to some in-app notifications.
-Add setting for quantum resistant tunnels to the desktop GUI.
-Enable TCP_NODELAY for the socket used by WireGuard over TCP. Improves latency and performance.
-
-Changed
-
-Update the Post-Quantum secure key exchange gRPC client to use the stabilized
-  PskExchangeV1 endpoint
-Add ""auto"" setting for the quantum-resistant tunnel feature, and make it the default. If it was
-  previously set to off, it will now be set to auto instead. That currently means the same thing as
-  ""off"", but this might change in the future.
-Update OpenVPN to 2.6.0 from 2.5.3.
-Update OpenSSL to 1.1.1t from 1.1.1j.
-Post-Quantum secure tunnels and multihop can now be used at the same time.
-Change WireGuard key rotation interval to 14 days. It was 7 days.
-
-Windows
-
-Remove automatic fallback to wireguard-go. This is done as a first step before fully
-  deprecating it on Windows.
-
-Removed
-
-Remove port 443 as valid port for WireGuard over TCP. Keep only port 80 and 5001. The reason is
-  to free up port 443 for other TCP based obfuscation later.
-
-Fixed
-
-Fix close to expiry notification not showing unless app is opened once within the last three days
-  in the desktop app.
-Retry if PQ PSK negotiation fails for any reason.
-Fix accumulated tunnel state notifications sometimes displayed after suspend.
-","Added
-Add Kyber1024 KEM algorithm into the Post-Quantum secure key exchange algorithm. This means the
-  Quantum-resistant-tunnels feature now mixes both Classic McEliece and Kyber for added protection.
-Add notification dot to tray icon and system notification throttling.
-Add troubleshooting information to some in-app notifications.
-Add setting for quantum resistant tunnels to the desktop GUI.
-Enable TCP_NODELAY for the socket used by WireGuard over TCP. Improves latency and performance.
-Changed
-Update the Post-Quantum secure key exchange gRPC client to use the stabilized
-  PskExchangeV1 endpoint
-Add ""auto"" setting for the quantum-resistant tunnel feature, and make it the default. If it was
-  previously set to off, it will now be set to auto instead. That currently means the same thing as
-  ""off"", but this might change in the future.
-Update OpenVPN to 2.6.0 from 2.5.3.
-Update OpenSSL to 1.1.1t from 1.1.1j.
-Post-Quantum secure tunnels and multihop can now be used at the same time.
-Change WireGuard key rotation interval to 14 days. It was 7 days.
-Windows
-Remove automatic fallback to wireguard-go. This is done as a first step before fully
-  deprecating it on Windows.
-Removed
-Remove port 443 as valid port for WireGuard over TCP. Keep only port 80 and 5001. The reason is
-  to free up port 443 for other TCP based obfuscation later.
-Fixed
-Fix close to expiry notification not showing unless app is opened once within the last three days
-  in the desktop app.
-Retry if PQ PSK negotiation fails for any reason.
-Fix accumulated tunnel state notifications sometimes displayed after suspend."
 6,"Added
 
 Add Kyber1024 KEM algorithm into the Post-Quantum secure key exchange algorithm. This means the
@@ -243,6 +189,71 @@ Add ""auto"" setting for the quantum-resistant tunnel feature, and make it the d
 Update OpenVPN to 2.6.0 from 2.5.3.
 Update OpenSSL to 1.1.1t from 1.1.1j.
 Post-Quantum secure tunnels and multihop can now be used at the same time.
+Change WireGuard key rotation interval to 14 days. It was 7 days.
+
+Windows
+
+Remove automatic fallback to wireguard-go. This is done as a first step before fully
+  deprecating it on Windows.
+
+Removed
+
+Remove port 443 as valid port for WireGuard over TCP. Keep only port 80 and 5001. The reason is
+  to free up port 443 for other TCP based obfuscation later.
+
+Fixed
+
+Fix close to expiry notification not showing unless app is opened once within the last three days
+  in the desktop app.
+Retry if PQ PSK negotiation fails for any reason.
+Fix accumulated tunnel state notifications sometimes displayed after suspend.
+","Added
+Add Kyber1024 KEM algorithm into the Post-Quantum secure key exchange algorithm. This means the
+  Quantum-resistant-tunnels feature now mixes both Classic McEliece and Kyber for added protection.
+Add notification dot to tray icon and system notification throttling.
+Add troubleshooting information to some in-app notifications.
+Add setting for quantum resistant tunnels to the desktop GUI.
+Enable TCP_NODELAY for the socket used by WireGuard over TCP. Improves latency and performance.
+Changed
+Update the Post-Quantum secure key exchange gRPC client to use the stabilized
+  PskExchangeV1 endpoint
+Add ""auto"" setting for the quantum-resistant tunnel feature, and make it the default. If it was
+  previously set to off, it will now be set to auto instead. That currently means the same thing as
+  ""off"", but this might change in the future.
+Update OpenVPN to 2.6.0 from 2.5.3.
+Update OpenSSL to 1.1.1t from 1.1.1j.
+Post-Quantum secure tunnels and multihop can now be used at the same time.
+Change WireGuard key rotation interval to 14 days. It was 7 days.
+Windows
+Remove automatic fallback to wireguard-go. This is done as a first step before fully
+  deprecating it on Windows.
+Removed
+Remove port 443 as valid port for WireGuard over TCP. Keep only port 80 and 5001. The reason is
+  to free up port 443 for other TCP based obfuscation later.
+Fixed
+Fix close to expiry notification not showing unless app is opened once within the last three days
+  in the desktop app.
+Retry if PQ PSK negotiation fails for any reason.
+Fix accumulated tunnel state notifications sometimes displayed after suspend."
+7,"Added
+
+Add Kyber1024 KEM algorithm into the Post-Quantum secure key exchange algorithm. This means the
+  Quantum-resistant-tunnels feature now mixes both Classic McEliece and Kyber for added protection.
+Add notification dot to tray icon and system notification throttling.
+Add troubleshooting information to some in-app notifications.
+Add setting for quantum resistant tunnels to the desktop GUI.
+Enable TCP_NODELAY for the socket used by WireGuard over TCP. Improves latency and performance.
+
+Changed
+
+Update the Post-Quantum secure key exchange gRPC client to use the stabilized
+  PskExchangeV1 endpoint
+Add ""auto"" setting for the quantum-resistant tunnel feature, and make it the default. If it was
+  previously set to off, it will now be set to auto instead. That currently means the same thing as
+  ""off"", but this might change in the future.
+Update OpenVPN to 2.6.0 from 2.5.3.
+Update OpenSSL to 1.1.1t from 1.1.1j.
+Post-Quantum secure tunnels and multihop can now be used at the same time.
 
 Windows
 
@@ -287,7 +298,7 @@ Fix close to expiry notification not showing unless app is opened once within th
   in the desktop app.
 Retry if PQ PSK negotiation fails for any reason.
 Fix accumulated tunnel state notifications sometimes displayed after suspend."
-7,"This release is for desktop only.
+8,"This release is for desktop only.
 Fixed
 Windows
 
@@ -302,7 +313,7 @@ Fix desktop app not quitting properly after switching from unpinned to pinned wi
 Fix service not starting when LSA protection is enabled (which is the default on Windows 11 22H2).
 Fix some issues with setting system DNS by using SetInterfaceDnsSettings when it's available (on
   Windows 10, version 1809 and above)."
-8,"This release is for desktop only.
+9,"This release is for desktop only.
 Here is a list of all changes since last stable release 2022.5.
 Added
 
@@ -405,7 +416,7 @@ Security
 Windows
 DNS loopback traffic is no longer blocked. Note that local resolvers are still unable to forward
   queries to servers that would normally be blocked."
-9,"Fixed
+10,"Fixed
 
 Fix sorting of devices in the ""too many devices""-view to properly sort on device creation time.
 
@@ -422,7 +433,7 @@ Improved reliability of the connectivity check workaround by adding an extra cap
   domain.
 Show ""Mullvad VPN"" in the Login Items UI instead of ""Amagicom AB"". 
 Detect whether users need to approve the launch daemon in the Login Items UI."
-10,"Added
+11,"Added
 
 Add quit button to tray context menu on Linux and Window.
 Add search bar to location list in desktop app. 
@@ -505,14 +516,14 @@ Security
 Windows
 DNS loopback traffic is no longer blocked. Note that local resolvers are still unable to forward
   queries to servers that would normally be blocked."
-11,"Added
+12,"Added
 
 Add privacy policy link in settings
 Add initial privacy consent which is showed on each start until approved
 ","Added
 Add privacy policy link in settings
 Add initial privacy consent which is showed on each start until approved"
-12,"This release is for Android only. Here's a list of the changes since last stable release android/2022.1:
+13,"This release is for Android only. Here's a list of the changes since last stable release android/2022.1:
 Added
 Android
 
@@ -575,7 +586,7 @@ Security
 Android
 Prevent location request responses from being received outside the tunnel when in the connected
   state."
-13,"This release is for desktop only.
+14,"This release is for desktop only.
 Here is a list of all changes since last stable release 2022.4.
 Added
 
@@ -718,7 +729,7 @@ Linux
 Added traffic blocking during early boot, before the daemon starts, to prevent leaks in the case
   that the system service starts after a networking daemon has already configured a network
   interface."
-14,"Added
+15,"Added
 
 Add custom option to WireGuard port selector.
 
@@ -743,7 +754,7 @@ Experimental: Upgrade the support for quantum-resistant WireGuard tunnels to a n
 Fixed
 Linux
 Fix app crashing immediately when using some icon themes."
-15,"Added
+16,"Added
 
 Add obfuscation settings under ""WireGuard settings"".
 
@@ -872,7 +883,7 @@ Linux
 Added traffic blocking during early boot, before the daemon starts, to prevent leaks in the case
   that the system service starts after a networking daemon has already configured a network
   interface."
-16,"Changed
+17,"Changed
 Android
 
 Refresh device data when opening the account view to ensure the local data is up-to-date and that
@@ -899,7 +910,7 @@ Fix tunnel info expansion state not remembered during pause and resume.
 Fix crash during some view transitions.
 Fix disabled login button on login failure. Instead, the login button will now still be enabled
   on login failures to let the user re-attempt the login."
-17,"Added
+18,"Added
 Windows
 
 Windows daemon now looks up the MTU on the default interface and uses this MTU instead of the
@@ -926,7 +937,7 @@ Lower the max MTU from the automatic MTU detection down to 1380,
   which was the hardcoded default before the automatic detection was implemented.
   This solves issues where the physical interface MTU was set higher than it could
   actually transport."
-18,"Added
+19,"Added
 Android
 
 Add device management to the Android app. This simplifies knowing which device is which and adds 
@@ -981,10 +992,10 @@ Security
 Android
 Prevent location request responses from being received outside the tunnel when in the connected
   state."
-19,"This release is for desktop only.
+20,"This release is for desktop only.
 This release is identical to 2022.3-beta3.","This release is for desktop only.
 This release is identical to 2022.3-beta3."
-20,"Fixed
+21,"Fixed
 
 Fix showing incompatible relay filtering options in desktop app. The filtering options are now
   dependent on the other filters.
@@ -1015,7 +1026,7 @@ Windows
 Fix potential leak window when stopping the service and auto-connect is enabled and always
   require VPN is disabled. When stopped, usually due to a reboot, the daemon would disconnect
   before entering a blocking state."
-21,"This release is a small bugfix release that only affects Windows. Linux and macOS has no changes at all in this release, compared to 2022.3-beta1.
+22,"This release is a small bugfix release that only affects Windows. Linux and macOS has no changes at all in this release, compared to 2022.3-beta1.
 Fixed
 Windows
 
@@ -1026,7 +1037,7 @@ Fixed
 Windows
 Fix DNS issue on non-English Windows installations. Don't parse the output of ipconfig.exe
   to determine if the tool succeeded."
-22,"Added
+23,"Added
 
 Add option to filter relays by ownership in the desktop apps.
 Experimental: Add support for quantum-resistant PSK exchange to the CLI.
@@ -1073,7 +1084,7 @@ Be more scrupulous about removing temporary files used by the installer and unin
 Fix issue where local name resolution fails. This requires users to ensure that non-tunnel
   interfaces are configured correctly to use local custom DNS.
 Configure DNS correctly when the DNS client service is disabled or not responding."
-23,"This release is for desktop only.
+24,"This release is for desktop only.
 Here is a list of all changes since last stable release 2022.1.
 Added
 
@@ -1204,7 +1215,7 @@ Security
 Windows
 Update split tunnel driver to 1.2.1.0. This fixes potential DNS leaks seen when excluding at least
   one application."
-24,"Added
+25,"Added
 
 Include creation timestamp for devices in the CLI.
 
@@ -1221,7 +1232,7 @@ Changed
 List devices on an account sorted by creation date, oldest to newest, instead of alphabetically.
 Fixed
 Fix logout failing if the API cannot be reached in the GUI."
-25,"Added
+26,"Added
 
 Extend DNS blocking with the following new categories: ""Adult content"" and ""gambling"".
 Obfuscate traffic to the Mullvad API using bridges if it cannot be reached directly.
@@ -1342,7 +1353,7 @@ Security
 Windows
 Update split tunnel driver to 1.2.1.0. This fixes potential DNS leaks seen when excluding at least
   one application."
-26,"This release is for desktop only.
+27,"This release is for desktop only.
 Here is a list of all changes since last stable release 2021.6.
 Added
 
@@ -1509,7 +1520,7 @@ Restrict which applications are allowed to communicate with the API while in a b
   whereas on Linux and macOS only root processes are able to reach the API.
 Enable ""Always require VPN"" by default if the settings cannot be parsed. This reduces the number
   of errors that lead to the daemon unexpectedly starting into non-blocking mode."
-27,"This release is for Android only.
+28,"This release is for Android only.
 Here is a list of all changes since last stable release 2021.1.
 Added
 Android
@@ -1600,7 +1611,7 @@ Fix TV-only apps not appearing in the Split Tunneling screen.
 Fix status bar having the wrong color after logging out.
 Fix app sometimes crashing during startup on Android TVs.
 Fix app crash caused by quick settings tile."
-28,"Added
+29,"Added
 
 Show warning message when blocking internet while logged out, and make it possible to unblock the
   connection from the login view.
@@ -1629,7 +1640,7 @@ Increase availability of the API by allowing to issue requests to the API when c
 Security
 Enable ""Always require VPN"" by default if the settings cannot be parsed. This reduces the number
   of errors that lead to the daemon unexpectedly starting into non-blocking mode."
-29,"Added
+30,"Added
 
 Add information about the always on kill switch in the desktop app.
 Add WireGuard multihop setting and entry location selection to desktop app.
@@ -1774,21 +1785,21 @@ Restrict which applications are allowed to communicate with the API while in a b
   This prevents malicious scripts on websites from trying to do so. On Windows, only
   mullvad-problem-report.exe and mullvad-daemon.exe executables are allowed to reach the API,
   whereas on Linux and macOS only root processes are able to reach the API."
-30,"Fixed
+31,"Fixed
 Android
 
 Fix app crash caused by quick settings tile.
 ","Fixed
 Android
 Fix app crash caused by quick settings tile."
-31,"Fixed
+32,"Fixed
 Android
 
 Fix app sometimes crashing during startup on Android TVs.
 ","Fixed
 Android
 Fix app sometimes crashing during startup on Android TVs."
-32,"Added
+33,"Added
 Android
 
 Add toggle for Split tunneling view to be able to show system apps
@@ -1871,7 +1882,7 @@ Fix request to connect from notification or quick-settings tile not connecting i
 Fix quick-settings tile sometimes showing the wrong tunnel state.
 Fix TV-only apps not appearing in the Split Tunneling screen.
 Fix status bar having the wrong color after logging out."
-33,"Except the below, this is identical to 2021.6-beta1, see that change log for all changes since last stable release.
+34,"Except the below, this is identical to 2021.6-beta1, see that change log for all changes since last stable release.
 Fixed
 
 Fix the font for Russian. Issue introduced in 2021.6-beta1.
@@ -1880,7 +1891,7 @@ Fix the font for Russian. Issue introduced in 2021.6-beta1.
 Fixed
 Fix the font for Russian. Issue introduced in 2021.6-beta1.
   Bundle a version of Source Sans Pro containing Cyrillic."
-34,"Added
+35,"Added
 Windows
 
 Add black monochromatic tray icon for Windows when using light color for tray.
@@ -1971,10 +1982,10 @@ Move window after dragging tray icon to new position.
 Linux
 Greatly simplify behavior around custom DNS when using systemd-resolved, by not setting DNS config on interfaces other
   than our tunnel interface."
-35,"This release is for desktop only.
+36,"This release is for desktop only.
 This release is identical to 2021.5-beta2 except that it has translations for new texts in the UI.","This release is for desktop only.
 This release is identical to 2021.5-beta2 except that it has translations for new texts in the UI."
-36,"This release only has changes for macOS.
+37,"This release only has changes for macOS.
 Fixed
 macOS
 
@@ -1983,7 +1994,7 @@ Fix issue with getting PF status due to an ABI change on macOS 12 Beta 9.
 Fixed
 macOS
 Fix issue with getting PF status due to an ABI change on macOS 12 Beta 9."
-37,"Added
+38,"Added
 
 Added possibility to filter locations by provider in the desktop app.
 Add ability to use WireGuard over TCP towards all relays via the desktop CLI. However,
@@ -2150,10 +2161,10 @@ Android
 Fix erasing wireguard MTU value in some scenarious.
 Fix initial state of Split tunneling excluded apps list. Previously it was not notified the daemon
 properly after initialization."
-38,"This release is for desktop only.
+39,"This release is for desktop only.
 This release is identical to 2021.4-beta1 except that it has translations for new texts in the UI.","This release is for desktop only.
 This release is identical to 2021.4-beta1 except that it has translations for new texts in the UI."
-39,"This release is for desktop only.
+40,"This release is for desktop only.
 Added
 
 When MULLVAD_MANAGEMENT_SOCKET_GROUP is set, only allow the specified group to access the
@@ -2292,13 +2303,13 @@ Security
 Linux
 Drop packets being forwarded unless they are approved by the same rules as incoming or outgoing
   traffic."
-40,"This release is for Android only.
+41,"This release is for Android only.
 This release is identical to 2021.1-beta1.","This release is for Android only.
 This release is identical to 2021.1-beta1."
-41,"This release is for desktop only.
+42,"This release is for desktop only.
 This release is identical to 2021.3-beta2.","This release is for desktop only.
 This release is identical to 2021.3-beta2."
-42,"This release is for Windows only.
+43,"This release is for Windows only.
 This release has no functional changes compared to 2021.3-beta1. The only
 difference is that the installer and the binaries are signed with our
 new code signing certificate. The old one is expiring.
@@ -2309,7 +2320,7 @@ difference is that the installer and the binaries are signed with our
 new code signing certificate. The old one is expiring.
 The new certificate is brand new and Windows does not really trust it yet.
 So there might be warnings when installing this for a while."
-43,"This release is for desktop only.
+44,"This release is for desktop only.
 Added
 
 Preserve log of old daemon instance when upgrading on Desktop.
@@ -2366,7 +2377,7 @@ Fix status bar having the wrong color after logging out.
 Security
 Always reconnect appropriately after an upgrade. Previously, installing the app twice in
   succession, with auto-connect disabled, would cause it to re-launch in the disconnected state."
-44,"This release is for Android only. From now on, Android releases will have this new header format
+45,"This release is for Android only. From now on, Android releases will have this new header format
 that is the same as the git tag they receive: android/<version>.
 Added
 
@@ -2459,10 +2470,10 @@ Fix DNS issues where NM would overwrite Mullvad tunnel's DNS config in systemd-r
 Fix issues with hosts where the firewall is doing reverse path filtering.
 Android
 Fix input area sometimes disappearing when returning to the Login screen."
-45,"This release is for desktop only.
+46,"This release is for desktop only.
 This release is identical to 2021.2-beta1, see that change log for all changes since last stable release.","This release is for desktop only.
 This release is identical to 2021.2-beta1, see that change log for all changes since last stable release."
-46,"Fixed
+47,"Fixed
 Linux
 
 Fix crash when trying to apply IPv6 routes for OpenVPN when IPv6 is disabled.
@@ -2481,14 +2492,14 @@ Ignore failure to add IPv6 split-tunneling routing rules when they fail due to I
 Windows
 Fix failure when Wintun adapter name conflicts with that of a non-Wintun adapter.
 Fix detection of SetupAPI patch when not installed by KB2921916."
-47,"Fixed
+48,"Fixed
 
 Fix crash on desktop when entering problem report view when using an outdated app version.
 
 The rest is identical to 2021.1-beta2, see that change log and previous betas for all changes since last stable release.","Fixed
 Fix crash on desktop when entering problem report view when using an outdated app version.
 The rest is identical to 2021.1-beta2, see that change log and previous betas for all changes since last stable release."
-48,"Fixed
+49,"Fixed
 
 Make it impossible to apply an empty list of custom DNS server IPs. 
   Stops the daemon from getting stuck in the offline state on macOS.
@@ -2503,7 +2514,7 @@ Make it impossible to apply an empty list of custom DNS server IPs.
 Windows
 Only load and unload the Wintun driver once instead of on every connection.
   Will hopefully fix an issue where it gave an error"
-49,"This release is for desktop only.
+50,"This release is for desktop only.
 Added
 
 Add header containing OS version to version-check API call to enable OS specific compatibility and
@@ -2604,7 +2615,7 @@ Prevent the private tunnel IPv6 address from being detectable on a local network
 Windows
 Deny network access to the OpenVPN plugin pipe, which allowed for anonymous write access when
   passwordless file sharing was enabled."
-50,"This release is for desktop only. Most actual changes are listed in the changelog for android/2020.8-beta1.
+51,"This release is for desktop only. Most actual changes are listed in the changelog for android/2020.8-beta1.
 Added
 Android
 
@@ -2631,7 +2642,7 @@ Fixed
 Android
 Fix login appearing to be cancelled after leaving the login screen while logging in.
 Fix login input area missing some times when opening the login screen."
-51,"This release is for Android only.
+52,"This release is for Android only.
 Added
 
 Improve accessibility in the desktop app. UI elements now have the correct role
@@ -2828,10 +2839,10 @@ Force OpenVPN to use TLS 1.3 or newer.
 Windows
 Block all traffic received or sent before the BFE service and daemon service have started during
   boot, if ""Always require VPN"" or auto-connect is enabled."
-52,"This release is identical to 2020.7-beta2, see that change log and 2020.7-beta1 for all changes since last stable release.
+53,"This release is identical to 2020.7-beta2, see that change log and 2020.7-beta1 for all changes since last stable release.
 This release has no differences for Windows and macOS compared to 2020.6. This release is just to address a number of DNS, routing and other networking issues present on Linux in version 2020.6.","This release is identical to 2020.7-beta2, see that change log and 2020.7-beta1 for all changes since last stable release.
 This release has no differences for Windows and macOS compared to 2020.6. This release is just to address a number of DNS, routing and other networking issues present on Linux in version 2020.6."
-53,"This release is for desktop only. It only has changes for Linux
+54,"This release is for desktop only. It only has changes for Linux
 Fixed
 Linux
 
@@ -2840,7 +2851,7 @@ Parse routes more permissively and log parsing errors less verbosely.
 Fixed
 Linux
 Parse routes more permissively and log parsing errors less verbosely."
-54,"This release is for desktop only. It only has changes for Linux.
+55,"This release is for desktop only. It only has changes for Linux.
 Fixed
 Linux
 
@@ -2869,10 +2880,10 @@ Apply DNS config quicker when managing DNS via NetworkManager.
 When NetworkManager is managing /etc/resolv.conf but ultimately using systemd-resolved, use
   systemd-resolved directly to manage DNS. 
 Only use WireGuard kernel implementation if DNS isn't managed via NetworkManager."
-55,"This release is for desktop only.
+56,"This release is for desktop only.
 Except for updated GUI translations, the rest is identical to 2020.6-beta3, see that change log for all changes since last stable release.","This release is for desktop only.
 Except for updated GUI translations, the rest is identical to 2020.6-beta3, see that change log for all changes since last stable release."
-56,"This release is for desktop only.
+57,"This release is for desktop only.
 Added
 Linux
 
@@ -2941,7 +2952,7 @@ Honor routes other than the default route with mullvad-exclude. This is mainly t
   routing within LANs.
 Security
 Stop resetting the firewall after an upgrade to not leak after an upgrade."
-57,"Added
+58,"Added
 
 Save application logs to file.
 Add button to reconnect the tunnel.
@@ -2978,7 +2989,7 @@ Remove the WireGuard key from the account inside the VPN tunnel during the log o
   active at that time. Before it would always remove it outside the tunnel.
 Turn off WireGuard backend when there are no active network interfaces available. Saves battery.
 Switch from JSON-RPC to REST communication protocol when talking to Mullvad API servers."
-58,"This release is for Android only.
+59,"This release is for Android only.
 Added
 
 Add CLI command to set the location constraint via mullvad relay set relay HOSTNAME.
@@ -3027,7 +3038,7 @@ Show ""Exclude applications"" header if needed when entering the ""Split tunneli
 Fix check for update versions and check for support for current version.
 Fix crash that could happen when leaving the Select Location screen.
 Don't show out-of-time notification for newly created accounts."
-59,"This release is Android only.
+60,"This release is Android only.
 Added
 
 Show system notification when account has expired.
@@ -3146,14 +3157,14 @@ Linux
 Fix systemd-resolved DNS management by not parsing /etc/resolv.conf.
 Fix issue where DNS configuration would not be reset when NetworkManager was used and the daemon
   was stopped ungracefully. This persisted after reboots."
-60,"Added
+61,"Added
 
 Add Korean, Polish and Thai languages to the desktop app.
 
 The rest is identical to 2020.5-beta2, see that change log for all changes since last stable release.","Added
 Add Korean, Polish and Thai languages to the desktop app.
 The rest is identical to 2020.5-beta2, see that change log for all changes since last stable release."
-61,"Added
+62,"Added
 Android
 
 Add buttons to buy credit and redeem voucher in Account screen.
@@ -3286,7 +3297,7 @@ Ignore touch events when another view is shown on top of the app in order to pre
   attacks. Fixes audit ticket MUL-02-003.
 Prevent screens showing potentially sensitive data from being recorded. Fixes audit
   ticket MUL-02-003."
-62,"This release is Android only
+63,"This release is Android only
 Added
 
 Add a new Let's Encrypt root certificate.
@@ -3367,7 +3378,7 @@ Fix UI losing any settings updates that happen after leaving the app and then co
 Fix account expiration date disappearing in some circumstances.
 Fix notification reappearing after quitting the application.
 Retry when fetching account expiration fails."
-63,"This release is for desktop only. This release is identical to 2020.4-beta4.
+64,"This release is for desktop only. This release is identical to 2020.4-beta4.
 For the changes since last stable release see the changelogs for all the betas since then:
 * 2020.4-beta1.
 * 2020.4-beta2.
@@ -3378,7 +3389,7 @@ For the changes since last stable release see the changelogs for all the betas s
 * 2020.4-beta2.
 * 2020.4-beta3.
 * 2020.4-beta4."
-64,"Fixed
+65,"Fixed
 
 Fix bogus or absent update notifications on the desktop app due to incorrect deserialization of a 
   struct sent from the daemon.
@@ -3399,7 +3410,7 @@ App will now use packaged relay list if it's newer than the cached one.
 Fix relay list sort order
 Windows
 Remove all log files on uninstall. Clear install.log on upgrades."
-65,"Added
+66,"Added
 
 Add shell completions for the mullvad CLI. Installed for bash and zsh on Linux and zsh on macOS.
 
@@ -3472,7 +3483,7 @@ Ship native Node modules unpacked to prevent malware checks by macOS on each run
 Android
 Fix failure to create tunnel when app is started with auto-connect enabled. This would sometimes
   lead to a traffic leak."
-66,"This release is desktop (Windows, macOS and Linux) only.
+67,"This release is desktop (Windows, macOS and Linux) only.
 Please note that a lot of desktop changes happened in 2020.4-beta1 but the binaries were never published. So see that changelog also for the full list of changes since the last desktop release.
 Added
 
@@ -3513,7 +3524,7 @@ Formalize what operating system versions we support in the readme. In practice
 Windows
 Windows 7 only: Address packet loss issues with OpenVPN on some systems by reverting the TAP
   adapter driver to an older NDIS 5 driver."
-67,"Initial release for iOS (iPhone). Supports...
+68,"Initial release for iOS (iPhone). Supports...
 * Establishing WireGuard tunnels
 * Selecting and changing location and servers
 * See account expiry
@@ -3526,7 +3537,7 @@ Windows 7 only: Address packet loss issues with OpenVPN on some systems by rever
 * Purchase more VPN time via in-app purchases
 * See the current WireGuard key in use and how long it has been used
 * Generate a new WireGuard key to replace the old"
-68,"This release is Android only
+69,"This release is Android only
 Added
 
 Add signal handlers on Linux, macOS and Android to better log critical faults with the daemon.
@@ -3631,16 +3642,16 @@ Fix issue in daemon where the block_when_disconnected setting was sometimes not 
   stopping the daemon. I.e. traffic could flow freely after the daemon was stopped.
 Android
 Fix issue where IPv6 traffic could leak outside of the tunnel."
-69,"This release is identical to 2020.3-beta1, see that change log for all changes since last stable release.","This release is identical to 2020.3-beta1, see that change log for all changes since last stable release."
-70,"Security
+70,"This release is identical to 2020.3-beta1, see that change log for all changes since last stable release.","This release is identical to 2020.3-beta1, see that change log for all changes since last stable release."
+71,"Security
 
 Fix stack overflow caused by WireGuard key rotation timers. When the daemon crashed it was
   restarted automatically. But it did not connect (depending on settings), leaving a leak.
 ","Security
 Fix stack overflow caused by WireGuard key rotation timers. When the daemon crashed it was
   restarted automatically. But it did not connect (depending on settings), leaving a leak."
-71,"This release is identical to 2020.2-beta1, see that change log for all changes since last stable release.","This release is identical to 2020.2-beta1, see that change log for all changes since last stable release."
-72,"Added
+72,"This release is identical to 2020.2-beta1, see that change log for all changes since last stable release.","This release is identical to 2020.2-beta1, see that change log for all changes since last stable release."
+73,"Added
 
 Add reconnect button to the desktop app.
 Add monochrome option for the tray icon on Windows and Linux.
@@ -3725,8 +3736,8 @@ Windows
 Prevent DNS leak that could happen while connected if ""Local network sharing"" was enabled
   and the device had a default DNS resolver on the local private network. This issue was
   only present in the 2020.1 release."
-73,"This release is identical to 2020.1-beta1, see that change log for all changes since last stable release.","This release is identical to 2020.1-beta1, see that change log for all changes since last stable release."
-74,"Added
+74,"This release is identical to 2020.1-beta1, see that change log for all changes since last stable release.","This release is identical to 2020.1-beta1, see that change log for all changes since last stable release."
+75,"Added
 
 Add translations for Finnish and Danish.
 Copy WireGuard key when clicking on it.
@@ -3889,7 +3900,7 @@ Stop OpenVPN from loading C:\etc\ssl\openssl.cnf on start. This file was being l
 macOS
 Limit macOS firewall rules to only allow UDP packets in the rules meant to enable being a DHCPv4
   server when local network sharing is enabled."
-75,"Fixed
+76,"Fixed
 
 Fix improved WireGuard port selection
 
@@ -3918,7 +3929,7 @@ Linux
 Stop CVE-2019-14899 by dropping all packets destined
   for the tunnel IP coming in on some other interface than the tunnel.
 The rest is identical to 2019.10-beta2, see that change log for all changes since last stable release."
-76,"Added
+77,"Added
 
 Add mullvad relay set tunnel-protocol subcommand to the CLI to specify what tunnel protocol
   to use.
@@ -4031,7 +4042,7 @@ Security
 Force OpenVPN to use TLS 1.2 or newer, and limit the TLS 1.3 ciphers to only the strongest ones.
   The Mullvad servers have never allowed any insecure ciphers, so this was not really a problem.
   Just one extra safety precaution."
-77,"This release is for Android only.
+78,"This release is for Android only.
 Added
 Android
 
@@ -4054,7 +4065,7 @@ Fix bad file descriptor errors caused by sending a file descriptor between the d
   wireguard-go library.
 Recreate tun device after a fixed number of connection attempts on the same tun device. Breaks
   infinite reconnection loops on broken tun devices."
-78,"Added
+79,"Added
 
 Add ability to submit vouchers from the CLI.
 
@@ -4099,7 +4110,7 @@ Use authenticated URL to go to account page from expired account view.
 macOS
 Remove mullvad and mullvad-problem-report symlinks from /usr/local/bin on uninstall.
 The rest is identical to 2019.9-beta1, see that change log for all changes since last stable release."
-79,"Added
+80,"Added
 
 Add ability to change the desktop GUI language from within Settings.
 Add ability to create new accounts from the CLI.
@@ -4180,10 +4191,10 @@ Various stability fixes.
 Windows
 More adjustments in online/offline detection logic. Should prevent more users from being stuck
   in the offline state. Should also make the app notice network disconnects faster."
-80,"Updated translations for new strings in the app
+81,"Updated translations for new strings in the app
 The rest is identical to 2019.8-beta1, see that change log for all changes since last stable release.","Updated translations for new strings in the app
 The rest is identical to 2019.8-beta1, see that change log for all changes since last stable release."
-81,"Added
+82,"Added
 
 Add ability to replace the WireGuard key with a new one. Allows manual key rotation.
 Show age of currently set WireGuard key.
@@ -4262,7 +4273,7 @@ Fix bug in netlink parsing in offline detection code.
 Removed
 Windows
 Removed logic that implemented monitoring and enforcement of DNS settings."
-82,"Added
+83,"Added
 
 Add more details to the block reason shown in GUI when the daemon fails to generate tunnel
   parameters.
@@ -4279,7 +4290,7 @@ Fixed
 Check and adjust relay and bridge constraints when they are updated, so no incompatible
   combinations are used.
 The rest is identical to 2019.7-beta1, see that change log for all changes since last stable release."
-83,"Added
+84,"Added
 
 Add new settings page for generating and verifying wireguard keys.
 Automatically generate and upload WireGuard keys on Linux and macOS.
@@ -4316,14 +4327,14 @@ The VPN service on Windows will now be restarted when it crashes.
 Retry to connect when WireGuard tunnel fails due to a bad file descriptor.
 Linux
 Improve resolv.conf based DNS management to detect changes to file."
-84,"Added
+85,"Added
 
 Add simplified Chinese translations.
 
 The rest is identical to 2019.6-beta1, see that change log for all changes since last stable release.","Added
 Add simplified Chinese translations.
 The rest is identical to 2019.6-beta1, see that change log for all changes since last stable release."
-85,"Added
+86,"Added
 
 Add a switch to turn off system notifications under Preferences in the GUI.
 
@@ -4366,12 +4377,12 @@ Adjust network interface checks in offline detection logic. Prevents the app fro
 Linux
 Fix some netlink packet parsing error in DNS handling.
 Improve offline check so if it fails, it always fails as online."
-86,"
+87,"
 Add Norwegian translations
 
 The rest is identical to 2019.5-beta1, see that change log for all changes since last stable release.","Add Norwegian translations
 The rest is identical to 2019.5-beta1, see that change log for all changes since last stable release."
-87,"Added
+88,"Added
 
 Add support for roaming between connections when using wireguard.
 Allow mDNS/discover to 239.255.255.251 when local network sharing is enabled. This change fixes
@@ -4456,8 +4467,8 @@ Add better offline detection.
 Linux
 Fix systemd-resolved detection by better checking /etc/resolv.conf symlinks.
 Improve detection of whether NetworkManager is the preferred DNS solution."
-88,"This release is identical to 2019.4-beta1, see that change log for all changes since last stable release.","This release is identical to 2019.4-beta1, see that change log for all changes since last stable release."
-89,"Added
+89,"This release is identical to 2019.4-beta1, see that change log for all changes since last stable release.","This release is identical to 2019.4-beta1, see that change log for all changes since last stable release."
+90,"Added
 
 When IPv6 is enabled, get both exit IP versions from am.i.mullvad.net and show.
 Add translations for country and city names in the relay list and map.
@@ -4492,14 +4503,14 @@ Security
 Windows
 Make the firewall rules permanent until reboot, or until the daemon removes them. Should make
   the kill switch active even if the daemon dies unexpectedly."
-90,"Fixed
+91,"Fixed
 Windows
 
 Correct dependencies on installer logger plugin to resolve installation issues on Windows 7/8.
 ","Fixed
 Windows
 Correct dependencies on installer logger plugin to resolve installation issues on Windows 7/8."
-91,"Removed
+92,"Removed
 
 Remove the Mullvad OpenVPN intermediate transition CA. Used when transitioning from the old to
   the new root CA. Now the app only bundles and trust the new Mullvad root CA valid until 2028.
@@ -4514,7 +4525,7 @@ Remove the Mullvad OpenVPN intermediate transition CA. Used when transitioning f
 Fixed
 Read the relay list from cache only if it's newer than the version bundled in the app.
 The rest is identical to 2019.2-beta1, see that change log for all changes since last stable release."
-92,"Added
+93,"Added
 
 Integrate initial Shadowsocks proxy support. Accessible via CLI.
 Add initial Wireguard support on macOS and Linux. Accessible via CLI.
@@ -4577,8 +4588,8 @@ Increase the timeout to the Mullvad API from 5 to 10 seconds.
 Linux
 Increase NetworkManager DBus RPC timeout from 1 second to 3 seconds.
 Improve notification look by adding application name and icon."
-93,This release is identical to 2019.1-beta1,This release is identical to 2019.1-beta1
-94,"Added
+94,This release is identical to 2019.1-beta1,This release is identical to 2019.1-beta1
+95,"Added
 
 Handle ""block when disconnected"" extra kill-switch level in the GUI, showing the disconnected
   state as blocked when appropriate and also having a toggle switch for the setting in the Advanced
@@ -4679,8 +4690,8 @@ Security
 Linux
 Poll netfilter to verify firewall rules were added correctly. On Ubuntu 14.04 netfilter did not
   return any error, but it also ignored the rules the daemon tried to add."
-95,This release is identical to 2018.6-beta1,This release is identical to 2018.6-beta1
-96,"Added
+96,This release is identical to 2018.6-beta1,This release is identical to 2018.6-beta1
+97,"Added
 
 CLI command relay update that triggers an update of the relay list in the daemon.
 Add extra level of kill-switch called ""block when disconnected"". Blocks all network traffic even
@@ -4751,7 +4762,7 @@ Add default route to fix NLA issues (Microsoft Store/Office/etc say the machine 
 Update installer to not rely on WMI when enumerating network adapters.
 Increase timeout waiting for OpenVPN to shut down cleanly.
 Sign the bundled openvpn.exe binary. Should make some anti-virus software complain less."
-97,"Changed
+98,"Changed
 
 Replace OpenVPN root CA certificate bundled with the app to the new Mullvad root CA.
 
@@ -4764,7 +4775,7 @@ Replace OpenVPN root CA certificate bundled with the app to the new Mullvad root
 Fixed
 Linux
 Improve packaging on RPM based distros by re-enabling the daemon after an upgrade"
-98,"Added
+99,"Added
 
 Fall back and try to connect over TCP port 443 if protocol is set to automatic and two attempts
   with UDP fail in a row. If that also fails, alternate between UDP and TCP with random ports.
@@ -4823,12 +4834,12 @@ Security
 Linux
 Block all traffic to DNS servers other than the correct one in the tunnel. Stops potential DNS
   leaks when ""Local network sharing"" was enabled and DNS management failed."
-99,"Fixed
+100,"Fixed
 
 Fix so changing the OpenVPN mssfix setting triggers setting up a new tunnel with the new setting.
 ","Fixed
 Fix so changing the OpenVPN mssfix setting triggers setting up a new tunnel with the new setting."
-100,"Fixed
+101,"Fixed
 
 Place Mssfix setting inside scrollable area.
 Fix so mssfix can be unset. Previously emptying the textbox did nothing.
@@ -4847,7 +4858,7 @@ The app will have its window resized correctly when display scaling settings are
   should also fix bad window behaviour on startup.
 Fixed systemd-resolved DNS management. Skip using it as the DNS manager if it's running in
   consumer mode."
-101,"Added
+102,"Added
 
 Allow configuration of OpenVPN mssfix option with GUI (under Advanced Settings).
 
@@ -4912,7 +4923,7 @@ Windows
 Use different method for identifying network interfaces during installation. Should solve some
   installation errors.
 Properly restore DNS settings on network interfaces. Fixes issue #352."
-102,"Added
+103,"Added
 
 Allow packets to the fe80::/10 and fe02::/16 IPv6 networks when local network sharing is enabled.
   Should allow IPv6 over the LAN, and mDNS host discovery which in turn should allow Apple AirDrop
@@ -4957,7 +4968,7 @@ Improve tray icon response time by disabling the double click handling.
 Security
 Prevent Electron from executing/navigating to files being drag-and-dropped onto the app GUI. This
   fixes MUL-01-001"
-103,"Changed
+104,"Changed
 macOS
 
 Move the CLI binary (mullvad) back into the Resources/ directory. A bug caused the app to not 
@@ -4978,7 +4989,7 @@ Windows
 Lock the installation directory to C:\Program Files\Mullvad VPN. This prevents potential local
   privilege escalation by ensuring all binaries executed by the SYSTEM user, as part of the 
   Mullvad system service, are stored where unprivileged users can't modify them."
-104,"Added
+105,"Added
 
 Add option to enable or disable IPv6 on the tunnel interface. It's disabled by default.
 Log panics in the daemon to the log file.
@@ -5077,8 +5088,8 @@ Make the pkg installer kill any running GUI process after installation is done. 
 Windows
 Failing to restore DNS settings on daemon start does not make the daemon exit with an error, just
   log the error and continue."
-105,This stable release is identical to 2018.2-beta3,This stable release is identical to 2018.2-beta3
-106,"Added
+106,This stable release is identical to 2018.2-beta3,This stable release is identical to 2018.2-beta3
+107,"Added
 
 Create a new UI log file for every UI execution session, and preserve the log from the previous
   session.
@@ -5131,7 +5142,7 @@ Ignore empty strings as redaction requests in the problem report tool, to avoid 
   markers between every character of the log message.
 Previously logged in users won't be going through login view when restarting the app, instead
   will be taken straight to main view."
-107,"Added
+108,"Added
 
 Bundle the root CA signing the API and only trust that single one, limiting
   trust to a single root CA
@@ -5200,7 +5211,7 @@ Autohide the main window on focus loss.
 Loosen up firewall rules to allow incoming requests on tunnel interface.
 Properly stop the service, announcing errors to the system, in the event of initialization or
   runtime error."
-108,"Added
+109,"Added
 
 Refresh account expiration when account view becomes visible.
 Add tunnel subcommand to manage tunnel specific options in the CLI.
@@ -5317,7 +5328,7 @@ Fix OpenVPN warning about usage of AES-256-CBC cipher.
 Fix ""Out of time"" screen status icon position.
 If necessary, create parent directories for RPC connection info file and tunnel log.
 Fix error message when attempting to login when the daemon isn't running ."
-109,"Changed
+110,"Changed
 
 Redact all account numbers in the account number history from problem reports instead of only the
   currently logged in one.
@@ -5336,7 +5347,7 @@ Increase a timeout for problem report collection to fix a timeout error on slowe
 Fix a memory leak in the problem report collection routine.
 Fix an issue when viewing a problem report brought up a dialog to choose the application to open
   the file."
-110,"[2018.1-beta10] - 2018-02-13
+111,"[2018.1-beta10] - 2018-02-13
 Added
 
 Show the app version in the settings view.
@@ -5361,7 +5372,7 @@ Fixed
 Fix erroneous styles in the settings view.
 Security
 Update the CRL with newly revoked server certificates."
-111,"[2018.1-beta9] - 2018-01-30
+112,"[2018.1-beta9] - 2018-01-30
 Added
 
 Uses the https://am.i.mullvad.net/ service to figure out location and public IP of the device.
@@ -5388,7 +5399,7 @@ Fixed a bug where the problem report tool would redact some things in the logs w
   IPv6 addresses, but looked like ones.
 Show a better error message when api.mullvad.net is unreachable.
 Fix bug getting daemon state on frontend start instead of assuming it."
-112,"[2018.1-beta8] - 2018-01-09
+113,"[2018.1-beta8] - 2018-01-09
 Added
 
 ""Allow LAN"" setting that configures if the app should allow communication to the LAN (private
@@ -5425,7 +5436,7 @@ Default to selecting servers in Sweden to increase the likelyhood of a fast and 
 Scrollbars will automatically hide when not scrolling.
 Removed
 Remove the unsafe Camellia and Seed ciphers from the list of allowed OpenVPN ciphers."
-113,"[2017.1-beta7] - 2017-12-13
+114,"[2017.1-beta7] - 2017-12-13
 Added
 
 Buffer size and fast-io parameters to OpenVPN. Can double the speed on high latency connections.

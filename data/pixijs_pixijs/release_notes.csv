@@ -1,5 +1,127 @@
-Index,Release Note,Release Note With Abstraction
-1,"💾  Download
+Index,Release Note,Release Note Abstract
+1,"🚨 WARNING 🚨
+This project is currently highly experimental and subject to large changes before we reach an official launch.
+🎁 NEW 🎁
+
+WebGPU Renderer and overhaul of WebGL renderer
+up to 2.5x faster!
+Reactive renderer, only update transform of something that changes. If nothing changes then nothing is updated.
+Advanced Blend Modes - All them cool photoshop filters? Pixi v8 has them all! Vivid Light, Color burn the lot! Parity with Canvas and more
+
+🔥 Breaking Changes
+Below is a non complete list of breaking changes. This will be updated fully before the official release
+
+
+PixiJS will now need to be initialised asynchronously. With the introduction of the WebGPU renderer PixiJS will now need to be awaited before being used
+    Old:
+     ```ts
+    import { Application } from 'pixi.js'
+const app = new Application();
+// do pixi things
+New:ts
+import { Application } from 'pixi.js'
+const app = new Application();
+(async () => {
+    await app.init({
+        // application options
+    });
+// do pixi things
+
+})()
+```
+
+
+Graphics API has been overhauled
+    Old:
+    ts
+    graphics
+        .beginFill(0xDE3249)
+        .drawRect(50, 50, 100, 100);
+        .endFill();
+    New:
+    ts
+    graphics
+        .rect(50, 50, 100, 100)
+        .fill(0xDE3249)
+
+Text is now one unified class. You specify the rendering mode in the constructor
+    Old:
+    ts
+    new Text('hello')
+    new BitmapText('hello')
+    New: 
+    ts
+    new Text({ text: 'hello', renderMode: 'canvas' });
+    new Text({ text: 'hello', renderMode: 'bitmap' });
+A Ticker instance is now passed to the callback
+    Old:
+    ts
+    Ticker.shared.add((dt)=> {
+        bunny.rotation += dt
+    });
+    New:
+    ts
+    Ticker.shared.add((ticker)=> {
+        bunny.rotation += ticker.deltaTime;
+    });
+","🚨 WARNING 🚨
+This project is currently highly experimental and subject to large changes before we reach an official launch.
+🎁 NEW 🎁
+WebGPU Renderer and overhaul of WebGL renderer
+up to 2.5x faster!
+Reactive renderer, only update transform of something that changes. If nothing changes then nothing is updated.
+Advanced Blend Modes - All them cool photoshop filters? Pixi v8 has them all! Vivid Light, Color burn the lot! Parity with Canvas and more
+🔥 Breaking Changes
+Below is a non complete list of breaking changes. This will be updated fully before the official release
+PixiJS will now need to be initialised asynchronously. With the introduction of the WebGPU renderer PixiJS will now need to be awaited before being used
+    Old:
+     ```ts
+    import { Application } from 'pixi.js'
+const app = new Application();
+// do pixi things
+New:ts
+import { Application } from 'pixi.js'
+const app = new Application();
+(async () => {
+    await app.init({
+        // application options
+    });
+// do pixi things
+})()
+```
+Graphics API has been overhauled
+    Old:
+    ts
+    graphics
+        .beginFill(0xDE3249)
+        .drawRect(50, 50, 100, 100);
+        .endFill();
+    New:
+    ts
+    graphics
+        .rect(50, 50, 100, 100)
+        .fill(0xDE3249)
+Text is now one unified class. You specify the rendering mode in the constructor
+    Old:
+    ts
+    new Text('hello')
+    new BitmapText('hello')
+    New: 
+    ts
+    new Text({ text: 'hello', renderMode: 'canvas' });
+    new Text({ text: 'hello', renderMode: 'bitmap' });
+A Ticker instance is now passed to the callback
+    Old:
+    ts
+    Ticker.shared.add((dt)=> {
+        bunny.rotation += dt
+    });
+    New:
+    ts
+    Ticker.shared.add((ticker)=> {
+        bunny.rotation += ticker.deltaTime;
+    });"
+2,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.4/pixi.js
 - https://pixijs.download/v7.2.4/pixi.mjs
@@ -76,7 +198,7 @@ Fix: Flip pixels in Extract.pixels from renderer (#9347) @dev7355608
 Fix: Extract correctly when resolution is not 1 (#9352) @SuperSodaSea 
 :broom: Chores
 Chore: Add more payload properties for beta.pixijs.com event (#9300) @baseten "
-2,"💾  Download
+3,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.3/pixi.js
 - https://pixijs.download/v7.2.3/pixi.mjs
@@ -135,7 +257,7 @@ Fix implementation of Color.round (#9294) @dev7355608
 Chore: Add trigger workflow to update beta.pixijs.com (#9282) @baseten 
 Chore: Add CodeSandbox CI configuration (#9279) @baseten 
 Chore: Miscellaneous documentation changes (#9292) @Zyie"
-3,"💾  Download
+4,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.2/pixi.js
 - https://pixijs.download/v7.2.2/pixi.mjs
@@ -180,7 +302,7 @@ link
 :bug: Fixed
 Fix: Ensure input color channels are clamped (#9281) @bigtimebuddy 
 Fix: Clone and deep equal the Color's value when setting (#9280) @bigtimebuddy "
-4,"💾  Download
+5,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.1/pixi.js
 - https://pixijs.download/v7.2.1/pixi.mjs
@@ -245,7 +367,7 @@ json
         ""@types/css-font-loading-module"": ""^0.0.8""
     }
 }"
-5,"📣 Overview
+6,"📣 Overview
 This is a big release that we've been working on for awhile. We want to highlight some of the new features available in this release which we think will make developer's lives much easier.
 🔠  HTMLText
 This release adds HTMLText. Previously this was available as a plugin but we have decided to make it available by default in pixi.js, pixi.js-legacy (the Web Worker and node bundles does not support HTMLText yet).
@@ -486,7 +608,7 @@ Chore: Add strict null checks  (#9211, #9215, #9223, #9188, #9229, #9236, #9242,
 Chore: Update package-lock.json (#9225) @SuperSodaSea 
 Chore: Cache-bust banner image (#9232) @bigtimebuddy 
 Chore: Bump workflow improvements (#9262) @bigtimebuddy "
-6,"💾  Download
+7,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.0-rc.3/pixi.js
 - https://pixijs.download/v7.2.0-rc.3/pixi.mjs
@@ -523,7 +645,7 @@ Documentation:
 - link
 Changed
 link"
-7,"💾  Download
+8,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.0-rc.2/pixi.js
 - https://pixijs.download/v7.2.0-rc.2/pixi.mjs
@@ -560,7 +682,7 @@ Documentation:
 - link
 Changed
 link"
-8,"💾  Download
+9,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.0-rc/pixi.js
 - https://pixijs.download/v7.2.0-rc/pixi.mjs
@@ -597,7 +719,7 @@ Documentation:
 - link
 Changed
 link"
-9,"💾  Download
+10,"💾  Download
 Development Build:
 - https://pixijs.download/v7.1.4/pixi.js
 - https://pixijs.download/v7.1.4/pixi.mjs
@@ -646,7 +768,7 @@ Fix: Line Join Round and Miter Limit (#9031) @SuperSodaSea
 Fix: Renderer#type not available (#9218) @SuperSodaSea
 Fix: Prevent NaN in RopeGeometry vertex data (#9220) @SuperSodaSea
 Fix: Ensure prepare and extract systems are available from IRenderer (#9222) @bigtimebuddy"
-10,"💾  Download
+11,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.0-beta.4/pixi.js
 - https://pixijs.download/v7.2.0-beta.4/pixi.mjs
@@ -683,7 +805,7 @@ Documentation:
 - link
 Changed
 link"
-11,"💾  Download
+12,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.0-beta.3/pixi.js
 - https://pixijs.download/v7.2.0-beta.3/pixi.mjs
@@ -720,7 +842,7 @@ Documentation:
 - link
 Changed
 link"
-12,"💾  Download
+13,"💾  Download
 Development Build:
 - https://pixijs.download/v7.1.3/pixi.js
 - https://pixijs.download/v7.1.3/pixi.mjs
@@ -775,7 +897,7 @@ Fix rightclick and onrightclick not triggering (#9190) @viniciusbitt
 Fix: EventEmitter#once should only trigger once (#9200) @SuperSodaSea 
 Fix types for Renderer resolution (#9209) @baseten 
 Fix: TilingSprite tileScale inconsistency (#9208) @SuperSodaSea "
-13,"💾  Download
+14,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.0-beta.2/pixi.js
 - https://pixijs.download/v7.2.0-beta.2/pixi.mjs
@@ -812,7 +934,7 @@ Documentation:
 - link
 Changed
 link"
-14,"💾  Download
+15,"💾  Download
 Development Build:
 - https://pixijs.download/v7.2.0-beta/pixi.js
 - https://pixijs.download/v7.2.0-beta/pixi.mjs
@@ -849,7 +971,7 @@ Documentation:
 - link
 Changed
 link"
-15,"💾  Download
+16,"💾  Download
 Development Build:
 - https://pixijs.download/v7.1.2/pixi.js
 - https://pixijs.download/v7.1.2/pixi.mjs
@@ -908,7 +1030,7 @@ Fix loading assets that need the resolver (#9119) @Zyie
 :broom: Chores
 Chore: Cleanup GitHub Actions deprecation warnings (#9104) @SuperSodaSea
 Chore: Cleanup document for renderer options (#9120) @SuperSodaSea "
-16,"💾  Download
+17,"💾  Download
 Development Build:
 - https://pixijs.download/v6.5.9/pixi.js
 - https://pixijs.download/v6.5.9/pixi.mjs
@@ -957,7 +1079,7 @@ Fix: Extract should use multisample (#9103) @SuperSodaSea
 :broom: Chores
 Pin GitHub Actions Ubuntu version for v6.x (#9054) @SuperSodaSea 
 Chore: Cleanup GitHub Actions deprecation warnings (for v6.x) (#9106) @SuperSodaSea "
-17,"💾  Download
+18,"💾  Download
 Development Build:
 - https://pixijs.download/v7.1.1/pixi.js
 - https://pixijs.download/v7.1.1/pixi.mjs
@@ -1030,7 +1152,7 @@ Fix: Document for TextureGCSystem (#9095) @SuperSodaSea
 :broom: Chores
 Chore: Updated License (#9074, #9084) @pacifiquem @SuperSodaSea 
 Chore: Update document for Extract and Prepare (#9086) @SuperSodaSea "
-18,"💾  Download
+19,"💾  Download
 Development Build:
 - https://pixijs.download/v7.1.0/pixi.js
 - https://pixijs.download/v7.1.0/pixi.mjs
@@ -1201,7 +1323,7 @@ Chore: Add strict null checks to @pixijs/utils (#8960) @Emobe
 Chore: Add CDN Install in READMEs for browser builds (#9020) @SuperSodaSea 
 Chore: @pixi/node README.md improvements (#9033) @StanFlint 
 Chore: Remove some duplicate definitions (#9045) @SuperSodaSea "
-19,"💾  Download
+20,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.5/pixi.js
 - https://pixijs.download/v7.0.5/pixi.mjs
@@ -1300,7 +1422,7 @@ Change ""snap shot"" to ""snapshot"" (#8934) @vanillajonathan
 Chore: Fix typos in packages usage instructions (#8946) @vikpe 
 Chore: Jest running on Windows (#8864) @SuperSodaSea 
 Chore: Cleanup core dependencies (#8926) @SuperSodaSea "
-20,"💾  Download
+21,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.4/pixi.js
 - https://pixijs.download/v7.0.4/pixi.mjs
@@ -1343,7 +1465,7 @@ Changed
 link
 :bug: Fixed
 Fix compatibility with CodeSandbox (#8841) @bigtimebuddy "
-21,"💾  Download
+22,"💾  Download
 Development Build:
 - https://pixijs.download/v7.1.0-alpha/pixi.js
 - https://pixijs.download/v7.1.0-alpha/pixi.mjs
@@ -1380,7 +1502,7 @@ Documentation:
 - link
 Changed
 link"
-22,"💾  Download
+23,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.3/pixi.js
 - https://pixijs.download/v7.0.3/pixi.mjs
@@ -1433,7 +1555,7 @@ Fix negative coordinates for roundPixels (#8816) @ivanpopelyshev
 Fix: NodeCanvasElement compatible with ICanvas (#8823) @SuperSodaSea 
 Avoid casting view, adds IRenderer, Application template type (#8820) @bigtimebuddy 
 EventEmitter types improvements (#8828) @zOadT "
-23,"💾  Download
+24,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.2/pixi.js
 - https://pixijs.download/v7.0.2/pixi.mjs
@@ -1476,7 +1598,7 @@ Changed
 link
 :fire: Hotfix
 Hotfix publishing GlobalMixins (#8803) @bigtimebuddy "
-24,"💾  Download
+25,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.1/pixi.js
 - https://pixijs.download/v7.0.1/pixi.mjs
@@ -1527,7 +1649,7 @@ Fix publishing for @pixi/unsafe-eval (#8795) @bigtimebuddy
 Fix GlobalMixins with TypeScript 4.7+ (#8800) @bigtimebuddy 
 :broom: Chores
 Chore: Bump workflow dependencies, remove Codecov (#8796) @bigtimebuddy "
-25,"🧭  Migration Guide
+26,"🧭  Migration Guide
 We create a Wiki post here to address some of the breaking changes introduced in v7. If you are upgrading or considering upgrading, please review the guide.
 💾  Download
 Development Build:
@@ -1700,7 +1822,7 @@ Chore: Cleanup document for v7.x (#8754) @SuperSodaSea
 Chore: Preserve modules, Improve Tree-Shaking (#8769) @bigtimebuddy 
 Chore: Automatically upload assets to release (#8782) @bigtimebuddy 
 Chore: Update document for MIPMAP_TEXTURES and MIPMAP_MODES (#8781) @SuperSodaSea "
-26,"💾  Download
+27,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.0-beta.6/pixi.js
 - https://pixijs.download/v7.0.0-beta.6/pixi.mjs
@@ -1737,7 +1859,7 @@ Documentation:
 - link
 Changed
 link"
-27,"💾  Download
+28,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.0-beta.5/pixi.js
 - https://pixijs.download/v7.0.0-beta.5/pixi.mjs
@@ -1774,7 +1896,7 @@ Documentation:
 - link
 Changed
 link"
-28,"💾  Download
+29,"💾  Download
 Development Build:
 - https://pixijs.download/v6.5.8/pixi.js
 - https://pixijs.download/v6.5.8/pixi.mjs
@@ -1817,7 +1939,7 @@ Missing peers causing unnecessary bundling (#8763) @bigtimebuddy
 :bug: Fixed
 Fix BitmapText when its font is replaced (#8768) @SuperSodaSea 
 Fix round line join on 180 degree corner (#8771) @SuperSodaSea "
-29,"💾  Download
+30,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.0-beta.4/pixi.js
 - https://pixijs.download/v7.0.0-beta.4/pixi.mjs
@@ -1854,7 +1976,7 @@ Documentation:
 - link
 Changed
 link"
-30,"💾  Download
+31,"💾  Download
 Development Build:
 - https://pixijs.download/v6.5.7/pixi.js
 - https://pixijs.download/v6.5.7/pixi.mjs
@@ -1909,7 +2031,7 @@ Fix: set current shader null when it is destroyed (#8731) @orange4glace
 Fix infinity loop in BitmapFont.from (#8760) @SuperSodaSea 
 :broom: Chores
 Chore: Update document for v6.x (#8750) @SuperSodaSea "
-31,"💾  Download
+32,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.0-beta.3/pixi.js
 - https://pixijs.download/v7.0.0-beta.3/pixi.mjs
@@ -1946,7 +2068,7 @@ Documentation:
 - link
 Changed
 link"
-32,"💾  Download
+33,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.0-beta.2/pixi.js
 - https://pixijs.download/v7.0.0-beta.2/pixi.js.map
@@ -1975,7 +2097,7 @@ Documentation:
 - link
 Changed
 link"
-33,"
+34,"
 Warning
 This release didn't publish correctly. Please discard.
 
@@ -2010,7 +2132,7 @@ Documentation:
 - link
 Changed
 link"
-34,"💾  Download
+35,"💾  Download
 Development Build:
 - https://pixijs.download/v6.5.6/pixi.js
 - https://pixijs.download/v6.5.6/pixi.js.map
@@ -2059,7 +2181,7 @@ Fix fromBuffer overriding defaults (#8709) @dev7355608
 Fix BitmapText regressions (#8699) @ivanpopelyshev 
 Fix dereferencing textures for BitmapText (#8713) @bigtimebuddy 
 Fix PageMeshData recycling when BitmapText is destroyed (#8719) @SuperSodaSea "
-35,"💾  Download
+36,"💾  Download
 Development Build:
 - https://pixijs.download/v6.5.5/pixi.js
 - https://pixijs.download/v6.5.5/pixi.js.map
@@ -2096,7 +2218,7 @@ link
 :bug: Fixed
 Transfer the shiftKey property for federated events (#8674) @bhousel 
 Fix CanvasSpriteRenderer regression with rotated and trimmed textures (#8679) @smlmyck "
-36,"💾  Download
+37,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.0-alpha.3/pixi.js
 - https://pixijs.download/v7.0.0-alpha.3/pixi.js.map
@@ -2125,7 +2247,7 @@ Documentation:
 - link
 Changed
 link"
-37,"💾  Download
+38,"💾  Download
 Development Build:
 - https://pixijs.download/v6.5.4/pixi.js
 - https://pixijs.download/v6.5.4/pixi.js.map
@@ -2178,7 +2300,7 @@ Fix GitHub Actions Link (#8658) @bigtimebuddy
 Fix node WebGLRenderingContext (#8643) @michaeljherrmann
 Fix Assets missing types (#8651) @Zyie
 Update texture style if dirtyStyleId changes (#8660) @dev7355608 "
-38,"💾  Download
+39,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.0-alpha.2/pixi.js
 - https://pixijs.download/v7.0.0-alpha.2/pixi.js.map
@@ -2207,7 +2329,7 @@ Documentation:
 - link
 Changed
 link"
-39,"💾  Download
+40,"💾  Download
 Development Build:
 - https://pixijs.download/v7.0.0-alpha/pixi.js
 - https://pixijs.download/v7.0.0-alpha/pixi.js.map
@@ -2236,7 +2358,7 @@ Documentation:
 - link
 Changed
 link"
-40,"💾  Download
+41,"💾  Download
 Development Build:
 - https://pixijs.download/v6.5.3/pixi.js
 - https://pixijs.download/v6.5.3/pixi.js.map
@@ -2283,7 +2405,7 @@ Fix CanvasSpriteRenderer to render sprites with rotated BaseTextures (#8615) @sm
 Allow integer as sampler uniform value (#8586) @dev7355608
 Cache sampler uniform values (#8587) @dev7355608 
 Fix GlobalMixins for @pixi/node (#8634) @Zyie "
-41,"💾  Download
+42,"💾  Download
 Development Build:
 - https://pixijs.download/v6.5.2/pixi.js
 - https://pixijs.download/v6.5.2/pixi.js.map
@@ -2346,7 +2468,7 @@ Add cross-compatible path utils for Assets (#8605) @Zyie
 🧹 Chores
 Add installation error help to readme (#8563) @Zyie 
 Add pixijselementals.com to ""Learn"" section of main readme (#8581) @domis86 "
-42,"🔥  Hotfix
+43,"🔥  Hotfix
 Previous release accidentally bundled the core into packages it wasn't suppose to including in ticker, canvas-mesh, canvas-sprite. It is strongly recommended that you update to 6.5.1 if you upgraded (or tried to) 6.5.0.
 💾  Download
 Development Build:
@@ -2385,7 +2507,7 @@ Changed
 link
 :bug: Fixed
 Hotfix: Make sure core isn't bundled in ticker, canvas-sprite, canvas-mesh (#8527) @bigtimebuddy "
-43,"
+44,"
 Warning
 There's a major problem with this release in that it bundles multiple versions of @pixi/core into other packages because of dependency errors. It is strongly recommended to upgrade to v6.5.1.
 
@@ -2519,7 +2641,7 @@ Chore: Remove unused lib references from packages (#8463) @Zyie
 Chore: Update readme (#8466) @Zyie
 Chore: Upgrade to earcut 2.2.4 (#8478) @dev7355608 
 Chore: Add script to clean types (#8492) @Zyie "
-44,"🔥 Sorting blocking bug related to @pixi/assets
+45,"🔥 Sorting blocking bug related to @pixi/assets
 💾  Download
 Development Build:
 - https://pixijs.download/v6.5.0-rc.4/pixi.js
@@ -2550,7 +2672,7 @@ Documentation:
 - link
 Changed
 link"
-45,"🔥 Sorting more blocking bugs related to @pixi/node
+46,"🔥 Sorting more blocking bugs related to @pixi/node
 💾  Download
 Development Build:
 - https://pixijs.download/v6.5.0-rc.3/pixi.js
@@ -2581,7 +2703,7 @@ Documentation:
 - link
 Changed
 link"
-46,"🔥 Hotfix for @pixi/node
+47,"🔥 Hotfix for @pixi/node
 💾  Download
 Development Build:
 - https://pixijs.download/v6.5.0-rc.2/pixi.js
@@ -2612,7 +2734,7 @@ Documentation:
 - link
 Changed
 link"
-47,"This is a do-no-harm prerelease and to test new packages @pixi/assets and @pixi/node.
+48,"This is a do-no-harm prerelease and to test new packages @pixi/assets and @pixi/node.
 💾  Download
 Development Build:
 - https://pixijs.download/v6.5.0-rc/pixi.js
@@ -2643,7 +2765,7 @@ Documentation:
 - link
 Changed
 link"
-48,"💾  Download
+49,"💾  Download
 Development Build:
 - https://pixijs.download/v6.4.2/pixi.js
 - https://pixijs.download/v6.4.2/pixi.js.map
@@ -2684,7 +2806,7 @@ link
 Fix: Resolves issue where ""exports"" broke Webpack (#8381) @zwade 
 🐛  Fixed
 Clarify that the object's mask must be in the subtree of its parent in the docs (#8378) @lazarljubenovic"
-49,"💾  Download
+50,"💾  Download
 Development Build:
 - https://pixijs.download/v6.4.0/pixi.js
 - https://pixijs.download/v6.4.0/pixi.js.map
@@ -2757,7 +2879,7 @@ Chore: improve documentation linting (#8342) @Zyie
 Chore: Add ""types"" and ""exports"" to package.json (#8371) @zwade 
 Chore: Fix TypeScript issues in tests (#8370) @Zyie
 Chore: Flatten the packages structure (#8374) @bigtimebuddy "
-50,"💾  Download
+51,"💾  Download
 Development Build:
 - https://pixijs.download/v6.3.2/pixi.js
 - https://pixijs.download/v6.3.2/pixi.js.map
@@ -2798,7 +2920,7 @@ link
 Hotfix cached OffscreenCanvas in TextMetrics (#8318) @bigtimebuddy 
 🧹  Chore
 Fix Discord URL (#8319) @miltoncandelero "
-51,"💾  Download
+52,"💾  Download
 Development Build:
 - https://pixijs.download/v6.3.1/pixi.js
 - https://pixijs.download/v6.3.1/pixi.js.map
@@ -2859,7 +2981,7 @@ Chore: Add build:types to dist workflow (#8275) @ShukantPal
 Extending the amount of times for stale (#8293) @bigtimebuddy 
 Favor Discord for PixiJS community chat (#8298) @bigtimebuddy 
 Refactor DOM-based side effects (#8307) @bigtimebuddy "
-52,"💾  Download
+53,"💾  Download
 Development Build:
 - https://pixijs.download/v6.3.0/pixi.js
 - https://pixijs.download/v6.3.0/pixi.js.map
@@ -2944,7 +3066,7 @@ Fix PolygonUtils.isPolygonClockwise (#8224) @dev7355608
 Replace deprecated String.prototype.substr() (#8232) @CommanderRoot 
 Fix lineWidth calculation in Graphics.calculateBounds (#8225) @dev7355608 
 Fix BitmapText shake with monospace font (#8233) @neymanushka "
-53,"💾  Download
+54,"💾  Download
 Development Build:
 - https://pixijs.download/v5.3.12/pixi.js
 - https://pixijs.download/v5.3.12/pixi.js.map
@@ -2979,7 +3101,7 @@ Changed
 link
 🐛  Fixed
 Backport fix drop shadow positioning with resolutions other than 1 (#8220) @goldenratio"
-54,"💾  Download
+55,"💾  Download
 Development Build:
 - https://pixijs.download/v6.2.2/pixi.js
 - https://pixijs.download/v6.2.2/pixi.js.map
@@ -3034,7 +3156,7 @@ Fix a problem of line alignment on CanvasRenderer (#8053) @ymegane
 Fix readme example (#8113) @niknbr 
 Fix drop shadow positioning with resolutions other than 1 (#8080) @themoonrat 
 Fix Sprite.getLocalBounds corrupting bounds (#8087) @dev7355608 "
-55,"💾  Download
+56,"💾  Download
 Development Build:
 - https://pixijs.download/v6.2.1/pixi.js
 - https://pixijs.download/v6.2.1/pixi.js.map
@@ -3091,7 +3213,7 @@ Fix RoundedRectangle.contains (#7975) @dev7355608
 Fix GeometrySystem.getSignature (#7827) @dev7355608 
 Fix the letterSpacing support check (#8045) @bigtimebuddy 
 Fix legacy filters that use filterArea/filterClamp failing the first time they are used (#8033) @dev7355608 "
-56,"💾  Download
+57,"💾  Download
 Development Build:
 - https://pixijs.download/v6.2.0/pixi.js
 - https://pixijs.download/v6.2.0/pixi.js.map
@@ -3192,7 +3314,7 @@ Fix incorrect typing of OnLoadSignal (#7894) @fluffy-heinzelman
 Fix the next parameter type of loader middleware to be non-optional (#7904) @fluffy-heinzelman 
 Exported IHitArea type (#7916) @miltoncandelero 
 Better detection of scissor rect to workaround iOS 15 bugs (#7896) @ivanpopelyshev "
-57,"💾  Download
+58,"💾  Download
 Development Build:
 - https://pixijs.download/v5.3.11/pixi.js
 - https://pixijs.download/v5.3.11/pixi.js.map
@@ -3227,7 +3349,7 @@ Changed
 link
 🐛  Fixed
 Fix simple tiling sprite syntax issue (#7917) @animanathome"
-58,"💾  Download
+59,"💾  Download
 Development Build:
 - https://pixijs.download/v6.1.3/pixi.js
 - https://pixijs.download/v6.1.3/pixi.js.map
@@ -3282,7 +3404,7 @@ Fix rendering Sprites after destroyed with CanvasSpriteRenderer (#7783) @owendwy
 Fix Framebuffer blit (#7759) @dev7355608 
 Convert Filter resolution from property to accessor (#7769) @mcdenhoed 
 Fix SpritesheetLoader to pass metadata to all multipacks (#7745) @Gawlas "
-59,"💾  Download
+60,"💾  Download
 Development Build:
 - https://pixijs.download/v6.1.2/pixi.js
 - https://pixijs.download/v6.1.2/pixi.js.map
@@ -3317,7 +3439,7 @@ Changed
 link
 :bug: Fixed
 Remove CanvasRenderer types from mixin-cache-as-bitmap and accessibility (#7684) @bigtimebuddy "
-60,"💾  Download
+61,"💾  Download
 Development Build:
 - https://pixijs.download/v6.1.1/pixi.js
 - https://pixijs.download/v6.1.1/pixi.js.map
@@ -3354,7 +3476,7 @@ link
 🐛  Fixed
 Fix ambiguous Buffer resolution (#7675) @bigtimebuddy 
 Fix Loader signal typings (#7669) @ivanpopelyshev "
-61,"⚠️ Important
+62,"⚠️ Important
 ParticleContainer Package Renamed
 The package @pixi/particles is renamed to @pixi/particle-container to avoid confusion with pixi-particles plugin. Please make sure, if you are importing directly from this packages, to rename your import. 
 ts
@@ -3569,7 +3691,7 @@ Update graphics documentation (#7641) @doehyunbaek
 🚽  Deprecated
 Remove Lerna bootstrap, replace with npm v7 workspaces (#7357) @bigtimebuddy 
 Rename the @pixi/particles to @pixi/particle-container (#7543) @bigtimebuddy "
-62,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
+63,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
 💾  Download
 Development Build:
 - https://pixijs.download/v6.1.0-rc.6/pixi.js
@@ -3596,7 +3718,7 @@ Production Build:
 - link
 Documentation:
 - link"
-63,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
+64,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
 💾  Download
 Development Build:
 - https://pixijs.download/v6.1.0-rc.5/pixi.js
@@ -3623,7 +3745,7 @@ Production Build:
 - link
 Documentation:
 - link"
-64,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
+65,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
 💾  Download
 Development Build:
 - https://pixijs.download/v6.1.0-rc.4/pixi.js
@@ -3650,7 +3772,7 @@ Production Build:
 - link
 Documentation:
 - link"
-65,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
+66,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
 💾  Download
 Development Build:
 - https://pixijs.download/v6.1.0-rc.3/pixi.js
@@ -3677,7 +3799,7 @@ Production Build:
 - link
 Documentation:
 - link"
-66,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
+67,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
 💾  Download
 Development Build:
 - https://pixijs.download/v6.1.0-rc.2/pixi.js
@@ -3704,7 +3826,7 @@ Production Build:
 - link
 Documentation:
 - link"
-67,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
+68,"This is a do-no-harm prerelease for the upcoming 6.1.0. Complete release notes will be available in that release.
 💾  Download
 Development Build:
 - https://pixijs.download/v6.1.0-rc/pixi.js
@@ -3731,7 +3853,7 @@ Production Build:
 - link
 Documentation:
 - link"
-68,"💾  Download
+69,"💾  Download
 Development Build:
 - https://pixijs.download/v5.3.10/pixi.js
 - https://pixijs.download/v5.3.10/pixi.js.map
@@ -3766,7 +3888,7 @@ Changed
 link
 🐛 Fixed
 Fix Graphics color/textureId filling (#7529) @eXponenta  :fire: Major Bug"
-69,"🔥  Hotfix
+70,"🔥  Hotfix
 Fixes the following TypeScript error when building that was introduced in 6.0.3.
 Error: node_modules/@pixi/mixin-get-child-by-name/index.d.ts:4:1 - error TS1314: Global module exports may only appear in module files.
 4 export as namespace PIXI;
@@ -3817,7 +3939,7 @@ Changed
 link
 :bug: Fixed
 Revert ""Fix export namespace to the declaration files (#7413)"" (#7484) @bigtimebuddy "
-70,"💾  Download
+71,"💾  Download
 Development Build:
 - https://pixijs.download/v6.0.3/pixi.js
 - https://pixijs.download/v6.0.3/pixi.js.map
@@ -3888,7 +4010,7 @@ Update webdoc dependencies (#7472) @bigtimebuddy
 Fix missing dependency to compressed-textures (#7474) @dev7355608 
 Fix Mesh rendering on canvas (#7463) @dev7355608 
 Fix HEIGHT_MULTIPLIER height in TextMetrics.measureFont() (#7439) @dev7355608 "
-71,"💾  Download
+72,"💾  Download
 Development Build:
 - https://pixijs.download/v6.0.2/pixi.js
 - https://pixijs.download/v6.0.2/pixi.js.map
@@ -3941,7 +4063,7 @@ Fix Texture.clone with frame, orig and noFrame variants (#7365) @dev7355608
 Declare _renderCanvas, _generateCanvasTexture as a methods not function properties (#7378) @SukantPal 
 Fix LoaderResource texture typings (#7382) @ivanpopelyshev 
 Fix BufferResource/DepthResource upload size (#7366) @dev7355608 "
-72,"💾  Download
+73,"💾  Download
 Development Build:
 - https://pixijs.download/v6.0.1/pixi.js
 - https://pixijs.download/v6.0.1/pixi.js.map
@@ -3990,7 +4112,7 @@ Remove inch support for docs coverage (#7297) @bigtimebuddy
 Remove spritesheet dependency from loaders, fix Loader's resources type (#7300) @bigtimebuddy 
 Clean-up url types for API extractor (#7326) @bigtimebuddy 
 Fix BitmapFont destroying respects external Textures (#7327) @bigtimebuddy "
-73,"💾  Download
+74,"💾  Download
 Development Build:
 - https://pixijs.download/v5.3.9/pixi.js
 - https://pixijs.download/v5.3.9/pixi.js.map
@@ -4029,7 +4151,7 @@ link
 Fix missing removeEventListener in ResizePlugin (#7271) @epaezrubio 
 Fix cacheAsBitmap respecting projection destinationFrame (#7274) @ivanpopelyshev
 Fix BitmapFont destroying respects external Textures (#7327) @bigtimebuddy"
-74,"💥  Breaking Changes
+75,"💥  Breaking Changes
 This version is largely compatible with v5 except for a few subtle differences:
 Stricter Typings
 TypeScript types have been completely re-generated and work for all packages. There are likely subtle differences between v5 types where the new types are much more exact. Also, we have removed the use of PIXI global namespace in typings. If you were previously using that you'll need to convert to module typings.
@@ -4320,7 +4442,7 @@ Fix for AnimatedSprite not stopping with autoUpdate disabled (#7211)
 @jflcarvalho
 @jasonsturges 
 @ivanpopelyshev "
-75,"💾  Download
+76,"💾  Download
 Development Build:
 - https://pixijs.download/v6.0.0-rc.3/pixi.js
 - https://pixijs.download/v6.0.0-rc.3/pixi.js.map
@@ -4349,7 +4471,7 @@ Documentation:
 - link
 Changed
 link"
-76,"💾  Download
+77,"💾  Download
 Development Build:
 - https://pixijs.download/v5.3.8/pixi.js
 - https://pixijs.download/v5.3.8/pixi.js.map
@@ -4398,7 +4520,7 @@ Fix for AnimatedSprite not stopping with autoUpdate disabled (#7211)
 @ash-r1
 @themoonrat 
 @Owlzy "
-77,"📣  Overview
+78,"📣  Overview
 This is the second release candidate for 6.0.0 and fixes typing issues associated with the first release candidate.
 💾  Download
 Development Build:
@@ -4431,7 +4553,7 @@ Documentation:
 - link
 Changed
 link"
-78,"📣  Overview
+79,"📣  Overview
 This is the first release candidate for 6.0.0. This replaces what would have been 5.4.0-rc.4; there will be no 5.4.0 release moving forward, only patch updates for 5.3.x. We have decided to make a major version bump to not break our TypeScript users since the types were overhauled. Official release will have full release notes of changes including breaking changes.
 💾  Download
 Development Build:
@@ -4464,7 +4586,7 @@ Documentation:
 - link
 Changed
 link"
-79,"🔥  Hotfix
+80,"🔥  Hotfix
 This release fixes a long-standing memory leak with the geometry system. This was found when two shaders with different signatures were used for the same geometry. It's a rare case on small projects, but normal on larger, more complex projects.
 💾  Download
 Development Build:
@@ -4509,7 +4631,7 @@ link
 Fix: Geometry with different shaders leaked buffers (#7093) 
 👏  Contributors: 1
 @ivanpopelyshev "
-80,"🔥  Hotfix
+81,"🔥  Hotfix
 One fix introduced in v5.3.5 broke TilingSprite because it was not thoroughly tested. This release reverts this change to the v5.3.4 behavior. If you are using TilingSprite with CanvasRenderer, it's recommended you update.
 💾  Download
 Development Build:
@@ -4554,7 +4676,7 @@ link
 Revert #6869 (#7078)
 👏  Contributors: 1
 @bigtimebuddy "
-81,"📣  Overview
+82,"📣  Overview
 This release contains high-value, low-risk cherry picked fixes from the upcoming 6.0.0 release. In particular this release fixes quite a few issues with BitmapText and BitmapFonts. If you use those features, it is recommended you upgrade.
 💾  Download
 Development Build:
@@ -4675,7 +4797,7 @@ Silence harmless Firefox warning with Text default colors (#7042)
 @teoxoy 
 @dev7355608 
 @ayamada "
-82,"🔥  Hotfix
+83,"🔥  Hotfix
 This release fixes a serious performance regression introduced in 5.2.2 with CanvasRenderer and Graphics. If you are using canvas-based rendering, it recommended that you upgrade.
 💾  Download
 Development Build:
@@ -4720,7 +4842,7 @@ link
 Fix serious performance problem in CanvasRenderer (#7032)
 👏  Contributors: 1
 Ivan Popelyshev (@ivanpopelyshev)"
-83,"🔥  Hotfix
+84,"🔥  Hotfix
 This release fixes a serious performance regression introduced in 5.2.2 with CanvasRenderer and Graphics. If you are using canvas-based rendering, it recommended that you upgrade.
 💾  Download
 Development Build:
@@ -4765,7 +4887,7 @@ link
 Fix serious performance problem in CanvasRenderer (#7032)
 👏  Contributors: 1
 Ivan Popelyshev (@ivanpopelyshev)"
-84,"📣  Overview
+85,"📣  Overview
 Take 3 at trying to sort the package types.
 💾  Download
 Development Build:
@@ -4798,7 +4920,7 @@ Documentation:
 - link
 Changed
 link"
-85,"📣  Overview
+86,"📣  Overview
 Take 2 at trying to sort the package types.
 💾  Download
 Development Build:
@@ -4831,7 +4953,7 @@ Documentation:
 - link
 Changed
 link"
-86,"📣  Overview
+87,"📣  Overview
 In 5.4.0, we have completely replaced our process for generating TypeScript typings and added typings for all packages. We wanted to make a prerelease to sort out any issues related to typings before going live. Release notes will be available once these pieces are sorted.
 💾  Download
 Development Build:
@@ -4864,7 +4986,7 @@ Documentation:
 - link
 Changed
 link"
-87,"💾  Download
+88,"💾  Download
 Development Build:
 - https://pixijs.download/v4.4.5/pixi.js
 - https://pixijs.download/v4.4.5/pixi.js.map
@@ -4897,7 +5019,7 @@ link
 Fix BLEND_MODES.ADD based on #5740 (#6972)
 👏  Contributors: 1
 Mark Dolbyrev (@flashist)"
-88,"💾  Download
+89,"💾  Download
 Development Build:
 - https://pixijs.download/v5.3.3/pixi.js
 - https://pixijs.download/v5.3.3/pixi.js.map
@@ -4950,7 +5072,7 @@ Dave Moore (@themoonrat)
 Florian Landerl (@sirflo)
 @JetLua 
 Matt Karl (@bigtimebuddy)"
-89,"📣  Overview
+90,"📣  Overview
 This is a hotfix for 5.3.1 for TypeScript users of PixiJS. If you are using TypeScript, please upgrade to this version.
 💾  Download
 Development Build:
@@ -4987,7 +5109,7 @@ link
 Fix incorrect typings (#6776)
 👏  Contributors
 Matt Karl (@bigtimebuddy)"
-90,"💾  Download
+91,"💾  Download
 Development Build:
 - https://pixijs.download/v5.3.1/pixi.js
 - https://pixijs.download/v5.3.1/pixi.js.map
@@ -5056,7 +5178,7 @@ Sukant Pal (@SukantPal)
 @JetLua 
 Matt Karl (@bigtimebuddy)
 Ivan Popelyshev (@ivanpopelyshev)"
-91,"💾  Download
+92,"💾  Download
 Development Build:
 - https://pixijs.download/v5.3.0/pixi.js
 - https://pixijs.download/v5.3.0/pixi.js.map
@@ -5255,7 +5377,7 @@ Yevhenii Huselietov (@cursedcoder)
 Hendrik Mans (@hmans)
 Connor Clark (@connorjclark)
 @SerG-Y"
-92,"🔥 Hot Fix
+93,"🔥 Hot Fix
 This is a hot fix for v5.2.2 which introduced a small breakage for IE11 using Graphics.
 💾  Download
 Development Build:
@@ -5292,7 +5414,7 @@ link
 Feature detect svgMatrix and setTransform check to support IE11 (#6588)
 :clap: Contributors
 Ivan Popelyshev (@ivanpopelyshev) "
-93,"🔥 Hot Fix
+94,"🔥 Hot Fix
 This is a hot fix for v5.2.2 which introduces a small breakage users attempting to reference the Loader Resource's Texture after loading a Spritesheet atlas. For most users, this is not a problem but has been corrected in this release.
 💾  Download
 Development Build:
@@ -5329,7 +5451,7 @@ link
 Hotfix for Spritesheet memory leak PR #6508 (#6580)
 :clap: Contributors
 Matt Karl (@bigtimebuddy)"
-94,"💾  Download
+95,"💾  Download
 Development Build:
 - https://pixijs.download/v5.2.2/pixi.js
 - https://pixijs.download/v5.2.2/pixi.js.map
@@ -5460,7 +5582,7 @@ Yury Kuvetski (@YuryKuvetski)
 @EIA 
 Michael Schneider (@TheOriginalArkless)
 Sukant Pal (@SukantPal)"
-95,"Overview
+96,"Overview
 This release is exactly the same as v5.1.5, except that it applies publishing exact versions (#6211), which means that it will insulate users from fuzzy versioning issues upgrading to v5.2.0.
 💾  Download
 Development Build:
@@ -5485,7 +5607,7 @@ Documentation:
 - link
 Changed
 link"
-96,"💾  Download
+97,"💾  Download
 Development Build:
 - https://pixijs.download/v5.2.1/pixi.js
 - https://pixijs.download/v5.2.1/pixi.js.map
@@ -5612,7 +5734,7 @@ Pavel (@pbalmasov)
 Nils Kuhnhenn (@laino)
 Wayne Langman (@surtr-isaz)
 Konstantin Timoshenko (@eXponenta)"
-97,"💾  Download
+98,"💾  Download
 Development Build:
 - https://pixijs.download/v4.8.9/pixi.js
 - https://pixijs.download/v4.8.9/pixi.js.map
@@ -5661,7 +5783,7 @@ Matt Karl (@bigtimebuddy)
 Eric Ente (@ericente)
 Martin Bokša (@martinboksa)
 Ivan Popelyshev (@ivanpopelyshev)"
-98,"💾  Download
+99,"💾  Download
 Development Build:
 - https://pixijs.download/v5.2.0/pixi.js
 - https://pixijs.download/v5.2.0/pixi.js.map
@@ -5786,7 +5908,7 @@ Konstantin Timoshenko (@eXponenta)
 Johan Jönsson (@J00nz)
 Pavel (@pbalmasov)
 May Groves (@GoodBoyDigital)"
-99,"Overview
+100,"Overview
 This is a :fire: hotfix for v5.1.4, that corrects #6099.
 💾  Download
 Development Build:
@@ -5831,7 +5953,7 @@ Fix Geometry typings (#6118)
 Ivan Popelyshev (@ivanpopelyshev)
 Matt Karl (@bigtimebuddy)
 @JetLua"
-100,"💾  Download
+101,"💾  Download
 Development Build:
 - https://pixijs.download/v5.1.4/pixi.js
 - https://pixijs.download/v5.1.4/pixi.js.map
@@ -5872,7 +5994,7 @@ Fix kerning rendering with letterSpacing (#6091)
 Ivan Popelyshev (@ivanpopelyshev)
 Matt Karl (@bigtimebuddy)
 Eric Ente (@ericente)"
-101,"💾  Download
+102,"💾  Download
 Development Build:
 - https://pixijs.download/v5.1.3/pixi.js
 - https://pixijs.download/v5.1.3/pixi.js.map
@@ -5923,7 +6045,7 @@ Nils Kuhnhenn (@laino)
 Konstantin Timosheko (@eXponenta)
 Endel Dreyer (@endel)
 Janne Ramstedt (@jramstedt)"
-102,"💾  Download
+103,"💾  Download
 Development Build:
 - https://pixijs.download/v5.1.2/pixi.js
 - https://pixijs.download/v5.1.2/pixi.js.map
@@ -5986,7 +6108,7 @@ Durga Prasad Mudhuru (@mdprasadeng)
 Berton Zhu (@meowtec)
 Matt Karl (@bigtimebuddy)
 Nils Kuhnhenn (@laino)"
-103,"💾  Download
+104,"💾  Download
 Development Build:
 - https://pixijs.download/v5.1.1/pixi.js
 - https://pixijs.download/v5.1.1/pixi.js.map
@@ -6083,7 +6205,7 @@ Matt Karl (@bigtimebuddy)
 @hirotomk 
 @JetLua 
 @jmlee2k "
-104,"💾  Download
+105,"💾  Download
 Development Build:
 - https://pixijs.download/v5.1.0/pixi.js
 - https://pixijs.download/v5.1.0/pixi.js.map
@@ -6238,7 +6360,7 @@ Timo Kämäräinen (@qtiki)
 Chris Parton (@chrisparton1991)
 @danyisill 
 @Norgerman "
-105,"💾  Download
+106,"💾  Download
 Development Build:
 - https://pixijs.download/v5.0.4/pixi.js
 - https://pixijs.download/v5.0.4/pixi.js.map
@@ -6303,7 +6425,7 @@ Ivan Popelyshev (@ivanpopelyshev)
 Mat Groves (@GoodBoyDigital)
 @Norgerman
 @JetLua "
-106,"💾  Download
+107,"💾  Download
 Development Build:
 - https://pixijs.download/v4.8.8/pixi.js
 - https://pixijs.download/v4.8.8/pixi.js.map
@@ -6344,7 +6466,7 @@ Fixes blendMode ADD again (#5740)
 👏 Contributors: 2
 Ivan Popelyshev (@ivanpopelyshev)
 Matt Karl (@bigtimebuddy)"
-107,"💾  Download
+108,"💾  Download
 Development Build:
 - https://pixijs.download/v5.0.3/pixi.js
 - https://pixijs.download/v5.0.3/pixi.js.map
@@ -6397,7 +6519,7 @@ Ivan Popelyshev (@ivanpopelyshev)
 Matt Karl (@bigtimebuddy)
 @JetLua 
 @fanjules"
-108,"💾  Download
+109,"💾  Download
 Development Build:
 - https://pixijs.download/v5.0.2/pixi.js
 - https://pixijs.download/v5.0.2/pixi.js.map
@@ -6428,7 +6550,7 @@ Changed
 🔥 Fixes video not working in v5.0.1 (#5660)
 :clap: Contributors: 1
 Dave Moore (@themoonrat)"
-109,"💾  Download
+110,"💾  Download
 Development Build:
 - https://pixijs.download/v5.0.1/pixi.js
 - https://pixijs.download/v5.0.1/pixi.js.map
@@ -6483,7 +6605,7 @@ Damiano Cancemi (@damianoc90)
 Ivan Popelyshev (@ivanpopelyshev)
 Steven McCoy (@steve-o)
 @fanjules "
-110,"Overview
+111,"Overview
 For a summary of all of the features in this major release, please see this Medium post written by @GoodBoyDigital. Also, we have created a Migration Guide which outlines significant changes when upgrading from v4.
 💾  Download
 Development Build:
@@ -6584,7 +6706,7 @@ Abhinav Sagar (@abhinavsagar)
 Lucas Jones (@lucas-jones)
 Russell Speke (@TheWyo)
 Dave Moore (@themoonrat)"
-111,"💾  Download
+112,"💾  Download
 Development Builds:
 - https://pixijs.download/v5.0.0-rc.3/pixi.js
 - https://pixijs.download/v5.0.0-rc.3/pixi-legacy.js
@@ -6705,7 +6827,7 @@ David Figatner (@davidfig)
 @JetLua 
 Dave Moore (@themoonrat)
 @fmhdp "
-112,"💾  Download
+113,"💾  Download
 Development Build:
 - https://pixijs.download/v4.8.7/pixi.js
 - https://pixijs.download/v4.8.7/pixi.js.map
@@ -6742,7 +6864,7 @@ Fixes shader avoiding equal compare between float (#5466)
 👏 Contributors: 2
 Ivan Popelyshev(@ivanpopelyshev)
 @uinz"
-113,"💾  Download
+114,"💾  Download
 Development Build:
 - https://pixijs.download/v5.0.0-rc.2/pixi.js
 - https://pixijs.download/v5.0.0-rc.2/pixi.js.map
@@ -6835,7 +6957,7 @@ Ivan Popelyshev (@ivanpopelyshev)
 Janne Ramstedt (@jramstedt)
 Konstantin (@eXponenta)
 @Dairnon"
-114,"💾  Download
+115,"💾  Download
 Development Build:
 - https://pixijs.download/v4.8.6/pixi.js
 - https://pixijs.download/v4.8.6/pixi.js.map
@@ -6892,7 +7014,7 @@ Adds option to update anchor with defaultAnchor when frame changes. (#5419)
 Ivan Popelyshev (@ivanpopelyshev)
 Matt Karl (@bigtimebuddy)
 Janne Ramstedt (@jramstedt)"
-115,"💾  Download
+116,"💾  Download
 Development Build:
 - https://pixijs.download/v5.0.0-rc/pixi.js
 - https://pixijs.download/v5.0.0-rc/pixi.js.map
@@ -7073,7 +7195,7 @@ Sergey Kazantsev (@ProtonGustave)
 Viktor (@Izumi-kun)
 @codymikol
 Stafford Williams (@staff0rd)"
-116,"💾  Download
+117,"💾  Download
 Development Build:
 - https://pixijs.download/v4.8.5/pixi.js
 - https://pixijs.download/v4.8.5/pixi.js.map
@@ -7118,7 +7240,7 @@ Ivan Popelyshev (@ivanpopelyshev)
 Matt Karl (@bigtimebuddy)
 Dave Moore (@themoonrat)
 @jdelrue"
-117,"🔥Hotfix
+118,"🔥Hotfix
 Addresses to critical bugs (#5291 & #5290) which popped up in the last patch release which were changes that happened to resource-loader dependency. 
 💾  Download
 Development Build:
@@ -7171,7 +7293,7 @@ Konstantin (@eXponenta)
 Matt Karl (@bigtimebuddy)
 Marjori Pomarole (@mpomarole)
 Chad Engler (@englercj)"
-118,"💾  Download
+119,"💾  Download
 Development Build:
 - https://pixijs.download/v4.8.3/pixi.js
 - https://pixijs.download/v4.8.3/pixi.js.map
@@ -7248,7 +7370,7 @@ Ivan Popelyshev (@ivanpopelyshev)
 Evgeniy Kuvshinov (@kib357)
 Adam Rasiński (@a-rasinski)
 Matt Karl (@bigtimebuddy)"
-119,"💾  Download
+120,"💾  Download
 Development Build:
 - https://pixijs.download/v4.8.2/pixi.js
 - https://pixijs.download/v4.8.2/pixi.js.map
@@ -7371,7 +7493,7 @@ Matt Karl (@bigtimebuddy)
 @st3v0 
 @Norgerman
 @finscn "
-120,"Overview
+121,"Overview
 More fixes and cleanup from alpha.2. Whenever relevant, this release cherry-picks all changes from 4.8.0 and 4.8.1.
 💾  Download
 Development Build:
@@ -7492,7 +7614,7 @@ Drew Diamantoukos (@MercifulCode)
 Allan Reyes (@allanbreyes)
 Ivan Popelyshev (@ivanpopelyshev)
 @hellraisercenobit"
-121,"💾  Download
+122,"💾  Download
 Development Build:
 - https://pixijs.download/v4.8.1/pixi.js
 - https://pixijs.download/v4.8.1/pixi.js.map
@@ -7533,7 +7655,7 @@ TextMetrics.wordWrap - Don't add a newline if it's the last token/word (#4956)
 👏 Contributors: 2
 Matt Karl (@bigtimebuddy)
 Russell Speke (@TheWyo)"
-122,"💾  Download
+123,"💾  Download
 Development Build:
 - https://pixijs.download/v4.8.0/pixi.js
 - https://pixijs.download/v4.8.0/pixi.js.map
@@ -7658,7 +7780,7 @@ Paul Blair (@pbblair)
 Matt Karl (@bigtimebuddy)
 Sergei Chipiga (@schipiga)
 Luca Pivotto (@lucap86)"
-123,"💾  Download
+124,"💾  Download
 Development Build:
 - https://pixijs.download/v4.7.3/pixi.js
 - https://pixijs.download/v4.7.3/pixi.js.map
@@ -7681,7 +7803,7 @@ Documentation:
 - link
 🔥 Reverted
 Reverts change #4800 because it broke things unexpectedly in our last release (#4830)"
-124,"🔥 Hotfix
+125,"🔥 Hotfix
 The purpose of this release is to patch an issue that was broken in v4.7.1 which affected users of IE 9-11. If for, whatever reason, you're unable to upgrade, please include this polyfill within your v4.7.1 project:
 js
 if (!Number.isInteger) {
@@ -7740,7 +7862,7 @@ Fixes contributor documentation (#4768)
 Dave Moore (@themoonrat)
 Tsvetan Stanislavov (@ceco-fmedia)
 Allan Reyes (@allanbreyes)"
-125,"Overview
+126,"Overview
 The goal of this release is to formalize the new core that was started in v5.0.0-alpha. In addition, the major overhaul to v5 is splitting the project up into a multi-package structure. This will allow developers to compose their own flavor of PixiJS without having to create a custom build. We think this is a huge improvement. 
 Also, the major change for v5 is making canvas rendering a second-class citizen. The future of PixiJS will be WebGL 2 with fallback to WebGL 1, not context2d support. However, for many developers this is still pretty critical so we have created to bundles: pixi.js and pixi.js-legacy. The latter contains the most analogous code to v4. The former excludes CanvasRenderer and related canvas rendering functionality. Important: if you want to upgrade seamlessly, use the new package: pixi.js-legacy. 
 ⚠️ Known Issues
@@ -7925,7 +8047,7 @@ Mat Groves (@GoodBoyDigital)
 Ivan Popelyshev (@ivanpopelyshev)
 Yi-wen LIN (@yiwenl)
 As well as many devs from v4 releases"
-126,"💾  Download
+127,"💾  Download
 Development Build:
 - https://pixijs.download/v4.7.1/pixi.js
 - https://pixijs.download/v4.7.1/pixi.js.map
@@ -8018,7 +8140,7 @@ Dave Moore (@themoonrat)
 Matt Karl (@bigtimebuddy)
 @brenwell 
 Allan Reyes (@allanbreyes)"
-127,"💾  Download
+128,"💾  Download
 Development Build:
 - https://pixijs.download/v4.7.0/pixi.js
 - https://pixijs.download/v4.7.0/pixi.js.map
@@ -8105,7 +8227,7 @@ Matt Karl (@bigtimebuddy)
 @qingyangmoke
 Dave Moore (@themoonrat)
 Niraj Thapaliya (@nthapaliya)"
-128,"💾  Download
+129,"💾  Download
 Development Build:
 - https://pixijs.download/v4.6.2/pixi.js
 - https://pixijs.download/v4.6.2/pixi.js.map
@@ -8188,7 +8310,7 @@ Nikola (@nikkop)
 Martijn Croezen (@whizzkid)
 @skobnx
 Bjoern Acker (@bma73)"
-129,"💾  Download
+130,"💾  Download
 Development Build:
 - https://pixijs.download/v4.6.1/pixi.js
 - https://pixijs.download/v4.6.1/pixi.js.map
@@ -8253,7 +8375,7 @@ Darren Lu (@LunarRed)
 Ivan Popelyshev (@ivanpopelyshev)
 @finscn 
 J.C (@jcyuan)"
-130,"💾  Download
+131,"💾  Download
 Development Build:
 - https://pixijs.download/v4.6.0/pixi.js
 - https://pixijs.download/v4.6.0/pixi.js.map
@@ -8324,7 +8446,7 @@ Dave Moore (@themoonrat)
 @finscn 
 @axldns 
 @jojuntune"
-131,"💾  Download
+132,"💾  Download
 Development Build:
 - https://pixijs.download/v4.5.6/pixi.js
 - https://pixijs.download/v4.5.6/pixi.js.map
@@ -8391,7 +8513,7 @@ Mykola (@mmykola)
 @finscn
 David Guan (@EcutDavid)
 Matt Karl (@bigtimebuddy)"
-132,"💾  Download
+133,"💾  Download
 Development Build:
 - https://pixijs.download/v4.5.5/pixi.js
 - https://pixijs.download/v4.5.5/pixi.js.map
@@ -8458,7 +8580,7 @@ Tsvetan Stanislavov (@ceco-fmedia)
 Joe Boyle (@helloitsjoe)
 Dave Moore (@themoonrat)
 Akihiko Odaki (@akihikodaki)"
-133,"💾  Download
+134,"💾  Download
 Development Build:
 - https://pixijs.download/v4.5.4/pixi.js
 - https://pixijs.download/v4.5.4/pixi.js.map
@@ -8531,7 +8653,7 @@ Ivan Popelyshev (@ivanpopelyshev)
 Mat Groves (@GoodBoyDigital)
 Stanislav Chervenkov (@chalgoman)
 @Dairnon"
-134,"💾  Download
+135,"💾  Download
 Development Build:
 - https://pixijs.download/v4.5.3/pixi.js
 - https://pixijs.download/v4.5.3/pixi.js.map
@@ -8596,7 +8718,7 @@ Ivan Popelyshev (@ivanpopelyshev)
 Dave Moore (@themoonrat)
 Matt Karl (@bigtimebuddy)
 Mertcan Mermerkaya (@mmermerkaya)"
-135,"📣  Overview
+136,"📣  Overview
 IMPORTANT: This is a preview-only  pre-release and will definitely undergo drastic changes (including breaking API changes). Pease do not plan v5 compatibility based on this release! It was released to demonstrate functionality for an upcoming @GoodBoyDigital presentation.
 To install:
 command-line install
@@ -8642,7 +8764,7 @@ Production Build:
 - link
 Documentation:
 - link"
-136,"Download
+137,"Download
 Development Build:
 - https://pixijs.download/v4.5.2/pixi.js
 - https://pixijs.download/v4.5.2/pixi.js.map
@@ -8745,7 +8867,7 @@ Mike Reinstein (@mreinstein)
 Daniel Santos (@artsjedi)
 Andrew Start (@andrewstart)
 @YahorPadlucki"
-137,"Download
+138,"Download
 Development Build:
 - https://pixijs.download/v4.5.1/pixi.js
 - https://pixijs.download/v4.5.1/pixi.js.map
@@ -8804,7 +8926,7 @@ Chad Engler (@englercj)
 Matt Karl (@bigtimebuddy)
 Dave Moore (@themoonrat)
 Andrew Start (@andrewstart)"
-138,"Overview
+139,"Overview
 Important Note: This release deprecates the support for Bower package manager. If you are using this package manager to pull pixi.js, it will only work up-to-and-excluding version 4.5.0. Please make sure your version does not include version greater than this, e.g., 4 < 4.5.0.
 Download
 Development Build:
@@ -8947,7 +9069,7 @@ Dave Moore (@themoonrat)
 Piotr Rachtan (@prachtan)
 @rasentry
 Stafford Williams (@staff0rd)"
-139,"Download
+140,"Download
 Development Build:
 - https://pixijs.download/v4.4.4/pixi.js
 - https://pixijs.download/v4.4.4/pixi.js.map
@@ -8986,7 +9108,7 @@ Adds temporary autoFit property to Filter for disabling filter sizing to bounds 
 Ivan Popelyshev (@ivanpopelyshev)
 Andrew Start (@andrewstart)
 Commits: link"
-140,"Overview
+141,"Overview
 Interactive hot fixes that addresses critical performance and functionality issues.
 Download
 Development Build:
@@ -9021,7 +9143,7 @@ Fixes #3844 - memory leak on touch end. #3857
 Fixes another component of #3790, #3851 - tracking that an interactive child was hit was forgotten more than one level up. #3857
 Adds unit tests for both of these fixes. #3857
 Commits: link"
-141,"Overview
+142,"Overview
 This release adds continuing hot-fixes for v4.4.0. Note: download links below are now accessible from HTTPS as well as HTTP. 
 Download
 Development Build:
@@ -9056,7 +9178,7 @@ Follow-up to #3796 which resolves interactivity issues #3800
 Fixes a memory leak with cacheAsBitmap #3801 
 Fixes destroyed DisplayObjects are not considered for prepare #3802
 Commits: link"
-142,"Download
+143,"Download
 Development Build:
 - https://pixijs.download/v4.4.1/pixi.js
 - https://pixijs.download/v4.4.1/pixi.js.map
@@ -9087,7 +9209,7 @@ Fixes PointerEvents from mice not using renderer.plugins.interaction.mouse for t
 Fixes PIXI.loader not respecting the default SCALE_MODE #3787 #3797 
 Fixes MouseUp event firing on a Sprite if there is a DOM element above #3796
 Commits: link"
-143,"Download
+144,"Download
 Development Build:
 - http://pixijs.download/v4.4.0/pixi.js
 - http://pixijs.download/v4.4.0/pixi.js.map
@@ -9242,7 +9364,7 @@ Updates electron and floss dev dependencies #3748
 Improve the accuracy of RETINA_PREFIX #3759 
 Don't query currentState again #3764
 Commits: link"
-144,"Download
+145,"Download
 Development Build:
 - http://pixijs.download/v4.3.5/pixi.js
 - http://pixijs.download/v4.3.5/pixi.js.map
@@ -9271,7 +9393,7 @@ Fixed
 Fixes mask/filter could not be rendered if there was a sprite with same texture somewhere. #3721 
 Fixes lint issues #3724 
 Commits: link"
-145,"Download
+146,"Download
 Development Build:
 - http://pixijs.download/v4.3.4/pixi.js
 - http://pixijs.download/v4.3.4/pixi.js.map
@@ -9298,7 +9420,7 @@ Changes
 🐛  Fixed
 Resolves two critical issues with resource-loader dependency a10ad85d16e69803899aaa875b4f08cc63bee241
 Commits: link"
-146,"Download
+147,"Download
 Development Build:
 - http://pixijs.download/v4.3.3/pixi.js
 - http://pixijs.download/v4.3.3/pixi.js.map
@@ -9391,7 +9513,7 @@ Remove needless Number() call #3552
 Rectangle test updates #3578 
 Preserve mocha scope #3599
 Commits: link"
-147,"Download
+148,"Download
 Development Build:
 - http://pixijs.download/v4.3.2/pixi.js
 - http://pixijs.download/v4.3.2/pixi.js.map
@@ -9418,7 +9540,7 @@ Changes
 🐛 Fixed
 Updated the version number in the package.json
 Commits: link"
-148,"Download
+149,"Download
 Development Build:
 - http://pixijs.download/v4.3.1/pixi.js
 - http://pixijs.download/v4.3.1/pixi.js.map
@@ -9487,7 +9609,7 @@ Performance improvement _texture instead of texture #3508 #3517 #3532
 Remove the needless checking for orig #3479
 Allows support for multiple fonts in the TextStyle#fontFamily property. Either expressed as a comma separated string, or an Array of font names. #3513 
 Commits: link"
-149,"Download
+150,"Download
 Development Build:
 - http://pixijs.download/v4.3.0/pixi.js
 - http://pixijs.download/v4.3.0/pixi.js.map
@@ -9548,7 +9670,7 @@ Adds an additional argument for PIXI.utils.getResolutionOfUrl to define the defa
 Add parameter kernelSize for BlurFilter. #3410 
 Allow '0x' notation of colors via strings to work in Text class #3341
 Commits: link"
-150,"Download
+151,"Download
 Development Build:
 - http://pixijs.download/v4.2.3/pixi.js
 - http://pixijs.download/v4.2.3/pixi.js.map
@@ -9583,7 +9705,7 @@ Expose the PIXI.Bounds class again #3333
 Bower main fix, ""bin"" renamed ""dist"" #3332 
 Fixes issue with quoting fontFamily in PIXI.Text #3352 
 Commits: link"
-151,"Download
+152,"Download
 Development Build:
 - http://pixijs.download/v4.2.2/pixi.js
 - http://pixijs.download/v4.2.2/pixi.js.map
@@ -9626,7 +9748,7 @@ PIXI.settings.UPLOADS_PER_FRAME
 PIXI.settings.CAN_UPLOAD_SAME_BUFFER #3309 
 Support for using beefy #3306 
 Commits: link"
-152,"Download
+153,"Download
 Development Build:
 - http://pixijs.download/v4.2.1/pixi.js
 - http://pixijs.download/v4.2.1/pixi.js.map
@@ -9739,7 +9861,7 @@ PIXI.settings.RETINA_PREFIX (moved from PIXI.RETINA_PREFIX)
 PIXI.settings.WRAP_MODE (moved from PIXI.WRAP_MODES.DEFAULT)
 PIXI.settings.PRECISION (moved from PIXI.PRECISION.DEFAULT)
 Commits: link"
-153,"Download
+154,"Download
 Development Build:
 - http://pixijs.download/v4.1.1/pixi.js
 - http://pixijs.download/v4.1.1/pixi.js.map
@@ -9762,7 +9884,7 @@ Changes
 Added
 Add a blank .npmignore file to fix #3183 
 Commits: link"
-154,"Download
+155,"Download
 Development Build:
 - http://pixijs.download/v4.1.0/pixi.js
 - http://pixijs.download/v4.1.0/pixi.js.map
@@ -9873,12 +9995,12 @@ Updated EE3 and resource-loader versions #3037
 Smaller default texture size for text #3036
 updated some doc comments #3038
 Commits: link"
-155,"Fixed
+156,"Fixed
 
 Rebuilt with clean dependencies (removes console.logs from pixi-gl-core)
 ","Fixed
 Rebuilt with clean dependencies (removes console.logs from pixi-gl-core)"
-156,"Added
+157,"Added
 
 Adds getters for top, left, bottom and right to PIXI.Rectangle cabd152be5263c76defd2ef8a1cc6338350ed8e3
 Adds attributes constructor argument to PIXI.Shader 34cb48644936241ba73ea37b55f819eaf3843197
@@ -9897,7 +10019,7 @@ Fixes filter offset issue which popped up in v4.0.1  (issue #2935) 0ced0a98ec998
 Multiple renderers for Graphics fastRect #2963
 Fix multiple issue with CoCoonJS #2946
 temp fix for webpack usage of pixi #2981"
-157,"Fixed
+158,"Fixed
 
 Fixed broken documentations scrolling on the main page #2857
 Fixes interactive when destroying DisplayObjects #2855
@@ -9926,7 +10048,7 @@ PIXI v4 cacheAsBitmap issue when localBounds was incorrect 1 #2915
 Added
 Support for built, deployable documentation #2864 
 Texture.from function will assume the source is a texture if all other checks fail"
-158,"Overview
+159,"Overview
 Added
 
 Multi texture renderering
@@ -9987,7 +10109,7 @@ Removed
 Complex poly masking. This added lots of complexity but was never really used as the earcut algorithm is too good.
 FXAA no moved to filters rather than used automatically as a replacement for default antialiasing
 Non core filters moved to a new package - pixi-filters"
-159,"Added
+160,"Added
 
 Replaced Gulp build process with NPM scripts #2769 #2778 #2810 #2812 #2813 #2839
 Add preprocess to exclude deprecations from the release #2782
@@ -10032,10 +10154,10 @@ Documentation improvements #2819 #2821 #2835
 Cleanup WebGLState #2826 
 Line-height fix from v3 #2837 
 Fixes align with bitmap fonts when using on maxWidth to make break lines #2759"
-160,,
 161,,
 162,,
-163,"Minor update:
+163,,
+164,"Minor update:
 - Fixed interaction issue with overlaying objects.
 - Fixed canvas mesh issue.
 - Fixed color matrix alpha issue.
@@ -10048,7 +10170,7 @@ Fixes align with bitmap fonts when using on maxWidth to make break lines #2759"
 - Fixed tiling sprite resolution issue.
 - Added letter spacing to Text style.
 - Correct a reference error in the basic example on readme.md."
-164,"Minor update:
+165,"Minor update:
 - Added 'moveWhenInside option to interactive manager. his property determins if mousemove and touchmove events are fired only when the cursror is over the object. Setting to true will make things work more in line with how the DOM verison works.
 - Plane now support textures from a sprite sheets.
 - Rotated textures tweaked using a more robust approach. Now supported by atlas format too.
@@ -10065,7 +10187,7 @@ Fixes align with bitmap fonts when using on maxWidth to make break lines #2759"
 - Exposed WebGL renderers internal shaders.
 - Source map and non minified pixi.js build now separate.
 - Fixed accessibility bug."
-165,"https://github.com/pixijs/pixi.js/compare/v3.0.8...v3.0.9
+166,"https://github.com/pixijs/pixi.js/compare/v3.0.8...v3.0.9
 - Added skew property.
 - Fix some cacheAsBitmap bugs.
 - Add new ""Plane"" mesh class.
@@ -10086,8 +10208,8 @@ Fixes align with bitmap fonts when using on maxWidth to make break lines #2759"
 - #2166: Fix scale being 0
 - #2209: Replace splice with faster alternative
 - #2229: Fix issue in CanvasRenderer where previous blend mode was used"
-166,https://github.com/pixijs/pixi.js/compare/v3.0.7...v3.0.8,link
-167,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.6...v3.0.7
+167,https://github.com/pixijs/pixi.js/compare/v3.0.7...v3.0.8,link
+168,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.6...v3.0.7
 Bug Fixes
 
 Fix cacheAsBitmap alpha being applied twice (#1800)
@@ -10132,7 +10254,7 @@ Bump dependency versions (thanks @drkibitz)
 Improve particle shader perf (#1864, thanks @bchevalier)
 Update Contributing Guide (#1871, thanks @endel)
 Tons of code cleanup (#1836, thanks @drkibitz)"
-168,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.5...v3.0.6
+169,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.5...v3.0.6
 - Support negative animation speeds in MovieClip (#1762, thanks @snc)
 - Move Ticker to core lib (#1792, thanks @drkibitz)
 - Fix rendering issues with Mesh/Rope introduced in #1784 and #1768
@@ -10161,7 +10283,7 @@ Tons of code cleanup (#1836, thanks @drkibitz)"
 - Update the readme with more current information
 - Update to latest resource-loader (fixes #1781)
 - Update to latest ee3 version, improves speed of events."
-169,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.4...v3.0.5
+170,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.4...v3.0.5
 - Fix mesh rendering (#1784, thanks @simonTadram)
 - Fix some missing exports (#1790)
 - Fix sprite canvas draw sizing for scaled resolutions (#1778)
@@ -10170,7 +10292,7 @@ Tons of code cleanup (#1836, thanks @drkibitz)"
 - Fix some missing exports (#1790)
 - Fix sprite canvas draw sizing for scaled resolutions (#1778)
 - Fix broken alpha in complex polygons on WebGL (#1770 and #1678)"
-170,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.3...v3.0.4
+171,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.3...v3.0.4
 - Add destroy method to CanvasMaskManager (fix #1744)
 - Add support for spritesheets in Rope (#1768, thanks @gprzybylowicz)
 - Fix an error in Mesh where indicies weren't updated properly (#1766, thanks @gprzybylowicz)
@@ -10195,7 +10317,7 @@ Tons of code cleanup (#1836, thanks @drkibitz)"
 - Convert graphics to use earcut instead of a custom PolyK impl (#1772).
 - Fix an issue with context restore (#1788).
 - Bump resource loader to v1.5.6"
-171,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.2...v3.0.3
+172,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.2...v3.0.3
 - Implement full 5x4 color matrix support (#1651, thanks @spaceribs)
 - Fix #1771, incorrect viewport resize in webgl
 - Fix incorrect touch data in cocoonjs (#1731, thanks @JiDW)
@@ -10218,7 +10340,7 @@ Tons of code cleanup (#1836, thanks @drkibitz)"
 - Fix an issue with WebGL destroy()
 - Update text properly before return bounds in BitmapText (#1759, thanks @gprzybylowicz)
 - Update resource loader to v1.5.5 (fixes some crossOrigin and IE9 bugs)"
-172,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.1...v3.0.2
+173,"https://github.com/GoodBoyDigital/pixi.js/compare/v3.0.1...v3.0.2
 - Fix typo in MovieClip
 - Refactor MovieClip#currentFrame (thanks @gprzybylowicz)
 - Fix cacheAsBitmap leak
@@ -10239,20 +10361,20 @@ Tons of code cleanup (#1836, thanks @drkibitz)"
 - Bump resource loader version to 1.5.2
 - Now recognize .fnt as XML properly
 - Pixi now exports with UMD, and always exports to global as well."
-173,Necessary due to a mis-publish with the npm registry.,Necessary due to a mis-publish with the npm registry.
-174,"Massive refactoring/rewritting of the entire library.
+174,Necessary due to a mis-publish with the npm registry.,Necessary due to a mis-publish with the npm registry.
+175,"Massive refactoring/rewritting of the entire library.
 Details can be found in the blog post:
 http://www.goodboydigital.com/pixi-js-v3/","Massive refactoring/rewritting of the entire library.
 Details can be found in the blog post:
 link/"
-175,"v2 Maintenance Release
+176,"v2 Maintenance Release
 
 Merge PRs: #1592, #1601, #1607, #1609, #1627, #1640
 Fix #1594
 ","v2 Maintenance Release
 Merge PRs: #1592, #1601, #1607, #1609, #1627, #1640
 Fix #1594"
-176,"
+177,"
 Many bug fixes
 Move items back into their namespaces
 Bump resource loader version to latest
@@ -10261,19 +10383,19 @@ ParticleContainer now takes an object to describe the upload properties.
 Move items back into their namespaces
 Bump resource loader version to latest
 ParticleContainer now takes an object to describe the upload properties."
-177,"
+178,"
 Many, many bugfixes!
 ","Many, many bugfixes!"
-178,"
+179,"
 Multiude of bug fixes
 Fixed brfs dependency to work with transform config in browserify projects
 Doc updates and minor API updates/fixes
 ","Multiude of bug fixes
 Fixed brfs dependency to work with transform config in browserify projects
 Doc updates and minor API updates/fixes"
-179,v3 Release Candidate 1 (developer preview),v3 Release Candidate 1 (developer preview)
-180,Added new builds.,Added new builds.
-181,"Bug Fixes
+180,v3 Release Candidate 1 (developer preview),v3 Release Candidate 1 (developer preview)
+181,Added new builds.,Added new builds.
+182,"Bug Fixes
 
 Fixed multiple issues with RenderTexture
 Fixed multiple issues with TilingSprite
@@ -10290,12 +10412,12 @@ Fixed issue where FastSpriteBatch broke after a context loss
 New Features
 Extra data sent in asset loader progress event
 add touchenter and touchleave support to interaction manager"
-182,"Forgot to upload new builds in v2.2.4, this fixes that...","Forgot to upload new builds in v2.2.4, this fixes that..."
-183,Hotfix for #1381 ,Hotfix for #1381 
-184,Fix an issue with npm publish,Fix an issue with npm publish
-185,Fix versions written in pixi code to reflect actual version.,Fix versions written in pixi code to reflect actual version.
-186,Hotfix for #1324.,Hotfix for #1324.
-187,"Changelog:
+183,"Forgot to upload new builds in v2.2.4, this fixes that...","Forgot to upload new builds in v2.2.4, this fixes that..."
+184,Hotfix for #1381 ,Hotfix for #1381 
+185,Fix an issue with npm publish,Fix an issue with npm publish
+186,Fix versions written in pixi code to reflect actual version.,Fix versions written in pixi code to reflect actual version.
+187,Hotfix for #1324.,Hotfix for #1324.
+188,"Changelog:
 New features
 Massive update to the sprine runtime and the examples : @darionco
 The strip class has now three extra properties, canvasPadding, paddingX, and paddingY : @darionco
@@ -10334,12 +10456,12 @@ Applied the new generic updateTransform to spritebatch : @kambing86
 Several code formatting across the Strip class : @darionco
 Added a nice optimisation to the getBounds method.
 Documentation updates : @pstickne"
-188,"Changelog:
+189,"Changelog:
 Bug Fixes
 Fixed PIXI.DisplayObject pivot issue ","Changelog:
 Bug Fixes
 Fixed PIXI.DisplayObject pivot issue "
-189,"Changelog:
+190,"Changelog:
 New features
 unloadFromGPU added to PIXI.BaseTexture
 PIXI.VideoTexture added
@@ -10396,7 +10518,7 @@ Fixed PIXI.Text.getBounds Issue
 Misc
 Added Video Texture Example
 PIXI.RenderTexture.getCanvas optimized"
-190,"Changelog:
+191,"Changelog:
 New features
 
 Sprites can now have a custom shader applied to them. Much better performance than filters.
@@ -10467,7 +10589,7 @@ Separated out the CanvasBuffer to its own class
 Bind polyfill updated
 moved shapes to geom folder
 Examples have received a bit of a tidy"
-191,"Changelog:
+192,"Changelog:
 New features
 
 Sprite rendering now _400%_ faster when dealing with separate textures in webGL
@@ -10500,7 +10622,7 @@ Added 0 width check to PIXI.DisplayObjectContainer
 Misc
 cleaned up some trailing commas on objects declarations
 redundant variables removed"
-192,"Changelog:
+193,"Changelog:
 New features
 
 Big graphics update!
@@ -10599,7 +10721,7 @@ Removed this.local in InteractionData.
 Shader manager Simplified.
 Sprite._renderCanvas streamlined and optimized.
 WebGL drawCalls optimized."
-193,"Changelog:
+194,"Changelog:
 New features
 
 CacheAsBitmap added to displayObjects
@@ -10664,7 +10786,7 @@ Documentation tweaks
 Lowered the default size of SpriteBatch from 10000 to 2000 as this yields faster results on mobile 
 Grunt watch task added to grunt file (@mattdesl)
 Karma verison updated"
-194,"
+195,"
 Fix an issue with updateTransform (#569)
 Change parameter order of PIXI.autoDetectRenderer (#572)
 Fix Karma timeout (#574)
@@ -10673,7 +10795,7 @@ Fix TilingSprite bug in Firefox
 Change parameter order of PIXI.autoDetectRenderer (#572)
 Fix Karma timeout (#574)
 Fix TilingSprite bug in Firefox"
-195,"Changelog:
+196,"Changelog:
 New features
 
 Added PIXI.SpriteBatch Container to bring crazy speed boosts to the renderer
@@ -10744,12 +10866,12 @@ Remove mat3 and mat4 in favor of a Matrix object - (giving pixi a nice speed boo
 .addChild now just uses .addChildAt (thanks @qzix13)
 Remove some globals and refactor constants
 Whitespace/grammar fixes (thanks @danzel)"
-196,"Fixed Bug Where PIXI.Graphics children not rendering 
+197,"Fixed Bug Where PIXI.Graphics children not rendering 
 Fixed Memory Leak in removeChild
 Removed visibleCount reference as its no longer used","Fixed Bug Where PIXI.Graphics children not rendering 
 Fixed Memory Leak in removeChild
 Removed visibleCount reference as its no longer used"
-197,"
+198,"
 webGL renderer is now fully compatible with IE11
 Fully compatible with Cocoon.js (@ekelokorpi)
 Fixed issue where PIXI.TilingSprite required a power of two texture. It now accepts any texture.
@@ -10778,12 +10900,12 @@ Bug Fixes
 - Redundant code removed from SpineLoader and SpriteSheetLoader (@Nibbler999)
 Misc
 - Various Minor tweaks. "
-198,"Bugfixes
+199,"Bugfixes
 
 Fixed some typos and small bugs
 ","Bugfixes
 Fixed some typos and small bugs"
-199,"Changelog:
+200,"Changelog:
 New features
 
 WebGL Filters
@@ -10866,7 +10988,7 @@ Fix a bunch of documentation errors
 Fix setText to be on proper prototype (#330)
 Misc
 Shader code cleanup"
-200,"v1.3.0 is here!
+201,"v1.3.0 is here!
 So whats new? Basically Its faster and does more stuff:
 
 Spine runtime is now much more robust with lots of little tweaks and bug fixes to make it more compatible. 

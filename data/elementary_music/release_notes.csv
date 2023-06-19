@@ -1,5 +1,48 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"What's Changed
+
+PlaybackManager: use GLib.Once by @danirabbit in https://github.com/elementary/music/pull/732
+Handle dropped folder by @jeremypw in https://github.com/elementary/music/pull/739
+metainfo: Add translation field by @tintou in https://github.com/elementary/music/pull/740
+Bump bilelmoussaoui/flatpak-github-actions from 4 to 5 by @dependabot in https://github.com/elementary/music/pull/742
+Bump docker/setup-qemu-action from 1 to 2 by @dependabot in https://github.com/elementary/music/pull/741
+Bump actions/checkout from 1 to 3 by @dependabot in https://github.com/elementary/music/pull/743
+Update flatpak actions to new namespace by @davidmhewitt in https://github.com/elementary/music/pull/744
+Update runtime to 7.2 by @danirabbit in https://github.com/elementary/music/pull/748
+Bump flatpak/flatpak-github-actions from 5 to 6 by @dependabot in https://github.com/elementary/music/pull/749
+Allow to open directories directly by @aitor-gomila in https://github.com/elementary/music/pull/747
+Update metainfo for next release by @jeremypw in https://github.com/elementary/music/pull/751
+MainWindow: use HeaderBars by @danirabbit in https://github.com/elementary/music/pull/753
+MainWindow: Gtk.DropTarget: use drop instead on_drop by @leolost2605 in https://github.com/elementary/music/pull/754
+Release 7.1.0 by @danirabbit in https://github.com/elementary/music/pull/755
+
+New Contributors
+
+@dependabot made their first contribution in https://github.com/elementary/music/pull/742
+@aitor-gomila made their first contribution in https://github.com/elementary/music/pull/747
+@leolost2605 made their first contribution in https://github.com/elementary/music/pull/754
+
+Full Changelog: https://github.com/elementary/music/compare/7.0.1...7.1.0","What's Changed
+PlaybackManager: use GLib.Once by @danirabbit in link
+Handle dropped folder by @jeremypw in link
+metainfo: Add translation field by @tintou in link
+Bump bilelmoussaoui/flatpak-github-actions from 4 to 5 by @dependabot in link
+Bump docker/setup-qemu-action from 1 to 2 by @dependabot in link
+Bump actions/checkout from 1 to 3 by @dependabot in link
+Update flatpak actions to new namespace by @davidmhewitt in link
+Update runtime to 7.2 by @danirabbit in link
+Bump flatpak/flatpak-github-actions from 5 to 6 by @dependabot in link
+Allow to open directories directly by @aitor-gomila in link
+Update metainfo for next release by @jeremypw in link
+MainWindow: use HeaderBars by @danirabbit in link
+MainWindow: Gtk.DropTarget: use drop instead on_drop by @leolost2605 in link
+Release 7.1.0 by @danirabbit in link
+New Contributors
+@dependabot made their first contribution in link
+@aitor-gomila made their first contribution in link
+@leolost2605 made their first contribution in link
+Full Changelog: link"
+2,"What's Changed
 
 Use file basename instead of uri for the default audio object title. by @vjr in https://github.com/elementary/music/pull/710
 Skip invalid files instead of stopping playback. by @vjr in https://github.com/elementary/music/pull/711
@@ -22,11 +65,11 @@ Update Flatpak runtime to 7.1 by @danirabbit in link
 Update music.metainfo.xml.in by @danirabbit in link
 Release 7.0.1 by @danirabbit in link
 Full Changelog: link"
-2,Complete rewrite,Complete rewrite
-3,"Drop support for Last.FM
+3,Complete rewrite,Complete rewrite
+4,"Drop support for Last.FM
 Updated translations","Drop support for Last.FM
 Updated translations"
-4,"Fix an issue with saving smart playlists
+5,"Fix an issue with saving smart playlists
 Drop support for CD-ROM
 Dark style support
 Minor visual improvements
@@ -35,7 +78,7 @@ Drop support for CD-ROM
 Dark style support
 Minor visual improvements
 Updated translations"
-5,"music 5.0.5 is out! 
+6,"music 5.0.5 is out! 
 Fix removing items from the queue
 Fix equalizer sliders not properly disabled sometimes
 Updated translations
@@ -44,7 +87,7 @@ Fix removing items from the queue
 Fix equalizer sliders not properly disabled sometimes
 Updated translations
 Performance improvements"
-6,"Music 5.0.4 is out!
+7,"Music 5.0.4 is out!
 Changes:
 * Removed old gsignond vapi
 * LibraryWindow: Use Granite.MessageDialog for showing alerts
@@ -57,7 +100,7 @@ Changes:
 * PlaylistsUtils: Use Gtk.FileChooserNative
 * Accurately remember window size
 * Updated translations"
-7,"Music 5.0.3 is out!
+8,"Music 5.0.3 is out!
 Changes:
 * Scale album art properly at high resolutions
 * Accurately select Music Folder Location for directories with spaces in name
@@ -68,7 +111,7 @@ Changes:
 * Accurately select Music Folder Location for directories with spaces in name
 * New MediaKeyListener path for gnome-settings-daemon
 * Updated translations"
-8,"Music 5.0.2 is out!
+9,"Music 5.0.2 is out!
 Changes:
 * AlbumView: double-click to play album
 * Associate with s3m files
@@ -83,7 +126,7 @@ Changes:
 * Properly restore playlists
 * Always respect custom music folder setting
 * Updated translations"
-9,"Music 5.0.1 is out!
+10,"Music 5.0.1 is out!
 Changes:
 * Fix list and column view sorting
 * Add orange accent color
@@ -92,7 +135,7 @@ Changes:
 * Fix list and column view sorting
 * Add orange accent color
 * Add shortcut accels to tooltips"
-10,"Music 5.0 is out!
+11,"Music 5.0 is out!
 Changes:
 * Various UI changes
 * Shuffle fixes
@@ -103,10 +146,10 @@ Changes:
 * Shuffle fixes
 * Initial MPRIS support
 * Updated translations"
-11,"Noise 0.4.2 is out!
+12,"Noise 0.4.2 is out!
 The list of issues closed by this release can be found here.","Noise 0.4.2 is out!
 The list of issues closed by this release can be found here."
-12,"Noise 0.4.1 is out!
+13,"Noise 0.4.1 is out!
 Edit: The list of issues closed by this release can be found here.","Noise 0.4.1 is out!
 Edit: The list of issues closed by this release can be found here."
-13,Noise 0.4.0.3 is out!,Noise 0.4.0.3 is out!
+14,Noise 0.4.0.3 is out!,Noise 0.4.0.3 is out!

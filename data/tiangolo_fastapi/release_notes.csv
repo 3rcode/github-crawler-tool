@@ -1,5 +1,132 @@
-Index,Release Note,Release Note With Abstraction
-1,"
+Index,Release Note,Release Note Abstract
+1,"Features
+
+✨ Add support for dependencies in WebSocket routes. PR #4534 by @paulo-raca.
+✨ Add exception handler for WebSocketRequestValidationError (which also allows to override it). PR #6030 by @kristjanvalur.
+
+Refactors
+
+⬆️ Upgrade and fully migrate to Ruff, remove isort, includes a couple of tweaks suggested by the new version of Ruff. PR #9660 by @tiangolo.
+♻️ Update internal type annotations and upgrade mypy. PR #9658 by @tiangolo.
+♻️ Simplify AsyncExitStackMiddleware as without Python 3.6 AsyncExitStack is always available. PR #9657 by @tiangolo.
+
+Upgrades
+
+⬆️ Upgrade Black. PR #9661 by @tiangolo.
+
+Internal
+
+💚 Update CI cache to fix installs when dependencies change. PR #9659 by @tiangolo.
+⬇️ Separate requirements for development into their own requirements.txt files, they shouldn't be extras. PR #9655 by @tiangolo.
+","Features
+✨ Add support for dependencies in WebSocket routes. PR #4534 by @paulo-raca.
+✨ Add exception handler for WebSocketRequestValidationError (which also allows to override it). PR #6030 by @kristjanvalur.
+Refactors
+⬆️ Upgrade and fully migrate to Ruff, remove isort, includes a couple of tweaks suggested by the new version of Ruff. PR #9660 by @tiangolo.
+♻️ Update internal type annotations and upgrade mypy. PR #9658 by @tiangolo.
+♻️ Simplify AsyncExitStackMiddleware as without Python 3.6 AsyncExitStack is always available. PR #9657 by @tiangolo.
+Upgrades
+⬆️ Upgrade Black. PR #9661 by @tiangolo.
+Internal
+💚 Update CI cache to fix installs when dependencies change. PR #9659 by @tiangolo.
+⬇️ Separate requirements for development into their own requirements.txt files, they shouldn't be extras. PR #9655 by @tiangolo."
+2,"Fixes
+
+🐛 Fix HTTPException header type annotations. PR #9648 by @tiangolo.
+🐛 Fix OpenAPI model fields int validations, gte to ge. PR #9635 by @tiangolo.
+
+Upgrades
+
+📌 Update minimum version of Pydantic to >=1.7.4. This fixes an issue when trying to use an old version of Pydantic. PR #9567 by @Kludex.
+
+Refactors
+
+♻ Remove media_type from ORJSONResponse as it's inherited from the parent class. PR #5805 by @Kludex.
+♻ Instantiate HTTPException only when needed, optimization refactor. PR #5356 by @pawamoy.
+
+Docs
+
+🔥 Remove link to Pydantic's benchmark, as it was removed there. PR #5811 by @Kludex.
+
+Translations
+
+🌐 Fix spelling in Indonesian translation of docs/id/docs/tutorial/index.md. PR #5635 by @purwowd.
+🌐 Add Russian translation for docs/ru/docs/tutorial/index.md. PR #5896 by @Wilidon.
+🌐 Add Chinese translations for docs/zh/docs/advanced/response-change-status-code.md and docs/zh/docs/advanced/response-headers.md. PR #9544 by @ChoyeonChern.
+🌐 Add Russian translation for docs/ru/docs/tutorial/schema-extra-example.md. PR #9621 by @Alexandrhub.
+
+Internal
+
+🔧 Add sponsor Platform.sh. PR #9650 by @tiangolo.
+👷 Add custom token to Smokeshow and Preview Docs for download-artifact, to prevent API rate limits. PR #9646 by @tiangolo.
+👷 Add custom tokens for GitHub Actions to avoid rate limits. PR #9647 by @tiangolo.
+","Fixes
+🐛 Fix HTTPException header type annotations. PR #9648 by @tiangolo.
+🐛 Fix OpenAPI model fields int validations, gte to ge. PR #9635 by @tiangolo.
+Upgrades
+📌 Update minimum version of Pydantic to >=1.7.4. This fixes an issue when trying to use an old version of Pydantic. PR #9567 by @Kludex.
+Refactors
+♻ Remove media_type from ORJSONResponse as it's inherited from the parent class. PR #5805 by @Kludex.
+♻ Instantiate HTTPException only when needed, optimization refactor. PR #5356 by @pawamoy.
+Docs
+🔥 Remove link to Pydantic's benchmark, as it was removed there. PR #5811 by @Kludex.
+Translations
+🌐 Fix spelling in Indonesian translation of docs/id/docs/tutorial/index.md. PR #5635 by @purwowd.
+🌐 Add Russian translation for docs/ru/docs/tutorial/index.md. PR #5896 by @Wilidon.
+🌐 Add Chinese translations for docs/zh/docs/advanced/response-change-status-code.md and docs/zh/docs/advanced/response-headers.md. PR #9544 by @ChoyeonChern.
+🌐 Add Russian translation for docs/ru/docs/tutorial/schema-extra-example.md. PR #9621 by @Alexandrhub.
+Internal
+🔧 Add sponsor Platform.sh. PR #9650 by @tiangolo.
+👷 Add custom token to Smokeshow and Preview Docs for download-artifact, to prevent API rate limits. PR #9646 by @tiangolo.
+👷 Add custom tokens for GitHub Actions to avoid rate limits. PR #9647 by @tiangolo."
+3,"Features
+
+⚡ Update create_cloned_field to use a global cache and improve startup performance. PR #4645 by @madkinsz and previous original PR by @huonw.
+
+Docs
+
+📝 Update Deta deployment tutorial for compatibility with Deta Space. PR #6004 by @mikBighne98.
+✏️ Fix typo in Deta deployment tutorial. PR #9501 by @lemonyte.
+
+Translations
+
+🌐 Add Russian translation for docs/tutorial/body.md. PR #3885 by @solomein-sv.
+🌐 Add Russian translation for docs/ru/docs/tutorial/static-files.md. PR #9580 by @Alexandrhub.
+🌐 Add Russian translation for docs/ru/docs/tutorial/query-params.md. PR #9584 by @Alexandrhub.
+🌐 Add Russian translation for docs/ru/docs/tutorial/first-steps.md. PR #9471 by @AGolicyn.
+🌐 Add Russian translation for docs/ru/docs/tutorial/debugging.md. PR #9579 by @Alexandrhub.
+🌐 Add Russian translation for docs/ru/docs/tutorial/path-params.md. PR #9519 by @AGolicyn.
+🌐 Add Chinese translation for docs/zh/docs/tutorial/static-files.md. PR #9436 by @wdh99.
+🌐 Update Spanish translation including new illustrations in docs/es/docs/async.md. PR #9483 by @andresbermeoq.
+🌐 Add Russian translation for docs/ru/docs/tutorial/path-params-numeric-validations.md. PR #9563 by @ivan-abc.
+🌐 Add Russian translation for docs/ru/docs/deployment/concepts.md. PR #9577 by @Xewus.
+🌐 Add Russian translation for docs/ru/docs/tutorial/body-multiple-params.md. PR #9586 by @Alexandrhub.
+
+Internal
+
+👥 Update FastAPI People. PR #9602 by @github-actions[bot].
+🔧 Update sponsors, remove InvestSuite. PR #9612 by @tiangolo.
+","Features
+⚡ Update create_cloned_field to use a global cache and improve startup performance. PR #4645 by @madkinsz and previous original PR by @huonw.
+Docs
+📝 Update Deta deployment tutorial for compatibility with Deta Space. PR #6004 by @mikBighne98.
+✏️ Fix typo in Deta deployment tutorial. PR #9501 by @lemonyte.
+Translations
+🌐 Add Russian translation for docs/tutorial/body.md. PR #3885 by @solomein-sv.
+🌐 Add Russian translation for docs/ru/docs/tutorial/static-files.md. PR #9580 by @Alexandrhub.
+🌐 Add Russian translation for docs/ru/docs/tutorial/query-params.md. PR #9584 by @Alexandrhub.
+🌐 Add Russian translation for docs/ru/docs/tutorial/first-steps.md. PR #9471 by @AGolicyn.
+🌐 Add Russian translation for docs/ru/docs/tutorial/debugging.md. PR #9579 by @Alexandrhub.
+🌐 Add Russian translation for docs/ru/docs/tutorial/path-params.md. PR #9519 by @AGolicyn.
+🌐 Add Chinese translation for docs/zh/docs/tutorial/static-files.md. PR #9436 by @wdh99.
+🌐 Update Spanish translation including new illustrations in docs/es/docs/async.md. PR #9483 by @andresbermeoq.
+🌐 Add Russian translation for docs/ru/docs/tutorial/path-params-numeric-validations.md. PR #9563 by @ivan-abc.
+🌐 Add Russian translation for docs/ru/docs/deployment/concepts.md. PR #9577 by @Xewus.
+🌐 Add Russian translation for docs/ru/docs/tutorial/body-multiple-params.md. PR #9586 by @Alexandrhub.
+Internal
+👥 Update FastAPI People. PR #9602 by @github-actions[bot].
+🔧 Update sponsors, remove InvestSuite. PR #9612 by @tiangolo."
+4,"
 ⬆️ Upgrade Starlette version to >=0.27.0 for a security release. PR #9541 by @tiangolo. Details on Starlette's security advisory.
 
 Translations
@@ -42,7 +169,7 @@ Internal
 ⬆ Bump dawidd6/action-download-artifact from 2.26.0 to 2.27.0. PR #9394 by @dependabot[bot].
 💚 Disable setup-python pip cache in CI. PR #9438 by @tiangolo.
 ⬆ Bump pypa/gh-action-pypi-publish from 1.6.4 to 1.8.5. PR #9346 by @dependabot[bot]."
-2,"Fixes
+5,"Fixes
 
 🐛 Fix using Annotated in routers or path operations decorated multiple times. PR #9315 by @sharonyogev.
 
@@ -103,7 +230,7 @@ Translations
 Internal
 🔧 Update sponsors: remove Jina. PR #9388 by @tiangolo.
 🔧 Update sponsors, add databento, remove Ines's course and StriveWorks. PR #9351 by @tiangolo."
-3,"Highlights
+6,"Highlights
 This release adds support for dependencies and parameters using Annotated and recommends its usage. ✨
 This has several benefits, one of the main ones is that now the parameters of your functions with Annotated would not be affected at all.
 If you call those functions in other places in your code, the actual default values will be kept, your editor will help you notice missing required arguments, Python will require you to pass required arguments at runtime, you will be able to use the same functions for different things and with different libraries (e.g. Typer will soon support Annotated too, then you could use the same function for an API and a CLI), etc.
@@ -216,12 +343,12 @@ Docs
 📝 Tweak tip recommending Annotated in docs. PR #9270 by @tiangolo.
 📝 Update order of examples, latest Python version first, and simplify version tab names. PR #9269 by @tiangolo.
 📝 Update all docs to use Annotated as the main recommendation, with new examples and tests. PR #9268 by @tiangolo."
-4,"Fixes
+7,"Fixes
 
 🎨 Fix types for lifespan, upgrade Starlette to 0.26.1. PR #9245 by @tiangolo.
 ","Fixes
 🎨 Fix types for lifespan, upgrade Starlette to 0.26.1. PR #9245 by @tiangolo."
-5,"Upgrades
+8,"Upgrades
 
 ⬆ Upgrade python-multipart to support 0.0.6. PR #9212 by @musicinmybrain.
 ⬆️ Upgrade Starlette version, support new lifespan with state. PR #9239 by @tiangolo.
@@ -254,7 +381,7 @@ Internal
 ⬆ Bump types-ujson from 5.6.0.0 to 5.7.0.1. PR #6027 by @dependabot[bot].
 ⬆ Bump dawidd6/action-download-artifact from 2.24.3 to 2.26.0. PR #6034 by @dependabot[bot].
 ⬆ [pre-commit.ci] pre-commit autoupdate. PR #5709 by @pre-commit-ci[bot]."
-6,"Features
+9,"Features
 
 ✨ Add support for lifespan async context managers (superseding startup and shutdown events). Initial PR #2944 by @uSpike.
 
@@ -329,7 +456,7 @@ Internal
 ♻️ Refactor FastAPI Experts to use only discussions now that questions are migrated. PR #9165 by @tiangolo.
 ⬆️ Upgrade analytics. PR #6025 by @tiangolo.
 ⬆️ Upgrade and re-enable installing Typer-CLI. PR #6008 by @tiangolo."
-7,"🚨 This is a security fix. Please upgrade as soon as possible.
+10,"🚨 This is a security fix. Please upgrade as soon as possible.
 Upgrades
 
 ⬆️ Upgrade Starlette to 0.25.0. PR #5996 by @tiangolo.
@@ -344,7 +471,7 @@ Upgrades
 This solves a vulnerability that could allow denial of service attacks by using many small multipart fields/files (parts), consuming high CPU and memory.
 Only applications using forms (e.g. file uploads) could be affected.
 For most cases, upgrading won't have any breaking changes."
-8,"Upgrades
+11,"Upgrades
 
 ⬆️ Upgrade Starlette version to 0.24.0 and refactor internals for compatibility. PR #5985 by @tiangolo.
 This can solve nuanced errors when using middlewares. Before Starlette 0.24.0, a new instance of each middleware class would be created when a new middleware was added. That normally was not a problem, unless the middleware class expected to be created only once, with only one instance, that happened in some cases. This upgrade would solve those cases (thanks @adriangb! Starlette PR #2017). Now the middleware class instances are created once, right before the first request (the first time the app is called).
@@ -355,7 +482,7 @@ If you depended on that previous behavior, you might need to update your code. A
 ⬆️ Upgrade Starlette version to 0.24.0 and refactor internals for compatibility. PR #5985 by @tiangolo.
 This can solve nuanced errors when using middlewares. Before Starlette 0.24.0, a new instance of each middleware class would be created when a new middleware was added. That normally was not a problem, unless the middleware class expected to be created only once, with only one instance, that happened in some cases. This upgrade would solve those cases (thanks @adriangb! Starlette PR #2017). Now the middleware class instances are created once, right before the first request (the first time the app is called).
 If you depended on that previous behavior, you might need to update your code. As always, make sure your tests pass before merging the upgrade."
-9,"Upgrades
+12,"Upgrades
 
 ⬆️ Upgrade Starlette range to allow 0.23.1. PR #5980 by @tiangolo.
 
@@ -382,7 +509,7 @@ Translations
 🌐 Add Russian translation for docs/ru/docs/tutorial/cookie-params.md. PR #5890 by @bnzone.
 Internal
 ✏ Update zip-docs.sh internal script, remove extra space. PR #5931 by @JuanPerdomo00."
-10,"Upgrades
+13,"Upgrades
 
 ⬆️ Bump Starlette from 0.22.0 to 0.23.0. Initial PR #5739 by @Kludex.
 
@@ -433,7 +560,7 @@ Internal
 🔧 Add template for questions in Discussions. PR #5920 by @tiangolo.
 🔧 Update Sponsor Budget Insight to Powens. PR #5916 by @tiangolo.
 🔧 Update GitHub Sponsors badge data. PR #5915 by @tiangolo."
-11,"Fixes
+14,"Fixes
 
 🐛 Ignore Response classes on return annotation. PR #5855 by @Kludex. See the new docs in the PR below.
 
@@ -452,7 +579,7 @@ Docs
 📝 Add External Link: FastAPI lambda container: serverless simplified. PR #5784 by @rafrasenberg.
 Translations
 🌐 Add Turkish translation for docs/tr/docs/tutorial/first_steps.md. PR #5691 by @Kadermiyanyedi."
-12,"Features
+15,"Features
 
 ✨ Add support for function return type annotations to declare the response_model. Initial PR #1436 by @uriyyo.
 
@@ -548,7 +675,7 @@ Internal
 👥 Update FastAPI People. PR #5722 by @github-actions[bot].
 🔧 Update sponsors, disable course bundle. PR #5713 by @tiangolo.
 ⬆ Update typer[all] requirement from <0.7.0,>=0.6.1 to >=0.6.1,<0.8.0. PR #5639 by @dependabot[bot]."
-13,"Upgrades
+16,"Upgrades
 
 ⬆ Bump Starlette to version 0.22.0 to fix bad encoding for query parameters in new TestClient. PR #5659 by @azogue.
 
@@ -585,7 +712,7 @@ Internal
 👷 Fix and tweak CI cache handling. PR #5696 by @tiangolo.
 👷 Update setup-python action in tests to use new caching feature. PR #5680 by @madkinsz.
 ⬆ Bump black from 22.8.0 to 22.10.0. PR #5569 by @dependabot[bot]."
-14,"Highlights of this release:
+17,"Highlights of this release:
 
 Upgraded Starlette
 Now the TestClient is based on HTTPX instead of Requests. 🚀
@@ -650,7 +777,7 @@ Internal
 ⬆ Bump dawidd6/action-download-artifact from 2.24.1 to 2.24.2. PR #5609 by @dependabot[bot].
 ⬆ Bump dawidd6/action-download-artifact from 2.24.0 to 2.24.1. PR #5603 by @dependabot[bot].
 📝 Update coverage badge to use Samuel Colvin's Smokeshow. PR #5585 by @tiangolo."
-15,"Features
+18,"Features
 
 ⬆ Add Python 3.11 to the officially supported versions. PR #5587 by @tiangolo.
 ✅ Enable tests for Python 3.11. PR #4881 by @tiangolo.
@@ -691,7 +818,7 @@ Internal
 🎨 Format OpenAPI JSON in test_starlette_exception.py. PR #5379 by @iudeen.
 👷 Switch from Codecov to Smokeshow plus pytest-cov to pure coverage for internal tests. PR #5583 by @tiangolo.
 👥 Update FastAPI People. PR #5571 by @github-actions[bot]."
-16,"Note: this release doesn't affect final users, it's mainly internal. It unlocks Pydanitc work with the integration that runs FastAPI's tests in Pydantic's CI.
+19,"Note: this release doesn't affect final users, it's mainly internal. It unlocks Pydanitc work with the integration that runs FastAPI's tests in Pydantic's CI.
 Docs
 
 ✏ Fix grammar and add helpful links to dependencies in docs/en/docs/async.md. PR #5432 by @pamelafox.
@@ -758,7 +885,7 @@ Internal
 ⬆ [pre-commit.ci] pre-commit autoupdate. PR #5408 by @pre-commit-ci[bot].
 ⬆️ Upgrade Typer to include Rich in scripts for docs. PR #5502 by @tiangolo.
 🐛 Fix calling mkdocs for languages as a subprocess to fix/enable MkDocs Material search plugin. PR #5501 by @tiangolo."
-17,"Fixes
+20,"Fixes
 
 🐛 Fix support for strings in OpenAPI status codes: default, 1XX, 2XX, 3XX, 4XX, 5XX. PR #5187 by @JarroVGIT.
 
@@ -779,7 +906,7 @@ Internal
 👥 Update FastAPI People. PR #5447 by @github-actions[bot].
 🔧 Disable Material for MkDocs search plugin. PR #5495 by @tiangolo.
 🔇 Ignore Trio warning in tests for CI. PR #5483 by @samuelcolvin."
-18,"Features
+21,"Features
 
 ⬆ Upgrade version required of Starlette from 0.19.1 to 0.20.4. Initial PR #4820 by @Kludex.
 This includes several bug fixes in Starlette.
@@ -802,14 +929,14 @@ Internal
 ⬆️ Upgrade test dependencies: Black, HTTPX, databases, types-ujson. PR #5399 by @tiangolo.
 ⬆️ Upgrade mypy and tweak internal type annotations. PR #5398 by @tiangolo.
 🔧 Update test dependencies, upgrade Pytest, move dependencies from dev to test. PR #5396 by @tiangolo."
-19,"Breaking Changes
+22,"Breaking Changes
 This version of FastAPI drops support for Python 3.6. 🔥 Please upgrade to a supported version of Python (3.7 or above), Python 3.6 reached the end-of-life a long time ago. 😅☠
 
 🔧 Update package metadata, drop support for Python 3.6, move build internals from Flit to Hatch. PR #5240 by @ofek.
 ","Breaking Changes
 This version of FastAPI drops support for Python 3.6. 🔥 Please upgrade to a supported version of Python (3.7 or above), Python 3.6 reached the end-of-life a long time ago. 😅☠
 🔧 Update package metadata, drop support for Python 3.6, move build internals from Flit to Hatch. PR #5240 by @ofek."
-20,"🚨 This is probably the last release (or one of the last releases) to support Python 3.6. 🔥
+23,"🚨 This is probably the last release (or one of the last releases) to support Python 3.6. 🔥
 Python 3.6 reached the end-of-life and is no longer supported by Python since around a year ago.
 You hopefully updated to a supported version of Python a while ago. If you haven't, you really should.
 Features
@@ -840,7 +967,7 @@ Docs
 📝 Update SECURITY.md. PR #5377 by @Kludex.
 Internal
 ⬆ [pre-commit.ci] pre-commit autoupdate. PR #5352 by @pre-commit-ci[bot]."
-21,"🚨 This is probably the last release (or one of the last releases) to support Python 3.6. 🔥
+24,"🚨 This is probably the last release (or one of the last releases) to support Python 3.6. 🔥
 Python 3.6 reached the end-of-life and is no longer supported by Python since around a year ago.
 You hopefully updated to a supported version of Python a while ago. If you haven't, you really should.
 Features
@@ -913,7 +1040,7 @@ Internal
 ✏ Fix a small code highlight line error. PR #5256 by @hjlarry.
 ♻ Internal small refactor, move operation_id parameter position in delete method for consistency with the code. PR #4474 by @hiel.
 🔧 Update sponsors, disable ImgWhale. PR #5338 by @tiangolo."
-22,"Features
+25,"Features
 
 ✨ Add ReDoc <noscript> warning when JS is disabled. PR #5074 by @evroon.
 ✨ Add support for FrozenSet in parameters (e.g. query). PR #2938 by @juntatalor.
@@ -1004,7 +1131,7 @@ Internal
 ♻ Simplify conditional assignment in fastapi/dependencies/utils.py. PR #4597 by @cikay.
 ⬆ Upgrade version pin accepted for Flake8, for internal code, to flake8 >=3.8.3,<6.0.0. PR #4097 by @jamescurtin.
 🍱 Update Jina banner, fix typo. PR #5301 by @tiangolo."
-23,"Breaking Changes - Fixes
+26,"Breaking Changes - Fixes
 
 🐛 Fix response_model not invalidating None. PR #2725 by @hukkin.
 
@@ -1085,7 +1212,7 @@ Translations
 🌐 Fix typos in German translation for docs/de/docs/features.md. PR #4533 by @0xflotus.
 🌐 Add missing navigator for encoder.md in Korean translation. PR #5238 by @joonas-yoon.
 (Empty PR merge by accident) #4913."
-24,"Fixes
+27,"Fixes
 
 🐛 Fix jsonable_encoder using include and exclude parameters for non-Pydantic objects. PR #2606 by @xaviml.
 🐛 Fix edge case with repeated aliases names not shown in OpenAPI. PR #2351 by @klaa97.
@@ -1144,7 +1271,7 @@ Internal
 🔧 Update Jina sponsorship. PR #5283 by @tiangolo.
 🔧 Update Jina sponsorship. PR #5272 by @tiangolo.
 🔧 Update sponsors, Striveworks badge. PR #5179 by @tiangolo."
-25,"Fixes - Breaking Changes
+28,"Fixes - Breaking Changes
 
 🐛 Fix removing body from status codes that do not support it. PR #5145 by @tiangolo.
 Setting status_code to 204, 304, or any code below 200 (1xx) will remove the body from the response.
@@ -1209,7 +1336,7 @@ Internal
 ♻️ Move from Optional[X] to Union[X, None] for internal utils. PR #5124 by @tiangolo.
 🔧 Update sponsors, remove Dropbase, add Doist. PR #5096 by @tiangolo.
 🔧 Update sponsors, remove Classiq, add ImgWhale. PR #5079 by @tiangolo."
-26,"Features
+29,"Features
 
 
 ✨ Add support for omitting ... as default value when declaring required parameters with:
@@ -1338,7 +1465,7 @@ Internal
 🔧 Add Python formatting hooks to pre-commit. PR #4890 by @tiangolo.
 🔧 Add pre-commit with first config and first formatting pass. PR #4888 by @tiangolo.
 👷 Disable CI installing Material for MkDocs in forks. PR #4410 by @dolfinus."
-27,"Upgrades
+30,"Upgrades
 
 ⬆ Upgrade Starlette from 0.19.0 to 0.19.1. PR #4819 by @Kludex.
 
@@ -1371,7 +1498,7 @@ Translations
 🌐 Add Portuguese translation for docs/pt/docs/help-fastapi.md. PR #4583 by @mateusjs.
 Internal
 🔧 Add notifications in issue for Uzbek translations. PR #4884 by @tiangolo."
-28,"Upgrades
+31,"Upgrades
 
 ⬆ Upgrade Starlette from 0.18.0 to 0.19.0. PR #4488 by @Kludex.
 When creating an explicit JSONResponse the content argument is now required.
@@ -1428,7 +1555,7 @@ Translations
 🌐 Add Portuguese translation for docs/tutorial/body.md. PR #3960 by @leandrodesouzadev.
 🌐 Add Portuguese translation of tutorial/extra-data-types.md. PR #4077 by @luccasmmg.
 🌐 Update German translation for docs/features.md. PR #3905 by @jomue."
-29,"Upgrades
+32,"Upgrades
 
 ⬆ Upgrade Starlette from 0.17.1 to 0.18.0. PR #4483 by @Kludex.
 
@@ -1445,7 +1572,7 @@ Internal
 🔧 Add Budget Insight sponsor. PR #4824 by @tiangolo.
 🍱 Update sponsor, ExoFlare badge. PR #4822 by @tiangolo.
 🔧 Update sponsors, enable Dropbase again, update TalkPython link. PR #4821 by @tiangolo."
-30,"This release includes upgrades to third-party packages that handle security issues. Although there's a chance these issues don't affect you in particular, please upgrade as soon as possible.
+33,"This release includes upgrades to third-party packages that handle security issues. Although there's a chance these issues don't affect you in particular, please upgrade as soon as possible.
 Fixes
 
 ✅ Fix new/recent tests with new fixed ValidationError JSON Schema. PR #4806 by @tiangolo.
@@ -1474,7 +1601,7 @@ Upgrades
 Internal
 🔧 Update sponsors, add: ExoFlare, Ines Course; remove: Dropbase, Vim.so, Calmcode; update: Striveworks, TalkPython and TestDriven.io. PR #4805 by @tiangolo.
 ⬆️ Upgrade Codecov GitHub Action. PR #4801 by @tiangolo."
-31,"Translations
+34,"Translations
 
 🌐 Start Dutch translations. PR #4703 by @tiangolo.
 🌐 Start Persian/Farsi translations. PR #4243 by @aminalaee.
@@ -1503,17 +1630,17 @@ Internal
 🔧 Update Classiq sponsor links. PR #4688 by @tiangolo.
 🔧 Add Classiq sponsor. PR #4671 by @tiangolo.
 📝 Add Jina's QA Bot to the docs to help people that want to ask quick questions. PR #4655 by @tiangolo based on original PR #4626 by @hanxiao."
-32,"Features
+35,"Features
 
 ✨ Add support for custom generate_unique_id_function and docs for generating clients. New docs: Advanced - Generate Clients. PR #4650 by @tiangolo.
 ","Features
 ✨ Add support for custom generate_unique_id_function and docs for generating clients. New docs: Advanced - Generate Clients. PR #4650 by @tiangolo."
-33,"Features
+36,"Features
 
 ✨ Include route in scope to allow middleware and other tools to extract its information. PR #4603 by @tiangolo.
 ","Features
 ✨ Include route in scope to allow middleware and other tools to extract its information. PR #4603 by @tiangolo."
-34,"Breaking Changes
+37,"Breaking Changes
 
 ✨ Update internal AsyncExitStack to fix context for dependencies with yield. PR #4575 by @tiangolo.
 
@@ -1597,7 +1724,7 @@ Internal
 🔧 Add Striveworks sponsor. PR #4596 by @tiangolo.
 💚 Only build docs on push when on master to avoid duplicate runs from PRs. PR #4564 by @tiangolo.
 👥 Update FastAPI People. PR #4502 by @github-actions[bot]."
-35,"Features
+38,"Features
 
 ✨ Add support for declaring UploadFile parameters without explicit File(). PR #4469 by @tiangolo. New docs: Request Files - File Parameters with UploadFile.
 ✨ Add support for tags with Enums. PR #4468 by @tiangolo. New docs: Path Operation Configuration - Tags with Enums.
@@ -1632,7 +1759,7 @@ Fixes
 Internal
 🐛 Fix docs dependencies cache, to get the latest Material for MkDocs. PR #4466 by @tiangolo.
 🔧 Add sponsor Dropbase. PR #4465 by @tiangolo."
-36,"Features
+39,"Features
 
 ✨ Enable configuring Swagger UI parameters. Original PR #2568 by @jmriebold. Here are the new docs: Configuring Swagger UI.
 
@@ -1661,7 +1788,7 @@ Translations
 🌐 Add Chinese translation for docs\tutorial\path-operation-configuration.md. PR #3312 by @jaystone776.
 Internal
 🔧 Enable MkDocs Material Insiders' content.tabs.link. PR #4399 by @tiangolo."
-37,"Features
+40,"Features
 
 ✨ Add docs and tests for Python 3.9 and Python 3.10. PR #3712 by @tiangolo.
 You can start with Python Types Intro, it explains what changes between different Python versions, in Python 3.9 and in Python 3.10.
@@ -1684,7 +1811,7 @@ Internal
 👥 Update FastAPI People. PR #4354 by @github-actions[bot].
 🔧 Add FastAPI Trove Classifier for PyPI as now there's one 🤷😁. PR #4386 by @tiangolo.
 ⬆ Upgrade MkDocs Material and configs. PR #4385 by @tiangolo."
-38,"There's nothing interesting in this particular FastAPI release. It is mainly to enable/unblock the release of the next version of Pydantic that comes packed with features and improvements. 🤩
+41,"There's nothing interesting in this particular FastAPI release. It is mainly to enable/unblock the release of the next version of Pydantic that comes packed with features and improvements. 🤩
 Fixes
 
 🐛 Fix JSON Schema for dataclasses, supporting the fixes in Pydantic 1.9. PR #4272 by @PrettyWood.
@@ -1729,7 +1856,7 @@ Translations
 🌐 Add Turkish translation for docs/python-types.md. PR #3926 by @BilalAlpaslan.
 Internal
 👥 Update FastAPI People. PR #4274 by @github-actions[bot]."
-39,"This release just upgrades Starlette to the latest version, 0.16.0, which includes several bug fixes and some small breaking changes.
+42,"This release just upgrades Starlette to the latest version, 0.16.0, which includes several bug fixes and some small breaking changes.
 These last three consecutive releases are independent so that you can migrate gradually:
 
 First to FastAPI 0.68.2, with no breaking changes, but upgrading all the sub-dependencies.
@@ -1756,7 +1883,7 @@ Breaking Changes - Upgrade
 Also upgrades the ranges of optional dependencies:
 ""jinja2 >=2.11.2,<4.0.0""
 ""itsdangerous >=1.1.0,<3.0.0"""
-40,"Breaking Changes - Upgrade
+43,"Breaking Changes - Upgrade
 This release adds support for Trio. ✨
 It upgrades the version of Starlette to 0.15.0, now based on AnyIO, and the internal async components in FastAPI are now based on AnyIO as well, making it compatible with both asyncio and Trio.
 You can read the docs about running FastAPI with Trio using Hypercorn.
@@ -1831,7 +1958,7 @@ Internal
 🔧 Swap light/dark theme button icon. PR #3246 by @eddsalkield.
 🔧 Lint only in Python 3.7 and above. PR #4006 by @tiangolo.
 🔧 Add GitHub Action notify-translations config for Azerbaijani. PR #3995 by @tiangolo."
-41,"This release has no breaking changes. 🎉
+44,"This release has no breaking changes. 🎉
 It upgrades the version ranges of sub-dependencies to allow applications using FastAPI to easily upgrade them.
 Soon there will be a new FastAPI release upgrading Starlette to take advantage of recent improvements, but as that has a higher chance of having breaking changes, it will be in a separate release.
 Features
@@ -1900,7 +2027,7 @@ Internal
 ✨ Add Deepset Sponsorship. PR #3976 by @tiangolo.
 🎨 Tweak CSS styles for shell animations. PR #3888 by @tiangolo.
 🔧 Add new Sponsor Calmcode.io. PR #3777 by @tiangolo."
-42,"
+45,"
 ✨ Add support for read_with_orm_mode, to support SQLModel relationship attributes. PR #3757 by @tiangolo.
 
 Translations
@@ -1939,7 +2066,7 @@ Internal
 ➕ Update docs library to include sources in Markdown. PR #3648 by @tiangolo.
 ⬆ Enable tests for Python 3.9. PR #2298 by @Kludex.
 👥 Update FastAPI People. PR #3642 by @github-actions[bot]."
-43,"Features
+46,"Features
 
 ✨ Add support for extensions and updates to the OpenAPI schema in each path operation. New docs: FastAPI Path Operation Advanced Configuration - OpenAPI Extra. Initial PR #1922 by @edouardlp.
 ✨ Add additonal OpenAPI metadata parameters to FastAPI class, shown on the automatic API docs UI. New docs: Metadata and Docs URLs. Initial PR #1812 by @dkreeft.
@@ -1984,7 +2111,7 @@ Internal
 ✅ Add  the docs_src directory to test coverage and update tests. Initial PR #1904 by @Kludex.
 🔧 Add new GitHub templates with forms for new issues. PR #3612 by @tiangolo.
 📝 Add official FastAPI Twitter to docs: @fastapi. PR #3578 by @tiangolo."
-44,"Features
+47,"Features
 
 ✨ Add support for dataclasses in request bodies and response_model. New documentation: Advanced User Guide - Using Dataclasses. PR #3577 by @tiangolo.
 ✨ Support dataclasses in responses. PR #3576 by @tiangolo, continuation from initial PR #2722 by @amitlissack.
@@ -2029,7 +2156,7 @@ Internal
 👷 Rename and clarify CI workflow job names. PR #3570 by @tiangolo.
 👷 Update GitHub Action latest-changes, strike 2 ⚾. PR #3575 by @tiangolo.
 🔧 Sort external links in docs to have the most recent at the top. PR #3568 by @tiangolo."
-45,"Translations
+48,"Translations
 
 🌐 Add basic setup for German translations. PR #3522 by @0x4Dark.
 🌐 Add Portuguese translation for docs/tutorial/security/index.md. PR #3507 by @oandersonmagalhaes.
@@ -2046,7 +2173,7 @@ Internal
 Internal
 🔧 Configure strict pytest options and update/refactor tests. Upgrade pytest to >=6.2.4,<7.0.0 and pytest-cov to >=2.12.0,<3.0.0. Initial PR #2790 by @graingert.
 ⬆️ Upgrade python-jose dependency to >=3.3.0,<4.0.0 for tests. PR #3468 by @tiangolo."
-46,"Features
+49,"Features
 
 ✨ Allow setting the response_class to RedirectResponse or FileResponse and returning the URL from the function. New and updated docs are in the tutorial section Custom Response - HTML, Stream, File, others, in RedirectResponse and in FileResponse. PR #3457 by @tiangolo.
 
@@ -2071,7 +2198,7 @@ Translations
 🌐 Add Spanish translation for advanced/response-directly.md. PR #1253 by @jfunez.
 🌐 Add Spanish translation for advanced/additional-status-codes.md. PR #1252 by @jfunez.
 🌐 Add Spanish translation for advanced/path-operation-advanced-configuration.md. PR #1251 by @jfunez."
-47,"Fixes
+50,"Fixes
 
 ♻ Assume request bodies contain JSON when no Content-Type header is provided. This fixes a breaking change introduced by 0.65.2 with PR #2118. It should allow upgrading FastAPI applications with clients that send JSON data without a Content-Type header. And there's still protection against CSRFs. PR #3456 by @tiangolo.
 
@@ -2122,7 +2249,7 @@ Internal
 👥 Update FastAPI People. PR #3450 by @github-actions[bot].
 👥 Update FastAPI People. PR #3319 by @github-actions[bot].
 ⬆ Upgrade docs development dependency on typer-cli to >=0.0.12 to fix conflicts. PR #3429 by @tiangolo."
-48,"Security fixes
+51,"Security fixes
 
 🔒 Check Content-Type request header before assuming JSON. Initial PR #2118 by @patrickkwang.
 
@@ -2151,12 +2278,12 @@ Internal
 🔧 Add new gold sponsor Jina 🎉. PR #3291 by @tiangolo.
 🔧 Add new banner sponsor badge for FastAPI courses bundle. PR #3288 by @tiangolo.
 👷 Upgrade Issue Manager GitHub Action. PR #3236 by @tiangolo."
-49,"Security fixes
+52,"Security fixes
 
 📌 Upgrade pydantic pin, to handle security vulnerability CVE-2021-29510. PR #3213 by @tiangolo.
 ","Security fixes
 📌 Upgrade pydantic pin, to handle security vulnerability CVE-2021-29510. PR #3213 by @tiangolo."
-50,"Breaking Changes - Upgrade
+53,"Breaking Changes - Upgrade
 
 ⬆️  Upgrade Starlette to 0.14.2, including internal UJSONResponse migrated from Starlette. This includes several bug fixes and features from Starlette. PR #2335 by @hanneskuettner.
 
@@ -2183,7 +2310,7 @@ Internal
 ✨ Add new Deta banner badge with new sponsorship tier 🙇. PR #3194 by @tiangolo.
 👥 Update FastAPI People. PR #3189 by @github-actions[bot].
 🔊 Update FastAPI People to allow better debugging. PR #3188 by @tiangolo."
-51,"Features
+54,"Features
 
 ✨ Add support for adding multiple examples in request bodies and path, query, cookie, and header params. New docs: Declare Request Example Data. Initial PR #1267 by @austinorr.
 
@@ -2328,7 +2455,7 @@ Internal
 🔧 Update FastAPI People GitHub Sponsors order. PR #2620 by @tiangolo.
 🔧 Update InvestSuite sponsor data. PR #2608 by @tiangolo.
 👥 Update FastAPI People. PR #2590 by @github-actions[bot]."
-52,"Features
+55,"Features
 
 ✨ Improve type annotations, add support for mypy --strict, internally and for external packages. PR #2547 by @tiangolo.
 
@@ -2389,7 +2516,7 @@ Internal
 ✨ Add newsletter: FastAPI and friends. PR #2509 by @tiangolo.
 ✨ Add new Gold Sponsor: InvestSuite 🎉. PR #2508 by @tiangolo.
 🔧 Add issue template configs. PR #2476 by @tiangolo."
-53,"Features
+56,"Features
 
 ✨ Add support for shared/top-level parameters (dependencies, tags, etc). PR #2434 by @tiangolo.
 
@@ -2554,7 +2681,7 @@ Internal
 🐛 Fix disabling Material for MkDocs Insiders install in forks. PR #2339 by @tiangolo.
 ✨ Add silver sponsor WeTransfer. PR #2338 by @tiangolo.
 ✨ Set up and enable Material for MkDocs Insiders for the docs. PR #2325 by @tiangolo."
-54,"Fixes
+57,"Fixes
 
 📌 Relax Swagger UI version pin. PR #2089 by @jmriebold.
 🐛 Fix bug overriding custom HTTPException and RequestValidationError from exception_handlers. PR #1924 by @uriyyo.
@@ -2705,7 +2832,7 @@ Internal
 🔥 Remove pr-approvals GitHub Action as it's not compatible with forks. Use the new one. PR #2162 by @tiangolo.
 👷 Add GitHub Action Latest Changes. PR #2160.
 👷 Add GitHub Action Label Approved. PR #2161."
-55,"Fixes
+58,"Fixes
 
 Fix issues using jsonable_encoder with SQLAlchemy models directly. PR #1987.
 
@@ -2732,7 +2859,7 @@ Initialize French translations. PR #1975 by @JulianMaurin-BM.
 Initialize Turkish translations. PR #1905 by @ycd.
 Internal
 Improve docs maintainability by updating hl_lines syntax to use ranges. PR #1863 by @la-mar."
-56,"Features
+59,"Features
 
 Add support for injecting HTTPConnection (as Request and WebSocket). Useful for sharing app state in dependencies. PR #1827 by @nsidnev.
 Export WebSocketDisconnect and add example handling WebSocket disconnections to docs. PR #1822 by @rkbeatss.
@@ -2793,7 +2920,7 @@ Reword text to reduce ambiguity while not being gender-specific. PR #1824 by @Ma
 Internal
 Add Flake8 linting. Original PR #1774 by @MashhadiNima.
 Disable Gitter bot, as it's currently broken, and Gitter's response doesn't show the problem. PR #1853."
-57,"
+60,"
 Fix typo in docs for query parameters. PR #1832 by @ycd.
 Add docs about Async Tests. PR #1619 by @empicano.
 Raise an exception when using form data (Form, File) without having python-multipart installed.
@@ -2848,7 +2975,7 @@ Fix type annotation for **extra parameters in FastAPI. PR #1659 by @bharel.
 Bump MkDocs Material to fix docs in browsers with dark mode. PR #1789 by @adriencaccia.
 Remove docs preview comment from each commit. PR #1826.
 Update GitHub context extraction for Gitter notification bot. PR #1766."
-58,"
+61,"
 Add debugging logs for GitHub actions to introspect GitHub hidden context. PR #1764.
 Use OS preference theme for online docs. PR #1760 by @adriencaccia.
 Upgrade Starlette to version 0.13.6 to handle a vulnerability when using static files in Windows. PR #1759 by @jamesag26.
@@ -2861,7 +2988,7 @@ Upgrade Starlette to version 0.13.6 to handle a vulnerability when using static 
 Pin Swagger UI temporarily, waiting for a fix for swagger-api/swagger-ui#6249. PR #1763.
 Update GitHub Actions, use commit from PR for docs preview, not commit from pre-merge. PR #1761.
 Update GitHub Actions, refactor Gitter bot. PR #1746."
-59,"
+62,"
 Add GitHub Action to watch for missing preview docs and trigger a preview deploy. PR #1740.
 Add custom GitHub Action to get artifact with docs preview. PR #1739.
 Add new GitHub Actions to preview docs from PRs. PR #1738.
@@ -2876,7 +3003,7 @@ Add XML test coverage to support GitHub Actions. PR #1737.
 Update badges and remove Travis now that GitHub Actions is the main CI. PR #1736.
 Add GitHub Actions for CI, move from Travis. PR #1735.
 Add support for adding OpenAPI schema for GET requests with a body. PR #1626 by @victorphoenix3."
-60,"
+63,"
 Fix typo in docstring for OAuth2 utils. PR #1621 by @tomarv2.
 Update JWT docs to use Python-jose instead of PyJWT. Initial PR #1610 by @asheux.
 Fix/re-enable search bar in docs. PR #1703.
@@ -2909,7 +3036,7 @@ Add note in docs on order in Pydantic Unions. PR #1591 by @kbanc.
 Improve support for tests in editor. PR #1699.
 Pin dependencies. PR #1697.
 Update isort to version 5.x.x. PR #1670 by @asheux."
-61,"
+64,"
 Add link in docs to Pydantic data types. PR #1612 by @tayoogunbiyi.
 Fix link in warning logs for openapi_prefix. PR #1611 by @bavaria95.
 Fix bad link in docs. PR #1603 by @molto0504.
@@ -2934,7 +3061,7 @@ Update Chinese translation of main page. PR #1564 by @waynerv.
 Add translation to Chinese for Body - Multiple Parameters - 请求体 - 多个参数. PR #1532 by @waynerv.
 Add translation to Chinese for Path Parameters and Numeric Validations - 路径参数和数值校验. PR #1506 by @waynerv.
 Add GitHub action to auto-label approved PRs (mainly for translations). PR #1638."
-62,"
+65,"
 Deep merge OpenAPI responses to preserve all the additional metadata. PR #1577.
 Mention in docs that only main app events are run (not sub-apps). PR #1554 by @amacfie.
 Fix body validation error response, do not include body variable when it is not embedded. PR #1553 by @amacfie.
@@ -2947,7 +3074,7 @@ Fix body validation error response, do not include body variable when it is not 
 Fix testing OAuth2 security scopes when using dependency overrides. PR #1549 by @amacfie.
 Fix Model for JSON Schema keyword not as a JSON Schema instead of a list. PR #1548 by @v-do.
 Add support for OpenAPI servers. PR #1547 by @mikaello."
-63,"
+66,"
 Remove broken link from ""External Links"". PR #1565 by @victorphoenix3.
 Update/fix docs for WebSockets with dependencies. Original PR #1540 by @ChihSeanHsu.
 Add support for Python's http.HTTPStatus in status_code parameters. PR #1534 by @retnikt.
@@ -2986,7 +3113,7 @@ Add support for declaring metadata for tags in OpenAPI. New docs at Tutorial - M
 Add basic setup for Russian translations. PR #1566.
 Remove obsolete Chinese articles after adding official community translations. PR #1510 by @waynerv.
 Add repr for path operation function parameter helpers (like Query, Depends, etc) to simplify debugging. PR #1560 by @rkbeatss and @victorphoenix3."
-64,"
+67,"
 Add link to advanced docs from tutorial. PR #1512 by @kx-chen.
 Remove internal unnecessary f-strings. PR #1526 by @kotamatsuoka.
 Add translation to Chinese for Query Parameters and String Validations - 查询参数和字符串校验. PR #1500 by @waynerv.
@@ -3021,7 +3148,7 @@ Fix generating OpenAPI for apps using callbacks with routers including Pydantic 
 Optimize internal regex performance in get_path_param_names(). PR #1243 by @heckad.
 Remove *, from functions in docs where it's not needed. PR #1239 by @pankaj-giri.
 Start translations for Italian. PR #1557 by @csr."
-65,"
+68,"
 Add support for ASGI root_path:
 Use root_path internally for mounted applications, so that OpenAPI and the docs UI works automatically without extra configurations and parameters.
 Add new root_path parameter for FastAPI applications to provide it in cases where it can be set with the command line (e.g. for Uvicorn and Hypercorn, with the parameter --root-path).
@@ -3086,10 +3213,10 @@ PyConBY 2020: Serve ML models easily with FastAPI by Sebastián Ramírez (tiango
 [VIRTUAL] Py.Amsterdam's flying Software Circus: Intro to FastAPI by Sebastián Ramírez (tiangolo).
 PR #1467.
 Add translation to Chinese for Python Types Intro - Python 类型提示简介. PR #1197 by @waynerv."
-66,"
+69,"
 Fix handling of enums with their own schema in path parameters. To support samuelcolvin/pydantic#1432 in FastAPI. PR #1463.
 ",Fix handling of enums with their own schema in path parameters. To support samuelcolvin/pydantic#1432 in FastAPI. PR #1463.
-67,"
+70,"
 Allow enums to allow them to have their own schemas in OpenAPI. To support samuelcolvin/pydantic#1432 in FastAPI. PR #1461.
 Add links for funding through GitHub sponsors. PR #1425.
 Update issue template for for questions. PR #1344 by @retnikt.
@@ -3116,7 +3243,7 @@ Re-word and clarify docs for extra info in fields. PR #1299 by @chris-allnutt.
 Make sure the * in short features in the docs is consistent (after .) in all languages. PR #1424.
 Update order of execution for get_db in SQLAlchemy tutorial. PR #1293 by @bcb.
 Fix typos in Async docs. PR #1423."
-68,"
+71,"
 Add translation to Spanish for Concurrency and async / await - Concurrencia y async / await. PR #1290 by @alvaropernas.
 Remove obsolete vote link. PR #1289 by @donhui.
 Allow disabling docs UIs by just disabling OpenAPI with openapi_url=None. New example in docs: Advanced: Conditional OpenAPI. PR #1421.
@@ -3151,12 +3278,12 @@ Add translation for main page to Chinese PR #1191 by @waynerv.
 Update docs for project generation. PR #1287.
 Add Spanish translation for Introducción a los Tipos de Python (Python Types Intro). PR #1237 by @mariacamilagl.
 Add Spanish translation for Características (Features). PR #1220 by @mariacamilagl."
-69,"
+72,"
 Update database test setup. PR #1226.
 Improve test debugging by showing response text in failing tests. PR #1222 by @samuelcolvin.
 ","Update database test setup. PR #1226.
 Improve test debugging by showing response text in failing tests. PR #1222 by @samuelcolvin."
-70,"
+73,"
 Fix grammatical mistakes in async docs. PR #1188 by @mickeypash.
 Add support for response_model_exclude_defaults and response_model_exclude_none:
 Deprecate the parameter include_none in jsonable_encoder and add the inverted exclude_none, to keep in sync with Pydantic.
@@ -3183,7 +3310,7 @@ Start Portuguese translations. PR #1210 by @cassiobotaro.
 Update docs for Pydantic's Settings using a dependency with @lru_cache(). PR #1214.
 Add first translation to Spanish FastAPI. PR #1201 by @mariacamilagl.
 Add docs about Settings and Environment Variables. Initial PR 1118 by @alexmitelman."
-71,"
+74,"
 Fix automatic embedding of body fields for dependencies and sub-dependencies. Original PR #1079 by @Toad2186.
 Fix dependency overrides in WebSocket testing. PR #1122 by @amitlissack.
 Fix docs script to ensure languages are always sorted. PR #1189.
@@ -3194,7 +3321,7 @@ Fix dependency overrides in WebSocket testing. PR #1122 by @amitlissack.
 Fix docs script to ensure languages are always sorted. PR #1189.
 Start translations for Chinese. PR #1187 by @RunningIkkyu.
 Add docs for Schema Extra - Example. PR #1185."
-72,"
+75,"
 Fix included example after translations refactor. PR #1182.
 Add docs example for example in Field. Docs at Body - Fields: JSON Schema extras. PR #1106 by @JohnPaton.
 Fix using recursive models in response_model. PR #1164 by @voegtlel.
@@ -3207,7 +3334,7 @@ Fix using recursive models in response_model. PR #1164 by @voegtlel.
 Add docs for Pycharm Debugging. PR #1096 by @youngquan.
 Fix typo in docs. PR #1148 by @PLNech.
 Update Windows development environment instructions. PR #1179."
-73,"
+76,"
 Update test coverage badge. PR #1175.
 Add orjson to pip install fastapi[all]. PR #1161 by @michael0liver.
 Fix included example for GZipMiddleware. PR #1138 by @arimbr.
@@ -3232,10 +3359,10 @@ Update and simplify translations docs. PR #1171.
 Update development of FastAPI docs, set address to 127.0.0.1 to improve Windows support. PR #1169 by @mariacamilagl.
 Add support for docs translations. New docs: Development - Contributing: Docs: Translations. PR #1168.
 Update terminal styles in docs and add note about Typer, the FastAPI of CLIs. PR #1139."
-74,"
+77,"
 Add new high-performance JSON response class using orjson. New docs: Custom Response - HTML, Stream, File, others: ORJSONResponse. PR #1065.
 ","Add new high-performance JSON response class using orjson. New docs: Custom Response - HTML, Stream, File, others: ORJSONResponse. PR #1065."
-75,"
+78,"
 Re-export utils from Starlette:
 This allows using things like from fastapi.responses import JSONResponse instead of from starlette.responses import JSONResponse.
 It's mainly syntax sugar, a convenience for developer experience.
@@ -3258,7 +3385,7 @@ Custom Response - HTML, Stream, File, others.
 Advanced Middleware.
 Including WSGI - Flask, Django, others.
 PR #1064."
-76,"
+79,"
 Add link to Release Notes from docs about pinning versions for deployment. PR #1058.
 Upgrade code to use the latest version of Starlette, including:
 Several bug fixes.
@@ -3275,7 +3402,7 @@ Optional redirects of slashes, with or without ending in /.
 Events for routers, ""startup"", and ""shutdown"".
 PR #1057.
 Add docs about pinning FastAPI versions for deployment: Deployment: FastAPI versions. PR #1056."
-77,"
+80,"
 Fix links in release notes. PR #1052 by @sattosan.
 Fix typo in release notes. PR #1051 by @sattosan.
 Refactor/clarify serialize_response parameter name to avoid confusion. PR #1031 by @patrickmckenna.
@@ -3290,7 +3417,7 @@ Refactor calling each a path operation's handler function in an isolated functio
 Add missing dependencies for testing. PR #1026 by @sm-Fifteen.
 Fix accepting valid types for response models, including Python types like List[int]. PR #1017 by @patrickmckenna.
 Fix format in SQL tutorial. PR #1015 by @vegarsti."
-78,"
+81,"
 Fix path operation duplicated parameters when used in dependencies and the path operation function. PR #994 by @merowinger92.
 Update Netlify previews deployment GitHub action as the fix is already merged and there's a new release. PR #1047.
 Move mypy configurations to config file. PR #987 by @hukkinj1.
@@ -3299,7 +3426,7 @@ Temporary fix to Netlify previews not deployable from PRs from forks. PR #1046 b
 Update Netlify previews deployment GitHub action as the fix is already merged and there's a new release. PR #1047.
 Move mypy configurations to config file. PR #987 by @hukkinj1.
 Temporary fix to Netlify previews not deployable from PRs from forks. PR #1046 by @mariacamilagl."
-79,"
+82,"
 Fix encoding of pathlib paths in jsonable_encoder. PR #978 by @patrickmckenna.
 Add articles to External Links: PythonのWeb frameworkのパフォーマンス比較 (Django, Flask, responder, FastAPI, japronto) and [FastAPI] Python製のASGI Web フレームワーク FastAPIに入門する. PR #974 by @tokusumi.
 Fix broken links in docs. PR #949 by @tsotnikov.
@@ -3316,7 +3443,7 @@ Update and clarify docs for dependencies with yield. PR #986.
 Add Mermaid JS support for diagrams in docs. Add first diagrams to Dependencies: First Steps and Dependencies with yield and HTTPException. PR #985.
 Update CI to run docs deployment in GitHub actions. PR #983.
 Allow callables in path operation functions, like functions modified with functools.partial. PR #977."
-80,"
+83,"
 Run linters first in tests to error out faster. PR #948.
 Log warning about email-validator only when used. PR #946.
 Simplify Peewee docs with double dependency with yield. PR #947.
@@ -3345,12 +3472,12 @@ Add note about using Body parameters without Pydantic. PR #900 by @pawamoy.
 Fix Pydantic field clone logic. PR #899 by @deuce2367.
 Fix link in middleware docs. PR #893 by @linchiwei123.
 Rename default API title from ""Fast API"" to ""FastAPI"" for consistency. PR #890."
-81,"
+84,"
 Fix model filtering in response_model, cloning sub-models. PR #889.
 Fix FastAPI serialization of Pydantic models using ORM mode blocking the event loop. PR #888.
 ","Fix model filtering in response_model, cloning sub-models. PR #889.
 Fix FastAPI serialization of Pydantic models using ORM mode blocking the event loop. PR #888."
-82,"
+85,"
 Refactor documentation to make a simpler and shorter Tutorial - User Guide and an additional Advanced User Guide with all the additional docs. PR #887.
 Tweak external links, Markdown format, typos. PR #881.
 Fix bug in tutorial handling HTTP Basic Auth username and password. PR #865 by @isaevpd.
@@ -3369,7 +3496,7 @@ Update External Links with new links and dynamic GitHub projects with fastapi to
 Fix Peewee contextvars handling in docs: SQL (Relational) Databases with Peewee. PR #879.
 Setup development environment with Python's Venv and Flit, instead of requiring the extra Pipenv duplicating dependencies. Updated docs: Development - Contributing. PR #877.
 Update docs for HTTP Basic Auth to improve security against timing attacks. Initial PR #807 by @zwass."
-83,"
+86,"
 Fix typos and tweak configs. PR #837.
 Add link to Chinese article in External Links. PR 810 by @wxq0309.
 Implement OAuth2AuthorizationCodeBearer class. PR #797 by @kuwv.
@@ -3392,7 +3519,7 @@ Add support for subtypes of main types in jsonable_encoder, e.g. asyncpg's UUIDs
 Fix usage of Pydantic's HttpUrl in docs. PR #832 by @Dustyposa.
 Fix Twitter links in docs. PR #813 by @justindujardin.
 Add docs for correctly using FastAPI with Peewee ORM. Including how to overwrite parts of Peewee to correctly handle async threads. PR #789."
-84,"
+87,"
 Add support for OpenAPI Callbacks:
 New docs: OpenAPI Callbacks.
 Refactor generation of operationIds to be valid Python names (also valid variables in most languages).
@@ -3413,7 +3540,7 @@ Refactor logging to use the same logger everywhere, update log strings and level
 Add article to External Links: Почему Вы должны попробовать FastAPI?. PR #766 by @prostomarkeloff.
 Remove gender bias in docs for handling errors. PR #780. Original idea in PR #761 by @classywhetten.
 Rename docs and references to body-schema to body-fields to keep in line with Pydantic. PR #746 by @prostomarkeloff."
-85,"
+88,"
 Add GitHub social preview images to git. PR #752.
 Update PyPI ""trove classifiers"". PR #751.
 Add full support for Python 3.8. Enable Python 3.8 in full in Travis. PR 749.
@@ -3424,7 +3551,7 @@ Update PyPI ""trove classifiers"". PR #751.
 Add full support for Python 3.8. Enable Python 3.8 in full in Travis. PR 749.
 Update ""new issue"" templates. PR #749.
 Fix serialization of errors for exotic Pydantic types. PR #748 by @dmontagu."
-86,"
+89,"
 Add GitHub action Issue Manager. PR #742.
 Fix typos in docs. PR 734 by @bundabrg.
 Fix usage of custom_encoder in jsonable_encoder. PR #715 by @matrixise.
@@ -3445,7 +3572,7 @@ Add support for async class methods as dependencies #681 by @frankie567.
 Add FastAPI with Swagger UI cheatsheet to external links. PR #671 by @euri10.
 Fix typo in HTTP protocol in CORS example. PR #647 by @forestmonster.
 Add support for Pydantic versions 1.0.0 and above, with temporary (deprecated) backwards compatibility for Pydantic 0.32.2. PR #646 by @dmontagu."
-87,"
+90,"
 Update docs to reduce gender bias. PR #645 by @ticosax.
 Add docs about overriding the operationId for all the path operations based on their function name. PR #642 by @SKalt.
 Fix validators in models generating an incorrect key order. PR #637 by @jaddison.
@@ -3460,7 +3587,7 @@ Generate correct OpenAPI docs for responses with no content. PR #621 by @brotsky
 Remove $ from Bash code blocks in docs for consistency. PR #613 by @nstapelbroek.
 Add docs for self-serving docs' (Swagger UI) static assets, e.g. to use the docs offline, or without Internet. Initial PR #557 by @svalouch.
 Fix black linting after upgrade. PR #682 by @frankie567."
-88,"
+91,"
 Add dependencies with yield, a.k.a. exit steps, context managers, cleanup, teardown, ...
 This allows adding extra code after a dependency is done. It can be used, for example, to close database connections.
 Dependencies with yield can be normal or async, FastAPI will run normal dependencies in a threadpool.
@@ -3489,7 +3616,7 @@ New docs at Dependencies with yield.
 Updated database docs SQL (Relational) Databases: Main FastAPI app.
 PR #595.
 Fix sitemap.xml in website. PR #598 by @samuelcolvin."
-89,"
+92,"
 Upgrade required Starlette to 0.12.9, the new range is >=0.12.9,<=0.12.9.
 Add State to FastAPI apps at app.state.
 PR #593.
@@ -3520,7 +3647,7 @@ Processing a response after being generated by path operation functions but befo
 New docs section: Custom Request and APIRoute class.
 PR #589 by @dmontagu.
 Fix preserving custom route class in routers when including other sub-routers. PR #538 by @dmontagu."
-90,"
+93,"
 Add notes to docs about installing python-multipart when using forms. PR #574 by @sliptonic.
 Generate OpenAPI schemas in alphabetical order. PR #554 by @dmontagu.
 Add support for truncating docstrings from path operation functions.
@@ -3543,7 +3670,7 @@ Fix handling 4XX responses overriding default 422 validation error responses. PR
 Fix typo in documentation for Simple HTTP Basic Auth. PR #514 by @prostomarkeloff.
 Fix incorrect documentation example in first steps. PR #511 by @IgnatovFedor.
 Add support for Swagger UI initOauth settings with the parameter swagger_ui_init_oauth. PR #499 by @zamiramir."
-91,"
+94,"
 Allow path parameters to have default values (e.g. None) and discard them instead of raising an error.
 This allows declaring a parameter like user_id: str = None that can be taken from a query parameter, but the same path operation can be included in a router with a path /users/{user_id}, in which case will be taken from the path and will be required.
 PR #464 by @jonathanunderwood.
@@ -3556,17 +3683,17 @@ This allows declaring a parameter like user_id: str = None that can be taken fro
 PR #464 by @jonathanunderwood.
 Add support for setting a default_response_class in the FastAPI instance or in include_router. Initial PR #467 by @toppk.
 Add support for type annotations using strings and from future import annotations. PR #451 by @dmontagu."
-92,"
+95,"
 Fix incorrect Request class import. PR #493 by @kamalgill.
 ",Fix incorrect Request class import. PR #493 by @kamalgill.
-93,"
+96,"
 Add recent articles to External Links and recent opinions. PR #490.
 Upgrade support range for Starlette to include 0.12.8. The new range is >=0.11.1,<=0.12.8"". PR #477 by @dmontagu.
 Upgrade support to Pydantic version 0.32.2 and update internal code to use it (breaking change). PR #463 by @dmontagu.
 ","Add recent articles to External Links and recent opinions. PR #490.
 Upgrade support range for Starlette to include 0.12.8. The new range is >=0.11.1,<=0.12.8"". PR #477 by @dmontagu.
 Upgrade support to Pydantic version 0.32.2 and update internal code to use it (breaking change). PR #463 by @dmontagu."
-94,"
+97,"
 Add support for custom route classes for advanced use cases. PR #468 by @dmontagu.
 Allow disabling Google fonts in ReDoc. PR #481 by @b1-luettje.
 Fix security issue: when returning a sub-class of a response model and using skip_defaults it could leak information. PR #485 by @dmontagu.
@@ -3595,7 +3722,7 @@ And use media type from response class instead of fixed application/json (the de
 PR #437 by @divums.
 Fix using ""default"" extra response with status codes at the same time. PR #489.
 Allow additional responses to use status code ranges (like 5XX and 4XX) and ""default"". PR #435 by @divums."
-95,"
+98,"
 Fix implementation for skip_defaults when returning a Pydantic model. PR #422 by @dmontagu.
 Fix OpenAPI generation when using the same dependency in multiple places for the same path operation. PR #417 by @dmontagu.
 Allow having empty paths in path operations used with include_router and a prefix.
@@ -3614,14 +3741,14 @@ Now it doesn't have to be only /cats/ (with a trailing slash).
 To use it, declare the path in the path operation as the empty string ("""").
 PR #415 by @vitalik.
 Fix mypy error after merging PR #415. PR #462."
-96,"
+99,"
 Fix typo in routing assert. PR #419 by @pablogamboa.
 Fix typo in docs. PR #411 by @bronsen.
 Fix parsing a body type declared with Union. PR #400 by @koxudaxi.
 ","Fix typo in routing assert. PR #419 by @pablogamboa.
 Fix typo in docs. PR #411 by @bronsen.
 Fix parsing a body type declared with Union. PR #400 by @koxudaxi."
-97,"
+100,"
 
 Upgrade Starlette supported range to include the latest 0.12.7. The new range is 0.11.1,<=0.12.7. PR #367 by @dedsm.
 
@@ -3630,10 +3757,10 @@ Add test for OpenAPI schema with duplicate models from PR #333 by @dmontagu. PR 
 
 ","Upgrade Starlette supported range to include the latest 0.12.7. The new range is 0.11.1,<=0.12.7. PR #367 by @dedsm.
 Add test for OpenAPI schema with duplicate models from PR #333 by @dmontagu. PR #385."
-98,"
+101,"
 Upgrade Pydantic version to 0.30.0. PR #384 by @jekirl.
 ",Upgrade Pydantic version to 0.30.0. PR #384 by @jekirl.
-99,"
+102,"
 
 Fix typo in docs for features. PR #380 by @MartinoMensio.
 
@@ -3680,7 +3807,7 @@ This also changes the generated title for those models.
 Only composite bodies and response models are affected because those are generated dynamically, they don't have a module (a Python file).
 This also adds the possibility of using .include_router() with the same APIRouter multiple  times, with different prefixes, e.g. /api/v2 and /api/latest, and it will now work correctly.
 PR #347."
-100,"
+103,"
 Upgrade Pydantic supported version to 0.29.0.
 New supported version range is ""pydantic >=0.28,<=0.29.0"".
 This adds support for Pydantic Generic Models, kudos to @dmontagu.
@@ -3691,7 +3818,7 @@ PR #344.
 New supported version range is ""pydantic >=0.28,<=0.29.0"".
 This adds support for Pydantic Generic Models, kudos to @dmontagu.
 PR #344."
-101,"
+104,"
 
 Add section in docs about External Links and Articles. PR #341.
 
@@ -3716,7 +3843,7 @@ Update section about Help FastAPI - Get Help. PR #339.
 Refine internal type declarations to improve/remove Mypy errors in users' code. PR #338.
 Update and clarify SQL tutorial with SQLAlchemy. PR #331 by @mariacamilagl.
 Add SQLite online viewers to the docs. PR #330 by @cyrilbois."
-102,"
+105,"
 
 Add support for Pydantic's ORM mode:
 
@@ -3763,7 +3890,7 @@ PR #322.
 Remove/clean unused RegEx code in routing. PR #314 by @dmontagu.
 Use default response status code descriptions for additional responses. PR #313 by @duxiaoyao.
 Upgrade Pydantic support to 0.28. PR #320 by @jekirl."
-103,"
+106,"
 
 Fix handling an empty-body request with a required body param. PR #311.
 
@@ -3776,7 +3903,7 @@ Fix docs discrepancy in docs for Response Model. PR #288 by @awiddersheim.
 ","Fix handling an empty-body request with a required body param. PR #311.
 Fix broken link in docs: Return a Response directly. PR #306 by @dmontagu.
 Fix docs discrepancy in docs for Response Model. PR #288 by @awiddersheim."
-104,"
+107,"
 Add support for declaring a Response parameter:
 This allows declaring:
 Response Cookies.
@@ -3797,7 +3924,7 @@ An HTTP Status Code different than the default: Response - Change Status Code.
 All of this while still being able to return arbitrary objects (dict, DB model, etc).
 Update attribution to Hug, for inspiring the response parameter pattern.
 PR #294."
-105,"
+108,"
 
 Implement dependency cache per request.
 
@@ -3828,10 +3955,10 @@ Implement dependency overrides for testing.
 This allows using overrides/mocks of dependencies during tests.
 New docs: Testing Dependencies with Overrides.
 PR #291."
-106,"
+109,"
 Fix path and query parameters receiving dict as a valid type. It should be mapped to a body payload. PR #287. Updated docs at: Query parameter list / multiple values with defaults: Using list.
 ",Fix path and query parameters receiving dict as a valid type. It should be mapped to a body payload. PR #287. Updated docs at: Query parameter list / multiple values with defaults: Using list.
-107,"
+110,"
 
 Fix auto_error=False handling in HTTPBearer security scheme. Do not raise when there's an incorrect Authorization header if auto_error=False. PR #282.
 
@@ -3840,7 +3967,7 @@ Fix type declaration of HTTPException. PR #279.
 
 ","Fix auto_error=False handling in HTTPBearer security scheme. Do not raise when there's an incorrect Authorization header if auto_error=False. PR #282.
 Fix type declaration of HTTPException. PR #279."
-108,"
+111,"
 
 Fix broken link in docs about OAuth 2.0 with scopes. PR #275 by @dmontagu.
 
@@ -3861,7 +3988,7 @@ Fix/add support for list query parameters with list defaults. New documentation:
 Add support for enumerations in path operation parameters. New documentation: Path Parameters: Predefined values.
 Add support for type annotations using Optional as in param: Optional[str] = None. New documentation: Optional type declarations.
 PR #278."
-109,"
+112,"
 
 Separate error handling for validation errors.
 
@@ -3906,7 +4033,7 @@ Documented in PR #272 by @wshayes.
 New documentation at: Path Parameters containing paths.
 Update docs for testing FastAPI. Include using POST, sending JSON, testing headers, etc. New documentation: Testing. PR #271.
 Fix type declaration of response_model to allow generic Python types as List[Model]. Mainly to fix mypy for users. PR #266."
-110,"
+113,"
 
 Add support for Pydantic's include, exclude, by_alias.
 
@@ -3941,7 +4068,7 @@ There's a new path operation decorator parameter response_model_skip_defaults.
 The name of the parameter will most probably change in a future version to response_skip_defaults, model_skip_defaults or something similar.
 New documentation section about using response_model_skip_defaults.
 PR #248 by @wshayes."
-111,"
+114,"
 
 Add support for WebSockets with dependencies and parameters.
 
@@ -3980,7 +4107,7 @@ PR #178 by @jekirl.
 Upgrade the compatible version of Pydantic to 0.26.0.
 This includes JSON Schema support for IP address and network objects, bug fixes, and other features.
 PR #247 by @euri10."
-112,"
+115,"
 
 Upgrade the compatible version of Starlette to 0.12.0.
 
@@ -4017,7 +4144,7 @@ This is only to allow delegated authentication in the API docs with Swagger UI.
 PR #198 by @steinitzu.
 Make Swagger UI and ReDoc route handlers (path operations) be async functions instead of lambdas to improve performance. PR #241 by @Trim21.
 Make Swagger UI and ReDoc URLs parameterizable, allowing to host and serve local versions of them and have offline docs. PR #112 by @euri10."
-113,"
+116,"
 
 Add support for dependencies parameter:
 
@@ -4062,7 +4189,7 @@ Fix OpenAPI documentation of Starlette URL convertors. Specially useful when usi
 Make default parameter utilities exported from fastapi be functions instead of classes (the new functions return instances of those classes). To be able to override the return types and fix mypy errors in FastAPI's users' code. Applies to Path, Query, Header, Cookie, Body, Form, File, Depends, and Security. PR #226 and PR #231.
 Separate development scripts test.sh, lint.sh, and format.sh. PR #232.
 Re-enable black formatting checks for Python 3.7. PR #229 by @zamiramir."
-114,"
+117,"
 
 On body parsing errors, raise from previous exception, to allow better introspection in logging code. PR #192 by @ricardomomm.
 
@@ -4079,7 +4206,7 @@ Fix typo in routing. PR #221 by @djlambert.
 Use Python logger named ""fastapi"" instead of root logger. PR #222 by @euri10.
 Upgrade Pydantic to version 0.25. PR #225 by @euri10.
 Fix typo in routing. PR #221 by @djlambert."
-115,"
+118,"
 
 Add typing information to package including file py.typed. PR #209 by @meadsteve.
 
@@ -4088,7 +4215,7 @@ Add FastAPI bot for Gitter. To automatically announce new releases. PR #189.
 
 ","Add typing information to package including file py.typed. PR #209 by @meadsteve.
 Add FastAPI bot for Gitter. To automatically announce new releases. PR #189."
-116,"
+119,"
 
 Upgrade OAuth2:
 
@@ -4121,7 +4248,7 @@ Include Hypercorn as an alternative ASGI server in the docs. PR #187.
 Add docs for Static Files and Templates. PR #186.
 Add docs for handling Response Cookies and Response Headers. PR #185.
 Fix typos in docs. PR #176 by @chdsbd."
-117,"
+120,"
 
 Rename path operation decorator parameter content_type to response_class. PR #183.
 
@@ -4140,7 +4267,7 @@ How to use the jsonable_encoder in JSON compatible encoder.
 How to Return a Response directly.
 Update how to use a Custom Response Class.
 PR #184."
-118,"
+121,"
 
 Add docs for HTTP Basic Auth. PR #177.
 
@@ -4157,7 +4284,7 @@ Add docs for Middleware. PR #173.
 Upgrade HTTP Basic Auth handling with automatic headers (automatic browser login prompt). PR #175.
 Update dependencies for security. PR #174.
 Add docs for Middleware. PR #173."
-119,"
+122,"
 
 Make Flit publish from CI. PR #170.
 
@@ -4170,7 +4297,7 @@ By default, encode by alias. This allows using Pydantic alias parameters working
 ","Make Flit publish from CI. PR #170.
 Add documentation about handling CORS (Cross-Origin Resource Sharing). PR #169.
 By default, encode by alias. This allows using Pydantic alias parameters working by default. PR #168."
-120,"
+123,"
 
 Upgrade path operation doctsring parsing to support proper Markdown descriptions. New documentation at Path Operation Configuration. PR #163.
 
@@ -4191,7 +4318,7 @@ Refactor internal usage of Pydantic to use correct data types. PR #164.
 Upgrade Pydantic to version 0.23. PR #160 by @euri10.
 Fix typo in Tutorial about Extra Models. PR #159 by @danielmichaels.
 Fix Query Parameters URL examples in docs. PR #157 by @hayata-yamamoto."
-121,"
+124,"
 
 Add support for multiple file uploads (as a single form field). New docs at: Multiple file uploads. PR #158.
 
@@ -4200,7 +4327,7 @@ Add docs for: Additional Status Codes. PR #156.
 
 ","Add support for multiple file uploads (as a single form field). New docs at: Multiple file uploads. PR #158.
 Add docs for: Additional Status Codes. PR #156."
-122,"
+125,"
 
 Improve automatically generated names of path operations in OpenAPI (in API docs). A function read_items instead of having a generated name ""Read Items Get"" will have ""Read Items"". PR #155.
 
@@ -4221,7 +4348,7 @@ Add docs for: Testing FastAPI. PR #151.
 Update /docs Swagger UI to enable deep linking. This allows sharing the URL pointing directly to the path operation documentation in the docs. PR #148 by @wshayes.
 Update development dependencies, Pipfile.lock. PR #150.
 Include Falcon and Hug in: Alternatives, Inspiration and Comparisons."
-123,"
+126,"
 Improve/upgrade OAuth2 scopes support with SecurityScopes:
 SecurityScopes can be declared as a parameter like Request, to get the scopes of all super-dependencies/dependants.
 Improve Security handling, merging scopes when declaring SecurityScopes.
@@ -4238,7 +4365,7 @@ Allow using SecurityBase (like OAuth2) classes with Depends and still document t
 Updated docs about: OAuth2 with Password (and hashing), Bearer with JWT tokens.
 New docs about: OAuth2 scopes.
 PR #141."
-124,"
+127,"
 
 Fix bug: handling additional responses in APIRouter.include_router(). PR #140.
 
@@ -4251,7 +4378,7 @@ Fix typos in section about nested models and OAuth2 with JWT. PR #127 by @mmclou
 ","Fix bug: handling additional responses in APIRouter.include_router(). PR #140.
 Fix typo in SQL tutorial. PR #138 by @mostaphaRoudsari.
 Fix typos in section about nested models and OAuth2 with JWT. PR #127 by @mmcloud."
-125,"
+128,"
 
 Add additional responses parameter to path operation decorators to extend responses in OpenAPI (and API docs).
 
@@ -4270,7 +4397,7 @@ The new documentation is here: Additional Responses.
 responses can also be added to .include_router(), the updated docs are here: Bigger Applications.
 PR #97 originally initiated by @barsi.
 Update scripts/test-cov-html.sh to allow passing extra parameters like -vv, for development."
-126,"
+129,"
 
 Add auto_error parameter to security utility functions. Allowing them to be optional. Also allowing to have multiple alternative security schemes that are then checked in a single dependency instead of each one verifying and returning the error to the client automatically when not satisfied. PR #134.
 
@@ -4283,7 +4410,7 @@ Fix duplicate dependency in pyproject.toml. PR #128 by @zxalif.
 ","Add auto_error parameter to security utility functions. Allowing them to be optional. Also allowing to have multiple alternative security schemes that are then checked in a single dependency instead of each one verifying and returning the error to the client automatically when not satisfied. PR #134.
 Update SQL Tutorial to close database sessions even when there are exceptions. PR #89 by @alexiri.
 Fix duplicate dependency in pyproject.toml. PR #128 by @zxalif."
-127,"
+130,"
 
 Add Gitter chat, badge, links, etc. https://gitter.im/tiangolo/fastapi
 . PR #117.
@@ -4310,7 +4437,7 @@ Make Travis run Ubuntu Xenial (newer version) and Python 3.7 instead of Python 3
 Fix duplicated param variable creation. PR #123 by @yihuang.
 Add note in Response Model docs about why using a function parameter instead of a function return type annotation. PR #109 by @JHSaunders.
 Fix event docs (startup/shutdown) function name. PR #105 by @stratosgear."
-128,"
+131,"
 
 Fix OpenAPI (JSON Schema) for declarations of Python Union (JSON Schema additionalProperties). PR #121.
 
@@ -4323,10 +4450,10 @@ Document response models using unions and lists, updated at: Extra Models. PR #1
 ","Fix OpenAPI (JSON Schema) for declarations of Python Union (JSON Schema additionalProperties). PR #121.
 Update Background Tasks with a note on Celery.
 Document response models using unions and lists, updated at: Extra Models. PR #108."
-129,"
+132,"
 Add docs and tests for encode/databases. New docs at: Async SQL (Relational) Databases. PR #107.
 ",Add docs and tests for encode/databases. New docs at: Async SQL (Relational) Databases. PR #107.
-130,"
+133,"
 
 Add support for Background Tasks in path operation functions and dependencies. New documentation about Background Tasks is here. PR #103.
 
@@ -4339,10 +4466,10 @@ New docs section about Events: startup - shutdown. PR #99.
 ","Add support for Background Tasks in path operation functions and dependencies. New documentation about Background Tasks is here. PR #103.
 Add support for .websocket_route() in APIRouter. PR #100 by @euri10.
 New docs section about Events: startup - shutdown. PR #99."
-131,"
+134,"
 Document receiving Multiple values with the same query parameter and Duplicate headers. PR #95.
 ",Document receiving Multiple values with the same query parameter and Duplicate headers. PR #95.
-132,"
+135,"
 
 Upgrade compatible Pydantic version to 0.21.0. PR #90.
 
@@ -4359,7 +4486,7 @@ Fix link in ""Deployment"" to ""Bigger Applications"".
 Add documentation for: Application Configuration.
 Fix typo in docs. PR #76 by @matthewhegarty.
 Fix link in ""Deployment"" to ""Bigger Applications""."
-133,"
+136,"
 
 Make development scripts executable. PR #76 by @euri10.
 
@@ -4376,7 +4503,7 @@ Update isort imports and scripts to be compatible with newer versions. PR #75.
 Add support for adding tags in app.include_router(). PR #55 by @euri10. Documentation updated in the section: Bigger Applications.
 Update docs related to Uvicorn to use new --reload option from version 0.5.x. PR #74.
 Update isort imports and scripts to be compatible with newer versions. PR #75."
-134,"
+137,"
 
 Update technical details about async def handling with respect to previous frameworks. PR #64 by @haizaar.
 
@@ -4389,7 +4516,7 @@ Trigger Docker images build on Travis CI automatically. PR #65.
 ","Update technical details about async def handling with respect to previous frameworks. PR #64 by @haizaar.
 Add deployment documentation for Docker in Raspberry Pi and other architectures.
 Trigger Docker images build on Travis CI automatically. PR #65."
-135,"
+138,"
 Add support for UploadFile in File parameter annotations.
 This includes a file-like interface.
 Here's the updated documentation for declaring  File parameters with UploadFile.
@@ -4402,7 +4529,7 @@ This includes a file-like interface.
 Here's the updated documentation for declaring  File parameters with UploadFile.
 And here's the updated documentation for using Form parameters mixed with File parameters, supporting bytes and UploadFile at the same time.
 PR #63."
-136,"
+139,"
 
 Add technical details about async def handling to docs. PR #61.
 
@@ -4427,10 +4554,10 @@ Clarify Bigger Applications deployed with Docker.
 Fix typos in docs.
 Add section about History, Design and Future.
 Add docs for using WebSockets with FastAPI. PR #62."
-137,"
+140,"
 Add Favicons to docs. PR #53.
 ",Add Favicons to docs. PR #53.
-138,"
+141,"
 
 Introduce new project generator based on FastAPI and PostgreSQL: https://github.com/tiangolo/full-stack-fastapi-postgresql. PR #52.
 
@@ -4443,10 +4570,10 @@ Improve middleware naming in tutorial for SQL with SQLAlchemy https://fastapi.ti
 ","Introduce new project generator based on FastAPI and PostgreSQL: link. PR #52.
 Update SQL tutorial with SQLAlchemy, using Depends to improve editor support and reduce code repetition. PR #52.
 Improve middleware naming in tutorial for SQL with SQLAlchemy link/."
-139,"
+142,"
 Add docs for GraphQL: https://fastapi.tiangolo.com/tutorial/graphql/. PR #48.
 ",Add docs for GraphQL: link/. PR #48.
-140,"
+143,"
 
 Update SQL with SQLAlchemy tutorial at https://fastapi.tiangolo.com/tutorial/sql-databases/ using the new official request.state. PR #45.
 
@@ -4455,7 +4582,7 @@ Upgrade Starlette to version 0.11.1 and add required compatibility changes. PR #
 
 ","Update SQL with SQLAlchemy tutorial at link/ using the new official request.state. PR #45.
 Upgrade Starlette to version 0.11.1 and add required compatibility changes. PR #44."
-141,"
+144,"
 
 Add section about helping and getting help with FastAPI.
 
@@ -4472,7 +4599,7 @@ Add Development - Contributing section to the docs. PR #42.
 Add note about path operations order in docs.
 Update section about error handling with more information and make relation with Starlette error handling utilities more explicit. PR #41.
 Add Development - Contributing section to the docs. PR #42."
-142,"
+145,"
 
 Add new HTTPException with support for custom headers. With new documentation for handling errors at: https://fastapi.tiangolo.com/tutorial/handling-errors/. PR #35.
 
@@ -4489,7 +4616,7 @@ Update example for the SQLAlchemy tutorial at https://fastapi.tiangolo.com/tutor
 Add documentation to use Starlette Request object directly. Check #25 by @euri10.
 Add issue templates to simplify reporting bugs, getting help, etc: #34.
 Update example for the SQLAlchemy tutorial at link/ using middleware and database session attached to request."
-143,"
+146,"
 
 Add openapi_prefix, support for reverse proxy and mounting sub-applicaitons. See the docs at https://fastapi.tiangolo.com/tutorial/sub-applications-proxy/: #26 by @kabirkhan.
 
@@ -4498,13 +4625,13 @@ Update docs/tutorial for SQLAlchemy including note about DB Browser for SQLite.
 
 ","Add openapi_prefix, support for reverse proxy and mounting sub-applicaitons. See the docs at link/: #26 by @kabirkhan.
 Update docs/tutorial for SQLAlchemy including note about DB Browser for SQLite."
-144,"
+147,"
 Fix/add SQLAlchemy support, including ORM, and update docs for SQLAlchemy: #30
 ","Fix/add SQLAlchemy support, including ORM, and update docs for SQLAlchemy: #30"
-145,"
+148,"
 Fix jsonable_encoder for Pydantic models with Config but without json_encoders: #29.
 ",Fix jsonable_encoder for Pydantic models with Config but without json_encoders: #29.
-146,"
+149,"
 
 Fix typos in Security section: #24 by @kkinder
 
@@ -4513,11 +4640,11 @@ Add support for Pydantic custom JSON encoders: #21 by @euri10
 
 ","Fix typos in Security section: #24 by @kkinder
 Add support for Pydantic custom JSON encoders: #21 by @euri10"
-147,"
+150,"
 Upgrade Starlette version to the current latest 0.10.1: #17 by @euri10
 ",Upgrade Starlette version to the current latest 0.10.1: #17 by @euri10
-148,"Fix and test constrained large file uploads, referenced issue  #2","Fix and test constrained large file uploads, referenced issue  #2"
-149,"Query and Header parameters can be lists:
+151,"Fix and test constrained large file uploads, referenced issue  #2","Fix and test constrained large file uploads, referenced issue  #2"
+152,"Query and Header parameters can be lists:
 ```Python
 from typing import List
 from fastapi import FastAPI, Query
@@ -4556,7 +4683,7 @@ Several fixes for Python 3.7. For issues that didn't show in Python 3.6.
 Docs
 Several new tutorials and docs. 
 Improvements to existing docs."
-150,"Micro-release, with lots of docs.
+153,"Micro-release, with lots of docs.
 A whole new ""Tutorial - User Guide"" section (almost complete).
 See the docs at: https://fastapi.tiangolo.com/","Micro-release, with lots of docs.
 A whole new ""Tutorial - User Guide"" section (almost complete).

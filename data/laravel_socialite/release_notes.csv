@@ -1,107 +1,113 @@
-Index,Release Note,Release Note With Abstraction
-1,"Fixed
+Index,Release Note,Release Note Abstract
+1,"
+Add buildProvider method on DockBlock for IDE  support by @emrancu in https://github.com/laravel/socialite/pull/643
+",Add buildProvider method on DockBlock for IDE  support by @emrancu in link
+2,"
+Fix unable to use updated config object when using Laravel Octane by @aprokopenko in https://github.com/laravel/socialite/pull/639
+",Fix unable to use updated config object when using Laravel Octane by @aprokopenko in link
+3,"Fixed
 
 Add app property by @driesvints in https://github.com/laravel/socialite/pull/621
 ","Fixed
 Add app property by @driesvints in link"
-2,"Added
+4,"Added
 
 Laravel v10 Support by @driesvints in https://github.com/laravel/socialite/pull/618
 ","Added
 Laravel v10 Support by @driesvints in link"
-3,"Fixed
+5,"Fixed
 
 Fix User return types by @antoinelame in https://github.com/laravel/socialite/pull/614
 ","Fixed
 Fix User return types by @antoinelame in link"
-4,"Fixed
+6,"Fixed
 
 Fixed string type issue by @driesvints in https://github.com/laravel/socialite/commit/295a36648828f0419c1e9cbedd97609d2a4cb211
 ","Fixed
 Fixed string type issue by @driesvints in link"
-5,"Changed
+7,"Changed
 
 PHP 8.2 support by @driesvints in https://github.com/laravel/socialite/pull/607
 ","Changed
 PHP 8.2 support by @driesvints in link"
-6,"Changed
+8,"Changed
 
 Add ability to override access token request headers by @JasonTolliver in https://github.com/laravel/socialite/pull/603
 ","Changed
 Add ability to override access token request headers by @JasonTolliver in link"
-7,"Fixed
+9,"Fixed
 
 Add correct encoding and the required state param by @xhezairbey in https://github.com/laravel/socialite/pull/599
 ","Fixed
 Add correct encoding and the required state param by @xhezairbey in link"
-8,"Fixed
+10,"Fixed
 
 Add Twitter OAuth 2 fallback call by @driesvints in https://github.com/laravel/socialite/pull/596
 ","Fixed
 Add Twitter OAuth 2 fallback call by @driesvints in link"
-9,"Changed
+11,"Changed
 
 Allow OAuth version in the Twitter config by @taylorotwell (68afb03)
 ","Changed
 Allow OAuth version in the Twitter config by @taylorotwell (68afb03)"
-10,"Fixed
+12,"Fixed
 
 Override abstract provider for Twitter's OAuth 2.0 provider (#576)
 ","Fixed
 Override abstract provider for Twitter's OAuth 2.0 provider (#576)"
-11,"Changed
+13,"Changed
 
 add/set approvedScopes in User (#572)
 ","Changed
 add/set approvedScopes in User (#572)"
-12,"Added
+14,"Added
 
 Add Twitter OAuth2 provider (#574)﻿
 ","Added
 Add Twitter OAuth2 provider (#574)﻿"
-13,"Changed
+15,"Changed
 
 Laravel 9 Support (#571)
 ","Changed
 Laravel 9 Support (#571)"
-14,"Fixed
+16,"Fixed
 
 Fix PHP 8.1 issues (#567)﻿
 ","Fixed
 Fix PHP 8.1 issues (#567)﻿"
-15,"Changed
+17,"Changed
 
 Make enablePKCE public (#550)﻿
 ","Changed
 Make enablePKCE public (#550)﻿"
-16,"Changed
+18,"Changed
 
 Handle 'scope' for Twitter Oauth1 (#548)﻿
 ","Changed
 Handle 'scope' for Twitter Oauth1 (#548)﻿"
-17,"Changed
+19,"Changed
 
 Add reset methods for Octane (07840c0)﻿
 ","Changed
 Add reset methods for Octane (07840c0)﻿"
-18,"Fixed
+20,"Fixed
 
 Update provider to use DeferrableProvider instead (#529)﻿
 ","Fixed
 Update provider to use DeferrableProvider instead (#529)﻿"
-19,"Fixed
+21,"Fixed
 
 Make PKCE opt-in (#523)
 ﻿
 ","Fixed
 Make PKCE opt-in (#523)
 ﻿"
-20,"Added
+22,"Added
 
 Add support for OAuth 2.0 PKCE extension (#518)﻿
 ","Added
 Add support for OAuth 2.0 PKCE extension (#518)﻿"
-21,"Added
+23,"Added
 
 Added support for self hosted Gitlab instances (#510)
 
@@ -112,37 +118,37 @@ Fix scope separator in Gitlab provider (#512)﻿
 Added support for self hosted Gitlab instances (#510)
 Fixed
 Fix scope separator in Gitlab provider (#512)﻿"
-22,"Security
+24,"Security
 
 Revert Facebook picture access token changes (#504)﻿
 ","Security
 Revert Facebook picture access token changes (#504)﻿"
-23,"Changed
+25,"Changed
 
 Cache User instance to allow $provider->user() to be called multiple times (#498)﻿
 ","Changed
 Cache User instance to allow $provider->user() to be called multiple times (#498)﻿"
-24,"Added
+26,"Added
 
 PHP 8 Support (#495)﻿
 ","Added
 PHP 8 Support (#495)﻿"
-25,"Fixed
+27,"Fixed
 
 Include access token when requesting Facebook user profile photo (#489)
 ","Fixed
 Include access token when requesting Facebook user profile photo (#489)"
-26,"Fixed
+28,"Fixed
 
 Include grant_type=authorization code in token request parameters (#488)﻿
 ","Fixed
 Include grant_type=authorization code in token request parameters (#488)﻿"
-27,"Fixed
+29,"Fixed
 
 Fix bitbucket provider (#475)
 ","Fixed
 Fix bitbucket provider (#475)"
-28,"Added
+30,"Added
 
 Add custom exceptions for providers of One (#440)
 Support Laravel 8 (#465, #466)
@@ -165,12 +171,12 @@ Removed
 Drop Laravel 5.7 support (0bd64ae)
 Drop Laravel 5.8 support (4757ec4c)
 Drop PHP 7.1 support (6e21f1a)"
-29,"Fixed
+31,"Fixed
 
 Fix containter call (#450)
 ","Fixed
 Fix containter call (#450)"
-30,"Added
+32,"Added
 
 Support Guzzle 7 (#449)
 
@@ -181,17 +187,17 @@ Remove guzzlehttp/guzzle ~5.0 workaround (#448)
 Support Guzzle 7 (#449)
 Removed
 Remove guzzlehttp/guzzle ~5.0 workaround (#448)"
-31,"Fixed
+33,"Fixed
 
 Use Authorization header for Github provider (#430)
 ","Fixed
 Use Authorization header for Github provider (#430)"
-32,"Fixed
+34,"Fixed
 
 Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412)
 ","Fixed
 Override SocialiteServiceProvider::isDeferred() to mark as deferred (#412)"
-33,"Added
+35,"Added
 
 Allow to manually set desired Facebook graph version (#408)
 
@@ -202,32 +208,32 @@ Change default Facebook graph version to 3.3 (#408)
 Allow to manually set desired Facebook graph version (#408)
 Changed
 Change default Facebook graph version to 3.3 (#408)"
-34,"Added
+36,"Added
 
 Laravel 6.0 support (#390)
 ","Added
 Laravel 6.0 support (#390)"
-35,"Changed
+37,"Changed
 
 Updated version constraints for Laravel 6.0 (3fe71f1)
 ","Changed
 Updated version constraints for Laravel 6.0 (3fe71f1)"
-36,"Fixed
+38,"Fixed
 
 Fix bug with no LinkedIn email addresses (#355)
 ","Fixed
 Fix bug with no LinkedIn email addresses (#355)"
-37,"Fixed
+39,"Fixed
 
 Use proper key name for original avatar in Google Provider (5ec0024)
 ","Fixed
 Use proper key name for original avatar in Google Provider (5ec0024)"
-38,"Fixed
+40,"Fixed
 
 Update Google API urls (#346)
 ","Fixed
 Update Google API urls (#346)"
-39,"Added
+41,"Added
 
 Laravel 5.8 support (32b5ecf)
 
@@ -238,22 +244,22 @@ Handle Google responses excluding 'name' (#340)
 Laravel 5.8 support (32b5ecf)
 Fixed
 Handle Google responses excluding 'name' (#340)"
-40,"Fixed
+42,"Fixed
 
 Use proper localized name (#329)
 ","Fixed
 Use proper localized name (#329)"
-41,"Fixed
+43,"Fixed
 
 Fix a bug with no LinkedIn image (81adfcc)
 ","Fixed
 Fix a bug with no LinkedIn image (81adfcc)"
-42,"Fixed
+44,"Fixed
 
 Fixed broken GoogleProvider (#316)
 ","Fixed
 Fixed broken GoogleProvider (#316)"
-43,"Changed
+45,"Changed
 
 Removed support for PHP 7.0 (#311)
 Require Laravel 5.7 as minimum version (#311)

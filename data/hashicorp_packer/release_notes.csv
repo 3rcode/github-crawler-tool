@@ -1,10 +1,160 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"Nightly releases are snapshots of the development activity on the Packer project that may include new features and bug fixes scheduled for upcoming releases. These releases are made available to make it easier for users to test their existing build configurations against the latest Packer code base for potential issues or to experiment with new features, with a chance to provide feedback on ways to improve the changes before being released.
 As these releases are snapshots of the latest code, you may encounter an issue compared to the latest stable release. Users are encouraged to run nightly releases in a non production environment. If you encounter an issue, please check our issue tracker to see if the issue has already been reported; if a report hasn't been made, please report it so we can review the issue and make any needed fixes.
 Note: Nightly releases are only available via GitHub Releases, and artifacts are not codesigned or notarized. Distribution via other Release Channels such as the Releases Site or Homebrew is not yet supported.","Nightly releases are snapshots of the development activity on the Packer project that may include new features and bug fixes scheduled for upcoming releases. These releases are made available to make it easier for users to test their existing build configurations against the latest Packer code base for potential issues or to experiment with new features, with a chance to provide feedback on ways to improve the changes before being released.
 As these releases are snapshots of the latest code, you may encounter an issue compared to the latest stable release. Users are encouraged to run nightly releases in a non production environment. If you encounter an issue, please check our issue tracker to see if the issue has already been reported; if a report hasn't been made, please report it so we can review the issue and make any needed fixes.
 Note: Nightly releases are only available via GitHub Releases, and artifacts are not codesigned or notarized. Distribution via other Release Channels such as the Releases Site or Homebrew is not yet supported."
-2,"1.8.7 (May 4, 2023)
+2,"1.9.1 (June 1, 2023)
+BUG FIXES:
+
+On May 16th 2023, HCP introduced multi-project support to the platform.
+    In order to use multiple projects in your organization, you will need to update Packer
+    to version 1.9.1 or above. Starting with 1.9.1, you may specify a project ID to push
+    builds to with the HCP_PROJECT_ID environment variable. If no project ID is specified,
+    Packer will pick the project with the oldest creation date. Older versions of Packer are
+    incompatible with multi-project support on HCP, and builds will fail for HCP
+    organizations with multiple projects on versions before 1.9.1.
+    GH-12453
+","1.9.1 (June 1, 2023)
+BUG FIXES:
+On May 16th 2023, HCP introduced multi-project support to the platform.
+    In order to use multiple projects in your organization, you will need to update Packer
+    to version 1.9.1 or above. Starting with 1.9.1, you may specify a project ID to push
+    builds to with the HCP_PROJECT_ID environment variable. If no project ID is specified,
+    Packer will pick the project with the oldest creation date. Older versions of Packer are
+    incompatible with multi-project support on HCP, and builds will fail for HCP
+    organizations with multiple projects on versions before 1.9.1.
+    GH-12453"
+3,"1.9.0 (May 31, 2023)
+NOTES:
+
+
+Breaking Change: Iteration fingerprints used to be computed from the Git SHA of the
+     repository where the template is located when running packer build. This
+     changes with this release, and now fingerprints are automatically generated
+     as a ULID. This implies that continuing an existing iteration will require
+     users to define the fingerprint in the environment manually in order to
+     adopt this behaviour, otherwise, by default, a new iteration will be
+     created. This does not impact workflows where the fingerprint was defined
+     through the HCP_PACKER_ITERATION_FINGERPRINT environment variable, and
+     these builds will work exactly as they did before.
+     GH-12172
+
+
+Breaking Change: Community-maintained plugins bundled with the Packer binary have been removed.
+     These external plugin components are released independently of Packer core and can be installed
+     directly by the user. Users relying on the external plugin components listed below should refer
+     to the packer plugins sub-command and, if using HCL2, a required_plugins block to define a
+     list of plugins for building a template.
+
+
+PLUGINS
+
+
+Remove provisioner plugins for Chef, Converge, Puppet, Salt, and Inspec as
+     vendored plugins. These plugins have been previously archived and not
+     updated in release since being archived. These plugins can be installed
+     using packer init or with the Packer plugins sub-command packer plugins install github.com/hashicorp/chef.
+     GH-12374
+
+
+The following community plugins won't be bundled with Packer anymore:
+
+Alicloud
+CloudStack
+HCloud
+HyperOne
+Hyper-V
+JDCloud
+LXC
+LXD
+NCloud
+OpenStack
+Proxmox
+TencentCloud
+Triton
+Yandex
+
+GH-12436
+
+
+Users relying on these external plugin components should refer to the packer plugins sub-command and,
+if using HCL2, a required_plugins block to define a list of plugins to use for building a template.
+IMPROVEMENTS:
+
+core/hcp: Now, fingerprints used by HCP Packer are randomly generated ULIDs
+     instead of a Git SHA, and a new one is always generated, unless one is
+     specified in the environment.
+     GH-12172
+
+BUG FIXES:
+
+
+Fix LDFLAGS for release pipelines: Between Packer 1.8.5 and Packer 1.8.7, changes
+    to the LDFLAGS in use for building the binaries for Packer had mistakenly
+    removed some compilation flags, leading to the final binaries not being stripped.
+    This change raised the size of the built binaries by as much as 45%.
+    In this release, we fixed the LDFLAGS during compilation, yielding leaner binaries.
+
+
+Bumped gopsutil to v3. This fixes a macOS intermittent crash reported by the community
+    GH-12430
+
+","1.9.0 (May 31, 2023)
+NOTES:
+Breaking Change: Iteration fingerprints used to be computed from the Git SHA of the
+     repository where the template is located when running packer build. This
+     changes with this release, and now fingerprints are automatically generated
+     as a ULID. This implies that continuing an existing iteration will require
+     users to define the fingerprint in the environment manually in order to
+     adopt this behaviour, otherwise, by default, a new iteration will be
+     created. This does not impact workflows where the fingerprint was defined
+     through the HCP_PACKER_ITERATION_FINGERPRINT environment variable, and
+     these builds will work exactly as they did before.
+     GH-12172
+Breaking Change: Community-maintained plugins bundled with the Packer binary have been removed.
+     These external plugin components are released independently of Packer core and can be installed
+     directly by the user. Users relying on the external plugin components listed below should refer
+     to the packer plugins sub-command and, if using HCL2, a required_plugins block to define a
+     list of plugins for building a template.
+PLUGINS
+Remove provisioner plugins for Chef, Converge, Puppet, Salt, and Inspec as
+     vendored plugins. These plugins have been previously archived and not
+     updated in release since being archived. These plugins can be installed
+     using packer init or with the Packer plugins sub-command packer plugins install github.com/hashicorp/chef.
+     GH-12374
+The following community plugins won't be bundled with Packer anymore:
+Alicloud
+CloudStack
+HCloud
+HyperOne
+Hyper-V
+JDCloud
+LXC
+LXD
+NCloud
+OpenStack
+Proxmox
+TencentCloud
+Triton
+Yandex
+GH-12436
+Users relying on these external plugin components should refer to the packer plugins sub-command and,
+if using HCL2, a required_plugins block to define a list of plugins to use for building a template.
+IMPROVEMENTS:
+core/hcp: Now, fingerprints used by HCP Packer are randomly generated ULIDs
+     instead of a Git SHA, and a new one is always generated, unless one is
+     specified in the environment.
+     GH-12172
+BUG FIXES:
+Fix LDFLAGS for release pipelines: Between Packer 1.8.5 and Packer 1.8.7, changes
+    to the LDFLAGS in use for building the binaries for Packer had mistakenly
+    removed some compilation flags, leading to the final binaries not being stripped.
+    This change raised the size of the built binaries by as much as 45%.
+    In this release, we fixed the LDFLAGS during compilation, yielding leaner binaries.
+Bumped gopsutil to v3. This fixes a macOS intermittent crash reported by the community
+    GH-12430"
+4,"1.8.7 (May 4, 2023)
 
 Warning
 The version/version.go file tagged in this release refers to 1.8.6. If you are building Packer from source
@@ -203,7 +353,7 @@ core: Bump Go module version to 1.20
 core: Fix regression introduced in 1.8.6, where legacy JSON templates with
      custom builder names are outputted to STDOUT as uninterpolated user
      variables. GH-12290"
-3,"1.8.6 (February 15, 2023)
+5,"1.8.6 (February 15, 2023)
 NOTES:
 
 core: Users will see some changes in how names are displayed during a Packer
@@ -268,8 +418,8 @@ core/hcl2: Templates with build blocks referencing an unknown source block
 core: Linux packages now have vendor label and set the default label to
      HashiCorp. This fix is implemented for any future releases, but will not be
      updated for historical releases."
-4,,
-5,"1.8.5 (December 12, 2022)
+6,,
+7,"1.8.5 (December 12, 2022)
 NOTES:
 
 data/packer-image-iteration has been removed. This was an undocumented and
@@ -400,7 +550,7 @@ core: Using different template types when building a HCP Packer
      image iteration will now trigger a runtime build error due to the 
      mixing of template types.
      GH-12132"
-6,"1.8.4 (October 28 2022)
+8,"1.8.4 (October 28 2022)
 NOTES:
 
 
@@ -569,7 +719,7 @@ core: Bump golang.org/x/text to v0.3.8.
      GH-12047
 core: Update dependency to resolve GO-2022-0969.
      GH-12009"
-7,"1.8.3 (August 2, 2022)
+9,"1.8.3 (August 2, 2022)
 NOTES:
 
 
@@ -740,7 +890,7 @@ core/hcl2: Fix crash when parsing malformed provisioner override blocks.
 core/hcl2: Fix crash when running packer validate on templates containing
     one or more  HCP Packer data sources.
     GH-11883"
-8,"1.8.2 (June 21, 2022)
+10,"1.8.2 (June 21, 2022)
 NOTES:
 The Packer plugin SDK includes the latest version of the go-getter library, which has been updated to address the vulnerabilities listed in HCSEC-2022-13. 
 The updated SDK contains changes that can be breaking for some plugins as the updated go-getter settings in the SDK  prevent reading/writing through symlinks and to sub-directories that require upward path traversal (e.g /tmp/.../etc/hosts). The updates also includes a 30 minute maximum timeout for file downloading, which can be an issue for very large or slow downloads if they exceed more than 30 minutes to complete.
@@ -835,7 +985,7 @@ The preinst and postrm user scripts, including the service configuration
     directives, have been removed from the Packer rpm installations packages,
     as Packer does not require a service user in order to run.
     GH-11831"
-9,"1.8.1 (May 27, 2022)
+11,"1.8.1 (May 27, 2022)
 NOTES:
 
 All bundled plugins have been updated to their latest release to address any
@@ -990,7 +1140,7 @@ Bump github.com/hashicorp/packer-plugin-sdk to address legacy SSH key
     algorithms in SSH communicator.
     GH-11774
 GH-11754"
-10,"1.8.0 (March 4, 2022)
+12,"1.8.0 (March 4, 2022)
 NOTES:
 
 Breaking Change: The packer-plugin-check(github.com/hashicorp/packer/cmd/packer-plugins-check) has been replaced by the packer-sdc plugin-check command. Plugin maintainers who may be using the packer-plugin-check as part of their release pipeline are encouraged to move to the packer-sdc command. As an alternative, maintainers can continue to use the packer-plugin-check by pinning the command to Packer 1.7.10.  GH-11317
@@ -1113,31 +1263,31 @@ core: HCP Packer datasources will no longer fail for iterations with
 core: Packer darwin builds now use macOS system DNS resolver for resolving
     hostnames.GH-9710
 GH-11564"
-11,Packer patch release version 1.7.10,Packer patch release version 1.7.10
-12,Packer patch release version 1.7.9,Packer patch release version 1.7.9
-13,Packer patch release version 1.7.8,Packer patch release version 1.7.8
-14,Packer release version 1.7.7 with improved HCP Packer registry support,Packer release version 1.7.7 with improved HCP Packer registry support
-15,Packer patch release version 1.7.6,Packer patch release version 1.7.6
-16,Packer patch release version 1.7.5,Packer patch release version 1.7.5
-17,Packer patch release version 1.7.4,Packer patch release version 1.7.4
-18,Packer patch release version 1.7.3,Packer patch release version 1.7.3
-19,Packer patch release version 1.7.2,Packer patch release version 1.7.2
-20,Packer patch release version 1.7.1,Packer patch release version 1.7.1
-21,"Packer release version 1.7.0, introducing to Packer init and datasources !","Packer release version 1.7.0, introducing to Packer init and datasources !"
-22,Packer patch release version 1.6.6,Packer patch release version 1.6.6
-23,Packer patch release version 1.6.5,Packer patch release version 1.6.5
-24,fast-follow release 1.6.4 fixes some regressions in 1.6.3,fast-follow release 1.6.4 fixes some regressions in 1.6.3
-25,release 1.6.3,release 1.6.3
-26,1.6.2 patch release,1.6.2 patch release
-27,1.6.1 patch release,1.6.1 patch release
-28,,
-29,Version 1.5.6,Version 1.5.6
+13,Packer patch release version 1.7.10,Packer patch release version 1.7.10
+14,Packer patch release version 1.7.9,Packer patch release version 1.7.9
+15,Packer patch release version 1.7.8,Packer patch release version 1.7.8
+16,Packer release version 1.7.7 with improved HCP Packer registry support,Packer release version 1.7.7 with improved HCP Packer registry support
+17,Packer patch release version 1.7.6,Packer patch release version 1.7.6
+18,Packer patch release version 1.7.5,Packer patch release version 1.7.5
+19,Packer patch release version 1.7.4,Packer patch release version 1.7.4
+20,Packer patch release version 1.7.3,Packer patch release version 1.7.3
+21,Packer patch release version 1.7.2,Packer patch release version 1.7.2
+22,Packer patch release version 1.7.1,Packer patch release version 1.7.1
+23,"Packer release version 1.7.0, introducing to Packer init and datasources !","Packer release version 1.7.0, introducing to Packer init and datasources !"
+24,Packer patch release version 1.6.6,Packer patch release version 1.6.6
+25,Packer patch release version 1.6.5,Packer patch release version 1.6.5
+26,fast-follow release 1.6.4 fixes some regressions in 1.6.3,fast-follow release 1.6.4 fixes some regressions in 1.6.3
+27,release 1.6.3,release 1.6.3
+28,1.6.2 patch release,1.6.2 patch release
+29,1.6.1 patch release,1.6.1 patch release
 30,,
-31,Version 1.5.4,Version 1.5.4
+31,Version 1.5.6,Version 1.5.6
 32,,
-33,,
+33,Version 1.5.4,Version 1.5.4
 34,,
 35,,
-36,This is the 1.4.5 release of Packer. ,This is the 1.4.5 release of Packer. 
-37,Version 1.4.4 of Packer,Version 1.4.4 of Packer
-38,Version 1.4.3 of Packer,Version 1.4.3 of Packer
+36,,
+37,,
+38,This is the 1.4.5 release of Packer. ,This is the 1.4.5 release of Packer. 
+39,Version 1.4.4 of Packer,Version 1.4.4 of Packer
+40,Version 1.4.3 of Packer,Version 1.4.3 of Packer

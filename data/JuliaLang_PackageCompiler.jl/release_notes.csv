@@ -1,5 +1,59 @@
-Index,Release Note,Release Note With Abstraction
-1,"PackageCompiler v2.1.5
+Index,Release Note,Release Note Abstract
+1,"PackageCompiler v2.1.7
+Diff since v2.1.6
+Closed issues:
+- v2.1.6 can not create_app (#812)
+Merged pull requests:
+- fix importing executable before trying to compile its julia_main (#813) (@KristofferC)
+- bump version (#814) (@KristofferC)","PackageCompiler v2.1.7
+Diff since v2.1.6
+Closed issues:
+- v2.1.6 can not create_app (#812)
+Merged pull requests:
+- fix importing executable before trying to compile its julia_main (#813) (@KristofferC)
+- bump version (#814) (@KristofferC)"
+2,"PackageCompiler v2.1.6
+Diff since v2.1.5
+Closed issues:
+- compile_app() fails to build if paths are used (on Windows) (#721)
+- Precompile stage doesn't support packages with the same names and different uuids (#767)
+- InitError(mod=:micromamba_jll ... (#784)
+- Example for creating image with Plots.jl not working (#786)
+- fatal: error thrown and no exception handler available. (#789)
+- With 1.9.0-beta4, sysimages aren't built for the specified JULIA_CPU_TARGET (#790)
+- Reenable ignored precompile statements on julia 1.9+ (#798)
+- Parallel image generation works in julia nightly, but is still single threaded in PackageCompiler (#799)
+Merged pull requests:
+- Build and run MyLib (#732) (@rikhuijzer)
+- Mention uuid too in error (#733) (@rikhuijzer)
+- suggest using Plots.init() (#750) (@rdiaz02)
+- Allow the create_app function to accept and propagate the script::Union{Nothing, String} kwarg (#788) (@DilumAluthge)
+- Fix two typos (#797) (@goggle)
+- fail early if both incremental and filter_stdlibs (#800) (@baggepinnen)
+- Pass CPU targets as cmdline args (#804) (@ven-k)
+- Some fixes to precompile ""replay"" (#805) (@KristofferC)
+- Bump version (#810) (@KristofferC)","PackageCompiler v2.1.6
+Diff since v2.1.5
+Closed issues:
+- compile_app() fails to build if paths are used (on Windows) (#721)
+- Precompile stage doesn't support packages with the same names and different uuids (#767)
+- InitError(mod=:micromamba_jll ... (#784)
+- Example for creating image with Plots.jl not working (#786)
+- fatal: error thrown and no exception handler available. (#789)
+- With 1.9.0-beta4, sysimages aren't built for the specified JULIA_CPU_TARGET (#790)
+- Reenable ignored precompile statements on julia 1.9+ (#798)
+- Parallel image generation works in julia nightly, but is still single threaded in PackageCompiler (#799)
+Merged pull requests:
+- Build and run MyLib (#732) (@rikhuijzer)
+- Mention uuid too in error (#733) (@rikhuijzer)
+- suggest using Plots.init() (#750) (@rdiaz02)
+- Allow the create_app function to accept and propagate the script::Union{Nothing, String} kwarg (#788) (@DilumAluthge)
+- Fix two typos (#797) (@goggle)
+- fail early if both incremental and filter_stdlibs (#800) (@baggepinnen)
+- Pass CPU targets as cmdline args (#804) (@ven-k)
+- Some fixes to precompile ""replay"" (#805) (@KristofferC)
+- Bump version (#810) (@KristofferC)"
+3,"PackageCompiler v2.1.5
 Diff since v2.1.4
 Closed issues:
 - Fail early if no compiler can be found? (#677)
@@ -34,7 +88,7 @@ Merged pull requests:
 - CI: add the ci_started job (#776) (@DilumAluthge)
 - README: Fix the CI status badge (#777) (@DilumAluthge)
 - bump version (#782) (@KristofferC)"
-2,"PackageCompiler v2.1.4
+4,"PackageCompiler v2.1.4
 Diff since v2.1.2
 Closed issues:
 - Segfault while compiling package using a foreign type (#700)
@@ -61,7 +115,7 @@ Merged pull requests:
 - Patch bump. Set CI timeout to 90 mins (#760) (@IanButterworth)
 - Fixes for 1.10 (#762) (@IanButterworth)
 - PackageCompiler v2.1.4 (#763) (@IanButterworth)"
-3,"PackageCompiler v2.1.2
+5,"PackageCompiler v2.1.2
 Diff since v2.1.1
 Merged pull requests:
 - Add script kwarg to create_library to enable running of custom Julia code (#748) (@sharanry)
@@ -70,7 +124,7 @@ Diff since v2.1.1
 Merged pull requests:
 - Add script kwarg to create_library to enable running of custom Julia code (#748) (@sharanry)
 - bump version (#749) (@KristofferC)"
-4,"PackageCompiler v2.1.1
+6,"PackageCompiler v2.1.1
 Diff since v2.1.0
 Closed issues:
 - create_app Error: could not find project (#734)
@@ -87,14 +141,14 @@ Closed issues:
 Merged pull requests:
 - Monitor for low free memory during sysimage generation (#740) (@IanButterworth)
 - PackageCompiler v2.1.1 (#745) (@IanButterworth)"
-5,"PackageCompiler v2.1.0
+7,"PackageCompiler v2.1.0
 Diff since v2.0.11
 Merged pull requests:
 - Factor out the ""find compiler"" logic into a separate get_compiler_cmd function (#731) (@DilumAluthge)","PackageCompiler v2.1.0
 Diff since v2.0.11
 Merged pull requests:
 - Factor out the ""find compiler"" logic into a separate get_compiler_cmd function (#731) (@DilumAluthge)"
-6,"PackageCompiler v2.0.11
+8,"PackageCompiler v2.0.11
 Diff since v2.0.10
 Closed issues:
 - nightly (1.9) tests failing (#708)
@@ -107,7 +161,7 @@ Closed issues:
 Merged pull requests:
 - remove use of jl_set_value on 1.9. fix UndefVarError for new nightly error formatting (#709) (@simonbyrne)
 - Reinstate RelocatableFolders compat & patch bump (#729) (@IanButterworth)"
-7,"PackageCompiler v2.0.10
+9,"PackageCompiler v2.0.10
 Diff since v2.0.9
 Closed issues:
 - Apps/libraries/sysimages that have no package dependancies trigger unnecessary warning (#692)
@@ -124,7 +178,7 @@ Merged pull requests:
 - run CI on julia 1.8 (#707) (@simonbyrne)
 - Support RelocatableFolders v1 (#722) (@AshlinHarris)
 - CI: change '~1.8.0-0' to '1.8' (#723) (@DilumAluthge)"
-8,"PackageCompiler v2.0.9
+10,"PackageCompiler v2.0.9
 Diff since v2.0.8
 Closed issues:
 - New warning, possible bug (#713)
@@ -137,7 +191,7 @@ Closed issues:
 Merged pull requests:
 - Add concurrency control to GitHub workflow runs (#712) (@davidanthoff)
 - Fix an incorrect warning message (#715) (@DilumAluthge)"
-9,"PackageCompiler v2.0.8
+11,"PackageCompiler v2.0.8
 Diff since v2.0.7
 Closed issues:
 - MbedTLS cert.perm is not packaged (#710)
@@ -150,7 +204,7 @@ Closed issues:
 Merged pull requests:
 - check if manifest file exists instead of if manifest empty (#705) (@simonbyrne)
 - also bundle certificate (#711) (@KristofferC)"
-10,"PackageCompiler v2.0.7
+12,"PackageCompiler v2.0.7
 Diff since v2.0.6
 Closed issues:
 - PackageCompiler does not download artifacts for MKL now (#691)
@@ -167,7 +221,7 @@ Merged pull requests:
 - Fix the message in create_sysimg_object_file to correctly say ""incremental"" or ""nonincremental"" (#694) (@DilumAluthge)
 - fix lazy artifacts (#696) (@KristofferC)
 - Fix a few typos (#701) (@fingolfin)"
-11,"PackageCompiler v2.0.6
+13,"PackageCompiler v2.0.6
 Diff since v2.0.5
 Closed issues:
 - Documentation for libraries still mentions @ccallable (#668)
@@ -190,7 +244,7 @@ Closed issues:
 Merged pull requests:
 - Fix formatting of executables keyword in docstring (#679) (@blegat)
 - add support for dynamic artifact selection (#690) (@KristofferC)"
-12,"PackageCompiler v2.0.5
+14,"PackageCompiler v2.0.5
 Diff since v2.0.4
 Closed issues:
 - Error while compiling incremental system image with Flux (#641)
@@ -219,7 +273,7 @@ Closed issues:
 Merged pull requests:
 - make package test work without an installed General registry (#646) (@KristofferC)
 - Fix windows library filename (#655) (@kmsquire)"
-13,"PackageCompiler v2.0.4
+15,"PackageCompiler v2.0.4
 Diff since v2.0.3
 Closed issues:
 - Error when using standard library: ""ArgumentError: Package ReSolver does not have Dates in its dependencies"" (#648)
@@ -230,7 +284,7 @@ Closed issues:
 - Error when using standard library: ""ArgumentError: Package ReSolver does not have Dates in its dependencies"" (#648)
 Merged pull requests:
 - add precompile statements for functions called from main in apps (#649) (@JeffBezanson)"
-14,"PackageCompiler v2.0.3
+16,"PackageCompiler v2.0.3
 Diff since v2.0.2
 Closed issues:
 - stdatomic.h: No such file or directory (#637)
@@ -245,7 +299,7 @@ Closed issues:
 Merged pull requests:
 - Typo (#642) (@PallHaraldsson)
 - use debug libs when Julia is debug build (#644) (@jaakkor2)"
-15,"PackageCompiler v2.0.2
+17,"PackageCompiler v2.0.2
 Diff since v2.0.1
 Closed issues:
 - create_sysimage fails on macOS when one passes file name (e.g. ""sys.dylib"" ) to sysimage_path  (#635)
@@ -256,7 +310,7 @@ Closed issues:
 - create_sysimage fails on macOS when one passes file name (e.g. ""sys.dylib"" ) to sysimage_path  (#635)
 Merged pull requests:
 - use abspath (#636) (@terasakisatoshi)"
-16,"PackageCompiler v2.0.1
+18,"PackageCompiler v2.0.1
 Diff since v2.0.0
 Closed issues:
 - Allow create_pkg_context with only a Manifest.toml (#629)
@@ -275,7 +329,7 @@ Merged pull requests:
 - Fix code block on apps documentation (#631) (@guilhermebodin)
 - Fix doc typo (#632) (@alhirzel)
 - Fix typo in docs: use correct default cpu target (#633) (@ikirill)"
-17,"PackageCompiler v2.0.0
+19,"PackageCompiler v2.0.0
 PackageCompiler 2.0 comes with a few breaking changes. Read the upgrade guide here
 for instructions on how to upgrade to version 2.0.
 __
@@ -284,7 +338,7 @@ PackageCompiler 2.0 comes with a few breaking changes. Read the upgrade guide he
 for instructions on how to upgrade to version 2.0.
 __
 Diff since v1.7.7"
-18,"PackageCompiler v1.7.7
+20,"PackageCompiler v1.7.7
 Diff since v1.7.6
 Closed issues:
 - Multiple executables in an app (#320)
@@ -321,14 +375,14 @@ Merged pull requests:
 - Ensure app_libdir path exists before cp (#624) (@jpsamaroo)
 - fix bug when the same artifact was used more than once in the project (#626) (@KristofferC)
 - fix bug when the same artifact was used more than once in the project (#627) (@KristofferC)"
-19,"PackageCompiler v1.7.6
+21,"PackageCompiler v1.7.6
 Diff since v1.7.5
 Merged pull requests:
 - Backports release 1 (#610) (@KristofferC)","PackageCompiler v1.7.6
 Diff since v1.7.5
 Merged pull requests:
 - Backports release 1 (#610) (@KristofferC)"
-20,"PackageCompiler v1.7.5
+22,"PackageCompiler v1.7.5
 Diff since v1.7.4
 Closed issues:
 - Show some loading spinner or something while creating sysimages. (#318)
@@ -343,7 +397,7 @@ Closed issues:
 Merged pull requests:
 - Add a spinner for long running commands (#607) (@KristofferC)
 - fall back to gcc/clang if g++/clang++ not avaiable, but warn about it (#608) (@KristofferC)"
-21,"PackageCompiler v1.7.4
+23,"PackageCompiler v1.7.4
 Diff since v1.7.3
 Closed issues:
 - Feature request: use the Artifacts system to provide a C compiler on Linux and macOS (#316)
@@ -368,7 +422,7 @@ Merged pull requests:
 - use O3 for sysimage, like Julia itself does (#603) (@KristofferC)
 - improve documentation (#604) (@KristofferC)
 - Backports release 1 (#605) (@KristofferC)"
-22,"PackageCompiler v1.7.3
+24,"PackageCompiler v1.7.3
 Diff since v1.7.2
 Closed issues:
 - create_image with packages in Project.toml (#373)
@@ -397,7 +451,7 @@ Merged pull requests:
 - fix an off by one in julia-args parsing (#596) (@KristofferC)
 - fixup artifact format (#599) (@KristofferC)
 - Backports release 1 (#600) (@KristofferC)"
-23,"PackageCompiler v1.7.2
+25,"PackageCompiler v1.7.2
 Diff since v1.7.1
 Closed issues:
 - System image compiled with 1.7 segfaults. (#588)
@@ -412,7 +466,7 @@ Closed issues:
 Merged pull requests:
 - Fix a typo while gathering dependencies from Manifest.toml (#593) (@zhubonan)
 - use a file to run the sysimage code in (#594) (@KristofferC)"
-24,"PackageCompiler v1.7.1
+26,"PackageCompiler v1.7.1
 Diff since v1.7.0
 Merged pull requests:
 - run CI on 1.7 (#584) (@KristofferC)
@@ -427,7 +481,7 @@ Merged pull requests:
 - improve artifact bundling (#587) (@KristofferC)
 - fixup regression in precompilation before creating sysimage (#589) (@KristofferC)
 - allow loading stdlibs in the precompile process (#590) (@KristofferC)"
-25,"PackageCompiler v1.7.0
+27,"PackageCompiler v1.7.0
 Diff since v1.6.0
 Closed issues:
 - How to get parallelism to work? (#84)
@@ -478,7 +532,7 @@ Merged pull requests:
 - fix relocatability of PackageCompiler (#575) (@KristofferC)
 - initialize RNGs in sysimage process (#579) (@KristofferC)
 - fix library used for creating sysimage on debug builds of Julia (#580) (@KristofferC)"
-26,"PackageCompiler v1.6.0
+28,"PackageCompiler v1.6.0
 Diff since v1.5.0
 Closed issues:
 - Using julia shared libraries as python C exstensions (#25)
@@ -613,7 +667,7 @@ Merged pull requests:
 - delete spurious file (#564) (@KristofferC)
 - allow passing standard julia arguments to apps (#565) (@KristofferC)
 - call create_sysimage with a vector for packages (#566) (@KristofferC)"
-27,"PackageCompiler v1.5.0
+29,"PackageCompiler v1.5.0
 Diff since v1.4.1
 Closed issues:
 - Compiler warning on create_library (#532)
@@ -630,7 +684,7 @@ Merged pull requests:
 - Remove Manifest.toml from MyLib/build (#536) (@kmsquire)
 - dev PackageCompiler in MyLib/build (#537) (@KristofferC)
 - put the sysimage for apps inside lib and slightly tweak rpath (#538) (@KristofferC)"
-28,"PackageCompiler v1.4.1
+30,"PackageCompiler v1.4.1
 Diff since v1.4.0
 Merged pull requests:
 - Add missing include_lazy_artifacts parameter (#530) (@kmsquire)
@@ -639,7 +693,7 @@ Diff since v1.4.0
 Merged pull requests:
 - Add missing include_lazy_artifacts parameter (#530) (@kmsquire)
 - Disable autoprecomp during project instantiation (#531) (@kmsquire)"
-29,"PackageCompiler v1.4.0
+31,"PackageCompiler v1.4.0
 Diff since v1.3.0
 Closed issues:
 - Undefined Symbol when loading sysimage (#492)
@@ -664,7 +718,7 @@ Merged pull requests:
 - modernize documentation GHA (#524) (@KristofferC)
 - Update documentation and example about shared libraries (#527) (@amontoison)
 - Rebase: Add include_lazy_artifacts flag to create_app (issues/464). (#529) (@KristofferC)"
-30,"PackageCompiler v1.3.0
+32,"PackageCompiler v1.3.0
 Diff since v1.2.8
 Closed issues:
 - Question: How do we use build_shared_lib function Properly ? (#257)
@@ -681,14 +735,14 @@ Closed issues:
 - Inputing file path arguments to compiled package (#519)
 Merged pull requests:
 - Add create_library function (#490) (@kmsquire)"
-31,"PackageCompiler v1.2.8
+33,"PackageCompiler v1.2.8
 Diff since v1.2.7
 Merged pull requests:
 - Fix: Incorrect tree hash in Artifacts.toml (#520) (@vdayanand)","PackageCompiler v1.2.8
 Diff since v1.2.7
 Merged pull requests:
 - Fix: Incorrect tree hash in Artifacts.toml (#520) (@vdayanand)"
-32,"PackageCompiler v1.2.7
+34,"PackageCompiler v1.2.7
 Diff since v1.2.6
 Closed issues:
 - Support x86 on Windows (#511)
@@ -699,7 +753,7 @@ Closed issues:
 - Support x86 on Windows (#511)
 Merged pull requests:
 - Add 32 bit Windows gcc artifact (#516) (@davidanthoff)"
-33,"PackageCompiler v1.2.6
+35,"PackageCompiler v1.2.6
 Diff since v1.2.5
 Closed issues:
 - FATAL ERROR when compiling LsqFit.jl (#436)
@@ -758,7 +812,7 @@ Merged pull requests:
 - Remove 1.5.2 CI, re-run on 1.6 (#497) (@IanButterworth)
 - use Pkg.precompile instead of loading packages to ensure they are precompiled (#505) (@KristofferC)
 - Adapt to changes in Pkg.Operation method signatures under Julia 1.7. (#512) (@Sacha0)"
-34,"PackageCompiler v1.2.5
+36,"PackageCompiler v1.2.5
 Diff since v1.2.4
 Closed issues:
 - Error with create_sysimage (#475)
@@ -783,7 +837,7 @@ Merged pull requests:
 - Reword and link to an explanation of type-piracy (#477) (@rustyconover)
 - add a note to the devdocs that they are in fact devdocs (#481) (@KristofferC)
 - bump version (#491) (@KristofferC)"
-35,"PackageCompiler v1.2.4
+37,"PackageCompiler v1.2.4
 Diff since v1.2.3
 Closed issues:
 - Package CompilerSupportLibraries_jll is required but does not seem to be installed (#470)
@@ -798,7 +852,7 @@ Merged pull requests:
 - also call init_active_project when required (#460) (@KristofferC)
 - Update for 1.6 linking and handle stdlibs that aren't in the sysimage (#471) (@ianshmean)
 - Add github actions tests (#472) (@ianshmean)"
-36,"PackageCompiler v1.2.3
+38,"PackageCompiler v1.2.3
 Diff since v1.2.2
 Merged pull requests:
 - Update Travis CI badge (#448) (@omus)
@@ -807,7 +861,7 @@ Diff since v1.2.2
 Merged pull requests:
 - Update Travis CI badge (#448) (@omus)
 - Fix insufficient escaping (#459) (@GunnarFarneback)"
-37,"PackageCompiler v1.2.2
+39,"PackageCompiler v1.2.2
 Diff since v1.2.1
 Closed issues:
 - Travis is failing on master (#388)
@@ -850,7 +904,7 @@ Merged pull requests:
 - Add Julia 1.5 to test matrix (#440) (@simonbyrne)
 - Ensure @artifact is skipped on non-windows platforms (#443) (@staticfloat)
 - improve vararg precompilation statements (#447) (@KristofferC)"
-38,"PackageCompiler v1.2.1
+40,"PackageCompiler v1.2.1
 Diff since v1.2.0
 Merged pull requests:
 - Use older hash (#420) (@staticfloat)
@@ -859,7 +913,7 @@ Diff since v1.2.0
 Merged pull requests:
 - Use older hash (#420) (@staticfloat)
 - Use import to precompile packages (instead of using using) (#421) (@DilumAluthge)"
-39,"PackageCompiler v1.2.0
+41,"PackageCompiler v1.2.0
 Diff since v1.1.1
 Closed issues:
 - Feature request: allow julia argument --color=yes in build_executable (#278)
@@ -922,7 +976,7 @@ Merged pull requests:
 - add a warning that PackageCompiler requires a bit of background knowl… (#408) (@KristofferC)
 - fix typo 'julia-q' -> 'julia -q' (#414) (@p1scescom)
 - Allow passing a custom c program to create_app() (#415) (@NHDaly)"
-40,"PackageCompiler v1.1.1
+42,"PackageCompiler v1.1.1
 Diff since v1.1.0
 Closed issues:
 - unable to find entry point (code used to work in 0.6.4) (#369)
@@ -939,7 +993,7 @@ Closed issues:
 - Test Error for PackageCompiler for v1.3 (#378)
 Merged pull requests:
 - Use dirname in stead of ../.. on the executable name for depot path. (#380) (@rbvermaa)"
-41,"PackageCompiler v1.1.0
+43,"PackageCompiler v1.1.0
 Diff since v1.0.2
 Closed issues:
 - Generated executable is slow (doing JIT?) (#292)
@@ -974,7 +1028,7 @@ Merged pull requests:
 - Update LICENSE file for GitHub detection (#359) (@lucatrv)
 - fix the example showing how to get the path to an artifact (#363) (@KristofferC)
 - create new_sysimage_source_path in temp folder (#367) (@seregaxvm)"
-42,"PackageCompiler v1.0.2
+44,"PackageCompiler v1.0.2
 Diff since v1.0.1
 Closed issues:
 - Pkg.Operations.source_path changed in julia 1.4rc2 (#356)
@@ -985,7 +1039,7 @@ Closed issues:
 - Pkg.Operations.source_path changed in julia 1.4rc2 (#356)
 Merged pull requests:
 - fix brekage in 1.4 rc2 (#358) (@KristofferC)"
-43,"PackageCompiler v1.0.1
+45,"PackageCompiler v1.0.1
 Diff since v1.0.0
 Closed issues:
 - ARGS type in new PackageCompilerX (#327)
@@ -1002,7 +1056,7 @@ Closed issues:
 Merged pull requests:
 - (close the bracket in error message (#347) (@visr)
 - also abspath the precompile execution file (#353) (@KristofferC)"
-44,"PackageCompiler v1.0.0
+46,"PackageCompiler v1.0.0
 Diff since v0.6.5
 Closed issues:
 - Channels don't seem to compile (#52)
@@ -1265,18 +1319,18 @@ Merged pull requests:
 - add some upgrade notes for pre 1.0 PackageCompiler (#343) (@KristofferC)
 - fix typo error in code to create sysimage (#346) (@prakhar2b)
 - (close the bracket in error message (#347) (@visr)"
-45,,
-46,,
 47,,
 48,,
 49,,
 50,,
 51,,
 52,,
-53,"Update code for Julia v1.0, require Julia v0.7, drop Julia v0.6 support.","Update code for Julia v1.0, require Julia v0.7, drop Julia v0.6 support."
+53,,
 54,,
-55,,
+55,"Update code for Julia v1.0, require Julia v0.7, drop Julia v0.6 support.","Update code for Julia v1.0, require Julia v0.7, drop Julia v0.6 support."
 56,,
 57,,
-58,use kw_args for force and reuse instead of positional arguments,use kw_args for force and reuse instead of positional arguments
-59,Initial release,Initial release
+58,,
+59,,
+60,use kw_args for force and reuse instead of positional arguments,use kw_args for force and reuse instead of positional arguments
+61,Initial release,Initial release

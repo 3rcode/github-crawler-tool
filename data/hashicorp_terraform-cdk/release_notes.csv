@@ -1,5 +1,80 @@
-Index,Release Note,Release Note With Abstraction
-1,"fix
+Index,Release Note,Release Note Abstract
+1,"feat
+
+feat(provider-generator): allow removing big, cost intensive structures #2932
+feat(cli): add flag to display memory / time used for get and synth #2914
+feat(cli): Improve telemetry reporting #2840
+feat: make testing more resilient towards usage with app.synth #2762
+feat(provider-generator): Add docstring to main class generated for modules #2589
+
+fix
+
+fix(cli): exit ink app when done synthesizing #2933
+fix(lib): Support Computed List> #2850
+fix(cli): Give hint when cdktf synth failed to create config #2714
+fix(cli): Always run init, but selectively skip locking providers #2617
+
+chore
+
+chore: remove existing feature flags #2937
+chore: remove legacy comment #2938
+chore: pin all workflows after update #2926
+chore: remove PR sizing #2925
+chore: remove update snapshots CI job #2924
+chore: fix CODEOWNERS #2921
+chore: add merge queue and remove timechart #2909
+chore(hcl2cdk): add testing infrastructure for convert in Python & CSharp #2716
+
+refactor
+
+refactor: exit after cdktf project commands finishes #2934
+refactor(cli): upgrade inquirer to @inquirer/prompts #2853
+","feat
+feat(provider-generator): allow removing big, cost intensive structures #2932
+feat(cli): add flag to display memory / time used for get and synth #2914
+feat(cli): Improve telemetry reporting #2840
+feat: make testing more resilient towards usage with app.synth #2762
+feat(provider-generator): Add docstring to main class generated for modules #2589
+fix
+fix(cli): exit ink app when done synthesizing #2933
+fix(lib): Support Computed List> #2850
+fix(cli): Give hint when cdktf synth failed to create config #2714
+fix(cli): Always run init, but selectively skip locking providers #2617
+chore
+chore: remove existing feature flags #2937
+chore: remove legacy comment #2938
+chore: pin all workflows after update #2926
+chore: remove PR sizing #2925
+chore: remove update snapshots CI job #2924
+chore: fix CODEOWNERS #2921
+chore: add merge queue and remove timechart #2909
+chore(hcl2cdk): add testing infrastructure for convert in Python & CSharp #2716
+refactor
+refactor: exit after cdktf project commands finishes #2934
+refactor(cli): upgrade inquirer to @inquirer/prompts #2853"
+2,"In 0.16.2 the release to maven failed, we fixed the issue and release this version so that maven is included in the release.","In 0.16.2 the release to maven failed, we fixed the issue and release this version so that maven is included in the release."
+3,"fix
+
+fix(provider-generator): remove duplicates between wrapper classes and interfaces generated from provider schemas #2895
+fix(cli): run terraform init in serial so no text file is busy in the cache #2843
+fix(cli): buffer the output from the Terraform CLI and only forward output that has been terminated by a newline #2844
+fix(cli): fix no-color flag passing #2845
+fix(hcl2cdk): Support conversion of functions that have variate arguments at the end #2833
+
+chore
+
+chore: Mock synth to make parallelism test fail less #2831
+chore: Refactor hcl2cdk to read nicer #2826
+","fix
+fix(provider-generator): remove duplicates between wrapper classes and interfaces generated from provider schemas #2895
+fix(cli): run terraform init in serial so no text file is busy in the cache #2843
+fix(cli): buffer the output from the Terraform CLI and only forward output that has been terminated by a newline #2844
+fix(cli): fix no-color flag passing #2845
+fix(hcl2cdk): Support conversion of functions that have variate arguments at the end #2833
+chore
+chore: Mock synth to make parallelism test fail less #2831
+chore: Refactor hcl2cdk to read nicer #2826"
+4,"fix
 
 fix(cli): run terraform init in serial so no text file is busy in the cache #2843
 fix(cli): buffer the output from the Terraform CLI and only forward output that has been terminated by a newline #2844
@@ -18,7 +93,7 @@ fix(hcl2cdk): Support conversion of functions that have variate arguments at the
 chore
 chore: Mock synth to make parallelism test fail less #2831
 chore: Refactor hcl2cdk to read nicer #2826"
-2,"Breaking changes
+5,"Breaking changes
 Update to .NET 6.0
 We updated our C# template to .NET 6.0 as JSII updated recently and dropped support for netcoreapp3.1:
 
@@ -61,19 +136,19 @@ As part of this change, we use the same parameter names as Terraform which might
 ```python
 Fn.join("","", [src.stringResource.result, src.stringResource.result])
 Fn.join(separator="","", value=[src.stringResource.result, src.stringResource.result])"
-3,"fix
+6,"fix
 
 chore: update JSII to 1.75.0 #2653
 fix(lib): zipmap arg validators  #2633
 ","fix
 chore: update JSII to 1.75.0 #2653
 fix(lib): zipmap arg validators  #2633"
-4,"fix
+7,"fix
 
 fix(cli): Remove @types/node-fetch from dependencies as those take precedence over direct devDependencies on @node/types #2623
 ","fix
 fix(cli): Remove @types/node-fetch from dependencies as those take precedence over direct devDependencies on @node/types #2623"
-5,"chore
+8,"chore
 
 chore: Don't run terraform init when not required #2572
 chore: additionally lock providers for linux only #2593
@@ -138,7 +213,7 @@ feat(docs): Translate more examples to Go #2554
 feat(docs): Translate more examples to Go #2560
 feat(docs): Translate more examples to Go #2569
 feat: also go through files not yet added to git #2567"
-6,"feat
+9,"feat
 
 feat: create a plan file for non-TFC runs #2531
 
@@ -163,7 +238,7 @@ chore
 chore: actually autoclose older GHA updater PRs #2542
 chore: fill out homebrew pr body #2537
 chore: support soft sentinel overrides #2485"
-7,"fix
+10,"fix
 
 fix(provider-generator): fix resources named 'provider' breaking the code generation #2504
 
@@ -174,7 +249,7 @@ chore: autoclose older GHA updater PRs #2505
 fix(provider-generator): fix resources named 'provider' breaking the code generation #2504
 chore
 chore: autoclose older GHA updater PRs #2505"
-8,"Breaking changes
+11,"Breaking changes
 Renaming of *Options and *Props to *Config
 We had several exports where the configuration passed to constructs or functions was using a class with a different suffix then Config. If you are using a language like C#, Java, Python, or Go you might have needed to specify these classes in your CDKTF application. To simplify the usage we changed every suffix to be Config, so if you currently use one of the others please rename them to use the Config suffix. No options were changed in the process, only the names were aligned.
 This would be one example of the change to be made (this is in Java):
@@ -346,7 +421,7 @@ chore: deprecate feature flags #2498
 chore: document variable flags #2495
 refactor
 refactor: rename all Props and Options classes and interfaces to *Config #2471"
-9,"fix
+12,"fix
 
 fix: add completed tfc pending states #2398
 fix: skip confirming on auto-apply enabled tfc workspaces #2397
@@ -379,7 +454,7 @@ chore: add Terraform 1.3.4 to Docker container #2285
 feat
 feat(cli): prompt added in init - asks to use TFC when credentials are present #2386
 feat(docs): document Token.nullValue() #2297"
-10,"Breaking changes
+13,"Breaking changes
 We split up our cdktf-cli package into cdktf-cli for the UI parts, utilizing @cdktf/cli-core for the functionality. If you previously relied on the internal cdktf-cli/lib entrypoint you should switch to @cdktf/cli-core. This was never an official API, but we want to mention it here in case it breaks for anyone.
 chore
 
@@ -498,7 +573,7 @@ refactor
 refactor(cli): parse json according to schema #2286
 refactor: extract asset and constructs example into separate files #2275
 refactor(cli): move cli library into seperate package #2253"
-11,"A broken import that only appeared in the bundled cdktf-cli that we publish broke the 0.14.0 release. This patch release fixes this.
+14,"A broken import that only appeared in the bundled cdktf-cli that we publish broke the 0.14.0 release. This patch release fixes this.
 fix
 
 fix(provider-generator): fix cross package import which breaks the cdktf-cli release bundle #2302
@@ -511,7 +586,7 @@ fix
 fix(provider-generator): fix cross package import which breaks the cdktf-cli release bundle #2302
 chore
 chore: document authoring cdktf constructs #2287"
-12,"Breaking changes
+15,"Breaking changes
 Back in October, we announced significant performance improvements with CDKTF version 0.13. These improvements required breaking changes for which we provided backward-compatible provider bindings in version 0.13. As announced, the 0.12 (non-namespaced) provider bindings will no longer work starting with CDKTF 0.14. Refer to the upgrade guide for 0.13 to learn how to update your imports for these changes.
 feat
 
@@ -576,12 +651,12 @@ chore: add ecs-microservices example #2252
 chore: sync version and changelog from the 0.13.3 backported release #2251
 chore: install pre-built provider with exact version #2249
 chore: cache examples and terraform plugins #2213"
-13,"fix
+16,"fix
 
 fix: Redact authorization header when error logging from TFC/TFE #2241
 ","fix
 fix: Redact authorization header when error logging from TFC/TFE #2241"
-14,"fix
+17,"fix
 
 fix(provider-generator): don't require arrays wrapping variable / output declarations #2199
 fix(cli): Use 'id' as argument name for all templates #2119
@@ -618,7 +693,7 @@ chore(deps): Update docker image to use new jsii/superchain tag #2214
 chore(docs): rewrite internal redirects #2204
 feat
 feat: add CODEOWNERS file for automatic PR review assignment #2212"
-15,"feat
+18,"feat
 
 feat(cli): Add support for terraform's parallelism flag #2107
 feat: add redirect link to pre-built providers json file #2180
@@ -647,7 +722,7 @@ fix(docs): Fix upgrade guide imports for Python #2171
 fix(docs): update old config key #2195
 chore
 chore: Update link to blogpost #2176"
-16,"Breaking Changes
+19,"Breaking Changes
 Abbreviated version below, for a guide see Upgrade Guide for 0.13.
 0.13 includes performance improvements to generated providers. Instead of exporting a flat list of exports including all supported resources and data sources, we now export each construct and it's associated structures in their own namespace. Due to this, the way you import constructs from your CDKTF application will change. For more information regarding this release, and some of the reasonings behind the changes, please check out the version 0.13 release post.
 Typescript
@@ -669,7 +744,7 @@ module
 Python
 ```python
 from cdktf_cdktf_provider_kubernetes.kubernetes import Namespace, Service, Deployment, KubernetesProvider"
-17,"Breaking Changes
+20,"Breaking Changes
 A very minor change in the UX of the cdktf get command now generates the provider bindings for all languages (except TypeScript) in parallel. This speeds up the process in general, but on devices with limited memory it could lead to Out of Memory errors. If this happens you can limit the parallelism by providing the parallelism flag: cdktf get --parallelism=1.
 fix
 
@@ -744,7 +819,7 @@ chore(docs): Check whether links work :) #2063
 chore: ensure we have license header #1960
 chore: measure and print memory consumption of build and synth steps for examples in CI #2060
 chore: start running tests against TF 1.2.8 and drop running against 1.0.7 #2058"
-18,"Breaking Changes
+21,"Breaking Changes
 A very minor change in the interface names for provisioners occured to support them in JSII languages, renaming the following interfaces:
 
 ISSHProvisionerConnection to SSHProvisionerConnection
@@ -819,7 +894,7 @@ chore: npm-check-updates && yarn upgrade #2025
 chore: translate parts of the documentation #2011
 refactor
 refactor: port example script to JS #2047"
-19,"fix
+22,"fix
 
 fix(cli): add major versions greater 1 to package name when installing pre-built providers for go #2002
 fix(cli): Wait for other stacks to complete if one of them failed #1987
@@ -856,7 +931,7 @@ chore: add notes for how to clean the local dotnet cache #2022
 chore: add issue template for filing bugs with a pre-built providers label #1983
 chore: npm-check-updates && yarn upgrade #1984
 chore: npm-check-updates && yarn upgrade #2007"
-20,"Breaking Changes
+23,"Breaking Changes
 cdktf get exits with 0 exit code when no provider / module specifications are found in the cdktf.json
 Previously we would throw an error and exit with 1 if there were no provider or module specifications in the cdktf.json file. This can be inconvenient if cdktf get is part of a workflow.
 Fn.merge is split into Fn.mergeLists and Fn.mergeMaps
@@ -935,7 +1010,7 @@ chore: split provider tests into one test per provider #1862
 chore: reuse integration test definition for releases #1859
 chore: fix broken link in readme #1845
 chore: npm-check-updates && yarn upgrade #1706"
-21,"feat
+24,"feat
 
 feat(cli): support custom Terraform Enterprise instances #1857
 feat(hcl2json): expose hcl expression parser #1794
@@ -950,7 +1025,7 @@ feat(hcl2json): expose hcl expression parser #1794
 chore
 chore: synthesize all boolean as iresolvable tests #1849
 chore(docs): Fix Environment Variables and Best Practices #1839"
-22,"fix
+25,"fix
 
 fix(cli): Fix package version check on Windows #1831
 fix(docs): fix code blocks in ""create and deploy"" documentation #1826
@@ -969,7 +1044,7 @@ chore
 chore(cli): filter usage errors from error reporting #1828
 chore: document debug command #1812
 chore: add best practice page #1790"
-23,"Breaking Changes
+26,"Breaking Changes
 Abbreviated version below, for a guide see Upgrade Guide for 0.11
 TF_VAR_ prefixed environment variables can no longer be accessed at synth time
 These environment variables will now be filtered out in the synth phase since they are only intended to be used during diff (plan) and deploy (apply) phases to supply values for TerraformVariables. This inhibits accidentally inlining those values into the generated cdk.tf.json config.
@@ -1064,12 +1139,12 @@ chore(cli): add sentry error reporting #1809
 chore: document computed map reference documentation #1775
 chore(release): Update changelog to contain backported release for 0.10.4 #1773
 chore(docs): document how to debug cdktf programs #1758"
-24,"fix
+27,"fix
 
 fix(cli): Stop pinning jest in TS init template #1769
 ","fix
 fix(cli): Stop pinning jest in TS init template #1769"
-25,"feat
+28,"feat
 
 feat(provider-generator): emit a versions.json file to the output directory, containing the used provider versions #1749
 feat(cli): debug command #1731
@@ -1102,7 +1177,7 @@ fix(cli): handle version check more defensively #1753
 fix(cli): we should not send wait for approval if a stop has been issued #1740
 fix(cli): Fix indentation of RemoteBackend in CSharp and Java template #1733
 fix(cli): fix templates to properly indent cdktf.json and add RemoteBackend in TS template #1732"
-26,"fix
+29,"fix
 
 fix(tests): pin awscc version #1727
 fix(cli): return non-zero exit code in case of error when using cdktf diff #1726
@@ -1149,7 +1224,7 @@ test(hcl2cdk): add test case for property renaming #1709
 feat
 feat(cli): warn users about misaligned CLI and library versions #1700
 feat(lib): improve error messages around misused list mutation #1691"
-27,"fix
+30,"fix
 
 fix(cli): fix convert single blocks as array bug #1680
 fix(cli): Only print error that's thrown #1678
@@ -1180,7 +1255,7 @@ chore(docs): add sidebar link #1674
 chore: add extra column for PRs outside our main repo #1673
 feat
 feat(cli): support HTTP_PROXY for Terraform Cloud #1507"
-28,"Breaking Changes
+31,"Breaking Changes
 Remove cdktf synth --json Option #1640
 If you are using cdktf synth --json <stack-name> to get the synthesized JSON configuration for your Stack, you will now need to run cdktf synth && cat ./cdktf.out/stacks/<stack-name>/cdk.tf.json instead. The ./cdktf.out part is your output directory (set by cdktf.json or via the --output flag).
 Model ComplexComputedLists as ComplexLists and ComputedObjects #1499
@@ -1205,7 +1280,7 @@ module
 Python
 ```python
 first_item_id = resource.list_attribute(""0"").id;"
-29,"fix
+32,"fix
 
 fix(lib): check for null objects and don't try to reverse undefined or null #1592
 
@@ -1216,7 +1291,7 @@ chore(cli): fix typo in test assertion #1591
 fix(lib): check for null objects and don't try to reverse undefined or null #1592
 chore
 chore(cli): fix typo in test assertion #1591"
-30,"feat
+33,"feat
 
 feat(examples): Add Scaleway Golang example #1576
 
@@ -1229,7 +1304,7 @@ feat(examples): Add Scaleway Golang example #1576
 fix
 fix(cli): convert failed with a single provider passed #1588
 fix(tests): Windows needs special docker host override to work #1567"
-31,"fix
+34,"fix
 
 fix: cross-stack references in terraform cloud remote execution mode #1574
 
@@ -1242,7 +1317,7 @@ fix: cross-stack references in terraform cloud remote execution mode #1574
 chore
 chore: npm-check-updates && yarn upgrade #1579
 chore: npm-check-updates && yarn upgrade #1565"
-32,"feat
+35,"feat
 
 feat(cli): show help when no command is passed #1540
 
@@ -1297,7 +1372,7 @@ chore(docs): Merge stable-website into main #1515
 chore(docs): add 0.9 upgrade guide #1512
 test
 test(hcl2cdk): check if produced code can generate HCL #1539"
-33,"Breaking Changes
+36,"Breaking Changes
 Standardize IResolvable Usage #1299
 This is an effort to make sure attributes can be freely passed between resources for all different types.
 There is a minor breaking change:
@@ -1412,7 +1487,7 @@ chore: npm-check-updates && yarn upgrade #1477
 chore: npm-check-updates && yarn upgrade #1489
 chore: npm-check-updates && yarn upgrade #1503
 chore: remove patch file created through update automation #1491"
-34,"fix
+37,"fix
 
 fix(lib): don't treat strings as maps #1467
 fix: update specified nodejs version to >=12.16 to reflect our actual requirements #1466
@@ -1425,7 +1500,7 @@ fix(lib): don't treat strings as maps #1467
 fix: update specified nodejs version to >=12.16 to reflect our actual requirements #1466
 Other
 chore: fix constructs error #1460"
-35,"fix
+38,"fix
 
 fix(provider-generator): rename String resource #1455
 
@@ -1442,7 +1517,7 @@ chore(hcl2cdk): update readme #1452
 chore(examples): Upgrade aws provider version for Go example #1450
 chore: update maven config for publishing #1457
 chore: update constructs to 10.0.25 #1453"
-36,"fix
+39,"fix
 
 fix(provider-generator): remove .html suffix for doc links #1438
 fix: Update Remote State Outputs documentation #1436
@@ -1465,7 +1540,7 @@ chore
 chore: update constructs to 10.0.20 #1444
 chore: store website nav files (main) #1434
 chore: add make website command to preview docs website #1426"
-37,"fix
+40,"fix
 
 fix(provider-generator): rename system attributes as they conflict in CSharp (fixes Okta provider) #1422
 fix(docs): fix order of changelog steps to make sure version is bumped after running script #1419
@@ -1480,7 +1555,7 @@ fix(docs): fix order of changelog steps to make sure version is bumped after run
 chore
 chore: migrate docs to mdx #1421
 chore: fix edge provider tests in pre-release pipeline #1423"
-38,"fix
+41,"fix
 
 fix(lib): make sure to resolve reference expression target #1412
 fix(provider-generator): Fix false block attributes #1405
@@ -1507,7 +1582,7 @@ chore: update constructs to 10.0.12 #1414
 chore: copy edge provider on release pipeline #1408
 test
 test(provider-generator): verify generated provider emit same HCL across languages #1311"
-39,"fix
+42,"fix
 
 fix(cli): Distribute unbundled source code #1379
 fix(lib): Add struct sharding for providers without namespaces #1375
@@ -1524,7 +1599,7 @@ fix(cli): only log if logs are sent #1365
 fix(lib): Keep specified empty objects #1329
 chore
 chore(cli): typescript init prints link to all prebuilt providers #1348"
-40,"Breaking Changes
+43,"Breaking Changes
 Namespaced AWS Provider Resources #1248
 We iterated on the namespacing for the AWS provider which got introduced in #1101. Our goal was, to enable custom L2 / L3 abstractions being built with jsii, improve the general jsii support for the namespacing and last but not least to allow both namespace and barrel imports in Typescript. A welcome side effect is a 5x performance gain when building packages via jsii for Python (from ~ 16 minutes to ~ 3 minutes) and likely other targets such as Java or C#
 As a result, there are a few minor breaking changes:
@@ -1675,7 +1750,7 @@ feat(lib): Expand Output value types #1145
 test
 test(cli): test generated providers #1235
 test(lib): ensure assets dont redeploy without FS changes #1178"
-41,"Breaking Changes
+44,"Breaking Changes
 Abbreviated version below, for a guide see Upgrade Guide for 0.7
 Namespaced AWS Provider Resources #572
 The AWS Provider has a size that makes it hard to navigate in editors, especially in languages that compile it to a single file like Python. We implemented namespaces that hold Resources and Data Sources the same category together, the categories can be found on the AWS Provider page.
@@ -1818,7 +1893,7 @@ chore(docs): improve community documentation #1066
 chore(docs): What is CDKTF and Interoperability #1065
 chore(docs): link docs to Pocket codebase, YouTube #1062
 chore(docs): Project Setup #1056"
-42,"Breaking Changes
+45,"Breaking Changes
 fix(cli): Better handle non-registry modules and improved naming #929
 If you use Terraform Modules you will need to adust their names. We changed the naming to be more intuitive, e.g. TerraformAwsModulesVpcAws is now Vpc. To migrate please run cdktf get with this version and change your imports to match the new abbreviated form.
 Fixed Bugs
@@ -1843,7 +1918,7 @@ fix: ignore build output in prettier #1077
 Chores
 chore(deps): bump trim-newlines from 3.0.0 to 3.0.1 #863
 chore(docs): remove roadmap link from README #1067"
-43,"Features
+46,"Features
 
 feat(hcl2cdk): Add logical id override when construct id's aren't unique #1045
 feat(lib): use jest asymetric matchers & nicer error messages #1052
@@ -1880,7 +1955,7 @@ chore(tests): Fix release pipeline #1050
 chore(tests): Upgrade to jest 0.27 for integration tests and retry failed tests once #1051
 chore(deps): bump tmpl from 1.0.4 to 1.0.5 #1055
 chore: fix config for dependabot #1057"
-44,"Fixed Bugs
+47,"Fixed Bugs
 
 fix(cli): replaceAll not available in node v14 #1036
 fix(cli): fix import path for Manifest (was relative) #1037
@@ -1901,12 +1976,12 @@ chore: lint monorepo for relative imports between packages #1040
 chore: remove duplicated jest interface members #1042
 Documentation
 feat(docs): add docs for Testing.renderConstructTree() #1029"
-45,"Fixed Bugs
+48,"Fixed Bugs
 
 fix(lib): Fix testing setup #1027
 ","Fixed Bugs
 fix(lib): Fix testing setup #1027"
-46,"Breaking Changes
+49,"Breaking Changes
 Abbreviated version below, for a guide see Upgrade Guide for 0.6
 Constructs upgrade (v3 to v10)
 The constructs package serves as the base for all building blocks of the CDKs (e.g. CDK for Terraform, AWS CDK and cdk8s). Recently the constructs package was lifted to v10 with a few but major changes. The reason behind those was to make it future proof and stable across different CDKs. In this process the API surface area of the constructs base package was reduced and some functionality has been moved directly to the AWS CDK instead. For more information and the underlying motivation for the changes to the constructs library refer to the Removal of Construct Compatibility Layer RFC.
@@ -2031,7 +2106,7 @@ chore(hcl2cdk): Provide guidance for imports #949
 chore(deps): bump axios from 0.21.1 to 0.21.4 #963
 refactor(lib): use the same jest config everywhere #930
 feat(cli): Improve telemetry #895"
-47,"Read the announcement blog post: Announcing CDK for Terraform 0.5
+50,"Read the announcement blog post: Announcing CDK for Terraform 0.5
 New Features
 
 feat(cli): implement hcl2cdk #796
@@ -2128,14 +2203,14 @@ chore(cli): lint tsx files and clean up React Hooks code #818
 chore(cli): add prettier #793
 chore(lib): track overrides and backend types in stack #830
 chore(tests): Provide global PR workflow status #781"
-48,"Fixed Bugs
+51,"Fixed Bugs
 
 Fix cdktf destroy - Make sure output parses only relevant parts #761
 Dont error on init when log has been written #759
 ","Fixed Bugs
 Fix cdktf destroy - Make sure output parses only relevant parts #761
 Dont error on init when log has been written #759"
-49,"Implemented enhancements
+52,"Implemented enhancements
 
 Experimental Go Support #686
 Add Asset Construct #698
@@ -2174,7 +2249,7 @@ Deploy changes on TF output changes #687
 Fix: Unable to use resources containing an argument named 'stack' #716
 OCI Synth issues: ""module has already exported a member"" #713
 Adapt to changed output format in Terraform 0.15.4 #736"
-50,"Breaking Changes
+53,"Breaking Changes
 We're now supporting multiple Stacks! - existing Terraform state files from local Terraform workflows have to be renamed to match the stack name.
 Up until CDK for Terraform version 0.2 only a single stack was supported. For local state handling, a terraform.tfstate file in the project root folder was used. With version 0.3.0 the local state file reflects the stack name it belongs to in its file name. When a terraform.tfstate file is still present in the project root folder, it has to be renamed to match the schema terraform.<stack-name>.tfstate manually.
 Implemented enhancements:
@@ -2201,7 +2276,7 @@ Fix module variables without type #630
 Fix module without newline #633
 Rename instance variable to a more specific name to avoid name collisions #640
 Fix multiple modules with same end name #637"
-51,"Fixed Bugs
+54,"Fixed Bugs
 
 Resources containing hyphens in resource ids did not correctly display their apply status #614
 Add missing handling for resource status lines #619
@@ -2210,7 +2285,7 @@ Print more descriptive error messages if requests to Terraform Cloud fail #623, 
 Resources containing hyphens in resource ids did not correctly display their apply status #614
 Add missing handling for resource status lines #619
 Print more descriptive error messages if requests to Terraform Cloud fail #623, #626, #488, #400"
-52,"Fixed Bugs
+55,"Fixed Bugs
 
 Allow for module without outputs #599
 Fix Python template #604
@@ -2221,7 +2296,7 @@ Allow for module without outputs #599
 Fix Python template #604
 Don't treat warning lines as resources #585
 Handle malformed code blocks in provider schema descriptions #605"
-53,"Breaking Changes
+56,"Breaking Changes
 
 Generated classes for modules from the registry will change - see this comment for more details
 Phased out testing and support for Terraform 0.12. It's likely to still work for now, but it's not guaranteed anymore #592
@@ -2276,7 +2351,7 @@ Rename null provider for java & c# #589
 Chores:
 Fix typo in execTerraformSynth #554
 Upgrade Java exec-maven-plugin 3.0.0 #536"
-54,"Implemented enhancements:
+57,"Implemented enhancements:
 
 C# Support #477
 Terraform Cloud support with remote execution mode #449
@@ -2297,7 +2372,7 @@ Include feature flags in java template and test #471
 Security Updates:
 Bump ini from 1.3.5 to 1.3.8 #460
 CVE-2020-7789 / GHSA-p9pc-299p-vxgp #478 / #493"
-55,"Fixed bugs:
+58,"Fixed bugs:
 
 Depends on expansion #442
 Make sure tokens resolved before converting to json #439
@@ -2312,7 +2387,7 @@ Alter reset and input names when they conflict #429
 Fix complex map attribute data source reference #441
 Remap 'equals' to 'equalTo' to work around jsii limitation #428
 Generated custom mappings #395"
-56,"Fixed bugs:
+59,"Fixed bugs:
 
 Update jsii with python docs fix #418
 Maintain dependencies between required construct properties #310
@@ -2339,7 +2414,7 @@ Terraform version check #378
 Terraform Variables #277
 Terraform hcl module #375
 Support for matching existing Terraform names #329"
-57,"Fixed bugs:
+60,"Fixed bugs:
 
 Fix Orcale Provider #341
 Run Terraform commands with input=false flag #343
@@ -2358,7 +2433,7 @@ Implemented enhancements:
 Streamline CLI workflows for prebuilt providers #331
 CLI installable via Homebrew #342
 Support Terraform provider caching by default #189, #222, #349"
-58,"Fixed bugs:
+61,"Fixed bugs:
 
 Fix TerraformProvider alias definition #332
 
@@ -2373,7 +2448,7 @@ Implemented enhancements:
 Checkpoint telemetry integration #326
 Adding cdktf version to the terraform user agent #321
 Migrate to jsii-srcmak #276"
-59,"Fixed bugs:
+62,"Fixed bugs:
 
 Terraform 0.13 Compatibility for 3rd Party Providers (e.g. Docker) in Python #309
 Fix Naming Collision with Config interfaces #300
@@ -2386,7 +2461,7 @@ Terraform 0.13 Compatibility for 3rd Party Providers (e.g. Docker) in Python #30
 Fix Naming Collision with Config interfaces #300
 Implemented enhancements:
 Use remote backend class for typescript template #313"
-60,"Implemented enhancements:
+63,"Implemented enhancements:
 
 Terraform 0.13 Compatibility #285
 
@@ -2397,7 +2472,7 @@ Fix dot-prop security dependency bot alert #296
 Terraform 0.13 Compatibility #285
 Security Updates:
 Fix dot-prop security dependency bot alert #296"
-61,"Fixed bugs:
+64,"Fixed bugs:
 
 Fix interpolation bug in complex computed list of data sources #215
 Avoid conflicts with resource attributes called ""node"" #230
@@ -2420,12 +2495,12 @@ Add Lists of Maps #229
 Bump and align Typescript / @node/types Dependencies - Upgrade lodash #252
 Terraform backend config #224
 Terraform data remote state #241"
-62,"Fixed bugs:
+65,"Fixed bugs:
 
 cdktf init was broken on Windows #198
 ","Fixed bugs:
 cdktf init was broken on Windows #198"
-63,"Implemented enhancements:
+66,"Implemented enhancements:
 
 Defaults are opposite of Terraform but should default to being non-destructive #155
 Version check for new cdktf cli #130
@@ -2456,14 +2531,14 @@ cdktf init is broken #157
 Handle stale stacks in cdktf #150
 cdktf init Terraform Cloud workspace creation doesn't work #144
 Case sensitive tags are incorrectly downcased #75"
-64,"
+67,"
 Bug when creating Terraform Cloud workspace via cdktf init (#144)
 ",Bug when creating Terraform Cloud workspace via cdktf init (#144)
-65,"
+68,"
 Fix cdktf init issue (#139)
 ",Fix cdktf init issue (#139)
-66,Minor bug fixes and documentation for getting started guides.,Minor bug fixes and documentation for getting started guides.
-67,"
+69,Minor bug fixes and documentation for getting started guides.,Minor bug fixes and documentation for getting started guides.
+70,"
 Support for cdktf diff (#90)
 Support for cdktf deploy (#92)
 Support for cdktf destroy (#111)
@@ -2480,26 +2555,26 @@ Support for logging across the project (#100)
 New UI for cdktf synth and cdktf get (#103)
 Basic error handling support (#110)
 There are other minor bug fixes included in the release. (#109, #122, #128)."
-68,"
+71,"
 Typescript examples and template defaults for synthesize commands to compile application (#63)
 Terraform Output doesn't handle Optional Types (#83)
 ","Typescript examples and template defaults for synthesize commands to compile application (#63)
 Terraform Output doesn't handle Optional Types (#83)"
-69,"
+72,"
 Document Terraform outputs and remote backend (#64)
 Fix providers file workflow (#66)
 Stack escape hatch (#81)
 ","Document Terraform outputs and remote backend (#64)
 Fix providers file workflow (#66)
 Stack escape hatch (#81)"
-70,"
+73,"
 Getting started guide for Python (#73)
 Change output directory to cdktf.out for Terraform configuration (#70)
 Fix output directory argument for cdktf synth (#62)
 ","Getting started guide for Python (#73)
 Change output directory to cdktf.out for Terraform configuration (#70)
 Fix output directory argument for cdktf synth (#62)"
-71,Enable synthesis to Python,Enable synthesis to Python
-72,Minor output changes and updated README.md example.,Minor output changes and updated README.md example.
-73,Alpha release for Github and NPM,Alpha release for Github and NPM
-74,Initial release of cdktf-cli and cdktf to Github and NPM registry.,Initial release of cdktf-cli and cdktf to Github and NPM registry.
+74,Enable synthesis to Python,Enable synthesis to Python
+75,Minor output changes and updated README.md example.,Minor output changes and updated README.md example.
+76,Alpha release for Github and NPM,Alpha release for Github and NPM
+77,Initial release of cdktf-cli and cdktf to Github and NPM registry.,Initial release of cdktf-cli and cdktf to Github and NPM registry.

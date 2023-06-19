@@ -1,5 +1,33 @@
-Index,Release Note,Release Note With Abstraction
-1,"ENHANCEMENTS:
+Index,Release Note,Release Note Abstract
+1,"HOTFIX:
+
+Revert add ""conflictsWith"" to provider block schema. [GH-2131]
+","HOTFIX:
+Revert add ""conflictsWith"" to provider block schema. [GH-2131]"
+2,"FEATURES:
+
+resource/kubernetes_runtime_class_v1: Add a new resource kubernetes_runtime_class_v1. [GH-2080]
+
+ENHANCEMENTS:
+
+kubernetes/provider.go: add conflictsWith rules to provider configuration schema [GH-2084]
+kubernetes/resource_kubernetes_service_account.go: Remove default_secret_name warning [GH-2085]
+resource/kubernetes_node_taint Update import documentation GH-2094
+
+BUG FIXES:
+
+resource/kubernetes_node_taint: Don't fail when there is a taint in the state file for a node that no longer exists. [GH-2099]
+resource/kubernetes_job: Fixed a bug where setting backoff_limit to 6 would reset it to 0
+","FEATURES:
+resource/kubernetes_runtime_class_v1: Add a new resource kubernetes_runtime_class_v1. [GH-2080]
+ENHANCEMENTS:
+kubernetes/provider.go: add conflictsWith rules to provider configuration schema [GH-2084]
+kubernetes/resource_kubernetes_service_account.go: Remove default_secret_name warning [GH-2085]
+resource/kubernetes_node_taint Update import documentation GH-2094
+BUG FIXES:
+resource/kubernetes_node_taint: Don't fail when there is a taint in the state file for a node that no longer exists. [GH-2099]
+resource/kubernetes_job: Fixed a bug where setting backoff_limit to 6 would reset it to 0"
+3,"ENHANCEMENTS:
 kubernetes/resource_kubernetes_env.go: add support for initContainers [GH-2067]
 kubernetes/resource_kubernetes_node_taint.go: Remove MaxItems from taint attribute [GH-2046]
 BUG FIXES:
@@ -12,7 +40,7 @@ kubernetes/resource_kubernetes_node_taint.go: Remove MaxItems from taint attribu
 BUG FIXES:
 Fix diff after import when importing resources containing volume_mount [GH-2061]
 resource/kubernetes_node_taint: Fix an issue when updating taint does not update the ID in the state file. [GH-2077]"
-2,"Generating changelog for release-v2.19.0 from v2.18.1...
+4,"Generating changelog for release-v2.19.0 from v2.18.1...
 FEATURES:
 New Resource: kubernetes_token_request_v1. [GH-2024]
 BUG FIXES:
@@ -33,12 +61,12 @@ kubernetes/schema_pod_spec.go: Fix unexpected volumes appearing on plan [GH-2006
 resource/kubernetes_cron_job_v1: Fix annotation logic to prevent internalkeys from being removed in templates [GH-1983]
 resource/kubernetes_manifest: Fix a panic when constructing the diagnostic message about incompatible attribute types [GH-2054]
 resource/kubernetes_manifest: Fix crash when manifest config contains unknown values of unknown type (DynamicPseudoType) [GH-2055]"
-3,"HOTFIX:
+5,"HOTFIX:
 
 kubernetes_manifest: fix crash when waiting on conditions that are not yet present [GH-2008]
 ","HOTFIX:
 kubernetes_manifest: fix crash when waiting on conditions that are not yet present [GH-2008]"
-4,"FEATURES:
+6,"FEATURES:
 
 New data source: data_source/kubernetes_nodes. [GH-1921]
 New data source: data_source/kubernetes_resources. [GH-1967]
@@ -101,7 +129,7 @@ resource/resource_kubernetes_cron_job_v1: Add a new attribute spec.timezone. [GH
 Community Contributors :raised_hands:
 @AnisimoffNikita made their contribution in link
 @partcyborg made their contribution in link"
-5,"ENHANCEMENT:
+7,"ENHANCEMENT:
 
 Add a new optional attribute grpc to pod.spec.container.liveness_probe, pod.spec.container.readiness_probe, and pod.spec.container.startup_probe. That affects all resources and data sources that use mentioned pod.spec.container probes directly or as a template. [GH-1915]
 resource/kubernetes_cluster_role_binding_v1: add attribute generate_name to produce a unique random name [GH-1899]
@@ -142,7 +170,7 @@ Community Contributors :raised_hands:
 @multani made their contribution in link
 @sherifabdlnaby made their contribution in link
 @dgnemo made their contribution in link"
-6,"ENHANCEMENTS:
+8,"ENHANCEMENTS:
 
 Add additional validation on the delete operation to make it idempotent. [GH-1914], [GH-1919], [GH-1898]
 
@@ -237,7 +265,7 @@ This affects the following resources:
   - kubernetes_validating_webhook_configuration
   - kubernetes_validating_webhook_configuration_v1
 Special thanks to @sheneska for making these changes as part of her internship @hashicorp! 🚀"
-7,"FEATURES:
+9,"FEATURES:
 
 New data source: kubernetes_endpoints_v1 [GH-1805]
 
@@ -286,7 +314,7 @@ Community Contributors :raised_hands:
 @Dudesons made their contribution in link
 @St0rmingBr4in made their contribution in link
 @kylecarbs made their contribution in link"
-8,"ENHANCEMENT:
+10,"ENHANCEMENT:
 
 Add new resource resource_kubernetes_env [GH-1838]
 Add ""field_manager"" attribute to kubernetes_labels, kubernetes_annotations, kubernetes_config_map_v1_data [GH-1831]
@@ -305,7 +333,7 @@ r/kubernetes_horizontal_pod_autoscaler_v2: make attribute spec.behavior computed
 r/kubernetes_horizontal_pod_autoscaler_v2beta2: make attribute spec.behavior.scale_down computed [GH-1853]
 r/kubernetes_horizontal_pod_autoscaler_v2beta2: make attribute spec.behavior.scale_up computed [GH-1853]
 r/kubernetes_horizontal_pod_autoscaler_v2beta2: make attribute spec.behavior computed [GH-1853]"
-9,"ENHANCEMENT:
+11,"ENHANCEMENT:
 
 Added ""preemption_policy"" attribute to the priority_class resource. [GH-1846]
 new attribute: Add immutable attribute to resource_config_map [GH-1849]
@@ -332,12 +360,12 @@ r/kubernetes_service_v1: make spec.port block optional [GH-1856]
 2.13.1 (August 29, 2022)
 BUG FIXES:
 [TK-78009] Fix propagation of non-fatal Diagnostics in the type morphing logic"
-10,"BUG FIXES:
+12,"BUG FIXES:
 
 [TK-78009] Fix propagation of non-fatal Diagnostics in the type morphing logic
 ","BUG FIXES:
 [TK-78009] Fix propagation of non-fatal Diagnostics in the type morphing logic"
-11,"BUG FIXES:
+13,"BUG FIXES:
 * Starting from Kubernetes 1.24.0 service account token is not automatically generated, thus it has to create separately. The following resources were updated to handle this change: d/kubernetes_service_account, r/kubernetes_default_service_account, r/kubernetes_service_account. For Kubernetes clusters running v1.24+ default_secret_name will be empty. A warning message will be printed once any of the above resources are in use. (#1792)
 IMPROVEMENTS:
 
@@ -350,7 +378,7 @@ IMPROVEMENTS:
 r/kubernetes_manifest: Better error messages from OpenAPI schema transformations (#1780)
 Update documentation and correct some errors (#1768, #1786)
 Update acceptance tests infrastructure code for GKE and AKE and related GitHub Actions"
-12,"IMPROVEMENTS:
+14,"IMPROVEMENTS:
 
 Update documentation and correct some errors (#1759)
 
@@ -363,7 +391,7 @@ Update documentation and correct some errors (#1759)
 BUG FIXES:
 Fix type morphing of nested tuples that causes Failed to morph errors (#1756)
 Fix an issue when provider crashes intermittently in version v2.12.0 (#1762)"
-13,"NEW:
+15,"NEW:
 
 Attribute ignore_annotations of provider (#746)
 Attribute ignore_labels of provider (#746)
@@ -402,7 +430,7 @@ BUG FIXES:
 Fix kubernetes_default_service_account doesn't set the automount_service_account_token to false (#1247)
 Fix an issue when the imported kubernetes_manifest resource is replaced instead of getting updated (#1712)
 Fix provider crash when image_pull_secret of kubernetes_service_account(_v1) is null"
-14,"NEW:
+16,"NEW:
 
 Add a new resource kubernetes_horizontal_pod_autoscaler_v2 (#1674)
 
@@ -431,7 +459,7 @@ BUG FIXES:
 Fix conversion of big.Float to float64 in kubernetes_manifest (#1661)
 Fix identification of int-or-string type attributes to include 3rd party types defined by aggregated APIs (#1640)
 Fix not handling multiple cluster_role_selectors of kubernetes_cluster_role(_v1) (#1360)"
-15,"NEW:
+17,"NEW:
 
 Resource kubernetes_labels (#692)
 Resource kubernetes_annotations (#692)
@@ -466,7 +494,7 @@ BUG FIXES:
 Fix crash when multiple match_expression are used in kubernetes_resource_quota (#1561)
 Fix issue when in some circumstances changes of seLinuxOptions.Type doesn't reflect in the state file (#1650)
 Ignore service account volumes with kube-api-access prefix (#1663)"
-16,"IMPROVEMENTS:
+18,"IMPROVEMENTS:
 
 Add attribute csi to pod spec (#1092)
 Add kubernetes_resource data source (#1548)
@@ -491,7 +519,7 @@ Update documentation examples and correct some errors (#1597, #1611, #1612, #162
 BUG FIXES:
 Fix logic of wait_for_rollout attribute of kubernetes_deployment (#1405)
 Fix fail when the provider cannot determine default_secret_name (#1634)"
-17,"2.8.0 (February 09, 2022)
+19,"2.8.0 (February 09, 2022)
 IMPROVEMENTS:
 
 Add mutating_webhook_configuration_v1 data source (#1423)
@@ -512,12 +540,12 @@ Update terraform-plugin-go and terraform-plugin-sdk (#1551)
 BUG FIXES:
 Fix panic: lists must only contain one type of element errors on kubernetes_manifest
 Attribute backend.service.port.name in kubernetes_ingress_v1 should be type String  (#1541)"
-18,"BUG FIXES:
+20,"BUG FIXES:
 
 Fix type-morphing of Map into Map (#1521)
 ","BUG FIXES:
 Fix type-morphing of Map into Map (#1521)"
-19,"IMPROVEMENTS:
+21,"IMPROVEMENTS:
 
 Add support for storage/v1
 Add support for certificates/v1
@@ -544,7 +572,7 @@ Fix crash when container env block is empty
 Fix invalid allowedHostPaths PodSecurityPolicy patch
 Fix handling of ""null"" values on fields of kubernetes_manifest 
 This release introduces version suffixes to the names of resources and datasources. See our documentation page for more details on this convention and the motivation behind it."
-20,"2.6.1 (October 22, 2021)
+22,"2.6.1 (October 22, 2021)
 BUG FIXES:
 Fix import ID syntax in manifest import docs
 Tolerate unknown values in ""env"" and ""exec"" provider attributes
@@ -553,7 +581,7 @@ BUG FIXES:
 Fix import ID syntax in manifest import docs
 Tolerate unknown values in ""env"" and ""exec"" provider attributes
 Remove ""beta"" designation of the kubernetes_manifest from documentation"
-21,"2.6.0 (October 19, 2021)
+23,"2.6.0 (October 19, 2021)
 IMPROVEMENTS:
 * kubernetes_manifest is now GA and enabled by default
 BUG FIXES:
@@ -564,7 +592,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * kubernetes_manifest now correctly handles empty blocks as attribute values (#1352)
 * kubernetes_manifest now correctly handles multiple CRDs with different number of schema versions (#1460)"
-22,"IMPROVEMENTS:
+24,"IMPROVEMENTS:
 Allow setting kubernetes_job parallelism to zero (#1334)
 Add kubernetes_ingress_class resource (#1236)
 Add immutable field to kubernetes_secret (#1280)
@@ -587,7 +615,7 @@ Fix importing kubernetes_manifest resources (#1440)
 Fix documentation example for field_manager block (#1410)
 Fix kubernetes_job ""No waiting"" documentation example (#1383)
 Fix docs formatting for kubernetes_secret (#1434)"
-23,"IMPROVEMENTS:
+25,"IMPROVEMENTS:
 * Timeouts block on kubernetes_manifest
 * kubernetes_manifest supports setting field_manager name and ""force"" mode
 * kubernetes_manifest checks that resource exists before trying to create
@@ -606,24 +634,24 @@ BUG FIXES:
 * Fix typo in kubernetes_manifest documentation
 * Document that kubernetes_manifest must be enabled in the provider block.
 * Docs for ingress_class_name in kubernetes_ingress"
-24,"HOTFIX:
+26,"HOTFIX:
 Fix kubernetes_manifest Terraform version constraint causing error on 0.12/0.13 (#1345)","HOTFIX:
 Fix kubernetes_manifest Terraform version constraint causing error on 0.12/0.13 (#1345)"
-25,"BUG FIXES:
+27,"BUG FIXES:
 * Revert ""Filter well known labels and annotations"" (#1298)
 IMPROVEMENTS:
 * docs/stateful_set: add import section (#1287)","BUG FIXES:
 * Revert ""Filter well known labels and annotations"" (#1298)
 IMPROVEMENTS:
 * docs/stateful_set: add import section (#1287)"
-26,"
+28,"
 cluster_ip for kubernetes_service should support value None (#1291)
 Remove self_link from metadata (#1294)
 Add missing labels to fix ""kubernetes.io/metadata.name always in plan"" (#1293)
 ","cluster_ip for kubernetes_service should support value None (#1291)
 Remove self_link from metadata (#1294)
 Add missing labels to fix ""kubernetes.io/metadata.name always in plan"" (#1293)"
-27,"BUG FIXES:
+29,"BUG FIXES:
 * Add missing annotations (#1289)
 IMPROVEMENTS:
 
@@ -652,7 +680,7 @@ Resource kubernetes_deployment: allow changing strategy from rolling to recreate
 Filter well known labels and annotations (#1253)
 Resource kubernetes_resource_quota: suppress diff for no-op changes (#1251)
 Resource kubernetes_deployment: allow removing volume mount (#1246)"
-28,"IMPROVEMENTS:
+30,"IMPROVEMENTS:
 
 Clean up incompatible licenses. (#1238)
 Docs: fix broken links (#1041)
@@ -661,7 +689,7 @@ Enable links check and fix 2 links (#1259)
 Clean up incompatible licenses. (#1238)
 Docs: fix broken links (#1041)
 Enable links check and fix 2 links (#1259)"
-29,"IMPROVEMENTS:
+31,"IMPROVEMENTS:
 Match specific tolerations to prevent diffs (#978)
 Update all go modules (#1240)
 Docs: fix broken links (#1041)
@@ -670,7 +698,7 @@ Match specific tolerations to prevent diffs (#978)
 Update all go modules (#1240)
 Docs: fix broken links (#1041)
 Docs: fix typo in getting started guide (#1262)"
-30,"BUG FIXES:
+32,"BUG FIXES:
 * Fix kubernetes_cron_job ForceNew when modifying job_template (#1212)
 * Fix error returned by Create CSR (#1206)
 * Fix kubernetes_pod_disruption_budget: 100% now is a valid value (#1107)
@@ -691,7 +719,7 @@ IMPROVEMENTS:
 * Add secret_namespace to volume_source azure_file (#1204)
 * Docs: fix grammar in Network Policy (#1210)
 * Docs: kubernetes_cron_job add link to Kubernetes reference (#1200)"
-31,"BUG FIXES:
+33,"BUG FIXES:
 
 Fix resource_field_ref schema for projected_volume (#1189)
 Add diff suppression to persistent_volume and persistent_volume_claim (#1145)
@@ -712,21 +740,21 @@ Support topologySpreadConstraint in pod spec schema (#1022)
 Wait for kubernetes_ingress to be deleted (#1143)
 Improve docs for configuring the provider (#1132)
 Update docs to reflect Kubernetes service status attribute (#1148)"
-32,"BUG FIXES:
+34,"BUG FIXES:
 * Read operation should set resource id to null if not found (#1136)
 IMPROVEMENTS:
 * Add service timeouts docs (#963)","BUG FIXES:
 * Read operation should set resource id to null if not found (#1136)
 IMPROVEMENTS:
 * Add service timeouts docs (#963)"
-33,"BUG FIXES:
+35,"BUG FIXES:
 * Resources state migration should migrate empty array (#1124)
 IMPROVEMENTS:
 * Update docs to reflect new schema for load_balancer_ingress (#1123)","BUG FIXES:
 * Resources state migration should migrate empty array (#1124)
 IMPROVEMENTS:
 * Update docs to reflect new schema for load_balancer_ingress (#1123)"
-34,"See the upgrade guide for more details.
+36,"See the upgrade guide for more details.
 BREAKING CHANGES:
 * Replace support for KUBECONFIG environment variable with KUBE_CONFIG_PATH (#1052)
 * Remove load_config_file attribute from provider block (#1052)
@@ -779,7 +807,7 @@ BUG FIXES:
 IMPROVEMENTS:
 * Add upgrade test for daemonset (#1064)
 * Add kube_config_paths to provider block (#1052)"
-35,"1.13.3 (October 27, 2020)
+37,"1.13.3 (October 27, 2020)
 FEATURES:
 
 Add support for readiness_gate on Pod spec (#811)
@@ -820,7 +848,7 @@ Update acceptance tests for tfproviderlint (#887)
 Refactor Typhoon test configuration to allow selection of Kubernetes version (#992)
 Update Pull Request Lifecycle docs (#1032)
 CI checks for docs website (registry migration) (#953)"
-36,"BUG FIXES:
+38,"BUG FIXES:
 Fix spurious forced replacement in empty_dir volume (#985)
 Fix reported replica count when waiting for Deployment rollout (#998)
 health_check_port_node should force replacement (#986)
@@ -835,10 +863,10 @@ Don't force replacement StatefulSet / Deployment when affinity rule selectors ch
 IMPROVEMENTS:
 Wait for kubernetes_service to be deleted
 Updates to CONTRIBUTING.md and PULL_REQUESTS.md"
-37,"BUG FIXES:
+39,"BUG FIXES:
 Fix crash when size_limit is not present on empty_dir volume (#983)","BUG FIXES:
 Fix crash when size_limit is not present on empty_dir volume (#983)"
-38,"FEATURES:
+40,"FEATURES:
 Add resource CertificateSigningRequest (#922)
 Add resource default_service_account (#876)
 IMPROVEMENTS:
@@ -871,7 +899,7 @@ BUG FIXES:
 Recreate Storage Class on VolumeBindingMode update (#757)
 Fix url attribute in admissionregistration client_config.service block (#959)
 Fix crash when deferencing nil pointer in v1beta1.IngressRule (#967)"
-39,"BUG FIXES:
+41,"BUG FIXES:
 
 Fix crash in resource_kubernetes_pod_security_policy attribute host_ports (#931)
 
@@ -884,7 +912,7 @@ Fix crash in resource_kubernetes_pod_security_policy attribute host_ports (#931)
 IMPROVEMENTS:
 Add wait_for_rollout to kubernetes_deployment resource (#863)
 Add wait_for_rollout to kubernetes_stateful_set resource (#605)"
-40,"IMPROVEMENTS:
+42,"IMPROVEMENTS:
 * Add resource for CSIDriver (#825)
 * Add resource for Pod Security Policies (#861)
 * Add data source for Pod and PVC (#786)
@@ -907,12 +935,12 @@ Add wait_for_rollout to kubernetes_stateful_set resource (#605)"
 * Skip tests for CSIDriver if cluster version is less than 1.16
 * Allow 'ttl_seconds_after_finished = 0' in kubernetes_job resource (#849)
 * Set service block to 'optional' for webhook configurations (#902)"
-41,"IMPROVEMENTS:
+43,"IMPROVEMENTS:
 Add data source for ingress (#514)
 Add data sources for namespaces (#613)","IMPROVEMENTS:
 Add data source for ingress (#514)
 Add data sources for namespaces (#613)"
-42,"IMPROVEMENTS:
+44,"IMPROVEMENTS:
 
 Support for mutating_webhook_configuration and validating_webhook_configuration
 Support for custom metrics in horizontal_pod_autoscaler 
@@ -923,7 +951,7 @@ Support for mutating_webhook_configuration and validating_webhook_configuration
 Support for custom metrics in horizontal_pod_autoscaler 
 Add data sources for config_map and service_account
 Add wait_for_load_balancer field to ingress"
-43,"IMPROVEMENTS:
+45,"IMPROVEMENTS:
 
 Bump provider SDK to v1.7.0
 
@@ -934,7 +962,7 @@ Defer client initialization to improve resilience (#759)
 Bump provider SDK to v1.7.0
 BUG FIXES:
 Defer client initialization to improve resilience (#759)"
-44,"IMPROVEMENTS:
+46,"IMPROVEMENTS:
 
 Add mount_options attribute to kubernetes_persistent_volume and kubernetes_storage_class
 Refactor client config initialization and fix in-cluster config (#679) (#497)
@@ -959,7 +987,7 @@ Add support for startup_probe on container spec
 Fix (cluster-)role bindings and rules updates (#713)
 Fix namespacing issues on kubernetes_priority_class (#680) See comment on backward compatibility
 Documentation fixes"
-45,"FEATURES:
+47,"FEATURES:
 
 New resource: kubernetes_pod_disruption_budget (#644 / PR #338)
 New resource: kubernetes_priority_class (PR #495)

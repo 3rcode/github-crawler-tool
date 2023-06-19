@@ -1,5 +1,227 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"
+fix: temporarily revert to swagger-ui-dist v4 (7118614)
+fix: ignore non functions when applying metadata (da42f5e)
+Merge pull request #2482 from micalevisk/patch-1 (11bc8e0)
+chore(deps): update dependency eslint to v8.43.0 (903dcde)
+docs: update contributing guide repos hyperlinks (3ad0bac)
+","fix: temporarily revert to swagger-ui-dist v4 (7118614)
+fix: ignore non functions when applying metadata (da42f5e)
+Merge pull request #2482 from micalevisk/patch-1 (11bc8e0)
+chore(deps): update dependency eslint to v8.43.0 (903dcde)
+docs: update contributing guide repos hyperlinks (3ad0bac)"
+2,"
+feat: support v10 (5db5edf)
+chore: address breaking changes (0e9f187)
+chore: update package lock (a40fa55)
+chore: ignore scripts in ci (8a4d16c)
+Merge pull request #2474 from nestjs/renovate/nestjs-mapped-types-2.x (861ffe2)
+fix(deps): update dependency @nestjs/mapped-types to v2 (b4777cf)
+Merge pull request #2473 from nestjs/renovate/major-nest-monorepo (6d42d44)
+chore(deps): update nest monorepo to v10 (a06e34c)
+Merge pull request #2462 from nestjs/renovate/cimg-node-20.x (acbb72d)
+Merge pull request #2472 from nestjs/renovate/swagger-ui-dist-5.x (8414294)
+Merge pull request #2465 from nestjs/7.0.0 (a6bc318)
+fix(deps): update dependency swagger-ui-dist to v5 (0f74db8)
+Merge pull request #2468 from nestjs/renovate/swagger-ui-dist-5.x (b3b3a09)
+chore(deps): update dependency @types/node to v18.16.18 (99909fd)
+fix(deps): update dependency swagger-ui-dist to v5 (4bf3e84)
+chore(deps): update typescript-eslint monorepo to v5.59.11 (407e9e2)
+chore(deps): update nest monorepo to v9.4.3 (d6f7245)
+Merge pull request #2463 from nestjs/renovate/node-18.x (93662e7)
+Merge pull request #2459 from nestjs/feat/readonly-visitors (3951241)
+Merge pull request #2441 from nestjs/chore/drop-support-for-old-typescript (23bbc5d)
+Merge pull request #2392 from h4ad-forks/perf/lazy-initialization (9682d79)
+chore(deps): update dependency @types/node to v18.16.17 (ebf6eb5)
+chore: upgrade peer deps, tsconfig settings (f567413)
+chore(deps): update node.js to v20.3 (4ddb91e)
+chore: rename load method, update e2e test (f02bfda)
+chore: use async import instead of require (8d4db08)
+chore: move metadata loading to a separate function (d74c391)
+Merge pull request #2446 from nestjs/renovate/swagger-ui-dist-4.x (29cf194)
+chore(deps): update dependency release-it to v15.11.0 (643ff75)
+chore(deps): update typescript-eslint monorepo to v5.59.9 (692d03d)
+test: include external metadata in e2e tests (bf4a27e)
+feat: convert file paths to imports (27d9e9a)
+fix: extend object literal expr for ctrl methods (982922c)
+fix: apply ctrls metadata (a2470d6)
+chore: minor improvements to readonly visitor (1e0265f)
+feat(plugin): introduce readonly visitors (2a7abda)
+chore(deps): update dependency eslint to v8.42.0 (1415ce1)
+chore(deps): update dependency release-it to v15.10.5 (d1441f2)
+chore(deps): update dependency typescript to v5.1.3 (20881b5)
+chore(deps): update dependency @types/jest to v29.5.2 (dc07c93)
+chore(deps): update commitlint monorepo to v17.6.5 (afef4b2)
+chore(deps): update typescript-eslint monorepo to v5.59.8 (872921b)
+perf: added possibility to lazy initialize the document (e876270)
+chore(deps): update dependency @types/node to v18.16.16 (f586699)
+chore(deps): update dependency @types/node to v18.16.15 (9dd9e10)
+chore(deps): update dependency @types/lodash to v4.14.195 (9418435)
+chore(deps): update dependency @fastify/static to v6.10.2 (d70eace)
+chore(deps): update dependency openapi-types to v12.1.3 (0677711)
+fix(deps): update dependency swagger-ui-dist to v4.19.0 (929e527)
+chore(deps): update nest monorepo to v9.4.2 (6ed2af7)
+chore(deps): update typescript-eslint monorepo to v5.59.7 (a25c2b1)
+chore: remove a ci job that runs tests for ts v4.8 (0693fba)
+chore: drop support for typescript < 4.8 (d77d5c7)
+Merge pull request #2396 from nestjs/renovate/cimg-node-20.x (17eea40)
+Merge pull request #2410 from nestjs/renovate/swagger-ui-dist-4.x (87b133a)
+Merge pull request #2430 from nestjs/renovate/npm-vm2-vulnerability (ae5027f)
+chore(deps): update dependency @types/node to v18.16.14 (f0c3cdd)
+chore(deps): update dependency openapi-types to v12.1.1 (1daf8e0)
+chore(deps): update dependency eslint to v8.41.0 (d8e8e09)
+chore(deps): update dependency @types/node to v18.16.13 (3d6f8cd)
+chore(deps): update dependency @types/node to v18.16.12 (950f582)
+chore(deps): update node.js to v20 (18eee3b)
+chore(deps): update nest monorepo to v9.4.1 (0816095)
+chore(deps): update dependency @types/node to v18.16.10 (f295434)
+chore(deps): update typescript-eslint monorepo to v5.59.6 (88f0062)
+chore(deps): update dependency vm2 to 3.9.18 [security] (ae17cc4)
+chore(deps): update dependency @types/node to v18.16.9 (9c6d30c)
+chore(deps): update dependency @types/node to v18.16.8 (61a87eb)
+chore(deps): update dependency @types/node to v18.16.7 (b465c9a)
+chore(deps): update dependency @types/node to v18.16.6 (4aff5ac)
+chore(deps): update typescript-eslint monorepo to v5.59.5 (b6e22cc)
+chore(deps): update dependency eslint to v8.40.0 (6da089d)
+chore(deps): update dependency @types/node to v18.16.5 (5e51f47)
+chore(deps): update dependency @types/node to v18.16.4 (4dae770)
+chore(deps): update commitlint monorepo to v17.6.3 (d5a232e)
+chore(deps): update dependency release-it to v15.10.3 (6e26c43)
+chore(deps): update typescript-eslint monorepo to v5.59.2 (1a1ad65)
+chore(deps): update dependency release-it to v15.10.2 (7e3c6a5)
+chore(deps): update dependency @types/node to v18.16.3 (f165b25)
+chore(deps): update dependency @types/node to v18.16.2 (695798d)
+chore(deps): update dependency lint-staged to v13.2.2 (eaf61b8)
+fix(deps): update dependency swagger-ui-dist to v4.18.3 (5d9f770)
+chore(deps): update dependency @types/node to v18.16.1 (32e4543)
+chore(deps): update typescript-eslint monorepo to v5.59.1 (80a6adf)
+chore(deps): update dependency prettier to v2.8.8 (ffcaadd)
+chore(deps): update dependency @types/node to v18.16.0 (8f58f84)
+chore(deps): update dependency eslint to v8.39.0 (2aaca50)
+chore(deps): update dependency @types/node to v18.15.13 (4cc5bc5)
+chore(deps): update dependency @types/node to v18.15.12 (6cbe62f)
+chore(deps): update dependency @types/jest to v29.5.1 (1f211d8)
+chore(deps): update typescript-eslint monorepo to v5.59.0 (77ce74c)
+chore(deps): update commitlint monorepo to v17.6.1 (5313c38)
+chore(deps): update dependency @types/lodash to v4.14.194 (668c8ba)
+chore(deps): update dependency @fastify/static to v6.10.1 (f1633fa)
+chore(deps): update commitlint monorepo to v17.6.0 (8e45398)
+chore(deps): update typescript-eslint monorepo to v5.58.0 (26aa5bd)
+chore(deps): update dependency eslint to v8.38.0 (7c7ee2e)
+chore(deps): update dependency typescript to v5.0.4 (89c60e6)
+chore(deps): update dependency lint-staged to v13.2.1 (9d981f0)
+chore(deps): update nest monorepo to v9.4.0 (9d90546)
+chore(deps): update typescript-eslint monorepo to v5.57.1 (4172708)
+chore(deps): update dependency release-it to v15.10.1 (1adff75)
+chore(deps): update dependency ts-jest to v29.1.0 (2b8c7e9)
+chore(deps): update dependency @fastify/static to v6.10.0 (43d955f)
+chore(deps): update dependency release-it to v15.10.0 (8cf5eef)
+","feat: support v10 (5db5edf)
+chore: address breaking changes (0e9f187)
+chore: update package lock (a40fa55)
+chore: ignore scripts in ci (8a4d16c)
+Merge pull request #2474 from nestjs/renovate/nestjs-mapped-types-2.x (861ffe2)
+fix(deps): update dependency @nestjs/mapped-types to v2 (b4777cf)
+Merge pull request #2473 from nestjs/renovate/major-nest-monorepo (6d42d44)
+chore(deps): update nest monorepo to v10 (a06e34c)
+Merge pull request #2462 from nestjs/renovate/cimg-node-20.x (acbb72d)
+Merge pull request #2472 from nestjs/renovate/swagger-ui-dist-5.x (8414294)
+Merge pull request #2465 from nestjs/7.0.0 (a6bc318)
+fix(deps): update dependency swagger-ui-dist to v5 (0f74db8)
+Merge pull request #2468 from nestjs/renovate/swagger-ui-dist-5.x (b3b3a09)
+chore(deps): update dependency @types/node to v18.16.18 (99909fd)
+fix(deps): update dependency swagger-ui-dist to v5 (4bf3e84)
+chore(deps): update typescript-eslint monorepo to v5.59.11 (407e9e2)
+chore(deps): update nest monorepo to v9.4.3 (d6f7245)
+Merge pull request #2463 from nestjs/renovate/node-18.x (93662e7)
+Merge pull request #2459 from nestjs/feat/readonly-visitors (3951241)
+Merge pull request #2441 from nestjs/chore/drop-support-for-old-typescript (23bbc5d)
+Merge pull request #2392 from h4ad-forks/perf/lazy-initialization (9682d79)
+chore(deps): update dependency @types/node to v18.16.17 (ebf6eb5)
+chore: upgrade peer deps, tsconfig settings (f567413)
+chore(deps): update node.js to v20.3 (4ddb91e)
+chore: rename load method, update e2e test (f02bfda)
+chore: use async import instead of require (8d4db08)
+chore: move metadata loading to a separate function (d74c391)
+Merge pull request #2446 from nestjs/renovate/swagger-ui-dist-4.x (29cf194)
+chore(deps): update dependency release-it to v15.11.0 (643ff75)
+chore(deps): update typescript-eslint monorepo to v5.59.9 (692d03d)
+test: include external metadata in e2e tests (bf4a27e)
+feat: convert file paths to imports (27d9e9a)
+fix: extend object literal expr for ctrl methods (982922c)
+fix: apply ctrls metadata (a2470d6)
+chore: minor improvements to readonly visitor (1e0265f)
+feat(plugin): introduce readonly visitors (2a7abda)
+chore(deps): update dependency eslint to v8.42.0 (1415ce1)
+chore(deps): update dependency release-it to v15.10.5 (d1441f2)
+chore(deps): update dependency typescript to v5.1.3 (20881b5)
+chore(deps): update dependency @types/jest to v29.5.2 (dc07c93)
+chore(deps): update commitlint monorepo to v17.6.5 (afef4b2)
+chore(deps): update typescript-eslint monorepo to v5.59.8 (872921b)
+perf: added possibility to lazy initialize the document (e876270)
+chore(deps): update dependency @types/node to v18.16.16 (f586699)
+chore(deps): update dependency @types/node to v18.16.15 (9dd9e10)
+chore(deps): update dependency @types/lodash to v4.14.195 (9418435)
+chore(deps): update dependency @fastify/static to v6.10.2 (d70eace)
+chore(deps): update dependency openapi-types to v12.1.3 (0677711)
+fix(deps): update dependency swagger-ui-dist to v4.19.0 (929e527)
+chore(deps): update nest monorepo to v9.4.2 (6ed2af7)
+chore(deps): update typescript-eslint monorepo to v5.59.7 (a25c2b1)
+chore: remove a ci job that runs tests for ts v4.8 (0693fba)
+chore: drop support for typescript < 4.8 (d77d5c7)
+Merge pull request #2396 from nestjs/renovate/cimg-node-20.x (17eea40)
+Merge pull request #2410 from nestjs/renovate/swagger-ui-dist-4.x (87b133a)
+Merge pull request #2430 from nestjs/renovate/npm-vm2-vulnerability (ae5027f)
+chore(deps): update dependency @types/node to v18.16.14 (f0c3cdd)
+chore(deps): update dependency openapi-types to v12.1.1 (1daf8e0)
+chore(deps): update dependency eslint to v8.41.0 (d8e8e09)
+chore(deps): update dependency @types/node to v18.16.13 (3d6f8cd)
+chore(deps): update dependency @types/node to v18.16.12 (950f582)
+chore(deps): update node.js to v20 (18eee3b)
+chore(deps): update nest monorepo to v9.4.1 (0816095)
+chore(deps): update dependency @types/node to v18.16.10 (f295434)
+chore(deps): update typescript-eslint monorepo to v5.59.6 (88f0062)
+chore(deps): update dependency vm2 to 3.9.18 [security] (ae17cc4)
+chore(deps): update dependency @types/node to v18.16.9 (9c6d30c)
+chore(deps): update dependency @types/node to v18.16.8 (61a87eb)
+chore(deps): update dependency @types/node to v18.16.7 (b465c9a)
+chore(deps): update dependency @types/node to v18.16.6 (4aff5ac)
+chore(deps): update typescript-eslint monorepo to v5.59.5 (b6e22cc)
+chore(deps): update dependency eslint to v8.40.0 (6da089d)
+chore(deps): update dependency @types/node to v18.16.5 (5e51f47)
+chore(deps): update dependency @types/node to v18.16.4 (4dae770)
+chore(deps): update commitlint monorepo to v17.6.3 (d5a232e)
+chore(deps): update dependency release-it to v15.10.3 (6e26c43)
+chore(deps): update typescript-eslint monorepo to v5.59.2 (1a1ad65)
+chore(deps): update dependency release-it to v15.10.2 (7e3c6a5)
+chore(deps): update dependency @types/node to v18.16.3 (f165b25)
+chore(deps): update dependency @types/node to v18.16.2 (695798d)
+chore(deps): update dependency lint-staged to v13.2.2 (eaf61b8)
+fix(deps): update dependency swagger-ui-dist to v4.18.3 (5d9f770)
+chore(deps): update dependency @types/node to v18.16.1 (32e4543)
+chore(deps): update typescript-eslint monorepo to v5.59.1 (80a6adf)
+chore(deps): update dependency prettier to v2.8.8 (ffcaadd)
+chore(deps): update dependency @types/node to v18.16.0 (8f58f84)
+chore(deps): update dependency eslint to v8.39.0 (2aaca50)
+chore(deps): update dependency @types/node to v18.15.13 (4cc5bc5)
+chore(deps): update dependency @types/node to v18.15.12 (6cbe62f)
+chore(deps): update dependency @types/jest to v29.5.1 (1f211d8)
+chore(deps): update typescript-eslint monorepo to v5.59.0 (77ce74c)
+chore(deps): update commitlint monorepo to v17.6.1 (5313c38)
+chore(deps): update dependency @types/lodash to v4.14.194 (668c8ba)
+chore(deps): update dependency @fastify/static to v6.10.1 (f1633fa)
+chore(deps): update commitlint monorepo to v17.6.0 (8e45398)
+chore(deps): update typescript-eslint monorepo to v5.58.0 (26aa5bd)
+chore(deps): update dependency eslint to v8.38.0 (7c7ee2e)
+chore(deps): update dependency typescript to v5.0.4 (89c60e6)
+chore(deps): update dependency lint-staged to v13.2.1 (9d981f0)
+chore(deps): update nest monorepo to v9.4.0 (9d90546)
+chore(deps): update typescript-eslint monorepo to v5.57.1 (4172708)
+chore(deps): update dependency release-it to v15.10.1 (1adff75)
+chore(deps): update dependency ts-jest to v29.1.0 (2b8c7e9)
+chore(deps): update dependency @fastify/static to v6.10.0 (43d955f)
+chore(deps): update dependency release-it to v15.10.0 (8cf5eef)"
+3,"
 test: check ts version and compare diff output if v5 (508a206)
 fix(plugin): hotfix ts version condition (4858616)
 fix(plugin): hotfix ts version condition (9e82747)
@@ -170,7 +392,7 @@ fix: fixed duplicate operation_id (3e1f6f4)
 Merge branch 'nestjs:master' into master (0bfc2aa)
 Merge branch 'nestjs:master' into master (4ff17dc)
 fix(lib): fixed incorrect handling of @All decorator (14db2ea)"
-2,"
+4,"
 Merge pull request #2276 from urugator/patch-1 (513eac6)
 Merge pull request #2273 from jcolladosp/feature/json-yaml-custom-endpoint (ad6a508)
 fix: ApiResponseSchemaHost.status range support (e474064)
@@ -189,7 +411,7 @@ test(swagger): e2e tests for the jsonDocumentUrl and yamlDocumentUrl options (ae
 feat(swagger): add validatePath for the documents paths (d89ac55)
 feat(swagger): JSON and YAML document enpoints customizable (0365371)
 feat(swagger): JSON and YAML document enpoints customizable (e7e4c75)"
-3,"
+5,"
 Merge pull request #2275 from nestjs/renovate/nestjs-mapped-types-1.x (653c5e0)
 Merge pull request #2274 from nestjs/revert-1949-1711-operation-ids-with-version (311597e)
 fix(deps): update dependency @nestjs/mapped-types to v1.2.2 (c55a2f5)
@@ -350,7 +572,7 @@ fix(plugin): empty comment do not emit @ApiOperation decorator (f4e35f2)
 feat(@nestjs/swagger) support HTTP range status codes (b24c9ed)
 feat(swagger): Provide URI version to operationIdFactory (fd11b46)
 fix: fix numeric enum values (d4d6f8c)"
-4,"
+6,"
 Merge pull request #2171 from nestjs/renovate/typescript-eslint-monorepo (4dd8f91)
 chore(deps): update typescript-eslint monorepo to v5.45.1 (f84bd1c)
 Merge pull request #2174 from nestjs/renovate/typescript-4.x (26ded64)
@@ -459,7 +681,7 @@ chore(deps): update commitlint monorepo to v17.2.0 (3ffaef9)
 chore(deps): update dependency @types/node to v18.11.8 (cc69138)
 chore(deps): update dependency @types/node to v18.11.7 (886f832)
 chore(deps): update dependency @types/node to v18.11.6 (ac2b69a)"
-5,"
+7,"
 Merge pull request #2112 from bhrigushr/fix/1946-missing-request-body (f7809e2)
 Update test/explorer/swagger-explorer.spec.ts (2e784d3)
 Update test/explorer/swagger-explorer.spec.ts (50c4f96)
@@ -574,14 +796,14 @@ chore(deps): update dependency jest to v29.0.3 (69a4127)
 chore(deps): update dependency ts-jest to v29 (508c793)
 chore(deps): update dependency typescript to v4.8.3 (07b39ee)
 chore(deps): update typescript-eslint monorepo to v5.36.2 (fc0ad0b)"
-6,"
+8,"
 Merge pull request #2069 from KillWolfVlad/feature/fix-undefined-modifiers (e10e649)
 chore(deps): update dependency jest to v29.0.2 (0d67f99)
 fix(): undefined modifiers (0b3d9ab)
 ","Merge pull request #2069 from KillWolfVlad/feature/fix-undefined-modifiers (e10e649)
 chore(deps): update dependency jest to v29.0.2 (0d67f99)
 fix(): undefined modifiers (0b3d9ab)"
-7,"
+9,"
 Merge pull request #2067 from nestjs/chore/support-typescript-v4.8 (908bb52)
 Merge pull request #2023 from kaioduarte/perf/lazy-load-swagger-ui (1dc851c)
 chore(): support typescript v4.8 (8757d37)
@@ -610,7 +832,7 @@ chore(deps): update dependency eslint to v8.23.0 (3c917cc)
 chore(deps): update dependency jest to v29.0.1 (d950631)
 chore: address code review comment (857a2d8)
 perf(swagger-module): lazy load swagger-ui-dist module (4aea702)"
-8,"
+10,"
 Merge pull request #2035 from nestjs/renovate/swagger-ui-dist-4.x (e7b25d8)
 Merge pull request #1720 from andrewda/tsdoc (f6fb642)
 Merge pull request #2041 from ledniy/bugfix/pattern (697ceba)
@@ -665,7 +887,7 @@ chore(deps): update typescript-eslint monorepo to v5.33.0 (0a090e6)
 chore(deps): update nest monorepo to v9.0.8 (771ea39)
 style(): run formatter (e9584b5)
 feat(): add support for additional TSDoc tags (06ec7ec)"
-9,"
+11,"
 Merge pull request #1997 from nestjs/renovate/swagger-ui-dist-4.x (3efa8e3)
 Merge pull request #2012 from flamewow/fix/explorer_options_was_not_working (c5e4c97)
 Merge pull request #2013 from flamewow/fix/root_path (e73d013)
@@ -718,7 +940,7 @@ chore(deps): update dependency ts-jest to v28.0.7 (a3feff7)
 chore(deps): update dependency @types/jest to v28.1.6 (8ec2148)
 chore(deps): update dependency ts-jest to v28.0.6 (50c8b56)
 chore(deps): update dependency release-it to v15.1.2 (d86f97d)"
-10,"
+12,"
 Merge branch 'flamewow-fix/reverse_proxy_usecase' (453e977)
 style(): update comments (905216d)
 Merge branch 'fix/reverse_proxy_usecase' of github.com:flamewow/swagger into flamewow-fix/reverse_proxy_usecase (5473531)
@@ -741,7 +963,7 @@ chore(deps): update dependency jest to v28.1.3 (74ee706)
 chore(deps): update dependency @types/jest to v28.1.5 (ac8fcd0)
 fix(@nestjs/swagger): skip invalid types when converting swagger document to yaml (5e818f6)
 chore(deps): update nest monorepo to v9.0.3 (1048a32)"
-11,"
+13,"
 Merge pull request #1973 from CatsJuice/revert-1966-fix/build-html-static-base-url (2b21b54)
 chore(deps): update typescript-eslint monorepo to v5.30.6 (1dfb901)
 chore(deps): pin dependency supertest to 6.2.4 (e9ac49e)
@@ -750,7 +972,7 @@ Revert ""fix(swagger-module): change buildSwaggerHtml baseUrl from absolute toâ€
 chore(deps): update typescript-eslint monorepo to v5.30.6 (1dfb901)
 chore(deps): pin dependency supertest to 6.2.4 (e9ac49e)
 Revert ""fix(swagger-module): change buildSwaggerHtml baseUrl from absolute toâ€¦"" (8676ae7)"
-12,"
+14,"
 Merge branch 'flamewow-fix/fastify_ignoreTrailingSlash' (6d8cd31)
 chore(): minor tweaks (6b1a099)
 Merge branch 'fix/fastify_ignoreTrailingSlash' of github.com:flamewow/swagger into flamewow-fix/fastify_ignoreTrailingSlash (a45d527)
@@ -779,12 +1001,12 @@ fixed content type issue, added test cases (5652905)
 fix(swagger-module): change buildSwaggerHtml baseUrl from absolute to relative (4a2a365)
 fix(@nestjs/swagger): replace quoted functionPlaceholder completely (2afc3dc)
 chore(deps): update nest monorepo to v9.0.1 (207de33)"
-13,"
+15,"
 chore(): update mapped types (9f0c981)
 chore(deps): update dependency openapi-types to v12 (c45e00f)
 ","chore(): update mapped types (9f0c981)
 chore(deps): update dependency openapi-types to v12 (c45e00f)"
-14,"
+16,"
 Merge pull request #1939 from nestjs/renovate/lint-staged-13.x (5e6c421)
 Merge pull request #1959 from nestjs/renovate/swagger-ui-dist-4.x (87e118a)
 Merge pull request #1960 from nestjs/renovate/major-jest-monorepo (4954d59)
@@ -955,7 +1177,7 @@ chore(deps): update typescript-eslint monorepo to v5.17.0 (be03f42)
 chore(deps): update dependency fastify-swagger to v5.1.0 (1a5b119)
 chore(deps): update dependency eslint to v8.12.0 (4a4da13)
 chore(deps): update nest monorepo to v8.4.3 (2e9ecc6)"
-15,"
+17,"
 Merge pull request #1863 from nestjs/renovate/ts-jest-27.x (fd3bd67)
 Merge pull request #1861 from nestjs/renovate/npm-minimist-vulnerability (1387796)
 Merge pull request #1858 from nestjs/renovate/typescript-eslint-monorepo (22bb439)
@@ -1084,7 +1306,7 @@ feat: added support for decorators Matches, IsPositive, IsNegative, Length, IsIn
 feat: added support for decorators Matches, IsPositive, IsNegative, Length (733f562)
 fix: unescape colons in path (b11c809)
 chore: fix typo (48b91c9)"
-16,"
+18,"
 feat(): add uihooks option to fastify driver (2058583)
 Merge pull request #1525 from ton11797/fix-api-extension (ab92747)
 Merge pull request #1706 from chromey/introspect-comments-with-tabs (a525819)
@@ -1301,7 +1523,7 @@ fix (a59ac61)
 fix (80ce744)
 add test (8331807)
 fix (d89814f)"
-17,"
+19,"
 Merge pull request #1641 from nestjs/renovate/circleci-node-17.x (6dc8bda)
 Merge pull request #1657 from nestjs/renovate/npm-validator-vulnerability (8e4f3f1)
 Merge pull request #1673 from caucik/patch-1 (5d95707)
@@ -1370,17 +1592,17 @@ chore(deps): update dependency lint-staged to v11.2.4 (bcc4c6a)
 chore(deps): update dependency eslint to v8.1.0 (94a7e7a)
 chore(deps): update dependency @types/node to v14.17.29 (848d1fa)
 chore(deps): update dependency @types/node to v14.17.28 (dbcd946)"
-18,"
+20,"
 Merge pull request #1632 from micalevisk/hotfix/controller-default-version (0762f74)
 test: add unit tests to cover global default version feature (1e85ce6)
 fix: use defaultVersion as a fallback to controller version (84f1761)
 ","Merge pull request #1632 from micalevisk/hotfix/controller-default-version (0762f74)
 test: add unit tests to cover global default version feature (1e85ce6)
 fix: use defaultVersion as a fallback to controller version (84f1761)"
-19,"
+21,"
 fix(): fallback to the original behavior when no aliases (c107ca3)
 ",fix(): fallback to the original behavior when no aliases (c107ca3)
-20,"
+22,"
 Merge branch 'master' of https://github.com/nestjs/swagger (d4527f2)
 feat(): support multiple versions and aliases (967c893)
 chore(deps): update dependency husky to v7.0.4 (11ede75)
@@ -1397,7 +1619,7 @@ chore(deps): update dependency jest to v27.3.1 (b3aa064)
 chore(deps): update typescript-eslint monorepo to v5.1.0 (f79d05f)
 chore(deps): update dependency fastify-swagger to v4.12.5 (e241880)
 chore(deps): update dependency jest to v27.3.0 (b50fcc7)"
-21,"
+23,"
 Merge pull request #1593 from nestjs/renovate/npm-fastify-static-vulnerability (1b4507d)
 Merge pull request #1590 from tlan16/master (a6dd36e)
 chore(deps): update dependency ts-jest to v27.0.7 (6bb8554)
@@ -1470,7 +1692,7 @@ chore(deps): update dependency fastify-swagger to v4.12.3 (4c44316)
 chore(deps): update nest monorepo to v8.0.8 (8750b44)
 chore(deps): update dependency jest to v27.2.3 (225e375)
 chore(deps): update dependency fastify-swagger to v4.12.2 (3405b8c)"
-22,"
+24,"
 Merge branch 'master' of https://github.com/nestjs/swagger (abb0de8)
 fix(): revert examples property (67ccbbe)
 Merge pull request #1508 from sinchang/feature/add-uiconfig-type (dd72272)
@@ -1631,7 +1853,7 @@ chore(deps): update dependency @types/lodash to v4.14.172 (be3ecce)
 chore(deps): update typescript-eslint monorepo to v4.29.0 (3e48b52)
 chore(deps): update dependency @types/node to v14.17.7 (f4533e8)
 chore(deps): update dependency eslint to v7.32.0 (b3cebf7)"
-23,"
+25,"
 fix(): fix peer dependencies (4d53813)
 chore(deps): update nest monorepo to v8.0.5 (833458d)
 chore(deps): update typescript-eslint monorepo to v4.28.5 (59ae1f5)
@@ -1648,13 +1870,13 @@ chore(deps): update dependency lint-staged to v11.1.1 (d7907fe)
 chore(deps): update commitlint monorepo to v13 (f675de5)
 chore(deps): update dependency release-it to v14.10.1 (013779f)
 chore(deps): update dependency lint-staged to v11.1.0 (b25d4c3)"
-24,"
+26,"
 fix(plugin): replace existing api operation decorator (c0259af)
 ",fix(plugin): replace existing api operation decorator (c0259af)
-25,"
+27,"
 hotfix(): fix controller class visitor (87f2e4c)
 ",hotfix(): fix controller class visitor (87f2e4c)
-26,"
+28,"
 fix(): api operation decorator crashes with comment introspection #1460 (a57b7a0)
 Merge branch 'nartc-fix/1339' (a3e151f)
 Merge branch 'fix/1339' of https://github.com/nartc/swagger into nartc-fix/1339 (b4b244d)
@@ -1679,7 +1901,7 @@ refactor(plugin): use NodeFactory to replace all deprecated methods from TS (3c8
 Merge branch 'nestjs:master' into master (4f3bfe1)
 Merge branch 'nestjs:master' into master (bda56b2)
 Merge pull request #1 from nestjs/master (b4c2a1a)"
-27,"
+29,"
 Merge branch 'master' of https://github.com/nestjs/swagger (c190f93)
 fix(): fix deep scan route feature (router module) #1451 (22e1c28)
 chore(deps): update nest monorepo to v8.0.4 (f32f14b)
@@ -1688,17 +1910,17 @@ chore(deps): update nest monorepo to v8.0.3 (4740848)
 fix(): fix deep scan route feature (router module) #1451 (22e1c28)
 chore(deps): update nest monorepo to v8.0.4 (f32f14b)
 chore(deps): update nest monorepo to v8.0.3 (4740848)"
-28,"
+30,"
 fix(): move nullable prop under schema key #1439 (25c6cc7)
 ",fix(): move nullable prop under schema key #1439 (25c6cc7)
-29,"
+31,"
 Merge branch 'master' of https://github.com/nestjs/swagger (db16a56)
 fix(plugin): properly introspect nullable properties (9c5366e)
 chore(deps): update dependency lint-staged to v11.0.1 (a19e2e3)
 ","Merge branch 'master' of link (db16a56)
 fix(plugin): properly introspect nullable properties (9c5366e)
 chore(deps): update dependency lint-staged to v11.0.1 (a19e2e3)"
-30,"
+32,"
 Merge branch 'master' of https://github.com/nestjs/swagger (677d27d)
 fix(): literal object types regression #1442 (5a88336)
 chore(deps): update typescript-eslint monorepo to v4.28.3 (7eeb272)
@@ -1711,7 +1933,7 @@ chore(deps): update typescript-eslint monorepo to v4.28.3 (7eeb272)
 chore(deps): update nest monorepo to v8.0.2 (f74f2b0)
 chore(deps): update dependency fastify-swagger to v4.8.3 (238a52a)
 chore(deps): update nest monorepo to v8.0.1 (9836860)"
-31,"
+33,"
 Merge branch 'coyotte508-raw-definition' (0f86fbb)
 chore(): resolve conflicts (857c055)
 chore(): merge (98e660c)
@@ -1856,7 +2078,7 @@ test(): added decorator test (e520677)
 feat(): added decorator for exclude controller (bfe9ae4)
 perf: store schemas in an object instead of an array of key/value (1af74d2)
 fix: set default status for api-response decorator (f3257b2)"
-32,"
+34,"
 fix(plugin): transform absolute paths #1411 (ae70da9)
 chore(deps): update dependency fastify-swagger to v4.8.1 (fe98e6a)
 chore(deps): update typescript-eslint monorepo to v4.28.1 (c722f48)
@@ -1879,7 +2101,7 @@ chore(deps): update typescript-eslint monorepo to v4.28.0 (9e33248)
 chore(deps): update dependency fastify-swagger to v4.8.0 (b000a18)
 chore(deps): update dependency release-it to v14.10.0 (4a9153b)
 chore(deps): update dependency eslint to v7.29.0 (888f4ed)"
-33,"
+35,"
 Merge pull request #1308 from bilalshaikh42/patch-1 (9b2049a)
 Merge pull request #1309 from gperdomor/patch-1 (9c69f5a)
 Merge pull request #1318 from deviantfero/master (7258fca)
@@ -2058,7 +2280,7 @@ Revert ""fix: remove isArray prop from test"" (7aacb81)
 fix: remove isArray prop from test (bf22332)
 fix: add extra test to validate api query decorator (532640d)
 fix: add isArray prop for enums on api query decorator when applicable (d3c0b5c)"
-34,"
+36,"
 fix(plugin): exclude native nodejs libs (e05fd6a)
 Merge branch 'jessemyers-array-format-placement' (86ee0a0)
 fix(): minor tweaks (263a7b3)
@@ -2107,7 +2329,7 @@ fix: Move format and other item-level keys inward for arrays (cffdd76)
 chore(deps): update dependency lint-staged to v10.5.4 (855ab14)
 fix(api-extension): Add test case for array in e2e (eb4916a)
 fix(api-extension): Handle correct array value (016dadc)"
-35,"
+37,"
 Merge pull request #1205 from nestjs/renovate/class-transformer-0.x (f90cb7b)
 chore(deps): update dependency class-transformer to v0.4.0 (bd18c89)
 Merge pull request #1251 from nestjs/renovate/nestjs-mapped-types-0.x (28127a1)
@@ -2148,14 +2370,14 @@ chore(deps): update dependency eslint to v7.21.0 (2004131)
 chore(deps): update commitlint monorepo to v12.0.1 (de629e4)
 chore(deps): update dependency eslint-config-prettier to v8.1.0 (1408043)
 fix(deps): update dependency lodash to v4.17.21 (99ff384)"
-36,"
+38,"
 Merge branch 'master' of https://github.com/nestjs/swagger (3e3b78b)
 fix(plugin): support typescript 4.2+ (b417b92)
 chore(deps): update dependency typescript to v4.2.2 (a54b765)
 ","Merge branch 'master' of link (3e3b78b)
 fix(plugin): support typescript 4.2+ (b417b92)
 chore(deps): update dependency typescript to v4.2.2 (a54b765)"
-37,"
+39,"
 fix(plugin): support typescript 4.2+ (67682bb)
 chore(deps): update dependency ts-jest to v26.5.2 (f02b8e0)
 chore(deps): update commitlint monorepo to v12 (d58425f)
@@ -2190,7 +2412,7 @@ chore(deps): update dependency @types/node to v11.15.44 (2b1fe50)
 chore(deps): update dependency eslint to v7.20.0 (c62c842)
 chore(deps): update dependency fastify-swagger to v4.3.1 (c05ef0d)
 chore(deps): update dependency release-it to v14.4.0 (02c8fa5)"
-38,"
+40,"
 Merge branch 'master' of https://github.com/nestjs/swagger (4a133b2)
 fix(plugin): fix updating imports for new tsc (ea1e3d1)
 chore(deps): update dependency typescript to v4.1.5 (816cd9a)
@@ -2255,7 +2477,7 @@ chore(deps): update nest monorepo to v7.6.7 (b7df737)
 chore(deps): update dependency fastify-swagger to v4 (01741d3)
 chore(deps): update nest monorepo to v7.6.6 (1e5f82b)
 chore(deps): update typescript-eslint monorepo to v4.14.1 (0f7a1b1)"
-39,"
+41,"
 Merge pull request #1146 from nestjs/renovate/nestjs-mapped-types-0.x (7d0c589)
 fix(deps): update dependency @nestjs/mapped-types to v0.3.0 (0ca0549)
 chore(deps): update dependency eslint-config-prettier to v7.2.0 (765fbc2)
@@ -2270,14 +2492,14 @@ chore(deps): update typescript-eslint monorepo to v4.14.0 (1685703)
 chore(deps): update dependency @types/lodash to v4.14.168 (a0b936f)
 chore(deps): update dependency husky to v4.3.8 (0ffe041)
 chore(deps): update dependency eslint to v7.18.0 (24f9edc)"
-40,"
+42,"
 chore(): update mapped-types package (a806e41)
 chore(deps): update dependency class-transformer to v0.3.2 (d32c4b9)
 chore(deps): update dependency class-validator to v0.13.1 (4e54ab6)
 ","chore(): update mapped-types package (a806e41)
 chore(deps): update dependency class-transformer to v0.3.2 (d32c4b9)
 chore(deps): update dependency class-validator to v0.13.1 (4e54ab6)"
-41,"
+43,"
 fix(plugin): dont add decorators to standard methods in controllers (ef044eb)
 chore(deps): update typescript-eslint monorepo to v4.13.0 (7e2de3a)
 chore(deps): update dependency class-validator to v0.13.0 (a3ebde5)
@@ -2298,7 +2520,7 @@ chore(deps): update dependency eslint to v7.17.0 (354ef03)
 chore(deps): update dependency @types/lodash to v4.14.167 (ba7a022)
 chore(deps): update nest monorepo to v7.6.5 (6c601ee)
 chore(deps): update typescript-eslint monorepo to v4.11.1 (45acdd8)"
-42,"
+44,"
 Merge pull request #1109 from foray1010/master (ffa5adf)
 Merge pull request #1085 from nestjs/dependabot/npm_and_yarn/ini-1.3.8 (d846325)
 Merge pull request #1103 from nestjs/dependabot/npm_and_yarn/node-notifier-8.0.1 (920cdeb)
@@ -2323,7 +2545,7 @@ chore(deps): update typescript-eslint monorepo to v4.11.0 (821257b)
 chore(deps): update nest monorepo to v7.6.4 (52bd262)
 chore(deps): update dependency eslint-config-prettier to v7.1.0 (4f59b68)
 chore(deps): update dependency eslint to v7.16.0 (c6ccf13)"
-43,"
+45,"
 Merge branch 'master' of https://github.com/nestjs/swagger (557753d)
 fix(plugin): support arrays as examples (comments introspection) (9a38cca)
 chore(deps): update nest monorepo to v7.6.3 (748eeb8)
@@ -2332,7 +2554,7 @@ chore(deps): update nest monorepo to v7.6.2 (8cb8a0a)
 fix(plugin): support arrays as examples (comments introspection) (9a38cca)
 chore(deps): update nest monorepo to v7.6.3 (748eeb8)
 chore(deps): update nest monorepo to v7.6.2 (8cb8a0a)"
-44,"
+46,"
 Merge branch 'master' of https://github.com/nestjs/swagger (adf4956)
 fix(plugin): fix example string with spaces #1089 (a1dc7b8)
 Merge pull request #1092 from nestjs/add-license-1 (5611e8b)
@@ -2343,7 +2565,7 @@ fix(plugin): fix example string with spaces #1089 (a1dc7b8)
 Merge pull request #1092 from nestjs/add-license-1 (5611e8b)
 Create LICENSE (e747ab9)
 chore(deps): update typescript-eslint monorepo to v4.10.0 (0d81df6)"
-45,"
+47,"
 Merge branch 'master' of https://github.com/nestjs/swagger (54f7204)
 fix(plugin): dont parse stringified numbers when type is string (c7403c1)
 chore(deps): update dependency husky to v4.3.6 (db89dd9)
@@ -2402,29 +2624,29 @@ chore(deps): update dependency swagger-ui-express to v4.1.5 (0616647)
 chore(deps): update nest monorepo to v7.5.4 (ef048fe)
 chore(deps): update typescript-eslint monorepo to v4.8.1 (e26eb74)
 chore(deps): update nest monorepo to v7.5.3 (8e3ed3b)"
-46,"
+48,"
 fix(fastify): ensure body parser is applied before swagger plugin (fe498c5)
 chore(deps): update typescript-eslint monorepo to v4.8.0 (8b3f61c)
 ","fix(fastify): ensure body parser is applied before swagger plugin (fe498c5)
 chore(deps): update typescript-eslint monorepo to v4.8.0 (8b3f61c)"
-47,"
+49,"
 fix(): add property initializers inheritance support (e3bc6c3)
 chore(deps): update nest monorepo to v7.5.2 (c72bad9)
 ","fix(): add property initializers inheritance support (e3bc6c3)
 chore(deps): update nest monorepo to v7.5.2 (c72bad9)"
-48,"
+50,"
 fix(): allow setting query object explicitly (021f2e9)
 fix(): allow passing ref to the api query options (e3ab9cb)
 fix(): fix date type for query parameters (9646826)
 ","fix(): allow setting query object explicitly (021f2e9)
 fix(): allow passing ref to the api query options (e3ab9cb)
 fix(): fix date type for query parameters (9646826)"
-49,"
+51,"
 fix(plugin): fix nullable types support for typescript v4 (1ff55d6)
 chore(): update to ts v4, temporarily cast types (1b0d1ca)
 ","fix(plugin): fix nullable types support for typescript v4 (1ff55d6)
 chore(): update to ts v4, temporarily cast types (1b0d1ca)"
-50,"
+52,"
 Merge branch 'master' of https://github.com/nestjs/swagger (1184430)
 Merge pull request #978 from mlaigre/fix/ref-properties (e93a712)
 Merge branch 'master' of https://github.com/nestjs/swagger (aa88729)
@@ -2447,7 +2669,7 @@ chore(deps): update dependency ts-jest to v26.4.4 (ad7fd0b)
 chore(deps): update dependency eslint to v7.13.0 (8d47aee)
 ci(): fix package-lock (sync versions) (1e53d4f)
 fix(): nested schema additional properties take place next to allof (8f1b6a5)"
-51,"
+53,"
 Merge branch 'dennisameling-add-use-method-name-for-operations-option' (44fa532)
 refactor(): minor tweaks (0ce0497)
 Merge branch 'add-use-method-name-for-operations-option' of https://github.com/dennisameling/swagger into dennisameling-add-use-method-name-for-operations-option (29dc7c3)
@@ -2570,7 +2792,7 @@ refactor(lib): fix default operationidfactory (b5ae59d)
 refactor(lib): fix merge conflict (708e381)
 feat(lib): add operation id factory (dd15ad7)
 feat(): add use method name for operations option (bdbdd35)"
-52,"
+54,"
 feat(): support non-string types in examples (comments introspection) (2644f7a)
 fix(): add note about inline comments regex (be52bce)
 chore(deps): update dependency ts-jest to v26.4.0 (7af00bb)
@@ -2649,7 +2871,7 @@ chore(deps): update typescript-eslint monorepo to v3.10.0 (0a08568)
 chore(deps): update dependency prettier to v2.1.0 (fb07cd9)
 chore(deps): update dependency release-it to v13.6.9 (d88b0b2)
 chore(deps): update dependency jest to v26.4.2 (17a6f06)"
-53,"
+55,"
 Merge branch 'qbcbyb-descriptionFromCommentInPlugin' (d9bae0d)
 feat(): add comments introspection (b2daad6)
 fix(): resolve conflicts (7b96d7f)
@@ -2804,7 +3026,7 @@ chore(deps): update typescript-eslint monorepo to v3.6.0 (a7fffc6)
 chore(deps): update dependency eslint to v7.4.0 (b867568)
 chore(deps): update dependency typescript to v3.9.6 (0fe90dd)
 chore(deps): update typescript-eslint monorepo to v3.5.0 (48231ca)"
-54,"
+56,"
 Merge branch 'master' of https://github.com/nestjs/swagger (e62498f)
 fix(): fix api header and headers decorators (395c612)
 chore(deps): update dependency release-it to v13.6.4 (4eaaf3e)
@@ -2827,7 +3049,7 @@ chore(deps): update dependency @types/jest to v26.0.2 (06699a2)
 chore(deps): update dependency jest to v26.1.0 (c5b5920)
 chore(deps): update dependency eslint to v7.3.1 (181ab06)
 chore(deps): update typescript-eslint monorepo to v3.4.0 (2f69d9e)"
-55,"
+57,"
 fix(): allow setting default value in api header decorator (e1174b5)
 fix(plugin): apply is optional validation to plugin props (7b77202)
 chore(): update to the latest version of ts (e4cec35)
@@ -2870,7 +3092,7 @@ chore(deps): update dependency lint-staged to v10.2.10 (7423dad)
 chore(deps): update dependency eslint-plugin-import to v2.21.2 (fdadcd3)
 chore(deps): update dependency @types/jest to v26 (89aeb2d)
 chore(deps): update typescript-eslint monorepo to v3.2.0 (ad56135)"
-56,"
+58,"
 Merge branch 'master' of https://github.com/nestjs/swagger (edba50b)
 fix(plugin): ignore controller methods without decorators (aca1db2)
 chore(deps): update dependency eslint-plugin-import to v2.21.1 (406b319)
@@ -2899,7 +3121,7 @@ chore(deps): update dependency release-it to v13.6.2 (fff193f)
 chore(deps): update nest monorepo to v7.1.2 (4e7fabd)
 chore(deps): update dependency ts-jest to v26.1.0 (bf3b438)
 chore(deps): update dependency @types/lodash to v4.14.154 (f0591c3)"
-57,"
+59,"
 Merge branch 'master' of https://github.com/nestjs/swagger (209deda)
 fix(plugin): support decorators when package imported as module #774 (a93b6a3)
 chore(deps): update dependency lint-staged to v10.2.7 (cc35938)
@@ -2916,7 +3138,7 @@ chore(deps): update typescript-eslint monorepo to v3.0.2 (06c306d)
 chore(deps): update dependency @types/lodash to v4.14.153 (098728d)
 chore(deps): update dependency fastify-swagger to v2.6.0 (d9bcc57)
 chore(deps): update typescript-eslint monorepo to v3.0.1 (157b7ed)"
-58,"
+60,"
 test(): update the api-spec json fixture (56ee02a)
 Merge pull request #728 from BasKiers/fix/string-type-array-support (5dc6284)
 Merge branch 'master' of https://github.com/nestjs/swagger (8d57e0b)
@@ -2965,7 +3187,7 @@ chore(deps): update dependency lint-staged to v10.2.3 (a66e69a)
 chore(deps): update dependency release-it to v13.6.1 (037d8bf)
 fix(): temporarily revert ts version (a38b505)
 chore(): push dist to github as workaround (07ab5c5)"
-59,"
+61,"
 fix(): resolve conflicts (5718e4e)
 fix(): fix merging global metadata (use chunks for depth) (c3f1958)
 chore(deps): update dependency ts-jest to v26 (762a220)
@@ -2978,7 +3200,7 @@ chore(deps): update dependency ts-jest to v26 (762a220)
 chore(deps): update nest monorepo to v7.0.13 (3dfb0c5)
 chore(deps): update dependency @types/lodash to v4.14.151 (c4912b5)
 chore(deps): update dependency release-it to v13.6.0 (a34d71b)"
-60,"
+62,"
 fix(): make keys argument readonly (pick type and omit type) (dd50600)
 Merge pull request #742 from nestjs/renovate/nestjs-mapped-types-0.x (d339a5e)
 fix(deps): update dependency @nestjs/mapped-types to v0.0.4 (9b11059)
@@ -2999,7 +3221,7 @@ chore(deps): update nest monorepo to v7.0.11 (2a6f785)
 chore(deps): update typescript-eslint monorepo to v2.32.0 (b9db5f8)
 chore(deps): update dependency ts-jest to v25.5.1 (b93c1a5)
 chore(deps): update dependency eslint to v7 (11d4e93)"
-61,"
+63,"
 Merge pull request #726 from IKatsuba/missed-auth-cookie (24862fd)
 fix(): missed api-cookie.decorator export (c87aaab)
 chore(deps): update dependency ts-jest to v25.5.0 (c6a6e5a)
@@ -3016,7 +3238,7 @@ chore(deps): update dependency jest to v26 (dc8b9a3)
 chore(deps): update typescript-eslint monorepo to v2.31.0 (a8d2fe4)
 Update README.md (0b8e6e1)
 chore(): add migration instructions to the README (2bffe80)"
-62,"
+64,"
 Merge pull request #712 from gilzarfati/feature/activate-ApiExcludeEndpoint-conditionally (f4af3cd)
 Merge pull request #715 from andreoav/fix/api-extension (cc3273e)
 chore(deps): update dependency release-it to v13.5.8 (990aeda)
@@ -3071,7 +3293,7 @@ chore(deps): update dependency prettier to v2.0.5 (261fed1)
 chore(deps): update dependency release-it to v13.5.5 (813282f)
 chore(deps): update dependency lint-staged to v10.1.7 (9f4b93c)
 chore(deps): update typescript-eslint monorepo to v2.29.0 (d9d545d)"
-63,"
+65,"
 Merge pull request #690 from nestjs/renovate/nestjs-mapped-types-0.x (c6bd7cf)
 fix(deps): update dependency @nestjs/mapped-types to v0.0.3 (bcaa0ed)
 chore(deps): update dependency jest to v25.4.0 (e804f2f)
@@ -3106,7 +3328,7 @@ chore(deps): update dependency lint-staged to v10.1.4 (78fec1f)
 fix(deps): update dependency @nestjs/mapped-types to v0.0.2 (28da017)
 Update lib/interfaces/swagger-custom-options.interface.ts (ba1026e)
 Update swagger-custom-options.interface.ts (20c7f49)"
-64,"
+66,"
 Merge branch 'Diluka-intersection-type-helper' (35a8cf6)
 feat(): use mapped types, fix plugin integration (7393bbf)
 Merge branch 'intersection-type-helper' of https://github.com/Diluka/swagger into Diluka-intersection-type-helper (c4dde31)
@@ -3187,14 +3409,14 @@ chore(deps): update dependency jest to v25.2.3 (39e651b)
 chore(deps): update nest monorepo to v7.0.6 (cd937e7)
 chore(deps): update dependency jest to v25.2.2 (597f21b)
 chore(deps): update dependency release-it to v13.3.2 (cb491f5)"
-65,"
+67,"
 Merge branch 'master' of https://github.com/nestjs/swagger (5ba6583)
 feat(): add validation and transformation rules inheritance (1209dde)
 chore(deps): update dependency jest to v25.2.1 (648e948)
 ","Merge branch 'master' of link (5ba6583)
 feat(): add validation and transformation rules inheritance (1209dde)
 chore(deps): update dependency jest to v25.2.1 (648e948)"
-66,"
+68,"
 Merge branch 'master' of https://github.com/nestjs/swagger (bd420d3)
 feat(): add type helpers functions (8f68926)
 chore(deps): update dependency jest to v25.2.0 (81f77e9)
@@ -3237,7 +3459,7 @@ chore(deps): update typescript-eslint monorepo to v2.24.0 (000b776)
 chore(deps): update dependency swagger-parser to v9.0.1 (f59e140)
 chore(deps): update nest monorepo to v7.0.2 (6abc93e)
 chore(deps): update dependency swagger-parser to v9 (9985c83)"
-67,"
+69,"
 Merge pull request #605 from nestjs/renovate/major-nest-monorepo (5bab468)
 Merge pull request #607 from nestjs/dependabot/npm_and_yarn/acorn-6.4.1 (ea7145c)
 chore(deps): bump acorn from 6.4.0 to 6.4.1 (bb94107)
@@ -3270,7 +3492,7 @@ chore(deps): update nest monorepo to v6.11.11 (cf46c08)
 chore(deps): update nest monorepo to v6.11.10 (ad1caf9)
 chore(deps): update typescript-eslint monorepo to v2.22.0 (923d57b)
 chore(deps): update nest monorepo to v6.11.9 (e22f829)"
-68,"
+70,"
 fix(): fix lazy type function refence for query and param (e9c14e9)
 chore(deps): update dependency typescript to v3.8.3 (32276e1)
 chore(deps): update dependency release-it to v12.6.2 (afcba44)
@@ -3281,10 +3503,10 @@ chore(deps): update dependency typescript to v3.8.3 (32276e1)
 chore(deps): update dependency release-it to v12.6.2 (afcba44)
 chore(deps): update dependency lint-staged to v10.0.8 (6ac706c)
 chore(deps): update typescript-eslint monorepo to v2.21.0 (0a5a5ad)"
-69,"
+71,"
 fix(): fix optional, nested properties (b001efa)
 ","fix(): fix optional, nested properties (b001efa)"
-70,"
+72,"
 Merge branch 'nartc-feature/extract-enum' (217d212)
 fix(): apply code review suggestions (969799d)
 Merge branch 'feature/extract-enum' of https://github.com/nartc/swagger into nartc-feature/extract-enum (900aea3)
@@ -3333,7 +3555,7 @@ update get enumName function (ffef61b)
 format (17b49fc)
 fix(): add extra check for identifier existence (0fabeba)
 feature(): extract Enum out to its schema (c9e379b)"
-71,"
+73,"
 fix(plugin): generate metadata for single member enums (a10b7b6)
 chore(deps): update dependency typescript to v3.8.2 (3b3de59)
 chore(deps): update dependency release-it to v12.6.0 (b0a5cac)
@@ -3346,14 +3568,14 @@ chore(deps): update dependency release-it to v12.6.0 (b0a5cac)
 chore(deps): update nest monorepo to v6.11.8 (c934c78)
 chore(deps): update dependency @types/jest to v25.1.3 (753b605)
 fix(): add misc files to npmignore (1bf040c)"
-72,"
+74,"
 Merge branch 'master' of https://github.com/nestjs/swagger (13be846)
 fix(plugin): fix enum arrays when strict mode enabled (9b47e95)
 chore(deps): update dependency ts-jest to v25.2.1 (46795f0)
 ","Merge branch 'master' of link (13be846)
 fix(plugin): fix enum arrays when strict mode enabled (9b47e95)
 chore(deps): update dependency ts-jest to v25.2.1 (46795f0)"
-73,"
+75,"
 Merge branch 'master' of https://github.com/nestjs/swagger (6fe2278)
 fix(plugin): fix optional enums when strict mode enabled (42eb5d3)
 Merge pull request #566 from nestjs/renovate/release-it-12.x (4db5086)
@@ -3362,14 +3584,14 @@ chore(deps): update dependency release-it to v12.5.0 (8fdd5e3)
 fix(plugin): fix optional enums when strict mode enabled (42eb5d3)
 Merge pull request #566 from nestjs/renovate/release-it-12.x (4db5086)
 chore(deps): update dependency release-it to v12.5.0 (8fdd5e3)"
-74,"
+76,"
 chore(): resolve merge conflicts (f236505)
 fix(plugin): fix optional props in strict mode (c271871)
 Update README.md (79a8e71)
 ","chore(): resolve merge conflicts (f236505)
 fix(plugin): fix optional props in strict mode (c271871)
 Update README.md (79a8e71)"
-75,"
+77,"
 Merge branch 'master' of https://github.com/nestjs/swagger (c04537f)
 fix(plugin): fallback on errors (return unmodified node) (e9fc22c)
 chore(deps): update nest monorepo to v6.11.7 (a4580d3)
@@ -3380,7 +3602,7 @@ fix(plugin): fallback on errors (return unmodified node) (e9fc22c)
 chore(deps): update nest monorepo to v6.11.7 (a4580d3)
 chore(deps): update dependency husky to v4.2.3 (3a0369c)
 chore(deps): update dependency husky to v4.2.2 (aa5f7d5)"
-76,"
+78,"
 Merge branch 'master' of https://github.com/nestjs/swagger (d6fada1)
 fix(plugin): fix union and intersection (ce337c8)
 Merge pull request #555 from boenrobot/win-tests (3eb841f)
@@ -3393,17 +3615,17 @@ Merge pull request #555 from boenrobot/win-tests (3eb841f)
 test(platform): Explicitly added a new line type to tests (35e24ec)
 chore(deps): update dependency @types/jest to v25.1.2 (8321688)
 chore(deps): update nest monorepo to v6.11.6 (846cf1c)"
-77,"
+79,"
 fix(): fix index remove (node_modules) in plugin (948a679)
 ",fix(): fix index remove (node_modules) in plugin (948a679)
-78,"
+80,"
 Merge branch 'master' of https://github.com/nestjs/swagger (d8a5599)
 fix(): remove node modules from path (plugin) (60fb550)
 chore(deps): update dependency ts-jest to v25.2.0 (030802a)
 ","Merge branch 'master' of link (d8a5599)
 fix(): remove node modules from path (plugin) (60fb550)
 chore(deps): update dependency ts-jest to v25.2.0 (030802a)"
-79,"
+81,"
 Merge branch 'master' of https://github.com/nestjs/swagger (2f0a210)
 fix(plugin): add imports when downleveled (transpilation) (acf5179)
 Merge pull request #541 from nestjs/renovate/nest-monorepo (0fda71e)
@@ -3428,7 +3650,7 @@ chore(deps): update dependency @types/jest to v25.1.1 (b268a17)
 chore(deps): update dependency lint-staged to v10.0.4 (eb20c80)
 Merge pull request #528 from nestjs/renovate/nest-monorepo (c16951d)
 chore(deps): update nest monorepo to v6.11.4 (9c30a2d)"
-80,"
+82,"
 Merge branch 'master' of https://github.com/nestjs/swagger (cd1925b)
 fix(): fix inheritance issue (missing properties with plugin) (884bd42)
 fix(): fix as expression issue (plugin) (3f865ec)
@@ -3439,7 +3661,7 @@ fix(): fix inheritance issue (missing properties with plugin) (884bd42)
 fix(): fix as expression issue (plugin) (3f865ec)
 fix(): fix aliases issue (plugin) (cc93dfa)
 chore(deps): update nest monorepo to v6.11.3 (7155d7c)"
-81,"
+83,"
 Merge pull request #523 from loban/fix-522-api-security-decorator-is-broken-on-controller-method (8f4ec4f)
 Merge pull request #525 from nestjs/renovate/nest-monorepo (929623e)
 chore(deps): update nest monorepo to v6.11.2 (438708b)
@@ -3452,4 +3674,4 @@ chore(deps): update nest monorepo to v6.11.2 (438708b)
 fix(): TypeError when using @ApiSecurity on controller method (1984800)
 chore(deps): update dependency @types/jest to v25 (bbc13d3)
 chore(deps): update dependency lint-staged to v10.0.3 (ccd839f)"
-82,,
+84,,

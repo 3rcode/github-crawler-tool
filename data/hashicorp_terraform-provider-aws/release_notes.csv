@@ -1,5 +1,553 @@
-Index,Release Note,Release Note With Abstraction
-1,"NOTES:
+Index,Release Note,Release Note Abstract
+1,"FEATURES:
+
+New Data Source: aws_organizations_policies (#31545)
+New Data Source: aws_organizations_policies_for_target (#31682)
+New Resource: aws_chimesdkvoice_sip_media_application (#31937)
+New Resource: aws_opensearchserverless_collection (#31091)
+New Resource: aws_opensearchserverless_security_config (#28776)
+New Resource: aws_opensearchserverless_vpc_endpoint (#28651)
+
+ENHANCEMENTS:
+
+resource/aws_elb: Add configurable Create and Update timeouts (#31976)
+resource/aws_glue_data_quality_ruleset: Add catalog_id argument to target_table block (#31926)
+
+BUG FIXES:
+
+provider: Fix index out of range [0] with length 0 panic (#32004)
+resource/aws_elb: Recreate the resource if subnets is updated to an empty list (#31976)
+resource/aws_lambda_provisioned_concurrency_config: The function_name argument now properly handles ARN values (#31933)
+resource/aws_quicksight_data_set: Allow physical table map to be optional (#31863)
+resource/aws_ssm_default_patch_baseline: Fix *conns.AWSClient is not ssm.ssmClient: missing method SSMClient panic (#31928)
+","FEATURES:
+New Data Source: aws_organizations_policies (#31545)
+New Data Source: aws_organizations_policies_for_target (#31682)
+New Resource: aws_chimesdkvoice_sip_media_application (#31937)
+New Resource: aws_opensearchserverless_collection (#31091)
+New Resource: aws_opensearchserverless_security_config (#28776)
+New Resource: aws_opensearchserverless_vpc_endpoint (#28651)
+ENHANCEMENTS:
+resource/aws_elb: Add configurable Create and Update timeouts (#31976)
+resource/aws_glue_data_quality_ruleset: Add catalog_id argument to target_table block (#31926)
+BUG FIXES:
+provider: Fix index out of range [0] with length 0 panic (#32004)
+resource/aws_elb: Recreate the resource if subnets is updated to an empty list (#31976)
+resource/aws_lambda_provisioned_concurrency_config: The function_name argument now properly handles ARN values (#31933)
+resource/aws_quicksight_data_set: Allow physical table map to be optional (#31863)
+resource/aws_ssm_default_patch_baseline: Fix *conns.AWSClient is not ssm.ssmClient: missing method SSMClient panic (#31928)"
+2,"NOTES:
+
+resource/aws_instance: The metadata_options.http_endpoint argument now correctly defaults to enabled. (#24774)
+resource/aws_lambda_function: The replace_security_groups_on_destroy and replacement_security_group_ids attributes are being deprecated as AWS no longer supports this operation. These attributes now have no effect, and will be removed in a future major version. (#31904)
+
+FEATURES:
+
+New Data Source: aws_quicksight_theme (#31900)
+New Resource: aws_opensearchserverless_access_policy (#28518)
+New Resource: aws_opensearchserverless_security_policy (#28470)
+New Resource: aws_quicksight_theme (#31900)
+
+ENHANCEMENTS:
+
+data-source/aws_redshift_cluster: Add cluster_namespace_arn attribute (#31884)
+resource/aws_redshift_cluster: Add cluster_namespace_arn attribute (#31884)
+resource/aws_vpc_endpoint: Add private_dns_only_for_inbound_resolver_endpoint attribute to the dns_options configuration block (#31873)
+
+BUG FIXES:
+
+resource/aws_ecs_task_definition: Fix to prevent persistent diff when efs_volume_configuration has both root_volume and authorization_config set. (#26880)
+resource/aws_instance: Fix default for metadata_options.http_endpoint argument. (#24774)
+resource/aws_keyspaces_keyspace: Correct plan time validation for name (#31352)
+resource/aws_keyspaces_table: Correct plan time validation for keyspace_name, table_name and column names (#31352)
+resource/aws_quicksight_analysis: Fix assignment of KPI visual field well target values (#31901)
+resource/aws_redshift_cluster: Allow availability_zone_relocation_enabled to be true when publicly_accessible is true (#31886)
+resource/aws_vpc: Fix reading EC2 VPC (vpc-abcd1234) Attribute (enableDnsSupport): couldn't find resource errors when reading new resource (#31877)
+","NOTES:
+resource/aws_instance: The metadata_options.http_endpoint argument now correctly defaults to enabled. (#24774)
+resource/aws_lambda_function: The replace_security_groups_on_destroy and replacement_security_group_ids attributes are being deprecated as AWS no longer supports this operation. These attributes now have no effect, and will be removed in a future major version. (#31904)
+FEATURES:
+New Data Source: aws_quicksight_theme (#31900)
+New Resource: aws_opensearchserverless_access_policy (#28518)
+New Resource: aws_opensearchserverless_security_policy (#28470)
+New Resource: aws_quicksight_theme (#31900)
+ENHANCEMENTS:
+data-source/aws_redshift_cluster: Add cluster_namespace_arn attribute (#31884)
+resource/aws_redshift_cluster: Add cluster_namespace_arn attribute (#31884)
+resource/aws_vpc_endpoint: Add private_dns_only_for_inbound_resolver_endpoint attribute to the dns_options configuration block (#31873)
+BUG FIXES:
+resource/aws_ecs_task_definition: Fix to prevent persistent diff when efs_volume_configuration has both root_volume and authorization_config set. (#26880)
+resource/aws_instance: Fix default for metadata_options.http_endpoint argument. (#24774)
+resource/aws_keyspaces_keyspace: Correct plan time validation for name (#31352)
+resource/aws_keyspaces_table: Correct plan time validation for keyspace_name, table_name and column names (#31352)
+resource/aws_quicksight_analysis: Fix assignment of KPI visual field well target values (#31901)
+resource/aws_redshift_cluster: Allow availability_zone_relocation_enabled to be true when publicly_accessible is true (#31886)
+resource/aws_vpc: Fix reading EC2 VPC (vpc-abcd1234) Attribute (enableDnsSupport): couldn't find resource errors when reading new resource (#31877)"
+3,"NOTES:
+
+resource/aws_mwaa_environment: Upgrading your environment to a new major version of Apache Airflow forces replacement of the resource (#31833)
+
+FEATURES:
+
+New Data Source: aws_budgets_budget (#31691)
+New Data Source: aws_ecr_pull_through_cache_rule (#31696)
+New Data Source: aws_guardduty_finding_ids (#31711)
+New Data Source: aws_iam_principal_policy_simulation (#25569)
+New Resource: aws_chimesdkvoice_global_settings (#31365)
+New Resource: aws_finspace_kx_cluster (#31806)
+New Resource: aws_finspace_kx_database (#31803)
+New Resource: aws_finspace_kx_environment (#31802)
+New Resource: aws_finspace_kx_user (#31804)
+
+ENHANCEMENTS:
+
+data/aws_ec2_transit_gateway_connect_peer: Add bgp_peer_address and bgp_transit_gateway_addresses attributes (#31752)
+provider: Adds retry_mode parameter (#31745)
+resource/aws_chime_voice_connector: Add tagging support (#31746)
+resource/aws_ec2_transit_gateway_connect_peer: Add bgp_peer_address and bgp_transit_gateway_addresses attributes (#31752)
+resource/aws_ec2_transit_gateway_route_table_association: Add replace_existing_association argument (#31452)
+resource/aws_fis_experiment_template: Add support for Volumes to actions.*.target (#31499)
+resource/aws_instance: Add instance_market_options configuration block and instance_lifecycle and spot_instance_request_id attributes (#31495)
+resource/aws_lambda_function: Add support for ruby3.2 runtime value (#31842)
+resource/aws_lambda_layer_version: Add support for ruby3.2 compatible_runtimes value (#31842)
+resource/aws_mwaa_environment: Consider CREATING_SNAPSHOT a valid pending state for resource update (#31833)
+resource/aws_networkfirewall_firewall_policy: Add stream_exception_policy option to firewall_policy.stateful_engine_options (#31541)
+resource/aws_redshiftserverless_workgroup: Additional supported values for config_parameter.parameter_key (#31747)
+resource/aws_sagemaker_model: Add container.model_package_name and primary_container.model_package_name arguments (#31755)
+
+BUG FIXES:
+
+data-source/aws_redshift_cluster: Fix crash reading clusters in modifying state (#31772)
+provider/default_tags: Fix perpetual diff when identical tags are moved from default_tags to resource tags, and vice versa (#31826)
+resource/aws_autoscaling_group: Ignore any Failed scaling activities due to IAM eventual consistency (#31282)
+resource/aws_dx_connection: Convert vlan_id from TypeString to TypeInt in Terraform state for existing resources. This fixes a regression introduced in v5.1.0 causing a number is required errors (#31735)
+resource/aws_globalaccelerator_endpoint_group: Fix bug updating endpoint_configuration.weight to 0 (#31767)
+resource/aws_medialive_channel: Fix spelling in hls_cdn_settings expander. (#31844)
+resource/aws_redshiftserverless_namespace: Fix perpetual iam_roles diffs when the namespace contains a workgroup (#31749)
+resource/aws_redshiftserverless_workgroup: Change config_parameter from TypeList to TypeSet as order is not significant (#31747)
+resource/aws_redshiftserverless_workgroup: Fix ValidationException: Can't update multiple configurations at the same time errors (#31747)
+resource/aws_vpc_endpoint: Fix tagging error preventing use in ISO partitions (#31801)
+","NOTES:
+resource/aws_mwaa_environment: Upgrading your environment to a new major version of Apache Airflow forces replacement of the resource (#31833)
+FEATURES:
+New Data Source: aws_budgets_budget (#31691)
+New Data Source: aws_ecr_pull_through_cache_rule (#31696)
+New Data Source: aws_guardduty_finding_ids (#31711)
+New Data Source: aws_iam_principal_policy_simulation (#25569)
+New Resource: aws_chimesdkvoice_global_settings (#31365)
+New Resource: aws_finspace_kx_cluster (#31806)
+New Resource: aws_finspace_kx_database (#31803)
+New Resource: aws_finspace_kx_environment (#31802)
+New Resource: aws_finspace_kx_user (#31804)
+ENHANCEMENTS:
+data/aws_ec2_transit_gateway_connect_peer: Add bgp_peer_address and bgp_transit_gateway_addresses attributes (#31752)
+provider: Adds retry_mode parameter (#31745)
+resource/aws_chime_voice_connector: Add tagging support (#31746)
+resource/aws_ec2_transit_gateway_connect_peer: Add bgp_peer_address and bgp_transit_gateway_addresses attributes (#31752)
+resource/aws_ec2_transit_gateway_route_table_association: Add replace_existing_association argument (#31452)
+resource/aws_fis_experiment_template: Add support for Volumes to actions.*.target (#31499)
+resource/aws_instance: Add instance_market_options configuration block and instance_lifecycle and spot_instance_request_id attributes (#31495)
+resource/aws_lambda_function: Add support for ruby3.2 runtime value (#31842)
+resource/aws_lambda_layer_version: Add support for ruby3.2 compatible_runtimes value (#31842)
+resource/aws_mwaa_environment: Consider CREATING_SNAPSHOT a valid pending state for resource update (#31833)
+resource/aws_networkfirewall_firewall_policy: Add stream_exception_policy option to firewall_policy.stateful_engine_options (#31541)
+resource/aws_redshiftserverless_workgroup: Additional supported values for config_parameter.parameter_key (#31747)
+resource/aws_sagemaker_model: Add container.model_package_name and primary_container.model_package_name arguments (#31755)
+BUG FIXES:
+data-source/aws_redshift_cluster: Fix crash reading clusters in modifying state (#31772)
+provider/default_tags: Fix perpetual diff when identical tags are moved from default_tags to resource tags, and vice versa (#31826)
+resource/aws_autoscaling_group: Ignore any Failed scaling activities due to IAM eventual consistency (#31282)
+resource/aws_dx_connection: Convert vlan_id from TypeString to TypeInt in Terraform state for existing resources. This fixes a regression introduced in v5.1.0 causing a number is required errors (#31735)
+resource/aws_globalaccelerator_endpoint_group: Fix bug updating endpoint_configuration.weight to 0 (#31767)
+resource/aws_medialive_channel: Fix spelling in hls_cdn_settings expander. (#31844)
+resource/aws_redshiftserverless_namespace: Fix perpetual iam_roles diffs when the namespace contains a workgroup (#31749)
+resource/aws_redshiftserverless_workgroup: Change config_parameter from TypeList to TypeSet as order is not significant (#31747)
+resource/aws_redshiftserverless_workgroup: Fix ValidationException: Can't update multiple configurations at the same time errors (#31747)
+resource/aws_vpc_endpoint: Fix tagging error preventing use in ISO partitions (#31801)"
+4,"BREAKING CHANGES:
+
+resource/aws_iam_role: The role_last_used attribute has been removed. Use the aws_iam_role data source instead. (#31656)
+
+NOTES:
+
+resource/aws_autoscaling_group: The load_balancers and target_group_arns attributes have been changed to Computed. This means that omitting this argument is interpreted as ignoring any existing load balancer or target group attachments. To remove all load balancer or target group attachments an empty list should be specified. (#31527)
+resource/aws_iam_role: The role_last_used attribute has been removed. Use the aws_iam_role data source instead. See the community feedback provided in the linked issue for additional justification on this change. As the attribute is read-only, unlikely to be used as an input to another resource, and available in the corresponding data source, a breaking change in a minor version was deemed preferable to a long deprecation/removal cycle in this circumstance. (#31656)
+resource/aws_redshift_cluster: Ignores the parameter aqua_configuration_status, since the AWS API ignores it. Now always returns auto. (#31612)
+
+FEATURES:
+
+New Data Source: aws_vpclattice_resource_policy (#31372)
+New Resource: aws_autoscaling_traffic_source_attachment (#31527)
+New Resource: aws_emrcontainers_job_template (#31399)
+New Resource: aws_glue_data_quality_ruleset (#31604)
+New Resource: aws_quicksight_analysis (#31542)
+New Resource: aws_quicksight_dashboard (#31448)
+New Resource: aws_resourcegroups_resource (#31430)
+
+ENHANCEMENTS:
+
+data-source/aws_autoscaling_group: Add traffic_source attribute (#31527)
+data-source/aws_opensearch_domain: Add off_peak_window_options attribute (#35970)
+provider: Increases size of HTTP request bodies in logs to 1 KB (#31718)
+resource/aws_appsync_graphql_api: Add visibility argument (#31369)
+resource/aws_appsync_graphql_api: Add plan time validation for log_config.cloudwatch_logs_role_arn (#31369)
+resource/aws_autoscaling_group: Add traffic_source configuration block (#31527)
+resource/aws_cloudformation_stack_set: Add managed_execution argument (#25210)
+resource/aws_fsx_ontap_volume: Add skip_final_backup argument (#31544)
+resource/aws_fsx_ontap_volume: Remove default value for security_style argument and mark as Computed (#31544)
+resource/aws_fsx_ontap_volume: Update ontap_volume_type attribute to be configurable (#31544)
+resource/aws_fsx_ontap_volume: junction_path is Optional (#31544)
+resource/aws_fsx_ontap_volume: storage_efficiency_enabled is Optional (#31544)
+resource/aws_grafana_workspace: Increase default Create and Update timeouts to 30 minutes (#31422)
+resource/aws_lambda_invocation: Add lifecycle_scope CRUD to invoke on each resource state transition (#29367)
+resource/aws_lambda_layer_version_permission: Add skip_destroy attribute (#29571)
+resource/aws_lambda_provisioned_concurrency_configuration: Add skip_destroy argument (#31646)
+resource/aws_opensearch_domain: Add off_peak_window_options configuration block (#35970)
+resource/aws_sagemaker_endpoint_configuration: Add  and shadow_production_variants.serverless_config.provisioned_concurrency arguments (#31398)
+resource/aws_transfer_server: Add support for TransferSecurityPolicy-2023-05 security_policy_name value (#31536)
+
+BUG FIXES:
+
+data-source/aws_dx_connection: Fix the vlan_id being returned as null (#31480)
+provider/tags: Fix crash when some tags are null and others are computed (#31687)
+provider: Limits size of HTTP response bodies in logs to 4 KB (#31718)
+resource/aws_autoscaling_group: Fix The AutoRollback parameter cannot be set to true when the DesiredConfiguration parameter is empty errors when refreshing instances (#31715)
+resource/aws_autoscaling_group: Now ignores previous failed scaling activities (#31551)
+resource/aws_cloudfront_distribution: Remove the upper limit on origin_keepalive_timeout (#31608)
+resource/aws_connect_instance: Fix crash when reading instances with CREATION_FAILED status (#31689)
+resource/aws_connect_security_profile: Set correct tags in state (#31716)
+resource/aws_dx_connection: Fix the vlan_id being returned as null (#31480)
+resource/aws_ecs_service: Fix crash when just alarms is updated (#31683)
+resource/aws_fsx_ontap_volume: Change storage_virtual_machine_id to ForceNew (#31544)
+resource/aws_fsx_ontap_volume: Change volume_type to ForceNew (#31544)
+resource/aws_kendra_index: Persist user_group_resolution_mode value to state after creation (#31669)
+resource/aws_medialive_channel: Fix attribute spelling in hls_cdn_settings expand (#31647)
+resource/aws_quicksight_data_set: Fix join_instruction not applied when creating dataset (#31424)
+resource/aws_quicksight_data_set: Ignore failure to read refresh properties for non-SPICE datasets (#31488)
+resource/aws_rbin_rule: Fix crash when multiple resource_tags blocks are configured (#31393)
+resource/aws_rds_cluster: Correctly update db_cluster_instance_class (#31709)
+resource/aws_redshift_cluster: No longer errors on deletion when status is Maintenance (#31612)
+resource/aws_route53_vpc_association_authorization: Fix ConcurrentModification error (#31588)
+resource/aws_s3_bucket_replication_configuration: Replication configs sometimes need more than a second or two. This resolves a race condition and adds retry logic when reading them. (#30995)
+","BREAKING CHANGES:
+resource/aws_iam_role: The role_last_used attribute has been removed. Use the aws_iam_role data source instead. (#31656)
+NOTES:
+resource/aws_autoscaling_group: The load_balancers and target_group_arns attributes have been changed to Computed. This means that omitting this argument is interpreted as ignoring any existing load balancer or target group attachments. To remove all load balancer or target group attachments an empty list should be specified. (#31527)
+resource/aws_iam_role: The role_last_used attribute has been removed. Use the aws_iam_role data source instead. See the community feedback provided in the linked issue for additional justification on this change. As the attribute is read-only, unlikely to be used as an input to another resource, and available in the corresponding data source, a breaking change in a minor version was deemed preferable to a long deprecation/removal cycle in this circumstance. (#31656)
+resource/aws_redshift_cluster: Ignores the parameter aqua_configuration_status, since the AWS API ignores it. Now always returns auto. (#31612)
+FEATURES:
+New Data Source: aws_vpclattice_resource_policy (#31372)
+New Resource: aws_autoscaling_traffic_source_attachment (#31527)
+New Resource: aws_emrcontainers_job_template (#31399)
+New Resource: aws_glue_data_quality_ruleset (#31604)
+New Resource: aws_quicksight_analysis (#31542)
+New Resource: aws_quicksight_dashboard (#31448)
+New Resource: aws_resourcegroups_resource (#31430)
+ENHANCEMENTS:
+data-source/aws_autoscaling_group: Add traffic_source attribute (#31527)
+data-source/aws_opensearch_domain: Add off_peak_window_options attribute (#35970)
+provider: Increases size of HTTP request bodies in logs to 1 KB (#31718)
+resource/aws_appsync_graphql_api: Add visibility argument (#31369)
+resource/aws_appsync_graphql_api: Add plan time validation for log_config.cloudwatch_logs_role_arn (#31369)
+resource/aws_autoscaling_group: Add traffic_source configuration block (#31527)
+resource/aws_cloudformation_stack_set: Add managed_execution argument (#25210)
+resource/aws_fsx_ontap_volume: Add skip_final_backup argument (#31544)
+resource/aws_fsx_ontap_volume: Remove default value for security_style argument and mark as Computed (#31544)
+resource/aws_fsx_ontap_volume: Update ontap_volume_type attribute to be configurable (#31544)
+resource/aws_fsx_ontap_volume: junction_path is Optional (#31544)
+resource/aws_fsx_ontap_volume: storage_efficiency_enabled is Optional (#31544)
+resource/aws_grafana_workspace: Increase default Create and Update timeouts to 30 minutes (#31422)
+resource/aws_lambda_invocation: Add lifecycle_scope CRUD to invoke on each resource state transition (#29367)
+resource/aws_lambda_layer_version_permission: Add skip_destroy attribute (#29571)
+resource/aws_lambda_provisioned_concurrency_configuration: Add skip_destroy argument (#31646)
+resource/aws_opensearch_domain: Add off_peak_window_options configuration block (#35970)
+resource/aws_sagemaker_endpoint_configuration: Add  and shadow_production_variants.serverless_config.provisioned_concurrency arguments (#31398)
+resource/aws_transfer_server: Add support for TransferSecurityPolicy-2023-05 security_policy_name value (#31536)
+BUG FIXES:
+data-source/aws_dx_connection: Fix the vlan_id being returned as null (#31480)
+provider/tags: Fix crash when some tags are null and others are computed (#31687)
+provider: Limits size of HTTP response bodies in logs to 4 KB (#31718)
+resource/aws_autoscaling_group: Fix The AutoRollback parameter cannot be set to true when the DesiredConfiguration parameter is empty errors when refreshing instances (#31715)
+resource/aws_autoscaling_group: Now ignores previous failed scaling activities (#31551)
+resource/aws_cloudfront_distribution: Remove the upper limit on origin_keepalive_timeout (#31608)
+resource/aws_connect_instance: Fix crash when reading instances with CREATION_FAILED status (#31689)
+resource/aws_connect_security_profile: Set correct tags in state (#31716)
+resource/aws_dx_connection: Fix the vlan_id being returned as null (#31480)
+resource/aws_ecs_service: Fix crash when just alarms is updated (#31683)
+resource/aws_fsx_ontap_volume: Change storage_virtual_machine_id to ForceNew (#31544)
+resource/aws_fsx_ontap_volume: Change volume_type to ForceNew (#31544)
+resource/aws_kendra_index: Persist user_group_resolution_mode value to state after creation (#31669)
+resource/aws_medialive_channel: Fix attribute spelling in hls_cdn_settings expand (#31647)
+resource/aws_quicksight_data_set: Fix join_instruction not applied when creating dataset (#31424)
+resource/aws_quicksight_data_set: Ignore failure to read refresh properties for non-SPICE datasets (#31488)
+resource/aws_rbin_rule: Fix crash when multiple resource_tags blocks are configured (#31393)
+resource/aws_rds_cluster: Correctly update db_cluster_instance_class (#31709)
+resource/aws_redshift_cluster: No longer errors on deletion when status is Maintenance (#31612)
+resource/aws_route53_vpc_association_authorization: Fix ConcurrentModification error (#31588)
+resource/aws_s3_bucket_replication_configuration: Replication configs sometimes need more than a second or two. This resolves a race condition and adds retry logic when reading them. (#30995)"
+5,"BUG FIXES:
+
+provider/tags: Fix crash when tags are null (#31587)
+","BUG FIXES:
+provider/tags: Fix crash when tags are null (#31587)"
+6,"BREAKING CHANGES:
+
+data-source/aws_api_gateway_rest_api: minimum_compression_size is now a string type to allow values set via the body attribute to be properly computed. (#30969)
+data-source/aws_connect_hours_of_operation: The hours_of_operation_arn attribute has been removed (#31484)
+data-source/aws_db_instance: With the retirement of EC2-Classic the db_security_groups attribute has been removed (#30966)
+data-source/aws_elasticache_cluster: With the retirement of EC2-Classic the security_group_names attribute has been removed (#30966)
+data-source/aws_elasticache_replication_group: Remove number_cache_clusters, replication_group_description arguments -- use num_cache_clusters, and description, respectively, instead (#31008)
+data-source/aws_iam_policy_document: Don't add empty statement.sid values to json attribute value (#28539)
+data-source/aws_iam_policy_document: source_json and override_json have been removed -- use source_policy_documents and override_policy_documents, respectively, instead (#30829)
+data-source/aws_identitystore_group: The filter argument has been removed (#31312)
+data-source/aws_identitystore_user: The filter argument has been removed (#31312)
+data-source/aws_launch_configuration: With the retirement of EC2-Classic the vpc_classic_link_id and vpc_classic_link_security_groups attributes have been removed (#30966)
+data-source/aws_redshift_cluster: With the retirement of EC2-Classic the cluster_security_groups attribute has been removed (#30966)
+data-source/aws_secretsmanager_secret: The rotation_enabled, rotation_lambda_arn and rotation_rules attributes have been removed (#31487)
+data-source/aws_vpc_peering_connection: With the retirement of EC2-Classic the allow_classic_link_to_remote_vpc and allow_vpc_to_remote_classic_link attributes have been removed (#30966)
+provider: The assume_role.duration_seconds, assume_role_with_web_identity.duration_seconds, s3_force_path_style, shared_credentials_file and skip_get_ec2_platforms attributes have been removed (#31155)
+provider: The aws_subnet_ids data source has been removed (#31140)
+provider: With the retirement of EC2-Classic the aws_db_security_group resource has been removed (#30966)
+provider: With the retirement of EC2-Classic the aws_elasticache_security_group resource has been removed (#30966)
+provider: With the retirement of EC2-Classic the aws_redshift_security_group resource has been removed (#30966)
+provider: With the retirement of Macie Classic the aws_macie_member_account_association resource has been removed (#31058)
+provider: With the retirement of Macie Classic the aws_macie_s3_bucket_association resource has been removed (#31058)
+resource/aws_acmpca_certificate_authority: The status attribute has been removed (#31084)
+resource/aws_api_gateway_rest_api: minimum_compression_size is now a string type to allow values set via the body attribute to be properly computed. (#30969)
+resource/aws_autoscaling_attachment: alb_target_group_arn has been removed -- use lb_target_group_arn instead (#30828)
+resource/aws_autoscaling_group: Remove deprecated tags attribute (#30842)
+resource/aws_budgets_budget: The cost_filters attribute has been removed (#31395)
+resource/aws_ce_anomaly_subscription: The threshold attribute has been removed (#30374)
+resource/aws_cloudwatch_event_target: The ecs_target.propagate_tags attribute now has no default value (#25233)
+resource/aws_codebuild_project: The secondary_sources.auth and source.auth attributes have been removed (#31483)
+resource/aws_connect_hours_of_operation: The hours_of_operation_arn attribute has been removed (#31484)
+resource/aws_connect_queue: The quick_connect_ids_associated attribute has been removed (#31376)
+resource/aws_connect_routing_profile: The queue_configs_associated attribute has been removed (#31376)
+resource/aws_db_instance: Remove name - use db_name instead (#31232)
+resource/aws_db_instance: With the retirement of EC2-Classic the security_group_names attribute has been removed (#30966)
+resource/aws_db_instance: id is no longer the AWS database identifier - id is now the dbi-resource-id. Refer to identifier instead of id to use the database's identifier (#31232)
+resource/aws_default_vpc: With the retirement of EC2-Classic the enable_classiclink and enable_classiclink_dns_support attributes have been removed (#30966)
+resource/aws_dms_endpoint: s3_settings.ignore_headers_row has been removed (#30452)
+resource/aws_docdb_cluster: snapshot_identifier change now properly forces replacement (#29409)
+resource/aws_ec2_client_vpn_endpoint: The status attribute has been removed (#31223)
+resource/aws_ec2_client_vpn_network_association: The security_groups attribute has been removed (#31396)
+resource/aws_ec2_client_vpn_network_association: The status attribute has been removed (#31223)
+resource/aws_ecs_cluster: The capacity_providers and default_capacity_provider_strategy attributes have been removed (#31346)
+resource/aws_eip: With the retirement of EC2-Classic the standard domain is no longer supported (#30966)
+resource/aws_eip_association: With the retirement of EC2-Classic the standard domain is no longer supported (#30966)
+resource/aws_elasticache_cluster: With the retirement of EC2-Classic the security_group_names attribute has been removed (#30966)
+resource/aws_elasticache_replication_group: Remove availability_zones, number_cache_clusters, replication_group_description arguments -- use preferred_cache_cluster_azs, num_cache_clusters, and description, respectively, instead (#31008)
+resource/aws_elasticache_replication_group: Remove cluster_mode configuration block -- use top-level num_node_groups and replicas_per_node_group instead (#31008)
+resource/aws_kinesis_firehose_delivery_stream: Remove s3_configuration attribute from the root of the resource. s3_configuration is now a part of the following blocks: elasticsearch_configuration, opensearch_configuration, redshift_configuration, splunk_configuration, and http_endpoint_configuration (#31138)
+resource/aws_kinesis_firehose_delivery_stream: Remove s3 as an option for destination. Use extended_s3 instead (#31138)
+resource/aws_kinesis_firehose_delivery_stream: Rename extended_s3_configuration.0.s3_backup_configuration.0.buffer_size and extended_s3_configuration.0.s3_backup_configuration.0.buffer_interval to extended_s3_configuration.0.s3_backup_configuration.0.buffering_size and extended_s3_configuration.0.s3_backup_configuration.0.buffering_interval, respectively (#31141)
+resource/aws_kinesis_firehose_delivery_stream: Rename redshift_configuration.0.s3_backup_configuration.0.buffer_size and redshift_configuration.0.s3_backup_configuration.0.buffer_interval to redshift_configuration.0.s3_backup_configuration.0.buffering_size and redshift_configuration.0.s3_backup_configuration.0.buffering_interval, respectively (#31141)
+resource/aws_kinesis_firehose_delivery_stream: Rename s3_configuration.0.buffer_size and s3_configuration.0.buffer_internval to s3_configuration.0.buffering_size and s3_configuration.0.buffering_internval, respectively (#31141)
+resource/aws_launch_configuration: With the retirement of EC2-Classic the vpc_classic_link_id and vpc_classic_link_security_groups attributes have been removed (#30966)
+resource/aws_lightsail_instance: The ipv6_address attribute has been removed (#31489)
+resource/aws_medialive_multiplex_program: The statemux_settings attribute has been removed. Use statmux_settings argument instead (#31034)
+resource/aws_msk_cluster: The broker_node_group_info.ebs_volume_size attribute has been removed (#31324)
+resource/aws_neptune_cluster: snapshot_identifier change now properly forces replacement (#29409)
+resource/aws_networkmanager_core_network: Removed policy_document argument -- use aws_networkmanager_core_network_policy_attachment resource instead (#30875)
+resource/aws_rds_cluster: The engine argument is now required and has no default (#31112)
+resource/aws_rds_cluster: snapshot_identifier change now properly forces replacement (#29409)
+resource/aws_rds_cluster_instance: The engine argument is now required and has no default (#31112)
+resource/aws_redshift_cluster: With the retirement of EC2-Classic the cluster_security_groups attribute has been removed (#30966)
+resource/aws_route: instance_id can no longer be set in configurations. Use network_interface_id instead, for example, setting network_interface_id to aws_instance.test.primary_network_interface_id. (#30804)
+resource/aws_route_table: route.*.instance_id can no longer be set in configurations. Use route.*.network_interface_id instead, for example, setting network_interface_id to aws_instance.test.primary_network_interface_id. (#30804)
+resource/aws_secretsmanager_secret: The rotation_enabled, rotation_lambda_arn and rotation_rules attributes have been removed (#31487)
+resource/aws_security_group: With the retirement of EC2-Classic non-VPC security groups are no longer supported (#30966)
+resource/aws_security_group_rule: With the retirement of EC2-Classic non-VPC security groups are no longer supported (#30966)
+resource/aws_servicecatalog_product: Changes to any provisioning_artifact_parameters arguments now properly trigger a replacement. This fixes incorrect behavior, but may technically be breaking for configurations expecting non-functional in-place updates. (#31061)
+resource/aws_vpc: With the retirement of EC2-Classic the enable_classiclink and enable_classiclink_dns_support attributes have been removed (#30966)
+resource/aws_vpc_peering_connection: With the retirement of EC2-Classic the allow_classic_link_to_remote_vpc and allow_vpc_to_remote_classic_link attributes have been removed (#30966)
+resource/aws_vpc_peering_connection_accepter: With the retirement of EC2-Classic the allow_classic_link_to_remote_vpc and allow_vpc_to_remote_classic_link attributes have been removed (#30966)
+resource/aws_vpc_peering_connection_options: With the retirement of EC2-Classic the allow_classic_link_to_remote_vpc and allow_vpc_to_remote_classic_link attributes have been removed (#30966)
+resource/aws_wafv2_web_acl: The statement.managed_rule_group_statement.excluded_rule and statement.rule_group_reference_statement.excluded_rule attributes have been removed (#31374)
+resource/aws_wafv2_web_acl_logging_configuration: The redacted_fields.all_query_arguments, redacted_fields.body and redacted_fields.single_query_argument attributes have been removed (#31486)
+
+NOTES:
+
+data-source/aws_elasticache_replication_group: Update configurations to use description instead of the replication_group_description argument (#31008)
+data-source/aws_elasticache_replication_group: Update configurations to use num_cache_clusters instead of the number_cache_clusters argument (#31008)
+data-source/aws_opensearch_domain: The kibana_endpoint attribute has been deprecated. All configurations using kibana_endpoint should be updated to use the dashboard_endpoint attribute instead (#31490)
+data-source/aws_quicksight_data_set: The tags_all attribute has been deprecated and will be removed in a future version (#31162)
+data-source/aws_redshift_service_account: The aws_redshift_service_account data source has been deprecated and will be removed in a future version. AWS documentation states that a service principal name should be used instead of an AWS account ID in any relevant IAM policy (#31006)
+data-source/aws_service_discovery_service: The tags_all attribute has been deprecated and will be removed in a future version (#31162)
+resource/aws_api_gateway_rest_api: Update configurations with minimum_compression_size set to pass the value as a string. Valid values remain the same. (#30969)
+resource/aws_autoscaling_attachment: Update configurations to use lb_target_group_arn instead of alb_target_group_arn which has been removed (#30828)
+resource/aws_db_event_subscription: Configurations that define source_ids using the id attribute of aws_db_instance must be updated to use identifier instead - for example, source_ids = [aws_db_instance.example.id] must be updated to source_ids = [aws_db_instance.example.identifier] (#31232)
+resource/aws_db_instance: Configurations that define replicate_source_db using the id attribute of aws_db_instance must be updated to use identifier instead - for example, replicate_source_db = aws_db_instance.example.id must be updated to replicate_source_db = aws_db_instance.example.identifier (#31232)
+resource/aws_db_instance: The change of what id is, namely, a DBI Resource ID now versus DB Identifier previously, has far-reaching consequences. Configurations that refer to, for example, aws_db_instance.example.id will now have errors and must be changed to use identifier instead, for example, aws_db_instance.example.identifier (#31232)
+resource/aws_db_instance_role_association: Configurations that define db_instance_identifier using the id attribute of aws_db_instance must be updated to use identifier instead - for example, db_instance_identifier = aws_db_instance.example.id must be updated to db_instance_identifier = aws_db_instance.example.identifier (#31232)
+resource/aws_db_proxy_target: Configurations that define db_instance_identifier using the id attribute of aws_db_instance must be updated to use identifier instead - for example, db_instance_identifier = aws_db_instance.example.id must be updated to db_instance_identifier = aws_db_instance.example.identifier (#31232)
+resource/aws_db_snapshot: Configurations that define db_instance_identifier using the id attribute of aws_db_instance must be updated to use identifier instead - for example, db_instance_identifier = aws_db_instance.example.id must be updated to db_instance_identifier = aws_db_instance.example.identifier (#31232)
+resource/aws_docdb_cluster: Changes to the snapshot_identifier attribute will now trigger a replacement, rather than an in-place update. This corrects the previous behavior which resulted in a successful apply, but did not actually restore the cluster from the designated snapshot. (#29409)
+resource/aws_dx_gateway_association: The vpn_gateway_id attribute has been deprecated. All configurations using vpn_gateway_id should be updated to use the associated_gateway_id attribute instead (#31384)
+resource/aws_elasticache_replication_group: Update configurations to use description instead of the replication_group_description argument (#31008)
+resource/aws_elasticache_replication_group: Update configurations to use num_cache_clusters instead of the number_cache_clusters argument (#31008)
+resource/aws_elasticache_replication_group: Update configurations to use preferred_cache_cluster_azs instead of the availability_zones argument (#31008)
+resource/aws_elasticache_replication_group: Update configurations to use top-level num_node_groups and replicas_per_node_group instead of cluster_mode.0.num_node_groups and cluster_mode.0.replicas_per_node_group, respectively (#31008)
+resource/aws_flow_log: The log_group_name attribute has been deprecated. All configurations using log_group_name should be updated to use the log_destination attribute instead (#31382)
+resource/aws_guardduty_organization_configuration: The auto_enable argument has been deprecated. Use the auto_enable_organization_members argument instead. (#30736)
+resource/aws_neptune_cluster: Changes to the snapshot_identifier attribute will now trigger a replacement, rather than an in-place update. This corrects the previous behavior which resulted in a successful apply, but did not actually restore the cluster from the designated snapshot. (#29409)
+resource/aws_networkmanager_core_network: Update configurations to use the aws_networkmanager_core_network_policy_attachment resource instead of the policy_document argument (#30875)
+resource/aws_opensearch_domain: The engine_version attribute no longer has a default value. When omitted, the underlying AWS API will use the latest OpenSearch engine version. (#31568)
+resource/aws_opensearch_domain: The kibana_endpoint attribute has been deprecated. All configurations using kibana_endpoint should be updated to use the dashboard_endpoint attribute instead (#31490)
+resource/aws_rds_cluster: Changes to the snapshot_identifier attribute will now trigger a replacement, rather than an in-place update. This corrects the previous behavior which resulted in a successful apply, but did not actually restore the cluster from the designated snapshot. (#29409)
+resource/aws_rds_cluster: Configurations not including the engine argument must be updated to include engine as it is now required. Previously, not including engine was equivalent to engine = ""aurora"" and created a MySQL-5.6-compatible cluster (#31112)
+resource/aws_rds_cluster_instance: Configurations not including the engine argument must be updated to include engine as it is now required. Previously, not including engine was equivalent to engine = ""aurora"" and created a MySQL-5.6-compatible cluster instance (#31112)
+resource/aws_route: Since instance_id can no longer be set in configurations, use network_interface_id instead. For example, set network_interface_id to aws_instance.test.primary_network_interface_id. (#30804)
+resource/aws_route_table: Since route.*.instance_id can no longer be set in configurations, use route.*.network_interface_id instead. For example, set network_interface_id to aws_instance.test.primary_network_interface_id. (#30804)
+resource/aws_ssm_association: The instance_id attribute has been deprecated. All configurations using instance_id should be updated to use the targets attribute instead (#31380)
+
+ENHANCEMENTS:
+
+provider: Allow computed tags on resources (#30793)
+provider: Allow default_tags and resource tags to include zero values """" (#30793)
+provider: Duplicate default_tags can now be included and will be overwritten by resource tags (#30793)
+resource/aws_db_instance: Updates to identifier and identifier_prefix will no longer cause the database instance to be destroyed and recreated (#31232)
+resource/aws_eip: Deprecate vpc attribute. Use domain instead (#31567)
+resource/aws_guardduty_organization_configuration: Add auto_enable_organization_members attribute (#30736)
+resource/aws_kinesis_firehose_delivery_stream: Add s3_configuration to elasticsearch_configuration, opensearch_configuration, redshift_configuration, splunk_configuration, and http_endpoint_configuration (#31138)
+resource/aws_opensearch_domain: Removed engine_version default value (#31568)
+resource/aws_wafv2_web_acl: Support rule_action_override on rule_group_reference_statement (#31374)
+
+BUG FIXES:
+
+resource/aws_ecs_capacity_provider: Allow an instance_warmup_period of 0 in the auto_scaling_group_provider.managed_scaling configuration block (#24005)
+resource/aws_launch_template: Remove default values in metadata_options to allow default condition (#30545)
+resource/aws_s3_bucket: Fix bucket_regional_domain_name not including region for buckets in us-east-1 (#25724)
+resource/aws_s3_object: Remove acl default in order to work with S3 buckets that have ACL disabled (#27197)
+resource/aws_s3_object_copy: Remove acl default in order to work with S3 buckets that have ACL disabled (#27197)
+resource/aws_servicecatalog_product: Changes to provisioning_artifact_parameters arguments now properly trigger a replacement (#31061)
+resource/aws_vpc_peering_connection: Fix crash in vpcPeeringConnectionOptionsEqual (#30966)
+","BREAKING CHANGES:
+data-source/aws_api_gateway_rest_api: minimum_compression_size is now a string type to allow values set via the body attribute to be properly computed. (#30969)
+data-source/aws_connect_hours_of_operation: The hours_of_operation_arn attribute has been removed (#31484)
+data-source/aws_db_instance: With the retirement of EC2-Classic the db_security_groups attribute has been removed (#30966)
+data-source/aws_elasticache_cluster: With the retirement of EC2-Classic the security_group_names attribute has been removed (#30966)
+data-source/aws_elasticache_replication_group: Remove number_cache_clusters, replication_group_description arguments -- use num_cache_clusters, and description, respectively, instead (#31008)
+data-source/aws_iam_policy_document: Don't add empty statement.sid values to json attribute value (#28539)
+data-source/aws_iam_policy_document: source_json and override_json have been removed -- use source_policy_documents and override_policy_documents, respectively, instead (#30829)
+data-source/aws_identitystore_group: The filter argument has been removed (#31312)
+data-source/aws_identitystore_user: The filter argument has been removed (#31312)
+data-source/aws_launch_configuration: With the retirement of EC2-Classic the vpc_classic_link_id and vpc_classic_link_security_groups attributes have been removed (#30966)
+data-source/aws_redshift_cluster: With the retirement of EC2-Classic the cluster_security_groups attribute has been removed (#30966)
+data-source/aws_secretsmanager_secret: The rotation_enabled, rotation_lambda_arn and rotation_rules attributes have been removed (#31487)
+data-source/aws_vpc_peering_connection: With the retirement of EC2-Classic the allow_classic_link_to_remote_vpc and allow_vpc_to_remote_classic_link attributes have been removed (#30966)
+provider: The assume_role.duration_seconds, assume_role_with_web_identity.duration_seconds, s3_force_path_style, shared_credentials_file and skip_get_ec2_platforms attributes have been removed (#31155)
+provider: The aws_subnet_ids data source has been removed (#31140)
+provider: With the retirement of EC2-Classic the aws_db_security_group resource has been removed (#30966)
+provider: With the retirement of EC2-Classic the aws_elasticache_security_group resource has been removed (#30966)
+provider: With the retirement of EC2-Classic the aws_redshift_security_group resource has been removed (#30966)
+provider: With the retirement of Macie Classic the aws_macie_member_account_association resource has been removed (#31058)
+provider: With the retirement of Macie Classic the aws_macie_s3_bucket_association resource has been removed (#31058)
+resource/aws_acmpca_certificate_authority: The status attribute has been removed (#31084)
+resource/aws_api_gateway_rest_api: minimum_compression_size is now a string type to allow values set via the body attribute to be properly computed. (#30969)
+resource/aws_autoscaling_attachment: alb_target_group_arn has been removed -- use lb_target_group_arn instead (#30828)
+resource/aws_autoscaling_group: Remove deprecated tags attribute (#30842)
+resource/aws_budgets_budget: The cost_filters attribute has been removed (#31395)
+resource/aws_ce_anomaly_subscription: The threshold attribute has been removed (#30374)
+resource/aws_cloudwatch_event_target: The ecs_target.propagate_tags attribute now has no default value (#25233)
+resource/aws_codebuild_project: The secondary_sources.auth and source.auth attributes have been removed (#31483)
+resource/aws_connect_hours_of_operation: The hours_of_operation_arn attribute has been removed (#31484)
+resource/aws_connect_queue: The quick_connect_ids_associated attribute has been removed (#31376)
+resource/aws_connect_routing_profile: The queue_configs_associated attribute has been removed (#31376)
+resource/aws_db_instance: Remove name - use db_name instead (#31232)
+resource/aws_db_instance: With the retirement of EC2-Classic the security_group_names attribute has been removed (#30966)
+resource/aws_db_instance: id is no longer the AWS database identifier - id is now the dbi-resource-id. Refer to identifier instead of id to use the database's identifier (#31232)
+resource/aws_default_vpc: With the retirement of EC2-Classic the enable_classiclink and enable_classiclink_dns_support attributes have been removed (#30966)
+resource/aws_dms_endpoint: s3_settings.ignore_headers_row has been removed (#30452)
+resource/aws_docdb_cluster: snapshot_identifier change now properly forces replacement (#29409)
+resource/aws_ec2_client_vpn_endpoint: The status attribute has been removed (#31223)
+resource/aws_ec2_client_vpn_network_association: The security_groups attribute has been removed (#31396)
+resource/aws_ec2_client_vpn_network_association: The status attribute has been removed (#31223)
+resource/aws_ecs_cluster: The capacity_providers and default_capacity_provider_strategy attributes have been removed (#31346)
+resource/aws_eip: With the retirement of EC2-Classic the standard domain is no longer supported (#30966)
+resource/aws_eip_association: With the retirement of EC2-Classic the standard domain is no longer supported (#30966)
+resource/aws_elasticache_cluster: With the retirement of EC2-Classic the security_group_names attribute has been removed (#30966)
+resource/aws_elasticache_replication_group: Remove availability_zones, number_cache_clusters, replication_group_description arguments -- use preferred_cache_cluster_azs, num_cache_clusters, and description, respectively, instead (#31008)
+resource/aws_elasticache_replication_group: Remove cluster_mode configuration block -- use top-level num_node_groups and replicas_per_node_group instead (#31008)
+resource/aws_kinesis_firehose_delivery_stream: Remove s3_configuration attribute from the root of the resource. s3_configuration is now a part of the following blocks: elasticsearch_configuration, opensearch_configuration, redshift_configuration, splunk_configuration, and http_endpoint_configuration (#31138)
+resource/aws_kinesis_firehose_delivery_stream: Remove s3 as an option for destination. Use extended_s3 instead (#31138)
+resource/aws_kinesis_firehose_delivery_stream: Rename extended_s3_configuration.0.s3_backup_configuration.0.buffer_size and extended_s3_configuration.0.s3_backup_configuration.0.buffer_interval to extended_s3_configuration.0.s3_backup_configuration.0.buffering_size and extended_s3_configuration.0.s3_backup_configuration.0.buffering_interval, respectively (#31141)
+resource/aws_kinesis_firehose_delivery_stream: Rename redshift_configuration.0.s3_backup_configuration.0.buffer_size and redshift_configuration.0.s3_backup_configuration.0.buffer_interval to redshift_configuration.0.s3_backup_configuration.0.buffering_size and redshift_configuration.0.s3_backup_configuration.0.buffering_interval, respectively (#31141)
+resource/aws_kinesis_firehose_delivery_stream: Rename s3_configuration.0.buffer_size and s3_configuration.0.buffer_internval to s3_configuration.0.buffering_size and s3_configuration.0.buffering_internval, respectively (#31141)
+resource/aws_launch_configuration: With the retirement of EC2-Classic the vpc_classic_link_id and vpc_classic_link_security_groups attributes have been removed (#30966)
+resource/aws_lightsail_instance: The ipv6_address attribute has been removed (#31489)
+resource/aws_medialive_multiplex_program: The statemux_settings attribute has been removed. Use statmux_settings argument instead (#31034)
+resource/aws_msk_cluster: The broker_node_group_info.ebs_volume_size attribute has been removed (#31324)
+resource/aws_neptune_cluster: snapshot_identifier change now properly forces replacement (#29409)
+resource/aws_networkmanager_core_network: Removed policy_document argument -- use aws_networkmanager_core_network_policy_attachment resource instead (#30875)
+resource/aws_rds_cluster: The engine argument is now required and has no default (#31112)
+resource/aws_rds_cluster: snapshot_identifier change now properly forces replacement (#29409)
+resource/aws_rds_cluster_instance: The engine argument is now required and has no default (#31112)
+resource/aws_redshift_cluster: With the retirement of EC2-Classic the cluster_security_groups attribute has been removed (#30966)
+resource/aws_route: instance_id can no longer be set in configurations. Use network_interface_id instead, for example, setting network_interface_id to aws_instance.test.primary_network_interface_id. (#30804)
+resource/aws_route_table: route..instance_id can no longer be set in configurations. Use route..network_interface_id instead, for example, setting network_interface_id to aws_instance.test.primary_network_interface_id. (#30804)
+resource/aws_secretsmanager_secret: The rotation_enabled, rotation_lambda_arn and rotation_rules attributes have been removed (#31487)
+resource/aws_security_group: With the retirement of EC2-Classic non-VPC security groups are no longer supported (#30966)
+resource/aws_security_group_rule: With the retirement of EC2-Classic non-VPC security groups are no longer supported (#30966)
+resource/aws_servicecatalog_product: Changes to any provisioning_artifact_parameters arguments now properly trigger a replacement. This fixes incorrect behavior, but may technically be breaking for configurations expecting non-functional in-place updates. (#31061)
+resource/aws_vpc: With the retirement of EC2-Classic the enable_classiclink and enable_classiclink_dns_support attributes have been removed (#30966)
+resource/aws_vpc_peering_connection: With the retirement of EC2-Classic the allow_classic_link_to_remote_vpc and allow_vpc_to_remote_classic_link attributes have been removed (#30966)
+resource/aws_vpc_peering_connection_accepter: With the retirement of EC2-Classic the allow_classic_link_to_remote_vpc and allow_vpc_to_remote_classic_link attributes have been removed (#30966)
+resource/aws_vpc_peering_connection_options: With the retirement of EC2-Classic the allow_classic_link_to_remote_vpc and allow_vpc_to_remote_classic_link attributes have been removed (#30966)
+resource/aws_wafv2_web_acl: The statement.managed_rule_group_statement.excluded_rule and statement.rule_group_reference_statement.excluded_rule attributes have been removed (#31374)
+resource/aws_wafv2_web_acl_logging_configuration: The redacted_fields.all_query_arguments, redacted_fields.body and redacted_fields.single_query_argument attributes have been removed (#31486)
+NOTES:
+data-source/aws_elasticache_replication_group: Update configurations to use description instead of the replication_group_description argument (#31008)
+data-source/aws_elasticache_replication_group: Update configurations to use num_cache_clusters instead of the number_cache_clusters argument (#31008)
+data-source/aws_opensearch_domain: The kibana_endpoint attribute has been deprecated. All configurations using kibana_endpoint should be updated to use the dashboard_endpoint attribute instead (#31490)
+data-source/aws_quicksight_data_set: The tags_all attribute has been deprecated and will be removed in a future version (#31162)
+data-source/aws_redshift_service_account: The aws_redshift_service_account data source has been deprecated and will be removed in a future version. AWS documentation states that a service principal name should be used instead of an AWS account ID in any relevant IAM policy (#31006)
+data-source/aws_service_discovery_service: The tags_all attribute has been deprecated and will be removed in a future version (#31162)
+resource/aws_api_gateway_rest_api: Update configurations with minimum_compression_size set to pass the value as a string. Valid values remain the same. (#30969)
+resource/aws_autoscaling_attachment: Update configurations to use lb_target_group_arn instead of alb_target_group_arn which has been removed (#30828)
+resource/aws_db_event_subscription: Configurations that define source_ids using the id attribute of aws_db_instance must be updated to use identifier instead - for example, source_ids = [aws_db_instance.example.id] must be updated to source_ids = [aws_db_instance.example.identifier] (#31232)
+resource/aws_db_instance: Configurations that define replicate_source_db using the id attribute of aws_db_instance must be updated to use identifier instead - for example, replicate_source_db = aws_db_instance.example.id must be updated to replicate_source_db = aws_db_instance.example.identifier (#31232)
+resource/aws_db_instance: The change of what id is, namely, a DBI Resource ID now versus DB Identifier previously, has far-reaching consequences. Configurations that refer to, for example, aws_db_instance.example.id will now have errors and must be changed to use identifier instead, for example, aws_db_instance.example.identifier (#31232)
+resource/aws_db_instance_role_association: Configurations that define db_instance_identifier using the id attribute of aws_db_instance must be updated to use identifier instead - for example, db_instance_identifier = aws_db_instance.example.id must be updated to db_instance_identifier = aws_db_instance.example.identifier (#31232)
+resource/aws_db_proxy_target: Configurations that define db_instance_identifier using the id attribute of aws_db_instance must be updated to use identifier instead - for example, db_instance_identifier = aws_db_instance.example.id must be updated to db_instance_identifier = aws_db_instance.example.identifier (#31232)
+resource/aws_db_snapshot: Configurations that define db_instance_identifier using the id attribute of aws_db_instance must be updated to use identifier instead - for example, db_instance_identifier = aws_db_instance.example.id must be updated to db_instance_identifier = aws_db_instance.example.identifier (#31232)
+resource/aws_docdb_cluster: Changes to the snapshot_identifier attribute will now trigger a replacement, rather than an in-place update. This corrects the previous behavior which resulted in a successful apply, but did not actually restore the cluster from the designated snapshot. (#29409)
+resource/aws_dx_gateway_association: The vpn_gateway_id attribute has been deprecated. All configurations using vpn_gateway_id should be updated to use the associated_gateway_id attribute instead (#31384)
+resource/aws_elasticache_replication_group: Update configurations to use description instead of the replication_group_description argument (#31008)
+resource/aws_elasticache_replication_group: Update configurations to use num_cache_clusters instead of the number_cache_clusters argument (#31008)
+resource/aws_elasticache_replication_group: Update configurations to use preferred_cache_cluster_azs instead of the availability_zones argument (#31008)
+resource/aws_elasticache_replication_group: Update configurations to use top-level num_node_groups and replicas_per_node_group instead of cluster_mode.0.num_node_groups and cluster_mode.0.replicas_per_node_group, respectively (#31008)
+resource/aws_flow_log: The log_group_name attribute has been deprecated. All configurations using log_group_name should be updated to use the log_destination attribute instead (#31382)
+resource/aws_guardduty_organization_configuration: The auto_enable argument has been deprecated. Use the auto_enable_organization_members argument instead. (#30736)
+resource/aws_neptune_cluster: Changes to the snapshot_identifier attribute will now trigger a replacement, rather than an in-place update. This corrects the previous behavior which resulted in a successful apply, but did not actually restore the cluster from the designated snapshot. (#29409)
+resource/aws_networkmanager_core_network: Update configurations to use the aws_networkmanager_core_network_policy_attachment resource instead of the policy_document argument (#30875)
+resource/aws_opensearch_domain: The engine_version attribute no longer has a default value. When omitted, the underlying AWS API will use the latest OpenSearch engine version. (#31568)
+resource/aws_opensearch_domain: The kibana_endpoint attribute has been deprecated. All configurations using kibana_endpoint should be updated to use the dashboard_endpoint attribute instead (#31490)
+resource/aws_rds_cluster: Changes to the snapshot_identifier attribute will now trigger a replacement, rather than an in-place update. This corrects the previous behavior which resulted in a successful apply, but did not actually restore the cluster from the designated snapshot. (#29409)
+resource/aws_rds_cluster: Configurations not including the engine argument must be updated to include engine as it is now required. Previously, not including engine was equivalent to engine = ""aurora"" and created a MySQL-5.6-compatible cluster (#31112)
+resource/aws_rds_cluster_instance: Configurations not including the engine argument must be updated to include engine as it is now required. Previously, not including engine was equivalent to engine = ""aurora"" and created a MySQL-5.6-compatible cluster instance (#31112)
+resource/aws_route: Since instance_id can no longer be set in configurations, use network_interface_id instead. For example, set network_interface_id to aws_instance.test.primary_network_interface_id. (#30804)
+resource/aws_route_table: Since route..instance_id can no longer be set in configurations, use route..network_interface_id instead. For example, set network_interface_id to aws_instance.test.primary_network_interface_id. (#30804)
+resource/aws_ssm_association: The instance_id attribute has been deprecated. All configurations using instance_id should be updated to use the targets attribute instead (#31380)
+ENHANCEMENTS:
+provider: Allow computed tags on resources (#30793)
+provider: Allow default_tags and resource tags to include zero values """" (#30793)
+provider: Duplicate default_tags can now be included and will be overwritten by resource tags (#30793)
+resource/aws_db_instance: Updates to identifier and identifier_prefix will no longer cause the database instance to be destroyed and recreated (#31232)
+resource/aws_eip: Deprecate vpc attribute. Use domain instead (#31567)
+resource/aws_guardduty_organization_configuration: Add auto_enable_organization_members attribute (#30736)
+resource/aws_kinesis_firehose_delivery_stream: Add s3_configuration to elasticsearch_configuration, opensearch_configuration, redshift_configuration, splunk_configuration, and http_endpoint_configuration (#31138)
+resource/aws_opensearch_domain: Removed engine_version default value (#31568)
+resource/aws_wafv2_web_acl: Support rule_action_override on rule_group_reference_statement (#31374)
+BUG FIXES:
+resource/aws_ecs_capacity_provider: Allow an instance_warmup_period of 0 in the auto_scaling_group_provider.managed_scaling configuration block (#24005)
+resource/aws_launch_template: Remove default values in metadata_options to allow default condition (#30545)
+resource/aws_s3_bucket: Fix bucket_regional_domain_name not including region for buckets in us-east-1 (#25724)
+resource/aws_s3_object: Remove acl default in order to work with S3 buckets that have ACL disabled (#27197)
+resource/aws_s3_object_copy: Remove acl default in order to work with S3 buckets that have ACL disabled (#27197)
+resource/aws_servicecatalog_product: Changes to provisioning_artifact_parameters arguments now properly trigger a replacement (#31061)
+resource/aws_vpc_peering_connection: Fix crash in vpcPeeringConnectionOptionsEqual (#30966)"
+7,"NOTES:
 
 resource/aws_lightsail_domain_entry: The id attribute is now comma-delimited (#30820)
 
@@ -64,14 +612,14 @@ resource/aws_iam_openid_connect_provider: Change client_id_list from TypeList to
 resource/aws_servicecatalog_provisioned_product: Fix to properly send stack_set_provisioned_preferences.0.accounts on create and update (#31293)
 resource/aws_servicecatalog_provisioned_product: Fix to properly set stack_set_provisioned_preferences integer types failure_tolerance_count, failure_tolerance_percentage, max_concurrency_count, max_concurrency_percentage (#31289)
 resource/aws_ssm_activation: Fix various ValidationException errors on resource Create (#31340)"
-2,"BUG FIXES:
+8,"BUG FIXES:
 
 resource/aws_appautoscaling_target: Fix InvalidParameter: 1 validation error(s) found.
 minimum field size of 1, ListTagsForResourceInput.ResourceARN. related to Application Auto Scaling resource tagging introduced in v4.66.0 (#31214)
 ","BUG FIXES:
 resource/aws_appautoscaling_target: Fix InvalidParameter: 1 validation error(s) found.
 minimum field size of 1, ListTagsForResourceInput.ResourceARN. related to Application Auto Scaling resource tagging introduced in v4.66.0 (#31214)"
-3,"NOTES:
+9,"NOTES:
 
 resource/aws_instance: The cpu_core_count argument is deprecated in favor of the cpu_options block. The cpu_options block can set core_count (#31035)
 resource/aws_instance: The cpu_threads_per_core argument is deprecated in favor of the cpu_options block. The cpu_options block can set threads_per_core (#31035)
@@ -206,7 +754,7 @@ resource/aws_nat_gateway: Guarantee that all attributes are set when the NAT Gat
 resource/aws_rds_cluster_instance: Consider delete-precheck a valid pending state for resource deletion (#31047)
 resource/aws_servicecatalog_provisioned_product: Changes in the provisioning_artifact_name attribute are now reflected correctly in AWS (#26371)
 resource/aws_servicecatalog_provisioned_product: Fix product_name update handling (#31094)"
-4,"NOTES:
+10,"NOTES:
 
 data-source/aws_db_instance: With the retirement of EC2-Classic thedb_security_groups attribute has been deprecated and will be removed in a future version (#30919)
 data-source/aws_elasticache_cluster: With the retirement of EC2-Classic thesecurity_group_names attribute has been deprecated and will be removed in a future version (#30919)
@@ -311,7 +859,7 @@ resource/aws_ecs_service: Fix removal of service_registries configuration block 
 resource/aws_redshiftdata_statement: Fix ValidationException errors reading expired statements (#26343)
 resource/aws_vpc_endpoint_route_table_association: Retry resource Create for EC2 eventual consistency (#30994)
 resource/aws_vpc_endpoint_service_allowed_principal: Fix too many results error (#30974)"
-5,"FEATURES:
+11,"FEATURES:
 
 New Data Source: aws_dms_endpoint (#30717)
 New Data Source: aws_fsx_windows_file_system (#28622)
@@ -466,7 +1014,7 @@ resource/aws_quicksight_data_set: Fix to properly flatten cast_column_type_opera
 resource/aws_sagemaker_app: Fix crash when app is not found (#30786)
 resource/aws_sns_topic: Fix IAM eventual consistency error creating SNS topics with ABAC-controlled permissions (#30432)
 resource/aws_vpc: Don't overwrite any configured value for ipv6_ipam_pool_id with IPAM Managed (#30795)"
-6,"FEATURES:
+12,"FEATURES:
 
 New Data Source: aws_dms_certificate (#30498)
 New Data Source: aws_quicksight_group (#12311)
@@ -559,7 +1107,7 @@ resource/aws_quicksight_data_set: Fix to properly send physical_table_map..relat
 resource/aws_quicksight_data_set: Fix to properly send physical_table_map..relational_table.schema when set (#30704)
 resource/aws_rds_cluster: Prevent db_instance_parameter_group_name from causing errors on minor upgrades (#30679)
 resource/aws_rds_cluster_parameter_group: Fixes differences being reported on every apply when setting system-source parameters (#30536)"
-7,"FEATURES:
+13,"FEATURES:
 
 New Data Source: aws_ec2_transit_gateway_attachments (#29644)
 New Data Source: aws_ec2_transit_gateway_route_table_associations (#29642)
@@ -646,7 +1194,7 @@ resource/aws_rds_cluster_instance: Fix inconsistent final plan errors when engin
 resource/aws_rds_instance: Fix inconsistent final plan errors when engine_version updates are not applied immediately (#30247)
 resource/aws_s3_bucket_lifecycle_configuration: Allow rule.filter.object_size_greater_than = 0 (#29857)
 resource/aws_scheduler_schedule: Mark arn property of dead_letter_config as a required property (#30360)"
-8,"FEATURES:
+14,"FEATURES:
 
 New Data Source: aws_appmesh_gateway_route (#29064)
 New Data Source: aws_appmesh_virtual_node (#27545)
@@ -731,7 +1279,7 @@ resource/aws_launch_template: Allow metadata_options to be applied when http_end
 resource/aws_ssm_activation: Fix IAM eventual consistency errors on resource Create (#30280)
 resource/aws_ssm_document: Correctly set default_version, document_version, hash, latest_version and parameter as Computed when content changes (#28489)
 resource/aws_wafv2_ip_set: Fix DiffSuppress on addresses to detect changes for unknown values (#30352)"
-9,"FEATURES:
+15,"FEATURES:
 
 New Data Source: aws_appmesh_route (#26695)
 New Data Source: aws_appmesh_virtual_gateway (#27057)
@@ -802,7 +1350,7 @@ resource/aws_pinpoint_app: Don't return an error like deleting Pinpoint Applicat
 resource/aws_placement_group: Change spread_level to Computed (#28596)
 resource/aws_security_group: Improve respect for delete timeout set by user and retry of certain errors (#30114)
 resource/aws_transfer_server: Fix error refreshing protocol_details.as2_transports value (#30115)"
-10,"NOTES:
+16,"NOTES:
 
 resource/aws_connect_queue: The quick_connect_ids_associated attribute is being deprecated in favor of quick_connect_ids (#26151)
 resource/aws_connect_routing_profile: The queue_configs_associated attribute is being deprecated in favor of queue_configs (#26151)
@@ -939,7 +1487,7 @@ resource/aws_network_acl_association: Add retry to read step, resolving empty re
 resource/aws_opensearch_domain: Remove upper bound validation for ebs_options.throughput as the 1,000 MB/s limit can be raised (#27598)
 resource/aws_route: Allow destination_ipv6_cidr_block to be specified for a vpc_endpoint_id target (#29994)
 resource/aws_sagemaker_endpoint_configuration: Fix variant_name generation when unset (#29915)"
-11,"FEATURES:
+17,"FEATURES:
 
 New Data Source: aws_ecs_task_execution (#29783)
 New Data Source: aws_licensemanager_grants (#29741)
@@ -1002,12 +1550,12 @@ resource/aws_flow_log: Fix IAM eventual consistency errors on resource Create (#
 resource/aws_grafana_workspace: Allow removing vpc_configuration (#29793)
 resource/aws_medialive_channel: Fix setting of the include_fec attribute in fec_output_settings (#29808)
 resource/aws_medialive_channel: Fix setting of the video_pid attribute in m2ts_settings (#29824)"
-12,"BUG FIXES:
+18,"BUG FIXES:
 
 resource/aws_lambda_function: Prevent Provider produced inconsistent final plan errors produced by null skip_destroy attribute value. NOTE: Because the maintainers have been unable to reproduce the reported problem, the fix is best effort and we ask for community support in verifying the fix. (#29812)
 ","BUG FIXES:
 resource/aws_lambda_function: Prevent Provider produced inconsistent final plan errors produced by null skip_destroy attribute value. NOTE: Because the maintainers have been unable to reproduce the reported problem, the fix is best effort and we ask for community support in verifying the fix. (#29812)"
-13,"NOTES:
+19,"NOTES:
 
 resource/aws_dms_endpoint: The s3_settings argument has been deprecated. All configurations using aws_dms_endpoint.*.s3_settings should be updated to use the aws_dms_s3_endpoint resource instead (#29728)
 resource/aws_networkmanager_core_network: The base_policy_region argument is being deprecated in favor of the new base_policy_regions argument. (#29623)
@@ -1080,7 +1628,7 @@ resource/aws_dms_endpoint: Trigger updates based on adding new extra_connection_
 resource/aws_instance: When encountering InsufficientInstanceCapacity errors, do not retry in order to fail faster, as this error is typically not resolvable in the near future (#21293)
 resource/aws_transfer_server: Allow the removal of workflow_details attribute. (#27730)
 resource/aws_transfer_user: Fix bug preventing removal of all home_directory_mappings due to empty list validation error (#27563)"
-14,"NOTES:
+20,"NOTES:
 
 resource/aws_lambda_function: Updated to AWS SDK V2 (#29615)
 
@@ -1137,7 +1685,7 @@ resource/aws_resourceexplorer2_view: Fix Unexpected Planned Resource State on De
 resource/aws_servicecatalog_provisioned_product: Fix to allow outputs to be Computed when the resource changes (#29559)
 resource/aws_sns_topic_subscription: Fix filter_policy_scope update from MessageAttributes to MessageBody with nested objects in filter_policy (#28572)
 resource/aws_wafv2_web_acl: Prevent erroneous diffs and attempts to remove AWS-added rule when applying to CF distribution using AWS Shield to automatically mitigate DDoS (#29575)"
-15,"FEATURES:
+21,"FEATURES:
 
 New Data Source: aws_organizations_organizational_unit_child_accounts (#24350)
 New Data Source: aws_organizations_organizational_unit_descendant_accounts (#24350)
@@ -1224,7 +1772,7 @@ resource/aws_medialive_channel: Fix issue preventing audio_pids attribute from b
 resource/aws_neptune_cluster: Fix restore-from-snapshot functionality using the snapshot_identifier argument on resource Create (#28051)
 resource/aws_neptune_cluster: Fix major version upgrade (#28051)
 resource/aws_sagemaker_user_profile: Change user_settings.0.jupyter_server_app_settings.0.default_resource_spec to be optional (#28581)"
-16,"NOTES:
+22,"NOTES:
 
 provider: Resolves provider crashes reporting Error: Plugin did not respond and fatal error: concurrent map writes with updated upstream package (terraform-plugin-log) (#29269)
 resource/aws_networkmanager_core_network: The policy_document attribute is being deprecated in favor of the new aws_networkmanager_core_network_policy_attachment resource. (#29097)
@@ -1291,14 +1839,14 @@ resource/aws_prometheus_workspace: Create a logging configuration on resource up
 resource/aws_s3_bucket: Fix crash when logging is empty (#29243)
 resource/aws_sns_topic: Fixes potential race condition when reading policy document. (#29226)
 resource/aws_sns_topic_policy: Fixes potential race condition when reading policy document. (#29226)"
-17,"ENHANCEMENTS:
+23,"ENHANCEMENTS:
 
 provider: Adds structured fields in logging (#29223)
 provider: Masks authentication fields in HTTP header logging (#29223)
 ","ENHANCEMENTS:
 provider: Adds structured fields in logging (#29223)
 provider: Masks authentication fields in HTTP header logging (#29223)"
-18,"NOTES:
+24,"NOTES:
 
 resource/aws_dynamodb_table: In the past, in certain situations, kms_key_arn could be populated with the default DynamoDB key alias/aws/dynamodb. This was an error because it would then be sent back to AWS and should not be. (#29102)
 resource/aws_dynamodb_table: In the past, in certain situations, server_side_encryption.0.kms_key_arn or replica.*.kms_key_arn could be populated with the default DynamoDB key alias/aws/dynamodb. This was an error because it would then be sent back to AWS and should not be. (#29102)
@@ -1353,7 +1901,7 @@ resource/aws_medialive_channel: Add missing rate_control_mode in acc_settings fo
 resource/aws_medialive_input: Fix eventual consistency error when updating (#29051)
 resource/aws_vpc_ipam_pool_cidr_allocation: Added support for eventual consistency on read operations after create. (#29022)
 resource/aws_wafv2_web_acl: Fix error when setting aws_managed_rules_bot_control_rule_set in manage_rule_group_config (#28810)"
-19,"NOTES:
+25,"NOTES:
 
 resource/aws_ce_anomaly_subscription: Deprecate threshold argument in favour of threshold_expression (#28573)
 
@@ -1434,7 +1982,7 @@ resource/aws_lambda_function: Retry ResourceNotFoundException errors on resource
 resource/aws_lb_listener_certificate: Show errors in certain cases where they were previously only logged and resource was removed from state (#28968)
 resource/aws_opensearch_domain: Omit throughput and iops for unsupported volume types (#28862)
 resource/aws_sagemaker_app: Correctly list all apps so as not to lose track in an environment where there are many apps (#28561)"
-20,"FEATURES:
+26,"FEATURES:
 
 New Data Source: aws_lbs (#27161)
 New Resource: aws_sesv2_configuration_set_event_destination (#27565)
@@ -1587,17 +2135,17 @@ resource/aws_transfer_access: Improve refresh to avoid unnecessary diffs in poli
 resource/aws_transfer_user: Improve refresh to avoid unnecessary diffs in policy (#28859)
 resource/aws_vpc_endpoint: Improve refresh to avoid unnecessary diffs in policy (#28798)
 resource/aws_vpc_endpoint_policy: Improve refresh to avoid unnecessary diffs in policy (#28798)"
-21,"BUG FIXES:
+27,"BUG FIXES:
 
 provider: Fix Terraform v0.12 incompatible provider version error with provider v2.70.3 (#28743)
 ","BUG FIXES:
 provider: Fix Terraform v0.12 incompatible provider version error with provider v2.70.3 (#28743)"
-22,"BUG FIXES:
+28,"BUG FIXES:
 
 provider: Fix Terraform v0.12 failed to find installed plugin version 2.70.2 error (#28739)
 ","BUG FIXES:
 provider: Fix Terraform v0.12 failed to find installed plugin version 2.70.2 error (#28739)"
-23,"NOTES:
+29,"NOTES:
 
 resource/aws_dms_endpoint: For s3_settings cdc_min_file_size, AWS changed the multiplier to kilobytes instead of megabytes. In other words, prior to the change, a value of 32 represented 32 MiB. After the change, a value of 32 represents 32 KB. Change your configuration accordingly. (#28578)
 resource/aws_fsx_ontap_storage_virtual_machine: The subtype attribute is no longer deprecated (#28567)
@@ -1676,12 +2224,12 @@ resource/aws_elasticache_user_group_association: Retry on InvalidUserGroupState 
 resource/aws_lambda_function_url: Fix removal of cors configuration block (#28439)
 resource/aws_lightsail_database: The availability_zone attribute is now optional/computed to support HA bundle_ids (#28590)
 resource/aws_lightsail_disk_attachment: Resolves a panic when an attachment fails and attempts to display the error returned by AWS. (#28593)"
-24,"ENHANCEMENTS:
+30,"ENHANCEMENTS:
 
 resource/aws_s3_bucket: Mark server_side_encryption_configuration as Computed in support of S3 object encryption by default (#28702)
 ","ENHANCEMENTS:
 resource/aws_s3_bucket: Mark server_side_encryption_configuration as Computed in support of S3 object encryption by default (#28702)"
-25,"NOTES:
+31,"NOTES:
 
 provider: Add OpenBSD to list of OSes which the provider is built on (#28668)
 
@@ -1692,7 +2240,7 @@ resource/aws_s3_bucket: Mark server_side_encryption_configuration as Computed in
 provider: Add OpenBSD to list of OSes which the provider is built on (#28668)
 ENHANCEMENTS:
 resource/aws_s3_bucket: Mark server_side_encryption_configuration as Computed in support of S3 object encryption by default (#28703)"
-26,"FEATURES:
+32,"FEATURES:
 
 New Resource: aws_dx_macsec_key_association (#26274)
 
@@ -1717,7 +2265,7 @@ resource/aws_networkfirewall_rule_group: Add reference_sets configuration block 
 resource/aws_networkmanager_vpc_attachment: Add options.appliance_mode_support argument (#28450)
 BUG FIXES:
 resource/aws_networkfirewall_rule_group: Change rule_group.rules_source.stateful_rule from TypeSet to TypeList to preserve rule order (#27102)"
-27,"FEATURES:
+33,"FEATURES:
 
 New Data Source: aws_cloudwatch_log_data_protection_policy_document (#28272)
 New Data Source: aws_db_instances (#28303)
@@ -1778,7 +2326,7 @@ resource/aws_cloudwatch_metric_stream: Correctly update tags (#28310)
 resource/aws_db_instance: Ensure that apply_immediately default value is applied (#25768)
 resource/aws_ecs_service: Fix missing required field, UpdateServiceInput.ServiceConnectConfiguration.Enabled error when removing service_connect_configuration configuration block (#28338)
 resource/aws_ecs_service: Fix service_connect_configuration.service.ingress_port_override being set to 0 (InvalidParameterException: IngressPortOverride cannot use ports <= 1024 error) when not configured (#28338)"
-28,"NOTES:
+34,"NOTES:
 
 provider: Add OpenBSD to list of OSes which the provider is built on (#28300)
 resource/aws_fsx_ontap_storage_virtual_machine: The subtype attribute will always have the value ""DEFAULT"" (#28082)
@@ -1811,7 +2359,7 @@ resource/aws_s3_bucket_server_side_encryption_configuration: Retry on ServerSide
 resource/aws_security_group: Return an error if a rule's protocol value is all and from_port or to_port are not 0 (#27685)
 resource/aws_sqs_queue: Change sqs_managed_sse_enabled to Computed as newly created SQS queues use SSE-SQS encryption by default. This means that Terraform will only perform drift detection of the attribute's value when present in a configuration (#27313)
 resource/aws_sqs_queue: Respect configured sqs_managed_sse_enabled value on resource Create. In particular a configured false value is sent to the AWS API, which overrides the new service default value of true (#27338)"
-29,"FEATURES:
+35,"FEATURES:
 
 New Data Source: aws_glue_catalog_table (#23256)
 New Resource: aws_auditmanager_control (#27857)
@@ -1860,7 +2408,7 @@ resource/aws_lb_target_group: Allow interval to be updated for TCP health checks
 resource/aws_lb_target_group: Allow timeout to be set for TCP health checks (#28018)
 resource/aws_lb_target_group: Don't force recreation on health_check attribute changes (#28018)
 resource/aws_sns_topic_subscription: Fix unsupported FilterPolicyScope attribute error in the aws-cn partition (#28253)"
-30,"NOTES:
+36,"NOTES:
 
 provider: With AWS's retirement of EC2-Classic the skip_get_ec2_platforms attribute has been deprecated and will be removed in a future version (#28084)
 resource/aws_fsx_ontap_storage_virtual_machine: The subtype attribute has been deprecated and will be removed in a future version (#28127)
@@ -1897,7 +2445,7 @@ resource/aws_eks_cluster: Add cluster_id attribute and outpost_config.control_pl
 resource/aws_redshiftserverless_workgroup: Wait on MODIFYING status on resource Delete (#28114)
 BUG FIXES:
 resource/aws_redshiftserverless_namespace: Fix updating admin_username and admin_user_password (#28125)"
-31,"NOTES:
+37,"NOTES:
 
 resource/aws_fsx_ontap_storage_virtual_machine: The subtype attribute will always have the value ""DEFAULT"" (#28085)
 resource/aws_wafv2_web_acl: excluded_rule on managed_rule_group_statement has been deprecated. All configurations using excluded_rule should be updated to use the new rule_action_override attribute instead (#27954)
@@ -1922,7 +2470,7 @@ resource/aws_lambda_function: Add snap_start attribute (#28097)
 resource/aws_wafv2_web_acl: Support rule_action_override on managed_rule_group_statement (#27954)
 BUG FIXES:
 resource/aws_instance: Change iam_instance_profile to Computed as the value may be configured via a launch template (#27972)"
-32,"FEATURES:
+38,"FEATURES:
 
 New Resource: aws_neptune_global_cluster (#26133)
 
@@ -1943,7 +2491,7 @@ resource/aws_ecs_cluster: Add service_connect_defaults argument (#28052)
 resource/aws_ecs_service: Add service_connect_configuration argument in support of ECS Service Connect (#28052)
 resource/aws_glue_classifier: Add custom_datatypes and custom_datatype_configured arguments (#28048)
 resource/aws_neptune_cluster: Add global_cluster_identifier argument (#26133)"
-33,"FEATURES:
+39,"FEATURES:
 
 New Data Source: aws_redshiftserverless_credentials (#28026)
 New Resource: aws_cloudwatch_log_data_protection_policy (#28049)
@@ -1980,7 +2528,7 @@ BUG FIXES:
 resource/aws_lambda_function: Don't fail resource Create if AWS Signer service is not available in the configured Region (#28008)
 resource/aws_memorydb_cluster: Allow more than one element in snapshot_arns (#28022)
 resource/aws_sagemaker_user_profile: user_settings.jupyter_server_app_settings, user_settings.kernel_gateway_app_settings, and user_settings.tensor_board_app_settings are updateable (#28025)"
-34,"FEATURES:
+40,"FEATURES:
 
 New Data Source: aws_sqs_queues (#27890)
 New Resource: aws_ivschat_logging_configuration (#27924)
@@ -2037,7 +2585,7 @@ BUG FIXES:
 resource/aws_cloudcontrolapi_resource: Remove invalid regular expressions from CloudFormation resource schema (#27935)
 resource/aws_dms_endpoint: Add ability to use AWS Secrets Manager with the sybase engine (#27949)
 resource/aws_resourcegroups_group: Properly set configuration.parameters as optional (#27985)"
-35,"NOTES:
+41,"NOTES:
 
 data-source/aws_identitystore_group: The filter argument has been deprecated. Use the alternate_identifier argument instead (#27762)
 
@@ -2142,7 +2690,7 @@ resource/aws_appstream_stack: Fix redirect_url max character length (#27744)
 resource/aws_dynamodb_table: Allow changing KMS keys on tables with replicas. (#23156)
 resource/aws_route53_resolver_endpoint: Fix deduplication with multiple IPs on the same subnet (#25708)
 resource/aws_sesv2_email_identity_feedback_attributes: Fix invalid resource ID in error messages when creating the resource (#27784)"
-36,"BREAKING CHANGES:
+42,"BREAKING CHANGES:
 
 resource/aws_secretsmanager_secret_rotation: Remove unused tags attribute (#27656)
 
@@ -2213,7 +2761,7 @@ resource/aws_lightsail_instance_public_ports: Resource will now be removed from 
 resource/aws_s3_bucket: Attributes arn and hosted_zone_id were incorrectly settable but ignored (#27597)
 resource/aws_security_group: Return an error if a rule's protocol value is all and from_port or to_port are not 0 (#27642)
 resource/aws_vpn_connection: Configuring exactly one of transit_gateway_id or vpn_gateway_id is not required (#27693)"
-37,"FEATURES:
+43,"FEATURES:
 
 New Data Source: aws_connect_instance_storage_config (#27308)
 New Resource: aws_apprunner_vpc_ingress_connection (#27600)
@@ -2284,7 +2832,7 @@ data-source/aws_ip_ranges: Fix regression causing filtering on regions and servi
 resource/aws_batch_compute_environment: Update compute_resources.security_group_ids to be optional (#26172)
 resource/aws_dynamodb_table: Fix bug causing spurious diffs with and preventing proper updating of stream_enabled and stream_view_type (#27566)
 resource/aws_instance: Use EC2 API idempotency to ensure that only a single Instance is created (#27561)"
-38,"NOTES:
+44,"NOTES:
 
 resource/aws_medialive_multiplex_program: The statemux_settings argument has been deprecated. Use the statmux_settings argument instead (#27223)
 
@@ -2357,12 +2905,12 @@ resource/aws_ecs_service: Correctly handle unconfigured task_definition, making 
 resource/aws_lb_target_group: Fix import issues on aws_lb_target_group when specifying ip_address_type of ipv4 (#27464)
 resource/aws_rds_proxy_endpoint: Respect configured provider default_tags value on resource Update (#27367)
 resource/aws_vpc_ipam_pool_cidr: Fix crash when IPAM Pool CIDR not found (#27512)"
-39,"BUG FIXES:
+45,"BUG FIXES:
 
 data-source/aws_default_tags: Fix regression setting tags to null instead of an empty map ({}) when no default_tags are defined (#27377)
 ","BUG FIXES:
 data-source/aws_default_tags: Fix regression setting tags to null instead of an empty map ({}) when no default_tags are defined (#27377)"
-40,"FEATURES:
+46,"FEATURES:
 
 New Data Source: aws_elasticache_subnet_group (#27233)
 New Data Source: aws_sesv2_dedicated_ip_pool (#27278)
@@ -2409,7 +2957,7 @@ BUG FIXES:
 resource/aws_appstream_stack: Fix panic with application_settings. (#27257)
 resource/aws_sqs_queue: Change sqs_managed_sse_enabled to Computed as newly created SQS queues use SSE-SQS encryption by default. This means that Terraform will only perform drift detection of the attribute's value when present in a configuration (#26843)
 resource/aws_sqs_queue: Respect configured sqs_managed_sse_enabled value on resource Create. In particular a configured false value is sent to the AWS API, which overrides the new service default value of true (#27335)"
-41,"FEATURES:
+47,"FEATURES:
 
 New Data Source: aws_rds_reserved_instance_offering (#26025)
 New Data Source: aws_vpc_ipam_pools (#27101)
@@ -2468,7 +3016,7 @@ resource/aws_ecs_task_definition: Prevent panic when supplying a null value in c
 resource/aws_identitystore_user: Change the type of external_ids to a string instead of a bool. (#27184)
 resource/aws_organizations_policy_attachment: Handle missing policy when reading policy attachment (#27238)
 resource/aws_ssm_service_setting: Prevent panic during status read (#27232)"
-42,"NOTES:
+48,"NOTES:
 
 data-source/aws_identitystore_user: The filter argument has been deprecated. Use the alternate_identifier argument instead (#27053)
 
@@ -2539,7 +3087,7 @@ data-source/aws_ses_active_receipt_rule_set: Prevent crash when no receipt rule 
 resource/aws_keyspaces_table: Change schema_definition.clustering_key and schema_definition.partition_key to lists in order to respect configured orderings (#26812)
 resource/aws_rolesanywhere_profile: Correctly handle updates to enabled and session_policy (#26858)
 resource/aws_rolesanywhere_trust_anchor: Correctly handle updates to enabled (#26858)"
-43,"FEATURES:
+49,"FEATURES:
 
 New Data Source: aws_kms_custom_key_store (#24787)
 New Resource: aws_identitystore_group (#26674)
@@ -2576,7 +3124,7 @@ resource/aws_kms_key: Add custom_key_store_id attribute (#24787)
 BUG FIXES:
 resource/aws_rds_cluster: Support upgrade as a valid value in enabled_cloudwatch_logs_exports (#26792)
 resource/aws_ssm_parameter: Allow parameter overwrite on create (#26785)"
-44,"ENHANCEMENTS:
+50,"ENHANCEMENTS:
 
 resource/aws_eks_cluster: Add outpost_config argument to support EKS local clusers on Outposts (#26866)
 
@@ -2587,7 +3135,7 @@ resource/aws_ec2_managed_prefix_list: MaxEntries and Entry(s) can now be changed
 resource/aws_eks_cluster: Add outpost_config argument to support EKS local clusers on Outposts (#26866)
 BUG FIXES:
 resource/aws_ec2_managed_prefix_list: MaxEntries and Entry(s) can now be changed in the same apply (#26845)"
-45,"FEATURES:
+51,"FEATURES:
 
 New Data Source: aws_ec2_managed_prefix_lists (#26727)
 New Resource: aws_sqs_queue_redrive_allow_policy (#26733)
@@ -2618,7 +3166,7 @@ resource/aws_autoscaling_attachment: Retry errors like ValidationError: Trying t
 resource/aws_dynamodb_table: No longer returns error for an ARCHIVED table (#26744)
 resource/aws_instance: Prevents errors in ISO regions when not using DisableApiStop attribute (#26745)
 resource/aws_replication_subnet_group: Add retry to create step, resolving AccessDeniedFault error (#26768)"
-46,"FEATURES:
+52,"FEATURES:
 
 New Resource: aws_medialive_multiplex (#26608)
 New Resource: aws_medialive_multiplex_program (#26694)
@@ -2665,7 +3213,7 @@ resource/aws_instance: No longer fails when setting metadata_options.instance_me
 resource/aws_lambda_function: Update the environment variables if the kms_key_arn has changed (#26696)
 resource/aws_opsworks_stack: Defaults to default VPC when not supplied (#26711)
 resource/aws_security_group: Defaults to default VPC when not supplied (#26697)"
-47,"NOTES:
+53,"NOTES:
 
 resource/aws_db_instance: With AWS's retirement of EC2-Classic no new RDS DB Instances can be created referencing RDS DB Security Groups (#26525)
 resource/aws_db_security_group: With AWS's retirement of EC2-Classic no new RDS DB Security Groups can be created (#26525)
@@ -2770,7 +3318,7 @@ resource/aws_wafv2_web_acl: Add json_body attribute to the field_to_match block 
 BUG FIXES:
 provider: No longer silently ignores assume_role block when role_arn has unknown value. (#26590)
 resource/aws_security_group: Fix complex dependency violations such as using a security group with an EMR cluster (#26553)"
-48,"NOTES:
+54,"NOTES:
 
 resource/aws_db_instance: With the retirement of EC2-Classic thesecurity_group_names attribute has been deprecated and will be removed in a future version (#26427)
 resource/aws_db_security_group: With the retirement of EC2-Classic theaws_db_security_group resource has been deprecated and will be removed in a future version (#26427)
@@ -2851,7 +3399,7 @@ resource/aws_appstream_fleet: Fix crash when providing empty domain_join_info (e
 resource/aws_eip: Include any provider-level configured default_tags on resource Create (#26308)
 resource/aws_kinesis_firehose_delivery_stream: Updating tags no longer causes an unnecessary update (#26451)
 resource/aws_organizations_policy: Prevent InvalidParameter errors by handling content as generic JSON, not an IAM policy (#26279)"
-49,"FEATURES:
+55,"FEATURES:
 
 New Resource: aws_msk_serverless_cluster (#25684)
 New Resource: aws_networkmanager_attachment_accepter (#26227)
@@ -2912,7 +3460,7 @@ resource/aws_opsworks_php_app_layer: Correctly apply tags during create if the s
 resource/aws_opsworks_rails_app_layer: Correctly apply tags during create if the stack's region is not equal to the configured AWS Region (#26278)
 resource/aws_opsworks_stack: Correctly apply tags during create if region is not equal to the configured AWS Region (#26278)
 resource/aws_opsworks_static_web_layer: Correctly apply tags during create if the stack's region is not equal to the configured AWS Region (#26278)"
-50,"FEATURES:
+56,"FEATURES:
 
 New Data Source: aws_fsx_openzfs_snapshot (#26184)
 New Data Source: aws_networkfirewall_firewall (#25495)
@@ -2989,7 +3537,7 @@ resource/aws_lb_listener: Fix ValidationError when tags are added on create (#26
 resource/aws_lb_target_group: Fix ValidationError when tags are added on create (#26194)
 resource/aws_macie2_classification_job: Fix incorrect plan diff for TagScopeTerm() when updating resources (#19837)
 resource/aws_security_group_rule: Disallow empty strings in prefix_list_ids (#26220)"
-51,"FEATURES:
+57,"FEATURES:
 
 New Data Source: aws_waf_subscribed_rule_group (#10563)
 New Data Source: aws_wafregional_subscribed_rule_group (#10563)
@@ -3186,7 +3734,7 @@ resource/aws_s3_bucket: Allow customizable timeouts (#26121)
 BUG FIXES:
 resource/aws_api_gateway_rest_api: Add put_rest_api_mode argument to address race conditions when importing OpenAPI Specifications (#26051)
 resource/aws_appstream_fleet: Fix IAM InvalidRoleException error on creation (#26060)"
-52,"FEATURES:
+58,"FEATURES:
 
 New Resource: aws_acmpca_permission (#12485)
 New Resource: aws_ssm_service_setting (#13018)
@@ -3229,7 +3777,7 @@ resource/aws_cognito_identity_pool_provider_principal_tag: Fix read operation wh
 resource/aws_route53_record: Don't ignore dualstack prefix in Route 53 Record alias names (#10672)
 resource/aws_s3_bucket: Prevents unexpected import of existing bucket in us-east-1. (#26011)
 resource/aws_s3_bucket: Refactored object_lock_enabled parameter's default assignment behavior to protect partitions without Object Lock available. (#25098)"
-53,"FEATURES:
+59,"FEATURES:
 
 New Data Source: aws_connect_user_hierarchy_group (#24777)
 New Data Source: aws_location_geofence_collection (#25844)
@@ -3314,7 +3862,7 @@ resource/aws_iam_role: Fix problem with exclusive management of inline and manag
 resource/aws_rds_cluster: Prevent failure of AWS RDS Cluster creation when it is in rebooting state. (#25718)
 resource/aws_route_table: Retry resource Create for EC2 eventual consistency (#25793)
 resource/aws_storagegateway_gateway: Only manage average_download_rate_limit_in_bits_per_sec and average_upload_rate_limit_in_bits_per_sec when gateway type supports rate limits (#25922)"
-54,"FEATURES:
+60,"FEATURES:
 
 New Data Source: aws_location_route_calculator (#25689)
 New Data Source: aws_location_tracker (#25639)
@@ -3395,7 +3943,7 @@ resource/aws_ec2_transit_gateway: Fix MaxItems and subnet size validation in tra
 resource/aws_ecs_service: Fix ""unexpected new value"" errors on creation. (#25641)
 resource/aws_ecs_service: Fix error where tags are sometimes not retrieved. (#25641)
 resource/aws_emr_managed_scaling_policy: Support maximum_ondemand_capacity_units value of 0 (#17134)"
-55,"FEATURES:
+61,"FEATURES:
 
 New Data Source: aws_kendra_experience (#25601)
 New Data Source: aws_kendra_query_suggestions_block_list (#25592)
@@ -3448,12 +3996,12 @@ resource/aws_api_gateway_model: Remove length validation from schema argument (#
 resource/aws_appstream_fleet_stack_association: Fix association not being found after creation (#25370)
 resource/aws_appstream_stack: Fix crash when setting embed_host_domains (#25372)
 resource/aws_route53_record: Successfully allow renaming of set_identifier (specified with multiple routing policies) (#25620)"
-56,"BUG FIXES:
+62,"BUG FIXES:
 
 resource/aws_default_vpc_dhcp_options: Fix missing expected [ error introduced in v4.20.0 (#25562)
 ","BUG FIXES:
 resource/aws_default_vpc_dhcp_options: Fix missing expected [ error introduced in v4.20.0 (#25562)"
-57,"FEATURES:
+63,"FEATURES:
 
 New Data Source: aws_kendra_faq (#25523)
 New Data Source: aws_kendra_index (#25473)
@@ -3638,7 +4186,7 @@ resource/aws_lb_listener_rule: Prevent ISO-partition tagging precautions from ea
 resource/aws_lb_target_group: Prevent ISO-partition tagging precautions from eating legit errors (#25549)
 resource/aws_sns_topic: Prevent ISO-partition tagging precautions from eating legit errors (#25549)
 resource/aws_sqs_queue: Prevent ISO-partition tagging precautions from eating legit errors (#25549)"
-58,"FEATURES:
+64,"FEATURES:
 
 New Resource: aws_kendra_index (#24920)
 New Resource: aws_lightsail_container_service (#20625)
@@ -3655,7 +4203,7 @@ New Resource: aws_lightsail_container_service_deployment_version (#20625)
 BUG FIXES:
 resource/aws_dynamodb_table_item: Fix to remove attribute from table item on update (#25326)
 resource/aws_ec2_managed_prefix_list_entry: Fix error when attempting to create or delete multiple list entries (#25046)"
-59,"FEATURES:
+65,"FEATURES:
 
 New Resource: aws_ce_anomaly_monitor (#251777)
 New Resource: aws_emrserverless_application (#25144)
@@ -3690,12 +4238,12 @@ resource/aws_vpc_ipam_pool_cidr_allocation: improve internal search mechanism (#
 BUG FIXES:
 resource/aws_snapshot_create_volume_permission: Error if account_id is the snapshot's owner (#12103)
 resource/aws_ssm_parameter: Allow Intelligent-Tiering to upgrade to Advanced tier as needed. (#25174)"
-60,"BUG FIXES:
+66,"BUG FIXES:
 
 resource/aws_ram_resource_share: Fix regression in v4.17.0 where permission_arns would get clobbered if already set (#25158)
 ","BUG FIXES:
 resource/aws_ram_resource_share: Fix regression in v4.17.0 where permission_arns would get clobbered if already set (#25158)"
-61,"FEATURES:
+67,"FEATURES:
 
 New Data Source: aws_redshift_cluster_credentials (#25092)
 New Resource: aws_acmpca_policy (#25109)
@@ -3742,7 +4290,7 @@ resource/aws_ebs_volume: Fix to preserve iops when changing EBS volume type (io1
 resource/aws_launch_configuration: Honor associate_public_ip_address = false (#17695)
 resource/aws_rds_cluster_role_association: Extend timeout to 10 minutes (#25145)
 resource/aws_servicecatalog_provisioned_product: Correctly handle resources in a TAINTED state (#25130)"
-62,"FEATURES:
+68,"FEATURES:
 
 New Data Source: aws_location_place_index (#24980)
 New Data Source: aws_redshift_subnet_group (#25053)
@@ -3821,12 +4369,12 @@ resource/aws_instance: Correctly delete instance on destroy when disable_api_ter
 resource/aws_instance: Prevent error InvalidParameterCombination: The parameter GroupName within placement information cannot be specified when instanceInterruptionBehavior is set to 'STOP' when using a launch template that sets instance_interruption_behavior to stop (#24695)
 resource/aws_msk_cluster: Prevent crash on apply when client_authentication.tls is empty (#25072)
 resource/aws_servicecatalog_provisioned_product: Add possible TAINTED target state for resource update and remove one of the internal waiters during read (#24804)"
-63,"BUG FIXES:
+69,"BUG FIXES:
 
 resource/aws_organizations_account: Fix reading account state for existing accounts (#24899)
 ","BUG FIXES:
 resource/aws_organizations_account: Fix reading account state for existing accounts (#24899)"
-64,"BREAKING CHANGES:
+70,"BREAKING CHANGES:
 
 resource/aws_msk_cluster: The ebs_volume_size argument is deprecated in favor of the storage_info block. The storage_info block can set volume_size and provisioned_throughput (#24767)
 
@@ -3875,7 +4423,7 @@ resource/aws_s3_bucket_website_configuration: Add routing_rules parameter to be 
 BUG FIXES:
 resource/aws_autoscaling_group: Wait for correct number of ELBs when wait_for_elb_capacity is configured (#20806)
 resource/aws_elasticache_replication_group: Fix perpetual diff on auto_minor_version_upgrade (#24688)"
-65,"ENHANCEMENTS:
+71,"ENHANCEMENTS:
 
 resource/aws_lambda_function: Add support for nodejs16.x runtime value (#24874)
 resource/aws_lambda_layer_version: Add support for nodejs16.x compatible_runtimes value (#24874)
@@ -3884,7 +4432,7 @@ resource/aws_s3_bucket_website_configuration: Add routing_rules parameter to be 
 resource/aws_lambda_function: Add support for nodejs16.x runtime value (#24874)
 resource/aws_lambda_layer_version: Add support for nodejs16.x compatible_runtimes value (#24874)
 resource/aws_s3_bucket_website_configuration: Add routing_rules parameter to be used instead of routing_rule to support configurations with empty String values (#24199)"
-66,"FEATURES:
+72,"FEATURES:
 
 New Data Source: aws_connect_routing_profile (#23525)
 New Data Source: aws_connect_security_profile (#23524)
@@ -3943,7 +4491,7 @@ resource/aws_imagebuilder_image_recipe: Fix ResourceDependencyException errors w
 resource/aws_kms_key: Retry on MalformedPolicyDocumentException errors when updating key policy (#24697)
 resource/aws_servicecatalog_provisioned_product: Prevent error when retrieving a provisioned product in a non-available state (#24758)
 resource/aws_subnet: Fix InvalidSubnet.Conflict errors when associating IPv6 CIDR blocks (#24685)"
-67,"FEATURES:
+73,"FEATURES:
 
 New Data Source: aws_emrcontainers_virtual_cluster (#20003)
 New Data Source: aws_iam_instance_profiles (#24423)
@@ -4002,7 +4550,7 @@ resource/aws_cloudfront_distribution: Fix PreconditionFailed errors when other C
 resource/aws_ecs_service: Fix retry when using the wait_for_steady_state parameter (#24541)
 resource/aws_launch_template: Fix crash when reading license_specification (#24579)
 resource/aws_ssm_document: Always include attachment_sources when updating SSM documents (#24530)"
-68,"ENHANCEMENTS:
+74,"ENHANCEMENTS:
 
 resource/aws_kms_key: Add support for HMAC_256 customer master key spec (#24450)
 
@@ -4015,7 +4563,7 @@ resource/aws_kms_key: Add support for HMAC_256 customer master key spec (#24450)
 BUG FIXES:
 resource/aws_acm_certificate_validation: Restore certificate issuance timestamp as the resource id value, fixing error on existing resource Read (#24453)
 resource/aws_kms_alias: Fix reserved prefix used in name and name_prefix plan time validation (#24469)"
-69,"FEATURES:
+75,"FEATURES:
 
 New Data Source: aws_ce_cost_category (#24402)
 New Data Source: aws_ce_tags (#24402)
@@ -4090,7 +4638,7 @@ resource/aws_lb: Fix bug causing an error on update if tags unsupported in ISO r
 resource/aws_s3_bucket_policy: Let resource be removed from tfstate if bucket deleted outside Terraform (#23510)
 resource/aws_s3_bucket_versioning: Let resource be removed from tfstate if bucket deleted outside Terraform (#23510)
 resource/aws_ses_receipt_filter: Allow period character (.) in name argument (#24383)"
-70,"FEATURES:
+76,"FEATURES:
 
 New Data Source: aws_s3_bucket_policy (#17738)
 New Resource: aws_transfer_workflow (#24248)
@@ -4173,7 +4721,7 @@ resource/aws_s3_bucket_server_side_encryption_configuration: Retry on ServerSide
 resource/aws_sfn_state_machine: Prevent panic during resource update (#24302)
 resource/aws_shield_protection_group: When updating resource tags, use the protection_group_arn parameter instead of arn. (#24296)
 resource/aws_ssm_association: Prevent panic when wait_for_success_timeout_seconds is configured (#24300)"
-71,"FEATURES:
+77,"FEATURES:
 
 New Data Source: aws_iam_saml_provider (#10498)
 New Data Source: aws_nat_gateways (#24190)
@@ -4236,7 +4784,7 @@ resource/aws_ecs_service: Wait for service to reach an active state after create
 resource/aws_emr_cluster: Ignore UnknownOperationException errors when reading a cluster's auto-termination policy (#24237)
 resource/aws_lambda_function_url: Ignore ResourceConflictException errors caused by existing FunctionURLAllowPublicAccess permission statements (#24220)
 resource/aws_vpc_ipam_scope: Prevent panic when describing IPAM Scopes by ID (#24188)"
-72,"OTES:
+78,"OTES:
 
 resource/aws_s3_bucket: The acceleration_status, acl, cors_rule, grant, lifecycle_rule, logging, object_lock_configuration.rule, policy, replication_configuration, request_payer, server_side_encryption_configuration, versioning, and website parameters are now Optional. Please refer to the documentation for details on drift detection and potential conflicts when configuring these parameters with the standalone aws_s3_bucket_* resources. (#23985)
 
@@ -5769,7 +6317,7 @@ resource/aws_sqs_queue: Attempt tags-on-create, fallback to tag after create, an
 resource/aws_vpc: Add ipv6_cidr_block_network_border_group argument (#22211)
 resource/aws_vpc_ipam_pool_cidr_allocation: Add disallowed_cidrs argument (#22470)
 resource/aws_vp..."
-73,"ENHANCEMENTS:
+79,"ENHANCEMENTS:
 
 data-source/aws_eips: Set public_ips for VPC as well as EC2 Classic (#23859)
 data-source/aws_elasticache_cluster: Add log_delivery_configuration attribute (#20068)
@@ -5810,7 +6358,7 @@ BUG FIXES:
 resource/aws_autoscaling_group: Fix issue where group was not recreated if initial_lifecycle_hook changed (#20708)
 resource/aws_cloudfront_distribution: Fix default value of origin_path in origin block (#20709)
 resource/aws_cloudwatch_event_target: Fix setting path_parameter_values. (#23862)"
-74,"FEATURES:
+80,"FEATURES:
 
 New Data Source: aws_cloudwatch_event_bus (#23792)
 New Data Source: aws_imagebuilder_image_pipelines (#23741)
@@ -5873,12 +6421,12 @@ data-source/aws_ssm_document: Dont generate arn for AWS managed docs. (#23757)
 resource/aws_ecs_service: Ensure that load_balancer and service_registries can be updated in-place (#23786)
 resource/aws_launch_template: Fix network_interfaces.device_index and network_interfaces.network_card_index of 0 not being set (#23767)
 resource/aws_ssm_maintenance_window_task: Allow creating a window taks without targets. (#23756)"
-75,"BUG FIXES:
+81,"BUG FIXES:
 
 resource/aws_route_table_association: Retry resource Read for EC2 eventual consistency (#23806)
 ","BUG FIXES:
 resource/aws_route_table_association: Retry resource Read for EC2 eventual consistency (#23806)"
-76,"FEATURES:
+82,"FEATURES:
 
 New Data Source: aws_networkmanager_connection (#13251)
 New Data Source: aws_networkmanager_connections (#13251)
@@ -6021,7 +6569,7 @@ resource/aws_s3_bucket_lifecycle_configuration: Support empty string filtering (
 resource/aws_s3_bucket_replication_configuration: Change rule configuration block to list instead of set (#23703)
 resource/aws_s3_bucket_replication_configuration: Set rule.id as Computed to prevent drift when the value is not configured (#23703)
 resource/aws_s3_bucket_versioning: Add missing support for Disabled bucket versioning (#23723)"
-77,"NOTES:
+83,"NOTES:
 
 resource/aws_s3_bucket: The acceleration_status argument has been deprecated. Use the aws_s3_bucket_accelerate_configuration resource instead. (#23471)
 resource/aws_s3_bucket: The acl and grant arguments have been deprecated. Use the aws_s3_bucket_acl resource instead. (#23419)
@@ -6110,7 +6658,7 @@ resource/aws_s3_bucket_replication_configuration: Correctly configure empty rule
 resource/aws_s3_bucket_replication_configuration: Ensure both key and value arguments of the rule.filter.tag configuration block are correctly populated in the outgoing API request and terraform state. (#23716)
 resource/aws_s3_bucket_replication_configuration: Prevent inconsistent final plan when rule.filter.prefix is an empty string (#23716)
 resource/aws_s3_bucket_replication_configuration: Set rule.id as Computed to prevent drift when the value is not configured (#23737)"
-78,"ENHANCEMENTS:
+84,"ENHANCEMENTS:
 
 resource/aws_account_alternate_contact: Add configurable timeouts (#23516)
 resource/aws_s3_bucket: Add error handling for NotImplemented errors when reading object_lock_enabled and object_lock_configuration into terraform state. (#13366)
@@ -6179,7 +6727,7 @@ resource/aws_s3_bucket_lifecycle_configuration: Prevent drift when rule.noncurre
 resource/aws_s3_bucket_replication_configuration: Correctly configure empty rule.filter configuration block in API requests (#23586)
 resource/aws_s3_bucket_replication_configuration: Ensure both key and value arguments of the rule.filter.tag configuration block are correctly populated in the outgoing API request and terraform state. (#23579)
 resource/aws_s3_bucket_replication_configuration: Prevent inconsistent final plan when rule.filter.prefix is an empty string (#23586)"
-79,"FEATURES:
+85,"FEATURES:
 
 New Data Source: aws_connect_queue (#22768)
 New Data Source: aws_ec2_serial_console_access (#23443)
@@ -6278,7 +6826,7 @@ resource/aws_opsworks_static_web_layer: Fix error reported on successful deletio
 resource/aws_opsworks_user_profile: Fix error reported on successful deletion (#23397)
 resource/aws_route53_resolver_firewall_domain_list: Remove limit for number of domains. (#23485)
 resource/aws_synthetics_canary: Retry canary creation if it fails because of IAM propagation. (#23394)"
-80,"NOTES:
+86,"NOTES:
 
 resource/aws_internet_gateway: Set vpc_id as Computed to prevent drift when the aws_internet_gateway_attachment resource is used (#16386)
 resource/aws_s3_bucket_lifecycle_configuration: The prefix argument of the rule configuration block has been deprecated. Use the filter configuration block instead. (#23325)
@@ -6349,7 +6897,7 @@ BUG FIXES:
 provider: Validates names of named profiles before use. (#23388)
 resource/aws_dms_replication_task: Allow cdc_start_position to be computed (#23328)
 resource/aws_ecs_cluster: Fix bug preventing describing clusters in ISO regions (#23341)"
-81,"FEATURES:
+87,"FEATURES:
 
 New Data Source: aws_grafana_workspace (#22874)
 New Data Source: aws_iam_openid_connect_provider (#23240)
@@ -6416,7 +6964,7 @@ resource/aws_iam_service_linked_role: Improve tag handling in ISO regions (#2328
 resource/aws_iam_virtual_mfa_device: Improve tag handling in ISO regions (#23283)
 resource/aws_s3_bucket_lifecycle_configuration: Ensure both key and value arguments of the filter tag configuration block are correctly populated in the outgoing API request and terraform state. (#23252)
 resource/aws_s3_bucket_lifecycle_configuration: Prevent non-empty plans when filter is an empty configuration block (#23232)"
-82,"BUG FIXES:
+88,"BUG FIXES:
 
 resource/aws_ecs_capacity_provider: Fix tagging error preventing use in ISO partitions (#23030)
 resource/aws_ecs_cluster: Fix tagging error preventing use in ISO partitions (#23030)
@@ -6433,7 +6981,7 @@ resource/aws_ecs_task_definition: Fix tagging error preventing use in ISO partit
 resource/aws_ecs_task_set: Fix tagging error preventing use in ISO partitions (#23030)
 resource/aws_waf_rule_group: Prevent panic when expanding the rule group's set of activated_rule (#22978)
 resource/aws_wafregional_rule_group: Prevent panic when expanding the rule group's set of activated_rule (#22978)"
-83,"FEATURES:
+89,"FEATURES:
 
 New Data Source: aws_backup_framework (#23193)
 New Data Source: aws_backup_report_plan (#23146)
@@ -6542,14 +7090,14 @@ resource/aws_s3_bucket_lifecycle_configuration: Correctly handle the days value 
 resource/aws_s3_bucket_lifecycle_configuration: Fix extraneous diffs especially after import (#23144)
 resource/aws_sagemaker_endpoint_configuration: Emptiness check for arguments, Allow not passing async_inference_config.kms_key_id. (#22960)
 resource/aws_vpn_connection: Add support for ipsec.1-aes256 connection type (#23127)"
-84,"BUG FIXES:
+90,"BUG FIXES:
 
 resource/aws_rds_cluster: Fix crash when configured engine_version string is shorter than the EngineVersion string returned from the AWS API (#23039)
 resource/aws_vpn_connection: Add support for ipsec.1-aes256 connection type (#23127)
 ","BUG FIXES:
 resource/aws_rds_cluster: Fix crash when configured engine_version string is shorter than the EngineVersion string returned from the AWS API (#23039)
 resource/aws_vpn_connection: Add support for ipsec.1-aes256 connection type (#23127)"
-85,"BREAKING CHANGES:
+91,"BREAKING CHANGES:
 
 data-source/aws_connect_hours_of_operation: The hours_of_operation_arn attribute is renamed to arn (#22375)
 resource/aws_batch_compute_environment: No compute_resources configuration block can be specified when type is UNMANAGED (#22805)
@@ -6882,12 +7430,12 @@ resource/aws_route_table_association: Retry resource Read for EC2 eventual consi
 resource/aws_vpc_ipam: Correct update of description (#22863)
 resource/aws_waf_rule_group: Prevent panic when expanding the rule group's set of activated_rule (#22978)
 resource/aws_wafregional_rule_group: Prevent panic when expanding the rule group's set of activated_rule (#22978)"
-86,"BUG FIXES:
+92,"BUG FIXES:
 
 resource/aws_backup_selection: Fix permanent diffs for condition and not_resources arguments causing resource recreation (#22882)
 ","BUG FIXES:
 resource/aws_backup_selection: Fix permanent diffs for condition and not_resources arguments causing resource recreation (#22882)"
-87,"FEATURES:
+93,"FEATURES:
 
 New Data Source: aws_api_gateway_export (#22731)
 New Data Source: aws_api_gateway_sdk (#22731)
@@ -7010,7 +7558,7 @@ resource/aws_sns_topic: Further refine tag error handling in ISO partitions (#22
 resource/aws_sqs_queue: Further refine tag error handling in ISO partitions (#22780)
 resource/aws_vpc: Suppress errors if main route table, default NACL or default security group cannot be found (#22724)
 resource/aws_vpc_dhcp_options_association: Support default DHCP Options ID (#22722)"
-88,"FEATURES:
+94,"FEATURES:
 
 New Data Source: aws_cloudfront_origin_access_identity (#22572)
 New Data Source: aws_vpc_ipam_preview_next_cidr (#22643)
@@ -7067,7 +7615,7 @@ resource/aws_apprunner_custom_domain_association: Add the status binding_certifi
 resource/aws_cloudfront_distribution: Increase the maximum valid origin_keepalive_timeout value to 180 (#22632)
 resource/aws_ecr_lifecycle_policy: Fix diffs in policy when no changes are detected (#22665)
 resource/aws_load_balancer_policy: Suppress policy_attribute differences (#21776)"
-89,"FEATURES:
+95,"FEATURES:
 
 New Data Source: aws_cognito_user_pool_client (#22477)
 New Resource: aws_cognito_identity_pool_provider_principal_tag (#22514)
@@ -7246,7 +7794,7 @@ resource/aws_sqs_queue: Don't timeout when a queue policy Condition value contai
 resource/aws_ssm_parameter: Mark version as Computed when value changes (#22522)
 resource/aws_subnet: Protect against errors when availability_zone_id is not supported in a partition (e.g., ISO) (#22580)
 resource/aws_subnet: Resource-based naming is not available in the ap-southeast-3 region (#22531)"
-90,"FEATURES:
+96,"FEATURES:
 
 New Data Source: aws_batch_scheduling_policy (#22335)
 New Data Source: aws_cognito_user_pool_clients (#22289)
@@ -7407,7 +7955,7 @@ resource/aws_networkfirewall_rule_group: Allow any character in ip_set definitio
 resource/aws_ses_event_destination: Allow . and @ characters in cloudwatch_destination.default_value argument (#22359)
 resource/aws_ssoadmin_managed_policy_attachment: Fix missing call to ProvisionPermissionSet after detaching the managed policy (#21773)
 resource/aws_vpc_ipam_pool_cidr_allocation: update cidr and netmask_length attributes netmask to a minimum of 0 and maximum of 32 (#22418)"
-91,"NOTES:
+97,"NOTES:
 
 resource/aws_fsx_ontap_storage_virtual_machine: The active_directory_configuration.self_managed_active_directory_configuration.organizational_unit_distinguidshed_name attribute has been deprecated. All configurations using active_directory_configuration.self_managed_active_directory_configuration.organizational_unit_distinguidshed_name should be updated to use the new active_directory_configuration.self_managed_active_directory_configuration.organizational_unit_distinguished_name attribute instead (#22246)
 
@@ -7528,10 +8076,10 @@ resource/aws_sqs_queue_policy: Fix erroneous diffs in policy when no changes mad
 resource/aws_ssoadmin_permission_set_inline_policy: Fix erroneous diffs in inline_policy when no changes made or policies are equivalent (#22192)
 resource/aws_transfer_access: Fix erroneous diffs in policy when no changes made or policies are equivalent (#22193)
 resource/aws_transfer_user: Fix erroneous diffs in policy when no changes made or policies are equivalent (#22193)"
-92,"BUG FIXES:
+98,"BUG FIXES:
 resource/aws_lambda_function: Wait for successful completion of function code update (#22242)","BUG FIXES:
 resource/aws_lambda_function: Wait for successful completion of function code update (#22242)"
-93,"FEATURES:
+99,"FEATURES:
 
 New Resource: aws_codecommit_approval_rule_template_association (#13467)
 New Resource: aws_detective_graph (#22042)
@@ -7572,7 +8120,7 @@ resource/aws_lambda_event_source_mapping: Add filter_criteria argument (#21937)
 resource/aws_sqs_queue: Add sqs_managed_sse_enabled argument (#21954)
 resource/aws_transfer_server: Add function argument in support of custom identity providers (#22039)
 resource/ecs: Add runtime_platform argument in support of Fargate for ECS Windows containers (#22016)"
-94,"FEATURES:
+100,"FEATURES:
 
 New Data Source: aws_codecommit_approval_rule_template (#11487)
 New Data Source: aws_vpc_pool_data_source (#21998)
@@ -7633,7 +8181,7 @@ resource/aws_kms_replica_key: Fix order-related diffs in policy (#21990)
 resource/aws_s3_bucket: Fix order-related diffs in policy (#21997)
 resource/aws_s3_bucket_policy: Fix order-related diffs in policy (#21997)
 resource/aws_s3_bucket_replication_configuration: Mark event_threshold in destination metrics configuration block as Optional (#21901)"
-95,"FEATURES:
+101,"FEATURES:
 
 New Data Source: aws_ec2_instance_types (#21850)
 New Data Source: aws_imagebuilder_image_recipes (#21814)
@@ -7708,7 +8256,7 @@ resource/aws_rds_cluster_instance: Fix error from unexpected state storage-optim
 resource/aws_s3_bucket: Prevent OperationAborted conflict errors when simultaneously applying aws_s3_bucket_policy, aws_s3_bucket_public_access_block changes (#12949)
 resource/aws_s3_bucket_policy: Prevent OperationAborted conflict errors when simultaneously applying aws_s3_bucket, aws_s3_bucket_public_access_block changes (#12949)
 resource/aws_s3_bucket_public_access_block: Prevent OperationAborted conflict errors when simultaneously applying aws_s3_bucket_policy, aws_s3_bucket changes (#12949)"
-96,"FEATURES:
+102,"FEATURES:
 
 New Data Source: aws_emr_release_labels (#21767)
 New Resource: aws_appstream_directory_config (#21505)
@@ -7779,7 +8327,7 @@ resource/aws_internet_gateway: Allow available as a pending state during gateway
 resource/aws_lambda_layer_version: Increase MaxItems for compatible_runtimes field to 15. (#21825)
 resource/aws_route: On route creation with high custom creation timeout configured, the aws_route resource does no longer give up before the create timeout is exceeded (previously it was giving up after 20 not found checks). (#21831)
 resource/aws_security_group: Fix lack of pagination when describing security groups (#21743)"
-97,"FEATURES:
+103,"FEATURES:
 
 New Data Source: aws_key_pair (#15829)
 New Resource: aws_cloudfront_field_level_encryption_config (#15033)
@@ -7838,19 +8386,19 @@ resource/aws_route_table: Fix lack of pagination when describing route tables (#
 resource/aws_route_table_association: Fix lack of pagination when describing route tables (#21710)
 resource/aws_security_group_rule: Fix resource import for rules with icmp or icmpv6 protocol (#21163)
 resource/aws_servicecatalog_provisioned_product: Allow empty values in provisioning parameters (#21669)"
-98,"BUG FIXES:
+104,"BUG FIXES:
 
 provider: Additional fixes to allow setting endpoints with non-standard, legacy keys. (#21657)
 ","BUG FIXES:
 provider: Additional fixes to allow setting endpoints with non-standard, legacy keys. (#21657)"
-99,"BUG FIXES:
+105,"BUG FIXES:
 
 provider: Fix bug preventing custom endpoints from being set (#21639)
 provider: Fix bug preventing proper assignment of custom endpoints (#21641)
 ","BUG FIXES:
 provider: Fix bug preventing custom endpoints from being set (#21639)
 provider: Fix bug preventing proper assignment of custom endpoints (#21641)"
-100,"FEATURES:
+106,"FEATURES:
 
 New Data Source: aws_cloudfront_response_headers_policy (#21620)
 New Data Source: aws_iam_user_ssh_key (#21335)
@@ -7935,7 +8483,7 @@ resource/aws_db_event_subscription: Fix adding new event_categories to existing 
 resource/aws_flow_log: parameters of destination_options block now properly force resource rebuild (#21434)
 resource/aws_kinesisanalyticsv2_application: Correctly update run_configuration argument (#21303)
 resource/aws_placement_group: partition_count argument is Computed, preventing spurious resource diffs (#21555)"
-101,"FEATURES:
+107,"FEATURES:
 
 New Resource: aws_chime_voice_connector_termination_credentials (#21162)
 New Resource: aws_glue_partition_index (#21234)
@@ -7982,7 +8530,7 @@ resource/aws_imagebuilder_distribution_configuration: remove hard limit on distr
 resource/aws_rds_cluster: Add possible pending states for cluster update (#17111)
 resource/aws_rds_cluster_instance: Remove force new resource on the engine_version parameter to allow upgrade without remove instances (#17111)
 resource/glue_catalog_table: Ignore not exists errors on delete (#21227)"
-102,"FEATURES:
+108,"FEATURES:
 
 New Resource: aws_dx_connection_confirmation (#16489)
 New Resource: aws_dx_hosted_connection (#16489)
@@ -8043,7 +8591,7 @@ resource/aws_elasticache_replication_group: Properly updates tags on the Replica
 resource/aws_lb_target_group: Handle attributes at creation: deregistration_delay, load_balancing_algorithm_type, preserve_client_ip, proxy_protocol_v2, slow_start, stickiness, and lambda_multi_value_headers_enabled (#21187)
 resource/aws_route: Use custom timeouts values (#21161)
 resource/aws_ses_configuration_set: Fix ARN (#21188)"
-103,"FEATURES:
+109,"FEATURES:
 New Data Source: aws_cloudcontrolapi_resource (#21110)
 New Data Source: aws_db_proxy (#21053)
 New Data Source: aws_ec2_host (#10817)
@@ -8094,7 +8642,7 @@ BUG FIXES:
 resource/aws_dx_connection: Mark provider_name as Computed to avoid resource recreation with pre-v3.56.0 configurations (#21085)
 resource/aws_dx_lag: Mark provider_name as Computed to avoid resource recreation with pre-v3.56.0 configurations (#21085)
 resource/aws_route_table_association: Wait for up to 40 not found checks when creating a new route table association (#21062)"
-104,"FEATURES:
+110,"FEATURES:
 
 New Data Source: aws_cloudfront_log_delivery_canonical_user_id (#15167)
 New Data Source: aws_cloudwatch_log_groups (#17151)
@@ -8147,7 +8695,7 @@ data-source/aws_launch_template: Fix error setting metadata_options (#21008)
 resource/aws_cognito_user_pool: Fix removal of lambda_config (#20952)
 resource/aws_msk_cluster: Don't recreate cluster if order of broker_node_group_info.client_subnets or broker_node_group_info.security_groups entries change (#14627)
 resource/efs_file_system: Allow multiple lifecycle policies. (#20971)"
-105,"FEATURES:
+111,"FEATURES:
 
 New Data Source: aws_eks_clusters (#20315)
 New Data Source: aws_eks_node_group (#13564)
@@ -8210,7 +8758,7 @@ resource/aws_iam_role: Change name_prefix validation to a range of 1 to 38 chara
 resource/aws_imagebuilder_distribution_configuration: Improve validation error message of name argument (#20842)
 resource/aws_kms_key: Extends timeouts for policy and tag propagation to 5 minutes each (#20914)
 resource/aws_route53_health_check: Fix update for ip_address (#20795)"
-106,"FEATURES:
+112,"FEATURES:
 
 New Resource: aws_chime_voice_connector_origination (#20676)
 New Resource: aws_chime_voice_connector_termination (#20667)
@@ -8219,7 +8767,7 @@ New Resource: aws_quicksight_group_membership (#20687)
 New Resource: aws_chime_voice_connector_origination (#20676)
 New Resource: aws_chime_voice_connector_termination (#20667)
 New Resource: aws_quicksight_group_membership (#20687)"
-107,"FEATURES:
+113,"FEATURES:
 
 New Resource: aws_service_discovery_instance (#17498)
 
@@ -8260,7 +8808,7 @@ BUG FIXES:
 resource/aws_ecs_cluster: Ensure that setting attribute is set consistently (#20720)
 resource/aws_pinpoint_email_channel: When specifying the configuration_set parameter, use the name of the set instead of the ARN. (#20691)
 resource/aws_route53_record: Support set_identifier values containing _ (#13453)"
-108,"FEATURES:
+114,"FEATURES:
 
 New Data Source: aws_dx_connection (#17852)
 New Data Source: aws_dx_location (#9735)
@@ -8349,7 +8897,7 @@ data-source/aws_route53_resolver_rule: Fix lack of pagination when listing rules
 resource/aws_codebuild_webhook: Only update build_type if a value is specified (#20671)
 resource/aws_route53_delegation_set: Properly remove from state when resource does not exist (#20664)
 resource/aws_route53_query_log: Properly remove from state when resource does not exist (#20666)"
-109,"FEATURES:
+115,"FEATURES:
 
 New Data Source: aws_iam_roles (#18585)
 New Data Source: aws_subnets (#18803)
@@ -8404,7 +8952,7 @@ resource/aws_lambda_function: Fix handler, runtime attribute validation for pack
 resource/aws_lambda_function: fix Osaka ap-northeast-3 lambda function creation, failing due to code signer service not available in the region. (#20555)
 resource/aws_rds_cluster_parameter_group: Handle paginated response when reading parameters from RDS cluster parameter group. (#16010)
 resource/aws_storagegateway_smb_file_share: Only set oplocks_enabled if a value is specified in configuration (#20579)"
-110,"FEATURES:
+116,"FEATURES:
 
 New Resource: aws_chime_voice_connector (#19504)
 New Resource: aws_shield_protection_group (#20491)
@@ -8439,7 +8987,7 @@ aws/resource_aws_imagebuilder_infrastructure_configuration: Always set terminate
 resource/aws_iot_topic_rule: Correctly update resource on error_action change (#16471)
 resource/aws_iot_topic_rule: Enhance handling of IAM eventual consistency errors during create (#20467)
 resource/aws_synthetics_canary: Correctly report any resource creation errors (#20463)"
-111,"ENHANCEMENTS:
+117,"ENHANCEMENTS:
 
 data-source/aws_acm_certificate: Add status attribute (#20232)
 data-source/aws_ec2_coip_pool: Add arn attribute (#17046)
@@ -8474,7 +9022,7 @@ aws/resource_aws_amplify_branch: Correctly handle branch names that contain '/' 
 aws/resource_aws_apigateway_vpc_link: Ensure deletion does not return an error when resource is not found (#20441)
 aws/resource_aws_instance: Fix running terraform plan with with skip_credentials_validation=true (#20357)
 aws/resource_aws_instance: Fix state refresh when launch template was deleted (#20357)"
-112,"FEATURES:
+118,"FEATURES:
 
 New Resource: aws_sagemaker_workforce (#20065)
 New Resource: aws_sagemaker_workteam (#20122)
@@ -8525,7 +9073,7 @@ aws/resource_aws_elasticache_user: Correctly handle user modifications and delet
 resource/aws_budgets_budget: Change the service name in the arn attribute from budgetservice to budgets (#9092)
 resource/aws_budgets_budget: Suppress plan differences with trailing zeroes for limit_amount (#9092)
 resource/aws_budgets_budget_action: Change the service name in the arn attribute from budgetservice to budgets (#9092)"
-113,"FEATURES:
+119,"FEATURES:
 
 New Data Source: aws_elasticache_user (#16629)
 New Resource: aws_appconfig_deployment (#20172)
@@ -8558,7 +9106,7 @@ resource/aws_storagegateway_smb_file_share: Add bucket_region, oplocks_enabled a
 BUG FIXES:
 aws/resource_aws_lambda_event_source_mapping: Ignore InvalidParameterValueException error caused by IAM propagation when creating Lambda event source mapping with Kinesis stream source (#20229)
 aws/resource_aws_route_table_association: Correctly handle associated as a pending state when waiting for deletion of an association (#20265)"
-114,"NOTES:
+120,"NOTES:
 
 resource/aws_dx_gateway_association_proposal: If an accepted Proposal reaches end-of-life and is removed by AWS do not recreate the resource, instead refreshing Terraform state from the resource's Direct Connect Gateway ID and Associated Gateway ID. (#19741)
 
@@ -8623,7 +9171,7 @@ resource/aws_cognito_user_pool_client: Retry on ConcurrentModificationException 
 resource/aws_datasync_location_s3: Correctly parse S3 on Outposts location URI (#19859)
 resource/aws_db_instance: Ignore allocated_storage for replica at creation time (#12548)
 resource/aws_elasticache_replication_group: Cannot set cluster_mode.replicas_per_node_group when member of Global Replication Group (#20111)"
-115,"3.49.0 (July 08, 2021)
+121,"3.49.0 (July 08, 2021)
 FEATURES:
 
 New Resource: aws_eks_identity_provider_config (#17959)
@@ -8652,7 +9200,7 @@ data-source/aws_lakeformation_permissions: Fix various problems with permissions
 resource/aws_eks_cluster: Don't associate an encryption_config if there's already one (#19986)
 resource/aws_lakeformation_permissions: Fix various problems with permissions including select-only (#20108)
 resource/aws_ram_resource_share_accepter: Allow destroy even where AWS API provides no way to disassociate (#19718)"
-116,"
+122,"
 New Data Source: aws_iam_session_context (#19957)
 New Data Source: aws_servicecatalog_launch_paths (#19572)
 New Data Source: aws_servicecatalog_portfolio_constraints (#19813)
@@ -8677,7 +9225,7 @@ resource/aws_fsx_windows_file_system: Add audit_log_configuration argument. (#19
 BUG FIXES:
 resource/aws_cloudwatch_event_target: Don't crash if sqs_target configuration block is empty. (#19946)
 resource/aws_mwaa_environment: Changes to the kms_key argument force resource recreation (#19994)"
-117,"FEATURES:
+123,"FEATURES:
 
 New Resource: aws_cloudwatch_event_bus_policy (#16874)
 New Resource: aws_efs_backup_policy (#18006)
@@ -8724,7 +9272,7 @@ resource/aws_backup_vault_policy: Correctly handle deleting policy of deleted va
 resource/aws_backup_vault_policy: Correctly handle reading policy of deleted vault (#19749)
 resource/aws_glue_catalog_database: Set location_uri as compute to prevent drift when target_table has location_uri set. (#19743)
 resource/aws_glue_catalog_table: Fix updating schema_reference when columns are present. (#19742)"
-118,"FEATURES:
+124,"FEATURES:
 
 New Data Source: aws_appmesh_virtual_service (#19774)
 New Data Source: aws_servicecatalog_portfolio (#19500)
@@ -8777,7 +9325,7 @@ resource/aws_lakeformation_permissions: Fix bug where resource is not properly r
 resource/aws_lakeformation_permissions: Fix diffs resulting only from order of column names and exclude column names (#19817)
 resource/aws_lambda_event_source_mapping: Enhance handling of IAM eventual consistency errors during create (#19831)
 resource/aws_sqs_queue: Correctly handle the default kms_data_key_reuse_period_seconds value of 300 for unencrypted queues (#19834)"
-119,"FEATURES:
+125,"FEATURES:
 
 New Data Source: aws_appmesh_mesh (#19577)
 New Data Source: aws_globalaccelerator_accelerator (#19647)
@@ -8858,7 +9406,7 @@ resource/aws_lambda_function: Prevents perpetual diff in vpc_config (#17610)
 resource/aws_servicequotas_service_quota: Correctly handle errors embedded in API struct (#19722)
 resource/aws_sqs_queue: Allow visibility_timeout_seconds to be 0 when creating queue (#19639)
 resource/aws_sqs_queue: Ensure that queue attributes propagate completely during Create and Update (#19639)"
-120,"FEATURES:
+126,"FEATURES:
 
 New Resource: aws_amplify_branch (#11937)
 New Resource: aws_amplify_domain_association (#11938)
@@ -8901,7 +9449,7 @@ resource/aws_amplify_app: Mark the enable_performance_mode argument in the auto_
 resource/aws_cloudwatch_event_api_destination: Fix crash on resource update (#19654)
 resource/aws_elasticache_cluster: Fix provider-level default_tags support for resource (#19615)
 resource/aws_iam_access_key: Fix status not defaulting to Active (#19606)"
-121,"FEATURES:
+127,"FEATURES:
 
 New Data Source: aws_cloudwatch_event_connection (#18905)
 New Resource: aws_amplify_app (#15966)
@@ -8988,7 +9536,7 @@ resource/aws_glue_connection: connection_properties are optional (#19375)
 resource/aws_lb_listener_rule: Allow blank string for action.redirect.query nested argument (#19496)
 resource/aws_synthetics_canary: Change minimum timeout_in_seconds in run_config from 60 to 3 (#19515)
 resource/aws_vpn_connection: Allow local_ipv4_network_cidr, remote_ipv4_network_cidr, local_ipv6_network_cidr, and remote_ipv6_network_cidr to be CIDRs of any size (#17573)"
-122,"FEATURES:
+128,"FEATURES:
 
 New Data Source: aws_service_discovery_dns_namespace (#6856)
 New Resource: aws_cloudwatch_metric_stream (#18870)
@@ -9013,7 +9561,7 @@ ENHANCEMENTS:
 resource/aws_autoscaling_policy: Add PredictiveScaling policy_type and predictive_scaling_configuration argument (#19447)
 BUG FIXES:
 resource/aws_networkfirewall_rule_group: Correctly update resource on rules change (#19430)"
-123,"FEATURES:
+129,"FEATURES:
 
 New Data Source: aws_cloudfront_function (#19315)
 New Data Source: aws_glue_connection (#18802)
@@ -9074,7 +9622,7 @@ resource/aws_network_interface: Add interface_type argument (#18841)
 BUG FIXES:
 resource/aws_lambda_function: Wait for successful completion of function code update (#19386)
 resource/aws_pinpoint_email_channel: role_arn argument is optional (#19361)"
-124,"FEATURES:
+130,"FEATURES:
 
 New Resource: aws_macie2_custom_data_identifier (#19254)
 New Resource: aws_macie2_findings_filter (#19283)
@@ -9121,7 +9669,7 @@ resource/aws_lambda_event_source_mapping: Support reading starting_position and 
 resource/aws_lb_listener: Add tags argument & tags_all attribute. (#19286)
 resource/aws_lb_listener_rule: Add plan time validation to listener_arn, action.target_group_arn, action.forward.target_group.arn, action.redirect.host, action.redirect.path, action.redirect.query, action.redirect.status_code, action.fixed_response.message_body, action.authenticate_cognito.user_pool_arn. (#19285)
 resource/aws_lb_listener_rule: Add tagging support. (#19285)"
-125,"FEATURES:
+131,"FEATURES:
 
 New Data Source: aws_cloudwatch_event_source (#19219)
 New Resource: aws_dynamodb_kinesis_streaming_destination (#16743)
@@ -9182,7 +9730,7 @@ resource/aws_lakeformation_permissions: Fix issues related to permissions not be
 resource/aws_mwaa_environment: Correctly apply plugins_s3_object_version change (#19266)
 resource/aws_sfn_state_machine: Handle eventual consistency of state machine updates (#15434)
 resource/aws_ssoadmin_managed_policy_attachment: Retry attachment/detachment when other permission-set attachment event was not yet propagated, to avoid ConflictException. (#19216)"
-126,"NOTES:
+132,"NOTES:
 
 provider: default_tags support generally available to all provider resources that support tags with the exception of aws_autoscaling_group (#19084)
 
@@ -9319,7 +9867,7 @@ resource/aws_ram_resource_share_accepter: Improve handling of eventual consisten
 resource/aws_storagegateway_gateway: Correctly handle additional error message returned in some regions (#19116)
 resource/aws_vpc_endpoint: Fix auto_accept failing while waiting for the VPC Endpoint Connection acceptance (#19059)
 resource/aws_vpn_connection: Prevent flipped tunnel1_ and tunnel2_ ordering when tunnel1_inside_cidr, tunnel1_inside_ipv6_cidr, or tunnel1_preshared_key is configured (#19077)"
-127,"NOTES:
+133,"NOTES:
 
 provider: The HTTP User-Agent header has been reordered so the AWS SDK Go product is last, except when using the TF_APPEND_USER_AGENT environment variable. Environments dependent on the previous User-Agent header ordering may require updates. (#18855)
 
@@ -9382,7 +9930,7 @@ resource/aws_ecr_replication_configuration: Remove relication rules on resource 
 resource/aws_eip: Tags are created for EIPs which default to vpc domain (#18909)
 resource/aws_fms_policy: Use API model regular expression for resource_type and resource_type_list argument plan time validation (#18600)
 resource/aws_sqs_queue: Append .fifo suffix for Terraform-assigned FIFO queue names (#17164)"
-128,"FEATURES:
+134,"FEATURES:
 
 New Resource: aws_cloudfront_key_group (#17041)
 New Resource: aws_ecr_registry_policy (#16831)
@@ -9491,7 +10039,7 @@ resource/aws_ssm_parameter: Allow allowed_pattern and description arguments to b
 resource/aws_ssm_parameter: Allow tags to be applied to resource when overwrite is configured (#18640)
 resource/aws_vpc_endpoint_route_table_association: Handle read-after-create eventual consistency (#18465)
 resource/aws_xray_sampling_rule: Change the maximum length of rule_name from 128 to 32 (#18667)"
-129,"FEATURES:
+135,"FEATURES:
 
 New Resource: aws_cloudwatch_query_definition (#17899)
 
@@ -9576,7 +10124,7 @@ resource/aws_spot_instance_request: Handle read-after-create eventual consistenc
 resource/aws_synthetics_canary: Handle asynchronous IAM eventual consistency error on creation (#18404)
 resource/aws_vpc_dhcp_options_association: Handle read-after-create eventual consistency (#18472)
 resource/aws_vpn_gateway_route_propagation: Improve eventual consistency handling and handling of out-of-band resource removal (#17319)"
-130,"NOTES:
+136,"NOTES:
 
 resource/aws_storagegateway_upload_buffer: The Storage Gateway ListLocalDisks API operation has been implemented to support the disk_path attribute for Cached and VTL gateway types. Environments using restrictive IAM permissions may require updates. (#18313)
 
@@ -9671,7 +10219,7 @@ resource/aws_sns_topic_subscription: recreate subscription if topic is deleted (
 resource/aws_subnet: Handle EC2 eventual consistency errors on creation (#18392)
 resource/aws_vpc: Handle EC2 eventual consistency errors on creation (#18391)
 resource/aws_wafv2_web_acl_logging_configuration: Remove deprecation warning for redacted_fields single_header argument (#18384)"
-131,"NOTES:
+137,"NOTES:
 
 data-source/aws_vpc_endpoint_service: The service_type argument filtering has been switched from client-side to new EC2 API functionality (#17641)
 provider: New default_tags argument as a public preview for applying tags across all resources under a provider. Support for the functionality must be added to individual resources in the codebase and is only implemented for the aws_subnet and aws_vpc resources at this time. Until a general availability announcement, no compatibility promises are made with these provider arguments and their functionality. (#17974)
@@ -9728,7 +10276,7 @@ resource/aws_ssm_patch_group: Allow for a single patch group to be registered wi
 resource/aws_ssm_patch_group: Replace Provider produced inconsistent result after apply with actual error message (#15213)
 resource/aws_waf_rule: Fix rule deletion when still referenced by a WebACL (#17876)
 resource/aws_wafv2_web_acl_logging_configuration: Ensure redacted_fields are applied to the resource (#14319)"
-132,"FEATURES:
+138,"FEATURES:
 
 New Data Source: aws_acmpca_certificate (#10213)
 New Resource: aws_acmpca_certificate (#10213)
@@ -9775,7 +10323,7 @@ resource/aws_mq_broker: Support updating broker engine version without recreatin
 BUG FIXES:
 resource/aws_rds_cluster_instance: Add configuring-iam-database-auth pending state (#17982)
 resource/aws_storagegateway_upload_buffer: Replace Provider produced inconsistent result after apply with actual error message (#17880)"
-133,"FEATURES:
+139,"FEATURES:
 
 New Resource: aws_route53_hosted_zone_dnssec (#17474)
 
@@ -9810,7 +10358,7 @@ resource/aws_kms_grant: Adds support for operations on asymmetric keys (#17836)
 resource/aws_neptune_cluster_instance: Add ""storage-optimization"" to Neptune cluster instance create/update pending states (#17901)
 resource/aws_neptune_cluster_parameter_group: Correctly update resource by id (#17872)
 resource/aws_ssm_maintenance_window_task: Prevent ValidationException error on update when priority is not set or 0 (#17885)"
-134,"FEATURES:
+140,"FEATURES:
 
 New Data Source: aws_apigatewayv2_api (#13883)
 New Data Source: aws_apigatewayv2_apis (#13883)
@@ -9855,7 +10403,7 @@ resource/aws_glue_trigger: Support starting ON_DEMAND triggers via enabled flag.
 resource/aws_sagemaker_domain: Wait for update to finish. (#17251)
 resource/aws_sagemaker_user_profile: Wait for update to finish. (#17251)
 resource/aws_sns_topic_subscription: Fix to avoid delivery_policy always showing diff. (#14255)"
-135,"BUG FIXES:
+141,"BUG FIXES:
 
 data-source/aws_iam_policy_document: Keep empty conditions (#17752)
 resource/aws_db_instance: Fix conflicting argument validation error (#17755)
@@ -9868,7 +10416,7 @@ resource/aws_db_instance: Fix conflicting argument validation error (#17755)
 resource/aws_instance: Prevent error with iam_instance_profile containing additional forward slashes from path (#17734)
 resource/aws_lb_target_group_attachment: Retry InvalidTarget errors when creating (#8538)
 resource/aws_synthetics_canary: Fix Canary Update when in running state (#17704)"
-136,"FEATURES:
+142,"FEATURES:
 
 New Resource: aws_cloudwatch_event_archive (#17270)
 New Resource: aws_elasticache_global_replication_group (#15885)
@@ -9941,7 +10489,7 @@ resource/aws_ses_receipt_rule: Fix name validation regex to include . (period) (
 resource/aws_ssm_document: Recreate resource on name update (#17582)
 resource/aws_transfer_ssh_key: Corrects user_name validation (#17621)
 resource/aws_transfer_user: Corrects user_name validation (#17621)"
-137,"FEATURES:
+143,"FEATURES:
 
 New Data Source: aws_cloudfront_cache_policy (#17336)
 New Resource: aws_cloudfront_cache_policy (#17336)
@@ -10078,7 +10626,7 @@ resource/aws_lambda_event_source_mapping: Wait for create and update operations 
 resource/aws_lambda_function: Prevent crash when using Image package type (#17082)
 resource/aws_ssm_parameter: Use ARN value from API response rather than generating the value (#16618)
 resource/aws_wafv2_web_acl_association: Increase creation timeout value from 2 to 5 minutes to prevent WAFUnavailableEntityException (#17545)"
-138,"FEATURES:
+144,"FEATURES:
 
 New Data Source: aws_cloudfront_origin_request_policy (#17342)
 New Resource: aws_ec2_transit_gateway_prefix_list_reference (#16823)
@@ -10149,7 +10697,7 @@ resource/aws_security_group: Prevent perpetual differences with name_prefix argu
 resource/aws_ssoadmin_permission_set: Properly update resource with relay_state argument (#17423)
 resource/aws_vpc_endpoint: Return unsuccessful deletion information immediately as an error instead of timing out while waiting for deletion (#16656)
 resource/aws_vpc_endpoint_service: Return unsuccessful deletion information immediately as an error instead of timing out while waiting for deletion (#16656)"
-139,"NOTES:
+145,"NOTES:
 
 data-source/aws_route53_zone: The Route 53 ListResourceRecordSets API call has been implemented to support the name_servers attribute for private Hosted Zones similar to the resource implementation. Environments using restrictive IAM permissions may require updates. (#17002)
 
@@ -10198,7 +10746,7 @@ data-source/aws_route53_zone: Ensure name_servers is populated for private Hoste
 resource/aws_ebs_volume: Allow both size and snapshot_id attributes to be specified (#17243)
 resource/aws_elasticache_replication_group: Correctly update computed member_clusters values (#17201)
 resource/aws_sagemaker_code_repository: fix doc name (#17221)"
-140,"NOTES
+146,"NOTES
 
 resource/aws_lightsail_instance: The ipv6_address attribute has been deprecated. Use the ipv6_addresses attribute instead. This is due to a backwards incompatible change in the Lightsail API. (#17155)
 
@@ -10269,12 +10817,12 @@ resource/aws_lakeformation_permissions: Handle resources with multiple permissio
 resource/aws_lambda_function: Prevent panic with missing FunctionConfiguration PackageType attribute in API response (#16544)
 resource/aws_lambda_function: Prevent panic with missing environment variable value (#17056)
 resource/aws_sagemaker_image: Fix catching image not found on read error (#17141)"
-141,"BUG FIXES
+147,"BUG FIXES
 
 data-source/instance: Fix EBS and root block device tags issue with ""Invalid address to set"" (#17136)
 ","BUG FIXES
 data-source/instance: Fix EBS and root block device tags issue with ""Invalid address to set"" (#17136)"
-142,"FEATURES
+148,"FEATURES
 
 New Data Source: aws_api_gateway_domain_name (#12489)
 New Data Source: aws_identitystore_group (#15322)
@@ -10355,7 +10903,7 @@ resource/aws_route53_zone_association: Prevent deletion errors for missing Hoste
 resource/aws_sagemaker_image - fix error on wait for delete when image does not exist (#16077)
 resource/aws_s3_bucket_inventory: Prevent crashes with empty destination, filter, and schedule configuration blocks (#17055)
 service/apigateway: All operations will now automatically retry on ConflictException: Unable to complete operation due to concurrent modification. Please try again later. errors."
-143,"
+149,"
 New Data Source: aws_ssoadmin_instances (#15808)
 New Data Source: aws_ssoadmin_permission_set (#15808)
 New Resource: aws_sagemaker_image (#16082)
@@ -10406,7 +10954,7 @@ resource/aws_emr_cluster: Remove from state instead of returning an error on lon
 resource/aws_glue_catalog_table: Glue table partition keys should be set to empty list instead of being unset (#16727)
 resource/aws_imagebuilder_distribution_configuration: Remove user_ids argument maximum limit (#16905)
 resource/aws_transfer_user: Update user_name argument validation to support 100 characters (#16938)"
-144,"FEATURES
+150,"FEATURES
 
 New Data Source: aws_ec2_managed_prefix_list (#16738)
 New Data Source: aws_lakeformation_data_lake_settings (#13250)
@@ -10485,7 +11033,7 @@ resource/aws_db_instance: Fix missing db_subnet_group_name in API request when u
 resource/aws_eip_association: Handle eventual consistency when creating resource (#16808)
 resource/aws_main_route_table_association: Prevent crash on creation when VPC main route table association is not found (#16680)
 resource/aws_workspaces_workspace: Prevent panic from terminated WorkSpace (#16692)"
-145,"NOTES
+151,"NOTES
 
 resource/aws_imagebuilder_image_recipe: Previously the ordering of component configuration blocks was not properly handled by the resource, which could cause unexpected behavior with multiple Components. These configurations may see the ordering difference being fixed after upgrade. (#16566)
 
@@ -10546,7 +11094,7 @@ data-source/aws_imagebuilder_image_recipe: Ensure proper ordering of component a
 resource/aws_backup_plan: Prevent plan-time validation error for pre-existing resources with lifecycle delete_after and/or copy_action lifecycle delete_after arguments configured (#16605)
 resource/aws_imagebuilder_image_recipe: Ensure proper ordering of component configuration blocks (#16566)
 resource/aws_workspaces_directory: Fix empty custom_security_group_id & default_ou (#16589)"
-146,"ENHANCEMENTS
+152,"ENHANCEMENTS
 
 resource/aws_backup_plan: Add plan-time validation for various arguments (#16476)
 resource/aws_eks_node_group: Make capacity_type a Computed attribute (#16552)
@@ -10581,7 +11129,7 @@ resource/aws_ec2_client_vpn_network_association: Increase associate and disassoc
 resource/aws_instance: Automatically retry instance restart on eventual consistency error during instance_type in-place update (#16443)
 resource/aws_lambda_function: Prevent error during deletion when resource not found (#16183)
 resource/aws_ssm_maintenance_window_target: Remove from state if not found (#16478)"
-147,"FEATURES
+153,"FEATURES
 
 New Data Source: aws_glue_registry (#16418)
 
@@ -10614,7 +11162,7 @@ resource/aws_eks_node_group: Add capacity_type argument and support multiple ins
 resource/aws_lambda_function: Add support for Container Images (#16512)
 BUG FIXES
 resource/aws_fsx_windows_file_system: Prevent potential panics, unexpected errors, and use correct operation timeout on update (#16488)"
-148,"FEATURES
+154,"FEATURES
 
 New Data Source: aws_imagebuilder_image_pipeline (#16299)
 New Data Source: aws_imagebuilder_image_recipe (#16218)
@@ -10671,7 +11219,7 @@ resource/aws_kinesisanalyticsv2_application: Respect the order of 'record_column
 resource/aws_lambda_function: Prevent Lambda GetFunctionCodeSigningConfig API call error outside AWS Commercial regions (#16412)
 resource/aws_lb_listener: Mark port argument as optional and only default protocol argument to HTTP for Application Load Balancers (Support Gateway Load Balancer) (#16306)
 resource/aws_securityhub_member: Prevent invited attribute updates due to recent API changes (#16404)"
-149,"FEATURES
+155,"FEATURES
 
 New Data Source: aws_lambda_code_signing_config (#16384)
 New Data Source: aws_signer_signing_job (#16383)
@@ -10722,7 +11270,7 @@ resource/aws_workspaces_directory: Allows assigning IP group (#14451)
 BUG FIXES
 resource/aws_fsx_windows_file_system: Update the default creation timeout from 30 to 45 minutes (#16363)
 resource/aws_lb: Fix enable_cross_zone_load_balancing argument handling with Gateway Load Balancers (#16314)"
-150,"
+156,"
 New Data Source: aws_imagebuilder_component (#16159)
 New Data Source: aws_imagebuilder_distribution_configuration (#16180)
 New Data Source: aws_imagebuilder_infrastructure_configuration (#16186)
@@ -10783,7 +11331,7 @@ resource/aws_eks_fargate_profile: Serialize multiple profile creation and deleti
 resource/aws_organizations_organization: Prevent recreation when feature_set is updated to ALL (#15473)
 resource/aws_s3_bucket: Use provider credentials when getting the bucket region (fix AWS China non-ICP S3 Buckets and other restrictive environments) (#15481)
 resource/aws_s3_bucket_object: Correctly updates version_id when certain configuration keys are changed (#14900)"
-151,"ENHANCEMENTS
+157,"ENHANCEMENTS
 
 data-source/aws_ec2_transit_gateway_route_table: Add arn attribute (#13921)
 data-source/aws_ec2_transit_gateway_vpc_attachment: Add appliance_mode_support attribute (#16159)
@@ -10852,12 +11400,12 @@ resource/aws_lb_target_group: Allow invalid configurations that were allowed pri
 resource/aws_network_interface: Prevent crash with ENI attachments missing DeviceIndex or AttachmentID (#15567)
 resource/aws_s3_bucket: Add plan-time validation to acl (#15327)
 resource/aws_workspaces_bundle: Fix empty (private) owner (#14535)"
-152,"BUG FIXES
+158,"BUG FIXES
 
 resource/aws_cloudwatch_event_target: Prevent regression from version 3.14.0 with ListTargetsByRuleInput.EventBusName error (#16075)
 ","BUG FIXES
 resource/aws_cloudwatch_event_target: Prevent regression from version 3.14.0 with ListTargetsByRuleInput.EventBusName error (#16075)"
-153,"FEATURES
+159,"FEATURES
 
 New Data Source: aws_route53_resolver_endpoint (#8628)
 New Data Source: aws_sagemaker_prebuilt_ecr_image (#15924)
@@ -10932,7 +11480,7 @@ resource/aws_rds_cluster: Prevent error removing cluster from global cluster whe
 resource/aws_rds_cluster: Prevent recreation when using snapshot_identifier and kms_key_id without storage_encrypted = true (#15915)
 resource/aws_rds_cluster_instance: Add Cluster Identifier to creation error message (#15939)
 resource/aws_rds_global_cluster: Prevent error removing cluster from global cluster when not found (#15938)"
-154,"NOTES
+160,"NOTES
 
 data-source/aws_autoscaling_groups: The id attribute has changed to the name of the AWS Region. The first apply of this updated data source may show this difference. (#15896)
 data-source/aws_caller_identity: The id attribute has changed to the ID of the AWS Account. The first apply of this updated data source may show this difference. (#15896)
@@ -11091,7 +11639,7 @@ resource/aws_api_gateway_usage_plan: Change api_stages to from List to Set (#143
 resource/aws_lambda_function: Update published version and qualified_arn on config changes (#15121)
 resource/aws_rds_global_cluster: Prevent recreation when using encrypted source_db_cluster_identifier without storage_encrypted (#15916)
 resource/aws_vpc_peering_connection_options: Only modify options that have changed (#12126)"
-155,"FEATURES
+161,"FEATURES
 
 New Data Source: aws_rds_certificate (#15789)
 New Resource: aws_autoscalingplans_scaling_plan (#8965)
@@ -11136,7 +11684,7 @@ BUGFIXES
 resource/aws_workspaces_workspace: Fix terminated state resolution (#15705)
 resource/aws_glue_table_catalog_table: Prevent errors on unset of ser_de_info.name (#15127)
 resource/aws_glue_security_configuration: Don't send empty kms_arn if mode is DISABLED (#13618)"
-156,"FEATURES
+162,"FEATURES
 
 New Data Source: aws_codeartifact_repository_endpoint (#15566)
 New Resource: aws_appmesh_gateway_route (#15638)
@@ -11165,7 +11713,7 @@ resource/aws_backup_plan: Add support for AdvancedBackupSettings (#15341)
 resource/aws_sagemaker_notebook_instance: Add default_code_repository attribute (#13772)
 resource/aws_sagemaker_notebook_instance: Add volume_size attribute (#15521)
 resource/aws_workspaces_directory: Add workspaces creation properties (#14577)"
-157,"FEATURES
+163,"FEATURES
 
 New Data Source: aws_codeartifact_authorization_token (#15425)
 New Data Source: aws_ec2_instance_type (#13124)
@@ -11316,7 +11864,7 @@ resource/aws_s3_bucket: Correctly handle provider-level ignored tag configuratio
 resource/aws_s3_bucket: Correctly set expiration for lifecycle_rule with abort_incomplete_multipart_upload_days set (#15263)
 resource/aws_s3_bucket_analytics_configuration: Prevent unexpected timeout error on deletion due to API retries (#15529)
 resource/aws_s3_bucket_object: Correctly handle provider-level ignored tag configuration (#12013)"
-158,"FEATURES
+164,"FEATURES
 
 New Resource: aws_backup_vault_notifications (#12501)
 New Resource: aws_codeartifact_domain (#13743)
@@ -11379,7 +11927,7 @@ resource/aws_db_instance: Prevent ordering differences with enabled_cloudwatch_l
 resource/aws_ec2_client_vpn_authorization_rule: Increased active and revoked timeouts from 5 to 10 minutes (#15367)
 resource/aws_rds_cluster: Prevent ordering differences with enabled_cloudwatch_logs_exports argument (#15404)
 resource/aws_redshift_cluster: Increase default update timeout to 75 minutes (#15339)"
-159,"FEATURES
+165,"FEATURES
 
 New Resource: aws_datasync_location_fsx_windows (#12686)
 New Resource: aws_route53_resolver_query_log_config. (#14897)
@@ -11472,7 +12020,7 @@ resource/aws_fsx_lustre_file_system: Change aws_fsx_lustre_file_system's's netwo
 resource/aws_neptune_cluster_instance: Add configuring-enhanced-monitoring to expected states when creating and updating (#15284)
 resource/aws_vpn_gateway: Increase VPC detachment timeout to 30 minutes (#15201)
 resource/aws_vpn_gateway_attachment: Increase VPC detachment timeout to 30 minutes (#15201)"
-160,"FEATURES
+166,"FEATURES
 
 New Resource: aws_config_remediation_configuration (#13884)
 
@@ -11493,7 +12041,7 @@ resource/aws_kinesis_firehose_delivery_stream: Add server_side_encryption key_ar
 BUG FIXES
 resource/aws_acm_certificate: Prevent tagging is not permitted on re-import error (#15060)
 resource/aws_cognito_identity_pool: Prevent ordering differences for openid_connect_provider_arns argument (#15178)"
-161,"FEATURES
+167,"FEATURES
 
 New Resource: aws_db_proxy_default_target_group (#12743)
 
@@ -11504,7 +12052,7 @@ resource/aws_ec2_client_vpn_authorization_rule: Increase active and revoked time
 New Resource: aws_db_proxy_default_target_group (#12743)
 BUG FIXES
 resource/aws_ec2_client_vpn_authorization_rule: Increase active and revoked timeouts from 1 to 5 minutes (#15037)"
-162,"FEATURES
+168,"FEATURES
 
 New Data Source: aws_docdb_orderable_db_instance (#14931)
 New Data Source: aws_lex_slot_type (#8916)
@@ -11615,7 +12163,7 @@ resource/aws_route53_resolver_rule: Correct handling for single period (.) value
 resource/aws_route53_zone_association: Correctly handle zones with over 100 VPC associations (#14885)
 resource/aws_waf_rate_based_rule: Properly update rate_limit value (#14964)
 resource/aws_workspaces_workspace: Prevent error when workspace_properties running_mode is set to ALWAYS_ON (#13976)"
-163,"FEATURES
+169,"FEATURES
 
 New Data Source: aws_db_subnet_group (#9525)
 New Resource: aws_emr_managed_scaling_policy (#13965)
@@ -11678,7 +12226,7 @@ resource/aws_emr_instance_group: Increase creation and update timeout to 30 minu
 resource/aws_globalaccelerator_accelerator: Increase creation timeout to 10 minutes (#14486)
 resource/aws_globalaccelerator_endpoint_group: Prevent differences with health_check_path defaults (#14486)
 resource/aws_glue_crawler: Properly update schedule value (#14792)"
-164,"ENHANCEMENTS
+170,"ENHANCEMENTS
 
 data-source/aws_lambda_layer_version: Support java8.al2 and provided.al2 in runtime argument plan-time validation (#14663)
 provider: Support for appending information to User-Agent request headers with the TF_APPEND_USER_AGENT environment variable (#14555)
@@ -11759,7 +12307,7 @@ resource/aws_rds_cluster_parameter_group: Restore ability to update parameter co
 resource/aws_ssm_parameter: Handle retries after creation for asynchronous data_type validation process (#14514)
 resource/aws_storagegateway_nfs_file_share: Skip UpdateSMBFileShare API call when only tags change and remove extraneous ListTagsForResource API call during read (#13590)
 resource/aws_subnet: Ensure ipv6_cidr_block argument performs removal when removed from configuration (#12303)"
-165,"ENHANCEMENTS
+171,"ENHANCEMENTS
 
 data-source/aws_launch_configuration: Add ebs_block_device no_device attribute (#14583)
 data-source/aws_lb: Add subnet_mapping private_ipv4_address attribute (#14545)
@@ -11792,7 +12340,7 @@ resource/aws_acm_certificate_validation: Prevent panic with missing DomainValida
 resource/aws_ecr_repository: Prevent panic with missing EncryptionConfiguration attribute in API response (#14584)
 resource/aws_wafv2_rule_group: Prevent unnecessary resource recreation with rule updates (#14617)
 resource/aws_wafv2_web_acl: Prevent unnecessary resource recreation with rule updates (#14616)"
-166,"NOTES:
+172,"NOTES:
 
 resource/aws_route53_zone_association: The addition of cross-account zone association support required the use of new ListHostedZonesByVPC API call and adding the VPC Region to the resource ID for new resources. Restrictive IAM permissions for Terraform and cross-region imports may require updates. (#14215)
 
@@ -11861,7 +12409,7 @@ resource/aws_security_group: Ensure name_prefix argument with hex digits a throu
 resource/aws_spot_fleet_request: Allow target_capacity argument to be updated to 0 (#12759)
 resource/aws_spot_fleet_request: Wait for modify operation completion (default timeout of 10 minutes) (#12759)
 resource/aws_vpc_dhcp_options_association: Properly trigger resource recreation when VPC is deleted outside Terraform (#14367)"
-167,"NOTES:
+173,"NOTES:
 * provider: This version is built using Go 1.14.5, including security fixes to the crypto/x509 and net/http packages.
 BREAKING CHANGES
 
@@ -12062,7 +12610,7 @@ resource/aws_spot_fleet_request: Only retry RequestSpotFleet on IAM eventual con
 resource/aws_spot_instance_request: primary_network_interface_id now properly set (#14167)
 resource/aws_ssm_activation: Only retry CreateActivation on IAM eventual consistency errors and use standard 2 minute timeout (#14263)
 resource/aws_ssm_association: parameters now properly set (#14167)"
-168,"FEATURES:
+174,"FEATURES:
 
 New Resource: aws_ec2_client_vpn_authorization_rule (#13950)
 New Resource: aws_ec2_client_vpn_route (#14103)
@@ -12081,7 +12629,7 @@ resource/aws_launch_template: Add default_version argument (previously only an e
 resource/aws_launch_template: Add update_default_version argument to set the launch template's default version to the latest version available on update (#5225)
 resource/aws_organizations_organization: Support BACKUP_POLICY value in enabled_policy_types plan-time validation (Support Backup policies) (#14060)
 resource/aws_organizations_policy: Support BACKUP_POLICY value in type plan-time validation (Support Backup policies) (#14060)"
-169,"NOTES:
+175,"NOTES:
 
 data-source/aws_availability_zones: The blacklisted_names and blacklisted_zone_ids arguments have been deprecated in preference for exclude_names and exclude_zone_ids respectively. (#13771)
 
@@ -12128,7 +12676,7 @@ resource/aws_route53_record: Prevent errors when health_check_id argument is con
 resource/aws_sfn_state_machine: Handle IAM Role eventual consistency on creation and wait for state machine deletion (#12005)
 resource/aws_spot_fleet_request: Increase default delete timeout to 15 minutes (#13922)
 resource/aws_wafv2_web_acl: Support additional nested and/or/not statement in rule statement and rule statement rate_based_statement attributes (#13961)"
-170,"FEATURES:
+176,"FEATURES:
 
 New Data Source: aws_efs_access_points (#13918)
 New Resource: aws_wafv2_web_acl_logging_configuration (#13892)
@@ -12235,7 +12783,7 @@ resource/aws_spot_fleet_request: Prevent crash with missing placement informatio
 resource/aws_vpc_endpoint: Skip ModifyVpcEndpoint API call on tags only updates (#13853)
 resource/aws_vpc_endpoint: Wait for acceptance when auto_accept is enabled (#13876)
 resource/aws_wafv2_web_acl: Prevent unexpected UpdateWebACL API errors on tags only updates (#13871)"
-171,"NOTES:
+177,"NOTES:
 
 data-source/aws_secretsmanager_secret: The rotation_* attributes have been deprecated in favor of the new aws_secretsmanager_secret_rotation data source. (#9487)
 resource/aws_secretsmanager_secret: The rotation_* arguments have been deprecated in favor of the new aws_secretsmanager_secret_rotation resource. The new resource, which fixes workflow issues, prevents the existing resource from showing changes when attempting to remove rotation. Removal must be done with the new resource or manually. (#9487)
@@ -12358,7 +12906,7 @@ BUG FIXES:
 resource/aws_cloudfront_origin_access_identity: Properly trigger resource recreation when deleted outside Terraform (#13081)
 resource/aws_cognito_user_pool_client: Mark client_secret as sensitive (#13680)
 resource/aws_route: Ensure retries occur on read after creation if route not found for EC2 eventual consistency (#13747)"
-172,"FEATURES:
+178,"FEATURES:
 
 New Data Source: aws_wafv2_rule_group (#12790)
 New Resource: aws_wafv2_rule_group (#12677)
@@ -12379,7 +12927,7 @@ resource/aws_autoscaling_group: Add Computed field to instances_distribution and
 resource/aws_autoscaling_group: Remove Default field from instances_distribution sub-fields on_demand_allocation_strategy, on_demand_percentage_above_base_capacity, and spot_allocation_strategy  (#13623)
 resource/aws_batch_job_definition: Prevent differences when no command is specified in container properties (#13634)
 resource/aws_instance: Continue supporting empty string ("""") private_ip argument (#13640)"
-173,"ENHANCEMENTS:
+179,"ENHANCEMENTS:
 
 resource/aws_acm_certificate: Add status attribute (#13513)
 resource/aws_directory_servicedirectory: Add availability_zones attribute to vpc_settings block (#12654)
@@ -12424,7 +12972,7 @@ resource/aws_instance: Prevent perpetual plan differences, forcing replacement, 
 resource/aws_kinesis_firehose_delivery_stream: Correctly set kinesis_source_configuration during import to prevent resource recreation (#13536)
 resource/aws_ses_configuration_set: Prevent Provider produced inconsistent result after apply errors during creation or import [#12024] 
 resource/aws_workspaces_ip_group: Remove resource from state if deleted outside of Terraform (#13178)"
-174,"ENHANCEMENTS:
+180,"ENHANCEMENTS:
 
 data-source/aws_directory_service_directory: connect_settings connect_ips attribute now set (#13395)
 resource/aws_directory_service_directory: connect_settings connect_ips attribute now set (#13395)
@@ -12473,7 +13021,7 @@ resource/aws_ses_active_receipt_rule_set: Recreate resource when destroyed outsi
 resource/aws_ses_event_destination: Correctly refresh entire resource state (prevent unexpected differences from version 2.63.0 and properly perform drift detection) (#13464)
 resource/aws_ses_receipt_rule: Recreate resource when destroyed outside of Terraform (#9086)
 resource/aws_sns_topic: Attributes of type schema.TypeInt are now correctly set (#13437)"
-175,"FEATURES:
+181,"FEATURES:
 
 New Data Source: aws_efs_access_point (#11965)
 New Data Source: aws_wafv2_ip_set (#12788)
@@ -12536,7 +13084,7 @@ data-source/aws_db_instance: auto_minor_version_upgrade attribute now properly s
 resource/aws_autoscaling_group: tags propagate_at_launch attribute now properly set (#13360)
 resource/aws_eks_node_group: Only pass release_version value during UpdateNodegroupVersion if changed (#13407)
 resource/aws_network_acl: Fix issue with updating subnet associations returning InvalidAssociationID.NotFound (#13382)"
-176,"FEATURES:
+182,"FEATURES:
 
 New Resource: aws_workspaces_workspace (#11608)
 
@@ -12571,7 +13119,7 @@ resource/aws_iot_topic_rule: Add qos argument republish configuration block (#12
 BUG FIXES:
 resource/aws_codebuild_project: Allow empty value ("""") environment variables (#11572)
 resource/aws_security_group_rule: Prevent recreation when source_security_group_id refers to a security group across accounts (#11809)"
-177,"FEATURES:
+183,"FEATURES:
 
 New Data Source: aws_ec2_coip_pool (#12852)
 New Data Source: aws_ec2_coip_pools (#12852)
@@ -12622,7 +13170,7 @@ resource/aws_launch_template: add plan time validation tovolume_type,spot_instan
 resource/aws_workspaces_directory: Add output attributes for workspace_security_group_id, iam_role_id, registration_code, directory_name, directory_type, customer_user_name, alias, ip_group_ids and dns_ip_addresses (#13089)
 BUG FIXES:
 resource/aws_workspaces_directory: Fixes error when removing tags (#13089)"
-178,"NOTES:
+184,"NOTES:
 
 provider: Region validation now automatically supports the new eu-south-1 (Europe (Milan)) region. For AWS operations to work in the new region, the region must be explicitly enabled as outlined in the AWS Documentation. When the region is not enabled, the Terraform AWS Provider will return errors during credential validation (e.g. error validating provider credentials: error calling sts:GetCallerIdentity: InvalidClientTokenId: The security token included in the request is invalid) or AWS operations will throw their own errors (e.g. data.aws_availability_zones.current: Error fetching Availability Zones: AuthFailure: AWS was not able to validate the provided access credentials). (#12970)
 provider: Ignore tags functionality across all data sources and resources (except aws_autoscaling_group) via the provider-level ignore_tags configuration block has been enabled and this functionality is no longer considered in preview. (#13039)
@@ -12753,7 +13301,7 @@ resource/aws_route53_zone: Prevent panic with APIs missing ChangeInfo during cre
 resource/aws_storagegateway_gateway: Perform multiple connectivity checks after activation to wait if the underlying server (e.g. EC2 Instance) is automatically rebooted (#12772)
 resource/aws_storagegateway_gateway: Retry 504 status code on activation (#12773)
 resource/aws_wafregional_xss_match_set: Prevent crash with xss_match_tuple configuration block since version 2.59.0 (#13024)"
-179,"NOTES:
+185,"NOTES:
 
 provider: Region validation now automatically supports the new af-south-1 (Africa (Cape Town)) region. For AWS operations to work in the new region, the region must be explicitly enabled as outlined in the AWS Documentation. When the region is not enabled, the Terraform AWS Provider will return errors during credential validation (e.g. error validating provider credentials: error calling sts:GetCallerIdentity: InvalidClientTokenId: The security token included in the request is invalid) or AWS operations will throw their own errors (e.g. data.aws_availability_zones.current: Error fetching Availability Zones: AuthFailure: AWS was not able to validate the provided access credentials). (#12715)
 resource/aws_iam_user: The additional force_destroy behavior for handling signing certificates requires two additional IAM permissions (iam:ListSigningCertificates and iam:DeleteSigningCertificate). Restrictive IAM permissions for Terraform runs may require updates. (#10542)
@@ -12836,7 +13384,7 @@ resource/aws_glue_security_configuration: Prevent empty string KMS Key ARN in S3
 resource/aws_iam_user: Ensure force_destroy argument removes signing certificates when enabled (#10542)
 resource/aws_rds_cluster: Prevent unexpected global_cluster_identifier differences and deletion error with aurora-mysql and aurora-postgresql Global Cluster members (#12867)
 resource/aws_route: Prevent not found after creation error with destination_ipv6_cidr_block set to ::0/0 (#12890)"
-180,"FEATURES:
+186,"FEATURES:
 
 New Data Source: aws_regions (#12269)
 New Resource: aws_apigatewayv2_deployment (#9245)
@@ -12885,7 +13433,7 @@ resource/aws_instance: Allow changing root volume size without re-creating resou
 resource/aws_instance: Exports volume_name for root_block_device (#12620)
 BUG FIXES:
 resource/aws_dlm_lifecycle_policy: Ensure plan-time validation for times argument only allows 24 hour format (#12800)"
-181,"BREAKING CHANGES:
+187,"BREAKING CHANGES:
 
 provider: The configuration for the preview ignore tags functionality has been updated to include a wrapping configuration block. For example:
 
@@ -12954,7 +13502,7 @@ resource/aws_appautoscaling_policy: Fix error when importing DynamoDB Table Inde
 resource/aws_db_instance: Allow creating read replica into RAM shared Subnet with VPC Security Group (#12700)
 resource/aws_kms_key: Prevent eventual consistency related errors on creation (#12738)
 resource/aws_lb_target_group: Automatically propose resource recreation for TCP protocol Target Groups when health_check configuration block interval, protocol, or timeout argument values are updated (#4568)"
-182,"NOTES:
+188,"NOTES:
 
 resource/aws_emr_cluster: The bug fix in this release will potentially re-create EMR Clusters with multiple bootstrap actions, since bootstrap actions cannot be modified in place. To avoid re-creation, temporarily add the ignore_changes lifecycle configuration argument and/or update the order in your Terraform configuration.
 
@@ -12991,7 +13539,7 @@ resource/aws_emr_cluster: Now properly sets the order when multiple bootstrap ac
 resource/aws_kms_grant: Remove resource from Terraform state instead of error if removed outside Terraform (#12560)
 resource/aws_s3_bucket: Prevent various panics with empty configuration blocks (#12614)
 resource/aws_volume_attachment: Ensure any error is shown while waiting for volume to detach (#12596)"
-183,"FEATURES:
+189,"FEATURES:
 
 New Resource: aws_ec2_availability_zone_group (#12400)
 
@@ -13052,7 +13600,7 @@ resource/aws_db_instance: Allow restoring from snapshot into RAM shared Subnet w
 resource/aws_mq_configuration: Remove extraneous ListTags API call during refresh (#11843)
 resource/aws_neptune_cluster_instance: Add missing configuring-log-exports as allowed pending state (#12079)
 resource/aws_route53_health_check: Do not recreate health check when using compressed ipv6 address (#12305)"
-184,"FEATURES:
+190,"FEATURES:
 
 New Resource: aws_kinesis_video_stream (#8291)
 New Resource: aws_securityhub_member (#6975)
@@ -13141,7 +13689,7 @@ resource/aws_lambda_alias: Propose resource recreation for function_name argumen
 resource/aws_opsworks_application: Mark app_source configuration block ssh_key argument as sensitive (#11984)
 resource/aws_opsworks_stack: Mark custom_cookbooks_source configuration block ssh_key argument as sensitive (#11984)
 resource/aws_s3_bucket: Retry NoSuchBucket error when setting tags during resource creation (#12418)"
-185,"NOTES:
+191,"NOTES:
 
 resource/aws_cognito_user_pool: The addition of Software Token MFA support required the use of new GetUserPoolMfaConfig and SetUserPoolMfaConfig API calls. Restrictive IAM permissions for Terraform may require updates.  (#12358)
 
@@ -13186,7 +13734,7 @@ resource/aws_vpc_endpoint_service: Support tag-on-create and add network_load_ba
 BUG FIXES:
 resource/aws_vpn_gateway: Automatically retry on DetachVpnGateway calls receiving InvalidParameterValue: This call cannot be completed because there are pending VPNs or Virtual Interfaces (#11720)
 resource/aws_vpn_gateway_attachment: Automatically retry on DetachVpnGateway calls receiving InvalidParameterValue: This call cannot be completed because there are pending VPNs or Virtual Interfaces (#11720)"
-186,"FEATURES:
+192,"FEATURES:
 
 New Data Source: aws_ec2_instance_type_offering (#12139)
 New Data Source: aws_ec2_instance_type_offerings (#12139)
@@ -13215,7 +13763,7 @@ BUG FIXES:
 resource/aws_iam_service_linked_role: Allow aws_service_name argument validation to accept values in AWS partitions outside AWS Commercial and AWS GovCloud (US) (#11919)
 resource/aws_lambda_function_event_invoke_config: Retry on additional IAM eventual consistency error with SNS Topic destinations (#12171)
 resource/aws_media_store_container: Prevent ValidationException error on creation when no tags are configured (#12170)"
-187,"FEATURES:
+193,"FEATURES:
 
 New Data Source: aws_sfn_activity (#11080)
 New Data Source: aws_sfn_state_machine (#10932)
@@ -13270,7 +13818,7 @@ resource/aws_msk_cluster: Support in-place updates to enhanced_monitoring and nu
 resource/aws_msk_cluster: Add open_monitoring configuration block (support Prometheus monitoring configuration) (#11451)
 BUG FIXES:
 resource/aws_workspaces_directory: Prevent panic and remove resource from Terraform state if removed outside Terraform (#11837)"
-188,"NOTES:
+194,"NOTES:
 
 resource/aws_lambda_function: The publish argument now will also publish versions for configuration updates. This is accomplished via a separate PublishVersion API call, where before the publishing only occured via the Publish parameter of the UpdateFunctionCode API call. Restrictive IAM permissions for Terraform may require updates. (#11211)
 resource/aws_ram_resource_share_accepter: The status attribute now reflects the status of the RAM Resource Share and not the RAM Resource Share Invitation (which expires after 7 days). (#11562)
@@ -13305,7 +13853,7 @@ BUG FIXES:
 resource/aws_lambda_function: If publish argument is enabled, also publish new versions on function configuration-only updates in addition to function code updates (#11211)
 resource/aws_lambda_permission: Fix error when Lambda permission is deleted out-of-band (#11924)
 resource/aws_ram_resource_share_accepter: Fix read operations after the RAM Resource Share Invitation is no longer present after 7 days (#11562)"
-189,"FEATURES:
+195,"FEATURES:
 
 New Resource: aws_codestarnotifications_notification_rule (#10991)
 New Resource: aws_s3_bucket_analytics_configuration (#11874)
@@ -13350,7 +13898,7 @@ resource/aws_cognito_user_pool: Allow admin_create_user_config configuration blo
 resource/aws_launch_configuration: Fixes regression from version 2.23.0 with instance store AMIs returning an unexpected error (#9810)
 resource/aws_launch_configuration: Fixes regression from version 2.23.0 to allow missing EC2 Image during root block device lookup (#12009)
 resource/aws_route53_record: The artificial, hardcoded five minute timeouts for creation and deletions have been removed in preference of the default AWS Go SDK retrying logic (#11895)"
-190,"NOTES:
+196,"NOTES:
 
 resource/aws_organizations_policy_attachment: The underlying API calls have switched from ListPoliciesForTarget to ListTargetsForPolicy. Restrictive IAM Policies for Terraform execution may require updates. (#11612)
 
@@ -13413,7 +13961,7 @@ resource/aws_kinesis_firehose_delivery_stream: Allow processors to be cleared fr
 resource/aws_network_acl_rule: Trigger resource recreation instead of error when same number rule (but opposite ingress/egress) is removed (#11544)
 resource/aws_placement_group: Additional handling for creation and deletion eventual consistency (#11671)
 resource/aws_s3_bucket: Retry read after creation for 404 status code and prevent 2 minute delay for triggering recreation on existing resources deleted outside Terraform (#11894)"
-191,"NOTES:
+197,"NOTES:
 
 resource/aws_efs_file_system: Tagging API calls have been refactored to the AWS standardized TagResource and UntagResource API calls (from CreateTags and DeleteTags respectively). Restrictive IAM Policies for Terraform execution may require updates. (#11654)
 
@@ -13472,7 +14020,7 @@ resource/aws_emr_instance_group: Wait for RUNNING status on creation (#11688)
 resource/aws_ssm_activation: Properly trigger resource recreation when deleted outside Terraform (#11658)
 resource/aws_ssm_parameter: Prevent KeyId error when switching type value from SecureString to String (#10819)
 service/efs: Generate proper dns_name attribute hostname suffix in AWS China, AWS C2S, and AWS SC2S partitions (#11746)"
-192,"NOTES:
+198,"NOTES:
 
 provider: Terraform AWS Provider version 2.45.0 included AWS Go SDK version 1.28.0, which contained a regression in error handling behavior across many services that either prevented or incorrectly modified error messages from being surfaced by the API. Other than confusing errors in certain cases, this also affected automatic retry logic in a few resources. This release contains an AWS Go SDK update which should resolve these issues.
 
@@ -13553,7 +14101,7 @@ resource/aws_redshift_cluster: Handle available, prep-for-resize pending status 
 resource/aws_ssm_activation: Properly set expiration_date value into the Terraform state and perform drift detection when configured (#11491)
 resource/aws_ssm_document: Properly set created_date value into the Terraform state (#11491)
 resource/aws_waf_sql_injection_match_set: Properly set sql_injection_match_tuples value into Terraform state (#11498)"
-193,"ENHANCEMENTS:
+199,"ENHANCEMENTS:
 
 resource/aws_codepipeline_webhook: Support in-place tags updates (#11387)
 resource/aws_db_parameter_group: Support resetting parameter group values (#11540)
@@ -13598,7 +14146,7 @@ resource/aws_cloudwatch_event_target: Return failed entry error code and message
 resource/aws_codepipeline_webhook: Properly trigger resource recreation when authentication_configuration configuration block allowed_ip_range and secret_token arguments change (#11387)
 resource/aws_emr_cluster: Prevent perpetual difference with ec2_attributes configuration block emr_managed_master_security_group, emr_managed_slave_security_group, and service_access_security_groups arguments when omitted (support EMR Managed Security Groups) (#5493)
 resource/aws_opsworks_permission: Prevent Unable to change own permission level error during self updates (#11379)"
-194,"FEATURES:
+200,"FEATURES:
 
 New Data Source: aws_directory_service_directory (#11282)
 New Resource: aws_workspaces_directory (#11023)
@@ -13671,7 +14219,7 @@ resource/aws_ecs_service: Automatically retry IAM Service Linked Role assume rol
 resource/aws_iam_instance: Allows for instance profiles to be changed when instances are in stopped state (#11104)
 resource/aws_opsworks_stack: Ensure tags are refreshed in Terraform state during read for drift detection (#11373)
 resource/aws_rds_cluster_instance: Prevent is already being deleted error on deletion and wait for deletion completion (#11468)"
-195,"NOTES:
+201,"NOTES:
 
 This will be the last planned release until early January. Enjoy the rest of your year!
 
@@ -13716,7 +14264,7 @@ resource/aws_ecs_cluster: Fixes bug where ECS cluster capacity providers are upd
 resource/aws_globalaccelerator_endpoint_group: Allow traffic_dial_percentage to be set to 0 (#11253)
 resource/aws_lb_listener_rule: Fixes regression from version 2.42.0 when updating a rule without modifying condition (#11364)
 resource/aws_ssm_activation: Ensure tags are refreshed into Terraform state during read for drift detection (#11290)"
-196,"FEATURES:
+202,"FEATURES:
 
 New Resource: aws_ecs_capacity_provider [GH-11151]
 New Resource: aws_media_convert_queue [GH-10041]
@@ -13757,7 +14305,7 @@ resource/aws_iam_role: Ignore additional NoSuchEntity errors on deletion [GH-111
 resource/aws_network_interface: Prevent extraneous ModifyNetworkInterfaceAttribute API call during update [GH-11277]
 resource/aws_security_group: Support ampersand (&) in ingress and egress configuration block description argument value validation [GH-9528]
 resource/aws_security_group_rule: Support ampersand (&) in description argument value validation [GH-9528]"
-197,"FEATURES:
+203,"FEATURES:
 
 New Resource: aws_eks_fargate_profile (#11111)
 New Resource: aws_lambda_provisioned_concurrency_config (#11129)
@@ -13796,7 +14344,7 @@ BUG FIXES:
 resource/aws_batch_compute_environment: Forces new resource when launch_template contents are changed (#11057)
 resource/aws_datasync_location_s3: Automatically retry creation for IAM errors due to eventual consistency (#10984)
 resource/aws_launch_template: Only set associate_public_ip_address on network interfaces if it's explicitly set to avoid problems with multiple network interfaces (#10157)"
-198,"NOTES:
+204,"NOTES:
 
 resource/aws_datasync_task: The DataSync API and SDK have removed BEST_EFFORT as a valid value for the options configuration block posix_permissions argument. The value has been removed from the validation in this resource to match those changes. (#10985)
 
@@ -13843,7 +14391,7 @@ BUG FIXES:
 data-source/aws_iam_group: Ensure users attribute populates fully when group contains more than 100 users (#10993)
 resource/aws_default_route_table: Return helpful not found error on resource creation instead of generic Provider produced inconsistent result after apply error when given invalid default_route_table_id argument value (#10981)
 resource/aws_default_route_table: Propose resource recreation for missing Default Route Table on refresh instead of returning an error (#10981)"
-199,"FEATURES:
+205,"FEATURES:
 
 New Data Source: aws_guardduty_detector (#10463)
 New Resource: aws_glue_workflow (#10891)
@@ -13894,12 +14442,12 @@ resource/aws_batch_compute_environment: Propose resource recreation when updatin
 resource/aws_iam_instance_profile: Remove requirement to specify a role, as it is not required by the API (#10525)
 resource/aws_opsworks_application: Fixes issue where terraform apply continuously suggests applying changes to ssh_key or password in app_source property (#10175)
 resource/aws_opsworks_stack: Fixes issue where terraform apply continuously suggests applying changes to ssh_key or password in custom_cookbooks_source property (#10175)"
-200,"FEATURES:
+206,"FEATURES:
 
 New Resource: aws_eks_node_group (#10916)
 ","FEATURES:
 New Resource: aws_eks_node_group (#10916)"
-201,"ENHANCEMENTS:
+207,"ENHANCEMENTS:
 
 resource/aws_api_gateway_rest_api: Add tags argument and arn attribute (#10581)
 resource/aws_cloudtrail: support Tag on create (#10818)
@@ -13946,7 +14494,7 @@ BUG FIXES:
 data-source/aws_iam_policy_document: Prevent panic when combining single principal identifier with multiple principal identifiers (#10780)
 data-source/aws_iam_policy_document: Prevent losing identifier elements when combining single and multiple principals identifiers (#10844)
 resource/aws_servicequotas_service_quota: Remove resource from Terraform state on NoSuchResourceException error (#10735)"
-202,"ENHANCEMENTS:
+208,"ENHANCEMENTS:
 
 data-source/aws_iam_group: Add users attribute (#7132)
 resource/aws_apigateway_stage: Add arn attribute (#10570)
@@ -13961,7 +14509,7 @@ resource/aws_apigateway_usage_plan: Add tags argument and arn attribute (#10566)
 resource/aws_s3_bucket: Retry reading tags on NoSuchBucket errors due to eventual inconsistency (#10863)
 resource/aws_waf_rule: Add arn attribute (#10798)
 resource/aws_waf_rule_group: Add arn attribute (#10799)"
-203,"NOTES:
+209,"NOTES:
 
 provider: New ignore_tag_prefixes and ignore_tags arguments are being tested as a public preview for ignoring tags across all resources under a provider. Support for the functionality must be added to individual resources in the codebase and is only implemented for the aws_subnet and aws_vpc resources at this time. Until a general availability announcement, no compatibility promises are made with these provider arguments and their functionality. (#10418)
 
@@ -14034,7 +14582,7 @@ resource/aws_api_gateway_authorizer: Set authorizer_result_ttl_in_seconds argume
 resource/aws_autoscaling_group: Batch ELB attachments and detachments by 10 to prevent API and rate limiting errors (#10445)
 resource/aws_s3_bucket_public_access_block: Remove from Terraform state when S3 Bucket is already destroyed (#10534)
 resource/aws_ssm_maintenance_window_task: Prevent crashes with empty configuration blocks (#10713)"
-204,"ENHANCEMENTS:
+210,"ENHANCEMENTS:
 
 resource/aws_ecr_repository: Add image_scanning_configuration configuration block (support image scanning on push) (#10671)
 resource/aws_elasticache_replication_group: Add kms_key_id argument (support KMS encryption) (#10380)
@@ -14063,7 +14611,7 @@ resource/aws_cloudhsm_v2_cluster: Ensure multiple tag configurations are applied
 resource/aws_cloudhsm_v2_cluster: Perform drift detection with tags (#10309)
 resource/aws_dx_gateway_association: Fix backwards compatibility issue with missing dx_gateway_association_id attribute (#8776)
 resource/aws_s3_bucket: Bypass MethodNotAllowed errors for Object Lock Configuration on read (support AWS C2S) (#10657)"
-205,"FEATURES:
+211,"FEATURES:
 
 New Data Source: aws_waf_rate_based_rule (#10124)
 New Data Source: aws_wafregional_rate_based_rule (#10125)
@@ -14094,7 +14642,7 @@ resource/aws_waf_rule_group: Add tags argument (#10408)
 resource/aws_waf_web_acl: Add tags argument (#10408)
 BUG FIXES:
 resource/aws_gamelift_fleet: Increase default deletion timeout to 20 minutes to match service timing (#10443)"
-206,"NOTES:
+212,"NOTES:
 
 provider: The underlying Terraform codebase dependency for the provider SDK and acceptance testing framework has been migrated from github.com/hashicorp/terraform to github.com/hashicorp/terraform-plugin-sdk. They are functionality equivalent and this should only impact codebase development to switch imports. For more information see the Terraform Plugin SDK page in the Extending Terraform documentation. (#10367)
 
@@ -14119,7 +14667,7 @@ resource/aws_autoscaling_group: Batch ALB/NLB attachments and detachments by 10 
 resource/aws_emr_instance_group: Remove terminated instance groups from the Terraform state (#10425)
 resource/aws_s3_bucket: Prevent infinite deletion recursion with force_destroy argument and object keys with empty ""directory"" prefixes present since version 2.29.0 (#10388)
 resource/aws_vpc_endpoint_route_table_association: Fix resource import support (#10454)"
-207,"NOTES:
+213,"NOTES:
 
 resource/aws_lambda_function: Environments using Lambda functions with VPC configurations should upgrade their Terraform AWS Provider to this version or later to appropriately handle the networking changes introduced by the improved VPC networking for AWS Lambda functions deployment. These changes prevent proper deletion of EC2 Subnets and Security Groups for accounts and regions updated to the new Lambda networking infrastructure in older versions of the Terraform AWS Provider. Additional information and configuration workarounds for prior versions can be found in this GitHub issue.
 
@@ -14160,7 +14708,7 @@ resource/aws_vpc_peering_connection_options: Ensure allow_remote_vpc_dns_resolut
 resource/aws_wafregional_web_acl_association: Ensure missing resource triggers state removal (#10216)
 service/waf: Prevent incorrect Error getting WAF change token errors for API calls that should be retried or specially handled (#10242)
 service/wafregional: Prevent incorrect Error getting WAF regional change token errors for API calls that should be retried or specially handled (#10242)"
-208,"NOTES:
+214,"NOTES:
 
 provider: The default development, testing, and building of the Terraform AWS Provider binary is now done with Go 1.13. This version of Go now requires macOS 10.11 El Capitan or later and FreeBSD 11.2 or later. Support for previous versions of those operating systems has been discontinued. (#10206)
 provider: The actual Terraform version running the provider will now be included the AWS Go SDK User-Agent headers for Terraform 0.12 and later. Terraform 0.11 and earlier will use Terraform/0.11+compatible as this information was not accessible in those versions. Previously, the Terraform version in the User-Agent header was based on the github.com/hashicorp/terraform dependency in the provider codebase. (#9570)
@@ -14207,7 +14755,7 @@ resource/aws_ec2_client_vpn_endpoint: Ensure missing resource triggers state rem
 resource/aws_instance: Prevent panic when updating credit_specification to empty configuration block (#10212)
 resource/aws_security_group: Ensure deletion errors are properly raised (#10165)
 resource/aws_spot_fleet_request: Ensure launch_specification configuration block placement_group argument is passed through to the API when it is specified (#10103)"
-209,"ENHANCEMENTS:
+215,"ENHANCEMENTS:
 * data-source/aws_s3_bucket_object: Add object_lock_legal_hold_status, object_lock_mode and object_lock_retain_until_date attributes (#9942)
 * resource/aws_glue_job: Add ability to specify python version for pythonshell in glue jobs (#9409)
 * resource/aws_s3_bucket_object: Add force_destroy, object_lock_legal_hold_status, object_lock_mode and object_lock_retain_until_date attributes (#9942)
@@ -14224,12 +14772,12 @@ BUG FIXES:
 * resource/aws_wafregional_rate_based_rule: Update rate based rule limit for WAF (#9946)
 BUG FIXES:
 * ecs_task_definition_equivalency: Fix a crash if environment name is missing (#10074)"
-210,"BUG FIXES:
+216,"BUG FIXES:
 
 Revert ""resource/aws_cloudfront_distribution: Fix active_trusted_signers attribute for Terraform 0.12"" (#10093)
 ","BUG FIXES:
 Revert ""resource/aws_cloudfront_distribution: Fix active_trusted_signers attribute for Terraform 0.12"" (#10093)"
-211,"NOTES:
+217,"NOTES:
 
 resource/aws_cloudfront_distribution: This attribute implemented a legacy Terraform library (flatmap), which does not work with Terraform 0.12's data types and whose only usage was on this single attribute across all Terraform Providers. The attribute now implements (in the closest approximation to the previous implementation) the nested object data into the Terraform state in all Terraform versions. Any references to nested attributes such as active_trusted_signers.enabled will need to be updated to active_trusted_signers.0.enabled. (#10013)
 
@@ -14272,7 +14820,7 @@ resource/aws_elasticsearch_domain: Final retries after timeouts creating, updati
 resource/aws_elasticsearch_domain_policy: Final retries after timeouts upserting and deleting domain policies (#9892)
 resource/aws_iam_policy_attachment: Revert a change causing errors with policies not being found during attachment (#10063)
 resource/aws_lightsail_instance: Fixes an issue where 2-character lightsail instance names didn't get validated properly (#10046)"
-212,"ENHANCEMENTS:
+218,"ENHANCEMENTS:
 
 data-source/aws_ecs_cluster: Add setting attribute (#9720)
 provider: Support AWS C2S and SC2S endpoints (#9998)
@@ -14289,7 +14837,7 @@ resource/aws_ecs_cluster: Add setting configuration blocks (support enabling Con
 resource/aws_kinesis_firehose_delivery_stream: Add server_side_encryption configuration block (support Server Side Encryption) (#6523)
 BUG FIXES:
 resource/aws_s3_bucket: Include any system tags that Terraform ignores when setting S3 bucket tags (#7342)"
-213,"FEATURES:
+219,"FEATURES:
 
 New Data Source: aws_elasticsearch_domain (#1867)
 
@@ -14312,7 +14860,7 @@ resource/aws_s3_bucket_metric: Final retry after timeout putting bucket metric (
 resource/aws_s3_bucket_notification: Final retry after timeout putting notification (#9861)
 resource/aws_s3_bucket_policy: Final retry after timeout putting policy (#9861)
 resource/aws_s3_bucket_public_access_block: Final retries after timeouts creating and reading blocks (#9861)"
-214,"ENHANCEMENTS:
+220,"ENHANCEMENTS:
 
 resource/aws_rds_cluster: Support postgresql in plan time validation for enabled_cloudwatch_logs_exports argument (#9740)
 
@@ -14403,7 +14951,7 @@ service/dynamodb: Final retries after timeouts setting dynamodb tags (#9821)
 service/sagemaker: Final retries after timeouts setting sagemaker tags (#9821)
 service/waf: Final retry after timeout getting change token (#9826)
 service/wafregional: Final retry after timeout getting change token (#9826)"
-215,"2.24.0 (August 15, 2019)
+221,"2.24.0 (August 15, 2019)
 FEATURES:
 
 New Resource: aws_config_organization_custom_rule (#9716)
@@ -14502,8 +15050,8 @@ resource/aws_glue_crawler: Final retry after timeout creating glue crawler (#975
 resource/aws_guardduty_member: Final retry after timeout waiting for email invitation (#9757)
 resource/aws_lb_target_group_attachment: Perform drift detection on attachments using target health description (trigger resource recreation for manually deregistered attachments) (#9610)
 resource/aws_vpn_gateway: Retry after timeouts attaching and deleting VPN gateways, and retrying attachment after pending VPN errors (#9641)"
-216,,
-217,,
-218,,
-219,,
-220,,
+222,,
+223,,
+224,,
+225,,
+226,,

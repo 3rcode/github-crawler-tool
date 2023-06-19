@@ -1,5 +1,209 @@
-Index,Release Note,Release Note With Abstraction
-1,"1.14.7 (May 16, 2023)
+Index,Release Note,Release Note Abstract
+1,"1.16.0-rc1 (June 12, 2023)
+BREAKING CHANGES:
+
+api: The /v1/health/connect/ and /v1/health/ingress/ endpoints now immediately return 403 ""Permission Denied"" errors whenever a token with insufficient service:read permissions is provided. Prior to this change, the endpoints returned a success code with an empty result list when a token with insufficient permissions was provided. [GH-17424]
+peering: Removed deprecated backward-compatibility behavior.
+Upstream overrides in service-defaults will now only apply to peer upstreams when the peer field is provided.
+Visit the 1.16.x upgrade instructions for more information. [GH-16957]
+
+SECURITY:
+
+audit-logging: (Enterprise only) limit v1/operator/audit-hash endpoint to ACL token with operator:read privileges.
+
+FEATURES:
+
+api: (Enterprise only) Add POST /v1/operator/audit-hash endpoint to calculate the hash of the data used by the audit log hash function and salt.
+cli: (Enterprise only) Add a new consul operator audit hash command to retrieve and compare the hash of the data used by the audit log hash function and salt.
+cli: Adds new command - consul services export - for exporting a service to a peer or partition [GH-15654]
+connect: (Consul Enterprise only) Implement order-by-locality failover.
+mesh: Add new permissive mTLS mode that allows sidecar proxies to forward incoming traffic unmodified to the application. This adds AllowEnablingPermissiveMutualTLS setting to the mesh config entry and the MutualTLSMode setting to proxy-defaults and service-defaults. [GH-17035]
+mesh: Support configuring JWT authentication in Envoy. [GH-17452]
+server: (Enterprise Only) added server side RPC requests IP based read/write rate-limiter. [GH-4633]
+server: (Enterprise Only) allow automatic license utilization reporting. [GH-5102]
+server: added server side RPC requests global read/write rate-limiter. [GH-16292]
+xds: Add property-override built-in Envoy extension that directly patches Envoy resources. [GH-17487]
+xds: Add a built-in Envoy extension that inserts External Authorization (ext_authz) network and HTTP filters. [GH-17495]
+xds: Add a built-in Envoy extension that inserts Wasm HTTP filters. [GH-16877]
+xds: Add a built-in Envoy extension that inserts Wasm network filters. [GH-17505]
+
+IMPROVEMENTS:
+
+api: Support filtering for config entries. [GH-17183]
+cli: Add -filter option to consul config list for filtering config entries. [GH-17183]
+api: Enable setting query options on agent force-leave endpoint. [GH-15987]
+audit-logging: (Enterprise only) enable error response and request body logging [GH-5669]
+audit-logging: (Enterprise only) enable error response and request body logging
+ca: automatically set up Vault's auto-tidy setting for tidy_expired_issuers when using Vault as a CA provider. [GH-17138]
+ca: support Vault agent auto-auth config for Vault CA provider using AliCloud authentication. [GH-16224]
+ca: support Vault agent auto-auth config for Vault CA provider using AppRole authentication. [GH-16259]
+ca: support Vault agent auto-auth config for Vault CA provider using Azure MSI authentication. [GH-16298]
+ca: support Vault agent auto-auth config for Vault CA provider using JWT authentication. [GH-16266]
+ca: support Vault agent auto-auth config for Vault CA provider using Kubernetes authentication. [GH-16262]
+command: Adds ACL enabled to status output on agent startup. [GH-17086]
+command: Allow creating ACL Token TTL with greater than 24 hours with the -expires-ttl flag. [GH-17066]
+connect: (Enterprise Only) Add support for specifying ""Partition"" and ""Namespace"" in Prepared Queries failover rules.
+connect: update supported envoy versions to 1.23.10, 1.24.8, 1.25.7, 1.26.2 [GH-17546]
+connect: update supported envoy versions to 1.23.8, 1.24.6, 1.25.4, 1.26.0 [GH-5200]
+fix metric names in /docs/agent/telemetry [GH-17577]
+gateway: Change status condition reason for invalid certificate on a listener from ""Accepted"" to ""ResolvedRefs"". [GH-17115]
+http: accept query parameters datacenter, ap (enterprise-only), and namespace (enterprise-only). Both short-hand and long-hand forms of these query params are now supported via the HTTP API (dc/datacenter, ap/partition, ns/namespace). [GH-17525]
+systemd: set service type to notify. [GH-16845]
+ui: Update alerts to Hds::Alert component [GH-16412]
+ui: Update to use Hds::Toast component to show notifications [GH-16519]
+ui: update from  and  to design-system-components button  [GH-16251]
+ui: update typography to styles from hds [GH-16577]
+
+BUG FIXES:
+
+Fix a race condition where an event is published before the data associated is commited to memdb. [GH-16871]
+gateways: (Enterprise only) Fixed a bug in API gateways where gateway configuration objects in non-default partitions did not reconcile properly. [GH-17581]
+gateways: Fixed a bug in API gateways where binding a route that only targets a service imported from a peer results
+in the programmed gateway having no routes. [GH-17609]
+gateways: Fixed a bug where API gateways were not being taken into account in determining xDS rate limits. [GH-17631]
+peering: Fixes a bug where the importing partition was not added to peered failover targets, which causes issues when the importing partition is a non-default partition. [GH-16673]
+ui: fixes ui tests run on CI [GH-16428]
+xds: Fixed a bug where modifying ACLs on a token being actively used for an xDS connection caused all xDS updates to fail. [GH-17566]
+","1.16.0-rc1 (June 12, 2023)
+BREAKING CHANGES:
+api: The /v1/health/connect/ and /v1/health/ingress/ endpoints now immediately return 403 ""Permission Denied"" errors whenever a token with insufficient service:read permissions is provided. Prior to this change, the endpoints returned a success code with an empty result list when a token with insufficient permissions was provided. [GH-17424]
+peering: Removed deprecated backward-compatibility behavior.
+Upstream overrides in service-defaults will now only apply to peer upstreams when the peer field is provided.
+Visit the 1.16.x upgrade instructions for more information. [GH-16957]
+SECURITY:
+audit-logging: (Enterprise only) limit v1/operator/audit-hash endpoint to ACL token with operator:read privileges.
+FEATURES:
+api: (Enterprise only) Add POST /v1/operator/audit-hash endpoint to calculate the hash of the data used by the audit log hash function and salt.
+cli: (Enterprise only) Add a new consul operator audit hash command to retrieve and compare the hash of the data used by the audit log hash function and salt.
+cli: Adds new command - consul services export - for exporting a service to a peer or partition [GH-15654]
+connect: (Consul Enterprise only) Implement order-by-locality failover.
+mesh: Add new permissive mTLS mode that allows sidecar proxies to forward incoming traffic unmodified to the application. This adds AllowEnablingPermissiveMutualTLS setting to the mesh config entry and the MutualTLSMode setting to proxy-defaults and service-defaults. [GH-17035]
+mesh: Support configuring JWT authentication in Envoy. [GH-17452]
+server: (Enterprise Only) added server side RPC requests IP based read/write rate-limiter. [GH-4633]
+server: (Enterprise Only) allow automatic license utilization reporting. [GH-5102]
+server: added server side RPC requests global read/write rate-limiter. [GH-16292]
+xds: Add property-override built-in Envoy extension that directly patches Envoy resources. [GH-17487]
+xds: Add a built-in Envoy extension that inserts External Authorization (ext_authz) network and HTTP filters. [GH-17495]
+xds: Add a built-in Envoy extension that inserts Wasm HTTP filters. [GH-16877]
+xds: Add a built-in Envoy extension that inserts Wasm network filters. [GH-17505]
+IMPROVEMENTS:
+api: Support filtering for config entries. [GH-17183]
+cli: Add -filter option to consul config list for filtering config entries. [GH-17183]
+api: Enable setting query options on agent force-leave endpoint. [GH-15987]
+audit-logging: (Enterprise only) enable error response and request body logging [GH-5669]
+audit-logging: (Enterprise only) enable error response and request body logging
+ca: automatically set up Vault's auto-tidy setting for tidy_expired_issuers when using Vault as a CA provider. [GH-17138]
+ca: support Vault agent auto-auth config for Vault CA provider using AliCloud authentication. [GH-16224]
+ca: support Vault agent auto-auth config for Vault CA provider using AppRole authentication. [GH-16259]
+ca: support Vault agent auto-auth config for Vault CA provider using Azure MSI authentication. [GH-16298]
+ca: support Vault agent auto-auth config for Vault CA provider using JWT authentication. [GH-16266]
+ca: support Vault agent auto-auth config for Vault CA provider using Kubernetes authentication. [GH-16262]
+command: Adds ACL enabled to status output on agent startup. [GH-17086]
+command: Allow creating ACL Token TTL with greater than 24 hours with the -expires-ttl flag. [GH-17066]
+connect: (Enterprise Only) Add support for specifying ""Partition"" and ""Namespace"" in Prepared Queries failover rules.
+connect: update supported envoy versions to 1.23.10, 1.24.8, 1.25.7, 1.26.2 [GH-17546]
+connect: update supported envoy versions to 1.23.8, 1.24.6, 1.25.4, 1.26.0 [GH-5200]
+fix metric names in /docs/agent/telemetry [GH-17577]
+gateway: Change status condition reason for invalid certificate on a listener from ""Accepted"" to ""ResolvedRefs"". [GH-17115]
+http: accept query parameters datacenter, ap (enterprise-only), and namespace (enterprise-only). Both short-hand and long-hand forms of these query params are now supported via the HTTP API (dc/datacenter, ap/partition, ns/namespace). [GH-17525]
+systemd: set service type to notify. [GH-16845]
+ui: Update alerts to Hds::Alert component [GH-16412]
+ui: Update to use Hds::Toast component to show notifications [GH-16519]
+ui: update from  and  to design-system-components button  [GH-16251]
+ui: update typography to styles from hds [GH-16577]
+BUG FIXES:
+Fix a race condition where an event is published before the data associated is commited to memdb. [GH-16871]
+gateways: (Enterprise only) Fixed a bug in API gateways where gateway configuration objects in non-default partitions did not reconcile properly. [GH-17581]
+gateways: Fixed a bug in API gateways where binding a route that only targets a service imported from a peer results
+in the programmed gateway having no routes. [GH-17609]
+gateways: Fixed a bug where API gateways were not being taken into account in determining xDS rate limits. [GH-17631]
+peering: Fixes a bug where the importing partition was not added to peered failover targets, which causes issues when the importing partition is a non-default partition. [GH-16673]
+ui: fixes ui tests run on CI [GH-16428]
+xds: Fixed a bug where modifying ACLs on a token being actively used for an xDS connection caused all xDS updates to fail. [GH-17566]"
+2,"1.15.3 (June 1, 2023)
+BREAKING CHANGES:
+
+extensions: The Lua extension now targets local proxy listeners for the configured service's upstreams, rather than remote downstream listeners for the configured service, when ListenerType is set to outbound in extension configuration. See CVE-2023-2816 changelog entry for more details. [GH-17415]
+
+SECURITY:
+
+Update to UBI base image to 9.2. [GH-17513]
+Upgrade golang.org/x/net to address CVE-2022-41723 [GH-16754]
+Upgrade to use Go 1.20.4.
+This resolves vulnerabilities CVE-2023-24537(go/scanner),
+CVE-2023-24538(html/template), CVE-2023-24534(net/textproto) and CVE-2023-24536(mime/multipart). Also, golang.org/x/net has been updated to v0.7.0 to resolve CVEs CVE-2022-41721, CVE-2022-27664 and CVE-2022-41723 [GH-17240]
+extensions: Disable remote downstream proxy patching by Envoy Extensions other than AWS Lambda. Previously, an operator with service:write ACL permissions for an upstream service could modify Envoy proxy config for downstream services without equivalent permissions for those services. This issue only impacts the Lua extension. [CVE-2023-2816] [GH-17415]
+
+FEATURES:
+
+hcp: Add new metrics sink to collect, aggregate and export server metrics to HCP in OTEL format. [GH-17460]
+
+IMPROVEMENTS:
+
+Fixes a performance issue in Raft where commit latency can increase by 100x or more when under heavy load. For more details see https://github.com/hashicorp/raft/pull/541. [GH-17081]
+agent: add a configurable maximimum age (default: 7 days) to prevent servers re-joining a cluster with stale data [GH-17171]
+agent: add new metrics to track cpu disk and memory usage for server hosts (defaults to: enabled) [GH-17038]
+connect: update supported envoy versions to 1.22.11, 1.23.8, 1.24.6, 1.25.4 [GH-16889]
+envoy: add MaxEjectionPercent and BaseEjectionTime to passive health check configs. [GH-15979]
+hcp: Add support for linking existing Consul clusters to HCP management plane. [GH-16916]
+logging: change snapshot log header from agent.server.snapshot to agent.server.raft.snapshot [GH-17236]
+peering: allow re-establishing terminated peering from new token without deleting existing peering first. [GH-16776]
+peering: gRPC queries for TrustBundleList, TrustBundleRead, PeeringList, and PeeringRead now support blocking semantics, reducing network and CPU demand. The HTTP APIs for Peering List and Read have been updated to support blocking. [GH-17426]
+raft: Remove expensive reflection from raft/mesh hot path [GH-16552]
+xds: rename envoy_hcp_metrics_bind_socket_dir to envoy_telemetry_collector_bind_socket_dir to remove HCP naming references. [GH-17327]
+
+BUG FIXES:
+
+Fix an bug where decoding some Config structs with unset pointer fields could fail with reflect: call of reflect.Value.Type on zero Value. [GH-17048]
+acl: (Enterprise only) Check permissions in correct partition/namespace when resolving service in non-default partition/namespace
+acl: Fix an issue where the anonymous token was synthesized in non-primary datacenters which could cause permission errors when federating clusters with ACL replication enabled. [GH-17231]
+acls: Fix ACL bug that can result in sidecar proxies having incorrect endpoints.
+connect: Fix multiple inefficient behaviors when querying service health. [GH-17241]
+gateways: Fix an bug where targeting a virtual service defined by a service-resolver was broken for HTTPRoutes. [GH-17055]
+grpc: ensure grpc resolver correctly uses lan/wan addresses on servers [GH-17270]
+namespaces: adjusts the return type from HTTP list API to return the api module representation of a namespace. This fixes an error with the consul namespace list command when a namespace has a deferred deletion timestamp.
+peering: Fix issue where modifying the list of exported services did not correctly replicate changes for services that exist in a non-default namespace. [GH-17456]
+peering: Fix issue where peer streams could incorrectly deregister services in various scenarios. [GH-17235]
+peering: ensure that merged central configs of peered upstreams for partitioned downstreams work [GH-17179]
+xds: Fix possible panic that can when generating clusters before the root certificates have been fetched. [GH-17185]
+","1.15.3 (June 1, 2023)
+BREAKING CHANGES:
+extensions: The Lua extension now targets local proxy listeners for the configured service's upstreams, rather than remote downstream listeners for the configured service, when ListenerType is set to outbound in extension configuration. See CVE-2023-2816 changelog entry for more details. [GH-17415]
+SECURITY:
+Update to UBI base image to 9.2. [GH-17513]
+Upgrade golang.org/x/net to address CVE-2022-41723 [GH-16754]
+Upgrade to use Go 1.20.4.
+This resolves vulnerabilities CVE-2023-24537(go/scanner),
+CVE-2023-24538(html/template), CVE-2023-24534(net/textproto) and CVE-2023-24536(mime/multipart). Also, golang.org/x/net has been updated to v0.7.0 to resolve CVEs CVE-2022-41721, CVE-2022-27664 and CVE-2022-41723 [GH-17240]
+extensions: Disable remote downstream proxy patching by Envoy Extensions other than AWS Lambda. Previously, an operator with service:write ACL permissions for an upstream service could modify Envoy proxy config for downstream services without equivalent permissions for those services. This issue only impacts the Lua extension. [CVE-2023-2816] [GH-17415]
+FEATURES:
+hcp: Add new metrics sink to collect, aggregate and export server metrics to HCP in OTEL format. [GH-17460]
+IMPROVEMENTS:
+Fixes a performance issue in Raft where commit latency can increase by 100x or more when under heavy load. For more details see link. [GH-17081]
+agent: add a configurable maximimum age (default: 7 days) to prevent servers re-joining a cluster with stale data [GH-17171]
+agent: add new metrics to track cpu disk and memory usage for server hosts (defaults to: enabled) [GH-17038]
+connect: update supported envoy versions to 1.22.11, 1.23.8, 1.24.6, 1.25.4 [GH-16889]
+envoy: add MaxEjectionPercent and BaseEjectionTime to passive health check configs. [GH-15979]
+hcp: Add support for linking existing Consul clusters to HCP management plane. [GH-16916]
+logging: change snapshot log header from agent.server.snapshot to agent.server.raft.snapshot [GH-17236]
+peering: allow re-establishing terminated peering from new token without deleting existing peering first. [GH-16776]
+peering: gRPC queries for TrustBundleList, TrustBundleRead, PeeringList, and PeeringRead now support blocking semantics, reducing network and CPU demand. The HTTP APIs for Peering List and Read have been updated to support blocking. [GH-17426]
+raft: Remove expensive reflection from raft/mesh hot path [GH-16552]
+xds: rename envoy_hcp_metrics_bind_socket_dir to envoy_telemetry_collector_bind_socket_dir to remove HCP naming references. [GH-17327]
+BUG FIXES:
+Fix an bug where decoding some Config structs with unset pointer fields could fail with reflect: call of reflect.Value.Type on zero Value. [GH-17048]
+acl: (Enterprise only) Check permissions in correct partition/namespace when resolving service in non-default partition/namespace
+acl: Fix an issue where the anonymous token was synthesized in non-primary datacenters which could cause permission errors when federating clusters with ACL replication enabled. [GH-17231]
+acls: Fix ACL bug that can result in sidecar proxies having incorrect endpoints.
+connect: Fix multiple inefficient behaviors when querying service health. [GH-17241]
+gateways: Fix an bug where targeting a virtual service defined by a service-resolver was broken for HTTPRoutes. [GH-17055]
+grpc: ensure grpc resolver correctly uses lan/wan addresses on servers [GH-17270]
+namespaces: adjusts the return type from HTTP list API to return the api module representation of a namespace. This fixes an error with the consul namespace list command when a namespace has a deferred deletion timestamp.
+peering: Fix issue where modifying the list of exported services did not correctly replicate changes for services that exist in a non-default namespace. [GH-17456]
+peering: Fix issue where peer streams could incorrectly deregister services in various scenarios. [GH-17235]
+peering: ensure that merged central configs of peered upstreams for partitioned downstreams work [GH-17179]
+xds: Fix possible panic that can when generating clusters before the root certificates have been fetched. [GH-17185]"
+3,"1.14.7 (May 16, 2023)
 SECURITY:
 
 Upgrade to use Go 1.20.4.
@@ -52,7 +256,7 @@ grpc: ensure grpc resolver correctly uses lan/wan addresses on servers [GH-17270
 peering: Fix issue where peer streams could incorrectly deregister services in various scenarios. [GH-17235]
 proxycfg: ensure that an irrecoverable error in proxycfg closes the xds session and triggers a replacement proxycfg watcher [GH-16497]
 xds: Fix possible panic that can when generating clusters before the root certificates have been fetched. [GH-17185]"
-2,"1.13.8 (May 16, 2023)
+4,"1.13.8 (May 16, 2023)
 SECURITY:
 
 Upgrade to use Go 1.20.1.
@@ -101,7 +305,7 @@ connect: Fix multiple inefficient behaviors when querying service health. [GH-17
 grpc: ensure grpc resolver correctly uses lan/wan addresses on servers [GH-17270]
 peering: Fixes a bug that can lead to peering service deletes impacting the state of local services [GH-16570]
 xds: Fix possible panic that can when generating clusters before the root certificates have been fetched. [GH-17185]"
-3,"1.15.2 (March 30, 2023)
+5,"1.15.2 (March 30, 2023)
 FEATURES:
 
 xds: Allow for configuring connect proxies to send service mesh telemetry to an HCP metrics collection service. [GH-16585]
@@ -146,7 +350,7 @@ peering: Fixes a bug where the importing partition was not added to peered failo
 raft_logstore: Fixes a bug where restoring a snapshot when using the experimental WAL storage backend causes a panic. [GH-16647]
 ui: fix PUT token request with adding missed AccessorID property to requestBody [GH-16660]
 ui: fix rendering issues on Overview and empty-states by addressing isHTMLSafe errors [GH-16574]"
-4,"1.14.6 (March 30, 2023)
+6,"1.14.6 (March 30, 2023)
 BUG FIXES:
 
 audit-logging: (Enterprise only) Fix a bug where /agent/monitor and /agent/metrics endpoints return a Streaming not supported error when audit logs are enabled. This also fixes the delay receiving logs when running consul monitor against an agent with audit logs enabled. [GH-16700]
@@ -167,7 +371,7 @@ peering: Fix issue resulting in prepared query failover to cluster peers never u
 peering: Fixes a bug that can lead to peering service deletes impacting the state of local services [GH-16570]
 peering: Fixes a bug where the importing partition was not added to peered failover targets, which causes issues when the importing partition is a non-default partition. [GH-16693]
 ui: fix PUT token request with adding missed AccessorID property to requestBody [GH-16660]"
-5,"1.15.1 (March 7, 2023)
+7,"1.15.1 (March 7, 2023)
 IMPROVEMENTS:
 
 cli: added -append-policy-id, -append-policy-name, -append-role-name, and -append-role-id flags to the consul token update command.
@@ -218,7 +422,7 @@ mesh: Fix resolution of service resolvers with subsets for external upstreams [G
 proxycfg: ensure that an irrecoverable error in proxycfg closes the xds session and triggers a replacement proxycfg watcher [GH-16497]
 proxycfg: fix a bug where terminating gateways were not cleaning up deleted service resolvers for their referenced services [GH-16498]
 ui: Fix issue with lists and filters not rendering properly [GH-16444]"
-6,"1.14.5 (March 7, 2023)
+8,"1.14.5 (March 7, 2023)
 SECURITY:
 
 Upgrade to use Go 1.20.1.
@@ -249,7 +453,7 @@ peering: Fix bug where services were incorrectly imported as connect-enabled. [G
 peering: Fix issue where mesh gateways would use the wrong address when contacting a remote peer with the same datacenter name. [GH-16257]
 peering: Fix issue where secondary wan-federated datacenters could not be used as peering acceptors. [GH-16230]
 proxycfg: fix a bug where terminating gateways were not cleaning up deleted service resolvers for their referenced services [GH-16498]"
-7,"1.13.7 (March 7, 2023)
+9,"1.13.7 (March 7, 2023)
 SECURITY:
 
 Upgrade to use Go 1.19.6.
@@ -276,7 +480,7 @@ mesh: Add ServiceResolver RequestTimeout for route timeouts to make request time
 BUG FIXES:
 mesh: Fix resolution of service resolvers with subsets for external upstreams [GH-16499]
 proxycfg: fix a bug where terminating gateways were not cleaning up deleted service resolvers for their referenced services [GH-16498]"
-8,"1.15.0 (February 23, 2023)
+10,"1.15.0 (February 23, 2023)
 ANNOUNCEMENTS:
 
 Upcoming in Consul 1.16 we will stop publishing official Dockerhub images and publish only our Verified Publisher images. Users of Docker images should pull from hashicorp/consul instead of consul.
@@ -439,7 +643,7 @@ cli: fix ACL token processing unexpected precedence [GH-15274]
 peering: Fix bug where services were incorrectly imported as connect-enabled. [GH-16339]
 peering: Fix issue where mesh gateways would use the wrong address when contacting a remote peer with the same datacenter name. [GH-16257]
 peering: Fix issue where secondary wan-federated datacenters could not be used as peering acceptors. [GH-16230]"
-9,"1.14.4 (January 26, 2023)
+11,"1.14.4 (January 26, 2023)
 BREAKING CHANGES:
 
 connect: Fix configuration merging for transparent proxy upstreams. Proxy-defaults and service-defaults config entries were not correctly merged for implicit upstreams in transparent proxy mode and would result in some configuration not being applied. To avoid issues when upgrading, ensure that any proxy-defaults or service-defaults have correct configuration for upstreams, since all fields will now be properly used to configure proxies. [GH-16000]
@@ -488,7 +692,7 @@ connect: (Consul Enterprise only) Fix issue where upstream configuration from pr
 connect: Fix issue where service-resolver protocol checks incorrectly errored for failover peer targets. [GH-15833]
 connect: Fix issue where watches on upstream failover peer targets did not always query the correct data. [GH-15865]
 xds: fix bug where sessions for locally-managed services could fail with ""this server has too many xDS streams open"" [GH-15789]"
-10,"1.13.6 (January 26, 2023)
+12,"1.13.6 (January 26, 2023)
 FEATURES:
 
 connect: add flags envoy-ready-bind-port and envoy-ready-bind-address to the consul connect envoy command that allows configuration of readiness probe on proxy for any service kind. [GH-16015]
@@ -513,7 +717,7 @@ partition: (Consul Enterprise only) when loading service from on-disk config fil
 if the partition is unspecified, consul will default the partition in the request to agent's partition [GH-16024]
 BUG FIXES:
 agent: Fix assignment of error when auto-reloading cert and key file changes. [GH-15769]"
-11,"1.12.9 (January 26, 2023)
+13,"1.12.9 (January 26, 2023)
 FEATURES:
 
 deps: update to latest go-discover to provide ECS auto-discover capabilities. [GH-13782]
@@ -532,7 +736,7 @@ IMPROVEMENTS:
 grpc: Use new balancer implementation to reduce periodic WARN logs when shuffling servers. [GH-15701]
 BUG FIXES:
 agent: Fix assignment of error when auto-reloading cert and key file changes. [GH-15769]"
-12,"1.14.3 (December 13, 2022)
+14,"1.14.3 (December 13, 2022)
 SECURITY:
 
 Upgrade to use Go 1.19.4. This resolves a vulnerability where restricted files can be read on Windows. CVE-2022-41720 [GH-15705]
@@ -565,7 +769,7 @@ agent: (Enterprise Only) Ensure configIntentionsConvertToList does not compare e
 connect: Fix issue where DialedDirectly configuration was not used by Consul Dataplane. [GH-15760]
 connect: Fix peering failovers ignoring local mesh gateway configuration. [GH-15690]
 connect: Fixed issue where using Vault 1.11+ as CA provider in a secondary datacenter would eventually break Intermediate CAs [GH-15661]"
-13,"1.13.5 (December 13, 2022)
+15,"1.13.5 (December 13, 2022)
 SECURITY:
 
 Upgrade to use Go 1.18.9. This resolves a vulnerability where restricted files can be read on Windows. CVE-2022-41720 [GH-15706]
@@ -590,7 +794,7 @@ BUG FIXES:
 agent: (Enterprise Only) Ensure configIntentionsConvertToList does not compare empty strings with populated strings when filtering intentions created prior to AdminPartitions.
 cli: (Enterprise Only) Fix issue where consul partition update subcommand was not registered and therefore not available through the cli.
 connect: Fixed issue where using Vault 1.11+ as CA provider in a secondary datacenter would eventually break Intermediate CAs [GH-15661]"
-14,"1.12.8 (December 13, 2022)
+16,"1.12.8 (December 13, 2022)
 SECURITY:
 
 Upgrade to use Go 1.18.9. This resolves a vulnerability where restricted files can be read on Windows. CVE-2022-41720 [GH-15727]
@@ -615,7 +819,7 @@ BUG FIXES:
 agent: (Enterprise Only) Ensure configIntentionsConvertToList does not compare empty strings with populated strings when filtering intentions created prior to AdminPartitions.
 cli: (Enterprise Only) Fix issue where consul partition update subcommand was not registered and therefore not available through the cli.
 connect: Fixed issue where using Vault 1.11+ as CA provider in a secondary datacenter would eventually break Intermediate CAs [GH-15661]"
-15,"1.14.2 (November 30, 2022)
+17,"1.14.2 (November 30, 2022)
 FEATURES:
 
 connect: Add local_idle_timeout_ms to allow configuring the Envoy route idle timeout on local_app
@@ -652,7 +856,7 @@ connect: Fixed issue where using Vault 1.11+ as CA provider would eventually bre
 namespace: (Enterprise Only) Fix a bug that caused blocking queries during namespace replication to timeout
 peering: better represent non-passing states during peer check flattening [GH-15615]
 peering: fix the limit of replication gRPC message; set to 8MB [GH-15503]"
-16,"1.13.4 (November 30, 2022)
+18,"1.13.4 (November 30, 2022)
 IMPROVEMENTS:
 
 auto-config: Relax the validation on auto-config JWT authorization to allow non-whitespace, non-quote characters in node names. [GH-15370]
@@ -693,7 +897,7 @@ namespace: (Enterprise Only) Fixed a bug where a client may incorrectly log that
 peering: better represent non-passing states during peer check flattening [GH-15615]
 peering: fix the error of wan address isn't taken by the peering token. [GH-15065]
 peering: when wan address is set, peering stream should use the wan address. [GH-15108]"
-17,"1.12.7 (November 30, 2022)
+19,"1.12.7 (November 30, 2022)
 BUG FIXES:
 
 agent: Fixed issue where blocking queries with short waits could timeout on the client [GH-15541]
@@ -716,7 +920,7 @@ debug: fixed bug that caused consul debug CLI to error on ACL-disabled clusters 
 deps: update go-memdb, fixing goroutine leak [GH-15010] [GH-15068]
 namespace: (Enterprise Only) Fix a bug that caused blocking queries during namespace replication to timeout
 namespace: (Enterprise Only) Fixed a bug where a client may incorrectly log that namespaces were not enabled in the local datacenter"
-18,"1.14.1 (November 21, 2022)
+20,"1.14.1 (November 21, 2022)
 BUG FIXES:
 
 cli: Fix issue where consul connect envoy incorrectly uses the HTTPS API configuration for xDS connections. [GH-15466]
@@ -725,7 +929,7 @@ sdk: Fix SDK testutil backwards compatibility by only configuring grpc_tls port 
 BUG FIXES:
 cli: Fix issue where consul connect envoy incorrectly uses the HTTPS API configuration for xDS connections. [GH-15466]
 sdk: Fix SDK testutil backwards compatibility by only configuring grpc_tls port for new Consul versions. [GH-15423]"
-19,"1.14.0 (November 15, 2022)
+21,"1.14.0 (November 15, 2022)
 BREAKING CHANGES:
 
 config: Add new ports.grpc_tls configuration option.
@@ -914,7 +1118,7 @@ server: fixes the error trying to source proxy configuration for http checks, in
 xds: Central service configuration (proxy-defaults and service-defaults) is now correctly applied to Consul Dataplane proxies [GH-14962]
 NOTES:
 deps: Upgrade to use Go 1.19.2 [GH-15090]"
-20,"1.13.3 (October 19, 2022)
+22,"1.13.3 (October 19, 2022)
 FEATURES:
 
 agent: Added a new config option rpc_client_timeout to tune timeouts for client RPC requests [GH-14965]
@@ -951,7 +1155,7 @@ cache: prevent goroutine leak in agent cache [GH-14908]
 checks: Fixed a bug that prevented registration of UDP health checks from agent configuration files, such as service definition files with embedded health check definitions. [GH-14885]
 connect: Fixed a bug where transparent proxy does not correctly spawn listeners for upstreams to service-resolvers. [GH-14751]
 snapshot-agent: (Enterprise only) Fix a bug when a session is not found in Consul, which leads the agent to panic."
-21,"1.12.6 (October 19, 2022)
+23,"1.12.6 (October 19, 2022)
 FEATURES:
 
 agent: Added a new config option rpc_client_timeout to tune timeouts for client RPC requests [GH-14965]
@@ -990,7 +1194,7 @@ ca: fix a masked bug in leaf cert generation that would not be notified of root 
 cache: prevent goroutine leak in agent cache [GH-14908]
 connect: Fixed a bug where transparent proxy does not correctly spawn listeners for upstreams to service-resolvers. [GH-14751]
 snapshot-agent: (Enterprise only) Fix a bug when a session is not found in Consul, which leads the agent to panic."
-22,"1.11.11 (October 19, 2022)
+24,"1.11.11 (October 19, 2022)
 FEATURES:
 
 agent: Added a new config option rpc_client_timeout to tune timeouts for client RPC requests [GH-14965]
@@ -1021,7 +1225,7 @@ agent: avoid leaking the alias check runner goroutine when the check is de-regis
 ca: fix a masked bug in leaf cert generation that would not be notified of root cert rotation after the first one [GH-15005]
 cache: prevent goroutine leak in agent cache [GH-14908]
 snapshot-agent: (Enterprise only) Fix a bug when a session is not found in Consul, which leads the agent to panic."
-23,"1.14.0-beta1 (September 29, 2022)
+25,"1.14.0-beta1 (September 29, 2022)
 BREAKING CHANGES:
 
 config: Add new ports.grpc_tls configuration option.
@@ -1094,14 +1298,14 @@ checks: If set, use proxy address for automatically added sidecar check instead 
 cli: Fix Consul kv CLI 'GET' flags 'keys' and 'recurse' to be set together [GH-13493]
 metrics: Add duplicate metrics that have only a single ""consul_"" prefix for all existing metrics with double (""consul_consul_"") prefix, with the intent to standardize on single prefixes. [GH-14475]
 snapshot-agent: (Enterprise only) Fix a bug when a session is not found in Consul, which leads the agent to panic."
-24,"1.11.10 (September 22, 2022)
+26,"1.11.10 (September 22, 2022)
 BUG FIXES:
 
 kvs: Fixed a bug where query options were not being applied to KVS.Get RPC operations. [GH-13344]
 ","1.11.10 (September 22, 2022)
 BUG FIXES:
 kvs: Fixed a bug where query options were not being applied to KVS.Get RPC operations. [GH-13344]"
-25,"1.13.2 (September 20, 2022)
+27,"1.13.2 (September 20, 2022)
 SECURITY:
 
 auto-config: Added input validation for auto-config JWT authorization checks. Prior to this change, it was possible for malicious actors to construct requests which incorrectly pass custom JWT claim validation for the AutoConfig.InitialConfiguration endpoint. Now, only a subset of characters are allowed for the input before evaluating the bexpr. [GH-14577]
@@ -1174,7 +1378,7 @@ peering: Fix issue preventing deletion and recreation of peerings in TERMINATED 
 rpc: Adds max jitter to client deadlines to prevent i/o deadline errors on blocking queries [GH-14233]
 tls: undo breaking change that prevented setting TLS for gRPC when using config flags available in Consul v1.11. [GH-14668]
 ui: Removed Overview page from HCP instalations [GH-14606]"
-26,"1.12.5 (September 20, 2022)
+28,"1.12.5 (September 20, 2022)
 SECURITY:
 
 auto-config: Added input validation for auto-config JWT authorization checks. Prior to this change, it was possible for malicious actors to construct requests which incorrectly pass custom JWT claim validation for the AutoConfig.InitialConfiguration endpoint. Now, only a subset of characters are allowed for the input before evaluating the bexpr. [GH-14577]
@@ -1213,7 +1417,7 @@ connect: Fixed an issue where intermediate certificates could build up in the ro
 envoy: validate name before deleting proxy default configurations. [GH-14290]
 rpc: Adds max jitter to client deadlines to prevent i/o deadline errors on blocking queries [GH-14233]
 ui: Removed Overview page from HCP instalations [GH-14606]"
-27,"1.11.9 (September 20, 2022)
+29,"1.11.9 (September 20, 2022)
 SECURITY:
 
 auto-config: Added input validation for auto-config JWT authorization checks. Prior to this change, it was possible for malicious actors to construct requests which incorrectly pass custom JWT claim validation for the AutoConfig.InitialConfiguration endpoint. Now, only a subset of characters are allowed for the input before evaluating the bexpr. [GH-14577]
@@ -1248,7 +1452,7 @@ connect: Fixed an issue where intermediate certificates could build up in the ro
 rpc: Adds a deadline to client RPC calls, so that streams will no longer hang
 indefinitely in unstable network conditions. [GH-8504] [GH-11500]
 rpc: Adds max jitter to client deadlines to prevent i/o deadline errors on blocking queries [GH-14233]"
-28,"1.13.1 (August 12, 2022)
+30,"1.13.1 (August 12, 2022)
 BUG FIXES:
 
 agent: Fixed a compatibility issue when restoring snapshots from pre-1.13.0 versions of Consul [GH-14107] [GH-14149]
@@ -1257,7 +1461,7 @@ connect: Fixed some spurious issues during peering establishment when a follower
 BUG FIXES:
 agent: Fixed a compatibility issue when restoring snapshots from pre-1.13.0 versions of Consul [GH-14107] [GH-14149]
 connect: Fixed some spurious issues during peering establishment when a follower is dialed [GH-14119]"
-29,"1.12.4 (August 11, 2022)
+31,"1.12.4 (August 11, 2022)
 BUG FIXES:
 
 cli: when acl token read is used with the -self and -expanded flags, return an error instead of panicking [GH-13787]
@@ -1272,7 +1476,7 @@ connect: Fixed a goroutine/memory leak that would occur when using the ingress g
 connect: Ingress gateways with a wildcard service entry should no longer pick up non-connect services as upstreams.
 connect: Terminating gateways with a wildcard service entry should no longer pick up connect services as upstreams. [GH-13958]
 ui: Fixes an issue where client side validation errors were not showing in certain areas [GH-14021]"
-30,"1.11.8 (August 11, 2022)
+32,"1.11.8 (August 11, 2022)
 BUG FIXES:
 
 connect: Fixed a goroutine/memory leak that would occur when using the ingress gateway. [GH-13847]
@@ -1283,7 +1487,7 @@ BUG FIXES:
 connect: Fixed a goroutine/memory leak that would occur when using the ingress gateway. [GH-13847]
 connect: Ingress gateways with a wildcard service entry should no longer pick up non-connect services as upstreams.
 connect: Terminating gateways with a wildcard service entry should no longer pick up connect services as upstreams. [GH-13958]"
-31,"1.13.0 (August 9, 2022)
+33,"1.13.0 (August 9, 2022)
 BREAKING CHANGES:
 
 config-entry: Exporting a specific service name across all namespace is invalid.
@@ -1396,7 +1600,7 @@ rpc: Adds a deadline to client RPC calls, so that streams will no longer hang
 indefinitely in unstable network conditions. [GH-8504] [GH-11500]
 serf: upgrade serf to v0.9.8 which fixes a bug that crashes Consul when serf keyrings are listed [GH-13062]
 ui: Fixes an issue where client side validation errors were not showing in certain areas [GH-14021]"
-32,"1.12.3 (July 13 2022)
+34,"1.12.3 (July 13 2022)
 IMPROVEMENTS:
 
 Support Vault namespaces in Connect CA by adding RootPKINamespace and
@@ -1427,7 +1631,7 @@ fix a bug that caused an error when creating grpc or http2 ingress gateway liste
 ui: Fix incorrect text on certain page empty states [GH-13409]
 xds: Fix a bug that resulted in Lambda services not using the payload-passthrough option as expected. [GH-13607]
 xds: Fix a bug where terminating gateway upstream clusters weren't configured properly when the service protocol was http2. [GH-13699]"
-33,"1.11.7 (July 13, 2022)
+35,"1.11.7 (July 13, 2022)
 IMPROVEMENTS:
 
 connect: Update supported Envoy versions to 1.20.4, 1.19.5, 1.18.6, 1.17.4 [GH-13434]
@@ -1444,7 +1648,7 @@ BUG FIXES:
 agent: Fixed a bug in HTTP handlers where URLs were being decoded twice [GH-13265]
 fix a bug that caused an error when creating grpc or http2 ingress gateway listeners with multiple services [GH-13127]
 xds: Fix a bug where terminating gateway upstream clusters weren't configured properly when the service protocol was http2. [GH-13699]"
-34,"1.10.12 (July 13, 2022)
+36,"1.10.12 (July 13, 2022)
 BUG FIXES:
 
 agent: Fixed a bug in HTTP handlers where URLs were being decoded twice [GH-13264]
@@ -1453,7 +1657,7 @@ fix a bug that caused an error when creating grpc or http2 ingress gateway liste
 BUG FIXES:
 agent: Fixed a bug in HTTP handlers where URLs were being decoded twice [GH-13264]
 fix a bug that caused an error when creating grpc or http2 ingress gateway listeners with multiple services [GH-13127]"
-35,"1.13.0-alpha2 (June 21, 2022)
+37,"1.13.0-alpha2 (June 21, 2022)
 IMPROVEMENTS:
 
 api: merge-central-config query parameter support added to /catalog/node-services/:node-name API, to view a fully resolved service definition (especially when not written into the catalog that way). [GH-13450]
@@ -1468,7 +1672,7 @@ api: merge-central-config query parameter support added to /catalog/node-service
 connect: Update Envoy support matrix to latest patch releases (1.22.2, 1.21.3, 1.20.4, 1.19.5) [GH-13431]
 BUG FIXES:
 ui: Fix incorrect text on certain page empty states [GH-13409]"
-36,"1.13.0-alpha1 (June 15, 2022)
+38,"1.13.0-alpha1 (June 15, 2022)
 BREAKING CHANGES:
 
 config-entry: Exporting a specific service name across all namespace is invalid.
@@ -1545,14 +1749,14 @@ fix a bug that caused an error when creating grpc or http2 ingress gateway liste
 proxycfg: Fixed a minor bug that would cause configuring a terminating gateway to watch too many service resolvers and waste resources doing filtering. [GH-13012]
 raft: upgrade to v1.3.8 which fixes a bug where non cluster member can still be able to participate in an election. [GH-12844]
 serf: upgrade serf to v0.9.8 which fixes a bug that crashes Consul when serf keyrings are listed [GH-13062]"
-37,"1.12.2 (June 3, 2022)
+39,"1.12.2 (June 3, 2022)
 BUG FIXES:
 
 kvs: Fixed a bug where query options were not being applied to KVS.Get RPC operations. [GH-13344]
 ","1.12.2 (June 3, 2022)
 BUG FIXES:
 kvs: Fixed a bug where query options were not being applied to KVS.Get RPC operations. [GH-13344]"
-38,"1.12.1 (May 25, 2022)
+40,"1.12.1 (May 25, 2022)
 FEATURES:
 
 xds: Add the ability to invoke AWS Lambdas through sidecar proxies. [GH-12956]
@@ -1605,7 +1809,7 @@ snapshot-agent: (Enterprise only) Fix a bug where providing the ACL token to the
 ui: Re-instate '...' icon for row actions [GH-13183]
 NOTES:
 ci: change action to pull v1 instead of main [GH-12846]"
-39,"1.11.6 (May 25, 2022)
+41,"1.11.6 (May 25, 2022)
 IMPROVEMENTS:
 
 sentinel: (Enterprise Only) Sentinel now uses SHA256 to generate policy ids
@@ -1632,7 +1836,7 @@ health: ensure /v1/health/service/:service endpoint returns the most recent resu
 snapshot-agent: (Enterprise only) Fix a bug where providing the ACL token to the snapshot agent via a CLI or ENV variable without a license configured results in an error during license auto-retrieval.
 NOTES:
 ci: change action to pull v1 instead of main [GH-12846]"
-40,"1.10.11 (May 25, 2022)
+42,"1.10.11 (May 25, 2022)
 SECURITY:
 
 agent: Use SHA256 instead of MD5 to generate persistence file names.
@@ -1665,7 +1869,7 @@ health: ensure /v1/health/service/:service endpoint returns the most recent resu
 snapshot-agent: (Enterprise only) Fix a bug where providing the ACL token to the snapshot agent via a CLI or ENV variable without a license configured results in an error during license auto-retrieval.
 NOTES:
 ci: change action to pull v1 instead of main [GH-12846]"
-41,"1.12.0 (April 20, 2022)
+43,"1.12.0 (April 20, 2022)
 BREAKING CHANGES:
 
 connect: Removes support for Envoy 1.17.4 [GH-12777]
@@ -1818,7 +2022,7 @@ ui: Fixes an issue with the version footer wandering when scrolling [GH-11850]
 NOTES:
 Forked net/rpc to add middleware support: link/ . [GH-12311]
 dependency: Upgrade to use Go 1.18.1 [GH-12808]"
-42,"1.9.17 (April 13, 2022)
+44,"1.9.17 (April 13, 2022)
 SECURITY:
 
 agent: Added a new check field, disable_redirects, that allows for disabling the following of redirects for HTTP checks. The intention is to default this to true in a future release so that redirects must explicitly be enabled. [GH-12685]
@@ -1845,7 +2049,7 @@ connect/ca: cancel old Vault renewal on CA configuration. Provide a 1 - 6 second
 memberlist: fixes a bug which prevented members from joining a cluster with
 large amounts of churn [GH-253] [GH-12046]
 replication: Fixed a bug which could prevent ACL replication from continuing successfully after a leader election. [GH-12565]"
-43,"1.11.5 (April 13, 2022)
+45,"1.11.5 (April 13, 2022)
 SECURITY:
 
 agent: Added a new check field, disable_redirects, that allows for disabling the following of redirects for HTTP checks. The intention is to default this to true in a future release so that redirects must explicitly be enabled. [GH-12685]
@@ -1882,7 +2086,7 @@ replication: Fixed a bug which could prevent ACL replication from continuing suc
 server: fix spurious blocking query suppression for discovery chains [GH-12512]
 ui: Fixes a visual bug where our loading icon can look cut off [GH-12479]
 usagemetrics: (Enterprise only) Fix a bug where Consul usage metrics stopped being reported when upgrading servers from 1.10 to 1.11 or later."
-44,"1.10.10 (April 13, 2022)
+46,"1.10.10 (April 13, 2022)
 SECURITY:
 
 agent: Added a new check field, disable_redirects, that allows for disabling the following of redirects for HTTP checks. The intention is to default this to true in a future release so that redirects must explicitly be enabled. [GH-12685]
@@ -1915,7 +2119,7 @@ connect/ca: cancel old Vault renewal on CA configuration. Provide a 1 - 6 second
 raft: upgrade to v1.3.6 which fixes a bug where a read replica node could attempt bootstrapping raft and prevent other nodes from bootstrapping at all [GH-12496]
 replication: Fixed a bug which could prevent ACL replication from continuing successfully after a leader election. [GH-12565]
 server: fix spurious blocking query suppression for discovery chains [GH-12512]"
-45,"1.12.0-beta1 (April 4, 2022)
+47,"1.12.0-beta1 (April 4, 2022)
 BREAKING CHANGES:
 
 sdk: several changes to the testutil configuration structs (removed ACLMasterToken, renamed Master to InitialManagement, and AgentMaster to AgentRecovery) [GH-11827]
@@ -2030,7 +2234,7 @@ raft: upgrade to v1.3.6 which fixes a bug where a read replica node could attemp
 server: fix spurious blocking query suppression for discovery chains [GH-12512]
 ui: Added Tags tab to gateways(just like exists for non-gateway services) [GH-12400]
 ui: Fixes a visual bug where our loading icon can look cut off [GH-12479]"
-46,"1.11.4 (February 28, 2022)
+48,"1.11.4 (February 28, 2022)
 FEATURES:
 
 ca: support using an external root CA with the vault CA provider [GH-11910]
@@ -2087,7 +2291,7 @@ state: fix bug blocking snapshot restore when a node check and node differed in 
 ui: Ensure we always display the Policy default preview in the Namespace editing form [GH-12316]
 ui: Fix missing helper javascript error [GH-12358]
 xds: Fixed Envoy http features such as outlier detection and retry policy not working correctly with transparent proxy. [GH-12385]"
-47,"1.10.9 (February 28, 2022)
+49,"1.10.9 (February 28, 2022)
 SECURITY:
 
 agent: Use SHA256 instead of MD5 to generate persistence file names.
@@ -2138,7 +2342,7 @@ server: (Enterprise only) Namespace deletion will now attempt to delete as many 
 server: partly fix config entry replication issue that prevents replication in some circumstances [GH-12307]
 ui: Ensure we always display the Policy default preview in the Namespace editing form [GH-12316]
 xds: Fixed Envoy http features such as outlier detection and retry policy not working correctly with transparent proxy. [GH-12385]"
-48,"1.9.16 (February 28, 2022)
+50,"1.9.16 (February 28, 2022)
 FEATURES:
 
 ca: support using an external root CA with the vault CA provider [GH-11910]
@@ -2167,7 +2371,7 @@ areas: (Enterprise Only) Fixes a bug when using Yamux pool ( for servers version
 server: (Enterprise only) Namespace deletion will now attempt to delete as many namespaced config entries as possible instead of halting on the first deletion that failed.
 server: partly fix config entry replication issue that prevents replication in some circumstances [GH-12307]
 ui: Ensure we always display the Policy default preview in the Namespace editing form [GH-12316]"
-49,"1.11.3 (February 11, 2022)
+51,"1.11.3 (February 11, 2022)
 IMPROVEMENTS:
 
 connect: update Envoy supported version of 1.20 to 1.20.1 [GH-11895]
@@ -2212,7 +2416,7 @@ ui: Include partition data when saving an intention from the topology visualizat
 xds: allow only one outstanding delta request at a time [GH-12236]
 xds: fix for delta xDS reconnect bug in LDS/CDS [GH-12174]
 xds: prevents tight loop where the Consul client agent would repeatedly re-send config that Envoy has rejected. [GH-12195]"
-50,"1.10.8 (February 11, 2022)
+52,"1.10.8 (February 11, 2022)
 SECURITY:
 
 agent: Use SHA256 instead of MD5 to generate persistence file names.
@@ -2253,7 +2457,7 @@ snapshot: the snapshot save command now saves the snapshot with read permission 
 xds: allow only one outstanding delta request at a time [GH-12236]
 xds: fix for delta xDS reconnect bug in LDS/CDS [GH-12174]
 xds: prevents tight loop where the Consul client agent would repeatedly re-send config that Envoy has rejected. [GH-12195]"
-51,"1.9.15 (February 11, 2022)
+53,"1.9.15 (February 11, 2022)
 IMPROVEMENTS:
 
 sentinel: (Enterprise Only) Sentinel now uses SHA256 to generate policy ids
@@ -2274,7 +2478,7 @@ areas: (Enterprise Only) Fixes a bug when using Yamux pool ( for servers version
 config-entry: fix a panic when creating an ingress gateway config-entry and a proxy service instance, where both provided the same upstream and downstream mapping. [GH-12277]
 config: include all config errors in the error message, previously some could be hidden. [GH-11918]
 snapshot: the snapshot save command now saves the snapshot with read permission for only the current user. [GH-11918]"
-52,"1.11.2 (January 12, 2022)
+54,"1.11.2 (January 12, 2022)
 FEATURES:
 
 ingress: allow setting TLS min version and cipher suites in ingress gateway config entries [GH-11576]
@@ -2355,7 +2559,7 @@ ui: Prevent disconnection notice appearing with auth change on certain pages [GH
 ui: Temporarily remove KV pre-flight check for KV list permissions [GH-11968]
 windows: Fixes a bug with empty log files when Consul is run as a Windows Service [GH-11960]
 xds: fix a deadlock when the snapshot channel already have a snapshot to be consumed. [GH-11924]"
-53,"1.10.7 (January 12, 2022)
+55,"1.10.7 (January 12, 2022)
 SECURITY:
 
 namespaces: (Enterprise only) Creating or editing namespaces that include default ACL policies or ACL roles now requires acl:write permission in the default namespace. This change fixes CVE-2021-41805.
@@ -2424,7 +2628,7 @@ permissions errors rather than using UI capabilities 'pre-user-action' [GH-11520
 ui: Temporarily remove KV pre-flight check for KV list permissions [GH-11968]
 windows: Fixes a bug with empty log files when Consul is run as a Windows Service [GH-11960]
 xds: fix a deadlock when the snapshot channel already have a snapshot to be consumed. [GH-11924]"
-54,"1.9.14 (January 12, 2022)
+56,"1.9.14 (January 12, 2022)
 SECURITY:
 
 namespaces: (Enterprise only) Creating or editing namespaces that include default ACL policies or ACL roles now requires acl:write permission in the default namespace. This change fixes CVE-2021-41805.
@@ -2463,7 +2667,7 @@ become 'stuck' on the default namespace [GH-11830]
 ui: Include Service.Namespace into available variables for dashboard_url_templates [GH-11640]
 ui: Prevent disconnection notice appearing with auth change on certain pages [GH-11905]
 xds: fix a deadlock when the snapshot channel already have a snapshot to be consumed. [GH-11924]"
-55,"1.11.1 (December 15, 2021)
+57,"1.11.1 (December 15, 2021)
 SECURITY:
 
 ci: Upgrade golang.org/x/net to address CVE-2021-44716 [GH-11854]
@@ -2486,28 +2690,28 @@ Admin Partitions (Consul Enterprise only) This version adds admin partitions, a 
 networking: (Enterprise Only) Make segment_limit configurable, cap at 256.
 BUG FIXES:
 ui: Fixes an issue with the version footer wandering when scrolling [GH-11850]"
-56,"1.10.6 (December 15, 2021)
+58,"1.10.6 (December 15, 2021)
 SECURITY:
 
 ci: Upgrade golang.org/x/net to address CVE-2021-44716 [GH-11856]
 ","1.10.6 (December 15, 2021)
 SECURITY:
 ci: Upgrade golang.org/x/net to address CVE-2021-44716 [GH-11856]"
-57,"1.9.13 (December 15, 2021)
+59,"1.9.13 (December 15, 2021)
 SECURITY:
 
 ci: Upgrade golang.org/x/net to address CVE-2021-44716 [GH-11858]
 ","1.9.13 (December 15, 2021)
 SECURITY:
 ci: Upgrade golang.org/x/net to address CVE-2021-44716 [GH-11858]"
-58,"1.8.19 (December 15, 2021)
+60,"1.8.19 (December 15, 2021)
 SECURITY:
 
 ci: Upgrade golang.org/x/net to address CVE-2021-44716 [GH-11857]
 ","1.8.19 (December 15, 2021)
 SECURITY:
 ci: Upgrade golang.org/x/net to address CVE-2021-44716 [GH-11857]"
-59,"1.11.0 (December 14, 2021)
+61,"1.11.0 (December 14, 2021)
 BREAKING CHANGES:
 
 acl: The legacy ACL system that was deprecated in Consul 1.4.0 has been removed. Before upgrading you should verify that nothing is still using the legacy ACL system. See the Migrate Legacy ACL Tokens Learn Guide for more information. [GH-11232]
@@ -2746,7 +2950,7 @@ use the MaxQueryTime instead of RPCHoldTimeout for blocking RPC queries
 windows: fixes arm and arm64 builds [GH-11586]
 NOTES:
 Renamed the agent_master field to agent_recovery in the acl-tokens.json file in which tokens are persisted on-disk (when acl.enable_token_persistence is enabled) [GH-11744]"
-60,"1.10.5 (December 13, 2021)
+62,"1.10.5 (December 13, 2021)
 SECURITY:
 
 ci: Upgrade to Go 1.16.12 to address CVE-2021-44716 [GH-11808]
@@ -2759,14 +2963,14 @@ SECURITY:
 ci: Upgrade to Go 1.16.12 to address CVE-2021-44716 [GH-11808]
 BUG FIXES:
 agent: (Enterprise only) fix bug where 1.10.x agents would deregister serf checks from 1.11.x servers [GH-11700]"
-61,"1.9.12 (December 13, 2021)
+63,"1.9.12 (December 13, 2021)
 SECURITY:
 
 ci: Upgrade to Go 1.16.12 to address CVE-2021-44716 [GH-11807]
 ","1.9.12 (December 13, 2021)
 SECURITY:
 ci: Upgrade to Go 1.16.12 to address CVE-2021-44716 [GH-11807]"
-62,"1.8.18 (December 13, 2021)
+64,"1.8.18 (December 13, 2021)
 SECURITY:
 
 ci: Upgrade to Go 1.16.12 to address CVE-2021-44716 [GH-11806]
@@ -2787,7 +2991,7 @@ snapshot: (Enterprise only) fixed a bug where the snapshot agent would ignore th
 ui: Fixes an issue where under some circumstances after logging we present the
 data loaded previous to you logging in. [GH-11681]
 ui: Include Service.Namespace into available variables for dashboard_url_templates [GH-11640]"
-63,"1.11.0-rc (December 08, 2021)
+65,"1.11.0-rc (December 08, 2021)
 BREAKING CHANGES:
 
 cli: consul acl set-agent-token master has been replaced with consul acl set-agent-token recovery [GH-11669]
@@ -2890,7 +3094,7 @@ ui: Fix visual issue with slight table header overflow [GH-11670]
 ui: Fixes an issue where under some circumstances after logging we present the
 data loaded previous to you logging in. [GH-11681]
 ui: Include Service.Namespace into available variables for dashboard_url_templates [GH-11640]"
-64,"1.11.0-beta3 (November 17, 2021)
+66,"1.11.0-beta3 (November 17, 2021)
 SECURITY:
 
 agent: Use SHA256 instead of MD5 to generate persistence file names. [GH-11491]
@@ -2995,7 +3199,7 @@ permissions errors rather than using UI capabilities 'pre-user-action' [GH-11520
 ui: code editor styling (layout consistency + wide screen support) [GH-11474]
 windows: fixes arm and arm64 builds [GH-11586]
 xds: fixes a bug where replacing a mesh gateway node used for WAN federation (with another that has a different IP) could leave gateways in the other DC unable to re-establish the connection [GH-11522]"
-65,"1.10.4 (November 11, 2021)
+67,"1.10.4 (November 11, 2021)
 SECURITY:
 
 agent: Use SHA256 instead of MD5 to generate persistence file names. [GH-11491]
@@ -3054,7 +3258,7 @@ ui: Ensure we check intention permissions for specific services when deciding
 whether to show action buttons for per service intention actions [GH-11270]
 ui: Fixed styling of Role remove dialog on the Token edit page [GH-11298]
 xds: fixes a bug where replacing a mesh gateway node used for WAN federation (with another that has a different IP) could leave gateways in the other DC unable to re-establish the connection [GH-11522]"
-66,"1.9.11 (November 11, 2021)
+68,"1.9.11 (November 11, 2021)
 SECURITY:
 
 agent: Use SHA256 instead of MD5 to generate persistence file names. [GH-11491]
@@ -3089,7 +3293,7 @@ rpc: only attempt to authorize the DNSName in the client cert when verify_incomi
 server: (Enterprise only) Ensure that servers leave network segments when leaving other gossip pools
 ui: Fixed styling of Role remove dialog on the Token edit page [GH-11298]
 xds: fixes a bug where replacing a mesh gateway node used for WAN federation (with another that has a different IP) could leave gateways in the other DC unable to re-establish the connection [GH-11522]"
-67,"1.8.17 (November 11, 2021)
+69,"1.8.17 (November 11, 2021)
 SECURITY:
 * namespaces: (Enterprise only) Creating or editing namespaces that include default ACL policies or ACL roles now requires acl:write permission in the default namespace. This change fixes CVE-2021-41805.
 IMPROVEMENTS:
@@ -3120,7 +3324,7 @@ rpc: only attempt to authorize the DNSName in the client cert when verify_incomi
 server: (Enterprise only) Ensure that servers leave network segments when leaving other gossip pools
 ui: Fixed styling of Role delete confirmation button with the Token edit page [GH-11297]
 xds: fixes a bug where replacing a mesh gateway node used for WAN federation (with another that has a different IP) could leave gateways in the other DC unable to re-establish the connection [GH-11522]"
-68,"1.11.0-beta2 (November 02, 2021)
+70,"1.11.0-beta2 (November 02, 2021)
 BREAKING CHANGES:
 
 acl: The legacy ACL system that was deprecated in Consul 1.4.0 has been removed. Before upgrading you should verify that nothing is still using the legacy ACL system. See the Migrate Legacy ACL Tokens Learn Guide for more information. [GH-11232]
@@ -3179,7 +3383,7 @@ telemetry: fixes a bug with Prometheus consul_autopilot_failure_tolerance metric
 ui: Ensure dc selector correctly shows the currently selected dc [GH-11380]
 ui: Ensure we filter tokens by policy when showing which tokens use a certain
 policy whilst editing a policy [GH-11311]"
-69,"1.11.0-beta1 (October 15, 2021)
+71,"1.11.0-beta1 (October 15, 2021)
 FEATURES:
 
 partitions: allow for partition queries to be forwarded [GH-11099]
@@ -3264,7 +3468,7 @@ ui: hide create button for policies/roles/namespace if users token has no write 
 xds: ensure the active streams counters are 64 bit aligned on 32 bit systems [GH-11085]
 xds: fixed a bug where Envoy sidecars could enter a state where they failed to receive xds updates from Consul [GH-10987]
 Fixing SOA record to return proper domain when alt domain in use. [GH-10431]"
-70,"1.10.3 (September 27, 2021)
+72,"1.10.3 (September 27, 2021)
 FEATURES:
 
 sso/oidc: (Enterprise only) Add support for providing acr_values in OIDC auth flow [GH-11026]
@@ -3311,7 +3515,7 @@ for both read/write access if the HTTP API allows. [GH-10916]
 ui: hide create button for policies/roles/namespace if users token has no write permissions to those areas [GH-10914]
 xds: ensure the active streams counters are 64 bit aligned on 32 bit systems [GH-11085]
 xds: fixed a bug where Envoy sidecars could enter a state where they failed to receive xds updates from Consul [GH-10987]"
-71,"1.9.10 (September 27, 2021)
+73,"1.9.10 (September 27, 2021)
 FEATURES:
 
 sso/oidc: (Enterprise only) Add support for providing acr_values in OIDC auth flow [GH-11026]
@@ -3336,7 +3540,7 @@ telemetry: Add new metrics for the count of KV entries in the Consul store. [GH-
 BUG FIXES:
 tls: consider presented intermediates during server connection tls handshake. [GH-10964]
 ui: (Enterprise Only) Fix saving intentions with namespaced source/destination [GH-11095]"
-72,"1.8.16 (September 27, 2021)
+74,"1.8.16 (September 27, 2021)
 FEATURES:
 
 sso/oidc: (Enterprise only) Add support for providing acr_values in OIDC auth flow [GH-11026]
@@ -3357,7 +3561,7 @@ audit-logging: (Enterprise Only) Audit logs will now include select HTTP headers
 BUG FIXES:
 tls: consider presented intermediates during server connection tls handshake. [GH-10964]
 ui: (Enterprise Only) Fixes a visual issue where namespaces would ""double up"" in the Source/Destination select menu when creating/editing intentions [GH-11102]"
-73,"1.11.0-alpha (September 16, 2021)
+75,"1.11.0-alpha (September 16, 2021)
 SECURITY:
 
 rpc: authorize raft requests CVE-2021-37219 [GH-10925]
@@ -3438,7 +3642,7 @@ dns: return an empty answer when asked for an addr dns with type other then A an
 tls: consider presented intermediates during server connection tls handshake. [GH-10964]
 use the MaxQueryTime instead of RPCHoldTimeout for blocking RPC queries 
  [GH-8978]. [GH-10299]"
-74,"1.10.2 (August 27, 2021)
+76,"1.10.2 (August 27, 2021)
 SECURITY:
 
 rpc: authorize raft requests CVE-2021-37219 [GH-10931]
@@ -3525,7 +3729,7 @@ ui: Fix dropdown option duplication in the new intentions form [GH-10706]
 ui: Hide all metrics for ingress gateway services [GH-10858]
 ui: Properly encode non-URL safe characters in OIDC responses [GH-10901]
 ui: fixes a bug with some service failovers not showing the routing tab visualization [GH-10913]"
-75,"1.9.9 (August 27, 2021)
+77,"1.9.9 (August 27, 2021)
 SECURITY:
 
 rpc: authorize raft requests CVE-2021-37219 [GH-10932]
@@ -3576,7 +3780,7 @@ ui: Fix dropdown option duplication in the new intentions form [GH-10706]
 ui: Hide all metrics for ingress gateway services [GH-10858]
 ui: Properly encode non-URL safe characters in OIDC responses [GH-10901]
 ui: fixes a bug with some service failovers not showing the routing tab visualization [GH-10913]"
-76,"1.8.15 (August 27, 2021)
+78,"1.8.15 (August 27, 2021)
 SECURITY:
 
 rpc: authorize raft requests CVE-2021-37219 [GH-10933]
@@ -3619,7 +3823,7 @@ token. [GH-10795]
 connect: proxy upstreams inherit namespace from service if none are defined. [GH-10688]
 dns: fixes a bug with edns truncation where the response could exceed the size limit in some cases. [GH-10009]
 txn: fixes Txn.Apply to properly authorize service registrations. [GH-10798]"
-77,"1.10.1 (July 15, 2021)
+79,"1.10.1 (July 15, 2021)
 SECURITY:
 
 xds: ensure envoy verifies the subject alternative name for upstreams CVE-2021-32574 [GH-10621]
@@ -3680,7 +3884,7 @@ ui: Send service name down to Stats to properly call endpoint for Upstreams and 
 ui: Show ACLs disabled page at Tokens page instead of 403 error when ACLs are disabled [GH-10604]
 ui: Use the token's namespace instead of the default namespace when not
 specifying a namespace in the URL [GH-10503]"
-78,"1.9.8 (July 15, 2021)
+80,"1.9.8 (July 15, 2021)
 SECURITY:
 
 xds: ensure envoy verifies the subject alternative name for upstreams CVE-2021-32574 [GH-10621]
@@ -3697,7 +3901,7 @@ xds: ensure single L7 deny intention with default deny policy does not result in
 BUG FIXES:
 ca: Fixed a bug that returned a malformed certificate chain when the certificate did not having a trailing newline. [GH-10411]
 ui: Send service name down to Stats to properly call endpoint for Upstreams and Downstreams metrics [GH-10535]"
-79,"1.8.14 (July 15, 2021)
+81,"1.8.14 (July 15, 2021)
 SECURITY:
 
 xds: ensure envoy verifies the subject alternative name for upstreams CVE-2021-32574 [GH-10621]
@@ -3710,7 +3914,7 @@ SECURITY:
 xds: ensure envoy verifies the subject alternative name for upstreams CVE-2021-32574 [GH-10621]
 BUG FIXES:
 ca: Fixed a bug that returned a malformed certificate chain when the certificate did not having a trailing newline. [GH-10411]"
-80,"1.10.1-beta1 (July 01, 2021)
+82,"1.10.1-beta1 (July 01, 2021)
 IMPROVEMENTS:
 
 structs: prevent service-defaults upstream configs from using wildcard names or namespaces [GH-10475]
@@ -3733,7 +3937,7 @@ checks: fixes the default ServerName used with TLS health checks. [GH-10490]
 connect/proxy: fixes logic bug preventing builtin/native proxy from starting upstream listeners [GH-10486]
 streaming: fix a bug that was preventing streaming from being enabled. [GH-10514]
 ui: Send service name down to Stats to properly call endpoint for Upstreams and Downstreams metrics [GH-10535]"
-81,"1.10.0 (June 22, 2021)
+83,"1.10.0 (June 22, 2021)
 BREAKING CHANGES:
 
 connect: Disallow wildcard as name for service-defaults. [GH-10069]
@@ -3936,7 +4140,7 @@ ui: ensure proxy instance API requests perform blocking queries correctly [GH-10
 xds: (beta-only) ensure that dependent xDS resources are reconfigured during primary type warming [GH-10381]
 NOTES:
 legal: (Enterprise only) Enterprise binary downloads will now include a copy of the EULA and Terms of Evaluation in the zip archive"
-82,"1.9.7 (June 21, 2021)
+84,"1.9.7 (June 21, 2021)
 IMPROVEMENTS:
 
 debug: capture a single stream of logs, and single pprof profile and trace for the whole duration [GH-10279]
@@ -3955,7 +4159,7 @@ monitoring: optimize the monitoring endpoint to avoid losing logs when under hig
 BUG FIXES:
 license: (Enterprise only) Fixed an issue that would cause client agents on versions before 1.10 to not be able to retrieve the license from a 1.10+ server. [GH-10432]
 monitor: fix monitor to produce json format logs when requested [GH-10358]"
-83,"1.8.13 (June 21, 2021)
+85,"1.8.13 (June 21, 2021)
 IMPROVEMENTS:
 
 debug: capture a single stream of logs, and single pprof profile and trace for the whole duration [GH-10279]
@@ -3974,14 +4178,14 @@ monitoring: optimize the monitoring endpoint to avoid losing logs when under hig
 BUG FIXES:
 license: (Enterprise only) Fixed an issue that would cause client agents on versions before 1.10 to not be able to retrieve the license from a 1.10+ server. [GH-10432]
 monitor: fix monitor to produce json format logs when requested [GH-10358]"
-84,"1.10.0-rc2 (June 17, 2021)
+86,"1.10.0-rc2 (June 17, 2021)
 BUG FIXES:
 
 proxycfg: avoid panic when transparent proxy upstream is added and then removed. [GH-10423]
 ","1.10.0-rc2 (June 17, 2021)
 BUG FIXES:
 proxycfg: avoid panic when transparent proxy upstream is added and then removed. [GH-10423]"
-85,"1.10.0-rc (June 16, 2021)
+87,"1.10.0-rc (June 16, 2021)
 BREAKING CHANGES:
 
 connect: avoid encoding listener info in ingress and terminating gateway listener stats names. [GH-10404]
@@ -4018,7 +4222,7 @@ proxycfg: Ensure that endpoints for explicit upstreams in other datacenters are 
 xds: (beta-only) ensure that dependent xDS resources are reconfigured during primary type warming [GH-10381]
 NOTES:
 legal: (Enterprise only) Enterprise binary downloads will now include a copy of the EULA and Terms of Evaluation in the zip archive"
-86,"1.10.0-beta4 (June 10, 2021)
+88,"1.10.0-beta4 (June 10, 2021)
 IMPROVEMENTS:
 
 connect: Support dialing individual service IP addresses through transparent proxies. [GH-10329]
@@ -4051,7 +4255,7 @@ debug_enabled=true. [GH-10273]
 connect: Fix bug that prevented transparent proxies from working when mesh config restricted routing to catalog destinations. [GH-10365]
 envoy: fixes a bug where a large envoy config could cause the consul connect envoy command to deadlock when attempting to start envoy. [GH-10324]
 monitor: fix monitor to produce json format logs when requested [GH-10358]"
-87,"1.9.6 (June 04, 2021)
+89,"1.9.6 (June 04, 2021)
 IMPROVEMENTS:
 
 acl: Give more descriptive error if auth method not found. [GH-10163]
@@ -4126,7 +4330,7 @@ ui: De-duplicate tags in rendered tag listings [GH-10186]
 ui: Don't render a DOM element for empty namespace descriptions [GH-10157]
 ui: Reflect the change of Session API response shape for Checks in post 1.7 Consul [GH-10225]
 ui: Removes the extra rendering of namespace in service upstream list [GH-10152]"
-88,"1.8.12 (June 04, 2021)
+90,"1.8.12 (June 04, 2021)
 BUG FIXES:
 
 agent: fix logging output by removing leading whitespace from every log line [GH-10338]
@@ -4143,7 +4347,7 @@ the CLI behaves the same way as the API and accepts either an ACL token with ope
 debug_enabled=true. [GH-10273]
 envoy: fixes a bug where a large envoy config could cause the consul connect envoy command to deadlock when attempting to start envoy. [GH-10324]
 namespaces: (Enterprise only) fixes a problem where the logs would contain many warnings about namespaces not being licensed."
-89,"1.8.11 (June 03, 2021)
+91,"1.8.11 (June 03, 2021)
 IMPROVEMENTS:
 
 areas: (Enterprise only) Use server agent's gossip_wan config when setting memberlist configuration for network areas. Previously they used memberlists WAN defaults.
@@ -4174,7 +4378,7 @@ areas: (Enterprise only) Revert to the 10s dial timeout used before connection p
 areas: (Enterprise only) Selectively merge gossip_wan config for network areas to avoid attempting to enable gossip encryption where it was not intended or necessary.
 local: agents will no longer persist the default user token along with a service or check. [GH-10188]
 server: ensure that central service config flattening properly resets the state each time [GH-10239]"
-90,"1.10.0-beta3 (May 27, 2021)
+92,"1.10.0-beta3 (May 27, 2021)
 BREAKING CHANGES:
 
 licensing: (Enterprise Only) Consul Enterprise 1.10 has removed API driven licensing of servers in favor of license loading via configuration. The PUT and DELETE methods on the /v1/operator/license endpoint will now return 405s, the consul license put and consul license reset CLI commands have been removed and the LicensePut and LicenseReset methods in the API client have been altered to always return an error. [GH-10211]
@@ -4255,7 +4459,7 @@ ui: Add conditionals to lock sessions tab [GH-10121]
 ui: De-duplicate tags in rendered tag listings [GH-10186]
 ui: Don't render a DOM element for empty namespace descriptions [GH-10157]
 ui: Reflect the change of Session API response shape for Checks in post 1.7 Consul [GH-10225]"
-91,"1.8.11-beta2 (May 26, 2021)
+93,"1.8.11-beta2 (May 26, 2021)
 BUG FIXES:
 
 api: include the default value of raft settings in the output of /v1/agent/self [GH-8812]
@@ -4264,7 +4468,7 @@ areas: (Enterprise only) Selectively merge gossip_wan config for network areas t
 BUG FIXES:
 api: include the default value of raft settings in the output of /v1/agent/self [GH-8812]
 areas: (Enterprise only) Selectively merge gossip_wan config for network areas to avoid attempting to enable gossip encryption where it was not intended or necessary."
-92,"1.8.11-beta1 (May 18, 2021)
+94,"1.8.11-beta1 (May 18, 2021)
 IMPROVEMENTS:
 
 areas: (Enterprise only) Use server agent's gossip_wan config when setting memberlist configuration for network areas. Previously they used memberlists WAN defaults.
@@ -4291,7 +4495,7 @@ agent: ensure we hash the non-deprecated upstream fields on ServiceConfigRequest
 areas: (Enterprise only) Revert to the 10s dial timeout used before connection pooling was introduced in 1.7.3.
 local: agents will no longer persist the default user token along with a service or check. [GH-10188]
 server: ensure that central service config flattening properly resets the state each time [GH-10239]"
-93,"1.10.0-beta2 (May 05, 2021)
+95,"1.10.0-beta2 (May 05, 2021)
 BREAKING CHANGES:
 
 connect: Disallow wildcard as name for service-defaults. [GH-10069]
@@ -4376,7 +4580,7 @@ ui: Adding conditional to prevent Service Mesh from breaking when there are no U
 ui: Fix text searching through upstream instances. [GH-10151]
 ui: Removes the extra rendering of namespace in service upstream list [GH-10152]
 ui: Update conditional for topology empty state [GH-10124]"
-94,"1.10.0-beta1 (April 16, 2021)
+96,"1.10.0-beta1 (April 16, 2021)
 SECURITY:
 
 Add content-type headers to raw KV responses to prevent XSS attacks CVE-2020-25864 [GH-10023]
@@ -4491,7 +4695,7 @@ snapshot: fixes a bug that would cause snapshots to be missing all but the first
 streaming: lookup in health properly handle case-sensitivity and perform filtering based on tags and node-meta [GH-9703]
 ui: Fix intention form cancel button [GH-9901]
 ui: ensure proxy instance API requests perform blocking queries correctly [GH-10039]"
-95,"1.9.5 (April 15, 2021)
+97,"1.9.5 (April 15, 2021)
 SECURITY:
 
 Add content-type headers to raw KV responses to prevent XSS attacks CVE-2020-25864 [GH-10023]
@@ -4538,7 +4742,7 @@ config: correct config key from advertise_addr_ipv6 to advertise_addr_wan_ipv6 [
 http: fix a bug in Consul Enterprise that would cause the UI to believe namespaces were supported, resulting in warning logs and incorrect UI behaviour. [GH-9923]
 snapshot: fixes a bug that would cause snapshots to be missing all but the first ACL Auth Method. [GH-10025]
 ui: Fix intention form cancel button [GH-9901]"
-96,"1.8.10 (April 15, 2021)
+98,"1.8.10 (April 15, 2021)
 SECURITY:
 
 Add content-type headers to raw KV responses to prevent XSS attacks CVE-2020-25864 [GH-10023]
@@ -4561,7 +4765,7 @@ audit-logging: (Enterprise only) Fixed an issue that resulted in usage of the ag
 command: when generating envoy bootstrap configs to stdout do not mix informational logs into the json [GH-9980]
 config: correct config key from advertise_addr_ipv6 to advertise_addr_wan_ipv6 [GH-9851]
 snapshot: fixes a bug that would cause snapshots to be missing all but the first ACL Auth Method. [GH-10025]"
-97,"1.7.14 (April 15, 2021)
+99,"1.7.14 (April 15, 2021)
 SECURITY:
 
 Add content-type headers to raw KV responses to prevent XSS attacks CVE-2020-25864 [GH-10023]
@@ -4578,7 +4782,7 @@ BUG FIXES:
 command: when generating envoy bootstrap configs to stdout do not mix informational logs into the json [GH-9980]
 config: correct config key from advertise_addr_ipv6 to advertise_addr_wan_ipv6 [GH-9851]
 snapshot: fixes a bug that would cause snapshots to be missing all but the first ACL Auth Method. [GH-10025]"
-98,"1.10.0-alpha (March 18, 2021)
+100,"1.10.0-alpha (March 18, 2021)
 FEATURES:
 
 cli: Add prefix option to kv import command [GH-9792]
@@ -4643,7 +4847,7 @@ config: Fixed a bug where rpc_max_conns_per_client could not be changed by reloa
 config. [GH-8696]
 config: correct config key from advertise_addr_ipv6 to advertise_addr_wan_ipv6 [GH-9851]
 streaming: lookup in health properly handle case-sensitivity and perform filtering based on tags and node-meta [GH-9703]"
-99,"1.9.4 (March 04, 2021)
+101,"1.9.4 (March 04, 2021)
 IMPROVEMENTS:
 
 connect: if the token given to the vault provider returns no data avoid a panic [GH-9806]
@@ -4680,7 +4884,7 @@ ui: Exclude proxies when showing the total number of instances on a node. [GH-97
 ui: Fixed a bug in older browsers relating to String.replaceAll and fieldset w/flexbox usage [GH-9715]
 xds: deduplicate mesh gateway listeners by address in a stable way to prevent some LDS churn [GH-9650]
 xds: prevent LDS flaps in mesh gateways due to unstable datacenter lists; also prevent some flaps in terminating gateways as well [GH-9651]"
-100,"1.8.9 (March 04, 2021)
+102,"1.8.9 (March 04, 2021)
 IMPROVEMENTS:
 
 cli: Add new -cluster-id and common-name to consul tls ca create to support creating a CA for Consul Connect. [GH-9585]
@@ -4717,7 +4921,7 @@ server: When wan federating via mesh gateways after initial federation default t
 server: When wan federating via mesh gateways only do heuristic primary DC bypass on the leader. [GH-9366]
 xds: deduplicate mesh gateway listeners by address in a stable way to prevent some LDS churn [GH-9650]
 xds: prevent LDS flaps in mesh gateways due to unstable datacenter lists; also prevent some flaps in terminating gateways as well [GH-9651]"
-101,"1.7.13 (March 04, 2021)
+103,"1.7.13 (March 04, 2021)
 IMPROVEMENTS:
 
 connect: update supported envoy point releases to 1.13.7, 1.12.7, 1.11.2, 1.10.0 [GH-9740]
@@ -4740,7 +4944,7 @@ cache: Prevent spamming the logs for days when a cached request encounters an ""
 connect: connect CA Roots in the primary datacenter should use a SigningKeyID derived from their local intermediate [GH-9428]
 xds: deduplicate mesh gateway listeners by address in a stable way to prevent some LDS churn [GH-9650]
 xds: prevent LDS flaps in mesh gateways due to unstable datacenter lists; also prevent some flaps in terminating gateways as well [GH-9651]"
-102,"1.8.9-beta1 (February 11, 2021)
+104,"1.8.9-beta1 (February 11, 2021)
 IMPROVEMENTS:
 
 cli: Add new -cluster-id and common-name to consul tls ca create to support creating a CA for Consul Connect. [GH-9585]
@@ -4771,7 +4975,7 @@ server: When wan federating via mesh gateways after initial federation default t
 server: When wan federating via mesh gateways only do heuristic primary DC bypass on the leader. [GH-9366]
 xds: deduplicate mesh gateway listeners by address in a stable way to prevent some LDS churn [GH-9650]
 xds: prevent LDS flaps in mesh gateways due to unstable datacenter lists; also prevent some flaps in terminating gateways as well [GH-9651]"
-103,"1.9.3 (February 01, 2021)
+105,"1.9.3 (February 01, 2021)
 FEATURES:
 
 ui: Add additional search/filter status pills for viewing and removing current
@@ -4804,7 +5008,7 @@ autopilot: Fixed a bug that would cause snapshot restoration to stop autopilot o
 server: When wan federating via mesh gateways after initial federation default to using the local mesh gateways unless the heuristic indicates a bypass is required. [GH-9528]
 server: When wan federating via mesh gateways only do heuristic primary DC bypass on the leader. [GH-9366]
 ui: Fixed a bug that would cause missing or duplicate service instance healthcheck listings. [GH-9660]"
-104,"1.8.8 (January 22, 2021)
+106,"1.8.8 (January 22, 2021)
 BUG FIXES:
 
 connect: Fixed a bug in the AWS PCA Connect CA provider that could cause the intermediate PKI path to be deleted after reconfiguring the CA [GH-9498]
@@ -4821,7 +5025,7 @@ connect: Fixed an issue that would prevent updating the Connect CA configuration
 leader: Fixed a bug that could cause Connect CA initialization failures from allowing leader establishment to complete resulting in potentially infinite leader elections. [GH-9498]
 rpc: Prevent misleading RPC error claiming the lack of a leader when Raft is ok but there are issues with client agents gossiping with the leader. [GH-9487]
 ui: ensure namespace is used for node API requests [GH-9488]"
-105,"1.7.12 (January 22, 2021)
+107,"1.7.12 (January 22, 2021)
 BUG FIXES:
 
 rpc: Prevent misleading RPC error claiming the lack of a leader when Raft is ok but there are issues with client agents gossiping with the leader. [GH-9487]
@@ -4830,7 +5034,7 @@ ui: ensure namespace is used for node API requests [GH-9488]
 BUG FIXES:
 rpc: Prevent misleading RPC error claiming the lack of a leader when Raft is ok but there are issues with client agents gossiping with the leader. [GH-9487]
 ui: ensure namespace is used for node API requests [GH-9488]"
-106,"1.9.2 (January 20, 2021)
+108,"1.9.2 (January 20, 2021)
 FEATURES:
 
 agent: add config flag MaxHeaderBytes to control the maximum size of the http header per client request. [GH-9067]
@@ -4905,7 +5109,7 @@ ui: Fixes an issue with setting -ui-content-path flag/config [GH-9569]
 ui: ensure namespace is used for node API requests [GH-9410]
 ui: request intention listing with ns=* parameter to retrieve all intentions
 across namespaces [GH-9432]"
-107,"1.9.1 (December 11, 2020)
+109,"1.9.1 (December 11, 2020)
 FEATURES:
 
 ui: add copyable IDs to the Role and Policy views [GH-9296]
@@ -4946,7 +5150,7 @@ connect: fixes a case when updating the CA config in a secondary datacenter to c
 connect: only unset the active root in a secondary datacenter when a new one is replacing it [GH-9318]
 namespaces: (Enterprise only) Prevent stalling of replication in secondary datacenters due to conflicts between the namespace replicator and other replicators. [GH-9271]
 streaming: ensure the order of results provided by /health/service/:serviceName is consistent with and without streaming enabled [GH-9247]"
-108,"1.8.7 (December 10, 2020)
+110,"1.8.7 (December 10, 2020)
 BUG FIXES:
 
 acl: global tokens created by auth methods now correctly replicate to secondary datacenters [GH-9351]
@@ -4967,7 +5171,7 @@ license: (Enterprise only) Fixed an issue where warnings about Namespaces being 
 namespace: (Enterprise Only) Fixed a bug that could case snapshot restoration to fail when it contained a namespace marked for deletion while still containing other resources in that namespace. [GH-9156]
 namespace: (Enterprise Only) Fixed an issue where namespaced services and checks were not being deleted when the containing namespace was deleted.
 namespaces: (Enterprise only) Prevent stalling of replication in secondary datacenters due to conflicts between the namespace replicator and other replicators. [GH-9271]"
-109,"1.7.11 (December 10, 2020)
+111,"1.7.11 (December 10, 2020)
 BUG FIXES:
 
 license: (Enterprise only) Fixed an issue where warnings about Namespaces being unlicensed would be emitted erroneously.
@@ -4980,7 +5184,7 @@ license: (Enterprise only) Fixed an issue where warnings about Namespaces being 
 namespace: (Enterprise Only) Fixed a bug that could case snapshot restoration to fail when it contained a namespace marked for deletion while still containing other resources in that namespace. [GH-9156]
 namespace: (Enterprise Only) Fixed an issue where namespaced services and checks were not being deleted when the containing namespace was deleted.
 namespaces: (Enterprise only) Prevent stalling of replication in secondary datacenters due to conflicts between the namespace replicator and other replicators. [GH-9271]"
-110,"1.8.7-beta1 (December 03, 2020)
+112,"1.8.7-beta1 (December 03, 2020)
 BUG FIXES:
 
 connect: fixes a case when updating the CA config in a secondary datacenter to correctly trigger the creation of a new intermediate certificate [GH-9009]
@@ -4997,7 +5201,7 @@ license: (Enterprise only) Fixed an issue where the UI would see Namespaces and 
 license: (Enterprise only) Fixed an issue where warnings about Namespaces being unlicensed would be emitted erroneously.
 namespace: (Enterprise Only) Fixed a bug that could case snapshot restoration to fail when it contained a namespace marked for deletion while still containing other resources in that namespace. [GH-9156]
 namespace: (Enterprise Only) Fixed an issue where namespaced services and checks were not being deleted when the containing namespace was deleted."
-111,"1.9.0 (November 24, 2020)
+113,"1.9.0 (November 24, 2020)
 BREAKING CHANGES:
 
 agent: The enable_central_service_config option now defaults to true. [GH-8746]
@@ -5182,28 +5386,28 @@ raft: (Enterprise only) properly update consul server meta non_voter for non-vot
 server: skip deleted and deleting namespaces when migrating intentions to config entries [GH-9186]
 telemetry: fixed a bug that caused logs to be flooded with [WARN] agent.router: Non-server in server-only area [GH-8685]
 ui: show correct datacenter for gateways [GH-8704]"
-112,"1.8.6 (November 19, 2020)
+114,"1.8.6 (November 19, 2020)
 SECURITY:
 
 Increase the permissions to read from the /connect/ca/configuration endpoint to operator:write. Previously Connect CA configuration, including the private key, set via this endpoint could be read back by an operator with operator:read privileges. CVE-2020-28053 [GH-9240]
 ","1.8.6 (November 19, 2020)
 SECURITY:
 Increase the permissions to read from the /connect/ca/configuration endpoint to operator:write. Previously Connect CA configuration, including the private key, set via this endpoint could be read back by an operator with operator:read privileges. CVE-2020-28053 [GH-9240]"
-113,"1.7.10 (November 19, 2020)
+115,"1.7.10 (November 19, 2020)
 SECURITY:
 
 Increase the permissions to read from the /connect/ca/configuration endpoint to operator:write. Previously Connect CA configuration, including the private key, set via this endpoint could be read back by an operator with operator:read privileges. CVE-2020-28053 [GH-9240]
 ","1.7.10 (November 19, 2020)
 SECURITY:
 Increase the permissions to read from the /connect/ca/configuration endpoint to operator:write. Previously Connect CA configuration, including the private key, set via this endpoint could be read back by an operator with operator:read privileges. CVE-2020-28053 [GH-9240]"
-114,"1.6.10 (November 19, 2020)
+116,"1.6.10 (November 19, 2020)
 SECURITY:
 
 Increase the permissions to read from the /connect/ca/configuration endpoint to operator:write. Previously Connect CA configuration, including the private key, set via this endpoint could be read back by an operator with operator:read privileges. CVE-2020-28053 [GH-9240]
 ","1.6.10 (November 19, 2020)
 SECURITY:
 Increase the permissions to read from the /connect/ca/configuration endpoint to operator:write. Previously Connect CA configuration, including the private key, set via this endpoint could be read back by an operator with operator:read privileges. CVE-2020-28053 [GH-9240]"
-115,"1.9.0-rc1 (November 17, 2020)
+117,"1.9.0-rc1 (November 17, 2020)
 BREAKING CHANGES:
 
 connect: Update Envoy metrics names and labels for proxy listeners so that attributes like datacenter and namespace can be extracted. [GH-9207]
@@ -5270,7 +5474,7 @@ license: (Enterprise only) Fixed an issue where warnings about Namespaces being 
 namespace: (Enterprise Only) Fixed a bug that could case snapshot restoration to fail when it contained a namespace marked for deletion while still containing other resources in that namespace. [GH-9156]
 namespace: (Enterprise Only) Fixed an issue where namespaced services and checks were not being deleted when the containing namespace was deleted.
 server: skip deleted and deleting namespaces when migrating intentions to config entries [GH-9186]"
-116,"1.9.0-beta3 (November 10, 2020)
+118,"1.9.0-beta3 (November 10, 2020)
 BREAKING CHANGES:
 
 connect: Switch the default gateway port from 443 to 8443 to avoid assumption of Envoy running as root. [GH-9113]
@@ -5299,7 +5503,7 @@ autopilot: (Enterprise Only) Autopilot now supports using both Redundancy Zones 
 chore: update to Go 1.14.11 with mitigation for golang/go#42138 [GH-9119]
 BUG FIXES:
 autopilot: (Enterprise Only) Previously servers in other zones would not be promoted when all servers in a second zone had failed. Now the actual behavior matches the docs and autopilot will promote a healthy non-voter from any zone to replace failure of an entire zone. [GH-9103]"
-117,"1.9.0-beta2 (November 07, 2020)
+119,"1.9.0-beta2 (November 07, 2020)
 BREAKING CHANGES:
 
 sentinel: (Consul Enterprise only) update to v0.16.0, which replaces whitelist and blacklist with allowlist and denylist
@@ -5342,7 +5546,7 @@ api: Fixed a bug where the Check.GRPCUseTLS field could not be set using snake c
 connect: fix connect sidecars registered via the API not being automatically deregistered with their parent service after an agent restart by persisting the LocallyRegisteredAsSidecar property. [GH-8924]
 ui: hide metrics for ingress gateways until full support can be implemented [GH-9081]
 ui: only show topology tab for services that exist [GH-9008]"
-118,"1.7.9 (October 26, 2020)
+120,"1.7.9 (October 26, 2020)
 SECURITY:
 
 Fix Consul Enterprise Namespace Config Entry Replication DoS. Previously an operator with service:write ACL permissions in a Consul Enterprise cluster could write a malicious config entry that caused infinite raft writes due to issues with the namespace replication logic. [CVE-2020-25201] [GH-9024]
@@ -5361,7 +5565,7 @@ IMPROVEMENTS:
 connect: update supported envoy releases to 1.13.6, 1.12.7, 1.11.2, 1.10.0 for 1.7.x [GH-9000]
 BUG FIXES:
 agent: when enable_central_service_config is enabled ensure agent reload doesn't revert check state to critical [GH-8747]"
-119,"1.8.5 (October 23, 2020)
+121,"1.8.5 (October 23, 2020)
 SECURITY:
 
 Fix Consul Enterprise Namespace Config Entry Replication DoS. Previously an operator with service:write ACL permissions in a Consul Enterprise cluster could write a malicious config entry that caused infinite raft writes due to issues with the namespace replication logic. [CVE-2020-25201] [GH-9024]
@@ -5396,7 +5600,7 @@ connect: fix Vault provider not respecting IntermediateCertTTL [GH-8646]
 connect: fix connect sidecars registered via the API not being automatically deregistered with their parent service after an agent restart by persisting the LocallyRegisteredAsSidecar property. [GH-8924]
 fixed a bug that caused logs to be flooded with [WARN] agent.router: Non-server in server-only area [GH-8685]
 ui: show correct datacenter for gateways [GH-8704]"
-120,"1.9.0-beta1 (October 12, 2020)
+122,"1.9.0-beta1 (October 12, 2020)
 BREAKING CHANGES:
 
 agent: The enable_central_service_config option now defaults to true. [GH-8746]
@@ -5497,7 +5701,7 @@ fixed a bug that caused logs to be flooded with [WARN] agent.router: Non-server 
 license: (Enterprise only) Fixed an issue where the UI would see Namespaces and SSO as licensed when they were not.
 raft: (Enterprise only) properly update consul server meta non_voter for non-voting Enterprise Consul servers [GH-8731]
 ui: show correct datacenter for gateways [GH-8704]"
-121,"1.8.4 (September 11, 2020)
+123,"1.8.4 (September 11, 2020)
 FEATURES:
 
 agent: expose the list of supported envoy versions on /v1/agent/self [GH-8545]
@@ -5544,7 +5748,7 @@ connect: connect envoy command now respects the -ca-path flag [GH-8606]
 connect: fix bug in preventing some namespaced config entry modifications [GH-8601]
 connect: fix renewing secondary intermediate certificates [GH-8588]
 ui: fixed a bug related to in-folder KV creation GH-8613"
-122,"1.7.8 (September 11, 2020)
+124,"1.7.8 (September 11, 2020)
 FEATURES:
 
 agent: expose the list of supported envoy versions on /v1/agent/self [GH-8545]
@@ -5559,14 +5763,14 @@ agent: expose the list of supported envoy versions on /v1/agent/self [GH-8545]
 BUG FIXES:
 connect: fix bug in preventing some namespaced config entry modifications [GH-8601]
 api: fixed a panic caused by an api request with Connect=null [GH-8537]"
-123,"1.6.9 (September 11, 2020)
+125,"1.6.9 (September 11, 2020)
 BUG FIXES:
 
 api: fixed a panic caused by an api request with Connect=null [GH-8537]
 ","1.6.9 (September 11, 2020)
 BUG FIXES:
 api: fixed a panic caused by an api request with Connect=null [GH-8537]"
-124,"1.8.3 (August 12, 2020)
+126,"1.8.3 (August 12, 2020)
 BUGFIXES:
 
 [backport/1.8.x] catalog: fixed a bug where nodes, services, and checks would not be restored with the correct Create/ModifyIndex when restoring from a snapshot GH-8485
@@ -5577,7 +5781,7 @@ BUGFIXES:
 [backport/1.8.x] catalog: fixed a bug where nodes, services, and checks would not be restored with the correct Create/ModifyIndex when restoring from a snapshot GH-8485
 [backport/1.8.x] vendor: update github.com/armon/go-metrics to v0.3.4 GH-8478
 connect: (Consul Enterprise only) Fixed a regression that prevented mesh gateways from routing to services in their local datacenter that reside outside of the default namespace."
-125,"1.7.7 (August 12, 2020)
+127,"1.7.7 (August 12, 2020)
 BUG FIXES:
 * [backport/1.7.x] catalog: fixed a bug where nodes, services, and checks would not be restored with the correct Create/ModifyIndex when restoring from a snapshot [GH-8485]
 * [backport/1.7.x] vendor: update github.com/armon/go-metrics to v0.3.4 [GH-8478]
@@ -5586,14 +5790,14 @@ BUG FIXES:
 * [backport/1.7.x] catalog: fixed a bug where nodes, services, and checks would not be restored with the correct Create/ModifyIndex when restoring from a snapshot [GH-8485]
 * [backport/1.7.x] vendor: update github.com/armon/go-metrics to v0.3.4 [GH-8478]
 * [backport/1.7.x] xds: revert setting set_node_on_first_message_only to true when generating envoy bootstrap config [GH-8441]"
-126,"1.6.8 (August 12, 2020)
+128,"1.6.8 (August 12, 2020)
 BUG FIXES:
 
 vendor: update github.com/armon/go-metrics to v0.3.4 [GH-8478]
 ","1.6.8 (August 12, 2020)
 BUG FIXES:
 vendor: update github.com/armon/go-metrics to v0.3.4 [GH-8478]"
-127,"1.8.2 (August 07, 2020)
+129,"1.8.2 (August 07, 2020)
 BUGFIXES:
 
 auto_config: Fixed an issue where auto-config could be enabled in secondary DCs without enabling token replication when ACLs were enabled. [GH-8451]
@@ -5602,14 +5806,14 @@ xds: revert setting set_node_on_first_message_only to true when generating envoy
 BUGFIXES:
 auto_config: Fixed an issue where auto-config could be enabled in secondary DCs without enabling token replication when ACLs were enabled. [GH-8451]
 xds: revert setting set_node_on_first_message_only to true when generating envoy bootstrap config [GH-8440]"
-128,"1.7.6 (August 07, 2020)
+130,"1.7.6 (August 07, 2020)
 BUG FIXES:
 
 [backport/1.7.x] xds: revert setting set_node_on_first_message_only to true when generating envoy bootstrap config [GH-8441]
 ","1.7.6 (August 07, 2020)
 BUG FIXES:
 [backport/1.7.x] xds: revert setting set_node_on_first_message_only to true when generating envoy bootstrap config [GH-8441]"
-129,"1.8.1 (July 30, 2020)
+131,"1.8.1 (July 30, 2020)
 FEATURES: 
 
 acl: Added ACL Node Identities for easier creation of Consul Agent tokens. [GH-7970]
@@ -5660,7 +5864,7 @@ connect: Fixed issue where specifying a prometheus bind address would cause ingr
 gossip: Avoid issue where two unique leave events for the same node could lead to infinite rebroadcast storms [GH-8343]
 snapshot: (Consul Enterprise only) Fixed a regression when using Azure blob storage.
 xds: version sniff envoy and switch regular expressions from 'regex' to 'safe_regex' on newer envoy versions [GH-8265]"
-130,"1.7.5 (July 30, 2020)
+132,"1.7.5 (July 30, 2020)
 BUG FIXES:
 
 agent: Fixed an issue with lock contention during RPCs when under load while using the Prometheus metrics sink. [GH-8372]
@@ -5673,7 +5877,7 @@ agent: Fixed an issue with lock contention during RPCs when under load while usi
 gossip: Avoid issue where two unique leave events for the same node could lead to infinite rebroadcast storms [GH-8353]
 snapshot: (Consul Enterprise only) Fixed a regression when using Azure blob storage.
 Return a service splitter's weight or a zero [GH-8355]"
-131,"1.6.7 (July 30, 2020)
+133,"1.6.7 (July 30, 2020)
 BUG FIXES:
 
 agent: Fixed an issue with lock contention during RPCs when under load while using the Prometheus metrics sink. [GH-8372]
@@ -5682,7 +5886,7 @@ gossip: Avoid issue where two unique leave events for the same node could lead t
 BUG FIXES:
 agent: Fixed an issue with lock contention during RPCs when under load while using the Prometheus metrics sink. [GH-8372]
 gossip: Avoid issue where two unique leave events for the same node could lead to infinite rebroadcast storms [GH-8345]"
-132,"1.8.0 (June 18, 2020)
+134,"1.8.0 (June 18, 2020)
 BREAKING CHANGES:
 * acl: Remove deprecated acl_enforce_version_8 option [GH-7991]
 FEATURES:
@@ -5807,7 +6011,7 @@ server: strip local ACL tokens from RPCs during forwarding if crossing datacente
 ui: Quote service names when filtering intentions to prevent 500 errors when accessing a service [GH-7896] [GH-7888]
 ui: Miscellaneous amends for Safari and Firefox [GH-7904] [GH-7907]
 ui: Ensure a value is always passed to CONSUL_SSO_ENABLED [GH-7913]"
-133,"1.8.0-rc1 (June 15, 2020)
+135,"1.8.0-rc1 (June 15, 2020)
 BREAKING CHANGES:
 
 acl: Remove deprecated acl_enforce_version_8 option [GH-7991]
@@ -5850,7 +6054,7 @@ cache: Fix go routine leak in the agent cache. [GH-8092]
 connect: Internal refactoring to allow Connect proxy config to contain lists of structured configuration [GH-7963][GH-7964]
 connect: Handle re-bootstrapping scenario for WAN federation over mesh gateways. [GH-7931]
 server: don't activate federation state replication or anti-entropy until all servers are running 1.8.0 [GH-8014]"
-134,"1.7.4 (June 10, 2020)
+136,"1.7.4 (June 10, 2020)
 SECURITY:
 
 Adding an option http_config.use_cache to disable agent caching for http endpoints, because Consul’s DNS and HTTP API expose a caching feature susceptible to DoS. CVE-2020-13250 [GH-8023]
@@ -5873,7 +6077,7 @@ BUG FIXES:
 acl: Fixed an issue where legacy management tokens could not be used in secondary datacenters. [GH-7908]
 agent: Fixed a race condition that could cause an agent to crash when first starting. [GH-7955]
 connect: setup intermediate_pki_path on secondary when using vault [GH-8001]"
-135,"1.6.6 (June 10, 2020)
+137,"1.6.6 (June 10, 2020)
 SECURITY:
 
 Adding an option http_config.use_cache to disable agent caching for http endpoints, because Consul’s DNS and HTTP API expose a caching feature susceptible to DoS. CVE-2020-13250 [GH-8023]
@@ -5892,7 +6096,7 @@ Only resolve local acl token in the datacenter it belongs to. CVE-2020-13170 [GH
 BUG FIXES:
 acl: Fixed an issue where legacy management tokens could not be used in secondary datacenters. [GH-7908]
 agent: Fixed a race condition that could cause an agent to crash when first starting. [GH-7955]"
-136,"1.8.0-beta2 (May 21, 2020)
+138,"1.8.0-beta2 (May 21, 2020)
 IMPROVEMENTS:
 
 xds: Ingress gateways now respect the same binding options as mesh and terminating gateways [GH-7924]
@@ -5915,7 +6119,7 @@ ui: Miscellaneous amends for Safari and Firefox [GH-7904] [GH-7907]
 ui: Ensure a value is always passed to CONSUL_SSO_ENABLED [GH-7913]
 agent: Preserve ModifyIndex for unchanged entry in KV transaciton [GH-7832]
 agent: use default resolver scheme for gRPC dialing [GH-7617]"
-137,"1.8.0-beta1 (May 14, 2020)
+139,"1.8.0-beta1 (May 14, 2020)
 FEATURES:
 
 Terminating Gateway: Envoy can now be run as a gateway to enable services in a Consul service mesh to connect to external services through their local proxy. Terminating gateways unlock several of the benefits of a service mesh in the cases where a sidecar proxy cannot be deployed alongside services such as legacy applications or managed cloud databases.

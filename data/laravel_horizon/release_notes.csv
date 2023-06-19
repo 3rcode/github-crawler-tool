@@ -1,37 +1,40 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"
+Mark as deprecated using night() and $useDarkTheme by @lloricode in https://github.com/laravel/horizon/pull/1279
+",Mark as deprecated using night() and $useDarkTheme by @lloricode in link
+2,"
 Refreshes tags periodically by @nunomaduro in https://github.com/laravel/horizon/pull/1274
 Respect the prefers-color-scheme setting by @ramonrietdijk in https://github.com/laravel/horizon/pull/1275
 ","Refreshes tags periodically by @nunomaduro in link
 Respect the prefers-color-scheme setting by @ramonrietdijk in link"
-2,"
+3,"
 Fix deprecation errors for PHP 8.2 by @AntonCooper in https://github.com/laravel/horizon/pull/1270
 ",Fix deprecation errors for PHP 8.2 by @AntonCooper in link
-3,"
+4,"
 Add cancelled status to batch overview by @markvaneijk in https://github.com/laravel/horizon/pull/1255
 Add autoScalingStrategy option by @cosmastech in https://github.com/laravel/horizon/pull/1254
 ","Add cancelled status to batch overview by @markvaneijk in link
 Add autoScalingStrategy option by @cosmastech in link"
-4,"Changed
+5,"Changed
 
 Remove Lodash by @jessarcher in https://github.com/laravel/horizon/pull/1246
 Bump axios to v1.x by @ankurk91 in https://github.com/laravel/horizon/pull/1247
 ","Changed
 Remove Lodash by @jessarcher in link
 Bump axios to v1.x by @ankurk91 in link"
-5,"Fixed
+6,"Fixed
 
 Fix missing variable use in anonymous function by @joshuaruesweg in https://github.com/laravel/horizon/pull/1244
 ","Fixed
 Fix missing variable use in anonymous function by @joshuaruesweg in link"
-6,"Changed
+7,"Changed
 
 Allow any queued class to be silenced by @lioneaglesolutions in https://github.com/laravel/horizon/pull/1241
 A fresh coat of paint by @jessarcher in https://github.com/laravel/horizon/pull/1242
 ","Changed
 Allow any queued class to be silenced by @lioneaglesolutions in link
 A fresh coat of paint by @jessarcher in link"
-7,"Added
+8,"Added
 
 Implement Silenced interface by @driesvints in https://github.com/laravel/horizon/pull/1236
 
@@ -42,14 +45,14 @@ Increase perPage variable for monitored tags by @joshuaruesweg in https://github
 Implement Silenced interface by @driesvints in link
 Fixed
 Increase perPage variable for monitored tags by @joshuaruesweg in link"
-8,"Added
+9,"Added
 
 Silenced jobs by @driesvints in https://github.com/laravel/horizon/pull/1232
 Laravel v10 Support by @driesvints in https://github.com/laravel/horizon/pull/1234
 ","Added
 Silenced jobs by @driesvints in link
 Laravel v10 Support by @driesvints in link"
-9,"Changed
+10,"Changed
 
 Uses PHP Native Type Declarations 🐘 by @nunomaduro in https://github.com/laravel/horizon/pull/1206
 
@@ -60,17 +63,17 @@ Fix vue-json-pretty CSS for new classnames by @datpmwork in https://github.com/l
 Uses PHP Native Type Declarations 🐘 by @nunomaduro in link
 Fixed
 Fix vue-json-pretty CSS for new classnames by @datpmwork in link"
-10,"Changed
+11,"Changed
 
 Add signal option to horizon:purge (e.g. SIGKILL) by @crishoj in https://github.com/laravel/horizon/pull/1226
 ","Changed
 Add signal option to horizon:purge (e.g. SIGKILL) by @crishoj in link"
-11,"Fixed
+12,"Fixed
 
 Ensure Autoscaler never reduces processes to less than 1 by @LasseRafn in https://github.com/laravel/horizon/pull/1221
 ","Fixed
 Ensure Autoscaler never reduces processes to less than 1 by @LasseRafn in link"
-12,"Changed
+13,"Changed
 
 Add missing anchor title for clarity by @stevebauman in https://github.com/laravel/horizon/pull/1212
 
@@ -81,54 +84,54 @@ Set default value for job $payload['pushedAt'] when retrying by @stevebauman in 
 Add missing anchor title for clarity by @stevebauman in link
 Fixed
 Set default value for job $payload['pushedAt'] when retrying by @stevebauman in link"
-13,"Fixed
+14,"Fixed
 
 Allow deleting of Tags which contain forward slashes (Fixes #1093) by @sgotre in https://github.com/laravel/horizon/pull/1196
 Unnecessary param to refreshStatsPeriodically by @peterlupu in https://github.com/laravel/horizon/pull/1198
 ","Fixed
 Allow deleting of Tags which contain forward slashes (Fixes #1093) by @sgotre in link
 Unnecessary param to refreshStatsPeriodically by @peterlupu in link"
-14,"Changed
+15,"Changed
 
 Add exit codes to status command by @mbardelmeijer in https://github.com/laravel/horizon/pull/1191
 ","Changed
 Add exit codes to status command by @mbardelmeijer in link"
-15,"Changed
+16,"Changed
 
 Failed job list: Modify job retry tooltip label to include status of last job retry by @Jevz in https://github.com/laravel/horizon/pull/1182
 ","Changed
 Failed job list: Modify job retry tooltip label to include status of last job retry by @Jevz in link"
-16,"Added
+17,"Added
 
 Ability to ignore long waits for queue by @jasonmccreary in https://github.com/laravel/horizon/pull/1172
 ","Added
 Ability to ignore long waits for queue by @jasonmccreary in link"
-17,"Fixed
+18,"Fixed
 
 Fallback array for retried_by by @driesvints in https://github.com/laravel/horizon/pull/1166
 ","Fixed
 Fallback array for retried_by by @driesvints in link"
-18,"Changed
+19,"Changed
 
 When register, keep the original Redis options, only overwrite prefix by @nthsky in https://github.com/laravel/horizon/pull/1161
 ","Changed
 When register, keep the original Redis options, only overwrite prefix by @nthsky in link"
-19,"Changed
+20,"Changed
 
 Predis v2 support by @driesvints in https://github.com/laravel/horizon/commit/71291b2dc8172f46a8a503aee97b80d9a4139cdf
 ","Changed
 Predis v2 support by @driesvints in link"
-20,"Fixed
+21,"Fixed
 
 Checking the ""viewHorizon"" gate first by @marcialpaulg in https://github.com/laravel/horizon/pull/1148
 ","Fixed
 Checking the ""viewHorizon"" gate first by @marcialpaulg in link"
-21,"Fixed
+22,"Fixed
 
 Revert ""Make horizon work with strict content-security-policy"" by @driesvints in https://github.com/laravel/horizon/pull/1141
 ","Fixed
 Revert ""Make horizon work with strict content-security-policy"" by @driesvints in link"
-22,"Changed
+23,"Changed
 
 Make horizon work with strict content-security-policy by @Grldk in https://github.com/laravel/horizon/pull/1138
 
@@ -139,49 +142,49 @@ Fix for table headers in the Monitoring tab to match the data that is presented 
 Make horizon work with strict content-security-policy by @Grldk in link
 Fixed
 Fix for table headers in the Monitoring tab to match the data that is presented to the user by @dylan7778 in link"
-23,"Changed
+24,"Changed
 
 change chart.js intersect mode to false by @swist666 in https://github.com/laravel/horizon/pull/1133
 ","Changed
 change chart.js intersect mode to false by @swist666 in link"
-24,"Fixed
+25,"Fixed
 
 Forget job timer in case of exception or failed job by @Namoshek in https://github.com/laravel/horizon/pull/1127
 ","Fixed
 Forget job timer in case of exception or failed job by @Namoshek in link"
-25,"Fixed
+26,"Fixed
 
 Clear stopwatch once job is deleted by @taylorotwell in https://github.com/laravel/horizon/commit/69486d5e4fad8b6ee02c97ed0bea39ef241df956
 ","Fixed
 Clear stopwatch once job is deleted by @taylorotwell in link"
-26,"Changed
+27,"Changed
 
 Add some more defaults to supervisor (#1122)
 added display=swap to google font (#1121)
 ","Changed
 Add some more defaults to supervisor (#1122)
 added display=swap to google font (#1121)"
-27,"Added
+28,"Added
 
 Add exception context on failed jobs (#1115)
 ","Added
 Add exception context on failed jobs (#1115)"
-28,"Changed
+29,"Changed
 
 Laravel 9 Support (#1112)
 ","Changed
 Laravel 9 Support (#1112)"
-29,"Changed
+30,"Changed
 
 Resolve issue with php strict type by @farmani in https://github.com/laravel/horizon/pull/1110
 ","Changed
 Resolve issue with php strict type by @farmani in link"
-30,"Fixed
+31,"Fixed
 
 Add some PHP 8.1 fixes (#1100)﻿
 ","Fixed
 Add some PHP 8.1 fixes (#1100)﻿"
-31,"Changed
+32,"Changed
 
 Reduce bundle size (#1091)
 Hide Retry failed jobs button if no jobs failed (#1097)
@@ -194,19 +197,19 @@ Reduce bundle size (#1091)
 Hide Retry failed jobs button if no jobs failed (#1097)
 Fixed
 Prevent pool to receive more than available processes on scaling (#1096)﻿"
-32,"Changed
+33,"Changed
 
 Use callAfterResolving to register QueueManager (#1089)﻿
 ","Changed
 Use callAfterResolving to register QueueManager (#1089)﻿"
-33,"Changed
+34,"Changed
 
 Alphabetically sort jobs/queues for metrics (#1083)
 Update page title when switching between Pending and Completed views (#1084)﻿
 ","Changed
 Alphabetically sort jobs/queues for metrics (#1083)
 Update page title when switching between Pending and Completed views (#1084)﻿"
-34,"Changed
+35,"Changed
 
 Added pushed at to failedJobs (#0)
 
@@ -217,63 +220,63 @@ Check if failedJob.reserved_at is set before making time calculation (#1067)﻿
 Added pushed at to failedJobs (#0)
 Fixed
 Check if failedJob.reserved_at is set before making time calculation (#1067)﻿"
-35,"Changed
+36,"Changed
 
 Improve completed jobs UI (#1064)﻿
 ","Changed
 Improve completed jobs UI (#1064)﻿"
-36,"Changed
+37,"Changed
 
 Show paused supervisors on dashboard (#1052)﻿
 ","Changed
 Show paused supervisors on dashboard (#1052)﻿"
-37,"Changed
+38,"Changed
 
 Unified asset publishing (#1045)﻿
 ","Changed
 Unified asset publishing (#1045)﻿"
-38,"Changed
+39,"Changed
 
 Use env. to set config domain and path (#1030)﻿
 ","Changed
 Use env. to set config domain and path (#1030)﻿"
-39,"Fixed
+40,"Fixed
 
 Revert app layout PR (#1026)﻿
 ","Fixed
 Revert app layout PR (#1026)﻿"
-40,"Changed
+41,"Changed
 
 Move contents of #horizon to separate component (#1022)﻿
 ","Changed
 Move contents of #horizon to separate component (#1022)﻿"
-41,"Fixed
+42,"Fixed
 
 Fix encoding (ef0c45a, 9e3748e)
 ﻿
 ","Fixed
 Fix encoding (ef0c45a, 9e3748e)
 ﻿"
-42,"Fixed
+43,"Fixed
 
 Update syntax highlighting (#1002)
 Fix status for large batches (58b71c1)﻿
 ","Fixed
 Update syntax highlighting (#1002)
 Fix status for large batches (58b71c1)﻿"
-43,"Changed
+44,"Changed
 
 Add Supervisor Rest Option (#992)﻿
 ","Changed
 Add Supervisor Rest Option (#992)﻿"
-44,"Changed
+45,"Changed
 
 Move booting of services (#990)
 Clarify button purpose (#991)﻿
 ","Changed
 Move booting of services (#990)
 Clarify button purpose (#991)﻿"
-45,"Changed
+46,"Changed
 
 Throw exception when minProcesses is set to zero (#988, 831a5a8)
 
@@ -284,56 +287,56 @@ Fix checking parent id (#989)﻿
 Throw exception when minProcesses is set to zero (#988, 831a5a8)
 Fixed
 Fix checking parent id (#989)﻿"
-46,"Fixed
+47,"Fixed
 
 Add --rest flag to WorkCommand (fcb9843)﻿
 ","Fixed
 Add --rest flag to WorkCommand (fcb9843)﻿"
-47,"Added
+48,"Added
 
 Show workload also per queue when balancing is disabled (#966, b4e8c6a﻿
 ","Added
 Show workload also per queue when balancing is disabled (#966, b4e8c6a﻿"
-48,"Fixed
+49,"Fixed
 
 Add fallback font (#964)﻿
 ","Fixed
 Add fallback font (#964)﻿"
-49,"Fixed
+50,"Fixed
 
 Bump minimum Laravel version (#954)﻿
 ","Fixed
 Bump minimum Laravel version (#954)﻿"
-50,"Fixed
+51,"Fixed
 
 Set lastPushed when executing the delayed enqueue closure (#951)﻿
 ","Fixed
 Set lastPushed when executing the delayed enqueue closure (#951)﻿"
-51,"Changed
+52,"Changed
 
 Considering queue config parameter 'after_commit' (#948) 
 ﻿
 ","Changed
 Considering queue config parameter 'after_commit' (#948) 
 ﻿"
-52,"Fixed
+53,"Fixed
 
 Fix missing tag check in payload (#945)﻿
 ","Fixed
 Fix missing tag check in payload (#945)﻿"
-53,"Changed
+54,"Changed
 
 Use enqueueUsing when pushing delayed jobs (#939)
 ﻿
 ","Changed
 Use enqueueUsing when pushing delayed jobs (#939)
 ﻿"
-54,"Added
+55,"Added
 
 Metrics snapshot config proposal and fix for race condition (#936, 59221e9)﻿
 ","Added
 Metrics snapshot config proposal and fix for race condition (#936, 59221e9)﻿"
-55,"Added
+56,"Added
 
 Ability to see which masters are paused and only show paused if everything is paused (#929, f9b5aea)
 
@@ -344,7 +347,7 @@ Accept array format for exponential backoff (#926)﻿
 Ability to see which masters are paused and only show paused if everything is paused (#929, f9b5aea)
 Changed
 Accept array format for exponential backoff (#926)﻿"
-56,"Added
+57,"Added
 
 Add commands to pause and continue supervisors (#914)
 Support PHP 8 (#917)
@@ -363,7 +366,7 @@ Changed
 Improve wording of error message (#918)
 Fixed
 Fix balance false display on dashboard (88c84ac)﻿"
-57,"Added
+58,"Added
 
 Add maintenance notice on dashboard (#911)
 
@@ -380,12 +383,12 @@ Fix delayed until on pending jobs screen (#907)
 Add missing force option to horizon:clear (#909)
 Fix misleading memory limit config (#908)
 Fix completed jobs count (#910)﻿"
-58,"Changed
+59,"Changed
 
 Add secs to y-axis ticks' for clarity (#903)﻿
 ","Changed
 Add secs to y-axis ticks' for clarity (#903)﻿"
-59,"Added
+60,"Added
 
 Add horizon:forget command to delete a failed job (#896)
 
@@ -396,7 +399,7 @@ Fix check deleting failed job is actually failed (#894)﻿
 Add horizon:forget command to delete a failed job (#896)
 Fixed
 Fix check deleting failed job is actually failed (#894)﻿"
-60,"Added
+61,"Added
 
 Add ability to see if a failed job is retried and/or a retry (573e6a8)
 Add Horizon command to clear queue (#892, 05e3a1c)
@@ -409,7 +412,7 @@ Add ability to see if a failed job is retried and/or a retry (573e6a8)
 Add Horizon command to clear queue (#892, 05e3a1c)
 Fixed
 Rename variable to match route (4822955)﻿"
-61,"Added
+62,"Added
 
 Add support for setting workers name (#840)
 Support batches (#844)
@@ -440,12 +443,12 @@ Bump minimum PHP version to PHP 7.3 (ca9ddda)
 Merge tags from payload (#843)
 Fixed
 Check if parent is still running (#881)"
-62,"Fixed
+63,"Fixed
 
 Add try/catch for failed-jobs (#880)
 ","Fixed
 Add try/catch for failed-jobs (#880)"
-63,"Changed
+64,"Changed
 
 Unhide horizon command  (#878)
 
@@ -456,22 +459,22 @@ Try catch serialization error (57903ed)
 Unhide horizon command  (#878)
 Fixed
 Try catch serialization error (57903ed)"
-64,"Fixed
+65,"Fixed
 
 Trigger MasterSupervisorDeployed event (#839)
 ","Fixed
 Trigger MasterSupervisorDeployed event (#839)"
-65,"Fixed
+66,"Fixed
 
 Fix pending jobs count (#832)
 ","Fixed
 Fix pending jobs count (#832)"
-66,"Fixed
+67,"Fixed
 
 Revert ""Prevent horizon:purge from killing too many processes"" (#831)
 ","Fixed
 Revert ""Prevent horizon:purge from killing too many processes"" (#831)"
-67,"Changed
+68,"Changed
 
 Chronos 2.0 (#824)
 
@@ -484,12 +487,12 @@ Chronos 2.0 (#824)
 Fixed
 Fix Layout issues (#821)
 Prevent horizon:purge from killing too many processes (#820)"
-68,"Fixed
+69,"Fixed
 
 Revert dark mode breaking change (fdfbd5b)
 ","Fixed
 Revert dark mode breaking change (fdfbd5b)"
-69,"Added
+70,"Added
 
 Support ramsey/uuid v4 (#807)
 
@@ -500,7 +503,7 @@ Fix for job rows on monitoring tags screen (#814, 066ada5)
 Support ramsey/uuid v4 (#807)
 Fixed
 Fix for job rows on monitoring tags screen (#814, 066ada5)"
-70,"Added
+71,"Added
 
 Add metrics options and dark mode config (#795)
 
@@ -511,17 +514,17 @@ Align design with Pending/Completed jobs screen (#802)
 Add metrics options and dark mode config (#795)
 Fixed
 Align design with Pending/Completed jobs screen (#802)"
-71,"Changed
+72,"Changed
 
 Show warning when manifest is outdated (#783)
 ","Changed
 Show warning when manifest is outdated (#783)"
-72,"Fixed
+73,"Fixed
 
 Add margin to retries table and make exceptions stacktrace responsive (ff625c5)
 ","Fixed
 Add margin to retries table and make exceptions stacktrace responsive (ff625c5)"
-73,"Added
+74,"Added
 
 Add 'view details' to tag-jobs screen (#775)
 Add separate screen for completed jobs (#767)
@@ -538,51 +541,51 @@ Changed
 Bumped minimum dependencies to Laravel 7.0 (#710)
 Changed default Redis prefix (#643)
 Suggest predis instead of requiring it (#531)"
-74,"Fixed
+75,"Fixed
 
 Use provided timezone for delay due (aa69357)
 ","Fixed
 Use provided timezone for delay due (aa69357)"
-75,"Fixed
+76,"Fixed
 
 Use 'default' connection as a default redis connection (#765)
 ","Fixed
 Use 'default' connection as a default redis connection (#765)"
-76,"Added
+77,"Added
 
 Ability to see if a job is delayed (#755)
 Allow trimming of completed jobs (#720)
 ","Added
 Ability to see if a job is delayed (#755)
 Allow trimming of completed jobs (#720)"
-77,"Fixed
+78,"Fixed
 
 Fix wrong value for failedJobs periods (#757)
 ","Fixed
 Fix wrong value for failedJobs periods (#757)"
-78,"Added
+79,"Added
 
 Ability to view job details in recent jobs overview (#751)
 Another way for tags displaying & collapsible panels (#754)
 ","Added
 Ability to view job details in recent jobs overview (#751)
 Another way for tags displaying & collapsible panels (#754)"
-79,"Added
+80,"Added
 
 Allow Horizon to be used on a subdomain without a subfolder (#749)
 ","Added
 Allow Horizon to be used on a subdomain without a subfolder (#749)"
-80,"Fixed
+81,"Fixed
 
 Revert filtering by tag (#741)
 ","Fixed
 Revert filtering by tag (#741)"
-81,"Changed
+82,"Changed
 
 Reset the retryUntil value (#736)
 ","Changed
 Reset the retryUntil value (#736)"
-82,"Fixed
+83,"Fixed
 
 Fix php 7.4 tagged model typed props (#732, 025f953)
 
@@ -593,81 +596,81 @@ Remove unused functions (#722)
 Fix php 7.4 tagged model typed props (#732, 025f953)
 Removed
 Remove unused functions (#722)"
-83,"Fixed
+84,"Fixed
 
 Scale to the maxProcesses if timeToClearAll is zero (#718)
 Handle js phpunserialize not working with closures (9c3a75a)
 ","Fixed
 Scale to the maxProcesses if timeToClearAll is zero (#718)
 Handle js phpunserialize not working with closures (9c3a75a)"
-84,"Changed
+85,"Changed
 
 Set default 'tries' to 1 (#704)
 ","Changed
 Set default 'tries' to 1 (#704)"
-85,"Fixed
+86,"Fixed
 
 Prevent 'memory exhausted' when deleting monitored tag (#690, 1532f9c)
 Set same ttl for tags as same as recent jobs (#692)
 ","Fixed
 Prevent 'memory exhausted' when deleting monitored tag (#690, 1532f9c)
 Set same ttl for tags as same as recent jobs (#692)"
-86,"Fixed
+87,"Fixed
 
 Fix pagination for recent jobs (#678)
 ","Fixed
 Fix pagination for recent jobs (#678)"
-87,"Added
+88,"Added
 
 Filter recent jobs by tag (#665)
 ","Added
 Filter recent jobs by tag (#665)"
-88,"Fixed
+89,"Fixed
 
 Fix worker command binding (3b53310)
 ","Fixed
 Fix worker command binding (3b53310)"
-89,"Fixed
+90,"Fixed
 
 Fix autobalancer (#651)
 ","Fixed
 Fix autobalancer (#651)"
-90,"Added
+91,"Added
 
 Allow custom dashboard failed jobs metric period (#644)
 ","Added
 Allow custom dashboard failed jobs metric period (#644)"
-91,"Fixed
+92,"Fixed
 
 Forcing Vue to use the X-Requested-With header, set to XMLHttpRequest (#642)
 ","Fixed
 Forcing Vue to use the X-Requested-With header, set to XMLHttpRequest (#642)"
-92,"Changed
+93,"Changed
 
 Updated version constraints for Laravel 6.0 (b547cb2)
 ","Changed
 Updated version constraints for Laravel 6.0 (b547cb2)"
-93,"Fixed
+94,"Fixed
 
 Correct dashboard ""Failed Jobs Past 7 Days"" metric (#633)
 ","Fixed
 Correct dashboard ""Failed Jobs Past 7 Days"" metric (#633)"
-94,"Fixed
+95,"Fixed
 
 Adjust auto scaling to always use the max processes (#627)
 ","Fixed
 Adjust auto scaling to always use the max processes (#627)"
-95,"Fixed
+96,"Fixed
 
 Custom MasterSupervisor name breaks dashboard (#619)
 ","Fixed
 Custom MasterSupervisor name breaks dashboard (#619)"
-96,"Fixed
+97,"Fixed
 
 Reverted ""Display worker CPU and memory utilization in supervisor list"" (#616, #614)
 ","Fixed
 Reverted ""Display worker CPU and memory utilization in supervisor list"" (#616, #614)"
-97,"Changed
+98,"Changed
 
 Add app name to dashboard (#605)
 
@@ -678,12 +681,12 @@ Properly format numeric values (#606)
 Add app name to dashboard (#605)
 Fixed
 Properly format numeric values (#606)"
-98,"Fixed
+99,"Fixed
 
 Compiled assets (1dcbb96)
 ","Fixed
 Compiled assets (1dcbb96)"
-99,"Added
+100,"Added
 
 Display worker CPU and memory utilization in supervisor list (#589)
 
@@ -696,47 +699,47 @@ Display worker CPU and memory utilization in supervisor list (#589)
 Fixed
 Fix for missing first failed job when searching (#593)
 Switch to browser timezone (8ee690a, c7a4739)"
-100,"Fixed
+101,"Fixed
 
 Fix false jobs causing front-end not to display them (#582)
 ","Fixed
 Fix false jobs causing front-end not to display them (#582)"
-101,"Fixed
+102,"Fixed
 
 Fix failed jobs retrying (7d28272)
 ","Fixed
 Fix failed jobs retrying (7d28272)"
-102,"Added
+103,"Added
 
 Add support for Supervisor ""nice"" option (#551, 8d0034b, #556)
 ","Added
 Add support for Supervisor ""nice"" option (#551, 8d0034b, #556)"
-103,"Fixed
+104,"Fixed
 
 Add ability to configure route domain setting (#550)
 ","Fixed
 Add ability to configure route domain setting (#550)"
-104,"Fixed
+105,"Fixed
 
 Fix URL for retrying jobs (#547)
 ","Fixed
 Fix URL for retrying jobs (#547)"
-105,"Added
+106,"Added
 
 Adding horizon:status command (#545)
 ","Added
 Adding horizon:status command (#545)"
-106,"Fixed
+107,"Fixed
 
 Fix recent jobs screen (1ab5749)
 ","Fixed
 Fix recent jobs screen (1ab5749)"
-107,"Fixed
+108,"Fixed
 
 Compile assets (57814a0)
 ","Fixed
 Compile assets (57814a0)"
-108,"Fixed
+109,"Fixed
 
 Fix no failing jobs problem (#532)
 Make Year of readableTimestamp more readable (#535)
@@ -751,7 +754,7 @@ Make Year of readableTimestamp more readable (#535)
 Horizon::night() move to boot()(#537)
 Removed
 Remove unnecessary register method (7134324)"
-109,"Added
+110,"Added
 
 New UI (#522)
 Set the Horizon environment via command option (#523)
@@ -782,17 +785,17 @@ Fix deprecated process calls (#515)
 Add missing createPayloadArray arg (#516)
 Removed
 Removed support for Laravel 5.5 & 5.6 (8a92e09)"
-110,"Fixed
+111,"Fixed
 
 Fix breaking change with createPayload method on RedisQueue (b79bb27)
 ","Fixed
 Fix breaking change with createPayload method on RedisQueue (b79bb27)"
-111,"Changed
+112,"Changed
 
 Adjust configuration for 5.8 default configuration (f1f830e)
 ","Changed
 Adjust configuration for 5.8 default configuration (f1f830e)"
-112,"Added
+113,"Added
 
 Laravel 5.8 support (292bbc1)
 
@@ -803,7 +806,7 @@ Fix Failed Jobs page showing no results when failed jobs do exist (#511)
 Laravel 5.8 support (292bbc1)
 Fixed
 Fix Failed Jobs page showing no results when failed jobs do exist (#511)"
-113,"Added
+114,"Added
 
 Let user choose custom env (#483)
 
@@ -836,7 +839,7 @@ Fix storing floats in Redis (#477)
 Fix incorrect processes count (#481)
 Fix jobs per minute over estimation (#502)
 Prevent horizontal scrolling in Dashboard supervisors section (#506)"
-114,"Changed
+115,"Changed
 
 Updated overview stats labels on the dashboard (#461)
 Use router-link for recent failed jobs (#466)
@@ -849,12 +852,12 @@ Updated overview stats labels on the dashboard (#461)
 Use router-link for recent failed jobs (#466)
 Fixed
 Check for existence of stats before calling toLocaleString (#469)"
-115,"Fixed
+116,"Fixed
 
 Update outdated compiled assets (2a420af)
 ","Fixed
 Update outdated compiled assets (2a420af)"
-116,"Added
+117,"Added
 
 Added memory usage to the config (#463)
 
@@ -871,7 +874,7 @@ Changed
 Format numbers on the stats dashboard for better readability (#462)
 Fixed
 Fixed invalid doctype declaration (#448)"
-117,"Added
+118,"Added
 
 Added horizon:install command  (#422)
 Added middleware to the config (#432)
@@ -884,4 +887,4 @@ Added horizon:install command  (#422)
 Added middleware to the config (#432)
 Changed
 Added new application level HorizonServiceProvider and authorization method for consistency with Nova and Telescope (#422)"
-118,,
+119,,

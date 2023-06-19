@@ -1,291 +1,291 @@
-Index,Commit Message,Score,Correspond Changelog Sentence,Commit Description,Label
-1,:white_check_mark: Add tests for subcommands examples,0.6447303,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
-2,:bookmark: Release version 0.0.10,0.5604342,"Upgrade Mkdocs-Material version, update contributing guide style. PR #90.",📝 Remove obsolete references to --install-completion for typer.run() scripts,0
-3,:sparkles: Add termynal for awesome docs,0.78667086,Add custom automatic Termynal for docs. PR #5.,,1
-4,:bug: Fix handling of CLI parameters with multiple values,0.74506557,Add docs for CLI Parameters with Multiple Values. Includes tests for all the examples and bug fixes. PR #31.,,1
-5,:bug: Fix help extraction implementation and priority,0.5778067,Several bug fixes.,,0
-6,:bug: Fix Fish completion script (#82),0.9046091,Fix completion script for Fish. PR #82.,  📝 Add source examples for custom parameter types with Annotated   ✅ Add tests for custom parameters with Annotated   📝 Update docs for custom parameters with Annotated   ♻️ Fix overloads default in Argument after Annotated   ✅ Fix test for custom param types ,1
-7,🔧 Add exclude_lines to coverage configuration (#585),0.86941195,🔧 Add exclude_lines to coverage configuration. PR #585 by @dmontagu.,,1
-8,📝 Add note about how subcommands with function names using underscores are converted to dashes (#403),0.927532,📝 Add note about how subcommands with function names using underscores are converted to dashes. PR #403 by @targhs.,,1
-9,:wrench: Update deploy script,0.59464765,Upgrade deploy docs to Netlify GitHub action. PR #57.,updates: - github.com/asottile/pyupgrade: v3.3.1 → v3.3.2 Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,0
-10,:art: Fix types and format,0.5456841,🐛 Fix type conversion for List and Tuple and their internal types. PR #143 by @hellowhistler.," ✨ Add support for PEP-593 Annotated for specifying options and arguments  Implements #184  Revert things I did to get a 3.6 virtualenv 😅  A lot of the dev dependency packages weren't installable on 3.6, so I had to remove them from the pyproject.toml. This commit adds them back   Fix mypy/lint errors   Skip coverage on test lines that shouldn't execute   Missed a spot   ♻️ Tweak examples and tests with Annotated, add extra examples and tests   🔥 Remove Pydantic-specific logic from _typing.py   📝 Update docs to use new Annotated examples   📝 Add docs introducing Annotated and previous versions   🔧 Add commented out MkDocs config for highlighting docs examples   ✅ Fix tests for Click 7    Co-authored-by: Sebastián Ramírez tiangolo@gmail.com",0
-11,:bug: Fix docs format with hl_lines (#65),0.7211526,Fix format in docs with highlighted lines. PR #65.,,1
-12,⬆ [pre-commit.ci] pre-commit autoupdate (#500),0.9196667,⬆ [pre-commit.ci] pre-commit autoupdate. PR #500 by @pre-commit-ci[bot].,,1
-13,:white_check_mark: Add tests for examples with multiple values,0.5669598,Add tests for completion. PR #15 and #16.,,0
-14,:pencil: Update docs with references to --install-completion,0.7161093,Update references to --install-completion and --show-completion in docs. PR #9.,,1
-15,Update docs/index.md,0.7872633,Update docs and add latest changes to MkDocs/website. PR #33.,Bumps dawidd6/action-download-artifact from 2.24.2 to 2.26.0. - Release notes - Commits  updated-dependencies: - dependency-name: dawidd6/action-download-artifact   dependency-type: direct:production   update-type: version-update:semver-minor ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-16,⬆ Bump dawidd6/action-download-artifact from 2.24.2 to 2.26.0 (#558),0.9573292,⬆ Bump dawidd6/action-download-artifact from 2.24.2 to 2.26.0. PR #558 by @dependabot[bot]., ⬆ [pre-commit.ci] pre-commit autoupdate  updates: - github.com/PyCQA/autoflake: v2.0.0 → v2.1.1 - github.com/psf/black: 22.12.0 → 23.3.0  🎨 [pre-commit.ci] Auto format from pre-commit.com hooks   Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
-17,⬆️ Upgrade analytics (#557),0.9008215,⬆️ Upgrade analytics. PR #557 by @tiangolo.,,1
-18,"👷 Add GitHub Actions, move from Travis (#144)",0.94901025,"Add GitHub Actions, move from Travis. PR #144.","Allow rich 13.x Based on the changelog, the only relevant breaking change is that support for Python 3.6 is removed: https://github.com/Textualize/rich/blob/v13.0.0/CHANGELOG.md#1300---2022-12-30 This is OK even though we support Python 3.6 in typer, because we do still allow older versions of rich that are compatible with Python 3.6.",1
-19,:art: Format imports,0.47932747,🔧 Add pre-commit config and formatting. PR #392 by @tiangolo.,,0
-20,:memo: Update README with latest docs,0.63823724,Update docs and add latest changes to MkDocs/website. PR #33.,shinny -> shiny,0
-21,🔖 Release version 0.8.0,0.5857705,Upgrade Isort to version 5.x.x. PR #137.,,0
-22,"➕ Add Dependabot, try and see how it behaves with Flit (#136)",0.6816431,Add Dependabot. PR #136.,,0
-23,⬆ [pre-commit.ci] pre-commit autoupdate (#411),0.9168978,⬆ [pre-commit.ci] pre-commit autoupdate. PR #411 by @pre-commit-ci[bot].,"  📝 Tweak name for Custom Types   ✏️ Fix broken internal links in CLI Option autocompletion   📝 Update main page docs, remove colors as that renders badly in README   📝 Update README, sync with index.md, remove colors for GitHub and PyPI ",1
-24,:white_check_mark: Add tests for completion,0.69031286,Tests for the completion logic/code.,,0
-25,:memo: Update short description in MkDocs,0.5911861,"⬆️ Upgrade MkDocs Material, MDX-Include, and MkDocs structure. PR #356 by @tiangolo."," Support custom parameter types  While most CLI parameters are strings, ints, etc, we sometimes need custom types. Currently typer has no support for it (See #77), and while there are a few hacks, the likely solution is to add a 'str' argument and parse it inside the main function. This PR adds support for custom types in 3 different ways: - Manually specifying a click_type - Manually specifying a parse function - Using a Callable type annotation (It is very common for types to have a string constructor, like int(""1""))  Document how to parse custom objects with Typer.  Typer supports parsing of cutom types with: - A user provided parser class - A click custom type parser   🎨 [pre-commit.ci] Auto format from pre-commit.com hooks   📝 Tweak and simplify docs   ✅ Tweak tests to run scripts and remove pragma: nocover in examples   📝 Tweak examples for docs, add types and remove # pragma: nocover   ♻️ Tweak implementation checking for parser and Click type    Co-authored-by: Paulo Costa me@paulo.costa.nom.br Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com",0
-26,"✨ Add support for Python 3.11, tests in CI and official marker (#487)",0.94002044,"✨ Add support for Python 3.11, tests in CI and official marker. PR #487 by @tiangolo.",,1
-27,👷 Disable installing MkDocs Insiders in forks (#391),0.93267685,👷 Disable installing MkDocs Insiders in forks. PR #391 by @tiangolo.,Add exclude_lines to coverage configuration,1
-28,:bookmark: Release version 0.0.11,0.5545028,"Upgrade Mkdocs-Material version, update contributing guide style. PR #90.",,0
-29,:memo: Refactor docs with internal links #38,0.64516354,Update format for internal links. PR #38.,,0
-30,:sparkles: Update file handling implementation to make it simpler,0.512512,"Add support for customizing pretty short errors, new docs: Exceptions and Errors.",,0
-31,👷 Add GitHub Action Latest Changes (#321),0.8955712,👷 Add GitHub Action Latest Changes. PR #321 by @tiangolo.,,1
-32,":memo: Fix typos, update docs and descriptions",0.70733035,Fix typos in README and main docs #103 by @mrcartoonster.,,1
-33,📝 Update docs about helping Typer (#547),0.9147047,📝 Update docs about helping Typer. PR #547 by @tiangolo.,,1
-34,:memo: Update First Steps to include how to document in a docstring,0.64550066,Fix and document extracting help from a functions' docstring First Steps: Document your CLI app. PR #10.,,0
-35,"✏ Fix typo, duplicated word in docs/tutorial/options/required.md. (#316)",0.9417427,"✏ Fix typo, duplicated word in docs/tutorial/options/required.md.. PR #316 by @michaelriri.",,1
-36,":sparkles: Update Termynal modifications, update first steps to use it",0.6724121,"Update Termynal to have fixed sizes, add ""fast"" button, and use it in First Steps. PR #6.",,0
-37,✨ Add support for previewing docs in PRs from forks and enable MkDocs Insiders (#357),0.9573075,✨ Add support for previewing docs in PRs from forks and enable MkDocs Insiders. PR #357 by @tiangolo.,,1
-38,:sparkles: Add SubCommands sections,0.66541266,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
-39,":memo: :sparkles: :heavy_check_mark: CLI parameters: docs, refactor/upgrade, tests.",0.64234334,Add docs for CLI Parameters with Multiple Values. Includes tests for all the examples and bug fixes. PR #31.,Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-40,:memo: Add docs for CLI parameter types,0.74210536,Add docs for extra CLI parameter types: CLI Parameter Types: Number and CLI Parameter Types: Boolean CLI Options. PR #30.,,1
-41,"👷‍♂️ Consistently use sys.executable to run subprocesses, needed by OpenSUSE (#408)",0.95748293,"👷‍♂️ Consistently use sys.executable to run subprocesses, needed by OpenSUSE. PR #408 by @theMarix.",Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-42,:bookmark: Release version 0.1.0,0.56146395,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
-43,⬆ [pre-commit.ci] pre-commit autoupdate (#592),0.92661226,⬆ [pre-commit.ci] pre-commit autoupdate. PR #592 by @pre-commit-ci[bot].,,1
-44,":white_check_mark: Fix testing, add tests",0.6091927,"Fix testing utilities, add tests for First Steps examples. PR #8.",,0
-45,:memo: Add all the latest docs to MkDocs,0.6830028,Update docs and add latest changes to MkDocs/website. PR #33.,updates: - github.com/asottile/pyupgrade: v3.2.0 → v3.2.2 Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,0
-46,:memo: Add docs for progressbar,0.7235121,Add new docs to handle progress bars and spinners with Rich: Progress Par.,,1
-47,:memo: Refactor docs with internal links,0.55136037,Tweak external links' format. PR #36.,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-48,:memo: Update path docs,0.61467373,Update docs and add latest changes to MkDocs/website. PR #33.,,0
-49,:memo: Add docs for interactive prompts.,0.67037964,Add docs for Asking with Interactive Prompts. PR #22.,,0
-50,:bug: Fix testing CliRunner,0.62090284,Fix support for user provided completion in CLI Parameters.,,0
-51,🔧 Update Dependabot config (#476),0.8672413,🔧 Update Dependabot config. PR #476 by @tiangolo.,Bumps dawidd6/action-download-artifact from 2.24.1 to 2.24.2. - Release notes - Commits  updated-dependencies: - dependency-name: dawidd6/action-download-artifact   dependency-type: direct:production   update-type: version-update:semver-patch ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-52,🎨 Fix type annotations for get_group (#430),0.8950268,🎨 Fix type annotations for get_group. PR #430 by @tiangolo.,,1
-53,📝 Add date string formats to docs (#122),0.8414297,Add valid date formats to docs. PR #122 by @IamCathal.,,1
-54,:bookmark: Release version 0.0.2,0.5686159,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,Bumps dawidd6/action-download-artifact from 2.9.0 to 2.24.1. - Release notes - Commits  updated-dependencies: - dependency-name: dawidd6/action-download-artifact   dependency-type: direct:production   update-type: version-update:semver-minor ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-55,":memo: Sync Typer CLI docs, Coverage badge",0.6284205,📝 Update docs about helping Typer. PR #547 by @tiangolo.,Bumps actions/setup-python from 2 to 4. - Release notes - Commits  updated-dependencies: - dependency-name: actions/setup-python   dependency-type: direct:production   update-type: version-update:semver-major ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-56,📝 Add docs for using Rich with Typer (#421),0.9088844,📝 Add docs for using Rich with Typer. PR #421 by @tiangolo.,,1
-57,":fire: Clean exports from typer, remove unneeded Click components, add needed ones",0.7812485,Clean exports from Typer. Remove unneeded components from Click and add needed Exit exception. PR #11.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-58,:bug: Fix GitHub image,0.5981262,Update GitHub Action issue-manager. PR #114.,,0
-59,full doc review and fixing typos,0.8062111,Docs rewording and fix typos. PR #1 by @mariacamilagl.,,1
-60,"✨ Support main.py, passing prog_name to callable (#120)",0.6087842,Add docs for calling packages with python -m some_package using __main__.py: Building a Package: Support python -m. PR #121.,,0
-61,white_check_mark: Add coverage instructions to tests (#72),0.61782676,Fix coverage instructions. PR #72.,Adds quotes to package name with brackets Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-62,:bookmark: Release version 0.0.4,0.57655704,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
-63,👷 Fix Material for MkDocs install in CI (#395),0.9149165,👷 Fix Material for MkDocs install in CI. PR #395 by @tiangolo.,,1
-64,📝 Update release notes,0.6602831,⬆️ Upgrade analytics. PR #557 by @tiangolo.,,0
-65,👷‍♂️ Ensure the PYTHONPATH is set properly when testing the tutorial scripts (#407),0.94517833,👷‍♂️ Ensure the PYTHONPATH is set properly when testing the tutorial scripts. PR #407 by @theMarix.,,1
-66,:sparkles: Add custom CliRunner and Click imports,0.58115244,"As help in CLI arguments is not supported by Click, there are two new internal classes (Click sub-classes) to support it:",,0
-67,:pencil2: fix typo in progressbar/tutorial004.py (#63),0.72488296,Fix typo in progressbar example. PR #63 by @ValentinCalomme.,,1
-68,📝 Add Optional to docs for CLI Arguments and Options with a None default (#131),0.887919,Add Optional to docs for CLI Arguments and Options with a default of None. PR #131 by @rkbeatss.,,1
-69,👷 Enable tests for Python 3.9 (#322),0.8895787,👷 Enable tests for Python 3.9. PR #322 by @tiangolo.,,1
-70,✅ Add extra tests just for coverage because monkeypatching with strange imports confuses coverage (#490),0.95722365,✅ Add extra tests just for coverage because monkeypatching with strange imports confuses coverage. PR #490 by @tiangolo.,,1
-71,🐛 Fix type conversion for List and Tuple and their internal types (#143),0.8964681,🐛 Fix type conversion for List and Tuple and their internal types. PR #143 by @hellowhistler.,,1
-72,:art: Tweak external links' format #36,0.86686814,Tweak external links' format. PR #36.,,1
-73,":memo: Add docs for Callbacks and One or Multiple commands, with docs, tests, bug fixes.",0.69789195,"Extend docs for Commands, add Commands: Typer Callback and Commands: One or Multiple. This includes tests for all the examples and bug fixes. PR #29.",,0
-74,:memo: Update README.md from docs/index.md,0.61688614,Update docs and add latest changes to MkDocs/website. PR #33.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-75,:bug: Fix group creation without name,0.9053583,Fix group creation without name.,,1
-76,:bento: Add completion example images,0.47600478,👷 Refactor CI artifact upload/download for docs previews. PR #516 by @tiangolo.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-77,⬆ Bump actions/setup-python from 2 to 4 (#492),0.8795519,⬆ Bump actions/setup-python from 2 to 4. PR #492 by @dependabot[bot].,,1
-78,:memo: Add docs and examples for CLI parameters with multiple values,0.72267735,Add docs for extra CLI parameter types: CLI Parameter Types: Number and CLI Parameter Types: Boolean CLI Options. PR #30.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-79,:bookmark: Release version 0.0.8,0.56639194,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
-80,⬆ Bump dawidd6/action-download-artifact from 2.24.1 to 2.24.2 (#494),0.9531436,⬆ Bump dawidd6/action-download-artifact from 2.24.2 to 2.26.0. PR #558 by @dependabot[bot].,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-81,✨ Add support for Click 8 while keeping compatibility with Click 7 (#317),0.9182338,✨ Add support for Click 8 while keeping compatibility with Click 7. PR #317 by @tiangolo.,,1
-82,🎨 Update format in docs,0.6935159,Update docs and add latest changes to MkDocs/website. PR #33.,,0
-83,:bookmark: Release version 0.2.1,0.55503976,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
-84,:memo: Update release notes,0.5170719,👷 Add GitHub Action Latest Changes. PR #321 by @tiangolo.,,0
-85,:bug: Fix getting callback from instance creation,0.39022088,"Add support for type-based callbacks and autocompletion functions, extra tests and docs:",,0
-86,🔖 Release version 0.3.1,0.5893799,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
-87,⬆ [pre-commit.ci] pre-commit autoupdate (#549),0.93018425,⬆ [pre-commit.ci] pre-commit autoupdate. PR #549 by @pre-commit-ci[bot].,,1
-88,✏ Fix typo in docs (#98),0.8531965,Fix typo in docs. PR #98 by @mrcartoonster.,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-89,:bookmark: Release version 0.1.1,0.55056596,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-90,:fire: Remove unused code for argument param declarations,0.61448234,Remove unneeded code for argument handling. PR #26.,,0
-91,:white_check_mark: Fix test coverage handling,0.5848249,"Fix testing utilities, add tests for First Steps examples. PR #8.",Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-92,":memo: Add/extend docs and examples for param types. bool, int.",0.6437149,"📝 Update docs examples for custom param types using Annotated, fix overloads for typer.Argument. PR #594 by @tiangolo.",,0
-93,⬆ Bump nwtgck/actions-netlify from 1.2.4 to 2.0.0 (#513),0.93185604,⬆ Bump nwtgck/actions-netlify from 1.2.4 to 2.0.0. PR #513 by @dependabot[bot].,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-94,🔖 Release version 0.6.0,0.6016681,⬆ Bump dawidd6/action-download-artifact from 2.24.2 to 2.26.0. PR #558 by @dependabot[bot].,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-95,":white_check_mark: Add tests for tutorial006 in First Steps, to test help from docstring",0.6518314,"Fix testing utilities, add tests for First Steps examples. PR #8.",,0
-96,:sparkles: Add support for custom prompts in custom Termynal,0.63587976,Add custom automatic Termynal for docs. PR #5.,,0
-97,:white_check_mark: Add tests for the first steps,0.61470926,"Fix testing utilities, add tests for First Steps examples. PR #8.",,0
-98,":white_check_mark: Add tests for extra param types, bool, number",0.5661749,"Add support for type-based callbacks and autocompletion functions, extra tests and docs:",,0
-99,:white_check_mark: Add tests for commands: callbacks,0.5996785,"Add support for type-based callbacks and autocompletion functions, extra tests and docs:",,0
-100,:art: Tweak external link format,0.76401055,Tweak external links' format. PR #36.,,1
-101,:white_check_mark: Add tests for examples in CLI Options,0.6279429,Add docs for CLI Parameters with Multiple Values. Includes tests for all the examples and bug fixes. PR #31.,,0
-102,⬆️ Upgrade Codecov GitHub Action (#383),0.9336515,⬆️ Upgrade Codecov GitHub Action. PR #383 by @tiangolo.,,1
-103,:memo: Add docs for get_app_dir(),0.5152736,Fix and document extracting help from a functions' docstring First Steps: Document your CLI app. PR #10.,,0
-104,📌 Pin dependencies (#138),0.9241526,Pin dependencies. PR #138.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
-105,:wrench: Make Netlify use Python 3,0.52275795,👷 Add CI for Python 3.10. PR #384 by @tiangolo.,,0
-106,:sparkles: Add support for Click 7.1.1 (#60),0.8362065,Add support for Click version 7.1.1. PR #60.,Signed-off-by: Michael Gielda mgielda@antmicro.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-107,:sparkles: Docs for Typer CLI (#64),0.7907896,Add docs about Typer CLI - completion for small scripts. PR #64.,,1
-108,⬆️ Upgrade codecov GitHub Action (#420),0.92686844,⬆️ Upgrade codecov GitHub Action. PR #420 by @tiangolo.,,1
-109,✨ Allow configuring pretty errors when creating the Typer instance (#416),0.87004435,✨ Allow configuring pretty errors when creating the Typer instance. PR #416 by @tiangolo.,,1
-110,✨ Add support for mypy --strict (#147),0.80710226,Add support for mypy --strict. Original PR #147 by @victorphoenix3.,,1
-111,":sparkles: Add docs for subcommands, examples, tests, bug fixes",0.83256286,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,1
-112,":tada: First commit, Typer scaffolding",0.5517372,📝 Update docs about helping Typer. PR #547 by @tiangolo.,,0
-113,⬆ Bump dawidd6/action-download-artifact from 2.9.0 to 2.24.1 (#491),0.9545377,⬆ Bump dawidd6/action-download-artifact from 2.9.0 to 2.24.1. PR #491 by @dependabot[bot].,,1
-114,"🔧 Update pre-commit, Python version, isort version (#542)",0.91482913,"🔧 Update pre-commit, Python version, isort version. PR #542 by @tiangolo.",,1
-115,📝 Add Security policy (#324),0.8503846,📝 Add Security policy. PR #324 by @tiangolo.,,1
-116,👷 Update docs CI name (#320),0.8845971,👷 Update docs CI name. PR #320 by @tiangolo.,"  ♻️ Rename pretty_errors_ to pretty_exceptions_ to avoid confusion with validation errors   ✨ Add source examples for pretty_exceptions   📝 Add docs for pretty exceptions   🔧 Add Exceptions docs to MkDocs   ✅ Add tests for tutorial about exceptions   ✅ Update trackeback tests, remove tests covered by tutorial   ✅ Fix test for module ",1
-117,:white_check_mark: Fix tests using binary config files,0.53540665,"Fix testing utilities, add tests for First Steps examples. PR #8.",,0
-118,":white_check_mark: Update completion tests, checking for printed message",0.6029641,Tests for the completion logic/code.,,0
-119,"⬆ Upgrade Rich, support 13.x (#524)",0.8226999,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,1
-120,:construction_worker: Add GitHub action to deploy docs (#50),0.7020761,Update CI to run docs deployment in GitHub actions. PR #50.,,1
-121,🔧 Add GitHub Discussion templates for questions (#541),0.9141428,🔧 Add GitHub Discussion templates for questions. PR #541 by @tiangolo.,,1
-122,:memo: Add CLI Options docs and examples,0.6996242,Add docs for CLI Options. PR #12.,,0
-123,⬆ Bump actions/cache from 2 to 3 (#496),0.8875523,⬆ Bump actions/cache from 2 to 3. PR #496 by @dependabot[bot].,,1
-124,:sparkles: Add colors module,0.6380954,"Add colors module and docs for Printing and Colors and for Terminating, including tests. PR #20.",,0
-125,✨ Add support for custom types and parsers (updates/builds upon PR #443) (#583),0.83488774,✨ Add support for custom types and parsers. Initial PR #583 by @jpurviance. Based on original PR #443 by @paulo-raca.,,1
-126,:bento: Add GitHub social preview images,0.58590114,👷 Add GitHub Action Latest Changes. PR #321 by @tiangolo.,,0
-127,"✏ Update first-steps.md, clarify distinction between parameter and argument (#176)",0.9179027,"✏ Update first-steps.md, clarify distinction between parameter and argument. PR #176 by @mccarthysean.",,1
-128,"✏ Fix typo, ""ASCII codes"" to ""ANSI escape sequences"" (#308)",0.92424893,"✏ Fix typo, ""ASCII codes"" to ""ANSI escape sequences"". PR #308 by @septatrix.",,1
-129,:memo: Update README,0.45742866,Update docs and add latest changes to MkDocs/website. PR #33.,,0
-130,":white_check_mark: Add first test, scaffold testing",0.5862582,"Fix testing utilities, add tests for First Steps examples. PR #8.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-131,:bug: Fix using solved/extracted help,0.6413886,Several bug fixes.,,0
-132,:bug: Fix link in README for GitHub,0.55494845,Update GitHub Action issue-manager. PR #114.,,0
-133,":wrench: Update GitHub actions, remove left config from FastAPI",0.59910476,Update GitHub Action issue-manager. PR #114.,,0
-134,🐛 Fix setting FORCE_TERMINAL with colors (#423),0.90785235,🐛 Fix setting FORCE_TERMINAL with colors. PR #423 by @tiangolo.,updates: - github.com/pre-commit/pre-commit-hooks: v4.2.0 → v4.3.0 - github.com/asottile/pyupgrade: v2.32.1 → v2.34.0 Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
-135,👷 Update publish GitHub action (#325),0.8729185,👷 Update publish GitHub action. PR #325 by @tiangolo.,,1
-136,👷 Refactor CI artifact upload/download for docs previews (#516),0.9235457,👷 Refactor CI artifact upload/download for docs previews. PR #516 by @tiangolo.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
-137,"✨ Make typer.run() not add completion scripts by default, it only makes sense in installed apps (#488)",0.83395624,"✨ Make typer.run() not add completion scripts by default, it only makes sense in installed apps. Also update docs for handling autocompletion in CLI options. PR #488 by @tiangolo.",,1
-138,✨ Add support for help for CLI arguments (#123),0.8037419,Add support for help parameter in CLI arguments:,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
-139,"💚 Only test on push when on master, avoid duplicate CI runs from PRs (#358)",0.9418842,"💚 Only test on push when on master, avoid duplicate CI runs from PRs. PR #358 by @tiangolo.",,1
-140,":memo: Fix wording to avoid confusion between CLI program, command, subcommand",0.61288756,New docs: Commands: Using the Context.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-141,✏ Fix syntax typo in docs/tutorial/package.md (#333),0.92807317,✏ Fix syntax typo in docs/tutorial/package.md. PR #333 by @ryanstreur.,,1
-142,:recycle: Refactor docs structure and add CLI option names,0.70491874,Support for callbacks based on type annotations. New docs: CLI Option Callback and Context.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-143,📝 Remove obsolete references to --install-completion for typer.run() scripts (#595),0.6150717,"✨ Make typer.run() not add completion scripts by default, it only makes sense in installed apps. Also update docs for handling autocompletion in CLI options. PR #488 by @tiangolo.",,0
-144,Merge pull request #23 from tiangolo/progressbar,0.53128767,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
-145,:white_check_mark: Add tests for printing and terminating,0.6596928,"Add colors module and docs for Printing and Colors and for Terminating, including tests. PR #20.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-146,🔖 Release version 0.4.2,0.57871866,Upgrade Isort to version 5.x.x. PR #137.,,0
-147,:wrench: Add MkDocs config,0.6820412,👷 Fix Material for MkDocs install in CI. PR #395 by @tiangolo.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-148,🔖 Release version 0.3.2,0.5832211,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
-149,:heavy_plus_sign: Upgrade Material-Mkdocs (#90),0.6936465,"Upgrade Mkdocs-Material version, update contributing guide style. PR #90.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-150,✏️ Fix typo in datetime docs (#495),0.89539576,✏️ Fix typo in datetime docs. PR #495 by @huxuan.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-151,📝 Update docs with the new --help argument (#135),0.7143551,Update docs with new --help showing default values. PR #135 by @victorphoenix3.,,1
-152,💄 Update badges and remove Travis (#145),0.78176486,"Update badges and remove Travis, now that GitHub Actions is the main CI. PR #145.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-153,":fire: Clean exports from typer, remove unneeded Click components",0.79027504,Clean exports from Typer. Remove unneeded components from Click and add needed Exit exception. PR #11.,,1
-154,":memo: Update sub-header, short description",0.5095996,📝 Add note about how subcommands with function names using underscores are converted to dashes. PR #403 by @targhs.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-155,:wrench: Install GitHub issue-manager,0.7122025,Update GitHub Action issue-manager. PR #114.,,1
-156,:memo: Add new issue templates,0.5940217,🔧 Add updated issue templates. PR #323 by @tiangolo.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-157,:bug: Fix extracting help from docstrings in functions,0.8002473,Fix and document extracting help from a functions' docstring First Steps: Document your CLI app. PR #10.,,1
-158,:wrench: Add scripts,0.57070446,Add docs about Typer CLI - completion for small scripts. PR #64.,,0
-159,⬆ Bump actions/upload-artifact from 2 to 3 (#477),0.8912573,⬆ Bump actions/upload-artifact from 2 to 3. PR #477 by @dependabot[bot].,,1
-160,:memo: Add extra docs and tests for param types,0.67311877,"📝 Update docs examples for custom param types using Annotated, fix overloads for typer.Argument. PR #594 by @tiangolo.",Co-authored-by: pre-commit github-actions@github.com Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,0
-161,:memo: Add docs for asking with a prompt,0.6868289,Add docs for Asking with Interactive Prompts. PR #22.,,0
-162,":sparkles: Add docs for testing, password, version, context. Extra tests, include callback and autocompletion PR (#68)",0.68107903,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
-163,":wrench: Add type marker, support for PEP 561 (#58)",0.70311165,"Add support for PEP 561, to allow mypy to type check applications built with Typer. PR #58.",,1
-164,":sparkles: Fix Termynal size, update first steps, add fast button",0.82960296,"Update Termynal to have fixed sizes, add ""fast"" button, and use it in First Steps. PR #6.",,1
-165,:memo: Fix Twitter links,0.5651964,✏ Fix broken plac link. PR #275 by @mgielda.,,0
-166,:memo: Add docs for using Click with Typer (#70),0.84301925,Add docs for Using Click (with Typer). PR #70.,,1
-167,:white_check_mark: Add 4 extra tests for edge cases,0.6362984,Add extra tests for edge cases that don't belong in docs' examples. PR #32.,,0
-168,✏ Fix spelling (shinny -> shiny) (#586),0.90421796,✏ Fix spelling (shinny -> shiny). PR #586 by @runofthemill.,,1
-169,":sparkles: Add automatic completion options by default, if click-completion is installed",0.78441936,Add auto completion options by default when click-completion is installed: --install-completion and --show-completion. PR #7.,,1
-170,:white_check_mark: Add tests for subcommands,0.6338404,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
-171,⬆ Upgrade Isort to version 5.x.x (#137),0.9108424,Upgrade Isort to version 5.x.x. PR #137.,,1
-172,:bookmark: Release version 0.0.6,0.5761377,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,Co-authored-by: Michael Adkins michael@prefect.io,0
-173,🔧 Update new issue chooser to suggest GitHub Discussions (#544),0.9339893,🔧 Update new issue chooser to suggest GitHub Discussions. PR #544 by @tiangolo.,,1
-174,:green_heart: Update dev dependencies and CI scripts,0.5007265,Update CI to run docs deployment in GitHub actions. PR #50.,Co-authored-by: yanlong.wang yanlong.wang@naiver.org Co-authored-by: Han Xiao han.xiao@jina.ai,0
-175,✏ Fix typos and rewording in docs (#97),0.9031936,Fix typos and rewording in docs. PR #97 by @mrcartoonster.,,1
-176,":memo: :sparkles: :bug: Commands: docs, examples, tests, and fix",0.54567176,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
-177,🔧 Tweak pytest coverage (#485),0.84352726,🔧 Tweak pytest coverage. PR #485 by @tiangolo.,,1
-178,"✨ Richify, add integrations with Rich everywhere (#419)",0.8904275,"✨ Richify, add integrations with Rich everywhere. PR #419 by @tiangolo.",,1
-179,✏️ Add quotes to package name that includes brackets in docs (#475),0.92550564,✏️ Add quotes to package name that includes brackets in docs. PR #475 by @gjolga.,,1
-180,🔖 Release version 0.9.0,0.57701266,⬆ Bump dawidd6/action-download-artifact from 2.9.0 to 2.24.1. PR #491 by @dependabot[bot].,,0
-181,:bug: Fix handling defaults in TyperInfo,0.6611509,✨ Allow configuring pretty errors when creating the Typer instance. PR #416 by @tiangolo.,,0
-182,":bug: Make Tutorial intro be the index, to have a tutorial root",0.51620746,"Add initial version of code, docs, etc.",,0
-183,📝 Fix typo in docs at docs/tutorial/commands/help.md (#466),0.93175125,📝 Fix typo in docs at docs/tutorial/commands/help.md. PR #466 by @fepegar.,because it was actually a LOT of work to not break changes,1
-184,:memo: Add docs for launching applications/files.,0.67814326,Add docs for Launching Applications. PR #25.,,0
-185,:sparkles: Add support for forward references (#93),0.72578377,Add support for forward references (types declared inside of strings). PR #93.,,1
-186,:bookmark: Release version 0.2.0,0.55160415,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
-187,":memo: Add docs section, build a package from scratch (#71)",0.7054426,Add docs for Building a Package. PR #71.,,1
-188,🐛 Fix import of get_terminal_size for click 8.1.0 support and upgrade Black for CI (#380),0.87687624,🐛 Fix import of get_terminal_size for Click 8.1.0 support and upgrade Black to fix CI. PR #380 by @tiangolo based on original PR #375 by @madkinsz.,,1
-189,:bookmark: Release version 0.0.3,0.60090744,"Upgrade Mkdocs-Material version, update contributing guide style. PR #90.",,0
-190,:white_check_mark: Add tests for CLI parameter types,0.644093,Add docs for CLI Parameters with Multiple Values. Includes tests for all the examples and bug fixes. PR #31.,,0
-191,:sparkles: Improve --install-completion messages,0.59181553,Update references to --install-completion and --show-completion in docs. PR #9.,,0
-192,:arrow_up: Upgrade Netlify deploy action (#57),0.6349218,Upgrade deploy docs to Netlify GitHub action. PR #57.,,0
-193,🔧 Update issue-manager (#114),0.7644348,Update GitHub Action issue-manager. PR #114.,,1
-194,:memo: Add docs and examples for Commands,0.66330665,New docs: Commands: Using the Context.,,0
-195,:recycle: Refactor subcommands to not require being a package,0.5176421,"Refactor docs to make each individual page/section ""bite-sized"" / small. Add docs for CLI option names. Update typer.Argument() to remove invalid positional param_decls. PR #19.",,0
-196,👷 Move from pytest-cov to coverage and Codecov to Smokeshow (#483),0.93350327,👷 Move from pytest-cov to coverage and Codecov to Smokeshow. PR #483 by @tiangolo.,,1
-197,:bento: Add logos,0.5955977,🔧 Add sponsors docs and badge. PR #319 by @tiangolo.,,0
-198,:fire: Remove unnecessary noqa comments,0.43535003,Remove unneeded code for argument handling. PR #26.,,0
-199,:wrench: Add main config files,0.55235225,Add docs for calling packages with python -m some_package using __main__.py: Building a Package: Support python -m. PR #121.,,0
-200,:memo: Update docs with references to --install-completion,0.70741093,Update references to --install-completion and --show-completion in docs. PR #9.,,1
-201,:wrench: Update tests tools,0.6759729,"Fix testing utilities, add tests for First Steps examples. PR #8.",,0
-202,✨ Add pretty error tracebacks for user errors and support for Rich (#412),0.89624715,✨ Add pretty error tracebacks for user errors and support for Rich. PR #412 by @tiangolo.,,1
-203,"✏ Fix double ""and"" typo in first-steps tutorial (#225)",0.9082556,"✏ Fix double ""and"" typo in first-steps tutorial. PR #225 by @softwarebloat.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-204,✏ Fix typos in main page/README (#103),0.7812824,Fix typos in README and main docs #103 by @mrcartoonster.,,1
-205,:pencil: Rewording in docs and fix typos,0.8004914,Fix typos and rewording in docs. PR #97 by @mrcartoonster.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-206,🔧 Add updated issue templates (#323),0.84378684,🔧 Add updated issue templates. PR #323 by @tiangolo.,,1
-207,:art: Update testing coverage badge (#78),0.80891025,Update coverage badge. PR #78.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-208,✏ Fix minor typo in index.md (#274),0.87571275,✏ Fix minor typo in index.md. PR #274 by @RmStorm.,,1
-209,":bug: Fix test completion, check for bash completion file before running",0.7108809,Fix completion evaluation for Bash and Zsh when the program is not installed/found. PR #83.,,1
-210,":sparkles: Re-implement completion, fixes, add PowerShell support (#66)",0.58816254,"Add support for modern versions of PowerShell, 5, 6, and 7 (e.g. in Windows 10).",,0
-211,:memo: Add README and CONTRIBUTING,0.40317303,📝 Add docs for using Rich with Typer. PR #421 by @tiangolo.,  ✅ Report XML Coverate to support GitHub Actions   🙈 Add coverage report to .gitignore   ✅ Add custom testing .zshrc logic for coverage ,0
-212,✏️ Fix typo in release notes,0.6940478,✏ Fix typo in docs/tutorial/terminating.md. PR #382 by @kianmeng.,,0
-213,"⬆️ Upgrade MkDocs Material, MDX-Include, and MkDocs structure (#356)",0.94009924,"⬆️ Upgrade MkDocs Material, MDX-Include, and MkDocs structure. PR #356 by @tiangolo.",,1
-214,✅ Report coverage in XML (#146),0.74331766,Report coverage in XML to support GitHub Actions. PR #146.,,1
-215,🔖 Release version 0.3.0,0.58113253,"Upgrade Mkdocs-Material version, update contributing guide style. PR #90.",,0
-216,:memo: Add docs for CLI arguments,0.75128174,Add docs for CLI Arguments. PR #13.,,1
-217,:white_check_mark: Add tests for CLI arguments,0.6322712,Add support for help parameter in CLI arguments:,,0
-218,:sparkles: Add docs for CLI Options with tests,0.7962675,Add docs for CLI Parameters with Multiple Values. Includes tests for all the examples and bug fixes. PR #31.,,1
-219,➕ Bring back pytest-cov because coverage can't detect pytest-xdist (#484),0.9457238,➕ Bring back pytest-cov because coverage can't detect pytest-xdist. PR #484 by @tiangolo.,,1
-220,:green_heart: Update Netlify script with local Docker image tests,0.46659598,⬆ Bump nwtgck/actions-netlify from 1.1.5 to 1.2.4. PR #479 by @dependabot[bot].,,0
-221,:sparkles: Add support for mermaid visualizations (#56),0.8483919,Add support for Mermaid JS for visualizations. PR #56.,,1
-222,:white_check_mark: Add tests for prompts,0.5379524,"Fix testing utilities, add tests for First Steps examples. PR #8.",  🚚 Move docs src files to root docs_src   🚚 Update example includes from root docs_src   🚚 Import docs src examples for tests from docs_src   ⬆️ Upgrade isort and configs   🎨 Update format in testing   🔧 Update configs with root docs_src   🔥 Remove obsolete/unecessary section in contributing guide   🎨 Re-format multi-file example   ⏪ Revert format for multi-file examples   🔧 Add isort skips for multi-file examples ,0
-223,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0 (#481),0.9444855,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,1
-224,📝 Clarify testing documentation about checking stderr (#335),0.9211962,📝 Clarify testing documentation about checking stderr. PR #335 by @cgabard.,,1
-225,:memo: Add emphasis note about using typer.echo instead of print (#89),0.5942134,"For most use cases not using Rich, use plain print() instead of typer.echo() in the docs, to simplify the concepts and avoid confusions. New docs: Printing and Colors - typer Echo."," ✨ Implement custom TyperCommand and TyperArgument  to support help in CLI Arguments   ✨ Update data models to store help for CLI Arguments   ✨ Add help to typer.Argument()   ✨ Use new TyperCommand and TyperArgument classes by default   to support CLI Arguments with help   ✅ Update failing test   ✨ Make showing default values default to true and support arguments hidden from help text   ✨ Add docs for CLI arguments with defaults, help, and new features   📝 Update CLI options with new show_default=True by default   📝 Add example of CLI arguments with tuples   📝 Update docs with new generated help text for CLI arguments   📝 Use Optional for None example in micro-intro to types   ✅ Add tests for new CLI argument features from docs examples   ✅ Update tests with new generated help text for CLI arguments   ✅ Add tests for CLI arguments with tuple defaults   🔧 Update MkDocs with new sections   ✨ make show_envvar default to True   ✨ Add docs for envvar in CLI arguments   ✅ Add tests for CLI arguments with env vars from docs   🎨 Add format to CLI usage examples in docs   🔧 Add section about CLI arguments with env vars to MkDocs   📝 Fix link in docs with new structure   🎨 Fix format in first-steps ",0
-226,":memo: :sparkles: :bug: Add docs for CLI parameters with multiple values, with tests and bug fixes",0.78795266,Add docs for CLI Parameters with Multiple Values. Includes tests for all the examples and bug fixes. PR #31.,,1
-227,:memo: Update docs for app_dir using Path,0.6027746,Update docs for path CLI option. PR #21.,,0
-228,:memo: Release notes,0.47603896,⬆ Bump actions/upload-artifact from 2 to 3. PR #477 by @dependabot[bot].,,0
-229,:bug: Fix overwritten test function,0.50913167,Several bug fixes.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-230,:bug: Fix and document extracting help form docstring,0.7905831,Fix and document extracting help from a functions' docstring First Steps: Document your CLI app. PR #10.,,1
-231,":sparkles: Add custom termynal handling for docs, with fenced code",0.7578814,Add custom automatic Termynal for docs. PR #5.,  👌 IMPROVE: Correcting typos   📝 Replicate fixes to README to docs/index.md   Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
-232,👷 Add CI for Python 3.10 (#384),0.90912235,👷 Add CI for Python 3.10. PR #384 by @tiangolo.,,1
-233,:recycle: :memo: Refactor docs' structure and add CLI option names,0.6718364,Support for callbacks based on type annotations. New docs: CLI Option Callback and Context.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
-234,:memo: Add first version of docs,0.65641177,"Add initial version of code, docs, etc.",,0
-235,:memo: Add docs about alternatives and inspiration (#62),0.7173176,"Add docs about Alternatives, Inspiration and Comparisons. PR #62.",,1
-236,:bookmark: Release version 0.0.9,0.54776466,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
-237,:bug: Fix Bash completion install to .bashrc (#81),0.7828002,Fix shell installation for Bash to ~/.bashrc and update Windows development docs. PR #81.,,1
-238,:bug: Do not show an error on completion eval if the program is not installed (#83),0.59689546,Fix completion evaluation for Bash and Zsh when the program is not installed/found. PR #83.,,0
-239,:memo: Add docs for CLI Arguments,0.7742449,Add docs for CLI Arguments. PR #13.,,1
-240,👷 Add pre-commit CI config (#394),0.87418914,👷 Add pre-commit CI config. PR #394 by @tiangolo.,,1
-241,🐛 Fix setting FORCE_TERMINAL with colors 2 (#424),0.91665846,🐛 Fix setting FORCE_TERMINAL with colors 2. PR #424 by @tiangolo.,,1
-242,"📝 Tweak docs, Custom Types path, main page and READAME colors, broken links (#588)",0.92327577,"📝 Tweak docs, Custom Types path, main page and READAME colors, broken links. PR #588 by @tiangolo.",  :sparkles: Add support for forward references   :white_check_mark: Add forward references test   :bug: Fix coverage in completion   :bug: Fix testing with Pytest and Pytest-sugar   :pushpin: Pin Pytest ,1
-243,:art: Fix format,0.55601454,"🎨 Fix header format for ""Standard Input"" in docs/tutorial/printing.md. PR #386 by @briancohan.",,0
-244,🔧 Add sponsors docs and badge (#319),0.89678407,🔧 Add sponsors docs and badge. PR #319 by @tiangolo.,,1
-245,:bookmark: Release 0.0.5,0.56669676,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot]., :sparkles: Re-implement completion install to lazy load  to support completion for programs under environments   :white_check_mark: Update tests for new lazy loaded completion   :white_check_mark: Update test after removing period from message ,0
-246,🔖 Release version 0.4.1,0.59280527,Upgrade Isort to version 5.x.x. PR #137.,,0
-247,:art: Tweak Termynal CSS and emojis,0.4149911,⬆ Bump actions/upload-artifact from 2 to 3. PR #477 by @dependabot[bot].,,0
-248,✏ Fix link in docs to datetime.strptime() (#464),0.8964099,✏ Fix link in docs to datetime.strptime(). PR #464 by @Kobu.,,1
-249,➕ Add extra Material for MkDocs deps for docs (#482),0.9062029,➕ Add extra Material for MkDocs deps for docs. PR #482 by @tiangolo.,  :heavy_plus_sign: Upgrade Material-Mkdocs   :bug: Fix Mkdocs config bug   :heavy_plus_sign: Upgrade Mkdocs-material configs ,1
-250,:memo: Fix GitHub markdown formatting,0.5130296,👷 Add GitHub Action Latest Changes. PR #321 by @tiangolo.,,0
-251,:bookmark: Release 0.0.7,0.5588484,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
-252,:memo: Update docs for First Steps,0.5962908,Update docs and add latest changes to MkDocs/website. PR #33.,  :bug: Fix Fish completion script   :bug: Do not show an error on completion eval if the program is not installed   :sparkles: Add stderr redirect to /dev/null for Fish too   :white_check_mark: Update completion tests ,0
-253,:white_check_mark: Add tests for Commands,0.5577073,Tests for the completion logic/code.,,0
-254,:sparkles: Make installed completion lazy load (#92),0.53010106,Add support for completion for commands/programs not available on startup.,,0
-255,:memo: Add docs for first steps,0.5811953,"Add initial version of code, docs, etc.",  :bug: Fix Bash completion setup to .bashrc   :memo: Update docs and script for Windows development environment ,0
-256,📝 Add Jina's QA Bot to the docs to help people that want to ask quick questions (#368),0.9599223,📝 Add Jina's QA Bot to the docs to help people that want to ask quick questions. PR #368 by @tiangolo.,,1
-257,:memo: Add docs for callbacks and one or multiple commands,0.6087008,"New docs for setting an epilog, with support for Rich Markdown and Console Markup, new docs: Commands - Command Help - Epilog.",,0
-258,🐛 Fix context_settings for a Typer app with a single command (#210),0.89824,🐛 Fix context_settings for a Typer app with a single command. PR #210 by @daddycocoaman.,,1
-259,🔖 Release version 0.6.1,0.5960604,⬆ Bump dawidd6/action-download-artifact from 2.24.2 to 2.26.0. PR #558 by @dependabot[bot].,,0
-260,improve wording and fix typos,0.74359095,Docs rewording and fix typos. PR #1 by @mariacamilagl.,,1
-261,:memo: Add docs for launching applications,0.6765043,Add docs for Launching Applications. PR #25.,  :white_check_mark: Add coverage instructions to tests   :memo: Update docs note about coverage in features   :art: Fix format   :art: Update testing docs format ,0
-262,🔧 Add pre-commit config and formatting (#392),0.86524254,🔧 Add pre-commit config and formatting. PR #392 by @tiangolo.,"  :memo: Add docs section, build a package from scratch   :memo: Update Package docs   :pencil2: Fix internal links ",1
-263,:white_check_mark: Add extra tests for edge cases that don't belong on docs,0.7551669,Add extra tests for edge cases that don't belong in docs' examples. PR #32.,,1
-264,🔖 Release version 0.5.0,0.6670157,Upgrade Isort to version 5.x.x. PR #137.,  :memo: Add docs for using Click with Typer   :white_check_mark: Add tests for integrating Click and Typer ,0
-265,🔖 Release version 0.7.0,0.57767636,Upgrade Isort to version 5.x.x. PR #137.,,0
-266,🎨 Fix format in docs explaining datetime parameter type (#220),0.9238763,🎨 Fix format in docs explaining datetime parameter type. PR #220 by @DiegoPiloni.,"In the tutorial, the length of the progress bar is set to 1000 and the update was mistakenly set to 2500. The update should be 1/4 of the length given that the loop runs for 4 iterations. This commit sets the update amount to 250 which better showcases the feature.",1
-267,:wrench: Update coverage pragma,0.6474003,🔧 Tweak pytest coverage. PR #485 by @tiangolo.,,0
-268,✏ Fix broken plac link (#275),0.886819,✏ Fix broken plac link. PR #275 by @mgielda.,"  :sparkles: Implement custom handling for callbacks with types   :sparkles: Implement type-based handling for completion functions   :sparkles: Add examples for custom completion   :memo: Add docs for custom autocompletion   :white_check_mark: Add tests for autocompletion   :sparkles: Document using the context   :white_check_mark: Add tests for using the context   :white_check_mark: Add tests init for context   :wrench: Update Mypy config   :white_check_mark: Add extra tests for completion   :pencil2: Fix format, typos, and minor texts   :sparkles: Update docs for printing, include stdout, stderr, and stdin   :pencil2: Add references to FastAPI, fix typos   :pencil2: Fix typo in Typer CLI   :memo: Update docs for version   :memo: Update docs for callbacks   :memo: Update references to stdout/stderr in autocompletion   :memo: Add docs for password in CLI option   :memo: Add docs and tests for Testing   :memo: Add new sections to docs   :art: Fix formatting ",1
-269,:sparkles: Add docs and examples for subcommands,0.7307054,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,1
-270,"🎨 Fix header format for ""Standard Input"" in docs/tutorial/printing.md (#386)",0.96467686,"🎨 Fix header format for ""Standard Input"" in docs/tutorial/printing.md. PR #386 by @briancohan.",,1
-271,⬆ [pre-commit.ci] pre-commit autoupdate (#512),0.9222368,⬆ [pre-commit.ci] pre-commit autoupdate. PR #512 by @pre-commit-ci[bot].,"  :sparkles: Re-implement completion   :white_check_mark: Add tests for re-implemented completion   :art: Move mypy config to file   :see_no_evil: Update .gitignore   :heavy_plus_sign: Remove click-completion, add support for autodetection with shellingham   :white_check_mark: Fix test for PowerShell   :bug: Fix PowerShell permissions/test   :art: Format test   :checkered_flag: Fix PowerShell script for Windows and PowerShell 5   :memo: Update docs, internal implementation of completion ",1
-272,👷 Clear MkDocs Insiders cache (#393),0.90160096,👷 Clear MkDocs Insiders cache. PR #393 by @tiangolo.,,1
-273,✏ Fix typo in docs/tutorial/terminating.md (#382),0.9215894,✏ Fix typo in docs/tutorial/terminating.md. PR #382 by @kianmeng.,,1
-274,🎨 Fix type annotation of typer.run() (#284),0.8180032,🎨 Fix type annotation of typer.run(). PR #284 by @yassu.,,1
-275,:memo: Add contributing guide (#61),0.5063976,🔧 Add GitHub Discussion templates for questions. PR #541 by @tiangolo.,"  :sparkles: Add docs for Typer CLI   :memo: Update references to Typer CLI in docs   :wrench: Update tests to check files and linting before tests, to error out early   :memo: Sync README.md with docs/index.md ",0
-276,:bug: Fix Zsh completion install (#69),0.8841891,Fix Zsh completion install script. PR #69.,,1
-277,:sparkles: Add first version of subcommands tutorial,0.6137706,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
-278,:memo: Add docs for printing and terminating,0.6141141,"New docs for setting an epilog, with support for Rich Markdown and Console Markup, new docs: Commands - Command Help - Epilog.",,0
-279,:sparkles: Add first cleaned version of main code,0.5963157,"Add initial version of code, docs, etc.",,0
-280,📝 Add docs for main.py (#121),0.6843346,Add docs for calling packages with python -m some_package using __main__.py: Building a Package: Support python -m. PR #121.,,0
-281,🔖 Release version 0.4.0,0.59135425,Upgrade Isort to version 5.x.x. PR #137.," :arrow_up: Upgrade required Click to 7.1.1 and pin it to patch versions  as a MINOR version broke compatibility, so I'll have to upgrade manually every time   :pushpin: Fix pinning Click to MINOR version   :sparkles: Upgrade code to be compatible with latest Click changes   :white_check_mark: Update tests with new format for errors   :memo: Update docs to keep them in sync with actual output ",0
-282,"📝 Update docs examples for custom param types using Annotated, fix overloads for typer.Argument (#594)",0.96980965,"📝 Update docs examples for custom param types using Annotated, fix overloads for typer.Argument. PR #594 by @tiangolo.",,1
-283,⬆ Bump nwtgck/actions-netlify from 1.1.5 to 1.2.4 (#479),0.93712765,⬆ Bump nwtgck/actions-netlify from 1.1.5 to 1.2.4. PR #479 by @dependabot[bot].,,1
-284,⬆ Bump actions/checkout from 2 to 3 (#478),0.8716908,⬆ Bump actions/checkout from 2 to 3. PR #478 by @dependabot[bot].,,1
-285,:memo: Update docs. Add latest docs to MkDocs/website.,0.7951572,Update docs and add latest changes to MkDocs/website. PR #33.,,1
-286,✨ Refactor and document handling pretty exceptions (#422),0.85858476,✨ Refactor and document handling pretty exceptions. PR #422 by @tiangolo.,,1
-287,":memo: :sparkles: Add colors module and docs for printing and terminating, including tests.",0.80031955,"Add colors module and docs for Printing and Colors and for Terminating, including tests. PR #20.",,1
-288,⬆ [pre-commit.ci] pre-commit autoupdate (#404),0.91308343,⬆ [pre-commit.ci] pre-commit autoupdate. PR #404 by @pre-commit-ci[bot].,,1
-289,✨ Add support for PEP-593 Annotated for specifying options and arguments (#584),0.92681,✨ Add support for PEP-593 Annotated for specifying options and arguments. Initial PR #584 by @ryangalamb.,,1
-290,✏ Fix typo in docs for CLI Option autocompletion (#288),0.92321384,✏ Fix typo in docs for CLI Option autocompletion. PR #288 by @graue70.,,1
+Commit Message,Score,Correspond Changelog Sentence,Commit Description,Label
+📝 Update release notes,0.5084456,👷 Update docs CI name. PR #320 by @tiangolo.,,0
+📝 Remove obsolete references to --install-completion for typer.run() scripts (#595),0.7414207,"✨ Make typer.run() not add completion scripts by default, it only makes sense in installed apps. Also update docs for handling autocompletion in CLI options. PR #488 by @tiangolo.",📝 Remove obsolete references to --install-completion for typer.run() scripts,1
+🔖 Release version 0.9.0,0.4344598,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,0
+"📝 Update docs examples for custom param types using Annotated, fix overloads for typer.Argument (#594)",0.9714304,"📝 Update docs examples for custom param types using Annotated, fix overloads for typer.Argument. PR #594 by @tiangolo.",  📝 Add source examples for custom parameter types with Annotated   ✅ Add tests for custom parameters with Annotated   📝 Update docs for custom parameters with Annotated   ♻️ Fix overloads default in Argument after Annotated   ✅ Fix test for custom param types ,1
+⬆ [pre-commit.ci] pre-commit autoupdate (#592),0.91731757,⬆ [pre-commit.ci] pre-commit autoupdate. PR #592 by @pre-commit-ci[bot].,updates: - github.com/asottile/pyupgrade: v3.3.1 → v3.3.2 Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
+✨ Add support for PEP-593 Annotated for specifying options and arguments (#584),0.969385,✨ Add support for PEP-593 Annotated for specifying options and arguments. Initial PR #584 by @ryangalamb.," ✨ Add support for PEP-593 Annotated for specifying options and arguments  Implements #184  Revert things I did to get a 3.6 virtualenv 😅  A lot of the dev dependency packages weren't installable on 3.6, so I had to remove them from the pyproject.toml. This commit adds them back   Fix mypy/lint errors   Skip coverage on test lines that shouldn't execute   Missed a spot   ♻️ Tweak examples and tests with Annotated, add extra examples and tests   🔥 Remove Pydantic-specific logic from _typing.py   📝 Update docs to use new Annotated examples   📝 Add docs introducing Annotated and previous versions   🔧 Add commented out MkDocs config for highlighting docs examples   ✅ Fix tests for Click 7    Co-authored-by: Sebastián Ramírez tiangolo@gmail.com",1
+🔖 Release version 0.8.0,0.44053435,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,0
+⬆ Bump dawidd6/action-download-artifact from 2.24.2 to 2.26.0 (#558),0.95004827,⬆ Bump dawidd6/action-download-artifact from 2.24.2 to 2.26.0. PR #558 by @dependabot[bot].,Bumps dawidd6/action-download-artifact from 2.24.2 to 2.26.0. - Release notes - Commits  updated-dependencies: - dependency-name: dawidd6/action-download-artifact   dependency-type: direct:production   update-type: version-update:semver-minor ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+⬆ [pre-commit.ci] pre-commit autoupdate (#549),0.9182845,⬆ [pre-commit.ci] pre-commit autoupdate. PR #512 by @pre-commit-ci[bot]., ⬆ [pre-commit.ci] pre-commit autoupdate  updates: - github.com/PyCQA/autoflake: v2.0.0 → v2.1.1 - github.com/psf/black: 22.12.0 → 23.3.0  🎨 [pre-commit.ci] Auto format from pre-commit.com hooks   Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
+"⬆ Upgrade Rich, support 13.x (#524)",0.85591376,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.","Allow rich 13.x Based on the changelog, the only relevant breaking change is that support for Python 3.6 is removed: https://github.com/Textualize/rich/blob/v13.0.0/CHANGELOG.md#1300---2022-12-30 This is OK even though we support Python 3.6 in typer, because we do still allow older versions of rich that are compatible with Python 3.6.",1
+✏ Fix spelling (shinny -> shiny) (#586),0.9042891,✏ Fix spelling (shinny -> shiny). PR #586 by @runofthemill.,shinny -> shiny,1
+"📝 Tweak docs, Custom Types path, main page and READAME colors, broken links (#588)",0.9213087,"📝 Tweak docs, Custom Types path, main page and READAME colors, broken links. PR #588 by @tiangolo.","  📝 Tweak name for Custom Types   ✏️ Fix broken internal links in CLI Option autocompletion   📝 Update main page docs, remove colors as that renders badly in README   📝 Update README, sync with index.md, remove colors for GitHub and PyPI ",1
+✨ Add support for custom types and parsers (updates/builds upon PR #443) (#583),0.9559799,✨ Add support for custom types and parsers. Initial PR #583 by @jpurviance. Based on original PR #443 by @paulo-raca.," Support custom parameter types  While most CLI parameters are strings, ints, etc, we sometimes need custom types. Currently typer has no support for it (See #77), and while there are a few hacks, the likely solution is to add a 'str' argument and parse it inside the main function. This PR adds support for custom types in 3 different ways: - Manually specifying a click_type - Manually specifying a parse function - Using a Callable type annotation (It is very common for types to have a string constructor, like int(""1""))  Document how to parse custom objects with Typer.  Typer supports parsing of cutom types with: - A user provided parser class - A click custom type parser   🎨 [pre-commit.ci] Auto format from pre-commit.com hooks   📝 Tweak and simplify docs   ✅ Tweak tests to run scripts and remove pragma: nocover in examples   📝 Tweak examples for docs, add types and remove # pragma: nocover   ♻️ Tweak implementation checking for parser and Click type    Co-authored-by: Paulo Costa me@paulo.costa.nom.br Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com",1
+🔧 Add exclude_lines to coverage configuration (#585),0.97527945,🔧 Add exclude_lines to coverage configuration. PR #585 by @dmontagu.,Add exclude_lines to coverage configuration,1
+⬆️ Upgrade analytics (#557),0.868643,⬆️ Upgrade analytics. PR #557 by @tiangolo.,,1
+📝 Update docs about helping Typer (#547),0.9266626,📝 Update docs about helping Typer. PR #547 by @tiangolo.,,1
+🔧 Update new issue chooser to suggest GitHub Discussions (#544),0.9325248,🔧 Update new issue chooser to suggest GitHub Discussions. PR #544 by @tiangolo.,,1
+🔧 Add GitHub Discussion templates for questions (#541),0.94010866,🔧 Add GitHub Discussion templates for questions. PR #541 by @tiangolo.,,1
+"🔧 Update pre-commit, Python version, isort version (#542)",0.81247556,"🔧 Update pre-commit, Python version, isort version. PR #542 by @tiangolo.",,1
+⬆ [pre-commit.ci] pre-commit autoupdate (#512),0.92065,⬆ [pre-commit.ci] pre-commit autoupdate. PR #512 by @pre-commit-ci[bot].,Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+⬆ Bump nwtgck/actions-netlify from 1.2.4 to 2.0.0 (#513),0.963526,⬆ Bump nwtgck/actions-netlify from 1.1.5 to 1.2.4. PR #479 by @dependabot[bot].,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+👷 Refactor CI artifact upload/download for docs previews (#516),0.95735765,👷 Refactor CI artifact upload/download for docs previews. PR #516 by @tiangolo.,,1
+⬆ [pre-commit.ci] pre-commit autoupdate (#500),0.92193174,⬆ [pre-commit.ci] pre-commit autoupdate. PR #500 by @pre-commit-ci[bot].,updates: - github.com/asottile/pyupgrade: v3.2.0 → v3.2.2 Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
+⬆ Bump actions/cache from 2 to 3 (#496),0.84922236,⬆ Bump actions/cache from 2 to 3. PR #496 by @dependabot[bot].,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+✏️ Fix typo in datetime docs (#495),0.9526483,✏️ Fix typo in datetime docs. PR #495 by @huxuan.,,1
+⬆ Bump dawidd6/action-download-artifact from 2.24.1 to 2.24.2 (#494),0.9444951,⬆ Bump dawidd6/action-download-artifact from 2.24.1 to 2.24.2. PR #494 by @dependabot[bot].,Bumps dawidd6/action-download-artifact from 2.24.1 to 2.24.2. - Release notes - Commits  updated-dependencies: - dependency-name: dawidd6/action-download-artifact   dependency-type: direct:production   update-type: version-update:semver-patch ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+⬆ Bump dawidd6/action-download-artifact from 2.9.0 to 2.24.1 (#491),0.9495227,⬆ Bump dawidd6/action-download-artifact from 2.9.0 to 2.24.1. PR #491 by @dependabot[bot].,Bumps dawidd6/action-download-artifact from 2.9.0 to 2.24.1. - Release notes - Commits  updated-dependencies: - dependency-name: dawidd6/action-download-artifact   dependency-type: direct:production   update-type: version-update:semver-minor ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+⬆ Bump actions/setup-python from 2 to 4 (#492),0.903888,⬆ Bump actions/setup-python from 2 to 4. PR #492 by @dependabot[bot].,Bumps actions/setup-python from 2 to 4. - Release notes - Commits  updated-dependencies: - dependency-name: actions/setup-python   dependency-type: direct:production   update-type: version-update:semver-major ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+"👷‍♂️ Consistently use sys.executable to run subprocesses, needed by OpenSUSE (#408)",0.92292845,"👷‍♂️ Consistently use sys.executable to run subprocesses, needed by OpenSUSE. PR #408 by @theMarix.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+👷‍♂️ Ensure the PYTHONPATH is set properly when testing the tutorial scripts (#407),0.9564302,👷‍♂️ Ensure the PYTHONPATH is set properly when testing the tutorial scripts. PR #407 by @theMarix.,,1
+✏️ Add quotes to package name that includes brackets in docs (#475),0.9335302,✏️ Add quotes to package name that includes brackets in docs. PR #475 by @gjolga.,Adds quotes to package name with brackets Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+🔖 Release version 0.7.0,0.42879802,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,0
+✅ Add extra tests just for coverage because monkeypatching with strange imports confuses coverage (#490),0.95852935,✅ Add extra tests just for coverage because monkeypatching with strange imports confuses coverage. PR #490 by @tiangolo.,,1
+"✨ Make typer.run() not add completion scripts by default, it only makes sense in installed apps (#488)",0.8943536,"✨ Make typer.run() not add completion scripts by default, it only makes sense in installed apps. Also update docs for handling autocompletion in CLI options. PR #488 by @tiangolo.",,1
+"✨ Add support for Python 3.11, tests in CI and official marker (#487)",0.938558,"✨ Add support for Python 3.11, tests in CI and official marker. PR #487 by @tiangolo.",,1
+👷 Add CI for Python 3.10 (#384),0.9090736,👷 Add CI for Python 3.10. PR #384 by @tiangolo.,,1
+🎨 Fix type annotation of typer.run() (#284),0.96718246,🎨 Fix type annotation of typer.run(). PR #284 by @yassu.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+📝 Add note about how subcommands with function names using underscores are converted to dashes (#403),0.94916284,📝 Add note about how subcommands with function names using underscores are converted to dashes. PR #403 by @targhs.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+📝 Fix typo in docs at docs/tutorial/commands/help.md (#466),0.9222623,📝 Fix typo in docs at docs/tutorial/commands/help.md. PR #466 by @fepegar.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+✏ Fix link in docs to datetime.strptime() (#464),0.9053628,✏ Fix link in docs to datetime.strptime(). PR #464 by @Kobu.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+🔧 Tweak pytest coverage (#485),0.9463593,🔧 Tweak pytest coverage. PR #485 by @tiangolo.,,1
+➕ Bring back pytest-cov because coverage can't detect pytest-xdist (#484),0.98358536,➕ Bring back pytest-cov because coverage can't detect pytest-xdist. PR #484 by @tiangolo.,,1
+⬆ Bump actions/upload-artifact from 2 to 3 (#477),0.91082644,⬆ Bump actions/upload-artifact from 2 to 3. PR #477 by @dependabot[bot].,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+⬆ Bump actions/checkout from 2 to 3 (#478),0.8658685,⬆ Bump actions/checkout from 2 to 3. PR #478 by @dependabot[bot].,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+⬆ [pre-commit.ci] pre-commit autoupdate (#411),0.92708343,⬆ [pre-commit.ci] pre-commit autoupdate. PR #411 by @pre-commit-ci[bot].,Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+⬆ Bump nwtgck/actions-netlify from 1.1.5 to 1.2.4 (#479),0.9557549,⬆ Bump nwtgck/actions-netlify from 1.1.5 to 1.2.4. PR #479 by @dependabot[bot].,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0 (#481),0.9498248,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+👷 Move from pytest-cov to coverage and Codecov to Smokeshow (#483),0.9743496,👷 Move from pytest-cov to coverage and Codecov to Smokeshow. PR #483 by @tiangolo.,,1
+➕ Add extra Material for MkDocs deps for docs (#482),0.94744575,➕ Add extra Material for MkDocs deps for docs. PR #482 by @tiangolo.,,1
+🔧 Update Dependabot config (#476),0.87925535,🔧 Update Dependabot config. PR #476 by @tiangolo.,,1
+🎨 Fix type annotations for get_group (#430),0.9253925,🎨 Fix type annotations for get_group. PR #430 by @tiangolo.,,1
+"✏ Update first-steps.md, clarify distinction between parameter and argument (#176)",0.9486883,"✏ Update first-steps.md, clarify distinction between parameter and argument. PR #176 by @mccarthysean.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
+✏ Fix broken plac link (#275),0.9202624,✏ Fix broken plac link. PR #275 by @mgielda.,Signed-off-by: Michael Gielda mgielda@antmicro.com Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+🔖 Release version 0.6.1,0.4104834,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,0
+🐛 Fix setting FORCE_TERMINAL with colors 2 (#424),0.96361476,🐛 Fix setting FORCE_TERMINAL with colors 2. PR #424 by @tiangolo.,,1
+🐛 Fix setting FORCE_TERMINAL with colors (#423),0.9558754,🐛 Fix setting FORCE_TERMINAL with colors 2. PR #424 by @tiangolo.,,1
+✏️ Fix typo in release notes,0.64340353,✏ Fix minor typo in index.md. PR #274 by @RmStorm.,,0
+🔖 Release version 0.6.0,0.41956887,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,0
+✨ Refactor and document handling pretty exceptions (#422),0.8912106,✨ Refactor and document handling pretty exceptions. PR #422 by @tiangolo.,"  ♻️ Rename pretty_errors_ to pretty_exceptions_ to avoid confusion with validation errors   ✨ Add source examples for pretty_exceptions   📝 Add docs for pretty exceptions   🔧 Add Exceptions docs to MkDocs   ✅ Add tests for tutorial about exceptions   ✅ Update trackeback tests, remove tests covered by tutorial   ✅ Fix test for module ",1
+📝 Add docs for using Rich with Typer (#421),0.93997246,📝 Add docs for using Rich with Typer. PR #421 by @tiangolo.,,1
+⬆️ Upgrade codecov GitHub Action (#420),0.9246541,⬆️ Upgrade codecov GitHub Action. PR #420 by @tiangolo.,,1
+"✨ Richify, add integrations with Rich everywhere (#419)",0.93286973,"✨ Richify, add integrations with Rich everywhere. PR #419 by @tiangolo.",,1
+✨ Allow configuring pretty errors when creating the Typer instance (#416),0.96978134,✨ Allow configuring pretty errors when creating the Typer instance. PR #416 by @tiangolo.,,1
+🔖 Release version 0.5.0,0.43506858,🔧 Update Dependabot config. PR #476 by @tiangolo.,,0
+✨ Add pretty error tracebacks for user errors and support for Rich (#412),0.9613867,✨ Add pretty error tracebacks for user errors and support for Rich. PR #412 by @tiangolo.,,1
+"✏ Fix typo, ""ASCII codes"" to ""ANSI escape sequences"" (#308)",0.9263631,"✏ Fix typo, ""ASCII codes"" to ""ANSI escape sequences"". PR #308 by @septatrix.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+🔖 Release version 0.4.2,0.4484483,🔧 Update Dependabot config. PR #476 by @tiangolo.,,0
+⬆ [pre-commit.ci] pre-commit autoupdate (#404),0.9407706,⬆ [pre-commit.ci] pre-commit autoupdate. PR #404 by @pre-commit-ci[bot].,updates: - github.com/pre-commit/pre-commit-hooks: v4.2.0 → v4.3.0 - github.com/asottile/pyupgrade: v2.32.1 → v2.34.0 Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
+📝 Clarify testing documentation about checking stderr (#335),0.929602,📝 Clarify testing documentation about checking stderr. PR #335 by @cgabard.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
+🐛 Fix type conversion for List and Tuple and their internal types (#143),0.9542548,🐛 Fix type conversion for List and Tuple and their internal types. PR #143 by @hellowhistler.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
+🐛 Fix context_settings for a Typer app with a single command (#210),0.96569514,🐛 Fix context_settings for a Typer app with a single command. PR #210 by @daddycocoaman.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+✏ Fix typo in docs for CLI Option autocompletion (#288),0.9475532,✏ Fix typo in docs for CLI Option autocompletion. PR #288 by @graue70.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+"🎨 Fix header format for ""Standard Input"" in docs/tutorial/printing.md (#386)",0.9594004,"🎨 Fix header format for ""Standard Input"" in docs/tutorial/printing.md. PR #386 by @briancohan.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+✏ Fix typo in docs/tutorial/terminating.md (#382),0.9477864,✏ Fix typo in docs/tutorial/terminating.md. PR #382 by @kianmeng.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+✏ Fix syntax typo in docs/tutorial/package.md (#333),0.92763007,✏ Fix syntax typo in docs/tutorial/package.md. PR #333 by @ryanstreur.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+"✏ Fix typo, duplicated word in docs/tutorial/options/required.md. (#316)",0.96578914,"✏ Fix typo, duplicated word in docs/tutorial/options/required.md.. PR #316 by @michaelriri.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+✏ Fix minor typo in index.md (#274),0.9251748,✏ Fix minor typo in index.md. PR #274 by @RmStorm.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+"✏ Fix double ""and"" typo in first-steps tutorial (#225)",0.9278332,"✏ Fix double ""and"" typo in first-steps tutorial. PR #225 by @softwarebloat.",Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+🎨 Fix format in docs explaining datetime parameter type (#220),0.9429709,🎨 Fix format in docs explaining datetime parameter type. PR #220 by @DiegoPiloni.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+👷 Fix Material for MkDocs install in CI (#395),0.9421387,👷 Fix Material for MkDocs install in CI. PR #395 by @tiangolo.,,1
+👷 Add pre-commit CI config (#394),0.9191458,👷 Add pre-commit CI config. PR #394 by @tiangolo.,Co-authored-by: pre-commit github-actions@github.com Co-authored-by: pre-commit-ci[bot] 66853113+pre-commit-ci[bot]@users.noreply.github.com,1
+👷 Clear MkDocs Insiders cache (#393),0.93302333,👷 Clear MkDocs Insiders cache. PR #393 by @tiangolo.,,1
+🔧 Add pre-commit config and formatting (#392),0.93273735,🔧 Add pre-commit config and formatting. PR #392 by @tiangolo.,,1
+👷 Disable installing MkDocs Insiders in forks (#391),0.96769476,👷 Disable installing MkDocs Insiders in forks. PR #391 by @tiangolo.,,1
+⬆️ Upgrade Codecov GitHub Action (#383),0.9214928,⬆️ Upgrade codecov GitHub Action. PR #420 by @tiangolo.,,1
+🔖 Release version 0.4.1,0.4347449,🔧 Update Dependabot config. PR #476 by @tiangolo.,,0
+🐛 Fix import of get_terminal_size for click 8.1.0 support and upgrade Black for CI (#380),0.93393123,🐛 Fix import of get_terminal_size for Click 8.1.0 support and upgrade Black to fix CI. PR #380 by @tiangolo based on original PR #375 by @madkinsz.,Co-authored-by: Michael Adkins michael@prefect.io,1
+📝 Add Jina's QA Bot to the docs to help people that want to ask quick questions (#368),0.97164786,📝 Add Jina's QA Bot to the docs to help people that want to ask quick questions. PR #368 by @tiangolo.,Co-authored-by: yanlong.wang yanlong.wang@naiver.org Co-authored-by: Han Xiao han.xiao@jina.ai,1
+"💚 Only test on push when on master, avoid duplicate CI runs from PRs (#358)",0.9519998,"💚 Only test on push when on master, avoid duplicate CI runs from PRs. PR #358 by @tiangolo.",,1
+✨ Add support for previewing docs in PRs from forks and enable MkDocs Insiders (#357),0.9690796,✨ Add support for previewing docs in PRs from forks and enable MkDocs Insiders. PR #357 by @tiangolo.,,1
+"⬆️ Upgrade MkDocs Material, MDX-Include, and MkDocs structure (#356)",0.9498614,"⬆️ Upgrade MkDocs Material, MDX-Include, and MkDocs structure. PR #356 by @tiangolo.",,1
+👷 Update publish GitHub action (#325),0.7951744,👷 Update publish GitHub action. PR #325 by @tiangolo.,,1
+🔖 Release version 0.4.0,0.4433586,🔧 Update Dependabot config. PR #476 by @tiangolo.,,0
+📝 Add Security policy (#324),0.91284007,📝 Add Security policy. PR #324 by @tiangolo.,,1
+🔧 Add updated issue templates (#323),0.91513526,🔧 Add updated issue templates. PR #323 by @tiangolo.,,1
+👷 Enable tests for Python 3.9 (#322),0.93985933,👷 Enable tests for Python 3.9. PR #322 by @tiangolo.,,1
+👷 Add GitHub Action Latest Changes (#321),0.86706185,👷 Add GitHub Action Latest Changes. PR #321 by @tiangolo.,,1
+👷 Update docs CI name (#320),0.8256631,👷 Update docs CI name. PR #320 by @tiangolo.,,1
+🔧 Add sponsors docs and badge (#319),0.9250336,🔧 Add sponsors docs and badge. PR #319 by @tiangolo.,,1
+✨ Add support for Click 8 while keeping compatibility with Click 7 (#317),0.95868146,✨ Add support for Click 8 while keeping compatibility with Click 7. PR #317 by @tiangolo.,,1
+🔖 Release version 0.3.2,0.46679536,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,0
+✨ Add support for mypy --strict (#147),0.9264661,Add support for mypy --strict. Original PR #147 by @victorphoenix3.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+📝 Update docs with the new --help argument (#135),0.66025054,Update docs with new --help showing default values. PR #135 by @victorphoenix3.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
+📝 Add Optional to docs for CLI Arguments and Options with a None default (#131),0.9161954,Add Optional to docs for CLI Arguments and Options with a default of None. PR #131 by @rkbeatss.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+📝 Add date string formats to docs (#122),0.8755803,Add valid date formats to docs. PR #122 by @IamCathal.,,1
+✅ Report coverage in XML (#146),0.6816509,Report coverage in XML to support GitHub Actions. PR #146.,  ✅ Report XML Coverate to support GitHub Actions   🙈 Add coverage report to .gitignore   ✅ Add custom testing .zshrc logic for coverage ,0
+💄 Update badges and remove Travis (#145),0.6768119,"Update badges and remove Travis, now that GitHub Actions is the main CI. PR #145.",,0
+🔖 Release version 0.3.1,0.45736784,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,0
+"👷 Add GitHub Actions, move from Travis (#144)",0.88480127,"Add GitHub Actions, move from Travis. PR #144.",,1
+📌 Pin dependencies (#138),0.8722079,Pin dependencies. PR #138.,,1
+"➕ Add Dependabot, try and see how it behaves with Flit (#136)",0.5695297,Add Dependabot. PR #136.,,0
+⬆ Upgrade Isort to version 5.x.x (#137),0.86775786,Upgrade Isort to version 5.x.x. PR #137.,  🚚 Move docs src files to root docs_src   🚚 Update example includes from root docs_src   🚚 Import docs src examples for tests from docs_src   ⬆️ Upgrade isort and configs   🎨 Update format in testing   🔧 Update configs with root docs_src   🔥 Remove obsolete/unecessary section in contributing guide   🎨 Re-format multi-file example   ⏪ Revert format for multi-file examples   🔧 Add isort skips for multi-file examples ,1
+🔖 Release version 0.3.0,0.4595244,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,0
+✨ Add support for help for CLI arguments (#123),0.8856013,Add support for help parameter in CLI arguments:," ✨ Implement custom TyperCommand and TyperArgument  to support help in CLI Arguments   ✨ Update data models to store help for CLI Arguments   ✨ Add help to typer.Argument()   ✨ Use new TyperCommand and TyperArgument classes by default   to support CLI Arguments with help   ✅ Update failing test   ✨ Make showing default values default to true and support arguments hidden from help text   ✨ Add docs for CLI arguments with defaults, help, and new features   📝 Update CLI options with new show_default=True by default   📝 Add example of CLI arguments with tuples   📝 Update docs with new generated help text for CLI arguments   📝 Use Optional for None example in micro-intro to types   ✅ Add tests for new CLI argument features from docs examples   ✅ Update tests with new generated help text for CLI arguments   ✅ Add tests for CLI arguments with tuple defaults   🔧 Update MkDocs with new sections   ✨ make show_envvar default to True   ✨ Add docs for envvar in CLI arguments   ✅ Add tests for CLI arguments with env vars from docs   🎨 Add format to CLI usage examples in docs   🔧 Add section about CLI arguments with env vars to MkDocs   📝 Fix link in docs with new structure   🎨 Fix format in first-steps ",1
+📝 Add docs for main.py (#121),0.57208765,Add docs for calling packages with python -m some_package using __main__.py: Building a Package: Support python -m. PR #121.,,0
+"✨ Support main.py, passing prog_name to callable (#120)",0.5845179,Add docs for calling packages with python -m some_package using __main__.py: Building a Package: Support python -m. PR #121.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,0
+✏ Fix typos in main page/README (#103),0.75678384,Fix typos in README and main docs #103 by @mrcartoonster.,  👌 IMPROVE: Correcting typos   📝 Replicate fixes to README to docs/index.md   Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+✏ Fix typo in docs (#98),0.8273883,Fix typo in docs. PR #98 by @mrcartoonster.,Co-authored-by: Sebastián Ramírez tiangolo@gmail.com,1
+🎨 Update format in docs,0.4972078,Add valid date formats to docs. PR #122 by @IamCathal.,,0
+✏ Fix typos and rewording in docs (#97),0.8215004,Fix typos and rewording in docs. PR #97 by @mrcartoonster.,,1
+🔧 Update issue-manager (#114),0.49534273,⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR #481 by @dependabot[bot].,,0
+":memo: Sync Typer CLI docs, Coverage badge",0.51305896,📝 Update docs about helping Typer. PR #547 by @tiangolo.,,0
+:bookmark: Release version 0.2.1,0.42999962,Update format for internal links. PR #38.,,0
+:memo: Update release notes,0.48252958,⬆ [pre-commit.ci] pre-commit autoupdate. PR #592 by @pre-commit-ci[bot].,,0
+:sparkles: Add support for forward references (#93),0.6189647,Add support for forward references (types declared inside of strings). PR #93.,  :sparkles: Add support for forward references   :white_check_mark: Add forward references test   :bug: Fix coverage in completion   :bug: Fix testing with Pytest and Pytest-sugar   :pushpin: Pin Pytest ,0
+:bookmark: Release version 0.2.0,0.42923957,Update format for internal links. PR #38.,,0
+:sparkles: Make installed completion lazy load (#92),0.6804122,Update references to --install-completion and --show-completion in docs. PR #9., :sparkles: Re-implement completion install to lazy load  to support completion for programs under environments   :white_check_mark: Update tests for new lazy loaded completion   :white_check_mark: Update test after removing period from message ,0
+:memo: Add emphasis note about using typer.echo instead of print (#89),0.5328031,📝 Update docs about helping Typer. PR #547 by @tiangolo.,,0
+:heavy_plus_sign: Upgrade Material-Mkdocs (#90),0.6504343,"Upgrade Mkdocs-Material version, update contributing guide style. PR #90.",  :heavy_plus_sign: Upgrade Material-Mkdocs   :bug: Fix Mkdocs config bug   :heavy_plus_sign: Upgrade Mkdocs-material configs ,0
+:bookmark: Release version 0.1.1,0.43228334,Update format for internal links. PR #38.,,0
+:bug: Do not show an error on completion eval if the program is not installed (#83),0.7485511,Fix completion evaluation for Bash and Zsh when the program is not installed/found. PR #83.,  :bug: Fix Fish completion script   :bug: Do not show an error on completion eval if the program is not installed   :sparkles: Add stderr redirect to /dev/null for Fish too   :white_check_mark: Update completion tests ,1
+:bug: Fix Fish completion script (#82),0.9431482,Fix completion script for Fish. PR #82.,,1
+:bug: Fix Bash completion install to .bashrc (#81),0.6913295,Fix completion evaluation for Bash and Zsh when the program is not installed/found. PR #83.,  :bug: Fix Bash completion setup to .bashrc   :memo: Update docs and script for Windows development environment ,0
+:art: Update testing coverage badge (#78),0.8172018,Update coverage badge. PR #78.,,1
+:bookmark: Release version 0.1.0,0.42823622,Update format for internal links. PR #38.,,0
+white_check_mark: Add coverage instructions to tests (#72),0.61906356,✅ Add extra tests just for coverage because monkeypatching with strange imports confuses coverage. PR #490 by @tiangolo.,  :white_check_mark: Add coverage instructions to tests   :memo: Update docs note about coverage in features   :art: Fix format   :art: Update testing docs format ,0
+":memo: Add docs section, build a package from scratch (#71)",0.77918875,Add docs for Building a Package. PR #71.,"  :memo: Add docs section, build a package from scratch   :memo: Update Package docs   :pencil2: Fix internal links ",1
+:memo: Add docs for using Click with Typer (#70),0.8124471,Add docs for Using Click (with Typer). PR #70.,  :memo: Add docs for using Click with Typer   :white_check_mark: Add tests for integrating Click and Typer ,1
+:pencil2: fix typo in progressbar/tutorial004.py (#63),0.72031564,Fix typo in progressbar example. PR #63 by @ValentinCalomme.,"In the tutorial, the length of the progress bar is set to 1000 and the update was mistakenly set to 2500. The update should be 1/4 of the length given that the loop runs for 4 iterations. This commit sets the update amount to 250 which better showcases the feature.",1
+:bug: Fix Zsh completion install (#69),0.91801894,Fix Zsh completion install script. PR #69.,,1
+":sparkles: Add docs for testing, password, version, context. Extra tests, include callback and autocompletion PR (#68)",0.54757905,"Add support for type-based callbacks and autocompletion functions, extra tests and docs:","  :sparkles: Implement custom handling for callbacks with types   :sparkles: Implement type-based handling for completion functions   :sparkles: Add examples for custom completion   :memo: Add docs for custom autocompletion   :white_check_mark: Add tests for autocompletion   :sparkles: Document using the context   :white_check_mark: Add tests for using the context   :white_check_mark: Add tests init for context   :wrench: Update Mypy config   :white_check_mark: Add extra tests for completion   :pencil2: Fix format, typos, and minor texts   :sparkles: Update docs for printing, include stdout, stderr, and stdin   :pencil2: Add references to FastAPI, fix typos   :pencil2: Fix typo in Typer CLI   :memo: Update docs for version   :memo: Update docs for callbacks   :memo: Update references to stdout/stderr in autocompletion   :memo: Add docs for password in CLI option   :memo: Add docs and tests for Testing   :memo: Add new sections to docs   :art: Fix formatting ",0
+:bookmark: Release version 0.0.11,0.43424073,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,0
+":sparkles: Re-implement completion, fixes, add PowerShell support (#66)",0.6300757,"Add support for modern versions of PowerShell, 5, 6, and 7 (e.g. in Windows 10).","  :sparkles: Re-implement completion   :white_check_mark: Add tests for re-implemented completion   :art: Move mypy config to file   :see_no_evil: Update .gitignore   :heavy_plus_sign: Remove click-completion, add support for autodetection with shellingham   :white_check_mark: Fix test for PowerShell   :bug: Fix PowerShell permissions/test   :art: Format test   :checkered_flag: Fix PowerShell script for Windows and PowerShell 5   :memo: Update docs, internal implementation of completion ",0
+:bug: Fix docs format with hl_lines (#65),0.694161,Fix format in docs with highlighted lines. PR #65.,,0
+:sparkles: Docs for Typer CLI (#64),0.62638676,Add docs about Typer CLI - completion for small scripts. PR #64.,"  :sparkles: Add docs for Typer CLI   :memo: Update references to Typer CLI in docs   :wrench: Update tests to check files and linting before tests, to error out early   :memo: Sync README.md with docs/index.md ",0
+:memo: Add docs about alternatives and inspiration (#62),0.8135442,"Add docs about Alternatives, Inspiration and Comparisons. PR #62.",,1
+:memo: Add contributing guide (#61),0.7317934,Add Development - Contributing Guide. PR #61.,,1
+:bookmark: Release version 0.0.10,0.41660553,Update format for internal links. PR #38.,,0
+:sparkles: Add support for Click 7.1.1 (#60),0.7709193,Add support for Click version 7.1.1. PR #60.," :arrow_up: Upgrade required Click to 7.1.1 and pin it to patch versions  as a MINOR version broke compatibility, so I'll have to upgrade manually every time   :pushpin: Fix pinning Click to MINOR version   :sparkles: Upgrade code to be compatible with latest Click changes   :white_check_mark: Update tests with new format for errors   :memo: Update docs to keep them in sync with actual output ",1
+:bookmark: Release version 0.0.9,0.4227293,Update format for internal links. PR #38.,,0
+":wrench: Add type marker, support for PEP 561 (#58)",0.6127559,✨ Add support for PEP-593 Annotated for specifying options and arguments. Initial PR #584 by @ryangalamb.,,0
+:arrow_up: Upgrade Netlify deploy action (#57),0.78094625,Upgrade deploy docs to Netlify GitHub action. PR #57.,,1
+:sparkles: Add support for mermaid visualizations (#56),0.76724946,Add support for Mermaid JS for visualizations. PR #56.,,1
+:construction_worker: Add GitHub action to deploy docs (#50),0.71868783,Update CI to run docs deployment in GitHub actions. PR #50.,,1
+:memo: Refactor docs with internal links #38,0.67467,Update format for internal links. PR #38.,,0
+:white_check_mark: Fix tests using binary config files,0.5047085,✅ Add extra tests just for coverage because monkeypatching with strange imports confuses coverage. PR #490 by @tiangolo.,,0
+:memo: Refactor docs with internal links,0.54963356,Update format for internal links. PR #38.,,0
+:art: Tweak external links' format #36,0.8306386,Tweak external links' format. PR #36.,,1
+:art: Tweak external link format,0.7906524,Tweak external links' format. PR #36.,,1
+:bookmark: Release version 0.0.8,0.42649892,Update format for internal links. PR #38.,,0
+:memo: Update docs. Add latest docs to MkDocs/website.,0.80419827,Update docs and add latest changes to MkDocs/website. PR #33.,,1
+:white_check_mark: Add extra tests for edge cases that don't belong on docs,0.74527764,Add extra tests for edge cases that don't belong in docs' examples. PR #32.,,1
+:memo: Add all the latest docs to MkDocs,0.5265289,"⬆️ Upgrade MkDocs Material, MDX-Include, and MkDocs structure. PR #356 by @tiangolo.",,0
+:memo: Update docs for First Steps,0.53200674,New docs:,,0
+:white_check_mark: Add 4 extra tests for edge cases,0.551039,Add extra tests for edge cases that don't belong in docs' examples. PR #32.,,0
+":memo: :sparkles: :bug: Add docs for CLI parameters with multiple values, with tests and bug fixes",0.8155534,Add docs for CLI Parameters with Multiple Values. Includes tests for all the examples and bug fixes. PR #31.,,1
+:bug: Fix handling of CLI parameters with multiple values,0.78240156,Add docs for CLI Parameters with Multiple Values. Includes tests for all the examples and bug fixes. PR #31.,,1
+:white_check_mark: Add tests for examples with multiple values,0.49626464,Add extra tests for edge cases that don't belong in docs' examples. PR #32.,,0
+:memo: Add docs and examples for CLI parameters with multiple values,0.7315607,Add docs for CLI Parameters with Multiple Values. Includes tests for all the examples and bug fixes. PR #31.,,1
+:memo: Add extra docs and tests for param types,0.5371531,Add docs for CLI parameter types. Includes tests and file classes refactor. PR #17.,,0
+":white_check_mark: Add tests for extra param types, bool, number",0.47130156,Add extra tests for edge cases that don't belong in docs' examples. PR #32.,,0
+":memo: Add/extend docs and examples for param types. bool, int.",0.5472611,"📝 Update docs examples for custom param types using Annotated, fix overloads for typer.Argument. PR #594 by @tiangolo.",,0
+":memo: Add docs for Callbacks and One or Multiple commands, with docs, tests, bug fixes.",0.6592044,"Extend docs for Commands, add Commands: Typer Callback and Commands: One or Multiple. This includes tests for all the examples and bug fixes. PR #29.",,0
+:bug: Fix getting callback from instance creation,0.47054732,Support for callbacks based on type annotations. New docs: CLI Option Callback and Context.,,0
+:white_check_mark: Add tests for commands: callbacks,0.6620459,"Extend docs for Commands, add Commands: Typer Callback and Commands: One or Multiple. This includes tests for all the examples and bug fixes. PR #29.",,0
+:memo: Add docs for callbacks and one or multiple commands,0.5494906,"Extend docs for Commands, add Commands: Typer Callback and Commands: One or Multiple. This includes tests for all the examples and bug fixes. PR #29.",,0
+":sparkles: Add docs for subcommands, examples, tests, bug fixes",0.5880682,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
+:bug: Fix using solved/extracted help,0.55260867,Fix and document extracting help from a functions' docstring First Steps: Document your CLI app. PR #10.,,0
+:bug: Fix help extraction implementation and priority,0.55244666,Fix and document extracting help from a functions' docstring First Steps: Document your CLI app. PR #10.,,0
+:fire: Remove unnecessary noqa comments,0.28436667,📝 Add Security policy. PR #324 by @tiangolo.,,0
+:green_heart: Update dev dependencies and CI scripts,0.47264993,Update CI to run docs deployment in GitHub actions. PR #50.,,0
+:wrench: Update tests tools,0.52377725,New docs: Testing.,,0
+:white_check_mark: Add tests for subcommands examples,0.6079086,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
+:sparkles: Add docs and examples for subcommands,0.58591974,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
+:white_check_mark: Add tests for subcommands,0.55079556,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
+:sparkles: Add SubCommands sections,0.42464232,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
+:recycle: Refactor subcommands to not require being a package,0.42917538,📝 Add note about how subcommands with function names using underscores are converted to dashes. PR #403 by @targhs.,,0
+:sparkles: Add first version of subcommands tutorial,0.44668382,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
+:fire: Remove unused code for argument param declarations,0.5291118,Remove unneeded code for argument handling. PR #26.,,0
+:memo: Add docs for launching applications/files.,0.7878541,Add docs for Launching Applications. PR #25.,,1
+:memo: Add docs for launching applications,0.70445216,Add docs for Launching Applications. PR #25.,,1
+:memo: Update docs for app_dir using Path,0.55827546,Add docs for getting the CLI Application Directory. PR #24.,,0
+:memo: Add docs for get_app_dir(),0.5914854,Add docs for getting the CLI Application Directory. PR #24.,,0
+Merge pull request #23 from tiangolo/progressbar,0.54461104,Add docs for Progress Bars. PR #23.,:memo: Add docs for progress bars.,0
+:bug: Fix overwritten test function,0.5164119,✅ Add extra tests just for coverage because monkeypatching with strange imports confuses coverage. PR #490 by @tiangolo.,,0
+:memo: Add docs for progressbar,0.7180426,Add docs for Progress Bars. PR #23.,,1
+:memo: Add docs for interactive prompts.,0.7402925,Add docs for Asking with Interactive Prompts. PR #22.,,1
+:white_check_mark: Add tests for prompts,0.4797318,Add docs for Asking with Interactive Prompts. PR #22.,,0
+:memo: Add docs for asking with a prompt,0.70037144,Add new docs: Ask with Prompt - Prompt with Rich.,,1
+:memo: Update path docs,0.5777594,Update docs for path CLI option. PR #21.,,0
+":memo: :sparkles: Add colors module and docs for printing and terminating, including tests.",0.8024566,"Add colors module and docs for Printing and Colors and for Terminating, including tests. PR #20.",,1
+:art: Fix format,0.4048503,Fix format in docs with highlighted lines. PR #65.,,0
+:white_check_mark: Add tests for printing and terminating,0.6481808,"Add colors module and docs for Printing and Colors and for Terminating, including tests. PR #20.",,0
+:memo: Add docs for printing and terminating,0.43309888,✏ Fix typo in docs/tutorial/terminating.md. PR #382 by @kianmeng.,,0
+:sparkles: Add colors module,0.4911248,"Add colors module and docs for Printing and Colors and for Terminating, including tests. PR #20.",,0
+:recycle: :memo: Refactor docs' structure and add CLI option names,0.530505,Add docs for CLI parameter types. Includes tests and file classes refactor. PR #17.,,0
+:recycle: Refactor docs structure and add CLI option names,0.51736087,Add docs for CLI parameter types. Includes tests and file classes refactor. PR #17.,,0
+:bookmark: Release 0.0.7,0.43501797,Update format for internal links. PR #38.,,0
+":memo: :sparkles: :heavy_check_mark: CLI parameters: docs, refactor/upgrade, tests.",0.71635723,Add docs for CLI parameter types. Includes tests and file classes refactor. PR #17.,,1
+:sparkles: Update file handling implementation to make it simpler,0.36085883,✨ Refactor and document handling pretty exceptions. PR #422 by @tiangolo.,,0
+:white_check_mark: Add tests for CLI parameter types,0.6962495,Add docs for CLI parameter types. Includes tests and file classes refactor. PR #17.,,0
+:memo: Add docs for CLI parameter types,0.7502215,New docs: CLI Parameter Types: Custom Types.,,1
+":white_check_mark: Update completion tests, checking for printed message",0.5246373,Tests for the completion logic/code.,,0
+:white_check_mark: Add tests for completion,0.63487387,Tests for the completion logic/code.,,0
+":bug: Fix test completion, check for bash completion file before running",0.6705401,Fix completion evaluation for Bash and Zsh when the program is not installed/found. PR #83.,,0
+:bookmark: Release version 0.0.6,0.42936462,Update format for internal links. PR #38.,,0
+:memo: Release notes,0.5393944,New docs:,,0
+":memo: :sparkles: :bug: Commands: docs, examples, tests, and fix",0.58887124,New docs: Commands: Using the Context.,,0
+:bug: Fix handling defaults in TyperInfo,0.56286156,🎨 Fix type annotation of typer.run(). PR #284 by @yassu.,,0
+:white_check_mark: Add tests for Commands,0.5756044,"Extend docs for Commands, add Commands: Typer Callback and Commands: One or Multiple. This includes tests for all the examples and bug fixes. PR #29.",,0
+":memo: Fix wording to avoid confusion between CLI program, command, subcommand",0.5438771,New docs: Commands: Using the Context.,,0
+:memo: Add docs and examples for Commands,0.61212647,Add docs for SubCommands - Command Groups. This includes tests for all the examples and bug fixes. PR #28.,,0
+:memo: Add docs for CLI arguments,0.6756431,Add docs for CLI Arguments. PR #13.,,0
+:white_check_mark: Add tests for CLI arguments,0.6223378,Optional CLI Arguments.,,0
+:art: Tweak Termynal CSS and emojis,0.3296652,"Update Termynal to have fixed sizes, add ""fast"" button, and use it in First Steps. PR #6.",,0
+:memo: Add docs for CLI Arguments,0.6756431,Add docs for CLI Arguments. PR #13.,,0
+:sparkles: Add docs for CLI Options with tests,0.5791616,Add docs for CLI parameter types. Includes tests and file classes refactor. PR #17.,Add docs for CLI Options with tests,0
+:wrench: Update coverage pragma,0.6232452,Fix coverage instructions. PR #72.,,0
+:sparkles: Improve --install-completion messages,0.63201153,Update references to --install-completion and --show-completion in docs. PR #9.,,0
+:white_check_mark: Add tests for examples in CLI Options,0.59335274,Add extra tests for edge cases that don't belong in docs' examples. PR #32.,,0
+:memo: Add CLI Options docs and examples,0.654337,Add docs for CLI Options. PR #12.,,0
+:sparkles: Add support for custom prompts in custom Termynal,0.44976267,Add custom automatic Termynal for docs. PR #5.,,0
+":memo: Fix typos, update docs and descriptions",0.73598254,Fix typos and rewording in docs. PR #97 by @mrcartoonster.,,1
+:bookmark: Release 0.0.5,0.44272184,Update format for internal links. PR #38.,,0
+:memo: Update short description in MkDocs,0.5230782,Update short descriptions and assets.,,0
+":fire: Clean exports from typer, remove unneeded Click components, add needed ones",0.71607983,Clean exports from Typer. Remove unneeded components from Click and add needed Exit exception. PR #11.,"Clean exports from typer, remove unneeded Click components",1
+:art: Format imports,0.30897552,✨ Add support for custom types and parsers. Initial PR #583 by @jpurviance. Based on original PR #443 by @paulo-raca.,,0
+":fire: Clean exports from typer, remove unneeded Click components",0.717266,Clean exports from Typer. Remove unneeded components from Click and add needed Exit exception. PR #11.,and add Exit exception,1
+:bug: Fix and document extracting help form docstring,0.62512034,Fix and document extracting help from a functions' docstring First Steps: Document your CLI app. PR #10.,,0
+:white_check_mark: Fix test coverage handling,0.5913783,✅ Add extra tests just for coverage because monkeypatching with strange imports confuses coverage. PR #490 by @tiangolo.,,0
+":white_check_mark: Add tests for tutorial006 in First Steps, to test help from docstring",0.5280147,"Fix testing utilities, add tests for First Steps examples. PR #8.",,0
+:memo: Update First Steps to include how to document in a docstring,0.4754629,"✏ Update first-steps.md, clarify distinction between parameter and argument. PR #176 by @mccarthysean.",,0
+:bug: Fix extracting help from docstrings in functions,0.77021337,Fix and document extracting help from a functions' docstring First Steps: Document your CLI app. PR #10.,handling defaults when including Typer groups and explicit None,1
+:pencil: Update docs with references to --install-completion,0.711519,Update references to --install-completion and --show-completion in docs. PR #9.,,1
+:memo: Update docs with references to --install-completion,0.7339886,Update references to --install-completion and --show-completion in docs. PR #9.,and use subcommand everywhere instead of sub-command for consistency with Click,1
+":white_check_mark: Fix testing, add tests",0.6133951,New docs: Testing.,"Fix testing tools, add first tests",0
+:white_check_mark: Add tests for the first steps,0.5629922,"Fix testing utilities, add tests for First Steps examples. PR #8.",,0
+:bug: Fix testing CliRunner,0.49710387,"Fix testing utilities, add tests for First Steps examples. PR #8.",,0
+":sparkles: Add automatic completion options by default, if click-completion is installed",0.78291136,Add auto completion options by default when click-completion is installed: --install-completion and --show-completion. PR #7.,"Add automatic completion options by default, if click-completion is installed",1
+":sparkles: Fix Termynal size, update first steps, add fast button",0.69470954,"Update Termynal to have fixed sizes, add ""fast"" button, and use it in First Steps. PR #6.","Fix Termynal size, update first steps, add fast button",0
+":bug: Make Tutorial intro be the index, to have a tutorial root",0.41679078,👷‍♂️ Ensure the PYTHONPATH is set properly when testing the tutorial scripts. PR #407 by @theMarix.,,0
+":sparkles: Update Termynal modifications, update first steps to use it",0.5295998,"Update Termynal to have fixed sizes, add ""fast"" button, and use it in First Steps. PR #6.","Make Termynal have fixed sizes, add ""fast"" button, use it in first steps",0
+:memo: Fix GitHub markdown formatting,0.5780851,🔧 Add pre-commit config and formatting. PR #392 by @tiangolo.,,0
+:memo: Update README.md from docs/index.md,0.57122433,"⬆️ Upgrade MkDocs Material, MDX-Include, and MkDocs structure. PR #356 by @tiangolo.",,0
+:sparkles: Add termynal for awesome docs,0.6246406,Add custom automatic Termynal for docs. PR #5.,,0
+":sparkles: Add custom termynal handling for docs, with fenced code",0.61710143,Add custom automatic Termynal for docs. PR #5.,,0
+:bookmark: Release version 0.0.4,0.42884034,Update format for internal links. PR #38.,,0
+:bento: Add GitHub social preview images,0.4921848,👷 Add GitHub Action Latest Changes. PR #321 by @tiangolo.,,0
+":memo: Update sub-header, short description",0.40641576,Update short descriptions and assets.,,0
+:memo: Update README with latest docs,0.5059966,New docs:,,0
+:pencil: Rewording in docs and fix typos,0.7121862,Docs rewording and fix typos. PR #1 by @mariacamilagl.,,1
+Update docs/index.md,0.6222122,✏ Fix minor typo in index.md. PR #274 by @RmStorm.,Co-Authored-By: Sebastián Ramírez tiangolo@gmail.com,0
+full doc review and fixing typos,0.7005646,Docs rewording and fix typos. PR #1 by @mariacamilagl.,,1
+:bookmark: Release version 0.0.3,0.43031144,"⬆ Upgrade Rich, support 13.x. PR #524 by @musicinmybrain.",,0
+:bug: Fix group creation without name,0.930027,Fix group creation without name.,,1
+improve wording and fix typos,0.73062426,Docs rewording and fix typos. PR #1 by @mariacamilagl.,,1
+:bug: Fix link in README for GitHub,0.6261076,Update GitHub Action issue-manager. PR #114.,,0
+:bug: Fix GitHub image,0.60233206,Update GitHub Action issue-manager. PR #114.,,0
+:wrench: Update deploy script,0.41176832,Update CI to run docs deployment in GitHub actions. PR #50.,,0
+:bookmark: Release version 0.0.2,0.42169493,Update format for internal links. PR #38.,,0
+:memo: Update README,0.5993587,Fix typos in README and main docs #103 by @mrcartoonster.,,0
+:memo: Fix Twitter links,0.53855956,Update format for internal links. PR #38.,,0
+:art: Fix types and format,0.4166133,Fix typos and rewording in docs. PR #97 by @mrcartoonster.,,0
+":white_check_mark: Add first test, scaffold testing",0.57535684,"Fix testing utilities, add tests for First Steps examples. PR #8.",,0
+:sparkles: Add custom CliRunner and Click imports,0.35995942,👷 Add GitHub Action Latest Changes. PR #321 by @tiangolo.,,0
+":wrench: Update GitHub actions, remove left config from FastAPI",0.62468123,Update GitHub Action issue-manager. PR #114.,,0
+:green_heart: Update Netlify script with local Docker image tests,0.54664993,Upgrade deploy docs to Netlify GitHub action. PR #57.,,0
+:wrench: Make Netlify use Python 3,0.5710133,⬆ Bump nwtgck/actions-netlify from 1.2.4 to 2.0.0. PR #513 by @dependabot[bot].,,0
+:wrench: Add MkDocs config,0.6614366,👷 Fix Material for MkDocs install in CI. PR #395 by @tiangolo.,,0
+:wrench: Install GitHub issue-manager,0.668051,Update GitHub Action issue-manager. PR #114.,,0
+:memo: Add new issue templates,0.65724945,🔧 Add updated issue templates. PR #323 by @tiangolo.,,0
+:memo: Add README and CONTRIBUTING,0.5165863,Add docs for Building a Package. PR #71.,,0
+:wrench: Add main config files,0.45895243,Add docs for CLI Options. PR #12.,,0
+:memo: Add docs for first steps,0.5084087,Add new docs: Ask with Prompt - Prompt with Rich.,,0
+:wrench: Add scripts,0.47872287,Add docs about Typer CLI - completion for small scripts. PR #64.,,0
+:memo: Add first version of docs,0.44219422,"Add initial version of code, docs, etc.",,0
+:bento: Add completion example images,0.4755515,Update references to --install-completion and --show-completion in docs. PR #9.,,0
+:bento: Add logos,0.4062751,🔧 Add sponsors docs and badge. PR #319 by @tiangolo.,,0
+:sparkles: Add first cleaned version of main code,0.42595136,"Add initial version of code, docs, etc.",,0
+":tada: First commit, Typer scaffolding",0.55556965,📝 Update docs about helping Typer. PR #547 by @tiangolo.,,0

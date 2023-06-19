@@ -1,5 +1,79 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"The following packages have been updated
+@keystone-6/core@5.3.1
+Bug Fixes
+
+[core] Fixes hanging process when multiple Prisma generators are defined (#8598) @acburdine
+[core] Fixes types for allOperations, regression from https://github.com/keystonejs/keystone/pull/8570 (#8617) @dcousens
+[core] Fixes broken types for field groups, regression from https://github.com/keystonejs/keystone/pull/8570 (#8617) @dcousens
+[core] Fixes db.onConnect, with keystone start --with-migrations, to run  after migrations complete (#8612) @acburdine
+
+:blue_heart: Acknowledgements
+Lastly, thanks to @borisno2 (#8607), @dcousens (#8587), @raveling (#8606), @renovate (#8608,#8605,#8593,#8592,#8591) for changes not shown above, but none-the-less appreciated.","The following packages have been updated
+@keystone-6/core@5.3.1
+Bug Fixes
+[core] Fixes hanging process when multiple Prisma generators are defined (#8598) @acburdine
+[core] Fixes types for allOperations, regression from link (#8617) @dcousens
+[core] Fixes broken types for field groups, regression from link (#8617) @dcousens
+[core] Fixes db.onConnect, with keystone start --with-migrations, to run  after migrations complete (#8612) @acburdine
+:blue_heart: Acknowledgements
+Lastly, thanks to @borisno2 (#8607), @dcousens (#8587), @raveling (#8606), @renovate (#8608,#8605,#8593,#8592,#8591) for changes not shown above, but none-the-less appreciated."
+2,"The following packages have been updated
+@keystone-6/core@5.3.0
+New Features
+
+[core] Adds cookieName as an option for statelessSessions (#8570) @dcousens
+[core] Adds Session type parameter to generated TypeInfo, Lists and Context types, and propagates that type to access control and hooks (#8570) @dcousens
+[core] Adds ui.basePath for changing the AdminUI base path, using a dynamic next.config.js (#8545) @borisno2
+[core] Removes prompt when using CLI --frozen flag and a schema is out of date, CLI now exits (#8545) @borisno2
+[core] Adds resolveInput.{create|update} list hooks as shorthand operation circuitry (#8551) @dcousens
+[core] Adds new unfiltered shorthand function for an empty filter (exported from '@keystone-6/core/access') (#8552) @dcousens
+
+Bug Fixes
+
+[core] Change next experimental.appDir: false for now, until resolution found for internal React issues (#8568) @MohammadKurjieh
+[core] Fixes type generation for lists with omit.query: true (#8527) @acburdine
+[core] Update @prisma/* to 4.14.0 (#8562) @renovate
+[core] Fixes graphql.isNonNull.create: true TypeScript types to be non-optional (#8551) @dcousens
+[core] Fixes incompatible field key types when working with resolvedData (#8485) (#8551) @dcousens
+[core] Removes SessionStrategy's type parameter of StartSessionData, removal is non-breaking as the parameter was unusable (#8552) @dcousens
+[core] Fixes db.enableLogging with an array resulting in keystone dev exiting (#8569) @dcousens
+[core] Deprecates @keystone-6/core/system exports (createSystem, createExpressServer, initConfig and createAdminUIMiddleware), will be removed in next breaking change (#8569) @dcousens
+
+:seedling: New Contributors
+Thanks to the following developers for making their first contributions to the project!
+- @ciruz (#8572)
+- @mkarkachov (#8576,#8561)
+- @MohammadKurjieh (#8568)
+- @olejech (#8557)
+:blue_heart: Acknowledgements
+Lastly, thanks to @borisno2 (#8510), @ChrisLaneAU (#8516), @dcousens (#8546,#8357), @renovate (#8585,#8584,#8583,#8579,#8577,#8565,#8567,#8563,#8566,#8564,#8558,#8559,#8560,#8555,#8541,#8542,#8531,#8528) for changes not shown above, but none-the-less appreciated.","The following packages have been updated
+@keystone-6/core@5.3.0
+New Features
+[core] Adds cookieName as an option for statelessSessions (#8570) @dcousens
+[core] Adds Session type parameter to generated TypeInfo, Lists and Context types, and propagates that type to access control and hooks (#8570) @dcousens
+[core] Adds ui.basePath for changing the AdminUI base path, using a dynamic next.config.js (#8545) @borisno2
+[core] Removes prompt when using CLI --frozen flag and a schema is out of date, CLI now exits (#8545) @borisno2
+[core] Adds resolveInput.{create|update} list hooks as shorthand operation circuitry (#8551) @dcousens
+[core] Adds new unfiltered shorthand function for an empty filter (exported from '@keystone-6/core/access') (#8552) @dcousens
+Bug Fixes
+[core] Change next experimental.appDir: false for now, until resolution found for internal React issues (#8568) @MohammadKurjieh
+[core] Fixes type generation for lists with omit.query: true (#8527) @acburdine
+[core] Update @prisma/* to 4.14.0 (#8562) @renovate
+[core] Fixes graphql.isNonNull.create: true TypeScript types to be non-optional (#8551) @dcousens
+[core] Fixes incompatible field key types when working with resolvedData (#8485) (#8551) @dcousens
+[core] Removes SessionStrategy's type parameter of StartSessionData, removal is non-breaking as the parameter was unusable (#8552) @dcousens
+[core] Fixes db.enableLogging with an array resulting in keystone dev exiting (#8569) @dcousens
+[core] Deprecates @keystone-6/core/system exports (createSystem, createExpressServer, initConfig and createAdminUIMiddleware), will be removed in next breaking change (#8569) @dcousens
+:seedling: New Contributors
+Thanks to the following developers for making their first contributions to the project!
+- @ciruz (#8572)
+- @mkarkachov (#8576,#8561)
+- @MohammadKurjieh (#8568)
+- @olejech (#8557)
+:blue_heart: Acknowledgements
+Lastly, thanks to @borisno2 (#8510), @ChrisLaneAU (#8516), @dcousens (#8546,#8357), @renovate (#8585,#8584,#8583,#8579,#8577,#8565,#8567,#8563,#8566,#8564,#8558,#8559,#8560,#8555,#8541,#8542,#8531,#8528) for changes not shown above, but none-the-less appreciated."
+3,"The following packages have been updated
 @keystone-6/core@5.2.0
 @keystone-6/fields-document@8.0.0
 Breaking Changes
@@ -68,7 +142,7 @@ Thanks to the following developers for making their first contributions to the p
 - @timgates42 (#8367)
 :blue_heart: Acknowledgements
 Lastly, thanks to @borisno2 (#8471,#8508,#8371,#8456,#8454,#8447,#8439,#8440,#8360), @dcousens (#8523,#8520,#8517,#8491,#8483,#8482,#8479,#8478,#8477,#8476,#8473,#8470,#8459,#8431,#8398,#8399,#8395,#8392,#8375,#8363,#8362,#8361), @kennedybaird (#8380), @keystonejs-release-bot (#8374), @raveling (#8461), @renovate (#8512,#8507,#8495,#8494,#7802,#8489,#8444,#8474,#8422,#8463,#8464,#8450,#8451,#8448,#8449,#8433,#8425,#8423,#8426,#8421,#8424,#8428,#8429,#8427,#8229,#8379,#8378) for changes not shown above, but none-the-less appreciated."
-2,"The following packages have been updated
+4,"The following packages have been updated
 @keystone-6/core@5.1.0
 New Features
 
@@ -107,7 +181,7 @@ Thanks to the following developers for making their first contributions to the p
 - @stall84 (#8335)
 :blue_heart: Acknowledgements
 Lastly, thanks to @borisno2 (#8344), @dcousens (#8348,#8348,#8358,#8343,#8337,#8336), @renovate (#7553,#8340,#8235,#8341) for changes not shown above, but none-the-less appreciated."
-3,"The following packages have been updated
+5,"The following packages have been updated
 @keystone-6/auth@7.0.0
 @keystone-6/cloudinary@7.0.0
 @keystone-6/core@5.0.0
@@ -220,7 +294,7 @@ Thanks to the following developers for making their first contributions to the p
 - @TasinIshmam (#8137)
 :blue_heart: Acknowledgements
 Lastly, thanks to @borisno2 (#8258,#8247,#8232,#8231,#8188,#8170,#8157), @dcousens (#8330,#8323,#8320,#8096,#8301,#8299,#8255,#8212), @dependabot (#8287,#8275,#8271), @flexdinesh (#8175,#8173,#8174,#8148), @Meetcpatel (#8260), @raveling (#8314,#8310), @renovate (#8328,#8327,#8249,#8273,#8267,#8142,#8152,#8141,#8236,#8133,#8172,#7939) for changes not shown above, but none-the-less appreciated."
-4,"The following packages have been updated
+6,"The following packages have been updated
 @keystone-6/core@4.0.1
 Bug Fixes
 
@@ -229,7 +303,7 @@ Bug Fixes
 @keystone-6/core@4.0.1
 Bug Fixes
 [core] Resolve config.telemetry check issue (#8155) @borisno2"
-5,"The following packages have been updated
+7,"The following packages have been updated
 @keystone-6/auth@6.0.0
 @keystone-6/cloudinary@6.0.0
 @keystone-6/core@4.0.0
@@ -280,7 +354,7 @@ Thanks to the following developers for making their first contributions to the p
 - @shusiner (#8114)
 :blue_heart: Acknowledgements
 Lastly, thanks to @dcousens (#8127,#8125,#8122,#8120,#8104,#8108,#8108,#8108), @borisno2 (#8134), @flexdinesh (#8124,#8119), @renovate (#8072,#8116,#8109), @emmatown (#8099) for changes not shown above, but none-the-less appreciated."
-6,"The following packages have been updated
+8,"The following packages have been updated
 @keystone-6/core@3.1.3
 Bug Fixes
 
@@ -289,7 +363,7 @@ Bug Fixes
 @keystone-6/core@3.1.3
 Bug Fixes
 [core] Fixes access.filter.* passing listKey: undefined (#8122) @dcousens"
-7,"The following packages have been updated
+9,"The following packages have been updated
 @keystone-6/core@3.1.2
 Bug Fixes
 
@@ -298,7 +372,7 @@ Bug Fixes
 @keystone-6/core@3.1.2
 Bug Fixes
 [core] Fix http server not binding to :: by default (regression introduced by #8078) (#8105) @dcousens"
-8,"The following packages have been updated
+10,"The following packages have been updated
 @keystone-6/core@3.1.1
 Bug Fixes
 
@@ -307,7 +381,7 @@ Bug Fixes
 @keystone-6/core@3.1.1
 Bug Fixes
 [core] Fixes ui.displayMode in the relationship field incorrectly defaulting to count instead of select (#8099) @emmatown"
-9,"The following packages have been updated
+11,"The following packages have been updated
 @keystone-6/auth@5.0.1
 @keystone-6/cloudinary@5.0.1
 @keystone-6/core@3.1.0
@@ -352,7 +426,7 @@ Thanks to the following developers for making their first contributions to the p
 - @georgekrax (#8049)
 :blue_heart: Acknowledgements
 Lastly, thanks to @keystonejs-release-bot (#8064,#8064,#8064) for changes not shown above, but none-the-less appreciated."
-10,"The following packages have been updated
+12,"The following packages have been updated
 @keystone-6/core@3.0.2
 @keystone-6/fields-document@5.0.1
 Bug Fixes
@@ -389,7 +463,7 @@ Thanks to the following developers for making their first contributions to the p
 - @lukebennett88 (#8033)
 :blue_heart: Acknowledgements
 Lastly, thanks to @mitchellhamilton (#8063,#8059,#8027), @renovate (#8056,#8055,#8053,#8045,#8041,#8036,#7974), @flexdinesh (#8060,#8039,#8048), @bladey (#8057), @dcousens (#8026) for changes not shown above, but none-the-less appreciated."
-11,"The following packages have been updated
+13,"The following packages have been updated
 @keystone-6/core@3.0.1
 Bug Fixes
 
@@ -402,7 +476,7 @@ Bug Fixes
 [core] Fixes the inputData field type for FieldCreateItemAccessArgs (#8017) @acburdine
 :blue_heart: Acknowledgements
 Lastly, thanks to @dcousens (#8016) for changes not shown above, but none-the-less appreciated."
-12,"The following packages have been updated
+14,"The following packages have been updated
 @keystone-6/auth@5.0.0
 @keystone-6/cloudinary@5.0.0
 @keystone-6/core@3.0.0
@@ -483,7 +557,7 @@ Bug Fixes
 Thanks to the following developers for making their first contributions to the project!
 :blue_heart: Acknowledgements
 Lastly, thanks to @dcousens (#8012,#7998,#7997,#7995,#7981,#7979,#7973,#7897,#7895,#7894,#7864), @renovate (#8008,#7988,#7976,#7938,#7854,#7892,#7886,#7885,#7868), @flexdinesh (#8004,#8002,#7987,#7994,#7983,#7937,#7813), @mitchellhamilton (#7999,#7990,#7991,#7960,#7951,#7953,#7928,#7921,#7911,#7903,#7882,#7887,#7871,#7872,#7845,#7844), @Tekipeps (#7989), @Noviny (#7941) for changes not shown above, but none-the-less appreciated."
-13,"The following packages have been updated
+15,"The following packages have been updated
 @keystone-6/core@2.3.1
 Security Updates
 We have identified and fixed 1 security vulnerabilities
@@ -506,7 +580,7 @@ Bug Fixes
 :seedling: New Contributors
 Thanks to the following developers for making their first contributions to the project!
 - @marekryb (#8007)"
-14,"The following packages have been updated
+16,"The following packages have been updated
 @keystone-6/fields-document@4.1.2
 Bug Fixes
 
@@ -515,7 +589,7 @@ Bug Fixes
 @keystone-6/fields-document@4.1.2
 Bug Fixes
 [fields-document] Fixes a broken code path for conditional component-blocks when fields are missing - this previously resulted in invalid data structures within the document editor (#7922) @mitchellhamilton"
-15,"The following packages have been updated
+17,"The following packages have been updated
 @keystone-6/core@2.3.0
 @keystone-6/fields-document@4.1.1
 New Features
@@ -550,7 +624,7 @@ Thanks to the following developers for making their first contributions to the p
 - @acburdine (#7866)
 :blue_heart: Acknowledgements
 Lastly, thanks to @dcousens (#7876,#7839,#7832,#7819), @mitchellhamilton (#7875,#7873,#7847,#7830,#7828,#7818,#7928), @dependabot[bot] (#7869), @renovate[bot] (#7862,#7860,#7826,#7825,#7823,#7824), @renovate (#7721,#7812) and @moselhy (#7843) for changes not shown above, but none-the-less appreciated."
-16,"The following packages have been updated
+18,"The following packages have been updated
 @keystone-6/auth@4.0.1
 @keystone-6/cloudinary@4.0.1
 @keystone-6/core@2.2.0
@@ -637,7 +711,7 @@ Thanks to the following developers for making their first contributions to the p
 - @Meetcpatel (#7717)
 :blue_heart: Acknowledgements
 Lastly, thanks to @mitchellhamilton (#7786,#7785,#7784,#7769,#7745), @renovate (#7797,#7798,#7670,#7780,#7781,#7779,#7755,#7487,#7725), @dcousens (#7713,#7743,#7739,#7730), @Noviny (#7770), @Achisingh (#7757), @dependabot (#7728) for changes not shown above, but none-the-less appreciated."
-17,"The following packages have been updated
+19,"The following packages have been updated
 @keystone-6/fields-document@4.0.1
 Bug Fixes
 
@@ -652,7 +726,7 @@ Bug Fixes
 [fields-document] Fixes inline relationships being removed when loading/saving an item in the Admin UI (#7685, #7700) @mitchellhamilton
 Acknowledgements :blue_heart:
 Thanks to @Skulek (#7695) for their first contribution to the project."
-18,"30 June 2022
+20,"30 June 2022
 Feature release.
 @keystone-6/core@2.1.0
 @keystone-6/auth@4.0.0
@@ -727,7 +801,7 @@ Enjoying Keystone?
 Star this repo 🌟 ☝️ or connect with Keystone on Twitter and in Slack.
 Verbose Changelog :scroll:
 You can also view the verbose changelog or compare via GitHub since 2022-06-09"
-19,"🦋  @keystone-ui/button@7.0.0
+21,"🦋  @keystone-ui/button@7.0.0
 🦋  @keystone-ui/core@5.0.0
 🦋  @keystone-ui/fields@7.0.0
 🦋  @keystone-ui/icons@6.0.0
@@ -894,7 +968,7 @@ Enjoying Keystone?
 Star this repo 🌟 ☝️ or connect with Keystone on Twitter and in Slack.
 Changelog
 You can also view the verbose changelog in this pull request."
-20,"Maintenance release.
+22,"Maintenance release.
 sh
 ""@keystone-6/core"": ""1.1.1""
 ""@keystone-6/fields-document"": ""2.0.1""
@@ -963,7 +1037,7 @@ Enjoying Keystone?
 Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
 You can also view the verbose changelog in this pull request."
-21,"Maintenance release.
+23,"Maintenance release.
 sh
 ""@keystone-6/auth"": ""2.0.0"",
 ""@keystone-6/cloudinary"": ""2.0.0"",
@@ -1120,7 +1194,7 @@ Enjoying Keystone?
 Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
 You can also view the verbose changelog in the related PR (link) for this release."
-22,"This patch release is related to security advisory CVE-2022-0087.
+24,"This patch release is related to security advisory CVE-2022-0087.
 sh
 ""@keystone-6/auth"": ""1.0.2""
 Security Advisory 🔒
@@ -1167,7 +1241,7 @@ Enjoying Keystone?
 Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
 You can also view the verbose changelog in the related PR (link) for this release."
-23,"Patch release.
+25,"Patch release.
 sh
 ""@keystone-6/auth"": ""1.0.1"",
 ""@keystone-6/core"": ""1.0.1"",
@@ -1204,7 +1278,7 @@ Enjoying Keystone?
 Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
 You can also view the verbose changelog in the related PR (link) for this release."
-24,"This release marks the achievement of General Availability status for Keystone 6! 🚀
+26,"This release marks the achievement of General Availability status for Keystone 6! 🚀
 We've also included a range of improvements to Keystone's TypeScript DX since shipping last week's release candidate.
 Keystone 6 ⚡️
 With this major release, the project has moved to the @keystone-6 namespace on npm, and our version numbers have been reset.
@@ -1325,7 +1399,7 @@ We're grateful for the ideas you bring, the help you give others, and the code c
 Like this release? Give us a star on GitHub!
 Changelog
 You can view the verbose changelog in the related PR (link) for this release."
-25,"The Release Candidate for Keystone 6 General Availability has arrived! Within you'll find numerous improvements across the project. ⭐️
+27,"The Release Candidate for Keystone 6 General Availability has arrived! Within you'll find numerous improvements across the project. ⭐️
 After this release, we will be moving Keystone 6 to General Availability and promoting the project to the @keystone-6 namespace on npm.
 We highly recommend you upgrade to this release:
 json
@@ -1675,7 +1749,7 @@ Fixed default renderer of layout block in . Thanks @datner!
 Like this release? Give us a star on GitHub!
 Changelog
 You can view the verbose changelog in the related PR (link) for this release."
-26,"Expanded unique filters, customisable table and column names support and a new example featuring Nexus as we continue to finalise our GA release. 🪢
+28,"Expanded unique filters, customisable table and column names support and a new example featuring Nexus as we continue to finalise our GA release. 🪢
 json
 ""@keystone-next/auth"": ""36.0.0"",
 ""@keystone-next/cloudinary"": ""11.0.0"",
@@ -1823,7 +1897,7 @@ The format of the date shown in the DatePicker now uses the user's locale.
 When the sessionData option is invalid, the error will now be thrown on startup instead of silently ignored.
 Changelog
 You can also the verbose changelog in the related PR (link) for this release."
-27,"Patch release.
+29,"Patch release.
 sh
 ""@keystone-next/keystone"": ""27.0.2"",
 Miscellaneous Fixes ⚙️
@@ -1846,7 +1920,7 @@ Enjoying Keystone?
 Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
 You can also view the verbose changelog in the related PR (link) for this release."
-28,"Patch release.
+30,"Patch release.
 sh
 ""@keystone-next/keystone"": ""27.0.1"",
 Miscellaneous Fixes ⚙️
@@ -1869,7 +1943,7 @@ Enjoying Keystone?
 Star this repo 🌟 ☝️ or connect to Keystone on Twitter and in Slack.
 Changelog
 You can also view the verbose changelog in the related PR (link) for this release."
-29,"Server-side Live Reloading is here! 🚀 Plus more updates as we finalise the Keystone 6 GA release.
+31,"Server-side Live Reloading is here! 🚀 Plus more updates as we finalise the Keystone 6 GA release.
 json
 ""keystone-next/auth"": ""35.0.0"",
 ""keystone-next/cloudinary"": ""10.0.0"",
@@ -2026,7 +2100,7 @@ Added a short plain-text display to document fields in the List view as well as 
 We now support extensions with numerical characters when generating safe filenames. Thanks @Zlitus!
 Changelog
 You can view the verbose change log in the related PR (link) for this release."
-30,"We're nearly at Gold Master status for the Keystone 6 GA release! Here's what's new:
+32,"We're nearly at Gold Master status for the Keystone 6 GA release! Here's what's new:
 
 Fields Overhaul with lots of tweaks and additions 🚀
 Hook Updates bringing consolidation and clearer naming 🪝
@@ -2550,7 +2624,7 @@ Fixed remaining windows issue where it creates invalid import path. This removes
 Added support for Prisma preview features via the config.db.prismaPreviewFeatures configuration option. Thanks @Nikitoring!
 Changelog
 You can view the verbose change log in the related PR (link) for this release."
-31,"What's New
+33,"What's New
 Big strides towards our General Availability release for Keystone 6 in the very near future⌛  this release includes:
 
 New & Improved Access Control API ✨ 
@@ -4098,7 +4172,7 @@ Patch Changes
 
 #6432 module Thanks @renovate! - Updated module dependency to module.
 "
-32,"What's New
+34,"What's New
 A major milestone in the path to a General Availability status for Keystone 6, this release includes:
 
 A new and improved GraphQL API 🎉 ✨  
@@ -5630,7 +5704,7 @@ Updated dependencies [module, module, module, module, module, module, module, mo
 
 
 "
-33,"What's New
+35,"What's New
 Custom navigation, pages and logo in this big Admin UI themed release! 🎛️ 
 sh
 ""@keystone-ui/tooltip"": ""4.0.1"",
@@ -6171,7 +6245,7 @@ Major Changes
 
 #6145 module Thanks @gwyneplaine! - Initial version of the custom-admin-ui-logo example.
 "
-34,"What's New
+36,"What's New
 More examples, types, and UI rendering tweaks as we push forward towards a general availability release! 🚀
 sh
 ""@keystone-ui/core"": ""3.1.1"",
@@ -7156,7 +7230,7 @@ Updated dependencies [module, module, module, module, module, module, module]:
 
 
 "
-35,"What's New
+37,"What's New
 We've fixed an issue with cloudinaryImage and relationship fields. 🔥
 sh
 ""@keystone-next/auth"": ""28.0.1"",
@@ -7485,7 +7559,7 @@ Updated dependencies [module, module]:
 
 
 "
-36,"What's New
+38,"What's New
 The ID Field option has been revamped with cuid, uuid and autoincrement options! 🤹
 sh
 ""@keystone-next/admin-ui-utils"": ""5.0.3"",
@@ -8170,7 +8244,7 @@ Updated dependencies [module, module]:
 
 
 "
-37,"What's New
+39,"What's New
 An assortment of good things in this release! A new package to help test the behaviour of your GraphQL API, a document field example, better error messages, accessibility updates and another Prisma update! 🍱
 sh
 ""@keystone-ui/fields"": ""4.1.2"",
@@ -8808,7 +8882,7 @@ Updated dependencies [module, module, module, module, module, module, module, mo
 
 
 "
-38,"What's New
+40,"What's New
 Keystone Next now has a new core 🤖, unblocking many of the features you’ve been waiting for!
 After months of work deep in the codebase, it’ll be much easier for us to ship roadmap features like custom field types, GraphQL Schema extensions, and more.
 ⚠️ This release does come with some minor behavioural changes to Keystone’s APIs, read on below.
@@ -9925,7 +9999,7 @@ Updated dependencies [module, module, module, module, module, module, module, mo
 
 
 "
-39,"What's New
+41,"What's New
 We have a new JSON field ✨, a bunch of new learning resources, and plenty of under the hood optimisations in this big release. 💪 
 JSON Field 👩🏻‍💻
 Thanks to the new json field, you can now represent JSON blobs in your backend. Check out the JSON example project to learn more.  
@@ -12848,7 +12922,7 @@ module
 Updated dependencies [module, module, module, module, module, module, module, module, module, module, module, module, module, module, module, module, module, module, module, module, module, module, module, [module](link...
 
 "
-40,"What's New
+42,"What's New
 Node updates :rocket:
 Node.JS engines in our packages have been updated to 12.x and 14.x to keep up to date with the latest versions of our dependencies. 
 Admin UI package moved :truck:
@@ -14122,7 +14196,7 @@ Major Changes
 
 #5746 module Thanks @timleslie! - Update Node.js dependency to module.
 "
-41,"What's New
+43,"What's New
 Apollo cache hinting can now be configured on a per list or field basis — which can dramatically improve your applications performance 🔥.
 Implementing basic authentication? We've got another example using withAuth from the auth package to get you started 🔒.
 Focus control is now handled better in the Keystone UI, see the PR for the before and after 👀!
@@ -14468,7 +14542,7 @@ Updated dependencies [module, module, module, module, module]:
 
 
 "
-42,"What's New
+44,"What's New
 A bunch of admin UI tweaks in this release 🖥️, among other minor fixes. We also have the initial stages of a new blog example and a sweet new admin UI logo.
 Enjoying Keystone?
 Star this repo 🌟  ☝️ or connect to Keystone on Twitter and in Slack.
@@ -14806,7 +14880,7 @@ Updated dependencies [module, module, module, module, module]:
 
 
 "
-43,"What's New
+45,"What's New
 Aside from dependency updates 😴, we added an isIndexed config option to the text, integer, float, select, and timestamp field types.
 If you look closely you’ll see the core team working on example projects to share Keystone some best-practices. Keep an eye out for those in the not too distant future 🔮.
 Enjoying Keystone?
@@ -15223,7 +15297,7 @@ Updated dependencies [module, module, module, module]:
 
 
 "
-44,"What's New
+46,"What's New
 This release involved a bunch of busywork behind the scenes in Keystone Next 🔧. Stripping away all the things we don't need now that we're using Prisma exclusively. The end of the cleanup is in sight, and we're getting closer to the point where we can start working on some great new features.
 Files in Keystone Next 📁. Now you can use Admin UI to upload local files to your repo using SQLite. We also added a maxFileSize property for easier project config.
 Enjoying Keystone?
@@ -15917,7 +15991,7 @@ Updated dependencies [module, module, module, module, module, module, module, mo
 
 
 "
-45,"What's New
+47,"What's New
 Improvements to the Lists API
 To make the Lists API (i.e context.lists.{List}) more intuitive to use, we deprecated the resolveFields option in favour of two new methods 🔧:
 1. Specify a string of fields to return with the new query option:
@@ -17970,7 +18044,7 @@ Updated dependencies [module, module, module, module, module, module, module, mo
 
 
 "
-46,"What's New
+48,"What's New
 Controlled code demolition 🏗️ 👷‍♀️
 We pruned a lot of code from the Keystone garden – cutting out the dead wood to make way for a more efficient and productive core in Keystone 6. Notable changes include:
 
@@ -19027,7 +19101,7 @@ Updated dependencies [module, module, module, module, module, module, module, mo
 
 
 "
-47,"What's New
+49,"What's New
 Goodbye legacy code 👋 🌇
 We removed a few legacy items including: 
 
@@ -19807,7 +19881,7 @@ Updated dependencies [module, module, module, module, module, module, module, mo
 
 
 "
-48,"What's New
+50,"What's New
 Added support for SQLite with Prisma 🎉
 You can now use SQLite to store your data via Prisma. The SQLite rollout also includes support for the File and Cloudinary field types.
 Noteworthy bug-squashing 🐛
@@ -20109,7 +20183,7 @@ Updated dependencies [module, module]:
 
 
 "
-49,"What's New
+51,"What's New
 Prisma migrations 🚚
 
 We updated keystone-next dev with the Prisma adapter so that it interactively prompts for creating and applying migrations.

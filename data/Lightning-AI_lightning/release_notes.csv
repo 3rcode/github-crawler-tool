@@ -1,5 +1,101 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"App
+Added
+
+Added the property LightningWork.public_ip that exposes the public IP of the LightningWork instance (#17742)
+Add missing python-multipart dependency (#17244)
+
+Changed
+
+Made type hints public (#17100)
+
+Fixed
+
+Fixed LightningWork.internal_ip that was mistakenly exposing the public IP instead; now exposes the private/internal IP address (#17742)
+Fixed resolution of the latest version in CLI (#17351)
+Fixed property raised instead of returned (#17595)
+Fixed get project (#17617, #17666)
+
+
+Fabric
+Added
+
+Added support for Callback registration through entry points (#17756)
+
+Changed
+
+Made type hints public (#17100)
+Support compiling a module after it was set up by Fabric (#17529)
+
+Fixed
+
+Fixed computing the next version folder in CSVLogger (#17139)
+Fixed inconsistent settings for FSDP Precision (#17670)
+
+
+PyTorch
+Changed
+
+Made type hints public (#17100)
+
+Fixed
+
+CombinedLoader only starts DataLoader workers when necessary when operating in sequential mode (#17639)
+Fixed a potential bug with uploading model checkpoints to Neptune.ai by uploading files from stream (#17430)
+Fixed signature inspection of decorated hooks (#17507)
+The WandbLogger no longer flattens dictionaries in the hyperparameters logged to the dashboard (#17574)
+Fixed computing the next version folder in CSVLogger (#17139)
+Fixed a formatting issue when the filename in ModelCheckpoint contained metrics that were substrings of each other (#17610)
+Fixed WandbLogger ignoring the WANDB_PROJECT environment variable (#16222)
+Fixed inconsistent settings for FSDP Precision (#17670)
+Fixed an edge case causing overlapping samples in DDP when no global seed is set (#17713)
+Fallback to module available check for mlflow (#17467)
+Fixed LR finder max val batches (#17636)
+Fixed multithreading checkpoint loading (#17678)
+
+
+Contributors
+@adamjstewart, @AleksanderWWW, @awaelchli, @baskrahmer, @bkiat1123, @borda, @carmocca, @ethanwharris, @leng-yue, @lightningforever, @manangoel99, @mukhery, @Quasar-Kim, @water-vapor, @yurijmikhalevich
+If we forgot someone due to not matching commit email with GitHub account, let us know :]","App
+Added
+Added the property LightningWork.public_ip that exposes the public IP of the LightningWork instance (#17742)
+Add missing python-multipart dependency (#17244)
+Changed
+Made type hints public (#17100)
+Fixed
+Fixed LightningWork.internal_ip that was mistakenly exposing the public IP instead; now exposes the private/internal IP address (#17742)
+Fixed resolution of the latest version in CLI (#17351)
+Fixed property raised instead of returned (#17595)
+Fixed get project (#17617, #17666)
+Fabric
+Added
+Added support for Callback registration through entry points (#17756)
+Changed
+Made type hints public (#17100)
+Support compiling a module after it was set up by Fabric (#17529)
+Fixed
+Fixed computing the next version folder in CSVLogger (#17139)
+Fixed inconsistent settings for FSDP Precision (#17670)
+PyTorch
+Changed
+Made type hints public (#17100)
+Fixed
+CombinedLoader only starts DataLoader workers when necessary when operating in sequential mode (#17639)
+Fixed a potential bug with uploading model checkpoints to Neptune.ai by uploading files from stream (#17430)
+Fixed signature inspection of decorated hooks (#17507)
+The WandbLogger no longer flattens dictionaries in the hyperparameters logged to the dashboard (#17574)
+Fixed computing the next version folder in CSVLogger (#17139)
+Fixed a formatting issue when the filename in ModelCheckpoint contained metrics that were substrings of each other (#17610)
+Fixed WandbLogger ignoring the WANDB_PROJECT environment variable (#16222)
+Fixed inconsistent settings for FSDP Precision (#17670)
+Fixed an edge case causing overlapping samples in DDP when no global seed is set (#17713)
+Fallback to module available check for mlflow (#17467)
+Fixed LR finder max val batches (#17636)
+Fixed multithreading checkpoint loading (#17678)
+Contributors
+@adamjstewart, @AleksanderWWW, @awaelchli, @baskrahmer, @bkiat1123, @borda, @carmocca, @ethanwharris, @leng-yue, @lightningforever, @manangoel99, @mukhery, @Quasar-Kim, @water-vapor, @yurijmikhalevich
+If we forgot someone due to not matching commit email with GitHub account, let us know :]"
+2,"App
 Fixed
 
 Resolved Lightning App with remote storage (#17426)
@@ -45,7 +141,7 @@ Fixed an issue that caused num_nodes not to be set correctly for FSDPStrategy (#
 Contributors
 @awaelchli, @borda, @carmocca, @ethanwharris, @ryan597, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-2,"App
+3,"App
 Changed
 
 Added healthz endpoint to plugin server (#16882)
@@ -119,35 +215,35 @@ Improved the error message for installing tensorboard or tensorboardx (#17053)
 Contributors
 @awaelchli, @belerico, @carmocca, @colehawkins, @dmitsf, @Erotemic, @ethanwharris, @kshitij12345, @borda
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-3,"App
-Fixed
-
-Fix frontend hosts when running with multi-process in the cloud (#17324)
-
-
-Fabric
-No changes.
-
-PyTorch
-Fixed
-
-Make the is_picklable function more robust (#17270)
-
-
-Contributors
-@eng-yue @ethanwharris @Borda @awaelchli @carmocca
-If we forgot someone due to not matching commit email with GitHub account, let us know :]","App
-Fixed
-Fix frontend hosts when running with multi-process in the cloud (#17324)
-Fabric
-No changes.
-PyTorch
-Fixed
-Make the is_picklable function more robust (#17270)
-Contributors
-@eng-yue @ethanwharris @Borda @awaelchli @carmocca
-If we forgot someone due to not matching commit email with GitHub account, let us know :]"
 4,"App
+Fixed
+
+Fix frontend hosts when running with multi-process in the cloud (#17324)
+
+
+Fabric
+No changes.
+
+PyTorch
+Fixed
+
+Make the is_picklable function more robust (#17270)
+
+
+Contributors
+@eng-yue @ethanwharris @Borda @awaelchli @carmocca
+If we forgot someone due to not matching commit email with GitHub account, let us know :]","App
+Fixed
+Fix frontend hosts when running with multi-process in the cloud (#17324)
+Fabric
+No changes.
+PyTorch
+Fixed
+Make the is_picklable function more robust (#17270)
+Contributors
+@eng-yue @ethanwharris @Borda @awaelchli @carmocca
+If we forgot someone due to not matching commit email with GitHub account, let us know :]"
+5,"App
 No changes
 
 Fabric
@@ -193,7 +289,7 @@ Fixed issue where torch.compile would fail when logging to WandB (#17216)
 Contributors
 @Borda @williamFalcon @lightningforever @adamjstewart @carmocca @tshu-w @saryazdi @parambharat @awaelchli @colehawkins @woqidaideshi @md-121 @yhl48 @gkroiz @idc9 @speediedan 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-5,"Lightning AI is excited to announce the release of Lightning 2.0 :zap:
+6,"Lightning AI is excited to announce the release of Lightning 2.0 :zap:
 
 Highlights
 Backward Incompatible Changes
@@ -1935,7 +2031,7 @@ New
 If we forgot somebody or you have a suggestion, find us on Discord :zap:
 Did you know?
 Chuck Norris jokes aren't actually jokes, they are the truth. Chuck Norris actually can do all the things people say he can."
-6,"App
+7,"App
 Removed
 
 Removed implicit ui testing with testing.run_app_in_cloud in favor of headless login and app selection (#16741)
@@ -1987,88 +2083,88 @@ Fixed backwards compatibility for lightning.pytorch.utilities.parsing.get_init_a
 Contributors
 @ethanwharris, @carmocca, @awaelchli, @justusschock , @dtuit, @Liyang90 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-7,Full Changelog: https://github.com/Lightning-AI/lightning/compare/1.9.0...2.0.0rc0,Full Changelog: link
-8,"App
-Fixed
-
-Fixed lightning open command and improved redirects (#16794)
-
-
-Fabric
-Fixed
-
-Fixed an issue causing a wrong environment plugin to be selected when accelerator=tpu and devices > 1 (#16806)
-Fixed parsing of defaults for --accelerator and --precision in Fabric CLI when accelerator and precision are set to non-default values in the code (#16818)
-
-
-PyTorch
-Fixed
-
-Fixed an issue causing a wrong environment plugin to be selected when accelerator=tpu and devices > 1 (#16806)
-
-
-Contributors
-@ethanwharris, @carmocca, @awaelchli, @borda, @tchaton, @yurijmikhalevich
-If we forgot someone due to not matching commit email with GitHub account, let us know :]","App
-Fixed
-Fixed lightning open command and improved redirects (#16794)
-Fabric
-Fixed
-Fixed an issue causing a wrong environment plugin to be selected when accelerator=tpu and devices > 1 (#16806)
-Fixed parsing of defaults for --accelerator and --precision in Fabric CLI when accelerator and precision are set to non-default values in the code (#16818)
-PyTorch
-Fixed
-Fixed an issue causing a wrong environment plugin to be selected when accelerator=tpu and devices > 1 (#16806)
-Contributors
-@ethanwharris, @carmocca, @awaelchli, @borda, @tchaton, @yurijmikhalevich
-If we forgot someone due to not matching commit email with GitHub account, let us know :]"
+8,Full Changelog: https://github.com/Lightning-AI/lightning/compare/1.9.0...2.0.0rc0,Full Changelog: link
 9,"App
-Added
+Fixed
 
-Added Storage Commands (#16740)
-rm: Delete files from your Cloud Platform Filesystem
-Added lightning connect data to register data connection to private s3 buckets (#16738)
+Fixed lightning open command and improved redirects (#16794)
 
 
 Fabric
 Fixed
 
-Fixed an attribute error and improved input validation for invalid strategy types being passed to Fabric (#16693)
+Fixed an issue causing a wrong environment plugin to be selected when accelerator=tpu and devices > 1 (#16806)
+Fixed parsing of defaults for --accelerator and --precision in Fabric CLI when accelerator and precision are set to non-default values in the code (#16818)
 
 
 PyTorch
-Changed
-
-Disabled strict loading in multiprocessing launcher (""ddp_spawn"", etc.) when loading weights back into the main process (#16365)
-
 Fixed
 
-Fixed an attribute error and improved input validation for invalid strategy types being passed to Trainer (#16693)
-Fixed early stopping triggering extra validation runs after reaching min_epochs or min_steps (#16719)
+Fixed an issue causing a wrong environment plugin to be selected when accelerator=tpu and devices > 1 (#16806)
 
 
 Contributors
-@akihironitta, @awaelchli, @borda, @tchaton
+@ethanwharris, @carmocca, @awaelchli, @borda, @tchaton, @yurijmikhalevich
 If we forgot someone due to not matching commit email with GitHub account, let us know :]","App
-Added
-Added Storage Commands (#16740)
-rm: Delete files from your Cloud Platform Filesystem
-Added lightning connect data to register data connection to private s3 buckets (#16738)
+Fixed
+Fixed lightning open command and improved redirects (#16794)
 Fabric
 Fixed
-Fixed an attribute error and improved input validation for invalid strategy types being passed to Fabric (#16693)
+Fixed an issue causing a wrong environment plugin to be selected when accelerator=tpu and devices > 1 (#16806)
+Fixed parsing of defaults for --accelerator and --precision in Fabric CLI when accelerator and precision are set to non-default values in the code (#16818)
 PyTorch
-Changed
-Disabled strict loading in multiprocessing launcher (""ddp_spawn"", etc.) when loading weights back into the main process (#16365)
 Fixed
-Fixed an attribute error and improved input validation for invalid strategy types being passed to Trainer (#16693)
-Fixed early stopping triggering extra validation runs after reaching min_epochs or min_steps (#16719)
+Fixed an issue causing a wrong environment plugin to be selected when accelerator=tpu and devices > 1 (#16806)
 Contributors
-@akihironitta, @awaelchli, @borda, @tchaton
+@ethanwharris, @carmocca, @awaelchli, @borda, @tchaton, @yurijmikhalevich
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
 10,"App
 Added
 
+Added Storage Commands (#16740)
+rm: Delete files from your Cloud Platform Filesystem
+Added lightning connect data to register data connection to private s3 buckets (#16738)
+
+
+Fabric
+Fixed
+
+Fixed an attribute error and improved input validation for invalid strategy types being passed to Fabric (#16693)
+
+
+PyTorch
+Changed
+
+Disabled strict loading in multiprocessing launcher (""ddp_spawn"", etc.) when loading weights back into the main process (#16365)
+
+Fixed
+
+Fixed an attribute error and improved input validation for invalid strategy types being passed to Trainer (#16693)
+Fixed early stopping triggering extra validation runs after reaching min_epochs or min_steps (#16719)
+
+
+Contributors
+@akihironitta, @awaelchli, @borda, @tchaton
+If we forgot someone due to not matching commit email with GitHub account, let us know :]","App
+Added
+Added Storage Commands (#16740)
+rm: Delete files from your Cloud Platform Filesystem
+Added lightning connect data to register data connection to private s3 buckets (#16738)
+Fabric
+Fixed
+Fixed an attribute error and improved input validation for invalid strategy types being passed to Fabric (#16693)
+PyTorch
+Changed
+Disabled strict loading in multiprocessing launcher (""ddp_spawn"", etc.) when loading weights back into the main process (#16365)
+Fixed
+Fixed an attribute error and improved input validation for invalid strategy types being passed to Trainer (#16693)
+Fixed early stopping triggering extra validation runs after reaching min_epochs or min_steps (#16719)
+Contributors
+@akihironitta, @awaelchli, @borda, @tchaton
+If we forgot someone due to not matching commit email with GitHub account, let us know :]"
+11,"App
+Added
+
 Added lightning open command (#16482)
 Added experimental support for interruptable GPU in the cloud (#16399)
 Added FileSystem abstraction to simply manipulate files (#16581)
@@ -2174,7 +2270,7 @@ Fixed an import error when torch.distributed is not available (#16658)
 Contributors
 @akihironitta, @awaelchli, @borda, @BrianPulfer, @ethanwharris, @hhsecond, @justusschock, @Liyang90, @RuRo, @senarvi, @shenoynikhil, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-11,"App
+12,"App
 Added
 
 Added a possibility to set up basic authentication for Lightning apps (#16105)
@@ -2450,7 +2546,7 @@ Fixed an issue with MLFlowLogger not finalizing correctly when status code 'fini
 Contributors
 @1SAA, @akihironitta, @AlessioQuercia, @awaelchli, @bipinKrishnan, @Borda, @carmocca, @dmitsf, @erhoo82, @ethanwharris, @Forbu, @hhsecond, @justusschock, @lantiga, @lightningforever, @Liyang90, @manangoel99, @mauvilsa, @nicolai86, @nohalon, @rohitgr7, @schmidt-jake, @speediedan, @yMayanand
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-12,"App
+13,"App
 Added
 
 Added partial support for fastapi Request annotation in configure_api handlers (#16047)
@@ -2514,7 +2610,7 @@ Fixed the endpoint info tab not showing up in the AutoScaler UI (#16128)
 Fixed an issue where an exception would be raised in the logs when using a recent version of streamlit (#16139)
 Fixed e2e tests (#16146)
 Full Changelog: link"
-13,"App
+14,"App
 
 Fixed install/upgrade - removing single quote (#16079)
 Fixed bug where components that are re-instantiated several times failed to initialize if they were modifying self.lightningignore (#16080)
@@ -2532,7 +2628,7 @@ Fixed a bug where apps that had previously been deleted could not be run again f
 Pytorch
 Add function to remove checkpoint to allow override for extended classes (#16067)
 Full Changelog: link"
-14,"App
+15,"App
 Added
 
 Added Lightning{Flow,Work}.lightningignores attributes to programmatically ignore files before uploading to the cloud (#15818)
@@ -2574,7 +2670,7 @@ Fixed the debugger detection mechanism for the lightning App in VSCode (#16068)
 Pytorch
 some minor cleaning
 Full Changelog: link"
-15,"App
+16,"App
 
 Fixed MultiNode Component to use separate cloud computes (#15965)
 Fixed Registration for CloudComputes of Works in L.app.structures (#15964)
@@ -2592,8 +2688,8 @@ Fixed a bug where auto-upgrading to the latest lightning via the CLI could get s
 Pytorch
 Fixed the XLAProfiler not recording anything due to mismatching of action names (#15885)
 Full Changelog: link"
-16,:robot: ,:robot: 
-17,"App
+17,:robot: ,:robot: 
+18,"App
 Added
 
 Add code_dir argument to tracer run (#15771)
@@ -2705,7 +2801,7 @@ Fixed LRScheduler import for PyTorch 2.0 (#15940)
 Fixed fit_loop.restarting to be False for lr finder (#15620)
 Fixed torch.jit.script-ing a LightningModule causing an unintended error message about deprecated use_amp property (#15947)
 Full Changelog: link"
-18,"App
+19,"App
 Changed
 
 Fixed the PyTorch Inference locally on GPU (#15813)
@@ -2715,8 +2811,8 @@ Full Changelog: https://github.com/Lightning-AI/lightning/compare/1.8.3...1.8.3"
 Changed
 Fixed the PyTorch Inference locally on GPU (#15813)
 Full Changelog: link"
-19,,
-20,"App
+20,,
+21,"App
 Changed
 
 Deduplicate top-level lighting CLI command groups (#15761)
@@ -2762,7 +2858,7 @@ Changed
 Temporarily removed support for Hydra multi-run (#15737)
 Switch from tensorboard to tensorboardx in TensorBoardLogger (#15728)
 Full Changelog: link"
-21,"App
+22,"App
 Added
 
 Added title and description to ServeGradio (#15639)
@@ -2820,7 +2916,7 @@ Fixed
 Make sure save_dir can be empty str (#15638](link))
 Fixed the automatic fallback from Trainer(strategy=""ddp_spawn"", ...) to Trainer(strategy=""ddp"", ...) when on an LSF cluster (#15103](link))
 Full Changelog: link"
-22,"App
+23,"App
 Added
 
 Added the start method to the work (#15523)
@@ -2910,7 +3006,7 @@ Fixed model state transfer in multiprocessing launcher when running multi-node (
 Fixed manual optimization raising AttributeError with Bagua Strategy (#12534)
 Fixed the import of pytorch_lightning causing a warning 'Redirects are currently not supported in Windows or MacOs' (#15610)
 Full Changelog: link"
-23,"What's Changed
+24,"What's Changed
 
 Implement freeze batchnorm with freezing track running stats by @PososikTeam in https://github.com/Lightning-AI/lightning/pull/15063
 Pkg: fix parsing versions by @Borda in https://github.com/Lightning-AI/lightning/pull/15401
@@ -2927,7 +3023,7 @@ Remove pytest as a requirement to run app by @manskx in link
 New Contributors
 @PososikTeam made their first contribution in link
 Full Changelog: link"
-24,"The core team is excited to announce the release of Lightning 1.8 :zap:
+25,"The core team is excited to announce the release of Lightning 1.8 :zap:
 
 Highlights
 Backward Incompatible Changes
@@ -3879,7 +3975,7 @@ New
 If we forgot somebody or you have a suggestion, find support here :zap:
 Did you know?
 Chuck Norris can write functions of infinite recursion ... and have them return."
-25,"[0.7.0] - 2022-10-20
+26,"[0.7.0] - 2022-10-20
 Added
 
 Add --secret option to CLI to allow binding Secrets to app environment variables when running in the cloud (#14612)
@@ -3898,7 +3994,7 @@ Added option to add custom meta tags to the UI container (#14915)
 Added support to pass a LightningWork to the LightningApp (#15215
 Changed
 Allowed root path to run the app on /path (#14972)"
-26,"[0.6.3] - 2022-10-07
+27,"[0.6.3] - 2022-10-07
 Added
 
 Added option to add custom meta tags to the UI container (#14915)
@@ -3917,7 +4013,7 @@ Allowed root path to run the app on /path (#14972)
 Contributors
 @pritamsoni-hsr
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-27,"[1.7.7] - 2022-09-22
+28,"[1.7.7] - 2022-09-22
 Fixed
 
 Fixed the availability check for the neptune-client package (#14714)
@@ -3938,7 +4034,7 @@ Fixed TypeError on import when torch.distributed is not available (#14809)
 Contributors
 @awaelchli @Borda @carmocca @dependabot @otaj @raoakarsha
 If we forgot someone due to not matching commit email with GitHub account, let us know :)"
-28,"[0.6.2] - 2022-09-22
+29,"[0.6.2] - 2022-09-22
 Changed
 
 Improved Lightning App connect logic by disconnecting automatically (#14532)
@@ -3965,7 +4061,7 @@ Fixed an issue where some terminals would display broken icons in the PL app CLI
 Contributors
 @awaelchli, @borda, @pranjaldatta, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-29,"[0.6.1] - 2022-09-19
+30,"[0.6.1] - 2022-09-19
 Added
 
 Add support to upload files to the Drive through an asynchronous upload_file endpoint (#14703)
@@ -4004,7 +4100,7 @@ Resolved LightningApp(..., debug=True) (#14464)
 Contributors
 @dmitsf @hhsecond @tchaton @nohalon @krshrimali @pritamsoni-hsr @nmiculinic @ethanwharris @yurijmikhalevich @Felonious-Spellfire @otaj @Borda 
 If we forgot someone due to not matching commit email with GitHub account, let us know :)"
-30,"[1.7.6] - 2022-09-13
+31,"[1.7.6] - 2022-09-13
 Changed
 
 Improved the error messaging when passing Trainer.method(model, x_dataloader=None) with no module-method implementations available (#14614)
@@ -4029,7 +4125,7 @@ Fixed compatibility when torch.distributed is not available (#14454)
 Contributors
 @akihironitta @awaelchli @Borda @carmocca @dependabot @krshrimali @mauvilsa @pierocor @rohitgr7 @wangraying
 If we forgot someone due to not matching commit email with GitHub account, let us know :)"
-31,"[0.6.0] - 2022-09-08
+32,"[0.6.0] - 2022-09-08
 Added
 
 Introduce lightning connect (#14452)
@@ -4086,7 +4182,7 @@ Fixed imports of collections.abc for py3.10 (#14345)
 Contributors
 @adam-lightning, @awaelchli, @Borda, @dmitsf, @manskx, @MarcSkovMadsen, @nicolai86, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-32,"[1.7.5] - 2022-09-06
+33,"[1.7.5] - 2022-09-06
 Fixed
 
 Squeezed tensor values when logging with LightningModule.log (#14489)
@@ -4103,7 +4199,7 @@ Fixed Trainer.estimated_stepping_batches when maximum number of epochs is not se
 Contributors
 @carmocca @dependabot @robertomest @rohitgr7 @tshu-w
 If we forgot someone due to not matching commit email with GitHub account, let us know :)"
-33,"[1.7.4] - 2022-08-31
+34,"[1.7.4] - 2022-08-31
 Added
 
 Added an environment variable PL_DISABLE_FORK that can be used to disable all forking in the Trainer (#14319)
@@ -4126,7 +4222,7 @@ Fixed restoring the trainer after using lr_find() so that the correct LR schedul
 Fixed incorrect values after transferring data to an MPS device (#14368)
 Contributors
 @rohitgr7 @tanmoyio @justusschock @cschell @carmocca @Callidior @awaelchli @j0rd1smit @dependabot @Borda @otaj"
-34,"[1.7.3] - 2022-08-25
+35,"[1.7.3] - 2022-08-25
 Fixed
 
 Fixed an assertion error when using a ReduceOnPlateau scheduler with the Horovod strategy (#14215)
@@ -4145,7 +4241,7 @@ Added back support for logging in the configure_gradient_clipping hook after uni
 Fixed an issue to avoid the impact of sanity check on reload_dataloaders_every_n_epochs for validation (#13964)
 Contributors
 @awaelchli @Borda @carmocca @dependabot @kaushikb11 @otaj @rohitgr7"
-35,"[0.5.7] - 2022-08-22
+36,"[0.5.7] - 2022-08-22
 Changed
 
 Release LAI docs as stable (#14250)
@@ -4168,7 +4264,7 @@ Parsed local package versions (#13933)
 Contributors
 @borda, @hhsecond, @manskx 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-36,"[0.5.6] - 2022-08-16
+37,"[0.5.6] - 2022-08-16
 Fixed
 
 Resolved a bug where the install command was not installing the latest version of an app/component by default (#14181)
@@ -4181,7 +4277,7 @@ Resolved a bug where the install command was not installing the latest version o
 Contributors
 @manskx
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-37,"[1.7.2] - 2022-08-17
+38,"[1.7.2] - 2022-08-17
 Added
 
 Added FullyShardedNativeNativeMixedPrecisionPlugin to handle precision for DDPFullyShardedNativeStrategy (#14092)
@@ -4234,7 +4330,7 @@ Fixed an issue in which the default name for a run in WandbLogger would be set t
 Fixed not preserving set attributes on DataLoader and BatchSampler when instantiated inside *_dataloader hooks (#14212)
 Contributors
 @adamreeve @akihironitta @awaelchli @Borda @carmocca @dependabot @otaj @rohitgr7"
-38,"[1.7.1] - 2022-08-09
+39,"[1.7.1] - 2022-08-09
 Fixed
 
 Casted only floating point tensors to fp16 with IPUs (#13983)
@@ -4259,7 +4355,7 @@ Fixed dtype inference during gradient norm computation (#14051)
 Fixed a bug that caused ddp_find_unused_parameters to be set False, whereas the intended default is True (#14095)
 Contributors
 @adamjstewart @akihironitta @awaelchli @Birch-san @carmocca @clementpoiret @dependabot @rohitgr7"
-39,"[0.5.5] - 2022-08-9
+40,"[0.5.5] - 2022-08-9
 Deprecated
 
 Deprecate sheety API (#14004)
@@ -4282,7 +4378,7 @@ Fixed Start Lightning App on Cloud if Repo Begins With Name ""Lightning"" (#1402
 Contributors
 @manskx, @rlizzo, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-40,"The core team is excited to announce the release of PyTorch Lightning 1.7 :zap:
+41,"The core team is excited to announce the release of PyTorch Lightning 1.7 :zap:
 
 Highlights
 Backward Incompatible Changes
@@ -5038,7 +5134,7 @@ New
 If we forgot somebody or you have a suggestion, find support here :zap:
 Did you know?
 Chuck Norris can unit-test entire applications with a single assert."
-41,"[0.5.4] - 2022-08-01
+42,"[0.5.4] - 2022-08-01
 Changed
 
 Wrapped imports for traceability (#13924)
@@ -5063,7 +5159,7 @@ Fixed build meta pkg flow (#13926)
 Contributors
 @Borda, @manskx
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-42,"[0.5.3] - 2022-07-25
+43,"[0.5.3] - 2022-07-25
 Changed
 
 Pruned requirements duplicity (#13739)
@@ -5076,7 +5172,7 @@ Changed
 Pruned requirements duplicity (#13739)
 Fixed
 Use correct python version in lightning component template (#13790)"
-43,"[0.5.2] - 2022-07-18
+44,"[0.5.2] - 2022-07-18
 Added
 
 Update the Lightning App docs (#13537)
@@ -5089,7 +5185,7 @@ Added
 Update the Lightning App docs (#13537)
 Changed
 Added LIGHTNING_ prefix to Platform AWS credentials (#13703)"
-44,"[1.6.5] - 2022-07-13
+45,"[1.6.5] - 2022-07-13
 Fixed
 
 Fixed estimated_stepping_batches requiring distributed comms in configure_optimizers for the DeepSpeedStrategy (#13350)
@@ -5106,7 +5202,7 @@ The loops now call .set_epoch() also on batch samplers if the dataloader has one
 Fixed the restoration of log step during restart (#13467)
 Contributors
 @adamjstewart @akihironitta @awaelchli @Borda @martinosorb @rohitgr7 @SeanNaren"
-45,"[1.6.4] - 2022-06-01
+46,"[1.6.4] - 2022-06-01
 Added
 
 Added all DDP params to be exposed through hpu parallel strategy (#13067)
@@ -5155,7 +5251,7 @@ Fixed epoch logging on train epoch end (#13025)
 Fixed DDPStrategy and DDPSpawnStrategy to initialize optimizers only after moving the module to the device (#11952)
 Contributors
 @akihironitta @ananthsub @ar90n @awaelchli @Borda @carmocca @dependabot @jerome-habana @mads-oestergaard @otaj @rohitgr7 "
-46,"[1.6.3] - 2022-05-03
+47,"[1.6.3] - 2022-05-03
 Fixed
 
 Use only a single instance of rich.console.Console throughout codebase (#12886)
@@ -5192,7 +5288,7 @@ Fixed TQDMProgressBar reset and update to show correct time estimation (#12889)
 Fixed fit loop restart logic to enable resume using the checkpoint (#12821)
 Contributors
 @akihironitta @carmocca @HMellor @jerome-habana @kaushikb11 @krshrimali @mauvilsa @niberger @ORippler @otaj @rohitgr7 @SeanNaren"
-47,"[1.6.2] - 2022-04-27
+48,"[1.6.2] - 2022-04-27
 Fixed
 
 Fixed ImportError when torch.distributed is not available. (#12794)
@@ -5209,7 +5305,7 @@ Fixed encoding issues on terminals that do not support unicode characters (#1282
 Fixed support for ModelCheckpoint monitors with dots (#12783)
 Contributors
 @akihironitta @alvitawa @awaelchli @Borda @carmocca @code-review-doctor @ethanfurman @HenryLau0220 @krshrimali @otaj "
-48,"[1.6.1] - 2022-04-13
+49,"[1.6.1] - 2022-04-13
 Changed
 
 Support strategy argument being case insensitive (#12528)
@@ -5242,7 +5338,7 @@ Support auto_select_gpus with the accelerator and devices API (#12608)
 Contributors
 @akihironitta @awaelchli @Borda @carmocca @kaushikb11 @krshrimali @mauvilsa @otaj @pre-commit-ci @rohitgr7 @semaphore-egg @tkonopka @wayi1
 If we forgot someone due to not matching the commit email with the GitHub account, let us know :]"
-49,"The core team is excited to announce the PyTorch Lightning 1.6 release ⚡
+50,"The core team is excited to announce the PyTorch Lightning 1.6 release ⚡
 
 Highlights
 Backward Incompatible Changes
@@ -6341,7 +6437,7 @@ Veteran
 New
 @a-gardner1 @abhi-rf @abhinavarora @adamreeve @adamviola @AJSVB @akashkw @amin-nejad @AndresAlgaba @ant0nsc @armanal @bhadreshpsavani @CAIQT @catalys1 @chaddy1004 @chunyang-wen @circlecrystal @Code-Cornelius @Cyber-Machine @dennisbappert @DuYicong515 @edpizzi @franp9am @ftorres16 @ggare-cmu @guyang3532 @Honzys @idiomaticrefactoring @isvogor-foi @jerome-habana @jgibson2 @jlhbaseball15 @jona-0 @JoostvDoorn @josafatburmeister @konstantinjdobler @Kr4is @krishnakalyan3 @krshrimali @lemairecarl @lucmos @manangoel99 @mathemusician @mayeroa @mbortolon97 @NathanGodey @Nesqulck @nithinraok @ORippler @os1ma @peterdudfield @Piyush-97 @puhuk @qqueing @quancs @Raahul-Singh @Raalsky @Rajathbharadwaj @rasbt @rharish101 @rhjohnstone @rjkilpatrick @RobertLaurella @roschly @rsokl @rusty1s @SauravMaheshkar @sethvargo @shabie @shivammehta007 @srb-cv @ThomVett @wangraying @whokilleddb @zredeaux65
 If we forgot someone or have any suggestion, let us know in Slack :zap:"
-50,"[1.5.10] - 2022-02-08
+51,"[1.5.10] - 2022-02-08
 Fixed
 
 Fixed an issue to avoid validation loop run on restart (#11552)
@@ -6372,7 +6468,7 @@ Fixed bug where the path for best checkpoints was not getting saved correctly wh
 Contributors
 @ananthsub @borda @circlecrystal @NathanGodey @nithinraok @rohitgr7
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-51,"[1.5.9] - 2022-01-20
+52,"[1.5.9] - 2022-01-20
 Fixed
 
 Pinned sphinx-autodoc-typehints with <v1.15 (#11400)
@@ -6399,7 +6495,7 @@ Disabled sampler replacement when using IterableDataset (#11507)
 Contributors
 @ajtritt @akihironitta @carmocca @rohitgr7
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-52,"[1.5.8] - 2022-01-05
+53,"[1.5.8] - 2022-01-05
 Fixed
 
 Fixed LightningCLI race condition while saving the config (#11199)
@@ -6420,7 +6516,7 @@ Fixed dataloaders not getting reloaded the correct amount of times when setting 
 Contributors
 @adamviola @akihironitta @awaelchli @Borda @carmocca @edpizzi
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-53,"[1.5.7] - 2021-12-21
+54,"[1.5.7] - 2021-12-21
 Fixed
 
 Fixed NeptuneLogger when using DDP (#11030)
@@ -6453,7 +6549,7 @@ The ModelCheckpoint callback now saves and restores attributes best_k_models, kt
 Contributors
 @awaelchli @borchero @carmocca @guyang3532 @kaushikb11 @ORippler @Raalsky @rohitgr7 @SeanNaren
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-54,"[1.5.6] - 2021-12-15
+55,"[1.5.6] - 2021-12-15
 Fixed
 
 Fixed a bug where the DeepSpeedPlugin arguments cpu_checkpointing and contiguous_memory_optimization were not being forwarded to deepspeed correctly (#10874)
@@ -6478,7 +6574,7 @@ Fixed bug where the TQDM updated the training progress bar during trainer.valida
 Contributors
 @carmocca @jona-0 @kaushikb11 @Raalsky @rohitgr7 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-55,"[1.5.5] - 2021-12-07
+56,"[1.5.5] - 2021-12-07
 Fixed
 
 Disabled batch_size extraction for torchmetric instances because they accumulate the metrics internally (#10815)
@@ -6513,7 +6609,7 @@ Fixed a TypeError occuring in the SingalConnector.teardown() method (#10961)
 Contributors
 @awaelchli @carmocca @four4fish @kaushikb11 @lucmos @mauvilsa @Raalsky @rohitgr7
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-56,"[1.5.4] - 2021-11-30
+57,"[1.5.4] - 2021-11-30
 Fixed
 
 Fixed support for --key.help=class with the LightningCLI (#10767)
@@ -6540,7 +6636,7 @@ Removed PyTorch 1.6 support (#10367, #10738)
 Contributors
 @awaelchli @carmocca @kaushikb11 @rohitgr7 @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-57,"[1.5.3] - 2021-11-24
+58,"[1.5.3] - 2021-11-24
 Fixed
 
 Fixed ShardedTensor state dict hook registration to check if torch distributed is available (#10621)
@@ -6569,7 +6665,7 @@ Fixed an issue with collecting logged test results with multiple dataloaders (#1
 Contributors
 @ananthsub @awaelchli @carmocca @jiwidi @kaushikb11 @qqueing @rohitgr7 @shabie @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-58,"[1.5.2] - 2021-11-16
+59,"[1.5.2] - 2021-11-16
 Fixed
 
 Fixed CombinedLoader and max_size_cycle didn't receive a DistributedSampler (#10374)
@@ -6598,7 +6694,7 @@ Fixed propagation of device and dtype information to submodules of LightningLite
 Contributors
 @a-gardner1 @awaelchli @carmocca @justusschock @Raahul-Singh @rohitgr7 @SeanNaren @tchaton 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-59,"[1.5.1] - 2021-11-09
+60,"[1.5.1] - 2021-11-09
 Fixed
 
 Fixed apply_to_collection(defaultdict) (#10316)
@@ -6629,7 +6725,7 @@ Fixed dataloader workers with persistent_workers being deleted on every iteratio
 Contributors
 @EspenHa @four4fish @peterdudfield @rohitgr7 @tchaton @kaushikb11 @awaelchli @Borda @carmocca 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-60,"The PyTorch Lightning team and its community are excited to announce Lightning 1.5, introducing support for LightningLite, Fault-tolerant Training, Loop Customization, Lightning Tutorials, LightningCLI V2, RichProgressBar, CheckpointIO Plugin, Trainer Strategy flag, and more!
+61,"The PyTorch Lightning team and its community are excited to announce Lightning 1.5, introducing support for LightningLite, Fault-tolerant Training, Loop Customization, Lightning Tutorials, LightningCLI V2, RichProgressBar, CheckpointIO Plugin, Trainer Strategy flag, and more!
 
 Highlights
 Backward Incompatible Changes
@@ -7628,7 +7724,7 @@ Fixed distrib_type not being set when training plugin instances are being passed
 Contributors
 @adamjstewart @akihironitta @alessiobonfiglio @ananthsub @aphedges @awaelchli @bamblebam @Benjamin-Etheredge @borchero @Borda @borisdayma @bryant1410 @carmocca @cowwoc @daniellepintz @danielykim @edward-io @eladsegal @EricWiener @ethanwharris @four4fish @gau-nernst @hankyul2 @HansolEom @himanshu-dutta @I-iBot @jjenniferdai @jstjohn @justusschock @kainoj @kaushikb11 @kingyiusuen @Knarik1 @low5545 @lsqshr @mauvilsa @michele-arrival @nasnoisaac @ninginthecloud @popfido @pre-commit-ci @PuneetDabral @qmpzzpmq @rohitgr7 @ronif @roshikouhai @s-rog @samlurye @SeanNaren @shnela @sidml @stancld @stfwn @tangbinh @tchaton @thepurpleowl @Tshimanga @twsl @victorjoos @VirajBagal @wayi1 @weiji14 @yifuwang @yopknopixx
 If we forgot someone, let us know :]"
-61,"[1.4.9] - 2021-09-30
+62,"[1.4.9] - 2021-09-30
 
 Moved the gradient unscaling in NativeMixedPrecisionPlugin from pre_optimizer_step to post_backward (#9606)
 Fixed gradient unscaling being called too late, causing gradient clipping and gradient norm tracking to be applied incorrectly (#9606)
@@ -7649,7 +7745,7 @@ Reset metrics before each task starts (#9410)
 Contributors
 @rohitgr7 @tchaton 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-62,"[1.4.8] - 2021-09-22
+63,"[1.4.8] - 2021-09-22
 
 Fixed error reporting in DDP process reconciliation when processes are launched by an external agent (#9389)
 Added PL_RECONCILE_PROCESS environment variable to enable process reconciliation regardless of cluster environment settings (#)(#9389)
@@ -7666,7 +7762,7 @@ Fixed back-compatibility for saving hyperparameters from a single container and 
 Contributors
 @ananthsub @akihironitta @awaelchli @carmocca @tchaton 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-63,"[1.4.7] - 2021-09-14
+64,"[1.4.7] - 2021-09-14
 
 Fixed logging of nan parameters (#9364)
 Fixed replace_sampler missing the batch size under specific conditions (#9367)
@@ -7685,7 +7781,7 @@ Fixed DeepSpeed crash for RNNs (#9489)
 Contributors
 @asanakoy @awaelchli @borisdayma @carmocca @guotuofeng @justusschock @kaushikb11 @rohitgr7 @SeanNaren
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-64,"[1.4.6] - 2021-09-10
+65,"[1.4.6] - 2021-09-10
 
 Fixed an issues with export to ONNX format when a model has multiple inputs (#8800)
 Removed deprecation warnings being called for on_{task}_dataloader (#9279)
@@ -7720,7 +7816,7 @@ Fixed signature of Timer.on_train_epoch_end and StochasticWeightAveraging.on_tra
 Contributors
 @ananthsub @awaelchli @Borda @four4fish @justusschock @kaushikb11 @s-rog @SeanNaren @tangbinh @tchaton @xerus 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-65,"[1.4.5] - 2021-08-31
+66,"[1.4.5] - 2021-08-31
 
 Fixed reduction using self.log(sync_dict=True, reduce_fx={mean,max}) (#9142)
 Fixed not setting a default value for max_epochs if max_time was specified on the Trainer constructor (#9072)
@@ -7737,7 +7833,7 @@ Fixed DDP ""CUDA error: initialization error"" due to a copy instead of deepcopy
 Contributors
 @ananthsub @bamblebam @carmocca @daniellepintz @ethanwharris @kaushikb11 @sohamtiwari3120 @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-66,"[1.4.4] - 2021-08-24
+67,"[1.4.4] - 2021-08-24
 
 Fixed a bug in the binary search mode of auto batch size scaling where exception was raised if the first trainer run resulted in OOM (#8954)
 Fixed a bug causing logging with log_gpu_memory='min_max' not working (#9013)
@@ -7750,7 +7846,7 @@ Fixed a bug causing logging with log_gpu_memory='min_max' not working (#9013)
 Contributors
 @SkafteNicki @eladsegal
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-67,"[1.4.3] - 2021-08-17
+68,"[1.4.3] - 2021-08-17
 
 Fixed plateau scheduler stepping on incomplete epoch (#8861)
 Fixed infinite loop with CycleIterator and multiple loaders (#8889)
@@ -7771,7 +7867,7 @@ Ensure the existence of DDPPlugin._sync_dir in reconciliate_processes (#8939)
 Contributors
 @awaelchli @carmocca @justusschock @tchaton @yifuwang 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-68,"[1.4.2] - 2021-08-10
+69,"[1.4.2] - 2021-08-10
 
 Fixed recursive call for apply_to_collection(include_none=False) (#8719)
 Fixed truncated backprop through time enablement when set as a property on the LightningModule and not the Trainer (#8804)
@@ -7788,7 +7884,7 @@ Fixed typo error in LightningLoggerBase.after_save_checkpoint docstring (#8737)
 Contributors
 @Aiden-Jeon @ananthsub @awaelchli @edward-io
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-69,"[1.4.1] - 2021-08-03
+70,"[1.4.1] - 2021-08-03
 
 Fixed trainer.fit_loop.split_idx always returning None (#8601)
 Fixed references for ResultCollection.extra (#8622)
@@ -7813,7 +7909,7 @@ Fixed accelerator=ddp choice for CPU (#8645)
 Contributors
 @awaelchli, @borda, @carmocca, @kaushikb11, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-70,"Today we are excited to announce Lightning 1.4, introducing support for TPU pods, XLA profiling, IPUs, and new plugins to reach 10+ billion parameters, including Deep Speed Infinity, Fully Sharded Data-Parallel and more!
+71,"Today we are excited to announce Lightning 1.4, introducing support for TPU pods, XLA profiling, IPUs, and new plugins to reach 10+ billion parameters, including Deep Speed Infinity, Fully Sharded Data-Parallel and more!
 https://devblog.pytorchlightning.ai/announcing-lightning-1-4-8cd20482aee9
 [1.4.0] - 2021-07-27
 Added
@@ -8264,7 +8360,7 @@ Fixed DeepSpeed breaking with no schedulers (#8580)
 Contributors
 @00sapo @AffineParameter @ajtritt @akihironitta @ananthsub @aniketmaurya @aslisabanci @awaelchli @bamblebam @Borda @borisdayma @carmocca @dalek-who @DavidMChan @davors72 @dcfidalgo @ddrevicky @deepsource-autofix @djthegr8 @edenlightning @edgarriba @eladsegal @ethanwharris @eugeneh101 @fepegar @gaoteng-git @gtauzin @i-aki-y @janhenriklambrechts @jiwidi @justusschock @karthikrangasai @kaushikb11 @loic-beheshti @Lucklyric @ManuelPalermo @mauvilsa @maxoppelt @neggert @nikvaessen @nisheethlahoti @pre-commit-ci @rohitgr7 @ruotianluo @satishjasthi @SeanNaren @shirayu @shuyingsunshine21 @sid-sundrani @Sileadim @simran2905 @stancld @t-vi @tchaton @theblackfly @theodumont @tilman151 @tomy0000000 @tshu-w @vatch123 @WrRan @yifuwang
 If we forgot someone, let us know :]"
-71,"[1.3.8] - 2021-07-01
+72,"[1.3.8] - 2021-07-01
 Fixed
 
 Fixed a sync deadlock when checkpointing a LightningModule that uses a torchmetrics 0.4 Metric (#8218)
@@ -8291,7 +8387,7 @@ Fixed NCCL error when selecting non-consecutive device ids (#8165)
 Fixed SWA to also work with IterableDataset (#8172)
 Contributors
 @GabrielePicco @SeanNaren @ethanwharris @carmocca @tchaton @justusschock "
-72,"[1.3.7post0] - 2021-06-23
+73,"[1.3.7post0] - 2021-06-23
 Fixed
 
 Fixed backward compatibility of moved functions rank_zero_warn and rank_zero_deprecation (#8085)
@@ -8302,7 +8398,7 @@ Fixed
 Fixed backward compatibility of moved functions rank_zero_warn and rank_zero_deprecation (#8085)
 Contributors
 @kaushikb11 @carmocca "
-73,"[1.3.7] - 2021-06-22
+74,"[1.3.7] - 2021-06-22
 Fixed
 
 Fixed a bug where skipping an optimizer while using amp causes amp to trigger an assertion error (#7975)
@@ -8323,7 +8419,7 @@ Improved PyTorchProfiler chrome traces names (#8009)
 Fixed moving the best score to device in EarlyStopping callback for TPU devices (#7959)
 Contributors
 @yifuwang @kaushikb11 @ajtritt @carmocca @tchaton "
-74,"[1.3.6] - 2021-06-15
+75,"[1.3.6] - 2021-06-15
 Fixed
 
 Fixed logs overwriting issue for remote filesystems (#7889)
@@ -8340,7 +8436,7 @@ Fixed setting worker_init_fn to seed dataloaders correctly when using DDP (#7942
 Fixed BaseFinetuning callback to properly handle parent modules w/ parameters (#7931)
 Contributors
 @awaelchli @Borda @kaushikb11 @Queuecumber @SeanNaren @senarvi @speediedan"
-75,"[1.3.5] - 2021-06-08
+76,"[1.3.5] - 2021-06-08
 Added
 
 Added warning to Training Step output (#7779)
@@ -8373,7 +8469,7 @@ Move training_output validation to after train_step_end (#7868)
 Contributors
 @Borda, @justusschock, @kandluis, @mauvilsa, @shuyingsunshine21, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-76,"[1.3.4] - 2021-06-01
+77,"[1.3.4] - 2021-06-01
 Fixed
 
 Fixed info message when max training time reached (#7780)
@@ -8388,7 +8484,7 @@ Fixed missing len method to IndexBatchSamplerWrapper (#7681)
 Contributors
 @awaelchli @kaushikb11 
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-77,"[1.3.3] - 2021-05-26
+78,"[1.3.3] - 2021-05-26
 Changed
 
 Changed calling of untoggle_optimizer(opt_idx) out of the closure function (#7563)
@@ -8417,7 +8513,7 @@ Fixed training loop total batch counter when accumulate grad batches was enabled
 Contributors
 @carmocca @kaushikb11 @ryanking13 @Lucklyric @ajtritt @yifuwang
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-78,"[1.3.2] - 2021-05-18
+79,"[1.3.2] - 2021-05-18
 Changed
 
 DataModules now avoid duplicate {setup,teardown,prepare_data} calls for the same stage (#7238)
@@ -8442,7 +8538,7 @@ Fixed incorrect number of calls to LR scheduler when check_val_every_n_epoch > 1
 Contributors
 @alanhdu @carmocca @justusschock @tkng
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-79,"[1.3.1] - 2021-05-11
+80,"[1.3.1] - 2021-05-11
 Fixed
 
 Fixed DeepSpeed with IterableDatasets (#7362)
@@ -8459,7 +8555,7 @@ Fixed local rank displayed in console log (#7395)
 Contributors
 @akihironitta @awaelchli @leezu
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-80,"Today we are excited to announce Lightning 1.3, containing highly anticipated new features including a new Lightning CLI, improved TPU support, integrations such as PyTorch profiler, new early stopping strategies, predict and validate trainer routines, and more.
+81,"Today we are excited to announce Lightning 1.3, containing highly anticipated new features including a new Lightning CLI, improved TPU support, integrations such as PyTorch profiler, new early stopping strategies, predict and validate trainer routines, and more.
 https://medium.com/pytorch/pytorch-lightning-1-3-lightning-cli-pytorch-profiler-improved-early-stopping-6e0ffd8deb29
 [1.3.0] - 2021-05-06
 Added
@@ -8836,8 +8932,8 @@ Fixed importing torchtext batch (#6365, #6323, #6211)
 Contributors
 @akihironitta, @alessiobonfiglio, @amisev, @amogkam, @ananthsub, @ArvinZhuang, @ashleve, @asnorkin, @awaelchli, @BloodAxe, @bmahlbrand, @Borda, @borisdayma, @camruta, @carmocca, @ceshine, @dbonner, @dhkim0225, @EdwardJB, @EliaCereda, @EricCousineau-TRI, @ethanwharris, @FlorianMF, @hemildesai, @ifsheldon, @kaushikb11, @mauvilsa, @maxfrei750, @mesejo, @ramonemiliani93, @rohitgr7, @s-rog, @sadiqj, @scart97, @SeanNaren, @shuyingsunshine21, @SkafteNicki, @SpontaneousDuck, @stllfe, @tchaton, @THasthika, @vballoli
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-81,"Fixing missing packaging package in dependencies, which was affecting the only installation to a very blank system.","Fixing missing packaging package in dependencies, which was affecting the only installation to a very blank system."
-82,"[1.2.9] - 2021-04-20
+82,"Fixing missing packaging package in dependencies, which was affecting the only installation to a very blank system.","Fixing missing packaging package in dependencies, which was affecting the only installation to a very blank system."
+83,"[1.2.9] - 2021-04-20
 Fixed
 
 Fixed the order to call for world ranks & the root_device property in TPUSpawnPlugin (#7074)
@@ -8852,7 +8948,7 @@ Fixed multi-gpu join for Horovod (#6954)
 Fixed parsing for pre-release package versions (#6999)
 Contributors
 @irasit @Borda @kaushikb11 "
-83,"[1.2.8] - 2021-04-14
+84,"[1.2.8] - 2021-04-14
 Added
 
 Added TPUSpawn + IterableDataset error message (#6875)
@@ -8901,7 +8997,7 @@ Remove hardcoding of local rank in accelerator connector (#6878)
 Contributors
 @ananthsub @awaelchli @ethanwharris @justusschock @kandluis @kaushikb11 @liob @SeanNaren @skmatz
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-84,"[1.2.7] - 2021-04-06
+85,"[1.2.7] - 2021-04-06
 Fixed
 
 Fixed resolve a bug with omegaconf and xm.save (#6741)
@@ -8924,7 +9020,7 @@ Fixed a bug where TensorBoardLogger would give a warning and not log correctly t
 Contributors
 @awaelchli, @ethanwharris, @karthikprasad, @kaushikb11, @mibaumgartner, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-85,"[1.2.6] - 2021-03-30
+86,"[1.2.6] - 2021-03-30
 Changed
 
 Changed the behavior of on_epoch_start to run at the beginning of validation & test epoch (#6498)
@@ -8957,7 +9053,7 @@ Fixed bug where no TPUs were detected in a TPU pod env (#6719)
 Contributors
 @awaelchli, @carmocca, @ethanwharris, @kaushikb11, @rohitgr7, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-86,"[1.2.5] - 2021-03-23
+87,"[1.2.5] - 2021-03-23
 Changed
 
 Added Autocast in validation, test and predict modes for Native AMP (#6565)
@@ -8984,7 +9080,7 @@ Fixed duplicate logs appearing in console when using the python logging module (
 Contributors
 @awaelchli, @Borda, @ethanwharris, @justusschock, @kaushikb11
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-87,"[1.2.4] - 2021-03-16
+88,"[1.2.4] - 2021-03-16
 Changed
 
 Changed the default of find_unused_parameters back to True in DDP and DDP Spawn (#6438)
@@ -9021,7 +9117,7 @@ Fixed when Train loop config was run during Trainer.predict (#6541)
 Contributors
 @awaelchli, @kaushikb11, @Palzer, @SeanNaren, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-88,"[1.2.3] - 2021-03-09
+89,"[1.2.3] - 2021-03-09
 Fixed
 
 Fixed ModelPruning(make_pruning_permanent=True) pruning buffers getting removed when saved during training (#6073)
@@ -9054,7 +9150,7 @@ Fixed Trainer not resetting lightning_optimizers when calling Trainer.fit() mult
 Contributors
 @awaelchli, @carmocca, @Chizuchizu, @frankier, @SeanNaren, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-89,"[1.2.2] - 2021-03-02
+90,"[1.2.2] - 2021-03-02
 Added
 
 Added checkpoint parameter to callback's on_save_checkpoint hook (#6072)
@@ -9091,7 +9187,7 @@ Fixed error thrown when using valid distributed mode in multi node (#6297)
 Contributors
 @akihironitta, @borisdayma, @carmocca, @dvolgyes, @SeanNaren, @SkafteNicki
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-90,"[1.2.1] - 2021-02-23
+91,"[1.2.1] - 2021-02-23
 Fixed
 
 Fixed incorrect yield logic for the amp autocast context manager (#6080)
@@ -9108,7 +9204,7 @@ Fixed error message for AMP + CPU incompatibility (#6107)
 Contributors
 @awaelchli, @SeanNaren, @carmocca
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-91,"[1.2.0] - 2021-02-18
+92,"[1.2.0] - 2021-02-18
 Added
 
 Added DataType, AverageMethod and MDMCAverageMethod enum in metrics (#5657)
@@ -9385,7 +9481,7 @@ Fixed allowing hashing of metrics with lists in their state (#5939)
 Contributors
 @alanhdu, @ananthsub, @awaelchli, @Borda, @borisdayma, @carmocca, @ddrevicky, @deng-cy, @ducthienbui97, @justusschock, @kartik4949, @kaushikb11, @manipopopo, @marload, @neighthan, @peblair, @prampey, @pranjaldatta, @rohitgr7, @SeanNaren, @sid-sundrani, @SkafteNicki, @tadejsv, @tchaton, @teddykoker, @titu1994, @yuntai
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-92,"[1.1.8] - 2021-02-08
+93,"[1.1.8] - 2021-02-08
 Fixed
 
 Separate epoch validation from step validation (#5208)
@@ -9400,7 +9496,7 @@ Fixed toggle_optimizers not handling all optimizer parameters (#5775)
 Contributors
 @ananthsub, @rohitgr7
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-93,"[1.1.7] - 2021-02-03
+94,"[1.1.7] - 2021-02-03
 Fixed
 
 Fixed TensorBoardLogger not closing SummaryWriter on finalize (#5696)
@@ -9425,7 +9521,7 @@ Fixed auto learning rate ordering (#5638)
 Contributors
 @awaelchli @guillochon @noamzilo @rohitgr7 @SkafteNicki @sumanthratna
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-94,"[1.1.6] - 2021-01-26
+95,"[1.1.6] - 2021-01-26
 Changed
 
 Increased TPU check timeout from 20s to 100s (#5598)
@@ -9462,7 +9558,7 @@ Fixed not using dataloader when hparams present (#4559)
 Contributors
 @awaelchli @bryant1410 @lezwon @manipopopo @PiotrJander @psinger @rnett @SeanNaren @swethmandava @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-95,"[1.1.5] - 2021-01-19
+96,"[1.1.5] - 2021-01-19
 Fixed
 
 Fixed a visual bug in the progress bar display initialization (#4579)
@@ -9481,7 +9577,7 @@ Fixed val_check_interval with fast_dev_run (#5540)
 Contributors
 @awaelchli, @carmocca, @rohitgr7
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-96,"[1.1.4] - 2021-01-12
+97,"[1.1.4] - 2021-01-12
 Added
 
 Add automatic optimization property setter to lightning module (#5169)
@@ -9512,7 +9608,7 @@ Check environ before selecting a seed to prevent warning message (#4743)
 Contributors
 @ananthsub, @SeanNaren, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-97,"[1.1.3] - 2021-01-05
+98,"[1.1.3] - 2021-01-05
 Added
 
 Added a check for optimizer attached to lr_scheduler (#5338)
@@ -9559,53 +9655,53 @@ Fixed casted key to string in _flatten_dict (#5354)
 Contributors
 @8greg8, @haven-jeon, @kandluis, @marload, @rohitgr7, @tadejsv, @tarepan, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-98,"Overview
-Detail changes
-Added
-
-Support number for logging with sync_dist=True (#5080)
-Added offset logging step when resuming for Wandb logger (#5050)
-
-Removed
-
-enable_pl_optimizer=False by default to temporarily fix AMP issues (#5163)
-
-Fixed
-
-Metric reduction with Logging (#5150)
-Remove nan loss in manual optimization (#5121)
-Un-balanced logging properly supported (#5119)
-Fix hanging in DDP HPC accelerators (#5157)
-Fix saved filename in ModelCheckpoint if it already exists (#4861)
-Fix reset TensorRunningAccum (#5106)
-Updated DALIClassificationLoader to not use deprecated arguments (#4925)
-Corrected call to torch.no_grad (#5124)
-
-Contributors
-@8greg8, @ananthsub, @borisdayma, @gan3sh500, @rohitgr7, @SeanNaren, @tchaton, @VinhLoiIT
-If we forgot someone due to not matching commit email with GitHub account, let us know :]","Overview
-Detail changes
-Added
-Support number for logging with sync_dist=True (#5080)
-Added offset logging step when resuming for Wandb logger (#5050)
-Removed
-enable_pl_optimizer=False by default to temporarily fix AMP issues (#5163)
-Fixed
-Metric reduction with Logging (#5150)
-Remove nan loss in manual optimization (#5121)
-Un-balanced logging properly supported (#5119)
-Fix hanging in DDP HPC accelerators (#5157)
-Fix saved filename in ModelCheckpoint if it already exists (#4861)
-Fix reset TensorRunningAccum (#5106)
-Updated DALIClassificationLoader to not use deprecated arguments (#4925)
-Corrected call to torch.no_grad (#5124)
-Contributors
-@8greg8, @ananthsub, @borisdayma, @gan3sh500, @rohitgr7, @SeanNaren, @tchaton, @VinhLoiIT
-If we forgot someone due to not matching commit email with GitHub account, let us know :]"
 99,"Overview
 Detail changes
 Added
 
+Support number for logging with sync_dist=True (#5080)
+Added offset logging step when resuming for Wandb logger (#5050)
+
+Removed
+
+enable_pl_optimizer=False by default to temporarily fix AMP issues (#5163)
+
+Fixed
+
+Metric reduction with Logging (#5150)
+Remove nan loss in manual optimization (#5121)
+Un-balanced logging properly supported (#5119)
+Fix hanging in DDP HPC accelerators (#5157)
+Fix saved filename in ModelCheckpoint if it already exists (#4861)
+Fix reset TensorRunningAccum (#5106)
+Updated DALIClassificationLoader to not use deprecated arguments (#4925)
+Corrected call to torch.no_grad (#5124)
+
+Contributors
+@8greg8, @ananthsub, @borisdayma, @gan3sh500, @rohitgr7, @SeanNaren, @tchaton, @VinhLoiIT
+If we forgot someone due to not matching commit email with GitHub account, let us know :]","Overview
+Detail changes
+Added
+Support number for logging with sync_dist=True (#5080)
+Added offset logging step when resuming for Wandb logger (#5050)
+Removed
+enable_pl_optimizer=False by default to temporarily fix AMP issues (#5163)
+Fixed
+Metric reduction with Logging (#5150)
+Remove nan loss in manual optimization (#5121)
+Un-balanced logging properly supported (#5119)
+Fix hanging in DDP HPC accelerators (#5157)
+Fix saved filename in ModelCheckpoint if it already exists (#4861)
+Fix reset TensorRunningAccum (#5106)
+Updated DALIClassificationLoader to not use deprecated arguments (#4925)
+Corrected call to torch.no_grad (#5124)
+Contributors
+@8greg8, @ananthsub, @borisdayma, @gan3sh500, @rohitgr7, @SeanNaren, @tchaton, @VinhLoiIT
+If we forgot someone due to not matching commit email with GitHub account, let us know :]"
+100,"Overview
+Detail changes
+Added
+
 Add a notebook example to reach a quick baseline of ~94% accuracy on CIFAR10 using Resnet in Lightning (#4818)
 
 Changed
@@ -9653,7 +9749,7 @@ Do not warn when the name key is used in the lr_scheduler dict (#5057)
 Contributors
 @Borda, @carmocca, @hemildesai, @rohitgr7, @s-rog, @tarepan, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-100,"Overview
+101,"Overview
 Lightning 1.1 is out! You can now train models with twice the parameters and zero code changes with the new sharded model training! We also have a new plugin for sequential model parallelism, more logging options, and a lot of improvements!
 Release highlights: https://bit.ly/3gyLZpP
 Learn more about sharded training: https://bit.ly/2W3hgI0
@@ -9768,242 +9864,242 @@ Fixed DDP and manual_optimization (#4976)
 Contributors
 @ananyahjha93, @awaelchli, @blatr, @Borda, @borisdayma, @carmocca, @ddrevicky, @george-gca, @gianscarpe, @irustandi, @janhenriklambrechts, @jeremyjordan, @justusschock, @lezwon, @rohitgr7, @s-rog, @SeanNaren, @SkafteNicki, @tadejsv, @tchaton, @williamFalcon, @zippeurfou
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-101,"Detail changes
-Added
-
-Added casting to python types for numpy scalars when logging hparams (#4647)
-Added warning when progress bar refresh rate is less than 20 on Google Colab to prevent crashing (#4654)
-Added F1 class metric (#4656)
-
-Changed
-
-Consistently use step=trainer.global_step in LearningRateMonitor independently of logging_interval (#4376)
-Metric states are no longer as default added to state_dict (#4685)
-Renamed class metric Fbeta >> FBeta (#4656)
-Model summary: add 1 decimal place (#4745)
-Do not override PYTHONWARNINGS (#4700)
-
-Fixed
-
-Fixed checkpoint hparams dict casting when omegaconf is available (#4770)
-Fixed incomplete progress bars when total batches not divisible by refresh rate (#4577)
-Updated SSIM metric (#4566)(#4656)
-Fixed batch_arg_name - add batch_arg_name to all calls to _adjust_batch_sizebug (#4812)
-Fixed torchtext data to GPU (#4785)
-Fixed a crash bug in MLFlow logger (#4716)
-
-Contributors
-@awaelchli, @jonashaag, @jungwhank, @M-Salti, @moi90, @pgagarinov, @s-rog, @Samyak2, @SkafteNicki, @teddykoker, @ydcjeff
-If we forgot someone due to not matching commit email with GitHub account, let us know :]","Detail changes
-Added
-Added casting to python types for numpy scalars when logging hparams (#4647)
-Added warning when progress bar refresh rate is less than 20 on Google Colab to prevent crashing (#4654)
-Added F1 class metric (#4656)
-Changed
-Consistently use step=trainer.global_step in LearningRateMonitor independently of logging_interval (#4376)
-Metric states are no longer as default added to state_dict (#4685)
-Renamed class metric Fbeta >> FBeta (#4656)
-Model summary: add 1 decimal place (#4745)
-Do not override PYTHONWARNINGS (#4700)
-Fixed
-Fixed checkpoint hparams dict casting when omegaconf is available (#4770)
-Fixed incomplete progress bars when total batches not divisible by refresh rate (#4577)
-Updated SSIM metric (#4566)(#4656)
-Fixed batch_arg_name - add batch_arg_name to all calls to _adjust_batch_sizebug (#4812)
-Fixed torchtext data to GPU (#4785)
-Fixed a crash bug in MLFlow logger (#4716)
-Contributors
-@awaelchli, @jonashaag, @jungwhank, @M-Salti, @moi90, @pgagarinov, @s-rog, @Samyak2, @SkafteNicki, @teddykoker, @ydcjeff
-If we forgot someone due to not matching commit email with GitHub account, let us know :]"
 102,"Detail changes
 Added
 
-Added lambda closure to manual_optimizer_step (#4618)
+Added casting to python types for numpy scalars when logging hparams (#4647)
+Added warning when progress bar refresh rate is less than 20 on Google Colab to prevent crashing (#4654)
+Added F1 class metric (#4656)
 
 Changed
 
-Change Metrics persistent default mode to False (#4685)
+Consistently use step=trainer.global_step in LearningRateMonitor independently of logging_interval (#4376)
+Metric states are no longer as default added to state_dict (#4685)
+Renamed class metric Fbeta >> FBeta (#4656)
+Model summary: add 1 decimal place (#4745)
+Do not override PYTHONWARNINGS (#4700)
 
 Fixed
 
-Prevent crash if sync_dist=True on CPU (#4626)
-Fixed average pbar Metrics (#4534)
-Fixed setup callback hook to correctly pass the LightningModule through (#4608)
-Allowing decorate model init with saving hparams inside (#4662)
-Fixed split_idx set by LoggerConnector in on_trainer_init to Trainer  (#4697)
+Fixed checkpoint hparams dict casting when omegaconf is available (#4770)
+Fixed incomplete progress bars when total batches not divisible by refresh rate (#4577)
+Updated SSIM metric (#4566)(#4656)
+Fixed batch_arg_name - add batch_arg_name to all calls to _adjust_batch_sizebug (#4812)
+Fixed torchtext data to GPU (#4785)
+Fixed a crash bug in MLFlow logger (#4716)
 
 Contributors
-@ananthsub, @Borda, @SeanNaren, @SkafteNicki, @tchaton
+@awaelchli, @jonashaag, @jungwhank, @M-Salti, @moi90, @pgagarinov, @s-rog, @Samyak2, @SkafteNicki, @teddykoker, @ydcjeff
 If we forgot someone due to not matching commit email with GitHub account, let us know :]","Detail changes
 Added
-Added lambda closure to manual_optimizer_step (#4618)
+Added casting to python types for numpy scalars when logging hparams (#4647)
+Added warning when progress bar refresh rate is less than 20 on Google Colab to prevent crashing (#4654)
+Added F1 class metric (#4656)
 Changed
-Change Metrics persistent default mode to False (#4685)
+Consistently use step=trainer.global_step in LearningRateMonitor independently of logging_interval (#4376)
+Metric states are no longer as default added to state_dict (#4685)
+Renamed class metric Fbeta >> FBeta (#4656)
+Model summary: add 1 decimal place (#4745)
+Do not override PYTHONWARNINGS (#4700)
 Fixed
-Prevent crash if sync_dist=True on CPU (#4626)
-Fixed average pbar Metrics (#4534)
-Fixed setup callback hook to correctly pass the LightningModule through (#4608)
-Allowing decorate model init with saving hparams inside (#4662)
-Fixed split_idx set by LoggerConnector in on_trainer_init to Trainer  (#4697)
+Fixed checkpoint hparams dict casting when omegaconf is available (#4770)
+Fixed incomplete progress bars when total batches not divisible by refresh rate (#4577)
+Updated SSIM metric (#4566)(#4656)
+Fixed batch_arg_name - add batch_arg_name to all calls to _adjust_batch_sizebug (#4812)
+Fixed torchtext data to GPU (#4785)
+Fixed a crash bug in MLFlow logger (#4716)
 Contributors
-@ananthsub, @Borda, @SeanNaren, @SkafteNicki, @tchaton
+@awaelchli, @jonashaag, @jungwhank, @M-Salti, @moi90, @pgagarinov, @s-rog, @Samyak2, @SkafteNicki, @teddykoker, @ydcjeff
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
 103,"Detail changes
 Added
 
-Added metrics aggregation in Horovod and fixed early stopping (#3775) 
-Added manual_optimizer_step which work with AMP Native and accumulated_grad_batches (#4485)
-Added persistent(mode) method to metrics, to enable and disable metric states being added to state_dict (#4482)
-Added congratulations at the end of our notebooks (#4555)
+Added lambda closure to manual_optimizer_step (#4618)
 
 Changed
 
-Changed fsspec to tuner (#4458)
-Unify sLURM/TorchElastic under backend plugin (#4578, #4580, #4581, #4582, #4583)
+Change Metrics persistent default mode to False (#4685)
 
 Fixed
 
-Fixed feature-lack in hpc_load (#4526)
-Fixed metrics states being overridden in DDP mode (#4482)
-Fixed lightning_getattr, lightning_hasattr not finding the correct attributes in datamodule (#4347)
-Fixed automatic optimization AMP by manual_optimization_step (#4485)
-Replace MisconfigurationException with warning in ModelCheckpoint Callback (#4560)
-Fixed logged keys in mlflow logger (#4412)
-Fixed is_picklable by catching AttributeError (#4508)
+Prevent crash if sync_dist=True on CPU (#4626)
+Fixed average pbar Metrics (#4534)
+Fixed setup callback hook to correctly pass the LightningModule through (#4608)
+Allowing decorate model init with saving hparams inside (#4662)
+Fixed split_idx set by LoggerConnector in on_trainer_init to Trainer  (#4697)
 
 Contributors
-@dscarmo, @jtamir, @kazhang, @maxjeblick, @rohitgr7, @SkafteNicki, @tarepan, @tchaton, @tgaddair, @williamFalcon
+@ananthsub, @Borda, @SeanNaren, @SkafteNicki, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]","Detail changes
 Added
-Added metrics aggregation in Horovod and fixed early stopping (#3775) 
-Added manual_optimizer_step which work with AMP Native and accumulated_grad_batches (#4485)
-Added persistent(mode) method to metrics, to enable and disable metric states being added to state_dict (#4482)
-Added congratulations at the end of our notebooks (#4555)
+Added lambda closure to manual_optimizer_step (#4618)
 Changed
-Changed fsspec to tuner (#4458)
-Unify sLURM/TorchElastic under backend plugin (#4578, #4580, #4581, #4582, #4583)
+Change Metrics persistent default mode to False (#4685)
 Fixed
-Fixed feature-lack in hpc_load (#4526)
-Fixed metrics states being overridden in DDP mode (#4482)
-Fixed lightning_getattr, lightning_hasattr not finding the correct attributes in datamodule (#4347)
-Fixed automatic optimization AMP by manual_optimization_step (#4485)
-Replace MisconfigurationException with warning in ModelCheckpoint Callback (#4560)
-Fixed logged keys in mlflow logger (#4412)
-Fixed is_picklable by catching AttributeError (#4508)
+Prevent crash if sync_dist=True on CPU (#4626)
+Fixed average pbar Metrics (#4534)
+Fixed setup callback hook to correctly pass the LightningModule through (#4608)
+Allowing decorate model init with saving hparams inside (#4662)
+Fixed split_idx set by LoggerConnector in on_trainer_init to Trainer  (#4697)
 Contributors
-@dscarmo, @jtamir, @kazhang, @maxjeblick, @rohitgr7, @SkafteNicki, @tarepan, @tchaton, @tgaddair, @williamFalcon
+@ananthsub, @Borda, @SeanNaren, @SkafteNicki, @tchaton
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
 104,"Detail changes
 Added
 
-Added PyTorch 1.7 Stable support (#3821)
-Added timeout for tpu_device_exists to ensure process does not hang indefinitely (#4340)
+Added metrics aggregation in Horovod and fixed early stopping (#3775) 
+Added manual_optimizer_step which work with AMP Native and accumulated_grad_batches (#4485)
+Added persistent(mode) method to metrics, to enable and disable metric states being added to state_dict (#4482)
+Added congratulations at the end of our notebooks (#4555)
 
 Changed
 
-W&B log in sync with Trainer step (#4405)
-Hook on_after_backward is called only when optimizer_step is being called (#4439)
-Moved track_and_norm_grad into training loop and called only when optimizer_step is being called (#4439)
-Changed type checker with explicit cast of ref_model object (#4457)
-
-Deprecated
-
-Deprecated passing ModelCheckpoint instance to checkpoint_callback Trainer argument (#4336)
+Changed fsspec to tuner (#4458)
+Unify sLURM/TorchElastic under backend plugin (#4578, #4580, #4581, #4582, #4583)
 
 Fixed
 
-Disable saving checkpoints if not trained (#4372)
-Fixed error using auto_select_gpus=True with gpus=-1 (#4209)
-Disabled training when limit_train_batches=0 (#4371)
-Fixed that metrics do not store computational graph for all seen data (#4313)
-Fixed AMP unscale for on_after_backward (#4439)
-Fixed TorchScript export when module includes Metrics (#4428)
-Fixed CSV logger warning (#4419)
-Fixed skip DDP parameter sync (#4301)
+Fixed feature-lack in hpc_load (#4526)
+Fixed metrics states being overridden in DDP mode (#4482)
+Fixed lightning_getattr, lightning_hasattr not finding the correct attributes in datamodule (#4347)
+Fixed automatic optimization AMP by manual_optimization_step (#4485)
+Replace MisconfigurationException with warning in ModelCheckpoint Callback (#4560)
+Fixed logged keys in mlflow logger (#4412)
+Fixed is_picklable by catching AttributeError (#4508)
 
 Contributors
-@ananthsub, @awaelchli, @borisdayma, @carmocca, @justusschock, @lezwon, @rohitgr7, @SeanNaren, @SkafteNicki, @ssaru, @tchaton, @ydcjeff
+@dscarmo, @jtamir, @kazhang, @maxjeblick, @rohitgr7, @SkafteNicki, @tarepan, @tchaton, @tgaddair, @williamFalcon
 If we forgot someone due to not matching commit email with GitHub account, let us know :]","Detail changes
 Added
-Added PyTorch 1.7 Stable support (#3821)
-Added timeout for tpu_device_exists to ensure process does not hang indefinitely (#4340)
+Added metrics aggregation in Horovod and fixed early stopping (#3775) 
+Added manual_optimizer_step which work with AMP Native and accumulated_grad_batches (#4485)
+Added persistent(mode) method to metrics, to enable and disable metric states being added to state_dict (#4482)
+Added congratulations at the end of our notebooks (#4555)
 Changed
-W&B log in sync with Trainer step (#4405)
-Hook on_after_backward is called only when optimizer_step is being called (#4439)
-Moved track_and_norm_grad into training loop and called only when optimizer_step is being called (#4439)
-Changed type checker with explicit cast of ref_model object (#4457)
-Deprecated
-Deprecated passing ModelCheckpoint instance to checkpoint_callback Trainer argument (#4336)
+Changed fsspec to tuner (#4458)
+Unify sLURM/TorchElastic under backend plugin (#4578, #4580, #4581, #4582, #4583)
 Fixed
-Disable saving checkpoints if not trained (#4372)
-Fixed error using auto_select_gpus=True with gpus=-1 (#4209)
-Disabled training when limit_train_batches=0 (#4371)
-Fixed that metrics do not store computational graph for all seen data (#4313)
-Fixed AMP unscale for on_after_backward (#4439)
-Fixed TorchScript export when module includes Metrics (#4428)
-Fixed CSV logger warning (#4419)
-Fixed skip DDP parameter sync (#4301)
+Fixed feature-lack in hpc_load (#4526)
+Fixed metrics states being overridden in DDP mode (#4482)
+Fixed lightning_getattr, lightning_hasattr not finding the correct attributes in datamodule (#4347)
+Fixed automatic optimization AMP by manual_optimization_step (#4485)
+Replace MisconfigurationException with warning in ModelCheckpoint Callback (#4560)
+Fixed logged keys in mlflow logger (#4412)
+Fixed is_picklable by catching AttributeError (#4508)
 Contributors
-@ananthsub, @awaelchli, @borisdayma, @carmocca, @justusschock, @lezwon, @rohitgr7, @SeanNaren, @SkafteNicki, @ssaru, @tchaton, @ydcjeff
+@dscarmo, @jtamir, @kazhang, @maxjeblick, @rohitgr7, @SkafteNicki, @tarepan, @tchaton, @tgaddair, @williamFalcon
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
 105,"Detail changes
 Added
 
-Added dirpath and filename parameter in ModelCheckpoint (#4213)
-Added plugins docs and DDPPlugin to customize ddp across all accelerators (#4258)
-Added strict option to the scheduler dictionary (#3586)
-Added fsspec support for profilers (#4162)
-Added autogenerated helptext to Trainer.add_argparse_args (#4344)
-Added support for string values in Trainer's profiler parameter (#3656)
+Added PyTorch 1.7 Stable support (#3821)
+Added timeout for tpu_device_exists to ensure process does not hang indefinitely (#4340)
 
 Changed
 
-Improved error messages for invalid configure_optimizers returns (#3587)
-Allow changing the logged step value in validation_step (#4130)
-Allow setting replace_sampler_ddp=True with a distributed sampler already added (#4273)
-Fixed santized parameters for WandbLogger.log_hyperparams (#4320)
+W&B log in sync with Trainer step (#4405)
+Hook on_after_backward is called only when optimizer_step is being called (#4439)
+Moved track_and_norm_grad into training loop and called only when optimizer_step is being called (#4439)
+Changed type checker with explicit cast of ref_model object (#4457)
 
 Deprecated
 
-Deprecated filepath in ModelCheckpoint (#4213)
-Deprecated reorder parameter of the auc metric (#4237)
-Deprecated bool values in Trainer's profiler parameter (#3656)
+Deprecated passing ModelCheckpoint instance to checkpoint_callback Trainer argument (#4336)
 
 Fixed
 
-Fixed setting device ids in DDP (#4297)
-Fixed synchronization of best model path in ddp_accelerator (#4323)
-Fixed WandbLogger not uploading checkpoint artifacts at the end of training (#4341)
+Disable saving checkpoints if not trained (#4372)
+Fixed error using auto_select_gpus=True with gpus=-1 (#4209)
+Disabled training when limit_train_batches=0 (#4371)
+Fixed that metrics do not store computational graph for all seen data (#4313)
+Fixed AMP unscale for on_after_backward (#4439)
+Fixed TorchScript export when module includes Metrics (#4428)
+Fixed CSV logger warning (#4419)
+Fixed skip DDP parameter sync (#4301)
 
 Contributors
-@ananthsub, @awaelchli, @carmocca, @ddrevicky, @louis-she, @mauvilsa, @rohitgr7, @SeanNaren, @tchaton
+@ananthsub, @awaelchli, @borisdayma, @carmocca, @justusschock, @lezwon, @rohitgr7, @SeanNaren, @SkafteNicki, @ssaru, @tchaton, @ydcjeff
 If we forgot someone due to not matching commit email with GitHub account, let us know :]","Detail changes
 Added
-Added dirpath and filename parameter in ModelCheckpoint (#4213)
-Added plugins docs and DDPPlugin to customize ddp across all accelerators (#4258)
-Added strict option to the scheduler dictionary (#3586)
-Added fsspec support for profilers (#4162)
-Added autogenerated helptext to Trainer.add_argparse_args (#4344)
-Added support for string values in Trainer's profiler parameter (#3656)
+Added PyTorch 1.7 Stable support (#3821)
+Added timeout for tpu_device_exists to ensure process does not hang indefinitely (#4340)
 Changed
-Improved error messages for invalid configure_optimizers returns (#3587)
-Allow changing the logged step value in validation_step (#4130)
-Allow setting replace_sampler_ddp=True with a distributed sampler already added (#4273)
-Fixed santized parameters for WandbLogger.log_hyperparams (#4320)
+W&B log in sync with Trainer step (#4405)
+Hook on_after_backward is called only when optimizer_step is being called (#4439)
+Moved track_and_norm_grad into training loop and called only when optimizer_step is being called (#4439)
+Changed type checker with explicit cast of ref_model object (#4457)
 Deprecated
-Deprecated filepath in ModelCheckpoint (#4213)
-Deprecated reorder parameter of the auc metric (#4237)
-Deprecated bool values in Trainer's profiler parameter (#3656)
+Deprecated passing ModelCheckpoint instance to checkpoint_callback Trainer argument (#4336)
 Fixed
-Fixed setting device ids in DDP (#4297)
-Fixed synchronization of best model path in ddp_accelerator (#4323)
-Fixed WandbLogger not uploading checkpoint artifacts at the end of training (#4341)
+Disable saving checkpoints if not trained (#4372)
+Fixed error using auto_select_gpus=True with gpus=-1 (#4209)
+Disabled training when limit_train_batches=0 (#4371)
+Fixed that metrics do not store computational graph for all seen data (#4313)
+Fixed AMP unscale for on_after_backward (#4439)
+Fixed TorchScript export when module includes Metrics (#4428)
+Fixed CSV logger warning (#4419)
+Fixed skip DDP parameter sync (#4301)
 Contributors
-@ananthsub, @awaelchli, @carmocca, @ddrevicky, @louis-she, @mauvilsa, @rohitgr7, @SeanNaren, @tchaton
+@ananthsub, @awaelchli, @borisdayma, @carmocca, @justusschock, @lezwon, @rohitgr7, @SeanNaren, @SkafteNicki, @ssaru, @tchaton, @ydcjeff
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
 106,"Detail changes
 Added
 
+Added dirpath and filename parameter in ModelCheckpoint (#4213)
+Added plugins docs and DDPPlugin to customize ddp across all accelerators (#4258)
+Added strict option to the scheduler dictionary (#3586)
+Added fsspec support for profilers (#4162)
+Added autogenerated helptext to Trainer.add_argparse_args (#4344)
+Added support for string values in Trainer's profiler parameter (#3656)
+
+Changed
+
+Improved error messages for invalid configure_optimizers returns (#3587)
+Allow changing the logged step value in validation_step (#4130)
+Allow setting replace_sampler_ddp=True with a distributed sampler already added (#4273)
+Fixed santized parameters for WandbLogger.log_hyperparams (#4320)
+
+Deprecated
+
+Deprecated filepath in ModelCheckpoint (#4213)
+Deprecated reorder parameter of the auc metric (#4237)
+Deprecated bool values in Trainer's profiler parameter (#3656)
+
+Fixed
+
+Fixed setting device ids in DDP (#4297)
+Fixed synchronization of best model path in ddp_accelerator (#4323)
+Fixed WandbLogger not uploading checkpoint artifacts at the end of training (#4341)
+
+Contributors
+@ananthsub, @awaelchli, @carmocca, @ddrevicky, @louis-she, @mauvilsa, @rohitgr7, @SeanNaren, @tchaton
+If we forgot someone due to not matching commit email with GitHub account, let us know :]","Detail changes
+Added
+Added dirpath and filename parameter in ModelCheckpoint (#4213)
+Added plugins docs and DDPPlugin to customize ddp across all accelerators (#4258)
+Added strict option to the scheduler dictionary (#3586)
+Added fsspec support for profilers (#4162)
+Added autogenerated helptext to Trainer.add_argparse_args (#4344)
+Added support for string values in Trainer's profiler parameter (#3656)
+Changed
+Improved error messages for invalid configure_optimizers returns (#3587)
+Allow changing the logged step value in validation_step (#4130)
+Allow setting replace_sampler_ddp=True with a distributed sampler already added (#4273)
+Fixed santized parameters for WandbLogger.log_hyperparams (#4320)
+Deprecated
+Deprecated filepath in ModelCheckpoint (#4213)
+Deprecated reorder parameter of the auc metric (#4237)
+Deprecated bool values in Trainer's profiler parameter (#3656)
+Fixed
+Fixed setting device ids in DDP (#4297)
+Fixed synchronization of best model path in ddp_accelerator (#4323)
+Fixed WandbLogger not uploading checkpoint artifacts at the end of training (#4341)
+Contributors
+@ananthsub, @awaelchli, @carmocca, @ddrevicky, @louis-she, @mauvilsa, @rohitgr7, @SeanNaren, @tchaton
+If we forgot someone due to not matching commit email with GitHub account, let us know :]"
+107,"Detail changes
+Added
+
 Added persistent flag to Metric.add_state (#4195)
 
 Changed
@@ -10030,7 +10126,7 @@ Fixed overwrite check for model hooks (#4010)
 Contributors
 @Borda, @EspenHa, @teddykoker
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-107,"Fixes the last major bugs for validation logging.
+108,"Fixes the last major bugs for validation logging.
 Also removes duplicate charts for metric / metric_loss.
 Doing this minor release because correct validation metrics logging is critical.
 Details changes
@@ -10071,8 +10167,8 @@ Fixed runtime failure while exporting hparams to yaml (#4158)
 Contributors
 @Borda, @NumesSanguis, @rohitgr7, @williamFalcon
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-108,Obligatory post 1.0 minor release. Main fix is to make Lightning module fully compatible with Jit (had some edge-cases we had not covered).,Obligatory post 1.0 minor release. Main fix is to make Lightning module fully compatible with Jit (had some edge-cases we had not covered).
-109,"Overview
+109,Obligatory post 1.0 minor release. Main fix is to make Lightning module fully compatible with Jit (had some edge-cases we had not covered).,Obligatory post 1.0 minor release. Main fix is to make Lightning module fully compatible with Jit (had some edge-cases we had not covered).
+110,"Overview
 ...
 Detail changes
 
@@ -10147,7 +10243,7 @@ Fixed mismatch between docstring and code regarding when on_load_checkpoint hook
 Contributors
 @ananyahjha93, @Borda, @edenlightning, @hbredin, @rohitgr7, @SkafteNicki, @teddykoker, @williamFalcon
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-110,"This release is a buffer in case 1.0 breaks any compatibility for people who upgrade. 0.10.0 has all the bug fixes and features of 1.0 but is 100% backward compatible. The 1.0 release following in the next 24 hours. 
+111,"This release is a buffer in case 1.0 breaks any compatibility for people who upgrade. 0.10.0 has all the bug fixes and features of 1.0 but is 100% backward compatible. The 1.0 release following in the next 24 hours. 
 Overview
 The major changes are:
 - Results objects are deprecated (we hated them too haha)
@@ -10538,7 +10634,7 @@ Fixed unexpected signature for validation_step (#3947)
 Contributors
 @abrahambotros, @akihironitta, @ananthsub, @ananyahjha93, @awaelchli, @Borda, @c00k1ez, @carmocca, @f4hy, @GimmickNG, @jbschiratti, @justusschock, @LeeJZh, @lezwon, @Lucas-Steinmann, @maxjeblick, @monney, @mpariente, @nateraw, @nrupatunga, @patrickorlando, @PhilJd, @rohitgr7, @s-rog, @ShomyLiu, @SkafteNicki, @Sordie, @teddykoker, @tgaddair, @Vozf, @williamFalcon, @XDynames, @ydcjeff
 If we forgot someone due to not matching the commit email with GitHub account, let us know :]"
-111,"Overview
+112,"Overview
 The newest PyTorch Lightning release includes final API clean-up with better data decoupling and shorter logging syntax.
 Were happy to release PyTorch Lightning 0.9 today, which contains many great new features, more bugfixes than any release we ever had, but most importantly it introduced our mostly final API changes! Lightning is being adopted by top researchers and AI labs around the world, and we are working hard to make sure we provide a smooth experience and support for all the latest best practices. 
 Detail changes
@@ -10739,7 +10835,7 @@ Fixed setting device to root GPU (#3042)
 Contributors
 @ananthsub, @ananyahjha93, @awaelchli, @bkhakshoor, @Borda, @ethanwharris, @f4hy, @groadabike, @ibeltagy, @justusschock, @lezwon, @nateraw, @neighthan, @nsarang, @PhilJd, @pwwang, @rohitgr7, @romesco, @ruotianluo, @shijianjian, @SkafteNicki, @tgaddair, @thschaaf, @williamFalcon, @xmotli02, @ydcjeff, @yukw777, @zerogerc
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-112,"Overview
+113,"Overview
 The point of this release is more bug fixes ahead of v 1.0.0. We now have CI tests on TPU thanks to @zcain117 from Google! :slightly_smiling_face:
 This means we fixed many TPU bugs we hadn’t caught before because we had no tests.
 In addition, we fixed:
@@ -10804,7 +10900,7 @@ Fixed DDP tests and .test() (#2512, #2570)
 Contributors
 @anthonytec2, @awaelchli, @bernardomig, @Borda, @EspenHa, @HHousen, @InCogNiTo124, @rohitgr7, @williamFalcon
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-113,"Detail changes
+114,"Detail changes
 Added
 
 Added reduce ddp results on eval (#2434)
@@ -10839,14 +10935,14 @@ Fixed TPU saving dir (fc26078e395f8a001f4c6dd7b3fe7ca202f914a3, 04e68f022fc03dd5
 Fixed logging on rank 0 only (#2425)
 Contributors
 @awaelchli, @Borda, @olineumann, @williamFalcon"
-114,"Fixed
+115,"Fixed
 
 Fixed AMP wrong call (593837e1da24ff6c942b24ed803fc1496a304609)
 Fixed batch typo (92d1e75b2638a493d9d21ed5fe00a22093888285)
 ","Fixed
 Fixed AMP wrong call (593837e1da24ff6c942b24ed803fc1496a304609)
 Fixed batch typo (92d1e75b2638a493d9d21ed5fe00a22093888285)"
-115,"Overview
+116,"Overview
 As we continue to strengthen the codebase with more tests, we’re finally getting rid of annoying bugs that have been around for a bit now. Mostly around the inconsistent checkpoint and early stopping behaviour (amazing work @awaelchli  @jeremyjordan )
 Noteworthy changes:
 
@@ -10941,7 +11037,7 @@ Fixed loading model without arguments (#2403)
 Contributors
 @airium, @awaelchli, @Borda, @elias-ramzi, @jeremyjordan, @lezwon, @mateuszpieniak, @mmiakashs, @pwl, @rohitgr7, @ssakhavi, @thschaaf, @tridao, @williamFalcon
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-116,"Overview
+117,"Overview
 Fixing critical bugs in newly added hooks and hparams assignment.
 The recommended data following:
 
@@ -10966,7 +11062,7 @@ Fixed hooks - added barrier (#2245, #2257, #2260)
 Fixed hparams - remove frame inspection on self.hparams (#2253)
 Fixed setup and on fit calls (#2252)
 Fixed GPU template (#2255)"
-117,"Overview
+118,"Overview
 Highlights of this release are adding Metric package and new hooks and flags to customize your workflow.
 Major features:
 
@@ -11139,7 +11235,7 @@ Fixed Pid port + duplicate rank_zero logging (#2140, #2231)
 Contributors
 @awaelchli, @baldassarreFe, @Borda, @borisdayma, @cuent, @devashishshankar, @ivannz, @j-dsouza, @justusschock, @kepler, @kumuji, @lezwon, @lgvaz, @LoicGrobol, @mateuszpieniak, @maximsch2, @moi90, @rohitgr7, @SkafteNicki, @tullie, @williamFalcon, @yukw777, @ZhaofengWu
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-118,"Overview
+119,"Overview
 Highlights of this release are adding support for TorchElastic enables distributed PyTorch training jobs to be executed in a fault-tolerant and elastic manner; auto-scaling of batch size; new transfer learning example; an option to provide seed to random generators to ensure reproducibility.
 Detail changes
 Added
@@ -11242,7 +11338,7 @@ Fixed hparam logging with metrics (#1647)
 Contributors
 @ashwinb, @awaelchli, @Borda, @cmpute, @festeh, @jbschiratti, @justusschock, @kepler, @kumuji, @nanddalal, @nathanbreitsch, @olineumann, @pitercl, @rohitgr7, @S-aiueo32, @SkafteNicki, @tgaddair, @tullie, @tw991, @williamFalcon, @ybrovman, @yukw777
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-119,"We made a few changes to Callbacks to test ops on detached GPU tensors to avoid CPU transfer. However, it made callbacks unpicklable which will crash DDP. 
+120,"We made a few changes to Callbacks to test ops on detached GPU tensors to avoid CPU transfer. However, it made callbacks unpicklable which will crash DDP. 
 This release fixes that core issue
 Changed
 
@@ -11273,7 +11369,7 @@ Fixed CPU DDP breaking change and DDP change (#1635)
 Tested pickling (#1636)
 Contributors
 @justusschock, @quinor, @williamFalcon"
-120,"Key updates
+121,"Key updates
 
 PyTorch 1.5  support
 Added Horovod distributed_backend option
@@ -11392,7 +11488,7 @@ Fixed bool conversion from string (#1606)
 Contributors
 @alexeykarnachev, @areshytko, @awaelchli, @Borda, @borisdayma, @ethanwharris, @fschlatt, @HenryJia, @Ir1d, @justusschock, @karlinjf, @lezwon, @neggert, @rmrao, @rohitgr7, @SkafteNicki, @tgaddair, @williamFalcon
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-121,"We had a few (subtle) bugs that affected DDP and a few key things in 0.7.2 so we released 0.7.3 to fix them because they are critical for DDP. sorry about that! still, no API changes, but please do skip straight to  0.7.3 upgrade for those fixes
+122,"We had a few (subtle) bugs that affected DDP and a few key things in 0.7.2 so we released 0.7.3 to fix them because they are critical for DDP. sorry about that! still, no API changes, but please do skip straight to  0.7.3 upgrade for those fixes
 Detail changes
 Added
 
@@ -11419,7 +11515,7 @@ Fixed gradient clipping (#1438)
 Fixed pretty print (#1441)
 Contributors
 @alsrgv, @Borda, @williamFalcon"
-122,"Overview
+123,"Overview
 This release aims at fixing particular issues and improving the user development experience via extending docs, adding typing and supporting python 3.8. In particular, some of the release highlights are:
 - Added benchmark for comparing lightning with vanilla implementations
 - Extended optimizer support with particular frequency
@@ -11596,8 +11692,8 @@ Fixed Unimplemented backend XLA error on TPU (#1387)
 Contributors
 @alexeykarnachev, @amoudgl, @areshytko, @asafmanor, @awaelchli, @bkkaggle, @bmartinn, @Borda, @borisdayma, @cmpute, @djbyrne, @ethanwharris, @gerardrbentley, @jbschiratti, @jeremyjordan, @justusschock, @monney, @mpariente, @pertschuk, @rmrao, @S-aiueo32, @shubhamagarwal92, @SkafteNicki, @sneiman, @tullie, @vanpelt, @williamFalcon, @xingzhaolee
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-123,Monir bug fix with print issues and data_loader (#1080),Monir bug fix with print issues and data_loader (#1080)
-124,"Overview
+124,Monir bug fix with print issues and data_loader (#1080),Monir bug fix with print issues and data_loader (#1080)
+125,"Overview
 This is the first joint release between pytorch-bearer and Lightning, here we come ...
 This release adds support for training models on Tensor Processing Units (TPU). We can now train models on GPUs and TPUs by changing a single parameter in Trainer (see docs). We are also bringing the flexibility of Bearer into Lightning by allowing for arbitrary user-defined callbacks, see docs. 
 We are also including a profiler that allows Lightning users to identify training bottlenecks (see docs).
@@ -11750,7 +11846,7 @@ Remove deprecated args to learning rate step function (#890)
 Contributors
 @airglow, @akshaykvnit, @AljoSt, @AntixK, @awaelchli, @baeseongsu, @bobkemp, @Borda, @calclavia, @Calysto, @djbyrne, @ethanwharris, @fdelrio89, @hadim, @hanbyul-kim, @jeremyjordan, @kuynzereb, @luiscape, @MattPainter01, @neggert, @onkyo14taro, @peteriz, @shoarora, @SkafteNicki, @smallzzy, @srush, @theevann, @tullie, @williamFalcon, @xeTaiz, @xssChauhan, @yukw777
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-125,"This release focused on a ton of bug fixes, small optimizations to training but most importantly, clean new docs!
+126,"This release focused on a ton of bug fixes, small optimizations to training but most importantly, clean new docs!
 Major changes
 We have released New documentation, please bear with us as we fix broken links and patch in missing pieces. 
 This project moved to new org PyTorchLightning, so no longer the root sits on WilliamFalcon/PyTorchLightning. 
@@ -11887,7 +11983,7 @@ Fixed a bug where on_train_end was not called when early stopping (#723)
 Contributors
 @akhti, @alumae, @awaelchli, @Borda, @borisdayma, @ctlaltdefeat, @dreamgonfly, @elliotwaite, @fdiehl, @goodok, @haossr, @HarshSharma12, @Ir1d, @jakubczakon, @jeffling, @kuynzereb, @MartinPernus, @matthew-z, @MikeScarp, @mpariente, @neggert, @rwesterman, @ryanwongsa, @schwobr, @tullie, @vikmary, @VSJMilewski, @williamFalcon, @YehCF
 If we forgot someone due to not matching commit email with GitHub account, let us know :]"
-126,"Generalization release
+127,"Generalization release
 The main focus of this release was on adding flexibility and generalization to support broad research cases.
 Next release will be Dec 7th (every 30 days).
 Internal Facebook support
@@ -12176,7 +12272,7 @@ Tons of doc improvements.
 Thanks!
 Thank you to the amazing contributor community! Especially @neggert  and @Borda for reviewing PRs and taking care of a good number of Github issues. The community is thriving and has really embraced making Lightning better.
 Great job everyone!"
-127,"0.5.1
+128,"0.5.1
 Simpler interface
 All trainers now have a default logger, early stopping and checkpoint object. To modify the behavior, pass in your own versions of those. 
 
@@ -12215,7 +12311,7 @@ No longer need to set master port, Lightning does it for you using the job id.
 Minor changes
 training_step and validation_end now return two separate dicts, one for the progress bar and one for logging.
 Added options to memory printing: 'min_max' logs only the max/min memory use. 'all' logs all the GPUs on the root node.  "
-128,"This release has breaking API changes. See #124 for all details. 
+129,"This release has breaking API changes. See #124 for all details. 
 Syntax changes are: 
 in trainer options use: train, test, val  
 for data: val_dataloader, test_dataloader, train_dataloader
@@ -12230,7 +12326,7 @@ data_batch -> batch
 prog -> progress 
 gradient_clip -> gradient_clip_val  
 add_log_row_interval -> row_log_interval"
-129,"This release does the following: 
+130,"This release does the following: 
 
 Moves SLURM resubmit from test-tube to PL (which removes the need for cluster parameter).
 Cluster checkpoint done by Lightning now (not test-tube). Also doesn't require a checkpoint object to restore weights when on cluster.     
@@ -12243,7 +12339,7 @@ Cluster checkpoint done by Lightning now (not test-tube). Also doesn't require a
 Loads all models on CPU when restoring weights to avoid OOM issues in PyTorch. User now needs to move to GPU manually. However, if using Lightning, lightning will move to correct GPUs automatically. 
 Fixes various subtle bugs in DDP implementation.
 documentation updates"
-130,"
+131,"
 validation_step, val_dataloader are now optional.   
 enabled multiple dataloaders for validation.    
 support for latest test-tube logger optimized for PT 1.2.0.   
@@ -12252,7 +12348,7 @@ lr_scheduler now activated after epoch
 enabled multiple dataloaders for validation.  
 support for latest test-tube logger optimized for PT 1.2.0. 
 lr_scheduler now activated after epoch    "
-131,"0.4.0
+132,"0.4.0
 0.4.0 is the first public release after a short period testing with public users. Thanks for all the help ironing out bugs to get Lightning to run on everything from notebooks to local to server machines.
 This release includes:
 
@@ -12279,7 +12375,7 @@ Training continuation (not just weights, but also epoch, global step, etc...)
 if the folder the checkpoint callback uses has weights, it loads the last weights automatically.
 training step and validation step don't reduce outputs automatically anymore. This fixes issues with reducing generated outputs for example (images, text). 
 16-bit can now be used with a single GPU (no DP or DDP in this case). bypasses issue with NVIDIA apex and PT compatibility for DP+16-bit training. "
-132,"Simplified data loader.
+133,"Simplified data loader.
 Added a decorator to do lazy loading internally:
 Old:
 python
@@ -12308,7 +12404,7 @@ Now:
 def tng_dataloader(self):
       return DataLoader(...)
 ````"
-133,"Fully tested!
+134,"Fully tested!
 Includes:
 - Code coverage (99%)
 - Full tests that run multiple models in different configs

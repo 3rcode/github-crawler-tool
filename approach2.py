@@ -8,7 +8,8 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics import f1_score
 
-model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
+model = SentenceTransformer('all-mpnet-base-v2')
+THRESHOLD = 0.7
 
 linking_statement = [r"(?i)fixes:?", r"(?i)what's changed:?", r"(?i)other changes:?", r"(?i)documentation:?",
                      r"(?i)features:?", r"(?i)new contributors:?", r"(?i)bug fixes:?", r"(?i)changelog:?",
@@ -19,14 +20,25 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_origin_data(file_path):
     df = pd.read_csv(file_path)
-    commit = df['Commit Message'].astype(str) + df['Commit Description'].astype(str)
+    def merge(row):
+        if pd.isna(row['Commit Description']):
+            return str(row['Commit Message'])
+        else:
+            return str(row['Commit Message']) + str(row['Commit Description'])
+
+    commit = df.apply(merge, axis=1)
     label = df['Label']
     return np.asarray(commit), np.asarray(label)
 
 
 def load_abstract_data(file_path):
     df = pd.read_csv(file_path)
-    commit = df['Commit Message Abstract'].astype(str) + df['Commit Desription Abstract'].astype(str) # Note description
+    def merge(row):
+        if pd.isna(row['Commit Description Abstract']):
+            return str(row['Commit Message Abstract'])
+        else:
+            return str(row['Commit Message Abstract']) + str(row['Commit Description Abstract'])
+    commit = df.apply(merge, axis=1)
     label = df['Label']
     return np.asarray(commit), np.asarray(label)
 
@@ -42,10 +54,7 @@ if __name__ == '__main__':
     with open(test_cases_path, 'r') as f:
         test_cases = yaml.load(f, Loader=SafeLoader)
 
-
-
     def approach2(test_name, train_repos, test_repos, _type):
-
         file_name = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv'
         load_data = load_origin_data if _type == 'origin' else load_abstract_data 
         # load changelog sentences database
@@ -92,22 +101,28 @@ if __name__ == '__main__':
         # Calculate cosine similarity
         print('Start to calculate cosine similarity')
         cosine_similarities = cosine_similarity(encoded_test_commit, encoded_changelog_sentences)
-        pred = [0] * len(cosine_similarities)
-        for i, score in enumerate(cosine_similarities):
-            result = max(score)
-            if result > 0.7: 
-                pred[i] = 1
-            else:
-                pred[i] = 0
+        scores = np.amax(cosine_similarities, axis=1)
+        preds = np.where(scores >= THRESHOLD, 1, 0)
 
         print('Successfully calculated cosine similarity')
-
         # Score result
         test_size = len(X_test)
-        true_pred = sum([pred[i] == y_test[i] for i in range(test_size)])
-        print("Accuracy: %.2f%%" % (true_pred / test_size * 100))
-        score = f1_score(y_test, pred)
-        print(f"F1 score: {score}")
+        true_pred = sum([preds[i] == y_test[i] for i in range(test_size)])
+        accuracy = true_pred / test_size * 100
+        print("Accuracy: %.2f%%" % (accuracy))
+        accuracy = str(int(accuracy * 100) / 100) + '%'
+
+        f1 = f1_score(y_test, preds)
+        print(f"F1 score: {f1}")
+        f1 = str(f1)
+        result_path = os.path.join(ROOT_DIR, 'encode_cosine.yaml')
+        with open(result_path, 'r') as f:
+            result = yaml.safe_load(f)
+            if result is None:
+                result = {}
+            result.update({f'{test_name}_{_type}': {'Num Commits': test_size, 'Accuracy': accuracy, 'F1 score': f1}})
+        with open(result_path, 'w') as f:
+            yaml.safe_dump(result, f)
 
     for test_case, test_repos in test_cases.items():
         train_repos = list(set(repos) - set(test_repos))

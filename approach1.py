@@ -1,4 +1,3 @@
-import spacy
 import numpy as np
 import pandas as pd
 import os
@@ -11,7 +10,6 @@ from sklearn.metrics import f1_score
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-nlp = spacy.load('en_core_web_lg')
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 max_commit_length = 30
 
@@ -225,12 +223,11 @@ if __name__ == '__main__':
             with open(result_path, 'w') as f:
                 yaml.safe_dump(result, f)
         
-        LSTM_model(test_name, _type, X_train, y_train, X_test, y_test) 
+        naive_bayes(test_name, _type, X_train, y_train, X_test, y_test) 
     
     for test_case, test_repos in test_cases.items():
-        if test_case in ['test6', 'test7']:
-            train_repos = list(set(repos) - set(test_repos))
-            approach1(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='origin') 
+        train_repos = list(set(repos) - set(test_repos))
+        approach1(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='origin') 
     
     
     

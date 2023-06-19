@@ -1,76 +1,79 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"
+Fix bug with customer_update in checkout by @driesvints in https://github.com/laravel/cashier-stripe/pull/1538
+",Fix bug with customer_update in checkout by @driesvints in link
+2,"
 Handle automatic payment method updates by @shatterproof in https://github.com/laravel/cashier-stripe/pull/1534
 ",Handle automatic payment method updates by @shatterproof in link
-2,"
+3,"
 Fallback for empty pm_type object on fillPaymentMethodDetails by @shatterproof in https://github.com/laravel/cashier-stripe/pull/1531
 ",Fallback for empty pm_type object on fillPaymentMethodDetails by @shatterproof in link
-3,"
+4,"
 Add ability to set a description on ""one-off"" charge checkouts by @AmrAb-05 in https://github.com/laravel/cashier-stripe/pull/1525
 ","Add ability to set a description on ""one-off"" charge checkouts by @AmrAb-05 in link"
-4,"
+5,"
 Add ability to ignore incomplete payments by @driesvints in https://github.com/laravel/cashier-stripe/pull/1524
 ",Add ability to ignore incomplete payments by @driesvints in link
-5,"
+6,"
 Set payment confirm options by @driesvints in https://github.com/laravel/cashier-stripe/pull/1516
 ",Set payment confirm options by @driesvints in link
-6,"
+7,"
 Provide findSetupIntent method by @andycowan in https://github.com/laravel/cashier-stripe/pull/1505
 Fix deletion of subscription items in swap() by @glspdotnet in https://github.com/laravel/cashier-stripe/pull/1509
 ","Provide findSetupIntent method by @andycowan in link
 Fix deletion of subscription items in swap() by @glspdotnet in link"
-7,"
+8,"
 Laravel v10 support by @driesvints in https://github.com/laravel/cashier-stripe/pull/1507
 ",Laravel v10 support by @driesvints in link
-8,"
+9,"
 Fix invoice line items by @driesvints in https://github.com/laravel/cashier-stripe/pull/1503
 ",Fix invoice line items by @driesvints in link
-9,"Fixed
+10,"Fixed
 
 Fix webhook command by @driesvints in https://github.com/laravel/cashier-stripe/pull/1499
 ","Fixed
 Fix webhook command by @driesvints in link"
-10,"Added
+11,"Added
 
 Add SyncCustomerDetails job by @driesvints in https://github.com/laravel/cashier-stripe/pull/1498
 ","Added
 Add SyncCustomerDetails job by @driesvints in link"
-11,"Fixed
+12,"Fixed
 
 Return null if attribute isn't found by @driesvints in https://github.com/laravel/cashier-stripe/pull/1496
 ","Fixed
 Return null if attribute isn't found by @driesvints in link"
-12,"Fixed
+13,"Fixed
 
 Fix wrong foreignKey on SubscriptionItem by @zofe in https://github.com/laravel/cashier-stripe/pull/1494
 ","Fixed
 Fix wrong foreignKey on SubscriptionItem by @zofe in link"
-13,"Added
+14,"Added
 
 Laravel v10 Support by @driesvints in https://github.com/laravel/cashier-stripe/pull/1486
 ","Added
 Laravel v10 Support by @driesvints in link"
-14,"Changed
+15,"Changed
 
 Adds types to database migrations and factories by @nunomaduro in https://github.com/laravel/cashier-stripe/pull/1472
 ","Changed
 Adds types to database migrations and factories by @nunomaduro in link"
-15,"Added
+16,"Added
 
 Cursor pagination for invoices by @driesvints in https://github.com/laravel/cashier-stripe/pull/1479
 ","Added
 Cursor pagination for invoices by @driesvints in link"
-16,"Changed
+17,"Changed
 
 Update Stripe API version and Stripe PHP SDK v10 support by @driesvints in https://github.com/laravel/cashier-stripe/pull/1478
 ","Changed
 Update Stripe API version and Stripe PHP SDK v10 support by @driesvints in link"
-17,"Changed
+18,"Changed
 
 Modernize migrations by @driesvints in https://github.com/laravel/cashier-stripe/pull/1471
 ","Changed
 Modernize migrations by @driesvints in link"
-18,"Added
+19,"Added
 
 Allow incomplete subscriptions as active by @driesvints in https://github.com/laravel/cashier-stripe/pull/1466
 
@@ -83,7 +86,7 @@ Allow incomplete subscriptions as active by @driesvints in link
 Changed
 Refactor dates property by @driesvints in link
 Pass pay options to pay method by @driesvints in link"
-19,"Fixed
+20,"Fixed
 
 Fix undefined property id notice by @Lyrisbee in https://github.com/laravel/cashier-stripe/pull/1448
 fix minor typo by @owainjones74 in https://github.com/laravel/cashier-stripe/pull/1450
@@ -92,12 +95,12 @@ Fix StripeObject values problem by @Lyrisbee in https://github.com/laravel/cashi
 Fix undefined property id notice by @Lyrisbee in link
 fix minor typo by @owainjones74 in link
 Fix StripeObject values problem by @Lyrisbee in link"
-20,"Fixed
+21,"Fixed
 
 Add fallback for null value in unitAmountExcludingTax method by @jayan-blutui in https://github.com/laravel/cashier-stripe/pull/1447
 ","Fixed
 Add fallback for null value in unitAmountExcludingTax method by @jayan-blutui in link"
-21,"Added
+22,"Added
 
 Fresh receipt template by @driesvints in https://github.com/laravel/cashier-stripe/pull/1446
 Allow guest checkout by @alexgaal & @driesvints in https://github.com/laravel/cashier-stripe/pull/1438 & https://github.com/laravel/cashier-stripe/pull/1439
@@ -120,12 +123,12 @@ Add generic trial scopes by @lioneaglesolutions in link
 Add days until due to sends invoice by @driesvints in link
 Fixed
 Fix applied balance on invoices by @driesvints in link"
-22,"Fixed
+23,"Fixed
 
 Fix subscription invoicing bug by @driesvints in https://github.com/laravel/cashier-stripe/pull/1434
 ","Fixed
 Fix subscription invoicing bug by @driesvints in link"
-23,"Changed
+24,"Changed
 
 Add invoice.payment_succeeded event to WebhookCommand by @driesvints in https://github.com/laravel/cashier-stripe/pull/1428
 
@@ -138,7 +141,7 @@ Add invoice.payment_succeeded event to WebhookCommand by @driesvints in link
 Fixed
 Fix applied balance on receipts by @driesvints in link
 Renders the invoice item dates on invoices when set by @nicko170 in link"
-24,"Added
+25,"Added
 
 Add new balance transaction methods by @driesvints in https://github.com/laravel/cashier-stripe/pull/1423
 
@@ -155,7 +158,7 @@ Changed
 Add invoice.payment_succeeded event to WebhookCommand by @driesvints in link
 Fixed
 Fix applied balance on receipts by @driesvints in link"
-25,"Added
+26,"Added
 
 Sync preferred locales by @driesvints in https://github.com/laravel/cashier-stripe/pull/1408
 Add new balance transaction methods by @driesvints in https://github.com/laravel/cashier-stripe/pull/1423
@@ -194,12 +197,12 @@ Remove Checkout button by @driesvints in link
 Drop PHP 7.4 and Laravel v8 support by @driesvints in link
 Remove deprecated functionality by @driesvints in link
 Drop MoneyPHP 3.x by @driesvints in link"
-26,"Fixed
+27,"Fixed
 
 Fix Stripe key not found by @driesvints in https://github.com/laravel/cashier-stripe/pull/1421
 ","Fixed
 Fix Stripe key not found by @driesvints in link"
-27,"Added
+28,"Added
 
 Allow Stripe SDK v9 by @driesvints in https://github.com/laravel/cashier-stripe/pull/1413
 
@@ -210,12 +213,12 @@ Fix issue with overwriting behavior by @driesvints in https://github.com/laravel
 Allow Stripe SDK v9 by @driesvints in link
 Fixed
 Fix issue with overwriting behavior by @driesvints in link"
-28,"Fixed
+29,"Fixed
 
 Fix tax on invoice by @driesvints in https://github.com/laravel/cashier-stripe/pull/1412
 ","Fixed
 Fix tax on invoice by @driesvints in link"
-29,"Added
+30,"Added
 
 Create invoices separately by @driesvints in https://github.com/laravel/cashier-stripe/pull/1409
 
@@ -226,7 +229,7 @@ Fix webhook command by @driesvints in https://github.com/laravel/cashier-stripe/
 Create invoices separately by @driesvints in link
 Fixed
 Fix webhook command by @driesvints in link"
-30,"Changed
+31,"Changed
 
 Allow dompdf v2 by @carlalexander in https://github.com/laravel/cashier-stripe/pull/1393
 
@@ -237,24 +240,24 @@ Fix receipt totals and balance by @driesvints in https://github.com/laravel/cash
 Allow dompdf v2 by @carlalexander in link
 Fixed
 Fix receipt totals and balance by @driesvints in link"
-31,"Changed
+32,"Changed
 
 Allow dompdf v2 and money v4 by @GrahamCampbell in https://github.com/laravel/cashier-stripe/pull/1391
 ","Changed
 Allow dompdf v2 and money v4 by @GrahamCampbell in link"
-32,"Changed
+33,"Changed
 
 Update reference to Stripe SDK by @driesvints in https://github.com/laravel/cashier-stripe/pull/1383
 Re-add support for Sources API by @driesvints in https://github.com/laravel/cashier-stripe/pull/1384
 ","Changed
 Update reference to Stripe SDK by @driesvints in link
 Re-add support for Sources API by @driesvints in link"
-33,"Fixed
+34,"Fixed
 
 Fixed undefined quantity notice by @Lyrisbee in https://github.com/laravel/cashier-stripe/pull/1377
 ","Fixed
 Fixed undefined quantity notice by @Lyrisbee in link"
-34,"Added
+35,"Added
 
 Add new hasTrialExpired methods by @driesvints in https://github.com/laravel/cashier-stripe/pull/1366
 
@@ -271,12 +274,12 @@ Changed
 Allow Stripe SDK v8 by @ankurk91 in link
 Fixed
 Fix reference to billable by @driesvints in link"
-35,"Security
+36,"Security
 
 Bump Dompdf by @driesvints in https://github.com/laravel/cashier-stripe/pull/1360
 ","Security
 Bump Dompdf by @driesvints in link"
-36,"Added
+37,"Added
 
 Discount improvements by @driesvints in https://github.com/laravel/cashier-stripe/pull/1354
 
@@ -287,7 +290,7 @@ Fix deprecation with Carbon on receipts by @driesvints in https://github.com/lar
 Discount improvements by @driesvints in link
 Fixed
 Fix deprecation with Carbon on receipts by @driesvints in link"
-37,"Added
+38,"Added
 
 Add pay method by @mozex in https://github.com/laravel/cashier-stripe/pull/1345
 
@@ -298,45 +301,40 @@ Allow options with formatAmount by @driesvints in https://github.com/laravel/cas
 Add pay method by @mozex in link
 Changed
 Allow options with formatAmount by @driesvints in link"
-38,"Fixed
+39,"Fixed
 
 Fix issue with zero tax on invoice by @driesvints in https://github.com/laravel/cashier-stripe/pull/1343
 ","Fixed
 Fix issue with zero tax on invoice by @driesvints in link"
-39,"Changed
+40,"Changed
 
 Pass locale to custom format amount by @driesvints in https://github.com/laravel/cashier-stripe/pull/1340
 ","Changed
 Pass locale to custom format amount by @driesvints in link"
-40,"Changed
+41,"Changed
 
 Make use of anonymous classes by @mmachatschek in https://github.com/laravel/cashier-stripe/pull/1329
 Allow normal and metered prices in builder by @driesvints in https://github.com/laravel/cashier-stripe/pull/1336
 ","Changed
 Make use of anonymous classes by @mmachatschek in link
 Allow normal and metered prices in builder by @driesvints in link"
-41,"Changed
+42,"Changed
 
 Fix rawDiscountFor method by @driesvints in https://github.com/laravel/cashier-stripe/pull/1325
 Fix swapping metered price of subscription item by @pietrantonio91 in https://github.com/laravel/cashier-stripe/pull/1328
 ","Changed
 Fix rawDiscountFor method by @driesvints in link
 Fix swapping metered price of subscription item by @pietrantonio91 in link"
-42,"Fixed
+43,"Fixed
 
 Fallback to null quantity for metered price when swapping a subscription (#1319)
 ","Fixed
 Fallback to null quantity for metered price when swapping a subscription (#1319)"
-43,"Fixed
+44,"Fixed
 
 Prevent duplicate subscription creation (#1308)﻿
 ","Fixed
 Prevent duplicate subscription creation (#1308)﻿"
-44,"Added
-
-Implement invoice renderer (#1304)﻿
-","Added
-Implement invoice renderer (#1304)﻿"
 45,"Added
 
 Implement invoice renderer (#1304)﻿
@@ -344,10 +342,15 @@ Implement invoice renderer (#1304)﻿
 Implement invoice renderer (#1304)﻿"
 46,"Added
 
+Implement invoice renderer (#1304)﻿
+","Added
+Implement invoice renderer (#1304)﻿"
+47,"Added
+
 Laravel 9 support (#1302)﻿
 ","Added
 Laravel 9 support (#1302)﻿"
-47,"Added
+48,"Added
 
 Add deletePaymentMethod (#1298)
 
@@ -358,7 +361,7 @@ Laravel 9 Support (#1299)
 Add deletePaymentMethod (#1298)
 Changed
 Laravel 9 Support (#1299)"
-48,"Changed
+49,"Changed
 
 Simplify cancelation check (#1283)
 Rename cancelled to canceled (#1284)
@@ -373,7 +376,7 @@ Rename cancelled to canceled (#1284)
 Allow latest moneyphp version (#1280, #1286)
 Fixed
 Fix factory canceled state (#1282)﻿"
-49,"Added
+50,"Added
 
 Add createAndSendInvoice method (#1276)
 
@@ -384,27 +387,27 @@ Allow the base url for the Stripe API to be customised (#1273)﻿
 Add createAndSendInvoice method (#1276)
 Changed
 Allow the base url for the Stripe API to be customised (#1273)﻿"
-50,"Fixed
+51,"Fixed
 
 Fix enabling auto collecting in checkout (#1270)﻿
 ","Fixed
 Fix enabling auto collecting in checkout (#1270)﻿"
-51,"Fixed
+52,"Fixed
 
 Fix confirming payments on the payment page (#1268)﻿
 ","Fixed
 Fix confirming payments on the payment page (#1268)﻿"
-52,"Fixed
+53,"Fixed
 
 Handle Stripe Object lock timeout (#1259)﻿
 ","Fixed
 Handle Stripe Object lock timeout (#1259)﻿"
-53,"Fixed
+54,"Fixed
 
 Fix a stripe notice with SubscriptionBuilder and metered prices (#1261)﻿
 ","Fixed
 Fix a stripe notice with SubscriptionBuilder and metered prices (#1261)﻿"
-54,"Changed
+55,"Changed
 
 Use default name for subscription factory (#1250)
 PHP 8.1 compatibility (#1251)
@@ -417,12 +420,12 @@ Use default name for subscription factory (#1250)
 PHP 8.1 compatibility (#1251)
 Fixed
 Fallback to null quantity for metered price (#1255)﻿"
-55,"Fixed
+56,"Fixed
 
 Fix setting name on subscription (5d00c21)﻿
 ","Fixed
 Fix setting name on subscription (5d00c21)﻿"
-56,"Added
+57,"Added
 
 Add invoices methods to subscription (#1245)
 
@@ -437,19 +440,19 @@ Fixed
 Fix webhook order issue (#1243)
 Send data when upcoming invoice is refreshed (#1244)
 Update customer details when tax id is collected (#1246)﻿"
-57,"Fixed
+58,"Fixed
 
 Fix quantity filling on subscriptions (#1238)
 Fix unreachable status value (#1240)﻿
 ","Fixed
 Fix quantity filling on subscriptions (#1238)
 Fix unreachable status value (#1240)﻿"
-58,"Changed
+59,"Changed
 
 Add support for inline price data (#1235)﻿
 ","Changed
 Add support for inline price data (#1235)﻿"
-59,"Changed
+60,"Changed
 
 Allow promo codes on subscription updates (#1230)
 
@@ -460,34 +463,34 @@ Fix asStripeCustomerBalanceTransaction (#1234)﻿
 Allow promo codes on subscription updates (#1230)
 Fixed
 Fix asStripeCustomerBalanceTransaction (#1234)﻿"
-60,"Fixed
+61,"Fixed
 
 Fix issue with requires_action (#1226)
 Fix async issue with webhooks (#1227)﻿
 ","Fixed
 Fix issue with requires_action (#1226)
 Fix async issue with webhooks (#1227)﻿"
-61,"Changed
+62,"Changed
 
 Implement server side Checkout redirect (#1218)﻿
 ","Changed
 Implement server side Checkout redirect (#1218)﻿"
-62,"Added
+63,"Added
 
 Implement customer balances (#1216)﻿
 ","Added
 Implement customer balances (#1216)﻿"
-63,"Added
+64,"Added
 
 Add invoicePrice and tabPrice methods (#1213)﻿
 ","Added
 Add invoicePrice and tabPrice methods (#1213)﻿"
-64,"Fixed
+65,"Fixed
 
 Fix collecting tax ids (#1209)﻿
 ","Fixed
 Fix collecting tax ids (#1209)﻿"
-65,"Added
+66,"Added
 
 Implement new calculateTaxes call (#1198)
 Implement webhook command (#1202, 1d9cce8)
@@ -506,12 +509,12 @@ Changed
 Prevent tax calculation for one-off charges (#1206)
 Fixed
 Use correct method visibility (#1200)﻿"
-66,"Added
+67,"Added
 
 Implement webhook command (#1202)
 ","Added
 Implement webhook command (#1202)"
-67,"Added
+68,"Added
 
 Implement support for Stripe Tax (#1190)
 Collect Tax IDs in Checkout (#1191)
@@ -524,7 +527,7 @@ Implement support for Stripe Tax (#1190)
 Collect Tax IDs in Checkout (#1191)
 Fixed
 Fix adding metered plan to subscription (#1189)﻿"
-68,"Added
+69,"Added
 
 Support more payment method types (#1074)
 Cashier Stripe Factories (#1096)
@@ -585,12 +588,12 @@ Fixed
 Fix trialEndsAt more closely represents onTrial (#1129)
 Removed
 Remove legacy sources support (#1077)﻿"
-69,"Fixed
+70,"Fixed
 
 Fix broken unit_amount with tab (9246063)﻿
 ","Fixed
 Fix broken unit_amount with tab (9246063)﻿"
-70,"Added
+71,"Added
 
 Support prorations while extending trials (#1151)
 Add extra methods to invoice object (#1167)
@@ -609,12 +612,12 @@ Add extra 10 seconds of trial time for checkout session (#1160)
 Fix adding invoice item with quantities (#1161)
 Fix coupons with Stripe Checkout sessions (#1165)
 Fix checkout owner (7bbfe23)﻿"
-71,"Fixed
+72,"Fixed
 
 Fix discount calculation (#1144)﻿
 ","Fixed
 Fix discount calculation (#1144)﻿"
-72,"Added
+73,"Added
 
 Add methods for managing TaxIDs (#1137)
 
@@ -625,7 +628,7 @@ Fix receipt comments (#1131)﻿
 Add methods for managing TaxIDs (#1137)
 Fixed
 Fix receipt comments (#1131)﻿"
-73,"Added
+74,"Added
 
 Implement object serialization (#1116)
 
@@ -646,12 +649,12 @@ Extract creating subscription to a separate method (#1124)
 Fixed
 Fix latest_invoice retrieval (#1115)
 Fix coupon label on receipts (#1118)﻿"
-74,"Added
+75,"Added
 
 Implement cancelAt method (#1106)﻿
 ","Added
 Implement cancelAt method (#1106)﻿"
-75,"Added
+76,"Added
 
 Added new payment status helper methods (#1068)
 Add capture method (#1099)
@@ -666,7 +669,7 @@ Add capture method (#1099)
 Changed
 Update description on receipt (#1098)
 Update payment page (#1094)﻿"
-76,"Changed
+77,"Changed
 
 Use DejaVu Sans for receipts (#1083)
 
@@ -677,14 +680,14 @@ Subscription Update Webhook bugfix (#1085, 3184afc)﻿
 Use DejaVu Sans for receipts (#1083)
 Fixed
 Subscription Update Webhook bugfix (#1085, 3184afc)﻿"
-77,"Fixed
+78,"Fixed
 
 Fix missing method on WebhookController (#1080)
 Allow relative urls for redirect (#1082)﻿
 ","Fixed
 Fix missing method on WebhookController (#1080)
 Allow relative urls for redirect (#1082)﻿"
-78,"Changed
+79,"Changed
 
 Allow model swapping (#1067)
 
@@ -695,7 +698,7 @@ Fix styles overwriting checkout button when class is set (#1070)﻿
 Allow model swapping (#1067)
 Fixed
 Fix styles overwriting checkout button when class is set (#1070)﻿"
-79,"Added
+80,"Added
 
 Add endTrial method (#1062)
 
@@ -706,12 +709,12 @@ Fix removing tax rates (d803ae5)﻿
 Add endTrial method (#1062)
 Fixed
 Fix removing tax rates (d803ae5)﻿"
-80,"Fixed
+81,"Fixed
 
 Fix removing tax rates (#1059)﻿
 ","Fixed
 Fix removing tax rates (#1059)﻿"
-81,"Added
+82,"Added
 
 Metered billing (#1048)
 
@@ -728,36 +731,36 @@ Changed
 Allow Stripe dashboard subscriptions (#1058)
 Fixed
 Fix return type for invoice line items (#1053)﻿"
-82,"Fixed
+83,"Fixed
 
 Fix tax rates for subscription checkouts (#1050)﻿
 ","Fixed
 Fix tax rates for subscription checkouts (#1050)﻿"
-83,"Added
+84,"Added
 
 Stripe Checkout Support (#1007)﻿
 ","Added
 Stripe Checkout Support (#1007)﻿"
-84,"Fixed
+85,"Fixed
 
 Fix image support in PDF invoices (#1045, bb7d17e8)
 ﻿
 ","Fixed
 Fix image support in PDF invoices (#1045, bb7d17e8)
 ﻿"
-85,"Changed
+86,"Changed
 
 Bump dompdf to v0.8.4 (8a4b495)
 Allow dompdf v1.0 (4949af9)﻿
 ","Changed
 Bump dompdf to v0.8.4 (8a4b495)
 Allow dompdf v1.0 (4949af9)﻿"
-86,"Fixed
+87,"Fixed
 
 Fix proration behaviour being forced when syncing tax rates (#1028)﻿
 ","Fixed
 Fix proration behaviour being forced when syncing tax rates (#1028)﻿"
-87,"Added
+88,"Added
 
 Add withPromotionCode method (#1032)
 
@@ -768,27 +771,27 @@ Refactor duplicated code (#1029)﻿
 Add withPromotionCode method (#1032)
 Changed
 Refactor duplicated code (#1029)﻿"
-88,"Added
+89,"Added
 
 PHP 8 Support (#1020)﻿
 ","Added
 PHP 8 Support (#1020)﻿"
-89,"Fixed
+90,"Fixed
 
 Fail url checking when url is invalid (#1021)﻿
 ","Fixed
 Fail url checking when url is invalid (#1021)﻿"
-90,"Fixed
+91,"Fixed
 
 Fix trial ends at check (#1015)﻿
 ","Fixed
 Fix trial ends at check (#1015)﻿"
-91,"Fixed
+92,"Fixed
 
 Fix n+1 problem with subscription retrieval (#1009)﻿
 ","Fixed
 Fix n+1 problem with subscription retrieval (#1009)﻿"
-92,"Added
+93,"Added
 
 Implement trialEndsAt (#1000)
 
@@ -807,12 +810,12 @@ Simplify subscription method (#1003)
 Fixed
 Fix quantity preserving (#999)
 Fix Models namespace for Laravel 8 (9024107)﻿"
-93,"Fixed
+94,"Fixed
 
 Fix double payment method (#987)
 ","Fixed
 Fix double payment method (#987)"
-94,"Added
+95,"Added
 
 Support Laravel 8 (#985)
 
@@ -829,27 +832,27 @@ Changed
 Stripe SDK minimum version is now ^7.39 (#981)
 Fixed
 Fix url checking for invalid urls (#984)"
-95,"Added
+96,"Added
 
 Apply prorate and invoice_now for cancelNow (#975)
 ","Added
 Apply prorate and invoice_now for cancelNow (#975)"
-96,"Added
+97,"Added
 
 Add support for Stripe's Customer Portal (#966)
 ","Added
 Add support for Stripe's Customer Portal (#966)"
-97,"Fixed
+98,"Fixed
 
 Fix validating payment intent (#959)
 ","Fixed
 Fix validating payment intent (#959)"
-98,"Changed
+99,"Changed
 
 Implement new proration and pending updates (#949)
 ","Changed
 Implement new proration and pending updates (#949)"
-99,"Added
+100,"Added
 
 Add convenience methods to update stripe objects (#943)
 
@@ -862,17 +865,17 @@ Add convenience methods to update stripe objects (#943)
 Fixed
 Send invoice when charging automatically (#942)
 Remove unnecessary if statement on receipt (#946)"
-100,"Fixed
+101,"Fixed
 
 Fix undefined redirect error (0fc4c6e)
 ","Fixed
 Fix undefined redirect error (0fc4c6e)"
-101,"Security
+102,"Security
 
 Protect against host mismatch (#930)
 ","Security
 Protect against host mismatch (#930)"
-102,"Fixed
+103,"Fixed
 
 Fix add and remove plan (#926)
 Fix quantity prorating (#924)
@@ -881,12 +884,12 @@ Fix multiplan subscription swapping (#925)
 Fix add and remove plan (#926)
 Fix quantity prorating (#924)
 Fix multiplan subscription swapping (#925)"
-103,"Fixed
+104,"Fixed
 
 Fix quantity methods (#919)
 ","Fixed
 Fix quantity methods (#919)"
-104,"Changed
+105,"Changed
 
 Re-add tax percentage (#916)
 
@@ -899,12 +902,12 @@ Re-add tax percentage (#916)
 Fixed
 Fix syncing of tax rates (0489030)
 Remove null assignment (8520443)"
-105,"Added
+106,"Added
 
 Multiplan swapping (#915)
 ","Added
 Multiplan swapping (#915)"
-106,"Added
+107,"Added
 
 Multiplan subscriptions (#900)
 Tax Rates (#830)
@@ -935,17 +938,17 @@ Loosen exception throwing (#882)
 Rename some exceptions (#881)
 Allow for custom filename with downloadInvoice method (#889)
 Split Billable trait into multiple concerns (#898)"
-107,"Fixed
+108,"Fixed
 
 Send along status for payment page (#896)
 ","Fixed
 Send along status for payment page (#896)"
-108,"Fixed
+109,"Fixed
 
 Add X-Vapor-Base64-Encode header (#897)
 ","Fixed
 Add X-Vapor-Base64-Encode header (#897)"
-109,"Added
+110,"Added
 
 Add getters for owner instances to objects (#877)
 Implement extending trials (#884)
@@ -964,7 +967,7 @@ Re-enable proration (#886)
 Changed
 Add @throws declaration to methods on Billable which can throw Payment exceptions (#872)
 Update payment page with new JS method (#879)"
-110,"Added
+111,"Added
 
 Add findBillable method (#869)
 
@@ -975,12 +978,12 @@ Prevent createAsStripeCustomer when stripe_id is set (#871)
 Add findBillable method (#869)
 Fixed
 Prevent createAsStripeCustomer when stripe_id is set (#871)"
-111,"Fixed
+112,"Fixed
 
 Fix findInvoiceOrFail behavior (#853)
 ","Fixed
 Fix findInvoiceOrFail behavior (#853)"
-112,"Changed
+113,"Changed
 
 Assert customer exists before retrieving (#834)
 Simplify refund method (#837)
@@ -995,12 +998,12 @@ Simplify refund method (#837)
 Fixed
 Fix typo in exception message (#846)
 Fix overriding notification subject translation (59faaf3)"
-113,"Added
+114,"Added
 
 Symfony 5 support (#822)
 ","Added
 Symfony 5 support (#822)"
-114,"Added
+115,"Added
 
 Webhook events (#810)
 
@@ -1013,14 +1016,14 @@ Webhook events (#810)
 Fixed
 Add missing @throws tags (#813)
 Properly return null for find methods (#817)"
-115,"Added
+116,"Added
 
 Add findPaymentMethod method (#801)
 Allow to set past due as active (#802)
 ","Added
 Add findPaymentMethod method (#801)
 Allow to set past due as active (#802)"
-116,"Added
+117,"Added
 
 Configure Stripe logger (#790, 4a53b46)
 
@@ -1043,12 +1046,12 @@ Refactor handling of invalid webhook signatures (#791)
 Remove config repository dependency from webhook middleware (#793)
 Fixed
 Remove extra sign off from ConfirmPayment notification (#779)"
-117,"Fixed
+118,"Fixed
 
 Ensure SVG icons are visible even with a long success or error message (#772)
 ","Fixed
 Ensure SVG icons are visible even with a long success or error message (#772)"
-118,"Added
+119,"Added
 
 Add ability to ignore cashier routes (#763)
 
@@ -1061,12 +1064,12 @@ Add ability to ignore cashier routes (#763)
 Fixed
 Only mount card element if payment has not succeeded or been cancelled (#765)
 Set off_session parameter to true when creating a new subscription (#764)"
-119,"Fixed
+120,"Fixed
 
 Remove collation from migrations (#761)
 ","Fixed
 Remove collation from migrations (#761)"
-120,"Added
+121,"Added
 
 Multiple stripe accounts (#754)
 Set Stripe library info (#756)
@@ -1087,7 +1090,7 @@ Changed
 Update Stripe API version to 2019-08-14 (#749)
 Fixed
 syncStripeStatus trying to update incorrect status column (#748)"
-121,"Added
+122,"Added
 
 Allow hasCompletePayment() to check other subscriptions than “default” (#733)
 Add indexes to those columns used to lookup data in the database (#739)
@@ -1100,7 +1103,7 @@ Allow hasCompletePayment() to check other subscriptions than “default” (#733
 Add indexes to those columns used to lookup data in the database (#739)
 Fixed
 Fixed a label with an incorrect for attribute (#732)"
-122,"Added
+123,"Added
 
 Add latestPayment method on Subscription (#705)
 Allow custom filename for invoice download (#723)
@@ -1137,7 +1140,7 @@ Fix subscription invoicing (#710)
 Fix null return for latestPayment method (#730)
 Removed
 Remove unused $customer parameter on updateQuantity method (#729)"
-123,"Changed
+124,"Changed
 
 Remove old 5.9 version constraints (c7664fc)
 
@@ -1148,30 +1151,30 @@ Don't try and find a user when stripeId is null (#721)
 Remove old 5.9 version constraints (c7664fc)
 Fixed
 Don't try and find a user when stripeId is null (#721)"
-124,"Changed
+125,"Changed
 
 Updated version constraints for Laravel 6.0 (4a4c5c2)
 ","Changed
 Updated version constraints for Laravel 6.0 (4a4c5c2)"
-125,Cashier v10 is a major new release. Please give the upgrade guide a thorough read to see what's new.,Cashier v10 is a major new release. Please give the upgrade guide a thorough read to see what's new.
-126,"Fixed
+126,Cashier v10 is a major new release. Please give the upgrade guide a thorough read to see what's new.,Cashier v10 is a major new release. Please give the upgrade guide a thorough read to see what's new.
+127,"Fixed
 
 Fix hasStartingBalance and subtotal on Invoice (#684)
 ","Fixed
 Fix hasStartingBalance and subtotal on Invoice (#684)"
-127,"Changed
+128,"Changed
 
 VerifyWebhookSignature is no longer final (260de04)
 Remove strict type check for trialUntil() (#678)
 ","Changed
 VerifyWebhookSignature is no longer final (260de04)
 Remove strict type check for trialUntil() (#678)"
-128,"Fixed
+129,"Fixed
 
 Fixing defaultCard() exception when user is not a Stripe customer (#660)
 ","Fixed
 Fixing defaultCard() exception when user is not a Stripe customer (#660)"
-129,"Added
+130,"Added
 
 Able to update a Stripe customer (#634)
 
@@ -1184,12 +1187,12 @@ Able to update a Stripe customer (#634)
 Fixed
 Handle incomplete subscriptions upon creation (#631)
 Handle card failure in plan swap (#641)"
-130,"Fixed
+131,"Fixed
 
 Use new created property on invoice (4714ba4)
 ","Fixed
 Use new created property on invoice (4714ba4)"
-131,"Added
+132,"Added
 
 Add subscription state scopes (#609)
 
@@ -1200,12 +1203,12 @@ Test latest Stripe API version (#611)
 Add subscription state scopes (#609)
 Changed
 Test latest Stripe API version (#611)"
-132,"Added
+133,"Added
 
 Laravel 5.8 support (291f4b2)
 ","Added
 Laravel 5.8 support (291f4b2)"
-133,"Added
+134,"Added
 
 Allow Carbon 2 installs (a3b9d36)
 
@@ -1222,7 +1225,7 @@ Changed
 Test against latest Stripe API version (#603)
 Fixed
 Correct PHP Doc @return tag (#601)"
-134,"Changed
+135,"Changed
 
 Removed support for PHP 7.0 (#595)
 Require Laravel 5.7 as minimum version (#595)

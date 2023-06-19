@@ -1,5 +1,357 @@
-Index,Release Note,Release Note With Abstraction
-1,"The Kivy team is happy to announce the release of Kivy 2.1.0.
+Index,Release Note,Release Note Abstract
+1,"The Kivy team is happy to announce the release of Kivy 2.2.1
+Kivy is a full-featured framework for creating novel and performant user
+interfaces, such as multi-touch applications, released under the MIT license.
+The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
+Installation instructions and Kivy Docs are hosted on the Kivy Website
+Currently supported Python versions are 3.7-3.11
+Highlights
+
+[#8283]: backport (#8276): Limit stencil to inner instructions on Image widget
+
+Tests/ci
+
+[#8288]: backport (#8263): Increase timeout of httpbin tests to reduce risk of failures on CI runs
+
+Documentation
+
+
+","The Kivy team is happy to announce the release of Kivy 2.2.1
+Kivy is a full-featured framework for creating novel and performant user
+interfaces, such as multi-touch applications, released under the MIT license.
+The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
+Installation instructions and Kivy Docs are hosted on the Kivy Website
+Currently supported Python versions are 3.7-3.11
+Highlights
+[#8283]: backport (#8276): Limit stencil to inner instructions on Image widget
+Tests/ci
+[#8288]: backport (#8263): Increase timeout of httpbin tests to reduce risk of failures on CI runs
+Documentation"
+2,"The Kivy team is happy to announce the release of Kivy 2.2.0.
+Kivy is a full-featured framework for creating novel and performant user
+interfaces, such as multi-touch applications, released under the MIT license.
+The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
+Installation instructions and Kivy Docs are hosted on the Kivy Website
+Currently supported Python versions are 3.7-3.11
+Features marked as deprecated on 1.9.0 and prior versions will be removed in Kivy 2.3.0 (See: https://github.com/kivy/kivy/issues/8177)
+Highlights
+
+[#7876]: Line/SmoothLine: Fixes rendering issues related to corner radius and updates its order (rounded_rectangle) + add getter methods for rounded_rectangle, rectangle, ellipse, circle.
+[#7882]: Re-implements the Bubble widget.
+[#7908]: Speed up SmoothLine creation by ~2.5x
+[#7942]: Config unicode support on Windows
+[#7988]: Added support for KIVY_LOG_MODE
+[#8044]: Add support for Python 3.11
+[#8056]: New Feature: Add BoxShadow graphic instruction 🎉
+[#8115]: Use font_direction and font_script_name from SDL2_ttf
+[#8144]: Added property for mouse draggable tab scrollbar to TabbedPanel
+[#8162]: Label: allow different values of left, top, right and bottom for padding.
+[#8169]: Image: add fit_mode feature
+[#8096]: Introduce build script for SDL dependencies and KIVY_DEPS_ROOT
+
+Deprecated
+
+[#7882]: Re-implements the Bubble widget.
+
+Breaking changes
+
+[#7876]: Line/SmoothLine: Fixes rendering issues related to corner radius and updates its order (rounded_rectangle) + add getter methods for rounded_rectangle, rectangle, ellipse, circle.
+
+Kv-lang
+
+[#8021]: Update builder.py
+
+Misc
+
+[#7906]: Replace deprecated logging.warn with logging.warning
+[#7913]: fix(UrlRequest): Add ""on_finish"" and add alternative implementation
+[#7943]: Fixes some E275 - assert is a keyword. + other minor PEP8 fixes
+[#7969]: Config is not available when generating docs + Use getdefault instead of has_option + get
+
+Widgets
+
+[#7626]: New Feature: Allow control how many lines to scroll at once using the mouse wheel on TextInput
+[#7882]: Re-implements the Bubble widget.
+[#7905]: Fix TextInputCutCopyPaste widget
+[#7925]: Qwerty VKeyboard button fix( z, Q and W and ] ) on Linux(Ubuntu Focal Fossa)
+[#8109]: Fix for changes of Splitter.strip_cls having no effect
+[#8144]: Added property for mouse draggable tab scrollbar to TabbedPanel
+[#8169]: Image: add fit_mode feature
+[#8202]: Migrate allow_stretch and keep_ratio in widgets/examples by corresponding fit_mode
+
+Core-app
+
+[#7942]: Config unicode support on Windows
+[#7958]: Use AddLevelName in kivy.Logger to define TRACE
+[#7962]: Refactored logging.ColoredFormatter to avoid deepcopy.
+[#7971]: Support KivyLogMode environment variable for logging testing
+[#7973]: Bump KIVY_CONFIG_VERSION and add a warning for future changes.
+[#7975]: Light clean up of stderr handling code.
+[#7979]: #7978: Don't monkey-patch logging.root
+[#7985]: Handle non-strings in logs.
+[#7988]: Added support for KIVY_LOG_MODE
+[#7989]: Android Lifecycle convergence
+[#7994]: Use urlopen instead of build_opener when fetching files from 'internet'. Removes some PY2 compat.
+[#8062]: Use find_spec, module_from_spec and exec_module instead of find_module and load_module since are deprecated.
+
+Core-providers
+
+[#7846]: Fix VKeyboard missing with custom keyboard class
+[#7857]: iOS camera provider enhancements
+[#7982]: Use SDL_WINDOWEVENT_DISPLAY_CHANGED to notice about window switching display to update _density an dpi
+[#7999]: Modify layout fix bug in how long text without space is cut 
+[#8025]: Release the GIL when performing SDL_GL_SwapWindow call.
+[#8058]: Makes Windows DPI aware of scale changes
+[#8076]: New Feature: Always On Top
+[#8083]: Allow changing Window.fullscreen and Window.borderless options after setup on iOS
+[#8115]: Use font_direction and font_script_name from SDL2_ttf
+[#8142]: New Feature: Allows to hide the taskbar icon
+[#8146]: Fix memory issue on iOS 16.2 for AVMetadataObject (during QRCode scan)
+[#8147]: Detect High DPI on Linux Desktop
+[#8162]: Label: allow different values of left, top, right and bottom for padding.
+[#8171]: Make VideoFFPy work with RTSP streams.
+
+
+Core-widget
+
+[#8035]: Simplify Animation._unregister
+
+Distribution
+
+[#7837]: Bump to 2.2.0.dev0
+[#7852]: Build python 3.9 wheels for RPi
+[#7974]: Bump SDL2, SDL_image, SDL_mixer, SDL_ttf versions to latest stable release
+[#8004]: Bump kivy_deps.sdl2 and kivy_deps.sdl2_dev to 0.5.0
+[#8006]: Use Platypus 5.4
+[#8043]: Bump SDL2 to 2.24.1 on Linux and macOS
+[#8044]: Add support for Python 3.11
+[#8050]: Bump again SDL2 to 2.24.2 on Linux and macOS
+[#8070]: Remove usage of distutils module which is deprecated and slated for removal in 3.12
+[#8096]: Introduce build script for SDL dependencies and KIVY_DEPS_ROOT
+[#8155]: Dependencies build tool: exit immediately on fail and allows to debug easier
+[#8173]: Bump macOS dependencies versions on tools/build_macos_dependencies.sh
+[#8174]: Bump Linux dependencies versions on tools/build_linux_dependencies.sh
+[#8176]: Bump Windows dependencies via kivy_deps packages
+[#8178]: Bump cython_max version
+[#8191]: XCode 14.3 fails to build SDL if MACOSX_DEPLOYMENT_TARGET < 10.13
+[#8203]: Migrate from autotools to cmake for SDL2 linux dependencies
+[#8223]: Perform RPi builds on balenalib/raspberrypi3-* images and skip DISPMANX API usage if can't be used [build wheel armv7l]
+[#8231]: Bump version to 2.2.0rc1
+
+Documentation
+
+[#7870]: Documentation: bump Gentoo install instructions
+[#7916]: Fixes NO DOCUMENTATION (module kivy.uix.recycleview)
+[#7927]: Fix minor typo in pong tutorial code comments
+[#7928]: Add missing closing paren in hint text
+[#7929]: Use consistent source code notes in pong tutorial
+[#7930]: Purge trailing whitespace in docs source files
+[#7946]: Add doc for Canvas.add()
+[#8026]: Typo : missing coma in the doc
+[#8032]: doc: Initial remarks on BSD compatibility.
+[#8034]: Fix backticks typo in pong tutorial
+[#8039]: Link to buildozer installation instructions instead of duplicating them
+[#8041]: installation-osx.rst: Minor code formatting
+[#8088]: Add support for sphinx 6.0.0
+[#8089]: Add a warning about keyboard_suggestions usage on Android
+[#8139]: Improve docs about BoxShadow behavior and usage.
+[#8156]: Docs: Update the Ubuntu prerequisites to build Kivy and its dependencies
+[#8175]: Update Copyright and LICENSE dates
+[#8179]: Update Python supported versions
+[#8181]: :book: Grammar tweaks to focus docstrings
+[#8183]: Docs: Fixes a typo (issue #7838)
+[#8229]: Sphinx 7.0.0 is incompatible, use <=6.2.1 for now
+[#8234]: Docs review  for RPi installation and build instructions
+
+Graphics
+
+[#7860]: Ellipse: update angle_start, angle_end to explicit floats
+[#7876]: Line/SmoothLine: Fixes rendering issues related to corner radius and updates its order (rounded_rectangle) + add getter methods for rounded_rectangle, rectangle, ellipse, circle.
+[#7908]: Speed up SmoothLine creation by ~2.5x
+[#8056]: New Feature: Add BoxShadow graphic instruction 🎉
+[#8098]: Fix BoxShadow shader crashing issue on Adreno GPUs
+[#8132]: BoxShadow: Add inset feature
+[#8138]: BoxShadow: Accept values for vertical and horizontal spread_radius
+[#8163]: Line/SmoothLine: ellipse - fix behavior and add feature to allow closing line through center of ellipse
+[#8164]: Ellipse: Handle the number of segments and avoid division by zero
+[#8170]: Add svg rotation transform support
+[#8187]: Line/SmoothLine - ellipse: Handle the number of segments to match Ellipse
+
+Input
+
+[#8027]: Typo : German Keyboard is QWERTZ
+
+Tests/ci
+
+[#7847]: Tests: ffpyplayer now ships cp310-* and Apple Silicon compatible wheels, so tests on the full version can be re-introduced.
+[#7854]: Fixes 3.8.x pyenv install due to a recent change in clang [build wheel osx]
+[#7885]: Our self-hosted Apple Silicon runner now has been migrated to actions/runner v2.292.0 which now supports arm64 natively
+[#7903]: Migrate from probot/no-response to lee-dohm/no-response
+[#7917]: When using pytest_asyncio for tests, function should be decorated with pytest_asyncio.fixture
+[#7972]: Fix trivial typo in workflow.
+[#7987]: Fix source typo in test_uix_bubbles.py
+[#8084]: Switch from ubuntu-18.04 to ubuntu-latest as 18.04 runners will be removed on 2023-01-12
+[#8093]: Add gstreamer1.0-plugins-good for autoaudiosink availability during tests
+[#8099]: Install twine only when needed [build wheel]
+[#8117]: Upgrade GitHub Actions
+[#8120]: [build wheel] Upgrade more GitHub Actions
+[#8121]: GitHub Actions: Use current Python instead of hardcoded v3.9
+[#8126]: Switch back to macos-latest instead of macos-11
+[#8129]: Remove remaining nosetest settings in favor of pytest
+[#8157]: Correct the flake8 pre-commit URL
+[#8217]: Generate-sdist needs packaging as a dependency [build wheel win]
+
+Thanks
+A big thanks to all of the Contributors, especially those github usernames mentioned here:
+Akshay Arora, Alsp, Anders, AnthonyZimmermann, CdrSonan, Cecil Curry, Chris Vincent, Christian Clauss, Danny Dawson, Dexer, Evgeniy Selezniov, Gabriel Pettier, Gabriel Vogel, Hugo van Kemenade, Johan Toft, Julian, Matt Einhorn, Mirko Galimberti, NomadDemon, Paul Cochrane, Peter Tripp, Richard Larkin, Robert Niederreiter, RobertF, Robin Picard, Romain Heller, SanAndreyas, Tom Dudley, Tomasz CEDRO, Vinayak Sachan, anand vibhuti, djogy, luzpaz, mp-007, 水戸う納豆齋(Nattōsai Mitō)","The Kivy team is happy to announce the release of Kivy 2.2.0.
+Kivy is a full-featured framework for creating novel and performant user
+interfaces, such as multi-touch applications, released under the MIT license.
+The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
+Installation instructions and Kivy Docs are hosted on the Kivy Website
+Currently supported Python versions are 3.7-3.11
+Features marked as deprecated on 1.9.0 and prior versions will be removed in Kivy 2.3.0 (See: link)
+Highlights
+[#7876]: Line/SmoothLine: Fixes rendering issues related to corner radius and updates its order (rounded_rectangle) + add getter methods for rounded_rectangle, rectangle, ellipse, circle.
+[#7882]: Re-implements the Bubble widget.
+[#7908]: Speed up SmoothLine creation by ~2.5x
+[#7942]: Config unicode support on Windows
+[#7988]: Added support for KIVY_LOG_MODE
+[#8044]: Add support for Python 3.11
+[#8056]: New Feature: Add BoxShadow graphic instruction 🎉
+[#8115]: Use font_direction and font_script_name from SDL2_ttf
+[#8144]: Added property for mouse draggable tab scrollbar to TabbedPanel
+[#8162]: Label: allow different values of left, top, right and bottom for padding.
+[#8169]: Image: add fit_mode feature
+[#8096]: Introduce build script for SDL dependencies and KIVY_DEPS_ROOT
+Deprecated
+[#7882]: Re-implements the Bubble widget.
+Breaking changes
+[#7876]: Line/SmoothLine: Fixes rendering issues related to corner radius and updates its order (rounded_rectangle) + add getter methods for rounded_rectangle, rectangle, ellipse, circle.
+Kv-lang
+[#8021]: Update builder.py
+Misc
+[#7906]: Replace deprecated logging.warn with logging.warning
+[#7913]: fix(UrlRequest): Add ""on_finish"" and add alternative implementation
+[#7943]: Fixes some E275 - assert is a keyword. + other minor PEP8 fixes
+[#7969]: Config is not available when generating docs + Use getdefault instead of has_option + get
+Widgets
+[#7626]: New Feature: Allow control how many lines to scroll at once using the mouse wheel on TextInput
+[#7882]: Re-implements the Bubble widget.
+[#7905]: Fix TextInputCutCopyPaste widget
+[#7925]: Qwerty VKeyboard button fix( z, Q and W and ] ) on Linux(Ubuntu Focal Fossa)
+[#8109]: Fix for changes of Splitter.strip_cls having no effect
+[#8144]: Added property for mouse draggable tab scrollbar to TabbedPanel
+[#8169]: Image: add fit_mode feature
+[#8202]: Migrate allow_stretch and keep_ratio in widgets/examples by corresponding fit_mode
+Core-app
+[#7942]: Config unicode support on Windows
+[#7958]: Use AddLevelName in kivy.Logger to define TRACE
+[#7962]: Refactored logging.ColoredFormatter to avoid deepcopy.
+[#7971]: Support KivyLogMode environment variable for logging testing
+[#7973]: Bump KIVY_CONFIG_VERSION and add a warning for future changes.
+[#7975]: Light clean up of stderr handling code.
+[#7979]: #7978: Don't monkey-patch logging.root
+[#7985]: Handle non-strings in logs.
+[#7988]: Added support for KIVY_LOG_MODE
+[#7989]: Android Lifecycle convergence
+[#7994]: Use urlopen instead of build_opener when fetching files from 'internet'. Removes some PY2 compat.
+[#8062]: Use find_spec, module_from_spec and exec_module instead of find_module and load_module since are deprecated.
+Core-providers
+[#7846]: Fix VKeyboard missing with custom keyboard class
+[#7857]: iOS camera provider enhancements
+[#7982]: Use SDL_WINDOWEVENT_DISPLAY_CHANGED to notice about window switching display to update _density an dpi
+[#7999]: Modify layout fix bug in how long text without space is cut 
+[#8025]: Release the GIL when performing SDL_GL_SwapWindow call.
+[#8058]: Makes Windows DPI aware of scale changes
+[#8076]: New Feature: Always On Top
+[#8083]: Allow changing Window.fullscreen and Window.borderless options after setup on iOS
+[#8115]: Use font_direction and font_script_name from SDL2_ttf
+[#8142]: New Feature: Allows to hide the taskbar icon
+[#8146]: Fix memory issue on iOS 16.2 for AVMetadataObject (during QRCode scan)
+[#8147]: Detect High DPI on Linux Desktop
+[#8162]: Label: allow different values of left, top, right and bottom for padding.
+[#8171]: Make VideoFFPy work with RTSP streams.
+Core-widget
+[#8035]: Simplify Animation._unregister
+Distribution
+[#7837]: Bump to 2.2.0.dev0
+[#7852]: Build python 3.9 wheels for RPi
+[#7974]: Bump SDL2, SDL_image, SDL_mixer, SDL_ttf versions to latest stable release
+[#8004]: Bump kivy_deps.sdl2 and kivy_deps.sdl2_dev to 0.5.0
+[#8006]: Use Platypus 5.4
+[#8043]: Bump SDL2 to 2.24.1 on Linux and macOS
+[#8044]: Add support for Python 3.11
+[#8050]: Bump again SDL2 to 2.24.2 on Linux and macOS
+[#8070]: Remove usage of distutils module which is deprecated and slated for removal in 3.12
+[#8096]: Introduce build script for SDL dependencies and KIVY_DEPS_ROOT
+[#8155]: Dependencies build tool: exit immediately on fail and allows to debug easier
+[#8173]: Bump macOS dependencies versions on tools/build_macos_dependencies.sh
+[#8174]: Bump Linux dependencies versions on tools/build_linux_dependencies.sh
+[#8176]: Bump Windows dependencies via kivy_deps packages
+[#8178]: Bump cython_max version
+[#8191]: XCode 14.3 fails to build SDL if MACOSX_DEPLOYMENT_TARGET < 10.13
+[#8203]: Migrate from autotools to cmake for SDL2 linux dependencies
+[#8223]: Perform RPi builds on balenalib/raspberrypi3-* images and skip DISPMANX API usage if can't be used [build wheel armv7l]
+[#8231]: Bump version to 2.2.0rc1
+Documentation
+[#7870]: Documentation: bump Gentoo install instructions
+[#7916]: Fixes NO DOCUMENTATION (module kivy.uix.recycleview)
+[#7927]: Fix minor typo in pong tutorial code comments
+[#7928]: Add missing closing paren in hint text
+[#7929]: Use consistent source code notes in pong tutorial
+[#7930]: Purge trailing whitespace in docs source files
+[#7946]: Add doc for Canvas.add()
+[#8026]: Typo : missing coma in the doc
+[#8032]: doc: Initial remarks on BSD compatibility.
+[#8034]: Fix backticks typo in pong tutorial
+[#8039]: Link to buildozer installation instructions instead of duplicating them
+[#8041]: installation-osx.rst: Minor code formatting
+[#8088]: Add support for sphinx 6.0.0
+[#8089]: Add a warning about keyboard_suggestions usage on Android
+[#8139]: Improve docs about BoxShadow behavior and usage.
+[#8156]: Docs: Update the Ubuntu prerequisites to build Kivy and its dependencies
+[#8175]: Update Copyright and LICENSE dates
+[#8179]: Update Python supported versions
+[#8181]: :book: Grammar tweaks to focus docstrings
+[#8183]: Docs: Fixes a typo (issue #7838)
+[#8229]: Sphinx 7.0.0 is incompatible, use <=6.2.1 for now
+[#8234]: Docs review  for RPi installation and build instructions
+Graphics
+[#7860]: Ellipse: update angle_start, angle_end to explicit floats
+[#7876]: Line/SmoothLine: Fixes rendering issues related to corner radius and updates its order (rounded_rectangle) + add getter methods for rounded_rectangle, rectangle, ellipse, circle.
+[#7908]: Speed up SmoothLine creation by ~2.5x
+[#8056]: New Feature: Add BoxShadow graphic instruction 🎉
+[#8098]: Fix BoxShadow shader crashing issue on Adreno GPUs
+[#8132]: BoxShadow: Add inset feature
+[#8138]: BoxShadow: Accept values for vertical and horizontal spread_radius
+[#8163]: Line/SmoothLine: ellipse - fix behavior and add feature to allow closing line through center of ellipse
+[#8164]: Ellipse: Handle the number of segments and avoid division by zero
+[#8170]: Add svg rotation transform support
+[#8187]: Line/SmoothLine - ellipse: Handle the number of segments to match Ellipse
+Input
+[#8027]: Typo : German Keyboard is QWERTZ
+Tests/ci
+[#7847]: Tests: ffpyplayer now ships cp310-* and Apple Silicon compatible wheels, so tests on the full version can be re-introduced.
+[#7854]: Fixes 3.8.x pyenv install due to a recent change in clang [build wheel osx]
+[#7885]: Our self-hosted Apple Silicon runner now has been migrated to actions/runner v2.292.0 which now supports arm64 natively
+[#7903]: Migrate from probot/no-response to lee-dohm/no-response
+[#7917]: When using pytest_asyncio for tests, function should be decorated with pytest_asyncio.fixture
+[#7972]: Fix trivial typo in workflow.
+[#7987]: Fix source typo in test_uix_bubbles.py
+[#8084]: Switch from ubuntu-18.04 to ubuntu-latest as 18.04 runners will be removed on 2023-01-12
+[#8093]: Add gstreamer1.0-plugins-good for autoaudiosink availability during tests
+[#8099]: Install twine only when needed [build wheel]
+[#8117]: Upgrade GitHub Actions
+[#8120]: [build wheel] Upgrade more GitHub Actions
+[#8121]: GitHub Actions: Use current Python instead of hardcoded v3.9
+[#8126]: Switch back to macos-latest instead of macos-11
+[#8129]: Remove remaining nosetest settings in favor of pytest
+[#8157]: Correct the flake8 pre-commit URL
+[#8217]: Generate-sdist needs packaging as a dependency [build wheel win]
+Thanks
+A big thanks to all of the Contributors, especially those github usernames mentioned here:
+Akshay Arora, Alsp, Anders, AnthonyZimmermann, CdrSonan, Cecil Curry, Chris Vincent, Christian Clauss, Danny Dawson, Dexer, Evgeniy Selezniov, Gabriel Pettier, Gabriel Vogel, Hugo van Kemenade, Johan Toft, Julian, Matt Einhorn, Mirko Galimberti, NomadDemon, Paul Cochrane, Peter Tripp, Richard Larkin, Robert Niederreiter, RobertF, Robin Picard, Romain Heller, SanAndreyas, Tom Dudley, Tomasz CEDRO, Vinayak Sachan, anand vibhuti, djogy, luzpaz, mp-007, 水戸う納豆齋(Nattōsai Mitō)"
+3,"The Kivy team is happy to announce the release of Kivy 2.1.0.
 Kivy is a full-featured framework for creating novel and performant user
 interfaces, such as multi-touch applications, released under the MIT license.
 The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
@@ -523,7 +875,7 @@ Tests/ci
 Thanks
 A big thanks to all of the Contributors, especially those github usernames mentioned here:
 0x4A-0x41-0x4B, Akshay Arora, Alexander Lais, Alexander Wolf, Alspb, Andreas Ecker, Andrii Oriekhov, André Sbrocco Figueiredo, Anthon van der Neut, Auskas, Dalton Woodside-Moffatt, Daniel Foerster, Dean Serenevy, Dexer, Dominik Spicher, Eero af Heurlin, Filip Radović, Gabriel Pettier, Geo Maciolek, Ilya Kochankov, Jim Morris, Julian, Kostiantyn Syrykh, Kristian Sloth Lauszus, Lindström Mathias, Louwrensth, Mathieu Virbel, Matthew Einhorn, Mirko Galimberti, Nattōsai Mitō, Pablo Woolvett, Richard Larkin, Robert Niederreiter, Sander Land, Stanislav Syekirin, Steven P. Wells, SubaruArai, The Cheaterman, Tim Gates, Tomas Krizek, VIGNESH KUMAR, Vibhakar Solanki, abayomi185, allerter, baseplate-admin, eric15342335, luzpaz, meow464, onsunsl, oshotton, outdooracorn, salt-die, simon klemenc, snuq, willow, xayhewalo"
-2,"The Kivy team is happy to announce the release of Kivy 2.0.0.
+4,"The Kivy team is happy to announce the release of Kivy 2.0.0.
 Kivy is a full-featured framework for creating novel and performant user
 interfaces, such as multi-touch applications, released under the MIT license.
 The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
@@ -1132,8 +1484,8 @@ Hope we mentioned them all.
 --
 Kivy Team
 link"
-3,"This release fixed some issues with the docs, the CI, and Kivy dependencies that was introduced in 1.11.0 (https://github.com/kivy/kivy/pull/6357).","This release fixed some issues with the docs, the CI, and Kivy dependencies that was introduced in 1.11.0 (link)."
-4,"We are pleased to announce Kivy 1.11.0.
+5,"This release fixed some issues with the docs, the CI, and Kivy dependencies that was introduced in 1.11.0 (https://github.com/kivy/kivy/pull/6357).","This release fixed some issues with the docs, the CI, and Kivy dependencies that was introduced in 1.11.0 (link)."
+6,"We are pleased to announce Kivy 1.11.0.
 Kivy is a full featured framework for creating novel and performant user
 interfaces, such as multitouch applications, released under the MIT license.
 The framework works on Windows, macOS, Linux, Android, iOS and Raspberry Pi.
@@ -1815,7 +2167,7 @@ Hope we mentioned them all.
 --
 Kivy Team
 link"
-5,"This was supposedly a bugfix releases, but a few new features have 
+7,"This was supposedly a bugfix releases, but a few new features have 
 managed to get in, aside that, a lot of fixes are included.
 Highlighted changes:
 
@@ -2426,17 +2778,17 @@ ce6d54e2f: Add wheel generation support for osx and Linux.
 2e400aa41: Quote filenames [build wheel]
 04bfcff4d: Give better wheel upload path [build wheel win]
 8167ff410: Fix wheel building on all platforms (#5812)"
-6,"We are pleased to announce Kivy 1.10.0.
+8,"We are pleased to announce Kivy 1.10.0.
 Packages are available at https://kivy.org/#download.
 Details about this release can be found at https://kivy.org/#changelog.","We are pleased to announce Kivy 1.10.0.
 Packages are available at link.
 Details about this release can be found at link."
-7,"We are pleased to announce Kivy 1.9.1.
+9,"We are pleased to announce Kivy 1.9.1.
 Packages are available at https://kivy.org/#download.
 Details about this release can be found at https://kivy.org/#changelog.","We are pleased to announce Kivy 1.9.1.
 Packages are available at link.
 Details about this release can be found at link."
-8,"Packages are available at https://kivy.org/#download.
+10,"Packages are available at https://kivy.org/#download.
 Details about this release can be found at https://kivy.org/#changelog.","Packages are available at link.
 Details about this release can be found at link."
-9,,
+11,,

@@ -1,5 +1,270 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"FEATURES:
+
+New Data Source: azurerm_mobile_network_packet_core_data_plane (#21053)
+New Resource: azurerm_arc_machine_extension (#22051)
+New Resource: azurerm_arc_kubernetes_flux_configuration (#21579)
+New Resource: azurerm_kubernetes_flux_configuration (#21579)
+New Resource: azurerm_mobile_network_packet_core_data_plane (#21053)
+
+ENHANCEMENTS:
+
+dependencies: updating to v0.20230530.1150329 of github.com/tombuildsstuff/kermit (#21980)
+dependencies: compute/gallery: updating to API Version 2022-03-03 (#21999)
+dependencies: kusto: updating to API Version 2022-12-29 (#21961)
+Data Source azurerm_site_recovery_replication_recovery_plan - add support for azure_to_azure_settings block (#22098)
+compute: updating to use API Version 2023-03-01 (#21980)
+containers: updating to use API version 2023-04-02-preview [22048]
+managedidentity: updating to use API Version 2023-01-31 (#22102)
+azurerm_backup_protected_vm - support for the protection_state property (#20608)
+azurerm_batch_account - the public_network_access_enabled property can now be updated (#22095)
+azurerm_batch_pool - support for the target_node_communication_mode property (#22094)
+azurerm_automanage_configuration - support for the log_analytics_enabled property (#22121)
+azurerm_nginx_certificate - the key_virtual_path, certificate_virtual_path, and key_vault_secret_id proeprties can now be updated (#22100)
+azurerm_spring_cloud_gateway - support for the client_authentication property (#22016)
+
+BUG FIXES:
+
+azurerm_databricks_workspace_data_source - correctly set the managed_idnetity_id attribute (#22021)
+","FEATURES:
+New Data Source: azurerm_mobile_network_packet_core_data_plane (#21053)
+New Resource: azurerm_arc_machine_extension (#22051)
+New Resource: azurerm_arc_kubernetes_flux_configuration (#21579)
+New Resource: azurerm_kubernetes_flux_configuration (#21579)
+New Resource: azurerm_mobile_network_packet_core_data_plane (#21053)
+ENHANCEMENTS:
+dependencies: updating to v0.20230530.1150329 of github.com/tombuildsstuff/kermit (#21980)
+dependencies: compute/gallery: updating to API Version 2022-03-03 (#21999)
+dependencies: kusto: updating to API Version 2022-12-29 (#21961)
+Data Source azurerm_site_recovery_replication_recovery_plan - add support for azure_to_azure_settings block (#22098)
+compute: updating to use API Version 2023-03-01 (#21980)
+containers: updating to use API version 2023-04-02-preview [22048]
+managedidentity: updating to use API Version 2023-01-31 (#22102)
+azurerm_backup_protected_vm - support for the protection_state property (#20608)
+azurerm_batch_account - the public_network_access_enabled property can now be updated (#22095)
+azurerm_batch_pool - support for the target_node_communication_mode property (#22094)
+azurerm_automanage_configuration - support for the log_analytics_enabled property (#22121)
+azurerm_nginx_certificate - the key_virtual_path, certificate_virtual_path, and key_vault_secret_id proeprties can now be updated (#22100)
+azurerm_spring_cloud_gateway - support for the client_authentication property (#22016)
+BUG FIXES:
+azurerm_databricks_workspace_data_source - correctly set the managed_idnetity_id attribute (#22021)"
+2,"NOTES:
+
+azurerm_security_center_subscription_pricing - upon deletion the pricing tier will now reset to Free tier (#21437)
+
+ENHANCEMENTS:
+
+dependencies: batch: updating to API Version 2022-10-01 (#21962)
+dependencies: loadtest: updating to API Version 2022-12-01 (#22091)
+provider: adding the client_id_file_path and client_secret_file_path provider properties (#21764)
+data.azurerm_key_vault_encrypted_value - now exports the decoded_plain_text_value [attribute GH-21682]
+azurerm_automanage_configuration - support for the backup and azure_security_baseline blocks (#22081)
+azurerm_app_configuration - support toggling of user permission error on soft deleted stores through app_configuration.recover_soft_deleted feature flag (#19661)
+azurerm_backup_policy_file_share - support for day-based retention policies and hourly backups (#21529)
+azurerm_linux_function_app - support for Python 3.11 for Linux function app (#21956)
+azurerm_linux_function_app_slot - support for Python 3.11 for Linux function app (#21956)
+azurerm_monitor_autoscale_setting - support for the predictive block (#22038)
+azurerm_machine_learning_compute_instance - support for the node_public_ip_enabled property (#22063)
+azurerm_spring_cloud_service - support for the container_registry block (#22017)
+azurerm_site_recovery_replication_recovery_plan - the order of the pre_action and post_action properties is now respected (#22019)
+
+BUG FIXES:
+
+azurerm_hdinsight_interactive_query_cluster - deprecating the *_node.0.autoscale.0.capacity property (#21981)
+azurerm_key_vault_key - allow the rotation_policy property to be removed (#21935)
+azurerm_mssql_server - fix issue where the minimum_tls_version property is being returned as None instead of Disabled (#22067)
+azurerm_sentinel_data_connector_microsoft_threat_intelligence - the bing_safety_phishing_url_lookback_date property has been deprecated (#21954)
+","NOTES:
+azurerm_security_center_subscription_pricing - upon deletion the pricing tier will now reset to Free tier (#21437)
+ENHANCEMENTS:
+dependencies: batch: updating to API Version 2022-10-01 (#21962)
+dependencies: loadtest: updating to API Version 2022-12-01 (#22091)
+provider: adding the client_id_file_path and client_secret_file_path provider properties (#21764)
+data.azurerm_key_vault_encrypted_value - now exports the decoded_plain_text_value [attribute GH-21682]
+azurerm_automanage_configuration - support for the backup and azure_security_baseline blocks (#22081)
+azurerm_app_configuration - support toggling of user permission error on soft deleted stores through app_configuration.recover_soft_deleted feature flag (#19661)
+azurerm_backup_policy_file_share - support for day-based retention policies and hourly backups (#21529)
+azurerm_linux_function_app - support for Python 3.11 for Linux function app (#21956)
+azurerm_linux_function_app_slot - support for Python 3.11 for Linux function app (#21956)
+azurerm_monitor_autoscale_setting - support for the predictive block (#22038)
+azurerm_machine_learning_compute_instance - support for the node_public_ip_enabled property (#22063)
+azurerm_spring_cloud_service - support for the container_registry block (#22017)
+azurerm_site_recovery_replication_recovery_plan - the order of the pre_action and post_action properties is now respected (#22019)
+BUG FIXES:
+azurerm_hdinsight_interactive_query_cluster - deprecating the *_node.0.autoscale.0.capacity property (#21981)
+azurerm_key_vault_key - allow the rotation_policy property to be removed (#21935)
+azurerm_mssql_server - fix issue where the minimum_tls_version property is being returned as None instead of Disabled (#22067)
+azurerm_sentinel_data_connector_microsoft_threat_intelligence - the bing_safety_phishing_url_lookback_date property has been deprecated (#21954)"
+3,"FEATURES:
+
+New Data Source: azurerm_arc_machine (#21796)
+New Resource: azurerm_automanage_configuration (#21490)
+
+ENHANCEMENTS:
+
+dependencies: updating to v0.20230523.1140858 of github.com/hashicorp/go-azure-sdk (#21910)
+dependencies: azurem_monitor_action_group - upgrading actiongroupsapis from 2021-09-01 to 2023-01-01 (#21948)
+dependencies: policy.guestconfigurationassignments: migrate to hashicorp/go-azure-sdk (#21927)
+dependencies: azurerm_monitor_autoscale_setting  upgrade API version from to 2023-05-01-preview (#21953)
+data.azurerm_linux_web_app - now exports the availability and usage attributes (#21945)
+data.azurerm_linux_function_app - now exports the availability and usage attributes (#21945)
+data.azurerm_cdn_frontdoor_secret - now exports the expiration_date attribute (#21945)
+data.azurerm_virtual_machine - now exports the power_state (#21945)
+data.azurerm_virtual_machine_scale_set -  now exports the power_state attribute (#21945)
+data.azurerm_azurerm_resources - now exports the resource_group_name attribute for each resource (#21676)
+security.watchitems - updating to use hashicorp/go-azure-sdk (#21944)
+azurerm_cosmosdb_account - support new capabilities for MongoDB (#21974)
+azurerm_kubernetes_cluster - the properties enable_host_encryption, enable_node_public_ip, kubelet_config, linux_os_config, max_pods, node_taints, only_critical_addons_enabled, os_disk_size_gb, os_disk_type, os_sku, pod_subnet_id, ultra_ssd_enabled, vnet_subnet_id and zones are now updateable through cycling of the system node pool (#21719)
+azurerm_machine_learning_compute_cluster - add support for the node_public_ip_enabled property (#21377)
+azurerm_nginx_certificate - key_vault_secret_id now accepts version-less key vault secret ids (#21949)
+azurerm_postgresql_flexible_server - add support for version value 15 (#21934)
+azurerm_shared_image_version - now exports the id property (#22006)
+azurerm_spring_cloud_certificate - support for the exclude_private_key property (#21942)
+azurerm_spring_cloud_customized_accelerator - support for the ca_certificate_id property (#21943)
+
+BUG FIXES:
+
+azurerm_app_configuration - prevent errors when deleting by checking that the name of the app configuration store has been released (#21750)
+azurerm_express_route_port_authorization - add a lock when create/update/delete authorization of express route port (#21959)
+azurerm_kubernetes_cluster - recompute the field oidc_issuer_url if the value of oidc_issuer_enabled has changed (#21911)
+azurerm_kubernetes_cluster - set correct value for default_node_pool.os_sku when resizing the default_node_pool (#21976)
+azurerm_postgresql_flexible_server - fix issue updating storage_mb and backup_retention_days together (#21987)
+","FEATURES:
+New Data Source: azurerm_arc_machine (#21796)
+New Resource: azurerm_automanage_configuration (#21490)
+ENHANCEMENTS:
+dependencies: updating to v0.20230523.1140858 of github.com/hashicorp/go-azure-sdk (#21910)
+dependencies: azurem_monitor_action_group - upgrading actiongroupsapis from 2021-09-01 to 2023-01-01 (#21948)
+dependencies: policy.guestconfigurationassignments: migrate to hashicorp/go-azure-sdk (#21927)
+dependencies: azurerm_monitor_autoscale_setting  upgrade API version from to 2023-05-01-preview (#21953)
+data.azurerm_linux_web_app - now exports the availability and usage attributes (#21945)
+data.azurerm_linux_function_app - now exports the availability and usage attributes (#21945)
+data.azurerm_cdn_frontdoor_secret - now exports the expiration_date attribute (#21945)
+data.azurerm_virtual_machine - now exports the power_state (#21945)
+data.azurerm_virtual_machine_scale_set -  now exports the power_state attribute (#21945)
+data.azurerm_azurerm_resources - now exports the resource_group_name attribute for each resource (#21676)
+security.watchitems - updating to use hashicorp/go-azure-sdk (#21944)
+azurerm_cosmosdb_account - support new capabilities for MongoDB (#21974)
+azurerm_kubernetes_cluster - the properties enable_host_encryption, enable_node_public_ip, kubelet_config, linux_os_config, max_pods, node_taints, only_critical_addons_enabled, os_disk_size_gb, os_disk_type, os_sku, pod_subnet_id, ultra_ssd_enabled, vnet_subnet_id and zones are now updateable through cycling of the system node pool (#21719)
+azurerm_machine_learning_compute_cluster - add support for the node_public_ip_enabled property (#21377)
+azurerm_nginx_certificate - key_vault_secret_id now accepts version-less key vault secret ids (#21949)
+azurerm_postgresql_flexible_server - add support for version value 15 (#21934)
+azurerm_shared_image_version - now exports the id property (#22006)
+azurerm_spring_cloud_certificate - support for the exclude_private_key property (#21942)
+azurerm_spring_cloud_customized_accelerator - support for the ca_certificate_id property (#21943)
+BUG FIXES:
+azurerm_app_configuration - prevent errors when deleting by checking that the name of the app configuration store has been released (#21750)
+azurerm_express_route_port_authorization - add a lock when create/update/delete authorization of express route port (#21959)
+azurerm_kubernetes_cluster - recompute the field oidc_issuer_url if the value of oidc_issuer_enabled has changed (#21911)
+azurerm_kubernetes_cluster - set correct value for default_node_pool.os_sku when resizing the default_node_pool (#21976)
+azurerm_postgresql_flexible_server - fix issue updating storage_mb and backup_retention_days together (#21987)"
+4,"FEATURES:
+
+New data Source: azurerm_mobile_network_packet_core_control_plane (#21071)
+New Resource: azurerm_cosmosdb_mongo_role_definition (#21754)
+New Resource: azurerm_cosmosdb_mongo_user_definition (#21914)
+New Resource: azurerm_iothub_file_upload (#20668)
+New Resource: azurerm_mobile_network_packet_core_control_plane (#21071)
+New Resource: azurerm_mysql_flexible_server_active_directory_administrator (#21786)
+New Resource: azurerm_monitor_alert_prometheus_rule_group (#21751)
+New Resource: azurerm_recovery_services_vault_resource_guard_association (#21712)
+New Resource: azurerm_site_recovery_hyperv_network_mapping (#21788)
+New Resource: azurerm_site_recovery_vmware_replication_policy_association (#21389)
+
+ENHANCEMENTS:
+
+dependencies: updating to v0.20230523.1080931 of github.com/hashicorp/go-azure-sdk (#21898)
+dependencies: updating to v0.20230518.1143920 of github.com/tombuildsstuff/kermit (#21899)
+dependencies: azurerm_monitor_autoscale_setting  upgrade API version from 2015-04-01 to 2022-10-01 (#21887)
+cosmosdb.gremlin: updating to use hashicorp/go-azure-sdk and api version 2023-04-15 (#21813)
+cosmosdb.sql_container: updating to use hashicorp/go-azure-sdk and api version 2023-04-15 (#21813)
+nginx: updating to use hashicorp/go-azure-sdk as a base layer rather than Azure/go-autorest (#21810)
+portal: updating to use hashicorp/go-azure-sdk as a base layer rather than Azure/go-autorest (#21810)
+redis: updating to use hashicorp/go-azure-sdk as a base layer rather than Azure/go-autorest (#21810)
+appplatform: updating to API Version 2023-03-01-preview (#21404)
+redisenterprise: updating to use hashicorp/go-azure-sdk as a base layer rather than Azure/go-autorest (#21810)
+azurerm_cosmosdb_account - fix for upstream Microsoft API issue where updating identity and default_identity at the same time silently fails (#21780)
+azurerm_monitor_activity_log_alert - support for the levels, resource_providers, resource_types, resource_groups, resource_ids, statuses, and sub_statuses properties (#21367)
+azurerm_media_transform - support for the experimental_options property (#21873)
+azurerm_backup_policy_vm - support for the days and include_last_days properties (#21434)
+azurerm_subnet - the name property within the subnet_delegation block can now be set to Microsoft.App/environments (#21893)
+azurerm_subnet_service_endpoint_policy - support for the service property (#21865)
+azurerm_signalr_service - support for the user_assigned_identity_id property (#21055)
+azurerm_site_recovery_replication_recovery_plan - support for the azure_to_azure_settings block (#21666)
+azurerm_cosmosdb_postgresql_cluster - the citus_version property now supports 11.3 (#21916)
+
+BUG FIXES:
+
+Data Source: azurerm_kubernetes_cluster - prevent a panic when some values returned are nil (#21867)
+azurerm_application_insights_web_test - normalizing the value for the application_insights_id property (#21837)
+azurerm_api_management - correctly configure the triple_des_ciphers_enabled value (#21789)
+azurerm_key_vault - during creation thecreateMode will now be set to default instead of nil (#21668)
+azurerm_spring_cloud_gateway_route_config -  the filters and predicates properties will now be omitted when not specified (#21745)
+azurerm_subnet - permit Microsoft.BareMetal/AzureHostedService as an option for the service_delegation property (#21871)
+","FEATURES:
+New data Source: azurerm_mobile_network_packet_core_control_plane (#21071)
+New Resource: azurerm_cosmosdb_mongo_role_definition (#21754)
+New Resource: azurerm_cosmosdb_mongo_user_definition (#21914)
+New Resource: azurerm_iothub_file_upload (#20668)
+New Resource: azurerm_mobile_network_packet_core_control_plane (#21071)
+New Resource: azurerm_mysql_flexible_server_active_directory_administrator (#21786)
+New Resource: azurerm_monitor_alert_prometheus_rule_group (#21751)
+New Resource: azurerm_recovery_services_vault_resource_guard_association (#21712)
+New Resource: azurerm_site_recovery_hyperv_network_mapping (#21788)
+New Resource: azurerm_site_recovery_vmware_replication_policy_association (#21389)
+ENHANCEMENTS:
+dependencies: updating to v0.20230523.1080931 of github.com/hashicorp/go-azure-sdk (#21898)
+dependencies: updating to v0.20230518.1143920 of github.com/tombuildsstuff/kermit (#21899)
+dependencies: azurerm_monitor_autoscale_setting  upgrade API version from 2015-04-01 to 2022-10-01 (#21887)
+cosmosdb.gremlin: updating to use hashicorp/go-azure-sdk and api version 2023-04-15 (#21813)
+cosmosdb.sql_container: updating to use hashicorp/go-azure-sdk and api version 2023-04-15 (#21813)
+nginx: updating to use hashicorp/go-azure-sdk as a base layer rather than Azure/go-autorest (#21810)
+portal: updating to use hashicorp/go-azure-sdk as a base layer rather than Azure/go-autorest (#21810)
+redis: updating to use hashicorp/go-azure-sdk as a base layer rather than Azure/go-autorest (#21810)
+appplatform: updating to API Version 2023-03-01-preview (#21404)
+redisenterprise: updating to use hashicorp/go-azure-sdk as a base layer rather than Azure/go-autorest (#21810)
+azurerm_cosmosdb_account - fix for upstream Microsoft API issue where updating identity and default_identity at the same time silently fails (#21780)
+azurerm_monitor_activity_log_alert - support for the levels, resource_providers, resource_types, resource_groups, resource_ids, statuses, and sub_statuses properties (#21367)
+azurerm_media_transform - support for the experimental_options property (#21873)
+azurerm_backup_policy_vm - support for the days and include_last_days properties (#21434)
+azurerm_subnet - the name property within the subnet_delegation block can now be set to Microsoft.App/environments (#21893)
+azurerm_subnet_service_endpoint_policy - support for the service property (#21865)
+azurerm_signalr_service - support for the user_assigned_identity_id property (#21055)
+azurerm_site_recovery_replication_recovery_plan - support for the azure_to_azure_settings block (#21666)
+azurerm_cosmosdb_postgresql_cluster - the citus_version property now supports 11.3 (#21916)
+BUG FIXES:
+Data Source: azurerm_kubernetes_cluster - prevent a panic when some values returned are nil (#21867)
+azurerm_application_insights_web_test - normalizing the value for the application_insights_id property (#21837)
+azurerm_api_management - correctly configure the triple_des_ciphers_enabled value (#21789)
+azurerm_key_vault - during creation thecreateMode will now be set to default instead of nil (#21668)
+azurerm_spring_cloud_gateway_route_config -  the filters and predicates properties will now be omitted when not specified (#21745)
+azurerm_subnet - permit Microsoft.BareMetal/AzureHostedService as an option for the service_delegation property (#21871)"
+5,"FEATURES:
+
+New Data Source: azurerm_virtual_hub_connection (#21681)
+
+ENHANCEMENTS:
+
+synapse: refactoring to use tombuildsstuff/kermit rather than Azure/azure-sdk-for-go for Data Plane (#21792)
+azurerm_batch_account - support versionless keys for CMK (#21677)
+azurerm_kubernetes_cluster - changing the http_proxy_config.no_proxy no longer creates a new resource (#21793)
+azurerm_media_transform - support for the jpg_image and png_image blocks within the custom_preset block (#21709)
+azurerm_recovery_services_vault - support the monitoring block (#21691)
+
+BUG FIXES:
+
+data.azurerm_kubernetes_cluster - prevent a panic when some values returned are nil (#21850)
+","FEATURES:
+New Data Source: azurerm_virtual_hub_connection (#21681)
+ENHANCEMENTS:
+synapse: refactoring to use tombuildsstuff/kermit rather than Azure/azure-sdk-for-go for Data Plane (#21792)
+azurerm_batch_account - support versionless keys for CMK (#21677)
+azurerm_kubernetes_cluster - changing the http_proxy_config.no_proxy no longer creates a new resource (#21793)
+azurerm_media_transform - support for the jpg_image and png_image blocks within the custom_preset block (#21709)
+azurerm_recovery_services_vault - support the monitoring block (#21691)
+BUG FIXES:
+data.azurerm_kubernetes_cluster - prevent a panic when some values returned are nil (#21850)"
+6,"FEATURES:
 
 New Resource: azurerm_cosmosdb_postgresql_coordinator_configuration (#21595)
 New Resource: azurerm_cosmosdb_postgresql_node_configuration (#21596)
@@ -60,7 +325,7 @@ azurerm_monitor_metric_alert - fix regression by using SingleResourceMultiMetric
 azurerm_service_fabric_managed_cluster - fixing a bug where certificates within the vm_secrets block wouldn't be set into the state (#21680)
 azurerm_storage_share - correct resource ID segment from fileshares to shares (#21645)
 azurerm_virtual_machine_scale_set,  - - support specifying ultra_ssd_disk_iops_read_write and ultra_ssd_disk_mbps_read_write for PremiumV2_LRS (#21530) "
-2,"FEATURES:
+7,"FEATURES:
 
 New Data Source: azurerm_kubernetes_node_pool_snapshot (#21511)
 New Resource: azurerm_cosmosdb_postgresql_firewall_rule (#21599)
@@ -97,7 +362,7 @@ azurerm_managed_disk - now detaches when disk_size_gb increases from below 4095 
 Service mssqlmanagedinstance - add initialize of client.MSSQLManagedInstance to fix panic (#21657)
 azurerm_virtual_machine - fixing a regression when parsing the OS Disk ID from the Azure API (#21606)
 azurerm_virtual_machine - fixing a regression when parsing the Data Disk ID from the Azure API (#21606)"
-3,"BREAKING CHANGES:
+8,"BREAKING CHANGES:
 
 azurerm_attestation_provider - the field policy is deprecated and non-functional due to a design issue with the original resource (where this wasn't retrieved from the Azure API and thus wasn't exposed correctly) - this has been superseded by the fields open_enclave_policy_base64, sgx_enclave_policy_base64 and tpm_policy_base64. (#21524)
 
@@ -174,7 +439,7 @@ azurerm_mysql_flexible_server - fix issue where identity was not being removed p
 azurerm_search_service - updating the default value for partition_count to 1 to match the API (#21323)
 azurerm_search_service - updating the default value for replica_count to 1 to match the API (#21323)
 azurerm_search_service - the field allowed_ips is now a Set rather than a List (#21323)"
-4,"FEATURES:
+9,"FEATURES:
 
 New Resource: azurerm_cost_management_scheduled_action (#21325)
 New Resource: azurerm_storage_mover_agent (#21273)
@@ -241,7 +506,7 @@ azurerm_cognitive_account - mark the custom_question_answering_search_service_ke
 azurerm_monitor_metric_alert - fix crash when the dynamic_criteria.0.ignore_data_before property  isn't set (#21446)
 azurerm_postgresql_flexible_server - correctly set the point_in_time_restore_time_in_utc property (#21501)
 azurerm_search_service - mark the primary_key and secondary_key properties as sensitive (#21469)"
-5,"ENHANCEMENTS:
+10,"ENHANCEMENTS:
 
 containerRegistry - refactoring to use hashicorp/go-azure-sdk (#21344)
 monitor - refactoring to use hashicorp/go-azure-sdk (#21392)
@@ -312,7 +577,7 @@ azurerm_windows_function_app - fix acrash in auth_v2 in active_directory_v2 (#21
 azurerm_windows_function_app_slot - fix a crash in auth_v2 in active_directory_v2 (#21381)
 azurerm_windows_web_app - fix a crash in auth_v2 in active_directory_v2 (#21381)
 azurerm_windows_web_app_slot - fix a crash in auth_v2 in active_directory_v2 (#21381)"
-6,"BREAKING CHANGES:
+11,"BREAKING CHANGES:
 
 azurerm_kubernetes_cluster - the sku_tier property no longer accepts the value Paid, it must be updated to Standard (#21256)
 
@@ -417,7 +682,7 @@ azurerm_windows_function_app  - fix a crash in auth_v2 in active_directory_v2 (#
 azurerm_windows_function_app_slot  - fix a crash in auth_v2 in active_directory_v2 (#21219)
 azurerm_windows_web_app  - fix a crash in auth_v2 in active_directory_v2 (#21219)
 azurerm_windows_web_app_slot  - fix a crash in auth_v2 in active_directory_v2 (#21219)"
-7,"FEATURES:
+12,"FEATURES:
 
 New DataSource: azurerm_container_app (#21199)
 New Resource: azurerm_web_pubsub_custom_certificate (#21114)
@@ -664,7 +929,7 @@ azurerm_windows_function_app_slot  - fix crash in auth_v2 in active_directory_v2
 azurerm_windows_virtual_machine_scale_set - validating application_security_group_ids, network_security_group_id, proximity_placement_group_id, public_ip_prefix_id, subnet_id and virtual_network_gateway_id (#21129)
 azurerm_windows_web_app  - fix crash in auth_v2 in active_directory_v2 (#21113)
 azurerm_windows_web_app_slot  - fix crash in auth_v2 in active_directory_v2 (#21113)"
-8,"BREAKING CHANGES: 
+13,"BREAKING CHANGES: 
 App Service site_config
 * ip_restriction blocks are no longer computed - changes to IP restrictions outside of Terraform will now present a diff
 * scm_ip_restriction blocks are no longer computed - changes to SCM IP restrictions outside of Terraform will now present a diff
@@ -833,7 +1098,7 @@ azurerm_windows_web_app_slot - fixed processing of cors block (#20987)
 azurerm_windows_web_app_slot - the scm_ip_restriction block can is now successfully removed by removing from config (#20987)
 azurerm_windows_web_app_slot - fix auth_v2 active_directory_v2 sending empty data (#21091)
 azurerm_windows_web_app_slot - fix read for token_store_enabled to correctly set returned value in state (#21091)"
-9,"FEATURES: 
+14,"FEATURES: 
 
 New Data Source: azurerm_mobile_network_sim_policy [FGH-20732]
 New Resource: azurerm_express_route_port_authorization (#20736)
@@ -876,7 +1141,7 @@ azurerm_healthcare_dicom_service - extending the create and update timeouts to 9
 azurerm_kusto_eventhub_data_connection - fixing an issue where an existing resource wouldn't be flagged during creation (#20926)
 azurerm_linux_function_app - Fixed apply time validation when using WEBSITE_CONTENTOVERVNET  (#18258)
 azurerm_windows_function_app - Fixed apply time validation when using WEBSITE_CONTENTOVERVNET (#18258)"
-10,"FEATURES: 
+15,"FEATURES: 
 
 New Resource: azurerm_sentinel_metadata (#20801)
 
@@ -999,7 +1264,7 @@ azurerm_synapse_workspace_key - marking the resource as gone when it's been dele
 azurerm_synapse_workspace_sql_aad_admin - marking the resource as gone when it's been deleted outside of Terraform (#20797)
 azurerm_web_app_active_slot - marking the resource as gone when it's been deleted outside of Terraform (#20797)
 azurerm_windows_function_app_slot - fix health_check_eviction_time_in_min (#20816)"
-11,"FEATURES
+16,"FEATURES
 
 New Data Source: azurerm_mobile_network_data_network (#20338)
 New Data Source: azurerm_sentinel_alert_rule_anomaly_built_in (#20368)
@@ -1134,7 +1399,7 @@ azurerm_proximity_placement_group - will now correctly update when a vm is attac
 azurerm_sentinel_log_analytics_workspace_onboard - fixing a crash when the connection dropped (#20670)
 azurerm_servicebus_namespace_disaster_recovery_config - fixing a crash when the connection dropped (#20670)
 azurerm_storage_object_replication - now functions when cross tenant replication is disabled (#20132)"
-12,"FEATURES
+17,"FEATURES
 
 App Service - Add authV2 to Web Apps (#20449)
 New Resource: azurerm_site_recovery_hyperv_replication_policy (#20454)
@@ -1215,7 +1480,7 @@ azurerm_log_analytics_workspace - prevent ForceNew when sku is LACluster (#19608
 azurerm_media_streaming_endpoint - set and update tags properly (#20585)
 azurerm_mobile_network_sim_group - update identity to only support User Assigned Identities (#20474)
 azurerm_monitor_diagnostic_setting - the log_analytics_destination_type property is nto computer rather then defaulting to AzureDiagnostics on new resources (#20203)"
-13,"ENHANCEMENTS
+18,"ENHANCEMENTS
 
 dependencies: updating to v0.20230217.1150808 of github.com/hashicorp/go-azure-sdk (#20539)
 
@@ -1252,7 +1517,7 @@ azurerm_app_configuration_key - surfacing the error when a data plane client can
 azurerm_kubernetes_cluster - fix a crash when securityProfile is nil in the API Response (#20517)
 azurerm_logic_app_standard - fixing an issue where the storage endpoint suffix couldn't be found (#20536)
 azurerm_synapse_role_assignment - fixing an issue where the Synapse domain suffix couldn't be found (#20536)"
-14,"FEATURES:
+19,"FEATURES:
 
 New Data Source: azurerm_hybrid_compute_machine (#20211)
 New Data Source: azurerm_policy_definition_built_in (#19933)
@@ -1403,7 +1668,7 @@ azurerm_private_endpoint - normalizing the private_connection_resource_id propet
 azurerm_private_endpoint - consistently normalizing the value returned from the API for private_connection_resource_id (#20452)
 azurerm_recovery_services_vault - updating cross_region_restore_enabled to false recreates the resource since this operation isn't supported by the API (#20406)
 azurerm_storage_management_policy - the rule.filters property is now Required since storage management policies fail if it's unspecified (#20448)"
-15,"FEATURES
+20,"FEATURES
 
 New Data Source: azurerm_mobile_network (#20128)
 New Data Source: azurerm_container_app_environment (#18008)
@@ -1504,7 +1769,7 @@ azurerm_redis_enterprise_cluster - switching a spurious usage of Azure/azure-sdk
 azurerm_service_fabric_managed_cluster - Fix potential panic when setting node_type (#20345)
 azurerm_web_application_firewall_policy - prevent a failure caused by changing the order of the disabled_rules properties (#20285)
 azurerm_databricks_access_connector - name can now be up to 64 character in length (#20353)"
-16,"FEATURES
+21,"FEATURES
 
 New Resource: azurerm_ip_group_cidr (#20225)
 New Resource: azurerm_network_manager_connectivity_configuration (#20133)
@@ -1545,7 +1810,7 @@ data.azurerm_monitor_data_collection_rule - raises an error when the specified d
 azurerm_federated_identity_credential - prevent a perpetual diff (#20219)
 azurerm_linux_function_app - fix linuxFxVersion for docker registry_url processing (#18194)
 azurerm_monitor_aad_diagnostic_setting - the field log_analytics_workspace_id is now parsed case-insensitively from the API Response (#20206)"
-17,"FEATURES
+22,"FEATURES
 
 New Data Source: azurerm_key_vault_certificates (#19498)
 New Data Source: azurerm_site_recovery_replication_recovery_plan (#19940)
@@ -1600,7 +1865,7 @@ azurerm_storage_account - support for AADKERB to azure_files_authentication.0.di
 BUG FIXES:
 azurerm_stream_analytics_output_servicebus_queue - shared access policy name and key are now optional for MSI authentication (#19712)
 azurerm_stream_analytics_output_servicebus_topic - shared access policy name and key are now optional for MSI authentication (#19708)"
-18,"FEATURES
+23,"FEATURES
 
 New Data Source: azurerm_bastion_host (#20062)
 New Resource: azurerm_lab_service_schedule (#19977)
@@ -1677,14 +1942,14 @@ azurerm_static_site - the field api_key is now correctly marked as a sensitive v
 azurerm_storage_account - will no longer silently ignore 404 error while reading service properties (#19062)
 azurerm_storage_account - the infrastructure_encryption_enabled is now supportted for premium accounts (#20028)
 azurerm_windows_web_app_slot - fix a bug where use_32_bit_worker would not be set correctly (#20051)"
-19,"BUG FIXES:
+24,"BUG FIXES:
 
 azurerm_cosmosdb_sql_container - Fix property included_path can not be removed issue (#19998)
 azurerm_log_analytics- fixing crash during read (#20011)
 ","BUG FIXES:
 azurerm_cosmosdb_sql_container - Fix property included_path can not be removed issue (#19998)
 azurerm_log_analytics- fixing crash during read (#20011)"
-20,"BREAKING CHANGES:
+25,"BREAKING CHANGES:
 
 
 App Service App Stack Re-alignment - due to a number of changes in how the Service manages App and Stack settings, the Terraform resource schema and validation needs to be updated to re-align with the service. Whist we ordinarily avoid breaking changes outside a major release, the drift has made several aspects of these resources in an unworkable position resulting in a poor experience for many users (#19685)
@@ -1889,7 +2154,7 @@ azurerm_windows_web_app - prevent a bug where backup_config could silently fail 
 azurerm_windows_web_app - prevent a bug where health_check_eviction_time_in_min would not be correctly set on Crete or Update  (#19685)
 azurerm_windows_web_app_slot - prevent a bug where backup_config could silently fail to expand resulting in the config not being sent  (#19685)
 azurerm_windows_web_app_slot - prevent a bug where health_check_eviction_time_in_min would not be correctly set on Crete or Update  (#19685)"
-21,"FEATURES:
+26,"FEATURES:
 
 New Data Source: azurerm_marketplace_agreement (#19628)
 New Data Source: azurerm_network_manager_network_group (#19593)
@@ -1960,7 +2225,7 @@ azurerm_subscription_cost_management_export - marking the resource as gone when 
 azurerm_synapse_linked_service - report error during create/update (#19849)
 azurerm_virtual_desktop_application_group - changing the host_pool_id now creates a new resource (#19689)
 azurerm_vmware_express_route_authorization - marking the resource as gone when it's no longer present in Azure (#19871)"
-22,"FEATURES:
+27,"FEATURES:
 
 New Resource: azurerm_cognitive_deployment (#19526)
 New Resource: azurerm_billing_account_cost_management_export (#19723)
@@ -1989,7 +2254,7 @@ azurerm_netapp_volume - support for the zone property (#19669)
 BUG FIXES: 
 azurerm_app_configuration_key - fix a regression when handling IDs containing a : (#19722)
 azurerm_virtual_network_gateway_connection -  can now be created with a azurerm_virtual_network_gateway in another resource group (#19699)"
-23,"FEATURES:
+28,"FEATURES:
 
 New Resource: azurerm_virtual_machine_packet_capture (#19385)
 New Resource: azurerm_virtual_machine_scale_set_packet_capture (#19385)
@@ -2060,7 +2325,7 @@ azurerm_resource_policy_exemption - changing the policy_assignment_id property n
 azurerm_resource_group_policy_exemption - changing the policy_assignment_id property not created a new resource (#19674)
 azurerm_subscription_policy_exemption - changing the policy_assignment_id property not created a new resource (#19674)
 azurerm_stream_analytics_output_mssql - the user and password properties are not optional when using MSI authentication (#19696)"
-24,"BREAKING CHANGES
+29,"BREAKING CHANGES
 
 azurerm_stream_analytics_output_blob - the field batch_min_rows is now an integer rather than a float due to a breaking change in the API Specifications - we believe this was only previously valid as an integer, as such whilst this is a breaking change we believe this shouldn't cause an issue for most users (since the API required that this was an integer) (#19602)
 
@@ -2157,7 +2422,7 @@ azurerm_monitor_smart_detector_alert_rule - added a state migration to work arou
 azurerm_spring_cloud_ - added a state migration to work around the previously incorrect id casing (#19564)
 azurerm_stream_analytics_output_blob - the field batch_min_rows is now an integer rather than a float due to a breaking change in the API Specifications - we believe this was only previously valid as an integer, as such whilst this is a breaking change we believe this shouldn't cause an issue for most users (since the API required that this was an integer) (#19602)
 azurerm_virtual_desktop_workspace_application_group_association - set tags properly (#19574)"
-25,"ENHANCEMENTS:
+30,"ENHANCEMENTS:
 
 dependencies: updating to v0.20221129.1175354 of github.com/hashicorp/go-azure-sdk (#19483)
 media: refactoring to use github.com/hashicorp/go-azure-sdk (#19285)
@@ -2218,7 +2483,7 @@ azurerm_synapse_linked_service - a state migration to work around the previously
 azurerm_windows_web_app - Fix currentStack is being reset when other site_config values are changed. (#18568)
 azurerm_windows_web_app_slot - Fix currentStack is being reset when other site_config values are changed. (#18568)
 azurerm_windows_virtual_machine_scale_set Fix crash when upgrading automatic_os_upgrade_policy (#19465)"
-26,"FEATURES:
+31,"FEATURES:
 
 New Data Source: azurerm_cdn_frontdoor_custom_domain (#19357)
 New Resource: azurerm_mssql_managed_instance_transparent_data_encryption (#18918)
@@ -2273,7 +2538,7 @@ azurerm_mysql_flexible_server - increase validation max value for the iops prope
 azurerm_servicebus_subscription_rule - correlation_filter with empty attributes no longer crashes (#19352)
 azurerm_storage_account - fix crash in multichannel checking (#19298)
 azurerm_storage_account - prevent both blob_properties.0.versioning_enabled and is_hns_enabled being set to true (#19418)"
-27,"DEPRECATIONS
+32,"DEPRECATIONS
 
 The azurerm_integration_service_environment resource is now deprecated as the underlying Azure Service is being retired on 2024-08-31 and new instances cannot be provisioned (by default) after 2022-11-01 (#19265)
 
@@ -2308,7 +2573,7 @@ azurerm_orchestrated_virtual_machine_scale_set - allow no image to be specified 
 azurerm_synapse_firewall_rule - wait for the firewall to be ready (#19227)
 azurerm_service_fabric_managed_cluster - correctly define active_directory as a List (#19163)
 azurerm_orchestrated_virtual_machine_scale_set -  instance parameter is now set on update (#19337)"
-28,"FEATURES:
+33,"FEATURES:
 
 New Resource: azurerm_federated_identity_credential (#19199)
 New Resource: azurerm_stream_analytics_stream_input_eventhub_v2 (#19150)
@@ -2355,7 +2620,7 @@ azurerm_windows_function_app - support for .NET 7 (#19232)
 BUG FIXES:
 azurerm_cdn_frontdoor_route - update read function to parse cdn_frontdoor_origin_group_id insensitively (#19178)
 azurerm_cdn_frontdoor_rule - update url_redirect_action to allow query_string field to pass multiple query string parameters (#19180)"
-29,"FEATURES:
+34,"FEATURES:
 
 New Resource: azurerm_kubernetes_fleet_manager (#19111)
 New Resource: azurerm_mssql_server_microsoft_support_auditing_policy (#18609)
@@ -2446,12 +2711,12 @@ azurerm_windows_virtual_machine_scale_set - can now set automatic_os_upgrade_pol
 3.29.1 (October 28, 2022)
 BUG FIXES:
 azurerm_kubernetes_cluster - prevent panic when setting public_network_access_enabled (#19048)"
-30,"BUG FIXES:
+35,"BUG FIXES:
 
 azurerm_kubernetes_cluster - prevent panic when setting public_network_access_enabled [GH-19048]
 ","BUG FIXES:
 azurerm_kubernetes_cluster - prevent panic when setting public_network_access_enabled [GH-19048]"
-31,"FEATURES:
+36,"FEATURES:
 
 New Data Source: azurerm_api_management_gateway_host_name_configuration (#17166)
 New Data Source: azurerm_cdn_frontdoor_firewall_policy (#18903)
@@ -2584,7 +2849,7 @@ azurerm_key_vault_certificate - new versions of key vault certs can now be impor
 azurerm_postgresql_server - correctly create replicas when CMK is enabled (#18805)
 azurerm_stream_analytics_stream_input_eventhub - shared_access_policy_key and shared_access_policy_name are no longer required (#18959)
 azurerm_windows_virtual_machine_scale_set - the gallery_applications block has been renamted to gallery_application (#19014)"
-32,"FEATURES:
+37,"FEATURES:
 
 New Data Source: azurerm_cdn_frontdoor_secret (#18817)
 New Resource: azurerm_databricks_access_connector (#18709)
@@ -2695,7 +2960,7 @@ azurerm_windows_virtual_machine - allow disabling secure boot when creating a vi
 azurerm_windows_function_app - fix an issue where app_settings would show a diff when setting vnet_route_all_enabled to true (#18836)
 azurerm_windows_function_app_slot - fix an issue where app_settings would show a diff when setting vnet_route_all_enabled to true (#18836)
 azurerm_windows_web_app - fix parsing of docker_container_name and docker_container_registry on read (#18251)"
-33,"BREAKING CHANGES:
+38,"BREAKING CHANGES:
 
 azurerm_cdn_frontdoor_custom_domain - removed the associate_with_cdn_frontdoor_route_id field to allow for a custom domains to be associated with multiple routes. (#18600)
 
@@ -2774,7 +3039,7 @@ azurerm_log_analytics_cluster - fixing an issue when checking for the presence o
 azurerm_logic_app_workflow - can now be updated when associated with integration_service_environment_id (#18660)
 azurerm_spring_cloud_connection - correctly parse storage blob resource id (#18699)
 azurerm_app_service_connection - correctly parse storage blob resource id (#18699)"
-34,"BREAKING CHANGES:
+39,"BREAKING CHANGES:
 
 azurerm_load_test - the computed attribute dataplane_uri has been renamed to data_plane_uri for consistency (#18654)
 
@@ -2821,7 +3086,7 @@ BUG FIXES:
 azurerm_linux_function_app_slot - read app settings from the correct endpoint (#18396)
 azurerm_load_test - changing the name field now forces a new resource to be created (#18654)
 azurerm_windows_function_app_slot - read app settings from the correct endpoint (#18396)"
-35,"FEATURES:
+40,"FEATURES:
 
 New Resource: azurerm_cdn_frontdoor_route (#18231)
 New Resource: azurerm_cdn_frontdoor_custom_domain (#18231)
@@ -2870,7 +3135,7 @@ azurerm_windows_virtual_machine - support for the gallery_application property (
 BUG FIXES:
 Data Source: azurerm_key_vault_certificate_data - correctly create PEM private key block header for EC keys (#18419)
 azurerm_log_analytics_linked_storage_account - correctly data_source_type case handling (#18116)"
-36,"FEATURES:
+41,"FEATURES:
 
 New Resource: azurerm_automation_software_update_configuration (#17902)
 New Resource: azurerm_monitor_alert_processing_rule_action_group (#17006)
@@ -2917,7 +3182,7 @@ BUG FIXES:
 azurerm_monitor_metric_alert - pass multi criteria to the API in the correct order (#18438)
 azurerm_monitor_diagnostic_settings - correctly parsing the case for the workspace_id property (#18467)
 azurerm_security_center_workspace - correctly parsing the case for the workspace_id property (#18467)"
-37,"FEATURES:
+42,"FEATURES:
 
 New Data Source: private_dns_zone_virtual_network_link (#18045)
 New Data Source: azurerm_monitor_data_collection_rule (#18318)
@@ -2956,7 +3221,7 @@ azurerm_resource_group_policy_remediation - the policy_definition_id property ha
 azurerm_subscription_policy_remediation - the policy_definition_id property has been deprecated in favour of the more accuractly named policy_definition_reference_id property (#18037)
 BUG FIXES:
 azurerm_netapp_volume: add extra validation when data_protection_snapshot_policy.0. snapshot_policy_id is empty (#18348)"
-38,"FEATURES:
+43,"FEATURES:
 
 New Resource: azurerm_api_management_api_tag_description (#17876)
 New Resource: azurerm_api_management_schema (#18158)
@@ -3011,7 +3276,7 @@ azurerm_hdinsight_hadoop_cluster - support for the extension property (#17846)
 BUG FIXES:
 azurerm_mssql_database - the license_type property is now also Computed (#18230)
 azurerm_log_analytics_solution - a state migration to work around the previously incorrect id casing (#18291)"
-39,"BREAKING CHANGES:
+44,"BREAKING CHANGES:
 
 azurerm_container_registry - the field azuread_authentication_as_arm_policy_enabled has been removed to fix a regression - support for this will be reintroduced in a future release.
 azurerm_container_registry - the field soft_delete_policy has been removed to fix a regression - support for this will be reintroduced in a future release.
@@ -3032,7 +3297,7 @@ the containerregistry api version has been reverted to 2021-08-01-preview to res
 BUG FIXES:
 azurerm_container_registry - the virtual_network block has been restored (#18239)
 azurerm_log_analytics_data_export_rule - a state migration to work around the previously incorrect id casing (#18240)"
-40,"FEATURES:
+45,"FEATURES:
 
 New Data Source: azurerm_monitor_data_collection_endpoint (#17992)
 New Resource: azurerm_app_service_connection (#16907)
@@ -3205,7 +3470,7 @@ BUG FIXES:
 azurerm_kubernetes_cluster - kube_config is now set when AAD is enabled for a v1.24 cluster (#18142)
 azurerm_redis_cache - will now recreate the cache when downgrading the SKU (#17767)
 azurerm_spring_cloud_service - ignore the default zero value for read_timeout_seconds (#18161)"
-41,"FEATURES:
+46,"FEATURES:
 
 Provider: support for generic OIDC authentication providers (#18118)
 New Resource: azurerm_backup_policy_vm_workload (#17765)
@@ -3238,7 +3503,7 @@ azurerm_cosmosdb_sql_database - prevent panic in autoacale settings (#18070)
 azurerm_kubernetes_cluster_node_pool - fix a crash in expanding upgrade settings (#18074)
 azurerm_mssql_elastic_pool - list of values for maintenance_configuration_name is now correct (#18041)
 azurerm_postgresql_flexible_server - point_in_time_restore_time_in_utc correctly converts to RFC3339 (#18106)"
-42,"BUG FIXES:
+47,"BUG FIXES:
 
 azurerm_dns_a_record - parse resource IDs insensitively in the read functions due to casing on the dnsZones segment (#18048)
 azurerm_dns_aaaa_record - parse resource IDs insensitively in the read functions due to casing on the dnsZones segment (#18048)
@@ -3261,7 +3526,7 @@ azurerm_dns_ptr_record - parse resource IDs insensitively in the read functions 
 azurerm_dns_srv_record - parse resource IDs insensitively in the read functions due to casing on the dnsZones segment (#18048)
 azurerm_dns_txt_record - parse resource IDs insensitively in the read functions due to casing on the dnsZones segment (#18048)
 azurerm_dns_zone - parse resource IDs insensitively in the read functions due to casing on the dnsZones segment (#18048)"
-43,"FEATURES:
+48,"FEATURES:
 
 New Data Source: azurerm_dns_a_record (#17477)
 New Data Source: azurerm_dns_aaaa_record (#17477)
@@ -3412,7 +3677,7 @@ azurerm_windows_function_app - correctly send WEBSITE_CONTENTSHARE and WEBSITE_C
 azurerm_windows_function_app - fix content settings when storage_uses_managed_identity is set to true (#18035)
 azurerm_windows_function_app_slot - correctly send WEBSITE_CONTENTSHARE and WEBSITE_CONTENTAZUREFILECONNECTIONSTRING (#18035)
 azurerm_windows_function_app_slot - fix content settings when storage_uses_managed_identity is set to true (#18035)"
-44,"FEATURES: 
+49,"FEATURES: 
 
 New Resource: azurerm_monitor_data_collection_endpoint (#17684)
 
@@ -3443,7 +3708,7 @@ azurerm_servicebus_subscription - support for the client_scoped_subscription_ena
 BUG FIXES:
 azurerm_backup_policy_vm - now prevents crash when frequency is set to Hourly and, hour_interval and hour_durationare not set (#17880)
 Data Source: azurerm_blueprint_definition - Fix version property output (#16299)"
-45,"ENHANCEMENTS:
+50,"ENHANCEMENTS:
 
 domainservice: updating to use API Version 2021-05-01 (#17737)
 Data Source: azurerm_proximity_placement_group - refactoring to use hashicorp/go-azure-sdk (#17776)
@@ -3472,7 +3737,7 @@ azurerm_subnet - support for the service delegation Microsoft.Orbital/orbitalGat
 azurerm_eventhub_namespace - support for the local_authentication_enabled, public_network_access_enabled, and minimum_tls_version properties (#17194)
 BUG FIXES:
 Data Source: azurerm_private_dns_zone - returning the correct Resource ID when not specifying the resource_group_name (#17729)"
-46,"FEATURES: 
+51,"FEATURES: 
 
 New Resource: azurerm_datadog_monitor (#16131)
 New Resource: azurerm_kusto_cluster_managed_private_endpoint (#17667)
@@ -3547,7 +3812,7 @@ BUG FIXES:
 data.azurerm_servicebus_queue - fix a regression around namespace_id (#17755)
 azurerm_postgresql_aad_administrator - fix the state migration (#17732)
 azurerm_postgresql_server - fix a regression around id (#17755)"
-47,"BUG FIXES: 
+52,"BUG FIXES: 
 
 data.azurerm_servicebus_queue - fix a regression around namespace_id (#17755)
 azurerm_postgresql_aad_administrator: fix the state migration (#17732)
@@ -3556,7 +3821,7 @@ azurerm_postgresql_server - fix a regression around id (#17755)
 data.azurerm_servicebus_queue - fix a regression around namespace_id (#17755)
 azurerm_postgresql_aad_administrator: fix the state migration (#17732)
 azurerm_postgresql_server - fix a regression around id (#17755)"
-48,"FEATURES: 
+53,"FEATURES: 
 * New Data Source: azurerm_cdn_frontdoor_origin_group (#17089)
 * New Data Source: azurerm_cdn_frontdoor_origin (#17089)
 * New Resource: azurerm_cdn_frontdoor_origin_group (#17089)
@@ -3591,7 +3856,7 @@ servicebus: refactoring to use hashicorp/go-azure-sdk (#17628)
 postgres: refactoring to use hashicorp/go-azure-sdk (#17625)
 azurerm_kusto_cluster_resource - support for the allowed_fqdns, allowed_ip_ranges, and outbound_network_access_restricted properties (#17581)
 azurerm_storage_account - supports for the change_feed_retention_in_days property (#17130)"
-49,"FEATURES:
+54,"FEATURES:
 
 New Resource: azurerm_application_insights_workbook_template (#17433)
 New Resource: azurerm_gallery_application (#17394)
@@ -3686,7 +3951,7 @@ azurerm_windows_function_app - set the default_hostname properly on read (#17498
 azurerm_windows_function_app - correctly create function apps when custom handlers are used (#17498)
 azurerm_windows_function_app_slot - set the default_hostname properly on read (#17498)
 azurerm_windows_function_app_slot - correctly create function apps when custom handlers are used (#17498)"
-50,"FEATURES:
+55,"FEATURES:
 
 New Data Source: azurerm_public_maintenance_configurations (#16810)
 New Resource: azurerm_fluid_relay_server (#17238)
@@ -3735,7 +4000,7 @@ azurerm_synapse_integration_runtime_azure - the location property now supports A
 azurerm_windows_virtual_machine - support for the capacity_reservation_group_id property (#17236)
 BUG FIXES:
 azurerm_application_gateway -  request_routing_rule.x.priority is optional (#17380)"
-51,"FEATURES:
+56,"FEATURES:
 
 New Resource: azurerm_active_directory_domain_service_trust (#17045)
 New Resource: azurerm_data_protection_resource_guard (#17325)
@@ -3850,7 +4115,7 @@ azurerm_subscription_policy_assignment - the name property can no longer contain
 azurerm_windows_function_app - correctly validate the app_setting_names and connection_string_names properties within the sticky_settings block (#17209)
 azurerm_windows_web_app - correctly configure auto_heal and slow_request (#17296)
 azurerm_windows_web_app - correctly validate the app_setting_names and connection_string_names properties within the sticky_settings block (#17209)"
-52,"FEATURES:
+57,"FEATURES:
 
 New Data Source: azurerm_management_group_template_deployment (#14524)
 New Data Source: azurerm_policy_assignment (#16527)
@@ -3893,7 +4158,7 @@ Data Source: azurerm_mysql_flexible_server - generate the correct terraform reso
 azurerm_shared_image - the privacy_statement_uri, publisher, offer and sku fields are now ForceNew (#17289)
 azurerm_shared_image_* - Fix validation for gallery_name (#17201)
 azurerm_time_series_insights_gen2_environment - Fix ordering of id_properties (#17234)"
-53,"FEATURES:
+58,"FEATURES:
 
 New Data Source: azurerm_cdn_frontdoor_rule_set (#17094)
 New Resource: azurerm_capacity_reservation_group (#16464)
@@ -3928,7 +4193,7 @@ azurerm_application_gateway - add default value for backend_http_settings.0.requ
 azurerm_applicaton_gateway -priority is now required (#16849)
 azurerm_container_group - Double the delete check timeout for nic (#17115)
 azurerm_windows_function_app_x - custom_domain_verification_id is now written to state file ((#17183)"
-54,"FEATURES:
+59,"FEATURES:
 
 New Data Source: azurerm_app_configuration_keys (#17053)
 New Data Source: azurerm_cdn_frontdoor_endpoint (#17078)
@@ -3981,7 +4246,7 @@ BUG FIXES:
 azurerm_container_registry_task - sending authentication within the source_trigger block when updating (#17002)
 azurerm_eventhub_authorization_rule - extend regex char limit for name (#17057)
 azurerm_kubernetes_cluster - prevent a potential crash during import of a cluster that doesn't have an API Server Access Profile (#17005)"
-55,"FEATURES:
+60,"FEATURES:
 
 New Resource: azurerm_mssql_server_dns_alias (#16861)
 New Resource: azurerm_spring_cloud_gateway_route_config (#16721)
@@ -4052,7 +4317,7 @@ azurerm_mysql_server -  fix an error updating public_network_access_enabled with
 azurerm_linux_function_app_slot - correctly check for name availability during creation (#16410)
 azurerm_windows_function_app_slot - correctly check for name availability during creation (#16410)
 azurerm_windows_virtual_machine - changing the timezone property now creates a new resources (#16866)"
-56,"FEATURES:
+61,"FEATURES:
 
 New Authentication Method: OIDC (#16555)
 New Data Source: azurerm_elastic_cloud_elasticsearch (#14821)
@@ -4107,7 +4372,7 @@ azurerm_shared_image - changing the eula property now creates a new resource (#1
 DEPRECATIONS:
 azurerm_video_analyzer - Video Analyzer (Preview) is now Deprecated and will be Retired on 2022-11-30 - as such this resource is deprecated and will be removed in v4.0 of the AzureRM Provider (#16847)
 azurerm_video_analyzer_edge_module - Video Analyzer (Preview) is now Deprecated and will be Retired on 2022-11-30 - as such this resource is deprecated and will be removed in v4.0 of the AzureRM Provider (#16847)"
-57,"FEATURES:
+62,"FEATURES:
 
 New Resource: azurerm_confidential_ledger (#15420)
 New Resource: azurerm_managed_disk_sas_token (#15558)
@@ -4166,7 +4431,7 @@ azurerm_windows_virtual_machine - correctly support for the update the diff_disk
 BUG FIXES:
 azurerm_app_configuration_feature - allow successful creation of resource without specifying any optional filters (#16459)
 azurerm_mssql_managed_instance_failover_group - correctly import resource and sent primary isntance id (#16705)"
-58,"FEATURES:
+63,"FEATURES:
 
 New Data Source: azurerm_healthcare_dicom_service (#15887)
 New Resource: azurerm_healthcare_dicom_service (#15887)
@@ -4229,7 +4494,7 @@ azurerm_linux_function_app_slot - fix app_settings.WEBSITE_RUN_FROM_PACKAGE hand
 azurerm_machine_learning_compute_cluster - resource will now be deleted instead of just detached (#16640)
 azurerm_windows_function_app - correctly deduplicate user app_settings (#15740)
 azurerm_windows_function_app_slot - correctly deduplicate user app_settings (#15740)"
-59,"FEATURES:
+64,"FEATURES:
 
 New Resource: azurerm_stream_analytics_output_cosmosdb (#16441)
 
@@ -4286,7 +4551,7 @@ BUG FIXES:
 azurerm_datafactory_dataset_x - Fix crash around azure_blob_storage_location.0.dynamic_container_enabled (#16514)
 azurerm_kubernetes_cluster - allow updates to a cluster running a deprecated version of kubernetes (#16551)
 azurerm_resource_policy_remediation - will no longer try to cancel a completed remediation task during deletion (#16478)"
-60,"FEATURES:
+65,"FEATURES:
 
 New Resource: azurerm_spring_cloud_container_deployment (#16181)
 
@@ -4385,7 +4650,7 @@ azurerm_windows_web_app - the ip_address property is now correctly set into stat
 azurerm_windows_web_app - prevent a potential crash when an empty app_stack block is used (#16446)
 azurerm_windows_web_app_slot - the ip_address property is now correctly set into state when the service_tag property is specified (#16426)
 azurerm_windows_web_app_slot - prevent a potential crash when an empty app_stack block is used (#16446)"
-61,"FEATURES:
+66,"FEATURES:
 
 New Datasource: azurerm_kusto_database (#16180)
 New Resource: azurerm_container_connected_registry (#15731)
@@ -4436,7 +4701,7 @@ azurerm_vpn_server_configuration - the server_root_certificate property is now o
 azurerm_storage_data_lake_gen2_path - support $superuser as an option for owner and group (#16370)
 azurerm_eventhub_namespace - can now be updated when customer managed keys are being used (#16371)
 azurerm_postgresql_flexible_server - high_availability blocks can now be added and removed (#16328)"
-62,"3.1.0 (April 07, 2022)
+67,"3.1.0 (April 07, 2022)
 FEATURES:
 
 New Resource: azurerm_container_registry_agent_pool (#16258)
@@ -4519,7 +4784,7 @@ azurerm_windows_web_app - fix docker windowsFXVersion when docker_container_regi
 azurerm_windows_web_app_slot - add support for dotnetcore in site metadata property current_stack (#16129)
 azurerm_windows_web_app_slot - fix docker windowsFXVersion when docker_container_registry is specified (#16192)
 azurerm_storage_data_lake_gen2_filesystem - add support for $superuser in group and owner properties (#16215)"
-63,"3.0.2 (March 26, 2022)
+68,"3.0.2 (March 26, 2022)
 BUG FIXES:
 
 azurerm_cosmosdb_account - prevent a panic when the API returns an nil list of read or write locations (#16031)
@@ -4538,12 +4803,12 @@ azurerm_linux_function_app - correctly update storage settings when using MSI (#
 azurerm_managed_disk - changing the zone property now correctly create a new resource (#16070)
 azurerm_resource_group - wait for eventual consistency when deleting (#16073)
 azurerm_windows_function_app - correctly update storage settings when using MSI (#16046)"
-64,"BUG FIXES:
+69,"BUG FIXES:
 
 provider: the prevent_deletion_if_contains_resources feature flag within the resource_group block now defaults to true [GH-16021]
 ","BUG FIXES:
 provider: the prevent_deletion_if_contains_resources feature flag within the resource_group block now defaults to true [GH-16021]"
-65,"3.0.0 (March 24, 2022)
+70,"3.0.0 (March 24, 2022)
 NOTES:
 
 Major Version: Version 3.0 of the Azure Provider is a major version - some behaviours have changed and some deprecated fields/resources have been removed - please refer to the 3.0 upgrade guide for more information.
@@ -4796,7 +5061,7 @@ azurerm_synapse_workspace - fixing a bug where workspaces created from a Dedicat
 azurerm_synapse_workspace_key - keys can now be correctly rotated (#15897)
 azurerm_windows_function_app - fixed update handling of app_settings for WEBSITE_CONTENTSHARE and WEBSITE_CONTENTAZUREFILECONNECTIONSTRING (#15907)
 azurerm_windows_function_app_slot - fixed update handling of app_settings for WEBSITE_CONTENTSHARE and WEBSITE_CONTENTAZUREFILECONNECTIONSTRING (#15907)"
-66,"2.99.0 (March 11, 2022)
+71,"2.99.0 (March 11, 2022)
 NOTES
 
 Preparation for 3.0: We intend for v2.99.0 to be the last release in the 2.x line - we’ll be turning our focus to 3.0 with the next release. We recommend consulting the list of changes coming in 3.0 to be aware and trialling the Beta available in the latest 2.x releases if you’re interested.
@@ -4901,7 +5166,7 @@ azurerm_mssql_managed_instance_active_directory_administrator - prevent a perpet
 azurerm_orchestrated_virtual_machine_scale_set - prevent a crash when the 3.0 beta was enabled (#15637)
 azurerm_storage_data_lake_gen2_filesystem - support configuring the group and owner properties (#15598)
 azurerm_virtual_network_gateway - prevent a panic with bgp_settings.0.peering_address (#15689)"
-67,"2.98.0 (February 25, 2022)
+72,"2.98.0 (February 25, 2022)
 FEATURES:
 
 New Beta Resource: azurerm_function_app_active_slot (#15246)
@@ -4932,7 +5197,7 @@ azurerm_windows_function_app_slot - adds key_vault_reference_identity_id support
 BUG FIXES:
 azurerm_cosmosdb_mongo_collection - can now set the autoscale_settings property without setting a shard_key when creating a cosmos DB mongo collection (#15529)
 azurerm_firewall_policy - will not wait for resource to finish provisioning after creation (#15561)"
-68,"2.97.0 (February 18, 2022)
+73,"2.97.0 (February 18, 2022)
 UPGRADE NOTES:
 
 3.0 Beta: This release includes a new feature-flag to opt-into the 3.0 Beta - which (when enabled) introduces a number of new data sources/resources, behavioural changes, field renames and removes some older deprecated resources. The 3.0 Beta is still a work-in-progress at this time and as such the changes listed in the 3.0 Upgrade Guide may change, however we're interested to hear your feedback and instructions on how to opt-into the 3.0 Beta can be found here.
@@ -5013,7 +5278,7 @@ azurerm_stream_analytics_cluster - fix an issue where the tags were not being se
 azurerm_virtual_desktop_host_pool - the registration_info info block is deprecated in favour of the azurerm_virtual_desktop_host_pool_registration_info resource due to changes in the API (#14953)
 azurerm_virtual_machine_data_disk_attachment - fixing a panic when an incorrect disk_id is provided (#15470)
 azurerm_web_application_firewall_policy - disabled_rules is now optional (#15386)"
-69,"2.96.0 (February 11, 2022)
+74,"2.96.0 (February 11, 2022)
 FEATURES: 
 
 New Data Source: azurerm_portal_dashboard (#15326)
@@ -5080,7 +5345,7 @@ azurerm_firewall - working around an Azure API issue when deleting the Firewall 
 azurerm_kubernetes_cluster - unsetting outbound_ip_prefix_ids or outbound_ip_address_ids with an empty slice will default the load_balancer_profile to a managed outbound IP (#15338)
 azurerm_orchestrated_virtual_machine_scale_set - fixing a crash when the computer_name_prefix wasn't specified (#15312)
 azurerm_recovery_services_vault - fixing an issue where the subscription couldn't be found when running in Azure Government (#15316)"
-70,"2.95.0 (February 04, 2022)
+75,"2.95.0 (February 04, 2022)
 FEATURES: 
 
 New Data Source: azurerm_container_group (#14946)
@@ -5149,7 +5414,7 @@ azurerm_policy_definition - fix the deprecation of management_group_name in favo
 azurerm_policy_set_definition - fix the deprecation of management_group_name in favour of management_group_id (#15209)
 azurerm_static_site - fixing the creation of a Free tier Static Site (#15141)
 azurerm_storage_share - fixing the ShareBeingDeleted error when the Storage Share is recreated (#15180)"
-71,"2.94.0 (January 28, 2022)
+76,"2.94.0 (January 28, 2022)
 UPGRADE NOTES:
 
 provider: support for the Azure German cloud has been removed in this release as this environment is no longer operational (#14403)
@@ -5212,12 +5477,12 @@ azurerm_dev_test_lab - fix an unexpected diff on with the key_vault_id property 
 azurerm_subscription_cost_management_export - now sents the ETag when updating a cost management export (#15017)
 azurerm_template_deployment - fixes a potential bug occuring during the deletion of a template deployment (#15085)
 azurerm_eventhub - the partition_count property can now be changed when using Premium sku (#15088)"
-72,"BUG FIXES:
+77,"BUG FIXES:
 
 azurerm_app_service - fix name availability check request (#15062)
 ","BUG FIXES:
 azurerm_app_service - fix name availability check request (#15062)"
-73,"2.93.0 (January 21, 2022)
+78,"2.93.0 (January 21, 2022)
 FEATURES:
 
 New Data Source: azurerm_mysql_flexible_server (#14976)
@@ -5260,7 +5525,7 @@ BUG FIXES:
 azurerm_machine_learning_compute_instance - add validation for tenant_id and object_id properties to prevent null values and subsequent panic (#14982)
 azurerm_linux_function_app - (beta) fix potential panic in application_stack when that block is not in config (#14844)
 azurerm_storage_share_file changing the content_md5 property will now trigger recreation and the content_length property of share file will now be set when updating properties. (#15007)"
-74,"2.92.0 (January 14, 2022)
+79,"2.92.0 (January 14, 2022)
 FEATURES:
 
 New Resource: azurerm_api_management_api_tag (#14711)
@@ -5319,7 +5584,7 @@ azurerm_spring_cloud_service - fix panic when removing git repos (#14900)
 azurerm_log_analytics_workspace - the reservation_capcity_in_gb_per_day has been deprecated and renamed to reservation_capacity_in_gb_per_day (#14910)
 azurerm_iothub_dps - fixed default value of allocation_weight to match azure default (#14943)
 azurerm_iothub - now exports event_hub_events_namespace and has a fallback route by default (#14942)"
-75,"2.91.0 (January 07, 2022)
+80,"2.91.0 (January 07, 2022)
 FEATURES:
 
 New Data Source: azurerm_aadb2c_directory (#14671)
@@ -5426,7 +5691,7 @@ azurerm_app_service_environment_v3 - fix the default value of the allow_new_priv
 azurerm_consumption_budget_subscription - added an additional state migration to fix the bug introduced by the first one and to parse the subscription_id from the resource's ID (#14803)
 azurerm_network_interface_security_group_association - checking the ID matches the expected format during import (#14753)
 azurerm_storage_management_policy - handle the unexpected deletion of the storage account (#14799)"
-76,"2.90.0 (December 17, 2021)
+81,"2.90.0 (December 17, 2021)
 FEATURES:
 
 New Datasource: azurerm_app_configuration_key (#14484)
@@ -5501,7 +5766,7 @@ azurerm_function_app - address app_settings during creation rather than just upd
 azurerm_marketplace_agreement - fix crash when the import check triggers (#14614)
 azurerm_postgresql_configuration - now locks during write operations to prevent conflicts (#14619)
 azurerm_postgresql_flexible_server_configuration - now locks during write operations to prevent conflicts (#14607)"
-77,"2.89.0 (December 10, 2021)
+82,"2.89.0 (December 10, 2021)
 FEATURES:
 
 New Resource: azurerm_bot_service_azure_bot [#14462] 
@@ -5582,7 +5847,7 @@ auto_heal renamed to auto_heal_enabled
 local_mysql renamed to local_mysql_enabled
 client_cert_enabled renamed to client_certificate_enabled
 client_cert_mode renamed to client_certificate_mode"
-78,"BUG FIXES
+83,"BUG FIXES
 
 Data Source: azurerm_automation_account - fixing a bug where the Resource Group and Name were set incorrectly (#14464)
 Data Source: azurerm_api_management - fixing a bug where the Managed Identity ID's weren't parsed correctly (#14469)
@@ -5615,7 +5880,7 @@ azurerm_function_app_slot - fixing a bug where the Managed Identity ID's weren't
 azurerm_kubernetes_cluster - fixing a bug where the Managed Identity ID's weren't parsed correctly (#14469)
 azurerm_kusto_cluster - fixing a bug where the Managed Identity ID's weren't parsed correctly (#14469)
 azurerm_mssql_server - fixing a bug where the Managed Identity ID's weren't parsed correctly (#14469)"
-79,"2.88.0 (December 02, 2021)
+84,"2.88.0 (December 02, 2021)
 FEATURES:
 
 New Resource: azurerm_mysql_flexible_database (#14285)
@@ -5664,7 +5929,7 @@ azurerm_kubernetes_cluster - handle incorrect casing of kubernetes cluster resou
 azurerm_kubernetes_cluster_node_pool - handle incorrect casing of kubernetes cluster resource ID with a state migration (#14241)
 azurerm_kubernetes_cluster_nodepool reverting the computed behaviour of node_taints and eviction_policy (#14378)
 azurerm_storage_account - populating the account cache on creation, which fixes an issue when the storage account occasionally couldn't be found (#14361)"
-80,"2.87.0 (November 26, 2021)
+85,"2.87.0 (November 26, 2021)
 FEATURES:
 
 New Resource: azurerm_api_management_notification_recipient_user (#14239)
@@ -5733,7 +5998,7 @@ azurerm_monitor_diagnostic_setting - Swap Relay parser and validator with EventH
 azurerm_stream_analytics_stream_input_eventhub - correctly support creation with the default eventhub_consumer_group_name (#14264)
 azurerm_synapse_workspace - fix a crash during updates when sql_aad_admin was configured (#14275)
 azurerm_linux_virtual_machine - the patch_mode property is now properly supported [GH0-14042]"
-81,"2.86.0 (November 19, 2021)
+86,"2.86.0 (November 19, 2021)
 FEATURES:
 
 New Beta Resource: azurerm_linux_function_app (#13806)
@@ -5852,7 +6117,7 @@ azurerm_linux_virtual_machine_scale_set - changing the source_image_reference.of
 azurerm_mssql_database - corrert an error when using OnlineSecondary with auditing on the primary database (#14192)
 azurerm_network_watcher_flow_log - now locks on the network security group to prevent AnotherOperationInProgress errors (#14160)
 azurerm_windows_virtual_machine_scale_set - source_image_reference.offer and source_image_reference.publisher are now ForceNew (#14165)"
-82,"2.85.0 (November 12, 2021)
+87,"2.85.0 (November 12, 2021)
 FEATURES:
 
 New Data Source: azurerm_batch_application (#14043)
@@ -5911,7 +6176,7 @@ azurerm_frontdoor_resource - route engines are no longer removed on update (#140
 azurerm_redis_cache - parsing the subnet_id response value case-insensitively (#14108)
 azurerm_redis_cache - ensuring that shard_count always has a value set (#14108)
 azurerm_storage_blob - ensuring that cache_control is sent during updates (#14100)"
-83,"2.84.0 (November 05, 2021)
+88,"2.84.0 (November 05, 2021)
 FEATURES:
 
 New Resource: azurerm_cosmosdb_cassandra_cluster (#14019)
@@ -5984,7 +6249,7 @@ azurerm_logic_app_standard - will no longer error when working on private networ
 azurerm_managed_disk_resource - the validation for the disk_iops_read_write and disk_mbps_read_write properties ensures values greater then 0 (#14028)
 azurerm_purview_account - deprecate the sku_name property (#13897)
 azurerm_synapse_workspace_key - deprecated the cusomter_managed_key_name property in favour of the correctly spelled customer_managed_key_name one (#13881)"
-84,"2.83.0 (October 29, 2021)
+89,"2.83.0 (October 29, 2021)
 FEATURES:
 
 New Data Source: azurerm_eventgrid_system_topic (#13851)
@@ -6063,7 +6328,7 @@ azurerm_cognitive_account - will now handle the unexpected state Accepted when w
 azurerm_data_factory - can now read global parameter values (#13519)
 azurerm_firewall_policy - will now correctly import (#13862)
 azurerm_firewall_policy - changing the identity will no longer create a new resource (#13904)"
-85,"2.82.0 (October 21, 2021)
+90,"2.82.0 (October 21, 2021)
 FEATURES: 
 
 New Resource: azurerm_mysql_flexible_server_configuration (#13831)
@@ -6132,7 +6397,7 @@ azurerm_mssql_server - will now configure the azuread_administrator during resou
 azurerm_mssql_database - extended_auditing_policy can now be configured and updated for secondaries (#13799)
 azurerm_postgresql_flexible_server - changing the standby_availability_zone no longer forces a new resource (#13507)
 azurerm_servicebus_subscription - the name field can now start & end with an underscore (#13797)"
-86,"2.81.0 (October 14, 2021)
+91,"2.81.0 (October 14, 2021)
 FEATURES: 
 
 New Data Source: azurerm_consumption_budget_resource_group(#12538)
@@ -6187,7 +6452,7 @@ azurerm_logic_app_workflow - will not check for nil and empty access control pro
 azurerm_management_group - will not nil check child management groups when deassociating a subscription from a management group (#13540)
 azurerm_subnet_resource - will now lock the virtual network and subnet on updates (#13726)
 azurerm_app_configuration_key - can now mix labeled and unlabeled keys (#13736)"
-87,"2.80.0 (October 08, 2021)
+92,"2.80.0 (October 08, 2021)
 FEATURES: 
 
 New Data Source: backup_policy_file_share (#13444)
@@ -6220,14 +6485,14 @@ azurerm_managed_disk - support for the logical_sector_size property (#13637)
 azurerm_service_fabric_cluster - support for the service_fabric_zonal_upgrade_mode and service_fabric_zonal_upgrade_mode properties (#13399)
 azurerm_stream_analytics_output_eventhub - support for the partition_key property (#13562)
 azurerm_linux_virtual_machine_scale_set - correctly update the overprovision property (#13653)"
-88,"2.79.1 (October 01, 2021)
+93,"2.79.1 (October 01, 2021)
 BUG FIXES: 
 
 azurerm_managed_disk - the max_shares propety is now Computed to account for managed disks that are already managed by Terraform (#13587)
 ","2.79.1 (October 01, 2021)
 BUG FIXES: 
 azurerm_managed_disk - the max_shares propety is now Computed to account for managed disks that are already managed by Terraform (#13587)"
-89,"2.79.0 (October 01, 2021)
+94,"2.79.0 (October 01, 2021)
 FEATURES: 
 
 New Resource: azurerm_app_configuration_feature (#13452)
@@ -6272,7 +6537,7 @@ azurerm_kubernetes_cluster - explicitly setting upgrade_channel to None when it'
 azurerm_linux_virtual_machine_scale_set - will not correctly ignore the protected_setting block withing the extension block (#13440)
 azurerm_windows_virtual_machine_scale_set - will not correctly ignore the protected_setting block withing the extension block (#13440)
 azurerm_app_configuration_key - correctly set the etag property (#13534)"
-90,"2.78.0 (September 23, 2021)
+95,"2.78.0 (September 23, 2021)
 UPGRADE NOTES
 
 The azurerm_data_factory_dataset_snowflake has been updated to set the correct schema_column api property with the correct schema - to retain the old behaviour please switch to the structure_column property (#13344)
@@ -6337,7 +6602,7 @@ azurerm_app_service_certificate_binding - reverted a change that introduced a bu
 azurerm_container_group - allow creation of shared volume between containers in multi container group (#13374)
 azurerm_kubernetes_cluster - changing the private_cluster_public_fqdn_enabled no longer created a new resource (#13413)
 azurerm_app_configuration_key - fix nil pointer for removed key (#13483)"
-91,"2.77.0 (September 17, 2021)
+96,"2.77.0 (September 17, 2021)
 FEATURES:
 
 New Data Source: azurerm_policy_virtual_machine_configuration_assignment (#13311)
@@ -6402,7 +6667,7 @@ azurerm_kubernetes_cluster_node_pool - os_sku is now computed (#13321)
 azurerm_linux_virtual_machine_scale_set - fixed crash when automatic_os_policy was nil (#13335)
 azurerm_lb - support for adding or replacing a frontend_ip_configuration with an availability_zone (#13305)
 azurerm_virtual_hub_connection - fixing race condition in the creation of virtual network resources (#13294)"
-92,"2.76.0 (September 10, 2021)
+97,"2.76.0 (September 10, 2021)
 NOTES
 * Opt-In Beta: Version 2.76 of the Azure Provider introduces an opt-in Beta for some of the new functionality coming in 3.0 - more information can be found in the 3.0 Notes and 3.0 Upgrade Guide (#12132)
 FEATURES:
@@ -6475,7 +6740,7 @@ Data Source: azurerm_kubernetes_cluster - correctly read resource when local_acc
 azurerm_api_management_subscription - relax subscription_id validation (#13203)
 azurerm_app_configuration_key - fix KV import with no label (#13253)
 azurerm_synapse_sql_pool - properly support UTF-8 characters for the name property (#13289)"
-93,"2.75.0 (September 02, 2021)
+98,"2.75.0 (September 02, 2021)
 FEATURES:
 
 New Data Source: azurerm_cosmosdb_mongo_database (#13123)
@@ -6524,7 +6789,7 @@ azurerm_mssql_server- refactoring to use an ID Formatter/Parser (#13151)
 azurerm_policy_virtual_machine_configuration_assignment - support for the assignment_type, content_uri, and content_hash properties (#13176)
 azurerm_storage_account - handle nil values for AllowBlobPublicAccess (#12689)
 azurerm_synapse_spark_pool - add support spark for 3.1 (#13181)"
-94,"2.74.0 (August 27, 2021)
+99,"2.74.0 (August 27, 2021)
 FEATURES:
 
 New Resource: azurerm_logic_app_integration_account_schema (#13100)
@@ -6597,7 +6862,7 @@ azurerm_cosmosdb_cassandra_table - correctly update throughput (#13102)
 azurerm_private_dns_a_record - fix regression in name validation and add max recordset limit validation (#13093)
 azurerm_postgresql_flexible_server_database the charset and collation properties are now optional (#13110)
 azurerm_spring_cloud_app - Fix crash when identity is not present (#13125)"
-95,"2.73.0 (August 20, 2021)
+100,"2.73.0 (August 20, 2021)
 FEATURES:
 
 New Data Source: azurerm_vpn_gateway (#12844)
@@ -6690,7 +6955,7 @@ azurerm_storage_account - allow 0 for the cors.max_age_in_seconds property (#130
 azurerm_servicebus_topic - correctyl validate the name property (#13026)
 azurerm_virtual_hub_connection - will not correctly lock it's cirtual network during updates (#12999)
 azurerm_linux_virtual_machine_scale_set - fix potential crash in updates to the rolling_upgrade_policy block (#13029)"
-96,"UPGRADE NOTES
+101,"UPGRADE NOTES
 
 This version of the Azure Provider introduces the prevent_deletion_if_contains_resources feature flag (which is disabled by default) which (when enabled) means that Terraform will check for Resources nested within the Resource Group during the deletion of the Resource Group and require that these Resources are deleted first. This avoids the unintentional deletion of unmanaged Resources within a Resource Group - and is defaulted off in 2.x versions of the Azure Provider but will be enabled by default in version 3.0 of the Azure Provider, see the features block documentation for more information. (#12657)
 
@@ -6827,7 +7092,7 @@ azurerm_virtual_machine_scale_set_extension - removing an unnecessary check duri
 azurerm_virtual_wan - removing an unnecessary check during deletion (#12879)
 azurerm_vpn_gateway_connection - removing an unnecessary check during deletion (#12879)
 azurerm_web_application_firewall_policy - removing an unnecessary check during deletion (#12879)"
-97,"2.71.0 (August 06, 2021)
+102,"2.71.0 (August 06, 2021)
 FEATURES:
 
 New Data Source: azurerm_databricks_workspace_private_endpoint_connection (#12543)
@@ -6930,7 +7195,7 @@ azurerm_private_dns_zone - fixing a crash during deletion (#12824)
 azurerm_resource_group_template_deployment - fixing deletion of nested items when using non-top level items (#12421)
 azurerm_subscription_template_deployment - fixing deletion of nested items when using non-top level items (#12421)
 azurerm_virtual_machine_extension - changing the publisher property now creates a new resource (#12790)"
-98,"2.70.0 (July 30, 2021)
+103,"2.70.0 (July 30, 2021)
 FEATURES:
 
 New Data Source azurerm_storage_share (#12693)
@@ -6993,7 +7258,7 @@ azurerm_firewall_polcy - support for property private_ip_ranges (#12696)
 BUG FIXES:
 azurerm_cdn_endpoint - fixing a crash when the future is nil (#12743)
 azurerm_private_endpoint - working around a casing issue in private_connection_resource_id for MariaDB, MySQL and PostgreSQL resources (#12761)"
-99,"2.69.0 (July 23, 2021)
+104,"2.69.0 (July 23, 2021)
 FEATURES:
 
 New Data Source azurerm_active_directory_domain_service (#10782)
@@ -7062,7 +7327,7 @@ azurerm_data_factory_linked_custom_service - fix a bug causing additional_proper
 azurerm_eventhub_authorization_rule - fixing the error ""empty non-retryable error received"" (#12642)
 azurerm_machine_learning_compute_cluster - fix a crash when creating a cluster without specifying subnet_resource_id (#12658)
 azurerm_storage_account - fixed account_replication_type validation (#12645)"
-100,"2.68.0 (July 16, 2021)
+105,"2.68.0 (July 16, 2021)
 FEATURES:
 
 New Data Source azurerm_local_network_gateway (#12579)
@@ -7133,7 +7398,7 @@ azurerm_postgresql_flexible_server - add new computed property private_dns_zone_
 machine_learning_compute_cluster - make the subnet_resource_id property actually optional (#12558)
 azurerm_mssql_database - don't allow license_type to be set for serverless SQL databases (#12555)
 azurerm_subnet_network_security_group_association - prevent potential deadlocks when using multiple association resources (#12267)"
-101,"2.67.0 (July 09, 2021)
+106,"2.67.0 (July 09, 2021)
 FEATURES:
 
 New Data Source azurerm_api_management_gateway (#12297)
@@ -7188,7 +7453,7 @@ azurerm_security_center_subscription_pricing - removed Owner permission note fro
 DEPRECATIONS:
 azurerm_postgresql_flexible_server - the cmk_enabled property has been deprecated as it has been removed from the API (#12405)
 azurerm_virtual_machine_configuration_policy_assignment - has been deprecated and renamed to azurerm_policy_virtual_machine_configuration_assignment (#12497)"
-102,"2.66.0 (July 02, 2021)
+107,"2.66.0 (July 02, 2021)
 FEATURES:
 
 New Resource azurerm_api_management_api_operation_tag (#12384)
@@ -7255,7 +7520,7 @@ azurerm_app_service - fix app_setting and SCM setting ordering (#12280)
 azurerm_hdinsight_kafka_cluster - will no longer panic from an empty component_version property (#12261)
 azurerm_spatial_anchors_account - the tags property can now be updated without creating a new resource (#11985)
 Data Source azurerm_app_service_environment_v3 - fix id processing for Read (#12436)"
-103,"FEATURES:
+108,"FEATURES:
 
 New Resource azurerm_data_protection_backup_instance_postgresql (#12220)
 New Resource azurerm_hpc_cache_blob_nfs_target (#11671)
@@ -7294,7 +7559,7 @@ azurerm_security_center_assessment_metadata - support for the categories propert
 azurerm_windows_virtual_machine - updating proximity_placement_group_id will no longer create a new resoruce (#11790)
 BUG FIXES:
 azurerm_data_factory - fix a bug where the name property was stored with the wrong casing (#12128)"
-104,"2.64.0 (June 18, 2021)
+109,"2.64.0 (June 18, 2021)
 FEATURES:
 
 New Data Source azurerm_key_vault_secrets (#12147)
@@ -7357,7 +7622,7 @@ azurerm_synapse_role_assignment - support for scopes and new role types (#11690)
 BUG FIXES:
 azurerm_synapse_role_assignment - support new roles and scopes (#11690)
 azurerm_lb - fix zone behaviour bug introduced in recent API upgrade (#12208)"
-105,"2.63.0 (June 11, 2021)
+110,"2.63.0 (June 11, 2021)
 FEATURES:
 
 New Resource azurerm_data_factory_linked_service_azure_search (#12122)
@@ -7418,14 +7683,14 @@ Service: App Configuration - Fixed a bug in tags on resources all being set to t
 Service: Event Hubs - Fixed a bug in tags on resources all being set to the same value (#12062)
 azurerm_subscription - fix ability to specify DevTest as workload (#12066)
 azurerm_sentinel_alert_rule_scheduled - the query frequency duration can noe be up to 14 days (#12164)"
-106,"2.62.1 (June 08, 2021)
+111,"2.62.1 (June 08, 2021)
 BUG FIXES:
 
 azurerm_role_assignment - use the correct ID when assigning roles to resources (#12076)
 ","2.62.1 (June 08, 2021)
 BUG FIXES:
 azurerm_role_assignment - use the correct ID when assigning roles to resources (#12076)"
-107,"2.62.0 (June 04, 2021)
+112,"2.62.0 (June 04, 2021)
 FEATURES:
 
 New Resource azurerm_data_protection_backup_vault (#11955)
@@ -7462,7 +7727,7 @@ azurerm_kubernetes_cluster - support for node_public_ip_prefix_id (#11635)
 azurerm_kubernetes_cluster_node_pool - support for node_public_ip_prefix_id (#11635)
 azurerm_machine_learning_inference_cluster - support for the ssl.leaf_domain_label and ssl.overwrite_existing_domain properties (#11830)
 azurerm_role_assignment - support the delegated_managed_identity_resource_id property (#11848)"
-108,"FEATURES:
+113,"FEATURES:
 
 New Data Source: azurerm_spatial_anchors_account (#11824)
 
@@ -7511,7 +7776,7 @@ azurerm_cdn_endpoint - do not send an empty origin_host_header to the api (#1185
 azurerm_linux_virtual_machine_scale_set: changing the disable_automatic_rollback and enable_automatic_os_upgrade properties no longer created a new resource (#11723)
 azurerm_storage_share: Fix ID for resource_manager_id (#11828)
 azurerm_windows_virtual_machine_scale_set: changing the disable_automatic_rollback and enable_automatic_os_upgrade properties no longer created a new resource (#11723)"
-109,"2.60.0 (May 20, 2021)
+114,"2.60.0 (May 20, 2021)
 FEATURES:
 
 New Data Source: azurerm_eventhub_cluster (#11763)
@@ -7566,7 +7831,7 @@ azurerm_linux_virtual_machine_scale_set - the extension blocks are now a set (#1
 azurerm_virtual_network_gateway_connection - fix a bug where shared_key was not being updated (#11742)
 azurerm_windows_virtual_machine_scale_set - the extension blocks are now a set (#11425)
 azurerm_windows_virtual_machine_scale_set - changing the license_type will no longer create a new resource (#11731)"
-110,"2.59.0 (May 14, 2021)
+115,"2.59.0 (May 14, 2021)
 FEATURES:
 * New Resource: azurerm_consumption_budget_resource_group (#9201)
 * New Resource: azurerm_consumption_budget_subscription (#9201)
@@ -7625,7 +7890,7 @@ azurerm_bastion_host - updating the ip_configuration block properties now forces
 azurerm_container_registry_token - updating the validation for the name field (#11607)
 azurerm_mssql_database - wil now correctly import the creation_source_database_id property for Secondary databases (#11703)
 azurerm_storage_account - allow empty/blank values for the allowed_headers and exposed_headers properties (#11692)"
-111,"2.58.0 (May 07, 2021)
+116,"2.58.0 (May 07, 2021)
 UPGRADE NOTES
 
 azurerm_frontdoor - The custom_https_provisioning_enabled field and the custom_https_configuration block have been deprecated and has been removed as they are no longer supported. (#11456)
@@ -7672,7 +7937,7 @@ azurerm_frontdoor - Fix for Frontdoor resource elements being returned out of or
 azurerm_hdinsight_*_cluster - support for autoscale  #8104 (#11547)
 azurerm_network_security_rule - support for the protocols Ah and Esp (#11581)
 azurerm_network_connection_monitor - support for the coverage_level, excluded_ip_addresses, included_ip_addresses, target_resource_id, and resource_type propeties (#11540)"
-112,"2.57.0 (April 30, 2021)
+117,"2.57.0 (April 30, 2021)
 UPGRADE NOTES
 
 azurerm_api_management_authorization_server - due to a bug in the 2020-12-01 version of the API Management API, changes to resource_owner_username and resource_owner_password in Azure will not be noticed by Terraform (#11146)
@@ -7849,7 +8114,7 @@ azurerm_netap_volume - correctly set the replication_frequency attribute in the 
 azurerm_postgresql_server - ensure public_network_access_enabled is correctly set for replicas (#11465)
 azurerm_postgresql_server - can now correctly disable replication if required when create_mode is changed (#11467)
 azurerm_virtual_network_gatewa - updating the custom_route block no longer forces a new resource to be created [GH- 11433]"
-113,"2.56.0 (April 15, 2021)
+118,"2.56.0 (April 15, 2021)
 FEATURES:
 
 New Resource: azurerm_data_factory_linked_service_azure_databricks (#10962)
@@ -7898,7 +8163,7 @@ azurerm_public_ip - support for ip_tags (#11270)
 azurerm_windows_virtual_machine_scale_set - Support health extension for rolling ugrade mode (#9136)
 BUG FIXES:
 azurerm_app_service_slot - fix crash bug when given empty http_logs (#11267)"
-114,"2.55.0 (April 08, 2021)
+119,"2.55.0 (April 08, 2021)
 FEATURES:
 
 New Resource: azurerm_api_management_email_template (#10914)
@@ -7949,7 +8214,7 @@ BUG FIXES:
 Data Source: azurerm_dns_zone - fixing a bug where the Resource ID wouldn't contain the Resource Group name when looking this up (#11221)
 azurerm_media_service_account - storage_authentication_type correctly accepts both ManagedIdentity and System (#11222)
 azurerm_web_application_firewall_policy - http_listener_ids and path_based_rule_ids are now Computed only (#11196)"
-115,"2.54.0 (April 02, 2021)
+120,"2.54.0 (April 02, 2021)
 FEATURES:
 
 New Resource: azurerm_hpc_cache_access_policy (#11083)
@@ -8006,7 +8271,7 @@ azurerm_machine_learning_workspace - support container registries in other subsc
 azurerm_site_recovery_fabric - Fixes error in checking for existing resource (#11130)
 azurerm_spring_cloud_custom_domain - thumbprint is required when specifying certificate_name (#11145)
 azurerm_subscription - fixes broken timeout on destroy (#11124)"
-116,"2.53.0 (March 26, 2021)
+121,"2.53.0 (March 26, 2021)
 FEATURES:
 * New Resource: azurerm_management_group_template_deployment (#10603)
 * New Resource: azurerm_tenant_template_deployment (#10603)
@@ -8049,7 +8314,7 @@ azurerm_resource_group_template_deployment - always sending parameters_content d
 azurerm_role_definition - fixing crash when permissions are empty (#9850)
 azurerm_subscription_template_deployment - always sending parameters_content during an update (#11001)
 azurerm_spring_cloud_app - supports for the tls_enabled property (#11064)"
-117,"2.52.0 (March 18, 2021)
+122,"2.52.0 (March 18, 2021)
 FEATURES:
 
 New Resource: azurerm_mssql_firewall_rule (#10954)
@@ -8078,7 +8343,7 @@ azurerm_cosmosdb_account_resource - marking connection_string as sensitive (#109
 azurerm_eventhub_namespace_disaster_recovery_config - deprecating the alternate_name property due to a service side API bug (#11013)
 azurerm_local_network_gateway - making the address_space property optional (#10983)
 azurerm_management_group - validation for subscription_id list property entries (#10948)"
-118,"FEATURES:
+123,"FEATURES:
 
 New Resource: azurerm_purview_account (#10395)
 New Resource: azurerm_data_factory_dataset_parquet (#10852)
@@ -8147,7 +8412,7 @@ azurerm_kusto_eventhub_data_connection - make table_name and data_format optiona
 azurerm_mssql_virtual_machine - workaround for inconsistent API value for log_backup_frequency_in_minutes in the manual_schedule block (#10899)
 azurerm_postgres_server - support for replicaset scaling (#10754)
 azurerm_postgresql_aad_administrator - prevent invalid usernames for the login property (#10757)"
-119,"2.50.0 (March 05, 2021)
+124,"2.50.0 (March 05, 2021)
 FEATURES:
 
 New Data Source: azurerm_vmware_private_cloud (#9284)
@@ -8258,7 +8523,7 @@ azurerm_virtual_machine - parsing the User Assigned Identity ID case-insensitive
 azurerm_virtual_machine_scale_set - parsing the User Assigned Identity ID case-insensitively to work around an Azure API issue (#10722)
 azurerm_windows_virtual_machine - parsing the User Assigned Identity ID case-insensitively to work around an Azure API issue (#10722)
 azurerm_windows_virtual_machine_scale_set - parsing the User Assigned Identity ID case-insensitively to work around an Azure API issue (#10722)"
-120,"2.49.0 (February 26, 2021)
+125,"2.49.0 (February 26, 2021)
 FEATURES:
 
 New Data Source: azurerm_spring_cloud_app (#10678)
@@ -8337,7 +8602,7 @@ azurerm_key_vault_secret - now waits for deletion to complete before purging (#1
 azurerm_kusto_cluster - changing the virtual_network_configuration property forces a new resource to be created (#10640)
 azurerm_lb_outbound_rule - fixing a crash when frontendIPConfigurations is omitted in the API response (#10696)
 azurerm_media_content_key_policy - fix an encoding bug which prevented configuring ask in the fairplay_configuration block (#10684)"
-121,"2.48.0 (February 18, 2021)
+126,"2.48.0 (February 18, 2021)
 FEATURES:
 
 New Data Source: azurerm_application_gateway (#10268)
@@ -8422,7 +8687,7 @@ azurerm_mariadb_firewall_rule - correctly validate the name property (#10579)
 azurerm_postgresql_server - correctly change ssl_minimal_tls_version_enforced on update (#10606)
 azurerm_private_endpoint - only updating the associated Private DNS Zone Group when there's changes (#10559)
 azurerm_resource_group_template_deployment - fixing an issue where the API version for nested items couldn't be found during deletion (#10565)"
-122,"2.47.0 (February 11, 2021)
+127,"2.47.0 (February 11, 2021)
 UPGRADE NOTES
 
 azurerm_frontdoor & azurerm_frontdoor_custom_https_configuration - the new fields backend_pool_health_probes, backend_pool_load_balancing_settings, backend_pools, frontend_endpoints, routing_rules have been added to the azurerm_frontdoor resource, which are a map of name-ID references. An upcoming version of the Azure Provider will change the blocks backend_pool, backend_pool_health_probe, backend_pool_load_balancing, frontend_endpoint and routing_rule from a List to a Set to work around an ordering issue within the Azure API - as such you should update your Terraform Configuration to reference these new Maps, rather than the Lists directly, due to the upcoming breaking change. For example, changing azurerm_frontdoor.example.frontend_endpoint[1].id to azurerm_frontdoor.example.frontend_endpoints[""exampleFrontendEndpoint2""] (#9357)
@@ -8507,7 +8772,7 @@ azurerm_monitor_diagnostic_setting - changing the log_analytics_workspace_id pro
 azurerm_storage_data_lake_gen2_filesystem - do not set/retrieve ACLs when HNS is not enabled  (#10470)
 azurerm_windows_virtual_machine_scale_set - fixing a bug when protected_settings within the extension block was an empty string (#10528)
 azurerm_windows_virtual_machine_scale_set - fixing a bug when settings within the extension block was an empty string (#10528)"
-123,"2.46.1 (February 05, 2021)
+128,"2.46.1 (February 05, 2021)
 BUG FIXES:
 
 azurerm_lb_backend_address_pool - mark backend_address as computed (#10481)
@@ -8516,7 +8781,7 @@ azurerm_storage_data_lake_gen2_filesystem_resource - do not set/retrieve ACLs wh
 BUG FIXES:
 azurerm_lb_backend_address_pool - mark backend_address as computed (#10481)
 azurerm_storage_data_lake_gen2_filesystem_resource - do not set/retrieve ACLs when HNS is not enabled  (#10470)"
-124,"2.46.0 (February 04, 2021)
+129,"2.46.0 (February 04, 2021)
 FEATURES:
 
 New Resource: azurerm_api_management_identity_provider_aadb2c (#10240)
@@ -8575,14 +8840,14 @@ azurerm_mssql_virtual_machine - fixing a crash where the KeyVault was nil in the
 azurerm_storage_account_datasource - prevent panics from passing in an empty name (#10370)
 azurerm_storage_data_lake_gen2_filesystem - change the ace property to a TypeSet to ensure consistent ordering (#10372)
 azurerm_storage_data_lake_gen2_path - change the ace property to a TypeSet to ensure consistent ordering (#10372)"
-125,"2.45.1 (January 28, 2021)
+130,"2.45.1 (January 28, 2021)
 BUG FIXES:
 
 azurerm_app_service_environment - prevent a panic when the API returns a nil cluster settings (#10365)
 ","2.45.1 (January 28, 2021)
 BUG FIXES:
 azurerm_app_service_environment - prevent a panic when the API returns a nil cluster settings (#10365)"
-126,"2.45.0 (January 28, 2021)
+131,"2.45.0 (January 28, 2021)
 FEATURES:
 
 New Data Source azurerm_search_service (#10181)
@@ -8675,7 +8940,7 @@ azurerm_media_streaming_endpoint - stopping the streaming endpoint prior to dele
 azurerm_role_definition - don't add scope to assignable_scopes unless none are specified (#8624)
 azurerm_windows_virtual_machine_scale_set - fixing an issue where protected_settings field within the extension block couldn't be empty (#10351)
 azurerm_windows_virtual_machine_scale_set - fixing an issue where settings field within the extension block couldn't be empty (#10351)"
-127,"2.44.0 (January 21, 2021)
+132,"2.44.0 (January 21, 2021)
 FEATURES:
 
 New Data Source: azurerm_iothub (#10228)
@@ -8726,7 +8991,7 @@ BUG FIXES:
 azurerm_backup_protected_file_share - updating to account for a breaking API change (#9015)
 azurerm_key_vault_certificate - fixing a crash when subject within the certificate_policy block was nil (#10200)
 azurerm_user_assigned_identity - adding a state migration to update the ID format (#10196)"
-128,"2.43.0 (January 14, 2021)
+133,"2.43.0 (January 14, 2021)
 FEATURES:
 
 New Data Source: azurerm_sentinel_alert_rule_template (#7020)
@@ -8841,7 +9106,7 @@ azurerm_virtual_machine - ensuring the casing of the identity_ids field within t
 azurerm_virtual_machine_scale_set - ensuring the casing of the identity_ids field within the identity block (#10105)
 azurerm_windows_virtual_machine - ensuring the casing of the identity_ids field within the identity block (#10105)
 azurerm_windows_virtual_machine_scale_set - ensuring the casing of the identity_ids field within the identity block (#10105)"
-129,"2.42.0 (January 08, 2021)
+134,"2.42.0 (January 08, 2021)
 BREAKING CHANGES
 
 azurerm_key_vault - the field soft_delete_enabled is now defaulted to true to match the breaking change in the Azure API where Key Vaults now have Soft Delete enabled by default, which cannot be disabled. This property is now non-functional, defaults to true and will be removed in version 3.0 of the Azure Provider. (#10088)
@@ -8968,7 +9233,7 @@ provider: will not correctly register the Microsoft.Blueprint and Microsoft.Heal
 * azurerm_role_assignment fix crash in retry logic (#10051)
 * azurerm_storage_account - allow hns when account_tier is Premium (#9548)
 * azurerm_storage_share_file - allowing files smaller than 4KB to be uploaded (#10035)"
-130,"2.41.0 (December 17, 2020)
+135,"2.41.0 (December 17, 2020)
 UPGRADE NOTES:
 
 azurerm_key_vault - Azure will be introducing a breaking change on December 31st, 2020 by force-enabling Soft Delete on all new and existing Key Vaults. To workaround this, this release of the Azure Provider still allows you to configure Soft Delete on before this date (but once this is enabled this cannot be disabled). Since new Key Vaults will automatically be provisioned using Soft Delete in the future, and existing Key Vaults will be upgraded - a future release will deprecate the soft_delete_enabled field and default this to true early in 2021. (#9911)
@@ -9033,7 +9298,7 @@ azurerm_key_vault_certificate - polling until the Certificate is fully deleted d
 azurerm_key_vault_key - polling until the Key is fully deleted during deletion (#9911)
 azurerm_key_vault_secret -  polling until the Secret is fully deleted during deletion (#9911)
 azurerm_log_analytics_workspace - adding a state migration to correctly update the Resource ID (#9853)"
-131,"2.40.0 (December 10, 2020)
+136,"2.40.0 (December 10, 2020)
 FEATURES:
 
 New Resource: azurerm_app_service_certificate_binding (#9415)
@@ -9144,7 +9409,7 @@ azurerm_media_service_account - checking for the presence of an existing account
 azurerm_postgresql_server - changing the geo_redundant_backup_enabled property now forces a new resource (#9694)
 azurerm_postgresql_server - Fix issue when specifying empty threat detection list attributes (#9739)
 azurerm_signar_service - having an empty allowed_origins in the cors block will no longer cause a panic (#9671)"
-132,"2.39.0 (December 04, 2020)
+137,"2.39.0 (December 04, 2020)
 FEATURES:
 
 New Resource: azurerm_api_management_policy (#9215)
@@ -9189,7 +9454,7 @@ azurerm_traffic_manager_profile - allow up to 2147483647 for the ttl property (#
 BUG FIXES:
 azurerm_security_center_workspace - fixing the casing on the workspace_id (#9651)
 azurerm_eventhub_dedicated_cluster - the sku_name capacity can be greater then 1 (#9649)"
-133,"2.38.0 (November 27, 2020)
+138,"2.38.0 (November 27, 2020)
 FEATURES:
 
 New Resource azurerm_app_service_managed_certificate (#9378)
@@ -9252,7 +9517,7 @@ azurerm_virtual_desktop_host_pool - adding a state migration to avoid a breaking
 azurerm_virtual_desktop_workspace - adding a state migration to avoid a breaking change when upgrading from v2.35.0 or later (#9495)
 azurerm_virtual_desktop_workspace_application_group_association - adding a state migration to avoid a breaking change when upgrading from v2.35.0 or later (#9495)
 azurerm_windows_virtual_machine - no longer sets patch_mode on creation if it is the default value (#9495)"
-134,"2.37.0 (November 20, 2020)
+139,"2.37.0 (November 20, 2020)
 FEATURES:
 
 New Data Source: azurerm_servicebus_subscription (#9272)
@@ -9375,7 +9640,7 @@ azurerm_firewall_policy - deprecate the dns.network_rule_fqdn_enabled property a
 azurerm_key_vault_certificate - fixing a crash when serializing the certificate policy block (#9355)
 azurerm_mssql_virtual_machine - fixing a crash when serializing auto_patching (#9388)
 azurerm_resource_group_template_deployment - fixing an issue during deletion where the API version of nested resources couldn't be determined (#9364)"
-135,"2.36.0 (November 12, 2020)
+140,"2.36.0 (November 12, 2020)
 UPGRADE NOTES:
 
 azurerm_network_connection_monitor - has been updated to work with v2 of the resource as the service team is deprecating v1 - all v1 properties have been deprecated and will be removed in version 3.0 of the provider and v2 propeties added. (#8640)
@@ -9484,7 +9749,7 @@ azurerm_linux_virtual_machine_scale_set - the field disk_size_gb within the os_d
 azurerm_linux_virtual_machine_scale_set - the field computer_name_prefix can now end with a dash (#9182)
 azurerm_windows_virtual_machine - the field disk_size_gb within the os_disk block can now be configured up to 4095 (#9202)
 azurerm_windows_virtual_machine_scale_set - the field disk_size_gb within the os_disk block can now be configured up to 4095 (#9202)"
-136,"2.35.0 (November 05, 2020)
+141,"2.35.0 (November 05, 2020)
 UPGRADE NOTES:
 
 azurerm_kubernetes_cluster - the field enable_pod_security_policy and node_taints (within the default_node_pool block) can no longer be configured - see below for more details (#8982)
@@ -9543,7 +9808,7 @@ azurerm_virtual_desktop_workspace_application_group_association - adding validat
 azurerm_virtual_desktop_workspace_application_group_association - adding validation to the workspace_id field (#9057)
 azurerm_virtual_desktop_workspace_application_group_association - validating the ID during import is a Workspace Application Group Association ID (#9057)
 azurerm_postgresql_firewall_rule - add validation for start_ip_address and end_ip_address properties (#8963)"
-137,"2.34.0 (October 29, 2020)
+142,"2.34.0 (October 29, 2020)
 UPGRADE NOTES
 
 azurerm_api_management_api - fixing a regression introduced in v2.16 where this value for subscription_required was defaulted to false instead of true (#7963)
@@ -9622,7 +9887,7 @@ azurerm_private_dns_zone_virtual_network_link - fixes case issue in name (#8617)
 azurerm_private_endpoint - fix crash when deleting private endpoint (#9068)
 azurerm_signalr_service - switching thefeatures block to a set so order is irrelevant (#8815)
 azurerm_virtual_desktop_application_group - correctly validate the nameproperty (#9030)"
-138,"2.33.0 (October 22, 2020)
+143,"2.33.0 (October 22, 2020)
 UPGRADE NOTES
 
 
@@ -9679,7 +9944,7 @@ azurerm_mssql_server_extended_auditing_policy - working around a breaking change
 azurerm_sql_database - working around a breaking change/regression in the Azure API (#8975)
 azurerm_sql_server - working around a breaking change/regression in the Azure API (#8975)
 azurerm_policy_set_definition - Fix updates for parameters and parameter_values in policy_definition_reference blocks (#8882)"
-139,"2.32.0 (October 15, 2020)
+144,"2.32.0 (October 15, 2020)
 FEATURES:
 New data source: azurerm_mysql_server (#8787)
 New resource: azurerm_security_center_setting (#8783)
@@ -9694,14 +9959,14 @@ New resource: azurerm_eventgrid_system_topic (#8735)
 IMPROVEMENTS:
 azurerm_container_registry - support for the trust_policy and retention_policy blocks (#8698)
 azurerm_security_center_contact - override SDK creat function to handle 201 response code (#8774)"
-140,"2.31.1 (October 08, 2020)
+145,"2.31.1 (October 08, 2020)
 BUG FIXES:
 
 azurerm_storage_account- large_file_share_enabled marked as computed to prevent existing storage shares from attempting to disable the default (#8807)
 ","2.31.1 (October 08, 2020)
 BUG FIXES:
 azurerm_storage_account- large_file_share_enabled marked as computed to prevent existing storage shares from attempting to disable the default (#8807)"
-141,"2.31.0 (October 08, 2020)
+146,"2.31.0 (October 08, 2020)
 UPGRADE NOTES
 
 This release updates the azurerm_security_center_subscription_pricing resource to use the latest version of the Security API which now allows configuring multiple Resource Types - as such a new field resource_type is now available. Configurations default the resource_type to VirtualMachines which matches the behaviour of the previous release - but your Terraform Configuration may need updating.
@@ -9770,7 +10035,7 @@ azurerm_function_app - mark the app_settings block as computed (#8682)
 azurerm_function_app_slot - mark the app_settings block as computed (#8682)
 azurerm_policy_set_definition - corrects issue with empty parameter_values attribute (#8668)
 azurerm_policy_definition - mode property now enforces correct case (#8795)"
-142,"2.30.0 (October 01, 2020)
+147,"2.30.0 (October 01, 2020)
 UPGRADE NOTES
 
 This release renames certain fields within the azurerm_cosmosdb_account (data source & resource) and azurerm_function_app_host_keys data source to follow HashiCorp's inclusive language guidelines - where fields have been renamed, existing fields will continue to remain available until the next major version of the Azure Provider (v3.0)
@@ -9835,7 +10100,7 @@ azurerm_storage_management_policy - support the appendBlob value for blob_types 
 BUG FIXES:
 azurerm_monitor_metric_alert - property wait when creating/updating multiple monitor metric alerts (#8667)
 azurerm_linux_virtual_machine_scale_set - fix empty JSON error in settings and protected_settings when these values are not used (#8627)"
-143,"2.29.0 (September 24, 2020)
+148,"2.29.0 (September 24, 2020)
 UPGRADE NOTES:
 
 azurerm_api_management - the value None has been removed from the identity block to match other resources, to specify an API Management Service with no Managed Identity remove the identity block (#8411)
@@ -9924,7 +10189,7 @@ azurerm_api_management - the value None for the field type within the identity b
 azurerm_app_service - don't try to manage source_control when scm_type is VSTSRM (#8531)
 azurerm_function_app - don't try to manage source_control when scm_type is VSTSRM (#8531)
 azurerm_kubernetes_cluster - picking the first system node pool if the original default_node_pool has been removed (#8503)"
-144,"2.28.0 (September 17, 2020)
+149,"2.28.0 (September 17, 2020)
 UPGRADE NOTES
 
 The id field for the azurerm_role_definition changed in release 2.27.0 to work around a bug in the Azure API when using management groups, where the Scope isn't returned - the existing id field is available as role_definition_resource_id from this version of the Azure Provider.
@@ -10001,7 +10266,7 @@ azurerm_kubernetes_cluster - ensure the OMS Agent Log Analytics Workspace case i
 azurerm_management_group_id - loosen case restritions during parsing of management group ID (#8024)
 azurerm_packet_capture - fix to ID path to match change in API (#8167)
 azurerm_role_definition - expose role_definition_resource_id (#8492)"
-145,"2.27.0 (September 10, 2020)
+150,"2.27.0 (September 10, 2020)
 FEATURES:
 
 New Data Source: azurerm_attestation_provider (#7885)
@@ -10062,7 +10327,7 @@ azurerm_linux_virtual_machine - Add WaitForState on VM delete (#8383)
 azurerm_network_security_group - fixed issue where updates would fail for resource (#8384)
 azurerm_role_definition - fixed delete operation when role is scoped to Management Group (#6107)
 azurerm_windows_virtual_machine - Add WaitForState on VM delete (#8383)"
-146,"UPGRADE NOTES:
+151,"UPGRADE NOTES:
 
 Opt-In Beta: This release introduces an opt-in beta for in-line Virtual Machine Scale Set Extensions. This functionality enables the resource to be used with Azure Service Fabric and other extensions that may require creation time inclusion on Scale Set members. Please see the documentation for azurerm_linux_virtual_machine_scale_set and azurerm_windows_virtual_machine_scale_set for information.
 
@@ -10119,7 +10384,7 @@ azurerm_network_interface_nat_rule_association_resource - handling the Network I
 azurerm_network_interface_network_security_group_association - handling the Network Interface being deleted during a refresh (#8267)
 azurerm_windows_virtual_machine - allow updating allow_extension_operations regardless of the value of provision_vm_agent (for when the VM Agent has been installed manually) (#8001)
 azurerm_windows_virtual_machine_scale_set - working around a bug in the Azure API by always sending the existing Storage Image Reference during updates (#7983)"
-147,"2.25.0 (August 27, 2020)
+152,"2.25.0 (August 27, 2020)
 UPGRADE NOTES:
 
 azurerm_container_group - The secure_environment_variables field within the container now maps keys with empty values, which differs from previous versions of this provider which ignored empty values (#8151)
@@ -10204,7 +10469,7 @@ azurerm_virtual_machine - adding validation to the zone field (#8233)
 azurerm_virtual_machine_scale_set - adding validation to the zone field (#8233)
 azurerm_windows_virtual_machine - support for updating ultra_ssd_enabled within the additional_capabilities block without recreating the virtual machine (#8015)
 azurerm_windows_virtual_machine_scale_set - adding validation to the zone field (#8233)"
-148,"2.24.0 (August 20, 2020)
+153,"2.24.0 (August 20, 2020)
 FEATURES:
 
 New Resource: azurerm_synapse_spark_pool (#7886)
@@ -10281,7 +10546,7 @@ azurerm_lb_rule - adding more specific validation for the Load Balancer ID field
 azurerm_lb_rule - ensuring all fields are always set into the state (#8172)
 azurerm_lb_rule - switching to use API version 2020-03-01 to workaround a bug in API version 2020-05-01 (#8006)
 azurerm_storage_account - only sending allow_blob_public_access and min_tls_version in Azure Public since these are currently not supported in other regions (#8148)"
-149,"2.23.0 (August 13, 2020)
+154,"2.23.0 (August 13, 2020)
 FEATURES:
 
 New Resource: azurerm_integration_service_environment (#7763)
@@ -10362,7 +10627,7 @@ azurerm_mysql_server - support for the identity block (#8059)
 azurerm_traffic_manager_profile - updating no longer clears all endpoints (#7846)
 azurerm_windows_virtual_machine - handling machines which are already stopped/deallocated [#8000]'
 azurerm_data_factory_dataset_delimited_text - fix issue with property azure_blob_storage_account (#7953)"
-150,"DEPENDENCIES:
+155,"DEPENDENCIES:
 
 updating github.com/Azure/azure-sdk-for-go to v44.2.0 (#7933)
 
@@ -10387,7 +10652,7 @@ azurerm_servicebus_queue - support for the enable_batched_operations, status, fo
 BUG FIXES:
 Data Source: azurerm_key_vault_certificate - fixing a crash when using acmebot certificates (#8029)
 azurerm_iothub_shared_access_policy - prevent primary_connection_string & secondary_connection_string from regenerating during every apply (#8017)"
-151,"2.21.0 (July 31, 2020)
+156,"2.21.0 (July 31, 2020)
 DEPENDENCIES:
 
 updating search to 2020-03-13 (#7867)
@@ -10442,7 +10707,7 @@ azurerm_cognitive_account - allow qname_runtime_endpoint to not be set (#7916)
 azurerm_iothub_dps - the only valid value for the sku property for the API is now S1 (#7847)
 azurerm_eventgrid_event_subscription - deprecate the topic_name as it is now readonly in the API (#7871)
 azurerm_kubernetes_cluster - updates will no longer fail when using managed AAD integration (#7874)"
-152,"2.20.0 (July 23, 2020)
+157,"2.20.0 (July 23, 2020)
 UPGRADE NOTES
 
 Enhanced Validation for Locations - the Azure Provider now validates that the value for the location argument is a supported Azure Region within the Azure Environment being used (from the Azure Metadata Service) - which allows us to catch configuration errors for this field at terraform plan time, rather than during a terraform apply. This functionality is now enabled by default, and can be opted-out of by setting the Environment Variable ARM_PROVIDER_ENHANCED_VALIDATION to false
@@ -10493,7 +10758,7 @@ azurerm_application_gateway - fix crash with gateway_ip_configuration (#7789)
 azurerm_cosmos_account - the geo_location.prefix property has been deprecated as service no longer accepts it as an input since Apr 25, 2019 (#7597)
 azurerm_monitor_autoscale_setting - Fix crash in notification (#7835)
 azurerm_storage_account - will now default allow_blob_public_access to false to align with the portal and be secure by default (#7784)"
-153,"2.19.0 (July 16, 2020)
+158,"2.19.0 (July 16, 2020)
 UPGRADE NOTES:
 
 HDInsight 3.6 will be retired (in Azure Public) on 2020-12-30 - HDInsight 4.0 does not support ML Services, RServer or Storm Clusters - as such the azurerm_hdinsight_ml_services_cluster, azurerm_hdinsight_rserver_cluster and azurerm_hdinsight_storm_cluster resources are deprecated and will be removed in the next major version of the Azure Provider. (#7706)
@@ -10578,7 +10843,7 @@ azurerm_notification_hub - validating that the ID is in the correct format when 
 azurerm_redis_cache - fixing a bug when provisioning with authentication disabled (#7734)
 azurerm_virtual_hub - the field address_prefix is now ForceNew to match the behaviour of the Azure API (#7713)
 azurerm_virtual_hub_connection - using the delete timeout if specified (#7731)"
-154,"2.18.0 (July 10, 2020)
+159,"2.18.0 (July 10, 2020)
 FEATURES:
 
 metadata_url can be set at the provider level to use an environment provided by a specific url (#7664)
@@ -10703,7 +10968,7 @@ azurerm_api_management_identity_provider_aad - fix perpetual diff on the client_
 azurerm_eventhub_namespace_authorization_rule - correctly update old resource IDs (#7622)
 azurerm_policy_remediation - removing the validation for the policy_definition_reference_id field since this isn't a Resource ID (#7600)
 azurerm_storage_data_lake_gen2_filesystem - prevent a crash during plan if storage account was deleted (#7378)"
-155,"2.17.0 (July 03, 2020)
+160,"2.17.0 (July 03, 2020)
 UPGRADE NOTES:
 
 azurerm_hdinsight_hadoop_cluster - the enabled property within the gateway block now defaults to true and cannot be disabled, due to a behavioural change in the Azure API (#7111)
@@ -10770,7 +11035,7 @@ azurerm_api_management_property - polling until the property is fully created (#
 azurerm_linux_virtual_machine_scale_set - using the provider feature roll_instances_when_required when upgrade_mode is set to Manual (#7513)
 azurerm_marketplace_agreement - fix issue around import (#7515)
 azurerm_windows_virtual_machine_scale_set - using the provider feature roll_instances_when_required when upgrade_mode is set to Manual (#7513)"
-156,"DEPENDENCIES:
+161,"DEPENDENCIES:
 
 updating github.com/Azure/go-autorest/azure/cli to v0.3.1 (#7433)
 
@@ -10841,7 +11106,7 @@ azurerm_postgresql_server - can now update the tier of sku_name by recreating th
 azurerm_network_interface_security_group_association - is now considered delete whtn the  network interfact is notfound (#7459)
 azurerm_role_definition - terraform import now sets scope to prevent a force recreate (#7424)
 azurerm_storage_account_network_rules - corretly clear ip_rules, virtual_network_subnet_ids when set to [] (#7385)"
-157,"2.15.0 (June 19, 2020)
+162,"2.15.0 (June 19, 2020)
 UPGRADE NOTES:
 
 azurerm_orchestrated_virtual_machine_scale_set - the single_placement_group property is now required to be false by the service team in the 2019-12-01 compute API (#7188)
@@ -10912,7 +11177,7 @@ azurerm_bot_connection - adding a runtime check for the available service provid
 azurerm_healthcare_service - the access_policy_object_ids property is now optional (#7296)
 azurerm_hdinsight_cluster - deprecating the min_instance_count property (#7272)
 azurerm_network_watcher_flow_log - propertly disable the flowlog on destroy (#7154)"
-158,"UPGRADE NOTES:
+163,"UPGRADE NOTES:
 
 azurerm_kubernetes_cluster - the Azure Policy add-on now only supports v2 (as per the Azure API) (#7233)
 
@@ -11019,7 +11284,7 @@ azurerm_kubernetes_cluster - searching for a system node pool when importing the
 azurerm_kubernetes_cluster_node_pool - changes to the node_taints field now force a new resource, matching the updated API behaviour (#7233)
 azurerm_management_group - using the Subscription ID rather than Subscription Resource ID when detaching Subscriptions from Management Groups during deletion (#7216)
 azurerm_windows_virtual_machine_scale_set - adding validation for the max_bid_price field (#7233)"
-159,"FEATURES:
+164,"FEATURES:
 
 New Data Source: azurerm_logic_app_integration_account (#7099)
 New Data Source: azurerm_virtual_machine_scale_set (#7141)
@@ -11066,7 +11331,7 @@ azurerm_function_app - correctly set Kind when os_type is linux (#7140)
 azurerm_key_vault_certificate - always setting the certificate_data and thumbprint fields (#7204)
 azurerm_role_assignment - support for Preview role assignments (#7205)
 azurerm_virtual_network_gateway - vpn_client_protocols is now also computed to prevent permanent diffs (#7168)"
-160,"2.12.0 (May 28, 2020)
+165,"2.12.0 (May 28, 2020)
 FEATURES:
 * New Data Source: azurerm_advisor_recommendations (#6867)
 * New Resource: azurerm_dev_test_global_shutdown_schedule (#5536)
@@ -11121,7 +11386,7 @@ azurerm_shared_image_version - target_region.x.storage_account_type is now defau
 azurerm_sql_virtual_network_rule - updating the validation for the name field (#6968)
 azurerm_windows_virtual_machine - allow setting virtual_machine_scale_set_id in non-zonal deployment (#7057)
 azurerm_windows_virtual_machine - correctly validating the rsa ssh public_key properties length (#7061)"
-161,"2.11.0 (May 21, 2020)
+166,"2.11.0 (May 21, 2020)
 DEPENDENCIES: 
 
 updating github.com/Azure/azure-sdk-for-go to v42.1.0 (#6725)
@@ -11212,7 +11477,7 @@ azurerm_management_group - workaround for 403 bug in service response (#6668)
 azurerm_postgresql_server - do not attempt to get the threat protection when the sku is basic (#7015)
 azurerm_windows_virtual_machine - allowing name to end with a capital (#7023)
 azurerm_windows_virtual_machine_scale_set - allowing name to end with a capital (#7023)"
-162,"2.10.0 (May 14, 2020)
+167,"2.10.0 (May 14, 2020)
 DEPENDENCIES: 
 
 updating eventgrid to 2020-04-01-preview (#6837)
@@ -11315,7 +11580,7 @@ azurerm_mariadb_server - the storage_mb property is now optional when auto_grow 
 azurerm_mysql_server - the storage_mb property is now optional when auto_grow is enabled (#6833)
 azurerm_role_assignment - added evential consistency check to assignment creation (#6925)
 azurerm_windows_virtual_machine_scale_set - support for updating the do_not_run_extensions_on_overprovisioned_machines property (#6917)"
-163,"2.9.0 (May 07, 2020)
+168,"2.9.0 (May 07, 2020)
 FEATURES:
 
 New Data Source: azurerm_data_share_account (#6575)
@@ -11388,7 +11653,7 @@ azurerm_policy_assignment - allow polices with scopes without subscription/ (bui
 azurerm_policy_definition - changes to the dynamic fields (createdBy, createdOn, updatedBy, updatedOn) keys in the metadata field are excluded from diff's (#6734)
 azurerm_redis_cache - ensure rdb_storage_connection_string is set when rdb_backup_enabled is enabled (#6819)
 azurerm_site_recovery_network_mapping - handling an API Error when checking for the presence of an existing Network Mapping (#6747)"
-164,"2.8.0 (April 30, 2020)
+169,"2.8.0 (April 30, 2020)
 FEATURES:
 
 New Data Source: azurerm_sentinel_alert_rule_ms_security_incident (#6606)
@@ -11451,7 +11716,7 @@ azurerm_web_application_firewall_policy - support for the managed_rules property
 azurerm_windows_virtual_machine - fix validation for name to allow full length resource names (#6639)
 azurerm_windows_virtual_machine_scale_set - fix validation for name to allow full length resource names (#6639)
 azurerm_virtual_network_gateway_connection - shared_key is now optional when type is IPSec (#6565)"
-165,"2.7.0 (April 23, 2020)
+170,"2.7.0 (April 23, 2020)
 FEATURES:
 
 New Data Source: azurerm_private_dns_zone (#6512)
@@ -11538,7 +11803,7 @@ azurerm_postgres_server - the storage_mb is no optional when auto_grow is enable
 azurerm_public_ip_prefix - update prefix_length validation to accept all valid IPv4 address ranges (#6589)
 azurerm_route - add validation to the name and route_table_namepropeties (#6055)
 azurerm_virtual_network_gateway - per api requirements, public_ip_address_id is required (#6548)"
-166,"FEATURES:
+171,"FEATURES:
 
 New Data Source: azurerm_policy_set_definition (#6305)
 
@@ -11607,7 +11872,7 @@ Data Source: azurerm_network_ddos_protection_plan - ensuring the id field is set
 azurerm_function_app - prevent a panic from the API returning an empty IP Security Restriction (#6442)
 azurerm_machine_learning_workspace - the Enterprise sku will now properly work (#6397)
 azurerm_managed_disk-  fixing a bug where the machine would be stopped regardless of whether it was currently shut down or not (#4690)"
-167,"2.5.0 (April 09, 2020)
+172,"2.5.0 (April 09, 2020)
 BREAKING CHANGES:
 
 Azure Kubernetes Service
@@ -11666,7 +11931,7 @@ azurerm_kubernetes_cluster - conditionally sending the http_application_routing 
 azurerm_kubernetes_cluster_node_pool - requiring that min_count and max_count are set to null rather than 0 when auto-scaling is disabled (#6095)
 azurerm_linux_virtual_machine - if the priority property on read is empty assume it to be Regular (#6301)
 azurerm_windows_virtual_machine - if the priority property on read is empty assume it to be Regular (#6301)"
-168,"2.4.0 (April 02, 2020)
+173,"2.4.0 (April 02, 2020)
 FEATURES:
 New Data Source: azurerm_managed_application_definition (#6211)
 New Resource: azurerm_hpc_cache_nfs_target (#6191)
@@ -11693,7 +11958,7 @@ azurerm_management_group - deprecated and rename the group_id property to name t
 BUGS:
 azurerm_application_gateway - can now set include_path with target_url (#6175)
 azurerm_policy_set_definition - mark metadata as computed (#6266)"
-169,"FEATURES:
+174,"FEATURES:
 
 New Data Source: azurerm_mssql_database (#6083)
 New Data Source: azurerm_network_service_tags (#6229)
@@ -11774,7 +12039,7 @@ azurerm_storage_management_policy - conditionally setting values within the base
 azurerm_virtual_machine_data_disk_attachment - detecting the disk attachment as gone when the VM is no longer available (#6237)
 azurerm_windows_virtual_machine - making the custom_data field sensitive (#6225)
 azurerm_windows_virtual_machine_scale_set - making the custom_data field sensitive (#6225)"
-170,"2.2.0 (March 18, 2020)
+175,"2.2.0 (March 18, 2020)
 FEATURES:
 
 New Data Source: azurerm_app_configuration (#6133)
@@ -11823,7 +12088,7 @@ azurerm_iothub_dps_shared_access_policy - building the primary_connection_string
 azurerm_linux_virtual_machine - updating the validation for name to allow periods (#5966)
 azurerm_linux_virtual_machine_scale_set - updating the validation for name to allow periods (#5966)
 azurerm_storage_management_policy - Fixed the use of single blob rule actions (#5803)"
-171,"2.1.0 (March 11, 2020)
+176,"2.1.0 (March 11, 2020)
 NOTES:
 The azurerm_frontdoor resource has introduced a breaking change due to the underlying service API which enforces location attributes must be set to 'Global' on all newly deployed Front Door services.
 FEATURES:
@@ -11958,7 +12223,7 @@ azurerm_netapp_volume - support volmes uoto 100TB in size (#5485)
 azurerm_search_service - changing the properties replica_count & partition_count properties no longer force a new resource (#5935)
 azurerm_storage_account - fixing a crash when an empty static_website block was specified (#6050)
 azurerm_storage_account - using SharedKey Authorization for reading/updating the Static Website when not using AzureAD authentication (#6050)"
-172,"2.0.0 (February 24, 2020)
+177,"2.0.0 (February 24, 2020)
 NOTES:
 
 Major Version: Version 2.0 of the Azure Provider is a major version - some deprecated fields/resources have been removed - please refer to the 2.0 upgrade guide for more information.
@@ -12373,7 +12638,7 @@ azurerm_storage_account - locking on the storage account resource when updating 
 azurerm_subnet - supporting updating of the enforce_private_link_endpoint_network_policies field (#5801)
 azurerm_subnet - supporting updating of the enforce_private_link_service_network_policies field (#5801)
 azurerm_windows_virtual_machine - using the delete custom timeout during deletion (#5764)"
-173,"NOTES
+178,"NOTES
 
 
 Preparation for 2.0: We intend for v1.44.0 to be the last release in the 1.x line - we'll be turning our focus to 2.0 with the next release. We recommend consulting the list of changes coming in 2.0 to be aware and trialling the Beta available in 1.x versions if you're interested.
@@ -12442,7 +12707,7 @@ azurerm_storage_queue - support for authenticating using Azure AD (#5614)
 BUGS:
 azurerm_storage_account - fix hanging destroy caused by multiple network rules (#5565)
 azurerm_linux_virtual_machine - fix shared_image_id parsing (#5640)"
-174,"NOTES
+179,"NOTES
 
 
 Opt-In Beta: Version 1.43 of the Azure Provider introduces an opt-in Beta for some of the new functionality coming in 2.0 - more information can be found in the Beta guide.
@@ -12489,7 +12754,7 @@ azurerm_managed_disk - correctly handles disk resizing when attached to a virtua
 azurerm_marketplace_agreement - recreate agreement if not accepted (#5582)
 azurerm_mysql_virtual_network_rule - allow subnet_id to be in a different subscription then the database (#5568)
 azurerm_virtual_network_gateway_connection - increase routing_weight maximum to 32000 (#5540)"
-175,"1.42.0 (January 27, 2020)
+180,"1.42.0 (January 27, 2020)
 NOTES:
 
 azurerm_cosmosdb_account - the capabilities is now force new as it cannot be updated once set (#5453)
@@ -12568,7 +12833,7 @@ azurerm_postgresql_virtual_network_rule - correctly validate the server_name pro
 azurerm_private_link_service - fixing a crash when the auto_approval and visibility blocks aren't returned from the Azure API (#5428)
 azurerm_subnet - thedelegations.#.actions property is now computed to accommodate azure defaults (#5484)
 azurerm_virtual_machine - will no longer panic if network_interface_ids is missing (#5413)"
-176,"NOTES:
+181,"NOTES:
 
 azurerm_managed_disk - the Azure API now requires that the storage_account_id field is specified during import, as such this field is now required during when importing a VHD to a Managed Disk (#5250)
 
@@ -12647,7 +12912,7 @@ azurerm_postgresql_server - the sku block has been deprecated in favour of the s
 BUG FIXES:
 azurerm_api_management_operation - will no longer panic on missing values in request (#5318)
 azurerm_storage_account - fix performance issue for accounts that don't support queues (#5316)"
-177,"1.40.0 (January 08, 2020)
+182,"1.40.0 (January 08, 2020)
 
 New Data Source: azurerm_netapp_volume (#4933)
 New Data Source: azurerm_netapp_snapshot (#5215)
@@ -12786,7 +13051,7 @@ azurerm_storage_account_network_rules - matching the validation used for ip_rule
 azurerm_subnet - allowing both enforce_private_link_endpoint_network_policies and enforce_private_link_service_network_policies to be set together (#5200)
 azurerm_virtual_machine - handling a crash when os_profile_secrets was nil (#5308)
 azurerm_virtual_machine - handling a crash when the vault_certificates block within the os_profile_secrets was nil (#5308)"
-178,"FEATURES: 
+183,"FEATURES: 
 
 New Resource: azurerm_app_configuration (#4859)
 New Resource: azurerm_bot_channel_ms_teams (#4984)
@@ -12853,7 +13118,7 @@ azurerm_storage_container - querying all pages when listing storage accounts (#5
 azurerm_storage_file - querying all pages when listing storage accounts (#5075)
 azurerm_storage_queue - querying all pages when listing storage accounts (#5075)
 azurerm_storage_table - querying all pages when listing storage accounts (#5075)"
-179,"FEATURES:
+184,"FEATURES:
 
 New Data Source: azurerm_nat_gateway (#4449)
 New Data Source: azurerm_private_link_endpoint_connection (#4493)
@@ -12922,7 +13187,7 @@ BUG FIXES:
 azurerm_mssql_elasticpool - no longer panicing when sku is nil (#5017)
 azurerm_storage_account - ensuring we only lock each Virtual Network once during deletion (#4908)
 azurerm_virtual_wan - deprecating the security_provider_name field since it's no longer used (#5004)"
-180,"NOTES
+185,"NOTES
 The azurerm_kubernetes_cluster resource has undergone substantial changes in this release to work around breaking behavioural changes in the Azure API. As such the agent_pool_profile block has been superseded by the default_node_pool block. Multiple Node Pools can instead be configured using the azurerm_kubernetes_cluster_node_pool resource.
 FEATURES:
 * New Data Source: azurerm_automation_account (#4740)
@@ -13081,7 +13346,7 @@ azurerm_postgresql_database - allowing dashes in the name (#4866)
 azurerm_private_dns_cname_record - fixing a bug where calling Delete didn't delete the CName record (#4804)
 azurerm_storage_account - fixing an error where Advanced Threat Protection is unavailable in Azure Germany (#4746)
 azurerm_virtual_network_gateway_connection - Configure routing_weight with weight 0 (#4849)"
-181,"FEATURES:
+186,"FEATURES:
 
 New Data Source: azurerm_app_service_certificate_order (#4454)
 New Data Source: azurerm_data_factory (#4517)
@@ -13190,7 +13455,7 @@ azurere_storage_account - Ignore Advanced Threat Protection read errors in Azure
 azurerm_storage_blob - making metadata a computed field (#4727)
 azurerm_virtual_machine - handling the plan block being nil (#4712)
 azurerm_virtual_machine_data_disk_attachment - will no longer remove the identity block when making an update (#4538)"
-182,"FEATURES:
+187,"FEATURES:
 
 New Data Source: azurerm_app_service_certificate (#4468)
 New Data Source: azurerm_public_ip_prefix (#4340)
@@ -13277,7 +13542,7 @@ azurerm_kubernetes_cluster - fixing a bug where upgrading to 1.34.0 would requir
 azurerm_public_ip - ensuring that public_ip_prefix_id is read (#4344)
 azurerm_role_assignment - changing the skip_service_principal_aad_check property no longer forces a new resource (#4412)
 azurerm_storage_blob - reading the properties after an update (#4452)"
-183,"FEATURES:
+188,"FEATURES:
 
 New Data Source: azurerm_network_ddos_protection_plan (#4228)
 New Data Source: azurerm_proximity_placement_group (#4020)
@@ -13450,10 +13715,10 @@ azurerm_log_analytics_linked_service - will no longer panic if no items are pass
 azurerm_log_analytics_workspace_linked_service - will no longer panic if no items are passed into the property linked_service_properties (#4152)
 azurerm_network_interface - changing the ip_configuration property to no longer force new resource (#4155)
 azurerm_virtual_network_peering - prevent nil object from being read (#4180)"
-184,"
+189,"
 networking: reducing the number of locks to avoid deadlock when creating 3 or more subnets with Network Security Group/Route Table Associations (#3673)
 ",networking: reducing the number of locks to avoid deadlock when creating 3 or more subnets with Network Security Group/Route Table Associations (#3673)
-185,"FEATURES:
+190,"FEATURES:
 
 New Data Source: azurerm_dev_test_virtual_network (#3746)
 New Resource: azurerm_cosmosdb_sql_container (#3871)
@@ -13562,7 +13827,7 @@ azurerm_storage_queue - switching to using SharedKey for authentication (#4122)
 azurerm_storage_share - allow up to 100TB for the quota property (#4054)
 azurerm_storage_share_directory - handling the share being eventually consistent (#4122)
 azurerm_storage_share_directory - allowing nested directories (#4122)"
-186,"BUG FIXES: 
+191,"BUG FIXES: 
 
 azurerm_application_gateway fix an index out of range crash (#3966)
 azurerm_api_management_backend - ensuring a nil certificates object is sent to the API instead of an empty one (#3931)
@@ -13591,7 +13856,7 @@ azurerm_storage_account - fix enable_advanced_threat_protection create/read for 
 azurerm_storage_table - now migrates older versions of the resource id to the new format (#3932)
 azurerm_virtual_machine_scale_set - the ssh_keys property of the os_profile_linux_config block now recognizes updates (#3837)
 azurerm_virtual_machine_scale_set - changes made to the network_profile property should now be correctly reflected during updates (#3821)"
-187,"FEATURES:
+192,"FEATURES:
 
 New Data Source: azurerm_maps_account (#3698)
 New Data Source: azurerm_mssql_elasticpool (#3824)
@@ -13712,7 +13977,7 @@ azurerm_virtual_machine_scale_set - prevent public_ip_address_configuration from
 BUG FIXES:
 azurerm_image - prevent crash when using data_disk (#3797)
 azurerm_role_assignment - now correctly uses scope when looking up the role definition by name (#3768)"
-188,"1.31.0 (June 28, 2019)
+193,"1.31.0 (June 28, 2019)
 FEATURES:
 
 increase the default timeout to 3 hours (#3737)
@@ -13771,14 +14036,14 @@ azurerm_service_fabric_cluster - ability to set certificate_common_names (#3652)
 azurerm_storage_account - ability to set default_action oi the network_rules block (#3255)
 BUG FIXES:
 azurerm_cosmosdb_account - will ignore 500 responses from documentdb.DatabaseAccountsClient#CheckNameExists requests to work around a broken API (#3747)"
-189,"1.30.1 (June 07, 2019)
+194,"1.30.1 (June 07, 2019)
 BUG FIXES:
 
 Ensuring the authorization header is set for calls to the User Assigned Identity API's (#3613)
 ","1.30.1 (June 07, 2019)
 BUG FIXES:
 Ensuring the authorization header is set for calls to the User Assigned Identity API's (#3613)"
-190,"1.30.0 (June 07, 2019)
+195,"1.30.0 (June 07, 2019)
 FEATURES:
 
 New Data Source: azurerm_redis_cache (#3481)
@@ -13813,7 +14078,7 @@ azurerm_app_service - support for windows containers (#3566)
 azurerm_app_service_plan - support for the maximum_elastic_worker_count property (#3547)
 azurerm_managed_disk - support for the create_option of Restore (#3598)
 azurerm_app_service_plan - support for windows containers (#3566)"
-191,"1.29.0 (May 25, 2019)
+196,"1.29.0 (May 25, 2019)
 FEATURES:
 
 New Resource: azurerm_application_insights_web_test (#3331)
@@ -13854,7 +14119,7 @@ azurerm_api_management_api - correct validation to allow empty and strings 400 c
 azurerm_dev_test_virtual_network - correctly manages subnets on the initial creation (#3501)
 azurerm_express_route_circuit - no longer removes circuit subresources on update (#3496)
 azurerm_role_assignment - making the role_definition_name field case-insensitive (#3499)"
-192,"1.28.0 (May 17, 2019)
+197,"1.28.0 (May 17, 2019)
 FEATURES:
 
 New Data Source: azurerm_automation_variable_bool (#3310)
@@ -13971,21 +14236,21 @@ azurerm_app_service_plan - supports elastic for the sku tier (#3402)
 azurerm_application_gateway - supports disabled_rule_group for waf configurations (#3394)
 azurerm_application_gateway - supports exclusion for waf configurations (#3407)
 azurerm_application_gateway - supports updating a gateway_ip_configuration.x.subnet_id (#3437)"
-193,"1.27.1 (April 26, 2019)
+198,"1.27.1 (April 26, 2019)
 BUG FIXES:
 
 provider will now only register available resource providers (#3313)
 ","1.27.1 (April 26, 2019)
 BUG FIXES:
 provider will now only register available resource providers (#3313)"
-194,"1.27.0 (April 26, 2019)
+199,"1.27.0 (April 26, 2019)
 NOTES:
 
 This release includes a Terraform SDK upgrade with compatibility for Terraform v0.12. The provider remains backwards compatible with Terraform v0.11 and there should not be any significant behavioural changes. (#2968)
 ","1.27.0 (April 26, 2019)
 NOTES:
 This release includes a Terraform SDK upgrade with compatibility for Terraform v0.12. The provider remains backwards compatible with Terraform v0.11 and there should not be any significant behavioural changes. (#2968)"
-195,"1.26.0 (April 25, 2019)
+200,"1.26.0 (April 25, 2019)
 IMPROVEMENTS:
 
 azurerm_app_service - support for Java 11 (#3270)
@@ -14002,5 +14267,5 @@ azurerm_app_service_slot - support for Java 11 (#3270)
 azurerm_container_group - support for the identity block (#3243)
 BUG FIXES:
 provider will work through proxies again (#3301)"
-196,,
-197,,
+201,,
+202,,

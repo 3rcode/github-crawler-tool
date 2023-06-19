@@ -1,5 +1,55 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"
+This release removes code deprecated during 4.x.
+🎵 We could stay like this forever.
+Changelog
+:bug: Bug Fix
+
+#8621 fix: normalizeErrorResponse should be resilient to non-string details (@NullVoxPopuli)
+#8598 fix: docs generation should maintain a stable relative path (@runspired)
+#8566 Avoid unnecessary identity notification when record is saved (@robbytx)
+#8597 fix: dont share promise cache for all fields (@runspired)
+#8594 fix: restore Store extends EmberObject :( (@runspired)
+#8570 Fix: don't clear RecordArray if remaining record does not match the removed record (@esbanarango)
+#8555 fix: fix polymorphic assertions when deprecated code is removed, improve polymorphic dx (@runspired)
+
+:shower: Deprecation Removal
+
+#8550 chore: remove 4.x deprecations (@runspired)
+
+:memo: Documentation
+
+#8601 docs: fix forgotten references to FetchManager (@runspired)
+#8598 fix: docs generation should maintain a stable relative path (@runspired)
+
+Committers: 4
+
+Chris Thoburn (@runspired)
+Esteban (@esbanarango)
+Robby Morgan (@robbytx)
+@NullVoxPopuli
+","This release removes code deprecated during 4.x.
+🎵 We could stay like this forever.
+Changelog
+:bug: Bug Fix
+8621 fix: normalizeErrorResponse should be resilient to non-string details (@NullVoxPopuli)
+8598 fix: docs generation should maintain a stable relative path (@runspired)
+8566 Avoid unnecessary identity notification when record is saved (@robbytx)
+8597 fix: dont share promise cache for all fields (@runspired)
+8594 fix: restore Store extends EmberObject :( (@runspired)
+8570 Fix: don't clear RecordArray if remaining record does not match the removed record (@esbanarango)
+8555 fix: fix polymorphic assertions when deprecated code is removed, improve polymorphic dx (@runspired)
+:shower: Deprecation Removal
+8550 chore: remove 4.x deprecations (@runspired)
+:memo: Documentation
+8601 docs: fix forgotten references to FetchManager (@runspired)
+8598 fix: docs generation should maintain a stable relative path (@runspired)
+Committers: 4
+Chris Thoburn (@runspired)
+Esteban (@esbanarango)
+Robby Morgan (@robbytx)
+@NullVoxPopuli"
+2,"
 
 
 It might be the last release of the cycle, but this release comes packed with goodies, so here we'll try to unpack a bit of what's changed.
@@ -251,11 +301,11 @@ Alex Matchneer (@machty)
 Chris Krycho (@chriskrycho)
 Ross Ketron (@rossketron)
 Timothy Morey (@timmorey)"
-2,Fixes a memory leak in SSR/Tests and Infinite Recursion bug in develop when yielded/awaited in an ember-concurrency task.,Fixes a memory leak in SSR/Tests and Infinite Recursion bug in develop when yielded/awaited in an ember-concurrency task.
-3,"Bugfixes to resolve major upgrade blockages (computed chains not recalcing, failing builds)","Bugfixes to resolve major upgrade blockages (computed chains not recalcing, failing builds)"
-4,Fixes a memory leak in SSR/Tests and Infinite Recursion bug in develop when yielded/awaited in an ember-concurrency task.,Fixes a memory leak in SSR/Tests and Infinite Recursion bug in develop when yielded/awaited in an ember-concurrency task.
-5,"Bugfixes to resolve major upgrade blockages (computed chains not recalcing, failing builds)","Bugfixes to resolve major upgrade blockages (computed chains not recalcing, failing builds)"
-6,"4.9.1 (2022-12-03)
+3,Fixes a memory leak in SSR/Tests and Infinite Recursion bug in develop when yielded/awaited in an ember-concurrency task.,Fixes a memory leak in SSR/Tests and Infinite Recursion bug in develop when yielded/awaited in an ember-concurrency task.
+4,"Bugfixes to resolve major upgrade blockages (computed chains not recalcing, failing builds)","Bugfixes to resolve major upgrade blockages (computed chains not recalcing, failing builds)"
+5,Fixes a memory leak in SSR/Tests and Infinite Recursion bug in develop when yielded/awaited in an ember-concurrency task.,Fixes a memory leak in SSR/Tests and Infinite Recursion bug in develop when yielded/awaited in an ember-concurrency task.
+6,"Bugfixes to resolve major upgrade blockages (computed chains not recalcing, failing builds)","Bugfixes to resolve major upgrade blockages (computed chains not recalcing, failing builds)"
+7,"4.9.1 (2022-12-03)
 Note: RequestManager was marked private as a package prior to publishing and did not ship with this version.
 :bug: Bug Fix
 
@@ -298,7 +348,7 @@ Committers: 3
 Chris Thoburn (@runspired)
 Lukas Kohler (@luxzeitlos)
 Sergey Astapov (@SergeAstapov)"
-7,"4.8.2 (2022-11-04)
+8,"4.8.2 (2022-11-04)
 :bug: Bug Fix
 
 fix: (Actually fix) publish should use pnpm pack to remove workspace: prefix
@@ -391,7 +441,7 @@ Chris Thoburn (@runspired)
 Edward Faulkner (@ef4)
 Patrick Pircher (@patricklx)
 Rich Glazerman (@richgt)"
-8,"4.7.2 (2022-09-15)
+9,"4.7.2 (2022-09-15)
 :bug: Bug Fix
 
 store
@@ -410,7 +460,7 @@ store
 8178 fix: filterBy should compare values (@jrjohnson)
 Committers: 1
 Jon Johnson (@jrjohnson)"
-9,"v4.7.1 (2022-09-06)
+10,"v4.7.1 (2022-09-06)
 Version 4.7 includes a number of new deprecations, several new features, bug fixes, and a large slate of significant performance improvements.
 Of Note:
 
@@ -633,8 +683,8 @@ Tyler (@runnerboy22)
 Jen Weber (@jenweber)
 @law-rence
 Eugen Ciur (@ciur)"
-10,This is a re-release of v4.5.0,This is a re-release of v4.5.0
-11,"v4.5.0 (2022-07-27)
+11,This is a re-release of v4.5.0,This is a re-release of v4.5.0
+12,"v4.5.0 (2022-07-27)
 Version 4.5 includes a number of new deprecations, a significant internal refactoring of the store architecture and several bug fixes.
 Of note:
 
@@ -859,43 +909,43 @@ Bert De Block (@bertdeblock)
 @patricklx
 Cameron Dubas (@camerondubas)
 Jen Weber (@jenweber)"
-12,,
 13,,
 14,,
 15,,
 16,,
 17,,
-18,"Changelog (May 27, 2021)
+18,,
+19,"Changelog (May 27, 2021)
 
 #7552 [BUGFIX release] rollup step should deactivate ember modules polyfill >= 3.27 (#7552)
 ","Changelog (May 27, 2021)
 7552 [BUGFIX release] rollup step should deactivate ember modules polyfill >= 3.27 (#7552)"
-19,,
 20,,
 21,,
 22,,
 23,,
 24,,
-25,LTS,LTS
-26,https://github.com/emberjs/data/blob/v3.16.9/CHANGELOG.md#release-3169-lts-august-29-2020,link
-27,,
-28,Release of 3.12 branch as an long term support branch,Release of 3.12 branch as an long term support branch
-29,"Changelog (May 13, 2019)
+25,,
+26,LTS,LTS
+27,https://github.com/emberjs/data/blob/v3.16.9/CHANGELOG.md#release-3169-lts-august-29-2020,link
+28,,
+29,Release of 3.12 branch as an long term support branch,Release of 3.12 branch as an long term support branch
+30,"Changelog (May 13, 2019)
 Re-release of 3.9.3 to allow for an extended stabilization period for the Packages RFC","Changelog (May 13, 2019)
 Re-release of 3.9.3 to allow for an extended stabilization period for the Packages RFC"
-30,"Changelog (April 19, 2019)
+31,"Changelog (April 19, 2019)
 
 7e3ca651 [BUGFIX jQuery] avoid jQuery deprecation notice for intentional use
 [BUGFIX fastboot] ember-fetch fastboot passthrough
 ","Changelog (April 19, 2019)
 7e3ca651 [BUGFIX jQuery] avoid jQuery deprecation notice for intentional use
 [BUGFIX fastboot] ember-fetch fastboot passthrough"
-31,"Changelog (February 20, 2019)
+32,"Changelog (February 20, 2019)
 
 No changes since 3.8 release
 ","Changelog (February 20, 2019)
 No changes since 3.8 release"
-32,"Changelog (February 20, 2019)
+33,"Changelog (February 20, 2019)
 
 #5671 Use _scheduleFetch instead of _fetchRecord for belongsTo relationship (#5671)
 #5702 [CHORE reference] update reference to be ES2015
@@ -916,12 +966,12 @@ No changes since 3.8 release"
 5721 [BUGFIX 5720] - assert that replacing has-many with non-array throws assertion
 5749 [DOC beta] Fix broken links
 5743 drop use of MODEL_FACTORY_FOR"
-33,"Changelog (January 8, 2019)
+34,"Changelog (January 8, 2019)
 
 Re-release of 3.6.0
 ","Changelog (January 8, 2019)
 Re-release of 3.6.0"
-34,"Changelog (December 12, 2018)
+35,"Changelog (December 12, 2018)
 
 #5671 Fix issue preventing coalescing of belongsTo
 #5700 [CHORE] remove deprecations targeted for 3.5 (#5700)
@@ -930,19 +980,19 @@ Re-release of 3.6.0"
 5671 Fix issue preventing coalescing of belongsTo
 5700 [CHORE] remove deprecations targeted for 3.5 (#5700)
 5733 [BUGFIX inspector] Fix columns names in debug-adapter (#5733)"
-35,"Changelog 3.5.2 (November 29, 2018)
+36,"Changelog 3.5.2 (November 29, 2018)
 
 #5766 [BUGFIX] update ember-cli-babel to ensure @ember/canary-features is available
 #5769 [BUGFIX beta] backport #5767 Make _recordData lazy
 ","Changelog 3.5.2 (November 29, 2018)
 5766 [BUGFIX] update ember-cli-babel to ensure @ember/canary-features is available
 5769 [BUGFIX beta] backport #5767 Make _recordData lazy"
-36,"Changelog 3.5.1 (November 28, 2018)
+37,"Changelog 3.5.1 (November 28, 2018)
 
 #5762 [BUGFIX unloadRecord] bfs compatibility for custom RecordData (#5703)
 ","Changelog 3.5.1 (November 28, 2018)
 5762 [BUGFIX unloadRecord] bfs compatibility for custom RecordData (#5703)"
-37,"Changelog (October 12, 2018)
+38,"Changelog (October 12, 2018)
 
 #5491 [Feature] Add MU support for model and model-test blueprints
 #5616 [FEAT RecordData] turn on the build-flag by default
@@ -977,12 +1027,12 @@ Re-release of 3.6.0"
 5654  add mocha rfc232 blueprints
 5665 add remaining mocha rfc 232 blueprints (#5665)
 5667 Added check to extract polymorphic relationship for hasMany (#5623)"
-38,"Changelog (October 12 2018)
+39,"Changelog (October 12 2018)
 
 LTS Release of 3.4
 ","Changelog (October 12 2018)
 LTS Release of 3.4"
-39,"Changelog (September 14, 2018)
+40,"Changelog (September 14, 2018)
 
 #5616 [FEAT RecordData] turn on the build-flag by default
 #5639 Include request/response info with Abort error
@@ -991,17 +1041,17 @@ LTS Release of 3.4"
 5616 [FEAT RecordData] turn on the build-flag by default
 5639 Include request/response info with Abort error
 5640 [BUGFIX] fix deprecation for store entry methods"
-40,"Changelog (September 14, 2018)
+41,"Changelog (September 14, 2018)
 
 #5641 [BUGFIX] fix deprecation for store entry methods
 ","Changelog (September 14, 2018)
 5641 [BUGFIX] fix deprecation for store entry methods"
-41,"Changelog (September 14, 2018)
+42,"Changelog (September 14, 2018)
 
 #5616 [FEAT RecordData] turn on the build-flag by default
 ","Changelog (September 14, 2018)
 5616 [FEAT RecordData] turn on the build-flag by default"
-42,"Changelog (September 14, 2018)
+43,"Changelog (September 14, 2018)
 
 #5621 Add partner test for the ilios frontend
 #5589 fix broken link because the new API website does not support the anchor
@@ -1026,14 +1076,14 @@ LTS Release of 3.4"
 5624 [BUGFIX] fix promise labels
 5627 [FEAT adapterOptions] Ensure adapterOptions use is possible throughout (#5627)
 5632 cleanup code climate config"
-43,"Changelog (September 14, 2018)
+44,"Changelog (September 14, 2018)
 
 #5582 [BUGFIX] Reference.reload should not cause sync-relationship assertion (#5582)
 #5636 Update appveyor config for release branch 3.3
 ","Changelog (September 14, 2018)
 5582 [BUGFIX] Reference.reload should not cause sync-relationship assertion (#5582)
 5636 Update appveyor config for release branch 3.3"
-44,"Changelog (September 14, 2018)
+45,"Changelog (September 14, 2018)
 
 #5593 [BUGFIX Backport] fix createRecord re-fetch
 #5597 [BUGFIX] Reference.reload should not cause sync-relationship assertion (#5582) (#5597)
@@ -1042,7 +1092,7 @@ LTS Release of 3.4"
 5593 [BUGFIX Backport] fix createRecord re-fetch
 5597 [BUGFIX] Reference.reload should not cause sync-relationship assertion (#5582) (#5597)
 5634 Backport @ember/ordered-set fix to 3.2"
-45,"Changelog (September 14, 2018)
+46,"Changelog (September 14, 2018)
 
 #5601 Backport modelName fix from #5406 to 3.1 (#5601)
 #5630 Backport copy usage removal to 3.1
@@ -1051,12 +1101,12 @@ LTS Release of 3.4"
 5601 Backport modelName fix from #5406 to 3.1 (#5601)
 5630 Backport copy usage removal to 3.1
 5633 Backport @ember/ordered-set fix to 3.1"
-46,"Changelog (September 14, 2018)
+47,"Changelog (September 14, 2018)
 
 #5600 Backport modelName fix from #5406 to 3.0 (#5600)
 ","Changelog (September 14, 2018)
 5600 Backport modelName fix from #5406 to 3.0 (#5600)"
-47,"Changelog  (September 14, 2018)
+48,"Changelog  (September 14, 2018)
 
 #5376 [bugfix beta] Fetch cancels unload
 #5586 [BUGFIX Backport] #5467 to 2.18
@@ -1069,14 +1119,14 @@ LTS Release of 3.4"
 5599 Backport modelName fix from #5406 to 2.18 (#5599)
 5611 backport #5408 to ember data 2.18 (#5611)
 5614 [FEAT #5607] ensure release builds only perform necessary jobs (#5614)"
-48,"Release 3.5.0-beta.1 (August 27, 2018)
+49,"Release 3.5.0-beta.1 (August 27, 2018)
 
 #5589 fix broken link because the new API website does not support the anchor
 #5592 Grammar fixes
 ","Release 3.5.0-beta.1 (August 27, 2018)
 5589 fix broken link because the new API website does not support the anchor
 5592 Grammar fixes"
-49,"Release 3.4.0 (August 27, 2018)
+50,"Release 3.4.0 (August 27, 2018)
 
 #5540 revert is-empty flag change, leave todo (#5540)
 #5545 [FEAT] TrackableRequests for when async leakage is detected
@@ -1155,7 +1205,7 @@ LTS Release of 3.4"
 5471 [CHORE] cull unnecessary files left from previous build setups
 5476 [Feature] added module-unification adapter and adapter-test blueprints
 5508 [CHORE] Update Dependencies"
-50,"Release 3.4.0-beta.4 (August 23, 2018)
+51,"Release 3.4.0-beta.4 (August 23, 2018)
 
 #5540 revert is-empty flag change, leave todo (#5540)
 #5545 [FEAT] TrackableRequests for when async leakage is detected
@@ -1174,7 +1224,7 @@ LTS Release of 3.4"
 5562 [BUGFIX] use internalModel promise if already loading (#5562)
 5566 Acceptance Tests for belongsTo
 5567 [FEAT] enable external partner testing"
-51,"Release 3.4.0-beta.3 (July 31, 2018)
+52,"Release 3.4.0-beta.3 (July 31, 2018)
 
 #5549 [BUGFIX beta] Replace Object.assign with Ember polyfill assign (#5549)
 #5540 revert is-empty flag change, leave todo (#5540)
@@ -1185,7 +1235,7 @@ LTS Release of 3.4"
 5540 revert is-empty flag change, leave todo (#5540)
 5544 remove test waiter (#5544)
 5543 Do not publish yarn.lock to npm"
-52,"Release 3.4.0-beta.2 (July 26, 2018)
+53,"Release 3.4.0-beta.2 (July 26, 2018)
 
 #5477 [BUGFIX] normalize model name for belongs to relationships (#5477)
 #5518 [BUGFIX] Clarifying error message for polymorphic types (#5518)
@@ -1206,37 +1256,37 @@ LTS Release of 3.4"
 5531 broccoli-babel-transpiler appears only used in tests, otherwise it uses
 5533 [BUGFIX] fix and tests for belongs-to proxy not properly updating (#5533)
 5536 [BUGFIX beta] Upgrading ember-inflector to v3.3.0"
-53,"Release 3.3.1 (July 26, 2018)
+54,"Release 3.3.1 (July 26, 2018)
 
 #5541 [BUGFIX] backport fix for belongsTo proxy update
 ","Release 3.3.1 (July 26, 2018)
 5541 [BUGFIX] backport fix for belongsTo proxy update"
-54,"Release 3.2.1 (July 26, 2018)
+55,"Release 3.2.1 (July 26, 2018)
 
 #5541 [BUGFIX] backport fix for belongsTo proxy update
 ","Release 3.2.1 (July 26, 2018)
 5541 [BUGFIX] backport fix for belongsTo proxy update"
-55,"Release 2.18.4 (July 24, 2018)
+56,"Release 2.18.4 (July 24, 2018)
 
 #5376 [bugfix beta] Fetch cancels unload
 ","Release 2.18.4 (July 24, 2018)
 5376 [bugfix beta] Fetch cancels unload"
-56,"Release 3.4.0-beta.1 (July 13, 2018)
+57,"Release 3.4.0-beta.1 (July 13, 2018)
 
 Re-release of Ember Data 3.3.0-beta.1
 ","Release 3.4.0-beta.1 (July 13, 2018)
 Re-release of Ember Data 3.3.0-beta.1"
-57,"Release 3.3.0 (July 13, 2018)
+58,"Release 3.3.0 (July 13, 2018)
 
 Re-release of Ember Data 3.2.0
 ","Release 3.3.0 (July 13, 2018)
 Re-release of Ember Data 3.2.0"
-58,"Release 2.18.3 (July 6, 2018)
+59,"Release 2.18.3 (July 6, 2018)
 
 #5519 Do not publish .node_modules.ember-try folder to npm
 ","Release 2.18.3 (July 6, 2018)
 5519 Do not publish .node_modules.ember-try folder to npm"
-59,"CHANGELOG
+60,"CHANGELOG
 
 #5467 [BUGFIX] don't cause unnecessary work during destroy
 #5411 Remove deprecations scheduled for 3.0
@@ -1273,7 +1323,7 @@ Re-release of Ember Data 3.2.0"
 5471 [CHORE] cull unnecessary files left from previous build setups
 5476 [Feature] added module-unification adapter and adapter-test blueprints
 5508 [CHORE] Update Dependencies"
-60,"CHANGELOG
+61,"CHANGELOG
 
 #5497 [BUGFIX] Make snapshot lazier and fix defaultValue.
 #5499 [BUGFIX] Backport fix infinite relationship retry issue from #5492.
@@ -1352,7 +1402,7 @@ Re-release of Ember Data 3.2.0"
 5381 [FEAT BREAKING] remove globals build for 3.x (#5381)
 5383 fix external ordered set dependency
 5384 [FEAT] remove all stale feature flags (#5384)"
-61,"Release 3.2.0-beta.2 (April 6, 2018)
+62,"Release 3.2.0-beta.2 (April 6, 2018)
 
 #5412 Fix npmignore and cleanup test artifacts before publishing
 #4977 Trap exceptions that are thrown from adapter methods
@@ -1393,12 +1443,12 @@ Re-release of Ember Data 3.2.0"
 5416 adds a more robust test around reload
 5418 Limit CI runs on branches to master, beta, release
 5422 [FEAT] Prevent async test leakage (feat. adds test waiters)"
-62,"Release 3.1.1 (March 27, 2018)
+63,"Release 3.1.1 (March 27, 2018)
 
 #5383 Remove '@ember/ordered-set' warning when building Ember Data
 ","Release 3.1.1 (March 27, 2018)
 5383 Remove '@ember/ordered-set' warning when building Ember Data"
-63,"Release 3.2.0-beta.1 (March 26, 2018)
+64,"Release 3.2.0-beta.1 (March 26, 2018)
 
 #4977 Trap exceptions that are thrown from adapter methods and reject the (#4977)
 #5379 minor typo
@@ -1421,7 +1471,7 @@ Re-release of Ember Data 3.2.0"
 5381 [FEAT BREAKING] remove globals build for 3.x (#5381)
 5383 fix external ordered set dependency
 5384 [FEAT] remove all stale feature flags (#5384)"
-64,"Release 3.1.0 (March 26, 2018)
+65,"Release 3.1.0 (March 26, 2018)
 
 #5255 [BUGFIX beta] Use native Map if present. (#5255)
 #5367 Update ember twiddle links to working versions (#5367)
@@ -1474,7 +1524,7 @@ Re-release of Ember Data 3.2.0"
 5339 Prevent build issues when linking ember-source.
 5340 [BUGFIX beta] Update DS.Errors#unknownProperty to return undefined.
 5342 Refactor Travis setup to leverage stages... (#5342)"
-65,"Release 3.1.0-beta.2 (March 15, 2018)
+66,"Release 3.1.0-beta.2 (March 15, 2018)
 
 #5255 [BUGFIX beta] Use native Map if present. (#5255)
 #5367 Update ember twiddle links to working versions (#5367)
@@ -1487,17 +1537,17 @@ Re-release of Ember Data 3.2.0"
 5370 Fix failing test on master by adding an invalid inverse to trigger th…
 5372 [BUGFIX beta] Use @ember/ordered-set to avoid deprecations.
 5376 [bugfix beta] Fetch cancels unload"
-66,"Release 3.0.1 (February 13, 2018)
+67,"Release 3.0.1 (February 13, 2018)
 
 #5273 client-side-delete semantics unloadRecord
 ","Release 3.0.1 (February 13, 2018)
 5273 client-side-delete semantics unloadRecord"
-67,"Release 2.18.1 (February 13, 2018)
+68,"Release 2.18.1 (February 13, 2018)
 
 #5273 client-side-delete semantics unloadRecord
 ","Release 2.18.1 (February 13, 2018)
 5273 client-side-delete semantics unloadRecord"
-68,"Release 3.1.0-beta.1 (Feburary 12, 2018)
+69,"Release 3.1.0-beta.1 (Feburary 12, 2018)
 
 #5327 [DOC] Fix Changelog release date for v2.11.0
 #5310 Remove s3-put and cached-npm scripts.
@@ -1534,7 +1584,7 @@ Re-release of Ember Data 3.2.0"
 5339 Prevent build issues when linking ember-source.
 5340 [BUGFIX beta] Update DS.Errors#unknownProperty to return undefined.
 5342 Refactor Travis setup to leverage stages... (#5342)"
-69,"Release 3.0.0 (Feburary 12, 2018)
+70,"Release 3.0.0 (Feburary 12, 2018)
 
 #5296 blueprints/adapter-test: Add RFC232 variants
 #5249 Fix client-side delete + resurrection
@@ -1583,7 +1633,7 @@ Re-release of Ember Data 3.2.0"
 5300 Simplify store.adapterFor and store.serializerFor.
 5305 Serializers and adapters should be unique per store
 5308 Simplify the getDescriptor test helper"
-70,"Release 3.0.0-beta.1 (December 29, 2017)
+71,"Release 3.0.0-beta.1 (December 29, 2017)
 
 #5294 blueprints/transform-test: Add RFC232 variants
 #5249 Fix client-side delete + resurrection
@@ -1620,7 +1670,7 @@ Re-release of Ember Data 3.2.0"
 5301 Add a test to ensure multiple stores get unique instances of serializ…
 5305 Serializers and adapters should be unique per store
 5308 Simplify the getDescriptor test helper"
-71,"Release 2.18.0 (December 28, 2017)
+72,"Release 2.18.0 (December 28, 2017)
 
 #5225 Remove blueprints for Mocha < 0.12. (#5225)
 #4998 [DOC beta] Assert that both modelName and id are passed to peekRecord (#4998)
@@ -1665,7 +1715,7 @@ Re-release of Ember Data 3.2.0"
 5242 [BUGFIX beta] Normalize model names during push
 5250 [doc] Update links to Ember Guide (#5250)
 5260 [doc] Update urlForFindRecord example"
-72,"Release 2.18.0-beta.1 (November 19, 2017)
+73,"Release 2.18.0-beta.1 (November 19, 2017)
 
 #5225 Remove blueprints for Mocha < 0.12. (#5225)
 #4998 [DOC beta] Assert that both modelName and id are passed to peekRecord (#4998)
@@ -1710,7 +1760,7 @@ Re-release of Ember Data 3.2.0"
 5242 [BUGFIX beta] Normalize model names during push
 5250 [doc] Update links to Ember Guide (#5250)
 5260 [doc] Update urlForFindRecord example"
-73,"Release 2.17.0 (November 19, 2017)
+74,"Release 2.17.0 (November 19, 2017)
 
 #5216 [BUGFIX beta] invalid record becomes loaded when property is reset
 #4998 [DOC beta] Assert that both modelName and id are passed to peekRecord (#4998)
@@ -1757,7 +1807,7 @@ Re-release of Ember Data 3.2.0"
 5223 [BUGFIX release] Cleanup test only dependencies.
 5224 Add missing dependency for travis build
 5232 Update documentation in model.js"
-74,"Release 2.15.0-beta.4 (August 10, 2017)
+75,"Release 2.15.0-beta.4 (August 10, 2017)
 
 #5098 {beta} Beta unload and create
 #5105 {Beta} forward port
@@ -1766,41 +1816,41 @@ Re-release of Ember Data 3.2.0"
 5098 {beta} Beta unload and create
 5105 {Beta} forward port
 5119 [BUGFIX release] Don't notify relationships with links during initialization"
-75,"Release 2.14.10 (August 10, 2017)
+76,"Release 2.14.10 (August 10, 2017)
 
 #5119 [BUGFIX release] Don't notify relationships with links during initialization
 ","Release 2.14.10 (August 10, 2017)
 5119 [BUGFIX release] Don't notify relationships with links during initialization"
-76,"Release 2.15.0-beta.2 (July 11, 2017)
+77,"Release 2.15.0-beta.2 (July 11, 2017)
 
 #5032 loosen header parsing slightly
 #5048 [BUGFIX release] createRecord should only setup relationships it has … (#5048)
 ","Release 2.15.0-beta.2 (July 11, 2017)
 5032 loosen header parsing slightly
 5048 [BUGFIX release] createRecord should only setup relationships it has … (#5048)"
-77,"Release 2.14.4 (July 11, 2017)
+78,"Release 2.14.4 (July 11, 2017)
 
 #5048 [BUGFIX release] createRecord should only setup relationships it has … (#5048)
 ","Release 2.14.4 (July 11, 2017)
 5048 [BUGFIX release] createRecord should only setup relationships it has … (#5048)"
-78,"Release 2.14.3 (June 22, 2017)
+79,"Release 2.14.3 (June 22, 2017)
 
 #5033 loosen header parsing slightly
 ","Release 2.14.3 (June 22, 2017)
 5033 loosen header parsing slightly"
-79,"Release 2.14.2 (June 19, 2017)
+80,"Release 2.14.2 (June 19, 2017)
 
 #5022 Ensure ember-data/-private module is emitted properly for ember-cli < 2.12. (#5022)
 ","Release 2.14.2 (June 19, 2017)
 5022 Ensure ember-data/-private module is emitted properly for ember-cli < 2.12. (#5022)"
-80,"Release 2.14.1 (June 19, 2017)
+81,"Release 2.14.1 (June 19, 2017)
 
 #4994 [BUGFIX beta] Fix flushing of pending saves, that include a deleted record (#4994)
 #5008 [BUGFIX BETA] Fixed export regression. ember-data/transform to be default.
 ","Release 2.14.1 (June 19, 2017)
 4994 [BUGFIX beta] Fix flushing of pending saves, that include a deleted record (#4994)
 5008 [BUGFIX BETA] Fixed export regression. ember-data/transform to be default."
-81,"Release 2.15.0-beta.1 (June 18, 2017)
+82,"Release 2.15.0-beta.1 (June 18, 2017)
 
 #4981 [DOC release] Document DS.HasManyReference.ids
 #4964 Fix typo: expect multiple s/methods/records back
@@ -1837,7 +1887,7 @@ Re-release of Ember Data 3.2.0"
 5008 [BUGFIX BETA]: Fixed export regression. ember-data/transform to be default.
 5009 cleanup index.js and drop 0.12 node
 5011 Fix and tests for unloadRecord => findRecord issue"
-82,"Release 2.14.0 (June 18, 2017)
+83,"Release 2.14.0 (June 18, 2017)
 
 #5013 [BUGFIX beta] fixes an issue with sync dematerialization followed by a findRecord, adds test coverage
 #5002 [BUGFIX BETA] Added system/store/container-instance-cache to the -private export file
@@ -1960,17 +2010,17 @@ Re-release of Ember Data 3.2.0"
 4946 dummy app routes should work with and without heimdall
 4948 Only will merge mixin in dev
 4950 [PERF] Guard against poorly optimized babel output"
-83,"Release 2.13.2 (June 18, 2017)
+84,"Release 2.13.2 (June 18, 2017)
 
 #5012 [BUGFIX release] fixes an issue with sync dematerialization followed by a findRecord, adds test coverage
 ","Release 2.13.2 (June 18, 2017)
 5012 [BUGFIX release] fixes an issue with sync dematerialization followed by a findRecord, adds test coverage"
-84,"Release 2.14.0-beta.3 (June 7, 2017)
+85,"Release 2.14.0-beta.3 (June 7, 2017)
 
 #5002 [BUGFIX BETA] Added system/store/container-instance-cache to the -private export file
 ","Release 2.14.0-beta.3 (June 7, 2017)
 5002 [BUGFIX BETA] Added system/store/container-instance-cache to the -private export file"
-85,"Release 2.14.0-beta.2 (May 5, 2017)
+86,"Release 2.14.0-beta.2 (May 5, 2017)
 
 #4959 [BUGFIX] remove forgotten broccoli-stew import
 #4965 [BUGFIX beta]  Skip test which doesn't play nicely with the latest em…
@@ -1981,14 +2031,14 @@ Re-release of Ember Data 3.2.0"
 4965 [BUGFIX beta]  Skip test which doesn't play nicely with the latest em…
 4969 [BUGFIX beta] Ensure Engines can boot without error.
 4971 Fix typo in function call"
-86,"Release 2.13.1 (May 5, 2017)
+87,"Release 2.13.1 (May 5, 2017)
 
 #4965 [BUGFIX beta]  Skip test which doesn't play nicely with the latest em…
 #4970 [BUGFIX release] Ensure Engines can boot without error.
 ","Release 2.13.1 (May 5, 2017)
 4965 [BUGFIX beta]  Skip test which doesn't play nicely with the latest em…
 4970 [BUGFIX release] Ensure Engines can boot without error."
-87,"Release 2.14.0-beta.1 (April 28, 2017)
+88,"Release 2.14.0-beta.1 (April 28, 2017)
 
 #4885 Lazy snapshot.type
 #4855 Update the changelog for the Ember Data 2.12.0 release
@@ -2099,7 +2149,7 @@ Re-release of Ember Data 3.2.0"
 4946 dummy app routes should work with and without heimdall
 4948 Only will merge mixin in dev
 4950 [PERF] Guard against poorly optimized babel output"
-88,"Release 2.13.0 (April 28, 2017)
+89,"Release 2.13.0 (April 28, 2017)
 
 #4860 Refactor the detection / warnings around ember-cli-shims.
 #4853 [Fixes #4853] use Object.create(null) directly
@@ -2238,40 +2288,40 @@ Re-release of Ember Data 3.2.0"
 4846 remove un-needed Ember.A
 4850 Optimise has many notifications (#4850)
 4851 Don't calculate _changedKeys pointlessly (#4851)"
-89,"Release 2.13.0-beta.4 (April 12, 2017)
+90,"Release 2.13.0-beta.4 (April 12, 2017)
 
 #4922 [BUGFIX release] restore internalModels GUID_KEY’s
 #4916 [BACKPORT 4913] don't prematurely nullify props on the container-inst…
 ","Release 2.13.0-beta.4 (April 12, 2017)
 4922 [BUGFIX release] restore internalModels GUID_KEY’s
 4916 [BACKPORT 4913] don't prematurely nullify props on the container-inst…"
-90,"Release 2.12.2 (April 12, 2017)
+91,"Release 2.12.2 (April 12, 2017)
 
 #4922 [BUGFIX release] restore internalModels GUID_KEY’s
 #4917 [BACKPORT 4913] For release
 ","Release 2.12.2 (April 12, 2017)
 4922 [BUGFIX release] restore internalModels GUID_KEY’s
 4917 [BACKPORT 4913] For release"
-91,"Release 2.13.0-beta.3 (March 21, 2017)
+92,"Release 2.13.0-beta.3 (March 21, 2017)
 
 #4862 [BETA] Update dependencies to use babel 6.
 ","Release 2.13.0-beta.3 (March 21, 2017)
 4862 [BETA] Update dependencies to use babel 6."
-92,"Release 2.13.0-beta.2 (March 17, 2017)
+93,"Release 2.13.0-beta.2 (March 17, 2017)
 
 #4877 [BUGFIX beta] ensure the globals build has the correct context in the iife.
 #4879 [BUGFIX beta] ensure context is applied in iife
 ","Release 2.13.0-beta.2 (March 17, 2017)
 4877 [BUGFIX beta] ensure the globals build has the correct context in the iife.
 4879 [BUGFIX beta] ensure context is applied in iife"
-93,"Release 2.12.1 (March 17, 2017)
+94,"Release 2.12.1 (March 17, 2017)
 
 #4875 [BUGFIX release] ensure the globals build has the correct context in the iife.
 #4881 Fix injection-test on the release branch
 ","Release 2.12.1 (March 17, 2017)
 4875 [BUGFIX release] ensure the globals build has the correct context in the iife.
 4881 Fix injection-test on the release branch"
-94,"Release 2.13.0-beta.1 (March 13, 2017)
+95,"Release 2.13.0-beta.1 (March 13, 2017)
 
 #4767 Updating gitignore to remove .idea
 #4741 Clean up some YUIdoc erros
@@ -2392,7 +2442,7 @@ Re-release of Ember Data 3.2.0"
 4846 remove un-needed Ember.A
 4850 Optimise has many notifications (#4850)
 4851 Don't calculate _changedKeys pointlessly (#4851)"
-95,"Release 2.12.0 (March 13, 2017)
+96,"Release 2.12.0 (March 13, 2017)
 
 #4805 Don’t redefine findPossibleInverses for each _findInverseFor
 #4808 Avoid mutating model factory in _modelForMixin.
@@ -2459,12 +2509,12 @@ Re-release of Ember Data 3.2.0"
 4718 [BUGFIX beta] Inverse null relationships should throw if model doesn't exist 3
 4734 [DOC] fix a couple of typos in model class docs
 4739 Removed id in urlForFindAll signature"
-96,"Release 2.11.3 (February 24, 2017)
+97,"Release 2.11.3 (February 24, 2017)
 
 0ab7698 Do not assign modelName to the factory. Fixes error with ember-getowner-polyfill
 ","Release 2.11.3 (February 24, 2017)
 0ab7698 Do not assign modelName to the factory. Fixes error with ember-getowner-polyfill"
-97,"Release 2.12.0-beta.4 (February 24, 2017)
+98,"Release 2.12.0-beta.4 (February 24, 2017)
 
 #4805 Don’t redefine findPossibleInverses for each _findInverseFor
 #4808 Avoid mutating model factory in _modelForMixin.
@@ -2473,14 +2523,14 @@ Re-release of Ember Data 3.2.0"
 4805 Don’t redefine findPossibleInverses for each _findInverseFor
 4808 Avoid mutating model factory in _modelForMixin.
 4810 [Fixes #4807] realize class + factory seperation"
-98,"Release 2.11.2 (February 24, 2017)
+99,"Release 2.11.2 (February 24, 2017)
 
 #4808 Avoid mutating model factory in _modelForMixin.
 #4820 [Backport of #4810 to release]
 ","Release 2.11.2 (February 24, 2017)
 4808 Avoid mutating model factory in _modelForMixin.
 4820 [Backport of #4810 to release]"
-99,"Release 2.12.0-beta.3 (February 3, 2017)
+100,"Release 2.12.0-beta.3 (February 3, 2017)
 
 #4743 [BUGFIX canary] Fix _lookupFactory deprecation for Ember canary
 #4765 [DOC] Make model.unloadRecord public (#4765)
@@ -2493,7 +2543,7 @@ Re-release of Ember Data 3.2.0"
 4792 [BUGFIX beta] revert deletion of filter that removed deleted model…
 4789 Do not access container if Ember.getOwner exists.
 4760 Update deprecate arguments (#4760)"
-100,"Release 2.11.1 (February 3, 2017)
+101,"Release 2.11.1 (February 3, 2017)
 
 #4743 [BUGFIX canary] Fix _lookupFactory deprecation for Ember canary
 #4765 [DOC] Make model.unloadRecord public (#4765)
@@ -2506,12 +2556,12 @@ Re-release of Ember Data 3.2.0"
 4791 [BUGFIX release] revert deletion of filter that removed deleted model…
 4789 Do not access container if Ember.getOwner exists.
 4760 Update deprecate arguments (#4760)"
-101,"
+102,"
 #4743 [BUGFIX canary] Fix _lookupFactory deprecation for Ember canary
 #4771 [BUGFIX beta] Ensure ISO-8601 regex correctly matches timestamps
 ","4743 [BUGFIX canary] Fix _lookupFactory deprecation for Ember canary
 4771 [BUGFIX beta] Ensure ISO-8601 regex correctly matches timestamps"
-102,"Release 2.12.0-beta.1 (January 9, 2016)
+103,"Release 2.12.0-beta.1 (January 9, 2016)
 
 #4698 [FIX backburner] Avoids spinning up unnecessary run loops via run.join
 #4638 Update the API docs for snapshots
@@ -2562,7 +2612,7 @@ Re-release of Ember Data 3.2.0"
 4718 [BUGFIX beta] Inverse null relationships should throw if model doesn't exist 3
 4734 [DOC] fix a couple of typos in model class docs
 4739 Removed id in urlForFindAll signature"
-103,"Release 2.11.0 (January 9, 2016)
+104,"Release 2.11.0 (January 9, 2016)
 
 #4518 Update the relationship docs to remove some references to a globals s…
 #4581 [DOC] Update descriptions of findRecord() and findAll()
@@ -2683,7 +2733,7 @@ Re-release of Ember Data 3.2.0"
 4669 fix mock server
 4674 Update findHasMany API docs
 4680 Remove unused helper function normalizeAttributes"
-104,"Release 2.11.0-beta.1 (November 28, 2016)
+105,"Release 2.11.0-beta.1 (November 28, 2016)
 
 #4518 Update the relationship docs to remove some references to a globals s…
 #4581 [DOC] Update descriptions of findRecord() and findAll()
@@ -2804,7 +2854,7 @@ Re-release of Ember Data 3.2.0"
 4669 fix mock server
 4674 Update findHasMany API docs
 4680 Remove unused helper function normalizeAttributes"
-105,"Release 2.10.0 (November 28, 2016)
+106,"Release 2.10.0 (November 28, 2016)
 
 #4656 [PERF backport to beta] fix sub-optimal compiler output (#4655)
 #4592 [DOC] Add documentation for query#update() to refresh query
@@ -2825,17 +2875,17 @@ Re-release of Ember Data 3.2.0"
 4574 Move heimdalljs to dependencies
 4576 [DOC] Update Readme to reflect new default adapter
 4578 Improved null id assertions"
-106,"Release 2.10.0-beta.3 (November 21, 2016)
+107,"Release 2.10.0-beta.3 (November 21, 2016)
 
 #4656 [PERF backport to beta] fix sub-optimal compiler output (#4655)
 ","Release 2.10.0-beta.3 (November 21, 2016)
 4656 [PERF backport to beta] fix sub-optimal compiler output (#4655)"
-107,"Release 2.10.0-beta.2 (October 24, 2016)
+108,"Release 2.10.0-beta.2 (October 24, 2016)
 
 #4592 [DOC] Add documentation for query#update() to refresh query
 ","Release 2.10.0-beta.2 (October 24, 2016)
 4592 [DOC] Add documentation for query#update() to refresh query"
-108,"Release 2.10.0-beta.1 (October 18, 2016)
+109,"Release 2.10.0-beta.1 (October 18, 2016)
 
 #4510 Heimdall instrumentation
 #4546 Revert ""Log an assertion if the response from createRecord does not have an i…""
@@ -2852,7 +2902,7 @@ Re-release of Ember Data 3.2.0"
 4574 Move heimdalljs to dependencies
 4576 [DOC] Update Readme to reflect new default adapter
 4578 Improved null id assertions"
-109,"Release 2.9.0 (October 18, 2016)
+110,"Release 2.9.0 (October 18, 2016)
 
 #4577 [DOC] fix typo
 #4529 isUpdating should be true only if a reload happens
@@ -2893,7 +2943,7 @@ Re-release of Ember Data 3.2.0"
 4516 Update the docs for normalizeModelName so they explain the intent of …
 4521 Remove ContainerProxy
 4522 add license to bower.json"
-110,"Release 2.9.0-beta.4 (October 10, 2016)
+111,"Release 2.9.0-beta.4 (October 10, 2016)
 
 #4529 isUpdating should be true only if a reload happens
 #4566 Properly cleanup store and env in store integration test
@@ -2902,14 +2952,14 @@ Re-release of Ember Data 3.2.0"
 4529 isUpdating should be true only if a reload happens
 4566 Properly cleanup store and env in store integration test
 4567 [bugfix beta] Treat status code 0 as an abort"
-111,"Release 2.9.0-beta.3 (October 3, 2016)
+112,"Release 2.9.0-beta.3 (October 3, 2016)
 
 #4559 [BUGFIX beta] Use Ember.guidFor to set InternalModel's guid.
 #4560 [BUGFIX beta] Ensure record array length is reset during willDestroy.
 ","Release 2.9.0-beta.3 (October 3, 2016)
 4559 [BUGFIX beta] Use Ember.guidFor to set InternalModel's guid.
 4560 [BUGFIX beta] Ensure record array length is reset during willDestroy."
-112,"Release 2.9.0-beta.2 (September 29, 2016)
+113,"Release 2.9.0-beta.2 (September 29, 2016)
 
 #4545 [BUGFIX beta] Make Model#data a plain getter.
 #4541 [DOC beta] Remove Ember.ArrayController from initializer example (#4540)
@@ -2924,7 +2974,7 @@ Re-release of Ember Data 3.2.0"
 4537 [BUGFIX beta] Ember Data should not swallow exceptions from the run loop
 4546 Revert ""Log an assertion if the response from createRecord does not have an i…""
 4536 [DOC] fix features response typo (#4530)"
-113,"Release 2.8.1 (September 23, 2016)
+114,"Release 2.8.1 (September 23, 2016)
 
 #4536 bump to latest ember-cli, run ember init, cleanup post init
 #4546 Revert ""Log an assertion if the response from createRecord does not have an I…""
@@ -2937,7 +2987,7 @@ Re-release of Ember Data 3.2.0"
 4537 [BUGFIX beta] Ember Data should not swallow exceptions from the run loop
 4545 [BUGFIX beta] Make Model#data a plain getter.
 4541 [BUGFIX release] Include initializers for global production build"
-114,"Release 2.8.0  (September 8, 2016)
+115,"Release 2.8.0  (September 8, 2016)
 
 #4519 [BUGFIX beta] Prefer includes over contains
 #4489 [BUGFIX beta] Fix Brittle Promise Usage
@@ -2996,12 +3046,12 @@ Re-release of Ember Data 3.2.0"
 4481 [BUGFIX release] Revert blueprints to use the old import DS format
 4484 [BUGFIX beta] Update API docs to import DS from 'ember-data'
 4485 Update changelog for the Ember Data 2.7.0 release"
-115,"Release 2.8.0-beta.3 (August 29, 2016)
+116,"Release 2.8.0-beta.3 (August 29, 2016)
 
 #4519 [BUGFIX beta] Prefer includes over contains
 ","Release 2.8.0-beta.3 (August 29, 2016)
 4519 [BUGFIX beta] Prefer includes over contains"
-116,"Release 2.8.0-beta.2 (August 15, 2016)
+117,"Release 2.8.0-beta.2 (August 15, 2016)
 
 #4489 [BUGFIX beta] Fix Brittle Promise Usage
 #4473 Fix key remapping for id/ids belongsTo with embedded-records-mixin
@@ -3010,7 +3060,7 @@ Re-release of Ember Data 3.2.0"
 4489 [BUGFIX beta] Fix Brittle Promise Usage
 4473 Fix key remapping for id/ids belongsTo with embedded-records-mixin
 4490 [DOCS] No need to use Ember.run in succes and failure of wrapped getJSON"
-117,"Release 2.8.0-beta.1 (July 25, 2016)
+118,"Release 2.8.0-beta.1 (July 25, 2016)
 
 #4446 modelHasAttributeOrRelationshipNamedType should not show up in the …
 #4425 [BUGFIX] Pass options to transform for serialization in json-api
@@ -3061,7 +3111,7 @@ Re-release of Ember Data 3.2.0"
 4481 [BUGFIX release] Revert blueprints to use the old import DS format
 4484 [BUGFIX beta] Update API docs to import DS from 'ember-data'
 4485 Update changelog for the Ember Data 2.7.0 release"
-118,"Release 2.7.0 (July 25, 2016)
+119,"Release 2.7.0 (July 25, 2016)
 
 #4482 Disable ds-improved-ajax for the 2.7 release
 #4470 Belongs to not updating when response contains a change with the previous value
@@ -3130,24 +3180,24 @@ Re-release of Ember Data 3.2.0"
 4403 [BUGFIX beta] Correctly coalesce URI encoded ids
 4405 [BUGFIX beta] Document the adapterOptions property
 4427 Update changelog for the 2.6.0 release"
-119,"Release 2.6.2 (July 25, 2016)
+120,"Release 2.6.2 (July 25, 2016)
 
 #4481 [BUGFIX release] Revert blueprints to use the old import DS format
 ","Release 2.6.2 (July 25, 2016)
 4481 [BUGFIX release] Revert blueprints to use the old import DS format"
-120,"Release 2.5.5 (July 25, 2016)
+121,"Release 2.5.5 (July 25, 2016)
 
 #4483 [BUGFIX release] Update the blueprints to import the DS namespace
 ","Release 2.5.5 (July 25, 2016)
 4483 [BUGFIX release] Update the blueprints to import the DS namespace"
-121,"Release 2.7.0-beta.3 (July 11, 2016)
+122,"Release 2.7.0-beta.3 (July 11, 2016)
 
 #4464 Add benchmarks directory to npmignore
 #4466 [BUGFIX beta] Fixes issue with GET requests appending ?{} to url
 ","Release 2.7.0-beta.3 (July 11, 2016)
 4464 Add benchmarks directory to npmignore
 4466 [BUGFIX beta] Fixes issue with GET requests appending ?{} to url"
-122,"Release 2.7.0-beta.2 (June 28, 2016)
+123,"Release 2.7.0-beta.2 (June 28, 2016)
 
 #4425 [BUGFIX] Pass options to transform for serialization in json-api
 #4433 Remove JSHint directives from Mocha test blueprints
@@ -3158,14 +3208,14 @@ Re-release of Ember Data 3.2.0"
 4433 Remove JSHint directives from Mocha test blueprints
 4435 [DOC] typo fix for queryRecord (kown -> known)
 4448 [BUGFIX beta] The adapter should call ajax instead of the new metho…"
-123,"Release 2.6.1 (June 15, 2016)
+124,"Release 2.6.1 (June 15, 2016)
 
 #4425 [BUGFIX] Pass options to transform for serialization in json-api
 #4389 call super in addon#init
 ","Release 2.6.1 (June 15, 2016)
 4425 [BUGFIX] Pass options to transform for serialization in json-api
 4389 call super in addon#init"
-124,"Release 2.7.0-beta.1 (June 8, 2016)
+125,"Release 2.7.0-beta.1 (June 8, 2016)
 
 #4320 Fixup feature flagging infrastructure.
 #4311 Use property lookup in applyTransforms
@@ -3212,7 +3262,7 @@ Re-release of Ember Data 3.2.0"
 4403 [BUGFIX beta] Correctly coalesce URI encoded ids
 4405 [BUGFIX beta] Document the adapterOptions property
 4427 Update changelog for the 2.6.0 release"
-125,"Release 2.6.0 (June 8, 2016)
+126,"Release 2.6.0 (June 8, 2016)
 
 #4386 [BUGFIX release] isUpdating flag is set correctly for store.findAll
 #4374 Fix #4366: EmbeddedRecordsMixin embeds the record, not the snapshot
@@ -3367,12 +3417,12 @@ Re-release of Ember Data 3.2.0"
 4308 pass snapshot through to urlForFindHasMany and urlForFindBelongsTo
 4316 Fix isUpdating for DS.AdapterPopulatedRecordArray#update()
 4317 [CLEANUP] remove reference to no more used isNewSerializerAPI flag"
-126,"Release 2.5.3 (May 17, 2016)
+127,"Release 2.5.3 (May 17, 2016)
 
 #4386 [BUGFIX release] isUpdating flag is set correctly for store.findAll
 ","Release 2.5.3 (May 17, 2016)
 4386 [BUGFIX release] isUpdating flag is set correctly for store.findAll"
-127,"Release 2.6.0-beta.4 (May 12, 2016)
+128,"Release 2.6.0-beta.4 (May 12, 2016)
 
 #4374 Fix #4366: EmbeddedRecordsMixin embeds the record, not the snapshot
 #4379 [BUGFIX beta] Fix resetting of properties to in-flight values
@@ -3381,14 +3431,14 @@ Re-release of Ember Data 3.2.0"
 4374 Fix #4366: EmbeddedRecordsMixin embeds the record, not the snapshot
 4379 [BUGFIX beta] Fix resetting of properties to in-flight values
 4380 [BUGFIX beta] remove trailing whitespace from model blueprint"
-128,"Release 2.6.0-beta.3 (May 3, 2016)
+129,"Release 2.6.0-beta.3 (May 3, 2016)
 
 #4300 [BUGFIX beta] Overhaul queryRecord
 #4363 [DOC] Fix hard-coded ""Customizing Adapters"" link
 ","Release 2.6.0-beta.3 (May 3, 2016)
 4300 [BUGFIX beta] Overhaul queryRecord
 4363 [DOC] Fix hard-coded ""Customizing Adapters"" link"
-129,"Release 2.6.0-beta.2 (April 29, 2016)
+130,"Release 2.6.0-beta.2 (April 29, 2016)
 
 #4320 Fixup feature flagging infrastructure.
 #4324 [DOC beta] Clarify DS.Model#changedAttributes()
@@ -3409,14 +3459,14 @@ Re-release of Ember Data 3.2.0"
 4331 [BUGFIX beta] Overhaul attr/relationships imports in model blueprint
 4338 [DOC beta] Overhaul documentation for reload / background reload
 4345 [DOC] fix example syntax"
-130,"Release 2.5.2 (April 14, 2016)
+131,"Release 2.5.2 (April 14, 2016)
 
 #4328 [BUGFIX release] Only setup babel options once.
 #4333 [BUGFIX release] use es5 syntax for addon's index.js file
 ","Release 2.5.2 (April 14, 2016)
 4328 [BUGFIX release] Only setup babel options once.
 4333 [BUGFIX release] use es5 syntax for addon's index.js file"
-131,"Release 2.6.0-beta.1 (April 12, 2016)
+132,"Release 2.6.0-beta.1 (April 12, 2016)
 
 #4184 blueprints: Use project.dependencies() to determine test framework
 #3848 [BUGFIX] EmbeddedRecordMixin should include the type serializing hasMany as ids
@@ -3541,12 +3591,12 @@ Re-release of Ember Data 3.2.0"
 4308 pass snapshot through to urlForFindHasMany and urlForFindBelongsTo
 4316 Fix isUpdating for DS.AdapterPopulatedRecordArray#update()
 4317 [CLEANUP] remove reference to no more used isNewSerializerAPI flag"
-132,"Release 2.5.1 (April 12, 2016)
+133,"Release 2.5.1 (April 12, 2016)
 
 #4320 [BUGFIX release] Ensure feature flag stripping works for all builds.
 ","Release 2.5.1 (April 12, 2016)
 4320 [BUGFIX release] Ensure feature flag stripping works for all builds."
-133,"Release 2.5.0 (April 11, 2016)
+134,"Release 2.5.0 (April 11, 2016)
 
 #4293 Transition an invalid created record to the deleted saved state when deleted
 #4304 pass DS.SnapshotRecordArray to build-url-mixin buildURL
@@ -3689,7 +3739,7 @@ Re-release of Ember Data 3.2.0"
 4171 [CLEANUP] Remove shim for Backburner.join
 4172 [CLEANUP] Remove shim for Ember.Service
 4224 Enable feature flags for 2.5 beta cycle"
-134,"Release 2.5.0-beta.4 (April 1, 2016)
+135,"Release 2.5.0-beta.4 (April 1, 2016)
 
 #4245 Tweaks to docs on error responses
 #4268 JSONSerializer should normalize the links object using the attrs hash
@@ -3704,7 +3754,7 @@ Re-release of Ember Data 3.2.0"
 4271 [BUGFIX beta] Ensure null is returned for Reference#value()
 4274 [DOC canary] Update extractMeta documentation
 4295 [DOC release] Mistaken back tick."
-135,"Release 2.5.0-beta.3 (March 22, 2016)
+136,"Release 2.5.0-beta.3 (March 22, 2016)
 
 #4178 DS.Store type presence checks
 #4194 Use modelNameFromPayloadKey when type is given
@@ -3719,19 +3769,19 @@ Re-release of Ember Data 3.2.0"
 4248 fix prod-build issue
 4250 [BUGFIX beta] Use Ember.assign when availability
 4256 [BUGFIX release] Revert pr #3864"
-136,"Release 2.4.3 (March 22, 2016)
+137,"Release 2.4.3 (March 22, 2016)
 
 #4243 moves the ember dep in the package-manager package.json into optionalDependencies
 #4256 [BUGFIX release] Revert pr #3864
 ","Release 2.4.3 (March 22, 2016)
 4243 moves the ember dep in the package-manager package.json into optionalDependencies
 4256 [BUGFIX release] Revert pr #3864"
-137,"Release 2.4.2 (March 19, 2016)
+138,"Release 2.4.2 (March 19, 2016)
 
 #4248 [BUGFIX release] fix prod-build issue
 ","Release 2.4.2 (March 19, 2016)
 4248 [BUGFIX release] fix prod-build issue"
-138,"Release 2.5.0-beta.2 (March 18, 2016)
+139,"Release 2.5.0-beta.2 (March 18, 2016)
 
 #4214 Fix AMD dependencies
 #4184 blueprints: Use project.dependencies() to determine test framework
@@ -3756,7 +3806,7 @@ Re-release of Ember Data 3.2.0"
 4221 [BUGFIX beta] use assert from debug utils so it is stripped correctly
 4235 [DOC] Fix store.findAll return type
 4237 [DOC beta] Fix typo in inline doc. of normalizeResponse"
-139,"Release 2.4.1 (March 18, 2016)
+140,"Release 2.4.1 (March 18, 2016)
 
 #3559 [BUGFIX release] Guard against isDestroyed in ManyArray.flushCanonical
 #4154 Make sure new record are not pushed twice when parent is saved before.
@@ -3769,7 +3819,7 @@ Re-release of Ember Data 3.2.0"
 4204 Fix RESTAdapter.findRecord without a snapshot
 4205 [BUGFIX release] ensure import paths are resolved \w posix separators
 4214 Fix AMD dependencies"
-140,"Release 2.5.0-beta.1 (March 9, 2016)
+141,"Release 2.5.0-beta.1 (March 9, 2016)
 
 #4119 Add ember.js and ember-data tags automatically to SO question
 #4063 [BUGFIX release] don't load ""app"" code when loading globals files
@@ -3856,7 +3906,7 @@ Re-release of Ember Data 3.2.0"
 4171 [CLEANUP] Remove shim for Backburner.join
 4172 [CLEANUP] Remove shim for Ember.Service
 4224 Enable feature flags for 2.5 beta cycle"
-141,"Release 2.4.0 (February 29, 2016)
+142,"Release 2.4.0 (February 29, 2016)
 
 #4125 [BUGFIX beta] Export more public API's via modules
 #4135 import require
@@ -4021,7 +4071,7 @@ Re-release of Ember Data 3.2.0"
 4039 Replace calls to store.find with store.findRecord
 4053 [FEATURE ds-references] Only add function to prototype if enabled
 4059 Update name for feature in FEATURES.md"
-142,"Release 2.4.0-beta.3 (February 26, 2016)
+143,"Release 2.4.0-beta.3 (February 26, 2016)
 
 #4125 [BUGFIX beta] Export more public API's via modules
 #4135 Fix build error when using babel 6 with the transform-es2015-modules-amd plugin
@@ -4036,7 +4086,7 @@ Re-release of Ember Data 3.2.0"
 4141 [DOC] Document behavior of object level errors with JSON API
 4147 Fix key remapping for embedded belongsTo
 4167 Add blueprints from ember-cli-mocha"
-143,"Release 1.13.16 (February 9, 2016)
+144,"Release 1.13.16 (February 9, 2016)
 
 #4143 Update Ember
   Inflector and correct Ember Data's usage of it so that users' default
@@ -4045,7 +4095,7 @@ Re-release of Ember Data 3.2.0"
 4143 Update Ember
 Inflector and correct Ember Data's usage of it so that users' default
   custom inflections work."
-144,"Release 2.4.0-beta.2 (February 2, 2016)
+145,"Release 2.4.0-beta.2 (February 2, 2016)
 
 #4082 Move the date import to where it is used instead of the root module
 #4063 [BUGFIX release] don't load ""app"" code when loading globals files
@@ -4072,12 +4122,12 @@ Inflector and correct Ember Data's usage of it so that users' default
 4091 [BUGFIX release] Refactor Model.reopen to use mixins
 4095 [BUGFIX release] Remove 'v' prefix from DS.VERSION
 4108 [BUGFIX beta] Fix BuildUrlMixin.urlPrefix regression when host=/"
-145,"Release 2.3.3 (January 21, 2016)
+146,"Release 2.3.3 (January 21, 2016)
 
 #4095 [BUGFIX release] Remove 'v' prefix from DS.VERSION
 ","Release 2.3.3 (January 21, 2016)
 4095 [BUGFIX release] Remove 'v' prefix from DS.VERSION"
-146,"Release 2.3.2 (January 18, 2016)
+147,"Release 2.3.2 (January 18, 2016)
 
 #4000 Re-enable pushing builds to S3
 #4002 Fix paths to files which should be uploaded to S3
@@ -4098,7 +4148,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 4088 [BUFGIX release] Fix regression with missing initializers
 4090 Make yui doc generate links from the project root instead of the file…
 4091 [BUGFIX release] Refactor Model.reopen to use mixins"
-147,"Release 2.3.0 (January 12, 2015)
+148,"Release 2.3.0 (January 12, 2015)
 
 #4039 Replace calls to store.find with store.findRecord
 #4042 [BUGFIX beta] prevent calls to store.query leaking
@@ -4209,7 +4259,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 3927 restore globals publishing to canary build
 3929 upgrade node to 4 on CI
 3931 update ember-cli to 1.13.12"
-148,"Release 2.4.0-beta.1 (January 12, 2016)
+149,"Release 2.4.0-beta.1 (January 12, 2016)
 
 #3999 Run the Ember Data initializer when Ember Data is loaded as an Ember …
 #3941 Mark adapterFor and serializerFor as public
@@ -4338,14 +4388,14 @@ Inflector and correct Ember Data's usage of it so that users' default
 4039 Replace calls to store.find with store.findRecord
 4053 [FEATURE ds-references] Only add function to prototype if enabled
 4059 Update name for feature in FEATURES.md"
-149,"Release 2.3.1 (January 12, 2016)
+150,"Release 2.3.1 (January 12, 2016)
 
 #4063 [BUGFIX release] don't load ""app"" code when loading globals files
 #4066 Use correct version number when used as an addon.
 ","Release 2.3.1 (January 12, 2016)
 4063 [BUGFIX release] don't load ""app"" code when loading globals files
 4066 Use correct version number when used as an addon."
-150,"Release 2.3.0-beta.5 (December 31, 2015)
+151,"Release 2.3.0-beta.5 (December 31, 2015)
 
 #4018 [CLEANUP] re-use test setup to assert correct call to adapter.ajax
 #4019 Use JSON-API adapter and serializer in blueprints
@@ -4360,7 +4410,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 4025 Use keyForReliationship for belongsTo and hasMany
 4029 [BUGFIX beta] Move public modules out of the -private folder
 4026 [BUGFIX beta] ignores keys that are not found in the map"
-151,"Release 2.3.0-beta.4 (December 18, 2015)
+152,"Release 2.3.0-beta.4 (December 18, 2015)
 
 #3813 ember-data should provide its blueprints
 #3996 Update ember-cli-shims to 0.1.0 to silence ED's own warning
@@ -4375,12 +4425,12 @@ Inflector and correct Ember Data's usage of it so that users' default
 4003 Only run the Ember.onload initializers in globals mode
 4010 [DOC beta] Mark comments as private
 4014 Register the version before the DEBUG version are printed when loadin…"
-152,"Release 2.3.0-beta.3 (December 14, 2015)
+153,"Release 2.3.0-beta.3 (December 14, 2015)
 
 #3995 [BUGFIX beta] Implement public module API.
 ","Release 2.3.0-beta.3 (December 14, 2015)
 3995 [BUGFIX beta] Implement public module API."
-153,"Release 2.3.0-beta.2 (December 12, 2015)
+154,"Release 2.3.0-beta.2 (December 12, 2015)
 
 #3865 [PERF] Ajax should join an existing run if one exists
 #3949 Fix incorrect reference in store api docs
@@ -4397,12 +4447,12 @@ Inflector and correct Ember Data's usage of it so that users' default
 3978 [BUGFIX beta] bump ember-inflector
 3983 [DOC beta] Fix documentation to use ""serializedHasManyName""
 3986 Move private modules into the -private directory"
-154,"Release 2.2.1 (November 25, 2015)
+155,"Release 2.2.1 (November 25, 2015)
 
 #3866 Allow store.push to accept { data: null }
 ","Release 2.2.1 (November 25, 2015)
 3866 Allow store.push to accept { data: null }"
-155,"Release 2.3.0-beta.1 (November 17, 2015)
+156,"Release 2.3.0-beta.1 (November 17, 2015)
 
 #3865 Assert that passed array to set a hasMany consists of records
 #3820 [CLEANUP] Remove duplicate test for creating record
@@ -4487,7 +4537,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 3931 update ember-cli to 1.13.12
 3937 [BUGFIX beta] Warn instead of asserting when a mapped key doesn't mat…
 3938 Update the changelog for Ember Data 2.2.0"
-156,"Release 2.2.0 (November 17, 2015)
+157,"Release 2.2.0 (November 17, 2015)
 
 #3937 [BUGFIX beta] Warn instead of asserting when a mapped key doesn't mat…
 #3868 Reset changed attributes when matching data is pushed
@@ -4570,7 +4620,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 3808 Update internal-model.js
 3814 [BUGFIX] Do not deserialize when a relationship named type exists
 3816 run optional feature tests on AppVeyor"
-157,"Release 2.2.0-beta.4 (November 11, 2015)
+158,"Release 2.2.0-beta.4 (November 11, 2015)
 
 #3868 Reset changed attributes when matching data is pushed
 #3875 [BUGFIX beta] serialize type for embedded, polymorphic belongsTo
@@ -4587,14 +4637,14 @@ Inflector and correct Ember Data's usage of it so that users' default
 3909 [BUGFIX beta] Correctly handle object level errors in json api
 3910 [BUGFIX release] Normalize attrs keys
 3912 Use public API for container/registry when possible."
-158,"Release 1.13.15 (November 9, 2015)
+159,"Release 1.13.15 (November 9, 2015)
 
 #3876 [BACKPORT] [BUGFIX beta] serialize type for embedded, polymorphic belongsTo
 #3891 Don't use Ember.create by default
 ","Release 1.13.15 (November 9, 2015)
 3876 [BACKPORT] [BUGFIX beta] serialize type for embedded, polymorphic belongsTo
 3891 Don't use Ember.create by default"
-159,"Release 2.2.0-beta.3 (October 27, 2015)
+160,"Release 2.2.0-beta.3 (October 27, 2015)
 
 #3835 [BUGFIX] extract polymorphic belongsTo in RESTSerializer
 #3887 [BUGFIX release] update ember-inflector to resolve default Inflector …
@@ -4603,7 +4653,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 3835 [BUGFIX] extract polymorphic belongsTo in RESTSerializer
 3887 [BUGFIX release] update ember-inflector to resolve default Inflector …
 3888 [BUGFIX release] import from ember-inflector to use the default instance"
-160,"Release 2.2.0-beta.2 (October 18, 2015)
+161,"Release 2.2.0-beta.2 (October 18, 2015)
 
 #3832 Fix API docs for JSONAPISerializer.normalize
 #3837 [BUGFIX] Attribute/relationship named ""type"" of embedded record is considered before normalization
@@ -4622,7 +4672,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 3859 [BUGFIX beta] Correctly handle invalid errors without payload or pointer
 3861 [BUGFIX beta] Assert that an array is returned from the normalized re…
 3867 Allow serializers to normalize response, remove old internal serializers code"
-161,"Release 1.13.14 (October 18, 2015)
+162,"Release 1.13.14 (October 18, 2015)
 
 #3665 [BUGFIX beta] Fix usage of registry for 2.1.0+.
 #3825 [BUGFIX] Restore IE8 compatibility by using Ember.create
@@ -4641,7 +4691,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 3847 [BUGFIX beta] JSONAPI serializer not respecting 'attrs' hash
 3857 [BUGFIX beta] rollbackAttributes() works after multiple failed saves
 3859 [BUGFIX beta] Correctly handle invalid errors without payload or pointer"
-162,"Release 2.2.0-beta.1 (October 5, 2015)
+163,"Release 2.2.0-beta.1 (October 5, 2015)
 
 #3697 Fix typo in CHANGELOG
 #3215 remove Map/MapWithDefault polyfills, use Ember's ones
@@ -4688,7 +4738,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 3814 [BUGFIX] Do not deserialize when a relationship named type exists
 3816 run optional feature tests on AppVeyor
 3817 Update the changelog for Ember Data 2.1.0"
-163,"Release 2.1.0 (October 5, 2015)
+164,"Release 2.1.0 (October 5, 2015)
 
 #3811 Format lists in JSONSerializer docs for rendering
 #3814 [BUGFIX] Do not deserialize when a relationship named type exists
@@ -4735,12 +4785,12 @@ Inflector and correct Ember Data's usage of it so that users' default
 3641 Improve InternalModel (2x - 3x faster)
 3649 Empty object
 3647 Adapter.query should be part of the public overrideable interface."
-164,"Release 2.1.0-beta.5 (September 28, 2015)
+165,"Release 2.1.0-beta.5 (September 28, 2015)
 
 #3781 [BUGFIX beta] Fix id property in DS.Model once and for all
 ","Release 2.1.0-beta.5 (September 28, 2015)
 3781 [BUGFIX beta] Fix id property in DS.Model once and for all"
-165,"Release 2.1.0-beta.4 (September 24, 2015)
+166,"Release 2.1.0-beta.4 (September 24, 2015)
 
 #3783 Update changelog for 2.0.1 release
 #3788 Port pr #3725 to the beta 2.0 branch
@@ -4753,7 +4803,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 3793 Map iteration has value, key params 'backwards'
 3794 [DOC release] Update documentation for store
 3796 [DOC release] Update documentation for EmbeddedRecordsMixin."
-166,"Release 2.1.0-beta.3 (September 17, 2015)
+167,"Release 2.1.0-beta.3 (September 17, 2015)
 
 #3764 [BUGFIX beta] Support JSON API links object
 15d4360c [BUGFIX release] Improve links vs. local data for relationships
@@ -4786,7 +4836,7 @@ Inflector and correct Ember Data's usage of it so that users' default
 3765 [BUGFIX beta] Fix JSONSerializer.serializeHasMany() issue #3760
 3782 [DOC release] Remove private label for findAll, query, queryRecord
 3762 [BUGFIX release] Improve links vs. local data for relationships"
-167,"Release 2.0.1 (September 17, 2015)
+168,"Release 2.0.1 (September 17, 2015)
 
 #3751 Remove normalizePayload, associated docs, and mention of functionality.
 #3762 [BUGFIX release] Improve links vs. local data for relationships
@@ -4805,14 +4855,14 @@ Inflector and correct Ember Data's usage of it so that users' default
 3778 [BUGFIX release] Remove deprecation on store.filter
 3779 [BUGFIX release] Remove store method deprecations
 3782 [DOC release] Remove private label for findAll, query, queryRecord"
-168,"Release 1.13.13 (September 17, 2015)
+169,"Release 1.13.13 (September 17, 2015)
 
 #3762 [BUGFIX release]
   Improve links vs. local data for relationships
 ","Release 1.13.13 (September 17, 2015)
 3762 [BUGFIX release]
 Improve links vs. local data for relationships"
-169,"Release 1.13.12 (September 10, 2015)
+170,"Release 1.13.12 (September 10, 2015)
 
 #3689 Backport empty-object performance improvements from 2.1.0-beta1
 #3690 [BUGFIX release-1-13] Ensure that service:store is cleared before regsitering.
@@ -4825,7 +4875,7 @@ Improve links vs. local data for relationships"
 3725 [BUGFIX release-1-13] Disable polymorphic deserialization when a mode…
 3753 Bumped the ember-inflector version to 1.9.2.
 3754 Do not run tests with Ember 2.0 in the Ember Data 1.13 appveyor builds"
-170,"Release 2.1.0-beta.2 (September 08, 2015)
+171,"Release 2.1.0-beta.2 (September 08, 2015)
 
 #3701 [BUGFIX release] fix regression where dynamically set id is not serialized in a create…
 #3714 Update the location of the custom store in the API doc example
@@ -4838,7 +4888,7 @@ Improve links vs. local data for relationships"
 3717 Remove Fixture Adapter
 3722 Shape and cleanup
 3732 follow up fixes for #3701"
-171,"Release 1.13.11 (August 21, 2015)
+172,"Release 1.13.11 (August 21, 2015)
 
 #3685 Fixing typo that causes Ember-Data v1.13.10 to crash with Ember v2.0.
 #3686 Fix broken rest-serializer test.
@@ -4847,7 +4897,7 @@ Please Note: Ember Data 1.13.x does not support Ember 2.1+. If you would like to
 3685 Fixing typo that causes Ember-Data v1.13.10 to crash with Ember v2.0.
 3686 Fix broken rest-serializer test.
 Please Note: Ember Data 1.13.x does not support Ember 2.1+. If you would like to use Ember Data with Ember 2.1 or greater please upgrade to Ember Data 2.0"
-172,"Release 2.1.0-beta.1 (August 20, 2015)
+173,"Release 2.1.0-beta.1 (August 20, 2015)
 Changes from Ember Data 2.0.0
 
 #3641 Improve InternalModel (2x - 3x faster)
@@ -4858,7 +4908,7 @@ Changes from Ember Data 2.0.0
 3641 Improve InternalModel (2x - 3x faster)
 3649 Empty object
 3647 Adapter.query should be part of the public overrideable interface."
-173,"Release 2.0.0 (August 20, 2015)
+174,"Release 2.0.0 (August 20, 2015)
 Breaking Changes
 Usaved deleted records are no longer removed from hasMany relationships and RecordArrays returned by the store
 In Ember Data 1.13 once a record was marked as deleted it was removed from all of the RecordArrays and hasMany arrays it belongTo. This made it difficult to create UIs where a user could flag a record for deletion but still allow the user the ability to un-flag the record until the save request was made.
@@ -4999,7 +5049,7 @@ Changes
 3533 [CLEANUP beta] Remove console.log() call
 3567 Use Ember.$ instead of jQuery for AJAX requests
 3570 Update Ember.deprecate and Ember.warn calls to include required information"
-174,"Release 1.13.10 (August 20, 2015)
+175,"Release 1.13.10 (August 20, 2015)
 
 #3577 Use the correct modelClass and serializer to extract a polymorphic
 #3667 Don’t crash \w Ember 2.0
@@ -5008,7 +5058,7 @@ Please Note: Ember Data 1.13.x does not support Ember 2.1+. If you would like to
 3577 Use the correct modelClass and serializer to extract a polymorphic
 3667 Don’t crash \w Ember 2.0
 Please Note: Ember Data 1.13.x does not support Ember 2.1+. If you would like to use Ember Data with Ember 2.1 or greater please upgrade to Ember Data 2.0"
-175,"Release 2.0.0-beta.2 (August 14, 2015)
+176,"Release 2.0.0-beta.2 (August 14, 2015)
 Breaking Changes
 The live updating filterBy (introduced in 2.0.0-beta.1) on RecordArrays and ManyArrays has been
 reverted because it broke semver and existing applications. filterBy once again returns a normal array. See #3263. 
@@ -5025,7 +5075,7 @@ Changes
 3651 [DOC release] Update changelog for 1.13.9
 3653 [BUGFIX beta] Update the dependencies for Ember 2.0
 3654 Revert the live filterBy changes in Ember Data beta.1"
-176,"Release 1.13.9 (August 13, 2015)
+177,"Release 1.13.9 (August 13, 2015)
 Breaking Changes
 The live updating filterBy (introduced in 1.13.8) on RecordArrays and ManyArrays has been
 reverted because it broke semver and existing applications. See #3263.
@@ -5044,7 +5094,7 @@ Changes
 3639 Remove todo in API doc
 3648 Revert filter by
 3623 [BUGFIX release] Update ember-inflector to 1.9.0 (This commit was included in 1.13.8 but 1.13.8 was built with an old ember-inflector dependency by mistake.)"
-177,"Release 2.0.0-beta.1 (August 6, 2015)
+178,"Release 2.0.0-beta.1 (August 6, 2015)
 Breaking Changes
 Unsaved deleted records are no longer removed from hasMany relationships and RecordArrays returned by the store
 In Ember Data 1.13 once a record was marked as deleted it was removed from all of the RecordArrays and hasMany arrays it belongTo. This made it difficult to create UIs where a user could flag a record for deletion but still allow the user the ability to un-flag the record until the save request was made.
@@ -5171,7 +5221,7 @@ Changes
 3533 [CLEANUP beta] Remove console.log() call
 3567 Use Ember.$ instead of jQuery for AJAX requests
 3570 Update Ember.deprecate and Ember.warn calls to include required information"
-178,"Release 1.13.8 (August 6, 2015)
+179,"Release 1.13.8 (August 6, 2015)
 3608 [BUGFIX release] Validate JSON API docs returned by normalizeResponse
 3591 DS.Store#findQuery overrides DS.Store#query docs
 3263 Add RecordArray#filterBy which contains a live, filtered subset
@@ -5194,7 +5244,7 @@ Changes
 3622 Fix failing tests from merging PR #3263
 3623 [BUGFIX release] Update ember-inflector to 1.9.0
 3624 Implement filterBy on DS.ManyArray"
-179,"Release 1.13.7 (July 27, 2015)
+180,"Release 1.13.7 (July 27, 2015)
 3554 Add queryRecord method to the RESTAdapter
 3553 Reversed args in Ember.Observer
 3531 Adds some documentation for JSONApiSerializer
@@ -5219,7 +5269,7 @@ Changes
 3575 [BUGFIX release] Update Ember.deprecate and Ember.warn calls to include required information
 3582 [BUGFIX release] Fix unconsistent behavior in Model.changedAttributes
 3590 Update bin/changelog to deal with cherry-picked commits"
-180,"Changelog
+181,"Changelog
 
 #3437 Deprecate normalizePayload and normalizeHash @wecc
 #3478 Fix Ember Data build with fresh install @sly7-7

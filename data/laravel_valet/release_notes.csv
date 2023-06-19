@@ -1,21 +1,26 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"
+Load specific drivers before custom drivers to allow for extension. by @mattstauffer in https://github.com/laravel/valet/pull/1414
+Ensure base configuration is correct even if file already exists by @mattstauffer in https://github.com/laravel/valet/pull/1415
+","Load specific drivers before custom drivers to allow for extension. by @mattstauffer in link
+Ensure base configuration is correct even if file already exists by @mattstauffer in link"
+2,"
 Install older PHP versions via alternate tap by @drbyte in https://github.com/laravel/valet/pull/1411
 ",Install older PHP versions via alternate tap by @drbyte in link
-2,"
+3,"
 Add driver for Radicle by @csorrentino in https://github.com/laravel/valet/pull/1413
 ",Add driver for Radicle by @csorrentino in link
-3,"
+4,"
 Fix ngrok.io proxy/forwarding detection by @drbyte in https://github.com/laravel/valet/pull/1404
 Fix read non existing config file by @mischabraam in https://github.com/laravel/valet/pull/1398
 ","Fix ngrok.io proxy/forwarding detection by @drbyte in link
 Fix read non existing config file by @mischabraam in link"
-4,"
+5,"
 Fixes Valet\Drivers\LocalValetDriver not found error by @fylzero in https://github.com/laravel/valet/pull/1388
 More robust check for Bedrock environments by @ethanclevenger91 in https://github.com/laravel/valet/pull/1390
 ","Fixes Valet\Drivers\LocalValetDriver not found error by @fylzero in link
 More robust check for Bedrock environments by @ethanclevenger91 in link"
-5,"Welcome to Valet v4! This release is mostly about re-writing the internals so they're easier to debug, fix, and modify. There are a few user-facing additions and improvements, including but not limited to: ngrok is now managed by Homebrew, .valetphprc is replaced with a more powerful .valetrc, you can use Expose to share, there's a new status command to make sure all your services are running correctly, and a lot of the other existing commands work even better than ever before.
+6,"Welcome to Valet v4! This release is mostly about re-writing the internals so they're easier to debug, fix, and modify. There are a few user-facing additions and improvements, including but not limited to: ngrok is now managed by Homebrew, .valetphprc is replaced with a more powerful .valetrc, you can use Expose to share, there's a new status command to make sure all your services are running correctly, and a lot of the other existing commands work even better than ever before.
 Added
 
 Add Expose support by @mattstauffer in https://github.com/laravel/valet/pull/1344 and https://github.com/laravel/valet/pull/1349
@@ -66,20 +71,20 @@ Fixed
 Unsecure when unlinking by @mattstauffer in link
 Update phpRc reader to check cwd before checking config, if cwd specified by @mattstauffer in link
 Remove Valet Certificate Authority on uninstall by @mattstauffer in link"
-6,"
+7,"
 Valet version 4 by @mattstauffer in https://github.com/laravel/valet/pull/1318
 ",Valet version 4 by @mattstauffer in link
-7,"Fixed
+8,"Fixed
 
 Enable local network sharing by @thinkverse in https://github.com/laravel/valet/pull/1284
 ","Fixed
 Enable local network sharing by @thinkverse in link"
-8,"Fixed
+9,"Fixed
 
 Make 127.0.0.1 SERVER_ADDR definition only if null by @mattstauffer in https://github.com/laravel/valet/pull/1356
 ","Fixed
 Make 127.0.0.1 SERVER_ADDR definition only if null by @mattstauffer in link"
-9,"Added
+10,"Added
 
 Add set-ngrok-token command by @mattstauffer in https://github.com/laravel/valet/pull/1325
 Laravel v10 Support by @driesvints in https://github.com/laravel/valet/pull/1341
@@ -92,17 +97,17 @@ Add set-ngrok-token command by @mattstauffer in link
 Laravel v10 Support by @driesvints in link
 Fixed
 Fixes permission denied check when result starts with 'Permission denied' by @matthewjohns0n in link"
-10,"Fixed
+11,"Fixed
 
 Fix how drivers are available for extension by @mattstauffer in https://github.com/laravel/valet/pull/1317
 ","Fixed
 Fix how drivers are available for extension by @mattstauffer in link"
-11,"Fixed
+12,"Fixed
 
 Fix autoloading in distribution by @mattstauffer in https://github.com/laravel/valet/commit/35998a0f86b9d57b5766f2663a41a2c99af3d579
 ","Fixed
 Fix autoloading in distribution by @mattstauffer in link"
-12,"Changed
+13,"Changed
 
 When formatting provided site name, only remove .tld if it's at the end by @ErikDohmen in https://github.com/laravel/valet/pull/1297
 Set files path as a static path for concrete5 driver by @KorvinSzanto in https://github.com/laravel/valet/pull/514
@@ -123,70 +128,70 @@ Move all drivers to PSR autoload, and write tests for drivers by @mattstauffer i
 Fixed
 Retain secure proxies by @ashleyshenton in link
 Prevent 502 errors when using AJAX by @mattkingshott in link"
-13,"Fixed
+14,"Fixed
 
 Fix bedrockvaletdriver by @EHLOVader in https://github.com/laravel/valet/pull/1289
 ","Fixed
 Fix bedrockvaletdriver by @EHLOVader in link"
-14,"Changed
+15,"Changed
 
 Valet fetch-share-url issue fix by @NasirNobin in https://github.com/laravel/valet/pull/1285
 Add description to secured command by @EvanGoss in https://github.com/laravel/valet/pull/1288
 ","Changed
 Valet fetch-share-url issue fix by @NasirNobin in link
 Add description to secured command by @EvanGoss in link"
-15,"Fixed
+16,"Fixed
 
 Update version by @driesvints in https://github.com/laravel/valet/commit/6f1e4d421bfa7a206133e971a186de708c963adf
 ","Fixed
 Update version by @driesvints in link"
-16,"Changed
+17,"Changed
 
 PHP 8.2 support by @driesvints in https://github.com/laravel/valet/pull/1279
 ","Changed
 PHP 8.2 support by @driesvints in link"
-17,"Fixed
+18,"Fixed
 
 Fix version number
 ","Fixed
 Fix version number"
-18,"Fixed
+19,"Fixed
 
 Revert ngrok arm binary by @driesvints in https://github.com/laravel/valet/pull/1258
 ","Fixed
 Revert ngrok arm binary by @driesvints in link"
-19,"What's Changed
+20,"What's Changed
 
 Update Ngrok (valet share) to lowercase domains before matching by @mattstauffer in https://github.com/laravel/valet/pull/1253
 
 Full Changelog: https://github.com/laravel/valet/compare/v3.1.6...v3.1.7","What's Changed
 Update Ngrok (valet share) to lowercase domains before matching by @mattstauffer in link
 Full Changelog: link"
-20,"
+21,"
 Add extra info output to phpfpm install method
 
 Full Changelog: https://github.com/laravel/valet/compare/v3.1.5...v3.1.6","Add extra info output to phpfpm install method
 Full Changelog: link"
-21,"What's Changed
+22,"What's Changed
 
 Remove preg_replace deprecation warning by @NasirNobin in https://github.com/laravel/valet/pull/1242
 
 Full Changelog: https://github.com/laravel/valet/compare/v3.1.4...v3.1.5","What's Changed
 Remove preg_replace deprecation warning by @NasirNobin in link
 Full Changelog: link"
-22,"What's Changed
+23,"What's Changed
 
 Confirm tld command by @driesvints in https://github.com/laravel/valet/pull/1244
 
 Full Changelog: https://github.com/laravel/valet/compare/v3.1.3...v3.1.4","What's Changed
 Confirm tld command by @driesvints in link
 Full Changelog: link"
-23,"
+24,"
 Roll back #1088 
 
 Full Changelog: https://github.com/laravel/valet/compare/v3.1.2...v3.1.3","Roll back #1088 
 Full Changelog: link"
-24,"What's Changed
+25,"What's Changed
 
 Add PHP version to valet links output table by @michaellehmkuhl in https://github.com/laravel/valet/pull/1229
 Add support for parked domains to some commands by @antonioribeiro in https://github.com/laravel/valet/pull/1088
@@ -201,21 +206,21 @@ Add support for parked domains to some commands by @antonioribeiro in link
 New Contributors
 @michaellehmkuhl made their first contribution in link
 Full Changelog: link"
-25,"What's Changed
+26,"What's Changed
 
 Isolation compatibility with .valetphprc by @NasirNobin in https://github.com/laravel/valet/pull/1213
 
 Full Changelog: https://github.com/laravel/valet/compare/v3.1.0...v3.1.1","What's Changed
 Isolation compatibility with .valetphprc by @NasirNobin in link
 Full Changelog: link"
-26,"What's Changed
+27,"What's Changed
 
 PHP version isolation helper for command line by @NasirNobin in https://github.com/laravel/valet/pull/1216
 
 Full Changelog: https://github.com/laravel/valet/compare/v3.0.1...v3.1.0","What's Changed
 PHP version isolation helper for command line by @NasirNobin in link
 Full Changelog: link"
-27,"What's Changed
+28,"What's Changed
 
 When stopping Homebrew services, restore original folder permissions by @nicoverbruggen in https://github.com/laravel/valet/pull/1223
 
@@ -228,7 +233,7 @@ When stopping Homebrew services, restore original folder permissions by @nicover
 New Contributors
 @nicoverbruggen made their first contribution in link
 Full Changelog: link"
-28,"What's Changed
+29,"What's Changed
 
 Multiple/Parallel PHP Version Support
 Multiple/Parallel PHP Version Support for Valet by @NasirNobin in https://github.com/laravel/valet/pull/1192
@@ -257,28 +262,28 @@ New Contributors
 @NasirNobin made their first contribution in link
 @BurningDog made their first contribution in link
 Full Changelog: link"
-29,"What's Changed
+30,"What's Changed
 
 Add --site flag to isolate and unisolate commands by @mattstauffer in https://github.com/laravel/valet/pull/1212
 
 Full Changelog: https://github.com/laravel/valet/compare/v3.0.0-alpha.2...v3.0.0-alpha.3","What's Changed
 Add --site flag to isolate and unisolate commands by @mattstauffer in link
 Full Changelog: link"
-30,"What's Changed
+31,"What's Changed
 
 Only look for certificate files when looking for secured sites by @mattstauffer in https://github.com/laravel/valet/commit/c8e70396e4039e3a632d575b42927800fb95b53a
 
 Full Changelog: https://github.com/laravel/valet/compare/v3.0.0-alpha.1...v3.0.0-alpha.2","What's Changed
 Only look for certificate files when looking for secured sites by @mattstauffer in link
 Full Changelog: link"
-31,"What's Changed
+32,"What's Changed
 
 Fix Homebrew PHP default www pools issue on Valet 3.0 alpha by @NasirNobin in https://github.com/laravel/valet/pull/1208
 
 Full Changelog: https://github.com/laravel/valet/compare/v3.0.0-alpha...v3.0.0-alpha1","What's Changed
 Fix Homebrew PHP default www pools issue on Valet 3.0 alpha by @NasirNobin in link
 Full Changelog: link"
-32,"What's Changed
+33,"What's Changed
 
 Multiple/Parallel PHP Version Support for Valet
 Original PR by @NasirNobin in https://github.com/laravel/valet/pull/1192
@@ -299,28 +304,28 @@ Updated again to use symlinks in link
 New Contributors
 @NasirNobin made their first contribution in link
 Full Changelog: link"
-33,"What's Changed
+34,"What's Changed
 
 Add ""secured"" command by @mattstauffer in https://github.com/laravel/valet/pull/1203
 
 Full Changelog: https://github.com/laravel/valet/compare/v2.18.9...v2.18.10","What's Changed
 Add ""secured"" command by @mattstauffer in link
 Full Changelog: link"
-34,"Fixed
+35,"Fixed
 
 Fixed an issue with wrong configured variable in Valet's bash script
 
 Full Changelog: https://github.com/laravel/valet/compare/v2.18.8...v2.18.9","Fixed
 Fixed an issue with wrong configured variable in Valet's bash script
 Full Changelog: link"
-35,"What's Changed
+36,"What's Changed
 
 Laravel 9 support by @driesvints in https://github.com/laravel/valet/pull/1181
 
 Full Changelog: https://github.com/laravel/valet/compare/v2.18.7...v2.18.8","What's Changed
 Laravel 9 support by @driesvints in link
 Full Changelog: link"
-36,"What's Changed
+37,"What's Changed
 
 Stop root homebrew services on php version switch by @cristiancalara in https://github.com/laravel/valet/pull/1178
 
@@ -333,95 +338,95 @@ Stop root homebrew services on php version switch by @cristiancalara in link
 New Contributors
 @cristiancalara made their first contribution in link
 Full Changelog: link"
-37,"Fixed
+38,"Fixed
 
 Fix syntax error in ./valet (#1183)
 ","Fixed
 Fix syntax error in ./valet (#1183)"
-38,"What's Changed
+39,"What's Changed
 
 Add ARM support for ngrok by @driesvints in https://github.com/laravel/valet/pull/1182
 
 Full Changelog: https://github.com/laravel/valet/compare/v2.18.4...v2.18.5","What's Changed
 Add ARM support for ngrok by @driesvints in link
 Full Changelog: link"
-39,"
+40,"
 Fix warnings when using Valet in non-CLI context (#1169)
 ",Fix warnings when using Valet in non-CLI context (#1169)
-40,"Fixed
+41,"Fixed
 
 Fix some more Guzzle compatibility issues (f980900)
 ","Fixed
 Fix some more Guzzle compatibility issues (f980900)"
-41,"Fixed
+42,"Fixed
 
 Fix an issue with valet on-latest-version (#1164)
 ","Fixed
 Fix an issue with valet on-latest-version (#1164)"
-42,"
+43,"
 Avoid expiring of the root certificate authority by extending it to last 20 years (#1161)
 ",Avoid expiring of the root certificate authority by extending it to last 20 years (#1161)
-43,"
+44,"
 Replace HTTPful (un-managed) with Guzzle (#1163)
 ",Replace HTTPful (un-managed) with Guzzle (#1163)
-44,"
+45,"
 Fix certificate generation bug introduced in v2.17.0 (#1155)
 ",Fix certificate generation bug introduced in v2.17.0 (#1155)
-45,"
+46,"
 Default SSL certificates to shorter duration (per Chrome 58), allow for manual duration setting when securing (#1154)
 ","Default SSL certificates to shorter duration (per Chrome 58), allow for manual duration setting when securing (#1154)"
-46,"
+47,"
 Set Brew highest PHP version to 8.1 (#1111)
 Update constraints (#1151)
 ","Set Brew highest PHP version to 8.1 (#1111)
 Update constraints (#1151)"
-47,"
+48,"
 Allow execution of custom PHP files in Bedrock projects (#1094)
 Add alias latest for on-latest-version command (#1089)
 ","Allow execution of custom PHP files in Bedrock projects (#1094)
 Add alias latest for on-latest-version command (#1089)"
-48,"
+49,"
 Add the ability to define a given project's preferred PHP version using a .valetphprc file in the project root, and then switch to that version when in that folder by running valet use (#1083)
 ","Add the ability to define a given project's preferred PHP version using a .valetphprc file in the project root, and then switch to that version when in that folder by running valet use (#1083)"
-49,"
+50,"
 Update default ngrok binary (#1082)
 ",Update default ngrok binary (#1082)
-50,"
+51,"
 Set the $_SERVER['SCRIPT_FILENAME'] to the front controller path (#1072, closes #1071)
 ","Set the $_SERVER['SCRIPT_FILENAME'] to the front controller path (#1072, closes #1071)"
-51,"
+52,"
 Fix subdomains using root link (#1068)
 ",Fix subdomains using root link (#1068)
-52,"
+53,"
 Stop non-root Valet-managed Brew services during stop and install (#1069)
 ",Stop non-root Valet-managed Brew services during stop and install (#1069)
-53,"
+54,"
 Fix subdomains pointing to root path (#1040)
 ",Fix subdomains pointing to root path (#1040)
-54,"
+55,"
 Add the ability to proxy insecurely (#1005)
 ",Add the ability to proxy insecurely (#1005)
-55,"
+56,"
 Make small changes to allow Valet to be included as a dependency in non-CLI apps (#1050)
 ",Make small changes to allow Valet to be included as a dependency in non-CLI apps (#1050)
-56,"
+57,"
 Add loopback command for Docker users (#1039)
 ",Add loopback command for Docker users (#1039)
-57,"
+58,"
 Fix issues with valet share on Hyper terminal (#1029)
 ",Fix issues with valet share on Hyper terminal (#1029)
-58,"
+59,"
 Delete rogue valet.sock files when changing PHP versions (#1028)
 Prioritize linked subdomains over basic park match (#1018)
 ","Delete rogue valet.sock files when changing PHP versions (#1028)
 Prioritize linked subdomains over basic park match (#1018)"
-59,"
+60,"
 Fix Valet Bin dir linking for ARM/M1 Macs (#1025)
 ",Fix Valet Bin dir linking for ARM/M1 Macs (#1025)
-60,"
+61,"
 Fix a bug with an un-imported Exception (#1014)
 ",Fix a bug with an un-imported Exception (#1014)
-61,"
+62,"
 Just a note that 2.13.14 was supposed to be 2.13.4 but I have fat fingers.
 Update the test suite to PHPUnit 9.5 (#1004)
 Specify 8.0 as the latest PHP version (#1006)
@@ -432,57 +437,57 @@ Update the test suite to PHPUnit 9.5 (#1004)
 Specify 8.0 as the latest PHP version (#1006)
 Include resolve conf in diagnose output (#1007)
 Improve the 'valet use' command (#1008)"
-62,"
+63,"
 Point PHP-FPM error_log to user directory (#996)
 ",Point PHP-FPM error_log to user directory (#996)
-63,"
+64,"
 Update Brew commands to remove deprecation warning (#1003)
 ",Update Brew commands to remove deprecation warning (#1003)
-64,"
+65,"
 Fix bug introduced in v2.13.1 that failed to prioritize subdomain matches before full domain matches with Valet link (#997)
 ",Fix bug introduced in v2.13.1 that failed to prioritize subdomain matches before full domain matches with Valet link (#997)
-65,"
+66,"
 Fix VS Code using the wrong user when launched  from the Dock, Spotlight, or Finder (#943) 
 Allow serving from case-sensitive file systems (#952) 
 Call Brew packages using the Brew-defined path instead of hard-coded /usr/local (#992)
 ","Fix VS Code using the wrong user when launched  from the Dock, Spotlight, or Finder (#943) 
 Allow serving from case-sensitive file systems (#952) 
 Call Brew packages using the Brew-defined path instead of hard-coded /usr/local (#992)"
-66,"
+67,"
 Add support for PHP8 (https://github.com/laravel/valet/pull/987)
 Fix TLD bugs (https://github.com/laravel/valet/pull/990)
 Make tunnel services configurable (https://github.com/laravel/valet/pull/954)
 ","Add support for PHP8 (link)
 Fix TLD bugs (link)
 Make tunnel services configurable (link)"
-67,"
+68,"
 Support Illuminate 8.0 components (#979)
 ",Support Illuminate 8.0 components (#979)
-68,"
+69,"
 Allow support for Kirby's files above the webroot (https://github.com/laravel/valet/pull/740)
 ",Allow support for Kirby's files above the webroot (link)
-69,"
+70,"
 Alias ""forget"" to ""unpark"" (#957)
 Disallow running ""forget"" inside the config sites folder (#958)
 Alias dev-master to 2.x-dev (#950)
 ","Alias ""forget"" to ""unpark"" (#957)
 Disallow running ""forget"" inside the config sites folder (#958)
 Alias dev-master to 2.x-dev (#950)"
-70,"
+71,"
 Drop unnecessary special nginx directives in proxied sites (#949)
 ",Drop unnecessary special nginx directives in proxied sites (#949)
-71,"
+72,"
 Tweak diagnose command to only report brew-related commands in the Launch* lists.  (#942)
 ",Tweak diagnose command to only report brew-related commands in the Launch* lists.  (#942)
-72,"
+73,"
 Add ""diagnose"" command (#938)
 Add proxy site-handling commands (#913)
 ","Add ""diagnose"" command (#938)
 Add proxy site-handling commands (#913)"
-73,"
+74,"
 Allow for Tightenco collect 7.0+ (#929)
 ",Allow for Tightenco collect 7.0+ (#929)
-74,"
+75,"
 
 888: Add a directory-listing setting
 
@@ -499,12 +504,12 @@ Allow for Tightenco collect 7.0+ (#929)
 898: Update nginx.conf to re-organize
 916: Update PHP memory limit (Only takes effect after running valet install, or when valet use php@X.Y installs a new X.Y PHP version)
 922 : Allow Illuminate Container 7.0+"
-75,"
+76,"
 
 891 - Clean up old TLD config files when switching TLD or uninstalling
 
 ",891 - Clean up old TLD config files when switching TLD or uninstalling
-76,"
+77,"
 
 892 - Reduce internal code duplication
 
@@ -525,17 +530,17 @@ Allow for Tightenco collect 7.0+ (#929)
 895 - Detect running version of PHP when use is called with no version number
 874 - Allow for starting, stopping and resetting individual services
 894 - Use semicolons instead of hashes for PHP configs"
-77,"
+78,"
 
 881 - Enable multiple command line arguments passed to ngrok
 
 ",881 - Enable multiple command line arguments passed to ngrok
-78,"
+79,"
 
 870: Allow valet share to support multiple domains from same app
 
 ",870: Allow valet share to support multiple domains from same app
-79,"
+80,"
 
 871: Update ngrok binary to 2.3.35
 
@@ -544,7 +549,7 @@ Allow for Tightenco collect 7.0+ (#929)
 
 ","871: Update ngrok binary to 2.3.35
 872: Fix auto-detection amongst multiple ngrok processes"
-80,"
+81,"
 
 835 - Don't show sites in ""parked"" if they won't be served
 
@@ -589,31 +594,31 @@ Allow for Tightenco collect 7.0+ (#929)
 864 - Fix domain auto-detection for multilple ngrok processes
 858 - Move PHP-FPM config to a separate file for easier debugging
 856 - Move DNSMasq config to a separate folder for easier debugging"
-81,"
+82,"
 Add support for PHP 7.4 (https://github.com/laravel/valet/pull/847)
 Add support for Symfony Process 5.0 (https://github.com/laravel/valet/pull/845)
 ","Add support for PHP 7.4 (link)
 Add support for Symfony Process 5.0 (link)"
-82,"
+83,"
 Fix secure bug introduced by Symfony Process 4.4.0 (#843)
 ",Fix secure bug introduced by Symfony Process 4.4.0 (#843)
-83,"
+84,"
 Fix a bug in parked command to not show ""parked"" files, just directories (#834)
 Fix fastcgi_split_path_info config to allow slash-based paths (#832)
 ","Fix a bug in parked command to not show ""parked"" files, just directories (#834)
 Fix fastcgi_split_path_info config to allow slash-based paths (#832)"
-84,"
+85,"
 Fix plus symbols in paths (#830)
 ",Fix plus symbols in paths (#830)
-85,"
+86,"
 Only stop the current version of PHP, instead of all, when running stop (#826) 
 Fix code that checks whether multi-segment domains are secured (#825)
 Add parked command to show which sites have been registered to show via the park {path} command (#824)
 ","Only stop the current version of PHP, instead of all, when running stop (#826) 
 Fix code that checks whether multi-segment domains are secured (#825)
 Add parked command to show which sites have been registered to show via the park {path} command (#824)"
-86,Revert #813.,Revert #813.
-87,"
+87,Revert #813.,Revert #813.
+88,"
 Allow for longer domain names (#818)
 Increase nginx buffer sizes in dev (#813)
 Disable logging for missing favicon and robots.txt (#819)
@@ -622,7 +627,7 @@ Disable logging for missing favicon and robots.txt (#819)
 Increase nginx buffer sizes in dev (#813)
 Disable logging for missing favicon and robots.txt (#819)
 @drbyte FTW ❤️ "
-88,"
+89,"
 Allow HTTP2 push for secured domains (#573)
 Add Chinese translation to Statamic driver (#738)
 Fire the .valet-env detection earlier (#811)
@@ -633,51 +638,51 @@ Add Chinese translation to Statamic driver (#738)
 Fire the .valet-env detection earlier (#811)
 Add Illuminate 6.0 compatibility (#816)
 Update ngrok (#812)"
-89,"
+90,"
 Fix valet log command for folks with local Collect @ < 5.6.6 (#781)
 ",Fix valet log command for folks with local Collect @ < 5.6.6 (#781)
-90,"
+91,"
 Version bump of shame
 ",Version bump of shame
-91,"
+92,"
 Preserve user Home and env when calling sudo command (#770)
 Fix ""sudo: sorry, you are not allowed to preserve the environment"" message (#780)
 Add JSON:API support for Drupal (#705)
 ","Preserve user Home and env when calling sudo command (#770)
 Fix ""sudo: sorry, you are not allowed to preserve the environment"" message (#780)
 Add JSON:API support for Drupal (#705)"
-92,"
+93,"
 Add log feature (https://github.com/laravel/valet/pull/757)
 ",Add log feature (link)
-93,"
+94,"
 Add HOME autoload for easier local dev (https://github.com/laravel/valet/pull/767)
 Better fix the Process error temporarily fixed in v2.2.4 (https://github.com/laravel/valet/pull/766)
 Recursively search for matching drivers (https://github.com/laravel/valet/pull/591)
 ","Add HOME autoload for easier local dev (link)
 Better fix the Process error temporarily fixed in v2.2.4 (link)
 Recursively search for matching drivers (link)"
-94,"
+95,"
 Revert #761 to fix a bug described in #763 (#764) for people with old versions of Symfony's Process component
 ",Revert #761 to fix a bug described in #763 (#764) for people with old versions of Symfony's Process component
-95,"
+96,"
 Fix issue with CA serial params
 Fix deprecated Process argument passed as string
 ","Fix issue with CA serial params
 Fix deprecated Process argument passed as string"
-96,"
+97,"
 Squash a ""file not exists"" error (#747)
 Better handle SSL certificate creation (#721)
 ","Squash a ""file not exists"" error (#747)
 Better handle SSL certificate creation (#721)"
-97,Version bump of shame,Version bump of shame
-98,"
+98,Version bump of shame,Version bump of shame
+99,"
 Allow for PHP version switching with valet use php@7.2 (#710)
 Fix more of how Valet references, loads, and tests PHP versions because of changes to Homebrew (#711, #720)
 Update nginx code given Homebrew's removal of options from packages (#726) 
 ","Allow for PHP version switching with valet use php@7.2 (#710)
 Fix more of how Valet references, loads, and tests PHP versions because of changes to Homebrew (#711, #720)
 Update nginx code given Homebrew's removal of options from packages (#726) "
-99,"
+100,"
 Better handle static file serving for subfolders (https://github.com/laravel/valet/pull/542)
 Better handle folder names with spaces in them (https://github.com/laravel/valet/pull/692)
 Allow for loading server environment variables from .valet-env.php (https://github.com/laravel/valet/pull/474)
@@ -686,8 +691,8 @@ Re-work PHP resolution in response to Homebrew PHP changes (https://github.com/l
 Better handle folder names with spaces in them (link)
 Allow for loading server environment variables from .valet-env.php (link)
 Re-work PHP resolution in response to Homebrew PHP changes (link, link, link)"
-100,Version bump (:shame face:) (https://github.com/laravel/valet/commit/af007f995853b68abcc01c7800c6ab2657b54c0e#commitcomment-31604184),Version bump (:shame face:) (link)
-101,"
+101,Version bump (:shame face:) (https://github.com/laravel/valet/commit/af007f995853b68abcc01c7800c6ab2657b54c0e#commitcomment-31604184),Version bump (:shame face:) (link)
+102,"
 Support PHP 7.3
 Handle usernames with spaces
 Check for config directory
@@ -696,22 +701,22 @@ PHP 7.3 upgrade notes from @drbyte: https://github.com/laravel/valet/pull/683#is
 Handle usernames with spaces
 Check for config directory
 PHP 7.3 upgrade notes from @drbyte: link"
-102,"
+103,"
 better sanity checks for ->tld in config
 Move secure port from 88 (because of conflicts) to 60
 ","better sanity checks for ->tld in config
 Move secure port from 88 (because of conflicts) to 60"
-103,"
+104,"
 Fix sharing secured sites through ngrok
 Update ngrok binary to 2.2.8
 Minor changes to Drupal, Statamic, and Contao drivers
 ","Fix sharing secured sites through ngrok
 Update ngrok binary to 2.2.8
 Minor changes to Drupal, Statamic, and Contao drivers"
-104,"
+105,"
 Keeps preexisting users from having to run valet install to import their configuration settings when upgrading to 2.1.* (https://github.com/laravel/valet/pull/636)
 ",Keeps preexisting users from having to run valet install to import their configuration settings when upgrading to 2.1.* (link)
-105,"🎉
+106,"🎉
 
 Drop old taps
 Move helpers into the Valet namespace
@@ -728,16 +733,16 @@ Unlink manually-renamed links
 Allow SSI
 Rename valet domain to valet tld
 There have also been a lot of smaller changes to drivers and smaller implementation details."
-106,"
+107,"
 Fix bug with incorrectly reported PHP FPM path
 ",Fix bug with incorrectly reported PHP FPM path
-107,"
+108,"
 More fixes for changes to how Homebrew manages PHP versions
 ",More fixes for changes to how Homebrew manages PHP versions
-108,"
+109,"
 Fixes for changes to how Homebrew manages PHP versions
 ",Fixes for changes to how Homebrew manages PHP versions
-109,"
+110,"
 Show some useful output about what Valet is doing during installation/restart
 Add support for Craft 3 Beta
 Test for nginx config errors before attempting to restart Valet
@@ -752,7 +757,7 @@ Prevent access to valet CLI commands that don't work until valet install is run
 Add Magento 2 driver
 Fixes for CakePHP 3 driver
 Add support for PHP 7.2"
-110,"
+111,"
 Better handling of large file uploads
 Prettier output for linked sites
 Make PHP 5.6 an explicit requirement (wouldn't work without 5.6 already, but composer.json was missing this info)
@@ -771,42 +776,42 @@ Support adding a directory to valet open
 Support wildcard TLS certificates
 Don't create sudoer entry for Valet by default
 Various minor tweaks and fixes"
-111,,
 112,,
 113,,
-114,"
+114,,
+115,"
 Explicitly set which port PHP FPM listens on during installation to avoid issues when users move from master to the current tag stream
 ",Explicitly set which port PHP FPM listens on during installation to avoid issues when users move from master to the current tag stream
-115,"
+116,"
 Automatically regenerate TLS Caddyfiles on valet install to make migrating from dev-master to a tagged release easier
 ",Automatically regenerate TLS Caddyfiles on valet install to make migrating from dev-master to a tagged release easier
-116,"
+117,"
 Use Caddy 0.9.1
 Support for Sierra
 ","Use Caddy 0.9.1
 Support for Sierra"
-117,"
+118,"
 Set DOCUMENT_ROOT environment variable to improve support for sites served by basic driver
 Fix bug where Caddyfiles for TLS sites were being generated with the literal string VALET_HOME_PATH instead of the environment variable value
 ","Set DOCUMENT_ROOT environment variable to improve support for sites served by basic driver
 Fix bug where Caddyfiles for TLS sites were being generated with the literal string VALET_HOME_PATH instead of the environment variable value"
-118,"
+119,"
 Add support for viewing Caddy logs
 Allow optionally specifying a path in park and forget commands to be used instead of the current working directory
 ","Add support for viewing Caddy logs
 Allow optionally specifying a path in park and forget commands to be used instead of the current working directory"
-119,"
+120,"
 Move Drupal driver to correct location
 ",Move Drupal driver to correct location
-120,"
+121,"
 Fix error in bash script
 Update version
 ","Fix error in bash script
 Update version"
-121,"
+122,"
 Remove experimental undocumented features from tagged release stream
 ",Remove experimental undocumented features from tagged release stream
-122,"
+123,"
 Allow Valet to operate under PHP 7.1
 Add Drupal 7 and 8 drivers
 Support Symfony < 3.0
@@ -815,17 +820,17 @@ Minor tweaks and improvements
 Add Drupal 7 and 8 drivers
 Support Symfony < 3.0
 Minor tweaks and improvements"
-123,"
+124,"
 Fix issue with trying to change domain before ever securing a site
 ",Fix issue with trying to change domain before ever securing a site
-124,"
+125,"
 Fix problem with Brew installations.
 ",Fix problem with Brew installations.
-125,,
 126,,
-127,"
+127,,
+128,"
 Improvements to overall application structure.
 Symlink /usr/local/bin/valet to Valet installation.
 ","Improvements to overall application structure.
 Symlink /usr/local/bin/valet to Valet installation."
-128,,
+129,,

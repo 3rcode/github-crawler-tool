@@ -1,673 +1,679 @@
-Index,Commit Message Abstract,Score Abstract,Corresponding Changelog Sentence Abstract,Commit Desription Abstract,Label
-1,Fix activation when connected to Windows with Remote SSH (#748),0.96974957,Fix activation when connected to Windows with Remote SSH extension (#748),Removed instances of deprecated TextDocument Replaced TextDocument type in diagnostics,1
-2,compare scope when determining css conflicts (#134),0.6171376,Fix incorrect cssConflict warnings. (#136),Show pixel equivalents for more rem/em values Add pixel equivalents to media query variant completions,0
-3,0.1.10,0.5021916,Update minimum VS Code version requirement to ^1.52.0,,0
-4,add accent-color to list of color-related CSS properties,0.75640714,Show color decorators for accent-* classes,,1
-5,add parcel watcher,0.47104937,Use VS Code's built-in file watcher,,0
-6,fix css context check,0.6560736,Update CSS syntax definitions,,0
-7,Fix resolution of WSL files on Windows (#411),1.0,Fix resolution of WSL files on Windows (#411),,1
-8,remove lerna and update lsp deps,0.57450294,[LSP] Remove InitializeParams.initializationOptions requirement,,0
-9,reinstate console.log overrides,0.5277859,Removed all unnecessary logs (#91),This removes the need to define types here. Also this allows third parties to use this package without having to declare type definitions for culori.,0
-10,Add missing default function,0.5818332,Fix error when using a withOptions plugin without any options,,0
-11,use realpath for config require hook,0.46224552,Fix usage of absolute paths in experimental.configFile setting (#617),,0
-12,0.9.9,0.6761708,    },,0
-13,tweak dynamic registration disposal,0.5368985,Update settings descriptions to use markdown,,0
-14,boot language clients lazily,0.53933764,Boot language servers for nested workspace folders (#642),,0
-15,v0.6.11,0.5673131,Update minimum VS Code version requirement to ^1.52.0,,0
-16,0.1.2,0.4881757,Update minimum VS Code version requirement to ^1.52.0,,0
-17,fix @​variants completions/diagnostics in JIT mode (fixes #324),0.9403287,[JIT] Fix @variants completions and diagnostics (#324),,1
-18,Fix mode identification when using nested presets (#431),0.963048,Fix mode detection when using nested presets (#431),,1
-19,fix changelog spacing?,0.43466145,Fix files.exclude configuration resolution (#464),,0
-20,ignore watcher binary load errors,0.5287423,Ignore file watcher permission errors (#238),See also: link,0
-21,rename prod server file,0.7128165,Update language server filename,,1
-22,v0.6.12,0.55550206,Update minimum VS Code version requirement to ^1.52.0,,0
-23,resolve parcel watcher prebuilds from actual package,0.4715705,Fix first-party plugin usage when using bundled version of tailwindcss (#751),,0
-24,inject syntax definition to text.html,0.64982665,"      ""plaintext"": ""html""",,0
-25,tweak file watching (#112),0.5060706,Use VS Code's built-in file watcher,,0
-26,Fix EEx support (for elixir/phoenix) (#54),0.4458168,Use patched version of enhanced-resolve (#600),Fix theme helper handling when specifying default value Tidy,0
-27,update module resolution (#128),0.7641271,Updated module resolution for compatibility with pnpm (#128),,1
-28,add group-focus variant,0.41974726,"Add focus-visible, checked, motion-safe, motion-reduce, and dark  to @variants completions",link,0
-29,Remove log,0.88248026,Removed all unnecessary logs (#91),"The code actions API depends on TextDocuments. This is specific to the language server. This makes it hard to use without a language server. The use of TextDocuments has been removed. Instead, the resolved text document is passed down.",1
-30,Replace detective-typescript (#739),0.49326786,Remove typescript from default languages (#645),,0
-31,Merge branch 'DanSnow-pnp-support',0.37160754,Updated module resolution for compatibility with pnpm (#128),,0
-32,bump tailwindcss-language-service,0.75687605,"    ""tailwindCSS.includeLanguages"": {",link,1
-33,update diagnostic name,0.5418416,"Revert ""Improve conflict diagnostics"" (#525)",,0
-34,v0.3.1,0.5861215,Update minimum VS Code version requirement to ^1.52.0,,0
-35,v0.6.3,0.5957279,Update minimum VS Code version requirement to ^1.52.0,,0
-36,Fix IntelliSense inside Handlebars template scripts (#726),0.76282,Add support for Handlebars template scripts (,,1
-37,make pseudo class name meta always an array,0.44428682,The extension now ignores the purge option when extracting class names (#131),,0
-38,clear color decorators when restarting language client,0.66822016,Show color decorators for accent-* classes,,0
-39,remove logs,0.8823104,Removed all unnecessary logs (#91),,1
-40,add support for config files with .cjs extension (#198),0.9993162,Add support for config files with .cjs extension (#198),,1
-41,fix pnp config module resolution,0.8335673,Updated module resolution for compatibility with pnpm (#128),,1
-42,Update settings,0.64770186,Update icon,,0
-43,add missing dep,0.46739578,Restore missing readme images,,0
-44,fix language boundary ranges,0.73932403,Rework language boundary detection (#502),,1
-45,Update color extraction,0.78503084,Improve color parsing (#415),Support InitializeParams.rootUri Remove log,1
-46,Remove typescript from list of languages (#645),0.953163,Remove typescript from default languages (#645),Fix InvalidTailwindDirective in notSemicolonLanguages with CRLF file endings Fix regex Co-authored-by: Jordan Pittman jordan@cryptica.me,1
-47,short-circuit re-initialisation,0.50330573,[JIT] Fix initialisation when mode is set in a preset (#333),,0
-48,item sorting,0.5388442,Disable variant order linting and automatic sorting when using Tailwind v3,,0
-49,0.8.1,0.508442,Update minimum VS Code version requirement to ^1.52.0,,0
-50,"Remove ""preview"" tag",0.796221,"Remove marketplace ""preview"" tag (5932d20)",,1
-51,provide corePlugins helper when running plugins,0.61601484,Fix error when using a withOptions plugin without any options,,0
-52,fix completion item order,0.64169896,Improve completion list performance (#706),,0
-53,add anchor links to readme,0.64001477,Fix readme image references,,0
-54,bump versions,0.58373404,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,0
-55,add initial css helper hover,0.6727625,Improve theme helper completion and hover info,Improve completions when class contains trigger character wip wip,0
-56,add vue/svelte support,0.55361533,Improve theme helper completion and hover info,Don't watch beyond workspace root Catch errors when adding paths to chokidar watcher Normalize paths wip,0
-57,Fix first-party plugin usage when using bundled version of tailwindcss (#751),1.0,Fix first-party plugin usage when using bundled version of tailwindcss (#751),,1
-58,add lsp boilerplate,0.5270305,[LSP] Remove InitializeParams.initializationOptions requirement,Update context.getClassList usage fix default metadata,0
-59,"update class attribute lexers to fix matching of ""computed"" attributes",0.65066576,"Fix completion triggers for ""computed"" class attributes.",Use completion list itemDefaults more defaults,0
-60,Add SugarSS support,0.4036912,Add support for tailwindcss v2.2,,0
-61,Merge pull request #660 from tailwindlabs/dependabot/npm_and_yarn/packages/tailwindcss-language-service/minimatch-3.1.2,0.7127706,Add bundled version of tailwindcss. The extension will use this version if tailwindcss cannot be resolved within the workspace,,1
-62,tweak opacity modifier completions,0.8116081,[JIT] Add opacity modifier completions,,1
-63,override console.log/error and catch unhandled rejections,0.4731738,Removed all unnecessary logs (#91),,0
-64,update class attribute regex (#125),0.89444315,"Update class attribute regex to support (class=""_"") (#233)",,1
-65,tweak pixel equivalent comment spacing (#200),0.5835562,[JIT] Show rem pixel equivalents in completion item details (#332),,0
-66,0.1.13,0.4964896,Update minimum VS Code version requirement to ^1.52.0,,0
-67,update extension package.json and add icon,0.6402084,Update icon,,0
-68,add types for js-levenshtein,0.6500001,Add typescript to default languages (#690),,0
-69,0.1.11,0.48719603,Update minimum VS Code version requirement to ^1.52.0,,0
-70,Use @types/culori (#735),0.48948473,Fix @layer syntax highlighting (#637),,0
-71,update tailwind-class-names dep,0.75165755,Class names from @tailwind base are now included (by default @tailwind base does not include any class names but plugins may contribute them),This reverts commit 19a550d0de1f3bfbc2a49297e9f7e0c53cfc1ca6.,1
-72,0.7.2,0.560117,Update minimum VS Code version requirement to ^1.52.0,,0
-73,add notification handlers,0.51232755,"Add hovers, suggestions, and codeActions settings (#535)",,0
-74,Improve completions when class contains trigger character,0.83085763,"Fix completion triggers for ""computed"" class attributes.",,1
-75,add matchUtilities mock,0.60492384,Fix variant completions when using a DEFAULT value with matchVariant (#635),,0
-76,Bump trim-off-newlines from 1.0.1 to 1.0.3 (#481),0.5345816,"Completions now trigger when using backticks (#50, #93):",,0
-77,Account for loadConfig returning {default:config} just in case,0.47120398,Add documentation for @config completion (ea5aff5),,0
-78,ignore purge option (#131),0.6487328,The extension now ignores the purge option when extracting class names (#131),Bump json5 from 2.2.0 to 2.2.3 in /packages/tailwindcss-language-server,0
-79,add prepublishOnly script,0.54143685,Add support for Handlebars template scripts (,Bumps json5 from 2.2.0 to 2.2.3. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: json5   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com,0
-80,Remove unused dependency vscode-languageclient (#527),0.59408385,Support exports fields when resolving dependencies (#412),Bump json5 and tsconfig-paths in /packages/tailwindcss-language-service,0
-81,Bump shelljs from 0.8.4 to 0.8.5 (#483),0.48689052,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps json5 and tsconfig-paths. These dependencies needed to be updated together. Updates json5 from 2.1.3 to 2.2.3 - Release notes - Changelog - Commits Updates tsconfig-paths from 3.9.0 to 3.10.1 - Release notes - Changelog - Commits updated-dependencies: - dependency-name: json5   dependency-type: indirect - dependency-name: tsconfig-paths   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com,0
-82,Show completions when using parameterized and/or labelled variants,0.61721593,Fix variant completions when using a DEFAULT value with matchVariant (#635),"wait for init in onInitialize before sending response to the client, so that client won't try to do request before the lsp handlers are registered.",0
-83,update setting descriptions,0.7726151,Update settings descriptions to use markdown,Bumps qs from 6.5.2 to 6.5.3. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: qs   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-84,bump language service,0.49013326,Add rescript to list of default languages. Thanks @dcalhoun! (#222),Bumps qs from 6.5.2 to 6.5.3. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: qs   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-85,tweak style block regexes,0.6111464,"Add hover, color decorator, linting support for experimental.classRegex setting (#129)",Bumps ansi-regex and ansi-regex. These dependencies needed to be updated together. Updates ansi-regex from 3.0.0 to 4.1.1 - Release notes - Commits Updates ansi-regex from 4.1.0 to 4.1.1 - Release notes - Commits updated-dependencies: - dependency-name: ansi-regex   dependency-type: indirect - dependency-name: ansi-regex   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-86,Bump tailwindcss and plugins,0.884909,Bump bundled versions of tailwindcss and first-party plugins (315070a),Bumps decode-uri-component from 0.2.0 to 0.2.2. - Release notes - Commits updated-dependencies: - dependency-name: decode-uri-component   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-87,Update context.getClassList usage (#707),0.6222019,Add class modifier completions (#686),Bump minimatch from 3.0.4 to 3.1.2 in /packages/tailwindcss-language-service,0
-88,Add experimental.configFile setting (#541),0.9999999,Add experimental.configFile setting (#541),Bumps minimatch from 3.0.4 to 3.1.2. - Release notes - Commits updated-dependencies: - dependency-name: minimatch   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com,1
-89,use user's separator,0.5548016,Fix incorrect separator (#343),Bump minimatch from 3.0.4 to 3.1.2 in /packages/vscode-tailwindcss,0
-90,add @screen completions (#7),0.60854363,Add @​layer completions,Bumps minimatch from 3.0.4 to 3.1.2. - Release notes - Commits updated-dependencies: - dependency-name: minimatch   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com,0
-91,Improve theme helper detection,0.9999999,Improve theme helper detection,Co-authored-by: Anbcodes me@anb.codes,1
-92,v0.7.0,0.5759877,Update minimum VS Code version requirement to ^1.52.0,,0
-93,update package-lock,0.522542,Update icon,,0
-94,make invalidApply quick fix work with multiple selectors,0.54342794,Fix error when using a withOptions plugin without any options,Comment out typescript from list of languages Update languages.ts Co-authored-by: Brad Cornes hello@bradley.dev,0
-95,Protect against undefined separator (#427),0.66358864,Fix incorrect separator (#343),,0
-96,Add support for gohtmltmpl files for Hugo (#473),0.7542439,Add gohtmltmpl to supported languages (#473),,1
-97,Bump bundled version of tailwindcss to 3.2.4,0.9681351,Bump bundled version of tailwindcss to v3.3.0 (#749),,1
-98,add config helper completions,0.6577421,Add documentation for @config completion (ea5aff5),,0
-99,add tailwind-config.js to config file glob,0.6970308,Add tailwindCSS.files.exclude setting,,0
-100,Don't read configuration from initializationOptions,0.6532193,[LSP] Remove InitializeParams.initializationOptions requirement,,0
-101,restructure,0.47038597,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
-102,build and package updates,0.5559883,Update minimum VS Code version requirement to ^1.52.0,,0
-103,Force AOT mode,0.55113816,Fix error when switching from JIT mode to AOT mode,,0
-104,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),1.0000002,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),,1
-105,Update language contribution,0.6677408,Add rescript to list of default languages. Thanks @dcalhoun! (#222),,0
-106,Remove unused import,0.52370214,Fix error caused by incorrect feature flags import,handle the DEFAULT case Prettier Co-authored-by: Brad Cornes hello@bradley.dev,0
-107,0.8.6,0.7034688,    },,1
-108,prettier,0.65180004,    },,0
-109,Bump minimist from 1.2.5 to 1.2.6 in /packages/vscode-tailwindcss (#508),0.78814197,Bump bundled version of tailwindcss to v3.3.0 (#749),wip wip Boot client if a CSS file contains @config wip Check document exists wip Fix duplicate document selector wip Use enum for document selector priorities Delete unused functions Remove unused state type Share glob patterns Update config file glob fix logs Fix filename checks on Windows Don't show error popups wip handle negated content paths Handle non-tailwind dependency installs add package root to document selectors tidy wip dedupe document selectors Fix @config regex Fix document selectors when using experimental.configFile Remove log,1
-110,Move requirements section over features section,0.46664077,"Potential fix for language feature duplication (#316, #326, #327)","Theme helper improvements, support @config, adopt getVariants, bump bundled modules",0
-111,Synchronise files configuration section,0.82330054,Ensure files.exclude configuration changes are synchronized,,1
-112,Ensure itemDefaults.data is used in VS Code Insiders,0.54754305,Guard against optional client capabilities (#602),,0
-113,add vscode gallery banner color,0.6493317,Add color decorators for classes and CSS helper functions.,"& doesn't always make sense as a placeholder, for example with the container queries plugin",0
-114,v0.4.2,0.6233976,Update minimum VS Code version requirement to ^1.52.0,,0
-115,0.8.2,0.6917992,    },,0
-116,update color extraction to allow parentheses (#423),0.7255411,Improve color parsing (#415),,1
-117,replace publish npm script,0.4299561,Update language server filename,,0
-118,minor refactor of @apply diagnostics,0.65204316,[JIT] Fix @variants completions and diagnostics (#324),,0
-119,Fix for projects with brackets in their path (#429),0.82989717,Fix IntelliSense for project paths containing brackets (#694),,1
-120,add includeLanguages setting and remove default language client,0.6925912,Add rescript to list of default languages. Thanks @dcalhoun! (#222),Fix IntelliSense when separator is -- Tidy up,0
-121,Bump minimist in /packages/tailwindcss-language-service (#510),0.7361369,Bump bundled versions of tailwindcss and first-party plugins (315070a),,1
-122,Enable IntelliSense for ,0.65998006,Fix IntelliSense when separator is -- (#628),,0
-123,Exclude classes in blocklist from IntelliSense (#746),1.0000002,Exclude classes in blocklist from IntelliSense (#746),,1
-124,add note about color decorator settings,0.8022723,Add color decorators for classes and CSS helper functions.,,1
-125,Rename banner image,0.6687557,Update readme banner image,,0
-126,add recommendedVariantOrder setting to readme,0.56209564,Add mdx to default languages,,0
-127,formatting,0.42197913,"Ignore content: """" when determining document colors. This enables color decorators for before and after variants",,0
-128,fix image sizes,0.61601806,Fix files.exclude configuration resolution (#464),,0
-129,Merge branches 'master' and 'master' of github.com:tailwindlabs/tailwindcss-intellisense,0.6481779,Add bundled version of tailwindcss. The extension will use this version if tailwindcss cannot be resolved within the workspace,,0
-130,Bump qs from 6.5.2 to 6.5.3 in /packages/tailwindcss-language-service (#673),0.7222911,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),"for client like lsp-mode for emacs which doesn't have colorProvider, server is failing to start, and according to the specification, the capabilities here is all optional, so we should guard the nil situation.",1
-131,Detect conflicting multi-rule classes (#498),1.0000004,Detect conflicting multi-rule classes (#498),,1
-132,Merge pull request #365 from choplin/patch-1,0.4866729,Bump bundled versions of tailwindcss and first-party plugins (315070a),,0
-133,Add clean script,0.5350583,Add support for Handlebars template scripts (,,0
-134,remove commented out code,0.79881865,Ignore commented out code (#599),Surface support is defined here link See link and link,1
-135,0.1.16,0.53701246,Update minimum VS Code version requirement to ^1.52.0,,0
-136,add sublime gifs,0.4853935,Add showPixelEquivalents and rootFontSize settings (#200),,0
-137,Improve conflict diagnostics (#503),1.0000001,Improve conflict diagnostics (#503),,1
-138,disable extension in virtual workspaces (#398),0.999358,Disable extension in virtual workspaces (#398),Bumps terser from 4.6.12 to 4.8.1. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: terser   dependency-type: direct:development ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-139,ensure diagnostics are updated when the user's tailwind config changes,0.7763268,Update @tailwind completions and diagnostics to account for @tailwind variants,,1
-140,Fix method called before initialize (#667),0.6127837,[JIT] Fix initialisation when mode is set in a preset (#333),,0
-141,add django support (#58),0.49480695,Add support for @config (Tailwind v3.2) (bf57dd1),,0
-142,add experimental showPixelValues setting,0.9243797,Add experimental.showPixelValues setting (#200),,1
-143,fix @tailwind completion item resolution,0.75574136,Update @tailwind completions and diagnostics to account for @tailwind variants,,1
-144,find config files hiding in hidden folders (#389),0.83368766,Support config files in hidden (dot) folders (#389),Support insiders versions of tailwindcss Revert import reorder,1
-145,set chokidar cwd,0.43959075,Add tailwindCSS.inspectPort setting,,0
-146,Merge pull request #222 from dcalhoun/add-rescript-support,0.48774523,Fix incorrect separator (#343),,0
-147,"add initial ""unknown config key"" lint rule",0.5207479,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
-148,Deduplicate classlist candidates (#572),1.0000002,Deduplicate classlist candidates (#572),,1
-149,Merge branch 'next' into diagnostics,0.4488417,[JIT] Fix @variants completions and diagnostics (#324),Support arbitrary variants Bump typescript and types versions Revert @types/vscode version bump,0
-150,0.9.2,0.588151,    },Support arbitrary variants Bump typescript and types versions,0
-151,update lint setting names,0.53503704,Update language server filename,,0
-152,Merge branch 'master' into watcher,0.31077495,Use VS Code's built-in file watcher,,0
-153,update gitignore,0.47810984,Update icon,,0
-154,fix semi-colon insertion for indented rules,0.54715914,Fix excess semi-colons in CSS previews,,0
-155,add grammar (#6),0.507622,Add class modifier completions (#686),Add experimental configFile setting Fix initial capability registration Update readme Add setting default and description Remove unused variable Be more defensive when reading setting Fix type Fix type,0
-156,Add ReScript support,0.57364774,Add support for Handlebars template scripts (,,0
-157,update package.json,0.6838664,Don't watch package.json files (#573),,0
-158,0.1.15,0.50366294,Update minimum VS Code version requirement to ^1.52.0,"Add suggest and hover settings Rename settings, add codeActions setting",0
-159,Support InitializeParams.rootUri (#725),0.5469505,Add showPixelEquivalents and rootFontSize settings (#200),Add missing package metadata Remove tailwindcss-language-service metadata Co-authored-by: Brad Cornes hello@bradley.dev,0
-160,Add files.exclude setting,0.6696306,Add tailwindCSS.files.exclude setting,,0
-161,v0.5.6,0.55952,Update minimum VS Code version requirement to ^1.52.0,,0
-162,support tailwindcss v2.2,0.96679115,Add support for tailwindcss v2.2,,1
-163,Only watch directories up to workspace root (#709),0.8989389,Don't watch directories above workspace root (#709),This dependency is unused by the language service.,1
-164,Bump path-parse in /packages/tailwindcss-language-service (#489),0.7092079,Bump bundled version of tailwindcss to v3.3.0 (#749),,1
-165,0.7.3,0.5381502,Bump bundled version of tailwindcss to v3.3.0 (#749),This reverts commit ddfaea21cc5feca1bbf71ddb36645a61f01daea3.,0
-166,fix for canary releases,0.4342974,Fix overeager ,"TypeScript was complaining about some syntax features, this solves it. It doesn’t affect the output, as tsdx ignores the target property.",0
-167,add lerna and separate language server package,0.600814,Update language server filename,"tsdx uses .browserslistrc to determine how to transpile the source code. By default it supports very old environments. By specifying relatively modern targets, the bundle size has been reduced with ~40%. This also significantly increases performance and readability of the output, because babel’s regenerator runtime isn’t used anymore. The output target can’t be set to something too new, because tsdx uses an older version of terser which isn’t compatible with all new syntax (e.g. optional chaining).",0
-168,remove variants filter,0.56766677,[LSP] Remove InitializeParams.initializationOptions requirement,"It was already imported in one place, that appears to work fine. Using require results in invalid ESM output, because require is not defined in ES modules.",0
-169,Catch errors when resolving config and creating context,0.5482236,Add experimental.configFile setting (#541),,0
-170,add prettier dependency,0.49697226,[JIT] Add opacity modifier completions,,0
-171,Account for undefined dependencies,0.5550622,Support exports fields when resolving dependencies (#412),,0
-172,Convert dlv require statements to imports (#521),0.60426426,Support exports fields when resolving dependencies (#412),,0
-173,Add workspace root document selector when there's exactly one active project (#711),0.68365884,Enable IntelliSense in entire workspace when there is exactly one active Tailwind project (#711),"Use esbuild Replace direct eval add initial language mode Update capabilities, add rename provider Update vscode types Add completion middleware to match built-in CSS provider Update language config to match built-in CSS language Add folding region completion provider Add stylesheet cache Add log and error handling Update settings handling, debounce validation Fix response flakiness by always augmenting CSS Respect folding range limit Use uncommon symbol as @media placeholder Update readme Use esbuild for language server build Add theme() completion item Avoid errors when using @media screen() Update readme Add CSS server to build script Rename language mode server file in prod Update VS Code engines and types versions Update grammar",0
-174,export completionsFromClassList,0.59620875,Exclude the global selector (*) from class completions,Use esbuild Replace direct eval Use esbuild for language server build,0
-175,Fix @types/vscode version,0.57005733,[JIT] Fix @variants completions and diagnostics (#324),,0
-176,0.1.5,0.5628898,    },Bumps ansi-regex from 4.1.0 to 4.1.1. - Release notes - Commits updated-dependencies: - dependency-name: ansi-regex   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-177,Skip @apply validation if applyComplexClasses flag is enabled,0.74411666,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,Bumps ansi-regex from 3.0.0 to 3.0.1. - Release notes - Commits updated-dependencies: - dependency-name: ansi-regex   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-178,update changelog and readme,0.62321174,Update readme banner image,Bumps minimist from 1.2.5 to 1.2.6. - Release notes - Commits updated-dependencies: - dependency-name: minimist   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-179,Add modifier completions for @apply and classRegex configs (#732),0.7027446,Add class modifier completions (#686),Bumps minimist from 1.2.5 to 1.2.6. - Release notes - Commits updated-dependencies: - dependency-name: minimist   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-180,remove unused imports,0.5080857,Support exports fields when resolving dependencies (#412),Bumps minimist from 1.2.5 to 1.2.6. - Release notes - Commits updated-dependencies: - dependency-name: minimist   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-181,Update variant API for compatibility with v3-alpha.2,0.5553307,Fix compatibility with Tailwind v3.0.0-alpha.2,,0
-182,custom seperator,0.57544005,Fix incorrect separator (#343),Fix classRegex error Rework language boundary detection,0
-183,enable diagnostics in multi-language documents,0.49263573,"Potential fix for language feature duplication (#316, #326, #327)",,0
-184,fix module resolution when path has a # (fixes #331),0.6250465,Fix files.exclude configuration resolution (#464),,0
-185,load jit modules with try/catch instead of by version number,0.52555275,[JIT] Fix @variants completions and diagnostics (#324),fix: prevent errors in not semicolon languages fix: extends fix for sugarss and stylus Formatting Fix document access Co-authored-by: Brad Cornes bradlc41@gmail.com,0
-186,update unknownConfigKey error messages,0.58085734,Fix incorrect cssConflict warnings. (#136),Bumps hosted-git-info from 2.8.8 to 2.8.9. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: hosted-git-info   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-187,Merge settings with defaults (#605),0.59269214,"Add automatic support for multi-config workspaces, including @config resolution (#633)",,0
-188,clear require cache before reading tailwind config,0.58631384,Support insiders versions of tailwindcss (#571),Bumps browserslist from 4.14.6 to 4.19.1. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: browserslist   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-189,add hover provider,0.62617457,Fix hover error (#353),Bumps path-parse from 1.0.6 to 1.0.7. - Release notes - Commits updated-dependencies: - dependency-name: path-parse   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-190,Bump dset to v3.1.2,0.6197609,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps glob-parent from 5.1.1 to 5.1.2. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: glob-parent   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-191,Improve completions when class contains trigger character (#710),0.75850976,"Fix completion triggers for ""computed"" class attributes.",Bumps tmpl from 1.0.4 to 1.0.5. - Release notes - Commits updated-dependencies: - dependency-name: tmpl   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-192,Support insiders versions of tailwindcss (#571),0.99999994,Support insiders versions of tailwindcss (#571),Bumps node-fetch from 2.6.1 to 2.6.7. - Release notes - Commits updated-dependencies: - dependency-name: node-fetch   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-193,Fix classRegex error (#501),0.99999976,Fix classRegex error (#501),Bumps trim-off-newlines from 1.0.1 to 1.0.3. - Release notes - Commits updated-dependencies: - dependency-name: trim-off-newlines   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
-194,add requirements to readme (thanks @ledenis),0.51407903,Add @​layer completions,Bumps shelljs from 0.8.4 to 0.8.5. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: shelljs   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-195,add inspectPort setting,0.6951915,Add tailwindCSS.inspectPort setting,Bumps lodash from 4.17.20 to 4.17.21. - Release notes - Commits updated-dependencies: - dependency-name: lodash   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-196,update changelog,0.6086187,Update icon,Bumps nanoid from 3.1.30 to 3.2.0. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: nanoid   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
-197,remove class list length limit (#136),0.63447666,The extension now ignores the purge option when extracting class names (#131),,0
-198,Added njk to the HTML_TYPES array for njk file extension support. (#31),0.63938963,Add support for config files with .cjs extension (#198),,0
-199,improve emmet syntax handling (#3),0.52937925,"Add noise check when providing Emmet-style completions (#146, #228)",,0
-200,Improve JS comment handling (#727),0.6083394,Ignore commented out code (#599),,0
-201,Fix duplicate color decorators (#652),0.9999999,Fix duplicate color decorators (#652),,1
-202,Update lockfile,0.52088106,Ensure files.exclude configuration changes are synchronized,,0
-203,Bump vsce,0.4364576,  {,,0
-204,Improve extraction for variable colors (#638),1.0,Improve extraction for variable colors (#638),,1
-205,fix error for tailwindcss < 1.7.0,0.78115636,Add support for tailwindcss v2.2,,1
-206,"add initial ""unknown screen"" diagnostics",0.44728944,[JIT] Fix @variants completions and diagnostics (#324),,0
-207,update extension activationEvents,0.5819964,Update icon,,0
-208,Bump lodash in /packages/tailwindcss-language-service (#487),0.7184845,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,1
-209,Fix CSS conflict diagnostics in semicolonless CSS documents (#771),0.7293359,Fix incorrect cssConflict warnings. (#136),,1
-210,update hover provider to use lexer for html class attribute hovers,0.5124037,"Add hovers, suggestions, and codeActions settings (#535)",,0
-211,add missing variants (#256),0.6891057,Add support for arbitrary variants (#557),,0
-212,rename project vscode-tailwind -> vscode-tailwindcss,0.70614886,"Support TypeScript and ESM Tailwind config files when using a version of tailwindcss that supports these (currently tailwindcss@insiders, since tailwindlabs/tailwindcss#10785) (#738, #739)",,1
-213,Update syntax definitions,0.6502003,Update CSS syntax definitions,,0
-214,Update package-lock.json,0.6533947,Don't watch package.json files (#573),,0
-215,Fix InvalidTailwindDirective in notSemicolonLanguages with CRLF file endings (#723),0.905486,Fix invalidTailwindDirective linting with CRLF file endings (#723),,1
-216,add .vscode,0.5703186,Use VS Code's built-in file watcher,,0
-217,fix multi-root,0.5229122,Improve experimental.configFile in multi-root workspaces (#640),,0
-218,v0.5.4,0.5927187,Update minimum VS Code version requirement to ^1.52.0,,0
-219,"Remove terser dependency, update lockfiles",0.4632647,Ensure files.exclude configuration changes are synchronized,,0
-220,Merge branch 'master' of github.com:bradlc/vscode-tailwindcss,0.595204,Add bundled version of tailwindcss. The extension will use this version if tailwindcss cannot be resolved within the workspace,,0
-221,Update language server notices file,0.82742083,Update language server filename,,1
-222,Bump json5 and tsconfig-paths in /packages/tailwindcss-language-service,0.6484482,"    ""tailwindCSS.includeLanguages"": {",,0
-223,0.1.6,0.5112442,Update minimum VS Code version requirement to ^1.52.0,,0
-224,update setting description,0.751617,Update settings descriptions to use markdown,,1
-225,add config helper completions for .vue files,0.61134404,Add experimental.configFile setting (#541),Adds M1 builds for language server,0
-226,Bump node-fetch from 2.6.1 to 2.6.7 (#482),0.56742024,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,0
-227,add experimental classRegex setting (#129),0.9932911,Add experimental.classRegex setting (#129),,1
-228,Fix flakiness caused by expired cache entries,0.52945095,Fix stale error messages when resolving a config file error,,0
-229,Fix error when a files.excludes pattern contains braces (#696),0.99999994,Fix error when a files.excludes pattern contains braces (#696),,1
-230,fix class list offsets (fixes hover ranges),0.5609298,Add class modifier completions (#686),,0
-231,0.1.4,0.51237875,Update minimum VS Code version requirement to ^1.52.0,,0
-232,add initial @variants completions,0.69433975,Add @​layer completions,,0
-233,v0.6.8,0.57640326,Update minimum VS Code version requirement to ^1.52.0,,0
-234,Merge pull request #236 from MoPaMo/patch-1,0.4164453,Fix files.exclude configuration resolution (#464),,0
-235,remove lerna deps,0.59673977,Removed all unnecessary logs (#91),,0
-236,update extension metadata,0.5946548,Update settings descriptions to use markdown,,0
-237,add todos,0.6124214,    },,0
-238,v0.5.2,0.59890413,Update minimum VS Code version requirement to ^1.52.0,,0
-239,0.8.3,0.4576993,Update minimum VS Code version requirement to ^1.52.0,,0
-240,add class list finder helper and fix ranges,0.72842926,Increase class list search range (#414),,1
-241,Merge branch 'next' of github.com:bradlc/vscode-tailwindcss into next,0.6044661,Add bundled version of tailwindcss. The extension will use this version if tailwindcss cannot be resolved within the workspace,,0
-242,v0.6.13,0.56904054,Update minimum VS Code version requirement to ^1.52.0,,0
-243,"classRegex: increase search range, make search global (#129)",0.70785815,Increase class list search range (#414),,1
-244,increase classlist search range (#414),0.9848381,Increase class list search range (#414),,1
-245,On tailwind error prevent crash and show message (#156),0.8676652,"Prevent crash when there's a Tailwind error, and show the error message in the editor (#156)",,1
-246,Fix use of certain built-in node modules in config file (#745),1.0000002,Fix use of certain built-in node modules in config file (#745),,1
-247,Update notices,0.5698634,Update icon,,0
-248,update banner,0.7638512,Update readme banner image,,1
-249,Fix @screen highlighting for Vetur SFC PostCSS styles (#538),1.0000002,Fix @screen highlighting for Vetur SFC PostCSS styles (#538),"wip Update v3 support, color handling Update diagnostics and completions bump language service update context api usage bump language service",1
-250,filter @apply completions,0.57782406,@apply completion list now excludes class names that are not compatible,,0
-251,v0.5.8,0.5787053,Update minimum VS Code version requirement to ^1.52.0,,0
-252,Bump language service,0.4887156,Add rescript to list of default languages. Thanks @dcalhoun! (#222),,0
-253,add support for slim files (#36),0.59321123,Fix files.exclude configuration resolution (#464),,0
-254,reinstate console.log override,0.5179044,Removed all unnecessary logs (#91),,0
-255,Settings tweak,0.6374177,Update settings descriptions to use markdown,,0
-256,invalid @apply quick fix: check that base class name can be @applied,0.63987696,@apply completion list now excludes class names that are not compatible,,0
-257,fix: guard against optional client capabilities (#602),0.9500476,Guard against optional client capabilities (#602),,1
-258,add placeholder to clients map to prevent >1 instance per folder,0.41649532,Ensure files.exclude configuration changes are synchronized,,0
-259,Merge pull request #116 from danmichaelo/patch-2,0.5060471,Fix incorrect separator (#343),,0
-260,Merge pull request #684 from tailwindlabs/dependabot/npm_and_yarn/packages/tailwindcss-language-service/json5-and-tsconfig-paths-2.2.3,0.6997217,Add bundled version of tailwindcss. The extension will use this version if tailwindcss cannot be resolved within the workspace,,0
-261,don't send diagnostics if intellisense is disabled (#133),0.54781675,Fix IntelliSense when separator is -- (#628),,0
-262,use lexer for class attribute completions,0.7162056,"Fix completion triggers for ""computed"" class attributes.",,1
-263,update gallery banner color,0.60322773,Fix color decorators for var() fallbacks (#423),,0
-264,0.9.7,0.5401118,    },,0
-265,0.7.5,0.5382754,Update minimum VS Code version requirement to ^1.52.0,,0
-266,0.7.6,0.5209476,Update minimum VS Code version requirement to ^1.52.0,,0
-267,Fix missing parameter,0.58160174,Fix error when using a withOptions plugin without any options,,0
-268,v0.5.1,0.5219946,Update minimum VS Code version requirement to ^1.52.0,,0
-269,add HTML (EEx) language,0.643731,HTML,,0
-270,fix tests,0.5879755,[JIT] Fix @variants completions and diagnostics (#324),,0
-271,Improve theme helper detection (#655),0.99999994,Improve theme helper detection (#655),,1
-272,tweak class regex to include className,0.7803703,"Update class attribute regex to support (class=""_"") (#233)",,1
-273,v0.2.0,0.617998,Update minimum VS Code version requirement to ^1.52.0,,0
-274,rename utilityConflicts lint rule,0.55240977,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
-275,Ignore commented out code (#599),0.9999998,Ignore commented out code (#599),,1
-276,Add support for Phoenix (.html.eex) files (#18),0.65690655,Add phoenix-heex language (#407),,0
-277,Filter out empty files.exclude items,0.5497374,Removed all unnecessary logs (#91),Avoid invalidConfigPath for function values,0
-278,add .haml support,0.47545746,Add gohtmltmpl to supported languages (#473),,0
-279,Update ThirdPartyNotices.txt,0.49037838,Update settings descriptions to use markdown,"Pass validateConfigPath if a type of value equals to function. The purpose of this commit is to avoid unwanted warnings when we define theme values as functions in tailwind.config.js, which, for example, are required to define theme colors with opacity enabled. link",0
-280,fix separator (#343),0.936789,Fix incorrect separator (#343),,1
-281,add phoenix-heex language (#407),0.9981401,Add phoenix-heex language (#407),,1
-282,Add initial color decorators,0.7682694,Add color decorators for classes and CSS helper functions.,,1
-283,fix config helper hover range,0.69153565,Fix hover error (#353),,0
-284,Fix configFile path resolution (#617),0.8132899,Fix files.exclude configuration resolution (#464),,1
-285,fix hover error,0.9287541,Fix hover error (#353),,1
-286,0.9.1,0.43587172,    },,0
-287,add img folder to vscodeignore,0.536374,Add tailwindCSS.files.exclude setting,,0
-288,prevent showing completions for unknown prefixes,0.5374833,Fix variant completions when using a DEFAULT value with matchVariant (#635),,0
-289,Bump minimist in /packages/tailwindcss-language-server (#509),0.74108535,Bump bundled versions of tailwindcss and first-party plugins (315070a),,1
-290,Bump nanoid from 3.1.30 to 3.2.0 (#485),0.5640632,Bump bundled version of tailwindcss to v3.3.0 (#749),,0
-291,Fix color parsing when alpha is 0 (#177),0.8480902,Fix completions not working when encountering a color with an alpha value of 0 (#177),,1
-292,bump minimum vscode version,0.6443316,Update minimum VS Code version requirement to ^1.52.0,,0
-293,0.9.6,0.64085627,    },,0
-294,v0.4.3,0.609454,Update minimum VS Code version requirement to ^1.52.0,,0
-295,restore user-defined mode config after compilation,0.58089864,[JIT] Fix initialisation when mode is set in a preset (#333),,0
-296,add languages,0.74883354,Add rescript to list of default languages. Thanks @dcalhoun! (#222),,1
-297,v0.6.0,0.59298897,Update minimum VS Code version requirement to ^1.52.0,,0
-298,update extension icon,0.8603483,Update icon,,1
-299,update error message wording,0.5634105,Fix stale error messages when resolving a config file error,,0
-300,Define TypeScript compiler target (#522),0.6078769,Add typescript to default languages (#690),,0
-301,add license and third-party notices for language server package,0.6170237,Update language server filename,,0
-302,Add bundled version of tailwindcss and first-party plugins,0.8839317,Bump bundled versions of tailwindcss and first-party plugins (315070a),,1
-303,replace js-levenshtein with sift-string,0.45779526,[LSP] Remove InitializeParams.initializationOptions requirement,,0
-304,initial refactor,0.5645654,Add some basic initialisation logs,Co-Authored-By: Rafał Chłodnicki rchl2k@gmail.com,0
-305,Fix error when rule doesn't have a parent,0.46085557,Detect conflicting multi-rule classes (#498),,0
-306,remove old img folder and update .vscodeignore,0.46852356,Add tailwindCSS.files.exclude setting,,0
-307,add initial quick fix for utility conflict diagnostic,0.68817127,Improve conflict diagnostics (#503),,0
-308,import types only,0.5200686,Support exports fields when resolving dependencies (#412),,0
-309,fix html class attr regex,0.66502804,"Update class attribute regex to support (class=""_"") (#233)",,0
-310,Update setting description,0.7661428,Update settings descriptions to use markdown,,1
-311,0.8.5,0.6914863,    },,0
-312,0.1.3,0.4949476,Update minimum VS Code version requirement to ^1.52.0,,0
-313,fix user-defined language support,0.61804926,Add gohtmltmpl to supported languages (#473),,0
-314,"restore readme, changelog, and img",0.77698344,Restore missing readme images,"fix crash on not passing ""userLanguages"" option",1
-315,Add support for arbitrary variants (#557),1.0,Add support for arbitrary variants (#557),"Since the server can be used by various clients and there is no guarantee that the ""userLanguages"" are provided, handle that case gracefully and don't crash.",1
-316,bust user plugin cache?,0.4773636,Bump bundled versions of tailwindcss and first-party plugins (315070a),,0
-317,Fix document selector when configFile setting is a string (#693),0.7751289,Fix document selector when tailwindCSS.experimental.configFile is a string (#693),,1
-318,update css helper hovers,0.6500335,Improve theme helper completion and hover info,,0
-319,Support class modifiers (#686),0.8635222,Add class modifier completions (#686),,1
-320,remove comment,0.62729275,Ignore commented out code (#599),,0
-321,Support require.extensions mutations (#583),1.0,Support require.extensions mutations (#583),,1
-322,v0.3.0-alpha.3,0.5929551,"I'm dropping an initial pre-release here for brave people to try out, and I will be looking to release a new version of the extension after a bit more testing. To install go to the Extensions panel in VS Code and click on the ""three-dot"" button. From there, select Install from VSIX... and select the vscode-tailwindcss-0.3.0-alpha.1.vsix file",,0
-323,Merge branch 'diagnostics',0.41728038,[JIT] Fix @variants completions and diagnostics (#324),,0
-324,show pixel equivalents in jit mode (fixes #332),0.7680251,[JIT] Show rem pixel equivalents in completion item details (#332),,1
-325,Add additional eex languages,0.62710035,Add phoenix-heex language (#407),,0
-326,keep editor state intact,0.42741007,Ensure files.exclude configuration changes are synchronized,,0
-327,change built-it to built-in,0.42268074,"  This setting allows you to add additional language support. The key of each entry is the new language ID and the value is any one of the extensions built-in languages, depending on how you want the new language to be treated (e.g. html, css, javascript etc.)",,0
-328,add marketplace link to readme,0.59061944,Update readme banner image,,0
-329,fix: Don't attempt to read from deleted CSS files (#765),0.59275866,Restore missing readme images,,0
-330,add quick fixes for invalid screens/variants/helper keys/@tailwind,0.6193278,"Fix initialisation failure when using ""jit"" mode with tailwindcss v2.1 (#296)",,0
-331,Fix error when initializationOptions is undefined (#656),0.58704925,[JIT] Fix initialisation when mode is set in a preset (#333),1.52.0 is required for the language client/server,0
-332,update colorDecorators setting,0.73687196,Fix color decorators for var() fallbacks (#423),,1
-333,Bump minimatch to 5.1.4 (#699),0.56014055,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,0
-334,tweak postcss cleanup,0.5147841,Fix @screen highlighting for Vetur SFC PostCSS styles (#538),,0
-335,Don't watch package.json files (#573),0.99999994,Don't watch package.json files (#573),,1
-336,Replace @vercel/ncc with esbuild (#517),0.5115169,Update output channel name (#262),,0
-337,v0.6.10,0.5865099,Update minimum VS Code version requirement to ^1.52.0,,0
-338,consolidate conflict diagnostics and update quick fixes,0.798993,Improve conflict diagnostics (#503),,1
-339,Merge pull request #341 from rchl/patch-1,0.5011561,Fix incorrect separator (#343),,0
-340,don't show init errors,0.4545572,Fix incorrect cssConflict warnings. (#136),,0
-341,diagnostics,0.5471839,[JIT] Fix @variants completions and diagnostics (#324),,0
-342,Support TS/ESM config files (#738),0.5792599,"Support TypeScript and ESM Tailwind config files when using a version of tailwindcss that supports these (#738, #739)",,0
-343,fix numbers being interpreted as colors,0.65013367,Fix duplicate color decorators (#652),,0
-344,"add hover, color decorator, linting support for classRegex setting (#129)",0.95240945,"Add hover, color decorator, linting support for experimental.classRegex setting (#129)",,1
-345,Add support for AdonisJS Edge templating (#29),0.5169558,Add support for Tailwind CSS v3 alpha (#424),,0
-346,add github issue template,0.56554514,Add support for Handlebars template scripts (,,0
-347,0.9.11,0.44493604,Update minimum VS Code version requirement to ^1.52.0,,0
-348,Added section to troubleshooting,0.6013166,Fix completions and hovers inside ,,0
-349,Theme helper improvements,0.87761456,Improve theme helper completion and hover info,,1
-350,Update color decorator debounce,0.77994895,Fix duplicate color decorators (#652),,1
-351,Fix @layer syntax highlighting (#637),1.0,Fix @layer syntax highlighting (#637),,1
-352,never reveal output channel,0.49681613,Update output channel name (#262),,0
-353,remove @defaults when stringifying CSS,0.7831867,[JIT] Remove @defaults from CSS previews,,1
-354,add emmet-style completions,0.6463863,"Add noise check when providing Emmet-style completions (#146, #228)",,0
-355,simplify built-in plugin finder,0.5596703,Fix error when using a withOptions plugin without any options,now it takes config dependencies into account,0
-356,Fix format assumption when resolving module dependencies,0.5926479,Support exports fields when resolving dependencies (#412),fixes classes not updating when plugin is changed,0
-357,add modules and options to tree view,0.5143548,Add showPixelEquivalents and rootFontSize settings (#200),,0
-358,add classAttributes setting,0.6847865,Add class modifier completions (#686),,0
-359,0.9.10,0.45043272,Update minimum VS Code version requirement to ^1.52.0,,0
-360,Merge branch 'master' into bugfix-style,0.47898483,Improve experimental.configFile in multi-root workspaces (#640),,0
-361,only run browserslist once,0.43927503,Fix initialisation failure when using extends in browserslist config (#159),,0
-362,update readme image paths,0.8240472,Fix readme image references,,1
-363,wip quick fix for invalid @apply,0.58303475,[JIT] Fix error when using @apply in a plugin (#319),,0
-364,update readme,0.7424394,Update readme banner image,,1
-365,Bump bundled version of tailwindcss to 3.2.0,0.96642905,Bump bundled version of tailwindcss to v3.3.0 (#749),,1
-366,Add default excluded files (for non-vscode clients),0.61878,Add tailwindCSS.files.exclude setting,,0
-367,0.9.4,0.47441137,Update minimum VS Code version requirement to ^1.52.0,,0
-368,v0.5.7,0.5949234,Update minimum VS Code version requirement to ^1.52.0,,0
-369,add support for leaf files (#16),0.54814637,Add support for config files with .cjs extension (#198),,0
-370,Bump json5 from 2.2.0 to 2.2.3 in /packages/tailwindcss-language-server,0.6844042,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,0
-371,Improve experimental.configFile in multi-root workspaces (#640),1.0000001,Improve experimental.configFile in multi-root workspaces (#640),,1
-372,Bump ansi-regex in /packages/tailwindcss-language-server (#512),0.61368245,"    ""tailwindCSS.includeLanguages"": {",,0
-373,Bump tmpl from 1.0.4 to 1.0.5 in /packages/tailwindcss-language-service (#488),0.7424024,Bump bundled version of tailwindcss to v3.3.0 (#749),,1
-374,feat: Yarn PnP support,0.66230404,Add support for Yarn Plug'n'Play. Thanks @DanSnow! (#217),,0
-375,add .vue @apply support (#4),0.52280563,[JIT] Fix error when using @apply in a plugin (#319),,0
-376,update class attribute regex,0.9051604,"Update class attribute regex to support (class=""_"") (#233)",,1
-377,bump postcss,0.5056709,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,0
-378,Update readme,0.7514112,Update readme banner image,,1
-379,reinstate #341,0.5241934,Fix incorrect separator (#343),,0
-380,Update lockfiles,0.54982114,Ensure files.exclude configuration changes are synchronized,,0
-381,update resolver options to support exports fields (#412),0.83734053,Support exports fields when resolving dependencies (#412),,1
-382,fix JIT initialisation when mode is set in a preset (fixes #333),0.94643396,[JIT] Fix initialisation when mode is set in a preset (#333),,1
-383,use decache when resolving config,0.44886416,Add experimental.configFile setting (#541),Force aot mode,0
-384,Bump terser from 4.6.12 to 4.8.1 (#578),0.50313425,Use patched version of enhanced-resolve (#600),,0
-385,fix zero values in CSS helper completion items,0.6251372,Fix incorrect cssConflict warnings. (#136),,0
-386,Bump glob-parent in /packages/tailwindcss-language-service (#490),0.7247024,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),Make output chanel name more human-friendly,1
-387,replace experimental.showPixelValues setting with showPixelEquivalents and enable by default (#200),0.91154534,Add experimental.showPixelValues setting (#200),"According to the documentation, the channel name is: ""Human-readable string which will be used to represent the channel in the UI"". So it shouldn't break anything. Signed-off-by: Peter Neupauer peter@neupauer.sk",1
-388,update diagnostic messages,0.5820104,"Revert ""Improve conflict diagnostics"" (#525)",,0
-389,update context completion items,0.6185458,Update settings descriptions to use markdown,,0
-390,update ,0.6791209,Update icon,,0
-391,Fix for missing files config,0.731611,Fix stale error messages when resolving a config file error,,1
-392,fix color detection,0.71505064,Improve color parsing (#415),,1
-393,0.1.12,0.49062613,Update minimum VS Code version requirement to ^1.52.0,,0
-394,update lockfile,0.5042347,Ensure files.exclude configuration changes are synchronized,,0
-395,Tweak type,0.47969756,Tweak theme helper detection (#689),,0
-396,v0.6.4,0.5950253,Update minimum VS Code version requirement to ^1.52.0,,0
-397,Fix color decorators not updating when config changes or errors,0.7667205,Fix duplicate color decorators (#652),,1
-398,fix hover provider when using computed attribute in vue template,0.5894197,Fix hover error (#353),,0
-399,0.8.0,0.5041175,Update minimum VS Code version requirement to ^1.52.0,,0
-400,Update assets,0.536854,Update icon,,0
-401,remove tree view stuff for now,0.5895649,Removed all unnecessary logs (#91),,0
-402,add type,0.69810426,Add typescript to default languages (#690),,0
-403,"fix error when using a ""withOptions"" plugin",0.9729848,Fix error when using a withOptions plugin without any options,Typo: change built-it to built-in in Docs,1
-404,update browserslist usage (#159),0.5842171,Fix initialisation failure when using extends in browserslist config (#159),,0
-405,add base/preflight,0.5150697,Add support for @config (Tailwind v3.2) (bf57dd1),,0
-406,Fix getModuleDependencies,0.55289894,Fix error when using a withOptions plugin without any options,There's a typo in line 37,0
-407,Remove language service dependency on TextDocuments (#742),0.6350675,Remove typescript from default languages (#645),,0
-408,fix readme image references,0.99775046,Fix readme image references,,1
-409,Disable variant order linting and sorting for tailwindcss v3,0.9390144,Disable variant order linting and automatic sorting when using Tailwind v3,,1
-410,add initial class name conflict diagnostics,0.5879018,Improve conflict diagnostics (#503),,0
-411,update to work with lsp definition format,0.55340666,Update language server filename,,0
-412,fix feature flags import,0.9268021,Fix error caused by incorrect feature flags import,,1
-413,add typescript (#118),0.7687971,Add typescript to default languages (#690),,1
-414,don't search for pnp file above root dir,0.62444186,Don't watch directories above workspace root (#709),,0
-415,add icon and update gallery banner color,0.65078515,Update icon,,0
-416,Exclude * from class completions,0.78520286,Exclude the global selector (*) from class completions,,1
-417,Merge branch 'improve-troubleshoot-section' of link into alexbjorlig-improve-troubleshoot-section,0.52790725,Fix documentation links,Add ReScript support,0
-418,0.8.7,0.72279906,    },,1
-419,Fix CSS conflict diagnostic false negatives (#761),0.7836623,Fix incorrect cssConflict warnings. (#136),,1
-420,"add initial ""unsupported tailwind directive"" lint rule",0.6687114,Fix invalidTailwindDirective linting with CRLF file endings (#723),,0
-421,avoid re-loading modules when not necessary,0.60002136,Fix use of certain built-in node modules in config file (#745),,0
-422,Bump language server version,0.60264206,Update language server filename,,0
-423,"Revert ""Remove typescript from list of languages (#645)"" (#690)",0.85865843,Remove typescript from default languages (#645),,1
-424,Avoid invalidConfigPath for function values,0.5463216,"Fix false positive error when using theme helper with a function value (thanks @choplin, #365)",,0
-425,rename unknownConfigKey to invalidHelperKey,0.43021572,Fix error caused by incorrect feature flags import,,0
-426,use lsp file events when available,0.4309114,Use VS Code's built-in file watcher,,0
-427,0.7.7,0.5062171,Update minimum VS Code version requirement to ^1.52.0,,0
-428,0.7.1,0.5463839,Update minimum VS Code version requirement to ^1.52.0,,0
-429,resolve jit modules together,0.5853538,Add support for JIT mode,,0
-430,support emmet style syntax in html-based file types,0.5442443,HTML,,0
-431,update color plucking logic (#113),0.7161827,Improve color parsing (#415),,1
-432,0.1.9,0.44724956,Update minimum VS Code version requirement to ^1.52.0,"fixes ""extends"" in browserslist config",0
-433,restore readme images,0.94514,Restore missing readme images,"fixes ""ors"" in regexes",1
-434,Merge branch 'master' into css-helpers,0.5007889,Update CSS syntax definitions,,0
-435,Bump ansi-regex (#671),0.4441632,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),,0
-436,Fix files.exclude merging (#464),0.7522172,Fix files.exclude configuration resolution (#464),,1
-437,0.1.8,0.56368655,    },,0
-438,update extension description,0.58543587,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
-439,show completion item color swatches for variable-alpha colors,0.8007271,Color swatches can now be displayed for rules with multiple properties and/or colors with variable alpha (#113),,1
-440,fix @types/vscode version,0.56713945,[JIT] Fix @variants completions and diagnostics (#324),,0
-441,update language server package,0.77868426,Update language server filename,,1
-442,add support for [ngClass] attribute (#187),0.9986554,Add support for [ngClass] attribute (#187),,1
-443,v0.4.0,0.60295737,Update minimum VS Code version requirement to ^1.52.0,,0
-444,support css properties with multiple values,0.6890452,CSS,,0
-445,refactor class name extraction and stringify,0.6879804,The extension now ignores the purge option when extracting class names (#131),,0
-446,Merge pull request #685 from tailwindlabs/dependabot/npm_and_yarn/packages/tailwindcss-language-server/json5-2.2.3,0.6888604,Add bundled version of tailwindcss. The extension will use this version if tailwindcss cannot be resolved within the workspace,,0
-447,update tree view title,0.50896966,Improve theme helper completion and hover info,,0
-448,separate out tailwindcss-language-service package,0.7832655,"    ""tailwindCSS.includeLanguages"": {",,1
-449,add mdx language support,0.89731884,Add mdx to default languages,,1
-450,move some utils,0.3920521,Fix completions and hovers inside ,,0
-451,Update GitHub issue template,0.55157226,Fix documentation links,,0
-452,resolve workspace dependencies relative to config file,0.6586166,Improve experimental.configFile in multi-root workspaces (#640),,0
-453,add color previews,0.6630782,Color swatches can now be displayed for rules with multiple properties and/or colors with variable alpha (#113),,0
-454,add initial hover provider,0.5760603,Fix hover error (#353),,0
-455,Rework language boundary detection (#502),1.0000002,Rework language boundary detection (#502),,1
-456,vary @tailwind completions based on version,0.8662803,Update @tailwind completions and diagnostics to account for @tailwind variants,,1
-457,improve support for tailwindcss v2,0.9358932,Add support for tailwindcss v2.2,,1
-458,v0.6.5,0.57788324,Update minimum VS Code version requirement to ^1.52.0,,0
-459,update for at-apply changes in v2,0.54297566,Update minimum VS Code version requirement to ^1.52.0,,0
-460,avoid emmet matches when word starts with a HTML tag name,0.45470256,HTML,,0
-461,reload on config file change,0.5151746,Ensure files.exclude configuration changes are synchronized,,0
-462,add gohtml,0.653641,Add gohtmltmpl to supported languages (#473),,0
-463,v0.6.15,0.5640719,Update minimum VS Code version requirement to ^1.52.0,,0
-464,Bump qs from 6.5.2 to 6.5.3 (#672),0.47285652,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,0
-465,fix removeMeta when meta prop is an object,0.52551335,[LSP] Remove InitializeParams.initializationOptions requirement,,0
-466,Create LICENSE,0.39172846,Add experimental.configFile setting (#541),,0
-467,Bump minimatch in /packages/tailwindcss-language-service,0.7417059,Bump bundled versions of tailwindcss and first-party plugins (315070a),,1
-468,fix config resolution,0.73883355,Fix files.exclude configuration resolution (#464),,1
-469,optimize banner,0.52450293,Update readme banner image,,0
-470,update settings descriptions and types,0.69683653,Update settings descriptions to use markdown,,0
-471,add support back in for config files named tailwind.js,0.7957611,Add support for tailwindcss v2.2,"In refrence to issue #172, this VS code setting: ""search.exclude"": {     ""*/.js"": true }, prevented the Tailwind config from being found ☺️",1
-472,fix re-init short-circuit,0.52770853,[JIT] Fix initialisation when mode is set in a preset (#333),,0
-473,"make ""invalid @apply"" quick fix work in mixed-language documents",0.5996927,[JIT] Fix error when using @apply in a plugin (#319),,0
-474,update .vscodeignore,0.6601511,Update minimum VS Code version requirement to ^1.52.0,,0
-475,tweaks,0.56863326,Update settings descriptions to use markdown,,0
-476,respect editor tab size in CSS previews,0.95865834,Respect default editor tab size in CSS previews,,1
-477,add docs url helper,0.6265914,Fix documentation links,,0
-478,remove lerna config file,0.54088986,Removed all unnecessary logs (#91),,0
-479,prevent crash on config error,0.5730111,Fix stale error messages when resolving a config file error,,0
-480,add astro languages,0.94790816,Add Astro languages (astro and astro-markdown),,1
-481,ignore file watcher permission errors (#238),0.99554217,Ignore file watcher permission errors (#238),,1
-482,fix @​apply in plugins in jit mode,0.8623487,[JIT] Fix error when using @apply in a plugin (#319),,1
-483,readme wip,0.5476576,Update readme banner image,,0
-484,remove diagnostics settings enum descriptions,0.519727,Update settings descriptions to use markdown,,0
-485,0.8.4,0.706792,    },,1
-486,emphasize default setting,0.5022762,Fix theme helper handling when specifying default value (#747),,0
-487,fix type,0.5678922,Fix overeager ,,0
-488,refactor invalid config path diagnostics,0.5569075,Fix usage of absolute paths in experimental.configFile setting (#617),,0
-489,fix fast-glob concurrency,0.8769068,"Fix fast-glob concurrency on certain operating systems (#226, #239)",,1
-490,look for tailwindcss in subdirs (#1),0.7454183,Update @tailwind completions and diagnostics to account for @tailwind variants,,1
-491,"Add automatic support for multi-config workspaces, including @config resolution (#633)",0.9999998,"Add automatic support for multi-config workspaces, including @config resolution (#633)",fixes case where config is a symlink,1
-492,Merge branch 'color-decorators',0.6005486,Fix duplicate color decorators (#652),,0
-493,Add support for @config,0.7597126,Add support for @config (Tailwind v3.2) (bf57dd1),,1
-494,Merge pull request #5 from bradlc/vue,0.47919947,Fix incorrect separator (#343),,0
-495,fix array equality check,0.47525293,Fix variant completions when using a DEFAULT value with matchVariant (#635),,0
-496,add directive completions,0.6077676,Fix completions and hovers inside ,,0
-497,add mustache (#58),0.43200862,    },,0
-498,Support Surface templates (#597),0.9999999,Support Surface templates (#597),,1
-499,Bundle @tailwindcss/container-queries (#733),0.6954287,Support insiders versions of tailwindcss (#571),,0
-500,0.7.4,0.4863413,Update minimum VS Code version requirement to ^1.52.0,,0
-501,update diagnostic message,0.58087,[JIT] Fix @variants completions and diagnostics (#324),,0
-502,fix for number values in config() completion items (#9),0.6101514,Improve completion list performance (#706),,0
-503,"add jit support, refactor for general reliability",0.66823715,Add support for JIT mode,,0
-504,Adopt getVariants API,0.46577278,Add support for [ngClass] attribute (#187),,0
-505,Bump @parcel/watcher,0.5020265,Tweak theme helper detection (#689),,0
-506,replace glob,0.549533,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),,0
-507,Bump ansi-regex in /packages/tailwindcss-language-service (#511),0.6195773,"    ""tailwindCSS.includeLanguages"": {",,0
-508,v0.6.6,0.5424411,Use patched version of enhanced-resolve (#600),,0
-509,add changelog and readme,0.5481861,Update readme banner image,,0
-510,add troubleshooting section to readme,0.61973155,Fix readme image references,,0
-511,Rethrow postcss error,0.5324534,Fix incorrect cssConflict warnings. (#136),,0
-512,tailwindcss must be installed,0.82303405,Add support for tailwindcss v2.2,,1
-513,Add Tailwind CSS language mode (#518),1.0,Add Tailwind CSS language mode (#518),,1
-514,don't provide quick fix for @apply class name which has multiple rules,0.7750283,@apply completion list now excludes class names that are not compatible,,1
-515,lockfile,0.5384887,Ensure files.exclude configuration changes are synchronized,,0
-516,increase dimensions of banner image,0.5462711,Update readme banner image,,0
-517,v0.5.3,0.59219635,Update minimum VS Code version requirement to ^1.52.0,,0
-518,add @tailwind completions,0.83366233,Update @tailwind completions and diagnostics to account for @tailwind variants,,1
-519,initial commit,0.49676484,Add some basic initialisation logs,,0
-520,fix config glob to search folders other than root (#1),0.5951459,Don't watch directories above workspace root (#709),,0
-521,add emmet noise check (#146),0.86795413,"Add noise check when providing Emmet-style completions (#146, #228)",,1
-522,inline getModuleDependencies,0.52667797,"Improved completion triggers, in particular for template interpolations",,0
-523,"Revert ""Improve conflict diagnostics (#503)"" (#525)",0.983537,"Revert ""Improve conflict diagnostics"" (#525)",,1
-524,v0.6.2,0.6098808,Update minimum VS Code version requirement to ^1.52.0,,0
-525,tidy up,0.41506365,Fix completions and hovers inside ,,0
-526,Merge pull request #296 from dorgelesn/jit,0.46435383,Fix incorrect separator (#343),,0
-527,Update @types/vscode and VS Code engines version,0.62720764,Update minimum VS Code version requirement to ^1.52.0,,0
-528,add utility config map,0.56584066,Add experimental.configFile setting (#541),,0
-529,Bump bundled version of tailwindcss to v3.3.0 (#749),1.0000001,Bump bundled version of tailwindcss to v3.3.0 (#749),,1
-530,Add htmldjango (vim filetype) to languages (#721),0.66645294,Add gohtmltmpl to supported languages (#473),,0
-531,remove log,0.873934,Removed all unnecessary logs (#91),,1
-532,add some basic initialisation logs,0.9990944,Add some basic initialisation logs,,1
-533,update settings schema,0.6429049,Update settings descriptions to use markdown,,0
-534,Migrate from deprecated text document (#781),0.4788783,Update readme banner image,,0
-535,Merge pull request #630 from tailwindlabs/next,0.6652133,Add bundled version of tailwindcss. The extension will use this version if tailwindcss cannot be resolved within the workspace,,0
-536,Fix completion text,0.6975563,Fix completions and hovers inside ,,0
-537,add tree view go to definition,0.45999426,Add showPixelEquivalents and rootFontSize settings (#200),,0
-538,tweak semi-colon regex,0.5715437,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),,0
-539,always disregard user-defined mode,0.49150074,Fix mode detection when using nested presets (#431),,0
-540,add recommendedVariantOrder lint setting,0.5473262,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
-541,Normalize document selector pattern (#708),0.5305612,"Ignore content: """" when determining document colors. This enables color decorators for before and after variants",,0
-542,Prevent errors in not semicolon languages (#461),0.8748071,Prevent directive errors in non-semicolon languages (#461),,1
-543,add to readme that tailwind.config.js is required,0.78041506,"Please be aware that as usual the extension will only activate if you have a Tailwind config file (**/{tailwind,tailwind.config,tailwind-config,.tailwindrc}.js) somewhere in your workspace and have the tailwindcss package installed",,1
-544,Add documentation for @config completion,0.8774022,Add documentation for @config completion (ea5aff5),,1
-545,inject syntax into vue and svelte,0.46505237,Prevent directive errors in non-semicolon languages (#461),,0
-546,update vsce,0.4728248,Update icon,,0
-547,add @apply hover provider,0.5603616,"Add hovers, suggestions, and codeActions settings (#535)",,0
-548,Optimize language service build (#520),0.5672687,"Potential fix for language feature duplication (#316, #326, #327)",,0
-549,add screen directive completions,0.6045228,Fix completions and hovers inside ,,0
-550,Fix theme helper handling when specifying default value (#747),1.0000001,Fix theme helper handling when specifying default value (#747),,1
-551,swap array for CSS_TYPES,0.5867318,CSS,,0
-552,Add document URI to configuration scope,0.43121806,Fix documentation links,,0
-553,fix file event handler when file is in a dot folder (#389),0.5695945,Support config files in hidden (dot) folders (#389),,0
-554,merge,0.6913113,  {,,0
-555,0.9.8,0.4276493,Update minimum VS Code version requirement to ^1.52.0,,0
-556,[JIT] add opacity modifier completions,0.9966098,[JIT] Add opacity modifier completions,,1
-557,Ensure jit state is reset,0.63999045,Fix error when switching from JIT mode to AOT mode,,0
-558,0.1.14,0.51166624,Update minimum VS Code version requirement to ^1.52.0,,0
-559,Escape brackets in glob patterns (#694),0.5920814,Fix error when a files.excludes pattern contains braces (#696),,0
-560,add inspectPort to readme,0.5844625,Add tailwindCSS.inspectPort setting,,0
-561,Resolve helper functions in CSS previews (#766),0.62839735,"Fix false positive error when using theme helper with a function value (thanks @choplin, #365)",,0
-562,Update changelog,0.59324515,Update icon,,0
-563,Bump language service version,0.5056067,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,0
-564,remove unused deps,0.6237836,Removed all unnecessary logs (#91),,0
-565,update syntax scope name,0.490962,The extension now ignores the purge option when extracting class names (#131),,0
-566,Ignore content: var(--tw-content) when determining color,0.70392895,"Ignore content: """" when determining document colors. This enables color decorators for before and after variants",,1
-567,Use patched version of enhanced-resolve (#600),1.0000001,Use patched version of enhanced-resolve (#600),,1
-568,rejig config finder (#130),0.576159,Add support for @config (Tailwind v3.2) (bf57dd1),,0
-569,only create output channel when needed,0.4875328,Update output channel name (#262),,0
-570,"update ""invalid helper key"" error conditions and messages",0.5088567,Fix stale error messages when resolving a config file error,,0
-571,add missing document types,0.5488862,Add typescript to default languages (#690),,0
-572,Bump browserslist in /packages/tailwindcss-language-service (#492),0.7324215,Bump bundled versions of tailwindcss and first-party plugins (315070a),,1
-573,Bump decode-uri-component from 0.2.0 to 0.2.2 (#669),0.44592053,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),,0
-574,show config errors,0.6746321,Fix stale error messages when resolving a config file error,,0
-575,Use itemDefaults to reduce size of completion lists (#706),0.7609219,Improve completion list performance (#706),,1
-576,refactor diagnostics and add types,0.56050074,[JIT] Fix @variants completions and diagnostics (#324),,0
-577,Add missing package metadata (#526),0.51418436,Update settings descriptions to use markdown,,0
-578,Merge branch 'master' into diagnostics,0.49683136,[JIT] Fix @variants completions and diagnostics (#324),,0
-579,0.9.5,0.4873161,    },,0
-580,v0.5.5,0.55005246,Update minimum VS Code version requirement to ^1.52.0,,0
-581,Bump hosted-git-info in /packages/tailwindcss-language-service (#493),0.6955848,Bump bundled versions of tailwindcss and first-party plugins (315070a),,0
-582,fix heading level,0.5453422,Fix completions and hovers inside ,,0
-583,v0.4.1,0.5698644,Update minimum VS Code version requirement to ^1.52.0,,0
-584,add settings for utility conflict and unsupported apply lint rules,0.63383764,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
-585,reorder package keywords,0.44756445,Update settings descriptions to use markdown,,0
-586,Merge branch 'pnp-support' of link into DanSnow-pnp-support,0.44267395,Updated module resolution for compatibility with pnpm (#128),,0
-587,reuse @apply validation in hover provider,0.4619739,[JIT] Fix error when using @apply in a plugin (#319),,0
-588,tidy up code actions,0.577909,"Add hovers, suggestions, and codeActions settings (#535)",,0
-589,v0.6.14,0.5790918,Update minimum VS Code version requirement to ^1.52.0,,0
-590,Increase class search range (#760),0.86893404,Increase class list search range (#414),,1
-591,use character-base ranges when looking for classes,0.7406008,Use character-based ranges when parsing class lists (#373),,1
-592,Support reasonml (#25),0.44181824,Support node: module prefix (#585),,0
-593,avoid false positives when parsing colors (#415),0.7726082,Improve color parsing (#415),,1
-594,tweak emmet regex,0.59617627,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),,0
-595,update package.json and readme,0.6499528,Don't watch package.json files (#573),,0
-596,Bump @tailwindcss/language-server,0.7553323,"    ""tailwindCSS.includeLanguages"": {",add to readme that tailwind.config.js is required,1
-597,Merge pull request #659 from tailwindlabs/dependabot/npm_and_yarn/packages/vscode-tailwindcss/minimatch-3.1.2,0.71635306,Add bundled version of tailwindcss. The extension will use this version if tailwindcss cannot be resolved within the workspace,,1
-598,replace microbundle with ncc,0.47609803,Fix use of certain built-in node modules in config file (#745),,0
-599,update readme and add changelog,0.6204283,Update readme banner image,,0
-600,add @screen completion item detail,0.63166225,Add @​layer completions,,0
-601,update docs urls,0.590423,Fix documentation links,,0
-602,fix hover provider error on unknown class name,0.628126,Fix hover error (#353),,0
-603,update tsconfig,0.5027053,Update icon,,0
-604,bump language service version,0.5065482,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,0
-605,fix completions and hovers inside ,0.9956327,Fix completions and hovers inside ,,1
-606,Merge branch 'master' of github.com:tailwindlabs/tailwindcss-intellisense,0.67799145,Add bundled version of tailwindcss. The extension will use this version if tailwindcss cannot be resolved within the workspace,Add SugarSS support,0
-607,make diagnostics settings language-overridable,0.5633915,"Potential fix for language feature duplication (#316, #326, #327)",,0
-608,Fix language features when using nested Vue  (#532),0.92536694,Fix language features when nesting  in Vue files (#532),,1
-609,update foundDefinition callback to match response format,0.47218302,Fix variant completions when using a DEFAULT value with matchVariant (#635),,0
-610,update setupContext arguments,0.58731353,Update settings descriptions to use markdown,,0
-611,Include pixel equivalents in more places (#775),0.6562254,[JIT] Show rem pixel equivalents in completion item details (#332),,0
-612,Fix IntelliSense when separator is -- (#628),0.9999999,Fix IntelliSense when separator is -- (#628),,1
-613,0.1.7,0.52078784,    },,0
-614,Bump language server,0.5571422,Update language server filename,,0
-615,"Revert ""Improve completions when class contains trigger character""",0.80593413,"Fix completion triggers for ""computed"" class attributes.",,1
-616,fix error when using @​apply in plugins (#255),0.9837165,Fix error when @​apply is used within a plugin (#255),,1
-617,"add initial ""unknown variant"" lint rule",0.6178551,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
-618,v0.6.1,0.5505436,Update minimum VS Code version requirement to ^1.52.0,,0
-619,Merge pull request #101 from ledenis/patch-1,0.52591264,Fix incorrect separator (#343),,0
-620,update package-lock.json,0.6608434,Don't watch package.json files (#573),,0
-621,allow whitespace around class attribute = (#426),0.7265439,Support attributes with whitespace around the = character (#426),,1
-622,Boot language servers for nested workspace folders (#642),1.0,Boot language servers for nested workspace folders (#642),,1
-623,"fix crash on not passing ""userLanguages"" option",0.50879437,Add gohtmltmpl to supported languages (#473),,0
-624,Bump vs code dependencies,0.51970845,Bump bundled versions of tailwindcss and first-party plugins (315070a),,0
-625,v0.3.0-alpha.2,0.5809279,Fix compatibility with Tailwind v3.0.0-alpha.2,,0
-626,Merge pull request #111 from zolrath/next,0.43997383,Fix incorrect separator (#343),,0
-627,bump language server version,0.60438216,Update language server filename,,0
-628,update class attribute regex (#233),0.9376118,"Update class attribute regex to support (class=""_"") (#233)",,1
-629,fix changelog spacing,0.4441095,Fix files.exclude configuration resolution (#464),,0
-630,bump tailwindcss-language-service version,0.7952256,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,1
-631,0.9.3,0.45618582,Update minimum VS Code version requirement to ^1.52.0,,0
-632,fix: Add back pnpm support,0.6750504,Updated module resolution for compatibility with pnpm (#128),,0
-633,v0.6.9,0.5500854,Update minimum VS Code version requirement to ^1.52.0,Add additional Elixir eex languages,0
-634,Bump minimatch from 3.0.4 to 3.1.2 in /packages/vscode-tailwindcss,0.82233393,Bump bundled version of tailwindcss to v3.3.0 (#749),,1
-635,[server] Fix crash on M1 macs,0.55058837,* Fixed fsevents not being used on macOS (#112),,0
-636,register disposables,0.38600224,Add some basic initialisation logs,,0
-637,remove unnecessary async keyword,0.41813397,[JIT] Remove @defaults from CSS previews,,0
-638,Merge pull request #262 from neupauer/patch-1,0.42123273,Bump bundled versions of tailwindcss and first-party plugins (315070a),,0
-639,Handle the DEFAULT case for matchVariant (#635),0.75977504,Fix variant completions when using a DEFAULT value with matchVariant (#635),,1
-640,add setting descriptions,0.65083516,Update settings descriptions to use markdown,,0
-641,Improve support for arbitrary variants (#558),0.9464287,Add support for arbitrary variants (#557),,1
-642,Remove unused code,0.5821266,Ignore commented out code (#599),,0
-643,"Bump versions, update lockfiles and notices",0.5742287,Update icon,,0
-644,improve postcss,0.52574074,Fix @screen highlighting for Vetur SFC PostCSS styles (#538),,0
-645,Remove arbitrary value snippet placeholder,0.4788192,[LSP] Remove InitializeParams.initializationOptions requirement,,0
-646,Add settings to enable/disable specific features (#535),0.6032248,"Add hovers, suggestions, and codeActions settings (#535)",,0
-647,update custom regex support (#129),0.7280041,"Update class attribute regex to support (class=""_"") (#233)",,1
-648,"refactor ""suggestion"" quick fixes",0.5541978,Fix overeager ,,0
-649,Support node: module prefix (#585),1.0,Support node: module prefix (#585),,1
-650,update @apply diagnostics,0.5808394,[JIT] Fix @variants completions and diagnostics (#324),,0
-651,add @​layer completions,0.9989028,Add @​layer completions,,1
-652,ignore empty content when determining rule color,0.7379115,"Ignore content: """" when determining document colors. This enables color decorators for before and after variants",,1
-653,0.9.0,0.45823964,Update minimum VS Code version requirement to ^1.52.0,,0
-654,tweak readme wording,0.5742488,Update readme banner image,,0
-655,Reduce size of project key in completion items,0.45573854,Improve completion list performance (#706),,0
-656,update color parser to avoid false positives (#180),0.8082442,Update color parser to avoid interpreting shadows and font-weights as colors (#180),,1
-657,Suppress glob errors (#174),0.5306392,Fix incorrect separator (#343),,0
-658,Merge branch 'alexbjorlig-improve-troubleshoot-section',0.48202127,"Potential fix for language feature duplication (#316, #326, #327)",,0
-659,detect indent from CSS text only,0.58482146,CSS,,0
-660,add tree view,0.4881832,Add showPixelEquivalents and rootFontSize settings (#200),,0
-661,offer suggestions for unknown variants/screens/@tailwind,0.6929604,Update @tailwind completions and diagnostics to account for @tailwind variants,,0
-662,fix issue with nested vue ,0.6233346,Fix language features when nesting  in Vue files (#532),,0
-663,Tweak theme helper detection (#689),0.99999994,Tweak theme helper detection (#689),,1
-664,Clarify supported config file names in readme (#278),0.5078335,Fix readme image references,,0
-665,v0.5.10,0.5730043,Update minimum VS Code version requirement to ^1.52.0,,0
-666,Add support for v3-alpha (#424),0.5847223,Add support for Tailwind CSS v3 alpha (#424),,0
-667,Fix overeager ,1.0000001,Fix overeager ,,1
-668,Fix culori type,0.7023685,Color swatches can now be displayed for rules with multiple properties and/or colors with variable alpha (#113),,1
-669,add target plugin helper,0.5520463,Fix error when using a withOptions plugin without any options,,0
-670,update @tailwind completions and diagnostics,0.9538427,Update @tailwind completions and diagnostics to account for @tailwind variants,,1
-671,Make output chanel name more human-friendly,0.43389925,Update language server filename,,0
-672,add missing import,0.6628307,Fix error caused by incorrect feature flags import,,0
+Commit Message,Score,Correspond Changelog Sentence,Commit Description,Label
+Update editor.quickSuggestions example in readme,0.4357287,"Add hovers, suggestions, and codeActions settings (#535)",,0
+Update issue template,0.41869736,Update icon,Add VS Code version question,0
+Add language mode icon (#794),0.52416766,Add Tailwind CSS language mode (#518),,0
+Fix diagnostic false-positive when no CSS properties are present (#793),0.5671081,"Fix false positive error when using theme helper with a function value (thanks @choplin, #365)",,0
+Fix activation when files.excludes contains braces (#789),0.8516777,Fix error when a files.excludes pattern contains braces (#696),Fix activation when files.excludes contains braces Fix file exclude when searching for CSS files,1
+Fix initialisation when using tailwindcss@^0 (#787),0.7828511,"Fix initialisation failure when using ""jit"" mode with tailwindcss v2.1 (#296)",,1
+Migrate from deprecated text document (#781),0.2922966,"Potential fix for language feature duplication (#316, #326, #327)",Removed instances of deprecated TextDocument Replaced TextDocument type in diagnostics,0
+Include pixel equivalents in more places (#775),0.5103588,[JIT] Show rem pixel equivalents in completion item details (#332),Show pixel equivalents for more rem/em values Add pixel equivalents to media query variant completions,0
+Update package-lock.json,0.59766924,Don't watch package.json files (#573),,0
+Enable IntelliSense for ,0.5300585,Fix IntelliSense when separator is -- (#628),,0
+Fix CSS conflict diagnostics in semicolonless CSS documents (#771),0.7081524,Fix excess semi-colons in CSS previews,,1
+Resolve helper functions in CSS previews (#766),0.6086601,Improve support for theme CSS helper when not using quotes and/or using an opacity modifier (1b730cb),,0
+Fix culori type,0.35113582,Fix incorrect cssConflict warnings. (#136),,0
+Use @types/culori (#735),0.39116168,Add support for arbitrary variants (#557),This removes the need to define types here. Also this allows third parties to use this package without having to declare type definitions for culori.,0
+fix: Don't attempt to read from deleted CSS files (#765),0.491351,Fix incorrect cssConflict warnings. (#136),,0
+Fix CSS conflict diagnostic false negatives (#761),0.62952435,Fix incorrect cssConflict warnings. (#136),,0
+Increase class search range (#760),0.8770788,Increase class list search range (#414),,1
+Bump language server version,0.5934999,Update language server filename,,0
+Update language server notices file,0.7001252,Update language server filename,,1
+0.9.11,0.23163225,Update icon,,0
+Update changelog,0.38325986,Removed all unnecessary logs (#91),,0
+Fix first-party plugin usage when using bundled version of tailwindcss (#751),0.99999994,Fix first-party plugin usage when using bundled version of tailwindcss (#751),,1
+0.9.10,0.21291102,General stability and reliability improvements,,0
+Account for loadConfig returning {default:config} just in case,0.42493543,Add documentation for @config completion (ea5aff5),See also: link,0
+Bump bundled version of tailwindcss to v3.3.0 (#749),1.0,Bump bundled version of tailwindcss to v3.3.0 (#749),,1
+Ensure itemDefaults.data is used in VS Code Insiders,0.38520932,Use VS Code's built-in file watcher,,0
+Fix activation when connected to Windows with Remote SSH (#748),0.95180196,Fix activation when connected to Windows with Remote SSH extension (#748),,1
+Fix theme helper handling when specifying default value (#747),1.0000001,Fix theme helper handling when specifying default value (#747),Fix theme helper handling when specifying default value Tidy,1
+Exclude classes in blocklist from IntelliSense (#746),1.0000002,Exclude classes in blocklist from IntelliSense (#746),,1
+Fix format assumption when resolving module dependencies,0.5820719,Support exports fields when resolving dependencies (#412),link,0
+Remove language service dependency on TextDocuments (#742),0.5112385,Remove typescript from default languages (#645),"The code actions API depends on TextDocuments. This is specific to the language server. This makes it hard to use without a language server. The use of TextDocuments has been removed. Instead, the resolved text document is passed down.",0
+Fix use of certain built-in node modules in config file (#745),1.0000002,Fix use of certain built-in node modules in config file (#745),,1
+Fix getModuleDependencies,0.4527097,Support require.extensions mutations (#583),link,0
+Replace detective-typescript (#739),0.5056334,Remove typescript from default languages (#645),,0
+0.9.9,0.20206693,  js,,0
+Support TS/ESM config files (#738),0.64500254,"Support TypeScript and ESM Tailwind config files when using a version of tailwindcss that supports these (#738, #739)",,0
+0.9.8,0.25948685,Update icon,,0
+Bundle @tailwindcss/container-queries (#733),0.60186934,Add support for tailwindcss v2.2,,0
+Bump language service,0.46240124,Update language server filename,,0
+Add modifier completions for @apply and classRegex configs (#732),0.7669088,Add class modifier completions (#686),,1
+Improve JS comment handling (#727),0.5156932,Ignore commented out code (#599),,0
+Fix IntelliSense inside Handlebars template scripts (#726),0.7557312,Add support for Handlebars template scripts (,,1
+Add htmldjango (vim filetype) to languages (#721),0.5656299,Add gohtmltmpl to supported languages (#473),,0
+Support InitializeParams.rootUri (#725),0.5293251,[LSP] Remove InitializeParams.initializationOptions requirement,Support InitializeParams.rootUri Remove log,0
+Fix InvalidTailwindDirective in notSemicolonLanguages with CRLF file endings (#723),0.84441555,Fix invalidTailwindDirective linting with CRLF file endings (#723),Fix InvalidTailwindDirective in notSemicolonLanguages with CRLF file endings Fix regex Co-authored-by: Jordan Pittman jordan@cryptica.me,1
+update package-lock.json,0.59766924,Don't watch package.json files (#573),,0
+Bump @tailwindcss/language-server,0.7140978,"    ""tailwindCSS.includeLanguages"": {",,1
+Update ThirdPartyNotices.txt,0.33201835,Update language server filename,,0
+0.9.7,0.23138565,Update icon,,0
+"Revert ""Improve completions when class contains trigger character""",0.6847715,"Fix completion triggers for ""computed"" class attributes.",,0
+Fix missing parameter,0.42154264,Fix error when using a withOptions plugin without any options,,0
+Improve completions when class contains trigger character,0.7233728,"Fix completion triggers for ""computed"" class attributes.",,1
+Add workspace root document selector when there's exactly one active project (#711),0.6378436,Enable IntelliSense in entire workspace when there is exactly one active Tailwind project (#711),,0
+Improve completions when class contains trigger character (#710),0.70743865,"Fix completion triggers for ""computed"" class attributes.",Improve completions when class contains trigger character wip wip,1
+Only watch directories up to workspace root (#709),0.9081036,Don't watch directories above workspace root (#709),Don't watch beyond workspace root Catch errors when adding paths to chokidar watcher Normalize paths wip,1
+Normalize document selector pattern (#708),0.49809167,Fix document selector when tailwindCSS.experimental.configFile is a string (#693),,0
+Update context.getClassList usage (#707),0.45833117,Fix classRegex error (#501),Update context.getClassList usage fix default metadata,0
+Use itemDefaults to reduce size of completion lists (#706),0.7581128,Improve completion list performance (#706),Use completion list itemDefaults more defaults,1
+0.9.6,0.2814774,Update icon,,0
+Bump minimatch to 5.1.4 (#699),0.4584975,Add support for arbitrary variants (#557),,0
+Reduce size of project key in completion items,0.41897893,[JIT] Show rem pixel equivalents in completion item details (#332),,0
+0.9.5,0.19927345,  js,,0
+Fix error when a files.excludes pattern contains braces (#696),1.0000002,Fix error when a files.excludes pattern contains braces (#696),,1
+Bump vsce,0.25186825,"I'm dropping an initial pre-release here for brave people to try out, and I will be looking to release a new version of the extension after a bit more testing. To install go to the Extensions panel in VS Code and click on the ""three-dot"" button. From there, select Install from VSIX... and select the vscode-tailwindcss-0.3.0-alpha.1.vsix file",,0
+0.9.4,0.26214308,Update icon,,0
+Escape brackets in glob patterns (#694),0.6059231,Fix error when a files.excludes pattern contains braces (#696),,0
+Fix document selector when configFile setting is a string (#693),0.7980399,Fix document selector when tailwindCSS.experimental.configFile is a string (#693),,1
+Bump language service version,0.48701388,Update language server filename,,0
+0.9.3,0.27805686,Update icon,,0
+"Revert ""Remove typescript from list of languages (#645)"" (#690)",0.8141952,Remove typescript from default languages (#645),This reverts commit 19a550d0de1f3bfbc2a49297e9f7e0c53cfc1ca6.,1
+"Remove ""preview"" tag",0.8054329,"Remove marketplace ""preview"" tag (5932d20)",,1
+Update readme,0.6892757,Update readme banner image,,0
+Tweak theme helper detection (#689),0.99999964,Tweak theme helper detection (#689),,1
+0.9.2,0.28922436,Update icon,,0
+Bump bundled version of tailwindcss to 3.2.4,0.97327745,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,1
+Support class modifiers (#686),0.65834546,Add class modifier completions (#686),,0
+Merge pull request #685 from tailwindlabs/dependabot/npm_and_yarn/packages/tailwindcss-language-server/json5-2.2.3,0.59248805,Fix compatibility with Tailwind v3.0.0-alpha.2,Bump json5 from 2.2.0 to 2.2.3 in /packages/tailwindcss-language-server,0
+Bump json5 from 2.2.0 to 2.2.3 in /packages/tailwindcss-language-server,0.68225586,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),Bumps json5 from 2.2.0 to 2.2.3. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: json5   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com,0
+Merge pull request #684 from tailwindlabs/dependabot/npm_and_yarn/packages/tailwindcss-language-service/json5-and-tsconfig-paths-2.2.3,0.69803596,"Support TypeScript and ESM Tailwind config files when using a version of tailwindcss that supports these (#738, #739)",Bump json5 and tsconfig-paths in /packages/tailwindcss-language-service,0
+Bump json5 and tsconfig-paths in /packages/tailwindcss-language-service,0.6965039,"Support TypeScript and ESM Tailwind config files when using a version of tailwindcss that supports these (#738, #739)",Bumps json5 and tsconfig-paths. These dependencies needed to be updated together. Updates json5 from 2.1.3 to 2.2.3 - Release notes - Changelog - Commits Updates tsconfig-paths from 3.9.0 to 3.10.1 - Release notes - Changelog - Commits updated-dependencies: - dependency-name: json5   dependency-type: indirect - dependency-name: tsconfig-paths   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com,0
+Fix method called before initialize (#667),0.46285495,[JIT] Fix initialisation when mode is set in a preset (#333),"wait for init in onInitialize before sending response to the client, so that client won't try to do request before the lsp handlers are registered.",0
+Bump qs from 6.5.2 to 6.5.3 in /packages/tailwindcss-language-service (#673),0.6780335,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps qs from 6.5.2 to 6.5.3. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: qs   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump qs from 6.5.2 to 6.5.3 (#672),0.47190937,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps qs from 6.5.2 to 6.5.3. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: qs   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump ansi-regex (#671),0.4903952,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),Bumps ansi-regex and ansi-regex. These dependencies needed to be updated together. Updates ansi-regex from 3.0.0 to 4.1.1 - Release notes - Commits Updates ansi-regex from 4.1.0 to 4.1.1 - Release notes - Commits updated-dependencies: - dependency-name: ansi-regex   dependency-type: indirect - dependency-name: ansi-regex   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump decode-uri-component from 0.2.0 to 0.2.2 (#669),0.47624707,Use patched version of enhanced-resolve (#600),Bumps decode-uri-component from 0.2.0 to 0.2.2. - Release notes - Commits updated-dependencies: - dependency-name: decode-uri-component   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Merge pull request #660 from tailwindlabs/dependabot/npm_and_yarn/packages/tailwindcss-language-service/minimatch-3.1.2,0.599193,Fix compatibility with Tailwind v3.0.0-alpha.2,Bump minimatch from 3.0.4 to 3.1.2 in /packages/tailwindcss-language-service,0
+Bump minimatch in /packages/tailwindcss-language-service,0.6779036,"    ""tailwindCSS.includeLanguages"": {",Bumps minimatch from 3.0.4 to 3.1.2. - Release notes - Commits updated-dependencies: - dependency-name: minimatch   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com,0
+Merge pull request #659 from tailwindlabs/dependabot/npm_and_yarn/packages/vscode-tailwindcss/minimatch-3.1.2,0.607485,Fix compatibility with Tailwind v3.0.0-alpha.2,Bump minimatch from 3.0.4 to 3.1.2 in /packages/vscode-tailwindcss,0
+Bump minimatch from 3.0.4 to 3.1.2 in /packages/vscode-tailwindcss,0.6959438,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps minimatch from 3.0.4 to 3.1.2. - Release notes - Commits updated-dependencies: - dependency-name: minimatch   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com,0
+Fix error when initializationOptions is undefined (#656),0.57314503,Fix error when using a withOptions plugin without any options,Co-authored-by: Anbcodes me@anb.codes,0
+Improve theme helper detection (#655),1.0000002,Improve theme helper detection (#655),,1
+Fix duplicate color decorators (#652),0.9999998,Fix duplicate color decorators (#652),,1
+Remove typescript from list of languages (#645),0.9327302,Remove typescript from default languages (#645),Comment out typescript from list of languages Update languages.ts Co-authored-by: Brad Cornes hello@bradley.dev,1
+Update GitHub issue template,0.3949963,Update readme banner image,,0
+Boot language servers for nested workspace folders (#642),1.0,Boot language servers for nested workspace folders (#642),,1
+Add document URI to configuration scope,0.4679085,Fix document selector when tailwindCSS.experimental.configFile is a string (#693),,0
+Add documentation for @config completion,0.9294404,Add documentation for @config completion (ea5aff5),,1
+Improve experimental.configFile in multi-root workspaces (#640),0.99999976,Improve experimental.configFile in multi-root workspaces (#640),,1
+"Bump versions, update lockfiles and notices",0.44335723,Bump bundled versions of tailwindcss and first-party plugins (315070a),,0
+Bump bundled version of tailwindcss to 3.2.0,0.96973825,Bump bundled version of tailwindcss to v3.3.0 (#749),,1
+Add missing default function,0.3829623,Fix theme helper handling when specifying default value (#747),,0
+Improve extraction for variable colors (#638),1.0000002,Improve extraction for variable colors (#638),,1
+Fix @layer syntax highlighting (#637),1.0000002,Fix @layer syntax highlighting (#637),,1
+0.9.1,0.2843619,Update icon,,0
+Handle the DEFAULT case for matchVariant (#635),0.70262456,Fix variant completions when using a DEFAULT value with matchVariant (#635),handle the DEFAULT case Prettier Co-authored-by: Brad Cornes hello@bradley.dev,1
+0.9.0,0.26197928,Update icon,,0
+"Add automatic support for multi-config workspaces, including @config resolution (#633)",1.0,"Add automatic support for multi-config workspaces, including @config resolution (#633)",wip wip Boot client if a CSS file contains @config wip Check document exists wip Fix duplicate document selector wip Use enum for document selector priorities Delete unused functions Remove unused state type Share glob patterns Update config file glob fix logs Fix filename checks on Windows Don't show error popups wip handle negated content paths Handle non-tailwind dependency installs add package root to document selectors tidy wip dedupe document selectors Fix @config regex Fix document selectors when using experimental.configFile Remove log,1
+Merge pull request #630 from tailwindlabs/next,0.5826596,Fix compatibility with Tailwind v3.0.0-alpha.2,"Theme helper improvements, support @config, adopt getVariants, bump bundled modules",0
+Bump tailwindcss and plugins,0.8465853,Bump bundled versions of tailwindcss and first-party plugins (315070a),,1
+Remove arbitrary value snippet placeholder,0.35726285,[JIT] Remove @defaults from CSS previews,"& doesn't always make sense as a placeholder, for example with the container queries plugin",0
+Fix completion text,0.59778297,Fix completions and hovers inside ,,0
+Tweak type,0.4139179,Add support for arbitrary variants (#557),,0
+Remove unused import,0.48470795,Fix error caused by incorrect feature flags import,,0
+Adopt getVariants API,0.36475024,Fix variant completions when using a DEFAULT value with matchVariant (#635),,0
+Add support for @config,0.6870803,Add documentation for @config completion (ea5aff5),,0
+Theme helper improvements,0.7578703,Improve theme helper detection,,1
+Fix IntelliSense when separator is -- (#628),0.9999999,Fix IntelliSense when separator is -- (#628),Fix IntelliSense when separator is -- Tidy up,1
+Show completions when using parameterized and/or labelled variants,0.6205874,"Add focus-visible, checked, motion-safe, motion-reduce, and dark  to @variants completions",,0
+Fix configFile path resolution (#617),0.7061882,Fix usage of absolute paths in experimental.configFile setting (#617),,1
+Merge settings with defaults (#605),0.501818,Update settings descriptions to use markdown,,0
+0.8.7,0.3203017,Update icon,,0
+Update @types/vscode and VS Code engines version,0.6803873,Update minimum VS Code version requirement to ^1.52.0,,0
+Update lockfiles,0.41224417,Ensure files.exclude configuration changes are synchronized,,0
+fix: guard against optional client capabilities (#602),0.83846354,Guard against optional client capabilities (#602),"for client like lsp-mode for emacs which doesn't have colorProvider, server is failing to start, and according to the specification, the capabilities here is all optional, so we should guard the nil situation.",1
+Use patched version of enhanced-resolve (#600),1.0000001,Use patched version of enhanced-resolve (#600),,1
+Bump vs code dependencies,0.3328938,Bump bundled versions of tailwindcss and first-party plugins (315070a),,0
+Ignore commented out code (#599),1.0000002,Ignore commented out code (#599),,1
+Support Surface templates (#597),1.0000001,Support Surface templates (#597),Surface support is defined here link See link and link,1
+Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),0.9999999,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),,1
+Support node: module prefix (#585),1.0000004,Support node: module prefix (#585),,1
+Support require.extensions mutations (#583),1.0000002,Support require.extensions mutations (#583),,1
+Bump terser from 4.6.12 to 4.8.1 (#578),0.41470367,Support require.extensions mutations (#583),Bumps terser from 4.6.12 to 4.8.1. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: terser   dependency-type: direct:development ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+"Remove terser dependency, update lockfiles",0.39636838,Don't watch package.json files (#573),,0
+Don't watch package.json files (#573),1.0000001,Don't watch package.json files (#573),,1
+Deduplicate classlist candidates (#572),1.0000001,Deduplicate classlist candidates (#572),,1
+Bump dset to v3.1.2,0.4695298,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),,0
+Support insiders versions of tailwindcss (#571),1.0000002,Support insiders versions of tailwindcss (#571),Support insiders versions of tailwindcss Revert import reorder,1
+0.8.6,0.3410276,Update icon,,0
+Improve theme helper detection,0.9999998,Improve theme helper detection,,1
+0.8.5,0.2742146,Update icon,,0
+Fix @types/vscode version,0.63383675,Update minimum VS Code version requirement to ^1.52.0,,0
+Improve support for arbitrary variants (#558),0.93190837,Add support for arbitrary variants (#557),Support arbitrary variants Bump typescript and types versions Revert @types/vscode version bump,1
+Add support for arbitrary variants (#557),1.0,Add support for arbitrary variants (#557),Support arbitrary variants Bump typescript and types versions,1
+0.8.4,0.32464474,Update icon,,0
+Account for undefined dependencies,0.50885063,Support exports fields when resolving dependencies (#412),,0
+Fix overeager ,1.0000001,Fix overeager ,,1
+0.8.3,0.33864793,Update icon,,0
+Add experimental.configFile setting (#541),0.9999998,Add experimental.configFile setting (#541),Add experimental configFile setting Fix initial capability registration Update readme Add setting default and description Remove unused variable Be more defensive when reading setting Fix type Fix type,1
+Fix @screen highlighting for Vetur SFC PostCSS styles (#538),0.99999994,Fix @screen highlighting for Vetur SFC PostCSS styles (#538),,1
+0.8.2,0.33967027,Update icon,,0
+Add settings to enable/disable specific features (#535),0.41733825,"Add hovers, suggestions, and codeActions settings (#535)","Add suggest and hover settings Rename settings, add codeActions setting",0
+Add missing package metadata (#526),0.52832735,Support require.extensions mutations (#583),Add missing package metadata Remove tailwindcss-language-service metadata Co-authored-by: Brad Cornes hello@bradley.dev,0
+Fix language features when using nested Vue  (#532),0.9436079,Fix language features when nesting  in Vue files (#532),,1
+Merge branch 'master' of github.com:tailwindlabs/tailwindcss-intellisense,0.52203906,Support insiders versions of tailwindcss (#571),,0
+Remove unused dependency vscode-languageclient (#527),0.56441504,Remove typescript from default languages (#645),This dependency is unused by the language service.,0
+0.8.1,0.33271712,Update icon,,0
+"Revert ""Improve conflict diagnostics (#503)"" (#525)",0.96451247,"Revert ""Improve conflict diagnostics"" (#525)",This reverts commit ddfaea21cc5feca1bbf71ddb36645a61f01daea3.,1
+Define TypeScript compiler target (#522),0.6551765,Add typescript to default languages (#690),"TypeScript was complaining about some syntax features, this solves it. It doesn’t affect the output, as tsdx ignores the target property.",0
+Optimize language service build (#520),0.4396857,Boot language servers for nested workspace folders (#642),"tsdx uses .browserslistrc to determine how to transpile the source code. By default it supports very old environments. By specifying relatively modern targets, the bundle size has been reduced with ~40%. This also significantly increases performance and readability of the output, because babel’s regenerator runtime isn’t used anymore. The output target can’t be set to something too new, because tsdx uses an older version of terser which isn’t compatible with all new syntax (e.g. optional chaining).",0
+Convert dlv require statements to imports (#521),0.44225705,Support exports fields when resolving dependencies (#412),"It was already imported in one place, that appears to work fine. Using require results in invalid ESM output, because require is not defined in ES modules.",0
+Update notices,0.47201207,Update icon,,0
+0.8.0,0.32194975,Update icon,,0
+Update language contribution,0.53241515,Update language server filename,,0
+Add Tailwind CSS language mode (#518),1.0000002,Add Tailwind CSS language mode (#518),"Use esbuild Replace direct eval add initial language mode Update capabilities, add rename provider Update vscode types Add completion middleware to match built-in CSS provider Update language config to match built-in CSS language Add folding region completion provider Add stylesheet cache Add log and error handling Update settings handling, debounce validation Fix response flakiness by always augmenting CSS Respect folding range limit Use uncommon symbol as @media placeholder Update readme Use esbuild for language server build Add theme() completion item Avoid errors when using @media screen() Update readme Add CSS server to build script Rename language mode server file in prod Update VS Code engines and types versions Update grammar",1
+Replace @vercel/ncc with esbuild (#517),0.41494828,Support node: module prefix (#585),Use esbuild Replace direct eval Use esbuild for language server build,0
+Fix flakiness caused by expired cache entries,0.37438172,Fix stale error messages when resolving a config file error,,0
+Bump ansi-regex in /packages/tailwindcss-language-server (#512),0.70610374,"    ""tailwindCSS.includeLanguages"": {",Bumps ansi-regex from 4.1.0 to 4.1.1. - Release notes - Commits updated-dependencies: - dependency-name: ansi-regex   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+Bump ansi-regex in /packages/tailwindcss-language-service (#511),0.6970618,"    ""tailwindCSS.includeLanguages"": {",Bumps ansi-regex from 3.0.0 to 3.0.1. - Release notes - Commits updated-dependencies: - dependency-name: ansi-regex   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump minimist in /packages/tailwindcss-language-service (#510),0.67727864,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps minimist from 1.2.5 to 1.2.6. - Release notes - Commits updated-dependencies: - dependency-name: minimist   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump minimist in /packages/tailwindcss-language-server (#509),0.6919519,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps minimist from 1.2.5 to 1.2.6. - Release notes - Commits updated-dependencies: - dependency-name: minimist   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump minimist from 1.2.5 to 1.2.6 in /packages/vscode-tailwindcss (#508),0.6531333,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps minimist from 1.2.5 to 1.2.6. - Release notes - Commits updated-dependencies: - dependency-name: minimist   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Improve conflict diagnostics (#503),1.0000002,Improve conflict diagnostics (#503),,1
+Rework language boundary detection (#502),1.0,Rework language boundary detection (#502),Fix classRegex error Rework language boundary detection,1
+Fix classRegex error (#501),1.0000002,Fix classRegex error (#501),,1
+Detect conflicting multi-rule classes (#498),1.0,Detect conflicting multi-rule classes (#498),,1
+Prevent errors in not semicolon languages (#461),0.7771626,Prevent directive errors in non-semicolon languages (#461),fix: prevent errors in not semicolon languages fix: extends fix for sugarss and stylus Formatting Fix document access Co-authored-by: Brad Cornes bradlc41@gmail.com,1
+Bump hosted-git-info in /packages/tailwindcss-language-service (#493),0.6095666,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps hosted-git-info from 2.8.8 to 2.8.9. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: hosted-git-info   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Add support for gohtmltmpl files for Hugo (#473),0.811347,Add gohtmltmpl to supported languages (#473),,1
+Bump browserslist in /packages/tailwindcss-language-service (#492),0.6720334,"    ""tailwindCSS.includeLanguages"": {",Bumps browserslist from 4.14.6 to 4.19.1. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: browserslist   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump path-parse in /packages/tailwindcss-language-service (#489),0.70444816,"    ""tailwindCSS.includeLanguages"": {",Bumps path-parse from 1.0.6 to 1.0.7. - Release notes - Commits updated-dependencies: - dependency-name: path-parse   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,1
+Bump glob-parent in /packages/tailwindcss-language-service (#490),0.68407786,"    ""tailwindCSS.includeLanguages"": {",Bumps glob-parent from 5.1.1 to 5.1.2. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: glob-parent   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump tmpl from 1.0.4 to 1.0.5 in /packages/tailwindcss-language-service (#488),0.65975344,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps tmpl from 1.0.4 to 1.0.5. - Release notes - Commits updated-dependencies: - dependency-name: tmpl   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump node-fetch from 2.6.1 to 2.6.7 (#482),0.5495131,Support node: module prefix (#585),Bumps node-fetch from 2.6.1 to 2.6.7. - Release notes - Commits updated-dependencies: - dependency-name: node-fetch   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump trim-off-newlines from 1.0.1 to 1.0.3 (#481),0.37518674,Bump bundled version of tailwindcss to v3.3.0 (#749),Bumps trim-off-newlines from 1.0.1 to 1.0.3. - Release notes - Commits updated-dependencies: - dependency-name: trim-off-newlines   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump shelljs from 0.8.4 to 0.8.5 (#483),0.3629979,Add support for Yarn Plug'n'Play. Thanks @DanSnow! (#217),Bumps shelljs from 0.8.4 to 0.8.5. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: shelljs   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump lodash in /packages/tailwindcss-language-service (#487),0.62386096,"    ""tailwindCSS.includeLanguages"": {",Bumps lodash from 4.17.20 to 4.17.21. - Release notes - Commits updated-dependencies: - dependency-name: lodash   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+Bump nanoid from 3.1.30 to 3.2.0 (#485),0.44128352,Bump bundled version of tailwindcss to 3.2.4 (f07eedd),Bumps nanoid from 3.1.30 to 3.2.0. - Release notes - Changelog - Commits updated-dependencies: - dependency-name: nanoid   dependency-type: indirect ... Signed-off-by: dependabot[bot] support@github.com Co-authored-by: dependabot[bot] 49699333+dependabot[bot]@users.noreply.github.com,0
+0.7.7,0.22991419,Update icon,,0
+Filter out empty files.exclude items,0.6067238,Fix error when a files.excludes pattern contains braces (#696),,0
+Protect against undefined separator (#427),0.6381926,Fix incorrect separator (#343),,0
+Fix for projects with brackets in their path (#429),0.83421487,Fix IntelliSense for project paths containing brackets (#694),,1
+Fix for missing files config,0.53489894,Fix files.exclude configuration resolution (#464),,0
+Remove log,0.6806295,Removed all unnecessary logs (#91),,0
+Add default excluded files (for non-vscode clients),0.5267381,Ensure files.exclude configuration changes are synchronized,,0
+0.7.6,0.30587336,Update icon,,0
+Synchronise files configuration section,0.6216771,Ensure files.exclude configuration changes are synchronized,,0
+Fix files.exclude merging (#464),0.70214665,Fix error when a files.excludes pattern contains braces (#696),,1
+Don't read configuration from initializationOptions,0.5394283,[LSP] Remove InitializeParams.initializationOptions requirement,,0
+0.7.5,0.24166468,Update minimum VS Code version requirement to ^1.52.0,,0
+Add files.exclude setting,0.6653863,Fix error when a files.excludes pattern contains braces (#696),,0
+Add bundled version of tailwindcss and first-party plugins,0.8556862,Bump bundled versions of tailwindcss and first-party plugins (315070a),,1
+Update lockfile,0.35767218,Update language server filename,,0
+Add clean script,0.36786026,Add rescript to list of default languages. Thanks @dcalhoun! (#222),,0
+Create LICENSE,0.1592885,Fix activation on Windows when project path contains brackets (#699),,0
+0.7.4,0.30878264,Update icon,,0
+Rename banner image,0.5868639,Update readme banner image,,0
+Update assets,0.50067896,Update icon,,0
+0.7.3,0.31203964,Bump bundled version of tailwindcss to v3.3.0 (#749),,0
+Exclude * from class completions,0.84465533,Exclude the global selector (*) from class completions,,1
+Disable variant order linting and sorting for tailwindcss v3,0.9580354,Disable variant order linting and automatic sorting when using Tailwind v3,,1
+Bump language server,0.541414,Update language server filename,,0
+Bump @parcel/watcher,0.26388276,Bump bundled versions of tailwindcss and first-party plugins (315070a),Adds M1 builds for language server,0
+0.7.2,0.3111312,Update icon,,0
+Ignore content: var(--tw-content) when determining color,0.62533015,"Ignore content: """" when determining document colors. This enables color decorators for before and after variants",,0
+Update syntax definitions,0.7411393,Update CSS syntax definitions,,1
+Update variant API for compatibility with v3-alpha.2,0.65993124,Add support for arbitrary variants (#557),,0
+Ensure jit state is reset,0.63704664,[JIT] Fix initialisation when mode is set in a preset (#333),,0
+Fix mode identification when using nested presets (#431),0.9530479,Fix mode detection when using nested presets (#431),,1
+Catch errors when resolving config and creating context,0.6228359,Fix stale error messages when resolving a config file error,,0
+0.7.1,0.3016752,Update icon,,0
+fix color detection,0.6395016,Improve color parsing (#415),,0
+update tsconfig,0.42382032,Add typescript to default languages (#690),,0
+reinstate console.log override,0.45727342,Removed all unnecessary logs (#91),,0
+increase classlist search range (#414),0.9735757,Increase class list search range (#414),,1
+update color extraction to allow parentheses (#423),0.70881367,Improve color parsing (#415),,1
+add classAttributes setting,0.58499855,Add tailwindCSS.classAttributes setting (#350),,0
+Fix resolution of WSL files on Windows (#411),1.0000004,Fix resolution of WSL files on Windows (#411),,1
+bump postcss,0.33065617,Bump bundled versions of tailwindcss and first-party plugins (315070a),,0
+add github issue template,0.3247991,Add support for Handlebars template scripts (,,0
+allow whitespace around class attribute = (#426),0.81777525,Support attributes with whitespace around the = character (#426),,1
+bump language service,0.46240124,Update language server filename,,0
+add accent-color to list of color-related CSS properties,0.705572,Show color decorators for accent-* classes,,1
+Clarify supported config file names in readme (#278),0.55377305,Support config files in hidden (dot) folders (#389),,0
+v0.7.0,0.35682443,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+Add support for v3-alpha (#424),0.5624658,Fix compatibility with Tailwind v3.0.0-alpha.2,"wip Update v3 support, color handling Update diagnostics and completions bump language service update context api usage bump language service",0
+v0.6.15,0.35557398,Update icon,,0
+tweak style block regexes,0.48325592,"Update class attribute regex to support (class=""_"") (#233)",,0
+Merge branch 'master' into bugfix-style,0.3240319,[JIT] Fix @variants completions and diagnostics (#324),,0
+update resolver options to support exports fields (#412),0.6775082,Support exports fields when resolving dependencies (#412),,0
+add phoenix-heex language (#407),1.0000002,Add phoenix-heex language (#407),,1
+avoid false positives when parsing colors (#415),0.78652596,Improve color parsing (#415),,1
+remove log,0.6806295,Removed all unnecessary logs (#91),,0
+disable extension in virtual workspaces (#398),1.0000001,Disable extension in virtual workspaces (#398),,1
+fix file event handler when file is in a dot folder (#389),0.50671977,Support config files in hidden (dot) folders (#389),,0
+find config files hiding in hidden folders (#389),0.6908493,Support config files in hidden (dot) folders (#389),,0
+bump language server version,0.5934999,Update language server filename,,0
+update ,0.49554256,Update icon,,0
+inline getModuleDependencies,0.38880733,Support exports fields when resolving dependencies (#412),,0
+[server] Fix crash on M1 macs,0.40491512,* Fixed fsevents not being used on macOS (#112),,0
+Fix error when rule doesn't have a parent,0.5465377,Detect conflicting multi-rule classes (#498),,0
+update changelog,0.38325986,Removed all unnecessary logs (#91),,0
+v0.6.14,0.35551715,Update icon,,0
+Merge branch 'master' into css-helpers,0.4561364,Improve theme helper detection (#655),,0
+use character-base ranges when looking for classes,0.7532885,Use character-based ranges when parsing class lists (#373),,1
+remove logs,0.6925968,Removed all unnecessary logs (#91),,0
+update language server package,0.6696677,Update language server filename,,0
+update readme,0.6892759,Update readme banner image,,0
+add license and third-party notices for language server package,0.40805894,Update language server filename,,0
+update css helper hovers,0.70745474,Improve theme helper completion and hover info,,1
+prettier,0.2601513,CSS,,0
+update diagnostic message,0.42560905,"Revert ""Improve conflict diagnostics"" (#525)",,0
+Merge pull request #365 from choplin/patch-1,0.42145026,"Revert ""Improve conflict diagnostics"" (#525)",Avoid invalidConfigPath for function values,0
+Avoid invalidConfigPath for function values,0.4422707,Fix usage of absolute paths in experimental.configFile setting (#617),"Pass validateConfigPath if a type of value equals to function. The purpose of this commit is to avoid unwanted warnings when we define theme values as functions in tailwind.config.js, which, for example, are required to define theme colors with opacity enabled. link",0
+v0.6.13,0.36384642,Update icon,,0
+remove @defaults when stringifying CSS,0.70204145,[JIT] Remove @defaults from CSS previews,,1
+fix semi-colon insertion for indented rules,0.4815489,Fix excess semi-colons in CSS previews,,0
+v0.6.12,0.35345966,Update icon,,0
+fix hover error,0.9341053,Fix hover error (#353),,1
+v0.6.11,0.35198602,Update icon,,0
+update @tailwind completions and diagnostics,0.91561407,Update @tailwind completions and diagnostics to account for @tailwind variants,,1
+update lockfile,0.35767218,Update language server filename,,0
+bump tailwindcss-language-service,0.770851,"    ""tailwindCSS.includeLanguages"": {",,1
+v0.6.10,0.3162438,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+ignore empty content when determining rule color,0.540745,"Ignore content: """" when determining document colors. This enables color decorators for before and after variants",,0
+ignore watcher binary load errors,0.5642961,Ignore file watcher permission errors (#238),,0
+v0.6.9,0.3346762,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+resolve parcel watcher prebuilds from actual package,0.39692545,Don't watch package.json files (#573),,0
+add parcel watcher,0.2553407,Use VS Code's built-in file watcher,,0
+Merge branch 'master' into watcher,0.28093538,Ignore file watcher permission errors (#238),,0
+v0.6.8,0.34863985,Update icon,,0
+add astro languages,0.7863506,Add Astro languages (astro and astro-markdown),,1
+use lsp file events when available,0.3852405,Use VS Code's built-in file watcher,,0
+fix separator (#343),0.9567554,Fix incorrect separator (#343),,1
+formatting,0.542636,CSS,,0
+tweak opacity modifier completions,0.8374926,[JIT] Add opacity modifier completions,,1
+fix for canary releases,0.42281893,Fix compatibility with Tailwind v3.0.0-alpha.2,,0
+reinstate #341,0.42930233,"Revert ""Improve conflict diagnostics"" (#525)",Co-Authored-By: Rafał Chłodnicki rchl2k@gmail.com,0
+fix heading level,0.2543225,Fix mode detection when using nested presets (#431),,0
+add inspectPort to readme,0.51476645,Add tailwindCSS.inspectPort setting,,0
+add inspectPort setting,0.6612496,Add tailwindCSS.inspectPort setting,,0
+tweak semi-colon regex,0.539713,Fix excess semi-colons in CSS previews,,0
+fix @types/vscode version,0.63383675,Update minimum VS Code version requirement to ^1.52.0,,0
+support tailwindcss v2.2,0.9774684,Add support for tailwindcss v2.2,,1
+add lerna and separate language server package,0.46976748,Update language server filename,,0
+Merge pull request #341 from rchl/patch-1,0.46910864,"Revert ""Improve conflict diagnostics"" (#525)","fix crash on not passing ""userLanguages"" option",0
+"fix crash on not passing ""userLanguages"" option",0.46879557,"    ""tailwindCSS.includeLanguages"": {","Since the server can be used by various clients and there is no guarantee that the ""userLanguages"" are provided, handle that case gracefully and don't crash.",0
+v0.6.6,0.33575788,Update icon,,0
+fix JIT initialisation when mode is set in a preset (fixes #333),0.9414053,[JIT] Fix initialisation when mode is set in a preset (#333),,1
+fix module resolution when path has a # (fixes #331),0.53063864,Fix files.exclude configuration resolution (#464),,0
+fix completions and hovers inside ,0.99999994,Fix completions and hovers inside ,,1
+show pixel equivalents in jit mode (fixes #332),0.6877049,[JIT] Show rem pixel equivalents in completion item details (#332),,0
+v0.6.5,0.3359542,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+[JIT] add opacity modifier completions,1.0000004,[JIT] Add opacity modifier completions,,1
+rename prod server file,0.6158761,Update language server filename,,0
+v0.6.4,0.3421287,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+fix @​variants completions/diagnostics in JIT mode (fixes #324),0.9146015,[JIT] Fix @variants completions and diagnostics (#324),,1
+tweak dynamic registration disposal,0.31810206,"Add support for dynamic and parameterized variants (Tailwind v3.2) (d073bb9, f59adbe)",,0
+update setupContext arguments,0.32701126,[LSP] Remove InitializeParams.initializationOptions requirement,,0
+update package-lock,0.43583396,Update icon,,0
+bump minimum vscode version,0.79225856,Update minimum VS Code version requirement to ^1.52.0,1.52.0 is required for the language client/server,1
+v0.6.3,0.34192103,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+fix @​apply in plugins in jit mode,0.87515897,[JIT] Fix error when using @apply in a plugin (#319),,1
+v0.6.2,0.34112152,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+avoid re-loading modules when not necessary,0.3292871,Fix module resolution in config files when using Yarn Plug'n'Play,,0
+"fix error when using a ""withOptions"" plugin",0.9461471,Fix error when using a withOptions plugin without any options,,1
+v0.6.1,0.3308446,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+fix feature flags import,0.8910694,Fix error caused by incorrect feature flags import,,1
+add prepublishOnly script,0.40743828,Add support for Handlebars template scripts (,,0
+v0.6.0,0.36500132,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+add recommendedVariantOrder setting to readme,0.47513267,Add support for arbitrary variants (#557),,0
+add support back in for config files named tailwind.js,0.745662,"Support TypeScript and ESM Tailwind config files when using a version of tailwindcss that supports these (currently tailwindcss@insiders, since tailwindlabs/tailwindcss#10785) (#738, #739)",,1
+resolve jit modules together,0.5263447,Add support for JIT mode,,0
+always disregard user-defined mode,0.5371828,[JIT] Fix initialisation when mode is set in a preset (#333),,0
+load jit modules with try/catch instead of by version number,0.46892995,Add support for JIT mode,,0
+reinstate console.log overrides,0.48721516,Removed all unnecessary logs (#91),,0
+fix re-init short-circuit,0.36875743,[JIT] Fix initialisation when mode is set in a preset (#333),now it takes config dependencies into account,0
+bust user plugin cache?,0.2879124,Fix first-party plugin usage when using bundled version of tailwindcss (#751),fixes classes not updating when plugin is changed,0
+add matchUtilities mock,0.37602332,Fix variant completions when using a DEFAULT value with matchVariant (#635),,0
+add recommendedVariantOrder lint setting,0.50925463,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
+update diagnostic name,0.40848577,[JIT] Fix @variants completions and diagnostics (#324),,0
+add note about color decorator settings,0.62235415,Add color decorators for classes and CSS helper functions.,,0
+register disposables,0.22914597,Deduplicate classlist candidates (#572),,0
+only create output channel when needed,0.51763177,Update output channel name (#262),,0
+don't show init errors,0.51914847,Add some basic initialisation logs,,0
+keep editor state intact,0.37791425,Respect default editor tab size in CSS previews,,0
+fix error for tailwindcss < 1.7.0,0.84095025,Add support for tailwindcss v2.2,,1
+never reveal output channel,0.44478047,Update output channel name (#262),,0
+add type,0.367231,Add typescript to default languages (#690),,0
+fix multi-root,0.30682528,Improve experimental.configFile in multi-root workspaces (#640),,0
+clear color decorators when restarting language client,0.56112206,Fix duplicate color decorators (#652),,0
+fix user-defined language support,0.57864106,"Potential fix for language feature duplication (#316, #326, #327)",,0
+remove unused imports,0.41991886,Fix error caused by incorrect feature flags import,,0
+update settings schema,0.60352665,Update settings descriptions to use markdown,,0
+update colorDecorators setting,0.5644819,  This can be configured with the new tailwindCSS.colorDecorators setting.,,0
+short-circuit re-initialisation,0.29512706,[JIT] Fix initialisation when mode is set in a preset (#333),,0
+remove unnecessary async keyword,0.30135822,Remove typescript from default languages (#645),,0
+boot language clients lazily,0.5588551,Boot language servers for nested workspace folders (#642),,0
+"add jit support, refactor for general reliability",0.6091741,Add support for JIT mode,,0
+v0.5.10,0.32030076,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+restore user-defined mode config after compilation,0.49620724,[JIT] Fix initialisation when mode is set in a preset (#333),,0
+Merge pull request #296 from dorgelesn/jit,0.39783606,"Revert ""Improve conflict diagnostics"" (#525)",Force aot mode,0
+Force AOT mode,0.6020153,Fix error when switching from JIT mode to AOT mode,,0
+override console.log/error and catch unhandled rejections,0.34389946,"Prevent crash when there's a Tailwind error, and show the error message in the editor (#156)",,0
+Merge pull request #262 from neupauer/patch-1,0.43507645,"Revert ""Improve conflict diagnostics"" (#525)",Make output chanel name more human-friendly,0
+Make output chanel name more human-friendly,0.41367695,Update output channel name (#262),"According to the documentation, the channel name is: ""Human-readable string which will be used to represent the channel in the UI"". So it shouldn't break anything. Signed-off-by: Peter Neupauer peter@neupauer.sk",0
+update changelog and readme,0.5141574,Update readme banner image,,0
+bump versions,0.3921513,Bump bundled versions of tailwindcss and first-party plugins (315070a),,0
+tweak pixel equivalent comment spacing (#200),0.3820578,Add showPixelEquivalents and rootFontSize settings (#200),,0
+replace experimental.showPixelValues setting with showPixelEquivalents and enable by default (#200),0.9544709,Add experimental.showPixelValues setting (#200),,1
+add missing variants (#256),0.5370954,Add support for arbitrary variants (#557),,0
+v0.5.8,0.3516853,Update icon,,0
+fix error when using @​apply in plugins (#255),0.9717462,Fix error when @​apply is used within a plugin (#255),,1
+v0.5.7,0.32783604,Update icon,,0
+bump tailwindcss-language-service version,0.7468128,"    ""tailwindCSS.includeLanguages"": {",,1
+fix fast-glob concurrency,0.8598784,"Fix fast-glob concurrency on certain operating systems (#226, #239)",,1
+tweak readme wording,0.5251084,Fix readme image references,,0
+Merge branch 'alexbjorlig-improve-troubleshoot-section',0.41362587,"Revert ""Improve conflict diagnostics"" (#525)",,0
+Merge branch 'improve-troubleshoot-section' of link into alexbjorlig-improve-troubleshoot-section,0.41671297,Fix documentation links,,0
+Merge pull request #236 from MoPaMo/patch-1,0.43268085,"Revert ""Improve conflict diagnostics"" (#525)",Typo: change built-it to built-in in Docs,0
+ignore file watcher permission errors (#238),1.0,Ignore file watcher permission errors (#238),,1
+update class attribute regex (#233),0.79206854,"Update class attribute regex to support (class=""_"") (#233)",,1
+change built-it to built-in,0.34929308,Fix use of certain built-in node modules in config file (#745),There's a typo in line 37,0
+v0.5.6,0.3331484,Update icon,,0
+bump language service version,0.48701388,Update language server filename,,0
+fix pnp config module resolution,0.72198176,Updated module resolution for compatibility with pnpm (#128),,1
+add emmet noise check (#146),0.67870504,"Add noise check when providing Emmet-style completions (#146, #228)",,0
+v0.5.5,0.3367374,Update minimum VS Code version requirement to ^1.52.0,,0
+replace publish npm script,0.4152317,Fix use of certain built-in node modules in config file (#745),,0
+Merge branches 'master' and 'master' of github.com:tailwindlabs/tailwindcss-intellisense,0.46401024,Support insiders versions of tailwindcss (#571),,0
+Merge pull request #222 from dcalhoun/add-rescript-support,0.55850625,Add rescript to list of default languages. Thanks @dcalhoun! (#222),Add ReScript support,0
+don't search for pnp file above root dir,0.49412903,Don't watch directories above workspace root (#709),,0
+add support for config files with .cjs extension (#198),0.99999976,Add support for config files with .cjs extension (#198),,1
+add missing import,0.51026756,Fix error caused by incorrect feature flags import,,0
+"add hover, color decorator, linting support for classRegex setting (#129)",0.9435281,"Add hover, color decorator, linting support for experimental.classRegex setting (#129)",,1
+add prettier dependency,0.42447054,Improve theme helper detection (#655),,0
+Add ReScript support,0.78502613,Add rescript to list of default languages. Thanks @dcalhoun! (#222),,1
+fix config resolution,0.67613494,Fix files.exclude configuration resolution (#464),,0
+Merge branch 'DanSnow-pnp-support',0.347825,Add support for Yarn Plug'n'Play. Thanks @DanSnow! (#217),,0
+Merge branch 'pnp-support' of link into DanSnow-pnp-support,0.3727448,Add support for Yarn Plug'n'Play. Thanks @DanSnow! (#217),,0
+v0.5.4,0.33948848,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+update browserslist usage (#159),0.5741005,Fix initialisation failure when using extends in browserslist config (#159),"fixes ""extends"" in browserslist config",0
+update custom regex support (#129),0.5932143,"Update class attribute regex to support (class=""_"") (#233)","fixes ""ors"" in regexes",0
+v0.5.3,0.3584356,Fix compatibility with Tailwind v3.0.0-alpha.2,,0
+add experimental showPixelValues setting,0.8501377,Add experimental.showPixelValues setting (#200),,1
+add some basic initialisation logs,1.0,Add some basic initialisation logs,,1
+"classRegex: increase search range, make search global (#129)",0.8036896,Increase class list search range (#414),,1
+v0.5.2,0.34059697,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+add support for [ngClass] attribute (#187),1.0,Add support for [ngClass] attribute (#187),,1
+lockfile,0.43240064,Ignore file watcher permission errors (#238),,0
+v0.5.1,0.32791755,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+add mdx language support,0.88320804,Add mdx to default languages,,1
+add @​layer completions,1.0000002,Add @​layer completions,,1
+update docs urls,0.62470496,Fix documentation links,,0
+add experimental classRegex setting (#129),0.94932914,Add experimental.classRegex setting (#129),,1
+remove comment,0.53451306,Ignore commented out code (#599),,0
+respect editor tab size in CSS previews,0.98149586,Respect default editor tab size in CSS previews,,1
+export completionsFromClassList,0.62366307,@apply completion list now excludes class names that are not compatible,,0
+update color parser to avoid false positives (#180),0.7835189,Improve color parsing (#415),,1
+update class attribute regex,0.71078753,"Update class attribute regex to support (class=""_"") (#233)",,1
+merge,0.269737,  },,0
+fix readme image references,0.9999999,Fix readme image references,,1
+remove lerna config file,0.33243495,Removed all unnecessary logs (#91),,0
+improve support for tailwindcss v2,0.965981,Add support for tailwindcss v2.2,,1
+update for at-apply changes in v2,0.42946953,Fix error when @​apply is used within a plugin (#255),,0
+remove lerna and update lsp deps,0.38232863,[LSP] Remove InitializeParams.initializationOptions requirement,,0
+import types only,0.39879474,Remove typescript from default languages (#645),,0
+separate out tailwindcss-language-service package,0.6693758,"    ""tailwindCSS.includeLanguages"": {",,0
+fix: Add back pnpm support,0.61064225,Updated module resolution for compatibility with pnpm (#128),,0
+Rethrow postcss error,0.43865746,Fix incorrect cssConflict warnings. (#136),,0
+feat: Yarn PnP support,0.6434472,Add support for Yarn Plug'n'Play. Thanks @DanSnow! (#217),,0
+Suppress glob errors (#174),0.64938295,Fix error when a files.excludes pattern contains braces (#696),,0
+Added section to troubleshooting,0.46351314,Add some basic initialisation logs,"In refrence to issue #172, this VS code setting: ""search.exclude"": {     ""*/.js"": true }, prevented the Tailwind config from being found ☺️",0
+v0.4.3,0.34790468,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+On tailwind error prevent crash and show message (#156),0.8792866,"Prevent crash when there's a Tailwind error, and show the error message in the editor (#156)",,1
+Fix color parsing when alpha is 0 (#177),0.71688735,Fix completions not working when encountering a color with an alpha value of 0 (#177),,1
+v0.4.2,0.34727198,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+Merge branch 'color-decorators',0.770456,Fix duplicate color decorators (#652),,1
+Skip @apply validation if applyComplexClasses flag is enabled,0.67189634,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
+Update color decorator debounce,0.5715379,Fix duplicate color decorators (#652),,0
+Update color extraction,0.69035864,Improve extraction for variable colors (#638),,0
+Remove unused code,0.48768902,Ignore commented out code (#599),,0
+Update setting description,0.676185,Update settings descriptions to use markdown,,0
+Fix color decorators not updating when config changes or errors,0.73474896,Fix color decorators for var() fallbacks (#423),,1
+Settings tweak,0.47128654,Update settings descriptions to use markdown,,0
+Update settings,0.469922,Update settings descriptions to use markdown,,0
+Add initial color decorators,0.6657937,Fix color decorators for var() fallbacks (#423),,0
+"update class attribute lexers to fix matching of ""computed"" attributes",0.6800093,"Fix completion triggers for ""computed"" class attributes.",,0
+remove class list length limit (#136),0.6313324,Increase class list search range (#414),,0
+use realpath for config require hook,0.550527,Fix usage of absolute paths in experimental.configFile setting (#617),fixes case where config is a symlink,0
+v0.4.1,0.3398088,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+rejig config finder (#130),0.50227225,Support config files in hidden (dot) folders (#389),,0
+compare scope when determining css conflicts (#134),0.48868966,Detect conflicting multi-rule classes (#498),,0
+don't send diagnostics if intellisense is disabled (#133),0.462493,Fix IntelliSense when separator is -- (#628),,0
+v0.4.0,0.37494966,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+update banner,0.7317432,Update readme banner image,,1
+update extension icon,0.76482874,Update icon,,1
+update setting description,0.676185,Update settings descriptions to use markdown,,0
+Merge branch 'diagnostics',0.46240908,Improve conflict diagnostics (#503),,0
+update gallery banner color,0.54344475,Update readme banner image,,0
+update extension metadata,0.4256284,Support require.extensions mutations (#583),,0
+update extension description,0.4614346,Update settings descriptions to use markdown,,0
+remove old img folder and update .vscodeignore,0.42380983,Update minimum VS Code version requirement to ^1.52.0,,0
+add troubleshooting section to readme,0.42582768,Add some basic initialisation logs,,0
+increase dimensions of banner image,0.535592,Update readme banner image,,0
+readme wip,0.45738778,Update readme banner image,,0
+rename utilityConflicts lint rule,0.47445998,The extension now ignores the purge option when extracting class names (#131),,0
+optimize banner,0.43205985,Update readme banner image,,0
+add setting descriptions,0.6730907,Update settings descriptions to use markdown,,0
+tweak postcss cleanup,0.36493486,Fix @screen highlighting for Vetur SFC PostCSS styles (#538),,0
+invalid @apply quick fix: check that base class name can be @applied,0.68443197,Fix error when @​apply is used within a plugin (#255),,0
+reuse @apply validation in hover provider,0.45737565,"Add hover, color decorator, linting support for experimental.classRegex setting (#129)",,0
+ignore purge option (#131),0.48139668,The extension now ignores the purge option when extracting class names (#131),,0
+refactor invalid config path diagnostics,0.64284253,Fix stale error messages when resolving a config file error,,0
+detect indent from CSS text only,0.4193069,CSS,,0
+tidy up,0.2364628,Removed all unnecessary logs (#91),,0
+make invalidApply quick fix work with multiple selectors,0.4444201,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
+tidy up code actions,0.41233528,"Add hovers, suggestions, and codeActions settings (#535)",,0
+don't provide quick fix for @apply class name which has multiple rules,0.55253017,Fix error when @​apply is used within a plugin (#255),,0
+"make ""invalid @apply"" quick fix work in mixed-language documents",0.5402235,Fix error when @​apply is used within a plugin (#255),,0
+fix language boundary ranges,0.65743476,Rework language boundary detection (#502),,0
+replace js-levenshtein with sift-string,0.31270194,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),,0
+"refactor ""suggestion"" quick fixes",0.44620606,"Add hovers, suggestions, and codeActions settings (#535)",,0
+consolidate conflict diagnostics and update quick fixes,0.73064435,Improve conflict diagnostics (#503),,1
+add initial quick fix for utility conflict diagnostic,0.6720349,Improve conflict diagnostics (#503),,0
+refactor diagnostics and add types,0.49076855,[JIT] Fix @variants completions and diagnostics (#324),,0
+wip quick fix for invalid @apply,0.5744034,Fix error when @​apply is used within a plugin (#255),,0
+update diagnostic messages,0.44937018,Fix stale error messages when resolving a config file error,,0
+add quick fixes for invalid screens/variants/helper keys/@tailwind,0.5572747,Update @tailwind completions and diagnostics to account for @tailwind variants,,0
+update error message wording,0.4753173,Fix stale error messages when resolving a config file error,,0
+update lint setting names,0.43558985,Update settings descriptions to use markdown,,0
+offer suggestions for unknown variants/screens/@tailwind,0.58185863,Update @tailwind completions and diagnostics to account for @tailwind variants,,0
+add types for js-levenshtein,0.49363616,Add typescript to default languages (#690),,0
+Merge branch 'master' into diagnostics,0.3677879,Improve conflict diagnostics (#503),,0
+"update ""invalid helper key"" error conditions and messages",0.40817487,Fix incorrect cssConflict warnings. (#136),,0
+fix class list offsets (fixes hover ranges),0.5402092,Fix hover error (#353),,0
+update module resolution (#128),0.74483085,Updated module resolution for compatibility with pnpm (#128),,1
+ensure diagnostics are updated when the user's tailwind config changes,0.67787325,Update @tailwind completions and diagnostics to account for @tailwind variants,,0
+rename unknownConfigKey to invalidHelperKey,0.41296822,Fix stale error messages when resolving a config file error,,0
+update unknownConfigKey error messages,0.58583415,Fix stale error messages when resolving a config file error,,0
+make diagnostics settings language-overridable,0.49244654,Add mdx to default languages,,0
+remove diagnostics settings enum descriptions,0.48026764,Update settings descriptions to use markdown,,0
+enable diagnostics in multi-language documents,0.44642752,"Potential fix for language feature duplication (#316, #326, #327)",,0
+"add initial ""unsupported tailwind directive"" lint rule",0.6199386,Add support for @config (Tailwind v3.2) (bf57dd1),,0
+"add initial ""unknown config key"" lint rule",0.47137773,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
+"add initial ""unknown variant"" lint rule",0.54951775,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
+"add initial ""unknown screen"" diagnostics",0.49841478,Add some basic initialisation logs,,0
+add settings for utility conflict and unsupported apply lint rules,0.58788586,Disable invalidApply lint rule when applyComplexClasses experimental flag is enabled.,,0
+update .vscodeignore,0.6273592,Update minimum VS Code version requirement to ^1.52.0,,0
+v0.3.1,0.3606192,Fix compatibility with Tailwind v3.0.0-alpha.2,,0
+update settings descriptions and types,0.72104084,Update settings descriptions to use markdown,,1
+restore readme images,0.92677355,Restore missing readme images,,1
+fix hover provider when using computed attribute in vue template,0.483849,Fix language features when nesting  in Vue files (#532),,0
+update class attribute regex (#125),0.7563693,"Update class attribute regex to support (class=""_"") (#233)",,1
+make pseudo class name meta always an array,0.38799858,Use character-based ranges when parsing class lists (#373),,0
+add initial class name conflict diagnostics,0.49984917,Improve conflict diagnostics (#503),,0
+minor refactor of @apply diagnostics,0.5011113,Fix error when @​apply is used within a plugin (#255),,0
+update vsce,0.518368,Update minimum VS Code version requirement to ^1.52.0,,0
+add .vscode,0.586426,"I'm dropping an initial pre-release here for brave people to try out, and I will be looking to release a new version of the extension after a bit more testing. To install go to the Extensions panel in VS Code and click on the ""three-dot"" button. From there, select Install from VSIX... and select the vscode-tailwindcss-0.3.0-alpha.1.vsix file",,0
+update setting descriptions,0.7391286,Update settings descriptions to use markdown,,1
+add requirements to readme (thanks @ledenis),0.43200454,Support require.extensions mutations (#583),,0
+fix changelog spacing,0.38243762,Removed all unnecessary logs (#91),,0
+fix changelog spacing?,0.38860995,Removed all unnecessary logs (#91),,0
+emphasize default setting,0.49505514,Fix theme helper handling when specifying default value (#747),,0
+update package.json,0.6144041,Don't watch package.json files (#573),,0
+Merge pull request #101 from ledenis/patch-1,0.43735194,"Revert ""Improve conflict diagnostics"" (#525)",add to readme that tailwind.config.js is required,0
+add changelog and readme,0.42796817,Add some basic initialisation logs,,0
+provide corePlugins helper when running plugins,0.36927074,Add support for Yarn Plug'n'Play. Thanks @DanSnow! (#217),,0
+v0.3.0-alpha.3,0.46933666,Fix compatibility with Tailwind v3.0.0-alpha.2,,0
+add gohtml,0.7285694,Add gohtmltmpl to supported languages (#473),,1
+add class list finder helper and fix ranges,0.6157855,Increase class list search range (#414),,0
+Merge branch 'next' into diagnostics,0.40788352,[JIT] Fix @variants completions and diagnostics (#324),,0
+Move requirements section over features section,0.34258178,Fix error caused by incorrect feature flags import,,0
+Merge branch 'next' of github.com:bradlc/vscode-tailwindcss into next,0.5629556,"I'm dropping an initial pre-release here for brave people to try out, and I will be looking to release a new version of the extension after a bit more testing. To install go to the Extensions panel in VS Code and click on the ""three-dot"" button. From there, select Install from VSIX... and select the vscode-tailwindcss-0.3.0-alpha.1.vsix file",,0
+add typescript (#118),0.7233031,Add typescript to default languages (#690),,1
+Merge pull request #116 from danmichaelo/patch-2,0.4443623,"Revert ""Improve conflict diagnostics"" (#525)",Add SugarSS support,0
+update hover provider to use lexer for html class attribute hovers,0.60166115,"Add hover, color decorator, linting support for experimental.classRegex setting (#129)",,0
+inject syntax definition to text.html,0.5862354,Update CSS syntax definitions,,0
+fix css context check,0.4330831,Update CSS syntax definitions,,0
+use lexer for class attribute completions,0.6250638,Add class modifier completions (#686),,0
+update @apply diagnostics,0.4780244,[JIT] Fix error when using @apply in a plugin (#319),,0
+add base/preflight,0.308325,Add some basic initialisation logs,,0
+filter @apply completions,0.6644363,@apply completion list now excludes class names that are not compatible,,0
+Add SugarSS support,0.36595666,Add support for tailwindcss v2.2,,0
+fix removeMeta when meta prop is an object,0.3392784,"Remove marketplace ""preview"" tag (5932d20)",,0
+diagnostics,0.41684246,Improve conflict diagnostics (#503),,0
+tailwindcss must be installed,0.8192133,Add support for tailwindcss v2.2,,1
+add notification handlers,0.26728103,"Please be aware that as usual the extension will only activate if you have a Tailwind config file (**/{tailwind,tailwind.config,tailwind-config,.tailwindrc}.js) somewhere in your workspace and have the tailwindcss package installed",,0
+v0.3.0-alpha.2,0.45848843,Fix compatibility with Tailwind v3.0.0-alpha.2,,0
+fix numbers being interpreted as colors,0.5886556,Update color parser to avoid interpreting shadows and font-weights as colors (#180),,0
+only run browserslist once,0.53796995,Fix initialisation failure when using extends in browserslist config (#159),,0
+add target plugin helper,0.4389061,Improve theme helper detection (#655),,0
+add includeLanguages setting and remove default language client,0.56195307,Add mdx to default languages,,0
+move some utils,0.19450003,Don't watch directories above workspace root (#709),,0
+restructure,0.2751751,Rework language boundary detection (#502),,0
+tweak file watching (#112),0.58978736,Use VS Code's built-in file watcher,,0
+replace glob,0.3678847,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),,0
+update color plucking logic (#113),0.56558067,Improve extraction for variable colors (#638),,0
+support css properties with multiple values,0.46967065,Color swatches can now be displayed for rules with multiple properties and/or colors with variable alpha (#113),,0
+fix tests,0.44445372,[JIT] Fix @variants completions and diagnostics (#324),,0
+Merge pull request #111 from zolrath/next,0.37375444,"Revert ""Improve conflict diagnostics"" (#525)",Add additional Elixir eex languages,0
+Add additional eex languages,0.61105907,Add phoenix-heex language (#407),,0
+show completion item color swatches for variable-alpha colors,0.7102536,Color swatches can now be displayed for rules with multiple properties and/or colors with variable alpha (#113),,1
+simplify built-in plugin finder,0.34772873,Improve theme helper detection (#655),,0
+resolve workspace dependencies relative to config file,0.6768683,"Add automatic support for multi-config workspaces, including @config resolution (#633)",,0
+set chokidar cwd,0.25598055,Update output channel name (#262),,0
+add HTML (EEx) language,0.56175303,Add phoenix-heex language (#407),,0
+add todos,0.30563974,"Add hovers, suggestions, and codeActions settings (#535)",,0
+add mustache (#58),0.32776776,Add class modifier completions (#686),,0
+build and package updates,0.41092148,Update icon,,0
+add languages,0.54838425,"  This setting allows you to add additional language support. The key of each entry is the new language ID and the value is any one of the extensions built-in languages, depending on how you want the new language to be treated (e.g. html, css, javascript etc.)",,0
+add docs url helper,0.52709836,Fix documentation links,,0
+fix config helper hover range,0.639142,Fix hover error (#353),,0
+update extension package.json and add icon,0.62276614,Update icon,,0
+fix zero values in CSS helper completion items,0.6202445,Fix completions not working when encountering a color with an alpha value of 0 (#177),,0
+fix @tailwind completion item resolution,0.7416036,Update @tailwind completions and diagnostics to account for @tailwind variants,,1
+vary @tailwind completions based on version,0.84688205,Update @tailwind completions and diagnostics to account for @tailwind variants,,1
+add @tailwind completions,0.76999855,Update @tailwind completions and diagnostics to account for @tailwind variants,,1
+fix completion item order,0.4923558,Improve completion list performance (#706),,0
+add @screen completion item detail,0.613107,Add @​layer completions,,0
+use user's separator,0.59482557,Fix incorrect separator (#343),,0
+update context completion items,0.48408067,"Fix completion triggers for ""computed"" class attributes.",,0
+update extension activationEvents,0.34036145,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+add utility config map,0.51039493,Add documentation for @config completion (ea5aff5),,0
+add group-focus variant,0.36107063,"Add focus-visible, checked, motion-safe, motion-reduce, and dark  to @variants completions",,0
+show config errors,0.617996,Fix stale error messages when resolving a config file error,,0
+prevent crash on config error,0.6501082,Fix stale error messages when resolving a config file error,,0
+fix hover provider error on unknown class name,0.76090854,Fix hover error (#353),,1
+add missing dep,0.37795562,Support require.extensions mutations (#583),,0
+use decache when resolving config,0.49764568,Fix stale error messages when resolving a config file error,,0
+fix array equality check,0.2454237,Fix mode detection when using nested presets (#431),,0
+remove unused deps,0.31947225,Removed all unnecessary logs (#91),,0
+remove lerna deps,0.3195723,Removed all unnecessary logs (#91),,0
+add @apply hover provider,0.6091793,"Add hover, color decorator, linting support for experimental.classRegex setting (#129)",,0
+remove variants filter,0.4334879,Fix variant completions when using a DEFAULT value with matchVariant (#635),,0
+add emmet-style completions,0.7442473,"Add noise check when providing Emmet-style completions (#146, #228)",,1
+refactor class name extraction and stringify,0.48697507,The extension now ignores the purge option when extracting class names (#131),,0
+add initial @variants completions,0.73348236,"Add focus-visible, checked, motion-safe, motion-reduce, and dark  to @variants completions",,1
+add screen directive completions,0.5594043,Add @​layer completions,,0
+add directive completions,0.63858163,Add @​layer completions,,0
+add initial css helper hover,0.6461519,Improve theme helper completion and hover info,,0
+update syntax scope name,0.516868,Update CSS syntax definitions,,0
+inject syntax into vue and svelte,0.62105143,Fix language features when nesting  in Vue files (#532),,0
+add initial hover provider,0.58949316,Fix hover error (#353),,0
+add vue/svelte support,0.5249036,Fix language features when nesting  in Vue files (#532),,0
+initial refactor,0.30639192,"Revert ""Improve conflict diagnostics"" (#525)",,0
+add to readme that tailwind.config.js is required,0.7118758,"Please be aware that as usual the extension will only activate if you have a Tailwind config file (**/{tailwind,tailwind.config,tailwind-config,.tailwindrc}.js) somewhere in your workspace and have the tailwindcss package installed",fix #74,1
+Merge branch 'master' of github.com:bradlc/vscode-tailwindcss,0.59109294,"I'm dropping an initial pre-release here for brave people to try out, and I will be looking to release a new version of the extension after a bit more testing. To install go to the Extensions panel in VS Code and click on the ""three-dot"" button. From there, select Install from VSIX... and select the vscode-tailwindcss-0.3.0-alpha.1.vsix file",,0
+Fix EEx support (for elixir/phoenix) (#54),0.45349935,Add phoenix-heex language (#407),,0
+add django support (#58),0.32274854,Add support for Handlebars template scripts (,,0
+"restore readme, changelog, and img",0.7939137,Restore missing readme images,,1
+remove tree view stuff for now,0.28460962,"Remove marketplace ""preview"" tag (5932d20)",,0
+v0.2.0,0.37164384,"It's been a long time coming (sorry!) but the extension has had a bit of a restructure, which has fixed some bugs, enabled some new features, and laid the groundwork for some really cool upcoming features.",,0
+add support for slim files (#36),0.41649482,Add support for arbitrary variants (#557),,0
+Added njk to the HTML_TYPES array for njk file extension support. (#31),0.4597673,"      ""plaintext"": ""html""",,0
+Add support for AdonisJS Edge templating (#29),0.40704972,Add support for Handlebars template scripts (,,0
+Support reasonml (#25),0.42131692,Add support for arbitrary variants (#557),,0
+update to work with lsp definition format,0.4935615,[LSP] Remove InitializeParams.initializationOptions requirement,,0
+fix type,0.42167965,Fix incorrect separator (#343),,0
+replace microbundle with ncc,0.26994437,Add support for JIT mode,,0
+update tree view title,0.305775,Update language server filename,,0
+update foundDefinition callback to match response format,0.30432117,Fix variant completions when using a DEFAULT value with matchVariant (#635),,0
+add placeholder to clients map to prevent >1 instance per folder,0.36221606,Ensure files.exclude configuration changes are synchronized,,0
+add modules and options to tree view,0.24300975,Add @​layer completions,,0
+add tree view go to definition,0.24596512,Fix IntelliSense for project paths containing brackets (#694),,0
+add tree view,0.20275053,"I appreciate anyone taking the time to try this out and provide feedback. I have a bit more free time at the moment to spend on the extension, and I want to make it as good as it can be!",,0
+add lsp boilerplate,0.568086,[LSP] Remove InitializeParams.initializationOptions requirement,,0
+custom seperator,0.4331336,Fix incorrect separator (#343),,0
+0.1.16,0.35748523,Update icon,,0
+Add support for Phoenix (.html.eex) files (#18),0.5602477,Add phoenix-heex language (#407),,0
+0.1.15,0.36451614,Update icon,,0
+add support for leaf files (#16),0.40546378,Add support for Yarn Plug'n'Play. Thanks @DanSnow! (#217),,0
+0.1.14,0.36911064,Update icon,,0
+add icon and update gallery banner color,0.47616696,Update icon,,0
+0.1.13,0.36699522,Update icon,,0
+add anchor links to readme,0.55890477,Fix documentation links,,0
+fix image sizes,0.3674841,Add showPixelEquivalents and rootFontSize settings (#200),,0
+fix issue with nested vue ,0.70135945,Fix language features when nesting  in Vue files (#532),,1
+0.1.12,0.35447475,Update icon,,0
+fix for number values in config() completion items (#9),0.53660226,Add documentation for @config completion (ea5aff5),,0
+avoid emmet matches when word starts with a HTML tag name,0.42717046,"      ""plaintext"": ""html""",,0
+add sublime gifs,0.27399716,  js,,0
+0.1.11,0.3464591,Update icon,,0
+add img folder to vscodeignore,0.44099098,Use VS Code's built-in file watcher,,0
+0.1.10,0.30099276,Fix compatibility with Tailwind v3.0.0-alpha.2,,0
+update readme and add changelog,0.5521704,Update readme banner image,,0
+add grammar (#6),0.4047833,Fix incorrect separator (#343),,0
+update gitignore,0.37857258,Update icon,,0
+0.1.9,0.30071485,Update minimum VS Code version requirement to ^1.52.0,,0
+add @screen completions (#7),0.6423929,Add @​layer completions,,0
+0.1.8,0.33698127,Update icon,,0
+improve postcss,0.31707215,Fix @screen highlighting for Vetur SFC PostCSS styles (#538),,0
+0.1.7,0.3206113,Update minimum VS Code version requirement to ^1.52.0,,0
+Merge pull request #5 from bradlc/vue,0.45171618,Fix language features when nesting  in Vue files (#532),Vue,0
+improve emmet syntax handling (#3),0.5392288,"Add noise check when providing Emmet-style completions (#146, #228)",,0
+tweaks,0.3985883,Tweak theme helper detection (#689),,0
+clear require cache before reading tailwind config,0.6539049,Add support for @config (Tailwind v3.2) (bf57dd1),,0
+add config helper completions for .vue files,0.563007,Fix language features when nesting  in Vue files (#532),,0
+add .vue @apply support (#4),0.60991096,Fix language features when nesting  in Vue files (#532),,0
+add marketplace link to readme,0.40467668,Update readme banner image,,0
+0.1.6,0.32871,Update icon,,0
+tweak emmet regex,0.4611361,Replace multi-regexp2 with becke-ch--regex--s0-0-v1--base--pl--lib (#590),,0
+0.1.5,0.2710388,Update minimum VS Code version requirement to ^1.52.0,,0
+support emmet style syntax in html-based file types,0.46051598,"      ""plaintext"": ""html""",,0
+0.1.4,0.32074088,Update minimum VS Code version requirement to ^1.52.0,,0
+look for tailwindcss in subdirs (#1),0.6012631,Add tailwindCSS.files.exclude setting,,0
+0.1.3,0.32322016,Bump bundled version of tailwindcss to v3.3.0 (#749),,0
+add .haml support,0.3581084,Add support for Yarn Plug'n'Play. Thanks @DanSnow! (#217),,0
+0.1.2,0.336655,Update minimum VS Code version requirement to ^1.52.0,,0
+fix config glob to search folders other than root (#1),0.5926966,Fix usage of absolute paths in experimental.configFile setting (#617),,0
+update readme image paths,0.70828223,Fix readme image references,,1
+add vscode gallery banner color,0.43445766,Add color decorators for classes and CSS helper functions.,,0
+swap array for CSS_TYPES,0.45930806,Update CSS syntax definitions,,0
+update package.json and readme,0.57994056,Don't watch package.json files (#573),,0
+item sorting,0.32519448,Disable variant order linting and automatic sorting when using Tailwind v3,,0
+add missing document types,0.35176563,Add typescript to default languages (#690),,0
+tweak class regex to include className,0.7006446,"Update class attribute regex to support (class=""_"") (#233)",,1
+update tailwind-class-names dep,0.72754395,Class names from @tailwind base are now included (by default @tailwind base does not include any class names but in theory plugins can contribute them),,1
+rename project vscode-tailwind -> vscode-tailwindcss,0.6103989,"I'm dropping an initial pre-release here for brave people to try out, and I will be looking to release a new version of the extension after a bit more testing. To install go to the Extensions panel in VS Code and click on the ""three-dot"" button. From there, select Install from VSIX... and select the vscode-tailwindcss-0.3.0-alpha.1.vsix file",,0
+fix html class attr regex,0.7204398,"Update class attribute regex to support (class=""_"") (#233)",,1
+remove commented out code,0.768284,Ignore commented out code (#599),,1
+add tailwind-config.js to config file glob,0.718308,"Support TypeScript and ESM Tailwind config files when using a version of tailwindcss that supports these (currently tailwindcss@insiders, since tailwindlabs/tailwindcss#10785) (#738, #739)",,1
+reorder package keywords,0.368669,Disable variant order linting and automatic sorting when using Tailwind v3,,0
+add color previews,0.52466875,  This can be configured with the new tailwindCSS.colorDecorators setting.,,0
+prevent showing completions for unknown prefixes,0.59624326,Exclude the global selector (*) from class completions,,0
+add hover provider,0.6477096,Fix hover error (#353),,0
+add config helper completions,0.7848402,Add documentation for @config completion (ea5aff5),,1
+reload on config file change,0.5200088,Fix stale error messages when resolving a config file error,,0
+initial commit,0.33531192,Add some basic initialisation logs,,0

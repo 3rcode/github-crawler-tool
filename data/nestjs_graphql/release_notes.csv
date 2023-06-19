@@ -1,5 +1,101 @@
-Index,Release Note,Release Note With Abstraction
-1,"v11.0.4 (2023-03-20)
+Index,Release Note,Release Note Abstract
+1,"12.0.0 (2023-06-16)
+Bringing support for NestJS v10.
+Dependencies
+
+mercurius
+#2866 chore(deps): update dependency @mercuriusjs/federation to v2 (@renovate[bot])
+#2797 chore(deps): update dependency mercurius to v13 (@renovate[bot])
+#2859 chore(deps): update dependency fastify to v4.18.0 (@renovate[bot])
+graphql
+#2867 chore(deps): update dependency ts-morph to v19 (@renovate[bot])
+#2855 fix(deps): update dependency @graphql-tools/utils to v10.0.1 (@renovate[bot])
+Other
+#2869 chore(deps): update dependency lerna to v7.0.1 - autoclosed (@renovate[bot])
+#2862 chore(deps): update typescript-eslint monorepo to v5.59.11 (@renovate[bot])
+#2860 chore(deps): update dependency @types/node to v18.16.18 (@renovate[bot])
+apollo, graphql, mercurius
+#2868 chore(deps): update nest monorepo to v10 (major) (@renovate[bot])
+#2861 chore(deps): update nest monorepo to v9.4.3 (@renovate[bot])
+#2850 fix(deps): update dependency tslib to v2.5.3 - autoclosed (@renovate[bot])
+
+Committers: 1
+
+Kamil Mysliwiec (@kamilmysliwiec)
+","12.0.0 (2023-06-16)
+Bringing support for NestJS v10.
+Dependencies
+mercurius
+2866 chore(deps): update dependency @mercuriusjs/federation to v2 (@renovate[bot])
+2797 chore(deps): update dependency mercurius to v13 (@renovate[bot])
+2859 chore(deps): update dependency fastify to v4.18.0 (@renovate[bot])
+graphql
+2867 chore(deps): update dependency ts-morph to v19 (@renovate[bot])
+2855 fix(deps): update dependency @graphql-tools/utils to v10.0.1 (@renovate[bot])
+Other
+2869 chore(deps): update dependency lerna to v7.0.1 - autoclosed (@renovate[bot])
+2862 chore(deps): update typescript-eslint monorepo to v5.59.11 (@renovate[bot])
+2860 chore(deps): update dependency @types/node to v18.16.18 (@renovate[bot])
+apollo, graphql, mercurius
+2868 chore(deps): update nest monorepo to v10 (major) (@renovate[bot])
+2861 chore(deps): update nest monorepo to v9.4.3 (@renovate[bot])
+2850 fix(deps): update dependency tslib to v2.5.3 - autoclosed (@renovate[bot])
+Committers: 1
+Kamil Mysliwiec (@kamilmysliwiec)"
+2,"Bug fixes
+
+graphql
+#2809 [#2800] Fix graphql schema generation with plugin introspectComments enabled (@msimon)
+#2788 fix(plugin): don't prefix absolute win paths (@mikejpeters)
+
+Dependencies
+
+Other
+#2779 chore(deps): update node.js to v20 (@renovate[bot])
+#2831 chore(deps): bump vm2 from 3.9.17 to 3.9.19 (@dependabot[bot])
+#2727 chore(deps): bump undici from 5.18.0 to 5.21.0 (@dependabot[bot])
+#2782 chore(deps): bump vm2 from 3.9.15 to 3.9.17 (@dependabot[bot])
+apollo
+#2820 chore(deps): update dependency @as-integrations/fastify to v2 (@renovate[bot])
+graphql
+#2835 fix(deps): update graphql-tools monorepo (major) (@renovate[bot])
+#2819 fix(deps): update dependency @graphql-tools/merge to v8.4.2 (@renovate[bot])
+#2822 fix(deps): update dependency graphql-ws to v5.13.1 - autoclosed (@renovate[bot])
+#2773 fix(deps): update graphql-tools monorepo (@renovate[bot])
+apollo, graphql, mercurius
+#2833 fix(deps): update dependency tslib to v2.5.2 (@renovate[bot])
+#2716 chore(deps): update nest monorepo to v9.4.0 (@renovate[bot])
+
+Committers: 3
+
+Jens Bodal (@jensbodal)
+Marc Simon (@msimon)
+Mike (@mikejpeters)
+","Bug fixes
+graphql
+2809 [#2800] Fix graphql schema generation with plugin introspectComments enabled (@msimon)
+2788 fix(plugin): don't prefix absolute win paths (@mikejpeters)
+Dependencies
+Other
+2779 chore(deps): update node.js to v20 (@renovate[bot])
+2831 chore(deps): bump vm2 from 3.9.17 to 3.9.19 (@dependabot[bot])
+2727 chore(deps): bump undici from 5.18.0 to 5.21.0 (@dependabot[bot])
+2782 chore(deps): bump vm2 from 3.9.15 to 3.9.17 (@dependabot[bot])
+apollo
+2820 chore(deps): update dependency @as-integrations/fastify to v2 (@renovate[bot])
+graphql
+2835 fix(deps): update graphql-tools monorepo (major) (@renovate[bot])
+2819 fix(deps): update dependency @graphql-tools/merge to v8.4.2 (@renovate[bot])
+2822 fix(deps): update dependency graphql-ws to v5.13.1 - autoclosed (@renovate[bot])
+2773 fix(deps): update graphql-tools monorepo (@renovate[bot])
+apollo, graphql, mercurius
+2833 fix(deps): update dependency tslib to v2.5.2 (@renovate[bot])
+2716 chore(deps): update nest monorepo to v9.4.0 (@renovate[bot])
+Committers: 3
+Jens Bodal (@jensbodal)
+Marc Simon (@msimon)
+Mike (@mikejpeters)"
+3,"v11.0.4 (2023-03-20)
 Bug fixes
 
 graphql
@@ -28,7 +124,7 @@ graphql
 2706 fix(deps): update dependency ws to v8.13.0 (@renovate[bot])
 Committers: 1
 Roy Peled (@roypeled)"
-2,"v11.0.0 (2023-03-10)
+4,"v11.0.0 (2023-03-10)
 Migration guide: https://docs.nestjs.com/graphql/migration-guide
 Features
 
@@ -119,7 +215,7 @@ Martin Lehoux (@martinlehoux)
 Dariusz Kuc (@dariuszkuc)
 Kamil Mysliwiec (@kamilmysliwiec)
 Roy Peled (@roypeled)"
-3,"Features
+5,"Features
 
 mercurius
 #2546 feat(mercurius): add mercurius hooks (@tugascript)
@@ -204,7 +300,7 @@ Harm van der Werf (@harm-less)
 Kunle Oyedele (@koyedele)
 Zackery Griesinger (@zgriesinger)
 @niceandneat"
-4,"Bug fixes
+6,"Bug fixes
 
 apollo, graphql
 #2500 fix: enable non-nullable, defaulted fields in code-first schema (@sam-super)
@@ -235,7 +331,7 @@ Committers: 3
 Hugh Willson (@hwillson)
 Maxim (@khmm12)
 Sam Adams (@sam-super)"
-5,"Dependencies
+7,"Dependencies
 
 graphql
 #2476 fix(deps): update graphql-tools monorepo (@renovate[bot])
@@ -250,7 +346,7 @@ graphql
 2493 fix(deps): update dependency ws to v8.11.0 (@renovate[bot])
 apollo, graphql, mercurius
 2480 fix(deps): update dependency tslib to v2.4.1 (@renovate[bot])"
-6,"v10.1.5 (2022-10-26)
+8,"v10.1.5 (2022-10-26)
 Bug fixes
 
 graphql
@@ -265,7 +361,7 @@ graphql
 2473 Fix getNumberOfParameters utility function (@thiagomini)
 Committers: 1
 Thiago Valentim (@thiagomini)"
-7,"v10.1.3 (2022-09-30)
+9,"v10.1.3 (2022-09-30)
 Enhancements
 
 graphql
@@ -302,7 +398,7 @@ Antonio Tripodi (@Tony133)
 David Havl (@DavidHavl)
 Jay McDoniel (@jmcdo29)
 Davide Gheri (Davide-Gheri)"
-8,"v10.1.0
+10,"v10.1.0
 Features
 
 graphql
@@ -357,7 +453,7 @@ Jason Kossis (@jkossis)
 Kamil Mysliwiec (@kamilmysliwiec)
 Valery Goncharov (@GValeriy)
 katainaka (@katainaka0503)"
-9,"v10.0.19 (2022-07-20)
+11,"v10.0.19 (2022-07-20)
 Features
 
 apollo
@@ -406,7 +502,7 @@ Hwa Soo Kang (@hwasurr)
 Martin Janeček (@wodCZ)
 katainaka (@katainaka0503)
 greguintow @greguintow"
-10,"Bug fixes
+12,"Bug fixes
 
 graphql, mercurius
 #2245 fix(apollo): Update resolveReference location (@trevor-scheer)
@@ -421,7 +517,7 @@ graphql, mercurius
 Committers: 2
 Thiago Valentim (@thiagomini)
 Trevor Scheer (@trevor-scheer)"
-11,"v10.0.13 (2022-05-27)
+13,"v10.0.13 (2022-05-27)
 Enhancements
 
 graphql
@@ -452,7 +548,7 @@ Other
 2177 chore(deps): update dependency eslint to v8.15.0 (@renovate[bot])
 Committers: 1
 Charly POLY (@charlypoly)"
-12,"v10.0.12 (2022-05-20)
+14,"v10.0.12 (2022-05-20)
 Bug fixes
 
 apollo, graphql
@@ -499,7 +595,7 @@ Joseph R. Quinn (@quinnjr)
 Kaden Wilkinson (@kdawgwilk)
 Romain Brancourt (@romainbrancourt)
 choco (@choco14t)"
-13,"v10.0.11 (2022-05-05)
+15,"v10.0.11 (2022-05-05)
 Enhancements
 
 graphql
@@ -526,7 +622,7 @@ graphql
 2138 fix(deps): update graphql-tools monorepo (@renovate[bot])
 Committers: 1
 Charly POLY (@charlypoly)"
-14,"Dependencies
+16,"Dependencies
 
 graphql
 #2126 fix(deps): update graphql-tools monorepo (@renovate[bot])
@@ -559,7 +655,7 @@ Other
 2104 chore(deps): update dependency prettier to v2.6.1 (@renovate[bot])
 Committers: 1
 Davide Gheri (@Davide-Gheri)"
-15,"Bug fixes
+17,"Bug fixes
 
 apollo, graphql
 #2092 fix(graphql): support nested arrays when generating type defs (@kamilmysliwiec)
@@ -572,7 +668,7 @@ apollo, graphql
 2092 fix(graphql): support nested arrays when generating type defs (@kamilmysliwiec)
 Committers: 1
 Kamil Mysliwiec (@kamilmysliwiec)"
-16,"Bug fixes
+18,"Bug fixes
 
 apollo
 #2079 build: add tslib dependency to the @nestjs/apollo package (@JaLe29)
@@ -617,7 +713,7 @@ Committers: 3
 Carson Full (@CarsonF)
 JaLe (@JaLe29)
 Kamil Mysliwiec (@kamilmysliwiec)"
-17,"Features
+19,"Features
 
 apollo, graphql, mercurius
 #2037 feat(): mercurius federation subscriptions (@Davide-Gheri)
@@ -650,7 +746,7 @@ graphql
 Committers: 2
 Davide Gheri (@Davide-Gheri)
 Karibash (@Karibash)"
-18,"v10.0.5 (2022-02-23)
+20,"v10.0.5 (2022-02-23)
 Bug fixes
 
 graphql
@@ -665,7 +761,7 @@ graphql
 2038 feat(): Add inheritResolversFromInterfaces property (@Karibash)
 Committers: 1
 Karibash (@Karibash)"
-19,"v10.0.0 (2022-02-10)
+21,"v10.0.0 (2022-02-10)
 
 @nestjs/graphql is now platform-agnostic (plug-in driver you want to use)
 @nestjs/apollo represents Apollo server integration while @nestjs/mercurius is an adapter for Mercurius lib (fastify)
@@ -682,7 +778,7 @@ update to the latest version of graphql-tools (remove schemaDirectives support)
 expose abstract driver that lets you integrate any GQL compatible server (e.g. express-gql) in a few lines
 Migration guide
 See link"
-20,"
+22,"
 Merge branch 'renovate/apollo-graphql-packages' (319361d)
 fix(): fix incompatibility with apollo/subgraph@0.1.5 (60ee0d0)
 Merge branch 'master' into renovate/apollo-graphql-packages (41c421e)
@@ -821,7 +917,7 @@ chore(deps): update dependency eslint to v8.1.0 (b4f6f99)
 chore(deps): update dependency ts-node to v10.4.0 (6433024)
 chore(deps): update dependency ts-node to v10.3.1 (ddf5a22)
 fix(deps): update dependency graphql-ws to v5.5.3 (8aff185)"
-21,"
+23,"
 Merge HEAD, branch 'master' of https://github.com/nestjs/graphql (0e37fe6)
 fix(): fix accidental breaking change (subgraphs import) (73ebdfe)
 chore(deps): update dependency husky to v7.0.4 (78a9890)
@@ -862,7 +958,7 @@ chore(deps): update dependency ini to 1.3.6 [security] (0fadd3d)
 chore(deps): update dependency hosted-git-info to 2.8.9 [security] (e46ec98)
 chore(deps): bump tar from 6.1.0 to 6.1.11 (675fb81)
 build(): logs the InputType class name, if it is available. (7e9f3ee)"
-22,"
+24,"
 feat(): log error if subscription is request-scoped (4c546f2)
 chore(): minor tweaks (d44ff1c)
 Merge pull request #1797 from iMobs/upgrade-apollo-federation-with-subgraph (0af4f4a)
@@ -921,7 +1017,7 @@ chore(deps): update dependency @commitlint/cli to v13.2.1 (521d8e1)
 chore(deps): update dependency lint-staged to v11.2.1 (82a6df2)
 chore(deps): update dependency jest to v27.2.5 (e93d349)
 fix(deps): update dependency ws to v8.2.3 (e9ccfac)"
-23,"
+25,"
 chore(): restrict federation to 0.33.0 (8f98e2b)
 chore(deps): update dependency rxjs to v7.4.0 (89c8436)
 chore(deps): update nest monorepo to v8.0.11 (8572e07)
@@ -950,7 +1046,7 @@ chore(deps): update nest monorepo to v8.0.9 (8c76d66)
 chore(deps): update dependency jest to v27.2.4 (e0dfddd)
 chore(deps): update nest monorepo to v8.0.8 (6353871)
 chore(deps): update dependency jest to v27.2.3 (4230b35)"
-24,"
+26,"
 Merge pull request #1723 from nestjs/renovate/ts-morph-12.x (a1c4ca0)
 Merge branch 'renovate/apollo-graphql-packages' (f714526)
 test(): fix broken federation tests (upgrade) (186f399)
@@ -1005,12 +1101,12 @@ chore(deps): update typescript-eslint monorepo to v4.31.0 (ba1cb1c)
 chore(deps): update dependency graphql to v15.5.3 (95df7d0)
 chore(deps): update dependency @types/node-fetch to v3 (9d2fd84)
 chore(deps): update dependency ts-morph to v12 (38cce30)"
-25,"
+27,"
 Merge pull request #1732 from th3neken/graphql-ws-missing-header-fix (9ae9ab1)
 fix(@nestjs/graphql): fixed fatal error when sec-websocket-protocol isn't exists in request headers using graphql-ws (4ea6609)
 ","Merge pull request #1732 from th3neken/graphql-ws-missing-header-fix (9ae9ab1)
 fix(@nestjs/graphql): fixed fatal error when sec-websocket-protocol isn't exists in request headers using graphql-ws (4ea6609)"
-26,"
+28,"
 Merge branch 'master' of https://github.com/nestjs/graphql (669fb38)
 chore(): revert graphql-tools/merge package (c25fca3)
 chore(deps): update typescript-eslint monorepo to v4.30.0 (9a507b6)
@@ -1023,13 +1119,13 @@ chore(deps): update typescript-eslint monorepo to v4.30.0 (9a507b6)
 chore(deps): update dependency graphql to v15.5.2 (c921300)
 chore(deps): update dependency jest to v27.1.0 (4bd1e03)
 chore(deps): update dependency typescript to v4.4.2 (510c703)"
-27,"
+29,"
 fix(): fix defaults settings (e565b04)
 ",fix(): fix defaults settings (e565b04)
-28,"
+30,"
 feat(): simplify subscriptions interface (96ed9de)
 ",feat(): simplify subscriptions interface (96ed9de)
-29,"Changelog:
+31,"Changelog:
 * chore(): update graphql-ws (81de2f8)
 * Merge pull request #1709 from hpohlmeyer/apollo-server-peer-deps (e99966d)
 * chore(deps): update apollo graphql packages to v3.3.0 (fcb71b7)
@@ -1202,7 +1298,7 @@ feat(): simplify subscriptions interface (96ed9de)
 * chore(deps): update nest monorepo to v8.0.1 (922e9b1)
 * chore(deps): update dependency ts-morph to v11.0.2 (3b9a52b)
 * feat: allow custom gql-on-ws protocol (3c05658)"
-30,"
+32,"
 Merge pull request #1616 from nestjs/renovate/ts-morph-11.x (d18c328)
 Merge pull request #1618 from nestjs/renovate/apollo-graphql-packages (01fc18e)
 chore(deps): update dependency @types/node to v14.17.5 (54ddf77)
@@ -1213,12 +1309,12 @@ Merge pull request #1618 from nestjs/renovate/apollo-graphql-packages (01fc18e)
 chore(deps): update dependency @types/node to v14.17.5 (54ddf77)
 chore(deps): update apollo graphql packages (1ed9104)
 chore(deps): update dependency ts-morph to ^10.0.1 || ^11.0.0 (b6ada60)"
-31,"
+33,"
 Merge pull request #1615 from nestjs/renovate/apollo-graphql-packages (f857911)
 chore(deps): update apollo graphql packages (259ec2a)
 ","Merge pull request #1615 from nestjs/renovate/apollo-graphql-packages (f857911)
 chore(deps): update apollo graphql packages (259ec2a)"
-32,"
+34,"
 Merge pull request #1439 from nestjs/8.0.0 (83b4919)
 chore(): resolve conflicts (1eec21f)
 Merge pull request #1553 from nestjs/renovate/major-jest-monorepo (6e1013b)
@@ -1335,7 +1431,7 @@ fix(ast): correctly mark fields as nullable when not required (06d001a)
 feat(@nestjs/graphql): base exception filter for apollo exceptions (422d392)
 fix(): update integration tests (38d54a7)
 Tweak the generated header comment (c08dbea)"
-33,"
+35,"
 Merge pull request #1469 from timhall/fix/resolve-type-issue (2dff6df)
 Merge pull request #1482 from randomprofilename/graphql_federation_schemahost_fix (c526701)
 Merge pull request #1503 from kuskoman/call-apollo-start (ca0872b)
@@ -1466,13 +1562,13 @@ chore(deps): update dependency eslint to v7.25.0 (98cf47d)
 fix: add missing apolloServer.start() (001fb25)
 fix(federation): assignment GraphqlSchemaHost#schema in factory (f91c76b)
 fix: disable enhancers for __resolveType (5463d64)"
-34,"
+36,"
 fix(): include default type mapping configuration (0ca398e)
 ",fix(): include default type mapping configuration (0ca398e)
-35,"
+37,"
 fix(): make default type mapping record partial (0736799)
 ",fix(): make default type mapping record partial (0736799)
-36,"
+38,"
 Merge branch 'master' of https://github.com/nestjs/graphql (f43ffd8)
 feat(): add default type mapping (95ae089)
 Merge pull request #1488 from nestjs/renovate/graphql-tools-monorepo (b90d9dd)
@@ -1549,7 +1645,7 @@ chore(deps): update dependency @types/jest to v26.0.22 (6632c3e)
 chore(deps): update dependency @types/node to v14.14.36 (136bbfb)
 chore(deps): update typescript-eslint monorepo to v4.19.0 (e7c7f56)
 chore(deps): update nest monorepo to v7.6.15 (2e260b9)"
-37,"
+39,"
 Merge pull request #1444 from advantitge/fix/federation-resolvetype (c9bde25)
 chore(deps): update dependency husky to v5.2.0 (9877e94)
 fix: add field directives on interface types (41ad53a)
@@ -1568,17 +1664,17 @@ chore(deps): update dependency release-it to v14.5.0 (76a65a4)
 chore(deps): update apollo graphql packages to v2.21.2 (c2aafaa)
 test(): fix integration tests (69ec075)
 fix(federation): override federated resolveType for interfaces (55991b4)"
-38,"
+40,"
 fix(): remove console log (f6e7263)
 chore(deps): update dependency @types/jest to v26.0.21 (3a47f79)
 chore(deps): update dependency ts-jest to v26.5.4 (7e9c16b)
 ","fix(): remove console log (f6e7263)
 chore(deps): update dependency @types/jest to v26.0.21 (3a47f79)
 chore(deps): update dependency ts-jest to v26.5.4 (7e9c16b)"
-39,"
+41,"
 feat(): support interface level directives and implements array (5213077)
 ",feat(): support interface level directives and implements array (5213077)
-40,"
+42,"
 chore(): upgrade deps (9f99236)
 Merge pull request #1434 from nestjs/renovate/nest-monorepo (31d4ae3)
 Merge pull request #1363 from madzhup/master (2d4c1a9)
@@ -1627,7 +1723,7 @@ chore(deps): update dependency husky to v5.1.3 (fe14f28)
 feat: add create union type and register enum type to shim (382877e)
 fix: skip adding existing directive metadata (b97030c)
 fix: inherit directive and extensions in type helpers, compile unique directives (8c721d0)"
-41,"
+43,"
 Merge branch 'master' of https://github.com/nestjs/graphql (1077622)
 fix(plugin): check version when updating file imports (eb4a0c3)
 chore(deps): update typescript-eslint monorepo to v4.16.1 (2fbaa78)
@@ -1644,7 +1740,7 @@ chore(deps): update dependency eslint to v7.21.0 (0f3568e)
 chore(deps): update commitlint monorepo to v12.0.1 (919cd74)
 chore(deps): update dependency eslint-config-prettier to v8.1.0 (05669f4)
 chore(deps): update dependency class-transformer to v0.4.0 (484f922)"
-42,"
+44,"
 fix(plugin): support typescript 4.2+ (5bbd70f)
 chore(deps): update dependency ts-jest to v26.5.2 (12f7db1)
 chore(deps): update commitlint monorepo to v12 (946333a)
@@ -1669,7 +1765,7 @@ chore(deps): update dependency @types/node to v12.20.4 (a2f4afd)
 chore(deps): update dependency release-it to v14.4.1 (bb229b5)
 chore(deps): update dependency @types/node to v12.20.3 (03ab20d)
 chore(deps): update dependency @types/node to v12.20.2 (1a71052)"
-43,"
+45,"
 Merge branch 'master' of https://github.com/nestjs/graphql (0e10bc8)
 fix(): fix get interfaces fn is undefined #1384 (f10c95e)
 chore(deps): update typescript-eslint monorepo to v4.15.1 (7585745)
@@ -1722,17 +1818,17 @@ chore(deps): update nest monorepo to v7.6.6 (01c5db9)
 chore(deps): update dependency supertest to v6.1.3 (e6ca9da)
 chore(deps): update typescript-eslint monorepo to v4.14.1 (a62ab02)
 chore(deps): update dependency supertest to v6.1.2 (ab63240)"
-44,"
+46,"
 fix(): disable enhancers for resolve type, add global middleware support (da4f751)
 ","fix(): disable enhancers for resolve type, add global middleware support (da4f751)"
-45,"
+47,"
 Merge pull request #1332 from nestjs/renovate/fast-glob-3.x (52c4849)
 feat(): allow registering global field middleware functions (773d5d8)
 fix(deps): update dependency fast-glob to v3.2.5 (ca0ca37)
 ","Merge pull request #1332 from nestjs/renovate/fast-glob-3.x (52c4849)
 feat(): allow registering global field middleware functions (773d5d8)
 fix(deps): update dependency fast-glob to v3.2.5 (ca0ca37)"
-46,"
+48,"
 Merge pull request #1336 from nestjs/renovate/graphql-tools-monorepo (251723c)
 Merge pull request #1338 from nestjs/renovate/nestjs-mapped-types-0.x (865cea7)
 Merge pull request #1328 from nestjs/renovate/chokidar-3.x (de04f47)
@@ -1757,7 +1853,7 @@ chore(deps): update dependency eslint to v7.18.0 (d8c2746)
 chore(deps): update dependency supertest to v6.1.1 (7aa96ee)
 chore(deps): update dependency supertest to v6.1.0 (eb405e2)
 fix(deps): update dependency chokidar to v3.5.1 (7ad4af2)"
-47,"
+49,"
 chore(): update mapped-types package (90344cd)
 chore(deps): update dependency @types/node-fetch to v2.5.8 (b10ba86)
 chore(deps): update dependency class-transformer to v0.3.2 (c6499f9)
@@ -1794,17 +1890,17 @@ Update LICENSE (a5100e4)
 docs(license): added LICENSE (e91acfb)
 chore(deps): update dependency eslint to v7.17.0 (829b4ea)
 chore(deps): update nest monorepo to v7.6.5 (966acab)"
-48,"
+50,"
 fix(mapped-types): fix mapped types (load no target metadata) (3cf8773)
 ",fix(mapped-types): fix mapped types (load no target metadata) (3cf8773)
-49,"
+51,"
 Merge branch 'master' of https://github.com/nestjs/graphql (5a28d18)
 fix(): fix args type when used in combination with mapped types (a7c45c9)
 chore(deps): update typescript-eslint monorepo to v4.11.1 (d491c4b)
 ","Merge branch 'master' of link (5a28d18)
 fix(): fix args type when used in combination with mapped types (a7c45c9)
 chore(deps): update typescript-eslint monorepo to v4.11.1 (d491c4b)"
-50,"
+52,"
 Merge branch 'master' of https://github.com/nestjs/graphql (d5fddca)
 fix(mapped-types): fix performance degradation issue (omit and pick types) #1301 (b5f4122)
 Merge pull request #1299 from nestjs/dependabot/npm_and_yarn/node-notifier-8.0.1 (1f8ef42)
@@ -1873,14 +1969,14 @@ Merge pull request #1265 from Tony133/docs/update-contribute (560f6f7)
 docs(contributing): update contribution guide (b0a8d7b)
 chore(deps): update typescript-eslint monorepo to v4.9.0 (9440a79)
 fix(deps): update dependency @graphql-tools/merge to v6.2.6 (6e7c9f3)"
-51,"
+53,"
 Merge branch 'master' of https://github.com/nestjs/graphql (1a3de39)
 fix(): add arg type check (code first) (f0235f6)
 chore(deps): update dependency prettier to v2.2.1 (eaf8aac)
 ","Merge branch 'master' of link (1a3de39)
 fix(): add arg type check (code first) (f0235f6)
 chore(deps): update dependency prettier to v2.2.1 (eaf8aac)"
-52,"
+54,"
 Merge pull request #1254 from nestjs/renovate/ts-morph-9.x (5091ced)
 Merge pull request #1253 from davidgoli/specify-generated-types-for-custom-scalars (6321aec)
 chore(deps): update dependency ts-morph to v9 (bde1b49)
@@ -1911,12 +2007,12 @@ chore(deps): update nest monorepo to v7.5.4 (914f1cc)
 chore(deps): update typescript-eslint monorepo to v4.8.1 (4bf5002)
 chore(deps): update nest monorepo to v7.5.3 (f87c44d)
 chore(deps): update typescript-eslint monorepo to v4.8.0 (c1bb4cc)"
-53,"
+55,"
 fix(): add property initializers inheritance support (cc8be5c)
 chore(deps): update nest monorepo to v7.5.2 (e06751c)
 ","fix(): add property initializers inheritance support (cc8be5c)
 chore(deps): update nest monorepo to v7.5.2 (e06751c)"
-54,"
+56,"
 fix(): fallback to request property when req does not exist (f557407)
 fix(gateway): stop the apollo server (if present) on module destroy hook (20886eb)
 fix(federation): respect use global prefix option for gateway #1158 (2465370)
@@ -1941,7 +2037,7 @@ Merge pull request #1237 from nestjs/dependabot/npm_and_yarn/find-my-way-3.0.5 (
 chore(deps): bump find-my-way from 3.0.4 to 3.0.5 (2714e01)
 chore(deps): update typescript-eslint monorepo to v4.7.0 (3638c0b)
 feat(): Add support for deprecated enum values (f8e8367)"
-55,"
+57,"
 Merge branch 'amplication-master' (5329642)
 chore(): set apollo-server-testing as optional (4703450)
 fix(): minor deps fixes (0f05cc5)
@@ -2116,7 +2212,7 @@ Update lib/testing/create-apollo-test-client.ts (56cc598)
 feat: Add createTestClient feat: Use createTestClient in code-first-federation.spec.ts feat: Use createTestClient in code-first.spec.ts (854e210)
 refactor(): use @graphql-tools monorepo instead of graphql-tools package (703daf9)
 feat(): Complexity options on Query and Mutation (1c3a64e)"
-56,"
+58,"
 Merge branch 'master' of https://github.com/nestjs/graphql (f399bb0)
 feat(): support lazy implements, add comments introspection (aa9ac61)
 chore(deps): update dependency ts-jest to v26.4.0 (fdee8f9)
@@ -2233,10 +2329,10 @@ chore(deps): update dependency jest to v26.2.2 (603caf0)
 chore(deps): update dependency @types/jest to v26.0.8 (4ba1497)
 chore(deps): update dependency jest to v26.2.1 (83466ad)
 chore(deps): update dependency class-transformer to v0.3.1 (63ff160)"
-57,"
+59,"
 feat(): add configurable number scalar (98c6a47)
 ",feat(): add configurable number scalar (98c6a47)
-58,"
+60,"
 Merge branch 'master' of https://github.com/nestjs/graphql (a84b518)
 fix(): fix interface name and undefined properties issue (e56512f)
 Merge pull request #1046 from nestjs/renovate/apollo-graphql-packages (c99b523)
@@ -2291,16 +2387,16 @@ chore(deps): update commitlint monorepo to v9.1.1 (311e96f)
 chore(deps): lock ts version (38defa5)
 chore(deps): update typescript to 3.9.6 (dbaf1ae)
 fix(plugin): fix wrong paths resolution on windows (a178553)"
-59,"
+61,"
 fix(): fix optional deps (33790a7)
 ",fix(): fix optional deps (33790a7)
-60,"
+62,"
 feat(): add executor factory to module options (1c8d821)
 ",feat(): add executor factory to module options (1c8d821)
-61,"
+63,"
 chore(): add apollo-server-core dependency (8308ddc)
 ",chore(): add apollo-server-core dependency (8308ddc)
-62,"
+64,"
 chore(): update apollo to the latest packages (58def40)
 Merge branch 'leerw4-feature/gql-schema-from-nodemodules' (552f602)
 refactor(): extract include node modules to a sep function (d78bff5)
@@ -2337,14 +2433,14 @@ feat(): Apply transformSchema to autoSchemaFile (73bca3e)
 Merge pull request #1017 from nestjs/renovate/graphql-tools-monorepo (cf83e1f)
 fix(deps): update graphql-tools monorepo to v6.0.12 (f60e51f)
 feat(@nestjs/graphql): Include graphql schemas from node_modules (ac7ab37)"
-63,"
+65,"
 Merge pull request #1006 from dotellie/fix/duplicate-types (fc50a23)
 fix(federation): remove duplicate types in schema (#1001) (0e361ee)
 fix(federation): remove duplicate types in schema #1001 (7dbaa77)
 ","Merge pull request #1006 from dotellie/fix/duplicate-types (fc50a23)
 fix(federation): remove duplicate types in schema (#1001) (0e361ee)
 fix(federation): remove duplicate types in schema #1001 (7dbaa77)"
-64,"
+66,"
 fix(test): fix sorted schema snapshot (b4cf611)
 Merge pull request #997 from mattleff/sort-schema (ad38ca0)
 Merge branch 'master' of https://github.com/nestjs/graphql (35f9802)
@@ -2381,7 +2477,7 @@ Merge pull request #998 from mattleff/patch-1 (f3f05eb)
 fix(deps): update graphql-tools monorepo to v6.0.11 (48216ae)
 fix: typo (64821fc)
 feat(): Add sortSchema option (4e8cbef)"
-65,"
+67,"
 ci(): sync package lock file (575d851)
 Merge branch 'master' of https://github.com/nestjs/graphql (1bf094d)
 fix(): add apollo gateway to optional deps (07aba27)
@@ -2396,15 +2492,15 @@ fix(): add apollo gateway to optional deps (e07aade)
 chore(deps): update dependency @types/jest to v26.0.3 (bc63f07)
 Merge pull request #991 from nestjs/renovate/jest-26.x (e13b51d)
 chore(deps): update dependency @types/jest to v26.0.2 (a557382)"
-66,"
+68,"
 fix(federation): inherit the date time scalar (from auto generated schema) (02fb373)
 ",fix(federation): inherit the date time scalar (from auto generated schema) (02fb373)
-67,"
+69,"
 fix(federation): apply default options when async config is used (6aa5549)
 fix(federation): avoid using transform schema for federation #981 (3358899)
 ","fix(federation): apply default options when async config is used (6aa5549)
 fix(federation): avoid using transform schema for federation #981 (3358899)"
-68,"
+70,"
 fix(plugin): add test for optional booleans (strict mode) (278e091)
 fix(): add symbol to query if used as return type #979 (c6160e9)
 Merge pull request #990 from nestjs/renovate/uuid-8.x (1bc1026)
@@ -2417,7 +2513,7 @@ Merge pull request #990 from nestjs/renovate/uuid-8.x (1bc1026)
 fix(deps): update dependency uuid to v8.2.0 (138180a)
 chore(deps): update dependency jest to v26.1.0 (c18d77c)
 chore(): update apollo federation deps (631d2cf)"
-69,"
+71,"
 Merge pull request #958 from timhall/fix-object-extension (9f7b973)
 Merge pull request #967 from nestjs/renovate/fast-glob-3.x (0466104)
 Merge pull request #978 from nestjs/dependabot/npm_and_yarn/apollo-server-core-2.15.0 (e1d65c3)
@@ -2504,14 +2600,14 @@ chore(deps): update typescript-eslint monorepo to v3.1.0 (12c766d)
 chore(deps): update nest monorepo to v7.1.2 (58e02e3)
 Merge pull request #918 from nestjs/renovate/graphql-tools-monorepo (9a51da4)
 fix(deps): update graphql-tools monorepo to v6.0.5 (fcf69fe)"
-70,"
+72,"
 Merge branch 'master' of https://github.com/nestjs/graphql (02fb272)
 fix(): add missing exports (1a713b2)
 chore(deps): update dependency ts-jest to v26.1.0 (f4ae6e8)
 ","Merge branch 'master' of link (02fb272)
 fix(): add missing exports (1a713b2)
 chore(deps): update dependency ts-jest to v26.1.0 (f4ae6e8)"
-71,"
+73,"
 Merge branch 'parkerself22-code-first-federation-unions' (20a7c3f)
 feat(): override the resolve type of interfaces (af6edc0)
 Merge branch 'code-first-federation-unions' of https://github.com/parkerself22/nestjs-graphql into parkerself22-code-first-federation-unions (f4e99d5)
@@ -2552,10 +2648,10 @@ refactor(federation): Update optionResolvers type to match master (f5a4f9e)
 refactor(federation): Merge master and refactor union type resolver fix (70548f0)
 fix(code-first-federation): Add union type resolvers to generateSchema (5431211)
 chore(deps): update dependency graphql-tools to v6.0.1 (14d9416)"
-72,"
+74,"
 fix(federation): merge or override auto generated resolvers (555c3f4)
 ",fix(federation): merge or override auto generated resolvers (555c3f4)
-73,"
+75,"
 feat(): update to the latest version of mapped types (f572f50)
 Merge pull request #888 from nestjs/renovate/uuid-8.x (673aae0)
 Merge pull request #862 from nestjs/renovate/apollo-gateway-0.x (a68fd42)
@@ -2600,10 +2696,10 @@ chore(deps): update dependency lint-staged to v10.2.3 (61ce6d5)
 chore(deps): update dependency ts-jest to v26 (f058b17)
 chore(deps): update nest monorepo to v7.0.13 (d2df37f)
 chore(deps): update dependency @apollo/federation to v0.16.0 (ac08bf6)"
-74,"
+76,"
 fix(): make keys argument readonly (pick type and omit type) (96c9579)
 ",fix(): make keys argument readonly (pick type and omit type) (96c9579)
-75,"
+77,"
 Merge branch 'kylecannon-defaultValueRegression' (590c2ad)
 fix(): use default value in object types (fc2a157)
 Merge branch 'defaultValueRegression' of https://github.com/kylecannon/graphql into kylecannon-defaultValueRegression (6b4af75)
@@ -2662,10 +2758,10 @@ chore(deps): update dependency jest to v26 (cdbde4a)
 chore(deps): update typescript-eslint monorepo to v2.31.0 (bde6961)
 chore(deps): update apollo graphql packages to v2.13.0 (8c15bd8)
 chore(deps): update dependency @apollo/gateway to v0.15.0 (de5efcd)"
-76,"
+78,"
 fix(): fix adding directives (federation) (1fcb97d)
 ",fix(): fix adding directives (federation) (1fcb97d)
-77,"
+79,"
 Merge branch 'jmiraglia-stuzo-fix-federated-directive' (1c6a898)
 fix(): use schema directive visitor from graphql-tools (876be36)
 Update lib/federation/graphql-federation.module.ts (b1189b3)
@@ -2692,7 +2788,7 @@ chore(deps): update dependency lint-staged to v10.2.2 (2e8da57)
 chore(deps): update dependency jest to v25.5.3 (f3ca138)
 chore(deps): update dependency lint-staged to v10.2.1 (c4a6ec2)
 fix(deps): update dependency uuid to v8 (ce204e7)"
-78,"
+80,"
 Merge pull request #831 from nestjs/fix/context-instance-830 (c9a09a2)
 Merge pull request #816 from nestjs/renovate/chokidar-3.x (0ca55fa)
 Merge pull request #814 from beeman/beeman/resolve-type-undefined (0cadbea)
@@ -2733,7 +2829,7 @@ Create lock.yml (76a6b0b)
 chore(deps): update dependency eslint-config-prettier to v6.11.0 (c5dd5b3)
 chore(deps): update dependency prettier to v2.0.5 (cfa2feb)
 chore(deps): update dependency lint-staged to v10.1.7 (f16dec7)"
-79,"
+81,"
 Merge branch 'master' of https://github.com/nestjs/graphql (2375376)
 fix(mapped-types): inherit all fields from the prototype chain (1cc8eec)
 chore(deps): update dependency ts-node to v8.9.0 (3cbf283)
@@ -2742,12 +2838,12 @@ chore(deps): update typescript-eslint monorepo to v2.29.0 (1853e79)
 fix(mapped-types): inherit all fields from the prototype chain (1cc8eec)
 chore(deps): update dependency ts-node to v8.9.0 (3cbf283)
 chore(deps): update typescript-eslint monorepo to v2.29.0 (1853e79)"
-80,"
+82,"
 Merge pull request #799 from nestjs/renovate/nestjs-mapped-types-0.x (735d04c)
 fix(deps): update dependency @nestjs/mapped-types to v0.0.3 (6eddd40)
 ","Merge pull request #799 from nestjs/renovate/nestjs-mapped-types-0.x (735d04c)
 fix(deps): update dependency @nestjs/mapped-types to v0.0.3 (6eddd40)"
-81,"
+83,"
 fix(): fix async context factories (1c5e1c5)
 Merge pull request #789 from nestjs/renovate/nestjs-mapped-types-0.x (26e222c)
 chore(deps): update dependency jest to v25.4.0 (90e8781)
@@ -2766,7 +2862,7 @@ chore(deps): update dependency class-validator to v0.12.0 (1c0a658)
 chore(deps): update dependency lint-staged to v10.1.5 (9f50c8a)
 chore(deps): update dependency lint-staged to v10.1.4 (190207c)
 fix(deps): update dependency @nestjs/mapped-types to v0.0.2 (33617b8)"
-82,"
+84,"
 Merge pull request #782 from nestjs/feat/expose-context-id (61d6876)
 Merge branch 'master' of https://github.com/nestjs/graphql (ad87336)
 Merge branch 'Diluka-mixin-type-helper' (c4f478a)
@@ -2793,7 +2889,7 @@ fix(deps): update dependency merge-graphql-schemas to v1.7.8 (663c12b)
 refactor(@nestjs/graphql): rename helper (a42845f)
 feat(): use request context id symbol, attach to ctx (f89e205)
 feat(@nestjs/graphql): add mixin type helper (27c555e)"
-83,"
+85,"
 Merge branch 'master' of https://github.com/nestjs/graphql (da46dc8)
 feat(schema-gen): add scalars param to graphql schema generator (5bd2dad)
 feat(schema-gen): add scalars param to graphql schema generator (15fb7ba)
@@ -2834,10 +2930,10 @@ fix(): custom-scalar.interface.ts (0fe9f38)
 fix(): set argument type of parse-literal (a41d05b)
 fix(): update custom-scalar for strict mode (f97573d)
 feat(federation): add support for graphql federation typedefs (e5fdeac)"
-84,"
+86,"
 fix(mapped-types): eagarly load type function (cd66002)
 ",fix(mapped-types): eagarly load type function (cd66002)
-85,"
+87,"
 Merge branch 'master' of https://github.com/nestjs/graphql (0f42d26)
 fix(plugin): fix adding imports per file (bfc2c64)
 Merge pull request #758 from nestjs/renovate/apollo-federation-0.x (bfb2ef1)
@@ -2850,7 +2946,7 @@ Merge pull request #758 from nestjs/renovate/apollo-federation-0.x (bfb2ef1)
 chore(deps): update dependency @apollo/federation to v0.14.0 (1ff415f)
 Merge pull request #759 from nestjs/renovate/apollo-gateway-0.x (2e26ea2)
 chore(deps): update dependency @apollo/gateway to v0.14.0 (81efa9b)"
-86,"
+88,"
 fix(plugin): fallback to an empty object (metadata) (a157e28)
 Merge branch 'master' of https://github.com/nestjs/graphql (4b1c791)
 fix(): fix directives on parent classes (01013f3)
@@ -2877,7 +2973,7 @@ chore(deps): update apollo graphql packages to v2.12.0 (0b3bbc7)
 chore(deps): update typescript-eslint monorepo to v2.27.0 (e805077)
 chore(deps): update dependency prettier to v2.0.4 (180f912)
 chore(deps): update dependency prettier to v2.0.3 (d0fc774)"
-87,"
+89,"
 Merge branch 'master' of https://github.com/nestjs/graphql (fb2efcc)
 fix(): fix ast definitions generation for federated graph (b03c5ef)
 chore(deps): update dependency lint-staged to v10.1.2 (a07626b)
@@ -2886,7 +2982,7 @@ chore(deps): update dependency ts-node to v8.8.2 (f8d79aa)
 fix(): fix ast definitions generation for federated graph (b03c5ef)
 chore(deps): update dependency lint-staged to v10.1.2 (a07626b)
 chore(deps): update dependency ts-node to v8.8.2 (f8d79aa)"
-88,"
+90,"
 feat(): update to graphql v15 (4e5bde8)
 Merge pull request #733 from nestjs/renovate/graphql-15.x (ddfe581)
 Merge pull request #729 from nestjs/renovate/uuid-7.x (8934f11)
@@ -2915,7 +3011,7 @@ chore(deps): update dependency graphql to v15 (caaab92)
 chore(deps): update dependency jest to v25.2.6 (3b0918b)
 fix(deps): update dependency uuid to v7.0.3 (507cdcb)
 chore(deps): update dependency lint-staged to v10.1.1 (d7768cd)"
-89,"
+91,"
 Merge branch 'master' of https://github.com/nestjs/graphql (b8b044d)
 fix(): add eager imports to analysed field types (c0ddccd)
 chore(deps): update typescript-eslint monorepo to v2.26.0 (525a660)
@@ -2930,7 +3026,7 @@ chore(deps): update dependency lint-staged to v10.1.0 (8e5af26)
 chore(deps): update dependency ts-jest to v25.3.0 (08e9166)
 chore(deps): update dependency jest to v25.2.4 (2e4b93d)
 chore(deps): update nest monorepo to v7.0.7 (5c1519e)"
-90,"
+92,"
 Merge branch 'master' of https://github.com/nestjs/graphql (6e1a85a)
 feat(): add graphql schema host (0355721)
 chore(deps): update dependency lint-staged to v10.0.10 (825944f)
@@ -2939,10 +3035,10 @@ chore(deps): update dependency eslint-plugin-import to v2.20.2 (42b6301)
 feat(): add graphql schema host (0355721)
 chore(deps): update dependency lint-staged to v10.0.10 (825944f)
 chore(deps): update dependency eslint-plugin-import to v2.20.2 (42b6301)"
-91,"
+93,"
 refactor(): add cannot determine input/output error classes (b8a78a7)
 ",refactor(): add cannot determine input/output error classes (b8a78a7)
-92,"
+94,"
 Merge branch 'master' of https://github.com/nestjs/graphql (ec224c6)
 feat(): add decorator type argument to type utils (6628cea)
 chore(deps): update dependency jest to v25.2.3 (3111c48)
@@ -2953,14 +3049,14 @@ feat(): add decorator type argument to type utils (6628cea)
 chore(deps): update dependency jest to v25.2.3 (3111c48)
 chore(deps): update nest monorepo to v7.0.6 (4e8f4ed)
 chore(deps): update dependency jest to v25.2.2 (301e325)"
-93,"
+95,"
 Merge branch 'master' of https://github.com/nestjs/graphql (3511dcd)
 feat(): add validation and transformation rules inheritance (29c38dd)
 chore(deps): update dependency jest to v25.2.1 (030501e)
 ","Merge branch 'master' of link (3511dcd)
 feat(): add validation and transformation rules inheritance (29c38dd)
 chore(deps): update dependency jest to v25.2.1 (030501e)"
-94,"
+96,"
 Merge branch 'master' of https://github.com/nestjs/graphql (9336bc9)
 feat(): add type helpers functions (dcaea9e)
 chore(deps): update dependency jest to v25.2.0 (03e7bb1)
@@ -2971,7 +3067,7 @@ feat(): add type helpers functions (dcaea9e)
 chore(deps): update dependency jest to v25.2.0 (03e7bb1)
 Update README.md (4523a7a)
 chore(deps): update dependency @types/node to v12.12.31 (e5785bb)"
-95,"
+97,"
 Merge branch 'master' of https://github.com/nestjs/graphql (8f1e336)
 fix(): invalid args decorator signature (add overload) (ff44cbe)
 chore(deps): update dependency lint-staged to v10.0.9 (f86c14b)
@@ -2982,12 +3078,12 @@ fix(): invalid args decorator signature (add overload) (ff44cbe)
 chore(deps): update dependency lint-staged to v10.0.9 (f86c14b)
 chore(deps): update dependency prettier to v2.0.2 (7efd346)
 chore(deps): update typescript-eslint monorepo to v2.25.0 (0810944)"
-96,"
+98,"
 fix(): add more verbose error for code first decorators (08ddc30)
 fix(): add missing class validator (dev dependency) (dcf1e0d)
 ","fix(): add more verbose error for code first decorators (08ddc30)
 fix(): add missing class validator (dev dependency) (dcf1e0d)"
-97,"
+99,"
 Merge branch 'master' of https://github.com/nestjs/graphql (dae9379)
 fix(): fix directives on field resolers (6ed51b1)
 chore(deps): update nest monorepo to v7.0.5 (1dd6289)
@@ -3012,20 +3108,20 @@ chore(deps): update dependency ts-node to v8.8.1 (5d5eecc)
 chore(deps): update dependency ts-node to v8.8.0 (0e7a38f)
 chore(deps): update dependency prettier to v2 (0a6c238)
 chore(deps): update nest monorepo to v7.0.4 (49e0034)"
-98,"
+100,"
 fix(): override get type method in gql execution context (f80f287)
 ",fix(): override get type method in gql execution context (f80f287)
-99,"
+101,"
 fix(): add missing model prefix to plugin (e72921a)
 ",fix(): add missing model prefix to plugin (e72921a)
-100,"
+102,"
 Merge branch 'master' of https://github.com/nestjs/graphql (c6a8b93)
 fix(plugin): apply plugin metadata on prototypes (7647e2b)
 chore(deps): update dependency ts-node to v8.7.0 (fb151d3)
 ","Merge branch 'master' of link (c6a8b93)
 fix(plugin): apply plugin metadata on prototypes (7647e2b)
 chore(deps): update dependency ts-node to v8.7.0 (fb151d3)"
-101,"
+103,"
 Merge branch 'tngmichael-plugin-fix-proposal' (1759e73)
 refactor(): move to a separate method (c682dc7)
 Merge branch 'plugin-fix-proposal' of https://github.com/tngmichael/graphql into tngmichael-plugin-fix-proposal (261afba)
@@ -3034,10 +3130,10 @@ fix(): some changes not correctly applied (d6ef0b7)
 refactor(): move to a separate method (c682dc7)
 Merge branch 'plugin-fix-proposal' of link into tngmichael-plugin-fix-proposal (261afba)
 fix(): some changes not correctly applied (d6ef0b7)"
-102,"
+104,"
 fix(): fix getters in object types #673 (faad7cf)
 ",fix(): fix getters in object types #673 (faad7cf)
-103,"
+105,"
 Merge branch 'master' of https://github.com/nestjs/graphql (2f30501)
 fix(): fix abstract resolvers, field resolver args (fd4e471)
 chore(deps): update nest monorepo to v7.0.3 (62008d4)
@@ -3046,15 +3142,15 @@ chore(deps): update typescript-eslint monorepo to v2.24.0 (14996d8)
 fix(): fix abstract resolvers, field resolver args (fd4e471)
 chore(deps): update nest monorepo to v7.0.3 (62008d4)
 chore(deps): update typescript-eslint monorepo to v2.24.0 (14996d8)"
-104,"
+106,"
 feat(): register interface implementations automatically (e74260e)
 ",feat(): register interface implementations automatically (e74260e)
-105,"
+107,"
 fix(): fix orphaned types factory, update e2e test (735f110)
 fix(): fallback type to object instead of undefined (8590822)
 ","fix(): fix orphaned types factory, update e2e test (735f110)
 fix(): fallback type to object instead of undefined (8590822)"
-106,"
+108,"
 Merge branch 'master' of https://github.com/nestjs/graphql (d2cac0f)
 fix(): interface type shouldnt require arguments (b843c08)
 Merge pull request #667 from igrek8/master (18ee9ed)
@@ -3063,15 +3159,15 @@ fix(): subscription.subscribe() not copied (0e789f5)
 fix(): interface type shouldnt require arguments (b843c08)
 Merge pull request #667 from igrek8/master (18ee9ed)
 fix(): subscription.subscribe() not copied (0e789f5)"
-107,"
+109,"
 Merge branch 'master' of https://github.com/nestjs/graphql (36abead)
 fix(): revert back release-it update (e563384)
 ","Merge branch 'master' of link (36abead)
 fix(): revert back release-it update (e563384)"
-108,"
+110,"
 fix(): fix peer dependencies (b39f4fe)
 ",fix(): fix peer dependencies (b39f4fe)
-109,"
+111,"
 Merge pull request #634 from nestjs/feat/plugin-code-first (466dc80)
 fix(): resolve conflicts (e814d54)
 chore(deps): update dependency release-it to v13.1.0 (bdf1780)
@@ -3136,7 +3232,7 @@ feat(): load all metadata lazily (67ab808)
 refactor(): minor updates to base explorer (5676b34)
 fix(): run all tests (bac36ee)
 feat(): add plugin, implement the isolated schema generator (23fa7d6)"
-110,"
+112,"
 fix(): tsmorph should be optional (8a1df35)
 chore(deps): update dependency typescript to v3.8.3 (cb28048)
 Merge pull request #623 from nestjs/renovate/tslib-1.x (5addf41)
@@ -3167,10 +3263,10 @@ chore(deps): update dependency @types/node-fetch to v2.5.4 (7b3a658)
 chore(deps): update dependency @apollo/gateway to ^0.12.0 (c733cb7)
 Merge pull request #620 from nestjs/renovate/apollo-federation-0.x (f6f8ea4)
 chore(deps): update dependency @apollo/federation to ^0.12.0 (facc86b)"
-111,"
+113,"
 refactor(): rename gateway build service (ce89331)
 ",refactor(): rename gateway build service (ce89331)
-112,"
+114,"
 Merge pull request #619 from nestjs/renovate/pin-dependencies (4b5541a)
 fix(deps): pin dependency tslib to 1.10.0 (1db02ea)
 Merge branch 'tuxmachine-feat/federation' (2449d24)
@@ -3257,4 +3353,4 @@ feat(federation): make getTypesFromPaths method public (2c83518)
 feat(federation): ResolveReference decorator (f2d5950)
 build: import tslib helpers (75df349)
 chore(federation): add deps (c38c853)"
-113,,
+115,,

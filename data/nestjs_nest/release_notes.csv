@@ -1,5 +1,252 @@
-Index,Release Note,Release Note With Abstraction
-1,"v9.4.0 (2023-04-05)
+Index,Release Note,Release Note Abstract
+1,"v10.0.0 (2023-06-15)
+Article: TBC
+Migration guide: https://docs.nestjs.com/migration-guide
+⚠️  Node v12 is no longer supported (>= v16 is required).
+Bug fixes
+
+core
+#11785 fix(core): apply middleware to versioned controllers (ctrl-level) (@kamilmysliwiec)
+#11650 fix(core): global prefix exclude when versioning is turned on (@kamilmysliwiec)
+platform-fastify
+#11718 fix(fastify): validate middleware paths (@kamilmysliwiec)
+microservices
+#10549 fix(microservices): allow falsy values in options (@Papooch)
+
+Enhancements
+
+platform-express
+#11667 feat(express): add support for multer.none (@mathewtrivett)
+common, core, websockets
+#10545 feat: create method on client to get websocket pattern (@jmcdo29)
+common
+#11673 fix(common): loosen http exception cause type (@namoscato)
+#10953 fix(common)!: when transforming optional boolean parameters on ValidationPipe (@micalevisk)
+core
+#9809 feat(core): middleware runs once for matching route (@rychardvale)
+#11118 feat(core): add support to named groups (@elplancton)
+#11142 feat: Support async local storage in interceptors (@nordfjord)
+common, core
+#10533 feat(core/common): Add @Search decorator to the available HTTP route handlers (@Gustrb)
+microservices
+#10359 feat(microservices): enable wildcards in redis microservice patterns (@tijsmoree)
+common, platform-express, platform-fastify
+#10630 feat(common)!: narrow getInstance return type for http adapters (@micalevisk)
+
+Dependencies
+
+Other
+#11793 chore(deps-dev): bump mongoose from 7.2.4 to 7.3.0 (@dependabot[bot])
+#11792 chore(deps-dev): bump cache-manager from 5.2.2 to 5.2.3 (@dependabot[bot])
+#11794 chore(deps-dev): bump ts-morph from 18.0.0 to 19.0.0 (@dependabot[bot])
+#11790 chore(deps): update node.js to v19.9 (@renovate[bot])
+#11787 chore(deps): update node.js to v18.16 - autoclosed (@renovate[bot])
+#11788 chore(deps): update jest monorepo to v29 (major) (@renovate[bot])
+#11786 chore(deps): update node.js to v16.20 (@renovate[bot])
+#11784 chore(deps): update dependency jest to v28.1.3 (@renovate[bot])
+#11783 fix(deps): update graphql-tools monorepo (major) (@renovate[bot])
+#11782 fix(deps): update dependency ts-morph to v18 - autoclosed (@renovate[bot])
+#11757 chore(deps): update dependency @types/node to v18.16.18 (@renovate[bot])
+#11780 fix(deps): update dependency mongoose to v7 (@renovate[bot])
+#11775 fix(deps): update dependency @nestjs/mercurius to v11 (@renovate[bot])
+#11761 fix(deps): update dependency rxjs to v7.8.1 (@renovate[bot])
+#11779 fix(deps): update dependency mongodb to v5 (@renovate[bot])
+#11777 fix(deps): update dependency cache-manager to v5 (@renovate[bot])
+#11776 fix(deps): update dependency @socket.io/redis-adapter to v8 (@renovate[bot])
+#11772 chore(deps): update dependency webpack-cli to v5 (@renovate[bot])
+#11768 chore(deps-dev): bump @fastify/multipart from 7.6.0 to 7.6.1 (@dependabot[bot])
+#11764 fix(deps): update prisma monorepo to v4.15.0 (@renovate[bot])
+#11778 fix(deps): update dependency mercurius to v13 (@renovate[bot])
+#11774 fix(deps): update dependency @nestjs/graphql to v11.0.6 (@renovate[bot])
+#11773 chore(deps): update jest monorepo to v29 (major) (@renovate[bot])
+#11771 chore(deps): update dependency typescript to v5 (@renovate[bot])
+#11740 chore(deps): update dependency ts-loader to v9.4.3 (@renovate[bot])
+#11762 fix(deps): update dependency sequelize to v6.32.0 (@renovate[bot])
+#11763 fix(deps): update nest monorepo (@renovate[bot])
+#11746 chore(deps-dev): bump eslint from 7.32.0 to 8.42.0 (@dependabot[bot])
+#11747 chore(deps-dev): bump mongoose from 7.2.2 to 7.2.4 (@dependabot[bot])
+#11758 fix(deps): update dependency mysql2 to v3.3.5 (@renovate[bot])
+#11759 chore(deps): update jest monorepo (@renovate[bot])
+#11519 chore(deps): update jest monorepo (@renovate[bot])
+#11742 chore(deps): bump dottie from 2.0.2 to 2.0.4 in /sample/07-sequelize (@dependabot[bot])
+#11743 chore(deps-dev): bump sinon from 15.1.0 to 15.1.2 (@dependabot[bot])
+#11745 chore(deps-dev): bump @apollo/server from 4.7.1 to 4.7.3 (@dependabot[bot])
+#11756 chore(deps-dev): bump @types/node from 20.2.5 to 20.3.1 (@dependabot[bot])
+#11755 fix(deps): update dependency mongoose to v6.11.2 (@renovate[bot])
+#11754 fix(deps): update dependency mongodb to v3.7.3 (@renovate[bot])
+#11753 fix(deps): update dependency dotenv to v16.1.4 (@renovate[bot])
+#11752 fix(deps): update dependency @nestjs/event-emitter to v1.4.2 (@renovate[bot])
+#11748 fix(deps): update apollo graphql packages (@renovate[bot])
+#11750 chore(deps): update dependency ts-node to v10.9.1 (@renovate[bot])
+#11749 chore(deps): update dependency supertest to v6.3.3 (@renovate[bot])
+#11751 chore(deps): update typescript-eslint monorepo to v5.59.11 (@renovate[bot])
+#11741 chore(deps): update dependency webpack to v5.86.0 (@renovate[bot])
+#11516 chore(deps): update dependency @types/node to v18.16.17 (@renovate[bot])
+#11738 chore(deps): update dependency prettier to v2.8.8 (@renovate[bot])
+#11739 chore(deps): update dependency ts-jest to v29.1.0 (@renovate[bot])
+#11524 fix(deps): update dependency @nestjs/mercurius to v10.2.1 (@renovate[bot])
+#11736 chore(deps): update dependency eslint-config-prettier to v8.8.0 (@renovate[bot])
+#11723 fix(deps): update apollo graphql packages (@renovate[bot])
+#11734 chore(deps): update confluentinc/cp-zookeeper docker tag to v7.4.0 (@renovate[bot])
+#11737 chore(deps): update dependency eslint-plugin-import to v2.27.5 (@renovate[bot])
+#11732 chore(deps): update babel monorepo to v7.22.5 (@renovate[bot])
+#11731 fix(deps): update dependency typeorm to v0.3.16 (@renovate[bot])
+#11735 chore(deps): update dependency @nestjs/cli to v9.5.0 (@renovate[bot])
+#11730 fix(deps): update dependency socket.io to v4.6.2 (@renovate[bot])
+#11733 chore(deps): update confluentinc/cp-kafka docker tag to v7.4.0 (@renovate[bot])
+#11724 fix(deps): update dependency @fastify/static to v6.10.2 (@renovate[bot])
+#11727 fix(deps): update dependency @nestjs/schedule to v2.2.3 (@renovate[bot])
+#11729 fix(deps): update dependency graphql-tools to v8.3.20 (@renovate[bot])
+#11728 fix(deps): update dependency @nestjs/sequelize to v9.0.2 (@renovate[bot])
+#11726 fix(deps): update dependency @nestjs/apollo to v11.0.6 (@renovate[bot])
+#11725 fix(deps): update dependency @grpc/grpc-js to v1.8.15 (@renovate[bot])
+#11722 chore(deps): update mysql docker tag to v8.0.33 (@renovate[bot])
+#11721 chore(deps): update dependency redis to v4.6.7 (@renovate[bot])
+#11720 chore(deps): update dependency @types/express to v4.17.17 (@renovate[bot])
+#11695 chore(deps-dev): bump typescript from 5.0.4 to 5.1.3 (@dependabot[bot])
+platform-fastify
+#11716 chore(deps): bump light-my-request from 5.9.1 to 5.10.0 (@dependabot[bot])
+
+Committers: 17
+
+Antonio Tripodi (@Tony133)
+Autofix (@autofix-bot)
+Denis Frenademetz (@skrtheboss)
+Einar Norðfjörð (@nordfjord)
+Jay McDoniel (@jmcdo29)
+Kamil Mysliwiec (@kamilmysliwiec)
+Mathew Trivett (@mathewtrivett)
+Maurer Krisztian (@MaurerKrisztian)
+Micael Levi L. Cavalcante (@micalevisk)
+Nick Amoscato (@namoscato)
+Ondřej Švanda (@Papooch)
+Pooyan Khanjankhani (@TheKhanj)
+Rychard Valle (@rychardvale)
+Tijs Moree (@tijsmoree)
+@Gustrb
+@elplancton
+@mohamadrezamomeni
+","v10.0.0 (2023-06-15)
+Article: TBC
+Migration guide: link
+⚠️  Node v12 is no longer supported (>= v16 is required).
+Bug fixes
+core
+11785 fix(core): apply middleware to versioned controllers (ctrl-level) (@kamilmysliwiec)
+11650 fix(core): global prefix exclude when versioning is turned on (@kamilmysliwiec)
+platform-fastify
+11718 fix(fastify): validate middleware paths (@kamilmysliwiec)
+microservices
+10549 fix(microservices): allow falsy values in options (@Papooch)
+Enhancements
+platform-express
+11667 feat(express): add support for multer.none (@mathewtrivett)
+common, core, websockets
+10545 feat: create method on client to get websocket pattern (@jmcdo29)
+common
+11673 fix(common): loosen http exception cause type (@namoscato)
+10953 fix(common)!: when transforming optional boolean parameters on ValidationPipe (@micalevisk)
+core
+9809 feat(core): middleware runs once for matching route (@rychardvale)
+11118 feat(core): add support to named groups (@elplancton)
+11142 feat: Support async local storage in interceptors (@nordfjord)
+common, core
+10533 feat(core/common): Add @Search decorator to the available HTTP route handlers (@Gustrb)
+microservices
+10359 feat(microservices): enable wildcards in redis microservice patterns (@tijsmoree)
+common, platform-express, platform-fastify
+10630 feat(common)!: narrow getInstance return type for http adapters (@micalevisk)
+Dependencies
+Other
+11793 chore(deps-dev): bump mongoose from 7.2.4 to 7.3.0 (@dependabot[bot])
+11792 chore(deps-dev): bump cache-manager from 5.2.2 to 5.2.3 (@dependabot[bot])
+11794 chore(deps-dev): bump ts-morph from 18.0.0 to 19.0.0 (@dependabot[bot])
+11790 chore(deps): update node.js to v19.9 (@renovate[bot])
+11787 chore(deps): update node.js to v18.16 - autoclosed (@renovate[bot])
+11788 chore(deps): update jest monorepo to v29 (major) (@renovate[bot])
+11786 chore(deps): update node.js to v16.20 (@renovate[bot])
+11784 chore(deps): update dependency jest to v28.1.3 (@renovate[bot])
+11783 fix(deps): update graphql-tools monorepo (major) (@renovate[bot])
+11782 fix(deps): update dependency ts-morph to v18 - autoclosed (@renovate[bot])
+11757 chore(deps): update dependency @types/node to v18.16.18 (@renovate[bot])
+11780 fix(deps): update dependency mongoose to v7 (@renovate[bot])
+11775 fix(deps): update dependency @nestjs/mercurius to v11 (@renovate[bot])
+11761 fix(deps): update dependency rxjs to v7.8.1 (@renovate[bot])
+11779 fix(deps): update dependency mongodb to v5 (@renovate[bot])
+11777 fix(deps): update dependency cache-manager to v5 (@renovate[bot])
+11776 fix(deps): update dependency @socket.io/redis-adapter to v8 (@renovate[bot])
+11772 chore(deps): update dependency webpack-cli to v5 (@renovate[bot])
+11768 chore(deps-dev): bump @fastify/multipart from 7.6.0 to 7.6.1 (@dependabot[bot])
+11764 fix(deps): update prisma monorepo to v4.15.0 (@renovate[bot])
+11778 fix(deps): update dependency mercurius to v13 (@renovate[bot])
+11774 fix(deps): update dependency @nestjs/graphql to v11.0.6 (@renovate[bot])
+11773 chore(deps): update jest monorepo to v29 (major) (@renovate[bot])
+11771 chore(deps): update dependency typescript to v5 (@renovate[bot])
+11740 chore(deps): update dependency ts-loader to v9.4.3 (@renovate[bot])
+11762 fix(deps): update dependency sequelize to v6.32.0 (@renovate[bot])
+11763 fix(deps): update nest monorepo (@renovate[bot])
+11746 chore(deps-dev): bump eslint from 7.32.0 to 8.42.0 (@dependabot[bot])
+11747 chore(deps-dev): bump mongoose from 7.2.2 to 7.2.4 (@dependabot[bot])
+11758 fix(deps): update dependency mysql2 to v3.3.5 (@renovate[bot])
+11759 chore(deps): update jest monorepo (@renovate[bot])
+11519 chore(deps): update jest monorepo (@renovate[bot])
+11742 chore(deps): bump dottie from 2.0.2 to 2.0.4 in /sample/07-sequelize (@dependabot[bot])
+11743 chore(deps-dev): bump sinon from 15.1.0 to 15.1.2 (@dependabot[bot])
+11745 chore(deps-dev): bump @apollo/server from 4.7.1 to 4.7.3 (@dependabot[bot])
+11756 chore(deps-dev): bump @types/node from 20.2.5 to 20.3.1 (@dependabot[bot])
+11755 fix(deps): update dependency mongoose to v6.11.2 (@renovate[bot])
+11754 fix(deps): update dependency mongodb to v3.7.3 (@renovate[bot])
+11753 fix(deps): update dependency dotenv to v16.1.4 (@renovate[bot])
+11752 fix(deps): update dependency @nestjs/event-emitter to v1.4.2 (@renovate[bot])
+11748 fix(deps): update apollo graphql packages (@renovate[bot])
+11750 chore(deps): update dependency ts-node to v10.9.1 (@renovate[bot])
+11749 chore(deps): update dependency supertest to v6.3.3 (@renovate[bot])
+11751 chore(deps): update typescript-eslint monorepo to v5.59.11 (@renovate[bot])
+11741 chore(deps): update dependency webpack to v5.86.0 (@renovate[bot])
+11516 chore(deps): update dependency @types/node to v18.16.17 (@renovate[bot])
+11738 chore(deps): update dependency prettier to v2.8.8 (@renovate[bot])
+11739 chore(deps): update dependency ts-jest to v29.1.0 (@renovate[bot])
+11524 fix(deps): update dependency @nestjs/mercurius to v10.2.1 (@renovate[bot])
+11736 chore(deps): update dependency eslint-config-prettier to v8.8.0 (@renovate[bot])
+11723 fix(deps): update apollo graphql packages (@renovate[bot])
+11734 chore(deps): update confluentinc/cp-zookeeper docker tag to v7.4.0 (@renovate[bot])
+11737 chore(deps): update dependency eslint-plugin-import to v2.27.5 (@renovate[bot])
+11732 chore(deps): update babel monorepo to v7.22.5 (@renovate[bot])
+11731 fix(deps): update dependency typeorm to v0.3.16 (@renovate[bot])
+11735 chore(deps): update dependency @nestjs/cli to v9.5.0 (@renovate[bot])
+11730 fix(deps): update dependency socket.io to v4.6.2 (@renovate[bot])
+11733 chore(deps): update confluentinc/cp-kafka docker tag to v7.4.0 (@renovate[bot])
+11724 fix(deps): update dependency @fastify/static to v6.10.2 (@renovate[bot])
+11727 fix(deps): update dependency @nestjs/schedule to v2.2.3 (@renovate[bot])
+11729 fix(deps): update dependency graphql-tools to v8.3.20 (@renovate[bot])
+11728 fix(deps): update dependency @nestjs/sequelize to v9.0.2 (@renovate[bot])
+11726 fix(deps): update dependency @nestjs/apollo to v11.0.6 (@renovate[bot])
+11725 fix(deps): update dependency @grpc/grpc-js to v1.8.15 (@renovate[bot])
+11722 chore(deps): update mysql docker tag to v8.0.33 (@renovate[bot])
+11721 chore(deps): update dependency redis to v4.6.7 (@renovate[bot])
+11720 chore(deps): update dependency @types/express to v4.17.17 (@renovate[bot])
+11695 chore(deps-dev): bump typescript from 5.0.4 to 5.1.3 (@dependabot[bot])
+platform-fastify
+11716 chore(deps): bump light-my-request from 5.9.1 to 5.10.0 (@dependabot[bot])
+Committers: 17
+Antonio Tripodi (@Tony133)
+Autofix (@autofix-bot)
+Denis Frenademetz (@skrtheboss)
+Einar Norðfjörð (@nordfjord)
+Jay McDoniel (@jmcdo29)
+Kamil Mysliwiec (@kamilmysliwiec)
+Mathew Trivett (@mathewtrivett)
+Maurer Krisztian (@MaurerKrisztian)
+Micael Levi L. Cavalcante (@micalevisk)
+Nick Amoscato (@namoscato)
+Ondřej Švanda (@Papooch)
+Pooyan Khanjankhani (@TheKhanj)
+Rychard Valle (@rychardvale)
+Tijs Moree (@tijsmoree)
+@Gustrb
+@elplancton
+@mohamadrezamomeni"
+2,"v9.4.0 (2023-04-05)
 Features
 
 microservices
@@ -150,7 +397,7 @@ Nathan Arseneau (@nathanArseneau)
 Noah Golub (@nomaxg)
 Tolga Paksoy (@tolgap)
 Yiheng (@ianzone)"
-2,"v9.3.12 (2023-03-22)
+3,"v9.3.12 (2023-03-22)
 Enhancements
 
 core
@@ -197,7 +444,7 @@ platform-fastify
 Committers: 2
 Hans Larsen (@hansl)
 Micael Levi L. Cavalcante (@micalevisk)"
-3,"v9.3.10 (2023-03-15)
+4,"v9.3.10 (2023-03-15)
 Bug fixes
 
 common
@@ -450,7 +697,7 @@ Micael Levi L. Cavalcante (@micalevisk)
 Steve Juneyoung Kang (@stevejkang)
 Thomas Ghysels (@thgh)
 @mohamadrezamomeni"
-4,"v9.3.6 (2023-02-08)
+5,"v9.3.6 (2023-02-08)
 Bug fixes
 
 core
@@ -525,7 +772,7 @@ platform-socket.io
 11062 chore(deps): bump socket.io from 4.5.4 to 4.6.0 (@dependabot[bot])
 Committers: 1
 Jay McDoniel (@jmcdo29)"
-5,"v9.3.3 (2023-02-06)
+6,"v9.3.3 (2023-02-06)
 Bug fixes
 
 core
@@ -564,7 +811,7 @@ Committers: 3
 Antonio Tripodi (@Tony133)
 Kamil Mysliwiec (@kamilmysliwiec)
 Simone Vicentini (@vizio360)"
-6,"v9.3.2 (2023-02-03)
+7,"v9.3.2 (2023-02-03)
 Bug fixes
 
 microservices
@@ -641,7 +888,7 @@ Constantin Cuciurcă (@bittlerr)
 Kamil Mysliwiec (@kamilmysliwiec)
 Rick Dutour Geerling (@tuxmachine)
 Xinyu Liu (@meteorlxy)"
-7,"v9.3.0 (2023-02-01)
+8,"v9.3.0 (2023-02-01)
 Features
 
 core
@@ -978,7 +1225,7 @@ Vojtech Novak (@vonovak)
 @SirReiva
 @nkitku
 @weal1312"
-8,"v9.2.1 (2022-11-29)
+9,"v9.2.1 (2022-11-29)
 Bug fixes
 
 common
@@ -1045,7 +1292,7 @@ Maxim Ciuchitu (@Leichtwind)
 Micael Levi L. Cavalcante (@micalevisk)
 Rubin Bhandari (@rubiin)
 thinkhalo (@ufec)"
-9,"v9.2.0 (2022-11-07)
+10,"v9.2.0 (2022-11-07)
 Features
 
 common, core
@@ -1196,7 +1443,7 @@ Micael Levi L. Cavalcante (@micalevisk)
 Thiago Valentim (@thiagomini)
 Tolga Paksoy (@tolgap)
 @SirReiva"
-10,"v9.1.1 (2022-09-19)
+11,"v9.1.1 (2022-09-19)
 Features
 
 core, microservices
@@ -1429,7 +1676,7 @@ Yuku Kotani (@yukukotani)
 ZungTa (@ZungTa)
 @szilveszterandras
 曾明健 (@ZanMinKian)"
-11,"v9.0.11
+12,"v9.0.11
 Bug fixes
 
 microservices
@@ -1474,7 +1721,7 @@ Gil Reifan (@gilre)
 Jay McDoniel (@jmcdo29)
 Kamil Mysliwiec (@kamilmysliwiec)
 Pooyan Khanjankhani (@TheKhanj)"
-12,"Enhancements
+13,"Enhancements
 
 microservices
 #10042 feat(microservices): add ""maxConnectionAttempts"" option to RMQ, hide urls log (@kamilmysliwiec)
@@ -1503,7 +1750,7 @@ Dependencies
 Committers: 2
 Kamil Mysliwiec (@kamilmysliwiec)
 rikapo (@rikapo)"
-13,"v9.0.6 (2022-07-28)
+14,"v9.0.6 (2022-07-28)
 Features
 
 common
@@ -1644,7 +1891,7 @@ Pooyan Khanjankhani (@TheKhanj)
 Roberto Sero (@random42)
 Thiago Valentim (@thiagomini)
 bangbang93 (@bangbang93)"
-14,"v9.0.5 (2022-07-20)
+15,"v9.0.5 (2022-07-20)
 Bug fixes
 
 common, platform-express
@@ -1711,7 +1958,7 @@ Franco Mangone (@frankmangone)
 Jay McDoniel (@jmcdo29)
 Tolga Paksoy (@tolgap)
 @kosh-b"
-15,"v9.0.2
+16,"v9.0.2
 Bug fixes
 
 common
@@ -1750,7 +1997,7 @@ Committers: 3
 Afonso Barracha (@tugascript)
 Antonio T. alias Tony (@Tony133)
 Micael Levi L. Cavalcante (@micalevisk)"
-16,"v9.0.0 (2022-07-08)
+17,"v9.0.0 (2022-07-08)
 Article: https://trilon.io/blog/nestjs-9-is-now-available
 Migration guide: https://docs.nestjs.com/migration-guide
 Features
@@ -1963,7 +2210,7 @@ William Sedlacek (@wSedlacek)
 @yevgeniypak
 曾明健 (@ZanMinKian)
 정우병 (@woobottle)"
-17,"v8.4.7 (2022-06-14)
+18,"v8.4.7 (2022-06-14)
 Enhancements
 
 microservices
@@ -2046,7 +2293,7 @@ Daniel De Lucca (@delucca)
 Matthew Painter (@mjgp2)
 Sushant Zope (@sushant9096)
 Volodymyr Tytarenko (@bovatitar)"
-18,"v8.4.5 (2022-05-13)
+19,"v8.4.5 (2022-05-13)
 Bug fixes
 
 core
@@ -2187,7 +2434,7 @@ Lutz (@MyAeroCode)
 Micael Levi L. Cavalcante (@micalevisk)
 Oleg ""OSA413"" Sokolov (@OSA413)
 TIBI Nicolas (@ntibi)"
-19,"v8.4.4 (2022-04-07)
+20,"v8.4.4 (2022-04-07)
 Bug fixes
 
 microservices
@@ -2286,8 +2533,8 @@ Kamil Mysliwiec (@kamilmysliwiec)
 Marcin (@cichy380)
 Micael Levi L. Cavalcante (@micalevisk)
 Wias Liaw (@wiasliaw)"
-20,,
-21,"v8.4.1 (2022-03-14)
+21,,
+22,"v8.4.1 (2022-03-14)
 Bug fixes
 
 core
@@ -2392,7 +2639,7 @@ Mario Rodrigo (@capitantrueno)
 Radek Mikeska (@radekmikeska)
 Zlatin Stanimirov (@stanimirovv)
 曾明健 (@ZanMinKian)"
-22,"v8.4.0 (2022-03-01)
+23,"v8.4.0 (2022-03-01)
 Features
 
 common, core
@@ -2535,7 +2782,7 @@ Micael Levi L. Cavalcante (@micalevisk)
 @brian-pinwheel
 @yevgeniypak
 jeanseok (@jeean)"
-23,"v8.3.1 (2022-02-16)
+24,"v8.3.1 (2022-02-16)
 Dependencies
 
 #9207 chore(deps): update babel monorepo (@renovate[bot])
@@ -2554,7 +2801,7 @@ Dependencies
 9196 chore(deps-dev): bump nats from 2.6.0 to 2.6.1 (@dependabot[bot])
 9195 chore(deps-dev): bump @types/node from 17.0.17 to 17.0.18 (@dependabot[bot])
 9189 chore(deps): update dependency @types/node to v16.11.24 (@renovate[bot])"
-24,"v8.3.0 (2022-02-14)
+25,"v8.3.0 (2022-02-14)
 Bug fixes
 
 core
@@ -2833,7 +3080,7 @@ Tony (@Tony133)
 Vasek - Tom C. (@TomChv)
 @StevenGBrown
 曾明健 (@ZanMinKian)"
-25,"v8.2.6 (2022-01-20)
+26,"v8.2.6 (2022-01-20)
 Dependencies
 
 Other
@@ -2924,7 +3171,7 @@ platform-socket.io
 8959 chore(deps): bump socket.io from 4.4.0 to 4.4.1 (@dependabot[bot])
 Committers: 1
 Tony (@Tony133)"
-26,"v8.2.5 (2022-01-12)
+27,"v8.2.5 (2022-01-12)
 Bug fixes
 
 microservices
@@ -2983,7 +3230,7 @@ Kamil Mysliwiec (@kamilmysliwiec)
 Micael Levi L. Cavalcante (@micalevisk)
 Thiago Valentim (@thiagomini)
 Tony (@Tony133)"
-27,"v8.2.4 (2021-12-17)
+28,"v8.2.4 (2021-12-17)
 Bug fixes
 
 common, core
@@ -3172,7 +3419,7 @@ Micael Levi L. Cavalcante (@micalevisk)
 Rik Smale (@WikiRik)
 William Sedlacek (@wSedlacek)
 曾明健 (@ZanMinKian)"
-28,"v8.2.3 (2021-11-22)
+29,"v8.2.3 (2021-11-22)
 Dependencies
 
 #8635 chore(deps): update dependency webpack to v5.64.2 (@renovate[bot])
@@ -3213,7 +3460,7 @@ Dependencies
 Committers: 2
 Jay McDoniel (@jmcdo29)
 @caucik"
-29,"v8.2.0 (2021-11-08)
+30,"v8.2.0 (2021-11-08)
 Dependencies
 
 Other
@@ -3304,7 +3551,7 @@ Andrii (@aaabramov)
 Francesco Soncina (@phra)
 Sebastian Schmid (@sjkummer)
 Tony (@Tony133)"
-30,"Features
+31,"Features
 
 common: refactor the built-in console logger class #6142 #5353, separate out Logger wrapper class and ConsoleLogger class, add buffering logs feature (buffer init logs and flush them out when a custom logger is assigned), add log level output #6172, support log levels feature nestjs/docs.nestjs.com#1613
 common: add StreamableFile class for streaming files from controller routes (cross-platform) https://github.com/nestjs/nest/pull/5278
@@ -3375,7 +3622,7 @@ Deprecations
 common: deprecate HttpModule to remove hard dependency on the axios library. HttpModule is published as a new @nestjs/axios package now
 core: deprecate the listenAsync() (use listen()) and startAllMicroservicesAsync() (use startAllMicroservices()) methods
 microservices: deprecate the listenAsync() method (use listen() instead)"
-31,"Features
+32,"Features
 
 common: support conditional cache TTL value (support async factories) https://github.com/nestjs/nest/pull/5366
 core: add Server-Sent Events (SSE) support https://github.com/nestjs/nest/pull/4842
@@ -3410,7 +3657,7 @@ core: fix invalid middleware execution order when request-scoped dependencies ar
 microservices: await consumer and producer disconnect operations link
 microservices: check replyTo channel presence (NATS) link
 platform-fastify: add missing chaining API to the inject() method link"
-32,"Bug fixes
+33,"Bug fixes
 
 microservices:  add microservice dispose() to close server on shutdown https://github.com/nestjs/nest/pull/5154
 microservices: properly handle a promise returned by the registerModules https://github.com/nestjs/nest/pull/5136
@@ -3423,7 +3670,7 @@ microservices:  add microservice dispose() to close server on shutdown link
 microservices: properly handle a promise returned by the registerModules link
 Dependencies
 platform-fastify: Fastify 3.0 support link"
-33,"Features
+34,"Features
 
 core: add the introspect() method to ModuleRef and NestApplicationContext classes
 core: add the registerRequestByContextId() method to ModuleRef and NestApplicationContext classes
@@ -3436,7 +3683,7 @@ core: add the introspect() method to ModuleRef and NestApplicationContext classe
 core: add the registerRequestByContextId() method to ModuleRef and NestApplicationContext classes
 Improvements
 core: user InstanceLinksHost to speed-up get() and resolve() methods"
-34,"Features
+35,"Features
 
 core: allow inheriting the ApplicationConfig object (for hybrid applications) #4261 
 microservices: add transport: Transport argument to the @MessagePattern() and @EventPattern decorators #4768
@@ -3453,7 +3700,7 @@ Bug Fixes
 common: avoid mutating the axios options object
 microservices: falsy options are no longer ignored (gRPC) #4817
 microservices: additional gRPC options are no longer ignored #4607 "
-35,"Features
+36,"Features
 
 common: automatically transform primitives (number, bool) with ValidationPipe #4110
 common add ParseArrayPipe and ParseBoolPipe #4113
@@ -3488,7 +3735,7 @@ common: remove deprecated @ReflectMetadata decorator
 graphql: built-in code-first support + CLI plugin link
 BREAKING CHANGES
 Read more here link"
-36,"Features
+37,"Features
 
 all: add tslib #3748
 common: strongly type custom decorators (createParamDecorator) #3356
@@ -3515,7 +3762,7 @@ Bug Fixes
 core: run lifecycle hooks for middleware and injectables #3870
 platform: add application's global prefix to error handlers and global middlewares #3656
 deps: update to axios@0.19.1 #3765"
-37,"Features
+38,"Features
 
 core: add transient inquirer injection #1637
 
@@ -3528,7 +3775,7 @@ core: add transient inquirer injection #1637
 Bug Fixes
 common: single stdout.write() call per logging in default Logger #3350 
 core:  use module class to generate hash #3363"
-38,"Features
+39,"Features
 
 common: add class-transformer excludeExtraneousValues flag #3278
 common: add applyDecorators function #3113
@@ -3551,7 +3798,7 @@ microservices/websockets: support createParamDecorator (custom decorators)
 Bug Fixes
 core: fix transient providers in request-scoped chain #3303
 microservices:  fix applying falsy options (e.g. noAck for RMQ) #3119"
-39,"Features
+40,"Features
 
 common: add more utility methods to Reflector class #3043 
 all: add RPC and WS decorators #3039
@@ -3568,7 +3815,7 @@ Improvements
 common: update class-validator external interface #3059
 core: improve error messages (more descriptive) #3001 
 core: remove optional package from dependencies #3041"
-40,"Features
+41,"Features
 
 core: add getType() to both ExecutionContext and ArgumentsHost #1581
 microservices: add getClientByServiceName to ClientGrpc https://github.com/nestjs/nest/pull/2967/commits/73c1cf34c15a30b8e1ae594de94ddc43a9ee1274
@@ -3589,24 +3836,24 @@ common: fix CacheStore.get() return type link
 common:  added return types to Controller decorator overloads link
 common: export NestApplicationOptions interface from the root link
 core: exclude duplicated methods #2557"
-41,"Bug Fixes:
+42,"Bug Fixes:
 
 core: improve performance of distance calculation (middleware) #2865 
 ","Bug Fixes:
 core: improve performance of distance calculation (middleware) #2865 "
-42,"Bug Fixes
+43,"Bug Fixes
 
 core: invert middleware execution order (apply middleware registered closer to the root module first)
 ","Bug Fixes
 core: invert middleware execution order (apply middleware registered closer to the root module first)"
-43,"Bug Fixes
+44,"Bug Fixes
 
 core: maximum call stack size exceeded for circular deps #2834 
 platform-fastify: unhandled exception when throwing an error in the middleware #2640 
 ","Bug Fixes
 core: maximum call stack size exceeded for circular deps #2834 
 platform-fastify: unhandled exception when throwing an error in the middleware #2640 "
-44,"Features:
+45,"Features:
 
 all: add API docs (better DX) #2688 
 common: add log levels (Logger) #2813 
@@ -3657,17 +3904,17 @@ microservices: update isTermined value when manually closed #2708
 platform-express: fix PreservePath boolean property location in multer configuration #2800
 Other:
 ci: migrate towards CircleCI #2720 "
-45,"Bug Fixes
+46,"Bug Fixes
 
 microservices: fix microservices pattern regression (add quotes and commas)
 ","Bug Fixes
 microservices: fix microservices pattern regression (add quotes and commas)"
-46,"Bug Fixes
+47,"Bug Fixes
 
 microservices: remove invalid types references (depependencies issue) #2534
 ","Bug Fixes
 microservices: remove invalid types references (depependencies issue) #2534"
-47,"Features
+48,"Features
 
 platform-express: add AnyFilesInterceptor #2496
 
@@ -3680,7 +3927,7 @@ platform-express: add AnyFilesInterceptor #2496
 Bug Fixes
 core: make errors serializable by default #2512 
 core: fix global, request-scoped enhancers (pipes, interceptors, filters, and guards) #1916"
-48,"Features
+49,"Features
 
 core: add ApplicationConfig to injectable providers #2412
 core: add getNext() to HttpArgumentsHost #2369
@@ -3701,7 +3948,7 @@ core: run static exception filters when request-scoped provider throws an error 
 core: fix invalid token created by ModuleTokenFactory when useClass is being used #2457
 microservices: fix Redis reconnection strategy (recover from disconnect) #2246
 microservices: sort microservices patterns (JS object keys) #2428"
-49,"Bug Fixes
+50,"Bug Fixes
 
 common: add missing user property to NatsOptions #2426
 common: add type guard to isNil utility function #2418
@@ -3710,12 +3957,12 @@ microservices: remove credentials property from options argument (gRPC) #2381
 common: add missing user property to NatsOptions #2426
 common: add type guard to isNil utility function #2418
 microservices: remove credentials property from options argument (gRPC) #2381"
-50,"Bug Fixes
+51,"Bug Fixes
 
 core: invalid scopes resolution on module re-export #2341
 ","Bug Fixes
 core: invalid scopes resolution on module re-export #2341"
-51,"Features
+52,"Features
 
 common: add enableImplicitConversion option to ValidationPipe #2253
 common: add ParseUUID pipe #2062 
@@ -3758,17 +4005,17 @@ microservices: fix gRPC server streaming error handling #1466
 Deps
 common: update axios package #2322
 core: upgrade `opencollective dependency #2272 "
-52,"Bug Fixes
+53,"Bug Fixes
 
 common: strip prototype keys in ValidationPipe
 ","Bug Fixes
 common: strip prototype keys in ValidationPipe"
-53,"Bug Fixes
+54,"Bug Fixes
 
 core: fix override factory provider in e2e tests #2229 
 ","Bug Fixes
 core: fix override factory provider in e2e tests #2229 "
-54,"Bug Fixes
+55,"Bug Fixes
 
 core: fix override and replace logic #2070
 microservices: fix interceptors in combination with @EventPattern() #2209 
@@ -3777,19 +4024,19 @@ platform-ws: trigger handleDisconnect() hook #2226
 core: fix override and replace logic #2070
 microservices: fix interceptors in combination with @EventPattern() #2209 
 platform-ws: trigger handleDisconnect() hook #2226"
-55,"Features
+56,"Features
 
 core: customizable ExternalContextCreator (pass options object that determines which enhancers should be applied - interceptors, guards, or filters respectively)
 ","Features
 core: customizable ExternalContextCreator (pass options object that determines which enhancers should be applied - interceptors, guards, or filters respectively)"
-56,"Bug Fixes
+57,"Bug Fixes
 
 common: fix HttpException breaking change on message property #1970
 core: invalid context in request-scoped interceptors #1987 
 ","Bug Fixes
 common: fix HttpException breaking change on message property #1970
 core: invalid context in request-scoped interceptors #1987 "
-57,"Features
+58,"Features
 
 core: allow setting headers and status code from interceptors/guards #1869
 microservices: allow setting socketOptions in both ClientRMQ and ServerRMQ #1549 
@@ -3806,14 +4053,14 @@ Bug Fixes
 microservices: ServerTCP fix host property usage #1967
 microservices: export ClientRMQ and ServerRMQ classes #1891 
 platform-fastify: fix http2 property delegation (constructor options) #1950"
-58,"Bug Fixes
+59,"Bug Fixes
 
 microservices: fix Scope.REQUEST in microservices #1886 
 platform-fastify: fix cors options delegation #1867
 ","Bug Fixes
 microservices: fix Scope.REQUEST in microservices #1886 
 platform-fastify: fix cors options delegation #1867"
-59,"Bug Fixes
+60,"Bug Fixes
 
 core: fix ExternalExceptionFilterContext (ApplicationConfig) #1805
 core: execute callback passed in to the listen() method when hostname is missing #1820
@@ -3824,7 +4071,7 @@ core: fix ExternalExceptionFilterContext (ApplicationConfig) #1805
 core: execute callback passed in to the listen() method when hostname is missing #1820
 microservices: fix dispatchEvent in the TCP strategy #1840
 microservices: allow Unicode characters in the TCP strategy #1795"
-60,"Bug Fixes
+61,"Bug Fixes
 
 core: invalid proxy configuration #1690
 testing: dependency injection in TestingModule #1689
@@ -3833,7 +4080,7 @@ platform-fastify: fix invalid routes mapping #1703
 core: invalid proxy configuration #1690
 testing: dependency injection in TestingModule #1689
 platform-fastify: fix invalid routes mapping #1703"
-61,"Features
+62,"Features
 
 core: extract platforms (express/fastify/socket.io/ws) #1329
 core: HTTP request based (and Transient) DI #1376 
@@ -3864,7 +4111,7 @@ Bug Fixes
 all: dynamic require() issues (webpack build) #1386
 core: global and local interceptor execution #1016 
 testing: deprecated warning when initializing TestingModule #1320"
-62,"Bug Fixes
+63,"Bug Fixes
 
 common: error response with ValidationPipe is incorrect #1622
 core: base path issue (incompatibility with module path) #1594 
@@ -3873,24 +4120,24 @@ core: FastifyAdapter wasn't triggering middleware when query parameter was prese
 common: error response with ValidationPipe is incorrect #1622
 core: base path issue (incompatibility with module path) #1594 
 core: FastifyAdapter wasn't triggering middleware when query parameter was present #1474 "
-63,"Bug Fixes
+64,"Bug Fixes
 
 core: display symbol in UnknownDependencyException #1563 
 microservices: fix RabbitMQ reply-to queue #1571 
 ","Bug Fixes
 core: display symbol in UnknownDependencyException #1563 
 microservices: fix RabbitMQ reply-to queue #1571 "
-64,"Bug Fixes
+65,"Bug Fixes
 
 core: fastify middleware bug (query parameters break wildcards) #972  
 ","Bug Fixes
 core: fastify middleware bug (query parameters break wildcards) #972  "
-65,"Bug Fixes
+66,"Bug Fixes
 
 core interceptors issue (hanging request) #1536  
 ","Bug Fixes
 core interceptors issue (hanging request) #1536  "
-66,"Features
+67,"Features
 
 common: allow array in request mapping decorators (@Get([]), @Post([]), etc) #1343 
 core: allow for multiple view dirs in Express adapter #1514 
@@ -3903,7 +4150,7 @@ common: allow array in request mapping decorators (@Get([]), @Post([]), etc) #13
 core: allow for multiple view dirs in Express adapter #1514 
 Bug Fixes
 microservices: fix load proto definition file (deep definition issue) #1469 "
-67,"Features
+68,"Features
 
 common: add options support to ValidationPipe in the transformation phase #1374 
 core: support abstract classes in INestApplicationContext #1452 
@@ -3924,7 +4171,7 @@ Bug Fixes
 common: fix configurable axios instance in async HttpModule #1257 
 core: fix error message in case of circular dependency (wrong url) #1441 
 microservices: support proto namespaces in gRPC #1371 "
-68,"Features
+69,"Features
 
 common: add registerAsync to HttpModule #1257 
 common: add exceptionFactory option to ValidationPipe #1267
@@ -3945,7 +4192,7 @@ core: custom HTTP exceptions body #1339
 core: invalid injection metadata inheritance #1338 
 websockets: catch stream (throwError) exceptions #1285 
 microservices: catch stream (throwError) exceptions #1285 "
-69,"Bug Fixes
+70,"Bug Fixes
 
 core: e2e tests are failing due to HTTP_SERVER_REF #1160 
 core: support using direct injectable instance #928 
@@ -3954,7 +4201,7 @@ core: symbol in the module exports array causes fatal error #1246
 core: e2e tests are failing due to HTTP_SERVER_REF #1160 
 core: support using direct injectable instance #928 
 core: symbol in the module exports array causes fatal error #1246 "
-70,"Features
+71,"Features
 
 common: update axios to latest version #1152 
 core: add module context name to UnknownDependenciesMessage #1143 
@@ -3975,7 +4222,7 @@ microservices: RabbitMQ support #1170
 microservices: support queues in Nats transport #1175 
 Bug Fixes
 core: allow exporting abstract providers #1208 "
-71,"Bug Fixes
+72,"Bug Fixes
 
 core: change context initial arguments #1188
 core: DI symbol as token #1177 
@@ -3986,7 +4233,7 @@ core: change context initial arguments #1188
 core: DI symbol as token #1177 
 websockets: WsAdapter close function error #1156 
 websockets: send a message only to a client in open state (WsAdapter) #1183"
-72,"Bug Fixes
+73,"Bug Fixes
 
 core: make use of default assignments (DI) #1151 
 core: circular structures for dynamic modules #1142
@@ -3995,7 +4242,7 @@ websockets: handle unexpected WS client exception #1144
 core: make use of default assignments (DI) #1151 
 core: circular structures for dynamic modules #1142
 websockets: handle unexpected WS client exception #1144 "
-73,"Features
+74,"Features
 
 common: caching mechanism - add CacheModule module #695 
 common: serialization - add ClassSerializerInterceptor interceptor 
@@ -4022,7 +4269,7 @@ core: expose valid HttpServer within ExpressAdapter #1017
 Improvements
 core: injector improvements (mainly circular dependencies)
 websockets: improve adapters (WsAdapter and IoAdapter)"
-74,"Features
+75,"Features
 
 common: provide global config for axios instance HttpModule.register() #846 
 core: use default exception filter handler on condition (extend core class) #860 
@@ -4063,7 +4310,7 @@ core: allow using single Logger instance #926
 core: hierarchical module resolution #938
 microservices: use @grpc-loader withing gRPC transport #980 
 testing: recursively trigger OnModuleDestroy hook for testing module #899 "
-75,"Features
+76,"Features
 
 common: FileFieldsInterceptor upload multiple files with different names (multer.fields) #741 
 core: support async dynamic modules #800 
@@ -4110,7 +4357,7 @@ common: expose axiosRef from HttpService#842
 common: make MiddlewareFunction generic #778 
 microservices: propagate internal gRPC error #844
 testing: type signature for TestModule.get() is too restrictive #772 "
-76,"Bug Fixes
+77,"Bug Fixes
 
 common: add missing forbidUnknownValues property (ValidationPipe) #706 
 core: support circular structures in the dynamic module #678 
@@ -4127,7 +4374,7 @@ core: exceptions are not handled in cascade way #729
 core: validate route path passed in forRoutes() #692 
 websockets: @WebSocketGateway and @SubscribeMessage do not properly handle errors #683 
 testing: fix misssing logger"
-77,"Features
+78,"Features
 
 core: support async lifecycle hooks (OnModuleInit and OnModuleDestroy) #569
 core: HTTP server independence, fastify integration (FastifyAdapter)
@@ -4208,7 +4455,7 @@ core: removed MiddlewaresConsumer (use MiddlewareConsumer)
 Notes
 move from traditional express middleware model: each middleware is solely bounded to a particular path, regardless of the request method
 Migration guide: link"
-78,"5.0.0-beta.4
+79,"5.0.0-beta.4
 Bug Fixes
 
 core: param pipes aren't working correctly #592
@@ -4223,7 +4470,7 @@ core: param pipes aren't working correctly #592
 microservices: unnecessary modules required #594
 Improvements
 all: upgrade RxJS version (v6.0.0)"
-79,"5.0.0-beta.3
+80,"5.0.0-beta.3
 Bug Fixes
 
 core: incorrect ExpressAdapter method wrappers #585
@@ -4234,7 +4481,7 @@ Bug Fixes
 core: incorrect ExpressAdapter method wrappers #585
 core: the fastify-formbody is no longer a required dependency #575
 core: incorrect createApplication() typings (unable to pass express instance directly) #575"
-80,"5.0.0-beta.0
+81,"5.0.0-beta.0
 Features
 
 core: support async lifecycle hooks (OnModuleInit and OnModuleDestroy) #569
@@ -4307,7 +4554,7 @@ core: deprecate modules: [] property (use imports: [] instead)
 core: deprecate components: [] property (use providers: [] instead)
 Notes
 move from traditional express middleware model: each middleware is solely bounded to a particular path, regardless of the request method"
-81,"Bug Fixes:
+82,"Bug Fixes:
 
 common: File(s)Interceptor throws http status code 500 #465
 core: e2e testing, EXPRESS_REF injector issue #484
@@ -4326,7 +4573,7 @@ Improvements:
 common: class-transformer update #483
 common: HttpService improvements, remove duplicated axios interfaces #470
 core: far more meaningful exception when not available component is exported (module inconsistency) #479"
-82,"Bug Fixes
+83,"Bug Fixes
 
 common: File(s)Interceptor does not populate thrown exception #437
 core: NestFactory.create() returns any
@@ -4347,7 +4594,7 @@ common: HttpException extends Error
 core: make cors middleware customizable (enableCors(), { cors }) #457 
 microservices: RpcException extends Error
 websockets: WsException extends Error"
-83,"Bug Fixes
+84,"Bug Fixes
 
 common: logger overrides custom logger scope #435
 common: FileInterceptor supports only one options at once #429
@@ -4362,7 +4609,7 @@ common: support symbol as a token (NestApplicationContext)
 core: fix exception handler (exceception thrown in the done() callback) #431
 core: incorrect HTTP response on SyntaxError #430
 microservices: can't select/get from context when using NestFactory.createMicroservice #398"
-84,"Features
+85,"Features
 
 common: ValidationPipe improvements #383
 common: ParseIntPipe improvements #385

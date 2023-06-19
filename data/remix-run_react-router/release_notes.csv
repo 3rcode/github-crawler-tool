@@ -1,5 +1,92 @@
-Index,Release Note,Release Note With Abstraction
-1,"Patch Changes
+Index,Release Note,Release Note Abstract
+1,"What's Changed
+6.13.0 is really a patch release in spirit but comes with a SemVer minor bump since we added a new future flag.
+The tl;dr; is that 6.13.0 is the same as 6.12.0 bue we've moved the usage of React.startTransition behind an opt-in future.v7_startTransition future flag because we found that there are applications in the wild that are currently using Suspense in ways that are incompatible with React.startTransition.
+Therefore, in 6.13.0 the default behavior will no longer leverage React.startTransition:
+```jsx
+
+{/.../}
+
+
+```
+If you wish to enable React.startTransition, pass the future flag to your router component:
+```jsx
+
+{/.../}
+
+
+```
+We recommend folks adopt this flag sooner rather than later to be better compatible with React concurrent mode, but if you run into issues you can continue without the use of React.startTransition until v7. Issues usually boil down to creating net-new promises during the render cycle, so if you run into issues when opting into React.startTransition, you should either lift your promise creation out of the render cycle or put it behind a useMemo.
+Minor Changes
+
+Move React.startTransition usage behinds a future flag (#10596)
+
+Patch Changes
+
+Work around webpack/terser React.startTransition minification bug in production mode (#10588)
+
+Full Changelog: https://github.com/remix-run/react-router/compare/react-router@6.12.1...react-router@6.13.0","What's Changed
+6.13.0 is really a patch release in spirit but comes with a SemVer minor bump since we added a new future flag.
+The tl;dr; is that 6.13.0 is the same as 6.12.0 bue we've moved the usage of React.startTransition behind an opt-in future.v7_startTransition future flag because we found that there are applications in the wild that are currently using Suspense in ways that are incompatible with React.startTransition.
+Therefore, in 6.13.0 the default behavior will no longer leverage React.startTransition:
+```jsx
+{/.../}
+modulejsx
+{/.../}
+```
+We recommend folks adopt this flag sooner rather than later to be better compatible with React concurrent mode, but if you run into issues you can continue without the use of React.startTransition until v7. Issues usually boil down to creating net-new promises during the render cycle, so if you run into issues when opting into React.startTransition, you should either lift your promise creation out of the render cycle or put it behind a useMemo.
+Minor Changes
+Move React.startTransition usage behinds a future flag (#10596)
+Patch Changes
+Work around webpack/terser React.startTransition minification bug in production mode (#10588)
+Full Changelog: link"
+2,"
+Warning
+Please use version 6.13.0 or later instead of 6.12.0/6.12.1. These versions suffered from some Webpack build/minification issues resulting failed builds or invalid minified code in your production bundles. See #10569 and #10579 for more details.
+
+Patch Changes
+
+Adjust feature detection of React.startTransition to fix webpack + react 17 compilation error (#10569)
+
+Full Changelog: https://github.com/remix-run/react-router/compare/react-router@6.12.0...react-router@6.12.1","Warning
+Please use version 6.13.0 or later instead of 6.12.0/6.12.1. These versions suffered from some Webpack build/minification issues resulting failed builds or invalid minified code in your production bundles. See #10569 and #10579 for more details.
+Patch Changes
+Adjust feature detection of React.startTransition to fix webpack + react 17 compilation error (#10569)
+Full Changelog: link"
+3,"
+Warning
+Please use version 6.13.0 or later instead of 6.12.0/6.12.1. These versions suffered from some Webpack build/minification issues resulting failed builds or invalid minified code in your production bundles. See #10569 and #10579 for more details.
+
+What's Changed
+With 6.12.0 we've added better support for suspending components by wrapping the internal router state updates in React.startTransition. This means that, for example, if one of your components in a destination route suspends and you have not provided a Suspense boundary to show a fallback, React will delay the rendering of the new UI and show the old UI until that asynchronous operation resolves. This could be useful for waiting for things such as waiting for images or CSS files to load (and technically, yes, you could use it for data loading but we'd still recommend using loaders for that 😀). For a quick overview of this usage, check out Ryan's demo on Twitter.
+Minor Changes
+
+Wrap internal router state updates with React.startTransition (#10438)
+
+Patch Changes
+
+Allow fetcher revalidations to complete if submitting fetcher is deleted (#10535)
+Re-throw DOMException (DataCloneError) when attempting to perform a PUSH navigation with non-serializable state. (#10427)
+Ensure revalidations happen when hash is present (#10516)
+Upgrade jest and jsdom (#10453)
+Updated dependencies:
+@remix-run/router@1.6.3 (Changelog)
+
+Full Changelog: https://github.com/remix-run/react-router/compare/react-router@6.11.2...react-router@6.12.0","Warning
+Please use version 6.13.0 or later instead of 6.12.0/6.12.1. These versions suffered from some Webpack build/minification issues resulting failed builds or invalid minified code in your production bundles. See #10569 and #10579 for more details.
+What's Changed
+With 6.12.0 we've added better support for suspending components by wrapping the internal router state updates in React.startTransition. This means that, for example, if one of your components in a destination route suspends and you have not provided a Suspense boundary to show a fallback, React will delay the rendering of the new UI and show the old UI until that asynchronous operation resolves. This could be useful for waiting for things such as waiting for images or CSS files to load (and technically, yes, you could use it for data loading but we'd still recommend using loaders for that 😀). For a quick overview of this usage, check out Ryan's demo on Twitter.
+Minor Changes
+Wrap internal router state updates with React.startTransition (#10438)
+Patch Changes
+Allow fetcher revalidations to complete if submitting fetcher is deleted (#10535)
+Re-throw DOMException (DataCloneError) when attempting to perform a PUSH navigation with non-serializable state. (#10427)
+Ensure revalidations happen when hash is present (#10516)
+Upgrade jest and jsdom (#10453)
+Updated dependencies:
+@remix-run/router@1.6.3 (Changelog)
+Full Changelog: link"
+4,"Patch Changes
 
 Fix basename duplication in descendant <Routes> inside a <RouterProvider> (#10492)
 Fix bug where initial data load would not kick off when hash is present (#10493)
@@ -12,7 +99,7 @@ Fix bug where initial data load would not kick off when hash is present (#10493)
 Export SetURLSearchParams type (#10444)
 Fix Remix HMR-driven error boundaries by properly reconstructing new routes and manifest in _internalSetRoutes (#10437)
 Full Changelog: link"
-2,"Patch Changes
+5,"Patch Changes
 
 Fix usage of Component API within descendant <Routes> (#10434)
 Fix bug when calling useNavigate from <Routes> inside a <RouterProvider> (#10432)
@@ -27,7 +114,7 @@ Fix usage of  in strict mode when using a data router (#10435)
 Fix basename handling when navigating without a path (#10433)
 ""Same hash"" navigations no longer re-run loaders to match browser behavior (i.e. /path#hash -> /path#hash) (#10408)
 Full Changelog: link"
-3,"What's Changed
+6,"What's Changed
 Minor Changes
 
 Enable basename support in useFetcher (#10336)
@@ -72,7 +159,7 @@ Enhance LoaderFunction/ActionFunction return type to prevent undefined from bein
 Ensure proper 404 error on fetcher.load call to a route without a loader (#10345)
 Decouple AbortController usage between revalidating fetchers and the thing that triggered them such that the unmount/deletion of a revalidating fetcher doesn't impact the ongoing triggering navigation/revalidation (#10271)
 Full Changelog: link"
-4,"What's Changed
+7,"What's Changed
 We recently published a post over on the Remix Blog titled ""Future Proofing Your Remix App"" that goes through our strategy to ensure smooth upgrades for your Remix and React Router apps going forward.  React Router 6.10.0 adds support for these flags (for data routers) which you can specify when you create your router:
 js
 const router = createBrowserRouter(routes, {
@@ -133,7 +220,7 @@ Properly handle lazy() errors during router initialization (#10201)
 Remove instanceof check for DeferredData to be resilient to ESM/CJS boundaries in SSR bundling scenarios (#10247)
 Update to latest @remix-run/web-fetch@4.3.3 (#10216)
 Full Changelog: link"
-5,"What's Changed
+8,"What's Changed
 Minor Changes
 
 React Router now supports an alternative way to define your route element and errorElement fields as React Components instead of React Elements. You can instead pass a React Component to the new Component and ErrorBoundary fields if you choose. There is no functional difference between the two, so use whichever approach you prefer 😀. You shouldn't be defining both, but if you do Component/ErrorBoundary will ""win"". (#10045)
@@ -280,7 +367,7 @@ Improve memoization for context providers to avoid unnecessary re-renders (#9983
 Fix generatePath incorrectly applying parameters in some cases (#10078)
 [react-router-dom-v5-compat] Add missed data router API re-exports (#10171)
 Full Changelog: link"
-6,"What's Changed
+9,"What's Changed
 
 Treat same-origin absolute URLs in <Link to> as external if they are outside of the router basename (#10135)
 Correctly perform a hard redirect for same-origin absolute URLs outside of the router basename (#10076)
@@ -299,7 +386,7 @@ Fix useBlocker to return IDLE_BLOCKER during SSR (#10046)
 Ensure status code and headers are maintained for defer loader responses in createStaticHandler's query() method (#10077)
 Change invariant to an UNSAFE_invariant export since it's only intended for internal use (#10066)
 Full Changelog: link"
-7,"What's Changed
+10,"What's Changed
 
 Remove inaccurate console warning for POP navigations and update active blocker logic (#10030)
 Only check for differing origin on absolute URL redirects (#10033)
@@ -312,7 +399,7 @@ Only check for differing origin on absolute URL redirects (#10033)
 Improved absolute url detection in Link component (now also supports mailto: urls) (#9994)
 Fix partial object (search or hash only) pathnames losing current path value (#10029)
 Full Changelog: link"
-8,"What's Changed
+11,"What's Changed
 Minor Changes
 Support absolute URLs in <Link to>. If the URL is for the current origin, it will still do a client-side navigation. If the URL is for a different origin then it will do a fresh document request for the new origin. (#9900)
 tsx
@@ -372,7 +459,7 @@ New Contributors
 @LordThi made their first contribution in link
 @bbrowning918 made their first contribution in link
 Full Changelog: v6.7.0...v6.8.0"
-9,"What's Changed
+12,"What's Changed
 Minor Changes
 
 Add unstable_useBlocker/unstable_usePrompt hooks for blocking navigations within the app's location origin (#9709, #9932)
@@ -414,14 +501,14 @@ New Contributors
 @akamfoad made their first contribution in link
 @lkwr made their first contribution in link
 Full Changelog: v6.6.2...v6.7.0"
-10,"What's Changed
+13,"What's Changed
 
 Ensure useId consistency during SSR (#9805)
 
 Full Changelog: https://github.com/remix-run/react-router/compare/react-router@6.6.1...react-router@6.6.2","What's Changed
 Ensure useId consistency during SSR (#9805)
 Full Changelog: link"
-11,"What's Changed
+14,"What's Changed
 
 Include submission info in shouldRevalidate on action redirects (#9777, #9782)
 Reset actionData on action redirect to current location (#9772)
@@ -430,7 +517,7 @@ Full Changelog: https://github.com/remix-run/react-router/compare/react-router@6
 Include submission info in shouldRevalidate on action redirects (#9777, #9782)
 Reset actionData on action redirect to current location (#9772)
 Full Changelog: link"
-12,"What's Changed
+15,"What's Changed
 This minor release is primarily to stabilize our SSR APIs for Data Routers now that we've wired up the new RouterProvider in Remix as part of the React Router-ing Remix work.
 Minor Changes
 
@@ -461,7 +548,7 @@ Proper hydration of Error objects from StaticRouterProvider (#9664)
 Skip initial scroll restoration for SSR apps with hydrationData (#9664)
 Fix a few bugs where loader/action data wasn't properly cleared on errors (#9735)
 Full Changelog: link"
-13,"What's Changed
+16,"What's Changed
 This release introduces support for Optional Route Segments. Now, adding a ? to the end of any path segment will make that entire segment optional. This works for both static segments and dynamic parameters.
 Optional Params Examples
 
@@ -540,7 +627,7 @@ Fix issue with deeply nested optional segments (#9727)
 GET forms now expose a submission on the loading navigation (#9695)
 Fix error boundary tracking for multiple errors bubbling to the same boundary (#9702)
 Full Changelog: link"
-14,"What's Changed
+17,"What's Changed
 
 Fix requests sent to revalidating loaders so they reflect a GET request (#9680)
 Remove instanceof Response checks in favor of isResponse (#9690)
@@ -555,7 +642,7 @@ Fix URL creation in Cloudflare Pages or other non-browser-environments (#9682, #
 Add requestContext support to static handler query/queryRoute (#9696)
 Note that the unstable API of queryRoute(path, routeId) has been changed to queryRoute(path, { routeId, requestContext })
 Full Changelog: link"
-15,"What's Changed
+18,"What's Changed
 
 Throw an error if an action/loader function returns undefined as revalidations need to know whether the loader has previously been executed. undefined also causes issues during SSR stringification for hydration. You should always ensure your loader/action returns a value, and you may return null if you don't wish to return anything. (#9511)
 Properly handle redirects to external domains (#9590, #9654)
@@ -582,7 +669,7 @@ Updated dependencies:
 @remix-run/router@1.0.4
 react-router@6.4.4
 Full Changelog: link"
-16,"What's Changed
+19,"What's Changed
 
 Generate correct <a href> values when using createHashRouter (#9409)
 Better handle encoding/matching with special characters in URLs and route paths (#9477, #9496)
@@ -619,7 +706,7 @@ New Contributors
 @AchThomas made their first contribution in #9464
 @manzano78 made their first contribution in #9451
 Full Changelog: link"
-17,"What's Changed
+20,"What's Changed
 
 Respect basename in useFormAction (#9352)
 Fix IndexRouteObject and NonIndexRouteObject types to make hasErrorElement optional (#9394)
@@ -632,10 +719,10 @@ Fix IndexRouteObject and NonIndexRouteObject types to make hasErrorElement optio
 Enhance console error messages for invalid usage of data router hooks (#9311)
 If an index route has children, it will result in a runtime error. We have strengthened our RouteObject/RouteProps types to surface the error in TypeScript. (#9366)
 Full Changelog: link"
-18,"We removed the mini-create-react-context dependency, moving it into an internal module to eliminate peer dependency warnings for users on React 18 (#9382).
+21,"We removed the mini-create-react-context dependency, moving it into an internal module to eliminate peer dependency warnings for users on React 18 (#9382).
 Full Changelog: https://github.com/remix-run/react-router/compare/v5.3.3...v5.3.4","We removed the mini-create-react-context dependency, moving it into an internal module to eliminate peer dependency warnings for users on React 18 (#9382).
 Full Changelog: link"
-19,"What's Changed
+22,"What's Changed
 Bug Fixes
 
 Preserve state from initialEntries (#9288)
@@ -646,7 +733,7 @@ Bug Fixes
 Preserve state from initialEntries (#9288)
 Preserve ?index for fetcher get submissions to index routes (#9312)
 Full Changelog: link"
-20,"Whoa this is a big one! 6.4.0 brings all the data loading and mutation APIs over from Remix. Here's a quick high level overview, but it's recommended you go check out the docs, especially the feature overview and the tutorial.
+23,"Whoa this is a big one! 6.4.0 brings all the data loading and mutation APIs over from Remix. Here's a quick high level overview, but it's recommended you go check out the docs, especially the feature overview and the tutorial.
 New APIs
 
 Create your router with createMemoryRouter
@@ -687,12 +774,12 @@ Bug Fixes
 Path resolution is now trailing slash agnostic (#8861)
 useLocation returns the scoped location inside a  component (#9094)
 Respect the  prop if it is defined (#8779)"
-21,"This is the first stable release of @remix-run/router, which provides all the underlying routing and data loading/mutation logic for react-router. You should not be using this package directly unless you are authoring a routing library similar to react-router.
+24,"This is the first stable release of @remix-run/router, which provides all the underlying routing and data loading/mutation logic for react-router. You should not be using this package directly unless you are authoring a routing library similar to react-router.
 For an overview of the features provided by react-router, we recommend you go check out the docs, especially the feature overview and the tutorial.
 For an overview of the features provided by @remix-run/router, please check out the README.","This is the first stable release of @remix-run/router, which provides all the underlying routing and data loading/mutation logic for react-router. You should not be using this package directly unless you are authoring a routing library similar to react-router.
 For an overview of the features provided by react-router, we recommend you go check out the docs, especially the feature overview and the tutorial.
 For an overview of the features provided by @remix-run/router, please check out the README."
-22,"Patch Changes
+25,"Patch Changes
 
 
 fix: remove internal router singleton (#9227)
@@ -832,7 +919,7 @@ Added APIs
 createRoutesFromElements (alias of createRoutesFromChildren)
 Updated dependencies
 react-router@6.4.0-pre.15"
-23,"Patch Changes
+26,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.15
@@ -843,7 +930,7 @@ react-router-dom@6.4.0-pre.15
 Updated dependencies
 react-router@6.4.0-pre.15
 react-router-dom@6.4.0-pre.15"
-24,"Patch Changes
+27,"Patch Changes
 
 fix: rename resetScroll -> preventScrollReset (#9199)
 Updated dependencies
@@ -854,7 +941,7 @@ Updated dependencies
 fix: rename resetScroll -> preventScrollReset (#9199)
 Updated dependencies
 @remix-run/router@0.2.0-pre.9"
-25,"Patch Changes
+28,"Patch Changes
 
 
 c3406eb9: fix: Rename <Deferred> to <Await> (#9095)
@@ -891,7 +978,7 @@ Note that raw promises will not be automatically cancelled on interruptions
 The hooks are now useAsyncValue/useAsyncError
 Updated dependencies
 @remix-run/router@0.2.0-pre.6"
-26,"Patch Changes
+29,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.11
@@ -900,7 +987,7 @@ react-router@6.4.0-pre.11
 ","Patch Changes
 Updated dependencies
 react-router@6.4.0-pre.11"
-27,"Patch Changes
+30,"Patch Changes
 
 Updated dependencies [c3406eb9]
 react-router@6.4.0-pre.11
@@ -909,7 +996,7 @@ react-router@6.4.0-pre.11
 ","Patch Changes
 Updated dependencies [c3406eb9]
 react-router@6.4.0-pre.11"
-28,"Patch Changes
+31,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.11
@@ -920,7 +1007,7 @@ react-router-dom@6.4.0-pre.11
 Updated dependencies
 react-router@6.4.0-pre.11
 react-router-dom@6.4.0-pre.11"
-29,"Patch Changes
+32,"Patch Changes
 
 
 c3406eb9: fix: Rename <Deferred> to <Await> (#9095)
@@ -949,7 +1036,7 @@ To that end, we changed from  to
 Note that raw promises will not be automatically cancelled on interruptions
     so they are not recommended
 The hooks are now useAsyncValue/useAsyncError"
-30,"Patch Changes
+33,"Patch Changes
 
 
 feat: Deferred API Updates (#9070)
@@ -982,7 +1069,7 @@ Remove Deferrable/ResolvedDeferrable in favor of raw Promise's and Awaited
 Remove generics from useDeferredData until useLoaderData generic is decided in 6.5
 Updated dependencies
 @remix-run/router@0.2.0-pre.5"
-31,"Patch Changes
+34,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.10
@@ -991,7 +1078,7 @@ react-router@6.4.0-pre.10
 ","Patch Changes
 Updated dependencies
 react-router@6.4.0-pre.10"
-32,"Patch Changes
+35,"Patch Changes
 
 
 SSR Updates for React Router (#9058)
@@ -1028,7 +1115,7 @@ StaticHandlerContext now exposes statusCode/loaderHeaders/actionHeaders
 foundMissingHydrationData check removed since Remix routes may have loaders (for modules) that don't return data for loaderData
 Updated dependencies
 react-router@6.4.0-pre.10"
-33,"Patch Changes
+36,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.10
@@ -1039,7 +1126,7 @@ react-router-dom@6.4.0-pre.10
 Updated dependencies
 react-router@6.4.0-pre.10
 react-router-dom@6.4.0-pre.10"
-34,"Patch Changes
+37,"Patch Changes
 
 
 feat: Deferred API Updates (#9070)
@@ -1169,7 +1256,7 @@ Can be disabled (or overridden) in the browser by passing hydrationData to /
  now tracks it's own SSR error boundaries on StaticHandlerContext
 StaticHandlerContext now exposes statusCode/loaderHeaders/actionHeaders
 foundMissingHydrationData check removed since Remix routes may have loaders (for modules) that don't return data for loaderData"
-35,"Patch Changes
+38,"Patch Changes
 
 
 Feat: adds deferred support to data routers (#9002)
@@ -1288,7 +1375,7 @@ feat: add basename support for data routers (#9026)
 fix: Fix trailing slash behavior on pathless routing when using a basename (#9045)
 Updated dependencies
 @remix-run/router@0.2.0-pre.4"
-36,"Patch Changes
+39,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.9
@@ -1297,7 +1384,7 @@ react-router@6.4.0-pre.9
 ","Patch Changes
 Updated dependencies
 react-router@6.4.0-pre.9"
-37,"Patch Changes
+40,"Patch Changes
 
 feat: add basename support for data routers (#9026)
 Updated dependencies
@@ -1308,7 +1395,7 @@ react-router@6.4.0-pre.9
 feat: add basename support for data routers (#9026)
 Updated dependencies
 react-router@6.4.0-pre.9"
-38,"Patch Changes
+41,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.9
@@ -1319,7 +1406,7 @@ react-router-dom@6.4.0-pre.9
 Updated dependencies
 react-router@6.4.0-pre.9
 react-router-dom@6.4.0-pre.9"
-39,"Patch Changes
+42,"Patch Changes
 
 fix: Handle fetcher 404s as normal boundary errors (#9015)
 feat: adds deferred support to data routers (#9002)
@@ -1332,7 +1419,7 @@ feat: adds deferred support to data routers (#9002)
 feat: add basename support for data routers (#9026)
 ci: simplify dist/ directory for CJS/ESM only (#9017)
 fix: Fix trailing slash behavior on pathless routing when using a basename (#9045)"
-40,"Patch Changes
+43,"Patch Changes
 
 fix: Make path resolution trailing slash agnostic (#8861)
 fix: Additional logic fixed for relative navigation from index/pathless layout routes (#8985)
@@ -1347,7 +1434,7 @@ fix: Additional logic fixed for relative navigation from index/pathless layout r
 fix: export ActionFunctionArgs/LoaderFunctionArgs up through router packages (#8975)
 Updated dependencies
 @remix-run/router@0.2.0-pre.3"
-41,"Patch Changes
+44,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.8
@@ -1356,7 +1443,7 @@ react-router@6.4.0-pre.8
 ","Patch Changes
 Updated dependencies
 react-router@6.4.0-pre.8"
-42,"Patch Changes
+45,"Patch Changes
 
 fix: Make path resolution trailing slash agnostic (#8861)
 fix: export ActionFunctionArgs/LoaderFunctionArgs up through router packages (#8975)
@@ -1369,7 +1456,7 @@ fix: Make path resolution trailing slash agnostic (#8861)
 fix: export ActionFunctionArgs/LoaderFunctionArgs up through router packages (#8975)
 Updated dependencies
 react-router@6.4.0-pre.8"
-43,"Patch Changes
+46,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.8
@@ -1380,7 +1467,7 @@ react-router-dom@6.4.0-pre.8
 Updated dependencies
 react-router@6.4.0-pre.8
 react-router-dom@6.4.0-pre.8"
-44,"Patch Changes
+47,"Patch Changes
 
 fix: properly handle <Form encType=""multipart/form-data""> submissions (#8984)
 fix: Make path resolution trailing slash agnostic (#8861)
@@ -1395,7 +1482,7 @@ fix: don't default to a REPLACE navigation on form submissions if the action red
 fix: export ActionFunctionArgs/LoaderFunctionArgs up through router packages (#8975)
 fix: preserve loader data for loaders that opted out of revalidation (#8973)
 Full Changes"
-45,"Minor Changes
+48,"Minor Changes
 
 Add support for functional updates in useSearchParams (similar to the useState callback signature) (#8955)
 
@@ -1414,7 +1501,7 @@ Properly handle relative navigation from index/pathless routes (#8954)
 Fix issues building with webpack + React 17 (#8938)
 Updated dependencies
 @remix-run/router@0.2.0-pre.2"
-46,"Patch Changes
+49,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.7
@@ -1423,7 +1510,7 @@ react-router@6.4.0-pre.7
 ","Patch Changes
 Updated dependencies
 react-router@6.4.0-pre.7"
-47,"Patch Changes
+50,"Patch Changes
 
 26302209: Respect the <Link replace> prop if it is defined (#8779)
 Updated dependencies
@@ -1434,7 +1521,7 @@ react-router@6.4.0-pre.7
 26302209: Respect the  prop if it is defined (#8779)
 Updated dependencies
 react-router@6.4.0-pre.7"
-48,"Patch Changes
+51,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.7
@@ -1445,23 +1532,23 @@ react-router-dom@6.4.0-pre.7
 Updated dependencies
 react-router@6.4.0-pre.7
 react-router-dom@6.4.0-pre.7"
-49,"Patch Changes
+52,"Patch Changes
 
 Capture fetcher errors at contextual route error boundaries (#8945)
 ","Patch Changes
 Capture fetcher errors at contextual route error boundaries (#8945)"
-50,,
-51,"Patch Changes
+53,,
+54,"Patch Changes
 
 react-router@6.4.0-pre.6
 ","Patch Changes
 react-router@6.4.0-pre.6"
-52,"Patch Changes
+55,"Patch Changes
 
 react-router@6.4.0-pre.6
 ","Patch Changes
 react-router@6.4.0-pre.6"
-53,"Patch Changes
+56,"Patch Changes
 
 44bce3c6: Fix react-router-dom peer dependency version
 react-router@6.4.0-pre.6
@@ -1472,47 +1559,47 @@ react-router-dom@6.4.0-pre.6
 44bce3c6: Fix react-router-dom peer dependency version
 react-router@6.4.0-pre.6
 react-router-dom@6.4.0-pre.6"
-54,"Patch Changes
+57,"Patch Changes
 
 Fix broken require for CJS builds
 ","Patch Changes
 Fix broken require for CJS builds"
-55,"Patch Changes
+58,"Patch Changes
 
 031d5d1f: Fix missing dist files
 ","Patch Changes
 031d5d1f: Fix missing dist files"
-56,"Patch Changes
-
-Updated dependencies
-react-router@6.4.0-pre.5
-
-
-","Patch Changes
-Updated dependencies
-react-router@6.4.0-pre.5"
-57,"Patch Changes
-
-Fix missing dist files
-","Patch Changes
-Fix missing dist files"
-58,"Patch Changes
-
-Fix broken require for CJS builds
-Updated dependencies
-react-router@6.4.0-pre.5
-
-
-","Patch Changes
-Fix broken require for CJS builds
-Updated dependencies
-react-router@6.4.0-pre.5"
 59,"Patch Changes
 
+Updated dependencies
+react-router@6.4.0-pre.5
+
+
+","Patch Changes
+Updated dependencies
+react-router@6.4.0-pre.5"
+60,"Patch Changes
+
 Fix missing dist files
 ","Patch Changes
 Fix missing dist files"
-60,"Patch Changes
+61,"Patch Changes
+
+Fix broken require for CJS builds
+Updated dependencies
+react-router@6.4.0-pre.5
+
+
+","Patch Changes
+Fix broken require for CJS builds
+Updated dependencies
+react-router@6.4.0-pre.5"
+62,"Patch Changes
+
+Fix missing dist files
+","Patch Changes
+Fix missing dist files"
+63,"Patch Changes
 
 Updated dependencies
 react-router@6.4.0-pre.5
@@ -1523,41 +1610,41 @@ react-router-dom@6.4.0-pre.5
 Updated dependencies
 react-router@6.4.0-pre.5
 react-router-dom@6.4.0-pre.5"
-61,"Patch Changes
-
-Fix missing dist files
-","Patch Changes
-Fix missing dist files"
-62,"Patch Changes
-
-Fix missing dist files
-","Patch Changes
-Fix missing dist files"
-63,"Patch Changes
-
-Make fallbackElement optional and change type to ReactNode (type changes only) (#8896)
-Properly trigger error boundaries on 404 routes
-","Patch Changes
-Make fallbackElement optional and change type to ReactNode (type changes only) (#8896)
-Properly trigger error boundaries on 404 routes"
 64,"Patch Changes
 
-Updated dependencies
+Fix missing dist files
 ","Patch Changes
-Updated dependencies"
+Fix missing dist files"
 65,"Patch Changes
+
+Fix missing dist files
+","Patch Changes
+Fix missing dist files"
+66,"Patch Changes
 
 Make fallbackElement optional and change type to ReactNode (type changes only) (#8896)
 Properly trigger error boundaries on 404 routes
 ","Patch Changes
 Make fallbackElement optional and change type to ReactNode (type changes only) (#8896)
 Properly trigger error boundaries on 404 routes"
-66,"Patch Changes
+67,"Patch Changes
 
 Updated dependencies
 ","Patch Changes
 Updated dependencies"
-67,"This pre-release brings the data abstractions from Remix to React Router. There will be more complete release notes for the v6.4 final release. Here are a couple quick resources to take it for a spin:
+68,"Patch Changes
+
+Make fallbackElement optional and change type to ReactNode (type changes only) (#8896)
+Properly trigger error boundaries on 404 routes
+","Patch Changes
+Make fallbackElement optional and change type to ReactNode (type changes only) (#8896)
+Properly trigger error boundaries on 404 routes"
+69,"Patch Changes
+
+Updated dependencies
+","Patch Changes
+Updated dependencies"
+70,"This pre-release brings the data abstractions from Remix to React Router. There will be more complete release notes for the v6.4 final release. Here are a couple quick resources to take it for a spin:
 
 Simple demo on stackblitz
 Getting Started With Data Guide on the new (beta) documentation site.
@@ -1572,14 +1659,14 @@ We have a lot more documentation work to do around guides, examples, and use-cas
 sh
 npm i react-router-dom@next
 Enjoy!"
-68,This release fixes a bad version selector in react-router-native. ,This release fixes a bad version selector in react-router-native. 
-69,"Changes
+71,This release fixes a bad version selector in react-router-native. ,This release fixes a bad version selector in react-router-native. 
+72,"Changes
 
 Fix: make v5 Router compatible with v18 StrictMode by @jgoz in https://github.com/remix-run/react-router/pull/8831
 ","Changes
 Fix: make v5 Router compatible with v18 StrictMode by @jgoz in link"
-70,This release adds missing LICENSE files to the published build.,This release adds missing LICENSE files to the published build.
-71,"What's Changed
+73,This release adds missing LICENSE files to the published build.,This release adds missing LICENSE files to the published build.
+74,"What's Changed
 
 Added the v5 to v6 backwards compatibility package 💜 (https://github.com/remix-run/react-router/pull/8752). The official guide can be found in this discussion
 
@@ -1598,12 +1685,12 @@ New Contributors
 @janpaepke made their first contribution in link
 @rtmann made their first contribution in link
 Full Changelog: link"
-72,,
-73,,
-74,,
 75,,
 76,,
-77,"What's Changed
+77,,
+78,,
+79,,
+80,"What's Changed
 🐛 Bug Fixes
 
 Fixed nested splat routes that begin with special URL-safe characters (#8563)
@@ -1664,11 +1751,11 @@ New Contributors
 @shamsup made their first contribution in link
 @brophdawg11 made their first contribution in link
 Full Changelog: link"
-78,,
-79,"This release updates the internal history dependency to 5.2.0.
+81,,
+82,"This release updates the internal history dependency to 5.2.0.
 Full Changelog: https://github.com/remix-run/react-router/compare/v6.2.0...v6.2.1","This release updates the internal history dependency to 5.2.0.
 Full Changelog: link"
-80,"🐛 Bug fixes
+83,"🐛 Bug fixes
 
 Fixed the RouteProps element type, which should be a ReactNode (#8473)
 Fixed a bug with useOutlet for top-level routes (#8483)
@@ -1691,10 +1778,10 @@ New Contributors
 @thisiskartik made their first contribution in link
 @vijaypushkin made their first contribution in link
 Full Changelog: link"
-81,"In v6.1.0 we inadvertently shipped a new, undocumented API that will likely introduce bugs (#7586). We have flagged HistoryRouter as unstable_HistoryRouter, as this API will likely need to change before a new major release.
+84,"In v6.1.0 we inadvertently shipped a new, undocumented API that will likely introduce bugs (#7586). We have flagged HistoryRouter as unstable_HistoryRouter, as this API will likely need to change before a new major release.
 Full Changelog: https://github.com/remix-run/react-router/compare/v6.1.0...v6.1.1","In v6.1.0 we inadvertently shipped a new, undocumented API that will likely introduce bugs (#7586). We have flagged HistoryRouter as unstable_HistoryRouter, as this API will likely need to change before a new major release.
 Full Changelog: link"
-82,"🐛 Bug fixes
+85,"🐛 Bug fixes
 
 Fixed a bug that broke support for base64 encoded IDs on nested routes (#8291)
 
@@ -1775,7 +1862,7 @@ New Contributors
 @baozouai made their first contribution in link
 @liuhanqu made their first contribution in link
 Full Changelog: link"
-83,"✨ Features
+86,"✨ Features
 
 Added the reloadDocument prop to <Link>. This allows <Link> to function like a normal anchor tag by reloading the document after navigation while maintaining the relative to resolution.
 
@@ -1810,17 +1897,17 @@ Fixed several issues in docblocks and the docs themselves. See the full changelo
 @fishmandev made their first contribution in link
 Full Changelog
 link"
-84,"🐛 Bug Fixes
+87,"🐛 Bug Fixes
 
 Add a default <StaticRouter location> value (#8243)
 Add invariant for using <Route> inside <Routes> to help people make the change (#8238)
 ","🐛 Bug Fixes
 Add a default  value (#8243)
 Add invariant for using  inside  to help people make the change (#8238)"
-85,"React Router v6 is here!
+88,"React Router v6 is here!
 Please go read our blog post for more information on all the great stuff in v6 including notes about how to upgrade from React Router v5 and Reach Router.","React Router v6 is here!
 Please go read our blog post for more information on all the great stuff in v6 including notes about how to upgrade from React Router v5 and Reach Router."
-86,"Remember last week when we said
+89,"Remember last week when we said
 
 We anticipate this will be the last beta release before v6 stable next week.
 
@@ -1841,7 +1928,7 @@ We fixed a few bugs in useHref that resulted in the incorrect resolved value in 
 We also fixed a bug in our path ranking algorithm so that splat routes (routes with a * path value) are now correctly ranked ahead of layout routes.
 🗒️ Docs
 We've added lots of goodies to our docs and examples, and there's a lot more yet to come. Take a look and see if you find something that makes your work a little easier! We think the lazy loading and custom query parsing examples are particularly cool! 🤓 "
-87,"In this release we made a small but significant change to how <Link to=""..""> works. This is going to help out a lot if you were trying to use links in a * route.
+90,"In this release we made a small but significant change to how <Link to=""..""> works. This is going to help out a lot if you were trying to use links in a * route.
 We have also backed out our blocking/prompt APIs for the stable v6 release. We will revisit this post 6.0 when we have a little more time to get it right.
 ✨ Features
 The major change in this release could also be classified as a bugfix or a breaking change, depending on how you look at it. We essentialy altered the way <Link to=""..""> works. See #8086 for the motivation behind this change.
@@ -1888,7 +1975,7 @@ Development for v6 has switched from dev to the main branch.
 If you'd like to test it out, install from npm:
 bash
 $ npm install history react-router-dom@next"
-88,"No big enhancements in this release, just squashing bugs and writing lots of tests! Also, we are hard at work on cranking out examples for v6. See the end of this post for an update on our roadmap between here and v6 stable.
+91,"No big enhancements in this release, just squashing bugs and writing lots of tests! Also, we are hard at work on cranking out examples for v6. See the end of this post for an update on our roadmap between here and v6 stable.
 🧰 Examples
 We have begun creating some examples for v6 that we hope will help developers make effective use of all the new features we have. So far, we have examples for the following:
 
@@ -1947,7 +2034,7 @@ Development for v6 is chugging along on the dev branch.
 If you'd like to test it out, install from npm:
 bash
 $ npm install history react-router-dom@next"
-89,"This week's release adds some much-needed polish to a few niche features of the router: splat routes (a route that uses a * path) and basenames. It also adds a renderMatches API that completes the story for those of you who may have been using react-router-config in v4 and v5.
+92,"This week's release adds some much-needed polish to a few niche features of the router: splat routes (a route that uses a * path) and basenames. It also adds a renderMatches API that completes the story for those of you who may have been using react-router-config in v4 and v5.
 🐛  Bugfixes
 
 A * in a child route path matches after a slash following its parent route path. This fixes some situations where the * was overly greedy (see #7972)
@@ -2004,7 +2091,7 @@ Development for v6 is chugging along on the dev branch.
 If you'd like to test it out, install from npm:
 bash
 $ npm install history react-router-dom@next"
-90,"Last week we released a lot of nice little bug features, but we did get a little carried away and let a little bug slip through with relative path resolution. Our bad! That nasty lil' guy is squashed in this week's beta. 🐛
+93,"Last week we released a lot of nice little bug features, but we did get a little carried away and let a little bug slip through with relative path resolution. Our bad! That nasty lil' guy is squashed in this week's beta. 🐛
 And there's more! Let's dive in…
 🐛 Bugfixes
 
@@ -2131,7 +2218,7 @@ Development for v6 is chugging along on the dev branch.
 If you'd like to test it out, install from npm:
 bash
 $ npm install history react-router-dom@next"
-91,"Loads of goodies for you this week, as well as a few breaking changes for all of you eager beavers who are brave enough to use beta software in production! 🦫
+94,"Loads of goodies for you this week, as well as a few breaking changes for all of you eager beavers who are brave enough to use beta software in production! 🦫
 (seriously, thank you all for helping us tighten up our APIs and fix nasty bugs)
 💔 Breaking Changes!
 
@@ -2216,7 +2303,7 @@ bash
 $ npm install history react-router-dom@next
 🙏 Credits
 Thanks to @andrelandgraf, @dhulme, @fgatti675, @hugmanrique, @MeiKatz, @chaance and @mjackson for your contributions!"
-92,"This release of react-router-dom adds support for passing a function to either the className or style props to conditionally apply values based on the link's active state.
+95,"This release of react-router-dom adds support for passing a function to either the className or style props to conditionally apply values based on the link's active state.
 This provides similar functionality as the existing activeClassName and activeStyle props, but is a bit more powerful. For example, you can now easily apply styles exclusively to an inactive NavLink as well. This offers a nicer experience for folks who use utility class-based CSS tools such as Tailwind.
 tsx
 function Comp() {
@@ -2247,10 +2334,10 @@ module
 }
 Note that as of v6.0.0-beta.3, the activeClassName and activeStyle props are removed completely. Adding support for functional className and style props to both v5 and v6 will give v5 users an easier upgrade path.
 Thanks to @tim-phillips for raising the issue that inspired the change! 🥳"
-93,"This release fixes a bug with <Link> so that, when the to location is the same as the current, the history state entry is replaced instead of pushed to the stack. See https://github.com/remix-run/react-router/issues/5362 for details. 🥳
+96,"This release fixes a bug with <Link> so that, when the to location is the same as the current, the history state entry is replaced instead of pushed to the stack. See https://github.com/remix-run/react-router/issues/5362 for details. 🥳
 Thanks to @guidobouman for the PR and for everyone else who weighed in for the fix!","This release fixes a bug with  so that, when the to location is the same as the current, the history state entry is replaced instead of pushed to the stack. See link for details. 🥳
 Thanks to @guidobouman for the PR and for everyone else who weighed in for the fix!"
-94,"🐛 Bugfixes
+97,"🐛 Bugfixes
 
 Fixed a bug that broke paths in nested routes
 Adds missing displayName back to <Link /> and <NavLink /> components
@@ -2287,7 +2374,7 @@ $ npm install history react-router-dom@next
 🙏 Credits
 Thanks to @liho98, @wojtekmaj, @cravend, @chaance and @mjackson for your contributions!
 Enjoy!"
-95,"We're on the road to a stable v6 release!
+98,"We're on the road to a stable v6 release!
 There are no new features in this release since beta.0, but a handful of squashed bugs, perf enhancements, and DX improvements for TypeScript users.
 🐛 Bugfixes
 
@@ -2322,7 +2409,7 @@ $ npm install history react-router-dom@next
 🙏 Credits
 Thanks to @brookslybrand, @bogdansoare, @chaance and @mjackson for your contributions!
 Enjoy!"
-96,"Today we are very happy to release the first beta of React Router version 6!
+99,"Today we are very happy to release the first beta of React Router version 6!
 Major Features
 No new features in this release since alpha.5, besides the fact that we are now using history v5 stable in various places behind the scenes.
 Major Changes
@@ -2379,7 +2466,7 @@ Roadmap
 Now that we are in beta, you can expect fewer breaking changes (if any) between releases in the next channel. We are actively developing features targeted at supporting suspense for data loading in the experimental channel. The main thing left to do is documentation and guides (and fix bugs, ofc). If you can spare some time, we'd love to have some help :) 
 We are actively working on documentation. For now, if you're just interested in testing things out you may be interested in the getting started guide. If you're interested in upgrading an existing app, please check out the v5 to v6 migration guide. There is also a comprehensive API Reference.
 Enjoy!"
-97,"This release is based on v6.0.0-beta.0 and adds a few features that are targeted at supporting React suspense for data loading. These features are:
+100,"This release is based on v6.0.0-beta.0 and adds a few features that are targeted at supporting React suspense for data loading. These features are:
 
 A timeoutMs prop that may be passed to a <BrowserRouter>, <HashRouter>, <MemoryRouter>, or <NativeRouter>. This timeout dictates how long these routers will wait before transitioning to a new page after the URL has changed. The default timeoutMs is 5000 (5 seconds).
 useLocationPending hook that returns true if a transition to a new location is pending
@@ -2408,7 +2495,7 @@ Or, if you're on React Native:
 $ yarn add history react-router-native@experimental
 We are actively working on documentation. For now, if you're just interested in testing things out you may be interested in the getting started guide. If you're interested in upgrading an existing app, please check out the v5 to v6 migration guide. There is also a comprehensive API Reference.
 Enjoy!"
-98,"This release adds support for data fetching with suspense using React's unstable_useTransition API. It is based on v6.0.0-alpha.5.
+101,"This release adds support for data fetching with suspense using React's unstable_useTransition API. It is based on v6.0.0-alpha.5.
 Support for suspense is added via a timeoutMs prop that may be passed to a <BrowserRouter>, <HashRouter>, <MemoryRouter>, or <NativeRouter>. Each of these use the prop internally to determine how long to wait to show the new page whenever the URL changes. The default timeoutMs is 5000 (5 seconds).
 What does ""experimental"" mean?
 React Router v6's experimental release channel follows the same semantics as React's own experimental channel, which means that it is used for features that are not yet ready for a stable release. Use the experimental releases to try out new features before they are released.
@@ -2431,7 +2518,7 @@ Or, if you're on React Native:
 $ yarn add react-router@experimental react-router-native@experimental
 We are actively working on documentation. For now, if you're just interested in testing things out you may be interested in the getting started guide. If you're interested in upgrading an existing app, please check out the v5 to v6 migration guide.
 Enjoy!"
-99,"Major Features
+102,"Major Features
 
 Added <Route preload> and route.preload (JSX and useRoutes) APIs. The preload function will be called when the route has matched and is about to render.
 Added <NavLink end> and <NavLink caseSensitive> to better control matching behavior of <NavLink>s
@@ -2478,7 +2565,7 @@ Or, if you're on React Native:
 $ yarn add react-router@next react-router-native@next
 We are actively working on documentation. For now, if you're just interested in testing things out you may be interested in the getting started guide. If you're interested in upgrading an existing app, please check out the v5 to v6 migration guide.
 Enjoy!"
-100,"This release includes a notable performance boost by separating the ""Router"" context from the ""History"" context internally. We also allow every element type for Link's component prop and support a sensitive prop on NavLink for control over case sensitive matching.
+103,"This release includes a notable performance boost by separating the ""Router"" context from the ""History"" context internally. We also allow every element type for Link's component prop and support a sensitive prop on NavLink for control over case sensitive matching.
 Enjoy!
 Changes
 
@@ -2493,7 +2580,7 @@ Add sensitive prop on NavLink (#7251 by @caseywebdev)
 Fix Link component prop type check (#7276 by @ypyakymiv)
 Update mini-create-react-context (#7288 by @patricksmms)
 Separate history to its own context (#7103 by @illuminist)"
-101,"Lots of great stuff in this release, especially if you like Intellisense :)
+104,"Lots of great stuff in this release, especially if you like Intellisense :)
 Major Features
 
 Migrated the core codebase to TypeScript and added TypeScript declarations
@@ -2546,7 +2633,7 @@ Or, if you're on React Native:
 $ yarn add react-router@next react-router-native@next
 We are actively working on documentation. For now, if you're just interested in testing things out you may be interested in the getting started guide. If you're interested in upgrading an existing app, please check out the v5 to v6 migration guide.
 Enjoy!"
-102,"Major Features
+105,"Major Features
 
 Added a new useSearchParams hook (see f59ee5488bc343cf3c957b7e0cc395ef5eb572d2)
 
@@ -2583,12 +2670,12 @@ Or, if you're on React Native:
 $ yarn add react-router@next react-router-native@next
 We are actively working on documentation. For now, if you're just interested in testing things out you may be interested in the getting started guide. If you're interested in upgrading an existing app, please check out the v5 to v6 migration guide.
 Enjoy!"
-103,"Changes
+106,"Changes
 
 Upgrade hoist-non-react-statics/react-is to support newer React APIs (#7182 by @henryqdineen)
 ","Changes
 Upgrade hoist-non-react-statics/react-is to support newer React APIs (#7182 by @henryqdineen)"
-104,"This release fixes a few bugs with the previous alpha, namely:
+107,"This release fixes a few bugs with the previous alpha, namely:
 
 Fix a few path matching corner cases
 Fix rendering <Link>s on the server (see https://github.com/ReactTraining/react-router/pull/7126, thanks @danpantry)
@@ -2604,7 +2691,7 @@ Enjoy!","This release fixes a few bugs with the previous alpha, namely:
 Fix a few path matching corner cases
 Fix rendering s on the server (see link, thanks @danpantry)
 Also, we added a new doc about adding React Router to your web project whether you're using create-react-app, Webpack, Parcel, or just plain 'ol "
-105,"Moved history from peerDependencies to dependencies. This should make it easier for people to install and test.
+108,"Moved history from peerDependencies to dependencies. This should make it easier for people to install and test.
 If you'd like to test it out, install from npm:
 $ npm install react-router@next react-router-dom@next
 Or, if you're on React Native:
@@ -2613,7 +2700,7 @@ If you'd like to test it out, install from npm:
 $ npm install react-router@next react-router-dom@next
 Or, if you're on React Native:
 $ yarn add react-router@next react-router-native@next"
-106,"First alpha release of the next major version of React Router, version 6. A few of the highlights are:
+109,"First alpha release of the next major version of React Router, version 6. A few of the highlights are:
 
 Relative routes and links
 Nested <Route>s
@@ -2644,21 +2731,21 @@ We are actively working on documentation. For now, if you're just interested in 
 Please note that although there are several breaking changes we are still working on the migration path and will continue to publish improvements and helpers in v5 that should help you upgrade as smoothly as possible. We are not done with v5. Heck, we're still cutting releases of v3.
 This release addresses several long-standing issues and pitfalls with previous releases. We are focused on providing a smooth upgrade path for both v4/5 users and v3 users who would like to make the jump to v6. We will be publishing more very soon.
 Enjoy!"
-107,"Changes
+110,"Changes
 
 Fix React version detection for UNSAFE_ lifecycles (fixes issues with React 16.10) (#6961 by @henryqdineen)
 Add element shape for Link's innerRef prop (#6886 by @nescalante)
 ","Changes
 Fix React version detection for UNSAFE_ lifecycles (fixes issues with React 16.10) (#6961 by @henryqdineen)
 Add element shape for Link's innerRef prop (#6886 by @nescalante)"
-108,"List of commits
+111,"List of commits
 Bugfixes
 
 Fix lingering <Link ref> error on React 15 (#6954)
 ","List of commits
 Bugfixes
 Fix lingering  error on React 15 (#6954)"
-109,"List of commits
+112,"List of commits
 Bugfixes
 
 Fix issue with useParams reading from null object (#6940)
@@ -2669,7 +2756,7 @@ Bugfixes
 Fix issue with useParams reading from null object (#6940)
 Fix regression passing ref to functional components in React <= 16.2 (#6934)
 Fix regression passing empty string to matchPath (#6941)"
-110,"Read the blog post
+113,"Read the blog post
 List of commits
 Features
 
@@ -2690,20 +2777,20 @@ Add support for functions in  and  (#5331, #5368)
 Add  API (#5437)
 Bugfixes
 Don't render  elements when the  does not match (96656595)"
-111,"Changes
+114,"Changes
 
 Add UNSAFE_ prefixes to deprecated lifecycle methods (#6883 by @bishwei)
 ","Changes
 Add UNSAFE_ prefixes to deprecated lifecycle methods (#6883 by @bishwei)"
-112,This release includes the missing UMD build from the 3.2.2. Sorry about that!,This release includes the missing UMD build from the 3.2.2. Sorry about that!
-113,"Changes
+115,This release includes the missing UMD build from the 3.2.2. Sorry about that!,This release includes the missing UMD build from the 3.2.2. Sorry about that!
+116,"Changes
 
 React 16.6 support (#6806 by @arthur791004)
 Access <Link>s underlying node via innerRef (#6340 by @pascalduez)
 ","Changes
 React 16.6 support (#6806 by @arthur791004)
 Access s underlying node via innerRef (#6340 by @pascalduez)"
-114,"Changes
+117,"Changes
 Updates
 
 Reduced component depth in withRouter() HOC. (10d78bb)
@@ -2738,7 +2825,7 @@ Fixed warning about createRef or useRef values in wrappedComponentRef when using
 Fixed withRouter() wrapped component inside NavLink not working properly (a38ef04)
 Fixed CJS build - previously, incorrect exports were emitted (caa9950)
 Thanks to @StringEpsilon for putting this list together. Enjoy!"
-115,"Note: While this does have a major version bump, it is actually a minor release. We screwed up some of the dependency version selection in 4.3.1, which necessitated a major bump. See this blog post for details.
+118,"Note: While this does have a major version bump, it is actually a minor release. We screwed up some of the dependency version selection in 4.3.1, which necessitated a major bump. See this blog post for details.
 ⚠️ Upgrade Warning ⚠️
 Please ensure you have upgraded both react-router and react-router-dom (react-router-native for RN users) to the exact same version. If different versions of those two packages are in your application, you will get errors when using <Link> and other react-router-dom-specific components. You can ensure you have the correct versions of both packages in your app using npm ls react-router react-router-dom.
 Breaking Changes
@@ -2828,26 +2915,26 @@ Removed use of eval in development to be compliant with unsafe-eval CSP - #6611
 Migrated to babel-preset-env
 Improved testing infrastructure to improve developer workflow
 Several docs improvements - #6410 (thanks @justsml)"
-116,"
+119,"
 Stop using eval in development to be compliant with unsafe-eval CSP (see #6611)
 Bumps the history dependency to version 4.9.0
 ","Stop using eval in development to be compliant with unsafe-eval CSP (see #6611)
 Bumps the history dependency to version 4.9.0"
-117,"
+120,"
 Fixed tree-shaking with Webpack (see #6464 and #6465)
 Added support for createRef in <Link innerRef> (see #6567)
 We now throw an error when using 2 different builds (dev only, see b2c6fa0725b7ff1ed762064d633b26b6293e0140)
 ","Fixed tree-shaking with Webpack (see #6464 and #6465)
 Added support for createRef in  (see #6567)
 We now throw an error when using 2 different builds (dev only, see b2c6fa0725b7ff1ed762064d633b26b6293e0140)"
-118,"Fixes
+121,"Fixes
 
 Fixed import of react-is in the CommonJS build (see #6445)
 Added missing prop-types dependency for ESM build (see #6438)
 ","Fixes
 Fixed import of react-is in the CommonJS build (see #6445)
 Added missing prop-types dependency for ESM build (see #6438)"
-119,"Fixes
+122,"Fixes
 
 Fixed <Route component> prop-type warning when using forwardRef (see #6417, thanks @frehner and @eXon)
 Added missing file to react-router-config package (see #6415, thanks @Anomen)
@@ -2856,7 +2943,7 @@ Several docs improvements (see #6410, thanks @justsml)
 Fixed  prop-type warning when using forwardRef (see #6417, thanks @frehner and @eXon)
 Added missing file to react-router-config package (see #6415, thanks @Anomen)
 Several docs improvements (see #6410, thanks @justsml)"
-120,"Features
+123,"Features
 
 Adds support for an array of paths in <Route path> (thanks @baronswindle)
 
@@ -2873,10 +2960,10 @@ Fix for  (thanks @ericyang89)
 MUCH smaller CJS + ESM builds (thanks @pshrmn and @TrySound)
 Include required deprecation warning file for require('react-router/Route') statements (thanks @timdorr)
 Enjoy! 😅"
-121,"
+124,"
 Fixed ESM entry point from 4.4.0-beta.2 🤦‍♂️
 ",Fixed ESM entry point from 4.4.0-beta.2 🤦‍♂️
-122,"Getting closer to 4.4 final! We've received some great feedback during the past few weeks on the 4.4 beta. Please keep it coming :)
+125,"Getting closer to 4.4 final! We've received some great feedback during the past few weeks on the 4.4 beta. Please keep it coming :)
 Features
 
 Both our CJS and ESM builds now use Rollup, which means they are smaller and should be easier to consume. Requiring individual files (e.g. require('react-router/Route')) from any of our packages is no longer supported.
@@ -2895,7 +2982,7 @@ Fixes
 Eliminate all warnings when using the router under React 16's . In fact, we now wrap all our tests in !
 Don't leak memory when a  is rendered server side (introduced in a previous 4.4 beta).
 Enjoy! 😅"
-123,"This release fixes a few issues with the build in v4.4.0-beta.0 where the 4.4.0-beta.0 version was not specified correctly in the dependencies of react-router-dom.
+126,"This release fixes a few issues with the build in v4.4.0-beta.0 where the 4.4.0-beta.0 version was not specified correctly in the dependencies of react-router-dom.
 Also, please be careful which build you are using. Prior to this release, you could mix your import styles, i.e.:
 ```js
 // Be careful, this won't work anymore!
@@ -2931,7 +3018,7 @@ js
 import { BrowserRouter, Route } from 'react-router-dom';
 I'm going to try and figure out a better way to detect if you're using 2 different builds so we can give you a better warning.
 Enjoy! 😅"
-124,"This is primarily a maintenance release that is fully backwards compatible with 4.3.1 while also improving compatibility with React 16 and preparing for the future.
+127,"This is primarily a maintenance release that is fully backwards compatible with 4.3.1 while also improving compatibility with React 16 and preparing for the future.
 The main features of this release are:
 
 Removed the single-child restriction in <Router> so you can have multiple children, provided you're using React 16
@@ -2967,8 +3054,8 @@ yarn add react-router-dom@next
 yarn add react-router-config@next
 We will be paying close attention to the feedback on this release and hope to release 4.4.0 final soon!
 Enjoy 😅"
-125,"Just a patch to fix an accidental move of warning from a normal dependency to a devDependency, which was causing issues with installation.","Just a patch to fix an accidental move of warning from a normal dependency to a devDependency, which was causing issues with installation."
-126,"The major new things of this release are Redirect with params (see #5209) and the new generatePath API. We also cleaned up the code with Prettier, so browsing through it should be more enjoyable.
+128,"Just a patch to fix an accidental move of warning from a normal dependency to a devDependency, which was causing issues with installation.","Just a patch to fix an accidental move of warning from a normal dependency to a devDependency, which was causing issues with installation."
+129,"The major new things of this release are Redirect with params (see #5209) and the new generatePath API. We also cleaned up the code with Prettier, so browsing through it should be more enjoyable.
 One other thing to mention, while I have your attention, is the deprecation of react-router-redux. It's no longer maintained and has a number of fundamental problems (particularly around time travel). Integrating Redux and the DOM History API is challenging because they don't maintain the same semantics and the resulting integration is error prone. Getting to the router context will be easier in future versions of React Router, so the main motivations for needing it will be going away. So, while I would advise against trying to integrate the two, for those that still want this functionality can turn to libraries like @supasate's connected-react-router.
 Changes
 
@@ -3001,21 +3088,21 @@ Add invariant for missing ""to"" property on  (#5792 by @selbekk)
 Use Prettier on the code (e6f9017 by @mjackson)
 Fix pathless route's match when parent is null (#5964 by @pshrmn)
 Use history.createLocation in  (#5722 by @pshrmn)"
-127,"Changes
+130,"Changes
 
 Fix broken UMD builds.
 Add sideEffects: false for webpack tree shaking (#6082 by @taylorc93)
 ","Changes
 Fix broken UMD builds.
 Add sideEffects: false for webpack tree shaking (#6082 by @taylorc93)"
-128,"Changes
+131,"Changes
 
 Bump hoist-non-react-statics for React 16.3.
 Missing generatePath in react-router-dom package.
 ","Changes
 Bump hoist-non-react-statics for React 16.3.
 Missing generatePath in react-router-dom package."
-129,"Changes
+132,"Changes
 
 Mar 26, 2018
 
@@ -3044,21 +3131,21 @@ Add invariant for missing ""to"" property on  (#5792 by @selbekk)
 Use Prettier on the code (e6f9017 by @mjackson)
 Fix pathless route's match when parent is null (#5964 by @pshrmn)
 Use history.createLocation in  (#5722 by @pshrmn)"
-130,"Changes
+133,"Changes
 
 React 16.3 support
 ","Changes
 React 16.3 support"
-131,"Changes
+134,"Changes
 
 React 16 support
 ","Changes
 React 16 support"
-132,"Apologies for the quick rebuild. There was a bad UMD config, which would have required you to include both the react-router and react-router-dom UMD files. You should only have to include react-router-dom now, which is the same behavior as the npm package.
+135,"Apologies for the quick rebuild. There was a bad UMD config, which would have required you to include both the react-router and react-router-dom UMD files. You should only have to include react-router-dom now, which is the same behavior as the npm package.
 OK, I'm done for a bit... 😬 ","Apologies for the quick rebuild. There was a bad UMD config, which would have required you to include both the react-router and react-router-dom UMD files. You should only have to include react-router-dom now, which is the same behavior as the npm package.
 OK, I'm done for a bit... 😬 "
-133,This fixes a missing warning dependency if you were installing just react-router-dom. No other changes to the actual code.,This fixes a missing warning dependency if you were installing just react-router-dom. No other changes to the actual code.
-134,"Changes
+136,This fixes a missing warning dependency if you were installing just react-router-dom. No other changes to the actual code.,This fixes a missing warning dependency if you were installing just react-router-dom. No other changes to the actual code.
+137,"Changes
 
 Aug 23, 2017
 
@@ -3103,7 +3190,7 @@ Fix memory leak in ConnectedRouter during server side rendering (#5203 by @klis8
 Reorder NavLink activeClassName/className priority (#5109 by @carloluis)
 Change react-native BackAndroid to BackHandler (#5093 by @SeanGroff)
 Fix react-router-native StackRouter (#5071 by @kafein)"
-135,"Changes
+138,"Changes
 
 Apr 12, 2017
 
@@ -3114,7 +3201,7 @@ Note: This work is still ongoing, as the React team still has some outstanding i
 Apr 12, 2017
 Fixes for the various PropTypes related issues. 
 Note: This work is still ongoing, as the React team still has some outstanding issues to figure out themselves. Keep an eye on this issue and the prop-types repo for updates as we all work through this craziness. "
-136,"Changes
+139,"Changes
 
 Apr 11, 2017
 
@@ -3127,7 +3214,7 @@ Apr 11, 2017
 Add wrappedComponent to the component returned by withRouter
 Add wrappedComponentRef prop to the component returned by withRouter
 Add non-react static methods and properties of the wrapped component to the component returned by withRouter"
-137,"Changes
+140,"Changes
 
 Mar 10, 2017
 
@@ -3136,19 +3223,19 @@ Released! No code changes from 4.0.0-beta.8
 ","Changes
 Mar 10, 2017
 Released! No code changes from 4.0.0-beta.8"
-138,"Changes
+141,"Changes
 
 Manually set displayName for components
 Async hooks could be removed during simultaneous server requests (#4941 by @s-yadav)
 ","Changes
 Manually set displayName for components
 Async hooks could be removed during simultaneous server requests (#4941 by @s-yadav)"
-139,"Changes
+142,"Changes
 
 Fixes for React 15.5 deprecation warnings
 ","Changes
 Fixes for React 15.5 deprecation warnings"
-140,"Changes
+143,"Changes
 
 Fix webpack-related anonymous function issue (#4857 by @alisd23)
 Fix usage with babel-plugin-transform-remove-prop-types (#4505 by @oliviertassinari)
@@ -3157,7 +3244,7 @@ Remove references to Link hash/query/state props (#4377 by @insin)
 Fix webpack-related anonymous function issue (#4857 by @alisd23)
 Fix usage with babel-plugin-transform-remove-prop-types (#4505 by @oliviertassinari)
 Remove references to Link hash/query/state props (#4377 by @insin)"
-141,"Changes
+144,"Changes
 
 Mar 8, 2017
 
@@ -3178,7 +3265,7 @@ Pass through the parent match object to s w/out a path. This also
   includes components wrapped using withRouter
 Fix unicode  paths
 Set NavLink's default activeClassName prop to active"
-142,"Changes
+145,"Changes
 
 Added support for <Redirect> as a child of a <Switch>
 Fixed a bug where <Switch> would always remount children
@@ -3199,7 +3286,7 @@ Removed location persistence across app restarts in
 Made docs easier to find in individual packages directories
 Split context.router into two parts: context.history and context.route
 Changed matchPath signature to matchPath(pathname, options)"
-143,"Changes
+146,"Changes
 
 Fixed a bug with <StaticRouter>'s createHref (#4484 thanks @pshrmn)
 Added support for objects in <Link to> in react-router-native (#4483 by @CodogoFreddie)
@@ -3208,7 +3295,7 @@ Include react-router in react-router-dom's UMD bundle
 Fixed a bug with 's createHref (#4484 thanks @pshrmn)
 Added support for objects in  in react-router-native (#4483 by @CodogoFreddie)
 Include react-router in react-router-dom's UMD bundle"
-144,"Changes
+147,"Changes
 
 Remove basename from <StaticRouter> locations
 Add ES build to react-router and react-router-dom (#4432 by @billyjanitsch)
@@ -3227,7 +3314,7 @@ Fix scripts on windows (#4447 by @pshrmn)
 Use peer deps for react-native
 Warn when  is given >1 children (#4450 by @jackfranklin)
 Only nullify empty children array (#4475 by @pshrmn)"
-145,"Changes
+148,"Changes
 
 Fix NavLink location variable (#4403 by @inuscript)
 NavLink tests (#4421 by @pshrmn)
@@ -3242,25 +3329,25 @@ Preact support (#4423 by @kwelch)
 Allow initialIndex, initialIndex in NativeRouter (#4415 by @IljaDaderko)
 Add  and 
 invariant dependency was missing"
-146,"Changes
+149,"Changes
 
 Fix missing StaticRouter (#4389 by @supasate)
 ","Changes
 Fix missing StaticRouter (#4389 by @supasate)"
-147,"Changes
+150,"Changes
 
 No end-user changes
 ","Changes
 No end-user changes"
-148,"This is a pretty big change from the alpha versions, so the diff isn't super helpful.
+151,"This is a pretty big change from the alpha versions, so the diff isn't super helpful.
 This release breaks things into a monorepo format, with several sub-packages for different ways of using the router. Think react-dom vs. react-native. ","This is a pretty big change from the alpha versions, so the diff isn't super helpful.
 This release breaks things into a monorepo format, with several sub-packages for different ways of using the router. Think react-dom vs. react-native. "
-149,"Changes
+152,"Changes
 
 Re-add module entry to package.json
 ","Changes
 Re-add module entry to package.json"
-150,"Changes
+153,"Changes
 
 Pass transition hook's arguments correctly (#4123 by @arkist)
 Fix index routes inside async pathless routes (#4147 by @taurose)
@@ -3273,10 +3360,10 @@ Fix index routes inside async pathless routes (#4147 by @taurose)
 'to' maybe undefined (#4216 by @panzj)
 Fix withRouter error when used without a Router (#4295 by @dropfen)
 Adding support for escaped parentheses in Route Paths (#4202 by @sebastiandeutsch) "
-151,"This release fixes problems with the last release for users of npm 2.x and yarn. If you're having trouble with alpha 5, this version should give you less trouble.
+154,"This release fixes problems with the last release for users of npm 2.x and yarn. If you're having trouble with alpha 5, this version should give you less trouble.
 Skipping the changelog on this one, as @ryanflorence has a heavily refactored version coming in the next day or two. Please wait for that release before upgrading if you're not blocked by the previous release's packaging issues. ","This release fixes problems with the last release for users of npm 2.x and yarn. If you're having trouble with alpha 5, this version should give you less trouble.
 Skipping the changelog on this one, as @ryanflorence has a heavily refactored version coming in the next day or two. Please wait for that release before upgrading if you're not blocked by the previous release's packaging issues. "
-152,"🎉  The 100th release of React Router! 🎉 
+155,"🎉  The 100th release of React Router! 🎉 
 This release removes all the deprecation warnings from v2.x along with some bugfixes.
 While the focus of this project is shifting towards the component-based v4, this branch will be maintained indefinitely!
 Bug fixes will continue to be accepted. We are not going to leave anyone hanging and want to assure you that v3 development will be alive and well.
@@ -3293,7 +3380,7 @@ Changes
 Oct 24, 2016
 - Removed
 - Bugfix: Cancel pending enter/change hooks on location change (#4063)"
-153,"Changes
+156,"Changes
 
 URL decode all parameters (@tyrsius in #3991)
 Fix ambiguous Miss component not rendering (@TimothyKrell in #3980)
@@ -3322,7 +3409,7 @@ Fix hashType prop on HashRouter (@herrkris in #4024)
 Remove react-history dep (@ryanflorence in d041434)
 Links apathetic to active state don't subscribe (@pshrmn in #3986)
 blockTransitions returns teardown function (@maxdeviant in #4058)"
-154,"Changes
+157,"Changes
 
 PropTypes are now exported (@alisd23 in #3910)
 Subscribe to location changes along context. Fixes usage with React Redux (@ryanflorence in bb7d8ee and ce59676)
@@ -3339,7 +3426,7 @@ Remove the entire website application from the npm package (@timdorr in a5e05f7)
 StaticRouter now tracks location in state (@mjackson in 5550cc3)
 Rename PropTypes.router to PropTypes.routerContext (@mjackson in c8510da)
 Remove direct history dependency (@mjackson in a603eaa)"
-155,"Quick Version Note
+158,"Quick Version Note
 I've swapped out the version string to better represent the prerelease nature of the v4 branch currently. It may not have been obvious before, but according to semver, any version string with a -anything on the end is considered a prerelease version. I've seen some references to the versions before as 4.0.1 and 4.0.2. This isn't correct, as we haven't yet pushed a 4.0.0 final version. This is not production-ready code. We're not done building 4.0! 
 And, most importantly, we need your help to figure out things that are missing, either stuff that should go into the core of React Router or external libraries and code patterns that need to be established. React Router is now a building block as much as React itself is, and this more lean, mean, super-minimal core means that you can build a lot of interesting stuff on top of it. Now's a great time to get into open source and contribute some code. Keep those issues and PRs coming!
 ~~Also, for the love of god, yes, we know the docs site isn't scrollable. We'll push a new version soon!~~
@@ -3350,7 +3437,7 @@ And, most importantly, we need your help to figure out things that are missing, 
 ~~Also, for the love of god, yes, we know the docs site isn't scrollable. We'll push a new version soon!~~
 Use this link for the docs site from now on: link/ We'll keep it updated.
 Changes"
-156,"Installation
+159,"Installation
 npm install react-router@beta
 Changes
 
@@ -3375,15 +3462,15 @@ Upstream changes from v2.7.0 through v2.8.1:
 - Feature: Support router as a prop on withRouter-wrapped components for overriding the router object from context (#3729)
 - Feature: Add withRef option to withRouter that enables getWrappedInstance (#3735, #3740)
 - Bugfix: Warn on invalid router middlewares (#3717)"
-157,"
+160,"
 Use the global React in the UMD build.
 ",Use the global React in the UMD build.
-158,"
+161,"
 Add missing path-to-regexp dependency
 Remove an extraneous <div> sometimes added by <StaticRouter>
 ","Add missing path-to-regexp dependency
 Remove an extraneous  sometimes added by "
-159,"⚠️  🚀  NEW VERSION ALERT ⚠️
+162,"⚠️  🚀  NEW VERSION ALERT ⚠️
 Available on npm: npm install react-router@next
 This is a ground-up rewrite of React Router that @ryanflorence and @mjackson have been working on for the last few months (with a tiny bit of help from yours truly). The central thesis for this version is ""declarative everything"". Almost all imperative code is completely gone in 4.0. 
 The API is not only completely different, so is the way of thinking about routing in general. Async behaviors are gone, replaced by always rendering something (even if that's just a ""Loading..."" screen). There are no top-level route configuration, as you can ""route"" from anywhere in your component tree (but that doesn't keep you from creating your own route config).
@@ -3402,14 +3489,14 @@ As expected, there will be growing pains. And bugs. And Twitter flame wars 💦�
 Quick Update:
 Yes, there will still be a 3.0 release (soon!). It is simply v2.0 without any deprecation warnings. We intend to keep supporting the 3.x branch indefinitely (published separately on npm to aid in migration), although there will likely not be any future major versions based on that code. 4.0 is the future, but we won't leave you hanging if you want to stick with 2.x/3.x.
 Examples and Docs Site"
-160,"Changes
+163,"Changes
 
 Sep 13, 2016
 - Bugfix: Fix redirects that specify query (#3808)
 ","Changes
 Sep 13, 2016
 - Bugfix: Fix redirects that specify query (#3808)"
-161,"Changes
+164,"Changes
 
 Sep 9, 2016
 - Feature: Support omitting to on <Link> (#3803)
@@ -3418,7 +3505,7 @@ Sep 9, 2016
 Sep 9, 2016
 - Feature: Support omitting to on  (#3803)
 - Refactor: Use history.replace instead of history.transitionTo for redirects (#3799)"
-162,"Changes
+165,"Changes
 
 Aug 20, 2016
 - Feature: Support router as a prop on withRouter-wrapped components for overriding the router object from context (#3729)
@@ -3429,7 +3516,7 @@ Aug 20, 2016
 - Feature: Support router as a prop on withRouter-wrapped components for overriding the router object from context (#3729)
 - Feature: Add withRef option to withRouter that enables getWrappedInstance (#3735, #3740)
 - Bugfix: Warn on invalid router middlewares (#3717)"
-163,"Changes
+166,"Changes
 
 Aug 2, 2016
 - Feature: Support function to prop in <Link> (#3669)
@@ -3440,14 +3527,14 @@ Aug 2, 2016
 - Feature: Support function to prop in  (#3669)
 - Chore: Move ES module build to es/ (#3670)
 - Chore: Add module entry point for webpack 2 (#3672)"
-164,"Changes
+167,"Changes
 
 Jul 29, 2016
 - Bugfix: Correctly handle routes with patterns that are the names of properties on Object.prototype (#3680)
 ","Changes
 Jul 29, 2016
 - Bugfix: Correctly handle routes with patterns that are the names of properties on Object.prototype (#3680)"
-165,"Changes
+168,"Changes
 
 Jul 19, 2016
 - Breaking: Remove all deprecated functionality as of v2.6.0 (#3603, #3646)
@@ -3458,7 +3545,7 @@ Jul 19, 2016
 - Breaking: Remove all deprecated functionality as of v2.6.0 (#3603, #3646)
 - Breaking: Support history v3 instead of history v2 (#3647)
 - Feature: Add router to props for route components (#3486)"
-166,"Changes
+169,"Changes
 
 Jul 18, 2016
 - Feature: Add prevState as argument to onLeave hooks (#3616)
@@ -3467,31 +3554,31 @@ Jul 18, 2016
 Jul 18, 2016
 - Feature: Add prevState as argument to onLeave hooks (#3616)
 - Bugfix: Fix when the  onClick invariant runs (#3636)"
-167,"
+170,"
 #3607 [added] Support for React v0.15
 #3645 [fixed] Passing through extra props to <Link>
 ","3607 [added] Support for React v0.15
 3645 [fixed] Passing through extra props to "
-168,"Changes
+171,"Changes
 
 Bugfix: Remove extraneous propTypes check when creating a route object from a React element (#3591)
 ","Changes
 Bugfix: Remove extraneous propTypes check when creating a route object from a React element (#3591)"
-169,"Changes
+172,"Changes
 
 Bugfix: Throw error instead of silently failing with history v3 (#3571)
 Bugfix: Explicitly throw error in onClick handler of <Link> rendered outside of router context (#3572)
 ","Changes
 Bugfix: Throw error instead of silently failing with history v3 (#3571)
 Bugfix: Explicitly throw error in onClick handler of  rendered outside of router context (#3572)"
-170,"Changes
+173,"Changes
 
 Feature/Deprecation: Call getChildRoutes and getIndexRoute with partialNextState; deprecate accessing location directly in favor of partialNextState.location there (#3556, #3561, #3569, Upgrade Guide)
 Refactor: Refactor creating routeParams objects (#3544)
 ","Changes
 Feature/Deprecation: Call getChildRoutes and getIndexRoute with partialNextState; deprecate accessing location directly in favor of partialNextState.location there (#3556, #3561, #3569, Upgrade Guide)
 Refactor: Refactor creating routeParams objects (#3544)"
-171,"Changes
+174,"Changes
 
 May 19, 2016
 - Breaking: Remove all deprecated functionality as of v2.3.0 (#3340, #3435)
@@ -3502,12 +3589,12 @@ May 19, 2016
 - Breaking: Remove all deprecated functionality as of v2.3.0 (#3340, #3435)
 - Breaking/Feature: Make  and withRouter update inside static containers (#3430, #3443)
 - Feature: Add params, location, and routes to props injected by withRouter and to properties on context.router (#3444, #3446)"
-172,"Changes
+175,"Changes
 
 Bugfix: Don't crash on invalid URI components in params (#3453)
 ","Changes
 Bugfix: Don't crash on invalid URI components in params (#3453)"
-173,"Changes
+176,"Changes
 
 Feature: Add withRouter higher-order component for injecting props.router (#3352)
 Minor: Add React as a peer dependency (#3361)
@@ -3518,7 +3605,7 @@ Feature: Add withRouter higher-order component for injecting props.router (#3352
 Minor: Add React as a peer dependency (#3361)
 Minor: Upgrade to Babel 6 (#3362)
 Minor: Add target to propTypes for  (#3397)"
-174,"Changes
+177,"Changes
 
 Feature: Add applyRouterMiddleware for extending router rendering (#3327)
 Feature/Deprecation: Add routerShape and locationShape as top-level exported prop types, and deprecate all the old prop types, including the ones that were previously incorrectly removed (#3349)
@@ -3527,29 +3614,29 @@ Minor: Move ES module build back to es6/ to avoid breaking people who were incor
 Feature: Add applyRouterMiddleware for extending router rendering (#3327)
 Feature/Deprecation: Add routerShape and locationShape as top-level exported prop types, and deprecate all the old prop types, including the ones that were previously incorrectly removed (#3349)
 Minor: Move ES module build back to es6/ to avoid breaking people who were incorrectly importing from react-router/es6 (#3334)"
-175,"Changes
+178,"Changes
 
 Noop: Publish again to npm to work around missing tarball problem
 ","Changes
 Noop: Publish again to npm to work around missing tarball problem"
-176,"Changes
+179,"Changes
 
 Bugfix: Don't use Object.assign in getComponentsForRoute (#3331)
 Minor: Speed up checking index path active status (#3313)
 ","Changes
 Bugfix: Don't use Object.assign in getComponentsForRoute (#3331)
 Minor: Speed up checking index path active status (#3313)"
-177,"Changes
+180,"Changes
 
 Bugfix: Fix edge cases with continuing matches after pathless routes (#3308)
 ","Changes
 Bugfix: Fix edge cases with continuing matches after pathless routes (#3308)"
-178,"Changes
+181,"Changes
 
 Bugfix: Fix this in getComponent and getComponents (#3306)
 ","Changes
 Bugfix: Fix this in getComponent and getComponents (#3306)"
-179,"Changes
+182,"Changes
 
 Feature/Deprecation: Call getComponent and getComponents with nextState; deprecate accessing location directly in favor of nextState.location there (#3298, Upgrade Guide)
 Bugfix: Do not ignore extraneous slashes in matching (#3285)
@@ -3564,12 +3651,12 @@ Bugfix: Do not unnecessarily set empty className on  (#3288)
 Minor: Update PropTypes (#3218)
 Minor: Move ES module build from es6/ to es/ (#3295)
 Minor: Do not include unused deprecation logic in production builds (#3296)"
-180,"Changes
+183,"Changes
 
 Bugfix: Remove unintentionally released code change (#3280)
 ","Changes
 Bugfix: Remove unintentionally released code change (#3280)"
-181,"Changes
+184,"Changes
 
 Feature: Add support for onChange hook on routes (#3108)
 Minor: Include full warning messages in non-minified UMD build (#3213)
@@ -3578,7 +3665,7 @@ Minor: Speed up path matching (#3217)
 Feature: Add support for onChange hook on routes (#3108)
 Minor: Include full warning messages in non-minified UMD build (#3213)
 Minor: Speed up path matching (#3217)"
-182,"Changes
+185,"Changes
 
 Bugfix: Call transition hooks on child routes of parents whose params
   changed but the child's did not. (#3166)
@@ -3587,7 +3674,7 @@ Minor: Remove support for installing from source (#3164)
 Bugfix: Call transition hooks on child routes of parents whose params
   changed but the child's did not. (#3166)
 Minor: Remove support for installing from source (#3164)"
-183,"Read the Full Upgrade Guide
+186,"Read the Full Upgrade Guide
 Goals
 You might enjoy reading this issue: https://github.com/rackt/react-router/issues/2646
 1. Clear up the coupling between History and Router with simpler APIs.
@@ -3622,7 +3709,7 @@ Using a tool called jscodeshift, we have made available some codemods for upgrad
 A codemod is much like Babel, but instead of converting your ES2015 code to ES5 compatible syntax, it does a limited set of transformations on function names, arguments, common patterns and more. One way to think of jscodeshift (the underlying tool) is ""jQuery for code"". These codemods aren't bulletproof, so be sure to test your code after you run them. But they can help with upgrading a large codebase to remove deprecation warnings you're now triggering.
 Changes since rc6
 Add back basename support in match (#3054)"
-184,"This should be the final release candidate before 2.0.0 final. Please test this version!
+187,"This should be the final release candidate before 2.0.0 final. Please test this version!
 Changes
 
 Breaking: Removed default top-level <Router> export (#2906)
@@ -3635,7 +3722,7 @@ Breaking: Removed default top-level  export (#2906)
 Use history.createLocation where possible (#2910)
 Fix initial routing state after match (#2965)
 Reduce stack size from matching routes (#2923)"
-185,"Changes
+188,"Changes
 
 Export createMemoryHistory #2792
 Fix warnings caused by React Dev Tools #2803
@@ -3650,10 +3737,10 @@ Add passing custom histories to match #2813
 Fix basename regression #2822
 Add back deprecated RoutingContext export #2851
 Improve support for server rendering async routes #2883"
-186,"
+189,"
 Also do not create a hashHistory on the server.
 ",Also do not create a hashHistory on the server.
-187,"rc2 hit an NPM packaging bug. This is a repackaging with one fix included:
+190,"rc2 hit an NPM packaging bug. This is a repackaging with one fix included:
 Changes
 
 Rebuilt with history correctly included.
@@ -3662,7 +3749,7 @@ Don’t create browserHistory on the server
 Changes
 Rebuilt with history correctly included.
 Don’t create browserHistory on the server"
-188,"Read the fancy upgrade guide.
+191,"Read the fancy upgrade guide.
 Changes
 Lots of stuff! Here's the summary.
 - Added render prop to Router
@@ -3681,8 +3768,8 @@ Lots of stuff! Here's the summary.
 - Replaced context.history with context.router
 - Deprecated Route Component props.history
 - Deprecated context.location"
-189,Don't worry about it. See v2.0.0-rc2 instead!,Don't worry about it. See v2.0.0-rc2 instead!
-190,"You may now upgrade your history version to the latest release. NPM will no longer yell at you about versioning and any previous deprecation warnings have been cleared in the 1.17.0 version. Sorry about the confusion!
+192,Don't worry about it. See v2.0.0-rc2 instead!,Don't worry about it. See v2.0.0-rc2 instead!
+193,"You may now upgrade your history version to the latest release. NPM will no longer yell at you about versioning and any previous deprecation warnings have been cleared in the 1.17.0 version. Sorry about the confusion!
 sh
 npm install --save history@1.17.0
 Changes
@@ -3693,7 +3780,7 @@ sh
 npm install --save history@1.17.0
 Changes
 Switched back to a caret range for history, now that the warnings have been removed"
-191,":warning: IMPORTANT :warning:
+194,":warning: IMPORTANT :warning:
 Please ensure your project is running history v1.13.1 to avoid any deprecation warnings or unmet peerDependencies errors.
 sh
 npm install --save history@1.13.1
@@ -3706,12 +3793,12 @@ sh
 npm install --save history@1.13.1
 Changes
 Pinned peer dependency on History to 1.13.x to avoid console warnings."
-192,"
+195,"
 Support IE8 (#2540)
 Add ES2015 module build (#2530)
 ","Support IE8 (#2540)
 Add ES2015 module build (#2530)"
-193,"Thanks for your patience :) Big changes from v0.13.x to 1.0. While on the surface a lot of this just looks like shuffling around API, the entire codebase has been rewritten to handle some really great use cases, like loading routes and components on demand, session-based route matching, server rendering, integration with libs like redux and relay, and lots more.
+196,"Thanks for your patience :) Big changes from v0.13.x to 1.0. While on the surface a lot of this just looks like shuffling around API, the entire codebase has been rewritten to handle some really great use cases, like loading routes and components on demand, session-based route matching, server rendering, integration with libs like redux and relay, and lots more.
 But for now, here's how to translate the old API to the new one.
 Importing
 The new Router component is a property of the top-level module.
@@ -4073,7 +4160,7 @@ var Home = React.createClass({
 />
 ```
 To cancel a ""transition from"", please refer to the Confirming Navigation guide."
-194,"
+197,"
 ec3f3eb [wip][added] Support custom RoutingContext on Router
 4b8e994 [fixed] Index routes with extraneous slashes
 c68f9f1 [removed] Remove deprecated handler prop on Route
@@ -4112,15 +4199,15 @@ fae04bc [added] Greedy splat (**)
 ac7dd4a [fixed] Postinstall script on Windows
 d905382 [added] Test for IndexLink to deeply nested IndexRoute
 6f8ceac [fixed] Transitions example"
-195,"
+198,"
 #2262 [added] Support for React v0.14
 ",2262 [added] Support for React v0.14
-196,"
+199,"
 e42a4ad [changed] Stop using npm prepublish script
 3be6a2d [fixed] Workaround for nasty npm bug
 ","e42a4ad [changed] Stop using npm prepublish script
 3be6a2d [fixed] Workaround for nasty npm bug"
-197,"
+200,"
 bdab3d8 [fixed] Compare query by string value
 c43fb61 [added]  prop
 24e7b4f [fixed] isActive on nested IndexLink
@@ -4145,17 +4232,17 @@ fc8a7a4 [changed] Run examples using HTML5 history
 be37196 [fixed] Actually update state when there are transition hooks
 b8f1abe [changed] Removed (un)registerRouteHook
 69a9240 [fixed] Added missing IndexLink to exports"
-198,"
+201,"
 b237238 [fixed] Removed getter for IE8 compat
 53ce7f1 [fixed] #1148 regex for detecting trailing slashes
 ","b237238 [fixed] Removed getter for IE8 compat
 53ce7f1 [fixed] #1148 regex for detecting trailing slashes"
-199,"
+202,"
 5fbe933 [changed] Do not add ""active"" class by default
 85c699c [changed] State -> IsActive
 ","5fbe933 [changed] Do not add ""active"" class by default
 85c699c [changed] State -> IsActive"
-200,"
+203,"
 94509e7 [added] IndexLink
 adc0a2f [added] IndexRoute
 b86509a [added] useRoutes history enhancer [added] RoutingContext component [added] RouteContext mixin [added] Lifecycle mixin
@@ -4194,12 +4281,12 @@ f4ed900 [fixed] correctly updates the window scroll position
 2389c61 [changed] Export history classes
 824ed63 [fixed]  handling
 2447ecb [added] formatPattern util method"
-201,https://github.com/rackt/react-router/compare/v1.0.0-beta2...v1.0.0-beta3,link
-202,https://github.com/rackt/react-router/compare/v1.0.0-beta1...v1.0.0-beta2,link
-203,https://github.com/rackt/react-router/compare/v1.0.0-alpha2...v1.0.0-beta1,link
-204,https://github.com/rackt/react-router/compare/0.13.x...v1.0.0-alpha2,link
-205,https://github.com/rackt/react-router/compare/v0.13.2...v0.13.3,link
-206,"
+204,https://github.com/rackt/react-router/compare/v1.0.0-beta2...v1.0.0-beta3,link
+205,https://github.com/rackt/react-router/compare/v1.0.0-beta1...v1.0.0-beta2,link
+206,https://github.com/rackt/react-router/compare/v1.0.0-alpha2...v1.0.0-beta1,link
+207,https://github.com/rackt/react-router/compare/0.13.x...v1.0.0-alpha2,link
+208,https://github.com/rackt/react-router/compare/v0.13.2...v0.13.3,link
+209,"
 4a8b756 [fixed] empty query strings not being removed
 1b2293b [fixed] use context in examples
 4af3c18 [fixed] HashLocation triggers 'replace' state on transition.redirect()
@@ -4210,10 +4297,10 @@ f5d4f36 [fixed] Docs Update
 4af3c18 [fixed] HashLocation triggers 'replace' state on transition.redirect()
 59c28de [fixed] Empty query string now routes correctly
 f5d4f36 [fixed] Docs Update"
-207,"
+210,"
 d12e9dee Use Router instead of this now that autobinding is off
 ",d12e9dee Use Router instead of this now that autobinding is off
-208,"React introduced the ability to use ES6 classes for component definitions, which has the side-effect of mixins not being ""the thing"" anymore. Our mixins like State and Navigation just proxied calls to some methods on an undocumented feature of React called context, that in turn called methods on the router instance under the hood.
+211,"React introduced the ability to use ES6 classes for component definitions, which has the side-effect of mixins not being ""the thing"" anymore. Our mixins like State and Navigation just proxied calls to some methods on an undocumented feature of React called context, that in turn called methods on the router instance under the hood.
 Without mixins we needed a way for you to get access to these methods. We decided the simplest solution was to stop hiding the router instance and just put the whole thing on context.
 You can think about context as values that are floating around a render tree that parent components (Handler in the Router.run callback) can explicitly define and descendent components can explicitly ask for. The stuff on context doesn't show up in a component unless you ask for it.
 Note: You can still use our mixins, you'll just get a deprecation warning.
@@ -4293,16 +4380,16 @@ f3a44f1 [fixed] React 0.13 compatibility
 07b4972 [fixed] Allow repetition in child paths
 696a706 [fixed] Use defaultProps of config components
 61f0a8c [changed] Deprecate Navigation/State mixins"
-209,"
+212,"
 5768506 [fixed] Build generation
 ",5768506 [fixed] Build generation
-210,"
+213,"
 aef0dce [fixed] DefaultRoute/NotFoundRoute name regression
 ",aef0dce [fixed] DefaultRoute/NotFoundRoute name regression
-211,"
+214,"
 196390f [fixed] Make s global, again
 ","196390f [fixed] Make s global, again"
-212,"
+215,"
 3d8a883 [fixed] Ignore extraneous popstate events in WebKit
 db2607d [fixed] Double-encoding of URLs
 c5a24a5 [added] Route/Match classes
@@ -4327,7 +4414,7 @@ e05e229 [added] Transition#cancel
 585d8ec [fixed] Use more correct children invariant
 62c49d2 [changed] Change Navigation to return the result of goBack()
 83c8f59 [fixed] Allow special characters in query"
-213,"transition.wait was removed, you now use a callback instead:
+216,"transition.wait was removed, you now use a callback instead:
 ``` js
 // 0.11.x
 var SomeHandler = React.createClass({
@@ -4381,10 +4468,10 @@ c6ed6fa [removed] transition.wait, use callbacks instead
 75c6206 [added] router.stop()
 4e96256 [fixed] Preserve original query with HashLocation
 2f19e63 [changed] Bump qs dependency version"
-214,"
+217,"
 90cd750 [fixed] Call all transition hooks on query changes
 ",90cd750 [fixed] Call all transition hooks on query changes
-215,"
+218,"
 31e1eb2 [fixed] supportsHistory false negatives on WP 8.1
 6417285 [fixed] tearing down location listeners
 457d944 [added] Router.History
@@ -4395,29 +4482,29 @@ c6aa4d3 [fixed] Now execute willTransition* hooks even if only query part was ch
 457d944 [added] Router.History
 a07003e [fixed] URL hash consistency across browsers
 c6aa4d3 [fixed] Now execute willTransition* hooks even if only query part was changed"
-216,"
+219,"
 b9079c9 [added] getPathname to Router.State
 91d4380 [fixed] Abort pending transition on user navigation
 5fe6c08 [changed] Don't update scroll if only query has changed
 ","b9079c9 [added] getPathname to Router.State
 91d4380 [fixed] Abort pending transition on user navigation
 5fe6c08 [changed] Don't update scroll if only query has changed"
-217,"
+220,"
 91d4380 [fixed] Abort pending transition on user navigation
 5fe6c08 [changed] Don't update scroll if only query has changed
 ","91d4380 [fixed] Abort pending transition on user navigation
 5fe6c08 [changed] Don't update scroll if only query has changed"
-218,"
+221,"
 017363d [fixed] default redirect path to '*'
 187eb0e [fixed] Added missing require statement
 5a1ed33 [fixed] Path.decode/encode with query string
 ","017363d [fixed] default redirect path to '*'
 187eb0e [fixed] Added missing require statement
 5a1ed33 [fixed] Path.decode/encode with query string"
-219,"
+222,"
 b75f648 [fixed] rendering current handlers before rendering root
 ",b75f648 [fixed] rendering current handlers before rendering root
-220,"The router changed a lot in this release. While you won't have to change too much of your app, you will have to change it in a lot of places. The fundamental change is that you, rather than the router, get to have control of your view instances.
+223,"The router changed a lot in this release. While you won't have to change too much of your app, you will have to change it in a lot of places. The fundamental change is that you, rather than the router, get to have control of your view instances.
 If you find anything is missing from this list, please open an issue and we will get it added here ASAP.
 React 0.12
 You must upgrade to 0.12.x before you can use version 0.11.x of the
@@ -4800,17 +4887,17 @@ var Something = React.createClass({
   }
 });
 ```"
-221,"
+224,"
 940a0d0 [changed] use Object.assign instead of copyProperties
 f8cb7f9 [changed] use Object.assign instead of merge
 70b442a [added] React 0.12 compatibility
 ","940a0d0 [changed] use Object.assign instead of copyProperties
 f8cb7f9 [changed] use Object.assign instead of merge
 70b442a [added] React 0.12 compatibility"
-222,"
+225,"
 70b442a [added] React 0.12 compatibility
 ",70b442a [added] React 0.12 compatibility
-223,"Nothing changed, this was simply React 0.12.0 compatibility. Note,
+226,"Nothing changed, this was simply React 0.12.0 compatibility. Note,
 your code needs to use the React 0.11.x API for things to work, there
 will be lots of warnings in the console.
 Changes
@@ -4821,10 +4908,10 @@ your code needs to use the React 0.11.x API for things to work, there
 will be lots of warnings in the console.
 Changes
 70b442a [added] React 0.12 compatibility"
-224,"
+227,"
 6192285 [added]  to opt out of scroll behavior for itself and descendants
 ",6192285 [added]  to opt out of scroll behavior for itself and descendants
-225,"
+228,"
 e571c27 [fixed] Add .active class to <Link>s with absolute hrefs
 ea5a380 [fixed] Make sure onChange is fired at synchronous first render
 dee374f [fixed] Listen to path changes caused by initial redirect, fixes #360
@@ -4837,10 +4924,10 @@ dee374f [fixed] Listen to path changes caused by initial redirect, fixes #360
 d47d7dd [fixed] potential infinite loop during transitions
 1b1a62b [added] Server-side rendering
 c7ca87e [added] "
-226,"
+229,"
 caf3a2b [fixed] scrollBehavior='none' on path update
 ",caf3a2b [fixed] scrollBehavior='none' on path update
-227,"
+230,"
 d57f830 [changed] Public interface for Location objects
 6723dc5 [added] ability to set params/query in Redirect
 60f9eb4 [fixed] encoded ampersands in query params
@@ -4849,10 +4936,10 @@ d57f830 [changed] Public interface for Location objects
 6723dc5 [added] ability to set params/query in Redirect
 60f9eb4 [fixed] encoded ampersands in query params
 668773c [fixed] transitioning to paths with ."
-228,"
+231,"
 76fe696 [fixed] trailing comma
 ",76fe696 [fixed] trailing comma
-229,"ActiveState mixin isActive
+232,"ActiveState mixin isActive
 isActive is now an instance method.
 ``` js
 // 0.7.x
@@ -5092,7 +5179,7 @@ ed0cf62 [removed] Router.Transitions (use Router.Navigation instead)
 ed0cf62 [removed] Router.RouteLookup (because it was useless)
 ed0cf62 [added]  alias of ""imitateBrowser""
 ed0cf62 [changed]  =>  will be useful for SSR"
-230,"Please don't upgrade to 0.8.0, just skip to 0.9.x.
+233,"Please don't upgrade to 0.8.0, just skip to 0.9.x.
 0.8.0 had some transient mixins we didn't intend to document, but had
 some miscommunication :( If you were one of three people who used some
 of these mixins and need help upgrading from 0.8.0 -> 0.9.x find us on
@@ -5137,7 +5224,7 @@ e0b708f [added] Ability to transitionTo absolute URLs
 c1493b5 [changed] #259 support dots in named params
 a4ce7c8 [changed] isActive is an instance method
 a4ce7c8 [removed] "
-231,"The package root modules were removed. Please import modules from the
+234,"The package root modules were removed. Please import modules from the
 Router default export.
 ``` js
 // 0.6.x
@@ -5160,10 +5247,10 @@ Changes
 0e649be [changed] Use Browserify to build examples
 bb7b666 [removed] .js files from repo root
 96122dd [fixed] undefined Buffer in query strings"
-232,"
+235,"
 7536d96 [fixed] warning on links w/o params
 ",7536d96 [fixed] warning on links w/o params
-233,"Path Matching
+236,"Path Matching
 Paths that start with / are absolute and work exactly as they used to.
 Paths that don't start with / are now relative, meaning they extend
 their parent route.
@@ -5323,7 +5410,7 @@ d5bd656 [changed] path matching algorithm
 6526e70 [removed] location=""disabled""
 8d2f3ed [changed] s to take params property
 2a85b74 [changed] handler keys to be optional"
-234,"
+237,"
 273625a [fixed] Active state on <Link>s with key prop
 283d3f6 [added] RouteStore#registerChildren
 a030648 [changed] Relaxed MemoryStore invariant
@@ -5346,7 +5433,7 @@ e028768 [added]  component
 ca96f86 [fixed] typo in Link
 f3dc513 [added] onClick handler to 
 b9f92f9 [changed] updated rf-changelog"
-235,"
+238,"
 21f4f57 [added] preserveScrollPosition Route/Routes props
 f3b4de8 [added] support for extra props in Links, fixes #170
 829a9ec [added] <Redirect/> component
@@ -5359,7 +5446,7 @@ f3b4de8 [added] support for extra props in Links, fixes #170
 0a49665 [added] Router.makeHref
 2100b8c [changed] handlers receive route name
 154afba [changed] location of public modules"
-236,"
+239,"
 08f5a69 [fixed] location=""history"" fallback
 87b1c2a [fixed] Navigation to root URL can fail
 760f021 [fixed] infinite loop in RouteStore.unregisterRoute
@@ -5376,7 +5463,7 @@ f3b4de8 [added] support for extra props in Links, fixes #170
 2a3582e [changed] make URLStore.push idempotent
 4c4f87b [fixed] alt click on Link should count as modified
 97c02f1 [fixed] middle click on "
-237,"We brought back <Routes/>.
+240,"We brought back <Routes/>.
 ``` js
 // 0.4.x
 var routes = (
@@ -5407,43 +5494,43 @@ var routes = (
 ```
 Changes
 5af49d4 [changed] Split  component from "
-238,"
+241,"
 2fc9976 [fixed] eslint cleanup; trailing comma fix for IE
 b8018b1 [added] animation example
 ","2fc9976 [fixed] eslint cleanup; trailing comma fix for IE
 b8018b1 [added] animation example"
-239,"
+242,"
 8152d67 [changed] repo location to rackt/react-router
 0ac4dea [removed] Dependency on react/lib/emptyFunction
 ","8152d67 [changed] repo location to rackt/react-router
 0ac4dea [removed] Dependency on react/lib/emptyFunction"
-240,"NPM users should point their apps to react-router instead of react-nested-router. Make sure to npm prune!
+243,"NPM users should point their apps to react-router instead of react-nested-router. Make sure to npm prune!
 Changes
 
 0be4bf7 [changed] npm registry name to react-router :D
 ","NPM users should point their apps to react-router instead of react-nested-router. Make sure to npm prune!
 Changes
 0be4bf7 [changed] npm registry name to react-router :D"
-241,"
+244,"
 0a7298c [removed] browserify.transforms from package.json
 ebf54ab [removed] Dependency on react/lib/merge
 ","0a7298c [removed] browserify.transforms from package.json
 ebf54ab [removed] Dependency on react/lib/merge"
-242,"
+245,"
 2598837 [fixed] bower build
 8c428ff [fixed] dist min build
 ","2598837 [fixed] bower build
 8c428ff [fixed] dist min build"
-243,"
+246,"
 92b9077 [changed] file name of dist builds
 ",92b9077 [changed] file name of dist builds
-244,"
+247,"
 3a4732e [changed] global export to ReactRouter
 ",3a4732e [changed] global export to ReactRouter
-245,"
+248,"
 baf2257 [fixed] dist files
 ",baf2257 [fixed] dist files
-246,"
+249,"
 React 0.11.x is now required.
 this.props.activeRoute became this.props.activeRouteHandler()
 
@@ -5524,7 +5611,7 @@ baf79b6 [fixed] Avoid some warnings
 8562482 [added] ActiveState mixin
 616f8bf [changed] Preserve forward slashes in URL params
 6c74c69 [changed] Combine URL helpers into URL module"
-247,"
+250,"
 0f86654 [fixed] checks for class instead of components
 a3d6e2a [changed] Render empty div before transition hooks
 f474ab1 [changed] '.' is no longer a path delimeter
@@ -5537,7 +5624,7 @@ f474ab1 [changed] '.' is no longer a path delimeter
 f3dcdd7 [fixed] injectParams invariant should not throw on values that coerce to false.
 468bf3b [changed] Deprecate Router interface
 31d1a6e [added] renderComponentToString()"
-248,"The Router function was removed.
+251,"The Router function was removed.
 ``` js
 // 0.1.x
 var router = Router(routes);

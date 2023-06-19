@@ -71,7 +71,7 @@ def summarize_data():
 
     def num_release_notes_sentences(release_notes):
         result = []
-        for col in ['Release Note', 'Release Note With Abstraction']:
+        for col in ['Release Note', 'Release Note Abstract']:
             all_release_note_sentences = []
             for release_note in release_notes[col]:
                 release_note_sentences = str(release_note).split('\n')
@@ -137,4 +137,4 @@ def summarize_data():
     abstract_data.to_csv(os.path.join(data_info_folder, 'abstract_data.csv'))
   
 
-summarize_result(approach='LSTM_model')
+summarize_data()

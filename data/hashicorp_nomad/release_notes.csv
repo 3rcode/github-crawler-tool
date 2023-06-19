@@ -1,13 +1,82 @@
-Index,Release Note,Release Note With Abstraction
-1,"1.5.5 (May 05, 2023)
+Index,Release Note,Release Note Abstract
+1,"1.5.6 (May 19, 2023)
+IMPROVEMENTS:
+
+core: Prevent task.kill_timeout being greater than update.progress_deadline [GH-16761]
+
+BUG FIXES:
+
+bug: Corrected status description and modification time for canceled evaluations [GH-17071]
+build: Linux packages now have vendor label and set the default label to HashiCorp. This fix is implemented for any future releases, but will not be updated for historical releases [GH-16071]
+client: Fixed a bug where restarting a terminal allocation turns it into a zombie where allocation and task hooks will run unexpectedly [GH-17175]
+client: clean up resources upon failure to restore task during client restart [GH-17104]
+logs: Fixed a bug where disabling log collection would prevent Windows tasks from starting [GH-17199]
+scale: Fixed a bug where evals could be created with the wrong type [GH-17092]
+scheduler: Fixed a bug where implicit spread targets were treated as separate targets for scoring [GH-17195]
+scheduler: Fixed a bug where scores for spread scheduling could be -Inf [GH-17198]
+services: Fixed a bug preventing group service deregistrations after alloc restarts [GH-16905]
+","1.5.6 (May 19, 2023)
+IMPROVEMENTS:
+core: Prevent task.kill_timeout being greater than update.progress_deadline [GH-16761]
+BUG FIXES:
+bug: Corrected status description and modification time for canceled evaluations [GH-17071]
+build: Linux packages now have vendor label and set the default label to HashiCorp. This fix is implemented for any future releases, but will not be updated for historical releases [GH-16071]
+client: Fixed a bug where restarting a terminal allocation turns it into a zombie where allocation and task hooks will run unexpectedly [GH-17175]
+client: clean up resources upon failure to restore task during client restart [GH-17104]
+logs: Fixed a bug where disabling log collection would prevent Windows tasks from starting [GH-17199]
+scale: Fixed a bug where evals could be created with the wrong type [GH-17092]
+scheduler: Fixed a bug where implicit spread targets were treated as separate targets for scoring [GH-17195]
+scheduler: Fixed a bug where scores for spread scheduling could be -Inf [GH-17198]
+services: Fixed a bug preventing group service deregistrations after alloc restarts [GH-16905]"
+2,"1.4.10 (May 19, 2023)
+IMPROVEMENTS:
+
+core: Prevent task.kill_timeout being greater than update.progress_deadline [GH-16761]
+
+BUG FIXES:
+
+bug: Corrected status description and modification time for canceled evaluations [GH-17071]
+client: Fixed a bug where restarting a terminal allocation turns it into a zombie where allocation and task hooks will run unexpectedly [GH-17175]
+client: clean up resources upon failure to restore task during client restart [GH-17104]
+scale: Fixed a bug where evals could be created with the wrong type [GH-17092]
+scheduler: Fixed a bug where implicit spread targets were treated as separate targets for scoring [GH-17195]
+scheduler: Fixed a bug where scores for spread scheduling could be -Inf [GH-17198]
+","1.4.10 (May 19, 2023)
+IMPROVEMENTS:
+core: Prevent task.kill_timeout being greater than update.progress_deadline [GH-16761]
+BUG FIXES:
+bug: Corrected status description and modification time for canceled evaluations [GH-17071]
+client: Fixed a bug where restarting a terminal allocation turns it into a zombie where allocation and task hooks will run unexpectedly [GH-17175]
+client: clean up resources upon failure to restore task during client restart [GH-17104]
+scale: Fixed a bug where evals could be created with the wrong type [GH-17092]
+scheduler: Fixed a bug where implicit spread targets were treated as separate targets for scoring [GH-17195]
+scheduler: Fixed a bug where scores for spread scheduling could be -Inf [GH-17198]"
+3,"1.3.15 (May 19, 2023)
+BUG FIXES:
+
+bug: Corrected status description and modification time for canceled evaluations [GH-17071]
+client: Fixed a bug where restarting a terminal allocation turns it into a zombie where allocation and task hooks will run unexpectedly [GH-17175]
+client: clean up resources upon failure to restore task during client restart [GH-17104]
+scale: Fixed a bug where evals could be created with the wrong type [GH-17092]
+scheduler: Fixed a bug where implicit spread targets were treated as separate targets for scoring [GH-17195]
+scheduler: Fixed a bug where scores for spread scheduling could be -Inf [GH-17198]
+","1.3.15 (May 19, 2023)
+BUG FIXES:
+bug: Corrected status description and modification time for canceled evaluations [GH-17071]
+client: Fixed a bug where restarting a terminal allocation turns it into a zombie where allocation and task hooks will run unexpectedly [GH-17175]
+client: clean up resources upon failure to restore task during client restart [GH-17104]
+scale: Fixed a bug where evals could be created with the wrong type [GH-17092]
+scheduler: Fixed a bug where implicit spread targets were treated as separate targets for scoring [GH-17195]
+scheduler: Fixed a bug where scores for spread scheduling could be -Inf [GH-17198]"
+4,"1.5.5 (May 05, 2023)
 BUG FIXES:
 
 logging: Fixed a bug where alloc logs would not be collected after an upgrade to 1.5.4 [GH-17087]
 ","1.5.5 (May 05, 2023)
 BUG FIXES:
 logging: Fixed a bug where alloc logs would not be collected after an upgrade to 1.5.4 [GH-17087]"
-2,"1.3.14 (May 03, 2023)","1.3.14 (May 03, 2023)"
-3,"1.5.4 (May 02, 2023)
+5,"1.3.14 (May 03, 2023)","1.3.14 (May 03, 2023)"
+6,"1.5.4 (May 02, 2023)
 BREAKING CHANGES:
 
 artifact: environment variables no longer inherited by default from Nomad client [GH-15514]
@@ -88,7 +157,7 @@ scheduler: Fix reconciliation of reconnecting allocs when the replacement alloca
 scheduler: honor false value for distinct_hosts constraint [GH-16907]
 server: Added verification of cron jobs already running before forcing new evals right after leader change [GH-16583]
 ui: Fix a visual bug where evaluation response wasn't scrollable in the Web UI. [GH-16960]"
-4,"1.4.9 (May 02, 2023)
+7,"1.4.9 (May 02, 2023)
 IMPROVEMENTS:
 
 build: Update from Go 1.20.3 to Go 1.20.4 [GH-17056]
@@ -133,7 +202,7 @@ scheduler: Fix reconciliation of reconnecting allocs when the replacement alloca
 scheduler: honor false value for distinct_hosts constraint [GH-16907]
 server: Added verification of cron jobs already running before forcing new evals right after leader change [GH-16583]
 services: Fixed a bug preventing group service deregistrations after alloc restarts [GH-16905]"
-5,"1.5.3 (April 04, 2023)
+8,"1.5.3 (April 04, 2023)
 SECURITY:
 
 acl: Fixed a bug where unauthenticated HTTP API requests through the client could bypass ACL policy checking CVE-2023-1782 [GH-16775] [GH-16775]
@@ -142,21 +211,21 @@ build: update to Go 1.20.3 to prevent denial of service attack via malicious HTT
 SECURITY:
 acl: Fixed a bug where unauthenticated HTTP API requests through the client could bypass ACL policy checking CVE-2023-1782 [GH-16775] [GH-16775]
 build: update to Go 1.20.3 to prevent denial of service attack via malicious HTTP headers CVE-2023-24534 [GH-16788]"
-6,"1.4.8 (April 04, 2023)
+9,"1.4.8 (April 04, 2023)
 SECURITY:
 
 build: update to Go 1.20.3 to prevent denial of service attack via malicious HTTP headers CVE-2023-24534 [GH-16788]
 ","1.4.8 (April 04, 2023)
 SECURITY:
 build: update to Go 1.20.3 to prevent denial of service attack via malicious HTTP headers CVE-2023-24534 [GH-16788]"
-7,"1.3.13 (April 04, 2023)
+10,"1.3.13 (April 04, 2023)
 SECURITY:
 
 build: update to Go 1.20.3 to prevent denial of service attack via malicious HTTP headers CVE-2023-24534 [GH-16788]
 ","1.3.13 (April 04, 2023)
 SECURITY:
 build: update to Go 1.20.3 to prevent denial of service attack via malicious HTTP headers CVE-2023-24534 [GH-16788]"
-8,"1.5.2 (March 21, 2023)
+11,"1.5.2 (March 21, 2023)
 BREAKING CHANGES:
 
 cli: nomad login no longer requires -type flag, since auth method names are globally unique. [GH-16504]
@@ -201,7 +270,7 @@ client: Fixed a bug where cpuset initialization fails after Client restart [GH-1
 core: Fixed a bug where Dynamic Node Metadata requests could crash servers [GH-16549]
 plugin: Add missing fields to TaskConfig so they can be accessed by external task drivers [GH-16434]
 services: Fixed a bug where a service would be deregistered twice [GH-16289]"
-9,"1.4.7 (March 21, 2023)
+12,"1.4.7 (March 21, 2023)
 IMPROVEMENTS:
 
 build: Update to go1.20.2 [GH-16427]
@@ -220,7 +289,7 @@ client: Fixed a bug where clients using Consul discovery to join the cluster wou
 client: Fixed a bug where cpuset initialization fails after Client restart [GH-16467]
 plugin: Add missing fields to TaskConfig so they can be accessed by external task drivers [GH-16434]
 services: Fixed a bug where a service would be deregistered twice [GH-16289]"
-10,"1.3.12 (March 21, 2023)
+13,"1.3.12 (March 21, 2023)
 IMPROVEMENTS:
 
 build: Update to go1.20.2 [GH-16427]
@@ -239,7 +308,7 @@ client: Fixed a bug where clients using Consul discovery to join the cluster wou
 client: Fixed a bug where cpuset initialization fails after Client restart [GH-16467]
 plugin: Add missing fields to TaskConfig so they can be accessed by external task drivers [GH-16434]
 services: Fixed a bug where a service would be deregistered twice [GH-16289]"
-11,"1.5.1 (March 10, 2023)
+14,"1.5.1 (March 10, 2023)
 BREAKING CHANGES:
 
 api: job register and register requests from API clients older than version 0.12.1 will not longer emit an evaluation [GH-16305]
@@ -306,7 +375,7 @@ server: Fixed a bug where the system reconcile summaries command and API would n
 service: Fixed a bug where attaching a policy to a job would prevent workload identities for the job from reading the service registration API [GH-16316]
 ui: fixed an issue where system/sysbatch jobs with wildcard datacenters (like [""dc*""]) were not showing client status charts [GH-16274]
 ui: fixed outbound link to outage recovery on error page [GH-16365]"
-12,"1.4.6 (March 10, 2023)
+15,"1.4.6 (March 10, 2023)
 SECURITY:
 
 variables: Fixed a bug where a workload-associated policy with a deny capability was ignored for the workload's own variables CVE-2023-1296 [GH-16349]
@@ -337,7 +406,7 @@ scheduler: Fixed a bug where collisions in dynamic port offerings would result i
 server: Fixed a bug where deregistering a job that was already garbage collected would create a new evaluation [GH-16287]
 server: Fixed a bug where node updates that produced errors from service discovery or CSI plugin updates were not logged [GH-16287]
 server: Fixed a bug where the system reconcile summaries command and API would not return any scheduler-related errors [GH-16287]"
-13,"1.3.11 (March 10, 2023)
+16,"1.3.11 (March 10, 2023)
 IMPROVEMENTS:
 
 env/ec2: update cpu metadata [GH-16417]
@@ -360,7 +429,7 @@ scheduler: Fixed a bug where collisions in dynamic port offerings would result i
 server: Fixed a bug where deregistering a job that was already garbage collected would create a new evaluation [GH-16287]
 server: Fixed a bug where node updates that produced errors from service discovery or CSI plugin updates were not logged [GH-16287]
 server: Fixed a bug where the system reconcile summaries command and API would not return any scheduler-related errors [GH-16287]"
-14,"1.5.0 (March 01, 2023)
+17,"1.5.0 (March 01, 2023)
 FEATURES:
 
 Dynamic Node Metadata: Allow users and tasks to update Node metadata via an API [GH-15844]
@@ -619,7 +688,7 @@ ui: Fix navigation to pages for jobs that are not in the default namespace [GH-1
 ui: Fixed a bug where the exec window would not maintain namespace upon refresh [GH-15454]
 ui: Scale down logger height in the UI when the sidebar container also has task events [GH-15759]
 volumes: Fixed a bug where per_alloc was allowed for volume blocks on system and sysbatch jobs, which do not have an allocation index [GH-16030]"
-15,"1.4.5 (March 01, 2023)
+18,"1.4.5 (March 01, 2023)
 BREAKING CHANGES:
 
 core: Ensure no leakage of evaluations for batch jobs. Prior to this change allocations and evaluations for batch jobs were never garbage collected until the batch job was explicitly stopped. The new batch_eval_gc_threshold server configuration controls how often they are collected. The default threshold is 24h. [GH-15097]
@@ -756,7 +825,7 @@ ui: Fix navigation to pages for jobs that are not in the default namespace [GH-1
 ui: Fixed a bug where the exec window would not maintain namespace upon refresh [GH-15454]
 ui: Scale down logger height in the UI when the sidebar container also has task events [GH-15759]
 volumes: Fixed a bug where per_alloc was allowed for volume blocks on system and sysbatch jobs, which do not have an allocation index [GH-16030]"
-16,"1.3.10 (March 01, 2023)
+19,"1.3.10 (March 01, 2023)
 BREAKING CHANGES:
 
 core: Ensure no leakage of evaluations for batch jobs. Prior to this change allocations and evaluations for batch jobs were never garbage collected until the batch job was explicitly stopped. The new batch_eval_gc_threshold server configuration controls how often they are collected. The default threshold is 24h. [GH-15097]
@@ -847,7 +916,7 @@ template: Fixed a bug that caused the chage script to fail to run [GH-15915]
 ui: Fix allocation memory chart to display the same value as the CLI [GH-15909]
 ui: Fix navigation to pages for jobs that are not in the default namespace [GH-15906]
 volumes: Fixed a bug where per_alloc was allowed for volume blocks on system and sysbatch jobs, which do not have an allocation index [GH-16030]"
-17,"FEATURES:
+20,"FEATURES:
 
 Dynamic Node Metadata: Allow users and tasks to update Node metadata via an API [GH-15844]
 SSO via OIDC: Allow users to authenticate with Nomad via OIDC providers [GH-15816]
@@ -1104,7 +1173,7 @@ ui: Fix navigation to pages for jobs that are not in the default namespace [GH-1
 ui: Fixed a bug where the exec window would not maintain namespace upon refresh [GH-15454]
 ui: Scale down logger height in the UI when the sidebar container also has task events [GH-15759]
 volumes: Fixed a bug where per_alloc was allowed for volume blocks on system and sysbatch jobs, which do not have an allocation index [GH-16030]"
-18,"1.4.4 (February 14, 2023)
+21,"1.4.4 (February 14, 2023)
 SECURITY:
 
 artifact: Provide mitigations against unbounded artifact decompression [GH-16126]
@@ -1113,7 +1182,7 @@ build: Update to go1.20.1 [GH-16182]
 SECURITY:
 artifact: Provide mitigations against unbounded artifact decompression [GH-16126]
 build: Update to go1.20.1 [GH-16182]"
-19,"1.3.9 (February 14, 2023)
+22,"1.3.9 (February 14, 2023)
 SECURITY:
 
 artifact: Provide mitigations against unbounded artifact decompression [GH-16126]
@@ -1122,7 +1191,7 @@ build: Update to go1.20.1 [GH-16182]
 SECURITY:
 artifact: Provide mitigations against unbounded artifact decompression [GH-16126]
 build: Update to go1.20.1 [GH-16182]"
-20,"1.2.16 (February 14, 2023)
+23,"1.2.16 (February 14, 2023)
 SECURITY:
 
 artifact: Provide mitigations against unbounded artifact decompression [GH-16126]
@@ -1131,7 +1200,7 @@ build: Update to go1.20.1 [GH-16182]
 SECURITY:
 artifact: Provide mitigations against unbounded artifact decompression [GH-16126]
 build: Update to go1.20.1 [GH-16182]"
-21,"1.5.0 (Unreleased)
+24,"1.5.0 (Unreleased)
 FEATURES:
 
 Dynamic Node Metadata: Allow users and tasks to update Node metadata via an API [GH-15844]
@@ -1338,7 +1407,7 @@ ui: Fix navigation to pages for jobs that are not in the default namespace [GH-1
 ui: Fixed a bug where the exec window would not maintain namespace upon refresh [GH-15454]
 ui: Scale down logger height in the UI when the sidebar container also has task events [GH-15759]
 volumes: Fixed a bug where per_alloc was allowed for volume blocks on system and sysbatch jobs, which do not have an allocation index [GH-16030]"
-22,"1.4.3 (November 21, 2022)
+25,"1.4.3 (November 21, 2022)
 IMPROVEMENTS:
 
 api: Added an API for counting evaluations that match a filter [GH-15147]
@@ -1417,7 +1486,7 @@ template: Fixed a bug where template could cause agent panic on startup [GH-1519
 ui: Fixed a bug where the task log sidebar would close and re-open if the parent job state changed [GH-15146]
 variables: Fixed a bug where a long-running rekey could hit the nack timeout [GH-15102]
 wi: Fixed a bug where clients running pre-1.4.0 allocations would erase the token used to query service registrations after upgrade [GH-15121]"
-23,"1.3.8 (November 21, 2022)
+26,"1.3.8 (November 21, 2022)
 BUG FIXES:
 
 api: Ensure all request body decode errors return a 400 status code [GH-15252]
@@ -1450,7 +1519,7 @@ fingerprint: Ensure Nomad can correctly fingerprint Consul gRPC where the Consul
 scheduler: Fixed a bug that prevented disconnected allocations to be updated after they reconnect. [GH-15068]
 scheduler: Prevent unnecessary placements when disconnected allocations reconnect. [GH-15068]
 template: Fixed a bug where template could cause agent panic on startup [GH-15192]"
-24,"1.2.15 (November 21, 2022)
+27,"1.2.15 (November 21, 2022)
 BUG FIXES:
 
 api: Ensure all request body decode errors return a 400 status code [GH-15252]
@@ -1475,7 +1544,7 @@ drivers: Fixed a bug where one goroutine was leaked per task [GH-15180]
 drivers: pass missing propagation_mode configuration for volume mounts to external plugins [GH-15096]
 event_stream: fixed a bug where dynamic port values would fail to serialize in the event stream [GH-12916]
 fingerprint: Ensure Nomad can correctly fingerprint Consul gRPC where the Consul agent is running v1.14.0 or greater [GH-15309]"
-25,"1.4.2 (October 26, 2022)
+28,"1.4.2 (October 26, 2022)
 SECURITY:
 
 event stream: Fixed a bug where ACL token expiration was not checked when emitting events [GH-15013]
@@ -1562,7 +1631,7 @@ services: Fixed a regression where check task validation stopped allowing some c
 ui: Fixed line charts to update x-axis (time) where relevant [GH-14814]
 ui: Fixes an issue where service tags would bleed past the edge of the screen [GH-14832]
 variables: Fixed a bug where Nomad version checking was not enforced for writing to variables [GH-14912]"
-26,"1.3.7 (October 26, 2022)
+29,"1.3.7 (October 26, 2022)
 IMPROVEMENTS:
 
 deps: update go-memdb for goroutine leak fix [GH-14983]
@@ -1589,7 +1658,7 @@ consul: atomically register checks on initial service registration [GH-14944]
 deps: Update hashicorp/raft to v1.3.11; fixes unstable leadership on server removal [GH-15021]
 nomad native service discovery: Ensure all local servers meet v.1.3.0 minimum before service registrations can be written [GH-14924]
 scheduler: Fixed a bug where version checking for disconnected clients handling was enforced across regions [GH-14911]"
-27,"1.2.14 (October 26, 2022)
+30,"1.2.14 (October 26, 2022)
 IMPROVEMENTS:
 
 deps: update go-memdb for goroutine leak fix [GH-14983]
@@ -1604,14 +1673,14 @@ deps: update go-memdb for goroutine leak fix [GH-14983]
 BUG FIXES:
 acl: Fixed a bug where Nomad version checking for one-time tokens was enforced across regions [GH-14910]
 deps: Update hashicorp/raft to v1.3.11; fixes unstable leadership on server removal [GH-15021]"
-28,"1.4.1 (October 06, 2022)
+31,"1.4.1 (October 06, 2022)
 BUG FIXES:
 
 keyring: Fixed a panic that can occur during upgrades to 1.4.0 when initializing the keyring [GH-14821]
 ","1.4.1 (October 06, 2022)
 BUG FIXES:
 keyring: Fixed a panic that can occur during upgrades to 1.4.0 when initializing the keyring [GH-14821]"
-29,"1.4.0 (October 04, 2022)
+32,"1.4.0 (October 04, 2022)
 FEATURES:
 
 ACL Roles: Added support for ACL Roles. [GH-14320]
@@ -1746,7 +1815,7 @@ rpc (Enterprise): check for spec changes in all regions when registering multire
 scheduler (Enterprise): Fixed bug where the scheduler would treat multiregion jobs as paused for job types that don't use deployments [GH-14659]
 template: Fixed a bug where the splay timeout was not being applied when change_mode was set to script. [GH-14749]
 ui: Remove extra space when displaying the version in the menu footer. [GH-14457]"
-30,"1.3.6 (October 04, 2022)
+33,"1.3.6 (October 04, 2022)
 SECURITY:
 
 client: recover from panics caused by artifact download to prevent the Nomad client from crashing [GH-14696]
@@ -1805,7 +1874,7 @@ rpc: check for spec changes in all regions when registering multiregion jobs [GH
 scheduler: Fixed bug where the scheduler would treat multiregion jobs as paused for job types that don't use deployments [GH-14659]
 template: Fixed a bug where the splay timeout was not being applied when change_mode was set to script. [GH-14749]
 ui: Remove extra space when displaying the version in the menu footer. [GH-14457]"
-31,"1.2.13 (October 04, 2022)
+34,"1.2.13 (October 04, 2022)
 SECURITY:
 
 client: recover from panics caused by artifact download to prevent the Nomad client from crashing [GH-14696]
@@ -1836,7 +1905,7 @@ jobspec: Fixed a bug where an artifact with headers configuration would fail to 
 metrics: Update client node_scheduling_eligibility value with server heartbeats. [GH-14483]
 quotas (Enterprise): Fixed a server crashing panic when updating and checking a quota concurrently.
 rpc: check for spec changes in all regions when registering multiregion jobs [GH-14519]"
-32,"1.4.0 (Unreleased)
+35,"1.4.0 (Unreleased)
 FEATURES:
 
 ACL Roles: Added support for ACL Roles. [GH-14320]
@@ -1969,7 +2038,7 @@ quotas (Enterprise): Fixed a server crashing panic when updating and checking a 
 rpc (Enterprise): check for spec changes in all regions when registering multiregion jobs [GH-14519]
 scheduler (Enterprise): Fixed bug where the scheduler would treat multiregion jobs as paused for job types that don't use deployments [GH-14659]
 ui: Remove extra space when displaying the version in the menu footer. [GH-14457]"
-33,"1.4.0 (Unreleased)
+36,"1.4.0 (Unreleased)
 FEATURES:
 
 ACL Roles: Added support for ACL Roles. [GH-14320]
@@ -2070,7 +2139,7 @@ rpc: check for spec changes in all regions when registering multiregion jobs [GH
 ui: Remove extra space when displaying the version in the menu footer. [GH-14457]
 ui: Stabilizes visual regression tests [GH-14551]
 ui: when creating a secure variable, check against your namespaces rather than assuming default [GH-13991]"
-34,"1.3.5 (August 31, 2022)
+37,"1.3.5 (August 31, 2022)
 IMPROVEMENTS:
 
 cgroups: use cgroup.kill interface file when using cgroups v2 [GH-14371]
@@ -2089,7 +2158,7 @@ BUG FIXES:
 cli: Fixed a bug where forcing a periodic job would fail if the job ID prefix-matched other periodic jobs [GH-14333]
 template: Fixed a bug that could cause Nomad to panic when using change_mode = ""script"" [GH-14374]
 ui: Revert a change that resulted in UI errors when ACLs were not used. [GH-14381]"
-35,"1.2.12 (August 31, 2022)
+38,"1.2.12 (August 31, 2022)
 IMPROVEMENTS:
 
 consul: Reduce load on Consul leader server by allowing stale results when listing namespaces. [GH-12953]
@@ -2102,14 +2171,14 @@ IMPROVEMENTS:
 consul: Reduce load on Consul leader server by allowing stale results when listing namespaces. [GH-12953]
 BUG FIXES:
 cli: Fixed a bug where forcing a periodic job would fail if the job ID prefix-matched other periodic jobs [GH-14333]"
-36,"1.1.18 (August 31, 2022)
+39,"1.1.18 (August 31, 2022)
 BUG FIXES:
 
 cli: Fixed a bug where forcing a periodic job would fail if the job ID prefix-matched other periodic jobs [GH-14333]
 ","1.1.18 (August 31, 2022)
 BUG FIXES:
 cli: Fixed a bug where forcing a periodic job would fail if the job ID prefix-matched other periodic jobs [GH-14333]"
-37,"1.3.4 (August 25, 2022)
+40,"1.3.4 (August 25, 2022)
 IMPROVEMENTS:
 
 api: HTTP server now returns a 429 error code when hitting the connection limit [GH-13621]
@@ -2172,7 +2241,7 @@ ui: Fixed a bug that caused the allocation details page to display the stats bar
 ui: Removes duplicate breadcrumb header when navigating from child job back to parent. [GH-14115]
 vault: Fixed a bug where Vault clients were recreated when the server configuration was reloaded, even if there were no changes to the Vault configuration. [GH-14298]
 vault: Fixed a bug where changing the Vault configuration namespace field was not detected as a change during server configuration reload. [GH-14298]"
-38,"1.2.11 (August 25, 2022)
+41,"1.2.11 (August 25, 2022)
 IMPROVEMENTS:
 
 build: update to go1.19 [GH-14132]
@@ -2195,7 +2264,7 @@ client: Fixed a bug where user lookups would hang or panic [GH-14248]
 ui: Fixed a bug that caused the allocation details page to display the stats bar chart even if the task was pending. [GH-14224]
 vault: Fixed a bug where Vault clients were recreated when the server configuration was reloaded, even if there were no changes to the Vault configuration. [GH-14298]
 vault: Fixed a bug where changing the Vault configuration namespace field was not detected as a change during server configuration reload. [GH-14298]"
-39,"1.1.17 (August 25, 2022)
+42,"1.1.17 (August 25, 2022)
 BUG FIXES:
 
 client/logmon: fixed a bug where logmon cannot find nomad executable [GH-14297]
@@ -2208,7 +2277,7 @@ client/logmon: fixed a bug where logmon cannot find nomad executable [GH-14297]
 ui: Fixed a bug that caused the allocation details page to display the stats bar chart even if the task was pending. [GH-14224]
 vault: Fixed a bug where Vault clients were recreated when the server configuration was reloaded, even if there were no changes to the Vault configuration. [GH-14298]
 vault: Fixed a bug where changing the Vault configuration namespace field was not detected as a change during server configuration reload. [GH-14298]"
-40,"1.3.3 (August 05, 2022)
+43,"1.3.3 (August 05, 2022)
 IMPROVEMENTS:
 
 csi: Add stage_publish_base_dir field to csi_plugin block to support plugins that require a specific staging/publishing directory for mounts [GH-13919]
@@ -2243,7 +2312,7 @@ qemu: restore the monitor socket path when restoring a QEMU task. [GH-14000]
 servicedisco: Fixed a bug where non-unique services would escape job validation [GH-13869]
 ui: Add missing breadcrumb in the Evaluations page. [GH-13865]
 ui: Fixed a bug where task memory was reported as zero on systems using cgroups v2 [GH-13670]"
-41,"1.2.10 (August 05, 2022)
+44,"1.2.10 (August 05, 2022)
 BUG FIXES:
 
 acl: Fixed a bug where the timestamp for expiring one-time tokens was not deterministic between servers [GH-13737]
@@ -2258,7 +2327,7 @@ deployments: Fixed a bug that prevented auto-approval if canaries were marked as
 metrics: Fixed a bug where blocked evals with no class produced no dc:class scope metrics [GH-13786]
 namespaces: Fixed a bug that allowed deleting a namespace that contained a CSI volume [GH-13880]
 qemu: restore the monitor socket path when restoring a QEMU task. [GH-14000]"
-42,"1.1.16 (August 05, 2022)
+45,"1.1.16 (August 05, 2022)
 BUG FIXES:
 
 acl: Fixed a bug where the timestamp for expiring one-time tokens was not deterministic between servers [GH-13737]
@@ -2271,7 +2340,7 @@ acl: Fixed a bug where the timestamp for expiring one-time tokens was not determ
 deployments: Fixed a bug that prevented auto-approval if canaries were marked as unhealthy during deployment [GH-14001]
 namespaces: Fixed a bug that allowed deleting a namespace that contained a CSI volume [GH-13880]
 qemu: restore the monitor socket path when restoring a QEMU task. [GH-14000]"
-43,"1.3.2 (July 13, 2022)
+46,"1.3.2 (July 13, 2022)
 IMPROVEMENTS:
 
 agent: Added delete support to the eval HTTP API [GH-13492]
@@ -2370,7 +2439,7 @@ ui: Fixed a bug that prevented the UI task exec functionality to work from behin
 ui: Fixed an issue where editing or running a job with a namespace via the UI would throw a 404 on redirect. [GH-13588]
 ui: fixed a bug where links to jobs with ""@"" in their name would mis-identify namespace and 404 [GH-13012]
 volumes: Fixed a bug where additions, updates, or removals of host volumes or CSI volumes were not treated as destructive updates [GH-13008]"
-44,"1.2.9 (July 13, 2022)
+47,"1.2.9 (July 13, 2022)
 BUG FIXES:
 
 api: Fix listing evaluations with the wildcard namespace and an ACL token [GH-13552]
@@ -2411,7 +2480,7 @@ state: Fix listing evaluations from all namespaces [GH-13551]
 ui: Allow running jobs from a namespace-limited token [GH-13659]
 ui: Fixed a bug that prevented the UI task exec functionality to work from behind a reverse proxy. [GH-12925]
 volumes: Fixed a bug where additions, updates, or removals of host volumes or CSI volumes were not treated as destructive updates [GH-13008]"
-45,"1.1.15 (July 13, 2022)
+48,"1.1.15 (July 13, 2022)
 BUG FIXES:
 
 api: Fixed a bug where Consul token was not respected for job revert API [GH-13065]
@@ -2442,7 +2511,7 @@ lifecycle: fixed a bug where sidecar tasks were not being stopped last [GH-13055
 ui: Allow running jobs from a namespace-limited token [GH-13659]
 ui: Fixed a bug that prevented the UI task exec functionality to work from behind a reverse proxy. [GH-12925]
 volumes: Fixed a bug where additions, updates, or removals of host volumes or CSI volumes were not treated as destructive updates [GH-13008]"
-46,"1.3.1 (May 19, 2022)
+49,"1.3.1 (May 19, 2022)
 SECURITY:
 
 A vulnerability was identified in the go-getter library that Nomad uses for its artifacts such that a specially crafted Nomad jobspec can be used for privilege escalation onto client agent hosts. CVE-2022-30324 [GH-13057]
@@ -2455,21 +2524,21 @@ SECURITY:
 A vulnerability was identified in the go-getter library that Nomad uses for its artifacts such that a specially crafted Nomad jobspec can be used for privilege escalation onto client agent hosts. CVE-2022-30324 [GH-13057]
 BUG FIXES:
 agent: fixed a panic on startup when the server.protocol_version config parameter was set [GH-12962]"
-47,"1.2.8 (May 19, 2022)
+50,"1.2.8 (May 19, 2022)
 SECURITY:
 
 A vulnerability was identified in the go-getter library that Nomad uses for its artifacts such that a specially crafted Nomad jobspec can be used for privilege escalation onto client agent hosts. CVE-2022-30324 [GH-13057]
 ","1.2.8 (May 19, 2022)
 SECURITY:
 A vulnerability was identified in the go-getter library that Nomad uses for its artifacts such that a specially crafted Nomad jobspec can be used for privilege escalation onto client agent hosts. CVE-2022-30324 [GH-13057]"
-48,"1.1.14 (May 19, 2022)
+51,"1.1.14 (May 19, 2022)
 SECURITY:
 
 A vulnerability was identified in the go-getter library that Nomad uses for its artifacts such that a specially crafted Nomad jobspec can be used for privilege escalation onto client agent hosts. CVE-2022-30324 [GH-13057]
 ","1.1.14 (May 19, 2022)
 SECURITY:
 A vulnerability was identified in the go-getter library that Nomad uses for its artifacts such that a specially crafted Nomad jobspec can be used for privilege escalation onto client agent hosts. CVE-2022-30324 [GH-13057]"
-49,"1.3.0 (May 11, 2022)
+52,"1.3.0 (May 11, 2022)
 FEATURES:
 
 Edge compute improvements: Added support for reconnecting healthy allocations when disconnected clients reconnect. [GH-12476]
@@ -2740,7 +2809,7 @@ ui: Fix the link target for CSI volumes on the task detail page [GH-11896]
 ui: Fixed a bug where volumes were being incorrectly linked when per_alloc=true [GH-12713]
 ui: fix broken link to task-groups in the Recent Allocations table in the Job Detail overview page. [GH-12765]
 ui: fix the unit for the task row memory usage metric [GH-11980]"
-50,"1.2.7 (May 10, 2022)
+53,"1.2.7 (May 10, 2022)
 SECURITY:
 
 server: validate mTLS certificate names on agent to agent endpoints [GH-11956]
@@ -2821,7 +2890,7 @@ jobspec: Fixed a bug where connect sidecar resources were ignored when using HCL
 scheduler: fixed a bug where in-place updates on ineligible nodes would be ignored [GH-12264]
 ui: Fix the link target for CSI volumes on the task detail page [GH-11896]
 ui: fix the unit for the task row memory usage metric [GH-11980]"
-51,"1.1.13 (May 10, 2022)
+54,"1.1.13 (May 10, 2022)
 SECURITY:
 
 server: validate mTLS certificate names on agent to agent endpoints [GH-11956]
@@ -2904,8 +2973,8 @@ jobspec: Fixed a bug where connect sidecar resources were ignored when using HCL
 scheduler: fixed a bug where in-place updates on ineligible nodes would be ignored [GH-12264]
 ui: Fix the link target for CSI volumes on the task detail page [GH-11896]
 ui: fix the unit for the task row memory usage metric [GH-11980]"
-52,,
-53,"1.3.0 (Unreleased)
+55,,
+56,"1.3.0 (Unreleased)
 FEATURES:
 
 Native service discovery: Register and discover services using builtin simple service discovery. [GH-12368]
@@ -3120,7 +3189,7 @@ server: Write peers.json file with correct permissions [GH-12369]
 template: Fixed a bug preventing allowing all consul-template functions. [GH-12312]
 ui: Fix the link target for CSI volumes on the task detail page [GH-11896]
 ui: fix the unit for the task row memory usage metric [GH-11980]"
-54,"1.2.6 (February 9, 2022)
+57,"1.2.6 (February 9, 2022)
 BACKWARDS INCOMPATIBILITIES:
 
 ACL authentication is now required for the Nomad API job parse endpoint to address a potential security vulnerability
@@ -3139,7 +3208,7 @@ Add ACL requirement and HCL validation to the job parse API endpoint to prevent 
 Fix race condition in use of go-getter that could cause a client agent to download the wrong artifact into the wrong destination. CVE-2022-24686 [GH-12036]
 Prevent panic in spread iterator during allocation stop. CVE-2022-24684 [GH-12039]
 Resolve symlinks to prevent unauthorized access to files outside the allocation directory. CVE-2022-24683 [GH-12037]"
-55,"1.2.5 (February 1, 2022)
+58,"1.2.5 (February 1, 2022)
 BUG FIXES:
 
 csi: Fixed a bug where garbage collected allocations could block new claims on a volume [GH-11890]
@@ -3152,7 +3221,7 @@ csi: Fixed a bug where garbage collected allocations could block new claims on a
 csi: Fixed a bug where releasing volume claims would fail with ACL errors after leadership transitions. [GH-11891]
 csi: Unmount volumes from the client before sending unpublish RPC [GH-11892]
 template: Fixed a bug where client template configuration that did not include any of the new 1.2.4 configuration options could result in none of the configuration getting set. [GH-11902]"
-56,"1.2.4 (January 18, 2022)
+59,"1.2.4 (January 18, 2022)
 FEATURES:
 
 ui: Add filters to allocations table in jobs/job/allocation view [GH-11544]
@@ -3275,42 +3344,42 @@ rpc: Fixed scaling policy get index response when the policy is found [GH-11579]
 scheduler: Fixed a performance bug where spread and node affinity can cause a job to take longer than the nack timeout to be evaluated. [GH-11712]
 template: Fixed a bug where templates did not receive an updated vault token if change_mode = ""noop"" was set in the job definition's vault stanza. [GH-11783]
 ui: Fix the ACL requirements for displaying the job details page [GH-11672]"
-57,"1.2.3 (December 13, 2021)
+60,"1.2.3 (December 13, 2021)
 SECURITY:
 
 Updated to Go 1.17.5. Go 1.17.3 contained 2 CVEs. CVE-2021-44717 could allow a task on a Unix system with exhausted file handles to misdirect I/O. CVE-2021-44716 could create unbounded memory growth in HTTP2 servers. Nomad servers do not use HTTP2. [GH-11662]
 ","1.2.3 (December 13, 2021)
 SECURITY:
 Updated to Go 1.17.5. Go 1.17.3 contained 2 CVEs. CVE-2021-44717 could allow a task on a Unix system with exhausted file handles to misdirect I/O. CVE-2021-44716 could create unbounded memory growth in HTTP2 servers. Nomad servers do not use HTTP2. [GH-11662]"
-58,"1.1.9 (December 13, 2021)
+61,"1.1.9 (December 13, 2021)
 SECURITY:
 
 Updated to Go 1.16.12. Earlier versions of Go contained 2 CVEs. CVE-2021-44717 could allow a task on a Unix system with exhausted file handles to misdirect I/O. CVE-2021-44716 could create unbounded memory growth in HTTP2 servers. Nomad servers do not use HTTP2. [GH-11662]
 ","1.1.9 (December 13, 2021)
 SECURITY:
 Updated to Go 1.16.12. Earlier versions of Go contained 2 CVEs. CVE-2021-44717 could allow a task on a Unix system with exhausted file handles to misdirect I/O. CVE-2021-44716 could create unbounded memory growth in HTTP2 servers. Nomad servers do not use HTTP2. [GH-11662]"
-59,"1.0.15 (December 13, 2021)
+62,"1.0.15 (December 13, 2021)
 SECURITY:
 
 Updated to Go 1.16.12. Earlier versions of Go contained 2 CVEs. CVE-2021-44717 could allow a task on a Unix system with exhausted file handles to misdirect I/O. CVE-2021-44716 could create unbounded memory growth in HTTP2 servers. Nomad servers do not use HTTP2. [GH-11662]
 ","1.0.15 (December 13, 2021)
 SECURITY:
 Updated to Go 1.16.12. Earlier versions of Go contained 2 CVEs. CVE-2021-44717 could allow a task on a Unix system with exhausted file handles to misdirect I/O. CVE-2021-44716 could create unbounded memory growth in HTTP2 servers. Nomad servers do not use HTTP2. [GH-11662]"
-60,"1.2.2 (November 24, 2021)
+63,"1.2.2 (November 24, 2021)
 BUG FIXES:
 
 scheduler: Fix panic when system jobs are filtered by node class [GH-11565]
 ","1.2.2 (November 24, 2021)
 BUG FIXES:
 scheduler: Fix panic when system jobs are filtered by node class [GH-11565]"
-61,"1.2.1 (November 19, 2021)
+64,"1.2.1 (November 19, 2021)
 SECURITY:
 
 Allow limiting QEMU arguments to reduce access to host resources. CVE-2021-43415 [GH-11542]
 ","1.2.1 (November 19, 2021)
 SECURITY:
 Allow limiting QEMU arguments to reduce access to host resources. CVE-2021-43415 [GH-11542]"
-62,"1.2.0 (November 15, 2021)
+65,"1.2.0 (November 15, 2021)
 FEATURES:
 
 System Batch scheduler: Run batch jobs cluster-wide with the new 'sysbatch' scheduler. [GH-9160]
@@ -3435,7 +3504,7 @@ rpc: Set the job deregistration eval priority to the job priority [GH-11426]
 rpc: Set the job scale eval priority to the job priority [GH-11429]
 server: Fixed a panic on arm64 platform when dispatching a job with a payload [GH-11396]
 server: Fixed a panic that may occur when preempting multiple allocations on the same node [GH-11346]"
-63,"1.1.6 (October 5, 2021)
+66,"1.1.6 (October 5, 2021)
 SECURITY:
 
 consul/connect: Fixed a bug causing the Nomad agent to panic if a mesh gateway was registered without a proxy block. [GH-11257]
@@ -3456,7 +3525,7 @@ build: Updated to Go 1.16.8 [GH-11253]
 BUG FIXES:
 client: Fixed a memory leak in log collector when tasks restart [GH-11261]
 events: Fixed wildcard namespace handling [GH-10935]"
-64,"1.1.5 (September 20, 2021)
+67,"1.1.5 (September 20, 2021)
 IMPROVEMENTS:
 
 client: Allow Docker hostnames to be configured and interpolated in bridged networking mode [GH-11173]
@@ -3483,7 +3552,7 @@ client: Task vars should take precedence over host vars when performing interpol
 ui: Fixed an issue that prevented periodic and dispatch jobs in a non-default namespace to be properly rendered [GH-11110]
 ui: Fixed an issue when dispatching jobs from a non-default namespace [GH-11141]
 Binaries - link/"
-65,"IMPROVEMENTS:
+68,"IMPROVEMENTS:
 
 deps: Updated go-memdb to v1.3.2 [GH-11185]
 
@@ -3502,7 +3571,7 @@ cli: Display all possible scores in the allocation status table [GH-11128]
 cli: Fixed a bug where the NOMAD_CLI_NO_COLOR environment variable was not always applied [GH-11168]
 client: Task vars should take precedence over host vars when performing interpolation. [GH-11206]
 Binaries - link/"
-66,"1.1.4 (August 26, 2021)
+69,"1.1.4 (August 26, 2021)
 SECURITY:
 
 Restricted access to the Raft RPC layer, so only servers within the region can issue Raft RPC requests. Previously, local clients and federated servers can issue Raft RPC requests directly. CVE-2021-37218 [GH-11084]
@@ -3547,7 +3616,7 @@ server: Fixed a bug where planning job update reports spurious in-place updates 
 ui: Add ability to search across all namespaces [GH-10666]
 ui: Fixed a bug where the ""Dispatch Job"" button was displayed for non-parameterized jobs [GH-11019]
 ui: Fixed a bug where the job dispatch form is not displayed when the job doesn't have meta fields [GH-10934]"
-67,"1.1.3 (July 29, 2021)
+70,"1.1.3 (July 29, 2021)
 BACKWARDS INCOMPATIBILITIES:
 
 api: The Job Run and Plan APIs now use the ?namespace= query parameter before the namespace from the job. This matches region's behavior. Users of api.Client should ensure their Config.Namespace is unset if they want to use the namespace in the job. [GH-10875]
@@ -3630,7 +3699,7 @@ drivers: Fixed bug where Nomad incorrectly reported tasks as recovered successfu
 scheduler: Fixed a bug where updates to the datacenters field were not destructive. [GH-10864]
 ui: Fixes bug where UI was not detecting namespace-specific capabilities. [GH-10893]
 volumes: Fix a bug where the HTTP server would crash if a volume_mount block was empty [GH-10855]"
-68,"1.1.2 (June 22, 2021)
+71,"1.1.2 (June 22, 2021)
 IMPROVEMENTS:
 * cli: Added -monitor flag to deployment status command and automatically monitor deployments from job run command. [GH-10661]
 * cli: Added remainder of available pprof profiles to nomad operator debug capture. [GH-10748]
@@ -3661,7 +3730,7 @@ BUG FIXES:
 * consul/connect: Fixed a bug where Connect upstreams would not be updated in-place [GH-10776]
 * deployments: Fixed a bug where unnecessary goroutines were spawned whenever deployments were updated. [GH-10756]
 * quotas (Enterprise): Fixed a bug where quotas were evaluated before constraints, resulting in quota capacity being used up by filtered nodes. [GH-10753]"
-69,"1.1.1 (June 9, 2021)
+72,"1.1.1 (June 9, 2021)
 FEATURES:
  * Connect Mesh Gateways: Adds built-in support for running Consul Connect Mesh Gateways [GH-10658]
 IMPROVEMENTS:
@@ -3712,7 +3781,7 @@ BUG FIXES:
 * quotas (Enterprise): Fixed a bug where stopped allocations for a failed deployment can be double-credited to quota limits, resulting in a quota limit bypass. [GH-10694]
 * ui: Fixed a bug where exec would not work across regions. [GH-10539]
 * ui: Fixed global-search shortcut for non-english keyboards. [GH-10714]"
-70,"https://github.com/hashicorp/nomad/blob/release-1.1.0/CHANGELOG.md
+73,"https://github.com/hashicorp/nomad/blob/release-1.1.0/CHANGELOG.md
 1.1.0 (May 18, 2021)
 FEATURES:
  * Memory oversubscription: Improve cluster efficiency by allowing applications,  whether containerized or non-containerized, to use memory in excess of their scheduled amount.
@@ -3863,7 +3932,7 @@ BUG FIXES:
  * server: Fixed a bug where jobs may not run if submitted with ParentID field set [GH-10424]
  * server: Fixed a panic that may arise on submission of jobs containing invalid service checks [GH-10154]
  * ui: Fixed the rendering of interstitial components shown after processing a dynamic application sizing recommendation. [GH-10094]"
-71,"https://github.com/hashicorp/nomad/blob/release-1.0.6/CHANGELOG.md
+74,"https://github.com/hashicorp/nomad/blob/release-1.0.6/CHANGELOG.md
 1.0.6 (May 18, 2021)
 BUG FIXES:
  * core (Enterprise): Update licensing library to v0.0.11 to include race condition fix. [GH-10253]
@@ -3926,12 +3995,12 @@ BUG FIXES:
  * server: Fixed a bug where jobs may not run if submitted with ParentID field set [GH-10424]
  * server: Fixed a panic that may arise on submission of jobs containing invalid service checks [GH-10154]
  * ui: Fixed the rendering of interstitial components shown after processing a dynamic application sizing recommendation. [GH-10094]"
-72,"1.0.5 (May 12, 2021)
+75,"1.0.5 (May 12, 2021)
 SECURITY:
  * drivers/docker+exec+java: Disable CAP_NET_RAW linux capability by default to prevent ARP spoofing. CVE-2021-32575 [GH-10568]","1.0.5 (May 12, 2021)
 SECURITY:
  * drivers/docker+exec+java: Disable CAP_NET_RAW linux capability by default to prevent ARP spoofing. CVE-2021-32575 [GH-10568]"
-73,"1.0.4 (February 24, 2021)
+76,"1.0.4 (February 24, 2021)
 FEATURES:
  * Terminating Gateways: Adds built-in support for running Consul Connect terminating gateways [GH-9829]
 IMPROVEMENTS:
@@ -4016,21 +4085,21 @@ BUG FIXES:
  * ui: Fixed a bug where namespaces were not being included when opening exec windows from allocations and tasks [GH-9968]
  * ui: Don't draw allocation associations in the topology visualization on window resize when the associations aren't supposed to be shown [GH-9769]
  * volumes: Fixed a bug where volume diffs were not displayed in the output of nomad plan. [GH-9973]"
-74,"1.0.3 (January 28, 2021)
+77,"1.0.3 (January 28, 2021)
 SECURITY:
 
 drivers/exec+java: Modified exec-based drivers to run tasks in private PID/IPC namespaces. CVE-2021-3283 [GH-9911]
 ","1.0.3 (January 28, 2021)
 SECURITY:
 drivers/exec+java: Modified exec-based drivers to run tasks in private PID/IPC namespaces. CVE-2021-3283 [GH-9911]"
-75,"0.12.10 (January 28, 2021)
+78,"0.12.10 (January 28, 2021)
 SECURITY:
 
 drivers/exec+java: Modified exec-based drivers to run tasks in private PID/IPC namespaces. CVE-2021-3283 [GH-9911]
 ","0.12.10 (January 28, 2021)
 SECURITY:
 drivers/exec+java: Modified exec-based drivers to run tasks in private PID/IPC namespaces. CVE-2021-3283 [GH-9911]"
-76,"1.0.2 (January 14, 2021)
+79,"1.0.2 (January 14, 2021)
 IMPROVEMENTS:
  * artifact: Added support for virtual host style AWS S3 paths. [GH-9050]
  * build: Updated to Go 1.15.6. [GH-9686]
@@ -4073,7 +4142,7 @@ BUG FIXES:
  * scaling: Fixed a bug where job scaling endpoint did not enforce scaling policy min/max [GH-9761]
  * server: Fixed a bug where new servers may bootstrap prematurely when configured with bootstrap_expect = 0 [GH-9672]
  * ui: The topology visualization will now render a subset of nodes instead of nothing when some nodes are running nomad <0.9.0 [GH-9733]"
-77,"1.0.1 (December 16, 2020)
+80,"1.0.1 (December 16, 2020)
 IMPROVEMENTS:
  * drivers/docker: Added a new syntax for specifying mount [GH-9635]
 BUG FIXES:
@@ -4092,7 +4161,7 @@ BUG FIXES:
  * cni: Fixed a bug where plugins that do not set the interface sandbox value could crash the Nomad client. [GH-9648]
  * consul/connect: Fixed a bug where client meta.connect.sidecar_image configuration was ignored [GH-9624]
  * consul/connect: Fixed a bug where client meta.connect.proxy_concurrency was not applied to connect gateways [GH-9611]"
-78,"FEATURES:
+81,"FEATURES:
 
 Event Stream: Subscribe to change events as they occur in real time. [GH-9013]
 Namespaces OSS: Namespaces are now available in open source Nomad. [GH-9135]
@@ -4247,7 +4316,7 @@ scheduler: Fixed a bug where where system jobs would bind on all interfaces inst
 ui: Fixed a bug in the volume list page where allocation counts were not displayed. [GH-9495]
 ui: Fixed a bug in the volume status page where read allocations and write allocations were not displayed. [GH-9377]
 ui: Fixed a bug in the CSI volume and plugin status pages where plugins that don't require controllers were shown as unhealthy. [GH-9416]"
-79,"FEATURES:
+82,"FEATURES:
 
 Event Stream: Subscribe to change events as they occur in real time. [GH-9013]
 Namespaces OSS: Namespaces are now available in open source Nomad. [GH-9135]
@@ -4392,16 +4461,16 @@ driver/docker: Fixed a bug where the default image_delay configuration was ignor
 driver/raw_exec: Fixed a bug where raw_exec attempts to create a freezer cgroups for the tasks even when no_cgroups is set. [GH-9328]
 ui: Fixed a bug in the volume status page where read allocations and write allocations were not displayed. [GH-9377]
 ui: Fixed a bug in the CSI volume and plugin status pages where plugins that don't require controllers were shown as unhealthy. [GH-9416]"
-80,"BUG FIXES:
+83,"BUG FIXES:
  * client: Fixed a regression where NOMAD_{ALLOC,TASK,SECRETS}_DIR variables would cause an error when interpolated into template.source stanzas. [GH-9391]","BUG FIXES:
  * client: Fixed a regression where NOMAD_{ALLOC,TASK,SECRETS}_DIR variables would cause an error when interpolated into template.source stanzas. [GH-9391]"
-81,"BUG FIXES:
+84,"BUG FIXES:
  * client: Backport from v0.12.9 - Fixed a regression where NOMAD_{ALLOC,TASK,SECRETS}_DIR variables would cause an error when interpolated into template.source stanzas. [GH-9402]","BUG FIXES:
  * client: Backport from v0.12.9 - Fixed a regression where NOMAD_{ALLOC,TASK,SECRETS}_DIR variables would cause an error when interpolated into template.source stanzas. [GH-9402]"
-82,"BUG FIXES:
+85,"BUG FIXES:
  * client: Backport from v0.12.9 - Fixed a regression where NOMAD_{ALLOC,TASK,SECRETS}_DIR variables would cause an error when interpolated into template.source stanzas. [GH-9405]","BUG FIXES:
  * client: Backport from v0.12.9 - Fixed a regression where NOMAD_{ALLOC,TASK,SECRETS}_DIR variables would cause an error when interpolated into template.source stanzas. [GH-9405]"
-83,"Nomad 0.12.8, Nomad 0.11.7, and Nomad 0.10.8 were released with an important security fix and a critical bug fix:
+86,"Nomad 0.12.8, Nomad 0.11.7, and Nomad 0.10.8 were released with an important security fix and a critical bug fix:
 CVE-2020-28348 Nomad File Sandbox Escape via Container Volume Mount
 A vulnerability was discovered in Nomad and Nomad Enterprise (“Nomad”) such that an operator with job submission capabilities can mount the host file system of a client agent and subvert the default Docker file sandbox feature when not explicitly disabled or when using a volume mount type. This vulnerability affects version 0.9.0 up to 0.12.7, and is fixed in the 0.12.8, 0.11.7, and 0.10.8 releases.
 Nomad disables host filesystem access by default in 0.12.0 and above to prevent job operators from accessing the client filesystem used to persistently store any required data on disk. The Docker task driver provides a volume mount type which can be used to access the client host filesystem from within a container, but clients must be configured to enable mounting directories outside an allocation’s path to prevent abuse from unprivileged operators.
@@ -4414,7 +4483,7 @@ Nomad disables host filesystem access by default in 0.12.0 and above to prevent 
 This issue is identified publicly as CVE-2020-28348.
 Critical Bug During Upgrades from pre-0.9
 A bug was identified in all versions of Nomad after 0.9.2. If a client agent is upgraded from a pre-0.9 version of Nomad to 0.9.2 or later; then all exec-based tasks (including exec, raw_exec, java, qemu) will fail to recover, will be leaked, and then Nomad will start another task. The leaked pre-0.9 task will run un-interrupted and unmanaged until the client dies or the task is killed manually."
-84,"Nomad 0.12.8, Nomad 0.11.7, and Nomad 0.10.8 were released with an important security fix and a critical bug fix:
+87,"Nomad 0.12.8, Nomad 0.11.7, and Nomad 0.10.8 were released with an important security fix and a critical bug fix:
 CVE-2020-28348 Nomad File Sandbox Escape via Container Volume Mount
 A vulnerability was discovered in Nomad and Nomad Enterprise (“Nomad”) such that an operator with job submission capabilities can mount the host file system of a client agent and subvert the default Docker file sandbox feature when not explicitly disabled or when using a volume mount type. This vulnerability affects version 0.9.0 up to 0.12.7, and is fixed in the 0.12.8, 0.11.7, and 0.10.8 releases.
 Nomad disables host filesystem access by default in 0.12.0 and above to prevent job operators from accessing the client filesystem used to persistently store any required data on disk. The Docker task driver provides a volume mount type which can be used to access the client host filesystem from within a container, but clients must be configured to enable mounting directories outside an allocation’s path to prevent abuse from unprivileged operators.
@@ -4427,7 +4496,7 @@ Nomad disables host filesystem access by default in 0.12.0 and above to prevent 
 This issue is identified publicly as CVE-2020-28348.
 Critical Bug During Upgrades from pre-0.9
 A bug was identified in all versions of Nomad after 0.9.2. If a client agent is upgraded from a pre-0.9 version of Nomad to 0.9.2 or later; then all exec-based tasks (including exec, raw_exec, java, qemu) will fail to recover, will be leaked, and then Nomad will start another task. The leaked pre-0.9 task will run un-interrupted and unmanaged until the client dies or the task is killed manually."
-85,"Nomad 0.12.8, Nomad 0.11.7, and Nomad 0.10.8 were released with an important security fix and a critical bug fix:
+88,"Nomad 0.12.8, Nomad 0.11.7, and Nomad 0.10.8 were released with an important security fix and a critical bug fix:
 CVE-2020-28348 Nomad File Sandbox Escape via Container Volume Mount
 A vulnerability was discovered in Nomad and Nomad Enterprise (“Nomad”) such that an operator with job submission capabilities can mount the host file system of a client agent and subvert the default Docker file sandbox feature when not explicitly disabled or when using a volume mount type. This vulnerability affects version 0.9.0 up to 0.12.7, and is fixed in the 0.12.8, 0.11.7, and 0.10.8 releases.
 Nomad disables host filesystem access by default in 0.12.0 and above to prevent job operators from accessing the client filesystem used to persistently store any required data on disk. The Docker task driver provides a volume mount type which can be used to access the client host filesystem from within a container, but clients must be configured to enable mounting directories outside an allocation’s path to prevent abuse from unprivileged operators.
@@ -4440,7 +4509,7 @@ Nomad disables host filesystem access by default in 0.12.0 and above to prevent 
 This issue is identified publicly as CVE-2020-28348.
 Critical Bug During Upgrades from pre-0.9
 A bug was identified in all versions of Nomad after 0.9.2. If a client agent is upgraded from a pre-0.9 version of Nomad to 0.9.2 or later; then all exec-based tasks (including exec, raw_exec, java, qemu) will fail to recover, will be leaked, and then Nomad will start another task. The leaked pre-0.9 task will run un-interrupted and unmanaged until the client dies or the task is killed manually."
-86,"FEATURES:
+89,"FEATURES:
 
 Event Stream: Subscribe to change events as they occur in real time. [GH-9013]
 Namespaces OSS: Namespaces are now available in open source Nomad. [GH-9135]
@@ -4523,28 +4592,28 @@ csi: Fixed a bug where multi-writer volumes were allowed only 1 write claim. [GH
 csi: Fixed a bug where nomad volume detach would not accept prefixes for the node ID parameter. [GH-9041]
 driver/docker: Fixed a bug where the default image_delay configuration was ignored if the gc configuration was not set. [GH-9101]
 Binaries: link/"
-87,"BUG FIXES:
+90,"BUG FIXES:
 
 artifact: Backport from v0.12.7 - Fixed a regression in 0.11.5 where if the artifact destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]
 template: Backport from v0.12.7 - Fixed a regression in 0.11.5 where if the template destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]
 ","BUG FIXES:
 artifact: Backport from v0.12.7 - Fixed a regression in 0.11.5 where if the artifact destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]
 template: Backport from v0.12.7 - Fixed a regression in 0.11.5 where if the template destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]"
-88,"BUG FIXES:
+91,"BUG FIXES:
 
 artifact: Backport from v0.12.7 - Fixed a regression in 0.10.6 where if the artifact destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]
 template: Backport from v0.12.7 - Fixed a regression in 0.10.6 where if the template destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]
 ","BUG FIXES:
 artifact: Backport from v0.12.7 - Fixed a regression in 0.10.6 where if the artifact destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]
 template: Backport from v0.12.7 - Fixed a regression in 0.10.6 where if the template destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]"
-89,"BUG FIXES:
+92,"BUG FIXES:
 
 artifact: Fixed a regression in 0.12.6 where if the artifact destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]
 template: Fixed a regression in 0.12.6 where if the template destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]
 ","BUG FIXES:
 artifact: Fixed a regression in 0.12.6 where if the artifact destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]
 template: Fixed a regression in 0.12.6 where if the template destination field is an absolute path it is not appended to the task working directory, breaking the use of NOMAD_SECRETS_DIR as part of the destination path. [GH-9148]"
-90,"0.12.6 (October 21, 2020)
+93,"0.12.6 (October 21, 2020)
 SECURITY:
 
 artifact: Fixed a bug where interpolation can be used in the artifact destination field to write artifact payloads outside the allocation directory. CVE-2020-27195 [GH-9129]
@@ -4555,7 +4624,7 @@ SECURITY:
 artifact: Fixed a bug where interpolation can be used in the artifact destination field to write artifact payloads outside the allocation directory. CVE-2020-27195 [GH-9129]
 template: Fixed a bug where interpolation can be used in the template source and destination fields to read or write files outside the allocation directory even when disable_file_sandbox was set to false (the default). CVE-2020-27195 [GH-9129]
 template: Fixed a bug where the disable_file_sandbox configuration was only respected for the template file function and not the template source and destination fields. CVE-2020-27195 [GH-9129]"
-91,"0.11.5 (October 21, 2020)
+94,"0.11.5 (October 21, 2020)
 SECURITY:
 
 artifact: Backport from v0.12.6 - Fixed a bug where interpolation can be used in the artifact destination field to write artifact payloads outside the allocation directory. CVE-2020-27195 [GH-9129]
@@ -4566,7 +4635,7 @@ SECURITY:
 artifact: Backport from v0.12.6 - Fixed a bug where interpolation can be used in the artifact destination field to write artifact payloads outside the allocation directory. CVE-2020-27195 [GH-9129]
 template: Backport from v0.12.6 - Fixed a bug where interpolation can be used in the template source and destination fields to read or write files outside the allocation directory even when disable_file_sandbox was set to false (the default). CVE-2020-27195 [GH-9129]
 template: Backport from v0.12.6 - Fixed a bug where the disable_file_sandbox configuration was only respected for the template file function and not the template source and destination fields. CVE-2020-27195 [GH-9129]"
-92,"0.10.6 (October 21, 2020)
+95,"0.10.6 (October 21, 2020)
 SECURITY:
 
 artifact: Backport from v0.12.6 - Fixed a bug where interpolation can be used in the artifact destination field to write artifact payloads outside the allocation directory. CVE-2020-27195 [GH-9129]
@@ -4577,7 +4646,7 @@ SECURITY:
 artifact: Backport from v0.12.6 - Fixed a bug where interpolation can be used in the artifact destination field to write artifact payloads outside the allocation directory. CVE-2020-27195 [GH-9129]
 template: Backport from v0.12.6 - Fixed a bug where interpolation can be used in the template source and destination fields to read or write files outside the allocation directory even when disable_file_sandbox was set to false (the default). CVE-2020-27195 [GH-9129]
 template: Backport from v0.12.6 - Fixed a bug where the disable_file_sandbox configuration was only respected for the template file function and not the template source and destination fields. CVE-2020-27195 [GH-9129]"
-93,"0.12.5 (September 17, 2020)
+96,"0.12.5 (September 17, 2020)
 BUG FIXES:
  * core: Fixed a panic on job submission when the job contains a service with expose = true set [GH-8882]
  * core: Fixed a regression where stopping the sole job allocation result in two replacement allocations [GH-8867]
@@ -4598,7 +4667,7 @@ BUG FIXES:
  * cli: Fixed a bug where host volumes could cause nomad node status to panic when the -verbose flag was used. [GH-8902]
  * ui: Fixed ability to switch between tasks in alloc exec sessions [GH-8856]
  * ui: Task log streaming will no longer suddenly flip to a different task's logs. [GH-8833]"
-94,"FEATURES:
+97,"FEATURES:
 
 Consul Ingress Gateways: Support for Consul Connect Ingress Gateways [GH-8709]
 
@@ -4649,7 +4718,7 @@ deployments (Enterprise): Fixed a bug where counts could not be changed in the w
 deployments (Enterprise): Fixed a bug in multi-region deployments where a region that was dropped from the jobspec was not deregistered. [GH-8763]
 exec: Fixed a bug causing escape characters to be missed in special cases [GH-8798]
 plan: Fixed a bug where plans always included a change for the NomadTokenID. [GH-8687]"
-95,"0.12.4 (September 2, 2020)
+98,"0.12.4 (September 2, 2020)
 FEATURES:
 
 Consul Ingress Gateways: Support for Consul Connect Ingress Gateways [GH-8709]
@@ -4700,14 +4769,14 @@ deployments (Enterprise): Fixed a bug where counts could not be changed in the w
 deployments (Enterprise): Fixed a bug in multi-region deployments where a region that was dropped from the jobspec was not deregistered. [GH-8763]
 exec: Fixed a bug causing escape characters to be missed in special cases [GH-8798]
 plan: Fixed a bug where plans always included a change for the NomadTokenID. [GH-8687]"
-96,"0.12.3 (August 13, 2020)
+99,"0.12.3 (August 13, 2020)
 BUG FIXES:
 
 csi: Fixed a panic in the API affecting both plugins and volumes. [GH-8655]
 ","0.12.3 (August 13, 2020)
 BUG FIXES:
 csi: Fixed a panic in the API affecting both plugins and volumes. [GH-8655]"
-97,"0.12.2 (August 12, 2020)
+100,"0.12.2 (August 12, 2020)
 FEATURES:
 
 Multiple Vault Namespaces (Enterprise): Support for multiple Vault Namespaces [GH-8453]
@@ -4768,7 +4837,7 @@ vault: Fixed a bug where upgrades from pre-0.11.3 that use Vault can lead to mem
 ui: Fixed various accessibility audit failures [GH-8455]
 ui: Fixed global search navigation where job name ≠ ID [GH-8560]
 ui: Fixed slow global search rendering by truncating results [GH-8571]"
-98,"SECURITY:
+101,"SECURITY:
 
 build: Updated to Go 1.14.6. Go 1.14.5 contained 2 CVEs which are low severity for Nomad [GH-8467]
 
@@ -4779,7 +4848,7 @@ vault: Fixed a bug where upgrades from pre-0.11.3 that use Vault can lead to mem
 build: Updated to Go 1.14.6. Go 1.14.5 contained 2 CVEs which are low severity for Nomad [GH-8467]
 BUG FIXES:
 vault: Fixed a bug where upgrades from pre-0.11.3 that use Vault can lead to memory spikes and write large Raft messages. [GH-8553]"
-99,"0.12.1 (July 23, 2020)
+102,"0.12.1 (July 23, 2020)
 SECURITY:
 
 build: Updated to Go 1.14.6. Go 1.14.5 contained 2 CVEs which are low severity for Nomad [GH-8467]
@@ -4830,7 +4899,7 @@ ui: Fixed the absence of the region query parameter on various actions, such as 
 ui: Fixed issue where an orphaned child job would make it so navigating to a job detail page would hang the UI [GH-8319]
 ui: Fixed issue where clicking View Raw File in a non-default region would not provide the region param resulting in a 404 [GH-8509]
 vault: Fixed a bug where vault identity policies not considered in permissions check [GH-7732]"
-100,"FEATURES:
+103,"FEATURES:
  * Preemption: Preemption is now an open source feature
  * Licensing (Enterprise): Nomad Enterprise now requires a license [GH-8076]
  * Multiregion Deployments (Enterprise): Nomad Enterprise now enables orchestrating deployments across multiple regions. [GH-8184]
@@ -4907,7 +4976,7 @@ driver/docker: Fixed a bug to set correct value for memory-swap when using memor
 ui: The log streamer will now always follow logs when the current scroll position is the end of the buffer. [GH-8177]
 ui: The task group detail page no longer makes excessive requests to the allocation and stats endpoints. [GH-8216]
 ui: Polling endpoints that have yet to be fetched normally works as expected (regression from 0.11.3). [GH-8207]"
-101,"FEATURES:
+104,"FEATURES:
  * Preemption: Preemption is now an open source feature
  * Licensing (Enterprise): Nomad Enterprise now requires a license [GH-8076]
  * Multiregion Deployments (Enterprise): Nomad Enterprise now enables orchestrating deployments across multiple regions. [GH-8184]
@@ -4978,7 +5047,7 @@ driver/docker: Fixed a bug to set correct value for memory-swap when using memor
 ui: The log streamer will now always follow logs when the current scroll position is the end of the buffer. [GH-8177]
 ui: The task group detail page no longer makes excessive requests to the allocation and stats endpoints. [GH-8216]
 ui: Polling endpoints that have yet to be fetched normally works as expected (regression from 0.11.3). [GH-8207]"
-102,"0.12.0 (Unreleased)
+105,"0.12.0 (Unreleased)
 FEATURES:
  * Preemption: Preemption is now an open source feature
  * Licensing (Enterprise): Nomad Enterprise now requires a license [GH-8076]
@@ -5045,7 +5114,7 @@ driver/docker: Fixed a bug to set correct value for memory-swap when using memor
 ui: The log streamer will now always follow logs when the current scroll position is the end of the buffer. [GH-8177]
 ui: The task group detail page no longer makes excessive requests to the allocation and stats endpoints. [GH-8216]
 ui: Polling endpoints that have yet to be fetched normally works as expected (regression from 0.11.3). [GH-8207]"
-103,"FEATURES:
+106,"FEATURES:
  * Preemption: Preemption is now an open source feature
  * Licensing (Enterprise): Nomad Enterprise now requires a license [GH-8076]
  * Multiregion Deployments (Enterprise): Nomad Enterprise now allows running deployments to multiple regions. [GH-8184]
@@ -5084,7 +5153,7 @@ BUG FIXES:
 cli: Fixed malformed alloc status address list when listing more than 1 address [GH-8161]
 client: Fixed a bug where stdout/stderr were not properly reopened for community task drivers. [GH-8155]
 driver/docker: Fixed a bug to set correct value for memory-swap when using memory_hard_limit [GH-8153]"
-104,"IMPROVEMENTS:
+107,"IMPROVEMENTS:
 
 build: Updated to Go 1.14.3 [GH-7431]
 csi: Return better error messages [GH-7984] [GH-8030]
@@ -5119,7 +5188,7 @@ core: Fixed a bug where an internal metadata, ClusterID, may not be initialized 
 api: Fixed a bug where setting connect sidecar task resources could fail [GH-7993]
 client: Fixed a bug where artifact downloads failed on redirects [GH-7854]
 csi: Validate empty volume arguments in API. [GH-8027]"
-105,"FEATURES:
+108,"FEATURES:
  * Task dependencies UI: task lifecycle charts and details
 IMPROVEMENTS:
 
@@ -5192,7 +5261,7 @@ ui: Fixed a bug where clicking stdout or stderr when already on that clicked vie
 ui: Fixed a race condition that made swithing from stdout to stderr too quickly show an error [GH-7820]
 ui: Switching namespaces now redirects to Volumes instead of Jobs when on a Storage page [GH-7896]
 vault: Fixed a bug where nomad retries revoking tokens indefinitely [GH-7959]"
-106,"BUG FIXES:
+109,"BUG FIXES:
 
 core: Fixed a bug that only ran a task shutdown_delay if the task had a registered service [GH-7663]
 core: Fixed a panic when garbage collecting a job with allocations spanning multiple versions [GH-7758]
@@ -5217,7 +5286,7 @@ csi: Fixed a bug where CSI plugins with NODE_STAGE_VOLUME capabilities were rece
 driver/docker: Fixed a bug where retrying failed docker creation may in rare cases trigger a panic [GH-7749]
 scheduler: Fixed a bug in managing allocated devices for a job allocation in in-place update scenarios [GH-7762]
 vault: Upgrade http2 library to fix Vault API calls that fail with http2: no cached connection was available [GH-7673]"
-107,"FEATURES:
+110,"FEATURES:
  * Container Storage Interface [beta]: Nomad has expanded support
    of stateful workloads through support for CSI plugins.
  * Exec UI: an in-browser terminal for connecting to running allocations.
@@ -5308,7 +5377,7 @@ driver/docker: Fixed a bug causing docker containers to use swap memory unexpect
 scheduler: Fixed a bug where changes to task group shutdown_delay were not persisted or displayed in plan output [GH-7618]
 ui: Fixed handling of multi-byte unicode characters in allocation log view [GH-7470] [GH-7551]
 Download binaries from link/"
-108,"Changes since beta2:
+111,"Changes since beta2:
 
 connect: Added support for using Connect with TLS enabled Consul agents [GH-7602]
 connect: Fixed a bug where restarting a client would prevent Connect enabled allocations from cleaning up properly [GH-7643]
@@ -5323,7 +5392,7 @@ consul: Fixed a bug where service updating could sometimes fail [GH-7600]
 scheduler: Fixed a bug where changes to task group shutdown_delay were not persisted or displayed in plan output [GH-7618]
 A number of documentation updates and test improvements.
 0.11.0-rc1 Binaries - link/ "
-109,"Since beta1:
+112,"Since beta1:
 
 connect: Added support for specifying Envoy expose path configurations
 cli: Fixed a bug where nomad agent -dev fails on Windows
@@ -5346,7 +5415,7 @@ ui: Fixed exec outside test environment
 ui: Removed exec button for dead jobs
 ui: Added exec-specific loading template
 api: change to the /v1/job/:id/scale API [beta]"
-110,"FEATURES:
+113,"FEATURES:
  * Container Storage Interface [beta]: Nomad has expanded support
    of stateful workloads through support for CSI plugins.
  * Exec UI [beta]: an in-browser terminal for connecting to running allocations.
@@ -5413,12 +5482,12 @@ cli: Fixed a panic when displaying device plugins without stats [GH-7231]
 cli: Fixed a bug where alloc exec command in TLS environments may fail [GH-7274]
 client: Fixed a panic when running in Debian with /etc/debian_version is empty [GH-7350]
 client: Fixed a bug where a multi-task allocation maybe considered healthy despite a task restarting [GH-7383]"
-111,"SECURITY:
+114,"SECURITY:
 
 server: Override content-type headers for unsafe content. CVE-2020-10944 [GH-7468]
 ","SECURITY:
 server: Override content-type headers for unsafe content. CVE-2020-10944 [GH-7468]"
-112,"FEATURES:
+115,"FEATURES:
 
 api: Nomad now supports ability to remotely request /debug/pprof endpoints from a remote agent. [GH-6841]
 consul/connect: Nomad may now register Consul Connect services when Consul is configured with ACLs enabled [GH-6701]
@@ -5491,7 +5560,7 @@ scheduler: Fixed a bug that caused evicted allocs on a lost node to be stuck in 
 scheduler: Fixed a bug where nomad job plan/apply returned errors instead of ignoring system job updates for ineligible nodes. [GH-6996]
 SECURITY:
 client: Nomad will no longer pass through the CONSUL_HTTP_TOKEN environment variable when launching a task. [GH-7131]"
-113,"FEATURES:
+116,"FEATURES:
 
 api: Nomad now supports ability to remotely request /debug/pprof endpoints from a remote agent. [GH-6841]
 consul/connect: Nomad may now register Consul Connect services when Consul is configured with ACLs enabled [GH-6701]
@@ -5564,7 +5633,7 @@ scheduler: Fixed a bug that caused evicted allocs on a lost node to be stuck in 
 scheduler: Fixed a bug where nomad job plan/apply returned errors instead of ignoring system job updates for ineligible nodes. [GH-6996]
 SECURITY:
 client: Nomad will no longer pass through the CONSUL_HTTP_TOKEN environment variable when launching a task. [GH-7131]"
-114,"SECURITY:
+117,"SECURITY:
 
 agent: Added unauthenticated connection timeouts and limits to prevent resource exhaustion. CVE-2020-7218 [GH-7002]
 server: Fixed insufficient validation for role and region for RPC connections when TLS enabled. CVE-2020-7956 [GH-7003]
@@ -5577,7 +5646,7 @@ agent: Added unauthenticated connection timeouts and limits to prevent resource 
 server: Fixed insufficient validation for role and region for RPC connections when TLS enabled. CVE-2020-7956 [GH-7003]
 IMPROVEMENTS:
 build: Updated to Go 1.12.16"
-115,"FEATURES:
+118,"FEATURES:
 
 Nomad Monitor: New nomad monitor command allows remotely following
    the logs of any Nomad Agent (clients or servers). See
@@ -5660,12 +5729,12 @@ scheduler: Changes to devices in resource stanza should cause rescheduling [GH-6
 scheduler: Fixed a bug that allowed inplace updates after affinity or spread were changed [GH-6703]
 vault: Allow overriding implicit Vault version constraint [GH-6687]
 vault: Supported Vault auth role's new fields, token_period and token_explicit_max_ttl [GH-6574], [GH-6580]"
-116,"BUG FIXES:
+119,"BUG FIXES:
 
 core: Fixed server panic caused by a plan evicting and preempting allocs on a node [GH-6792]
 ","BUG FIXES:
 core: Fixed server panic caused by a plan evicting and preempting allocs on a node [GH-6792]"
-117,"0.10.2 (November 22, 2019)
+120,"0.10.2 (November 22, 2019)
 FEATURES:
 
 Nomad Monitor: New nomad monitor command allows remotely following
@@ -5748,7 +5817,7 @@ scheduler: Changes to devices in resource stanza should cause rescheduling [GH-6
 scheduler: Fixed a bug that allowed inplace updates after affinity or spread were changed [GH-6703]
 vault: Allow overriding implicit Vault version constraint [GH-6687]
 vault: Supported Vault auth role's new fields, token_period and token_explicit_max_ttl [GH-6574], [GH-6580]"
-118,"BUG FIXES:
+121,"BUG FIXES:
 
 core: Fixed server panic when upgrading from 0.8 -> 0.10 and performing an
    inplace update of an allocation. [GH-6541]
@@ -5763,7 +5832,7 @@ api: Fixed panic when submitting Connect-enabled job without using a bridge
    network [GH-6575]
 client: Fixed client panic when upgrading from 0.8 -> 0.10 and performing an
    inplace update of an allocation. [GH-6605]"
-119,"FEATURES:
+122,"FEATURES:
  * Consul Connect: Nomad may now register Consul Connect services and
    manages an Envoy proxy sidecar to provide secured service-to-service
    communication.
@@ -5830,7 +5899,7 @@ drivers/docker: Set gc image_delay default to 3 minutes [GH-6078]
 ui: Fixed a bug where the allocation log viewer would render HTML or hide content that matched XML syntax [GH-6048]
 ui: Fixed a bug where allocation log viewer doesn't show all content in Firefox [GH-6466]
 ui: Fixed navigation via clicking recent allocation row [GH-6087]"
-120,"FEATURES:
+123,"FEATURES:
  * Consul Connect: Nomad may now register Consul Connect services and
    manages an Envoy proxy sidecar to provide secured service-to-service
    communication.
@@ -5893,7 +5962,7 @@ client: Fixed failure to start if another client is already running with the sam
 devices: Fixed a bug causing CPU usage spike when a device is detected [GH-6201]
 drivers/docker: Set gc image_delay default to 3 minutes [GH-6078]
 ui: Fixed navigation via clicking recent allocation row [GH-6087]"
-121,"SECURITY:
+124,"SECURITY:
 
 core: Redacted replication token in agent/self API endpoint.  The replication token is a management token that can be used for further privilege escalation. CVE-2019-12741 [GH-6430]
 core: Fixed a bug where a user may start raw_exec task on clients despite driver being disabled. CVE-2019-15928 [GH-6227] [GH-6431]
@@ -5926,7 +5995,7 @@ devices: Fixed a bug causing CPU usage spike when a device is detected [GH-6201]
 drivers: Fixed port mapping for docker and qemu drivers [GH-6251]
 drivers/docker: Fixed a case where a nomad alloc exec would never time out [GH-6144]
 ui: Fixed a bug where allocation log viewer doesn't show all content. [GH-6048]"
-122,"SECURITY:
+125,"SECURITY:
 client/template: Fix security vulnerabilities associated with task template rendering (CVE-2019-14802), introduced in Nomad 0.5.0 [GH-6055] [GH-6075]
 client/artifact: Fix a privilege escalation in the exec driver exploitable by artifacts with setuid permissions (CVE-2019-14803) [GH-6176]
 BACKWARDS INCOMPATIBILITIES:
@@ -5951,7 +6020,7 @@ BUG FIXES:
 api: Fixed job region to default to client node region if none provided [GH-6064]
 ui: Fixed links containing IPv6 addresses to include required square brackets [GH-6007]
 vault: Fix deadlock when reloading server Vault configuration [GH-6082]"
-123,"IMPROVEMENTS:
+126,"IMPROVEMENTS:
  * api: Inferred content type of file in alloc filesystem stat endpoint [GH-5907]
  * api: Used region from job hcl when not provided as query parameter in job registration and plan endpoints [GH-5664]
  * core: Deregister nodes in batches rather than one at a time [GH-5784]

@@ -1,12 +1,21 @@
-Index,Release Note,Release Note With Abstraction
-1,"4.15.0 (2023-05-07)
+Index,Release Note,Release Note Abstract
+1,"4.15.1 (2023-06-09)
+Bug Fixes
+
+replace :: with localhost before openBrowser() (#4856) (874c44b)
+types: compatibility with @types/ws (#4899) (34bcec2)
+","4.15.1 (2023-06-09)
+Bug Fixes
+replace :: with localhost before openBrowser() (#4856) (874c44b)
+types: compatibility with @types/ws (#4899) (34bcec2)"
+2,"4.15.0 (2023-05-07)
 Features
 
 overlay displays unhandled promise rejection (#4849) (d1dd430)
 ","4.15.0 (2023-05-07)
 Features
 overlay displays unhandled promise rejection (#4849) (d1dd430)"
-2,"4.14.0 (2023-05-06)
+3,"4.14.0 (2023-05-06)
 Features
 
 allow CLI to be ESM (#4837) (bb4a5d9)
@@ -15,35 +24,35 @@ allow filter overlay errors/warnings/runtimeErrors with function (#4813) (aab01b
 Features
 allow CLI to be ESM (#4837) (bb4a5d9)
 allow filter overlay errors/warnings/runtimeErrors with function (#4813) (aab01b3)"
-3,"4.13.3 (2023-04-15)
+4,"4.13.3 (2023-04-15)
 Bug Fixes
 
 perf: reduced initial start time (#4818) (fcf01d1)
 ","4.13.3 (2023-04-15)
 Bug Fixes
 perf: reduced initial start time (#4818) (fcf01d1)"
-4,"4.13.2 (2023-03-31)
+5,"4.13.2 (2023-03-31)
 Bug Fixes
 
 prevent open 0.0.0.0 in browser due windows problems (04e74f2)
 ","4.13.2 (2023-03-31)
 Bug Fixes
 prevent open 0.0.0.0 in browser due windows problems (04e74f2)"
-5,"4.13.1 (2023-03-18)
+6,"4.13.1 (2023-03-18)
 Bug Fixes
 
 make webpack optional peer dependency (#4778) (71be54e)
 ","4.13.1 (2023-03-18)
 Bug Fixes
 make webpack optional peer dependency (#4778) (71be54e)"
-6,"4.13.0 (2023-03-17)
+7,"4.13.0 (2023-03-17)
 Features
 
 added client.overlay.runtimeErrors option to control runtime errors (#4773) (dca2366)
 ","4.13.0 (2023-03-17)
 Features
 added client.overlay.runtimeErrors option to control runtime errors (#4773) (dca2366)"
-7,"4.12.0 (2023-03-14)
+8,"4.12.0 (2023-03-14)
 Features
 
 allow to set the sockjs_url option (only sockjs) using the webSocketServer.options.sockjsUrl option (#4586) (69a2fba)
@@ -64,14 +73,14 @@ open editor when clicking error on overlay (#4587) (efb2cec)
 Bug Fixes
 compatibility with experiments.buildHttp (#4585) (5b846cb)
 respect NODE_PATH env variable (#4581) (b857e6f)"
-8,"4.11.1 (2022-09-19)
+9,"4.11.1 (2022-09-19)
 Bug Fixes
 
 respect client.logging option for all logs (#4572) (375835c)
 ","4.11.1 (2022-09-19)
 Bug Fixes
 respect client.logging option for all logs (#4572) (375835c)"
-9,"4.11.0 (2022-09-07)
+10,"4.11.0 (2022-09-07)
 Features
 
 make allowedHosts accept localhost subdomains by default (#4357) (0a33e6a)
@@ -84,14 +93,14 @@ Features
 make allowedHosts accept localhost subdomains by default (#4357) (0a33e6a)
 Bug Fixes
 auto reply to OPTIONS requests only when unhandled (#4559) (984af02), closes #4551"
-10,"4.10.1 (2022-08-29)
+11,"4.10.1 (2022-08-29)
 Bug Fixes
 
 compatibility with old browsers (#4544) (6a430d4)
 ","4.10.1 (2022-08-29)
 Bug Fixes
 compatibility with old browsers (#4544) (6a430d4)"
-11,"4.10.0 (2022-08-10)
+12,"4.10.0 (2022-08-10)
 Features
 
 allow to configure more client options via resource URL (#4274) (216e3cb)
@@ -104,7 +113,7 @@ Features
 allow to configure more client options via resource URL (#4274) (216e3cb)
 Bug Fixes
 response correctly when receive an OPTIONS request (#4185) (2b3b7e0)"
-12,"4.9.3 (2022-06-29)
+13,"4.9.3 (2022-06-29)
 Bug Fixes
 
 avoid creation unnecessary stream for static sockjs file (#4482) (049b153)
@@ -113,21 +122,21 @@ history-api-fallback now supports HEAD requests and handles them the same as GET
 Bug Fixes
 avoid creation unnecessary stream for static sockjs file (#4482) (049b153)
 history-api-fallback now supports HEAD requests and handles them the same as GET (8936082)"
-13,"4.9.2 (2022-06-06)
+14,"4.9.2 (2022-06-06)
 Bug Fixes
 
 add @types/serve-static to dependencies (#4468) (af83deb)
 ","4.9.2 (2022-06-06)
 Bug Fixes
 add @types/serve-static to dependencies (#4468) (af83deb)"
-14,"4.9.1 (2022-05-31)
+15,"4.9.1 (2022-05-31)
 Bug Fixes
 
 security problem with sockjs (#4465) (e765182)
 ","4.9.1 (2022-05-31)
 Bug Fixes
 security problem with sockjs (#4465) (e765182)"
-15,"4.9.0 (2022-05-04)
+16,"4.9.0 (2022-05-04)
 Features
 
 support Trusted Types for client overlay (#4404) (8132e1d)
@@ -144,14 +153,14 @@ Bug Fixes
 ie11 runtime (#4403) (256d5fb)
 replace portfinder with custom implementation and fix security problem (#4384) (eea50f3)
 use the host in options to check if port is available (#4385) (a10c7cf)"
-16,"4.8.1 (2022-04-06)
+17,"4.8.1 (2022-04-06)
 Bug Fixes
 
 types (#4373) (f6fe6be)
 ","4.8.1 (2022-04-06)
 Bug Fixes
 types (#4373) (f6fe6be)"
-17,"4.8.0 (2022-04-05)
+18,"4.8.0 (2022-04-05)
 Features
 
 export initialized socket client (#4304) (7920364)
@@ -172,7 +181,7 @@ update description for --no-client (#4250) (c3b6690)
 update description for --no-history-api-fallback (#4277) (d63a0a2)
 update negated descriptions for more options (#4287) (c64bd94)
 update schema to have negatedDescription only for type boolean (#4280) (fcf8e8e)"
-18,"4.7.4 (2022-02-02)
+19,"4.7.4 (2022-02-02)
 Bug Fixes
 
 add @types/express (#4226) (e55f728)
@@ -185,28 +194,28 @@ add @types/express (#4226) (e55f728)
 negative descriptions (#4216) (fd854c0)
 types for the proxy option (#4173) (efec2f5)
 use CLI specific description for --open-app-name and --web-socket-server (#4215) (329679a)"
-19,"4.7.3 (2022-01-11)
+20,"4.7.3 (2022-01-11)
 Security
 
 update selfsigned to 2.0.0 version
 ","4.7.3 (2022-01-11)
 Security
 update selfsigned to 2.0.0 version"
-20,"4.7.2 (2021-12-29)
+21,"4.7.2 (2021-12-29)
 Bug Fixes
 
 apply onAfterSetupMiddleware after setupMiddlewares (as behavior earlier) (f6bc644)
 ","4.7.2 (2021-12-29)
 Bug Fixes
 apply onAfterSetupMiddleware after setupMiddlewares (as behavior earlier) (f6bc644)"
-21,"4.7.1 (2021-12-22)
+22,"4.7.1 (2021-12-22)
 Bug Fixes
 
 removed url package, fixed compatibility with future webpack defaults (#4132) (4e5d8ea)
 ","4.7.1 (2021-12-22)
 Bug Fixes
 removed url package, fixed compatibility with future webpack defaults (#4132) (4e5d8ea)"
-22,"4.7.0 (2021-12-21)
+23,"4.7.0 (2021-12-21)
 Features
 
 added the setupMiddlewares option and deprecated onAfterSetupMiddleware and onBeforeSetupMiddleware options (#4068) (c13aa56)
@@ -237,7 +246,7 @@ show deprecation warning for both https and http2 (#4069) (d8d5d71)
 update --web-socket-server description (#4098) (65955e9)
 update listen and close deprecation warning message (#4097) (b217a19)
 update descriptions of https and server options (#4094) (f97c9e2)"
-23,"4.6.0 (2021-11-25)
+24,"4.6.0 (2021-11-25)
 Features
 
 allow to pass all chokidar options (#4025) (5026601)
@@ -252,7 +261,7 @@ allow to pass all chokidar options (#4025) (5026601)
 Bug Fixes
 reconnection logic (#4044) (9b32c96)
 reload on warnings (#4056) (1ba9720)"
-24,"4.5.0 (2021-11-13)
+25,"4.5.0 (2021-11-13)
 Features
 
 add --web-socket-server-type option for CLI (#4001) (17c390a)
@@ -271,14 +280,14 @@ Bug Fixes
 infinity refresh on warnings (#4006) (10da223)
 invalid host message is missing on client with https (#3997) (#3998) (ff0869c)
 remove process listeners after stopping the server (#4013) (d198e4e)"
-25,"3.11.3 (2021-11-08)
+26,"3.11.3 (2021-11-08)
 Bug Fixes
 
 replace ansi-html with ansi-html-community (#4011) (4fef67b)
 ","3.11.3 (2021-11-08)
 Bug Fixes
 replace ansi-html with ansi-html-community (#4011) (4fef67b)"
-26,"4.4.0 (2021-10-27)
+27,"4.4.0 (2021-10-27)
 Features
 
 added the server option, now you can pass server options, example { server: { type: 'http', options: { maxHeaderSize: 32768 } } }, available options for http and https, note - for http2 is used spdy, options specified in the server.options option take precedence over https/http2 options (#3940) (a70a7ef)
@@ -297,14 +306,14 @@ improve error handling within startCallback and endCallback (#3969) (b0928ac)
 Bug Fixes
 schema for web socket server type (#3913) (f6aa6f7)
 typo in SSL information log (#3939) (4c6103b)"
-27,"4.3.1 (2021-10-04)
+28,"4.3.1 (2021-10-04)
 Bug Fixes
 
 perf (#3906) (f6e2a19)
 ","4.3.1 (2021-10-04)
 Bug Fixes
 perf (#3906) (f6e2a19)"
-28,"4.3.0 (2021-09-25)
+29,"4.3.0 (2021-09-25)
 Features
 
 allow array for headers option (#3847) (9911437)
@@ -325,7 +334,7 @@ avoid web socket connection when web socket server is not running (#3879) (8874d
 display file name for warnings/errors in overlay (#3867) (d20def5)
 formatting errors/warnings (#3877) (f0dbea0)
 handle 0 value of the port option property (ed67f66)"
-29,"4.2.1 (2021-09-13)
+30,"4.2.1 (2021-09-13)
 Bug Fixes
 
 infinity loop for multi compiler mode (#3840) (e019bd2)
@@ -334,7 +343,7 @@ reloading logic for multi compiler mode (#3841) (ef148ec)
 Bug Fixes
 infinity loop for multi compiler mode (#3840) (e019bd2)
 reloading logic for multi compiler mode (#3841) (ef148ec)"
-30,"4.2.0 (2021-09-09)
+31,"4.2.0 (2021-09-09)
 Features
 
 added the http.ca option (CLI option added too) (should be used instead cacert, because we will remove it in the next major release in favor the https.ca option)
@@ -389,7 +398,7 @@ Bug Fixes
 accept connections with file: and chrome-extensions: protocol by default (#3822) (138f064)
 close overlay on disconnection (#3825) (011bcf1)
 respect https.cacert option (#3820) (0002ebf)"
-31,"4.1.1 (2021-09-07)
+32,"4.1.1 (2021-09-07)
 Bug Fixes
 
 improve the description of the magicHtml option (#3772) (b80610f)
@@ -398,7 +407,7 @@ replace ansi-html with ansi-html-community to avoid CVE (#3801) (36fd214)
 Bug Fixes
 improve the description of the magicHtml option (#3772) (b80610f)
 replace ansi-html with ansi-html-community to avoid CVE (#3801) (36fd214)"
-32,"4.1.0 (2021-08-31)
+33,"4.1.0 (2021-08-31)
 Features
 
 added the magicHtml option (#3717) (4831f58)
@@ -421,7 +430,7 @@ change log type of Disconnected! to info (fde27f5)
 handle --allowed-hosts all correctly (#3720) (326ed56)
 output documentation link on errors (#3680) (e16221b)
 respect the bypass option with target/router options for proxy (b5dd568)"
-33,"4.0.0 (2021-08-18)
+34,"4.0.0 (2021-08-18)
 Notes:
 
 migration guide from v3 to v4 can be found here
@@ -438,7 +447,7 @@ Bug Fixes
 improve https CLI output (#3673) (f2d87fb)
 initial reloading for lazy compilation (#3662) (1768d6b)
 respect protocol from browser for manual setup (#3675) (cdcabb2)"
-34,"4.0.0-rc.1 (2021-08-17)
+35,"4.0.0-rc.1 (2021-08-17)
 Notes:
 
 migration guide from v3 to v4 can be found here
@@ -469,7 +478,7 @@ render ansi formatted error messages correctly in overlay (#3579) (9313454)
 use value of the infastructureLogging.level option by default for client.logging. (#3613) (c9ccc96)
 schema for the host option (#3549) (7200d31)
 show deprecation warning for incorrect usage of Node.js API (#3563) (62b21ff)"
-35,"4.0.0-rc.0 (2021-07-19)
+36,"4.0.0-rc.0 (2021-07-19)
 Notes:
 
 migration guide from v3 to v4 can be found here
@@ -552,7 +561,7 @@ regression with port and bonjour (c2805fe)
 rename path to pathname for client.webSocketURL (#3466) (fd63e02)
 respect logLevel and logProvider option for proxy (#3257) (199baec)
 show plugin name in progress log (#3337) (b8a0932)"
-36,"4.0.0-beta.3 (2021-05-06)
+37,"4.0.0-beta.3 (2021-05-06)
 Notes
 Don't worry about a lot of changes, before the stable release, we will list all the changes and what you should do to migrate
 ⚠ BREAKING CHANGES
@@ -599,7 +608,7 @@ overlay with warnings (#3215) (7e18161)
 help description for options
 error description for options
 improve warning message for the open option"
-37,"4.0.0-beta.2 (2021-04-06)
+38,"4.0.0-beta.2 (2021-04-06)
 ⚠ BREAKING CHANGES
 
 the openPage option and the --open-page CLI option were removed in favor { open: ['/my-page', '/my-other-page/'] } for Node.js API and --open-target [URL] (without [URL] dev server will open a browser using the host option value) and --open-app <browser> for CLI
@@ -702,7 +711,7 @@ improve CLI options (#3151) (09fa827)
 output description on invalid options (#3154) (2e02978)
 prefer to open the host option (#3115) (7e525eb)
 reduce number of dependencies"
-38,"4.0.0-beta.1 (2021-03-23)
+39,"4.0.0-beta.1 (2021-03-23)
 ⚠ BREAKING CHANGES
 
 --hot-only option was removed
@@ -753,14 +762,14 @@ show detailed error in overlay (ba01b05)
 support file: and chrome-extension: protocols in client (#2954) (163bdce)
 warnings in overlay (#3054) (6144c8d)
 webpack-cli installation message (#2955) (b9ce07f)"
-39,"3.11.2 (2021-01-13)
+40,"3.11.2 (2021-01-13)
 Bug Fixes
 
 cli arguments for serve command (a5fe337)
 ","3.11.2 (2021-01-13)
 Bug Fixes
 cli arguments for serve command (a5fe337)"
-40,"3.11.1 (2020-12-29)
+41,"3.11.1 (2020-12-29)
 Bug Fixes
 
 the open option works using webpack serve without value (#2948) (4837dc9)
@@ -769,7 +778,7 @@ vulnerable deps (#2949) (78dde50)
 Bug Fixes
 the open option works using webpack serve without value (#2948) (4837dc9)
 vulnerable deps (#2949) (78dde50)"
-41,"4.0.0-beta.0 (2020-11-27)
+42,"4.0.0-beta.0 (2020-11-27)
 ⚠ BREAKING CHANGES
 
 drop support Node.js@6 and Node.js@8, minimum supported Node.js version is Node@10
@@ -960,7 +969,7 @@ module.exports = {
     level: 'warn',
   },
 };"
-42,"3.11.0 (2020-05-08)
+43,"3.11.0 (2020-05-08)
 Features
 
 add icons for directory viewer (#2441) (e953d01)
@@ -989,14 +998,14 @@ security vulnerability in yargs-parser (#2566) (41d1d0c)
 don't crash on setupExitSignals(undefined) (#2507) (0d5c681)
 support entry descriptor (closes #2453) (#2465) (8bbef6a)
 update jquery (#2516) (99ccfd8)"
-43,"3.10.3 (2020-02-05)
+44,"3.10.3 (2020-02-05)
 Bug Fixes
 
 forward error requests to the proxy (#2425) (e291cd4)
 ","3.10.3 (2020-02-05)
 Bug Fixes
 forward error requests to the proxy (#2425) (e291cd4)"
-44,"3.10.2 (2020-01-31)
+45,"3.10.2 (2020-01-31)
 Bug Fixes
 
 fallthrough non GET and HEAD request to routes (#2374) (ebe8eca)
@@ -1007,14 +1016,14 @@ Bug Fixes
 fallthrough non GET and HEAD request to routes (#2374) (ebe8eca)
 add an optional peer dependency on webpack-cli (#2396) (aa365df)
 add heartbeat for the websocket server (#2404) (1a7c827)"
-45,"3.10.1 (2019-12-19)
+46,"3.10.1 (2019-12-19)
 Bug Fixes
 
 ie11 compatibility (1306abe)
 ","3.10.1 (2019-12-19)
 Bug Fixes
 ie11 compatibility (1306abe)"
-46,"3.10.0 (2019-12-18)
+47,"3.10.0 (2019-12-18)
 Features
 
 client: allow sock port to use location's port (sockPort: 'location') (#2341) (dc10d06)
@@ -1035,7 +1044,7 @@ client: don't override protocol for socket connection to 127.0.0.1 (#2303) (3a31
 server: respect sockPath on transportMode: 'ws' (#2310) (#2311) (e188542)
 https on chrome linux (#2330) (dc8b475)
 support webpack@5 (#2359) (8f89c01)"
-47,"3.9.0 (2019-10-22)
+48,"3.9.0 (2019-10-22)
 Bug Fixes
 
 add hostname and port to bonjour name to prevent name collisions (#2276) (d8af2d9)
@@ -1050,14 +1059,14 @@ add hostname and port to bonjour name to prevent name collisions (#2276) (d8af2d
 add extKeyUsage to self-signed cert (#2274) (a4dbc3b)
 Features
 add multiple openPage support (#2266) (c9e9178)"
-48,"3.8.2 (2019-10-02)
+49,"3.8.2 (2019-10-02)
 Security
 
 update selfsigned package
 ","3.8.2 (2019-10-02)
 Security
 update selfsigned package"
-49,"3.8.1 (2019-09-16)
+50,"3.8.1 (2019-09-16)
 Bug Fixes
 
 add null check for connection.headers (#2200) (7964997)
@@ -1070,7 +1079,7 @@ add null check for connection.headers (#2200) (7964997)
 false positive for an absolute path in the ContentBase option on windows (#2202) (68ecf78)
 add status in quiet log level (#2235) (7e2224e)
 scriptHost in client (#2246) (00903f6)"
-50,"3.8.0 (2019-08-09)
+51,"3.8.0 (2019-08-09)
 Bug Fixes
 
 server: fix setupExitSignals usage (#2181) (bbe410e)
@@ -1101,7 +1110,7 @@ server/client: made progress option available to API (#1961) (56274e4)
 Potential Breaking Changes
 We have migrated serverMode and clientMode to transportMode as an experimental option. If you want to use this feature, you have to change your settings. 
 Related PR: link"
-51,"3.7.2 (2019-06-17)
+52,"3.7.2 (2019-06-17)
 Bug Fixes
 
 client: add default fallback for client (#2015) (d26b444)
@@ -1112,14 +1121,14 @@ Bug Fixes
 client: add default fallback for client (#2015) (d26b444)
 open: set wait: false to run server.close successfully (#2001) (2b4cb52)
 test: fixed ProvidePlugin.test.js (#2002) (47453cb)"
-52,"3.7.1 (2019-06-07)
+53,"3.7.1 (2019-06-07)
 Bug Fixes
 
 retry finding port when port is null and get ports in sequence (#1993) (bc57514)
 ","3.7.1 (2019-06-07)
 Bug Fixes
 retry finding port when port is null and get ports in sequence (#1993) (bc57514)"
-53,"3.7.0 (2019-06-06)
+54,"3.7.0 (2019-06-06)
 Bug Fixes
 
 change clientLogLevel order to be called first (#1973) (57c8c92)
@@ -1134,7 +1143,7 @@ change clientLogLevel order to be called first (#1973) (57c8c92)
 es6 syntax in client (#1982) (802aa30)
 Features
 server: add serverMode option (#1937) (44a8cde)"
-54,"3.6.0 (2019-06-05)
+55,"3.6.0 (2019-06-05)
 Bug Fixes
 
 config: enable --overlay (#1968) (dc81e23)
@@ -1149,14 +1158,14 @@ config: enable --overlay (#1968) (dc81e23)
 server: don't ignore node_modules by default (#1970) (699f8b4), closes #1794
 Features
 server: add serverMode option (#1937) (44a8cde)"
-55,"3.5.1 (2019-06-01)
+56,"3.5.1 (2019-06-01)
 Bug Fixes
 
 allow passing promise function of webpack.config.js (#1947) (8cf1053)
 ","3.5.1 (2019-06-01)
 Bug Fixes
 allow passing promise function of webpack.config.js (#1947) (8cf1053)"
-56,"Bug Fixes
+57,"Bug Fixes
 
 add client code for electron-renderer target (#1935) (9297988)
 add client code for node-webkit target (#1942) (c6b2b1f)
@@ -1173,7 +1182,7 @@ Features
 server: onListening option (#1930) (61d0cdf)
 server: add callback support for invalidate (#1900) (cd218ef)
 server: add WEBPACK_DEV_SERVER env variable (#1929) (856169e)"
-57,"3.4.1 (2019-05-17)
+58,"3.4.1 (2019-05-17)
 Bug Fixes
 
 add none and warning to clientLogLevel (#1901) (0ae9be8)
@@ -1182,7 +1191,7 @@ broken hot reload (#1903) (6a444cd)
 Bug Fixes
 add none and warning to clientLogLevel (#1901) (0ae9be8)
 broken hot reload (#1903) (6a444cd)"
-58,"3.4.0 (2019-05-17)
+59,"3.4.0 (2019-05-17)
 Bug Fixes
 
 don't use self.location.port (#1838) (6d31984)
@@ -1215,7 +1224,7 @@ added sockHost option (#1858) (f47dff2)
 support HEAD method (#1875) (c2360e4)
 added liveReload option (#1889) (fc4fe32)
 update express to 4.17 version"
-59,"3.3.1 (2019-04-09)
+60,"3.3.1 (2019-04-09)
 Bug Fixes
 
 regression: always get necessary stats for hmr (#1780) (66b04a9)
@@ -1226,7 +1235,7 @@ Bug Fixes
 regression: always get necessary stats for hmr (#1780) (66b04a9)
 regression: host and port can be undefined or null (#1779) (028ceee)
 only add entries after compilers have been created (#1774) (b31cbaa)"
-60,"3.3.0 (2019-04-08)
+61,"3.3.0 (2019-04-08)
 Bug Fixes
 
 compatibility with webpack-cli@3.3 (#1754) (fd7cb0d)
@@ -1255,7 +1264,7 @@ add webpack as argument to before and after options (#1760) (0984d4b)
 http2 option to enable/disable HTTP/2 with HTTPS (#1721) (dcd2434)
 random port retry logic (#1692) (419f02e)
 relax depth limit from chokidar for content base (#1697) (7ea9ab9)"
-61,"3.2.1 (2019-02-25)
+62,"3.2.1 (2019-02-25)
 Bug Fixes
 
 deprecation message about setup now warning about v4 (#1684) (523a6ec)
@@ -1268,7 +1277,7 @@ deprecation message about setup now warning about v4 (#1684) (523a6ec)
 regression: allow ca, key and cert will be string (#1676) (b8d5c1e)
 regression: handle key, cert, cacert and pfx in CLI (#1688) (4b2076c)
 regression: problem with idb-connector after update internal-ip (#1691) (eb48691)"
-62,"3.2.0 (2019-02-20)
+63,"3.2.0 (2019-02-20)
 Bug Fixes
 
 allow single object proxy config (#1633) (252ea4f)
@@ -1289,7 +1298,7 @@ add sockPath option (options.sockPath) (#1553) (4bf1f76)
 allow to use ca, pfx, key and cert as string (#1542) (0b89fd9)
 automatically add the HMR plugin when hot or hotOnly is enabled (#1612) (178e6cc)
 set development mode by default when unspecified (#1653) (5ea376b)"
-63,"
+64,"
 3.1.14 (2018-12-24)
 Bug Fixes
 
@@ -1297,7 +1306,7 @@ add workaround for Origin header in sockjs (#1608) (1dfd4fb)
 ","3.1.14 (2018-12-24)
 Bug Fixes
 add workaround for Origin header in sockjs (#1608) (1dfd4fb)"
-64,"
+65,"
 3.1.13 (2018-12-22)
 Bug Fixes
 
@@ -1305,7 +1314,7 @@ delete a comma for Node.js <= v7.x (#1609) (0bab1c0)
 ","3.1.13 (2018-12-22)
 Bug Fixes
 delete a comma for Node.js <= v7.x (#1609) (0bab1c0)"
-65,"
+66,"
 3.1.12 (2018-12-22)
 Bug Fixes
 
@@ -1313,7 +1322,7 @@ regression in checkHost for checking Origin header (#1606) (8bb3ca8)
 ","3.1.12 (2018-12-22)
 Bug Fixes
 regression in checkHost for checking Origin header (#1606) (8bb3ca8)"
-66,"
+67,"
 3.1.11 (2018-12-21)
 Bug Fixes
 
@@ -1331,7 +1340,7 @@ Server: correct node version checks (#1543) (927a2b3)
 Server: mime type for wasm in contentBase directory (#1575) (#1580) (fadae5d)
 add url for compatibility with webpack@5 (#1598) (#1599) (68dd49a)
 check origin header for websocket connection (#1603) (b3217ca)"
-67,"2018-10-23
+68,"2018-10-23
 Bug Fixes
 
 options: add writeToDisk option to schema (#1520) (d2f4902)
@@ -1342,8 +1351,8 @@ Bug Fixes
 options: add writeToDisk option to schema (#1520) (d2f4902)
 package: update sockjs-client v1.1.5...1.3.0 (url-parse vulnerability) (#1537) (e719959)
 Server: set tls.DEFAULT_ECDH_CURVE to 'auto' (#1531) (c12def3)"
-68,,
-69,"2018-09-06
+69,,
+70,"2018-09-06
 Bug Fixes
 
 package: yargs security vulnerability (dependencies) (#1492) (8fb67c9)
@@ -1352,14 +1361,14 @@ utils/createLogger: ensure quiet always takes precedence (options.quiet) (#1486)
 Bug Fixes
 package: yargs security vulnerability (dependencies) (#1492) (8fb67c9)
 utils/createLogger: ensure quiet always takes precedence (options.quiet) (#1486) (7a6ca47)"
-70,"2018-08-29
+71,"2018-08-29
 Bug Fixes
 
 Server: don't use spdy on node >= v10.0.0 (#1451) (8ab9eb6)
 ","2018-08-29
 Bug Fixes
 Server: don't use spdy on node >= v10.0.0 (#1451) (8ab9eb6)"
-71,"2018-08-26
+72,"2018-08-26
 Bug Fixes
 
 bin: handle process signals correctly when the server isn't ready yet (#1432) (334c3a5)
@@ -1370,28 +1379,28 @@ Bug Fixes
 bin: handle process signals correctly when the server isn't ready yet (#1432) (334c3a5)
 examples/cli: correct template path in open-page example (#1401) (df30727)
 schema: allow the output filename to be a {Function} (#1409) (e2220c4)"
-72,"
+73,"
 Send the Progress event in the client so plugins can use it (#1427)
 Update sockjs-client to fix infinite reconnection loop (#1434)
 ","Send the Progress event in the client so plugins can use it (#1427)
 Update sockjs-client to fix infinite reconnection loop (#1434)"
-73,"
+74,"
 Update to webpack-dev-middleware 3.1.3, which should fix paths with a space not working on Windows (#1392)
 Fix logLevel option silent not being accepted by schema validation (#1372)
 ","Update to webpack-dev-middleware 3.1.3, which should fix paths with a space not working on Windows (#1392)
 Fix logLevel option silent not being accepted by schema validation (#1372)"
-74,"
+75,"
 Fix HMR causing a crash when trying to reload
 ",Fix HMR causing a crash when trying to reload
-75,"
+76,"
 Speed up incremental builds (#1362)
 Update webpack-dev-middleware to 3.1.2
 ","Speed up incremental builds (#1362)
 Update webpack-dev-middleware to 3.1.2"
-76,"
+77,"
 Update to webpack-dev-middleware v3, which removes the deprecation warnings from webpack.
 ","Update to webpack-dev-middleware v3, which removes the deprecation warnings from webpack."
-77,"Updates
+78,"Updates
 
 Fancy logging; webpack-log is now used for logging to the terminal (webpack-dev-middleware was already using this).
 The logLevel option is added for more fine-grained control over the logging.
@@ -1406,7 +1415,7 @@ The logLevel option is added for more fine-grained control over the logging.
 Bugfixes
 MultiCompiler was broken with webpack 4.
 Fix deprecation warnings caused by webpack 4. Note that you will still see some deprecation warnings because webpack-dev-middleware has not been updated yet."
-78,"Updates
+79,"Updates
 
 Breaking change: webpack v4 is now supported. Older versions of webpack are not supported.
 Breaking change: drops support for Node.js v4, going forward we only support v6+ (same as webpack).
@@ -1427,10 +1436,10 @@ After starting webpack-dev-server with an error in your code, it would not reloa
 DynamicEntryPlugin is now supported correctly (#1319).
 Huge thanks to all the contributors!
 Please note that webpack-serve will eventually be the successor of webpack-dev-server. The core features already work so if you're brave enough give it a try!"
-79,"
+80,"
 Since webpack v4 the entry option is optional and will default to ./src/. This didn't work in webpack-dev-server (#1308).
 ",Since webpack v4 the entry option is optional and will default to ./src/. This didn't work in webpack-dev-server (#1308).
-80,"This beta release differs a lot with the earlier alpha versions.
+81,"This beta release differs a lot with the earlier alpha versions.
 The previous alpha versions dropped a lot of features and supported less browsers, in an effort to get webpack-dev-server back to its core.
 These efforts have been moved to webpack-serve, and instead this major version of webpack-dev-version will focus on webpack v4 compatibility.
 The changelog below is compared to the latest v2 version of webpack-dev-server:
@@ -1447,9 +1456,9 @@ Support for webpack v4.
 webpack-dev-middleware updated to v2 (see changes).
 Drops support for Node.js v4, going forward we only support v6+ (same as webpack).
 We need your feedback! Please test this release. 🐛 🐞 👀 "
-81,"Our third attempt to fix compatibility with old browsers (#1273), this time we'll get it right.","Our third attempt to fix compatibility with old browsers (#1273), this time we'll get it right."
-82,Version 2.11.0 adds the transpilation of the client scripts via babel to ES5 which restores backwards compatibility (that was removed in 2.8.0) to very old or out of date browsers. ,Version 2.11.0 adds the transpilation of the client scripts via babel to ES5 which restores backwards compatibility (that was removed in 2.8.0) to very old or out of date browsers. 
-83,"Version 2.10.0 adds the transpilation of the client scripts via babel to ES5 which restores backwards compatibility (that was removed in 2.8.0) to very old or out of date browsers. 
+82,"Our third attempt to fix compatibility with old browsers (#1273), this time we'll get it right.","Our third attempt to fix compatibility with old browsers (#1273), this time we'll get it right."
+83,Version 2.11.0 adds the transpilation of the client scripts via babel to ES5 which restores backwards compatibility (that was removed in 2.8.0) to very old or out of date browsers. ,Version 2.11.0 adds the transpilation of the client scripts via babel to ES5 which restores backwards compatibility (that was removed in 2.8.0) to very old or out of date browsers. 
+84,"Version 2.10.0 adds the transpilation of the client scripts via babel to ES5 which restores backwards compatibility (that was removed in 2.8.0) to very old or out of date browsers. 
 Important webpack-dev-server has entered a maintenance-only mode. We won't be accepting any new features or major modifications. We'll still welcome pull requests for fixes however, and will continue to address any bugs that arise. Announcement with specifics pending.
 Bugfixes
 
@@ -1476,31 +1485,31 @@ transpile client bundles with babel (#1242)
 dependency updates (ce30460)
 Increase minimum marked version for ReDos vuln (#1255)
 Update sockjs dependency to fix auditjs security vulnerability warning"
-84,"Bugfixes
+85,"Bugfixes
 
 fixes #1208: watchOptions not passed to chokidar in wds
 ","Bugfixes
 fixes #1208: watchOptions not passed to chokidar in wds"
-85,"Updates
+86,"Updates
 
 fixes #1198: bump express for security (6b2d7a0)
 ","Updates
 fixes #1198: bump express for security (6b2d7a0)"
-86,"Bugfixes
+87,"Bugfixes
 
 assert ssl certs aren't published. fixes #1171
 fixes #860: failure to exit on SIGINT race condition (#1157)
 ","Bugfixes
 assert ssl certs aren't published. fixes #1171
 fixes #860: failure to exit on SIGINT race condition (#1157)"
-87,"Bugfixes
+88,"Bugfixes
 
 Fixes #1082, #1142. bin file correctly prefers local module, uses it, and bails if local module detected.
 Use dist/build sockjs-client instead of module source (#1148)
 ","Bugfixes
 Fixes #1082, #1142. bin file correctly prefers local module, uses it, and bails if local module detected.
 Use dist/build sockjs-client instead of module source (#1148)"
-88,"Bugfixes
+89,"Bugfixes
 Changed property descriptor for Array.includes polyfill (#1134)
 Updates
 Remove header additional property validation (#1115)
@@ -1511,8 +1520,8 @@ Updates
 Remove header additional property validation (#1115)
 Allow explicitly setting the protocol from the public option (#1117)
 Updates readme with support, usage, and caveats (outlines no support for old IE)"
-89,Patch release to resolve an errant log message in setup,Patch release to resolve an errant log message in setup
-90,"Note: Minor release due to addition of before and after hooks
+90,Patch release to resolve an errant log message in setup,Patch release to resolve an errant log message in setup
+91,"Note: Minor release due to addition of before and after hooks
 Features
 Deprecate setup in favor of before and after hooks (#1108)
 Bugfixes
@@ -1529,7 +1538,7 @@ fixes #1109: internal-ip update breaks useLocalIp option
 Fix quote style to satisfy ESLint (#1098)
 Updates
 Made error overlay translucent. (#1097)"
-91,"Bugfixes
+92,"Bugfixes
 fixes #1087: yargs@8 causes error output with webpack@2.x
 fixes #1084: template literals causing errors on IE (#1089)  …
 fixes #1086: promise configs fix and example
@@ -1540,14 +1549,14 @@ fixes #1084: template literals causing errors on IE (#1089)  …
 fixes #1086: promise configs fix and example
 Updates
 add promise-config example"
-92,"Bugfixes
+93,"Bugfixes
 fixes #1081, closes #1079. addDevServerEndpoints needs app stub for createDomain
 fixes #1080 - jQuery update caused live bundle iframe issue
 clean up progress option typo and options def","Bugfixes
 fixes #1081, closes #1079. addDevServerEndpoints needs app stub for createDomain
 fixes #1080 - jQuery update caused live bundle iframe issue
 clean up progress option typo and options def"
-93,"Features
+94,"Features
 
 Print webpack progress to browser console (#1063)
 Disable hot reloading with query string (#1068)
@@ -1584,7 +1593,7 @@ Allow --open option to specify the browser to use (#825)
 Adds requestCert support to the server
 Code cleanup and ESLint + eslint-config-webpack (#1058) 
 Include subjectAltName field in self-signed cert (#987) "
-94,"Features
+95,"Features
 
 Added Sockjs prefix config (#911) 
 Added --allowed-hosts CLI option (#1012)
@@ -1601,10 +1610,10 @@ Bugfixes
 Always allow requests with IP-address as host in checkHost() (#1007)
 Fully mute output info if quiet is set to true. (#999)
 Set undefined openPage to empty string when open option is true"
-95,"
+96,"
 Move loglevel from devDependencies to dependencies #1001
 ",Move loglevel from devDependencies to dependencies #1001
-96,"
+97,"
 Browser console messages now respect clientLogLevel (#921).
 Don't output startup info if quiet is set to true (#970).
 Only load Bonjour when needed (#958).
@@ -1617,10 +1626,10 @@ Only load Bonjour when needed (#958).
 Set HMR log level (#926).
 Do not show warnings @ overlay unless explicitly set (#881).
 Add cli option --disable-host-check (#980)."
-97,"Bugfixes
+98,"Bugfixes
 Fix peer dependencies to support webpack 3 ( #946 ) ( Fixes #932 )","Bugfixes
 Fix peer dependencies to support webpack 3 ( #946 ) ( Fixes #932 )"
-98,"Security
+99,"Security
 Don't provide a SSL cert, but generate one on demand. Unique for each developer.
 https://medium.com/@mikenorth/961572624c54 by Mike North
 Bugfixes
@@ -1641,57 +1650,16 @@ better check for WebWorker
 add openPage option to open a specific page
 add --bonjour
 add lan option, which listen on lan ip by default"
-99,"Bugfixes
+100,"Bugfixes
 
 fix a bug preventing publicHost from working
 ","Bugfixes
 fix a bug preventing publicHost from working"
-100,"Bugfixes:
+101,"Bugfixes:
 
 add disableHostCheck to schema
 ","Bugfixes:
 add disableHostCheck to schema"
-101,"Security fix:
-This version contains a security fix, which is also breaking change if you have an insecure configuration.
-We are releasing this breaking change as patch version to protect you from attacks.
-Sorry if this breaks your setup, but the fix is easy.
-We added a check for the correct Host header to the webpack-dev-server.
-This allowed evil websites to access your assets.
-The Host header of the request have to match the listening adress or the host provided in the public option.
-Make sure to provide correct values here.
-The response will contain a note when using an incorrect Host header.
-For usage behind a Proxy or similar setups we also added a disableHostCheck option to disable this check.
-Only use it when you know what you do. Not recommended.
-This version also includes this security fix for webpack-dev-middleware: https://github.com/webpack/webpack-dev-middleware/releases/tag/v1.10.2
-Note: This only affect the development server and middleware. webpack and built bundles are not affected.
-Credits to Ed Morley from Mozilla for reporting the issue.
-Bugfixes:
-
-Requests are not blocked when Host doesn't match listening host or public option.
-Requests to localhost or 127.0.0.1 are not blocked.
-
-Features:
-
-Added disableHostCheck option to disable the host check
-","Security fix:
-This version contains a security fix, which is also breaking change if you have an insecure configuration.
-We are releasing this breaking change as patch version to protect you from attacks.
-Sorry if this breaks your setup, but the fix is easy.
-We added a check for the correct Host header to the webpack-dev-server.
-This allowed evil websites to access your assets.
-The Host header of the request have to match the listening adress or the host provided in the public option.
-Make sure to provide correct values here.
-The response will contain a note when using an incorrect Host header.
-For usage behind a Proxy or similar setups we also added a disableHostCheck option to disable this check.
-Only use it when you know what you do. Not recommended.
-This version also includes this security fix for webpack-dev-middleware: link
-Note: This only affect the development server and middleware. webpack and built bundles are not affected.
-Credits to Ed Morley from Mozilla for reporting the issue.
-Bugfixes:
-Requests are not blocked when Host doesn't match listening host or public option.
-Requests to localhost or 127.0.0.1 are not blocked.
-Features:
-Added disableHostCheck option to disable the host check"
 102,"Security fix:
 This version contains a security fix, which is also breaking change if you have an insecure configuration.
 We are releasing this breaking change as patch version to protect you from attacks.
@@ -1733,7 +1701,48 @@ Requests are not blocked when Host doesn't match listening host or public option
 Requests to localhost or 127.0.0.1 are not blocked.
 Features:
 Added disableHostCheck option to disable the host check"
-103,"
+103,"Security fix:
+This version contains a security fix, which is also breaking change if you have an insecure configuration.
+We are releasing this breaking change as patch version to protect you from attacks.
+Sorry if this breaks your setup, but the fix is easy.
+We added a check for the correct Host header to the webpack-dev-server.
+This allowed evil websites to access your assets.
+The Host header of the request have to match the listening adress or the host provided in the public option.
+Make sure to provide correct values here.
+The response will contain a note when using an incorrect Host header.
+For usage behind a Proxy or similar setups we also added a disableHostCheck option to disable this check.
+Only use it when you know what you do. Not recommended.
+This version also includes this security fix for webpack-dev-middleware: https://github.com/webpack/webpack-dev-middleware/releases/tag/v1.10.2
+Note: This only affect the development server and middleware. webpack and built bundles are not affected.
+Credits to Ed Morley from Mozilla for reporting the issue.
+Bugfixes:
+
+Requests are not blocked when Host doesn't match listening host or public option.
+Requests to localhost or 127.0.0.1 are not blocked.
+
+Features:
+
+Added disableHostCheck option to disable the host check
+","Security fix:
+This version contains a security fix, which is also breaking change if you have an insecure configuration.
+We are releasing this breaking change as patch version to protect you from attacks.
+Sorry if this breaks your setup, but the fix is easy.
+We added a check for the correct Host header to the webpack-dev-server.
+This allowed evil websites to access your assets.
+The Host header of the request have to match the listening adress or the host provided in the public option.
+Make sure to provide correct values here.
+The response will contain a note when using an incorrect Host header.
+For usage behind a Proxy or similar setups we also added a disableHostCheck option to disable this check.
+Only use it when you know what you do. Not recommended.
+This version also includes this security fix for webpack-dev-middleware: link
+Note: This only affect the development server and middleware. webpack and built bundles are not affected.
+Credits to Ed Morley from Mozilla for reporting the issue.
+Bugfixes:
+Requests are not blocked when Host doesn't match listening host or public option.
+Requests to localhost or 127.0.0.1 are not blocked.
+Features:
+Added disableHostCheck option to disable the host check"
+104,"
 Properly close CLI when SIGINT or SIGTERM is called. This should fix some Docker issues (#787).
 Fix for entry not working when it was a function (#802).
 Fix for exception when using webpack-dev-server in a webworker (#813).
@@ -1746,10 +1755,10 @@ Fix for exception when using webpack-dev-server in a webworker (#813).
 Fix refresh loop that could happen on Firefox (#841).
 contentBase as an array did not work when used via CLI (#832).
 Proxy options were mutated, so this could lead to problems when re-using them (#836)."
-104,"
+105,"
 After fixing a warning/error, the overlay was not always cleared correctly (3cb79bd39489d12a2df9896ce204b8de15e636f4).
 ","After fixing a warning/error, the overlay was not always cleared correctly (3cb79bd39489d12a2df9896ce204b8de15e636f4)."
-105,"
+106,"
 contentBase: false in combination with the historyApiFallback option threw an error (#791).
 Separate logic of adding entry points to the webpack config; this allows alternative implementations like the webpack grunt plugin to use this instead of copying the code (#782).
 Update SockJS dependency to fix issue with FireFox constantly refreshing the page (#762).
@@ -1770,34 +1779,34 @@ overlay: {
   errors: true,
   warnings: true
 }"
-106,"
+107,"
 Add new fancy error overlay in-browser, which shows up when there are compilation errors. Disabled by default, add overlay: true to enable (#764)!
 If you use --open and options.public, the browser will now open the same URL as you have defined in public (#749).
 options.port now allows strings to be passed in, previously only integers were accepted (#766).
 ","Add new fancy error overlay in-browser, which shows up when there are compilation errors. Disabled by default, add overlay: true to enable (#764)!
 If you use --open and options.public, the browser will now open the same URL as you have defined in public (#749).
 options.port now allows strings to be passed in, previously only integers were accepted (#766)."
-107,"Probably the last release in the v1.x range:
+108,"Probably the last release in the v1.x range:
 - Backport support for webpack config as a Promise.","Probably the last release in the v1.x range:
 - Backport support for webpack config as a Promise."
-108,"First webpack-dev-server 2 release
+109,"First webpack-dev-server 2 release
 Following the webpack 2 release.
 It's equal to the last RC.
 If you're curious about the highlights, read this fancy Medium post.","First webpack-dev-server 2 release
 Following the webpack 2 release.
 It's equal to the last RC.
 If you're curious about the highlights, read this fancy Medium post."
-109,"
+110,"
 Allow latest webpack 2.2.0-rc.0 as peer dependency (#714).
 ",Allow latest webpack 2.2.0-rc.0 as peer dependency (#714).
-110,"
+111,"
 beta.11 prevented the page from reloading when there was an error or a warning. Now it will only prevent a reload when there are errors, since you can ignore warnings (#697).
 beta.11 introduced configuration validation. There was a small error that prevented clientLogLevel: ""none"" from working (#693).
 Fix startup information not using colors in some cases (8a4b0709c9479b87bc3238e3ae690fd5a6c26df6).
 ","beta.11 prevented the page from reloading when there was an error or a warning. Now it will only prevent a reload when there are errors, since you can ignore warnings (#697).
 beta.11 introduced configuration validation. There was a small error that prevented clientLogLevel: ""none"" from working (#693).
 Fix startup information not using colors in some cases (8a4b0709c9479b87bc3238e3ae690fd5a6c26df6)."
-111,"
+112,"
 Breaking change: all options passed to the server get validated now, just like the webpack options already are. In most cases this shouldn't break anything, but it is possible we missed some valid usages (#654).
 webpack 2.1.0-beta.26 or higher is required.
 If no port is specified, the CLI will now find the first available port that is not in use instead of crashing when port 8080 is in use (#685).
@@ -1816,7 +1825,7 @@ Fix --version flag not working in CLI (#679).
 Fix --open flag opening the wrong URL when using lazy mode (7cb0490bcaedd5ac32e6e1834b9da7a9de777303).
 Compilation errors were duplicated in the DevTools (webpack/webpack#3008).
 Expose events to the page, so e.g. plugins can show a custom error modal in the browser (#481)."
-112,"
+113,"
 Breaking change: only support Node.js 0.12 and higher.
 Update SSL certificate in https mode to fix issues with Windows (#648).
 Add option to listen on unix socket instead of a port with the --socket flag (#661).
@@ -1827,7 +1836,7 @@ Update SSL certificate in https mode to fix issues with Windows (#648).
 Add option to listen on unix socket instead of a port with the --socket flag (#661).
 Add deprecation warnings for using contentBase with a URL or port, since the proxy option does about the same and is more powerful (61b46ba).
 Fix more issues with IPv6 (#676)."
-113,"
+114,"
 Add support for watching files provided by the contentBase option. Enable with watchContentBase: true or --watch-content-base in the CLI (#649).
 Support IPv6 addresses as host option (#644).
 Fix historyApiFallback taking preference of contentBase files instead of the in-memory files; this caused issues with html-webpack-plugin (#640).
@@ -1836,7 +1845,7 @@ Fix edge case where rapidly refreshing the page caused the server to crash (#637
 Support IPv6 addresses as host option (#644).
 Fix historyApiFallback taking preference of contentBase files instead of the in-memory files; this caused issues with html-webpack-plugin (#640).
 Fix edge case where rapidly refreshing the page caused the server to crash (#637)."
-114,"
+115,"
 Backport a few fixes from v2:
 Support for PFX files as SSL connection options (#630).
 Fix edge case where quickly refreshing the browser could result in the server crashing (#637).
@@ -1845,17 +1854,17 @@ Webpack bundle assets were not loaded after using the proxy bypass feature (#614
 Support for PFX files as SSL connection options (#630).
 Fix edge case where quickly refreshing the browser could result in the server crashing (#637).
 Webpack bundle assets were not loaded after using the proxy bypass feature (#614). "
-115,"
+116,"
 Add full Web Worker support (#632).
 Fix historyApiFallback not working when specifying an index that is not index.html (#627, cb1b32f).
 Add support for new SSL parameters: pfx and pfxPassphrase. Use with --pfx and --pfx-passphrase in the CLI (#631).
 ","Add full Web Worker support (#632).
 Fix historyApiFallback not working when specifying an index that is not index.html (#627, cb1b32f).
 Add support for new SSL parameters: pfx and pfxPassphrase. Use with --pfx and --pfx-passphrase in the CLI (#631)."
-116,"
+117,"
 Add support for http/2 when using the https option. Falls back on http/1.1.
 ",Add support for http/2 when using the https option. Falls back on http/1.1.
-117,"
+118,"
 Start with tests! There's still a lot more to test, but at least there are some tests now (#623).
 Add optional callback for the close API (1cf6549).
 Fix historyApiFallback to fallback correctly to contentBase (#617).
@@ -1866,7 +1875,7 @@ Add optional callback for the close API (1cf6549).
 Fix historyApiFallback to fallback correctly to contentBase (#617).
 When using the bypass feature in a proxy, it was not possible to use in-memory webpack assets (#613).
 Simplify code for delivering assets (#618)."
-118,"
+119,"
 Add proxy config hot reloading - needs some additional configuration (#605).
 Fix --progress not working (#609).
 Fix [WDS] Hot Module Replacement enabled appearing even if the clientLogLevel was set to a non-info value (#607).
@@ -1877,14 +1886,14 @@ Fix --progress not working (#609).
 Fix [WDS] Hot Module Replacement enabled appearing even if the clientLogLevel was set to a non-info value (#607).
 Don't rely on a CDN for providing the SockJS script in iframe modus (#493).
 Explain what --inline does in help section for the CLI (#596)."
-119,"
+120,"
 Backport a few more fixes from v2:
 Add clientLogLevel (--client-log-level for CLI) option. It controls the log messages shown in the browser. Available levels are error, warning, info or none (#579).
 Limit websocket retries when the server can't be reached (#589).
 ","Backport a few more fixes from v2:
 Add clientLogLevel (--client-log-level for CLI) option. It controls the log messages shown in the browser. Available levels are error, warning, info or none (#579).
 Limit websocket retries when the server can't be reached (#589)."
-120,"
+121,"
 Backport a few fixes from v2 (#604):
 Using https and manually including the client script resulted in a wrong url for the websocket.
 Manually including the client script didn't work resulted in a wrong url for the websocket in some cases.
@@ -1893,7 +1902,7 @@ Compatibility with platforms that don't use a hostname (Electron / Ionic).
 Using https and manually including the client script resulted in a wrong url for the websocket.
 Manually including the client script didn't work resulted in a wrong url for the websocket in some cases.
 Compatibility with platforms that don't use a hostname (Electron / Ionic)."
-121,"
+122,"
 Fix contentBase option in webpack config being ignored when using the CLI (#597).
 Fix SockJS providing an old SocKJS-client file, causing compatibility error (#474).
 Fix websocket connection issues when using https with a relative script path (#592).
@@ -1904,7 +1913,7 @@ Fix SockJS providing an old SocKJS-client file, causing compatibility error (#47
 Fix websocket connection issues when using https with a relative script path (#592).
 Fix hostname resolving issues (#594).
 Improve reliability of --open parameter (#593)."
-122,"
+123,"
 Breaking change: removed overriding output.path to ""/"" in the webpack config when using the CLI (#337). Note that output.path needs to be an absolute path!
 Breaking change: removed contentBase as a proxy feature (deprecated since 1.x).
 Limit websocket retries when the server can't be reached (#589).
@@ -1919,7 +1928,7 @@ Improve detection for getting the server URL in the client (#496).
 Add clientLogLevel (--client-log-level for CLI) option. It controls the log messages shown in the browser. Available levels are error, warning, info or none (#579).
 Allow using no content base with the --no-content-base flag (previously it always defaulted to the working directory).
 Use stronger certs for the https modus, to prevent browsers from complaining about it (#572)."
-123,"
+124,"
 Breaking change: Only compatible with webpack v2.
 Breaking change: --inline is enabled by default now.
 Add compatibility for web workers (#298).
@@ -1932,7 +1941,7 @@ Add compatibility for web workers (#298).
 Convert to yargs to handle command line options.
 Allow a Promise instead of a config object in the CLI (#419).
 Add --hot-only flag, a shortcut that adds webpack/hot/only-dev-server in entry in the webpack config (#439)."
-124,"
+125,"
 Fix the bypass config option for proxies (#563).
 Reverted a change that prevented clicks from registering in the iframe.
 Fix using * as a proxy wildcard.
@@ -1941,7 +1950,7 @@ Avoid accessing document when using inline modus (#577).
 Reverted a change that prevented clicks from registering in the iframe.
 Fix using * as a proxy wildcard.
 Avoid accessing document when using inline modus (#577)."
-125,"
+126,"
 Use http-proxy-middleware instead of http-proxy. This fixes compatibility with native web sockets (#359).
 Properly close the server, which fixes issues with the port not freeing up (#357).
 Add --stdin flag, to close the dev server on process exit (#352).

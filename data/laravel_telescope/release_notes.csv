@@ -1,31 +1,42 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"
+Show list of headers when present by @timacdonald in https://github.com/laravel/telescope/pull/1355
+",Show list of headers when present by @timacdonald in link
+2,"
+Avoids serialialisation of exception traces by @nunomaduro in https://github.com/laravel/telescope/pull/1354
+",Avoids serialialisation of exception traces by @nunomaduro in link
+3,"
+Fixes jobs saying ""pending"" forever by @nunomaduro in https://github.com/laravel/telescope/pull/1349
+Prevent Memory Leak when using hideRequestParameters and hideRequestHeaders by @danilopinotti in https://github.com/laravel/telescope/pull/1350
+","Fixes jobs saying ""pending"" forever by @nunomaduro in link
+Prevent Memory Leak when using hideRequestParameters and hideRequestHeaders by @danilopinotti in link"
+4,"
 Add duration to HTTP Client watcher by @DougSisk in https://github.com/laravel/telescope/pull/1348
 ",Add duration to HTTP Client watcher by @DougSisk in link
-2,"
+5,"
 Fix MailWatcher tags by @Rezrazi in https://github.com/laravel/telescope/pull/1340
 ",Fix MailWatcher tags by @Rezrazi in link
-3,"
+6,"
 Return callable output on Telescope::withoutRecording by @adamczykpiotr in https://github.com/laravel/telescope/pull/1317
 Removed redundant default value from config file by @siarheipashkevich in https://github.com/laravel/telescope/pull/1323
 Don't use constructor injection in console commands, and inject into handle() instead by @mad-briller in https://github.com/laravel/telescope/pull/1327
 ","Return callable output on Telescope::withoutRecording by @adamczykpiotr in link
 Removed redundant default value from config file by @siarheipashkevich in link
 Don't use constructor injection in console commands, and inject into handle() instead by @mad-briller in link"
-4,"
+7,"
 Prevent Laravel\Scout\Jobs\MakeSearchable job from being recorded to avoid memory leak by @nicoverbruggen in https://github.com/laravel/telescope/pull/1306
 Allows to specify the log level by @nunomaduro in https://github.com/laravel/telescope/pull/1312
 ","Prevent Laravel\Scout\Jobs\MakeSearchable job from being recorded to avoid memory leak by @nicoverbruggen in link
 Allows to specify the log level by @nunomaduro in link"
-5,"
+8,"
 Create a fresh instance of schema for each migration by @nunomaduro in https://github.com/laravel/telescope/pull/1305
 ",Create a fresh instance of schema for each migration by @nunomaduro in link
-6,"Changed
+9,"Changed
 
 Center header button icons by @timacdonald in https://github.com/laravel/telescope/pull/1299
 ","Changed
 Center header button icons by @timacdonald in link"
-7,"Changed
+10,"Changed
 
 A fresh coat of paint by @jessarcher in https://github.com/laravel/telescope/pull/1295
 
@@ -36,12 +47,12 @@ Handle redis connection exception on DumpWatcher register by @aidanthewiz in htt
 A fresh coat of paint by @jessarcher in link
 Fixed
 Handle redis connection exception on DumpWatcher register by @aidanthewiz in link"
-8,"Added
+11,"Added
 
 Laravel v10 Support by @driesvints in https://github.com/laravel/telescope/pull/1292
 ","Added
 Laravel v10 Support by @driesvints in link"
-9,"Added
+12,"Added
 
 Add support for model keys cast to backed enums in FormatModel by @sidquisaad in https://github.com/laravel/telescope/pull/1286
 
@@ -52,76 +63,76 @@ Uses PHP Native Type Declarations 🐘  by @nunomaduro in https://github.com/lar
 Add support for model keys cast to backed enums in FormatModel by @sidquisaad in link
 Changed
 Uses PHP Native Type Declarations 🐘  by @nunomaduro in link"
-10,"Fixed
+13,"Fixed
 
 Fix deprecations by @driesvints in https://github.com/laravel/telescope/pull/1284
 ","Fixed
 Fix deprecations by @driesvints in link"
-11,"Fixed
+14,"Fixed
 
 Adjust text-break layout with text-break class by @thomas-goncalves-83 in https://github.com/laravel/telescope/pull/1281
 Fix FormatModel class to work with keyless Pivot models by @Cellard in https://github.com/laravel/telescope/pull/1282
 ","Fixed
 Adjust text-break layout with text-break class by @thomas-goncalves-83 in link
 Fix FormatModel class to work with keyless Pivot models by @Cellard in link"
-12,"Added
+15,"Added
 
 Add the Ability to Pass Custom ignore_paths To Query Watcher by @Watercycle in https://github.com/laravel/telescope/pull/1276
 ","Added
 Add the Ability to Pass Custom ignore_paths To Query Watcher by @Watercycle in link"
-13,"Fixed
+16,"Fixed
 
 Fix issue where json_encode quietly fails due to binary data inside telescope entry by @Hexide in https://github.com/laravel/telescope/pull/1266
 ","Fixed
 Fix issue where json_encode quietly fails due to binary data inside telescope entry by @Hexide in link"
-14,"Fixed
+17,"Fixed
 
 Dont register redis watcher if the redis service is not bound into the container. by @mad-briller in https://github.com/laravel/telescope/pull/1259
 ","Fixed
 Dont register redis watcher if the redis service is not bound into the container. by @mad-briller in link"
-15,"Fixed
+18,"Fixed
 
 Do not record when unserializing command by @driesvints in https://github.com/laravel/telescope/pull/1257 & https://github.com/laravel/telescope/pull/1258
 ","Fixed
 Do not record when unserializing command by @driesvints in link & link"
-16,"Fixed
+19,"Fixed
 
 Fix bug watching invokeable object events by @ziadoz in https://github.com/laravel/telescope/pull/1250
 ","Fixed
 Fix bug watching invokeable object events by @ziadoz in link"
-17,"Changed
+20,"Changed
 
 HTML Response vs Empty Response by @bdenizar in https://github.com/laravel/telescope/pull/1242
 ","Changed
 HTML Response vs Empty Response by @bdenizar in link"
-18,"Fixed
+21,"Fixed
 
 Check tags after set $this->user() by @trin4ik in https://github.com/laravel/telescope/pull/1236
 ","Fixed
 Check tags after set $this->user() by @trin4ik in link"
-19,"Added
+22,"Added
 
 Add support for ignoring by HTTP Verb by @ArthurPatriot in https://github.com/laravel/telescope/pull/1222
 ","Added
 Add support for ignoring by HTTP Verb by @ArthurPatriot in link"
-20,"Changed
+23,"Changed
 
 Relax user type in GateWatcher to match Laravel base framework. by @CImrie in https://github.com/laravel/telescope/pull/1221
 ","Changed
 Relax user type in GateWatcher to match Laravel base framework. by @CImrie in link"
-21,"Fixed
+24,"Fixed
 
 Defer loading monitored tags by @taylorotwell in https://github.com/laravel/telescope/pull/1215
 ","Fixed
 Defer loading monitored tags by @taylorotwell in link"
-22,"Changed
+25,"Changed
 
 CacheWatcher hide values by @dododedodonl in https://github.com/laravel/telescope/pull/1206
 Read from Horizon config when ignoring requests by @lightbulblighter in https://github.com/laravel/telescope/pull/1211
 ","Changed
 CacheWatcher hide values by @dododedodonl in link
 Read from Horizon config when ignoring requests by @lightbulblighter in link"
-23,"Added
+26,"Added
 
 Add option to record dumps even though the dump watcher tab is not open by @superDuperCyberTechno in https://github.com/laravel/telescope/pull/1199
 Add pause and resume commands by @jamespavett in https://github.com/laravel/telescope/pull/1200
@@ -134,7 +145,7 @@ Add option to record dumps even though the dump watcher tab is not open by @supe
 Add pause and resume commands by @jamespavett in link
 Changed
 Use Throwable instead of Exception by @adriaanzon in link"
-24,"Changed
+27,"Changed
 
 Use new anonymous classes by @mmachatschek in https://github.com/laravel/telescope/pull/1194
 
@@ -145,32 +156,32 @@ Truncate request url more by @driesvints in https://github.com/laravel/telescope
 Use new anonymous classes by @mmachatschek in link
 Fixed
 Truncate request url more by @driesvints in link"
-25,"Fixed
+28,"Fixed
 
 Mails sent through Notifications preview invalid HTML by @guushuizen in https://github.com/laravel/telescope/pull/1188
 ","Fixed
 Mails sent through Notifications preview invalid HTML by @guushuizen in link"
-26,"Fixed
+29,"Fixed
 
 Fix key handling for ModelWatcher (#1180)
 ","Fixed
 Fix key handling for ModelWatcher (#1180)"
-27,"Changed
+30,"Changed
 
 Attempt to fix model hydration (#1174)
 ","Changed
 Attempt to fix model hydration (#1174)"
-28,"Changed
+31,"Changed
 
 Laravel 9 Support (#1170)
 ","Changed
 Laravel 9 Support (#1170)"
-29,"Fixed
+32,"Fixed
 
 Fix issue with array hydration (#1165)
 ","Fixed
 Fix issue with array hydration (#1165)"
-30,"Changed
+33,"Changed
 
 Merge previously defined view data when building the view mailable data (#1157)
 
@@ -183,17 +194,17 @@ Merge previously defined view data when building the view mailable data (#1157)
 Fixed
 Add key attribute (#1154)
 Fix PHP 8.1 issues (#1156)﻿"
-31,"Changed
+34,"Changed
 
 Add support ignore request when status code specified (abc9660, #1150)
 ","Changed
 Add support ignore request when status code specified (abc9660, #1150)"
-32,"Changed
+35,"Changed
 
 Slow query filter method added (#1146)﻿
 ","Changed
 Slow query filter method added (#1146)﻿"
-33,"Changed
+36,"Changed
 
 Replace Http/Uri with HTTP/URI  (#1141)
 
@@ -204,29 +215,29 @@ Fix syntax highlighting (#1142)﻿
 Replace Http/Uri with HTTP/URI  (#1141)
 Fixed
 Fix syntax highlighting (#1142)﻿"
-34,"Fixed
+37,"Fixed
 
 Fix mail to check to allow for null to fields (#1133)﻿
 ","Fixed
 Fix mail to check to allow for null to fields (#1133)﻿"
-35,"Fixed
+38,"Fixed
 
 Don't log HTTP requests to Telescope endpoints (#1127)
 Laravel Octane fix: GateWatcher handles stack trace caller not found (#1128)
 ","Fixed
 Don't log HTTP requests to Telescope endpoints (#1127)
 Laravel Octane fix: GateWatcher handles stack trace caller not found (#1128)"
-36,"Fixed
+39,"Fixed
 
 Fix telescope.domain usage (#1124)﻿
 ","Fixed
 Fix telescope.domain usage (#1124)﻿"
-37,"Fixed
+40,"Fixed
 
 Rewind http client response after recording (#1114)﻿
 ","Fixed
 Rewind http client response after recording (#1114)﻿"
-38,"Changed
+41,"Changed
 
 Record 'connection failed' http client event (#1097)
 Unified asset publishing (#1105)
@@ -243,7 +254,7 @@ Fixes
 Suppress filesize errors in client request watcher (#1096)
 Use intdiv where appropriate to prevent unexpected conversion to float (#1100)
 Fix publishing for disabled module (#1104)﻿"
-39,"Added
+42,"Added
 
 Add a new ""Clear Entries"" button (#1091)
 
@@ -262,19 +273,19 @@ Telescope:withoutRecording() should be exception safe (#1092)
 Fixed
 Fixed frontend request polling memory leaks (#1086)
 Fix for JobWatchers when the job payload is encrypted (#1089)﻿"
-40,"Fixed
+43,"Fixed
 
 Http Client Link State (#1078)
 Improve file handling in client request watcher (#1080)﻿
 ","Fixed
 Http Client Link State (#1078)
 Improve file handling in client request watcher (#1080)﻿"
-41,"Added
+44,"Added
 
 Add http client request watcher (#1073)﻿
 ","Added
 Add http client request watcher (#1073)﻿"
-42,"Changed
+45,"Changed
 
 Remove asset manifest check and warning (#1063)
 
@@ -285,7 +296,7 @@ Implemented fallback for PDO::quote method on QueryWatcher (#1066)﻿
 Remove asset manifest check and warning (#1063)
 Fixed
 Implemented fallback for PDO::quote method on QueryWatcher (#1066)﻿"
-43,"Fixed
+46,"Fixed
 
 Always boot commands (#1045)
 Fix JSON indenting (#1049)
@@ -294,49 +305,49 @@ Fix query formatting in preview (#1050)﻿
 Always boot commands (#1045)
 Fix JSON indenting (#1049)
 Fix query formatting in preview (#1050)﻿"
-44,"Fixed
+47,"Fixed
 
 Fix query preview (#1044)﻿
 ","Fixed
 Fix query preview (#1044)﻿"
-45,"Changed
+48,"Changed
 
 Move booting of commands (#1034)
 Prep For Octane (#1040)﻿
 ","Changed
 Move booting of commands (#1034)
 Prep For Octane (#1040)﻿"
-46,"Fixed
+49,"Fixed
 
 Revert ""[4.x] Move cache read inside handler to avoid early cache call"" (#1030)﻿
 ","Fixed
 Revert ""[4.x] Move cache read inside handler to avoid early cache call"" (#1030)﻿"
-47,"Fixed
+50,"Fixed
 
 Move cache read inside handler to avoid early cache call (#1025)﻿
 ","Fixed
 Move cache read inside handler to avoid early cache call (#1025)﻿"
-48,"Fixed
+51,"Fixed
 
 Implement new GateEvaluated event (#1018)﻿
 ","Fixed
 Implement new GateEvaluated event (#1018)﻿"
-49,"Fixed
+52,"Fixed
 
 Handle when $batch is null (#1013)﻿
 ","Fixed
 Handle when $batch is null (#1013)﻿"
-50,"Fixed
+53,"Fixed
 
 GateWatcher shows allowed when it is denied via Response class (#1010)﻿
 ","Fixed
 GateWatcher shows allowed when it is denied via Response class (#1010)﻿"
-51,"Fixed
+54,"Fixed
 
 Prevent access to uninitialized typed properties (#1005)﻿
 ","Fixed
 Prevent access to uninitialized typed properties (#1005)﻿"
-52,"Added
+55,"Added
 
 Add model hydrations to model watcher (#1000)
 
@@ -347,24 +358,24 @@ Fix typo in memory calculation (#997)﻿
 Add model hydrations to model watcher (#1000)
 Fixed
 Fix typo in memory calculation (#997)﻿"
-53,"Fixed
+56,"Fixed
 
 Revert ""[4.x] Updated db command for clearing tables"" (#993)﻿
 ","Fixed
 Revert ""[4.x] Updated db command for clearing tables"" (#993)﻿"
-54,"Changed
+57,"Changed
 
 Updated db command for clearing tables (#991)
 ﻿
 ","Changed
 Updated db command for clearing tables (#991)
 ﻿"
-55,"Fixed
+58,"Fixed
 
 Fix for database migrations publishing path (#979)﻿
 ","Fixed
 Fix for database migrations publishing path (#979)﻿"
-56,"Added
+59,"Added
 
 PHP 8 Support (#977)
 
@@ -375,7 +386,7 @@ Consolidate database directory (#975)﻿
 PHP 8 Support (#977)
 Changed
 Consolidate database directory (#975)﻿"
-57,"Added
+60,"Added
 
 Be able to specify only allowed paths (#963, (18c475f))
 Added isGate() filter (#967)
@@ -384,17 +395,17 @@ Added isRequest() filter (#966)﻿
 Be able to specify only allowed paths (#963, (18c475f))
 Added isGate() filter (#967)
 Added isRequest() filter (#966)﻿"
-58,"Added
+61,"Added
 
 Dump visibility toggling, search, etc (#959)﻿
 ","Added
 Dump visibility toggling, search, etc (#959)﻿"
-59,"Fixed
+62,"Fixed
 
 Support new listeners syntax (a69fc6f)
 ","Fixed
 Support new listeners syntax (a69fc6f)"
-60,"Added
+63,"Added
 
 Laravel 8 support & Batches support (#903)
 
@@ -413,7 +424,7 @@ May be written to an empty log (#930)
 Removed
 Laravel 6 & 7 support (#860)
 PHP 7.2 support (3c3883d)"
-61,"Fixed
+64,"Fixed
 
 Change text for Marking Exceptions as Resolved (#916)
 Add explicit base font family fallback (#920)
@@ -422,7 +433,7 @@ Remove problematic unused code when formatting SQL (#924)
 Change text for Marking Exceptions as Resolved (#916)
 Add explicit base font family fallback (#920)
 Remove problematic unused code when formatting SQL (#924)"
-62,"Added
+65,"Added
 
 Add request IP address to RequestWatcher (#895)
 
@@ -433,7 +444,7 @@ Compile assets (762e4ed)
 Add request IP address to RequestWatcher (#895)
 Fixed
 Compile assets (762e4ed)"
-63,"Added
+66,"Added
 
 Allow avatar path customization (#890, 94a3952)
 Add entry to afterRecording hook (#893)
@@ -442,33 +453,33 @@ Add afterStore hooks (#894, (600e462))
 Allow avatar path customization (#890, 94a3952)
 Add entry to afterRecording hook (#893)
 Add afterStore hooks (#894, (600e462))"
-64,"Fixed
+67,"Fixed
 
 Changed truncate from 75 chars to 50 (#887)
 Add index to created_at (#885)
 ","Fixed
 Changed truncate from 75 chars to 50 (#887)
 Add index to created_at (#885)"
-65,"Added
+68,"Added
 
 Ability to review Exception context data (#882)
 ","Added
 Ability to review Exception context data (#882)"
-66,"Fixed
+69,"Fixed
 
 Fix typed properties issues (#879)
 Remove thousands separator in time records (#877)
 ","Fixed
 Fix typed properties issues (#879)
 Remove thousands separator in time records (#877)"
-67,"Fixed
+70,"Fixed
 
 Testing fixes (#866)
 Encode array for logging (#873)
 ","Fixed
 Testing fixes (#866)
 Encode array for logging (#873)"
-68,"Added
+71,"Added
 
 Added isQuery in IncomingEntry (#842)
 
@@ -479,17 +490,17 @@ Preserving the alphabetical order of providers (#841)
 Added isQuery in IncomingEntry (#842)
 Fixed
 Preserving the alphabetical order of providers (#841)"
-69,"Fixed
+72,"Fixed
 
 Fix array to string conversion (#839)
 ","Fixed
 Fix array to string conversion (#839)"
-70,"Added
+73,"Added
 
 Laravel 7 support (a26891d)
 ","Added
 Laravel 7 support (a26891d)"
-71,"Changed
+74,"Changed
 
 Change Telescope::$tagUsing to an array (#694)
 Make ignoring Laravel Nova paths configurable (#799)
@@ -502,32 +513,32 @@ Change Telescope::$tagUsing to an array (#694)
 Make ignoring Laravel Nova paths configurable (#799)
 Removed
 Dropped support for Laravel 5.8"
-72,"Fixed
+75,"Fixed
 
 Handle all eval() failures from Laravel Tinker (#829)
 ","Fixed
 Handle all eval() failures from Laravel Tinker (#829)"
-73,"Fixed
+76,"Fixed
 
 ReflectionException when used with debugbar (#825)
 ","Fixed
 ReflectionException when used with debugbar (#825)"
-74,"Fixed
+77,"Fixed
 
 Only log file/line for exception trace (#817)
 ","Fixed
 Only log file/line for exception trace (#817)"
-75,"Fixed
+78,"Fixed
 
 Avoiding to create guard (#810)
 ","Fixed
 Avoiding to create guard (#810)"
-76,"Fixed
+79,"Fixed
 
 Check if composers key exists (#797)
 ","Fixed
 Check if composers key exists (#797)"
-77,"Fixed
+80,"Fixed
 
 Enable redis events by default if the watcher is enabled (#789)
 Fix Round queries duration to 2 decimal places (#791)
@@ -536,7 +547,7 @@ Fix ignore generic listeners as view composer (#794)
 Enable redis events by default if the watcher is enabled (#789)
 Fix Round queries duration to 2 decimal places (#791)
 Fix ignore generic listeners as view composer (#794)"
-78,"Added
+81,"Added
 
 Add information about view composers (#766)
 Add formatted output support for plain text responses (#749)
@@ -571,7 +582,7 @@ Hide php-auth-pw server variable by default (#740)
 Use time instead of duplicated to show global queries duration (#737)
 Check for null values in query bindings (#727)
 Prevent resuming recording when processing sync job (#720)"
-79,"Added
+82,"Added
 
 Jump to related entry by hash (#708)
 Format SQL in watcher (#714)
@@ -612,12 +623,12 @@ Only load sfDump header once (#714)
 Fix events with ShouldBroadcastNow (#623)
 Support duration calculation without constant LARAVEL_START (#664)
 Optimize dump (#683)"
-80,"Fixed
+83,"Fixed
 
 Enable chunking on delete to prevent errors on large resultsets (#658, 32c3709)
 ","Fixed
 Enable chunking on delete to prevent errors on large resultsets (#658, 32c3709)"
-81,"Added
+84,"Added
 
 Add app name config to title and dashboard (#643), (a3f1580)
 
@@ -632,12 +643,12 @@ Fixed
 JSON fallback font (#605)
 PHPUnit 8 Warnings (#610)
 Empty path config in frontend (#637)"
-82,"Fixed
+85,"Fixed
 
 use property_exists (eb3f6f8)
 ","Fixed
 use property_exists (eb3f6f8)"
-83,"Changed
+86,"Changed
 
 Cache key compatibility update (#583)
 
@@ -648,24 +659,21 @@ Newline Config (#595)
 Cache key compatibility update (#583)
 Fixed
 Newline Config (#595)"
-84,"Fixes
+87,"Fixes
 
 Support apps that run carbon 1.0 (2b976e5)
 ","Fixes
 Support apps that run carbon 1.0 (2b976e5)"
-85,"Added
+88,"Added
 
 Added support for Date::use(CarbonImmutable::class); (d7a3ca4)
 ","Added
 Added support for Date::use(CarbonImmutable::class); (d7a3ca4)"
-86,"Changed
+89,"Changed
 
 Update Cache to use seconds instead of minutes (#562)
 ","Changed
 Update Cache to use seconds instead of minutes (#562)"
-87,,
-88,,
-89,,
 90,,
 91,,
 92,,
@@ -681,3 +689,6 @@ Update Cache to use seconds instead of minutes (#562)"
 102,,
 103,,
 104,,
+105,,
+106,,
+107,,

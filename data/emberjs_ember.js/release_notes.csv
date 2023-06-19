@@ -1,5 +1,24 @@
-Index,Release Note,Release Note With Abstraction
+Index,Release Note,Release Note Abstract
 1,"CHANGELOG
+
+#20461 [BUGFIX] Fix cyclic module crash with engines and fastboot.
+","CHANGELOG
+20461 [BUGFIX] Fix cyclic module crash with engines and fastboot."
+2,"CHANGELOG
+
+#20461 [BUGFIX] Fix cyclic module crash with engines and fastboot.
+","CHANGELOG
+20461 [BUGFIX] Fix cyclic module crash with engines and fastboot."
+3,"CHANGELOG
+
+#20449 [FEATURE] Publish stable types for Ember per RFC #800.
+#20439 [CLEANUP] Update tsconfig to target ES2021.
+#20461 [BUGFIX] Fix cyclic module crash with engines and fastboot.
+","CHANGELOG
+20449 [FEATURE] Publish stable types for Ember per RFC #800.
+20439 [CLEANUP] Update tsconfig to target ES2021.
+20461 [BUGFIX] Fix cyclic module crash with engines and fastboot."
+4,"CHANGELOG
 
 #20438 [BREAKING] Drop support for Node 14
 #20445 [CLEANUP] Update browser support per RFC #685. Minimum support has been updated to Chrome >= 103, Edge >= 110, Firefox >= 102, iOS >= 12, Safari >= 12, ChromeAndroid >= 112, FirefoxAndroid >= 110
@@ -30,22 +49,22 @@ Index,Release Note,Release Note With Abstraction
 20441 [BUGFIX] Fix for TS 5.1 nightly narrowing change
 20429 [BUGFIX] TS lint-level error in mixins/-proxy.ts
 20410 [BUGFIX] Add missing type declarations in the preview types for @ember/template-compilation"
-2,"CHANGELOG
+5,"CHANGELOG
 
 Publish v5.0.0-beta.2 again, having fixed publishing automation
 ","CHANGELOG
 Publish v5.0.0-beta.2 again, having fixed publishing automation"
-3,"CHANGELOG
+6,"CHANGELOG
 
 #20388 [BUGFIX] Don't run getters while applying mixins
 ","CHANGELOG
 20388 [BUGFIX] Don't run getters while applying mixins"
-4,"CHANGELOG
+7,"CHANGELOG
 
 #20388 [BUGFIX] Don't run getters while applying mixins
 ","CHANGELOG
 20388 [BUGFIX] Don't run getters while applying mixins"
-5,"CHANGELOG
+8,"CHANGELOG
 
 #20434 [BUGFIX] Fix HistoryLocation preview types
 #20438 [BREAKING] Drop support for Node 14
@@ -56,7 +75,7 @@ Publish v5.0.0-beta.2 again, having fixed publishing automation"
 20438 [BREAKING] Drop support for Node 14
 20441 [BUGFIX] Fix for TS 5.1 nightly narrowing change
 20445 [CLEANUP] Update browser support per RFC #685. Minimum support has been updated to Chrome >= 103, Edge >= 110, Firefox >= 102, iOS >= 12, Safari >= 12, ChromeAndroid >= 112, FirefoxAndroid >= 110"
-6,"CHANGELOG
+9,"CHANGELOG
 
 #20429 [BUGFIX] TS lint-level error in mixins/-proxy.ts
 #20410 [BUGFIX] Add missing type declarations in the preview types for @ember/template-compilation
@@ -83,7 +102,7 @@ Publish v5.0.0-beta.2 again, having fixed publishing automation"
 20414 [CLEANUP] Add @ember/string to smoke-tests app
 20415 [CLEANUP] Remove unused imports
 20416 [CLEANUP] Finish cleaning up Location interface"
-7,"CHANGELOG
+10,"CHANGELOG
 
 #20352 [FEATURE] Enable generating Typescript blueprints when isTypeScriptProject is true without additional environment variables per RFC #800.
 #20355 [FEATURE] Enhance the Typescript blueprint for generated services per RFC #800.
@@ -98,19 +117,19 @@ Publish v5.0.0-beta.2 again, having fixed publishing automation"
 20388 [BUGFIX] Don't run getters while applying mixins
 20398 [BUGFIX] Fix runloop types on TS 5.0+
 20385 [BUGFIX] Improve error for owner methods called after destroy"
-8,"CHANGELOG
+11,"CHANGELOG
 
 #20388 [BUGFIX] Don't run getters while applying mixins
 #20398 [BUGFIX] Fix runloop types on TS 5.0+
 ","CHANGELOG
 20388 [BUGFIX] Don't run getters while applying mixins
 20398 [BUGFIX] Fix runloop types on TS 5.0+"
-9,"CHANGELOG
+12,"CHANGELOG
 
 #20385 [BUGFIX] Improve error for owner methods called after destroy
 ","CHANGELOG
 20385 [BUGFIX] Improve error for owner methods called after destroy"
-10,"CHANGELOG
+13,"CHANGELOG
 
 #20352 [FEATURE] Enable generating Typescript blueprints when isTypeScriptProject is true without additional environment variables per RFC #800.
 #20355 [FEATURE] Enhance the Typescript blueprint for generated services per RFC #800.
@@ -119,7 +138,7 @@ Publish v5.0.0-beta.2 again, having fixed publishing automation"
 20352 [FEATURE] Enable generating Typescript blueprints when isTypeScriptProject is true without additional environment variables per RFC #800.
 20355 [FEATURE] Enhance the Typescript blueprint for generated services per RFC #800.
 20356 [FEATURE] Generate signature in Typescript component blueprints per RFC #800."
-11,"CHANGELOG
+14,"CHANGELOG
 
 #20288 [FEATURE] Stable types for @ember/owner
 #20323 [FEATURE] Introduce stable types for @ember/error
@@ -134,7 +153,7 @@ Publish v5.0.0-beta.2 again, having fixed publishing automation"
 20373 / #20374 [BUGFIX] Make the type for SafeString public
 20345 [CLEANUP] Remove flags for released features
 20285 Update to TS v4.9"
-12,"CHANGELOG
+15,"CHANGELOG
 
 #20288 [FEATURE] Stable types for @ember/owner
 #20323 [FEATURE] Introduce stable types for @ember/error
@@ -145,7 +164,7 @@ Publish v5.0.0-beta.2 again, having fixed publishing automation"
 20323 [FEATURE] Introduce stable types for @ember/error
 20345 [CLEANUP] Remove flags for released features
 20285 Update to TS v4.9"
-13,"CHANGELOG
+16,"CHANGELOG
 
 #20270 / #20271 [FEATURE] Add new imports for getOwner and setOwner from @ember/owner and introduce new @ember/routing sub-modules as part of RFC #821.
 #20341 [DEPRECATION] Deprecations for importing htmlSafe and isHTMLSafe from @ember/string. They have moved to @ember/template. From RFC #236.
@@ -164,28 +183,11 @@ Publish v5.0.0-beta.2 again, having fixed publishing automation"
 20283 [BUGFIX] revert TS compilerOptions.target to ES2017
 20253 Types: Add the Resolver type to preview types
 20319 Types: resolve services with Owner.lookup"
-14,"CHANGELOG
+17,"CHANGELOG
 
 #20327 [BUGFIX] Fix the types for the mutation-methods of NativeArray
 ","CHANGELOG
 20327 [BUGFIX] Fix the types for the mutation-methods of NativeArray"
-15,"CHANGELOG
-
-#20321 [BUGFIX LTS] types: ContainerDebugAdapter extends EmberObject, not Object
-","CHANGELOG
-20321 [BUGFIX LTS] types: ContainerDebugAdapter extends EmberObject, not Object"
-16,"CHANGELOG
-
-#20321 [BUGFIX] types: ContainerDebugAdapter extends EmberObject, not Object
-","CHANGELOG
-20321 [BUGFIX] types: ContainerDebugAdapter extends EmberObject, not Object"
-17,"CHANGELOG
-
-#20296 [BUGFIX] Controller queryParams should support readonly arrays
-#20318 [BUGFIX] Backport Resolver to preview types
-","CHANGELOG
-20296 [BUGFIX] Controller queryParams should support readonly arrays
-20318 [BUGFIX] Backport Resolver to preview types"
 18,"CHANGELOG
 
 #20321 [BUGFIX LTS] types: ContainerDebugAdapter extends EmberObject, not Object
@@ -193,36 +195,53 @@ Publish v5.0.0-beta.2 again, having fixed publishing automation"
 20321 [BUGFIX LTS] types: ContainerDebugAdapter extends EmberObject, not Object"
 19,"CHANGELOG
 
+#20321 [BUGFIX] types: ContainerDebugAdapter extends EmberObject, not Object
+","CHANGELOG
+20321 [BUGFIX] types: ContainerDebugAdapter extends EmberObject, not Object"
+20,"CHANGELOG
+
+#20296 [BUGFIX] Controller queryParams should support readonly arrays
+#20318 [BUGFIX] Backport Resolver to preview types
+","CHANGELOG
+20296 [BUGFIX] Controller queryParams should support readonly arrays
+20318 [BUGFIX] Backport Resolver to preview types"
+21,"CHANGELOG
+
+#20321 [BUGFIX LTS] types: ContainerDebugAdapter extends EmberObject, not Object
+","CHANGELOG
+20321 [BUGFIX LTS] types: ContainerDebugAdapter extends EmberObject, not Object"
+22,"CHANGELOG
+
 #20296 Controller queryParams should support readonly arrays
 #20318 Backport Resolver to preview types
 ","CHANGELOG
 20296 Controller queryParams should support readonly arrays
 20318 Backport Resolver to preview types"
-20,"CHANGELOG
+23,"CHANGELOG
 
 #20283 [BUGFIX] revert TS compilerOptions.target to ES2017
 #20284 [BUGFIX] remove incorrect types for deprecation functions
 ","CHANGELOG
 20283 [BUGFIX] revert TS compilerOptions.target to ES2017
 20284 [BUGFIX] remove incorrect types for deprecation functions"
-21,"CHANGELOG
+24,"CHANGELOG
 
 #20284 [BUGFIX] remove incorrect types for deprecation functions
 ","CHANGELOG
 20284 [BUGFIX] remove incorrect types for deprecation functions"
-22,"CHANGELOG
+25,"CHANGELOG
 
 #20286 [BUGFIX LTS] Allow class-based helpers in strict-mode
 ","CHANGELOG
 20286 [BUGFIX LTS] Allow class-based helpers in strict-mode"
-23,"CHANGELOG
+26,"CHANGELOG
 
 #20253 [FEATURE] Add the Resolver type to preview types
 #20270 / #20271 [FEATURE] Add new imports for getOwner and setOwner from @ember/owner and introduce new @ember/routing sub-modules as part of RFC #821.
 ","CHANGELOG
 20253 [FEATURE] Add the Resolver type to preview types
 20270 / #20271 [FEATURE] Add new imports for getOwner and setOwner from @ember/owner and introduce new @ember/routing sub-modules as part of RFC #821."
-24,"CHANGELOG
+27,"CHANGELOG
 
 #20274 [BUGFIX] Add some missing types to preview types
 #20256 [BUGFIX] Correct types for Ember Arrays
@@ -243,19 +262,19 @@ Publish v5.0.0-beta.2 again, having fixed publishing automation"
 20227 [BUGFIX] Fix unsafe internal cast for NativeArray
 20228 [BUGFIX] Remove type export for ControllerMixin
 20203 / #20204 [FEATURE] Preview types: Update to Typescript 4.8"
-25,"CHANGELOG
+28,"CHANGELOG
 
 #20256 [BUGFIX] Correct types for Ember Arrays
 #20257 [BUGFIX] Fix types for getOwner and GlimmerComponent
 ","CHANGELOG
 20256 [BUGFIX] Correct types for Ember Arrays
 20257 [BUGFIX] Fix types for getOwner and GlimmerComponent"
-26,"CHANGELOG
+29,"CHANGELOG
 
 #20244 Add missing type for getComponentTemplate to preview types
 ","CHANGELOG
 20244 Add missing type for getComponentTemplate to preview types"
-27,"CHANGELOG
+30,"CHANGELOG
 
 CVE pending Fix a prototype pollution vulnerability in set and setProperties
 #20233 [BUGFIX] Include package name in deprecation error message
@@ -268,21 +287,6 @@ CVE pending Fix a prototype pollution vulnerability in set and setProperties
 20235 [BUGFIX] Update @types/node for TS 4.9 issue
 20238 [BUGFIX] Update Node.js versions to match support policy
 20244 [BUGFIX] Expose getComponentTemplate type"
-28,"CHANGELOG
-
-CVE pending Fix a prototype pollution vulnerability in set and setProperties
-","CHANGELOG
-CVE pending Fix a prototype pollution vulnerability in set and setProperties"
-29,"CHANGELOG
-
-CVE pending Fix a prototype pollution vulnerability in set and setProperties
-","CHANGELOG
-CVE pending Fix a prototype pollution vulnerability in set and setProperties"
-30,"CHANGELOG
-
-CVE pending Fix a prototype pollution vulnerability in set and setProperties
-","CHANGELOG
-CVE pending Fix a prototype pollution vulnerability in set and setProperties"
 31,"CHANGELOG
 
 CVE pending Fix a prototype pollution vulnerability in set and setProperties
@@ -290,122 +294,137 @@ CVE pending Fix a prototype pollution vulnerability in set and setProperties
 CVE pending Fix a prototype pollution vulnerability in set and setProperties"
 32,"CHANGELOG
 
+CVE pending Fix a prototype pollution vulnerability in set and setProperties
+","CHANGELOG
+CVE pending Fix a prototype pollution vulnerability in set and setProperties"
+33,"CHANGELOG
+
+CVE pending Fix a prototype pollution vulnerability in set and setProperties
+","CHANGELOG
+CVE pending Fix a prototype pollution vulnerability in set and setProperties"
+34,"CHANGELOG
+
+CVE pending Fix a prototype pollution vulnerability in set and setProperties
+","CHANGELOG
+CVE pending Fix a prototype pollution vulnerability in set and setProperties"
+35,"CHANGELOG
+
 #20227 [BUGFIX] Fix unsafe internal cast for NativeArray
 #20228 [BUGFIX] Remove type export for ControllerMixin
 ","CHANGELOG
 20227 [BUGFIX] Fix unsafe internal cast for NativeArray
 20228 [BUGFIX] Remove type export for ControllerMixin"
-33,"CHANGELOG
+36,"CHANGELOG
 
 #20203 / #20204 [FEATURE] Preview types: Update to Typescript 4.8
 ","CHANGELOG
 20203 / #20204 [FEATURE] Preview types: Update to Typescript 4.8"
-34,"CHANGELOG
+37,"CHANGELOG
 
 #20180 [FEATURE] Publish an opt-in preview of public types for Ember
 #20166 [BUGFIX] Upgrade router_js to fix Linked list of RouteInfos contains undefined object
 ","CHANGELOG
 20180 [FEATURE] Publish an opt-in preview of public types for Ember
 20166 [BUGFIX] Upgrade router_js to fix Linked list of RouteInfos contains undefined object"
-35,"CHANGELOG
+38,"CHANGELOG
 
 #20166 [BUGFIX] Fix missing RouteInfo entries
 ","CHANGELOG
 20166 [BUGFIX] Fix missing RouteInfo entries"
-36,"CHANGELOG
+39,"CHANGELOG
 
 #20166 [BUGFIX] Fix missing RouteInfo entries
 ","CHANGELOG
 20166 [BUGFIX] Fix missing RouteInfo entries"
-37,"CHANGELOG
+40,"CHANGELOG
 
 #20212 [BUGFIX] Remove incorrect exports from preview routing types
 ","CHANGELOG
 20212 [BUGFIX] Remove incorrect exports from preview routing types"
-38,"CHANGELOG
+41,"CHANGELOG
 
 #20201 [BUGFIX] Fix type definition for Route
 ","CHANGELOG
 20201 [BUGFIX] Fix type definition for Route"
-39,"CHANGELOG
+42,"CHANGELOG
 
 #20194 [BUGFIX] Provide a .d.ts file at types/stable
 #20196 [BUGFIX] types imports are at 'ember-source/types'
 ","CHANGELOG
 20194 [BUGFIX] Provide a .d.ts file at types/stable
 20196 [BUGFIX] types imports are at 'ember-source/types'"
-40,"CHANGELOG
+43,"CHANGELOG
 
 #20186 [BUGFIX] Fix @ember/runloop type tests folder name so that the tests are properly excluded from the build
 #20180 [FEATURE] Publish an opt-in preview of public types for Ember
 ","CHANGELOG
 20186 [BUGFIX] Fix @ember/runloop type tests folder name so that the tests are properly excluded from the build
 20180 [FEATURE] Publish an opt-in preview of public types for Ember"
-41,"CHANGELOG
+44,"CHANGELOG
 
 #20166 [BUGFIX] Upgrade router_js to fix Linked list of RouteInfos contains undefined object
 ","CHANGELOG
 20166 [BUGFIX] Upgrade router_js to fix Linked list of RouteInfos contains undefined object"
-42,"CHANGELOG
+45,"CHANGELOG
 
 #20126 [BUGFIX] Replace Firefox detection that used a deprecated browser API
 ","CHANGELOG
 20126 [BUGFIX] Replace Firefox detection that used a deprecated browser API"
-43,"CHANGELOG
+46,"CHANGELOG
 
 #20126 [BUGFIX] Replacing Firefox detection that used a deprecated browser API
 ","CHANGELOG
 20126 [BUGFIX] Replacing Firefox detection that used a deprecated browser API"
-44,"CHANGELOG
+47,"CHANGELOG
 
 #20125 [BUGFIX] Replace deprecated substr() method with substring() method.
 ","CHANGELOG
 20125 [BUGFIX] Replace deprecated substr() method with substring() method."
-45,"CHANGELOG
+48,"CHANGELOG
 
 #20120 [BUGFIX] Adjust uniqueId() implementation to only generate valid selectors.
 ","CHANGELOG
 20120 [BUGFIX] Adjust uniqueId() implementation to only generate valid selectors."
-46,"CHANGELOG
+49,"CHANGELOG
 
 #20125 [BUGFIX] Replace deprecated substr() method with substring() method.
 #20120 [BUGFIX] Adjust uniqueId() implementation to only generate valid selectors.
 ","CHANGELOG
 20125 [BUGFIX] Replace deprecated substr() method with substring() method.
 20120 [BUGFIX] Adjust uniqueId() implementation to only generate valid selectors."
-47,"CHANGELOG
+50,"CHANGELOG
 No new external changes.","CHANGELOG
 No new external changes."
-48,"CHANGELOG
+51,"CHANGELOG
 
 #20052 / #20055 [FEATURE] Add the default helper manager to implement RFC #0756.
 #20053 [FEATURE] Expose renderSettled from @ember/renderer to enable implementation of RFC #0785.
 ","CHANGELOG
 20052 / #20055 [FEATURE] Add the default helper manager to implement RFC #0756.
 20053 [FEATURE] Expose renderSettled from @ember/renderer to enable implementation of RFC #0785."
-49,"CHANGELOG
+52,"CHANGELOG
 
 #20114 [BUGFIX] Fix generated import paths for test setup functions in addons
 ","CHANGELOG
 20114 [BUGFIX] Fix generated import paths for test setup functions in addons"
-50,"CHANGELOG
+53,"CHANGELOG
 
 #20082 [BUGFIX] Fix blueprint generation
 ","CHANGELOG
 20082 [BUGFIX] Fix blueprint generation"
-51,"CHANGELOG
+54,"CHANGELOG
 
 #20082 [BUGFIX] Fix blueprints publication
 ","CHANGELOG
 20082 [BUGFIX] Fix blueprints publication"
-52,"CHANGELOG
+55,"CHANGELOG
 
 #20052 / #20055 [FEATURE] Add the default helper manager to implement RFC #0756.
 #20053 [FEATURE] Expose renderSettled from @ember/renderer to enable implementation of RFC #0785.
 ","CHANGELOG
 20052 / #20055 [FEATURE] Add the default helper manager to implement RFC #0756.
 20053 [FEATURE] Expose renderSettled from @ember/renderer to enable implementation of RFC #0785."
-53,"CHANGELOG
+56,"CHANGELOG
 
 #19882 / #20005 [FEATURE] Implement the unique-id helper per RFC #0659.
 #19981 [FEATURE] Facilitate custom test setups per RFC #0637.
@@ -418,12 +437,12 @@ No new external changes."
 16879 [BUGFIX] isEmpty on nested objects
 17978 Make hasListeners public
 20014 Log until for deprecations"
-54,"CHANGELOG
+57,"CHANGELOG
 
 #20028 Fix a memory leak in the Router Service class
 ","CHANGELOG
 20028 Fix a memory leak in the Router Service class"
-55,"CHANGELOG
+58,"CHANGELOG
 
 #19882 / #20005 [FEATURE] Implement the unique-id helper per RFC #0659.
 #19981 [FEATURE] Facilitate custom test setups per RFC #0637.
@@ -436,7 +455,7 @@ No new external changes."
 16879 [BUGFIX] isEmpty on nested objects
 17978 Make hasListeners public
 20014 Log until for deprecations"
-56,"CHANGELOG
+59,"CHANGELOG
 
 #20025 [BUGFIX] Fix a memory leak in the Router Service class
 #19971 [BUGFIX] Don't serialize default Query Params on RouterService
@@ -445,25 +464,25 @@ No new external changes."
 20025 [BUGFIX] Fix a memory leak in the Router Service class
 19971 [BUGFIX] Don't serialize default Query Params on RouterService
 20024 [BUGFIX] Correctly associate props with factory and owner in FactoryManager"
-57,"CHANGELOG
+60,"CHANGELOG
 
 #19971 [BUGFIX] Don't serialize default Query Params on RouterService
 ","CHANGELOG
 19971 [BUGFIX] Don't serialize default Query Params on RouterService"
-58,"CHANGELOG
+61,"CHANGELOG
 No public API changes or bugfixes. ","CHANGELOG
 No public API changes or bugfixes. "
-59,"CHANGELOG
+62,"CHANGELOG
 
 #19878 [BUGFIX] Allow class-based helpers to work in strict-mode.
 ","CHANGELOG
 19878 [BUGFIX] Allow class-based helpers to work in strict-mode."
-60,"CHANGELOG
+63,"CHANGELOG
 
 #19878 [BUGFIX] Allow class-based helpers to work in strict-mode.
 ","CHANGELOG
 19878 [BUGFIX] Allow class-based helpers to work in strict-mode."
-61,"CHANGELOG
+64,"CHANGELOG
 
 #19772 / #19826 [FEATURE] Add a @cached decorator per RFC #0566.
 #19471 / #19834 [FEATURE] Add refresh method to the Router Service per RFC #0631.
@@ -478,26 +497,26 @@ No public API changes or bugfixes. "
 19510 [DEPRECATION] Deprecate auto location per RFC #0711.
 17570 [BUGFIX] Passing ObjectProxy with a property size to isEmpty would throw assertion
 18269 [BUGFIX] Fix for when query params are using a nested value"
-62,"CHANGELOG
+65,"CHANGELOG
 
 #19868 [BUGFIX] Fix a bug with the implicit injections deprecation that meant injecting a store to avoid the deprecation did not work.
 ","CHANGELOG
 19868 [BUGFIX] Fix a bug with the implicit injections deprecation that meant injecting a store to avoid the deprecation did not work."
-63,"CHANGELOG
+66,"CHANGELOG
 
 #19858 [BUGFIX] Improve assert message in default store for when routes have dynamic segments but no model hook
 #19860 [BUGFIX] Add model hook in route blueprint for routes with dynamic segments
 ","CHANGELOG
 19858 [BUGFIX] Improve assert message in default store for when routes have dynamic segments but no model hook
 19860 [BUGFIX] Add model hook in route blueprint for routes with dynamic segments"
-64,"CHANGELOG
+67,"CHANGELOG
 
 #19854 [BUGFIX] Fix implicit injections deprecation for routes to cover previously missed cases
 #19857 [BUGFIX] Improve assert message in default store for when routes have dynamic segments but no model hook
 ","CHANGELOG
 19854 [BUGFIX] Fix implicit injections deprecation for routes to cover previously missed cases
 19857 [BUGFIX] Improve assert message in default store for when routes have dynamic segments but no model hook"
-65,"CHANGELOG
+68,"CHANGELOG
 
 #19772 / #19826 [FEATURE] Add a @cached decorator per RFC #0566.
 #19471 / #19834 [FEATURE] Add refresh method to the Router Service per RFC #0631.
@@ -514,7 +533,7 @@ No public API changes or bugfixes. "
 17570 [BUGFIX] Passing ObjectProxy with a property size to isEmpty would throw assertion
 18269 [BUGFIX] Fix for when query params are using a nested value
 19787 Setup basic infrastructure to ensure destroyables destroyed"
-66,"CHANGELOG
+69,"CHANGELOG
 
 #19761 [BREAKING] Require ember-auto-import >= 2 or higher to enable ember-source to become a v2 addon in the 4.x cycle
 #19706 [BREAKING] Explicitly drop Node 10 support to match support policy.
@@ -657,7 +676,7 @@ removes deprecation of mutations during unknownProperty
 19227 [BUGFIX] Enable global event dispatcher listeners to be lazily created fixing Passive Listener Violation in Chrome
 19542 [BUGFIX] Fix initializer test blueprints
 19589 [BUGFIX] Don’t include type-tests in build output"
-67,"CHANGELOG
+70,"CHANGELOG
 
 #19833 [CLEANUP] Remove deprecated array observers
 #19836 [CLEANUP] Turn template-only-glimmer-components deprecation into an error
@@ -666,7 +685,7 @@ removes deprecation of mutations during unknownProperty
 19833 [CLEANUP] Remove deprecated array observers
 19836 [CLEANUP] Turn template-only-glimmer-components deprecation into an error
 19843 [CLEANUP] Turn argument-less-helper-paren-less-invocation deprecation into an error"
-68,"CHANGELOG
+71,"CHANGELOG
 
 #19749 [CLEANUP] Remove deprecate-router-events support code
 #19762 [CLEANUP] Update GlimmerVM to 0.81
@@ -697,7 +716,7 @@ removes deprecation of mutations during unknownProperty
 @glimmer/integration-tests, @glimmer/manager
 1329 Remove deprecated Modifier Manager version 3.13 (@nlfurniss)
 19806 [CLEANUP] Drop export of built-ins, remove legacy components"
-69,"CHANGELOG
+72,"CHANGELOG
 
 #19823 / #19828 [BUGFIX] Fix deprecation until and link for Component.reopenClass and Component.reopen
 #19825 [BUGFIX] Replace assert.equal in blueprints with assert.strictEqual to pass eslint-plugin-qunit v7 on generation
@@ -708,69 +727,69 @@ removes deprecation of mutations during unknownProperty
 19825 [BUGFIX] Replace assert.equal in blueprints with assert.strictEqual to pass eslint-plugin-qunit v7 on generation
 19808 [CLEANUP] Remove the --test-type option from the helper blueprint
 19820 Fix memory leak when looking up non-instantiable objects from the owner"
-70,"CHANGELOG
+73,"CHANGELOG
 
 #19820 Fix memory leak when looking up non-instantiable objects from the owner
 ","CHANGELOG
 19820 Fix memory leak when looking up non-instantiable objects from the owner"
-71,"CHANGELOG
+74,"CHANGELOG
 
 #19677 [CLEANUP] Remove jQuery from build
 ","CHANGELOG
 19677 [CLEANUP] Remove jQuery from build"
-72,"CHANGELOG
+75,"CHANGELOG
 
 #19799 / glimmerjs/glimmer-vm#1354 Fixes for errors while precompiling inline templates (introduced in 3.28.2)
 ","CHANGELOG
 19799 / glimmerjs/glimmer-vm#1354 Fixes for errors while precompiling inline templates (introduced in 3.28.2)"
-73,"CHANGELOG
+76,"CHANGELOG
 
 #19798 More fixes for errors while precompiling inline templates (introduced in 3.28.2)
 glimmerjs/glimmer-vm@0.80.3 Improve template compilation speed regression
 ","CHANGELOG
 19798 More fixes for errors while precompiling inline templates (introduced in 3.28.2)
 glimmerjs/glimmer-vm@0.80.3 Improve template compilation speed regression"
-74,"CHANGELOG
+77,"CHANGELOG
 
 #19799 / glimmerjs/glimmer-vm#1354 Fixes for errors while precompiling inline templates (introduced in 3.28.2)
 ","CHANGELOG
 19799 / glimmerjs/glimmer-vm#1354 Fixes for errors while precompiling inline templates (introduced in 3.28.2)"
-75,"CHANGELOG
+78,"CHANGELOG
 
 glimmerjs/glimmer-vm#1351 Support lexical scope in loose mode
 ","CHANGELOG
 glimmerjs/glimmer-vm#1351 Support lexical scope in loose mode"
-76,"CHANGELOG
+79,"CHANGELOG
 
 glimmerjs/glimmer-vm#1347 Avoid using a nested WeakMap for manager instances for a given owner (makes memory leak debugging easier)
 ","CHANGELOG
 glimmerjs/glimmer-vm#1347 Avoid using a nested WeakMap for manager instances for a given owner (makes memory leak debugging easier)"
-77,"CHANGELOG
+80,"CHANGELOG
 
 #19761 [BREAKING] Require ember-auto-import >= 2 or higher to enable ember-source to become a v2 addon in the 4.x cycle
 ","CHANGELOG
 19761 [BREAKING] Require ember-auto-import >= 2 or higher to enable ember-source to become a v2 addon in the 4.x cycle"
-78,"CHANGELOG
+81,"CHANGELOG
 
 #19683 [BUGFIX] Use super.willDestroy in native classes (instead of this._super)
 ","CHANGELOG
 19683 [BUGFIX] Use super.willDestroy in native classes (instead of this._super)"
-79,"CHANGELOG
+82,"CHANGELOG
 
 #19733 [BUGFIX] Ensure that using routerService.urlFor(...) and routerService.recognize(...) does not error if the router is not fully initialized
 ","CHANGELOG
 19733 [BUGFIX] Ensure that using routerService.urlFor(...) and routerService.recognize(...) does not error if the router is not fully initialized"
-80,"CHANGELOG
+83,"CHANGELOG
 
 #19708 [CLEANUP] Remove class-binding-and-class-name-bindings-in-templates
 ","CHANGELOG
 19708 [CLEANUP] Remove class-binding-and-class-name-bindings-in-templates"
-81,"CHANGELOG
+84,"CHANGELOG
 
 #19733 [BUGFIX] Ensure that using routerService.urlFor(...) and routerService.recognize(...) does not error if the router is not fully initialized
 ","CHANGELOG
 19733 [BUGFIX] Ensure that using routerService.urlFor(...) and routerService.recognize(...) does not error if the router is not fully initialized"
-82,"CHANGELOG
+85,"CHANGELOG
 
 #19680 [DEPRECATION] Deprecate owner.inject per RFC #680 and cleanup related deprecations that are until: 4.0.0.
 #19706 [BUGFIX] Explicitly drop Node 10 support to match support policy.
@@ -785,7 +804,7 @@ glimmerjs/glimmer-vm#1347 Avoid using a nested WeakMap for manager instances for
 19675 [CLEANUP] Remove jQuery usage from ember-testing
 19704 [CLEANUP] Remove template-compiler.registerPlugin
 19707 [CLEANUP] Remove Application Controller Router Properties"
-83,"CHANGELOG
+86,"CHANGELOG
 
 #19649 / #19692 [DEPRECATION] Add deprecation warning to Ember.assign implementing RFC #750.
 #19227 [BUGFIX] Enable global event dispatcher listeners to be lazily created fixing Passive Listener Violation in Chrome
@@ -870,7 +889,7 @@ glimmerjs/glimmer-vm#1347 Avoid using a nested WeakMap for manager instances for
 19678 [CLEANUP] Remove window.Ember global
 19695 [CLEANUP] Remove {{partial}}
 19691 Add build assertion against {{outlet named}}"
-84,"CHANGELOG
+87,"CHANGELOG
 
 #19697 [BUGFIX] Ensure deserializeQueryParam is called for lazy routes
 #19681 [BUGFIX] Restore previous hash behavior
@@ -887,14 +906,14 @@ glimmerjs/glimmer-vm#1347 Avoid using a nested WeakMap for manager instances for
 19584 [BUGFIX] Ensure hash objects correctly entangle as dependencies
 19491 [BUGFIX] Fix owner.lookup owner.register behavior with singleton: true option
 19472 [BUGFIX] Prevent transformation of block params called attrs"
-85,"CHANGELOG
+88,"CHANGELOG
 
 #19685 Fix memory leak with RouterService under Chrome
 #19683 Ensure super.willDestroy is called correctly in Router's willDestroy
 ","CHANGELOG
 19685 Fix memory leak with RouterService under Chrome
 19683 Ensure super.willDestroy is called correctly in Router's willDestroy"
-86,"CHANGELOG
+89,"CHANGELOG
 
 #19681 [BUGFIX] Restore previous hash behavior
 #19685 [BUGFIX] Fix memory leak in RouterService
@@ -903,32 +922,32 @@ glimmerjs/glimmer-vm#1347 Avoid using a nested WeakMap for manager instances for
 19681 [BUGFIX] Restore previous hash behavior
 19685 [BUGFIX] Fix memory leak in RouterService
 19690 [BUGFIX] Deprecates String.prototype.htmlSafe targeting Ember 4.0, as intended by the original deprecation."
-87,"CHANGELOG
+90,"CHANGELOG
 #19584 [BUGFIX] Ensure hash objects correctly entangle as dependencies","CHANGELOG
 19584 [BUGFIX] Ensure hash objects correctly entangle as dependencies"
-88,"CHANGELOG
+91,"CHANGELOG
 
 #19597 [BUGFIX] Fix <LinkTo> with nested children
 ","CHANGELOG
 19597 [BUGFIX] Fix  with nested children"
-89,"CHANGELOG
+92,"CHANGELOG
 
 #19597 [BIGFIX] Fix <LinkTo> with nested children
 ","CHANGELOG
 19597 [BIGFIX] Fix  with nested children"
-90,"CHANGELOG
+93,"CHANGELOG
 
 #19594 [BUGFIX] Revert lazy hash changes
 #19596 [DOC] Fix ""Dormant"" addon warning typo
 ","CHANGELOG
 19594 [BUGFIX] Revert lazy hash changes
 19596 [DOC] Fix ""Dormant"" addon warning typo"
-91,"CHANGELOG
+94,"CHANGELOG
 
 #19586 [BUGFIX] Fix Embroider compatibility
 ","CHANGELOG
 19586 [BUGFIX] Fix Embroider compatibility"
-92,"CHANGELOG
+95,"CHANGELOG
 
 #19565 [BUGFIX] Ensures that computed can depend on dynamic (hash keys
 #19571 [BUGFIX] Extend Route.prototype.transitionTo deprecation until 5.0.0
@@ -937,21 +956,21 @@ glimmerjs/glimmer-vm#1347 Avoid using a nested WeakMap for manager instances for
 19565 [BUGFIX] Ensures that computed can depend on dynamic (hash keys
 19571 [BUGFIX] Extend Route.prototype.transitionTo deprecation until 5.0.0
 19586 [BUGFIX] Fix Embroider compatibility"
-93,"
+96,"
 #19406 [BUGFIX] Makes user helper computation lazy instead of eager
 d462cca7 Update glimmer-vm to fix printing of elements with comments.
 #19263 [BUGFIX] Remove @dependentKeyCompat assertion
 ","19406 [BUGFIX] Makes user helper computation lazy instead of eager
 d462cca7 Update glimmer-vm to fix printing of elements with comments.
 19263 [BUGFIX] Remove @dependentKeyCompat assertion"
-94,"CHANGELOG
+97,"CHANGELOG
 
 #19565 [BUGFIX] Ensures that computed can depend on dynamic hash keys
 #19571 [BUGFIX] Delay until: 5.0.0 the removal of the deprecated transition methods of controller and route from RFC #674.
 ","CHANGELOG
 19565 [BUGFIX] Ensures that computed can depend on dynamic hash keys
 19571 [BUGFIX] Delay until: 5.0.0 the removal of the deprecated transition methods of controller and route from RFC #674."
-95,"
+98,"
 #19511 / #19548 [BUGFIX] Makes the (hash) helper lazy
 #19530 [DOC] fix passing params to named blocks examples
 #19536 [BUGFIX] Fix computed.* deprecation message to include the correct import path
@@ -968,7 +987,7 @@ d462cca7 Update glimmer-vm to fix printing of elements with comments.
 19557 [BUGFIX] Refine Ember Global deprecation message
 19564 [BUGFIX] Improve computed. and run. deprecation message (IE11)
 19491 [BUGFIX] Fix owner.lookup owner.register behavior with singleton: true option"
-96,"
+99,"
 #19511 / #19548 [BUGFIX] Makes the (hash) helper lazy
 #19530 [DOC] fix passing params to named blocks examples
 #19536 [BUGFIX] Fix computed.* deprecation message to include the correct import path
@@ -983,7 +1002,7 @@ d462cca7 Update glimmer-vm to fix printing of elements with comments.
 19555 [BUGFIX] Improve class based tranform deprecation message
 19557 [BUGFIX] Refine Ember Global deprecation message
 19564 [BUGFIX] Improve computed. and run. deprecation message (IE11)"
-97,"CHANGELOG
+100,"CHANGELOG
 
 #19540 [BUGFIX] Ensure ember-testing is loaded lazily
 #19541 [BUGFIX] Add missing metadata for some deprecations enabled in 3.27.0
@@ -994,12 +1013,12 @@ d462cca7 Update glimmer-vm to fix printing of elements with comments.
 19541 [BUGFIX] Add missing metadata for some deprecations enabled in 3.27.0
 19541 [BUGFIX] Ensure passing @href to  throws an error
 19541 [CLEANUP] Consistently use link/ in deprecation URLs"
-98,"CHANGELOG
+101,"CHANGELOG
 
 #19472 [BUGFIX] Prevent transformation of block params called attrs
 ","CHANGELOG
 19472 [BUGFIX] Prevent transformation of block params called attrs"
-99,"CHANGELOG
+102,"CHANGELOG
 
 #19309 / #19487 / #19474 [FEATURE] Enable (helper and (modifier helpers per RFC #432.
 #19382 / #19430 [FEATURE] Remaining implementation work per RFC #671.
@@ -1040,7 +1059,7 @@ Fix nested calls to helpers in dynamic helpers (see link)
 19390 Refactor the internal Ember loader to use the standard Ember CLI loader
 19441 Add automated publishing of weekly alpha releases to NPM
 19462 Use positional and named as the argument names in ember g helper blueprint"
-100,"CHANGELOG
+103,"CHANGELOG
 
 #19499 [DEPRECATION] Deprecate @foo={{helper}} per RFC #496.
 #19499 [BUGFIX] Update rendering engine to @glimmer/* 0.78.2 for fixes including:  
@@ -1053,7 +1072,7 @@ Fix nested calls to helpers in dynamic helpers (see https://github.com/glimmerjs
 19499 [BUGFIX] Update rendering engine to @glimmer/* 0.78.2 for fixes including:
 <:else> and <:inverse> should be aliases (see link)
 Fix nested calls to helpers in dynamic helpers (see link)"
-101,"CHANGELOG
+104,"CHANGELOG
 
 #19477 [BUGFIX] Move LinkTo assertion into a method so LinkToExternal can override it
 #19481 [BUGFIX] Export on from correct path
@@ -1062,24 +1081,24 @@ Fix nested calls to helpers in dynamic helpers (see link)"
 19477 [BUGFIX] Move LinkTo assertion into a method so LinkToExternal can override it
 19481 [BUGFIX] Export on from correct path
 19487 [BUGFIX] Allow passing a string literal to {{helper}} and {{modifier}}"
-102,"CHANGELOG
+105,"CHANGELOG
 
 #19473 Update GlimmerVM to latest (fix compatibility for template import proposals)
 #19474 [FEATURE] Enable (helper and (modifier helpers
 ","CHANGELOG
 19473 Update GlimmerVM to latest (fix compatibility for template import proposals)
 19474 [FEATURE] Enable (helper and (modifier helpers"
-103,"CHANGELOG
+106,"CHANGELOG
 
 #19473 Update Glimmer VM to latest.
 ","CHANGELOG
 19473 Update Glimmer VM to latest."
-104,"CHANGELOG
+107,"CHANGELOG
 
 #19473 Update Glimmer VM to latest.
 ","CHANGELOG
 19473 Update Glimmer VM to latest."
-105,"CHANGELOG
+108,"CHANGELOG
 
 #19382 / #19430 [FEATURE] Remaining implementation work per RFC #671.
 #19457 / #19463 / #19464 / #19467 [DEPRECATION] Add deprecation for the Ember Global per RFC #706.
@@ -1104,7 +1123,7 @@ Fix nested calls to helpers in dynamic helpers (see link)"
 19390 Refactor the internal Ember loader to use the standard Ember CLI loader
 19441 Add automated publishing of weekly alpha releases to NPM
 19462 Use positional and named as the argument names in ember g helper blueprint"
-106,"CHANGELOG
+109,"CHANGELOG
 
 #19255 [DEPRECATION] Deprecate transition methods of controller and route per RFC #674.
 #19345 [DEPRECATION] Deprecate <LinkTo> positional arguments per RFC #698.
@@ -1141,12 +1160,12 @@ Fix nested calls to helpers in dynamic helpers (see link)"
 19469 [BUGFIX] Prevent eager argument consumption on modifier destruction
 19405 [BUGFIX] Avoid instantiation errors when app/router.js injects the router service.
 19436 [BUGFIX] Support observer keys with colons"
-107,"CHANGELOG
+110,"CHANGELOG
 
 #19405 [BUGFIX] Avoid instantiation errors when app/router.js injects the router service.
 ","CHANGELOG
 19405 [BUGFIX] Avoid instantiation errors when app/router.js injects the router service."
-108,"CHANGELOG
+111,"CHANGELOG
 
 #19436 [BUGFIX] Support observer keys with colons
 #19448 [BUGFIX] Ensure query params are preserved through an intermediate loading state transition
@@ -1155,12 +1174,12 @@ Fix nested calls to helpers in dynamic helpers (see link)"
 19436 [BUGFIX] Support observer keys with colons
 19448 [BUGFIX] Ensure query params are preserved through an intermediate loading state transition
 19450 [BUGFIX] Ensure routerService.currentRoute.name and routerService.currentRouteName match during loading states"
-109,"
+112,"
 #19448 Ensure query params are preserved through an intermediate loading state transition
 #19450 Ensure routerService.currentRoute.name and routerService.currentRouteName match during loading states
 ","19448 Ensure query params are preserved through an intermediate loading state transition
 19450 Ensure routerService.currentRoute.name and routerService.currentRouteName match during loading states"
-110,"
+113,"
 #19389 Removes template ids
 #19395 [BUGFIX] Ensure <LinkTo> can return a valid href most of the time
 #19396 [BUGFIX] Revert deprecation of htmlSafe and isHTMLSafe
@@ -1173,7 +1192,7 @@ Fix nested calls to helpers in dynamic helpers (see link)"
 19397 [BUGFIX] Force building Ember bundles when targets.node is defined
 19399 [DOC] Update ArrayProxy Documentation
 19412 / #19416 [BUGFIX] Update Glimmer VM to 0.77 (fix dynamic helpers/modifiers)"
-111,"
+114,"
 #19448 Ensure query params are preserved through an intermediate loading state transition
 #19450 Ensure routerService.currentRoute.name and routerService.currentRouteName match during loading states
 #19395 [BUGFIX] Ensure <LinkTo> can return a valid href most of the time
@@ -1182,7 +1201,7 @@ Fix nested calls to helpers in dynamic helpers (see link)"
 19450 Ensure routerService.currentRoute.name and routerService.currentRouteName match during loading states
 19395 [BUGFIX] Ensure  can return a valid href most of the time
 19397 [BUGFIX] Force building Ember bundles when targets.node is defined"
-112,"CHANGELOG
+115,"CHANGELOG
 
 #19412 [BUGFIX] Updates Glimmer VM to 0.76.0, fix:
 if helper returns null instead of undefined
@@ -1195,7 +1214,7 @@ if helper returns null instead of undefined
 Using get helper with key length on a string in templates
 Value of input not updating if it had previously updated with the same string
 19416 [BUGFIX] Update Glimmer VM to 0.77, fix dynamic helpers/modifiers"
-113,"CHANGELOG
+116,"CHANGELOG
 
 #19387 [BUGFIX] LinkTo with incomplete model failing in rendering tests
 #19395 [BUGFIX] Only return empty href when LinkTo href generation throws error
@@ -1206,17 +1225,17 @@ Value of input not updating if it had previously updated with the same string
 19395 [BUGFIX] Only return empty href when LinkTo href generation throws error
 19396 [BUGFIX] Revert deprecation of htmlSafe and isHTMLSafe
 19397 [BUGFIX] Force building Ember bundles when targets.node is defined"
-114,"CHANGELOG
+117,"CHANGELOG
 
 #19326 / #19387 [BUGFIX] Fix usage of <LinkTo /> prior to routing (e.g. component rendering tests)
 ","CHANGELOG
 19326 / #19387 [BUGFIX] Fix usage of  prior to routing (e.g. component rendering tests)"
-115,"CHANGELOG
+118,"CHANGELOG
 
 #19326 / #19387 [BUGFIX] Fix usage of <LinkTo /> prior to routing (e.g. component rendering tests)
 ","CHANGELOG
 19326 / #19387 [BUGFIX] Fix usage of  prior to routing (e.g. component rendering tests)"
-116,"CHANGELOG
+119,"CHANGELOG
 
 #19255 [DEPRECATION] Deprecate transition methods of controller and route per RFC #674.
 #19345 [DEPRECATION] Deprecate <LinkTo> positional arguments per RFC #698.
@@ -1249,7 +1268,7 @@ Value of input not updating if it had previously updated with the same string
 19378 [BUGFIX] Fix typo in template-only-glimmer-components feature detection
 19298 [BUGFIX] Route serialize did not extract param off proxy
 19326 [BUGFIX] Lazily setup the router in non-application tests for  component"
-117,"CHANGELOG
+120,"CHANGELOG
 
 #19302 / #19306 / #19319 [FEATURE] Implement the Handlebars Strict Mode RFC.
 #19318 [FEATURE] Implement the Named Blocks RFC.
@@ -1274,22 +1293,22 @@ Value of input not updating if it had previously updated with the same string
 19336 [BUGFIX] Ensure Component Lookup Is Well Formed
 19338 [BUGFIX] Add missing deprecate options (for + since)
 19342 [BUGFIX] Fix misleading LinkTo error message"
-118,"CHANGELOG
+121,"CHANGELOG
 
 #19370 [BUGFIX] Update glimmer-vm to prevent errors for older inline precompilation
 ","CHANGELOG
 19370 [BUGFIX] Update glimmer-vm to prevent errors for older inline precompilation"
-119,"CHANGELOG
+122,"CHANGELOG
 
 #19363 [BUGFIX] Update VM, fix component name preprocessing
 ","CHANGELOG
 19363 [BUGFIX] Update VM, fix component name preprocessing"
-120,"CHANGELOG
+123,"CHANGELOG
 
 #19351 [BUGFIX] Ensure locals do not clobber components of the same name
 ","CHANGELOG
 19351 [BUGFIX] Ensure locals do not clobber components of the same name"
-121,"CHANGELOG
+124,"CHANGELOG
 
 #19339 [DEPRECATION] Deprecate importing htmlSafe and isHTMLSafe from @ember/string per the Deprecate Ember String RFC.
 #19336 [BUGFIX] Ensure Component Lookup Is Well Formed
@@ -1302,12 +1321,12 @@ Value of input not updating if it had previously updated with the same string
 19337 [BUGFIX] Ensure query param only  are properly scoped in engines.
 19338 [BUGFIX] Add missing deprecate options (for + since)
 19342 [BUGFIX] Fix misleading LinkTo error message"
-122,"CHANGELOG
+125,"CHANGELOG
 
 #19337 [BUGFIX] Ensure query param only <LinkTo /> are properly scoped in engines
 ","CHANGELOG
 19337 [BUGFIX] Ensure query param only  are properly scoped in engines"
-123,"CHANGELOG
+126,"CHANGELOG
 
 #19302 / #19306 / #19319 [FEATURE] Implement the Handlebars Strict Mode RFC.
 #19318 [FEATURE] Implement the Named Blocks RFC.
@@ -1318,7 +1337,7 @@ Value of input not updating if it had previously updated with the same string
 19318 [FEATURE] Implement the Named Blocks RFC.
 18148 [BUGFIX] Fix empty htmlSafe string to be treated as falsy
 19320 / #19317 / #19297 / #19293 / #19278 / #19275 Update rendering engine to @glimmer/* 0.73.1 for various features and bugfixes including ensuring {{component.name}} works with implicit this fallback"
-124,"CHANGELOG
+127,"CHANGELOG
 
 #19224 [FEATURE] Add {{page-title}} helper to route template blueprints to implement RFC #0654. 
 #19133 [FEATURE / DEPRECATION] Add new options to deprecate() for for and since and deprecate using deprecate() without those options per the Deprecation Staging RFC.
@@ -1351,27 +1370,27 @@ Value of input not updating if it had previously updated with the same string
 19229 [CLEANUP] Remove the EMBER_GLIMMER_SET_COMPONENT_TEMPLATE feature flag
 19238 [CLEANUP] Removes the expandLocalLookup API
 19258 / #19261 / #19267 Update rendering engine to 0.65.0"
-125,"CHANGELOG
+128,"CHANGELOG
 
 #19280 [BUGFIX] Ensure aliases cause recompute of a computed property when used with @each in the dependent keys of that property
 ","CHANGELOG
 19280 [BUGFIX] Ensure aliases cause recompute of a computed property when used with @each in the dependent keys of that property"
-126,"
+129,"
 #19282 [BUGFIX] Issue deprecations (instead of assertions) for tracked mutation in constructor during rendering
 #19263 [BUGFIX] Remove @dependentKeyCompat assertion
 ","19282 [BUGFIX] Issue deprecations (instead of assertions) for tracked mutation in constructor during rendering
 19263 [BUGFIX] Remove @dependentKeyCompat assertion"
-127,"CHANGELOG
+130,"CHANGELOG
 
 #19282 [BUGFIX] Issue deprecations (instead of assertions) for tracked mutation in constructor during rendering
 ","CHANGELOG
 19282 [BUGFIX] Issue deprecations (instead of assertions) for tracked mutation in constructor during rendering"
-128,"CHANGELOG
+131,"CHANGELOG
 
 #19282 [BUGFIX] Issue deprecations (instead of assertions) for tracked mutation in constructor during rendering
 ","CHANGELOG
 19282 [BUGFIX] Issue deprecations (instead of assertions) for tracked mutation in constructor during rendering"
-129,"CHANGELOG
+132,"CHANGELOG
 
 #19224 [FEATURE] Add {{page-title}} helper to route template blueprints to implement RFC #0654. 
 #19133 [FEATURE / DEPRECATION] Add new options to deprecate() for for and since and deprecate using deprecate() without those options per the Deprecation Staging RFC.
@@ -1402,7 +1421,7 @@ Value of input not updating if it had previously updated with the same string
 19229 [CLEANUP] Remove the EMBER_GLIMMER_SET_COMPONENT_TEMPLATE feature flag
 19238 [CLEANUP] Removes the expandLocalLookup API
 19258 / #19261 / #19267 Update rendering engine to 0.65.0"
-130,"CHANGELOG
+133,"CHANGELOG
 
 #19160 / #19182 [FEATURE] Implements the helper manager feature specified in the Helper Managers RFC.
 #19171 / #19182 [FEATURE] Implements invokeHelper from the JavaScript Helper Invocation API RFC.
@@ -1431,7 +1450,7 @@ Value of input not updating if it had previously updated with the same string
 19198 / #19232 [BUGFIX] Restores the shadowed property set behavior
 19221 [BUGFIX] Ensure fn and (mut) work with falsy values
 19213 [BUGFIX] Update rendering engine to improve error ergonomics."
-131,"
+134,"
 #19193 [BUGFIX] Ensure @ember/component user lifecycle hooks are untracked
 #19197 [BUGFIX] Restore the shadowed property set behavior
 #19199 [BUGFIX] Cleans up the DebugRenderTree more thoroughly on errors
@@ -1440,7 +1459,7 @@ Value of input not updating if it had previously updated with the same string
 19197 [BUGFIX] Restore the shadowed property set behavior
 19199 [BUGFIX] Cleans up the DebugRenderTree more thoroughly on errors
 19249 [BUGFIX] Fix issues with query params during intermediate transitions"
-132,"
+135,"
 #19138 [BUGFIX] Fix tag cycles in query parameters
 #19158 [BUGFIX] RouterService#isActive() now consumes currentURL to 3.20
 #19164 [BUGFIX] Entangles custom EmberArray implementations when accessed
@@ -1451,33 +1470,33 @@ Value of input not updating if it had previously updated with the same string
 19164 [BUGFIX] Entangles custom EmberArray implementations when accessed
 19172 / #19197 [BUGFIX] Ensures that tracked properties initialize property
 19178 [BUGFIX] Allow computeds to have cycles in their deps"
-133,"CHANGELOG
+136,"CHANGELOG
 
 #19249 [BUGFIX] Fix bugs in query params with intermediate transitions
 ","CHANGELOG
 19249 [BUGFIX] Fix bugs in query params with intermediate transitions"
-134,"CHANGELOG
+137,"CHANGELOG
 
 #19142 [BUGFIX] Fix App booting before DOM ready without jQuery
 #19198 / #19232 [BUGFIX] Restores the shadowed property set behavior
 ","CHANGELOG
 19142 [BUGFIX] Fix App booting before DOM ready without jQuery
 19198 / #19232 [BUGFIX] Restores the shadowed property set behavior"
-135,"CHANGELOG
+138,"CHANGELOG
 
 #19199 [BUGFIX] Fix Ember Inspector to not be in a broken state after render errors
 #19221 [BUGFIX] Ensure fn and (mut) work with falsy values
 ","CHANGELOG
 19199 [BUGFIX] Fix Ember Inspector to not be in a broken state after render errors
 19221 [BUGFIX] Ensure fn and (mut) work with falsy values"
-136,"CHANGELOG
+139,"CHANGELOG
 
 #19193 [BUGFIX] Ensure user lifecycle hooks are untracked
 #19213 [BUGFIX] Update rendering engine to improve error ergonomics.
 ","CHANGELOG
 19193 [BUGFIX] Ensure user lifecycle hooks are untracked
 19213 [BUGFIX] Update rendering engine to improve error ergonomics."
-137,"CHANGELOG
+140,"CHANGELOG
 
 #19160 / #19182 [FEATURE] Implements the helper manager feature specified in the Helper Managers RFC.
 #19171 / #19182 [FEATURE] Implements invokeHelper from the JavaScript Helper Invocation API RFC.
@@ -1492,7 +1511,7 @@ Value of input not updating if it had previously updated with the same string
 19122 [BUGFIX] Prevents dynamic invocations of string values when referenced directly in angle brackets
 19136 [BUGFIX] Update router microlib to improve Transition related debugging
 19173 [BUGFIX] Enforce usage of capabilities generation."
-138,"CHANGELOG
+141,"CHANGELOG
 
 #19062 / #19068 [FEATURE] Add @ember/destroyable feature from the Destroyables RFC.
 #18984 / #19067 [FEATURE] Add low-level Cache API per Autotracking Memoization RFC
@@ -1509,12 +1528,12 @@ Value of input not updating if it had previously updated with the same string
 19163 [BUGFIX] Use args proxy for modifier managers.
 19170 [BUGFIX] Make modifier manager 3.22 accept the resolved value directly.
 19124 [BUGFIX] Fix rendering engine usage within a fastboot sandbox"
-139,"CHANGELOG
+142,"CHANGELOG
 
 #19172 [BUGFIX] Ensures that tracked properties initialize property
 ","CHANGELOG
 19172 [BUGFIX] Ensures that tracked properties initialize property"
-140,"CHANGELOG
+143,"CHANGELOG
 
 #19138 [BUGFIX] Fix tag cycles in query parameters
 #19094 [BUGFIX] Fix RouterService#isActive() to work with tracking
@@ -1527,45 +1546,45 @@ Value of input not updating if it had previously updated with the same string
 19163 [BUGFIX] Use args proxy for modifier managers.
 19164 [BUGFIX] Entangles custom EmberArray implementations when accessed with Ember.get
 19170 [BUGFIX] Make modifier manager 3.22 accept the resolved value directly."
-141,"CHANGELOG
+144,"CHANGELOG
 
 #19172 [BUGFIX] Ensures that tracked properties initialize property
 ","CHANGELOG
 19172 [BUGFIX] Ensures that tracked properties initialize property"
-142,"CHANGELOG
+145,"CHANGELOG
 
 #19138 [BUGFIX] Fix tag cycles in query parameters
 #19164 [BUGFIX] Entangles custom EmberArray implementations when accessed with Ember.get
 ","CHANGELOG
 19138 [BUGFIX] Fix tag cycles in query parameters
 19164 [BUGFIX] Entangles custom EmberArray implementations when accessed with Ember.get"
-143,"CHANGELOG
+146,"CHANGELOG
 
 #19124 Fix rendering engine usage within a fastboot sandbox
 ","CHANGELOG
 19124 Fix rendering engine usage within a fastboot sandbox"
-144,"CHANGELOG
-
-#19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
-#19111 [BUGFIX] Fixes ArrayProxy length reactivity.
-","CHANGELOG
-19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
-19111 [BUGFIX] Fixes ArrayProxy length reactivity."
-145,"CHANGELOG
-
-#19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
-#19111 [BUGFIX] Fixes ArrayProxy length reactivity.
-","CHANGELOG
-19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
-19111 [BUGFIX] Fixes ArrayProxy length reactivity."
-146,"CHANGELOG
-
-#19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
-#19111 [BUGFIX] Fixes ArrayProxy length reactivity.
-","CHANGELOG
-19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
-19111 [BUGFIX] Fixes ArrayProxy length reactivity."
 147,"CHANGELOG
+
+#19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
+#19111 [BUGFIX] Fixes ArrayProxy length reactivity.
+","CHANGELOG
+19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
+19111 [BUGFIX] Fixes ArrayProxy length reactivity."
+148,"CHANGELOG
+
+#19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
+#19111 [BUGFIX] Fixes ArrayProxy length reactivity.
+","CHANGELOG
+19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
+19111 [BUGFIX] Fixes ArrayProxy length reactivity."
+149,"CHANGELOG
+
+#19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
+#19111 [BUGFIX] Fixes ArrayProxy length reactivity.
+","CHANGELOG
+19106 [BUGFIX] Ensure destroy methods on CoreObject are invoked.
+19111 [BUGFIX] Fixes ArrayProxy length reactivity."
+150,"CHANGELOG
 
 #19062 / #19068 [FEATURE] Add @ember/destroyable feature from the Destroyables RFC.
 #18984 / #19067 [FEATURE] Add low-level Cache API per Autotracking Memoization RFC
@@ -1574,7 +1593,7 @@ Value of input not updating if it had previously updated with the same string
 19062 / #19068 [FEATURE] Add @ember/destroyable feature from the Destroyables RFC.
 18984 / #19067 [FEATURE] Add low-level Cache API per Autotracking Memoization RFC
 19086 [FEATURE] Pass transition object to activate/deactivate hooks and events"
-148,"CHANGELOG
+151,"CHANGELOG
 
 #18993 [DEPRECATION] Deprecate getWithDefault per RFC #554.
 #19087 [BUGFIX] Generated initializer tests no longer causes a deprecation warning
@@ -1583,7 +1602,7 @@ Value of input not updating if it had previously updated with the same string
 18993 [DEPRECATION] Deprecate getWithDefault per RFC #554.
 19087 [BUGFIX] Generated initializer tests no longer causes a deprecation warning
 17571 [BUGFIX] Avoid tampering queryParam argument in RouterService#isActive"
-149,"CHANGELOG
+152,"CHANGELOG
 
 #19087 [BUGFIX] Generated initializer tests no longer causes a deprecation warning
 #19077 Simplify get and improve computed caching scheme.
@@ -1594,7 +1613,7 @@ Value of input not updating if it had previously updated with the same string
 19077 Simplify get and improve computed caching scheme.
 19082 Simplify mixin application
 19089 Update rendering engine to improve immediate encoding performance"
-150,"
+153,"
 #19047 Ensure inject-babel-helpers plugin can be parallelized
 #19089 Update rendering engine to improve immediate encoding performance
 #19082 Simplify mixin application
@@ -1611,15 +1630,15 @@ Value of input not updating if it had previously updated with the same string
 19077 Simplify get and improve computed caching scheme.
 19065 / #19072 - Updates GlimmerVM to improve internal destroyable system and improve tag / revision computation.
 19081 Reduces template compilation size in production builds."
-151,"CHANGELOG
+154,"CHANGELOG
 
 #19028 [BUGFIX] Ensure setter CP's with dependent keys on curly components can be two way bound
 ","CHANGELOG
 19028 [BUGFIX] Ensure setter CP's with dependent keys on curly components can be two way bound"
-152,"
+155,"
 #19028 [BUGFIX] Ensure setter CP's with dependent keys on curly components can be two way bound
 ",19028 [BUGFIX] Ensure setter CP's with dependent keys on curly components can be two way bound
-153,"CHANGELOG
+156,"CHANGELOG
 
 #19059 [BUGFIX] Prevent <base target=""_parent""> from erroring in HistoryLocation
 #19060 / #19065 / #19072 [BUGFIX] Update rendering engine to @glimmer/* 0.55.3
@@ -1628,7 +1647,7 @@ Value of input not updating if it had previously updated with the same string
 19059 [BUGFIX] Prevent  from erroring in HistoryLocation
 19060 / #19065 / #19072 [BUGFIX] Update rendering engine to @glimmer/* 0.55.3
 19063 [DOC] Fix missing docs for {{#in-element}}"
-154,"
+157,"
 #19048 [BUGFIX] Update router.js to ensure transition.abort works for query param only transitions
 #19059 [BUGFIX] Prevent <base target=""_parent""> from erroring in HistoryLocation
 #19060 [BUGFIX] Update rendering engine to @glimmer/* 0.55.1
@@ -1637,7 +1656,7 @@ Value of input not updating if it had previously updated with the same string
 19059 [BUGFIX] Prevent  from erroring in HistoryLocation
 19060 [BUGFIX] Update rendering engine to @glimmer/* 0.55.1
 19063 [DOC] Fix missing docs for {{#in-element}}"
-155,"
+158,"
 #19001 [BUGFIX] Invoke methods correctly in TextSupport sendAction
 #19023 [BUGFIX] Avoid over eager property access during init
 #19048 [BUGFIX] Update router.js to ensure transition.abort works for query param only transitions
@@ -1648,36 +1667,36 @@ Value of input not updating if it had previously updated with the same string
 19048 [BUGFIX] Update router.js to ensure transition.abort works for query param only transitions
 19057 [BUGFIX] Parallelize inject-babel-helpers plugin
 19059 [BUGFIX] Prevent  from erroring in HistoryLocation"
-156,"CHANGELOG
+159,"CHANGELOG
 
 #19048 [BUGFIX] Update router.js to ensure transition.abort works for query param only transitions.
 #19056 [BUGFIX] Update glimmer-vm to 0.54.2.
 ","CHANGELOG
 19048 [BUGFIX] Update router.js to ensure transition.abort works for query param only transitions.
 19056 [BUGFIX] Update glimmer-vm to 0.54.2."
-157,"CHANGELOG
+160,"CHANGELOG
 
 #19056 Update Glimmer rendering engine to 0.54.2. Fixes an issue with (private for now) destroyables work to enable the destroyables polyfill to work more appropriately.
 ","CHANGELOG
 19056 Update Glimmer rendering engine to 0.54.2. Fixes an issue with (private for now) destroyables work to enable the destroyables polyfill to work more appropriately."
-158,"CHANGELOG
+161,"CHANGELOG
 
 #19040 [BUGFIX] Fix a memory leak that occurred when changing the array passed to {{each}}
 #19047 [BUGFIX] Ensure inject-babel-helpers plugin can be parallelized
 ","CHANGELOG
 19040 [BUGFIX] Fix a memory leak that occurred when changing the array passed to {{each}}
 19047 [BUGFIX] Ensure inject-babel-helpers plugin can be parallelized"
-159,"
+162,"
 #19040 [BUGFIX] Fix a memory leak that occured when changing the array passed to {{each}}
 ",19040 [BUGFIX] Fix a memory leak that occured when changing the array passed to {{each}}
-160,"CHANGELOG
+163,"CHANGELOG
 
 #18993 [DEPRECATION] Deprecate getWithDefault per RFC #554.
 #17571 [BUGFIX] Avoid tampering queryParam argument in RouterService#isActive 
 ","CHANGELOG
 18993 [DEPRECATION] Deprecate getWithDefault per RFC #554.
 17571 [BUGFIX] Avoid tampering queryParam argument in RouterService#isActive"
-161,"CHANGELOG
+164,"CHANGELOG
 
 #18867 / #18927 / #18928 [FEATURE] Promote {{in-element}} to public API RFC.
 #19025 [BUGFIX] Updates Glimmer VM to 0.54.0
@@ -1694,29 +1713,29 @@ Value of input not updating if it had previously updated with the same string
 18997 [BUGFIX] Fix components  and  to work with native class actions correctly.
 18859 [BUGFIX] Fix transitionTo with scoped aliased queryParam.
 18961 [BUGFIX] Remove assertions for updating auto-tracked state without Ember.set / this.set"
-162,"CHANGELOG
+165,"CHANGELOG
 
 #19034 [BUGFIX] Disable named blocks; please continue to use the polyfill. 
 ","CHANGELOG
 19034 [BUGFIX] Disable named blocks; please continue to use the polyfill."
-163,"CHANGELOG
+166,"CHANGELOG
 
 #19025 [BUGFIX] Updates Glimmer VM to 0.54.0
 ","CHANGELOG
 19025 [BUGFIX] Updates Glimmer VM to 0.54.0"
-164,"CHANGELOG
+167,"CHANGELOG
 
 #19021 [BUGFIX] Disallow null/undefined targets in in-element.
 #19023 [BUGFIX] Don't access properties during init unless required to prevent unnecessary rendering invalidations.
 ","CHANGELOG
 19021 [BUGFIX] Disallow null/undefined targets in in-element.
 19023 [BUGFIX] Don't access properties during init unless required to prevent unnecessary rendering invalidations."
-165,"CHANGELOG
+168,"CHANGELOG
 
 #18997 [BUGFIX] Fix components <Input> and <Textarea> to work with native class actions correctly.
 ","CHANGELOG
 18997 [BUGFIX] Fix components  and  to work with native class actions correctly."
-166,"CHANGELOG
+169,"CHANGELOG
 
 #18926 / #18852 [FEATURE] Implement the Yieldable Named Blocks RFC.
 #18867 / #18927 / #18928 [FEATURE] Promote {{in-element}} to public API RFC.
@@ -1727,7 +1746,7 @@ Value of input not updating if it had previously updated with the same string
 18867 / #18927 / #18928 [FEATURE] Promote {{in-element}} to public API RFC.
 18859 Fix transitionTo with scoped aliased queryParam.
 18961 [BUGFIX] Remove assertions for updating auto-tracked state without Ember.set / this.set"
-167,"CHANGELOG
+170,"CHANGELOG
 
 #18982 / #18913 [BUGFIX] Update rendering engine to latest version.
 Add a compile time error when passing arguments to regular HTML elements (e.g. <a @foo=)
@@ -1754,21 +1773,21 @@ Fix: Rerender an {{#eachs block only when the specific item has changed
 18826 [CLEANUP] Remove deprecated private _setComputedDecorator
 18832 [CLEANUP] Remove deprecated privateimplicit-modifier-manager-capabilities
 18839 [CLEANUP] Updates the VM and autotracking APIs"
-168,"CHANGELOG
+171,"CHANGELOG
 
 #18879 Ensure errors thrown during component construction do not cause (unrelated) errors during application teardown (fixes a common issue when using setupOnerror with components asserting during constructor/init/didInssertElement).
 #18273 [BUGFIX] Fix issues with SSR rehydration of .
 ","CHANGELOG
 18879 Ensure errors thrown during component construction do not cause (unrelated) errors during application teardown (fixes a common issue when using setupOnerror with components asserting during constructor/init/didInssertElement).
 18273 [BUGFIX] Fix issues with SSR rehydration of ."
-169,"CHANGELOG
+172,"CHANGELOG
 
 #18958 [BUGFIX] Ensure AST transforms using in-element work properly.
 #18960 [BUGFIX] More assertions for Application lifecycle methods
 ","CHANGELOG
 18958 [BUGFIX] Ensure AST transforms using in-element work properly.
 18960 [BUGFIX] More assertions for Application lifecycle methods"
-170,"CHANGELOG
+173,"CHANGELOG
 
 #18941 [BUGFIX] Update rendering engine to latest version.
 Reduce template size growth to near 3.16 levels (still ~ 3% higher than 3.16)
@@ -1779,7 +1798,7 @@ Fixes an issue with key collisions in {{#each
 Reduce template size growth to near 3.16 levels (still ~ 3% higher than 3.16)
 Ensures destroyable items added to an {{#each after initial render are invoked properly
 Fixes an issue with key collisions in {{#each"
-171,"CHANGELOG
+174,"CHANGELOG
 
 #18941 [BUGFIX] Update rendering engine to latest version.
 Reduce template size growth to near 3.16 levels (still ~ 3% higher than 3.16)
@@ -1790,19 +1809,19 @@ Fixes an issue with key collisions in {{#each
 Reduce template size growth to near 3.16 levels (still ~ 3% higher than 3.16)
 Ensures destroyable items added to an {{#each after initial render are invoked properly
 Fixes an issue with key collisions in {{#each"
-172,"CHANGELOG
+175,"CHANGELOG
 
 #18913 [BUGFIX] Update to glimmer-vm 0.51.0.
 #18919 [BUGFIX] Add error for modifier manager without capabilities. 
 ","CHANGELOG
 18913 [BUGFIX] Update to glimmer-vm 0.51.0.
 18919 [BUGFIX] Add error for modifier manager without capabilities."
-173,"CHANGELOG
+176,"CHANGELOG
 
 #18879 Ensure errors thrown during component construction do not cause (unrelated) errors during application teardown (fixes a common issue when using setupOnerror with components asserting during constructor/init/didInssertElement).
 ","CHANGELOG
 18879 Ensure errors thrown during component construction do not cause (unrelated) errors during application teardown (fixes a common issue when using setupOnerror with components asserting during constructor/init/didInssertElement)."
-174,"CHANGELOG
+177,"CHANGELOG
 
 #18828 [BUGFIX] Prepend 'TODO: ' to 'Replace this with your real tests' comments in generated tests
 #18353 [BUGFIX] Improve fn & on undefined callback message
@@ -1817,7 +1836,7 @@ Fixes an issue with key collisions in {{#each"
 18826 [CLEANUP] Remove deprecated private _setComputedDecorator
 18832 [CLEANUP] Remove deprecated privateimplicit-modifier-manager-capabilities
 18839 [CLEANUP] Updates the VM and autotracking APIs"
-175,"CHANGELOG
+178,"CHANGELOG
 
 #18869 / #18861 / #18811 [BUGFIX] Update to glimmer-vm 0.50.2.
 #18807 [BUGFIX] Do not error (RE: elementId changing) if elementId is not changed
@@ -1828,60 +1847,60 @@ Fixes an issue with key collisions in {{#each"
 18807 [BUGFIX] Do not error (RE: elementId changing) if elementId is not changed
 18774 [BUGFIX] Suspend observer deactivation during property changes
 18785 Drop Node 8 support."
-176,"CHANGELOG
+179,"CHANGELOG
 
 #18854 Pass value through to PROPERTY_DID_CHANGE to avoid calling get when setting values for computed props
 ","CHANGELOG
 18854 Pass value through to PROPERTY_DID_CHANGE to avoid calling get when setting values for computed props"
-177,"CHANGELOG
+180,"CHANGELOG
 
 #18857 [BUGFIX] Pass value through to PROPERTY_DID_CHANGE to avoid calling get when setting values for computed props
 #18861 [BUGFIX] Update glimmer-vm to 0.50.1 to improve dev time performance.
 ","CHANGELOG
 18857 [BUGFIX] Pass value through to PROPERTY_DID_CHANGE to avoid calling get when setting values for computed props
 18861 [BUGFIX] Update glimmer-vm to 0.50.1 to improve dev time performance."
-178,"CHANGELOG
+181,"CHANGELOG
 
 #18857 Pass value through to PROPERTY_DID_CHANGE to avoid calling get when setting values for computed props
 ","CHANGELOG
 18857 Pass value through to PROPERTY_DID_CHANGE to avoid calling get when setting values for computed props"
-179,"CHANGELOG
+182,"CHANGELOG
 
 #18837 [BUGFIX] Fix willDestroy on class helpers
 #18838 [BUGFIX] Ensure destructors (e.g. will-destroy modifier, @ember/components with willDestroyElement, etc) fire when used within an {{#each}} block.
 ","CHANGELOG
 18837 [BUGFIX] Fix willDestroy on class helpers
 18838 [BUGFIX] Ensure destructors (e.g. will-destroy modifier, @ember/components with willDestroyElement, etc) fire when used within an {{#each}} block."
-180,"CHANGELOG
+183,"CHANGELOG
 
 #18837 [BUGFIX] Fix willDestroy on class based helpers.
 #18838 [BUGFIX] Ensure destructors (e.g. will-destroy modifier, @ember/components with willDestroyElement, etc) fire when used within an {{#each}} block.
 ","CHANGELOG
 18837 [BUGFIX] Fix willDestroy on class based helpers.
 18838 [BUGFIX] Ensure destructors (e.g. will-destroy modifier, @ember/components with willDestroyElement, etc) fire when used within an {{#each}} block."
-181,"CHANGELOG
+184,"CHANGELOG
 
 #18835 [BUGFIX] Make ArrayProxy Lazy.
 ","CHANGELOG
 18835 [BUGFIX] Make ArrayProxy Lazy."
-182,"CHANGELOG
+185,"CHANGELOG
 
 #18831 [BUGFIX] Fix transpilation issues (e.g. _createSuper is not a function) when used with Babel 7.9.0+.
 ","CHANGELOG
 18831 [BUGFIX] Fix transpilation issues (e.g. _createSuper is not a function) when used with Babel 7.9.0+."
-183,"CHANGELOG
+186,"CHANGELOG
 
 #18809 [BUGFIX] Do not error (RE: elementId changing) if elementId is not changed
 #18831 [BUGFIX] Fix transpilation issues (e.g. _createSuper is not a function) when used with Babel 7.9.0+.
 ","CHANGELOG
 18809 [BUGFIX] Do not error (RE: elementId changing) if elementId is not changed
 18831 [BUGFIX] Fix transpilation issues (e.g. _createSuper is not a function) when used with Babel 7.9.0+."
-184,"CHANGELOG
+187,"CHANGELOG
 
 #18831 [BUGFIX] Fix transpilation issues (e.g. _createSuper is not a function) when used with Babel 7.9.0+.
 ","CHANGELOG
 18831 [BUGFIX] Fix transpilation issues (e.g. _createSuper is not a function) when used with Babel 7.9.0+."
-185,"CHANGELOG
+188,"CHANGELOG
 
 #18741 [BUGFIX] Don't setup mandatory setters on array indexes
 #18742 [BUGFIX] Fix setDiff computed macro used within glimmer component
@@ -1894,26 +1913,26 @@ Fixes an issue with key collisions in {{#each"
 18767 [BUGFIX] Fix observer leaks.
 18780 [BUGFIX] Fix owner.ownerInjection() when used to create services directly
 18810 [BUGFIX] Do not error (RE: elementId changing) if elementId is not changed"
-186,"CHANGELOG
+189,"CHANGELOG
 
 #18807 [BUGFIX] Do not error (RE: elementId changing) if elementId is not changed
 #18811 [BUGFIX] Upgrade to latest glimmer-vm
 ","CHANGELOG
 18807 [BUGFIX] Do not error (RE: elementId changing) if elementId is not changed
 18811 [BUGFIX] Upgrade to latest glimmer-vm"
-187,"CHANGELOG
+190,"CHANGELOG
 
 #18809 [BUGFIX] Do not error (RE: elementId changing) if elementId is not changed
 ","CHANGELOG
 18809 [BUGFIX] Do not error (RE: elementId changing) if elementId is not changed"
-188,"CHANGELOG
+191,"CHANGELOG
 
 #18774 [BUGFIX] Suspend observer deactivation during property changes
 #18785 Drop Node 8 support.
 ","CHANGELOG
 18774 [BUGFIX] Suspend observer deactivation during property changes
 18785 Drop Node 8 support."
-189,"CHANGELOG
+192,"CHANGELOG
 
 #18688 / #18621 / #18714 / #18743 / #18762 Upgrades Glimmer VM to 0.47.9, fixes ignored checked attribute on input, fixes using array and hash helper together
 #18741 [BUGFIX] Don't setup mandatory setters on array indexes
@@ -1942,24 +1961,24 @@ Fixes an issue with key collisions in {{#each"
 18708 [BUGFIX] Ensures the arg proxy works with get
 18694 [BUGFIX] Ensure tag updates are buffered, remove error message
 18709 [BUGFIX] Fix this in @tracked initializer"
-190,"CHANGELOG
+193,"CHANGELOG
 
 #18742 [BUGFIX] Fix setDiff computed macro used within glimmer component
 #18743 / #18762 [BUGFIX] Upgrades Glimmer VM to 0.47.9, fixes ignored checked attribute on input, fixes using array and hash helper together
 ","CHANGELOG
 18742 [BUGFIX] Fix setDiff computed macro used within glimmer component
 18743 / #18762 [BUGFIX] Upgrades Glimmer VM to 0.47.9, fixes ignored checked attribute on input, fixes using array and hash helper together"
-191,"CHANGELOG
+194,"CHANGELOG
 
 #18730 Workaround for the Glimmer VM bug which encodes/decodes integer literals correctly.
 ","CHANGELOG
 18730 Workaround for the Glimmer VM bug which encodes/decodes integer literals correctly."
-192,"CHANGELOG
+195,"CHANGELOG
 
 #18730 Workaround for the Glimmer VM bug which encodes/decodes integer literals correctly.
 ","CHANGELOG
 18730 Workaround for the Glimmer VM bug which encodes/decodes integer literals correctly."
-193,"CHANGELOG
+196,"CHANGELOG
 
 #18727 [BUGFIX] Avoid breaking {{-in-element}} usage
 #18728 [BUGFIX] Fix {{#-in-element}} double-clearing issue
@@ -1968,14 +1987,14 @@ Fixes an issue with key collisions in {{#each"
 18727 [BUGFIX] Avoid breaking {{-in-element}} usage
 18728 [BUGFIX] Fix {{#-in-element}} double-clearing issue
 18729 [BUGFIX] Remove deprecation for instantiation of new singleton instances (e.g. a service) during teardown (originally added in 3.16.1 by #18717)."
-194,"CHANGELOG
+197,"CHANGELOG
 
 #18721 [BUGFIX] Backport autotracking bugfixes
 #18729 [BUGFIX] Remove deprecation for instantiation of new singleton instances (e.g. a service) during teardown (originally added in 3.16.1 by #18717).
 ","CHANGELOG
 18721 [BUGFIX] Backport autotracking bugfixes
 18729 [BUGFIX] Remove deprecation for instantiation of new singleton instances (e.g. a service) during teardown (originally added in 3.16.1 by #18717)."
-195,"CHANGELOG
+198,"CHANGELOG
 
 #18703 [BUGFIX] Correctly links ArrayProxy tags to arrangedContent
 #18707 [BUGFIX] Fixes tag chaining on Proxy mixins
@@ -1990,7 +2009,7 @@ Fixes an issue with key collisions in {{#each"
 18717 [BUGFIX] Ensure instantiation cannot happen after destruction.
 18720 [BUGFIX] Update minimum @ember/edition-utils to 1.2.0.
 18714 Update glimmer packages to 0.47.4."
-196,"CHANGELOG
+199,"CHANGELOG
 
 #18691 [BUGFIX] Updated component and helper blueprints to use import { hbs } from 'ember-cli-htmlbars'.
 #18698 [BUGFIX] Ensure tag updates are buffered
@@ -2003,7 +2022,7 @@ Fixes an issue with key collisions in {{#each"
 18713 [BUGFIX] Update @glimmer/syntax to ensure that using , , and  does not error.
 18717 [BUGFIX] Ensure instantiation cannot happen after destruction.
 18720 [BUGFIX] Ensure correct @ember/edition-utils is used (1.2.0)."
-197,"CHANGELOG
+200,"CHANGELOG
 
 #18691 [BUGFIX] Updated blueprints for component and helper tests to output the correct hbs import statement 
 #18694 [BUGFIX] Ensure tag updates are buffered, remove error message 
@@ -2012,12 +2031,12 @@ Fixes an issue with key collisions in {{#each"
 18691 [BUGFIX] Updated blueprints for component and helper tests to output the correct hbs import statement
 18694 [BUGFIX] Ensure tag updates are buffered, remove error message
 18709 [BUGFIX] Fix this in @tracked initializer"
-198,"CHANGELOG
+201,"CHANGELOG
 
 #18688 / #18621 Updates Glimmer-VM to v0.46
 ","CHANGELOG
 18688 / #18621 Updates Glimmer-VM to v0.46"
-199,"CHANGELOG
+202,"CHANGELOG
 
 #18436 [DEPRECATION] Deprecate globals resolver per RFC #331.
 #18668 [BUGFIX] Fix some scenarios where the ""backtracking assertion"" would be thrown by consuming tags after fully getting values
@@ -2026,12 +2045,12 @@ Fixes an issue with key collisions in {{#each"
 18436 [DEPRECATION] Deprecate globals resolver per RFC #331.
 18668 [BUGFIX] Fix some scenarios where the ""backtracking assertion"" would be thrown by consuming tags after fully getting values
 18651 [BUGFIX] Async functions were incorrectly treated as falsey in template conditionals"
-200,"CHANGELOG
+203,"CHANGELOG
 
 #18436 [DEPRECATION] Deprecate globals resolver per RFC #331.
 ","CHANGELOG
 18436 [DEPRECATION] Deprecate globals resolver per RFC #331."
-201,"CHANGELOG
+204,"CHANGELOG
 
 #17948 [DEPRECATION] Deprecate Component#isVisible per RFC #324.
 #18491 [DEPRECATION] Deprecate {{partial}} per RFC #449.
@@ -2044,53 +2063,53 @@ Fixes an issue with key collisions in {{#each"
 18441 [DEPRECATION] Deprecate use of window.ENV to configure boot options
 18554 [BREAKING BUGFIX] Adds autotracking transaction
 17834 [BUGFIX] Prevents autotracking ArrayProxy creation"
-202,"CHANGELOG
+205,"CHANGELOG
 
 #18582 [BUGFIX] Ensure loader.js is transpiled to the applications specified targets (from config/targets.js).
 ","CHANGELOG
 18582 [BUGFIX] Ensure loader.js is transpiled to the applications specified targets (from config/targets.js)."
-203,"CHANGELOG
+206,"CHANGELOG
 
 #18576 [BUGFIX] Fix leftover const expressions in legacy builds
 ","CHANGELOG
 18576 [BUGFIX] Fix leftover const expressions in legacy builds"
-204,"CHANGELOG
+207,"CHANGELOG
 
 #18582 [BUGFIX release] Ensure loader.js is transpiled to the applications specified targets (from config/targets.js).
 ","CHANGELOG
 18582 [BUGFIX release] Ensure loader.js is transpiled to the applications specified targets (from config/targets.js)."
-205,"CHANGELOG
+208,"CHANGELOG
 
 #17834 [BUGFIX] Prevents autotracking ArrayProxy creation
 #18554 [BREAKING BUGFIX] Adds autotracking transaction
 ","CHANGELOG
 17834 [BUGFIX] Prevents autotracking ArrayProxy creation
 18554 [BREAKING BUGFIX] Adds autotracking transaction"
-206,"CHANGELOG
+209,"CHANGELOG
 
 #18539 / #18548 [BUGFIX] Fix issues with the new APIs to be used by ember-inspector for building the ""component's tree"" including @glimmer/component.
 #18549 [BUGFIX] Add component reference to the mouse event handler deprecation warnings.
 ","CHANGELOG
 18539 / #18548 [BUGFIX] Fix issues with the new APIs to be used by ember-inspector for building the ""component's tree"" including @glimmer/component.
 18549 [BUGFIX] Add component reference to the mouse event handler deprecation warnings."
-207,"CHANGELOG
+210,"CHANGELOG
 
 #18244 Fix query param assertion when using the router services transitionTo to redirect during an existing transition.
 #18458 / #18555 Ensure (query-params) helper can be used outside of direct {{link-to}} / <LinkTo /> invocation.
 ","CHANGELOG
 18244 Fix query param assertion when using the router services transitionTo to redirect during an existing transition.
 18458 / #18555 Ensure (query-params) helper can be used outside of direct {{link-to}} /  invocation."
-208,"CHANGELOG
+211,"CHANGELOG
 
 #18549 [BUGFIX] Add component reference to the mouse event handler deprecation warnings
 ","CHANGELOG
 18549 [BUGFIX] Add component reference to the mouse event handler deprecation warnings"
-209,"CHANGELOG
+212,"CHANGELOG
 
 #18539 [BUGFIX] Add ID to CapturedRenderNode
 ","CHANGELOG
 18539 [BUGFIX] Add ID to CapturedRenderNode"
-210,"CHANGELOG
+213,"CHANGELOG
 
 #17948 [DEPRECATION] Deprecate Component#isVisible per RFC #324.
 #18491 [DEPRECATION] Deprecate {{partial}} per RFC #449.
@@ -2099,12 +2118,12 @@ Fixes an issue with key collisions in {{#each"
 17948 [DEPRECATION] Deprecate Component#isVisible per RFC #324.
 18491 [DEPRECATION] Deprecate {{partial}} per RFC #449.
 18441 [DEPRECATION] Deprecate window.ENV"
-211,"CHANGELOG
+214,"CHANGELOG
 
 #18244 [BUGFIX] Fix query param assertion when using the router services transitionTo to redirect during an existing transition.
 ","CHANGELOG
 18244 [BUGFIX] Fix query param assertion when using the router services transitionTo to redirect during an existing transition."
-212,"CHANGELOG
+215,"CHANGELOG
 
 #18345 / #18363 [FEATURE] Implement the [Provide @model named argument to route templates](https://github.com/emberjs/rfcs/blob/master/text/0523-model-argument-for-route-templates.md RFC.
 #18458 [BUGFIX] Using query params helper outside of link-to
@@ -2121,7 +2140,7 @@ Fixes an issue with key collisions in {{#each"
 18387 [BUGFIX] Ensure updateComponent is fired consistently
 18381 Drop Node 6 and 11 support.
 18410 Use ember-cli-htmlbars for inline precompilation if possible."
-213,"CHANGELOG
+216,"CHANGELOG
 
 #18476 [BUGFIX] Ensure model can be observed by sync observers.
 #18477 [BUGFIX] Allows @each to work with arrays that contain falsy values.
@@ -2130,34 +2149,34 @@ Fixes an issue with key collisions in {{#each"
 18476 [BUGFIX] Ensure model can be observed by sync observers.
 18477 [BUGFIX] Allows @each to work with arrays that contain falsy values.
 18500 [BUGFIX] Remove requirement for disabling jquery-integration in Octane."
-214,"CHANGELOG
+217,"CHANGELOG
 
 #18476 [BUGFIX] Ensure model can be observed by sync observers
 #18458 [BUGFIX] Using query params helper outside of link-to
 ","CHANGELOG
 18476 [BUGFIX] Ensure model can be observed by sync observers
 18458 [BUGFIX] Using query params helper outside of link-to"
-215,"CHANGELOG
+218,"CHANGELOG
 
 #18462 [BUGFIX] Prevents observer re-entry.
 ","CHANGELOG
 18462 [BUGFIX] Prevents observer re-entry."
-216,"CHANGELOG
+219,"CHANGELOG
 
 #18462 [BUGFIX] Prevents observer re-entry
 ","CHANGELOG
 18462 [BUGFIX] Prevents observer re-entry"
-217,"CHANGELOG
+220,"CHANGELOG
 
 #18429 [BUGFIX] Fix incorrect error message for octane features.
 ","CHANGELOG
 18429 [BUGFIX] Fix incorrect error message for octane features."
-218,"CHANGELOG
+221,"CHANGELOG
 
 #18429 [BUGFIX] Fix incorrect error message when opting into using Octane, and missing optional features.
 ","CHANGELOG
 18429 [BUGFIX] Fix incorrect error message when opting into using Octane, and missing optional features."
-219,"CHANGELOG
+222,"CHANGELOG
 
 #18273 [BUGFIX] Fix issues with SSR rehydration of .
 #18415 [BUGFIX] Fix hbs import path in test blueprint.
@@ -2166,14 +2185,14 @@ Fixes an issue with key collisions in {{#each"
 18273 [BUGFIX] Fix issues with SSR rehydration of .
 18415 [BUGFIX] Fix hbs import path in test blueprint.
 18418 / #18419 [BUGFIX] Require Octane features when using Octane preview."
-220,"CHANGELOG
+223,"CHANGELOG
 
 #18273 [BUGFIX] Fix issues with SSR rehydration of .
 #18418 / #18419 [BUGFIX] Require Octane features when using Octane preview.
 ","CHANGELOG
 18273 [BUGFIX] Fix issues with SSR rehydration of .
 18418 / #18419 [BUGFIX] Require Octane features when using Octane preview."
-221,"CHANGELOG
+224,"CHANGELOG
 
 #18345 / #18363 [FEATURE] Implement the [Provide @model named argument to route templates](https://github.com/emberjs/rfcs/blob/master/text/0523-model-argument-for-route-templates.md RFC.
 #18387 [BUGFIX] Ensure updateComponent is fired consistently
@@ -2186,7 +2205,7 @@ Fixes an issue with key collisions in {{#each"
 18372 Debug Render Tree (for Ember Inspector)
 18381 Drop Node 6 and 11 support.
 18410 Use ember-cli-htmlbars for inline precompilation if possible."
-222,"CHANGELOG
+225,"CHANGELOG
 
 #16366 / #16903 / #17572 / #17682 / #17765 / #17751 / #17835 / #18059 / #17951 / #18069 / #18074 / #18073 / #18091 / #18186 / #18223 / #18358 / #18266 [FEATURE] Implement the Tracked Properties and Tracked Property Updates RFCs.
 #18158 / #18203 / #18198 / #18190 / #18394 [FEATURE] Implement the Component Templates Co-location RFC, including the setComponentTemplate(), getComponentTemplate() and templateOnlyComponent() APIs. Note that while these low-level APIs are enabled, the co-location feature is only enabled in Octane apps as of this release. This restriction will be removed in a future version.
@@ -2235,14 +2254,14 @@ Fixes an issue with key collisions in {{#each"
 18248 [BUGFIX] Ensures that observers are flushed after CPs are updated
 18217 [BUGFIX] Adds ability for computed props to depend on args
 18222 [BUGFIX] Matches assertion behavior for CPs computing after destroy"
-223,"CHANGELOG
+226,"CHANGELOG
 
 #18314 [BUGFIX] Use class inheritance for getters and setters
 #18329 [BUGFIX] Eagerly consume aliases
 ","CHANGELOG
 18314 [BUGFIX] Use class inheritance for getters and setters
 18329 [BUGFIX] Eagerly consume aliases"
-224,"CHANGELOG
+227,"CHANGELOG
 
 #18278 [BUGFIX] Bump ember-router-generator from v1.2.3 to v2.0.0 to support parsing app/router.js with native class.
 #18291 [BUGFIX] Adds the babel-helpers injection plugin back and include ember-template-compiler in the vendor folder for Ember.
@@ -2253,7 +2272,7 @@ Fixes an issue with key collisions in {{#each"
 18291 [BUGFIX] Adds the babel-helpers injection plugin back and include ember-template-compiler in the vendor folder for Ember.
 18296 [BUGFIX] Ensure {{each-in}} can iterate over keys with periods
 18304 [BUGFIX] Check the EMBER_ENV environment variable after it is set"
-225,"CHANGELOG
+228,"CHANGELOG
 
 #18223 [FEATURE] Tracked Props Performance Tuning
 #18208 [BUGFIX] Compile Ember dynamically in consuming applications
@@ -2272,14 +2291,14 @@ Fixes an issue with key collisions in {{#each"
 18274 [BUGFIX] Allow CPs to depend on nested args
 18276 [BUGFIX] Change the assertion for @each dependencies into a deprecation
 18281 [BUGFIX] Check length of targets"
-226,"CHANGELOG
+229,"CHANGELOG
 
 #18248 [BUGFIX] Ensures that observers are flushed after CPs are updated
 #18241 [BUGFIX] Adds Component Manager 3.13 Capabilities
 ","CHANGELOG
 18248 [BUGFIX] Ensures that observers are flushed after CPs are updated
 18241 [BUGFIX] Adds Component Manager 3.13 Capabilities"
-227,"CHANGELOG
+230,"CHANGELOG
 
 #16366 / #16903 / #17572 / #17682 / #17765 / #17751 / #17835 / #18059 / #17951 / #18069 / #18074 / #18073 / #18091 / #18186 [FEATURE] Implement the Tracked Properties and Tracked Property Updates RFCs.
 #18158 / #18203 / #18198 / #18190 [FEATURE] Implement the Component Templates Co-location.
@@ -2292,7 +2311,7 @@ Fixes an issue with key collisions in {{#each"
 18214 [DEPRECATION] Implement the Deprecate support for mouseEnter/Leave/Move Ember events.
 18217 [BUGFIX] Adds ability for computed props to depend on args
 18222 [BUGFIX] Matches assertion behavior for CPs computing after destroy"
-228,"CHANGELOG
+231,"CHANGELOG
 
 #18159 [BUGFIX] Update router.js to ensure buildRouteInfoMetadata does not eagerly cache routes in lazy Engines
 #18226 [BUGFIX] Fix routing path with double slash (#18226)
@@ -2305,12 +2324,12 @@ Fixes an issue with key collisions in {{#each"
 17406 [BUGFIX] Properties observed through Ember.Observer can be set to undefined
 18150 [BUGFIX] Fix a memory retention issue with string-based event listeners
 18124 [CLEANUP] Remove deprecated NAME_KEY"
-229,"
+232,"
 #18159 Ensure RouteInfo object's do not eagerly cache routes in lazy Engines
 #18150 Ensure string based event listeners that are removed are not retained
 ","18159 Ensure RouteInfo object's do not eagerly cache routes in lazy Engines
 18150 Ensure string based event listeners that are removed are not retained"
-230,"CHANGELOG
+233,"CHANGELOG
 
 #18159 [BUGFIX] Ensure RouteInfo object's do not eagerly cache routes in lazy Engines
 #18150 [BUGFIX] Ensure string based event listeners that are removed are not retained
@@ -2319,7 +2338,7 @@ Fixes an issue with key collisions in {{#each"
 18159 [BUGFIX] Ensure RouteInfo object's do not eagerly cache routes in lazy Engines
 18150 [BUGFIX] Ensure string based event listeners that are removed are not retained
 18080 [BUGFIX] Fix ember-template-compiler compatibility with Fastboot."
-231,"CHANGELOG
+234,"CHANGELOG
 
 #17406 [BUGFIX] Properties observed through Ember.Observer can be set to undefined
 #18150 [BUGFIX] Fix a memory retention issue with string-based event listeners
@@ -2328,7 +2347,7 @@ Fixes an issue with key collisions in {{#each"
 17406 [BUGFIX] Properties observed through Ember.Observer can be set to undefined
 18150 [BUGFIX] Fix a memory retention issue with string-based event listeners
 18124 [CLEANUP] Remove deprecated NAME_KEY"
-232,"CHANGELOG
+235,"CHANGELOG
 
 #17842 / #17901 [FEATURE] Implement the Forwarding Element Modifiers with ""Splattributes"" RFC.
 #17941 / #17961 [FEATURE] Implement the {{fn}} rfc.
@@ -2349,24 +2368,24 @@ Fixes an issue with key collisions in {{#each"
 17843 [CLEANUP] Remove deprecated intimate apis in the router
 17940 [CLEANUP] Remove sync queue from @ember/runloop.
 18110 [BUGFIX] Ensure calling recompute on a class-based helper causes it to recompute"
-233,"CHANGELOG
+236,"CHANGELOG
 
 #17971 [BUGFIX] Ensure query param only link-to's work in error states.
 ","CHANGELOG
 17971 [BUGFIX] Ensure query param only link-to's work in error states."
-234,"CHANGELOG
+237,"CHANGELOG
 
 #17971 [BUGFIX] Ensure query param only link-to's work in error states.
 ","CHANGELOG
 17971 [BUGFIX] Ensure query param only link-to's work in error states."
-235,"CHANGELOG
+238,"CHANGELOG
 
 #18080 [BUGFIX] Fix ember-template-compiler compatibility with Fastboot.
 #18071 [BUGFIX] Ensure modifiers do not run in FastBoot modes.
 ","CHANGELOG
 18080 [BUGFIX] Fix ember-template-compiler compatibility with Fastboot.
 18071 [BUGFIX] Ensure modifiers do not run in FastBoot modes."
-236,"CHANGELOG
+239,"CHANGELOG
 
 #18071 [BUGFIX] Ensure modifiers do not run in FastBoot modes. (#18071)
 #18064 [BUGFIX] Fix 'hasAttribute is not a function' when jQuery is disabled
@@ -2375,7 +2394,7 @@ Fixes an issue with key collisions in {{#each"
 18071 [BUGFIX] Ensure modifiers do not run in FastBoot modes. (#18071)
 18064 [BUGFIX] Fix 'hasAttribute is not a function' when jQuery is disabled
 (#18064)"
-237,"CHANGELOG
+240,"CHANGELOG
 
 #18071 [BUGFIX] Ensure modifiers do not run in FastBoot modes. (#18071)
 #18064 [BUGFIX] Fix 'hasAttribute is not a function' when jQuery is disabled
@@ -2390,12 +2409,12 @@ sed
 17974 [BUGFIX] Ensure inheritable observers on object proxies are string ba
 sed
 17859 [BUGFIX] Fixes a regression in the legacy build"
-238,"CHANGELOG
+241,"CHANGELOG
 
 #18064 [BUGFIX] Fix 'hasAttribute is not a function' when jQuery is disabled
 ","CHANGELOG
 18064 [BUGFIX] Fix 'hasAttribute is not a function' when jQuery is disabled"
-239,"CHANGELOG
+242,"CHANGELOG
 
 #17842 / #17901 [FEATURE] Implement the Forwarding Element Modifiers with ""Splattributes"" RFC.
 #17941 / #17961 [FEATURE] Implement the {{fn}} rfc.
@@ -2416,7 +2435,7 @@ sed
 17843 [CLEANUP] Remove deprecated intimate apis in the router
 17940 [CLEANUP] Remove sync queue from @ember/runloop.
 18026 Enabling featured discussed in 2019-05-03 core team meeting."
-240,"CHANGELOG
+243,"CHANGELOG
 
 #17836 [BREAKING] Explicitly drop support for Node 6
 #17719 / #17745 [FEATURE] Support for nested components in angle bracket invocation syntax (see emberjs/rfcs#0457).
@@ -2467,19 +2486,19 @@ sed
 17740 [BUGFIX] Fix octane component blueprint and octane blueprint tests
 17411 / #17732 / #17412 Update initializer blueprints for ember-mocha 0.14
 17702 Extend from glimmer component for octane blueprint"
-241,"CHANGELOG
+244,"CHANGELOG
 
 #17938 [BUGFIX] Expose mechanism to detect if a property is a computed
 #17974 [BUGFIX] Ensure inheritable observers on object proxies are string based
 ","CHANGELOG
 17938 [BUGFIX] Expose mechanism to detect if a property is a computed
 17974 [BUGFIX] Ensure inheritable observers on object proxies are string based"
-242,"CHANGELOG
+245,"CHANGELOG
 
 #17930 [BUGFIX] Update assertion for events in tagless component to include method names
 ","CHANGELOG
 17930 [BUGFIX] Update assertion for events in tagless component to include method names"
-243,"CHANGELOG
+246,"CHANGELOG
 
 #17859 [BUGFIX] Fixes a regression in the legacy build
 #17891 [BUGFIX] Loosen ""engines"" restriction for Node versions 
@@ -2488,7 +2507,7 @@ sed
 17859 [BUGFIX] Fixes a regression in the legacy build
 17891 [BUGFIX] Loosen ""engines"" restriction for Node versions
 17900 [BUGFIX] Fix version for APP_CTRL_ROUTER_PROPS deprecation flag"
-244,"CHANGELOG
+247,"CHANGELOG
 
 #17846 [BUGFIX] Fix issues with template-only components causing errors in subsequent updates.
 #17870 / #17871 [BUGFIX] Fix issue where ...attributes may incorrectly overwrite attributes unexpectedly, depending on its position.
@@ -2509,7 +2528,7 @@ sed
 17855 [BUGFIX] Expose (private) computed _getter functions.
 17860 [BUGFIX] Add assertions for required parameters in computed macros, when used as a decorator.
 17868 [BUGFIX] Fix controller injection via decorators."
-245,"CHANGELOG
+248,"CHANGELOG
 
 #17870 / #17871 [BUGFIX] Fix issue where ...attributes may incorrectly overwrite attributes, depending on its position.
 #17874 [BUGFIX] Fix issue with event.stopPropagation() in component event handlers when jQuery is disabled.
@@ -2518,7 +2537,7 @@ sed
 17870 / #17871 [BUGFIX] Fix issue where ...attributes may incorrectly overwrite attributes, depending on its position.
 17874 [BUGFIX] Fix issue with event.stopPropagation() in component event handlers when jQuery is disabled.
 17876 [BUGFIX] Fix issue with multiple {{action}} modifiers on the same element when jQuery is disabled."
-246,"CHANGELOG
+249,"CHANGELOG
 
 #17836 [BREAKING] Explicitly drop support for Node 6
 #17719 / #17745 [FEATURE] Support for nested components in angle bracket invocation syntax (see emberjs/rfcs#0457). 
@@ -2547,14 +2566,14 @@ sed
 17411 / #17732 / #17412 Update initializer blueprints for ember-mocha 0.14
 17702 Extend from glimmer component for octane blueprint
 17740 Fix octane component blueprint and octane blueprint tests"
-247,"CHANGELOG
+250,"CHANGELOG
 
 #17684 [BUGFIX] Enable maximum rerendering limit to be customized.
 #17823 Update router_js to 6.2.4
 ","CHANGELOG
 17684 [BUGFIX] Enable maximum rerendering limit to be customized.
 17823 Update router_js to 6.2.4"
-248,"CHANGELOG
+251,"CHANGELOG
 
 #17470 [DEPRECATION] Implements the Computed Property Modifier deprecation RFCs
 Deprecates .property() (see emberjs/rfcs#0375
@@ -2587,31 +2606,31 @@ Deprecates computed overridability (see emberjs/rfcs#0369
 17618 [BUGFIX] Migrate autorun microtask queue to Promise.then
 17649 [BUGFIX] Revert decorator refactors
 17487 [BUGFIX] Fix scenario where aliased properties did not update in production mode"
-249,"CHANGELOG
+252,"CHANGELOG
 
 #17733 [BUGFIX] Assert on use of reserved component names (input and textarea)
 ","CHANGELOG
 17733 [BUGFIX] Assert on use of reserved component names (input and textarea)"
-250,"CHANGELOG
+253,"CHANGELOG
 
 #17710 [BUGFIX] Allow accessors in mixins
 ","CHANGELOG
 17710 [BUGFIX] Allow accessors in mixins"
-251,"CHANGELOG
+254,"CHANGELOG
 
 #17684 [BUGFIX] Enable maximum rerendering limit to be customized.
 #17691 [BUGFIX] Ensure tagForProperty works on class constructors
 ","CHANGELOG
 17684 [BUGFIX] Enable maximum rerendering limit to be customized.
 17691 [BUGFIX] Ensure tagForProperty works on class constructors"
-252,"CHANGELOG
+255,"CHANGELOG
 
 #17618 [BUGFIX] Migrate autorun microtask queue to Promise.then
 #17649 [BUGFIX] Revert decorator refactors
 ","CHANGELOG
 17618 [BUGFIX] Migrate autorun microtask queue to Promise.then
 17649 [BUGFIX] Revert decorator refactors"
-253,"CHANGELOG
+256,"CHANGELOG
 
 #17470 [DEPRECATION] Implements the Computed Property Modifier deprecation RFCs
 Deprecates .property() (see emberjs/rfcs#0375
@@ -2630,7 +2649,7 @@ Deprecates computed overridability (see emberjs/rfcs#0369
 17489 [DEPRECATION] Deprecate Ember.$() (see emberjs/rfcs#0386)
 17540 [DEPRECATION] Deprecate aliasMethod
 17487 [BUGFIX] Fix scenario where aliased properties did not update in production mode"
-254,"CHANGELOG
+257,"CHANGELOG
 
 #17143 / #17375 [FEATURE] Implement Element Modifier Manager RFC (see emberjs/rfcs#0373).
 #17054 / #17376 [FEATURE] Implement array helper RFC (see emberjs/rfcs#0318)
@@ -2669,31 +2688,31 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17216 Use native Error instead of custom Error subclass.
 17340 Remove unused hooks variable from qunit-rfc-232 util-test blueprint
 17357 Allow notifyPropertyChange to be imported from @ember/object"
-255,"CHANGELOG
+258,"CHANGELOG
 
 #17563 [BUGFIX] Transition.send/trigger call signature
 ","CHANGELOG
 17563 [BUGFIX] Transition.send/trigger call signature"
-256,"CHANGELOG
+259,"CHANGELOG
 
 #17563 [BUGFIX] Transition.send/trigger call signature
 #17552 [BUGFIX] Support numbers in component names for Angle Brackets
 ","CHANGELOG
 17563 [BUGFIX] Transition.send/trigger call signature
 17552 [BUGFIX] Support numbers in component names for Angle Brackets"
-257,"CHANGELOG
+260,"CHANGELOG
 
 #17552 [BUGFIX] Support numbers in component names for Angle Brackets
 ","CHANGELOG
 17552 [BUGFIX] Support numbers in component names for Angle Brackets"
-258,"CHANGELOG
+261,"CHANGELOG
 
 #17498 [BUGFIX] Don't remove dep keys in didUnwatch
 #17499 [BUGFIX] Update to glimmer-vm 0.37.1.
 ","CHANGELOG
 17498 [BUGFIX] Don't remove dep keys in didUnwatch
 17499 [BUGFIX] Update to glimmer-vm 0.37.1."
-259,"CHANGELOG
+262,"CHANGELOG
 
 Upgrade @glimmer/* packages to 0.35.10. Fixes a few issues:
 Usage of positional arguments with custom components.
@@ -2704,7 +2723,7 @@ Upgrade @glimmer/* packages to 0.35.10. Fixes a few issues:
 Usage of positional arguments with custom components.
 Forwarding attributes via ...attributes to a dynamic component.
 Prevent errors when rendering many template blocks (Error: Operand over 16-bits. Got 65536)."
-260,"CHANGELOG
+263,"CHANGELOG
 
 Upgrade @glimmer/* packages to 0.35.10. Fixes a few issues:
 Usage of positional arguments with custom components.
@@ -2715,17 +2734,17 @@ Upgrade @glimmer/* packages to 0.35.10. Fixes a few issues:
 Usage of positional arguments with custom components.
 Forwarding attributes via ...attributes to a dynamic component.
 Prevent errors when rendering many template blocks (Error: Operand over 16-bits. Got 65536)."
-261,"CHANGELOG
+264,"CHANGELOG
 
 #17461 [BUGFIX] Fix substate interactions with aborts
 ","CHANGELOG
 17461 [BUGFIX] Fix substate interactions with aborts"
-262,"CHANGELOG
+265,"CHANGELOG
 
 #17467 [BUGFIX] Fix substate interactions with aborts
 ","CHANGELOG
 17467 [BUGFIX] Fix substate interactions with aborts"
-263,"CHANGELOG
+266,"CHANGELOG
 
 #17143 / #17375 [FEATURE] Implement Element Modifier Manager RFC (see emberjs/rfcs#0373).
 #17054 / #17376 [FEATURE] Implement array helper RFC (see emberjs/rfcs#0318)
@@ -2752,7 +2771,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17340 Remove unused hooks variable from qunit-rfc-232 util-test blueprint
 17357 Allow notifyPropertyChange to be imported from @ember/object
 17413 Fix missing import in instance-initializer blueprint for ember-mocha"
-264,"CHANGELOG
+267,"CHANGELOG
 
 #17254 [BREAKING] Explicitly drop support for Node 4
 #17426 [BUGFIX] Fix 'strict mode does not allow function declarations'
@@ -2777,7 +2796,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17134 [CLEANUP] Remove deprecated '_router'
 17133 [CLEANUP] Remove deprecated 'property{Did,Will}Change'
 16898 Add RFC 232 style util test blueprint for Mocha"
-265,"CHANGELOG
+268,"CHANGELOG
 
 #17398 [BUGFIX] Avoid console.trace for every Ember.warn
 #17399 [BUGFIX] Local variable shadowing assert
@@ -2786,21 +2805,21 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17398 [BUGFIX] Avoid console.trace for every Ember.warn
 17399 [BUGFIX] Local variable shadowing assert
 17403 [BUGFIX] Ensure legacy build of template compiler can be loaded."
-266,"CHANGELOG
+269,"CHANGELOG
 
 #17328 [BUGFIX] Ensure that delayed transition retrys work
 #17374 [BUGFIX] Fix cyclic references on Array.prototype
 ","CHANGELOG
 17328 [BUGFIX] Ensure that delayed transition retrys work
 17374 [BUGFIX] Fix cyclic references on Array.prototype"
-267,"CHANGELOG
+270,"CHANGELOG
 
 #17328 [BUGFIX] Ensure that delayed transition retrys work
 #17374 [BUGFIX] Fix cyclic references on Array.prototype
 ","CHANGELOG
 17328 [BUGFIX] Ensure that delayed transition retrys work
 17374 [BUGFIX] Fix cyclic references on Array.prototype"
-268,"CHANGELOG
+271,"CHANGELOG
 
 #17254 [BREAKING] Explicitly drop support for Node 4
 #16898 Add RFC 232 style util test blueprint for Mocha
@@ -2813,7 +2832,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17128 [BUGFIX] Fix Sourcemaps build
 17134 [CLEANUP] Remove deprecated '_router'
 17133 [CLEANUP] Remove deprecated 'property{Did,Will}Change'"
-269,"CHANGELOG
+272,"CHANGELOG
 
 #17025 / #17034 / #17036 / #17038 / #17040 / #17041 / #17061 [FEATURE] Final stage of the router service RFC (see emberjs/rfcs#95
 #16795 [FEATURE] Native Class Constructor Update (see emberjs/rfcs#337
@@ -2856,7 +2875,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17153 [BUGFIX] Blueprints can generate components with a single word name
 16865 / #16899 / #16914 / #16897 / #16913 / #16894 / #16896 [BUGFIX] Support RFC 232 and RFC 268 style tests with Mocha blueprints
 17051 Update glimmer-vm packages to 0.36.4"
-270,"CHANGELOG
+273,"CHANGELOG
 
 #17184 [BUGFIX] Ensures removeAllListeners does not break subsequent adds
 #17186 [BUGFIX] Fix RouteInfo QP mutability
@@ -2865,7 +2884,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17184 [BUGFIX] Ensures removeAllListeners does not break subsequent adds
 17186 [BUGFIX] Fix RouteInfo QP mutability
 17192 [BUGFIX] currentRoute should respect substates"
-271,"CHANGELOG
+274,"CHANGELOG
 
 #17169 [BUGFIX] Add default implementations of Component lifecycle hooks
 #17165 [BUGFIX] Fix RouteInfo.find and transition.froms
@@ -2874,7 +2893,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17169 [BUGFIX] Add default implementations of Component lifecycle hooks
 17165 [BUGFIX] Fix RouteInfo.find and transition.froms
 17180 [BUGFIX] Router Service State should be correct in events"
-272,"CHANGELOG
+275,"CHANGELOG
 
 #17130 [BUGFIX] Ensure that timers scheduled after a system sleep are fired properly.
 #17137 [BUGFIX] Assert when local variables shadow modifier invocations
@@ -2889,7 +2908,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17128 [BUGFIX] Fix sourcemaping issues due to multiple sourcemap directives.
 17115 [BUGFIX] Pass the event parameter to sendAction
 17153 [BUGFIX] Blueprints can generate components with a single word name"
-273,"CHANGELOG
+276,"CHANGELOG
 
 #17028 Mark defineProperty as public (yet low level) API.
 #17115 [BUGFIX] Pass the event parameter to sendAction
@@ -2900,7 +2919,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17115 [BUGFIX] Pass the event parameter to sendAction
 17128 [BUGFIX] Fix sourcemaping issues due to multiple sourcemap directives.
 17130 [BUGFIX] Ensure that timers scheduled after a system sleep are fired properly."
-274,"CHANGELOG
+277,"CHANGELOG
 
 #17115 [BUGFIX] Ensure {{input continues to pass the event to the actions that it fires.
 #17128 [BUGFIX] Fix invalid sourcemap declarations.
@@ -2909,7 +2928,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 17115 [BUGFIX] Ensure {{input continues to pass the event to the actions that it fires.
 17128 [BUGFIX] Fix invalid sourcemap declarations.
 17130 [BUGFIX] Ensure that timers scheduled after a system sleep are fired properly."
-275,"CHANGELOG
+278,"CHANGELOG
 
 #16956 [DEPRECATION] Deprecate Ember.merge
 #16795 [FEATURE] Native Class Constructor Update (see emberjs/rfcs#337
@@ -2922,67 +2941,67 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 16865 / #16899 / #16914 / #16897 / #16913 / #16894 / #16896 [BUGFIX] Support RFC 232 and RFC 268 style tests with Mocha blueprints
 17025 / #17034 / #17036 / #17038 / #17040 / #17041 / #17061 [FEATURE] Final stage of the router service RFC (see emberjs/rfcs#95
 17051 Update glimmer-vm packages to 0.36.4"
-276,"CHANGELOG
+279,"CHANGELOG
 
 #16978 [BUGFIX] Properly teardown alias
 #16877 [CLEANUP] Allow routes to be named ""array"" and ""object""
 ","CHANGELOG
 16978 [BUGFIX] Properly teardown alias
 16877 [CLEANUP] Allow routes to be named ""array"" and ""object"""
-277,"CHANGELOG
+280,"CHANGELOG
 
 #17029 [BUGFIX] Update backburner.js to 2.4.0.
 ","CHANGELOG
 17029 [BUGFIX] Update backburner.js to 2.4.0."
-278,"CHANGELOG
+281,"CHANGELOG
 
 #17003 / #17013 [BUGFIX] Fix rendering of empty content with {{{...}}} or {{...}} with htmlSafe('')
 ","CHANGELOG
 17003 / #17013 [BUGFIX] Fix rendering of empty content with {{{...}}} or {{...}} with htmlSafe('')"
-279,"CHANGELOG
+282,"CHANGELOG
 
 #17013 [BUGFIX] Fix rendering of empty content with {{{...}}} or {{...}} with htmlSafe('') in IE11
 ","CHANGELOG
 17013 [BUGFIX] Fix rendering of empty content with {{{...}}} or {{...}} with htmlSafe('') in IE11"
-280,"CHANGELOG
+283,"CHANGELOG
 
 #16978 [BUGFIX] Properly teardown alias
 #16999 [BUGFIX] Fix mouseEnter/Leave event delegation w/o jQuery
 ","CHANGELOG
 16978 [BUGFIX] Properly teardown alias
 16999 [BUGFIX] Fix mouseEnter/Leave event delegation w/o jQuery"
-281,"CHANGELOG
+284,"CHANGELOG
 
 #17003 [BUGFIX] Fix rendering of empty content with {{{...}}} or {{...}} with htmlSafe('')
 ","CHANGELOG
 17003 [BUGFIX] Fix rendering of empty content with {{{...}}} or {{...}} with htmlSafe('')"
-282,"CHANGELOG
+285,"CHANGELOG
 
 #16860 [BUGFIX] Clear chains in ProxyMixin when destroyed
 #16999 [BUGFIX] Fix mouseEnter/Leave event delegation without jQuery
 ","CHANGELOG
 16860 [BUGFIX] Clear chains in ProxyMixin when destroyed
 16999 [BUGFIX] Fix mouseEnter/Leave event delegation without jQuery"
-283,"CHANGELOG
+286,"CHANGELOG
 
 #16933 [BUGFIX] Update glimmer-vm packages to 0.38.8
 #16860 [BUGFIX] Clear chains in ProxyMixin when destroyed
 ","CHANGELOG
 16933 [BUGFIX] Update glimmer-vm packages to 0.38.8
 16860 [BUGFIX] Clear chains in ProxyMixin when destroyed"
-284,"CHANGELOG
+287,"CHANGELOG
 
 #16933 [BUGFIX] Update glimmer-vm packages to 0.38.8
 ","CHANGELOG
 16933 [BUGFIX] Update glimmer-vm packages to 0.38.8"
-285,"CHANGELOG
+288,"CHANGELOG
 
 #16877 [CLEANUP] Allow routes to be named ""array"" and ""object""
 #16907 Upgrade to TypeScript 3.0
 ","CHANGELOG
 16877 [CLEANUP] Allow routes to be named ""array"" and ""object""
 16907 Upgrade to TypeScript 3.0"
-286,"CHANGELOG
+289,"CHANGELOG
 
 #16603 [BUGFIX] Support mouseEnter/Leave events w/o jQuery
 #16857 [BUGFIX] Prevents the recursive redefinition of root chains
@@ -3009,28 +3028,28 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 16784 [BUGFIX] Setting ArrayProxy#content in willDestroy resets length.
 16794 [BUGFIX] Fix instance-initializer-test blueprint for new QUnit testing API (emberjs/rfcs#232)
 16797 [BUGFIX] Drop autorun assertion"
-287,"CHANGELOG
+290,"CHANGELOG
 
 #16870 [BUGFIX] Enable @ember/object#get to be called with an empty string
 #16603 [BUGFIX] Support mouseEnter/Leave events w/o jQuery
 ","CHANGELOG
 16870 [BUGFIX] Enable @ember/object#get to be called with an empty string
 16603 [BUGFIX] Support mouseEnter/Leave events w/o jQuery"
-288,"CHANGELOG
+291,"CHANGELOG
 
 #16853 [BUGFIX] Allow ArrayProxy#pushObjects to accept ArrayProxy again
 #16870 [BUGFIX] Enable @ember/object#get to be called with an empty string
 ","CHANGELOG
 16853 [BUGFIX] Allow ArrayProxy#pushObjects to accept ArrayProxy again
 16870 [BUGFIX] Enable @ember/object#get to be called with an empty string"
-289,"CHANGELOG
+292,"CHANGELOG
 
 #16565 Fix template / component caching during rendering.
 #16853 [BUGFIX] Allow ArrayProxy#pushObjects to accept ArrayProxy again
 ","CHANGELOG
 16565 Fix template / component caching during rendering.
 16853 [BUGFIX] Allow ArrayProxy#pushObjects to accept ArrayProxy again"
-290,"CHANGELOG
+293,"CHANGELOG
 
 #16857 [BUGFIX] Prevents the recursive redefinition of root chains
 #16854 [BUGFIX] Don't thread FactoryManager through createComponent
@@ -3039,12 +3058,12 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 16857 [BUGFIX] Prevents the recursive redefinition of root chains
 16854 [BUGFIX] Don't thread FactoryManager through createComponent
 16853 [BUGFIX] Allow ArrayProxy#pushObjects to accept ArrayProxy again"
-291,"CHANGELOG
+294,"CHANGELOG
 
 #16836 [DOC] Fix Broken 3.3 API Documentation
 ","CHANGELOG
 16836 [DOC] Fix Broken 3.3 API Documentation"
-292,"CHANGELOG
+295,"CHANGELOG
 
 #16773 [FEATURE] Custom component manager (see emberjs/rfcs#213 for more details)
 #16708 [FEATURE] Angle bracket component invocation (see emberjs/rfcs#311 for more details)
@@ -3065,7 +3084,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 16784 [BUGFIX] Setting ArrayProxy#content in willDestroy resets length.
 16794 [BUGFIX] Fix instance-initializer-test blueprint for new QUnit testing API (emberjs/rfcs#232)
 16797 [BUGFIX] Drop autorun assertion"
-293,"CHANGELOG
+296,"CHANGELOG
 
 #16687 [FEATURE] Implement optional jQuery integration (see emberjs/rfcs#294 for more details).
 #16690 [DEPRECATION] emberjs/rfcs#294 Deprecate accessing jQuery.Event#originalEvent.
@@ -3092,41 +3111,41 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 16781 [BUGFIX] Ensure tests from @ember/* are excluded from debug/prod builds.
 16619 [BUGFIX] Update router_js to ensure (hash works in query params.
 16632 [BUGFIX] computed.sort array should update if sort properties array is empty/"
-294,"CHANGELOG
+297,"CHANGELOG
 
 #16781 [BUGFIX] Ensure tests from @ember/* are excluded from debug/prod builds.
 ","CHANGELOG
 16781 [BUGFIX] Ensure tests from @ember/* are excluded from debug/prod builds."
-295,"CHANGELOG
+298,"CHANGELOG
 
 #16754 [BUGFIX] Fix container destroy timing
 #16767 [BUGFIX] Ensure meta._parent is initialized
 ","CHANGELOG
 16754 [BUGFIX] Fix container destroy timing
 16767 [BUGFIX] Ensure meta._parent is initialized"
-296,"CHANGELOG
+299,"CHANGELOG
 
 #16754 [BUGFIX] Fix container destroy timing
 ","CHANGELOG
 16754 [BUGFIX] Fix container destroy timing"
-297,"CHANGELOG
+300,"CHANGELOG
 
 #16754 [BUGFIX] Fix container destroy timing
 ","CHANGELOG
 16754 [BUGFIX] Fix container destroy timing"
-298,"CHANGELOG
+301,"CHANGELOG
 
 #16750 [BUGFIX] Bring back isObject guard for ember-utils/is_proxy
 ","CHANGELOG
 16750 [BUGFIX] Bring back isObject guard for ember-utils/is_proxy"
-299,"CHANGELOG
+302,"CHANGELOG
 
 #16743 [BUGFIX] Update glimmer-vm to 0.35.4.
 #16750 [BUGFIX] Bring back isObject guard for ember-utils/is_proxy
 ","CHANGELOG
 16743 [BUGFIX] Update glimmer-vm to 0.35.4.
 16750 [BUGFIX] Bring back isObject guard for ember-utils/is_proxy"
-300,"CHANGELOG
+303,"CHANGELOG
 
 #16709 [BUGFIX] Avoid ordered set deprecation in @ember/ordered-set addon
 #16715 [BUGFIX] Update glimmer-vm to 0.35.3
@@ -3137,7 +3156,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 16715 [BUGFIX] Update glimmer-vm to 0.35.3
 16729 [BUGFIX] Throw error if run.bind receives no method
 16731 [BUGFIX] Better error when a route name is not valid"
-301,"CHANGELOG
+304,"CHANGELOG
 
 #16687 [FEATURE] Implement optional jQuery integration (see emberjs/rfcs#294 for more details).
 #16690 [DEPRECATION] emberjs/rfcs#294 Deprecate accessing jQuery.Event#originalEvent.
@@ -3148,7 +3167,7 @@ Prevent errors when rendering many template blocks (Error: Operand over 16-bits.
 16690 [DEPRECATION] emberjs/rfcs#294 Deprecate accessing jQuery.Event#originalEvent.
 16691 [DEPRECATION] emberjs/rfcs#237 Implement Ember.Map, Ember.MapWithDefault, and Ember.OrderedSet deprecation.
 16692 [DEPRECATION] emberjs/rfcs#322 Implement Ember.copy/Ember.Copyable deprecation."
-302,"CHANGELOG
+305,"CHANGELOG
 
 #16613 [BUGFIX] Prevent errors in ember-engines + 3.1 + proxies.
 #16597 [BUGFIX] Ensure Ember.run.cancelTimers is present.
@@ -3207,12 +3226,12 @@ emberjs/rfcs#286 [FEATURE] Enabled block let handlebars helper by default.
 16433 [CLEANUP] Remove content alias
 16462 [CLEANUP] Remove deprecated MODEL_FACTORY_INJECTIONS
 emberjs/rfcs#286 [FEATURE] Enabled block let handlebars helper by default."
-303,"CHANGELOG
+306,"CHANGELOG
 
 #16613 [BUGFIX] Prevent errors in ember-engines + 3.1 + proxies.
 ","CHANGELOG
 16613 [BUGFIX] Prevent errors in ember-engines + 3.1 + proxies."
-304,"CHANGELOG
+307,"CHANGELOG
 
 #16597 [BUGFIX] Ensure Ember.run.cancelTimers is present.
 #16605 [BUGFIX] Use resetCache on container destroy
@@ -3221,7 +3240,7 @@ emberjs/rfcs#286 [FEATURE] Enabled block let handlebars helper by default."
 16597 [BUGFIX] Ensure Ember.run.cancelTimers is present.
 16605 [BUGFIX] Use resetCache on container destroy
 16615 [BUGFIX] Fix NAMESPACES_BY_ID leaks"
-305,"CHANGELOG
+308,"CHANGELOG
 
 #16600 [BUGFIX] Fix SimpleHelper memory leak
 #16605 [BUGFIX] Use resetCache on container destroy.
@@ -3232,7 +3251,7 @@ emberjs/rfcs#286 [FEATURE] Enabled block let handlebars helper by default."
 16605 [BUGFIX] Use resetCache on container destroy.
 182fc3 [BUGFIX] Update glimmer-vm to ensure arguments are properly garbage collected.
 16281 [BUGFIX] Ensure warning from {{#link-to RE: loading state does not throw an assertion."
-306,"CHANGELOG
+309,"CHANGELOG
 
 #16539 [BUGFIX] Ember is already registered by the libraries registry already.
 #16559 [BUGFIX] Fix property normalization, Update glimmer-vm to 0.34.0
@@ -3253,7 +3272,7 @@ emberjs/rfcs#286 [FEATURE] Enabled block let handlebars helper by default."
 16560 [BUGFIX] avoid strict assertion when object proxy calls thru for function
 16564 [BUGFIX] Ensure Ember.isArray does not trigger proxy assertion.
 16572 [BUGFIX] Fix curly component class reference setup"
-307,"CHANGELOG
+310,"CHANGELOG
 
 #16559 [BUGFIX] Fix property normalization, Update glimmer-vm to 0.34.0
 #16493 [BUGFIX] Ensure proxies have access to getOwner(this).
@@ -3274,7 +3293,7 @@ emberjs/rfcs#286 [FEATURE] Enabled block let handlebars helper by default."
 16563 [BUGFIX] Ensure ariaRole can be initially false.
 16564 [BUGFIX] Ensure Ember.isArray does not trigger proxy assertion.
 16572 [BUGFIX] Fix curly component class reference setup"
-308,"CHANGELOG
+311,"CHANGELOG
 
 #16493 [BUGFIX] Ensure proxies have access to getOwner(this).
 #16494 [BUGFIX] Adjust assertion to allow for either undefined or null
@@ -3291,7 +3310,7 @@ emberjs/rfcs#286 [FEATURE] Enabled block let handlebars helper by default."
 16520 [BUGFIX] Adds options checking ability to debug/deprecation test helpers
 16526 [BUGFIX] Ensure setting a NAME_KEY does not error.
 16527 [BUGFIX] Update glimmer-vm to 0.33.5."
-309,"CHANGELOG
+312,"CHANGELOG
 
 #16250 [DEPRECATION] Deprecation of Ember.Logger
 #16436 [BUGFIX] Refactor CoreObject to leverage native JS semantics.
@@ -3310,7 +3329,7 @@ emberjs/rfcs#286 [FEATURE] Enabled block let handlebars helper by default.
 16433 [CLEANUP] Remove content alias
 16462 [CLEANUP] Remove deprecated MODEL_FACTORY_INJECTIONS
 emberjs/rfcs#286 [FEATURE] Enabled block let handlebars helper by default."
-310,"CHANGELOG
+313,"CHANGELOG
 
 #16293 [BUGFIX] Ignore --pod for -addon blueprints: helper, initializer, and instance-initializer
 #16312 [DEPRECATION] Deprecate Route.prototype.router in favor of Route.prototype._router
@@ -3341,7 +3360,7 @@ emberjs/rfcs#278 [FEATURE template-only-glimmer-components] Enable-able via @emb
 emberjs/rfcs#280 [FEATURE application-template-wrapper] Enable-able via @ember/optional-features addon.
 emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 15828 Upgrade glimmer-vm to latest version."
-311,"CHANGELOG
+314,"CHANGELOG
 
 #15601 [BUGFIX] Ensure Mixin.prototype.toString does not return constructor code
 #16326 [BUGFIX] Expanded syntax error for if handlebars helper to include source of error
@@ -3356,7 +3375,7 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 16350 [BUGFIX] Fix initialiters tests blueprints
 16351 [BUGFIX] Bring RSVP.cast back from the dead
 16365 [BUGFIX] Fold all trap methods together"
-312,"CHANGELOG
+315,"CHANGELOG
 
 #16294 [BUGFIX] Fix input macro params handling
 #16297 [BUGFIX] Revert ""Update to backburner.js@2.2.0.""
@@ -3367,7 +3386,7 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 16297 [BUGFIX] Revert ""Update to backburner.js@2.2.0.""
 16299 [BUGFIX] Revert ""[CLEANUP] Remove ':change' suffix on change events""
 16307 [BUGFIX] Ensure proper .toString() of default components."
-313,"CHANGELOG
+316,"CHANGELOG
 
 #16271 [BUGFIX] Fix ChainNode unchaining
 #16274 [BUGFIX] Ensure accessing a ""proxy"" itself does not error.
@@ -3384,7 +3403,7 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 16286 [BUGFIX] Update to glimmer-vm@0.32.1.
 16287 [BUGFIX] Update to router_js@2.0.0-beta.2.
 16288 [BUGFIX] Ensure all ""internal symbols"" avoid the proxy assertion"
-314,"CHANGELOG
+317,"CHANGELOG
 
 #13355 [BUGFIX] Fix issue with Ember.trySet on destroyed objects.
 #16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered.
@@ -3393,7 +3412,7 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 13355 [BUGFIX] Fix issue with Ember.trySet on destroyed objects.
 16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered.
 16246 [BUGFIX] computed.sort should not sort if sortProperties is empty"
-315,"CHANGELOG
+318,"CHANGELOG
 
 emberjs/rfcs#276 [FEATURE named-args] enabled by default.
 emberjs/rfcs#278 [FEATURE template-only-glimmer-components] Enable-able via @ember/optional-features addon.
@@ -3408,7 +3427,7 @@ emberjs/rfcs#280 [FEATURE application-template-wrapper] Enable-able via @ember/o
 emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 15828 Upgrade glimmer-vm to latest version.
 16212 Update to backburner.js@2.2.0."
-316,"CHANGELOG
+319,"CHANGELOG
 
 #16218 [BUGFIX beta] Prevent errors when using const (get arr 1).
 #16241 [BUGFIX lts] Avoid excessively calling Glimmer AST transforms.
@@ -3529,36 +3548,36 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 16015 [CLEANUP] Convert ember-router tests to new style
 16036 [CLEANUP] Convert ember-metal accessors tests to new style
 16023 Make event dispatcher work without jQuery"
-317,"CHANGELOG
-
-#16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered.
-","CHANGELOG
-16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered."
-318,"CHANGELOG
-
-#16174 [BUGFIX] Enable some recovery of errors thrown during render.
-#16241 [BUGFIX] Avoid excessively calling Glimmer AST transforms.
-","CHANGELOG
-16174 [BUGFIX] Enable some recovery of errors thrown during render.
-16241 [BUGFIX] Avoid excessively calling Glimmer AST transforms."
-319,"CHANGELOG
-
-#16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered.
-","CHANGELOG
-16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered."
 320,"CHANGELOG
 
+#16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered.
+","CHANGELOG
+16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered."
+321,"CHANGELOG
+
 #16174 [BUGFIX] Enable some recovery of errors thrown during render.
 #16241 [BUGFIX] Avoid excessively calling Glimmer AST transforms.
 ","CHANGELOG
 16174 [BUGFIX] Enable some recovery of errors thrown during render.
 16241 [BUGFIX] Avoid excessively calling Glimmer AST transforms."
-321,"CHANGELOG
+322,"CHANGELOG
 
 #16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered.
 ","CHANGELOG
 16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered."
-322,"CHANGELOG
+323,"CHANGELOG
+
+#16174 [BUGFIX] Enable some recovery of errors thrown during render.
+#16241 [BUGFIX] Avoid excessively calling Glimmer AST transforms.
+","CHANGELOG
+16174 [BUGFIX] Enable some recovery of errors thrown during render.
+16241 [BUGFIX] Avoid excessively calling Glimmer AST transforms."
+324,"CHANGELOG
+
+#16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered.
+","CHANGELOG
+16245 [BUGFIX] Ensure errors in deferred component hooks can be recovered."
+325,"CHANGELOG
 
 #15927 blueprints: Extend test framework detection to ember-qunit and ember-mocha
 #15935 [BUGFIX] blueprints: fix framework detection to work with prerelease versions of ember-cli-mocha
@@ -3569,19 +3588,19 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 15935 [BUGFIX] blueprints: fix framework detection to work with prerelease versions of ember-cli-mocha
 16174 [BUGFIX] Enable some recovery of errors thrown during render.
 16241 [BUGFIX] Avoid excessively calling Glimmer AST transforms."
-323,"CHANGELOG
+326,"CHANGELOG
 
 #16199 [BUGFIX] Mention ""computed properties"" in the assertion message
 #16200 [BUGFIX] Prevent test error by converting illegal characters
 ","CHANGELOG
 16199 [BUGFIX] Mention ""computed properties"" in the assertion message
 16200 [BUGFIX] Prevent test error by converting illegal characters"
-324,"CHANGELOG
+327,"CHANGELOG
 
 #16179 [BUGFIX] Fix a few bugs in the caching ArrayProxy implementation
 ","CHANGELOG
 16179 [BUGFIX] Fix a few bugs in the caching ArrayProxy implementation"
-325,"CHANGELOG
+328,"CHANGELOG
 
 #16160 [BUGFIX] Remove humanize() call from generated test descriptions
 #16101 [CLEANUP] Remove legacy ArrayProxy features
@@ -3606,7 +3625,7 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 16163 [CLEANUP] Remove unused path caches
 16169 [BUGFIX] Fix various issues with descriptor trap.
 16174 [BUGFIX] Enable some recovery of errors thrown during render."
-326,"CHANGELOG
+329,"CHANGELOG
 
 #16095 [CLEANUP] Fix ember-2-legacy support for Ember.Binding.
 #16117 [BUGFIX] link-to active class applied when params change
@@ -3617,7 +3636,7 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 16117 [BUGFIX] link-to active class applied when params change
 16097 / #16110 [CLEANUP] Remove sync runloop queue.
 16099 [CLEANUP] Remove custom eventManager support."
-327,"CHANGELOG
+330,"CHANGELOG
 
 #16067 [BUGFIX] Fix issues with run.debounce with only method and wait.
 #16045 [BUGFIX] Fix double debug output
@@ -3634,7 +3653,7 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 16084 [BUGFIX] Update computed.sort docs to avoid state leakage
 16087 [BUGFIX] Ensure App.visit resolves when rendering completed.
 16090 [CLEANUP] Remove Ember.Binding support"
-328,"CHANGELOG
+331,"CHANGELOG
 
 #15901 [CLEANUP] Remove Ember.Handlebars.SafeString
 #15894 [CLEANUP] removed immediateObserver
@@ -3701,7 +3720,7 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 16015 [CLEANUP] Convert ember-router tests to new style
 16036 [CLEANUP] Convert ember-metal accessors tests to new style
 16023 Make event dispatcher work without jQuery"
-329,"CHANGELOG
+332,"CHANGELOG
 
 95b449 [BUGFIX] Ensure Ember.run.cancel while the run loop is flushing works properly.
 #15952 [BUGFIX] fix regression of clicking link-to with disabled=true
@@ -3726,17 +3745,17 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 15919 [BUGFIX] Upgrade Backburner.js to v1.3.3, fixing an issue canceling tasks scheduled by scheduleOnce.
 14590 [DEPRECATION] Deprecate using targetObject.
 15754 [CLEANUP] Remove router.router deprecation."
-330,"CHANGELOG
+333,"CHANGELOG
 
 #15952 [BUGFIX] fix regression of clicking link-to with disabled=true
 ","CHANGELOG
 15952 [BUGFIX] fix regression of clicking link-to with disabled=true"
-331,"CHANGELOG
+334,"CHANGELOG
 
 #15982 [BUGFIX] Fix issue with unchaining ChainNodes (again)
 ","CHANGELOG
 15982 [BUGFIX] Fix issue with unchaining ChainNodes (again)"
-332,"CHANGELOG
+335,"CHANGELOG
 
 #15924 / #15940 [BUGFIX] Assert that classNameBinding items are non-empty strings
 #15927 [BUGFIX] Extend test framework detection to ember-qunit and ember-mocha
@@ -3745,7 +3764,7 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 15924 / #15940 [BUGFIX] Assert that classNameBinding items are non-empty strings
 15927 [BUGFIX] Extend test framework detection to ember-qunit and ember-mocha
 15935 [BUGFIX] Fix framework detection in blueprints to work with prerelease versions of ember-cli-mocha"
-333,"CHANGELOG
+336,"CHANGELOG
 
 #15902 [BUGFIX] Fix link-to throwing in integration tests
 #15905 [BUGFIX] Improve error message when calling inject().
@@ -3754,14 +3773,14 @@ emberjs/rfcs#281 [FEATURE native-es5-getters] Enabled by default.
 15902 [BUGFIX] Fix link-to throwing in integration tests
 15905 [BUGFIX] Improve error message when calling inject().
 15919 [BUGFIX] Upgrade Backburner.js to v1.3.3, fixing an issue canceling tasks scheduled by scheduleOnce."
-334,"CHANGELOG
+337,"CHANGELOG
 
 #14590 [DEPRECATION] Deprecate using targetObject.
 #15754 [CLEANUP] Remove router.router deprecation.
 ","CHANGELOG
 14590 [DEPRECATION] Deprecate using targetObject.
 15754 [CLEANUP] Remove router.router deprecation."
-335,"CHANGELOG
+338,"CHANGELOG
 
 #15855 [BUGFIX] fix regression with computed filter/map/sort
 #15871 [BUGFIX lts] Refactor / fix error handling scenarios.
@@ -3806,26 +3825,26 @@ Prevent unhandled rejections from being thrown twice (once by the RSVP unhandled
 15733 [BUGFIX] Fix computed sort regression when array prop initially null
 15265 [BUGFIX] fixed issue when passing false to activeClass for {{link-to}}
 15672 Update router_js to 2.0.0."
-336,"CHANGELOG
+339,"CHANGELOG
 
 #15848 [BUGFIX] Ensure helpers have a consistent API.
 #15849 [BUGFIX] Fix issue when observing a computed property that is clobbered during creation. 
 ","CHANGELOG
 15848 [BUGFIX] Ensure helpers have a consistent API.
 15849 [BUGFIX] Fix issue when observing a computed property that is clobbered during creation."
-337,"CHANGELOG
+340,"CHANGELOG
 
 #15797 [BUGFIX] Fix issues with using partials nested within other partials.
 #15808 [BUGFIX] Fix a memory leak in certain testing scenarios.
 ","CHANGELOG
 15797 [BUGFIX] Fix issues with using partials nested within other partials.
 15808 [BUGFIX] Fix a memory leak in certain testing scenarios."
-338,"CHANGELOG
+341,"CHANGELOG
 
 #15797 [BUGFIX] Fix issues with using partials nested within other partials.
 ","CHANGELOG
 15797 [BUGFIX] Fix issues with using partials nested within other partials."
-339,"CHANGELOG
+342,"CHANGELOG
 
 #15722 [BUGFIX] Avoid assertion when using (get helper with empty paths.
 #15746 [BUGFIX] Fix computed sort regression when array property is initally null.
@@ -3836,7 +3855,7 @@ Prevent unhandled rejections from being thrown twice (once by the RSVP unhandled
 15746 [BUGFIX] Fix computed sort regression when array property is initally null.
 15613 [BUGFIX] Prevent an error from being thrown when partial set of query params are passed to the router service.
 15777 [BUGFIX] Fix various issues around accessing dynamic data within a partial."
-340,"CHANGELOG
+343,"CHANGELOG
 
 #14764 Fixed string capitalize for accented characters.
 #15528 [DEPRECATION] Deprecate Controller#content alias.
@@ -3845,7 +3864,7 @@ Prevent unhandled rejections from being thrown twice (once by the RSVP unhandled
 14764 Fixed string capitalize for accented characters.
 15528 [DEPRECATION] Deprecate Controller#content alias.
 15552 [FEATURE] Update blueprints and tests to RFC #176."
-341,"CHANGELOG
+344,"CHANGELOG
 
 #15577 [BUGFIX] Include missing sourcemaps in vendorTree.
 #14848 [BUGFIX] Allow boolean values for current-when
@@ -3882,7 +3901,7 @@ Prevent unhandled rejections from being thrown twice (once by the RSVP unhandled
 15366 [BUGFIX] Allow numeric keys for the get helper.
 14805 / #14861 / #14979 / #15414 / #15415 [FEATURE ember-routing-router-service] Enable by default.
 15193 [CLEANUP] Remove owner._lookupFactory support."
-342,"CHANGELOG
+345,"CHANGELOG
 
 #14848 [BUGFIX] Allow boolean values for current-when
 #15572 [BUGFIX] Fix issue with using negative numbers as an argument passed in from the template.
@@ -3897,7 +3916,7 @@ Prevent unhandled rejections from being thrown twice (once by the RSVP unhandled
 14753 [BUGFIX] Fix  feature detect issue affecting Safari.
 15176 [BUGFIX] Ensure Controller.prototype.replaceRoute considers engine's mount point.
 15513 [BUGFIX] Release root components after they are destroyed."
-343,"CHANGELOG
+346,"CHANGELOG
 
 #15511 [BUGFIX] Fixes onFulfillment being undefined when stepping through RSVP code.
 #15510 [BUGFIX] Make sure notification changes are properly triggered for firstObject/lastObject.
@@ -3906,12 +3925,12 @@ Prevent unhandled rejections from being thrown twice (once by the RSVP unhandled
 15511 [BUGFIX] Fixes onFulfillment being undefined when stepping through RSVP code.
 15510 [BUGFIX] Make sure notification changes are properly triggered for firstObject/lastObject.
 15502 [BUGFIX] Work around a browser bug that causes getOwner to sometimes return undefined."
-344,"CHANGELOG
+347,"CHANGELOG
 
 #15502 [BUGFIX] Work around a browser bug that causes getOwner to sometimes return undefined.
 ","CHANGELOG
 15502 [BUGFIX] Work around a browser bug that causes getOwner to sometimes return undefined."
-345,"CHANGELOG
+348,"CHANGELOG
 
 #14338 [FEATURE] Remove explicit names from initializers.
 #15325 / #15326 [FEATURE ember-engines-mount-params] Allow {{mount to accept a model named parameter.
@@ -3928,7 +3947,7 @@ Prevent unhandled rejections from being thrown twice (once by the RSVP unhandled
 15366 [BUGFIX] Allow numeric keys for the get helper.
 14805 / #14861 / #14979 / #15414 / #15415 [FEATURE ember-routing-router-service] Enable by default.
 15193 [CLEANUP] Remove owner._lookupFactory support."
-346,"CHANGELOG
+349,"CHANGELOG
 
 #15312 [BUGFIX] Avoid re-freezing already frozen objects.
 #15315 [FEATURE] Add minlength to TextSupport
@@ -3973,12 +3992,12 @@ glimmerjs/glimmer-vm#529 [BUGFIX] Fix issues identified with custom element supp
 15148 [BUGFIX] Ensure that using replace with refreshModel works properly.
 15178 Refactor route to lookup controller for QPs.
 15129 Fix access to service:-document in ember-engines"
-347,"CHANGELOG
+350,"CHANGELOG
 
 #15321 [BUGFIX] Improve fastboot debugger/repl experience.
 ","CHANGELOG
 15321 [BUGFIX] Improve fastboot debugger/repl experience."
-348,"CHANGELOG
+351,"CHANGELOG
 
 #15242 [BUGFIX] Fix EmberError import in system/router
 #15204 [DEPRECATION] Ember.MODEL_FACTORY_INJECTIONS is now always false, and issues a deprecation if set.
@@ -3991,19 +4010,19 @@ glimmerjs/glimmer-vm#529 [BUGFIX] Fix issues identified with custom element supp
 15239 [BUGFIX] Ensure Ember.deprecate is exported properly.
 glimmerjs/glimmer-vm#529 [BUGFIX] Fix issues identified with custom element support.
 15277 [BUGFIX] Fix issues with retrying an initial transition."
-349,"CHANGELOG
+352,"CHANGELOG
 
 #15284 [BUGFIX] remove nested transaction assertion from glimmer.
 glimmerjs/glimmer-vm#529 [BUGFIX] Fix issues identified with custom element support.
 ","CHANGELOG
 15284 [BUGFIX] remove nested transaction assertion from glimmer.
 glimmerjs/glimmer-vm#529 [BUGFIX] Fix issues identified with custom element support."
-350,"CHANGELOG
+353,"CHANGELOG
 
 Revert over eager dependency upgrades in 2.13.1.
 ","CHANGELOG
 Revert over eager dependency upgrades in 2.13.1."
-351,"CHANGELOG
+354,"CHANGELOG
 
 #15129 Fix access to document service in ember-engines.
 #15138 [BUGFIX] Fix mocha blueprint service test filename
@@ -4018,7 +4037,7 @@ Revert over eager dependency upgrades in 2.13.1."
 15207 [BUGFIX] Ensure child engines do not have their container destroyed twice.
 15242 [BUGFIX] Fix EmberError import in system/router.
 15247 [BUGFIX] Ensure nested custom elements render properly."
-352,"CHANGELOG
+355,"CHANGELOG
 
 #15138 [BUGFIX] Fix mocha blueprint service test filename
 #15193 [BUGFIX] Ensure factoryFor does validation.
@@ -4029,7 +4048,7 @@ Revert over eager dependency upgrades in 2.13.1."
 15193 [BUGFIX] Ensure factoryFor does validation.
 15207 [BUGFIX] Ensure that an engines container is only destroyed once.
 15218 [BUGFIX] Update route-recognizer to v0.3.3."
-353,"CHANGELOG
+356,"CHANGELOG
 
 #15015 Allow mounting routeless engines with a bound engine name
 #15078 [DEPRECATION] Deprecate EventManager#canDispatchToEventManager.
@@ -4048,7 +4067,7 @@ Revert over eager dependency upgrades in 2.13.1."
 15148 [BUGFIX] Ensure that using replace with refreshModel works properly.
 15178 Refactor route to lookup controller for QPs.
 15129 Fix access to service:-document in ember-engines"
-354,"CHANGELOG
+357,"CHANGELOG
 
 #15111 / #15029 [PERF] factoryFor should cache when possible.
 #14961 [BUGIX] [Fixes #14925] remove duplicate / in pathname
@@ -4079,7 +4098,7 @@ Revert over eager dependency upgrades in 2.13.1."
 14919 [DEPRECATION] Deprecate the private Ember.Router.router property in favor of Ember.Router._routerMicrolib.
 14970 [BUGFIX] Generate integration tests for template helpers by default.
 14976 [BUGFIX] Remove ""no use strict"" workaround for old versions of iOS 8."
-355,"CHANGELOG
+358,"CHANGELOG
 
 #15160 [BUGFIX] Ensure Ember.Test global is setup when including ember-testing.js.
 #15142 / #15163 [BUGFIX] Don’t leak deprecated container.
@@ -4090,7 +4109,7 @@ Revert over eager dependency upgrades in 2.13.1."
 15142 / #15163 [BUGFIX] Don’t leak deprecated container.
 15161 [BUGFIX] Prevent errors from being triggered during error processing on non ES6 platforms.
 15180 [BUGFIX] Correct until values for this.container deprecations."
-356,"CHANGELOG
+359,"CHANGELOG
 
 #14961 [BUGIX] Remove duplicate trailing / in pathname.
 #15029 [PERF] [BUGFIX] cache factoryFor injections when possible
@@ -4099,7 +4118,7 @@ Revert over eager dependency upgrades in 2.13.1."
 14961 [BUGIX] Remove duplicate trailing / in pathname.
 15029 [PERF] [BUGFIX] cache factoryFor injections when possible
 15089 [BUGFIX] Fixing IE and Edge issue causing action handlers to be fired twice."
-357,"CHANGELOG
+360,"CHANGELOG
 
 #14011 [FEATURE ember-unique-location-history-state] Implements RFC #186.
 #13231 [BUGFIX] Fix a bug when using commas in computed property dependent keys.
@@ -4120,7 +4139,7 @@ Revert over eager dependency upgrades in 2.13.1."
 14970 [BUGFIX] Generate integration tests for template helpers by default.
 14976 [BUGFIX] Remove ""no use strict"" workaround for old versions of iOS 8.
 14981 [FEATURE ember-testing-resume-test] Enable by default."
-358,"CHANGELOG
+361,"CHANGELOG
 
 #15000 / #15002 / #15006 / #15008 / #15009 / #15011 [PERF] Assorted performance improvements for modern browsers.
 #14872 / #14871 / #14883 [PERF] Simplify action event handler.
@@ -4143,7 +4162,7 @@ Revert over eager dependency upgrades in 2.13.1."
 14829 [PERF] only logLibraryVersions in debug mode
 14852 [PERF] only LOG_TRANSITIONS and LOG_TRANSITIONS_INTERNAL in debug
 14854 [PERF] only LOG_ACTIVE_GENERATION and LOG_RESOLVER in debug"
-359,"CHANGELOG
+362,"CHANGELOG
 
 #14987 [BUGFIX] Fix a memory leak when components are destroyed.
 #14986 [BUGFIX] Fix a memory leak in RSVP.js.
@@ -4156,7 +4175,7 @@ Revert over eager dependency upgrades in 2.13.1."
 14985 [BUGFIX] Fix a bug that added babel helpers to the global scope.
 14898 [BUGFIX] Fix an issue where errors in tests sometimes do not cause a failure.
 14707 [BUGFIX] Improve deprecation message for unsafe style attribute bindings."
-360,"CHANGELOG
+363,"CHANGELOG
 
 #14987 [BUGFIX] Fix a memory leak when components are destroyed.
 #14986 [BUGFIX] Fix a memory leak in RSVP.js.
@@ -4169,12 +4188,12 @@ Revert over eager dependency upgrades in 2.13.1."
 14985 [BUGFIX] Fix a bug that added babel helpers to the global scope.
 14898 [BUGFIX] Fix an issue where errors in tests sometimes do not cause a failure.
 14707 [BUGFIX] Improve deprecation message for unsafe style attribute bindings."
-361,"CHANGELOG
+364,"CHANGELOG
 
 #14937 [BUGFIX] Fix issue preventing ember generate * from creating test files as appropriate.
 ","CHANGELOG
 14937 [BUGFIX] Fix issue preventing ember generate * from creating test files as appropriate."
-362,"CHANGELOG
+365,"CHANGELOG
 
 #14872 / #14871 / #14883 [PERF] Simplify action event handler
 #14905 [DOC] Add link to _lookupFactory deprecation message
@@ -4191,7 +4210,7 @@ Revert over eager dependency upgrades in 2.13.1."
 14860 [BUGFIX] Add back mainContext to loader #14859 (fixes issue with non ember-cli template compilation).
 14878 [DOC] Fix yuidoc package paths to ensure RSVP is properly included in API documentation.
 14910 [BUGFIX] Include blueprints in NPM release, to ensure ember-source blueprints are used over ember-cli-legacy-blueprints."
-363,"CHANGELOG
+366,"CHANGELOG
 
 #14762 [BUGFIX] Make ember-template-compiler handle {{input}} helpers with sub-expression ""type""
 #14791 [BUGFIX] exempt routes that share a controller from duplicate assertion
@@ -4206,7 +4225,7 @@ e94799c [BUGFIX] Update to route-recognizer@0.2.9 to prevent errors for duplicat
 14878 [DOC] Fix yuidoc package paths to ensure RSVP is properly included in API documentation.
 14910 [BUGFIX] Include blueprints in NPM release, to ensure ember-source blueprints are used over ember-cli-legacy-blueprints.
 e94799c [BUGFIX] Update to route-recognizer@0.2.9 to prevent errors for duplicate route name definitions in Router.map."
-364,"
+367,"
 #14360 [FEATURE factory-for] Implement factoryFor.
 #14751 [DEPRECATION] Deprecate Ember.K.
 #14756 [PERF] Disable costly eventManager support when unused.
@@ -4223,7 +4242,7 @@ e94799c [BUGFIX] Update to route-recognizer@0.2.9 to prevent errors for duplicat
 14829 [PERF] only logLibraryVersions in debug mode
 14852 [PERF] only LOG_TRANSITIONS and LOG_TRANSITIONS_INTERNAL in debug
 14854 [PERF] only LOG_ACTIVE_GENERATION and LOG_RESOLVER in debug"
-365,"CHANGELOG
+368,"CHANGELOG
 
 #14762 [BUGFIX] Ensure subexpressions can be used for {{input}}'s type.
 #14723 [BUGFIX] Improved backtracking re-render assertion message.
@@ -4252,21 +4271,21 @@ e94799c [BUGFIX] Update to route-recognizer@0.2.9 to prevent errors for duplicat
 14389 [BUGFIX] Disallow mutation of shared concatenatedProperties, such as classNames and classNameBindings.
 14441 [DEPRECATION] Deprecate remaining usage of the {{render}} helper.
 14482 [DEPRECATION] Deprecate Component#renderToElement."
-366,"CHANGELOG
+369,"CHANGELOG
 
 #14685 [BUGFIX] Fix this.$() returning undefined in willDestroyElement.
 #14717 [BUGFIX] Fix an issue with block params named attrs.
 ","CHANGELOG
 14685 [BUGFIX] Fix this.$() returning undefined in willDestroyElement.
 14717 [BUGFIX] Fix an issue with block params named attrs."
-367,"CHANGELOG
+370,"CHANGELOG
 
 #14685 [BUGFIX] Fix this.$() returning undefined in willDestroyElement.
 #14717 [BUGFIX] Fix an issue with block params named attrs.
 ","CHANGELOG
 14685 [BUGFIX] Fix this.$() returning undefined in willDestroyElement.
 14717 [BUGFIX] Fix an issue with block params named attrs."
-368,"CHANGELOG
+371,"CHANGELOG
 
 #14671 [BUGFIX] Fix an issue with the list attribute in  elements.
 #14681 [BUGFIX] Fix an issue with computed properties when using aliases as dependent keys.
@@ -4275,19 +4294,19 @@ e94799c [BUGFIX] Update to route-recognizer@0.2.9 to prevent errors for duplicat
 14671 [BUGFIX] Fix an issue with the list attribute in  elements.
 14681 [BUGFIX] Fix an issue with computed properties when using aliases as dependent keys.
 14682 [BUGFIX] Ensure closure actions do not trigger unnecessary re-renders."
-369,"
+372,"
 #14671 [BUGFIX] Fix an issue with the list attribute in <input> elements.
 #14681 [BUGFIX] Fix an issue with computed properties when using aliases as dependent keys.
 #14682 [BUGFIX] Ensure closure actions do not trigger unnecessary re-renders.
 ","14671 [BUGFIX] Fix an issue with the list attribute in  elements.
 14681 [BUGFIX] Fix an issue with computed properties when using aliases as dependent keys.
 14682 [BUGFIX] Ensure closure actions do not trigger unnecessary re-renders."
-370,"CHANGELOG
+373,"CHANGELOG
 
 #14658 [BUGFIX] Make the ember-source build work.
 ","CHANGELOG
 14658 [BUGFIX] Make the ember-source build work."
-371,"CHANGELOG
+374,"CHANGELOG
 
 #14389 [BUGFIX] Move classNames and classNameBindings properties into the component's prototype.
 #14389 [BUGFIX] Disallow mutation of shared concatenatedProperties, such as classNames and classNameBindings.
@@ -4298,7 +4317,7 @@ e94799c [BUGFIX] Update to route-recognizer@0.2.9 to prevent errors for duplicat
 14389 [BUGFIX] Disallow mutation of shared concatenatedProperties, such as classNames and classNameBindings.
 14441 [DEPRECATION] Deprecate remaining usage of the {{render}} helper.
 14482 [DEPRECATION] Deprecate Component#renderToElement."
-372,"CHANGELOG
+375,"CHANGELOG
 
 #14293 [BUGFIX] Remove style warning when the binding is quoted.
 #12708 [BUGFIX] Improve compatibility between Ember.isArray and the native Array.isArray for FileList.
@@ -4323,7 +4342,7 @@ tildeio/router.js#197 [BUGFIX] Fix redirects performed during the routers valida
 tildeio/router.js#197 [BUGFIX] Fix redirects performed during the routers validation stages. Properly handles replaceWith / transitionTo for initial and subsequent transitions.
 14520 [BUGFIX] Ensure local variables (block params) have higher precedence over helpers.
 14156 [FEATURE ember-glimmer] Enable by default."
-373,"CHANGELOG
+376,"CHANGELOG
 
 #14537 [BUGFIX] Improve behavior for QPs with undefined values
 #14545 [BUGFIX] Refactor loading/error substates. Fixes a number of issues with substate usage with ember-engines.
@@ -4334,7 +4353,7 @@ tildeio/router.js#197 [BUGFIX] Fix redirects performed during the routers valida
 14545 [BUGFIX] Refactor loading/error substates. Fixes a number of issues with substate usage with ember-engines.
 14571 [BUGFIX] Prevent errors in watching infrastructure for non-object paths.
 tildeio/router.js#197 [BUGFIX] Fix redirects performed during the routers validation stages. Properly handles replaceWith / transitionTo for initial and subsequent transitions."
-374,"CHANGELOG
+377,"CHANGELOG
 
 #14528 [BUGFIX] Fix memory leak (leaking component instances in the component registry).
 #14509 [BUGFIX] Fix overwriting rest positional parameters when passed as named parameters. Allows link-to to be used as a contextual component.
@@ -4343,7 +4362,7 @@ tildeio/router.js#197 [BUGFIX] Fix redirects performed during the routers valida
 14528 [BUGFIX] Fix memory leak (leaking component instances in the component registry).
 14509 [BUGFIX] Fix overwriting rest positional parameters when passed as named parameters. Allows link-to to be used as a contextual component.
 14550 [BUGFIX] Allow canceling items queued by run.schedule."
-375,"CHANGELOG
+378,"CHANGELOG
 
 #14528 [BUGFIX] Fix memory leak (leaking component instances in the component registry).
 #14509 [BUGFIX] Fix overwriting rest positional parameters when passed as named parameters. Allows link-to to be used as a contextual component.
@@ -4352,7 +4371,7 @@ tildeio/router.js#197 [BUGFIX] Fix redirects performed during the routers valida
 14528 [BUGFIX] Fix memory leak (leaking component instances in the component registry).
 14509 [BUGFIX] Fix overwriting rest positional parameters when passed as named parameters. Allows link-to to be used as a contextual component.
 14550 [BUGFIX] Allow canceling items queued by run.schedule."
-376,"CHANGELOG
+379,"CHANGELOG
 
 #14499 [BUGFIX] Fix ""Invalid value used as weak map key"" error in old versions of Node.js.
 #14519 [BUGFIX] Ensure didTransition is fired before rendering.
@@ -4363,17 +4382,17 @@ tildeio/router.js#197 [BUGFIX] Fix redirects performed during the routers valida
 14519 [BUGFIX] Ensure didTransition is fired before rendering.
 14520 [BUGFIX] Ensure local variables (block params) have higher precedence over helpers.
 14520 [BUGFIX] Fix an issue where class-based helpers are destroyed unexpectedly."
-377,"CHANGELOG
+380,"CHANGELOG
 
 #14156 [FEATURE ember-glimmer] Enable by default.
 ","CHANGELOG
 14156 [FEATURE ember-glimmer] Enable by default."
-378,"CHANGELOG
+381,"CHANGELOG
 
 No changes from 2.8.2.
 ","CHANGELOG
 No changes from 2.8.2."
-379,"CHANGELOG
+382,"CHANGELOG
 
 #14365 [BUGFIX] Fix an issue with URLs with encoded characters and a trailing slash.
 #14382 [BUGFIX] Allow bound id on tagless components.
@@ -4382,7 +4401,7 @@ No changes from 2.8.2."
 14365 [BUGFIX] Fix an issue with URLs with encoded characters and a trailing slash.
 14382 [BUGFIX] Allow bound id on tagless components.
 14421 [BUGFIX] Fix an issue with local components lookup."
-380,"CHANGELOG
+383,"CHANGELOG
 
 #14403 [BUGFIX] Ensure willInsertElement is fired for tagless components.
 #14384 [BUGFIX] Fix an issue when attrs is used in class name and attribute bindings.
@@ -4399,7 +4418,7 @@ No changes from 2.8.2."
 14425 [BUGFIX] Fix rendering {{this.attrs.*}} in a template.
 14427 [BUGFIX] Ensure Ember.set in didUpdate hooks causes a re-render.
 13996 [BUGFIX] Fix an issue when passing closure actions via attrs.* to child components."
-381,"CHANGELOG
+384,"CHANGELOG
 
 #14361 [BUGFIX] Prevent usage of this.element when running in a non-interactive environment (i.e. FastBoot).
 #14361 [BUGFIX] Prevent willRender and willUpdate from running in FastBoot.
@@ -4420,7 +4439,7 @@ No changes from 2.8.2."
 14366 [BUGFIX] Fix Ember.assign export.
 14367 [BUGFIX] Ensure feature flags are properly stripped.
 14371 [BUGFIX] Lazily add alias dependent keys (correct a slight performance regression from #14319)."
-382,"CHANGELOG
+385,"CHANGELOG
 
 #14313 [BUGFIX] Ensure id attribute bindings of undefined are handled properly.
 #14291 [BUGFIX] Fix component action bubbling semantics.
@@ -4437,7 +4456,7 @@ No changes from 2.8.2."
 14312 [BUGFIX] Allow a components layout to be injected.
 14315 [BUGFIX] Fix DOM output for properties and attributes.
 14319 [BUGFIX] Fixes rerendering issues when rendering aliased paths."
-383,"CHANGELOG
+386,"CHANGELOG
 
 #14184 [BUGFIX] Ensure that promises that reject with non Errors (i.e. something without a .stack) do not trigger an error during Ember's internal error processing.
 #14237 [BUGFIX] Ensure Engine Routes are deactivated before destruction.
@@ -4454,7 +4473,7 @@ No changes from 2.8.2."
 14281 [BUGFIX] Ensure referencing parentView in a computed property / observer dependent key (or in the template) does not cause an error during teardown.
 14281 [BUGFIX] Prevent errors from scheduling a rerender (by setting a property in willDestroyElement) after a component is destroyed.
 14291 [BUGFIX] Fix component action bubbling semantics. Actions should not bubble out of a component when returning true."
-384,"CHANGELOG
+387,"CHANGELOG
 
 #14237 [BUGFIX] Ensure Engine Routes are deactivated before destruction
 #14176 [BUGFIX] Ensure Controller#transitionToRoute and Route#intermediateTransitionTo work in Engines
@@ -4475,12 +4494,12 @@ No changes from 2.8.2."
 14253 [BUGFIX] Prevent duplicated Ember.meta invocations.
 14271 [BUGFIX] Ensure undefined and null values are not rendered as attributes or properties on initial render.
 14272 [BUGFIX] Fix issues with Transition#isActive being falsey incorrectly."
-385,"CHANGELOG
+388,"CHANGELOG
 
 #14156 [FEATURE ember-glimmer] Enable by default.
 ","CHANGELOG
 14156 [FEATURE ember-glimmer] Enable by default."
-386,"Changelog
+389,"Changelog
 
 #14229 [BUGFIX] Fix boot errors with location: 'auto' when using IE9.
 #14219 [BUGFIX] Fix issue with template meta (i.e. compiled template moduleName) was being mutated during the rendering process.
@@ -4541,24 +4560,24 @@ No changes from 2.8.2."
 13855 [FEATURE ember-application-engines] Enable by default.
 13855 [FEATURE ember-runtime-enumerable-includes] Enable by default.
 13855 [FEATURE ember-testing-check-waiters] Enable by default."
-387,"CHANGELOG
+390,"CHANGELOG
 
 #14219 [BUGFIX] Fix issue with mutating template's metadata.
 ","CHANGELOG
 14219 [BUGFIX] Fix issue with mutating template's metadata."
-388,"CHANGELOG
+391,"CHANGELOG
 
 #14159 [BUGFIX] Fix rendering system cleanup.
 ","CHANGELOG
 14159 [BUGFIX] Fix rendering system cleanup."
-389,"CHANGELOG
+392,"CHANGELOG
 
 #13895 [BUGFIX] Fix template meta lookup with tagless and blockless components.
 #14075 [BUGFIX] In which we revert route-recognizer to the version used in Ember 2.6. 😢
 ","CHANGELOG
 13895 [BUGFIX] Fix template meta lookup with tagless and blockless components.
 14075 [BUGFIX] In which we revert route-recognizer to the version used in Ember 2.6. 😢"
-390,"CHANGELOG
+393,"CHANGELOG
 
 #14123 [BUGFIX] Avoid rerendering outlet state during router destruction.
 #14077 [BUGFIX] Update route-recognizer.
@@ -4577,8 +4596,8 @@ No changes from 2.8.2."
 14117 [BUGFIX] Call ArrayProxy's content change hooks
 14135 [BUGFIX] Fix issues around Engine setup and teardown.
 14140 [BUGFIX] Ensure component injections happen in engine instances."
-391,See #13949 for recent changes.,See #13949 for recent changes.
-392,"CHANGELOG
+394,See #13949 for recent changes.,See #13949 for recent changes.
+395,"CHANGELOG
 
 #14009 [BUGFIX] Fix usage of role when used in attributeBindings.
 #14044 / #14062 / #14066 [BUGFIX] Update router.js so that getHandlers is invoked lazily.
@@ -4593,7 +4612,7 @@ No changes from 2.8.2."
 14033 [BUGFIX] Ensure fillIn acceptance test helper only sets value to first matched element.
 14058 [BUGFIX] Fix issues related to Ember.Router.map changes in 2.7.0.
 14068 [BUGFIX] Prevent errors when clicking a {{link-to}} during an existing transition."
-393,"CHANGELOG
+396,"CHANGELOG
 
 #13920 [BUGFIX] Add more info to the Ember.Binding deprecation.
 #14058 [BUGFIX] Fix issues related to Ember.Router.map changes in 2.7.0.
@@ -4602,9 +4621,9 @@ No changes from 2.8.2."
 13920 [BUGFIX] Add more info to the Ember.Binding deprecation.
 14058 [BUGFIX] Fix issues related to Ember.Router.map changes in 2.7.0.
 14068 [BUGFIX] Prevent errors when clicking a {{link-to}} during an existing transition."
-394,See #13949 for recent changes.,See #13949 for recent changes.
-395,See https://github.com/emberjs/ember.js/issues/13949 for recent changes.,See link for recent changes.
-396,"CHANGELOG
+397,See #13949 for recent changes.,See #13949 for recent changes.
+398,See https://github.com/emberjs/ember.js/issues/13949 for recent changes.,See link for recent changes.
+399,"CHANGELOG
 
 #13887 [BUGFIX] Add assertions for illegal component invocations.
 #13892 [CLEANUP] Remove View#createElement / View#destroyElement.
@@ -4619,8 +4638,8 @@ No changes from 2.8.2."
 13911 [BUGFIX] Avoid using clobbering .env property on components.
 13913 [BUGFIX] Disallow paths beginning with @ in templates.
 13920 [BUGFIX] Add more info to the Ember.Binding deprecation."
-397,See the announcement blog post for details.,See the announcement blog post for details.
-398,"CHANGELOG
+400,See the announcement blog post for details.,See the announcement blog post for details.
+401,"CHANGELOG
 
 #13757 / #13773 [CLEANUP] Remove legacy view layer features.
 #13819 [DOC] Add documentation for container (getOwner, etc.)
@@ -4635,7 +4654,7 @@ No changes from 2.8.2."
 13855 [FEATURE ember-application-engines] Enable by default.
 13855 [FEATURE ember-runtime-enumerable-includes] Enable by default.
 13855 [FEATURE ember-testing-check-waiters] Enable by default."
-399,"CHANGELOG
+402,"CHANGELOG
 
 #13764 [BUGFIX] Keep rest positional parameters when nesting contextual components if needed.
 #13781 [BUGFIX] Fix NoneLocation#getURL
@@ -4662,26 +4681,26 @@ No changes from 2.8.2."
 13273 [BUGFIX] Fix a number of query param related issues reported.
 13424 [DEPRECATE] Deprecate Ember.Binding. See the deprecation guide for more details.
 13599 [FEATURE] Enable ember-runtime-computed-uniq-by feature."
-400,"CHANGELOG
+403,"CHANGELOG
 
 #13781 [BUGFIX] Fix NoneLocation#getURL
 #13797 [BUGFIX] Ensure didInitAttrs deprecation is stripped in prod
 ","CHANGELOG
 13781 [BUGFIX] Fix NoneLocation#getURL
 13797 [BUGFIX] Ensure didInitAttrs deprecation is stripped in prod"
-401,"CHANGELOG
+404,"CHANGELOG
 
 #13781 [BUGFIX] Fix NoneLocation#getURL
 #13797 [BUGFIX] Ensure didInitAttrs deprecation is stripped in prod
 ","CHANGELOG
 13781 [BUGFIX] Fix NoneLocation#getURL
 13797 [BUGFIX] Ensure didInitAttrs deprecation is stripped in prod"
-402,"CHANGELOG
+405,"CHANGELOG
 
 #13768 [BUGFIX] Update route-recognizer to v0.2.0. This addresses a large number of per-existing bugs related to URL encoding. However, in doing so, it might inevitably break existing workarounds in this area. Please refer to the linked pull request for more details.
 ","CHANGELOG
 13768 [BUGFIX] Update route-recognizer to v0.2.0. This addresses a large number of per-existing bugs related to URL encoding. However, in doing so, it might inevitably break existing workarounds in this area. Please refer to the linked pull request for more details."
-403,"CHANGELOG
+406,"CHANGELOG
 
 #13634 [BUGFIX] Fix issues with rerendering blockless and tagless components.
 #13605 [BUGFIX] Ensure pauseTest runs after other async helpers.
@@ -4696,7 +4715,7 @@ No changes from 2.8.2."
 13672 [BUGFIX] Fix issue with this.render and this.disconnectOutlet in routes.
 13716 [BUGFIX] Ensure that Ember.Test.waiters allows access to configured test waiters.
 13273 [BUGFIX] Fix a number of query param related issues reported."
-404,"CHANGELOG
+407,"CHANGELOG
 
 #13634 [BUGFIX] Fix issues with rerendering blockless and tagless components.
 #13655 [BUGFIX] Make debugging this._super much easier (remove manual .call / .apply optimizations).
@@ -4705,14 +4724,14 @@ No changes from 2.8.2."
 13634 [BUGFIX] Fix issues with rerendering blockless and tagless components.
 13655 [BUGFIX] Make debugging this._super much easier (remove manual .call / .apply optimizations).
 13672 [BUGFIX] Fix issue with this.render and this.disconnectOutlet in routes."
-405,"CHANGELOG
+408,"CHANGELOG
 
 #13424 [DEPRECATE] Deprecate Ember.Binding. See the deprecation guide for more details.
 #13599 [FEATURE] Enable ember-runtime-computed-uniq-by feature.
 ","CHANGELOG
 13424 [DEPRECATE] Deprecate Ember.Binding. See the deprecation guide for more details.
 13599 [FEATURE] Enable ember-runtime-computed-uniq-by feature."
-406,"CHANGELOG
+409,"CHANGELOG
 
 #13520 [BUGFIX] Fixes issues with baseURL and rootURL in Ember.HistoryLocation and ensures that Ember.NoneLocation properly handles rootURL.
 #13590 [BUGFIX] Avoid _lazyInjections in production builds.
@@ -4777,12 +4796,12 @@ properties. Fixes scenarios where the list of own properties changed in debug bu
 13268 [DEPRECATE] Deprecate usage of {{render}} helper with a model param
 13285 [BUGFIX] Make Enumerable#firstObject read only.
 13289 [BUGFIX] Make Enumerable#lastObject read only."
-407,"CHANGELOG
+410,"CHANGELOG
 
 #13600 [BUGFIX] Revert QP changes introduced in 2.4.4.
 ","CHANGELOG
 13600 [BUGFIX] Revert QP changes introduced in 2.4.4."
-408,"CHANGELOG
+411,"CHANGELOG
 
 #13442 [BUGFIX] Revert Ember.Handlebars.SafeString deprecation.
 #13449 [BUGFIX] Ensure that Ember.get(null, 'foo') returns undefined.
@@ -4793,7 +4812,7 @@ properties. Fixes scenarios where the list of own properties changed in debug bu
 13449 [BUGFIX] Ensure that Ember.get(null, 'foo') returns undefined.
 13465 [BUGFIX] Propagate loc information for inline link-to transform.
 13461 [BUGFIX] Prevent Ember.get from attempting to retrieve properties on primitive objects."
-409,"CHANGELOG
+412,"CHANGELOG
 
 #13418 [BUGFIX] Ensure that passing run.later a timeout value of NaN does not break all future
   timers.
@@ -4806,7 +4825,7 @@ timers.
 13435 [BUGFIX] Fix positional parameters when used with component helper.
 13438 [BUGFIX] Ensure custom components extending from Ember.LinkComponent can operate
 in both block and inline form."
-410,"Changelog
+413,"Changelog
 
 #13356 [BUGFIX] Update Registry#has to always return true/false.
 #13359 [BUGFIX] Fix {{if}} and {{unless}} subexpression sometimes not updating.
@@ -4833,7 +4852,7 @@ properties. Fixes scenarios where the list of own properties changed in debug bu
 13315 [CLEANUP] Remove legacy view related exports.
 13310 [BUGFIX] Fix mouseenter typo in ember-testing helpers.
 13314 [CLEANUP] Remove Metamorph view and mixin."
-411,"Changelog
+414,"Changelog
 
 #13310 [BUGFIX] Fix mouseenter typo in ember-testing helpers.
 #13333 [BUGFIX] Prevent the toString property from being added to the objects own
@@ -4848,7 +4867,7 @@ properties. Fixes scenarios where the list of own properties changed in debug bu
 13335 [BUGFIX] Ensure injected property assertion checks container. Fixes issues
 with usage of objects created by older addons that are attempting to use Ember.inject.service().
 13344 [BUGFIX] Remove Ember.merge deprecation."
-412,"Changelog
+415,"Changelog
 
 #13144 / #13195 / #13193 [CLEANUP] Remove support for ember-legacy-views addon.
 #13192 [CLEANUP] Remove support for ember-legacy-controllers addon.
@@ -4867,7 +4886,7 @@ with usage of objects created by older addons that are attempting to use Ember.i
 13268 [DEPRECATE] Deprecate usage of {{render}} helper with a model param
 13285 [BUGFIX] Make Enumerable#firstObject read only.
 13289 [BUGFIX] Make Enumerable#lastObject read only."
-413,"Changelog
+416,"Changelog
 
 #13239 [BUGFIX] Prevent warnings for unknown feature flags
 #13287 [BUGFIX] Fix a recent regression with Ember.A(null)
@@ -4894,19 +4913,19 @@ with usage of objects created by older addons that are attempting to use Ember.i
 12928 [FEATURE ember-htmlbars-component-generation] Remove feature.
 13024 [BUGFIX] Change internal async acceptance test helpers to be somewhat more efficient in determining router transition status.
 [FEATURE] Add helper method named Ember.assign to roughly emulate Object.assign."
-414,"Changelog
+417,"Changelog
 
 #13239 [BUGFIX] Prevent warnings for unknown feature flags.
 #13294 [DEPRECATE] Deprecate usage of {{render}} with a block.
 ","Changelog
 13239 [BUGFIX] Prevent warnings for unknown feature flags.
 13294 [DEPRECATE] Deprecate usage of {{render}} with a block."
-415,"Changelog
+418,"Changelog
 
 #13169 [BUGFIX] Fixes {{link-to}} classes when transition is aborted
 ","Changelog
 13169 [BUGFIX] Fixes {{link-to}} classes when transition is aborted"
-416,"Changelog
+419,"Changelog
 
 #13177 [BUGFIX] Allow contextual component attributes are mutable (allowing for two way binding).
 #13185 [BUGFIX] Ensure {{render}} sets up target properly (fixes issues with {{render}}'ed templates using actions).
@@ -4919,29 +4938,29 @@ with usage of objects created by older addons that are attempting to use Ember.i
 13202 [BUGFIX] Merge in active transition QPs when doing a transition.
 13218 [BUGFIX] Do not refresh routes on initial transition.
 13228 [BUGFIX] re-enable link-to when disabledWhen changes values."
-417,"CHANGELOG
+420,"CHANGELOG
 
 #13118 [BUGFIX] Work around Chrome 49/50 optimization bug affecting helper usage.
 ","CHANGELOG
 13118 [BUGFIX] Work around Chrome 49/50 optimization bug affecting helper usage."
-418,"CHANGELOG
+421,"CHANGELOG
 
 #13118 [BUGFIX] Work around Chrome 49/50 optimization bug affecting helper usage.
 ","CHANGELOG
 13118 [BUGFIX] Work around Chrome 49/50 optimization bug affecting helper usage."
-419,"Changelog
+422,"Changelog
 
 #13083 [BUGFIX] Fix issue with feature flagging infrastructure in beta 2
 ","Changelog
 13083 [BUGFIX] Fix issue with feature flagging infrastructure in beta 2"
-420,"Changelog
+423,"Changelog
 
 #13031 [BUGFIX] Fix mergedProperties at create time modifying proto
 #13049 [BUGFIX] Fixes {{#with proxy as |foo|}}
 ","Changelog
 13031 [BUGFIX] Fix mergedProperties at create time modifying proto
 13049 [BUGFIX] Fixes {{#with proxy as |foo|}}"
-421,"Changelog
+424,"Changelog
 
 #13030 [BUGFIX] Fix legacy addon deprecations
 #13031 [BUGFIX] Fix mergedProperties at create time modifying proto
@@ -4952,12 +4971,12 @@ with usage of objects created by older addons that are attempting to use Ember.i
 13031 [BUGFIX] Fix mergedProperties at create time modifying proto
 13036 [BUGFIX] Revert ""Update Ember.compare to use operators""
 13049 [BUGFIX] Fixes {{#with proxy as |foo|}}"
-422,"Changelog
+425,"Changelog
 
 #13030 [BUGFIX] Fix legacy addon deprecations
 ","Changelog
 13030 [BUGFIX] Fix legacy addon deprecations"
-423,"Changelog
+426,"Changelog
 
 #12829 [BUGFIX] Support tagless components in fastboot
 #12575 Make acceptance helpers fire native evets instead of jQuery ones.
@@ -4980,7 +4999,7 @@ with usage of objects created by older addons that are attempting to use Ember.i
 13007 [BUGFIX] Update Ember.compare to use operators
 13024 [BUGFIX] Change internal async acceptance test helpers to be somewhat more efficient in determining router transition status.
 [FEATURE] Add helper method named Ember.assign to roughly emulate Object.assign."
-424,"Changelog
+427,"Changelog
 
 #12996 [BUGFIX] Fixes 12995 #with array yields true
 #13013 [BUGFIX] Do not set model on {{render}} rerender when only a single argument was provided.
@@ -5033,7 +5052,7 @@ with usage of objects created by older addons that are attempting to use Ember.i
 12674 removed unused name prop
 12664 Include NaN as a falsey value in the with helper's docstring
 12698 convert all this._super.apply(this, arguments) to this._super(...arguments)"
-425,"Changelog
+428,"Changelog
 
 #12922 [BUGFIX] Special case {{#with}} for isTruthy
 #12934 [BUGFIX] Ensure Route#transitionTo returns a Transition object.
@@ -5050,7 +5069,7 @@ with usage of objects created by older addons that are attempting to use Ember.i
 12947 [BUGFIX] Avoid using prototype extensions if possible ({add,remove}ArrayObserver).
 12942 [BUGFIX] Do not rely prototype extensions (objectAt).
 12991 [BUGFIX] Fix a regression in Ember.computed.sort."
-426,"Changelog
+429,"Changelog
 
 #12491 [BUGFIX] allow watching of ES5+ Getter
 #12829 [BUGFIX] Support tagless components in fastboot
@@ -5065,7 +5084,7 @@ with usage of objects created by older addons that are attempting to use Ember.i
 12848 Make dependencies that end in @each expand to [].
 12877 [BUGFIX] Upgrade htmlbars to 0.14.14. Fixes bug with lost cursor position with .
 12908 [BUGFIX] Fix issue that prevented recomputation of ArrayProxy values under certain circumstances."
-427,"Changelog
+430,"Changelog
 
 #12829 [BUGFIX] Support tagless components in fastboot.
 #12848 Make dependencies that end in @each expand to [].
@@ -5076,7 +5095,7 @@ with usage of objects created by older addons that are attempting to use Ember.i
 12848 Make dependencies that end in @each expand to [].
 12877 [BUGFIX] Upgrade htmlbars to 0.14.14. Fixes bug with lost cursor position with .
 12908 [BUGFIX] Fix issue that prevented recomputation of ArrayProxy values under certain circumstances."
-428,"
+431,"
 #12348 Route#disconnectOutlet should not be private
 #12648 Move packages/**/lib/main.js to packages/**/lib/index.js.
 #12647 update cli
@@ -5095,7 +5114,7 @@ with usage of objects created by older addons that are attempting to use Ember.i
 12674 removed unused name prop
 12664 Include NaN as a falsey value in the with helper's docstring
 12698 convert all this._super.apply(this, arguments) to this._super(...arguments)"
-429,"
+432,"
 #12712 [BUGFIX] Create a new hash parameter when creating a component cell
 #12746 [BUGFIX] Update htmlbars to 0.14.11 to fix CVE-2015-7565.
 #12752 [BUGFIX] Do not re-raise on errors handled in route error action.
@@ -5154,7 +5173,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12314 [BUGFIX] Mandatory setter should check prototype descriptors.
 12485 [BUGFIX] Access property only once during Ember.get.
 12503 Add helpful assertion when a tagless component includes event handler methods."
-430,"Changelog
+433,"Changelog
 
 #12659 [BUGFIX] Update HTMLBars to 0.14.7.
 #12666 [BUGFIX] Prevent triggering V8 memory leak bug through registry / resolver access.
@@ -5177,7 +5196,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12705 [BUGFIX] Fix FastBoot URL parsing crash.
 12728 [BUGFIX] Fix incorrect export for Ember.computed.collect.
 12731 [BUGFIX] Ensure container can still be provided to .create (prevents an error and provides a helpful deprecation)."
-431,"Changelog
+434,"Changelog
 
 #12626 [BUGFIX] Fix ""rest"" style positional params in contextual components when using dot syntax.
 #12627 [CLEANUP] Remove unused ENV flags.
@@ -5196,7 +5215,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12628 [BUGFIX] Fix processing arguments in rerender for contextual components.
 12629 [BUGFIX] Expose ownerInjection method on ContainerProxy.
 12636 [BUGFIX] Ensure Ember.Mixin.prototype.toString is defined (prevents issues with Object.seal(Ember.Mixin.prototype) in debug builds."
-432,"Changelog
+435,"Changelog
 
 #12532 Bump RSVP dependency from 3.0.6 to 3.1.0.
 #12422 / #12495 / #12517 / #12561 / #12542 / #12570 [FEATURE ember-contextual-components]
@@ -5211,7 +5230,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12314 [BUGFIX] Mandatory setter should check prototype descriptors.
 12485 [BUGFIX] Access property only once during Ember.get.
 12503 Add helpful assertion when a tagless component includes event handler methods."
-433,"Changelog
+436,"Changelog
 
 #12600 [BUGFIX beta] Guard against null attrs in getRoot hook.
 #12445 [BUGFIX] Ensure rest arg positionalParams can be supplied as hash arguments.
@@ -5246,7 +5265,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12318 [BUGFIX] Ensure attributeBindings work when legacy view addon is not present.
 12370 [DEPRECATION] Deprecate passing function as test argument to Ember.deprecate / Ember.warn / Ember.assert.
 12416 [BUGFIX] Ensure components actions function without controller addon."
-434,"Changelog
+437,"Changelog
 
 #12445 [BUGFIX] Ensure rest arg style positionalParams can be omitted.
 #12456 [BUGFIX]Allow usage of bound properties in {{link-to}} for bubbles, preventDefault, target, replace, and disabledWhen.
@@ -5257,7 +5276,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12456 [BUGFIX]Allow usage of bound properties in {{link-to}} for bubbles, preventDefault, target, replace, and disabledWhen.
 12463 [BUGFIX] Fix uglification introduced bug with super wrapping.
 12464 [BUGFIX] Ember.String.htmlSafe() should return a instance of SafeString for null / undefined."
-435,"Changelog
+438,"Changelog
 
 #12334 [BUGFIX] Fix for Array.prototype.filter polyfill on IE8.
 #12344 [BUGFIX] Allow {{link-to}}'s current-when param be specified as a bound value.
@@ -5272,7 +5291,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12471 [BUGFIX] Added deprecation for Ember.SortableMixin.
 12481 [BUGFIX] Add deprecation options to some 1.13 deprecations (to make handling with ember-cli-deprecation-workflow easier).
 12596 [BUGFIX] Fix {{input}} helper on IE8."
-436,"Changelog
+439,"Changelog
 
 #12445 [BUGFIX] Ensure rest arg positionalParams can be supplied as hash arguments.
 #12456 [BUGFIX] Allow usage of bound properties in {{link-to}} for bubbles, preventDefault, target, replace, and disabledWhen.
@@ -5287,7 +5306,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12464 [BUGFIX] Ember.String.htmlSafe() should return a instance of SafeString for null / undefined.
 12463 [BUGFIX] Fix uglification introduced bug with super wrapping.
 12519 [BUGFIX] Ensure closure actions are wrapped in a run loop."
-437,"Changelog
+440,"Changelog
 
 #12214 Remove most of defeatureify in favor of babel-plugin-filter-imports.
 #12253 [BUGFIX] Remove superfluous routing-service initializer.
@@ -5308,7 +5327,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12318 [BUGFIX] Ensure attributeBindings work when legacy view addon is not present.
 12370 [DEPRECATION] Deprecate passing function as test argument to Ember.deprecate / Ember.warn / Ember.assert.
 12416 [BUGFIX] Ensure components actions function without controller addon."
-438,"Changelog
+441,"Changelog
 
 #12396 [BUGFIX] Ensure that this._super is called when extending from Ember.Component.
 #12383 [BUGFIX] Fix Ember.String.classify to underscore items with a leading dash/underscore.
@@ -5385,7 +5404,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12117 [FEATURE ember-registry-container-reform] Enable by default.
 11440 [DEPRECATION] Deprecate using instance.container.lookup on first argument to instanceInitializers. Use instance.lookup instead.
 11440 [DEPRECATION] Deprecate passing two arguments to an initializers initialize function."
-439,"Changelog
+442,"Changelog
 
 #12075 [PERF] Avoid creating a run-loop for events that are unhandled.
 #12260 [BUGFIX] Ensure init is completed before didReceiveAttrs is fired.
@@ -5396,7 +5415,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12260 [BUGFIX] Ensure init is completed before didReceiveAttrs is fired.
 12323 [BUGFIX beta] Make {{get something 'path.goes.here'}} work.
 12331 [BUGFIX beta] Update backburner.js to prevent issues when interleaving run.later and run.next."
-440,"Changelog
+443,"Changelog
 
 #12157 [DEPRECATION] Allow deprecated access to registry from Application (argument to initializers) and ApplicationInstance (argument to instance initializers) instances.
 #12156 [BUGFIX] Add helpful error message when providing incorrect arguments to Ember.computed.
@@ -5423,7 +5442,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12256 [BUGFIX] Ensure concat streams unsubscribe properly.
 12262 [BUGFIX] Breaks circular references in rejected jqXhr promises
 12297 / #12299 [BUGFIX] Remove extra work per component on initial render."
-441,"Changelog
+444,"Changelog
 
 #12103 [BUGFIX] Fix Ember.isArray export
 #12104 [BUGFIX] Ensure concatenatedProperties are not stomped.
@@ -5438,7 +5457,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12208 [BUGFIX] Fix issue with Ember.computed.sort crashing when it hit a null value.
 12256 [BUGFIX] Ensure concat streams unsubscribe properly. Fixes memory leak with attributes specified within quotes in the template (i.e. ).
 12272 [BUGFIX] Update HTMLBars to fix memory leak when using an {{each}} inside of an {{if}}."
-442,"Changelog
+445,"Changelog
 
 #12104 [BUGFIX] Ensure concatenatedProperties are not stomped.
 #12256 [BUGFIX] Ensure concat streams unsubscribe properly. Fixes memory leak with attributes specified within quotes in the template (i.e. <div data-foo=""{{somethign}}""></div>).
@@ -5447,7 +5466,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12104 [BUGFIX] Ensure concatenatedProperties are not stomped.
 12256 [BUGFIX] Ensure concat streams unsubscribe properly. Fixes memory leak with attributes specified within quotes in the template (i.e. ).
 12272 [BUGFIX] Update HTMLBars to fix memory leak when an {{each}} is inside an {{if}}."
-443,"Changelog
+446,"Changelog
 
 #12163 [BUGFIX] Move View#currentState to View#_currentState.
 #12163 [DEPRECATION] Deprecate using the private currentState property on views/components.
@@ -5462,7 +5481,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12138 [BUGFIX] Do not require this._super(...arguments) when components implement didRecieveAttrs.
 12170 [BUGFIX release] Ensure Ember.computed.sum returns 0 if the array to be operated on is null or undefined.
 12176 [BUGFIX] Enable extending Ember.LinkComponent for customizations."
-444,"Changelog
+447,"Changelog
 
 #12093 [BUGFIX] Fix issue with Ember.computed.alias, Ember.computed.oneWay, and Ember.computed.reads that prevented them from invalidating properly.
 #12138 [BUGFIX] Do not require calling this._super(...arguments) in views/components when implementing didReceiveAttrs.
@@ -5471,14 +5490,14 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12093 [BUGFIX] Fix issue with Ember.computed.alias, Ember.computed.oneWay, and Ember.computed.reads that prevented them from invalidating properly.
 12138 [BUGFIX] Do not require calling this._super(...arguments) in views/components when implementing didReceiveAttrs.
 12170 [BUGFIX] Ensure Ember.computed.sum returns 0 when the underlying array property is null or undefined."
-445,"Changelog
+448,"Changelog
 
 #12138 [BUGFIX] Do not require calling this._super(...arguments) in views/components when implementing didReceiveAttrs.
 #12164 [BUGFIX] Properly handle block-less usage of a component without a template or layout specified in the component definition.
 ","Changelog
 12138 [BUGFIX] Do not require calling this._super(...arguments) in views/components when implementing didReceiveAttrs.
 12164 [BUGFIX] Properly handle block-less usage of a component without a template or layout specified in the component definition."
-446,"Changelog
+449,"Changelog
 
 #10173 [BUGFIX] Ensure non-singleton injections are not cached incorrectly.
 #11966 [PERF] Refactor Meta.
@@ -5501,7 +5520,7 @@ Ember.ENV.DISABLE_RANGE_API is removed (unused since HTMLBars landed in 1.10).
 12117 [FEATURE ember-registry-container-reform] Enable by default.
 11440 [DEPRECATION] Deprecate using instance.container.lookup on first argument to instanceInitializers. Use instance.lookup instead.
 11440 [DEPRECATION] Deprecate passing two arguments to an initializers initialize function."
-447,"Changelog
+450,"Changelog
 
 #12036 Cleanup CP Set and  Volatile
 #11993 [CLEANUP] Remove Ember.TrackedArray and Ember.SubArray.
@@ -5754,7 +5773,7 @@ Requires set to be passed in three or four arguments.
 11375 Transition feature flag infrastructure to modules.
 11383 Update {{each-in}} to use ember-metal/should-display.
 11396 Make Ember.Checkbox extend from Ember.Component."
-448,"Changelog
+451,"Changelog
 
 #12056 [BUGFIX] Ensure initializers can augment customEvents.
 #12037 [BUGFIX] Fix error in some query params scenarios.
@@ -5771,7 +5790,7 @@ Requires set to be passed in three or four arguments.
 12067 [BUGFIX] Prevent helper:@content-helper lookup errors when using a paramless helper.
 12071 [BUGFIX] Fix issue with accessing component attributes before initial render.
 12073 [BUGFIX] Fix issue with events when invoking a component and specifying classNames=."
-449,"Changelog
+452,"Changelog
 
 #11993 [CLEANUP] Remove Ember.TrackedArray and Ember.SubArray.
 #11550 [BUGFIX] Ensure that specifying an observer in a child class only observes changes to the childs dependent keys.
@@ -5820,7 +5839,7 @@ Requires set to be passed in three or four arguments.
 12027 [CLEANUP] Remove support for specifying template in a component.
 12027 [CLEANUP] Remove deprecated template access in Ember.Component.
 12028 [CLEANUP] Store actions in actions not _actions."
-450,"Changelog
+453,"Changelog
 
 #12000 [DEPRECATION] Deprecate using controller for {{with}}
 #11946 [PERF] Speed up AttrProxy implementation.
@@ -5845,7 +5864,7 @@ Requires set to be passed in three or four arguments.
 11993 [DEPRECATION] Deprecate Ember.TrackedArray and Ember.SubArray.
 11994 [DEPRECATION] Deprecate using @each as a leaf node in a dependent key. Refactor from Ember.computed('foo.@each', function() {}); to Ember.computed('foo.[]', function() { });.
 12026 [BUGFIX] Remove wasted dependent keys for template and layout properties of Ember.View/Ember.Component."
-451,"Changelog
+454,"Changelog
 
 #11854 [CLEANUP] Remove length from OrderedSet and Map.
 #11854 [CLEANUP] Remove OrderedSet.prototype.length.
@@ -5912,7 +5931,7 @@ Requires set to be passed in three or four arguments.
 11914 [CLEANUP] Remove Ember.oneWay.
 11895 [BUGFIX] Properly detect if the environment is Node.
 11897 [CLEANUP] Remove globals lookup from templates."
-452,"Changelog
+455,"Changelog
 
 #11900 [DEPRECATION] Deprecate Ember.Handlebars.makeViewHelper.
 #11900 [DEPRECATION] Deprecate Ember.HTMLBars.makeViewHelper.
@@ -5953,7 +5972,7 @@ Requires set to be passed in three or four arguments.
 11917 [BUGFIX] Ensure ""use strict""; is properly added for modules.
 11934 [DEPRECATION] Deprecate specifying positionalParams at extend time in favor of using static factory properties.
 11935 [BUGFIX] Avoid unnecessary change events during initial render."
-453,"Changelog
+456,"Changelog
 
 #11767 [DEPRECATION] Deprecate Controller#needs
 #11468 [DEPRECATION] Deprecate Ember.Freezable and frozenCopy.
@@ -5974,7 +5993,7 @@ Requires set to be passed in three or four arguments.
 11787 [DEPRECATION] Deprecate slash for a namespace in the {{render}} helper.
 11798 [DEPRECATION] Deprecate Function#observesBefore.
 11812 [DEPRECATION] Add deprecation messages when using Ember.get / Ember.set in a certain ways."
-454,"Changelog
+457,"Changelog
 
 #11777 [CLEANUP] Remove context switching form of {{#each model}}{{/each}}, use {{#each model as |item|}}{{/each}} instead.
 #11484 [CLEANUP] Remove Ember.ArrayController support, use ember-legacy-controllers addon for support until 2.4.
@@ -6047,7 +6066,7 @@ Requires set to be passed in three or four arguments.
 11807 [CLEANUP] Remove deprecated Ember.Handlebars.get.
 11808 [CLEANUP] Remove deprecated Binding#oneWay.
 11809 [CLEANUP] Remove deprecated Map#remove."
-455,"Changelog
+458,"Changelog
 
 #11651 [BUGFIX] Ensure child views of non-dirty components get the correct parentView when rerendered.
 #11662 [BUGFIX] Prevent ArrayController deprecation on generated controllers.
@@ -6060,7 +6079,7 @@ Requires set to be passed in three or four arguments.
 11655 [BUGFIX] Fix issue with blockless link-to with only query params.
 11664 [BUGFIX] Ensure Route actions can be unit tested.
 11667 [BUGFIX] Fix memory leak in rendering engine."
-456,"Changelog
+459,"Changelog
 
 #11213 [CLEANUP] Remove chaining in Observable.set
 #11438 [CLEANUP] Remove CP semantics
@@ -6121,7 +6140,7 @@ Requires set to be passed in three or four arguments.
 11710 Add repository field to package.json
 11700 [CLEANUP] Removes Enumerable.findProperty.
 11707 [CLEANUP] Remove Enumerable.everyBy."
-457,"Changelog
+460,"Changelog
 
 #11510 [DEPRECATION] Deprecate Ember.Object.createWithMixins.
 #11512 [DEPRECATION] Deprecate Ember.oneWay in favor of Ember.computed.oneWay.
@@ -6156,14 +6175,14 @@ always assign handlers to props, even if the case appears strange
 for exceptions input.form, input.list, button.type always use elem.setAttribute
 for form.action always escape
 always assign handlers to props, even if the case appears strange"
-458,"Changelog
+461,"Changelog
 
 #11461 Remove {{each}} without key= warning. Deprecates @guid and @item in favor of the new default @identity.
 #11495 [PERFORMANCE] Remove debug statements from production builds.
 ","Changelog
 11461 Remove {{each}} without key= warning. Deprecates @guid and @item in favor of the new default @identity.
 11495 [PERFORMANCE] Remove debug statements from production builds."
-459,"Changelog
+462,"Changelog
 
 #11445 [BUGFIX] Allow recomputation for Ember.Helper with arguments.
 #11317 [BUGFIX] Ensure handleURL called after setURL in visit helper.
@@ -6176,7 +6195,7 @@ always assign handlers to props, even if the case appears strange"
 11464 [DEPRECATION] Deprecate Ember.immediateObserver.
 11476 [DEPRECATION] Deprecate Ember.ArrayController.
 11478 [DEPRECATION] Deprecate Ember.RenderBuffer."
-460,"CHANGELOG
+463,"CHANGELOG
 
 #11270 [BUGFIX] Ensure view registry is propagated to components.
 #11273 [BUGFIX] Downgrade Ember.Service without proper inheritance to a deprecation (instead of an assertion).
@@ -6293,7 +6312,7 @@ always assign handlers to props, even if the case appears strange"
 11028 Add positional parameter support to components.
 11084 Enable {{yield to=""inverse""}} in components.
 11141 Implement angle-bracket components."
-461,"Changelog
+464,"Changelog
 
 11201 [BUGFIX] Fix currentURL test helper.
 11205 [BUGFIX] Fix usage of Ember.get with an empty string.
@@ -6308,7 +6327,7 @@ always assign handlers to props, even if the case appears strange"
 11289 [BUGFIX] Ensure instanceInitializers are ran before routing begins.
 11304 [BUGFIX] Fix issue with deprecated element space helpers returning attributes with spaces.
 11303 [BUGFIX] Ensure rootURL is preserved when using AutoLocation."
-462,"CHANGLOG
+465,"CHANGLOG
 
 #3852 [BREAKING BUGFIX] Do not assume null Ember.get targets always refer to a global
 #10501 Implement Glimmer Engine.
@@ -6329,7 +6348,7 @@ always assign handlers to props, even if the case appears strange"
 11028 Add positional parameter support to components.
 11084 Enable {{yield to=""inverse""}} in components.
 11141 Implement angle-bracket components."
-463,"CHANGELOG
+466,"CHANGELOG
 
 #10874 Include all files in jspm package.
 #10876 [BUGFIX] Make the {{component}} helper deal with dynamically set falsey values.
@@ -6382,7 +6401,7 @@ always assign handlers to props, even if the case appears strange"
 10731 [FEATURE] Enable new-computed-syntax feature.  See emberjs/rfcs#11 for more details.
 10731 [FEATURE] Enable ember-application-instance-initializers feature.
 10731 [FEATURE] Enable ember-application-initializer-context feature."
-464,"Changelog
+467,"Changelog
 
 #10795 - [BUGFIX] Fix regression triggered by CollectionView instances with attributeBindings.
 #10805 - [BUGFIX] Correctly update URL after browser popstate.
@@ -6397,7 +6416,7 @@ always assign handlers to props, even if the case appears strange"
 10813 - [BUGFIX] Ensure options.inverse can be called in an Ember.Handlebars compat mode helper.
 10815 - [BUGFIX] Fix invalid assertion for {{each foos as |foo|}} when foos is falsey.
 10822 - [BUGFIX] Allow {{render}} helper to give template to its view."
-465,"Changelog
+468,"Changelog
 
 #3852 [BREAKING BUGFIX] Do not assume null Ember.get targets always refer to a global
 #10200 Add 'autocomplete' to Ember.Select view
@@ -6438,7 +6457,7 @@ always assign handlers to props, even if the case appears strange"
 10731 [FEATURE] Enable new-computed-syntax feature.  See emberjs/rfcs#11 for more details.
 10731 [FEATURE] Enable ember-application-instance-initializers feature.
 10731 [FEATURE] Enable ember-application-initializer-context feature."
-466,"Changelog
+469,"Changelog
 
 #10736 [BUGFIX] Fix issue with Query Params when using Ember.ObjectController (regression from ObjectController deprecation).
 #10726 / router.js#ed45bc [BUGFIX] Fix issue with nested {{link-to}} active and transition classes getting out of sync.
@@ -6555,12 +6574,12 @@ always assign handlers to props, even if the case appears strange"
 10350 Make meta.cache & meta.cacheMeta lazy @ebryn
 10353 Avoid creating context bindings for collection views @mmun
 10093 [FEATURE] Implement {{component}} helper @lukemelia"
-467,"CHANGELOG
+470,"CHANGELOG
 
 #10556 [BUGFIX] Deprecate {{link-to}} unwrapping a controllers model.
 ","CHANGELOG
 10556 [BUGFIX] Deprecate {{link-to}} unwrapping a controllers model."
-468,"Changelog
+471,"Changelog
 
 #10528 [BUGFIX] Ensure custom Router can be passed to Ember.Application.
 #10530 [BUGFIX] Add assertion when calling this.$() in a tagless view/component.
@@ -6575,7 +6594,7 @@ always assign handlers to props, even if the case appears strange"
 10544 / #10550 [BUGFIX] Ensure that {{input}} can be updated multiple times, and does not loose cursor position.
 10553 [BUGFIX] Fix major regression in the non-block form of {{link-to}} that caused an application crash after a period of time.
 10554 [BUGFIX] Remove access to this in HTMLBars helpers. To fix any usages of this in a helper, you can access the view from env.data.view instead."
-469,"Changelog
+472,"Changelog
 
 #10475 [BUGFIX] Ensure wrapped errors are logged properly.
 #10489 [BUGFIX] Fix an issue with bindings inside of a yielded template when the yield helper is nested inside of another view
@@ -6588,7 +6607,7 @@ always assign handlers to props, even if the case appears strange"
 10493 [BUGFIX] Fix nested simple bindings inside of nested yields within views.
 10527 [BUGFIX] Ensure that Component context is not forced to parent context.
 10525 [BUGFIX] Fix issue causing cursor position to be lost while entering into an {{input}} / Ember.TextField."
-470,"Changelog
+473,"Changelog
 
 #10372 / #10431 / #10439 / #10442 Decouple route transition from view creation.
 #10436 [BUGFIX] Ensure instrument.{subscribe,unsubscribe,reset} aren’t accidentally clobbered.
@@ -6603,7 +6622,7 @@ always assign handlers to props, even if the case appears strange"
 10398 [BUGFIX] undefined and null values in bind-attr shoud remove attributes.
 10413 Update to use inclusive morph-range (via HTMLBars v0.11.1).
 10464 Add helpful assertion if templates are compiled with a different template compiler revision."
-471,"Changelog
+474,"Changelog
 
 #10160 [FEATURE] Add index as an optional parameter to #each blocks @tim-evans
 #10186 Port attributeBindings to AttrNode views @mixonic
@@ -6658,7 +6677,7 @@ always assign handlers to props, even if the case appears strange"
 10345 Update to QUnit 1.17.1. @rwjblue
 10350 Make meta.cache & meta.cacheMeta lazy @ebryn
 10353 Avoid creating context bindings for collection views @mmun"
-472,"Changelog
+475,"Changelog
 
 [BUGFIX] Ensure that property case is normalized.
 [BUGFIX] Prevent an error from being thrown if the errorThrown property is a string when catching unhandled promise rejections.
@@ -6801,7 +6820,7 @@ Allow all rejection types to be handled by default RSVP error handler.
 Deprecate setting ContainerView#childViews.
 [FEATURE] ember-htmlbars - Enable the HTMLBars rendering engine.
 [FEATURE] ember-htmlbars-block-params - Enable block params feature for HTMLBars."
-473,"Changelog:
+476,"Changelog:
 - [BUGFIX] Fix usage of emptyView with {{#each}} helper.
 - Assert if an attribute set statically and via bind-attr.  For example:
   <div class=""foo"" {{bind-attr class=""bar""}}></div> will now trigger an assertion (instead of
@@ -6844,7 +6863,7 @@ will now trigger an assertion (instead of
 - [BUGFIX] Fix Handlebars compat mode registerHelper interop with makeViewHelper.
 - [BUGFIX] Ensure that mergedProperties are properly merged when all properties are not present.
 - Add options argument to pass url to Ember.deprecate."
-474,"Changelog
+477,"Changelog
 
 Deprecate {{bind}} helper.
 Pass array to Ember.computed.filter callback
@@ -6859,7 +6878,7 @@ Pass array to Ember.computed.filter callback
 Remove Handlebars from dependencies.
 Update HTMLBars to 0.7.1.
 Fix error when parsing templates with invalid end tags."
-475,"Changelog
+478,"Changelog
 
 [BUGFIX] Allow makeBoundHelper to be a sub-expression.
 [BUGFIX] Allow compat makeBoundHelpers to be sub-expressions.
@@ -6890,14 +6909,14 @@ Add ember-template-compiler package.
 Rename Ember.HTMLBars.registerASTPlugin to Ember.HTMLBars.registerPlugin.
 Export ember-template-compiler.js.
 Escape href, src, and background attributes for a, link, img, and iframe elements."
-476,"Changelog
+479,"Changelog
 
 Allow {{view}} helper to proper handle view instances.
 Escape href, src, and background attributes for a, link, img, and iframe elements.
 ","Changelog
 Allow {{view}} helper to proper handle view instances.
 Escape href, src, and background attributes for a, link, img, and iframe elements."
-477,"Changelog
+480,"Changelog
 
 Move debugging file output from ember.js to ember.debug.js.
 Remove templateData property from views.
@@ -6920,7 +6939,7 @@ Allow all rejection types to be handled by default RSVP error handler.
 Deprecate setting ContainerView#childViews.
 [FEATURE] ember-htmlbars - Enable the HTMLBars rendering engine.
 [FEATURE] ember-htmlbars-block-params - Enable block params feature for HTMLBars."
-478,"Release Blog Post
+481,"Release Blog Post
 Changelog
 
 Add deprecation for quoteless outlet names ({{outlet main}} should be {{outlet 'main'}}).
@@ -6994,7 +7013,7 @@ it would silently continue.  Now, an assertion would be triggered.
 - [PERF] Speedup watchKey by preventing for in related deopt.
 - [FEATURE] ember-routing-fire-activate-deactivate-events.
 - [FEATURE] ember-testing-pause-test."
-479,"Changelog
+482,"Changelog
 
 Add deprecation for quoteless outlet names ({{outlet main}} should be {{outlet 'main'}}).
 [BUGFIX] Update the Ember.Map#forEach callback to include the map being iterated over.
@@ -7007,7 +7026,7 @@ Add deprecation for quoteless outlet names ({{outlet main}} should be {{outlet '
 [BUGFIX] Ensure that tagless container views are rendered properly.
 [PERF] Ember.View#_outlets is no longer observable.
 [PERF] Avoid extending a view for every {{each}}."
-480,"
+483,"
 Ensure initializers have a name property (provides a helpful assertion if missing).
 [BUILD TOOLING] Enable easier cross-browser testing by publishing builds and tests to S3.
 Enable Ember.run.join to return a value even if within an existing run loop.
@@ -7035,7 +7054,7 @@ Ensure that component actions that are subscribed to, trigger an assertion when 
 module
 Clearly, component-a has subscribed to some-other-component's action. Previously, if component-a did not handle the action it would silently continue.  Now, an assertion would be triggered.
 - [PERF] Speedup Mixin creation."
-481,"
+484,"
 [BREAKING] Require Handlebars 2.0. See blog post for details.
 Allow all rejection types in promises to be handled.
 Mandatory setter checks for configurable, and does not clobber non-configurable properties.
@@ -7066,7 +7085,7 @@ Prevent extra method.toString checks when setting _super.
 [PERF] Speedup watchKey by preventing for in related deopt.
 [FEATURE] ember-routing-fire-activate-deactivate-events.
 [FEATURE] ember-testing-pause-test."
-482,"
+485,"
 [BUGFIX] Make sure that {{view}} can accept a Ember.View instance.
 [BUGFIX] Throw an assertion if classNameBindings are specified on a tag-less view.
 [BUGFIX] Setting an attributeBinding for class attribute triggers assertion.
@@ -7079,7 +7098,7 @@ Prevent extra method.toString checks when setting _super.
 [BUGFIX] Fix htmlSafe to allow non-strings in unescaped code.
 [BUGFIX] Add support for null prototype object to mandatory setter code. Prevents errors when operating on Ember Data meta objects.
 [BUGFIX] Fix an issue with select/each that causes the last item rendered to be selected."
-483,"Blog post
+486,"Blog post
 Changelog
 
 [BUGFIX] Ensure published builds do not use define or require internally.
@@ -7202,7 +7221,7 @@ Rewrite Ember.Map to be faster and closer to ES6 implementation:
 [BUGFIX] Make GUID_KEY = intern(GUID_KEY) actually work on ES3.
 [BUGFIX] Ensure nested routes can inherit model from parent.
 Remove metamorph in favor of morph package (removes the need for "
-484,"
+487,"
 [BUGFIX] Allow for bound property {{input}} type.
 Fix minification of assets.
 Ensure ember-testing is not included in build output.
@@ -7211,7 +7230,7 @@ Ensure ember-testing is not included in build output.
 Fix minification of assets.
 Ensure ember-testing is not included in build output.
 [PERF] Do not use defineProperty on each View instance."
-485,"Changelog
+488,"Changelog
 
 [BUGFIX] Ensure Ember.Map works properly with falsey values.
 [BUGFIX] Make Ember.Namespace#toString ember-cli aware.
@@ -7220,7 +7239,7 @@ Ensure ember-testing is not included in build output.
 [BUGFIX] Ensure Ember.Map works properly with falsey values.
 [BUGFIX] Make Ember.Namespace#toString ember-cli aware.
 [PERF] Avoid using for x in y in Ember.RenderBuffer.prototype.add."
-486,"Ember 1.8.0-beta.4 (October, 5, 2014)
+489,"Ember 1.8.0-beta.4 (October, 5, 2014)
 
 [BUGFIX] Enable setProperties to work on Object.create(null) objects.
 [PERF] Update RSVP to 3.0.14 (faster instrumentation).
@@ -7233,7 +7252,7 @@ Ensure ember-testing is not included in build output.
 [BUGFIX] Add SVG support for metal-views.
 [BUGFIX] Allow camelCase attributes in DOM elements.
 [BUGFIX] Update backburner to latest."
-487,"Ember 1.8.0-beta.3 (September, 27, 2014)
+490,"Ember 1.8.0-beta.3 (September, 27, 2014)
 
 [BUGFIX] Use contextualElements to properly handle omitted optional start tags.
 [BUGFIX] Ensure that Route.prototype.activate is not retriggered when the model for the current route changes.
@@ -7270,7 +7289,7 @@ Rewrite Ember.Map to be faster and closer to ES6 implementation:
 [ES6] Remove length in-favor of size.
 [ES6] Throw if constructor is invoked without new
 [ES6] Make inheritance work correctly"
-488,"Ember 1.8.0-beta.2 (September, 20, 2014)
+491,"Ember 1.8.0-beta.2 (September, 20, 2014)
 
 [BUGFIX] Allow for bound property {{input}} type.
 [BUGFIX] Ensure pushUnique targetQueue is cleared by flush.

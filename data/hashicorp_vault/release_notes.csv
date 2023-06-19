@@ -1,5 +1,431 @@
-Index,Release Note,Release Note With Abstraction
-1,"1.13.2
+Index,Release Note,Release Note Abstract
+1,"1.14.0-rc1
+June 08, 2023
+CHANGES:
+
+auth/alicloud: Updated plugin from v0.14.0 to v0.15.0 [GH-20758]
+auth/azure: Updated plugin from v0.13.0 to v0.15.0 [GH-20816]
+auth/centrify: Updated plugin from v0.14.0 to v0.15.1 [GH-20745]
+auth/gcp: Updated plugin from v0.15.0 to v0.16.0 [GH-20725]
+auth/jwt: Updated plugin from v0.15.0 to v0.16.0 [GH-20799]
+auth/kubernetes: Update plugin to v0.16.0 [GH-20802]
+core: Bump Go version to 1.20.4.
+core: Remove feature toggle for SSCTs, i.e. the env var VAULT_DISABLE_SERVER_SIDE_CONSISTENT_TOKENS. [GH-20834]
+core: Revert #19676 (VAULT_GRPC_MIN_CONNECT_TIMEOUT env var) as we decided it was unnecessary. [GH-20826]
+database/couchbase: Updated plugin from v0.9.0 to v0.9.2 [GH-20764]
+database/redis-elasticache: Updated plugin from v0.2.0 to v0.2.1 [GH-20751]
+replication (enterprise): Add a new parameter for the update-primary API call
+that allows for setting of the primary cluster addresses directly, instead of
+via a token.
+secrets/ad: Updated plugin from v0.10.1-0.20230329210417-0b2cdb26cf5d to v0.16.0 [GH-20750]
+secrets/alicloud: Updated plugin from v0.5.4-beta1.0.20230330124709-3fcfc5914a22 to v0.15.0 [GH-20787]
+secrets/aure: Updated plugin from v0.15.0 to v0.16.0 [GH-20777]
+secrets/database/mongodbatlas: Updated plugin from v0.9.0 to v0.10.0 [GH-20882]
+secrets/database/snowflake: Updated plugin from v0.7.0 to v0.8.0 [GH-20807]
+secrets/gcp: Updated plugin from v0.15.0 to v0.16.0 [GH-20818]
+secrets/keymgmt: Updated plugin to v0.9.1
+secrets/kubernetes: Update plugin to v0.5.0 [GH-20802]
+secrets/mongodbatlas: Updated plugin from v0.9.1 to v0.10.0 [GH-20742]
+secrets/pki: Warning when issuing leafs from CSRs with basic constraints. In the future, issuance of non-CA leaf certs from CSRs with asserted IsCA Basic Constraints will be prohibited. [GH-20654]
+
+FEATURES:
+
+AWS Static Roles: The AWS Secrets Engine can manage static roles configured by users. [GH-20536]
+Automated License Utilization Reporting: Added automated license
+utilization reporting, which sends minimal product-license metering
+data
+to HashiCorp without requiring you to manually collect and report them.
+MongoDB Atlas Database Secrets: Adds support for generating X.509 certificates on dynamic roles for user authentication [GH-20882]
+NEW PKI Workflow in UI: Completes generally available rollout of new PKI UI that provides smoother mount configuration and a more guided user experience [GH-pki-ui-improvements]
+Vault PKI ACME Server: Support for the ACME certificate lifecycle management protocol has been added to the Vault PKI Plugin. This allows standard ACME clients, such as the EFF's certbot and the CNCF's k8s cert-manager, to request certificates from a Vault server with no knowledge of Vault APIs or authentication mechanisms. For public-facing Vault instances, we recommend requiring External Account Bindings (EAB) to limit the ability to request certificates to only authenticated clients. [GH-20752]
+Vault Proxy: Introduced Vault Proxy, a new subcommand of the Vault binary that can be invoked using vault proxy -config=config.hcl. It currently has the same feature set as Vault Agent's API proxy, but the two may diverge in the future. We plan to deprecate the API proxy functionality of Vault Agent in a future release. [GH-20548]
+cli: Add 'agent generate-config' sub-command [GH-20530]
+Sidebar Navigation in UI: A new sidebar navigation panel has been added in the UI to replace the top navigation bar.
+
+IMPROVEMENTS:
+
+activitylog: EntityRecord protobufs now contain a ClientType field for
+distinguishing client sources. [GH-20626]
+agent: Add integration tests for agent running in process supervisor mode [GH-20741]
+agent: Add logic to validate env_template entries in configuration [GH-20569]
+agent: initial implementation of a process runner for injecting secrets via environment variables via vault agent [GH-20628]
+api: GET ... /sys/internal/counters/activity?current_billing_period=true now
+results in a response which contains the full billing period [GH-20694]
+audit: forwarded requests can now contain host metadata on the node it was sent 'from' or a flag to indicate that it was forwarded.
+auth/kerberos: Enable plugin multiplexing
+auth/kerberos: Upgrade plugin dependencies [GH-20771]
+command/server (enterprise): -dev-three-node now creates perf standbys instead of regular standbys. [GH-20629]
+command/server: Add support for dumping pprof files to the filesystem via SIGUSR2 when
+VAULT_PPROF_WRITE_TO_FILE=true is set on the server. [GH-20609]
+core (enterprise): license updates trigger a reload of reporting and the activity log [GH-20680]
+core (enterprise): support reloading configuration for automated reporting via SIGHUP [GH-20680]
+core, secrets/pki, audit: Update dependency go-jose to v3 due to v2 deprecation. [GH-20559]
+core: Add possibility to decode a generated encoded root token via the rest API [GH-20595]
+core: include namespace path in granting_policies block of audit log
+core: include reason for ErrReadOnly on PBPWF writing failures
+core: report intermediate error messages during request forwarding [GH-20643]
+database/elasticsearch: Upgrade plugin dependencies [GH-20767]
+database/redis: Upgrade plugin dependencies [GH-20763]
+sdk/framework: Fix non-deterministic ordering of 'required' fields in OpenAPI spec [GH-20881]
+secrets/consul: Improve error message when ACL bootstrapping fails. [GH-20891]
+secrets/gcpkms: Enable plugin multiplexing
+secrets/gcpkms: Upgrade plugin dependencies [GH-20784]
+secrets/pki: add subject key identifier to read key response [GH-20642]
+secrets/transit: Respond to writes with updated key policy, cache configuration. [GH-20652]
+secrets/transit: Support BYOK-encrypted export of keys to securely allow synchronizing specific keys and version across clusters. [GH-20736]
+ui: Add filtering by auth type and auth name to the Authentication Method list view. [GH-20747]
+ui: Update Web CLI with examples and a new kv-get command for reading kv v2 data and metadata [GH-20590]
+
+BUG FIXES:
+
+agent: Fix bug with 'cache' stanza validation [GH-20934]
+api: Properly Handle nil identity_policies in Secret Data [GH-20636]
+auth/ldap: Set default value for max_page_size properly [GH-20453]
+core (enterprise): Fix intermittent issue with token entries sometimes not being found when using a newly created token in a request to a secondary, even when SSCT new_token forwarding is set. When this occurred, this would result in the following error to the client: error performing token check: no lease entry found for token that ought to have one, possible eventual consistency issue.
+core (enterprise): Fix log shipper buffer size overflow issue for 32 bit architecture.
+core (enterprise): Fix logshipper buffer size to default to DefaultBufferSize only when reported system memory is zero.
+core (enterprise): Fix panic when using invalid accessor for control-group request
+core (enterprise): Fix perf standby WAL streaming silently failures when replication setup happens at a bad time.
+core (enterprise): Fix read on perf standbys failing with 412 after leadership change, unseal, restores or restarts when no writes occur
+core (enterprise): Remove MFA Enforcment configuration for namespace when deleting namespace
+core/ssct (enterprise): Fixed race condition where a newly promoted DR may revert sscGenCounter
+resulting in 412 errors.
+core: Fix Forwarded Writer construction to correctly find active nodes, allowing PKI cross-cluster functionality to succeed on existing mounts.
+core: Fix writes to readonly storage on performance standbys when user lockout feature is enabled. [GH-20783]
+license (enterprise): Fix bug where license would update even if the license didn't change.
+replication (enterprise): Fix a caching issue when replicating filtered data to
+a performance secondary. This resulted in the data being set to nil in the cache
+and a ""invalid value"" error being returned from the API.
+replication (enterprise): Fix a race condition with invalid tokens during WAL streaming that was causing Secondary clusters to be unable to connect to a Primary.
+replication (enterprise): Fix bug where reloading external plugin on a secondary would
+break replication.
+replication (enterprise): Fix replication status for Primary clusters showing its primary cluster's information (in case of DR) in secondaries field when known_secondaries field is nil
+replication (enterprise): fix bug where secondary grpc connections would timeout when connecting to a primary host that no longer exists.
+secrets/pki: Support setting both maintain_stored_certificate_counts=false and publish_stored_certificate_count_metrics=false explicitly in tidy config. [GH-20664]
+secrets/transform (enterprise): Address SQL connection leak when cleaning expired tokens
+secrets/transform (enterprise): Fix a caching bug affecting secondary nodes after a tokenization key rotation
+secrets/transform (enterprise): Fix persistence problem with rotated tokenization key versions
+secrets/transform: Added importing of keys and key versions into the Transform secrets engine using the command 'vault transform import' and 'vault transform import-version'. [GH-20668]
+secrets/transit: Fix export of HMAC-only key, correctly exporting the key used for sign operations. For consumers of the previously incorrect key, use the plaintext export to retrieve these incorrect keys and import them as new versions.
+secrets/transit: Fix bug related to shorter dedicated HMAC key sizing.
+sdk/helper/keysutil: New HMAC type policies will have HMACKey equal to Key and be copied over on import. [GH-20864]
+ui: Fixes issue unsealing cluster for seal types other than shamir [GH-20897]
+ui: fixes auto_rotate_period ttl input for transit keys [GH-20731]
+ui: fixes key_bits and signature_bits reverting to default values when editing a pki role [GH-20907]
+","1.14.0-rc1
+June 08, 2023
+CHANGES:
+auth/alicloud: Updated plugin from v0.14.0 to v0.15.0 [GH-20758]
+auth/azure: Updated plugin from v0.13.0 to v0.15.0 [GH-20816]
+auth/centrify: Updated plugin from v0.14.0 to v0.15.1 [GH-20745]
+auth/gcp: Updated plugin from v0.15.0 to v0.16.0 [GH-20725]
+auth/jwt: Updated plugin from v0.15.0 to v0.16.0 [GH-20799]
+auth/kubernetes: Update plugin to v0.16.0 [GH-20802]
+core: Bump Go version to 1.20.4.
+core: Remove feature toggle for SSCTs, i.e. the env var VAULT_DISABLE_SERVER_SIDE_CONSISTENT_TOKENS. [GH-20834]
+core: Revert #19676 (VAULT_GRPC_MIN_CONNECT_TIMEOUT env var) as we decided it was unnecessary. [GH-20826]
+database/couchbase: Updated plugin from v0.9.0 to v0.9.2 [GH-20764]
+database/redis-elasticache: Updated plugin from v0.2.0 to v0.2.1 [GH-20751]
+replication (enterprise): Add a new parameter for the update-primary API call
+that allows for setting of the primary cluster addresses directly, instead of
+via a token.
+secrets/ad: Updated plugin from v0.10.1-0.20230329210417-0b2cdb26cf5d to v0.16.0 [GH-20750]
+secrets/alicloud: Updated plugin from v0.5.4-beta1.0.20230330124709-3fcfc5914a22 to v0.15.0 [GH-20787]
+secrets/aure: Updated plugin from v0.15.0 to v0.16.0 [GH-20777]
+secrets/database/mongodbatlas: Updated plugin from v0.9.0 to v0.10.0 [GH-20882]
+secrets/database/snowflake: Updated plugin from v0.7.0 to v0.8.0 [GH-20807]
+secrets/gcp: Updated plugin from v0.15.0 to v0.16.0 [GH-20818]
+secrets/keymgmt: Updated plugin to v0.9.1
+secrets/kubernetes: Update plugin to v0.5.0 [GH-20802]
+secrets/mongodbatlas: Updated plugin from v0.9.1 to v0.10.0 [GH-20742]
+secrets/pki: Warning when issuing leafs from CSRs with basic constraints. In the future, issuance of non-CA leaf certs from CSRs with asserted IsCA Basic Constraints will be prohibited. [GH-20654]
+FEATURES:
+AWS Static Roles: The AWS Secrets Engine can manage static roles configured by users. [GH-20536]
+Automated License Utilization Reporting: Added automated license
+utilization reporting, which sends minimal product-license metering
+data
+to HashiCorp without requiring you to manually collect and report them.
+MongoDB Atlas Database Secrets: Adds support for generating X.509 certificates on dynamic roles for user authentication [GH-20882]
+NEW PKI Workflow in UI: Completes generally available rollout of new PKI UI that provides smoother mount configuration and a more guided user experience [GH-pki-ui-improvements]
+Vault PKI ACME Server: Support for the ACME certificate lifecycle management protocol has been added to the Vault PKI Plugin. This allows standard ACME clients, such as the EFF's certbot and the CNCF's k8s cert-manager, to request certificates from a Vault server with no knowledge of Vault APIs or authentication mechanisms. For public-facing Vault instances, we recommend requiring External Account Bindings (EAB) to limit the ability to request certificates to only authenticated clients. [GH-20752]
+Vault Proxy: Introduced Vault Proxy, a new subcommand of the Vault binary that can be invoked using vault proxy -config=config.hcl. It currently has the same feature set as Vault Agent's API proxy, but the two may diverge in the future. We plan to deprecate the API proxy functionality of Vault Agent in a future release. [GH-20548]
+cli: Add 'agent generate-config' sub-command [GH-20530]
+Sidebar Navigation in UI: A new sidebar navigation panel has been added in the UI to replace the top navigation bar.
+IMPROVEMENTS:
+activitylog: EntityRecord protobufs now contain a ClientType field for
+distinguishing client sources. [GH-20626]
+agent: Add integration tests for agent running in process supervisor mode [GH-20741]
+agent: Add logic to validate env_template entries in configuration [GH-20569]
+agent: initial implementation of a process runner for injecting secrets via environment variables via vault agent [GH-20628]
+api: GET ... /sys/internal/counters/activity?current_billing_period=true now
+results in a response which contains the full billing period [GH-20694]
+audit: forwarded requests can now contain host metadata on the node it was sent 'from' or a flag to indicate that it was forwarded.
+auth/kerberos: Enable plugin multiplexing
+auth/kerberos: Upgrade plugin dependencies [GH-20771]
+command/server (enterprise): -dev-three-node now creates perf standbys instead of regular standbys. [GH-20629]
+command/server: Add support for dumping pprof files to the filesystem via SIGUSR2 when
+VAULT_PPROF_WRITE_TO_FILE=true is set on the server. [GH-20609]
+core (enterprise): license updates trigger a reload of reporting and the activity log [GH-20680]
+core (enterprise): support reloading configuration for automated reporting via SIGHUP [GH-20680]
+core, secrets/pki, audit: Update dependency go-jose to v3 due to v2 deprecation. [GH-20559]
+core: Add possibility to decode a generated encoded root token via the rest API [GH-20595]
+core: include namespace path in granting_policies block of audit log
+core: include reason for ErrReadOnly on PBPWF writing failures
+core: report intermediate error messages during request forwarding [GH-20643]
+database/elasticsearch: Upgrade plugin dependencies [GH-20767]
+database/redis: Upgrade plugin dependencies [GH-20763]
+sdk/framework: Fix non-deterministic ordering of 'required' fields in OpenAPI spec [GH-20881]
+secrets/consul: Improve error message when ACL bootstrapping fails. [GH-20891]
+secrets/gcpkms: Enable plugin multiplexing
+secrets/gcpkms: Upgrade plugin dependencies [GH-20784]
+secrets/pki: add subject key identifier to read key response [GH-20642]
+secrets/transit: Respond to writes with updated key policy, cache configuration. [GH-20652]
+secrets/transit: Support BYOK-encrypted export of keys to securely allow synchronizing specific keys and version across clusters. [GH-20736]
+ui: Add filtering by auth type and auth name to the Authentication Method list view. [GH-20747]
+ui: Update Web CLI with examples and a new kv-get command for reading kv v2 data and metadata [GH-20590]
+BUG FIXES:
+agent: Fix bug with 'cache' stanza validation [GH-20934]
+api: Properly Handle nil identity_policies in Secret Data [GH-20636]
+auth/ldap: Set default value for max_page_size properly [GH-20453]
+core (enterprise): Fix intermittent issue with token entries sometimes not being found when using a newly created token in a request to a secondary, even when SSCT new_token forwarding is set. When this occurred, this would result in the following error to the client: error performing token check: no lease entry found for token that ought to have one, possible eventual consistency issue.
+core (enterprise): Fix log shipper buffer size overflow issue for 32 bit architecture.
+core (enterprise): Fix logshipper buffer size to default to DefaultBufferSize only when reported system memory is zero.
+core (enterprise): Fix panic when using invalid accessor for control-group request
+core (enterprise): Fix perf standby WAL streaming silently failures when replication setup happens at a bad time.
+core (enterprise): Fix read on perf standbys failing with 412 after leadership change, unseal, restores or restarts when no writes occur
+core (enterprise): Remove MFA Enforcment configuration for namespace when deleting namespace
+core/ssct (enterprise): Fixed race condition where a newly promoted DR may revert sscGenCounter
+resulting in 412 errors.
+core: Fix Forwarded Writer construction to correctly find active nodes, allowing PKI cross-cluster functionality to succeed on existing mounts.
+core: Fix writes to readonly storage on performance standbys when user lockout feature is enabled. [GH-20783]
+license (enterprise): Fix bug where license would update even if the license didn't change.
+replication (enterprise): Fix a caching issue when replicating filtered data to
+a performance secondary. This resulted in the data being set to nil in the cache
+and a ""invalid value"" error being returned from the API.
+replication (enterprise): Fix a race condition with invalid tokens during WAL streaming that was causing Secondary clusters to be unable to connect to a Primary.
+replication (enterprise): Fix bug where reloading external plugin on a secondary would
+break replication.
+replication (enterprise): Fix replication status for Primary clusters showing its primary cluster's information (in case of DR) in secondaries field when known_secondaries field is nil
+replication (enterprise): fix bug where secondary grpc connections would timeout when connecting to a primary host that no longer exists.
+secrets/pki: Support setting both maintain_stored_certificate_counts=false and publish_stored_certificate_count_metrics=false explicitly in tidy config. [GH-20664]
+secrets/transform (enterprise): Address SQL connection leak when cleaning expired tokens
+secrets/transform (enterprise): Fix a caching bug affecting secondary nodes after a tokenization key rotation
+secrets/transform (enterprise): Fix persistence problem with rotated tokenization key versions
+secrets/transform: Added importing of keys and key versions into the Transform secrets engine using the command 'vault transform import' and 'vault transform import-version'. [GH-20668]
+secrets/transit: Fix export of HMAC-only key, correctly exporting the key used for sign operations. For consumers of the previously incorrect key, use the plaintext export to retrieve these incorrect keys and import them as new versions.
+secrets/transit: Fix bug related to shorter dedicated HMAC key sizing.
+sdk/helper/keysutil: New HMAC type policies will have HMACKey equal to Key and be copied over on import. [GH-20864]
+ui: Fixes issue unsealing cluster for seal types other than shamir [GH-20897]
+ui: fixes auto_rotate_period ttl input for transit keys [GH-20731]
+ui: fixes key_bits and signature_bits reverting to default values when editing a pki role [GH-20907]"
+2,"1.13.3
+June 08, 2023
+CHANGES:
+
+core: Bump Go version to 1.20.4.
+core: Revert #19676 (VAULT_GRPC_MIN_CONNECT_TIMEOUT env var) as we decided it was unnecessary. [GH-20826]
+replication (enterprise): Add a new parameter for the update-primary API call
+that allows for setting of the primary cluster addresses directly, instead of
+via a token.
+storage/aerospike: Aerospike storage shouldn't be used on 32-bit architectures and is now unsupported on them. [GH-20825]
+
+IMPROVEMENTS:
+
+Add debug symbols back to builds to fix Dynatrace support [GH-20519]
+audit: add a mount_point field to audit requests and response entries [GH-20411]
+autopilot: Update version to v0.2.0 to add better support for respecting min quorum [GH-19472]
+command/server: Add support for dumping pprof files to the filesystem via SIGUSR2 when 
+VAULT_PPROF_WRITE_TO_FILE=true is set on the server. [GH-20609]
+core: Add possibility to decode a generated encoded root token via the rest API [GH-20595]
+core: include namespace path in granting_policies block of audit log
+core: report intermediate error messages during request forwarding [GH-20643]
+openapi: Fix generated types for duration strings [GH-20841]
+sdk/framework: Fix non-deterministic ordering of 'required' fields in OpenAPI spec [GH-20881]
+secrets/pki: add subject key identifier to read key response [GH-20642]
+
+BUG FIXES:
+
+api: Properly Handle nil identity_policies in Secret Data [GH-20636]
+auth/ldap: Set default value for max_page_size properly [GH-20453]
+cli: CLI should take days as a unit of time for ttl like flags [GH-20477]
+cli: disable printing flags warnings messages for the ssh command [GH-20502]
+command/server: fixes panic in Vault server command when running in recovery mode [GH-20418]
+core (enterprise): Fix log shipper buffer size overflow issue for 32 bit architecture.
+core (enterprise): Fix logshipper buffer size to default to DefaultBufferSize only when reported system memory is zero.
+core (enterprise): Remove MFA Enforcment configuration for namespace when deleting namespace
+core/identity: Allow updates of only the custom-metadata for entity alias. [GH-20368]
+core: Fix Forwarded Writer construction to correctly find active nodes, allowing PKI cross-cluster functionality to succeed on existing mounts.
+core: Fix writes to readonly storage on performance standbys when user lockout feature is enabled. [GH-20783]
+core: prevent panic on login after namespace is deleted that had mfa enforcement [GH-20375]
+replication (enterprise): Fix a race condition with invalid tokens during WAL streaming that was causing Secondary clusters to be unable to connect to a Primary.
+replication (enterprise): fix bug where secondary grpc connections would timeout when connecting to a primary host that no longer exists.
+secrets/pki: Include per-issuer enable_aia_url_templating in issuer read endpoint. [GH-20354]
+secrets/transform (enterprise): Fix a caching bug affecting secondary nodes after a tokenization key rotation
+secrets/transform: Added importing of keys and key versions into the Transform secrets engine using the command 'vault transform import' and 'vault transform import-version'. [GH-20668]
+secrets/transit: Fix export of HMAC-only key, correctly exporting the key used for sign operations. For consumers of the previously incorrect key, use the plaintext export to retrieve these incorrect keys and import them as new versions.
+secrets/transit: Fix bug related to shorter dedicated HMAC key sizing.
+sdk/helper/keysutil: New HMAC type policies will have HMACKey equal to Key and be copied over on import. [GH-20864]
+ui: Fixes issue unsealing cluster for seal types other than shamir [GH-20897]
+ui: fixes issue creating mfa login enforcement from method enforcements tab [GH-20603]
+ui: fixes key_bits and signature_bits reverting to default values when editing a pki role [GH-20907]
+","1.13.3
+June 08, 2023
+CHANGES:
+core: Bump Go version to 1.20.4.
+core: Revert #19676 (VAULT_GRPC_MIN_CONNECT_TIMEOUT env var) as we decided it was unnecessary. [GH-20826]
+replication (enterprise): Add a new parameter for the update-primary API call
+that allows for setting of the primary cluster addresses directly, instead of
+via a token.
+storage/aerospike: Aerospike storage shouldn't be used on 32-bit architectures and is now unsupported on them. [GH-20825]
+IMPROVEMENTS:
+Add debug symbols back to builds to fix Dynatrace support [GH-20519]
+audit: add a mount_point field to audit requests and response entries [GH-20411]
+autopilot: Update version to v0.2.0 to add better support for respecting min quorum [GH-19472]
+command/server: Add support for dumping pprof files to the filesystem via SIGUSR2 when 
+VAULT_PPROF_WRITE_TO_FILE=true is set on the server. [GH-20609]
+core: Add possibility to decode a generated encoded root token via the rest API [GH-20595]
+core: include namespace path in granting_policies block of audit log
+core: report intermediate error messages during request forwarding [GH-20643]
+openapi: Fix generated types for duration strings [GH-20841]
+sdk/framework: Fix non-deterministic ordering of 'required' fields in OpenAPI spec [GH-20881]
+secrets/pki: add subject key identifier to read key response [GH-20642]
+BUG FIXES:
+api: Properly Handle nil identity_policies in Secret Data [GH-20636]
+auth/ldap: Set default value for max_page_size properly [GH-20453]
+cli: CLI should take days as a unit of time for ttl like flags [GH-20477]
+cli: disable printing flags warnings messages for the ssh command [GH-20502]
+command/server: fixes panic in Vault server command when running in recovery mode [GH-20418]
+core (enterprise): Fix log shipper buffer size overflow issue for 32 bit architecture.
+core (enterprise): Fix logshipper buffer size to default to DefaultBufferSize only when reported system memory is zero.
+core (enterprise): Remove MFA Enforcment configuration for namespace when deleting namespace
+core/identity: Allow updates of only the custom-metadata for entity alias. [GH-20368]
+core: Fix Forwarded Writer construction to correctly find active nodes, allowing PKI cross-cluster functionality to succeed on existing mounts.
+core: Fix writes to readonly storage on performance standbys when user lockout feature is enabled. [GH-20783]
+core: prevent panic on login after namespace is deleted that had mfa enforcement [GH-20375]
+replication (enterprise): Fix a race condition with invalid tokens during WAL streaming that was causing Secondary clusters to be unable to connect to a Primary.
+replication (enterprise): fix bug where secondary grpc connections would timeout when connecting to a primary host that no longer exists.
+secrets/pki: Include per-issuer enable_aia_url_templating in issuer read endpoint. [GH-20354]
+secrets/transform (enterprise): Fix a caching bug affecting secondary nodes after a tokenization key rotation
+secrets/transform: Added importing of keys and key versions into the Transform secrets engine using the command 'vault transform import' and 'vault transform import-version'. [GH-20668]
+secrets/transit: Fix export of HMAC-only key, correctly exporting the key used for sign operations. For consumers of the previously incorrect key, use the plaintext export to retrieve these incorrect keys and import them as new versions.
+secrets/transit: Fix bug related to shorter dedicated HMAC key sizing.
+sdk/helper/keysutil: New HMAC type policies will have HMACKey equal to Key and be copied over on import. [GH-20864]
+ui: Fixes issue unsealing cluster for seal types other than shamir [GH-20897]
+ui: fixes issue creating mfa login enforcement from method enforcements tab [GH-20603]
+ui: fixes key_bits and signature_bits reverting to default values when editing a pki role [GH-20907]"
+3,"1.12.7
+June 08, 2023
+CHANGES:
+
+core: Bump Go version to 1.19.9.
+core: Revert #19676 (VAULT_GRPC_MIN_CONNECT_TIMEOUT env var) as we decided it was unnecessary. [GH-20826]
+
+IMPROVEMENTS:
+
+audit: add a mount_point field to audit requests and response entries [GH-20411]
+command/server: Add support for dumping pprof files to the filesystem via SIGUSR2 when 
+VAULT_PPROF_WRITE_TO_FILE=true is set on the server. [GH-20609]
+core: include namespace path in granting_policies block of audit log
+openapi: Fix generated types for duration strings [GH-20841]
+sdk/framework: Fix non-deterministic ordering of 'required' fields in OpenAPI spec [GH-20881]
+secrets/pki: add subject key identifier to read key response [GH-20642]
+ui: update TTL picker for consistency [GH-18114]
+
+BUG FIXES:
+
+api: Properly Handle nil identity_policies in Secret Data [GH-20636]
+auth/ldap: Set default value for max_page_size properly [GH-20453]
+cli: CLI should take days as a unit of time for ttl like flags [GH-20477]
+cli: disable printing flags warnings messages for the ssh command [GH-20502]
+core (enterprise): Fix log shipper buffer size overflow issue for 32 bit architecture.
+core (enterprise): Fix logshipper buffer size to default to DefaultBufferSize only when reported system memory is zero.
+core (enterprise): Remove MFA Enforcment configuration for namespace when deleting namespace
+core: prevent panic on login after namespace is deleted that had mfa enforcement [GH-20375]
+replication (enterprise): Fix a race condition with invalid tokens during WAL streaming that was causing Secondary clusters to be unable to connect to a Primary.
+replication (enterprise): fix bug where secondary grpc connections would timeout when connecting to a primary host that no longer exists.
+secrets/transform (enterprise): Fix a caching bug affecting secondary nodes after a tokenization key rotation
+secrets/transit: Fix export of HMAC-only key, correctly exporting the key used for sign operations. For consumers of the previously incorrect key, use the plaintext export to retrieve these incorrect keys and import them as new versions.
+secrets/transit: Fix bug related to shorter dedicated HMAC key sizing.
+sdk/helper/keysutil: New HMAC type policies will have HMACKey equal to Key and be copied over on import. [GH-20864]
+ui: Fixes issue unsealing cluster for seal types other than shamir [GH-20897]
+","1.12.7
+June 08, 2023
+CHANGES:
+core: Bump Go version to 1.19.9.
+core: Revert #19676 (VAULT_GRPC_MIN_CONNECT_TIMEOUT env var) as we decided it was unnecessary. [GH-20826]
+IMPROVEMENTS:
+audit: add a mount_point field to audit requests and response entries [GH-20411]
+command/server: Add support for dumping pprof files to the filesystem via SIGUSR2 when 
+VAULT_PPROF_WRITE_TO_FILE=true is set on the server. [GH-20609]
+core: include namespace path in granting_policies block of audit log
+openapi: Fix generated types for duration strings [GH-20841]
+sdk/framework: Fix non-deterministic ordering of 'required' fields in OpenAPI spec [GH-20881]
+secrets/pki: add subject key identifier to read key response [GH-20642]
+ui: update TTL picker for consistency [GH-18114]
+BUG FIXES:
+api: Properly Handle nil identity_policies in Secret Data [GH-20636]
+auth/ldap: Set default value for max_page_size properly [GH-20453]
+cli: CLI should take days as a unit of time for ttl like flags [GH-20477]
+cli: disable printing flags warnings messages for the ssh command [GH-20502]
+core (enterprise): Fix log shipper buffer size overflow issue for 32 bit architecture.
+core (enterprise): Fix logshipper buffer size to default to DefaultBufferSize only when reported system memory is zero.
+core (enterprise): Remove MFA Enforcment configuration for namespace when deleting namespace
+core: prevent panic on login after namespace is deleted that had mfa enforcement [GH-20375]
+replication (enterprise): Fix a race condition with invalid tokens during WAL streaming that was causing Secondary clusters to be unable to connect to a Primary.
+replication (enterprise): fix bug where secondary grpc connections would timeout when connecting to a primary host that no longer exists.
+secrets/transform (enterprise): Fix a caching bug affecting secondary nodes after a tokenization key rotation
+secrets/transit: Fix export of HMAC-only key, correctly exporting the key used for sign operations. For consumers of the previously incorrect key, use the plaintext export to retrieve these incorrect keys and import them as new versions.
+secrets/transit: Fix bug related to shorter dedicated HMAC key sizing.
+sdk/helper/keysutil: New HMAC type policies will have HMACKey equal to Key and be copied over on import. [GH-20864]
+ui: Fixes issue unsealing cluster for seal types other than shamir [GH-20897]"
+4,"1.11.11
+June 08, 2023
+CHANGES:
+
+core: Bump Go version to 1.19.9.
+core: Revert #19676 (VAULT_GRPC_MIN_CONNECT_TIMEOUT env var) as we decided it was unnecessary. [GH-20826]
+
+IMPROVEMENTS:
+
+command/server: Add support for dumping pprof files to the filesystem via SIGUSR2 when 
+VAULT_PPROF_WRITE_TO_FILE=true is set on the server. [GH-20609]
+secrets/pki: add subject key identifier to read key response [GH-20642]
+ui: update TTL picker for consistency [GH-18114]
+
+BUG FIXES:
+
+api: Properly Handle nil identity_policies in Secret Data [GH-20636]
+auth/ldap: Set default value for max_page_size properly [GH-20453]
+cli: CLI should take days as a unit of time for ttl like flags [GH-20477]
+core (enterprise): Fix log shipper buffer size overflow issue for 32 bit architecture.
+core (enterprise): Fix logshipper buffer size to default to DefaultBufferSize only when reported system memory is zero.
+core (enterprise): Remove MFA Enforcment configuration for namespace when deleting namespace
+core: prevent panic on login after namespace is deleted that had mfa enforcement [GH-20375]
+replication (enterprise): Fix a race condition with invalid tokens during WAL streaming that was causing Secondary clusters to be unable to connect to a Primary.
+replication (enterprise): fix bug where secondary grpc connections would timeout when connecting to a primary host that no longer exists.
+secrets/transform (enterprise): Fix a caching bug affecting secondary nodes after a tokenization key rotation
+","1.11.11
+June 08, 2023
+CHANGES:
+core: Bump Go version to 1.19.9.
+core: Revert #19676 (VAULT_GRPC_MIN_CONNECT_TIMEOUT env var) as we decided it was unnecessary. [GH-20826]
+IMPROVEMENTS:
+command/server: Add support for dumping pprof files to the filesystem via SIGUSR2 when 
+VAULT_PPROF_WRITE_TO_FILE=true is set on the server. [GH-20609]
+secrets/pki: add subject key identifier to read key response [GH-20642]
+ui: update TTL picker for consistency [GH-18114]
+BUG FIXES:
+api: Properly Handle nil identity_policies in Secret Data [GH-20636]
+auth/ldap: Set default value for max_page_size properly [GH-20453]
+cli: CLI should take days as a unit of time for ttl like flags [GH-20477]
+core (enterprise): Fix log shipper buffer size overflow issue for 32 bit architecture.
+core (enterprise): Fix logshipper buffer size to default to DefaultBufferSize only when reported system memory is zero.
+core (enterprise): Remove MFA Enforcment configuration for namespace when deleting namespace
+core: prevent panic on login after namespace is deleted that had mfa enforcement [GH-20375]
+replication (enterprise): Fix a race condition with invalid tokens during WAL streaming that was causing Secondary clusters to be unable to connect to a Primary.
+replication (enterprise): fix bug where secondary grpc connections would timeout when connecting to a primary host that no longer exists.
+secrets/transform (enterprise): Fix a caching bug affecting secondary nodes after a tokenization key rotation"
+5,"1.13.2
 April 26, 2023
 CHANGES:
 
@@ -96,7 +522,7 @@ ui: fixes browser console formatting for help command output [GH-20064]
 ui: fixes remaining doc links to include /vault in path [GH-20070]
 ui: remove use of htmlSafe except when first sanitized [GH-20235]
 website/docs: Fix Kubernetes Auth Code Example to use the correct whitespace in import. [GH-20216]"
-2,"1.12.6
+6,"1.12.6
 April 26, 2023
 CHANGES:
 
@@ -171,7 +597,7 @@ ui: Fix OIDC provider logo showing when domain doesn't match [GH-20263]
 ui: Fix bad link to namespace when namespace name includes . [GH-19799]
 ui: fixes browser console formatting for help command output [GH-20064]
 ui: remove use of htmlSafe except when first sanitized [GH-20235]"
-3,"1.11.10
+7,"1.11.10
 April 26, 2023
 CHANGES:
 
@@ -232,7 +658,7 @@ ui: Fix OIDC provider logo showing when domain doesn't match [GH-20263]
 ui: Fix bad link to namespace when namespace name includes . [GH-19799]
 ui: fixes browser console formatting for help command output [GH-20064]
 ui: remove use of htmlSafe except when first sanitized [GH-20235]"
-4,"1.13.1
+8,"1.13.1
 March 29, 2023
 IMPROVEMENTS:
 
@@ -287,7 +713,7 @@ ui: fixes issue navigating back a level using the breadcrumb from secret metadat
 ui: fixes oidc tabs in auth form submitting with the root's default_role value after a namespace has been inputted [GH-19541]
 ui: pass encodeBase64 param to HMAC transit-key-actions. [GH-19429]
 ui: use URLSearchParams interface to capture namespace param from SSOs (ex. ADFS) with decoded state param in callback url [GH-19460]"
-5,"1.12.5
+9,"1.12.5
 March 29, 2023
 IMPROVEMENTS:
 
@@ -330,7 +756,7 @@ secrets/transform (enterprise): Fix persistence problem with rotated tokenizatio
 ui: fixes issue navigating back a level using the breadcrumb from secret metadata view [GH-19703]
 ui: pass encodeBase64 param to HMAC transit-key-actions. [GH-19429]
 ui: use URLSearchParams interface to capture namespace param from SSOs (ex. ADFS) with decoded state param in callback url [GH-19460]"
-6,"1.11.9
+10,"1.11.9
 March 29, 2023
 IMPROVEMENTS:
 
@@ -369,7 +795,7 @@ secrets/transform (enterprise): Fix persistence problem with rotated tokenizatio
 ui: fixes issue navigating back a level using the breadcrumb from secret metadata view [GH-19703]
 ui: pass encodeBase64 param to HMAC transit-key-actions. [GH-19429]
 ui: use URLSearchParams interface to capture namespace param from SSOs (ex. ADFS) with decoded state param in callback url [GH-19460]"
-7,"1.13.0
+11,"1.13.0
 March 01, 2023
 SECURITY:
 
@@ -960,7 +1386,7 @@ ui: fix entity policies list link to policy show page [GH-17950]
 ui: fixes query parameters not passed in api explorer test requests [GH-18743]
 ui: fixes reliance on secure context (https) by removing methods using the Crypto interface [GH-19403]
 ui: show Get credentials button for static roles detail page when a user has the proper permissions. [GH-19190]"
-8,"1.12.4
+12,"1.12.4
 March 01, 2023
 CHANGES:
 
@@ -1009,7 +1435,7 @@ ui (enterprise): Fix cancel button from transform engine role creation page [GH-
 ui: Fix bug where logging in via OIDC fails if browser is in fullscreen mode [GH-19071]
 ui: fixes reliance on secure context (https) by removing methods using the Crypto interface [GH-19410]
 ui: show Get credentials button for static roles detail page when a user has the proper permissions. [GH-19190]"
-9,"1.11.8
+13,"1.11.8
 March 01, 2023
 CHANGES:
 
@@ -1050,7 +1476,7 @@ secrets/ad: Fix bug where config couldn't be updated unless binddn/bindpass were
 ui (enterprise): Fix cancel button from transform engine role creation page [GH-19135]
 ui: Fix bug where logging in via OIDC fails if browser is in fullscreen mode [GH-19071]
 ui: show Get credentials button for static roles detail page when a user has the proper permissions. [GH-19190]"
-10,"1.10.11
+14,"1.10.11
 March 01, 2023
 CHANGES:
 
@@ -1085,7 +1511,7 @@ break replication.
 secrets/ad: Fix bug where config couldn't be updated unless binddn/bindpass were included in the update. [GH-18209]
 ui (enterprise): Fix cancel button from transform engine role creation page [GH-19135]
 ui: Fix bug where logging in via OIDC fails if browser is in fullscreen mode [GH-19071]"
-11,"February 16, 2023
+15,"February 16, 2023
 SECURITY:
 
 secrets/ssh: removal of the deprecated dynamic keys mode. When any remaining dynamic key leases expire, an error stating secret is unsupported by this backend will be thrown by the lease manager. [GH-18874]
@@ -1584,7 +2010,7 @@ ui: allow selection of ""default"" for ssh algorithm_signer in web interface [GH
 ui: cleanup unsaved auth method ember data record when navigating away from mount backend form [GH-18651]
 ui: fix entity policies list link to policy show page [GH-17950]
 ui: fixes query parameters not passed in api explorer test requests [GH-18743]"
-12,"1.12.3
+16,"1.12.3
 February 6, 2023
 CHANGES:
 
@@ -1693,7 +2119,7 @@ non-voter.  In some scenarios this resulted in loss of quorum. [GH-18263]
 storage/raft: Don't panic on unknown raft ops [GH-17732]
 ui: cleanup unsaved auth method ember data record when navigating away from mount backend form [GH-18651]
 ui: fixes query parameters not passed in api explorer test requests [GH-18743]"
-13,"1.11.7
+17,"1.11.7
 February 6, 2023
 CHANGES:
 
@@ -1764,7 +2190,7 @@ non-voter.  In some scenarios this resulted in loss of quorum. [GH-18263]
 storage/raft (enterprise): Fix some storage-modifying RPCs used by perf standbys that weren't returning the resulting WAL state.
 storage/raft: Don't panic on unknown raft ops [GH-17732]
 ui: fixes query parameters not passed in api explorer test requests [GH-18743]"
-14,"1.10.10
+18,"1.10.10
 February 6, 2023
 CHANGES:
 
@@ -1823,7 +2249,7 @@ kmip (enterprise): Fix Locate operation response incompatibility with clients us
 licensing (enterprise): update autoloaded license cache after reload
 storage/raft (enterprise): Fix some storage-modifying RPCs used by perf standbys that weren't returning the resulting WAL state.
 ui: fixes query parameters not passed in api explorer test requests [GH-18743]"
-15,"1.12.2
+19,"1.12.2
 November 30, 2022
 CHANGES:
 
@@ -1878,7 +2304,7 @@ secrets/gcp: Fixes duplicate service account key for rotate root on standby or s
 secrets/pki: Fix upgrade of missing expiry, delta_rebuild_interval by setting them to the default. [GH-17693]
 ui: Fixes issue with not being able to download raft snapshot via service worker [GH-17769]
 ui: fix entity policies list link to policy show page [GH-17950]"
-16,"1.11.6
+20,"1.11.6
 November 30, 2022
 IMPROVEMENTS:
 
@@ -1915,7 +2341,7 @@ secrets/azure: add WAL to clean up role assignments if errors occur [GH-18085]
 secrets/gcp: Fixes duplicate service account key for rotate root on standby or secondary [GH-18110]
 ui: Fixes issue with not being able to download raft snapshot via service worker [GH-17769]
 ui: fix entity policies list link to policy show page [GH-17950]"
-17,"1.10.9
+21,"1.10.9
 November 30, 2022
 BUG FIXES:
 
@@ -1938,7 +2364,7 @@ core: fix a start up race condition where performance standbys could go into a
 secrets/azure: add WAL to clean up role assignments if errors occur [GH-18084]
 secrets/gcp: Fixes duplicate service account key for rotate root on standby or secondary [GH-18109]
 ui: fix entity policies list link to policy show page [GH-17950]"
-18,"1.11.5
+22,"1.11.5
 November 2, 2022
 IMPROVEMENTS:
 
@@ -1975,7 +2401,7 @@ secrets/pki: Do not read revoked certificates from backend when CRL is disabled 
 secrets/pki: Respond to tidy-status, tidy-cancel on PR Secondary clusters. [GH-17497]
 ui/keymgmt: Sets the defaultValue for type when creating a key. [GH-17407]
 ui: Fixes oidc/jwt login issue with alternate mount path and jwt login via mount path tab [GH-17661]"
-19,"1.12.1
+23,"1.12.1
 November 2, 2022
 IMPROVEMENTS:
 
@@ -2018,7 +2444,7 @@ kmip (enterprise): Fix selection of Cryptographic Parameters for Encrypt/Decrypt
 login: Store token in tokenhelper for interactive login MFA [GH-17040]
 secrets/pki: Respond to tidy-status, tidy-cancel on PR Secondary clusters. [GH-17497]
 ui: Fixes oidc/jwt login issue with alternate mount path and jwt login via mount path tab [GH-17661]"
-20,"1.10.8
+24,"1.10.8
 November 2, 2022
 BUG FIXES:
 
@@ -2041,7 +2467,7 @@ login: Store token in tokenhelper for interactive login MFA [GH-17040]
 secrets/pki: Do not ignore provided signature bits value when signing intermediate and leaf certificates with a managed key [GH-17328]
 secrets/pki: Respond to tidy-status, tidy-cancel on PR Secondary clusters. [GH-17497]
 ui: Fixes oidc/jwt login issue with alternate mount path and jwt login via mount path tab [GH-17661]"
-21,"1.12.0
+25,"1.12.0
 October 13, 2022
 CHANGES:
 
@@ -2478,10 +2904,6 @@ ui: Fixed bug where red spellcheck underline appears in sensitive/secret kv valu
 ui: Fixes secret version and status menu links transitioning to auth screen [GH-16983]
 ui: OIDC login type uses localStorage instead of sessionStorage [GH-16170]
 vault: Fix a bug where duplicate policies could be added to an identity group. [GH-15638]"
-22,,
-23,,
-24,,
-25,,
 26,,
 27,,
 28,,
@@ -2489,7 +2911,11 @@ vault: Fix a bug where duplicate policies could be added to an identity group. [
 30,,
 31,,
 32,,
-33,"1.11.0
+33,,
+34,,
+35,,
+36,,
+37,"1.11.0
 Unreleased
 CHANGES:
 
@@ -2702,10 +3128,6 @@ ui: Fixes issue logging in with OIDC from a listed auth mounts tab [GH-14916]
 ui: fix firefox inability to recognize file format of client count csv export [GH-15364]
 ui: fix search-select component showing blank selections when editing group member entity [GH-15058]
 ui: masked values no longer give away length or location of special characters [GH-15025]"
-34,,
-35,,
-36,,
-37,,
 38,,
 39,,
 40,,
@@ -2713,7 +3135,11 @@ ui: masked values no longer give away length or location of special characters [
 42,,
 43,,
 44,,
-45,"1.10.0
+45,,
+46,,
+47,,
+48,,
+49,"1.10.0
 March 23, 2022
 CHANGES:
 
@@ -3136,11 +3562,11 @@ ui: Fixes node-forge error when parsing EC (elliptical curve) certs [GH-13238]
 ui: Redirects to managed namespace if incorrect namespace in URL param [GH-14422]
 ui: Removes ability to tune token_type for token auth methods [GH-12904]
 ui: trigger token renewal if inactive and half of TTL has passed [GH-13950]"
-46,,
-47,,
-48,,
-49,,
-50,"1.9.3
+50,,
+51,,
+52,,
+53,,
+54,"1.9.3
 January 27, 2022
 IMPROVEMENTS:
 
@@ -3189,7 +3615,7 @@ storage/raft: On linux, use map_populate for bolt files to improve startup time.
 storage/raft: Units for bolt metrics now given in milliseconds instead of nanoseconds [GH-13749]
 ui: Fixes breadcrumb bug for secrets navigation [GH-13604]
 ui: Fixes issue saving KMIP role correctly [GH-13585]"
-51,"1.8.8
+55,"1.8.8
 January 27, 2022
 IMPROVEMENTS:
 
@@ -3224,7 +3650,7 @@ storage/raft: On linux, use map_populate for bolt files to improve startup time.
 storage/raft: Units for bolt metrics now given in milliseconds instead of nanoseconds [GH-13749]
 ui: Fixes breadcrumb bug for secrets navigation [GH-13604]
 ui: Fixes issue saving KMIP role correctly [GH-13585]"
-52,"1.7.9
+56,"1.7.9
 January 27, 2022
 IMPROVEMENTS:
 
@@ -3245,7 +3671,7 @@ auth/oidc: Fixes OIDC auth from the Vault UI when using the implicit flow and fo
 secrets/gcp: Fixes role bindings for BigQuery dataset resources. [GH-13735]
 ui: Fixes breadcrumb bug for secrets navigation [GH-13604]
 ui: Fixes issue saving KMIP role correctly [GH-13585]"
-53,"1.9.2
+57,"1.9.2
 December 21, 2021
 CHANGES:
 
@@ -3266,7 +3692,7 @@ IMPROVEMENTS:
 auth/jwt: The Authorization Code flow makes use of the Proof Key for Code Exchange (PKCE) extension. [GH-13365]
 BUG FIXES:
 ui: Fix client count current month data not showing unless monthly history data exists [GH-13396]"
-54,"1.8.7
+58,"1.8.7
 December 21, 2021
 CHANGES:
 
@@ -3275,7 +3701,7 @@ go: Update go version to 1.16.12 [GH-13422]
 December 21, 2021
 CHANGES:
 go: Update go version to 1.16.12 [GH-13422]"
-55,"1.7.8
+59,"1.7.8
 December 21, 2021
 CHANGES:
 
@@ -3292,7 +3718,7 @@ go: Update go version to 1.16.12 [GH-13422]
 BUG FIXES:
 auth/aws: Fixes ec2 login no longer supporting DSA signature verification [GH-12340]
 identity: Fix a panic on arm64 platform when doing identity I/O. [GH-12371]"
-56,"1.9.1
+60,"1.9.1
 December 9, 2021
 IMPROVEMENTS:
 
@@ -3337,7 +3763,7 @@ ui: Fixes issue with OIDC auth workflow when using MetaMask Chrome extension [GH
 ui: Fixes issue with automate secret deletion value not displaying initially if set in secret metadata edit view [GH-13177]
 ui: Fixes issue with placeholder not displaying for automatically deleted secrets when deletion time has passed [GH-13166]
 ui: Fixes node-forge error when parsing EC (elliptical curve) certs [GH-13238]"
-57,"1.8.6
+61,"1.8.6
 December 9, 2021
 CHANGES:
 
@@ -3366,7 +3792,7 @@ ui: Do not show verify connection value on database connection config page [GH-1
 ui: Fixes issue restoring raft storage snapshot [GH-13107]
 ui: Fixes issue with OIDC auth workflow when using MetaMask Chrome extension [GH-13133]
 ui: Fixes issue with the number of PGP Key inputs not matching the key shares number in the initialization form on change [GH-13038]"
-58,"1.7.7
+62,"1.7.7
 December 9, 2021
 BUG FIXES:
 
@@ -3385,7 +3811,7 @@ storage/raft: Fix a panic when trying to write a key > 32KB [GH-13282]
 ui: Fixes issue restoring raft storage snapshot [GH-13107]
 ui: Fixes issue with OIDC auth workflow when using MetaMask Chrome extension [GH-13133]
 ui: Fixes issue with the number of PGP Key inputs not matching the key shares number in the initialization form on change [GH-13038]"
-59,"1.9.0
+63,"1.9.0
 November 17, 2021
 CHANGES:
 
@@ -3754,8 +4180,8 @@ ui: fix issue where on MaskedInput on auth methods if tab it would clear the val
 ui: fix missing navbar items on login to namespace [GH-12478]
 ui: update bar chart when model changes [GH-12622]
 ui: updating database TTL picker help text. [GH-12212]"
-60,,
-61,"1.8.5
+64,,
+65,"1.8.5
 November 4, 2021
 BUG FIXES:
 
@@ -3782,7 +4208,7 @@ kmip (enterprise): Fix handling of invalid role parameters within various vault 
 kmip (enterprise): Forward KMIP register operations to the active node
 secrets/keymgmt (enterprise): Fix support for Azure Managed HSM Key Vault instances. [GH-12952]
 transform (enterprise): Fix an error where the decode response of an expired token is an empty result rather than an error."
-62,"1.7.6
+66,"1.7.6
 November 4, 2021
 BUG FIXES:
 
@@ -3813,7 +4239,7 @@ secrets/keymgmt (enterprise): Fix support for Azure Managed HSM Key Vault instan
 storage/postgres: Update postgres library (github.com/lib/pq) to properly remove terminated TLS connections from the connection pool. [GH-12413]
 database/postgres: Update postgres library (github.com/lib/pq) to properly remove terminated TLS connections from the connection pool. [GH-12413]
 transform (enterprise): Fix an error where the decode response of an expired token is an empty result rather than an error."
-63,"1.8.4
+67,"1.8.4
 6 October 2021
 IMPROVEMENTS:
 
@@ -3836,7 +4262,7 @@ database/postgres: Update postgres library (github.com/lib/pq) to properly remov
 pki: Fix regression preventing email addresses being used as a common name within certificates [GH-12716]
 storage/postgres: Update postgres library (github.com/lib/pq) to properly remove terminated TLS connections from the connection pool. [GH-12413]
 ui: Fix bug where edit role form on auth method is invalid by default [GH-12646]"
-64,"1.8.3
+68,"1.8.3
 29 September 2021
 IMPROVEMENTS:
 
@@ -3873,7 +4299,7 @@ secrets/transit: Enforce minimum cache size for transit backend and init cache s
 storage/raft: Detect incomplete raft snapshots in api.RaftSnapshot(), and thereby in vault operator raft snapshot save. [GH-12388]
 ui: Fix bug where capabilities check on secret-delete-menu was encoding the forward slashes. [GH-12550]
 ui: Show day of month instead of day of year in the expiration warning dialog [GH-11984]"
-65,"1.7.5
+69,"1.7.5
 29 September 2021
 IMPROVEMENTS:
 
@@ -3904,7 +4330,7 @@ secrets/db: Fix bug where Vault can rotate static role passwords early during st
 secrets/openldap: Fix bug where Vault can rotate static role passwords early during start up under certain conditions. #28 [GH-12598]
 storage/raft: Detect incomplete raft snapshots in api.RaftSnapshot(), and thereby in vault operator raft snapshot save. [GH-12388]
 ui: Fixed api explorer routing bug [GH-12354]"
-66,"1.6.7
+70,"1.6.7
 29 September 2021
 BUG FIXES:
 
@@ -3919,7 +4345,7 @@ core (enterprise): Fix bug where password generation through password policies d
 core (enterprise): Only delete quotas on primary cluster. [GH-12339]
 secrets/db: Fix bug where Vault can rotate static role passwords early during start up under certain conditions. [GH-12563]
 secrets/openldap: Fix bug where Vault can rotate static role passwords early during start up under certain conditions. #28 [GH-12597]"
-67,"1.8.2
+71,"1.8.2
 26 August 2021
 CHANGES:
 
@@ -3954,7 +4380,7 @@ secrets/gcp: Fixes a potential panic in the service account policy rollback for 
 ui: Fixed api explorer routing bug [GH-12354]
 ui: Fixes metrics page when read on counter config not allowed [GH-12348]
 ui: fix issue where on MaskedInput on auth methods if tab it would clear the value. [GH-12409]"
-68,"1.7.4
+72,"1.7.4
 26 August 2021
 SECURITY:
 
@@ -4035,7 +4461,7 @@ core (enterprise): serialize access to HSM entropy generation to avoid errors in
 secret: fix the bug where transit encrypt batch doesn't work with key_version [GH-11628]
 secrets/ad: Forward all creds requests to active node [GH-76] [GH-11836]
 tokenutil: Perform the num uses check before token type. [GH-11647]"
-69,"1.6.6
+73,"1.6.6
 26 August 2021
 SECURITY:
 
@@ -4072,7 +4498,7 @@ secrets/database: Fixed an issue that prevented external database plugin process
 ui: Automatically refresh the page when user logs out [GH-12035]
 ui: Fixes metrics page when read on counter config not allowed [GH-12348]
 ui: fix oidc login with Safari [GH-11884]"
-70,"1.8.1
+74,"1.8.1
 August 5th, 2021
 CHANGES:
 
@@ -4101,7 +4527,7 @@ auth/jwt: Fixes OIDC auth from the Vault UI when using form_post as the oidc_res
 core (enterprise): Disallow autogenerated licenses to be used in diagnose even when config is specified
 core: fix byte printing for diagnose disk checks [GH-12229]
 identity: do not allow a role's token_ttl to be longer than the signing key's verification_ttl [GH-12151]"
-71,"1.8.0
+75,"1.8.0
 July 28th, 2021
 CHANGES:
 
@@ -4406,10 +4832,10 @@ ui: Fixed and updated lease renewal picker [GH-11256]
 ui: fix control group access for database credential [GH-12024]
 ui: fix issue where select-one option was not showing in secrets database role creation [GH-11294]
 ui: fix oidc login with Safari [GH-11884]"
-72,Release vault v1.8.0-rc2,Release vault v1.8.0-rc2
-73,Release vault v1.8.0-rc1,Release vault v1.8.0-rc1
-74,Release vault v1.7.3,Release vault v1.7.3
-75,"1.7.2
+76,Release vault v1.8.0-rc2,Release vault v1.8.0-rc2
+77,Release vault v1.8.0-rc1,Release vault v1.8.0-rc1
+78,Release vault v1.7.3,Release vault v1.7.3
+79,"1.7.2
 May 20th, 2021
 SECURITY:
 
@@ -4486,7 +4912,7 @@ secrets/keymgmt (enterprise): Fixes audit logging for the read key response.
 storage/raft: Support cluster address change for nodes in a cluster managed by autopilot [GH-11247]
 ui: Fix entity group membership and metadata not showing [GH-11641]
 ui: Fix text link URL on database roles list [GH-11597]"
-76,"1.6.5
+80,"1.6.5
 May 20th, 2021
 SECURITY:
 
@@ -4529,7 +4955,7 @@ core: correct logic for renewal of leases nearing their expiration time. [GH-116
 secrets/database: Fix marshalling to allow providing numeric arguments to external database plugins. [GH-11451]
 secrets/database: Fixes issue for V4 database interface where SetCredentials wasn't falling back to using RotateRootCredentials if SetCredentials is Unimplemented [GH-11585]
 ui: Fix namespace-bug on login [GH-11182]"
-77,"1.5.9
+81,"1.5.9
 May 20th, 2021
 SECURITY:
 
@@ -4564,10 +4990,10 @@ auth/gcp: Update to v0.7.2 to use IAM Service Account Credentials API for
 signing JWTs [GH-11499]
 BUG FIXES:
 core: correct logic for renewal of leases nearing their expiration time. [GH-11650]"
-78,Release vault 1.7.1,Release vault 1.7.1
-79,Release vault v1.6.4,Release vault v1.6.4
-80,Release vault v1.5.8,Release vault v1.5.8
-81,"1.7.0
+82,Release vault 1.7.1,Release vault 1.7.1
+83,Release vault v1.6.4,Release vault v1.6.4
+84,Release vault v1.5.8,Release vault v1.5.8
+85,"1.7.0
 24 March 2021
 CHANGES:
 
@@ -4786,8 +5212,8 @@ ui: Fix bug in Transform secret engine when a new role is added and then removed
 ui: Fix bug that double encodes secret route when there are spaces in the path and makes you unable to view the version history. [GH-10596]
 ui: Fix expected response from feature-flags endpoint [GH-10684]
 ui: Fix footer URL linking to the correct version changelog. [GH-10491]"
-82,Release vault v1.7.0-rc2,Release vault v1.7.0-rc2
-83,"CHANGES:
+86,Release vault v1.7.0-rc2,Release vault v1.7.0-rc2
+87,"CHANGES:
 
 go: Update go version to 1.15.8 [GH-11060]
 
@@ -5002,7 +5428,7 @@ ui: Fix bug in Transform secret engine when a new role is added and then removed
 ui: Fix bug that double encodes secret route when there are spaces in the path and makes you unable to view the version history. [GH-10596]
 ui: Fix expected response from feature-flags endpoint [GH-10684]
 ui: Fix footer URL linking to the correct version changelog. [GH-10491]"
-84,"SECURITY:
+88,"SECURITY:
 
 Limited Unauthenticated License Read: We addressed a security vulnerability that allowed for the unauthenticated
 reading of Vault licenses from DR Secondaries. This vulnerability affects Vault and Vault Enterprise and is
@@ -5045,7 +5471,7 @@ replication (enterprise): Don't write request count data on DR Secondaries.
 Fixes DR Secondaries becoming out of sync approximately every 30s. [GH-10970]
 secrets/azure (enterprise): Forward service principal credential creation to the
 primary cluster if called on a performance standby or performance secondary. [GH-10902]"
-85,"SECURITY:
+89,"SECURITY:
 
 IP Address Disclosure: We fixed a vulnerability where, under some error
 conditions, Vault would return an error message disclosing internal IP
@@ -5126,7 +5552,7 @@ storage/raft (enterprise): Autosnapshots config and storage weren't excluded fro
 performance replication, causing conflicts and errors.
 ui: Fix bug that double encodes secret route when there are spaces in the path and makes you unable to view the version history. [GH-10596]
 ui: Fix expected response from feature-flags endpoint [GH-10684]"
-86,"SECURITY:
+90,"SECURITY:
 
 IP Address Disclosure: We fixed a vulnerability where, under some error
 conditions, Vault would return an error message disclosing internal IP
@@ -5163,7 +5589,7 @@ authenticating the request.
 BUG FIXES:
 core: Avoid disclosing IP addresses in the errors of unauthenticated requests [GH-10579]
 core: Make the response to an unauthenticated request to sys/internal endpoints consistent regardless of mount existence. [GH-10650]"
-87,Release vault v1.6.1,Release vault v1.6.1
-88,Release vault v1.5.6,Release vault v1.5.6
-89,Release vault v1.6.0,Release vault v1.6.0
-90,Release vault v1.6.0-rc,Release vault v1.6.0-rc
+91,Release vault v1.6.1,Release vault v1.6.1
+92,Release vault v1.5.6,Release vault v1.5.6
+93,Release vault v1.6.0,Release vault v1.6.0
+94,Release vault v1.6.0-rc,Release vault v1.6.0-rc

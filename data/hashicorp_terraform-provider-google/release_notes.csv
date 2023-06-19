@@ -1,11 +1,150 @@
-Index,Release Note,Release Note With Abstraction
-1,"BUG FIXES:
+Index,Release Note,Release Note Abstract
+1,"4.69.1 (June 12, 2023)
+NOTE:
+* Added a new user guide to the provider documentation (#14886)","4.69.1 (June 12, 2023)
+NOTE:
+* Added a new user guide to the provider documentation (#14886)"
+2,"FEATURES:
+* New Data Source: google_vmwareengine_network (#14821)
+* New Resource: google_access_context_manager_service_perimeter_egress_policy (#14817)
+* New Resource: google_access_context_manager_service_perimeter_ingress_policy (#14817)
+* New Resource: google_certificate_manager_certificate_issuance_config (#14798)
+* New Resource: google_dataplex_datascan (#14798)
+* New Resource: google_dataplex_datascan_iam_* (#14828)
+* New Resource: google_vmwareengine_network (#14821)
+IMPROVEMENTS:
+* billing: added lookup_projects to google_billing_account datasource that skips reading the list of associated projects (#14815)
+* dlp: added info_type_transformations block in the record_transformations field to google_data_loss_prevention_deidentify_template resource. (#14827)
+* dlp: added redact_config, fixed_size_bucketing_config, bucketing_config, time_part_config and date_shift_config  fields to google_data_loss_prevention_deidentify_template resource (#14797)
+* dlp: added stored_info_type_id field to google_data_loss_prevention_stored_info_type resource (#14791)
+* dlp: added template_id field to google_data_loss_prevention_deidentify_template and google_data_loss_prevention_inspect_template (#14823)
+* dlp: changed actions field from required to optional in google_data_loss_prevention_job_trigger resource (#14803)
+* kms: removed validation for purpose in google_kms_crypto_key to allow newly added values for the field (#14799)
+* pubsub: allowed schema_settings of google_pubsub_topic to change without deleting and recreating the resource (#14819)
+BUG FIXES:
+* tags: fixed providing projects/<project_id to parent causing recreation on google_tags_tag_key (#14809)","FEATURES:
+* New Data Source: google_vmwareengine_network (#14821)
+* New Resource: google_access_context_manager_service_perimeter_egress_policy (#14817)
+* New Resource: google_access_context_manager_service_perimeter_ingress_policy (#14817)
+* New Resource: google_certificate_manager_certificate_issuance_config (#14798)
+* New Resource: google_dataplex_datascan (#14798)
+* New Resource: google_dataplex_datascan_iam_* (#14828)
+* New Resource: google_vmwareengine_network (#14821)
+IMPROVEMENTS:
+* billing: added lookup_projects to google_billing_account datasource that skips reading the list of associated projects (#14815)
+* dlp: added info_type_transformations block in the record_transformations field to google_data_loss_prevention_deidentify_template resource. (#14827)
+* dlp: added redact_config, fixed_size_bucketing_config, bucketing_config, time_part_config and date_shift_config  fields to google_data_loss_prevention_deidentify_template resource (#14797)
+* dlp: added stored_info_type_id field to google_data_loss_prevention_stored_info_type resource (#14791)
+* dlp: added template_id field to google_data_loss_prevention_deidentify_template and google_data_loss_prevention_inspect_template (#14823)
+* dlp: changed actions field from required to optional in google_data_loss_prevention_job_trigger resource (#14803)
+* kms: removed validation for purpose in google_kms_crypto_key to allow newly added values for the field (#14799)
+* pubsub: allowed schema_settings of google_pubsub_topic to change without deleting and recreating the resource (#14819)
+BUG FIXES:
+* tags: fixed providing projects/<project_id to parent causing recreation on google_tags_tag_key (#14809)"
+3,"FEATURES:
+* New Resource: google_container_analysis_note_iam_* (#14706)
+IMPROVEMENTS:
+* compute: promoted allow_psc_global_access field in google_compute_forwarding_rule to GA (#14754)
+* dlp: added included_fields and excluded_fields fields to google_data_loss_prevention_job_trigger (#14736)
+* dns: added regionalL7ilb enum support to the routing_policy.load_balancer_type field in google_dns_record_set (#14710)
+BUG FIXES:
+* accesscontextmanager: fixed incorrect validations for spec and status in google_access_context_manager_service_perimeter (#14705)
+* alloydb: increased timeouts for google_alloydb_instance from 20m to 40m (#14713)
+* apigee: fixed bug where updating config_bundle in google_apigee_sharedflow that's attached to google_apigee_sharedflow_deployment causes an error (#14725)
+* compute: increased timeout for compute_security_policy from 4m to 8m (#14712)
+* dataproc: fixed crash when reading google_dataproc_cluster.virtual_cluster_config (#14744)","FEATURES:
+* New Resource: google_container_analysis_note_iam_* (#14706)
+IMPROVEMENTS:
+* compute: promoted allow_psc_global_access field in google_compute_forwarding_rule to GA (#14754)
+* dlp: added included_fields and excluded_fields fields to google_data_loss_prevention_job_trigger (#14736)
+* dns: added regionalL7ilb enum support to the routing_policy.load_balancer_type field in google_dns_record_set (#14710)
+BUG FIXES:
+* accesscontextmanager: fixed incorrect validations for spec and status in google_access_context_manager_service_perimeter (#14705)
+* alloydb: increased timeouts for google_alloydb_instance from 20m to 40m (#14713)
+* apigee: fixed bug where updating config_bundle in google_apigee_sharedflow that's attached to google_apigee_sharedflow_deployment causes an error (#14725)
+* compute: increased timeout for compute_security_policy from 4m to 8m (#14712)
+* dataproc: fixed crash when reading google_dataproc_cluster.virtual_cluster_config (#14744)"
+4,"FEATURES:
+* New Data Source: google_*_iam_policy (#14662)
+* New Data Source: google_vertex_ai_index (#14640)
+IMPROVEMENTS:
+* cloudrun: added template.spec.containers.name field to google_cloud_run_service (#14647)
+* compute: added network_performance_config field to google_compute_instance and google_compute_instance_template (#14678)
+* compute: added guest_os_features and licenses fields to google_compute_disk and google_compute_region_disk (#14660)
+* datastream: added mysql_source_config.max_concurrent_backfill_tasks field to google_datastream_stream (#14639)
+* firebase: added additional import formats for google_firebase_webapp (#14638)
+* notebooks: added update support for google_notebooks_instance.metadata field (#14650)
+* privateca: added encoding_format field to google_privateca_ca_pool (#14663)
+BUG FIXES:
+* apigee: increased google_apigee_organization timeout defaults to 45m from 20m (#14643)
+* cloudresourcemanager: added retries to handle internal error: type: ""googleapis.com"" subject: ""160009"" (#14727)
+* cloudrun: fixed a permadiff for metadata.annotation in google_cloud_run_service (#14642)
+* container: fixed a crash scenario in google_container_node_pool (#14693)
+* gkeonprem: changed hostname (under ip_block) from required to optional for google_gkeonprem_vmware_cluster (#14690)
+* serviceusage: added retries to handle internal error: type: ""googleapis.com"" subject: ""160009"" when activating services (#14727)","FEATURES:
+* New Data Source: google_*_iam_policy (#14662)
+* New Data Source: google_vertex_ai_index (#14640)
+IMPROVEMENTS:
+* cloudrun: added template.spec.containers.name field to google_cloud_run_service (#14647)
+* compute: added network_performance_config field to google_compute_instance and google_compute_instance_template (#14678)
+* compute: added guest_os_features and licenses fields to google_compute_disk and google_compute_region_disk (#14660)
+* datastream: added mysql_source_config.max_concurrent_backfill_tasks field to google_datastream_stream (#14639)
+* firebase: added additional import formats for google_firebase_webapp (#14638)
+* notebooks: added update support for google_notebooks_instance.metadata field (#14650)
+* privateca: added encoding_format field to google_privateca_ca_pool (#14663)
+BUG FIXES:
+* apigee: increased google_apigee_organization timeout defaults to 45m from 20m (#14643)
+* cloudresourcemanager: added retries to handle internal error: type: ""googleapis.com"" subject: ""160009"" (#14727)
+* cloudrun: fixed a permadiff for metadata.annotation in google_cloud_run_service (#14642)
+* container: fixed a crash scenario in google_container_node_pool (#14693)
+* gkeonprem: changed hostname (under ip_block) from required to optional for google_gkeonprem_vmware_cluster (#14690)
+* serviceusage: added retries to handle internal error: type: ""googleapis.com"" subject: ""160009"" when activating services (#14727)"
+5,"NOTE:
+* Upgraded to Go 1.19.9 (#14561)
+FEATURES:
+* New Resource: google_network_security_server_tls_policy (#14557)
+IMPROVEMENTS:
+* bigquery: added ICEBERG as an enum for external_data_configuration.source_format field in google_bigquery_table (#14562)
+* cloudfunctions: added status attribute to the google_cloudfunctions_function resource and data source (#14574)
+* compute: added storage_location field in google_compute_image resource (#14619)
+* compute: added support for additional machine types in google_compute_region_commitment (#14593)
+* monitoring: added forecast_options field to google_monitoring_alert_policy resource (#14616)
+* monitoring: added notification_channel_strategy field to google_monitoring_alert_policy resource (#14563)
+* sql: added advanced_machine_features field in google_sql_database_instance (#14604)
+* storagetransfer: added field path to transfer_spec.aws_s3_data_source in google_storage_transfer_job (#14610)
+BUG FIXES:
+* artifactregistry: fixed new repositories ignoring the provider region if location is unset in google_artifact_registry_repository. (#14596)
+* compute: fixed permadiff on log_config.sample_rate of google_compute_backend_service (#14590)
+* container: fixed permadiff on gateway_api_config.channel of google_container_cluster (#14576)
+* dataflow: fixed inconsistent final plan when labels are added to google_dataflow_job (#14594)
+* provider: fixed an issue where mtls transports were not used consistently(initial implementation in v4.65.0, reverted in v4.65.1) (#14621)
+* storage: fixed inconsistent final plan when labels are added to google_storage_bucket (#14594)","NOTE:
+* Upgraded to Go 1.19.9 (#14561)
+FEATURES:
+* New Resource: google_network_security_server_tls_policy (#14557)
+IMPROVEMENTS:
+* bigquery: added ICEBERG as an enum for external_data_configuration.source_format field in google_bigquery_table (#14562)
+* cloudfunctions: added status attribute to the google_cloudfunctions_function resource and data source (#14574)
+* compute: added storage_location field in google_compute_image resource (#14619)
+* compute: added support for additional machine types in google_compute_region_commitment (#14593)
+* monitoring: added forecast_options field to google_monitoring_alert_policy resource (#14616)
+* monitoring: added notification_channel_strategy field to google_monitoring_alert_policy resource (#14563)
+* sql: added advanced_machine_features field in google_sql_database_instance (#14604)
+* storagetransfer: added field path to transfer_spec.aws_s3_data_source in google_storage_transfer_job (#14610)
+BUG FIXES:
+* artifactregistry: fixed new repositories ignoring the provider region if location is unset in google_artifact_registry_repository. (#14596)
+* compute: fixed permadiff on log_config.sample_rate of google_compute_backend_service (#14590)
+* container: fixed permadiff on gateway_api_config.channel of google_container_cluster (#14576)
+* dataflow: fixed inconsistent final plan when labels are added to google_dataflow_job (#14594)
+* provider: fixed an issue where mtls transports were not used consistently(initial implementation in v4.65.0, reverted in v4.65.1) (#14621)
+* storage: fixed inconsistent final plan when labels are added to google_storage_bucket (#14594)"
+6,"BUG FIXES:
 * provider: fixed an issue where google_client_config datasource return null for all attributes when region or zone is unset in provider config","BUG FIXES:
 * provider: fixed an issue where google_client_config datasource return null for all attributes when region or zone is unset in provider config"
-2,"BUG FIXES:
+7,"BUG FIXES:
 * provider: fixed an issue where google_client_config datasource return null for access_token","BUG FIXES:
 * provider: fixed an issue where google_client_config datasource return null for access_token"
-3,"FEATURES:
+8,"FEATURES:
 * New Data Source: google_datastream_static_ips (#14487)
 * New Resource: google_compute_disk_async_replication (#14489)
 * New Resource: google_firestore_field (#14512)
@@ -34,7 +173,7 @@ BUG FIXES:
 * compute: fixed crash on terraform destroy -refresh=false for instance group managers with wait_for_instances = ""true"" if the instance group manager was not found (#14543)
 * container: fixed node auto-provisioning not working when auto_provisioning_defaults.management is not provided on google_container_cluster (#14519)
 * provider: fixed an issue where mtls transports were not used consistently (#14550)"
-4,"FEATURES:
+9,"FEATURES:
 * New Data Source: google_alloydb_locations (#14355)
 * New Data Source: google_sql_tiers (#14420)
 * New Resource: google_database_migration_service_connection_profile (#14383)
@@ -107,10 +246,10 @@ BUG FIXES:
 * compute: fixed an import bug for google_compute_router_interface that happened when project was not set in the provider configuration or via environment variable (#14356)
 * dns: fixed bug in google_dns_keys data source where list attributes could not be used at plan-time (#14418)
 * firebase: specified required argument bundle_id in google_firebase_apple_app (#14469)"
-5,"BUG FIXES:
+10,"BUG FIXES:
 * bigtable: fixed plan failure because of an unused zone being unavailable","BUG FIXES:
 * bigtable: fixed plan failure because of an unused zone being unavailable"
-6,"NOTES:
+11,"NOTES:
 * alloydb: changed location from optional to required for google_alloydb_cluster and google_alloydb_backup resources. location had previously been marked as optional, but operations failed if it was omitted, and there was no way for location to be inherited from the provider configuration or from an environment variable. This means there was no way to have a working configuration without location specified. (#14330, #14334)
 FEATURES:
 * New Resource: google_access_context_manager_ingress_policy (#14302)
@@ -143,10 +282,10 @@ BUG FIXES:
 * compute: fixed an issue with TTLs being sent when USE_ORIGIN_HEADERS is set in google_compute_backend_bucket (#14323)
 * networkservices: increased default timeouts for google_network_services_edge_cache_keyset to 60m (from 30m) (#14314)
 * sql: fixed an issue that prevented setting enable_private_path_for_google_cloud_services to false in google_sql_database_instance (#14316)"
-7,"BUG FIXES:
+12,"BUG FIXES:
 * compute: fixed a diff that occurred when stack_type was unset on google_compute_ha_vpn_gateway","BUG FIXES:
 * compute: fixed a diff that occurred when stack_type was unset on google_compute_ha_vpn_gateway"
-8,"FEATURES:
+13,"FEATURES:
 * New Data Source: google_compute_region_instance_template (#14280)
 * New Resource: google_compute_region_instance_template (#14280)
 * New Resource: google_logging_linked_dataset (#14261)
@@ -175,7 +314,7 @@ BUG FIXES:
 * provider: fixed an error resulting from leaving batching.send_after unspecified and batching specified (#14263)
 * provider: fixed bug where credentials field could not be set as an empty string (#14279)
 * vertex: increased the default timeout for google_vertex_ai_index to 180m (#14248)"
-9,"BREAKING CHANGES:
+14,"BREAKING CHANGES:
 * cloudrunv2: set a default value of 3 for max_retries in google_cloud_run_v2_job. This should match the API's existing default, but may show a diff at plan time in limited circumstances as drift is now detected (#14223)
 FEATURES:
 * New Data Source: google_firebase_android_app_config (#14202)
@@ -228,15 +367,15 @@ BUG FIXES:
 * dataproc: fixed validation of optional_components (#14167)
 * provider: fixed an issue where the USER_PROJECT_OVERRIDE environment variable was not being read (#14238)
 * provider: fixed an issue where the provider crashed when ""batching"" was set in 4.60.0/4.60.1 (#14235)"
-10,"BUG FIXES:
+15,"BUG FIXES:
 * provider: fixed an issue where the provider crashed when ""batching"" was set in 4.60.0/4.60.1
 * provider: fixed an issue where the USER_PROJECT_OVERRIDE environment variable was not being read","BUG FIXES:
 * provider: fixed an issue where the provider crashed when ""batching"" was set in 4.60.0/4.60.1
 * provider: fixed an issue where the USER_PROJECT_OVERRIDE environment variable was not being read"
-11,"BUG FIXES:
+16,"BUG FIXES:
 * container: fixed a bug creating a diff adding a stack_type when GKE omitted stackType in API responses from older GKE clusters","BUG FIXES:
 * container: fixed a bug creating a diff adding a stack_type when GKE omitted stackType in API responses from older GKE clusters"
-12,"FEATURES:
+17,"FEATURES:
 * New Resource: google_apigee_keystores_aliases_key_cert_file (#14130)
 IMPROVEMENTS:
 * compute: added address_type, network, network_tier, prefix_length, purpose, subnetwork and users field for google_compute_address and google_compute_global_address datasource (#14078)
@@ -265,7 +404,7 @@ BUG FIXES:
 * cloudsql: fixed the error in any subsequent apply on google_sql_user after its google_sql_database_instance is deleted (#14098)
 * datacatalog: fixed google_data_catalog_tag only allowing 10 tags by increasing the page size to 1000 (#14077)
 * firebase: fixed google_firebase_project to succeed on apply when the project already has firebase enabled (#14121)"
-13,"FEATURES:
+18,"FEATURES:
 * New Resource: google_dataplex_asset_iam_* (#14046)
 * New Resource: google_dataplex_lake_iam_* (#14046)
 * New Resource: google_dataplex_zone_iam_* (#14046)
@@ -308,7 +447,7 @@ BUG FIXES:
 * compute: fixed bug where enforce_on_key_name could not be unset on google_compute_security_policy (#13993)
 * datastream: fixed bug where field dataset_id could not utilize the id from bigquery directly (#14003)
 * workstations: fixed permadiff on service_account of google_workstations_workstation_config (#13989)"
-14,"FEATURES:
+19,"FEATURES:
 * New Resource: google_apigee_sharedflow (#13938)
 * New Resource: google_apigee_sharedflow_deployment (#13938)
 * New Resource: google_apigee_flowhook (#13938)
@@ -329,7 +468,7 @@ BUG FIXES:
 * alloydb: fixed permadiff on automated_backup_policy.weekly_schedule of google_alloydb_cluster (#13948)
 * bigquery: fixed a permadiff when friendly_name is removed from google_bigquery_dataset (#13973)
 * redis: fixed a bug causing diff detection on reserved_ip_range in google_redis_instance (#13958)"
-15,"FEATURES:
+20,"FEATURES:
 * New Resource: google_access_context_manager_authorized_orgs_desc (#13925)
 * New Resource: google_bigquery_capacity_commitment (#13902)
 * New Resource: google_workstations_workstation (#13885)
@@ -352,7 +491,7 @@ BUG FIXES:
 * compute: fixed the error of invalid value for field failover_policy when UDP is selected on google_compute_region_backend_service (#13897)
 * firebase: allowed specifying a project field on datasources for google_firebase_android_app, google_firebase_web_app, and google_firebase_apple_app. (#13927)
 * tags: fixed a bug preventing use of google_tags_location_tag_binding with zonal parent resources (#13880)"
-16,"FEATURES:
+21,"FEATURES:
 * New Resource: google_data_catalog_policy_tag (#13818)
 * New Resource: google_data_catalog_taxonomy (#13818)
 * New Resource: google_scc_mute_config (#13818)
@@ -387,7 +526,7 @@ BUG FIXES:
 * dataproc: fixed an issue where master_config.num_instances would not force recreation when changed in google_dataproc_cluster (#13837)
 * spanner: fixed the error when updating deletion_protection on google_spanner_database (#13821)
 * spanner: fixed the error when updating force_destroy on google_spanner_instance (#13821)"
-17,"FEATURES:
+22,"FEATURES:
 * New Resource: google_cloudbuild_bitbucket_server_config (#13767)
 * New Resource: google_firebase_hosting_release (#13793)
 * New Resource: google_firebase_hosting_version (#13793)
@@ -404,7 +543,7 @@ IMPROVEMENTS:
 * storage: changed the default create timeout of google_storage_bucket to 10m from 4m (#13774)
 BUG FIXES:
 * container: fixed a crash when leaving placement_policy blank on google_container_node_pool (#13797)"
-18,"FEATURES:
+23,"FEATURES:
 * New Data Source: google_firebase_hosting_channel (#13686)
 * New Data Source: google_logging_sink (#13742)
 * New Data Source: google_sql_databases (#13738)
@@ -429,10 +568,10 @@ BUG FIXES:
 * bigquery: fixed permadiff on max_time_travel_hours of google_bigquery_dataset (#13691)
 * compute: added possibility to remove stateful_disk in compute_instance_group_manager and compute_region_instance_group_manager. (#13737)
 * sql: fixed an issue with updating the settings.activation_policy field in google_sql_database_instance(#13736)"
-19,"BUG FIXES:
+24,"BUG FIXES:
 * provider: fixed crash when trying to configure the provider without the userinfo-email scope or with invalid credentials","BUG FIXES:
 * provider: fixed crash when trying to configure the provider without the userinfo-email scope or with invalid credentials"
-20,"FEATURES:
+25,"FEATURES:
 * New Resource: google_apigee_addons_config (#13654)
 * New Resource: google_alloydb_backup (#13639)
 * New Resource: google_alloydb_cluster (#13639)
@@ -473,7 +612,7 @@ BUG FIXES:
 * composer: fixed an issue with cleaning up environments created in an error state (#13644)
 * compute: fixed wrong maximum limit description for possible VPC MTUs (#13674)
 * datafusion: fixed version can't be updated on google_data_fusion_instance (#13658)"
-21,"FEATURES:
+26,"FEATURES:
 * New Data Source: google_secret_manager_secret_version_access (#13605)
 * New Resource: google_workstations_workstation_cluster (#13619)
 IMPROVEMENTS:
@@ -502,7 +641,7 @@ BUG FIXES:
 * container: fixed an issue with resuming failed cluster creation (#13580)
 * gke: fixed the error of Invalid address to set on config_connector_config of the data source google_container_cluster (#13566)
 * secretmanager: fixed incorrect required_with for topics in google_secret_managed_secret (#13612)"
-22,"DEPRECATIONS:
+27,"DEPRECATIONS:
 * cloudrunv2: deprecated liveness_probe.tcp_socket field from google_cloud_run_v2_service resource as it is not supported by the API and it will be removed in a future major release (#13563)
 * cloudrunv2: deprecated startup_probe and liveness_probe fields from google_cloud_run_v2_job resource as they are not supported by the API and they will be removed in a future major release (#13531)
 FEATURES:
@@ -545,7 +684,7 @@ BUG FIXES:
 * bigquery: fixed permadiff on external_data_configuration.connection_id of google_bigquery_table (#13560)
 * gke: fixed the error of Invalid address to set on config_connector_config of the data source google_container_cluster (#13566)
 * google_project: fixes misleading examples that could cause firebase:enabled label to be accidentally removed. (#13552)"
-23,"FEATURES:
+28,"FEATURES:
 * New Data Source: google_compute_network_peering (#13476)
 * New Data Source: google_compute_router_nat (#13475)
 * New Resource: google_cloud_run_v2_job_iam_binding (#13492)
@@ -598,7 +737,7 @@ BUG FIXES:
 * cloudplatform: fixed the error with header X-Goog-User-Project on google_client_openid_userinfo (#13474)
 * cloudsql: fixed disk_type can't be updated on google_sql_database_instance (#13483)
 * vertexai: fixed updating value_type in google_vertex_ai_featurestore_entitytype_feature (#13491)"
-24,"FEATURES:
+29,"FEATURES:
 * New Data Source: google_project_service (#13434)
 * New Data Source: google_sql_database_instances (#13433)
 * New Data Source: google_container_attached_install_manifest (#13443)
@@ -659,7 +798,7 @@ BUG FIXES:
 * cloudplatform: fixed a bug where google_folder deletion would fail to handle async operations (#13377)
 * container: fixed a bug preventing updates to master_global_access_config in google_container_cluster (#13383)
 * spanner: fixed crash when google_spanner_database.ddl item was nil (#13441)"
-25,"FEATURES:
+30,"FEATURES:
 * New Data Source: google_beyondcorp_app_connection (#13336)
 * New Data Source: google_beyondcorp_app_connector (#13305)
 * New Data Source: google_beyondcorp_app_gateway (#13305)
@@ -742,7 +881,7 @@ BUG FIXES:
 * identityplatform: fixed issues with google_identity_platform_config creation (#13301)
 * resourcemanager: fixed the google_project datasource silently returning empty results when the project was not found or not in the ACTIVE state. Now, an error will be surfaced instead. (#13358)
 * sql: fixed sql_database_instance leaking root users (#13258)"
-26,"NOTES:
+31,"NOTES:
 * sql: fixed an issue where google_sql_database was abandoned by default as of version 4.45.0. Users who have upgraded to 4.45.0 or 4.46.0 will see a diff when running their next terraform apply after upgrading this version, indicating the deletion_policy field's value has changed from ""ABANDON"" to ""DELETE"". This will create a no-op call against the API, but can otherwise be safely applied. (#13226)
 FEATURES:
 * New Resource: google_alloydb_backup (#13202)
@@ -779,7 +918,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * composer: fixed a crash when updating ip_allocation_policy of google_composer_environment (#13188)
 * sql: fixed an issue where google_sql_database was abandoned by default as of version 4.45.0. Users who have upgraded to 4.45.0 or 4.46.0 will see a diff when running their next terraform apply after upgrading this version, indicating the deletion_policy field's value has changed from ""ABANDON"" to ""DELETE"". This will create a no-op call against the API, but can otherwise be safely applied. (#13226)"
-27,"FEATURES:
+32,"FEATURES:
 * New Data Source: google_firebase_android_app (#13186)
 * New Resource: google_cloud_run_v2_job (#13154)
 * New Resource: google_cloud_run_v2_service (#13166)
@@ -818,7 +957,7 @@ BUG FIXES:
 * container: fixed GKE permadiff/thrashing when update_settings. max_surge or update_settings. max_unavailable values are updating on google_container_node_pool (#13171)
 * datastream: fixed google_datastream_private_connection ignoring failures during creation (#13160)
 * kms: fixed issues with deleting crypto key versions in states other than ENABLED (#13167)"
-28,"FEATURES:
+33,"FEATURES:
 * New Data Source: google_logging_project_cmek_settings (#13078)
 * New Resource: google_vertex_ai_tensorboard (#13065)
 * New Resource: google_data_fusion_instance_iam_binding (#13134)
@@ -891,10 +1030,10 @@ BUG FIXES:
 * container: fixed the data source google_container_cluster to return an error if it does not exist (#13070)
 * sql: fixed googe_sql_database_instance to include backup_configuration in initial create request (#13092)
 * storage: fixed permdiff when website, website.main_page_suffix, website.not_found_page are removed on google_storage_bucket (#13069)"
-29,"BUG FIXES:
+34,"BUG FIXES:
 * compute: fixed a crash with google_compute_instance_template on a newly released field when advanced_machine_features was set (#13108)","BUG FIXES:
 * compute: fixed a crash with google_compute_instance_template on a newly released field when advanced_machine_features was set (#13108)"
-30,"FEATURES:
+35,"FEATURES:
 * New Resource: google_alloydb_instance (#12981)
 * New Resource: google_beyondcorp_app_connector (#13011)
 * New Resource: google_beyondcorp_app_gateway (#13011)
@@ -1017,16 +1156,16 @@ BUG FIXES:
 * provider: fixed a crash during provider authentication for certain environments (#13056)
 * storage: fixed a crash when log_bucket is updated with empty body on google_storage_bucket (#13058)
 * vertexai: made google_vertex_ai_featurestore_entitytype always use regional endpoint corresponding to parent's region (#12959)"
-31,"BUG FIXES:
+36,"BUG FIXES:
 * provider: fixed a crash during provider authentication for certain environments (#13056)","BUG FIXES:
 * provider: fixed a crash during provider authentication for certain environments (#13056)"
-32,"FEATURES:
+37,"FEATURES:
 * New Resource: google_kms_crypto_key_version (#12926)","FEATURES:
 * New Resource: google_kms_crypto_key_version (#12926)"
-33,"BUG FIXES:
+38,"BUG FIXES:
 * storage: fixed a crash in google_storage_bucket when upgrading provider to version 4.42.0 with lifecycle_rule.condition.age unset (#12922)","BUG FIXES:
 * storage: fixed a crash in google_storage_bucket when upgrading provider to version 4.42.0 with lifecycle_rule.condition.age unset (#12922)"
-34,"FEATURES:
+39,"FEATURES:
 * New Data Source: google_compute_addresses (#12829)
 * New Data Source: google_compute_region_network_endpoint_group (#12849)
 * New Resource: google_alloydb_cluster (#12772)
@@ -1113,7 +1252,7 @@ BUG FIXES:
 * container: fixed inability to update datapath_provider on google_container_cluster by making field changes trigger resource recreation (#12887)
 * pubsub: ensured topics are recreated when their schemas change. (#12806)
 * redis: updated persistence_config.rdb_snapshot_period to optional in the google_redis_instance resource. (#12872)"
-35,"KNOWN ISSUES:
+40,"KNOWN ISSUES:
 * container: This release introduced a new field, node_config.0.guest_accelerator.0.gpu_sharing_config, to an https://www.terraform.io/language/attr-as-blocks field (node_config.0.guest_accelerator). As detailed on the linked page, this may cause issues for modules and/or formats other than HCL.
 BREAKING CHANGES:
 * sql: updated google_sql_user.sql_server_user_details to be read only. Any configuration attempting to set this field is invalid and will cause the provider to fail during plan time. (#12742)
@@ -1142,7 +1281,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * kms: fixed apply failure when google_kms_crypto_key is removed after its versions were destroyed earlier (#12752)
 * monitoring: fixed a bug causing a perma-diff in google_monitoring_alert_policy when cross_series_reducer was set to ""REDUCE_NONE"" (#12741)"
-36,"FEATURES:
+41,"FEATURES:
 * New Data Source: google_cloudfunctions2_function (#12673)
 * New Data Source: google_compute_snapshot (#12671)
 * New Resource: google_compute_region_target_tcp_proxy (#12715)
@@ -1187,7 +1326,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * storage: fixed a bug where user specified labels get overwritten by Dataplex auto generated labels (#12694)
 * storagetransfer: fixed a bug in google_storagetransfer_job refreshes when transfer_schedule was empty (#12704)"
-37,"FEATURES:
+42,"FEATURES:
 * New Data Source: google_artifact_registry_repository (#12637)
 * New Resource: google_identity_platform_config (#12665)
 IMPROVEMENTS:
@@ -1230,7 +1369,7 @@ BUG FIXES:
 * iam: fixed permadiff resulting from empty fields being sent in requests to set conditional IAM policies (#12653)
 * secretmanager: fixed a bug where google_secret_manager_secret_version that was destroyed outside of Terraform would not be recreated on apply (#12644)
 * storagetransfer: fixed a crash in google_storagetransfer_job when transfer_schedule is empty (#12704)"
-38,"FEATURES:
+43,"FEATURES:
 * New Data Source: google_vpc_access_connector (#12580)
 * New Resource: google_datastream_private_connection (#12574)
 IMPROVEMENTS:
@@ -1261,7 +1400,7 @@ BUG FIXES:
 * container: fixed allow passing empty list to monitoring_config and logging_config in google_container_cluster (#12605)
 * sql: fixed a bug causing a perma-diff on disk_type due to API values being downcased (#12567)
 * storage: fixed the inability to set 0 for lifecycle_rule.condition.age on google_storage_bucket (#12593)"
-39,"FEATURES:
+44,"FEATURES:
 * New Resource: google_apigee_nat_address (#12536)
 * New Resource: google_dialogflow_cx_webhook (#12498)
 * New Resource: google_filestore_snapshot (#12490)
@@ -1290,7 +1429,7 @@ BUG FIXES:
 * notebooks: fixed perma-diff in google_notebooks_instance (#12493)
 * privateca: fixed an issue that blocked subordinate CA data sources when state was not AWAITING_USER_ACTIVATION (#12511)
 * storage: fixed permdiff on the field versioning of google_storage_bucket (#12495)"
-40,"FEATURES:
+45,"FEATURES:
 * New Resource: google_datastream_connection_profile (#12475)
 IMPROVEMENTS:
 * appengine: added field service_account to google_app_engine_flexible_app_version (#12463)
@@ -1317,7 +1456,7 @@ IMPROVEMENTS:
 * dataproc: added option shielded_instance_config to resource google_dataproc_workflow_template. (#12451)
 * metastore: extended default timeouts for google_dataproc_metastore_service from 40m to 60m (#12462)
 * pubsub: made google_pubsub_subscription.enable_exactly_once_delivery mutable so that it updates subscription without recreation. (#12438)"
-41,"IMPROVEMENTS:
+46,"IMPROVEMENTS:
 * apigee: added support for nodeConfig in google_apigee_environment (#12394)
 * apigee: added a properties field to google_apigee_organization (#12433)
 * cloudfunctions2: added secret_environment_variables and secret_volumes to google_cloudfunctions2_function (#12417)
@@ -1340,7 +1479,7 @@ BUG FIXES:
 * monitoring: added force_delete field to google_monitoring_notification_channel resource (#12414)
 BUG FIXES:
 * compute: fixed the id format of the data source google_compute_instance (#12405)"
-42,"NOTES:
+47,"NOTES:
 * updated Bigtable go client version from 1.13 to 1.16. (#12349)
 IMPROVEMENTS:
 * apigee: added support for specifying retention when deleting google_apigee_organization (#12336)
@@ -1637,7 +1776,7 @@ BUG FIXES:
 * composer: fixed permadiff on private_environment_config.cloud_composer_connection_subnetwork (#11954)
 * container: fixed an issue where node_config.min_cpu_platform could cause a perma-diff in google_container_cluster (#11986)
 * filestore: fixed a case where google_filestore_instance.networks.network would incorrectly see a diff between state and config when the network id format was used (#11995)"
-43,"FEATURES:
+48,"FEATURES:
 * New Resource: google_cloudfunctions2_function (#12322)
 IMPROVEMENTS:
 * container: added update support for authenticator_groups_config in google_container_cluster (#12310)
@@ -1658,7 +1797,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * bigquery: removed force replacement for display_name on google_bigquery_data_transfer_config (#12311)
 * compute: fixed permadiff for instance_termination_action in google_compute_instance_template (#12309)"
-44,"NOTES:
+49,"NOTES:
 * Updated to Golang 1.18 (#12246)
 FEATURES:
 * New Resource: google_dataplex_asset (#12210)
@@ -1705,7 +1844,7 @@ BUG FIXES:
 * compute: fixed perma-diff on google_compute_disk for new arm64 images (#12184)
 * dataflow: fixed bug where permadiff would show on google_dataflow_job.additional_experiments (#12268)
 * storage: fixed a bug in google_storage_bucket where name was incorrectly validated. (#12248)"
-45,"FEATURES:
+50,"FEATURES:
 * New Resource: google_dataplex_zone (#12146)
 IMPROVEMENTS:
 * bucket: added support for matches_prefix and matches_suffix in condition of a lifecycle_rule in  google_storage_bucket (#12175)
@@ -1736,7 +1875,7 @@ BUG FIXES:
 * dns: fixed a bug where google_dns_record_set would create an inconsistent plan when using interpolated values in rrdatas (#12157)
 * kms: fixed setting of resource id post-import for google_kms_crypto_key (#12164)
 * provider: fixed a bug where user-agent was showing ""dev"" rather than the provider version (#12137)"
-46,"FEATURES:
+51,"FEATURES:
 * New Data Source: google_service_account_jwt (#12107)
 * New Resource: google_certificate_map_entry (#12127)
 * New Resource: google_certificate_map (#12127)
@@ -1773,7 +1912,7 @@ BUG FIXES:
 * compute: allowed properly updating adaptive_protection_config in compute_security_policy (#12085)
 * notebooks: fixed a bug where google_notebooks_runtime can't be updated (#12113)
 * sql: fixed an issue in google_sql_database_instance where updates would fail because of the collation field (#12131)"
-47,"FEATURES:
+52,"FEATURES:
 * New Resource: google_artifact_registry_repository_iam_binding (#12063)
 * New Resource: google_artifact_registry_repository_iam_member (#12063)
 * New Resource: google_artifact_registry_repository_iam_policy (#12063)
@@ -1828,7 +1967,7 @@ BUG FIXES:
 * compute: fixed missing network_interface.0.ipv6_access_config.0.external_ipv6 output on google_compute_instance (#12072)
 * documentai: fixed a bug where eu region could not be utilized for documentai resources (#12074)
 * gkehub: fixed a bug where issuer can't be updated on google_gke_hub_membership (#12073)"
-48,"FEATURES:
+53,"FEATURES:
 * New Resource: google_bigquery_connection_iam_binding (#12004)
 * New Resource: google_bigquery_connection_iam_member (#12004)
 * New Resource: google_bigquery_connection_iam_policy (#12004)
@@ -1889,7 +2028,7 @@ BUG FIXES:
 * composer: fixed permadiff on private_environment_config.cloud_composer_connection_subnetwork (#11954)
 * container: fixed an issue where node_config.min_cpu_platform could cause a perma-diff in google_container_cluster (#11986)
 * filestore: fixed a case where google_filestore_instance.networks.network would incorrectly see a diff between state and config when the network id format was used (#11995)"
-49,"IMPROVEMENTS:
+54,"IMPROVEMENTS:
 * clouddeploy: added suspend field to google_clouddeploy_delivery_pipeline resource (#11914)
 * compute: added maxPortsPerVm field to google_compute_router_nat resource (#11933)
 * compute: added psc_connection_id and psc_connection_status output fields to google_compute_forwarding_rule and google_compute_global_forwarding_rule resources (#11892)
@@ -1904,7 +2043,7 @@ BUG FIXES:
 BUG FIXES:
 * compute: fixed default handling for enable_dynamic_port_allocation to be managed by the api (#11887)
 * vertexai: Fixed a bug where terraform crashes when force_destroy is set in google_vertex_ai_featurestore resource (#11928)"
-50,"FEATURES:
+55,"FEATURES:
 * New Resource: google_cloudfunctions2_function_iam_binding (#11853)
 * New Resource: google_cloudfunctions2_function_iam_member (#11853)
 * New Resource: google_cloudfunctions2_function_iam_policy (#11853)
@@ -1927,7 +2066,7 @@ IMPROVEMENTS:
 * composer: Promoted config.privately_used_public_ips and config.ip_masq_agent in google_composer_environment resource to GA. (#11849)
 BUG FIXES:
 * dns: fixed a bug where google_dns_record_set resource can not be changed from default routing to Geo routing policy. (#11872)"
-51,"IMPROVEMENTS:
+56,"IMPROVEMENTS:
 * bigquery: added connection_id to external_data_configuration for google_bigquery_table (#11836)
 * composer: promoted config.master_authorized_networks_config in google_composer_environment resource to GA. (#11810)
 * compute: added advanced_options_config to google_compute_security_policy (#11809)
@@ -1956,10 +2095,10 @@ BUG FIXES:
 * certificatemanager: fixed bug where DEFAULT scope would permadiff and force replace the certificate. (#11811)
 * dns: fixed perma-diff for updated labels in google_dns_managed_zone (#11846)
 * storagetransfer: fixed perm diff on transfer_options for google_storage_transfer_job (#11812)"
-52,"IMPROVEMENTS:
+57,"IMPROVEMENTS:
 * compute: added cache_key_policy field to google_compute_backend_bucket resource (#11791)","IMPROVEMENTS:
 * compute: added cache_key_policy field to google_compute_backend_bucket resource (#11791)"
-53,"FEATURES:
+58,"FEATURES:
 * New Data Source: google_tags_tag_key (#11753)
 * New Data Source: google_tags_tag_value (#11753)
 * New Resource: google_dataplex_lake (#11769)
@@ -1980,7 +2119,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * binaryauthorization: fixed permadiff in google_binary_authorization_attestor (#11731)
 * service: added re-polling for service account after creation, 404s sometimes due to eventual consistency (#11749)"
-54,"FEATURES:
+59,"FEATURES:
 * New Resource: google_bigquery_connection (#11701)
 * New Resource: google_certificate_manager_certificate (#11685)
 * New Resource: google_certificate_manager_dns_authorization (#11685)
@@ -2029,7 +2168,7 @@ BUG FIXES:
 * container: fixed Autopilot cluster couldn't omit master ipv4 cidr in google_container_cluster (#11639)
 * resourcemanager: fixed a bug in wrongly writing to state when creation failed on google_project_organization_policy (#11676)
 * storage: not specifying content or source for google_storage_bucket_object now fails at plan-time instead of apply-time. (#11663)"
-55,"IMPROVEMENTS:
+60,"IMPROVEMENTS:
 * cloudfunctions: added CMEK support for Cloud Functions (#11627)
 * compute: added service_directory_registrations to google_compute_forwarding_rule resource (#11635)
 * compute: removed validation checking against a fixed set of persistent disk types (#11630)
@@ -2052,7 +2191,7 @@ BUG FIXES:
 BUG FIXES:
 * compute: fixed a crash in google_compute_instance when the instance is deleted outside of Terraform (#11602)
 * provider: removed printing credentials to the console if malformed JSON is given (#11614)"
-56,"NOTES:
+61,"NOTES:
 * google_privateca_certificate_authority resources now cannot be destroyed unless deletion_protection = false is set in state for the resource. (#11551)
 FEATURES:
 * New Data Source: google_compute_disk (#11584)
@@ -2079,7 +2218,7 @@ BUG FIXES:
 * compute: fixed a crash when compute.instance is not found (#11602)
 * provider: removed printing credentials to the console if malformed JSON is given (#11599)
 * sql: fixed bug where encryption_key_name was not being propagated to the API. (#11601)"
-57,"IMPROVEMENTS:
+62,"IMPROVEMENTS:
 * cloudbuild: made CLOUD_LOGGING_ONLY available as a cloud build logging option. (#11511)
 * compute: added redirect_options field for google_compute_security_policy rules (#11492)
 * compute: added FIXED_STANDARD and STANDARD as valid values to the field network_interface.0.access_configs.0.network_tier of  google_compute_instance_template resource (#11536)
@@ -2106,7 +2245,7 @@ BUG FIXES:
 * bigquery: fixed a bug where encryption_configuration.kms_key_name stored the version rather than the key name. (#11496)
 * compute: fixed url_mask required mis-annotation in google_compute_region_network_endpoint_group, making it optional (#11517)
 * spanner: fixed escaping of database names with Postgres dialect in google_spanner_database (#11518)"
-58,"FEATURES:
+63,"FEATURES:
 * New Resource: google_privateca_certificate_template_iam_binding (#11464)
 * New Resource: google_privateca_certificate_template_iam_member (#11464)
 * New Resource: google_privateca_certificate_template_iam_policy (#11464)
@@ -2129,7 +2268,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * apigee: updated mutex on google_apigee_instance_attachment to lock on org_id. (#11467)
 * vpcaccess: fixed an issue where google_vpc_access_connector would be repeatedly recreated when network was not specified (#11469)"
-59,"FEATURES:
+64,"FEATURES:
 * New Data Source: google_access_approval_folder_service_account (#11407)
 * New Data Source: google_access_approval_organization_service_account (#11407)
 * New Data Source: google_access_approval_project_service_account (#11407)
@@ -2186,7 +2325,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * redis: fixed an issue where older redis instances had a dangerous diff on the field read_replicas_mode, adding a default of READ_REPLICAS_DISABLED. Now, if the field is not set in config, the value of the field will keep the old value from state. (#11420)
 * tags: fixed issue where tags could not be applied sequentially to the same parent in google_tags_tag_binding (#11442)"
-60,"NOTE: We're marked a change in this release as a BREAKING CHANGE to indicate that the change may cause undesirable behavior for users in some circumstances. This is done to increase visibility on the change, which otherwise would have been marked under the BUG FIXES category, and it is not believed to be a change that breaks the backwards compatibility of the provider requiring a major version change.
+65,"NOTE: We're marked a change in this release as a BREAKING CHANGE to indicate that the change may cause undesirable behavior for users in some circumstances. This is done to increase visibility on the change, which otherwise would have been marked under the BUG FIXES category, and it is not believed to be a change that breaks the backwards compatibility of the provider requiring a major version change.
 BREAKING CHANGES:
 * composer: made the google_composer_environment.config.software_config.image_version field immutable as updating this field is only available in beta. (#11309)
 FEATURES:
@@ -2237,7 +2376,7 @@ BUG FIXES:
 * osconfig: fixed a bug where recurring_schedule.time_of_day can not be set to 12am exact time in google_os_config_patch_deployment resource (#11293)
 * storage: fixed a bug where google_storage_bucket data source would retry for 20 min when bucket was not found. (#11295)
 * storage: fixed bug where google_storage_transfer_job that was deleted outside of Terraform would not be recreated on apply. (#11307)"
-61,"FEATURES:
+66,"FEATURES:
 * New Resource: google_logging_log_view (#11282)
 IMPROVEMENTS:
 * apigee: added billing_type attribute to google_apigee_organization resource. (#11285)
@@ -2256,7 +2395,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * dataproc: fixed a crash when logging_config only contains nil entry  in google_dataproc_workflow_template (#11280)
 * sql: fixed crash when one of settings.database_flags is nil. (#11279)"
-62,"FEATURES:
+67,"FEATURES:
 * New Resource: google_bigqueryreservation_assignment (#11215)
 * New Resource: google_apikeys_key (#11249)
 IMPROVEMENTS:
@@ -2279,7 +2418,7 @@ IMPROVEMENTS:
 * serviceusage: supported force behavior for deleting consumer quota override (#11205)
 BUG FIXES:
 * dataproc: fixed a crash when logging_config only contains nil entry  in google_dataproc_job (#11232)"
-63,"FEATURES:
+68,"FEATURES:
 * New Resource: google_apigee_endpoint_attachment (#11157)
 * New Datasource: google_dns_record_set (#11180)
 * New Datasource: google_privateca_certificate_authority (#11182)
@@ -2302,7 +2441,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * composer: allow region to be undefined in configuration for google_composer_environment (#11178)
 * container: fixed a bug where vertical_pod_autoscaling would cause autopilot clusters to recreate (#11167)"
-64,"NOTE:
+69,"NOTE:
 * updated to go 1.16.14 (#11132)
 IMPROVEMENTS:
 * bigquery: added support for authorized datasets to google_bigquery_dataset.access and google_bigquery_dataset_access (#11091)
@@ -2325,7 +2464,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * apigee: fixed a bug where multiple google_apigee_instance could not be used on the same google_apigee_organization (#11121)
 * compute: corrected an issue in google_compute_security_policy where only alpha values for certain enums were accepted (#11095)"
-65,"IMPROVEMENTS:
+70,"IMPROVEMENTS:
 * cloudfunctions: Added SecretManager integration support to google_cloudfunctions_function. (#11062)
 * dataproc: increased the default timeout for google_dataproc_cluster from 20m to 45m (#11026)
 * sql: added field clone.allocated_ip_range to support address range picker for clone in resource google_sql_database_instance (#11058)
@@ -2340,7 +2479,7 @@ BUG FIXES:
 BUG FIXES:
 * cloudrun: updated containers.ports.container_port to be optional instead of required on google_cloud_run_service (#11040)
 * compute: marked project field optional in google_compute_instance_template data source (#11041)"
-66,"FEATURES:
+71,"FEATURES:
 * New Resource: google_backend_service_iam_* (#11010)
 IMPROVEMENTS:
 * compute: added EXTERNAL_MANAGED as option for load_balancing_scheme in google_compute_global_forwarding_rule resource (#10985)
@@ -2363,7 +2502,7 @@ IMPROVEMENTS:
 * vpcaccess: updated field network in google_vpc_access_connector to accept self_link or name (#10988)
 BUG FIXES:
 * storage: Fixed bug where the provider crashes when Object.owner is missing when using google_storage_object_acl (#11006)"
-67,"BREAKING CHANGES:
+72,"BREAKING CHANGES:
 * cloudrun: changed the location of google_cloud_run_service so that modifying the location field will recreate the resource rather than causing Terraform to report it would attempt an invalid update (#10948)
 IMPROVEMENTS:
 * provider: changed the default timeout for many resources to 20 minutes, the current Terraform default, where it was less than 20 minutes previously (#10954)
@@ -2382,7 +2521,7 @@ BUG FIXES:
 * cloudrun: fixed a bug where changing the non-updatable location of a google_cloud_run_service would not force resource recreation (#10948)
 * compute: fixed a bug where google_compute_firewall would incorrectly find source_ranges to be empty during validation (#10976)
 * notebooks: fixed permadiff in google_notebooks_runtime.software_config (#10947)"
-68,"BREAKING CHANGES:
+73,"BREAKING CHANGES:
 * dlp: renamed the characters_to_ignore.character_to_skip field to characters_to_ignore.characters_to_skip in google_data_loss_prevention_deidentify_template. Any affected configurations will have been failing with an error at apply time already. (#10910)
 FEATURES:
 * New Resource: google_network_connectivity_spoke (#10921)
@@ -2409,14 +2548,14 @@ BUG FIXES:
 * cloudrun: Fixed permadiff in google_cloud_run_service's template.spec.service_account_name. (#10940)
 * dlp: Fixed typo in name of characters_to_ignore.characters_to_skip field for google_data_loss_prevention_deidentify_template (#10910)
 * storagetransfer: fixed bug where schedule was required, but really it is optional. (#10942)"
-69,"IMPROVEMENTS:
+74,"IMPROVEMENTS:
 * compute: added EXTERNAL_MANAGED as option for load_balancing_scheme in google_compute_backend_service resource (#10889)
 * container: promoted dns_config field of google_container_cluster to GA (#10892)
 * monitoring: added conditionMatchedLog and alertStrategy fields to google_monitoring_alert_policy resource (#10865)","IMPROVEMENTS:
 * compute: added EXTERNAL_MANAGED as option for load_balancing_scheme in google_compute_backend_service resource (#10889)
 * container: promoted dns_config field of google_container_cluster to GA (#10892)
 * monitoring: added conditionMatchedLog and alertStrategy fields to google_monitoring_alert_policy resource (#10865)"
-70,"BREAKING CHANGES:
+75,"BREAKING CHANGES:
 * pubsub: changed google_pubsub_schema so that modifiying fields will recreate the resource rather than causing Terraform to report it would attempt an invalid update (#10768)
 FEATURES:
 * New Resource: google_apigee_nat_address (#10789)
@@ -2455,7 +2594,7 @@ BUG FIXES:
 * pubsub: fixed update failure when attempting to change non-updatable resource google_pubsub_schema (#10768)
 * storage: fixed a bug where google_storage_bucket.lifecycle_rule.condition.days_since_custom_time was not updating. (#10778)
 * vpcaccess: Added back self_link functionality which was accidentally removed in 4.0.0 release. (#10808)"
-71,"FEATURES:
+76,"FEATURES:
 * New Data Source: google_container_aws_versions (#10754)
 * New Data Source: google_container_azure_versions (#10754)
 * New Resource: google_container_aws_cluster (#10754)
@@ -2494,7 +2633,7 @@ IMPROVEMENTS:
 * provider: enabled gRPC requests and response logging (#10721)
 BUG FIXES:
 * assuredworkloads: fixed a bug preventing google_assured_workloads_workload from being created in any region other than us-central1 (#10749)"
-72,"DEPRECATIONS:
+77,"DEPRECATIONS:
 * filestore: deprecated zone on google_filestore_instance in favor of location to allow for regional instances (#10662)
 FEATURES:
 * New Data Source: google_folders (#10658)
@@ -2527,7 +2666,7 @@ BUG FIXES:
 * compute: Fixed incorrectly failing validation for INTERNAL_MANAGED google_compute_region_backend_service. (#10664)
 * compute: fixed scenario where instance_group_manager would not start update if wait_for_instances was set and initial status was not STABLE (#10680)
 * container: fixed the ROUTES value for the networking_mode field in google_container_cluster. A recent API change unintentionally changed the default to a VPC_NATIVE cluster, and removed the ability to create a ROUTES-based one. Provider versions prior to this one will default to VPC_NATIVE due to this change, and are unable to create ROUTES clusters. (#10686)"
-73,"FEATURES:
+78,"FEATURES:
 * New Data Source: google_compute_router_status (#10573)
 * New Data Source: google_folders (#10658)
 * New Resource: google_notebooks_runtime (#10627)
@@ -2556,12 +2695,12 @@ IMPROVEMENTS:
 BUG FIXES:
 * essentialcontacts: marked updating email in google_essential_contacts_contact as requiring recreation (#10592)
 * privateca: fixed crlAccessUrls in CertificateAuthority (#10577)"
-74,"BUG FIXES:
+79,"BUG FIXES:
 
 provider: reverted a requirement in v4.2.0 for Terraform 0.13 and above. This release should be compatible with Terraform 0.12.31
 ","BUG FIXES:
 provider: reverted a requirement in v4.2.0 for Terraform 0.13 and above. This release should be compatible with Terraform 0.12.31"
-75,"FEATURES:
+80,"FEATURES:
 * New Data Source: google_compute_router_status (#10573)
 IMPROVEMENTS:
 * compute: added support for queue_count to google_compute_instance.network_interface and google_compute_instance_template.network_interface (#10571)
@@ -2580,7 +2719,7 @@ BUG FIXES:
 * compute: fixed a bug when cache_mode is set to FORCE_CACHE_ALL on google_compute_backend_bucket (#10572)
 * compute: fixed a perma-diff on google_compute_region_health_check when log_config.enable is set to false (#10553)
 * servicedirectory: added support for vpc network configuration in google_service_directory_endpoint. (#10569)"
-76,"IMPROVEMENTS:
+81,"IMPROVEMENTS:
 * cloudrun: Added support for secrets to GA provider. (#10519)
 * compute: Added bfd to google_compute_router_peer (#10487)
 * container: added gcfs_config to node_config of google_container_node_pool resource (#10499)
@@ -2607,7 +2746,7 @@ BUG FIXES:
 * compute: allowed source_disk to accept full image path on google_compute_snapshot (#10516)
 * compute: fixed a bug in google_compute_firewall that would cause changes in source_ranges to not correctly be applied (#10515)
 * logging: fixed a bug with updating description on google_logging_project_sink, google_logging_folder_sink and google_logging_organization_sink (#10493)"
-77,"NOTES:
+82,"NOTES:
 * compute: Google Compute Engine resources will now call the endpoint appropriate to the provider version rather than the beta endpoint by default (#10429)
 * container: Google Kubernetes Engine resources will now call the endpoint appropriate to the provider version rather than the beta endpoint by default (#10430)
 BREAKING CHANGES:
@@ -2750,12 +2889,12 @@ BUG FIXES:
 * compute: fixed the google_compute_instance_group_manager.update_policy.0.min_ready_sec field so that updating it to 0 works (#10457)
 * compute: fixed the google_compute_region_instance_group_manager.update_policy.0.min_ready_sec field so that updating it to 0 works (#10457)
 * spanner: fixed the schema for data.google_spanner_instance so that non-configurable fields are considered outputs (#10450)"
-78,"DEPRECATIONS:
+83,"DEPRECATIONS:
 
 container: fixed an overly-broad deprecation on master_auth, constraining it to master_auth.username and master_auth.password
 ","DEPRECATIONS:
 container: fixed an overly-broad deprecation on master_auth, constraining it to master_auth.username and master_auth.password"
-79,"DEPRECATIONS:
+84,"DEPRECATIONS:
 * container: deprecated workload_identity_config.0.identity_namespace and it will be removed in a future major release as it has been deprecated in the API. Use workload_identity_config.0.workload_pool instead. Switching your configuration from one value to the other will trigger a diff at plan time, and a spurious update. (#10327)
 * container: deprecated the following google_container_cluster fields: instance_group_urls and master_auth (#10356)
 IMPROVEMENTS:
@@ -2786,7 +2925,7 @@ BUG FIXES:
 * container: fixed a permadiff on google_container_node_pool.workload_metadata_config.mode (#10313)
 * iam: fixed request batching bug where failed requests would show unnecessary backslash escaping to the user. (#10303)
 * securitycenter: fixed bug where google_scc_notification_config.streaming_config.filter was not updating. (#10315)"
-80,"DEPRECATIONS:
+85,"DEPRECATIONS:
 * compute: deprecated the enable_display field in google_compute_instance_template in the google (GA) provider. It will only be available in the google-beta provider in a future release, as the underlying feature is in beta. (#10281)
 BUG FIXES:
 * compute: fixed bug where google_compute_router_peer could not set an advertised route priority of 0, causing permadiff. (#10292)
@@ -2799,7 +2938,7 @@ BUG FIXES:
 * container: fixed a crash on monitoring_config of google_container_cluster (#10290)
 * iam: fixed request batching bug where failed requests would show unnecessary backslash escaping to the user. (#10303)
 * storage: fixed a bug to better handle eventual consistency among google_storage_bucket resources. (#10287)"
-81,"NOTES:
+86,"NOTES:
 * reorganized documentation to group all Compute Engine and Monitoring (Stackdriver) resources together. (#10205)
 DEPRECATIONS:
 * container: deprecated workload_metadata_configuration.node_metadata in favor of workload_metadata_configuration.mode in google_container_cluster (#10238)
@@ -2848,7 +2987,7 @@ IMPROVEMENTS:
 * pubsub:  Added support for references to google_pubsub_lite_reservation to google_pubsub_lite_topic. (#10263)
 BUG FIXES:
 * monitoring: fixed typo in google_monitoring_uptime_check_config where NOT_MATCHES_REGEX could not be specified. (#10249)"
-82,"3.87.0 (October 04, 2021)
+87,"3.87.0 (October 04, 2021)
 DEPRECATIONS:
 * dataproc: deprecated the google_dataproc_workflow_template.version field, as it wasn't actually useful. The field is used during updates, but updates aren't currently possible with the resource. (#10183)
 FEATURES:
@@ -2879,7 +3018,7 @@ BUG FIXES:
 * container: fixed an issue where a node pool created with error (eg. GKE_STOCKOUT) would not be captured in state (#10137)
 * filestore: Allowed updating reserved_ip_range on google_filestore_instance via recreation of the instance (#10146)
 * serviceusage: enabled the service api to retry on failed operation calls in anticipation of transient errors that occur when first enabling the service. (#10171)"
-83,"IMPROVEMENTS:
+88,"IMPROVEMENTS:
 * healthcare: promoted google_healthcare_hl7_v2_store.parseConfig.version to GA (#10099)
 BUG FIXES:
 * dns: fixed an issue in google_dns_record_set where rrdatas could not be updated (#10089)
@@ -2890,7 +3029,7 @@ BUG FIXES:
 * dns: fixed an issue in google_dns_record_set where rrdatas could not be updated (#10089)
 * dns: fixed an issue in google_dns_record_set where creating the resource would result in an 409 error (#10089)
 * platform: fixed a bug in wrongly writing to state when creation failed on google_organization_policy (#10082)"
-84,"IMPROVEMENTS:
+89,"IMPROVEMENTS:
 * bigtable: enabled support for user_project_override in google_bigtable_instance and google_bigtable_table (#10060)
 * compute: added iap fields to google_compute_region_backend_service (#10038)
 * compute: allowed passing an IP address to the nextHopIlb field of google_compute_route resource (#10048)
@@ -2913,7 +3052,7 @@ BUG FIXES:
 * bigquery: fixed a bug where destination_encryption_config.kms_key_name stored the version rather than the key name. (#10068)
 * redis: extended the default timeouts on google_redis_instance (#10037)
 * serviceusage: fixed an issue in google_project_service where users could not reenable services that were disabled outside of Terraform. (#10045)"
-85,"FEATURES:
+90,"FEATURES:
 * New Data Source: google_secret_manager_secret (#9983)
 IMPROVEMENTS:
 * compute: added update support to google_compute_service_attachment (#9982)
@@ -2938,7 +3077,7 @@ BUG FIXES:
 * logging: fixed the data type for bucket_options.linear_buckets.width on google_logging_metric (#9985)
 * osconfig: fixed import on google_os_config_guest_policies (#10019)
 * storage: fixed an undetected change on days_since_noncurrent_time of google_storage_bucket (#10024)"
-86,"FEATURES:
+91,"FEATURES:
 * New Resource: google_privateca_certificate_template (#9905)
 IMPROVEMENTS:
 * privateca: added certificate_template to google_privateca_certificate. (#9915)
@@ -2971,7 +3110,7 @@ BUG FIXES:
 * privateca: fixed a permadiff bug for publishing_options on google_privateca_ca_pool when both attributes set false (#9926)
 * spanner: fixed instance updates to processing units (#9933)
 * storage: added support for timeouts on google_storage_bucket_object (#9937)"
-87,"FEATURES:
+92,"FEATURES:
 * New Resource: google_privateca_certificate_template (#9905)
 * New Resource: google_compute_firewall_policy (#9887)
 * New Resource: google_compute_firewall_policy_association (#9887)
@@ -3004,7 +3143,7 @@ BUG FIXES:
 * service_usage: fixed imports on google_service_usage_consumer_quota_override (#9876)
 * sql: fixed a permadiff bug for type when BUILT_IN on google_sql_user (#9864)
 * sql: fixed bug in google_sql_user with CLOUD_IAM_USERs on POSTGRES. (#9859)"
-88,"IMPROVEMENTS:
+93,"IMPROVEMENTS:
 * compute: Added enable attribute to google_compute_router_peer (#9776)
 * compute: added support for L3_DEFAULT as ip_protocol for google_compute_forwarding_rule and UNSPECIFIED as protocol for google_compute_region_backend_service to support network load balancers that forward all protocols and ports. (#9799)
 * compute: added support for security_settings to google_compute_backend_service (#9797)
@@ -3039,7 +3178,7 @@ BUG FIXES:
 * firestore: removed diff for server generated field name on google_firestore_index (#9820)
 * privateca: fixed the creation of subordinate google_privateca_certificate_authority with max_issuer_path_length = 0. (#9856)
 * privateca: Fixed null for ignore_active_certificates_on_deletion on the imported google_privateca_certificate_authority (#9781)"
-89,"FEATURES:
+94,"FEATURES:
 * New Resource: google_dialogflow_cx_environment (#9738)
 IMPROVEMENTS:
 * gkehub: added support for both //container.googleapis.com/${google_container_cluster.my-cluster.id} and google_container_cluster.my-cluster.id references in google_gke_hub_membership.endpoint.0.gke_cluster.0.resource_link (#9765)
@@ -3054,7 +3193,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * apigee: fixed update behavior on google_apigee_envgroup (#9740)
 * privateca: fixed a failure to create google_privateca_certificate_authority of type SUBORDINATE due to an invalid attempt to activate it on creation. (#9761)"
-90,"NOTES:
+95,"NOTES:
 * spanner: The num_nodes field on google_spanner_instance will have its default removed in a future major release, and either num_nodes or processing_units will be required. (#9716)
 FEATURES:
 * New Resource: google_dialogflow_cx_entity_type (#9717)
@@ -3069,7 +3208,7 @@ FEATURES:
 IMPROVEMENTS:
 * spanner: added processing_units to google_spanner_instance (#9716)
 * storage: added support for customer_encryption on resource_storage_bucket_object (#9704)"
-91,"FEATURES:
+96,"FEATURES:
 * New Resource: google_gke_hub_membership (#9616)
 IMPROVEMENTS:
 * servicenetworking: added support for user_project_override and billing_project to google_service_networking_connection (#9668)
@@ -3084,7 +3223,7 @@ BUG FIXES:
 * storagetransfer: Fixed a crash on azure_blob_storage_data_source for google_storage_transfer_job (#9644)
 * sql: fixed bug that wouldn't insert the google_sql_user in state for iam users. (#9625)
 * storage: fixed a crash when azure_credentials was defined in google_storage_transfer_job (#9671)"
-92,"3.77.0 (July 26, 2021)
+97,"3.77.0 (July 26, 2021)
 FEATURES:
 * New Resource: google_scc_notification_config (#9578)
 IMPROVEMENTS:
@@ -3105,7 +3244,7 @@ BUG FIXES:
 * billing: Fixed ordering of budget_filter. projects on google_billing_budget (#9598)
 * compute: removed default value of 0.8 from google_backend_service.backend.max_utilization and it will now default from API. All max_connections_xxx and max_rate_xxx will also default from API as these are all conditional on balancing mode. (#9587)
 * sql: fixed bug where the provider would retry on an error if the database instance name couldn't be reused. (#9591)"
-93,"FEATURES:
+98,"FEATURES:
 * New Resource: google_dialogflow_cx_flow (#9551)
 * New Resource: google_dialogflow_cx_intent (#9537)
 * New Resource: google_dialogflow_cx_version (#9554)
@@ -3128,7 +3267,7 @@ IMPROVEMENTS:
 * cloudbuild: Added pubsub_config and webhook_config parameter to google_cloudbuild_trigger. (#9541)
 BUG FIXES:
 * pubsub: fixed pubsublite update issues (#9544)"
-94,"FEATURES:
+99,"FEATURES:
 * New Resource: google_privateca_ca_pool (#9480)
 * New Resource: google_privateca_certificate (#9480)
 * New Resource: google_privateca_certificate_authority (#9480)
@@ -3159,7 +3298,7 @@ BUG FIXES:
 * billing: made amount.specified_amount.units updatable on google_billing_budget (#9465)
 * compute: fixed perma-diff in google_compute_instance (#9460)
 * storage: fixed handling of object paths that contain slashes for google_storage_object_access_control (#9502)"
-95,"FEATURES:
+100,"FEATURES:
 * New Resource: google_app_engine_service_network_settings (#9414)
 * New Resource: google_vertex_ai_dataset (#9411)
 * New Resource: google_cloudbuild_worker_pool (#9417)
@@ -3186,7 +3325,7 @@ BUG FIXES:
 * dataproc: fixed crash when creating google_dataproc_workflow_template with secondary_worker_config empty except for num_instances = 0 (#9381)
 * filestore: fixed an issue in google_filestore_instance where creating two instances simultaneously resulted in an error. (#9396)
 * sql: added support for binary_logging on replica instances for googe_sql_database_instance (#9428)"
-96,"FEATURES:
+101,"FEATURES:
 * New Resource: google_dialogflow_cx_agent (#9338)
 IMPROVEMENTS:
 * provider: added support for mtls authentication (#9382)
@@ -3209,7 +3348,7 @@ BUG FIXES:
 * apigee: added SLASH_23 support for peering_cidr_range on google_apigee_instance (#9343)
 * cloudrun: fixed a bug where plan would should a diff on google_cloud_run_service if the order of the template.spec.containers.env list was re-ordered outside of terraform. (#9340)
 * container: added user_project_override support to the ContainerOperationWaiter used by google_container_cluster (#9379)"
-97,"IMPROVEMENTS:
+102,"IMPROVEMENTS:
 * compute: added support for IPsec-encrypted Interconnect in the form of new fields on google_compute_router, google_compute_ha_vpn_gateway, google_compute_interconnect_attachment and google_compute_address(#9288)
 * container: Allowed specifying a cluster id field for google_container_node_pool.cluster to ensure that a node pool is recreated if the associated cluster is recreated. (#9309)
 * storagetransfer: added support for azure_blob_storage_data_source to google_storage_transfer_job (#9311)
@@ -3224,7 +3363,7 @@ BUG FIXES:
 * bigquery: Fixed google_bigquery_table.schema handling of policyTags (#9302)
 * bigtable: fixed bug that would error if creating multiple bigtable gc policies at the same time (#9305)
 * compute: fixed bug where encryption showed a perma-diff on resources created prior to the feature being released. (#9303)"
-98,"FEATURES:
+103,"FEATURES:
 * New Resource: google_dialogflow_fulfillment (#9253)
 IMPROVEMENTS:
 * compute: added reservation_affinity to google_compute_instance and google_compute_instance_template (#9256)
@@ -3247,7 +3386,7 @@ BUG FIXES:
 * composer: fixed a check that did not allow for preview versions in google_composer_environment (#9255)
 * storage: fixed error when matches_storage_class is set empty on google_storage_bucket (#9221)
 * vpcaccess: fixed permadiff when max_throughput is not set on google_vpc_access_connector (#9282)"
-99,"IMPROVEMENTS:
+104,"IMPROVEMENTS:
 * compute: added provisioned_iops to google_compute_disk (#9193)
 * compute: promoted distribution_policy_target_shape field in google_compute_region_instance_group_manager to GA. (#9186)
 * sql: added field disk_autoresize_limit to sql_database_instance (#9203)
@@ -3260,7 +3399,7 @@ BUG FIXES:
 BUG FIXES:
 * cloudrun: fixed a bug where resources would return successfully due to responses based on a previous version of the resource (#9213)
 * storage: fixed error when matches_storage_class is set empty on google_storage_bucket (#9221)"
-100,"IMPROVEMENTS:
+105,"IMPROVEMENTS:
 * compute: added ""description"" field to ""google_compute_resource_policy"" resource (#9176)
 * compute: added ""instance_schedule_policy"" field to ""google_compute_resource_policy"" resource (#9176)
 * compute: promoted field autoscaling_policy.scaling_schedules on google_compute_autoscaler and google_compute_region_autoscaler to ga (#9165)
@@ -3277,7 +3416,7 @@ BUG FIXES:
 * cloudidentity: fixed recreation on the initial_group_config of google_cloud_identity_group (#9143)
 * compute: added mutex in google_compute_metadata_item to reduce retries + quota errors (#9168)
 * container: fixed bug where enable_shielded_nodes could not be false on resource google_container_cluster (#9131)"
-101,"FEATURES:
+106,"FEATURES:
 * New Resource: google_pubsub_schema (#9116)
 IMPROVEMENTS:
 * compute: added initial_size  in resource google_compute_node_group to account for scenarios where size may change under the hood (#9078)
@@ -3296,7 +3435,7 @@ BUG FIXES:
 * compute: fixed bug where, when an organization security policy association was removed outside of terraform, the next plan/apply would fail. (#9095)
 * container: added validation to check that both node_version and remove_default_node_pool cannot be set on google_container_cluster (#9100)
 * dns: suppressed spurious diffs due to case changes in DS records (#9099)"
-102,"FEATURES:
+107,"FEATURES:
 * New Resource: google_memcache_instance (#8982)
 NOTES:
 * all: changed default HTTP request timeout from 30 seconds to 120 seconds (#8966)
@@ -3361,10 +3500,10 @@ BUG FIXES:
 * resourcemanager: fixed broken handling of IAM conditions for google_organization_iam_member, google_organization_iam_binding, and google_organization_iam_policy (#9047)
 * serviceusage: added google_project_service.service validation to reject invalid service domains that don't contain a period (#8987)
 * storage: fixed bug where role_entity user wouldn't update if the role changed. (#9008)"
-103,"BUG FIXES:
+108,"BUG FIXES:
 * compute: fixed bug where terraform would crash if updating from no service_account.scopes to more. (#9032)","BUG FIXES:
 * compute: fixed bug where terraform would crash if updating from no service_account.scopes to more. (#9032)"
-104,"NOTES:
+109,"NOTES:
 * all: changed default HTTP request timeout from 30 seconds to 120 seconds (#8966)
 BREAKING CHANGES:
 * datacatalog: updating parent in google_data_catalog_tag will now recreate the resource (#8964)
@@ -3403,7 +3542,7 @@ BUG FIXES:
 * datacatalog: set default false for force_delete on google_data_catalog_tag_template (#8922)
 * dns: added missing record types to google_dns_record_set resource (#8919)
 * sql: set clone.point_in_time optional for google_sql_database_instance (#8965)"
-105,"FEATURES:
+110,"FEATURES:
 * New Resource: google_eventarc_trigger (#8895)
 IMPROVEMENTS:
 * compute: added the ability to specify google_compute_forwarding_rule.ip_address by a reference in addition to raw IP address (#8877)
@@ -3424,7 +3563,7 @@ BUG FIXES:
 * compute: removed minimum for scopes field on google_compute_instance resource (#8893)
 * iam: fixed issue with principle and principleSet members not retaining their casing (#8860)
 * workflows: fixed a bug in google_workflows_workflow that could cause inconsistent final plan errors when using the name field in other resources (#8869)"
-106,"FEATURES:
+111,"FEATURES:
 * New Resource: google_tags_tag_key_iam_binding (#8844)
 * New Resource: google_tags_tag_key_iam_member (#8844)
 * New Resource: google_tags_tag_key_iam_policy (#8844)
@@ -3469,7 +3608,7 @@ BUG FIXES:
 * compute: reverted datatype change for mtu in google_compute_interconnect_attachment as it was incompatible with existing state representation (#8829)
 * iam: fixed issue with principle and principleSet members not retaining their casing (#8860)
 * storage: fixed intermittent Provider produced inconsistent result after apply error when creating google_storage_hmac_key (#8817)"
-107,"FEATURES:
+112,"FEATURES:
 * New Data Source: google_monitoring_istio_canonical_service (#8789)
 * New Resource: google_apigee_instance_attachment (#8795)
 IMPROVEMENTS:
@@ -3500,7 +3639,7 @@ BUG FIXES:
 * compute: added minimum for scopes field to google_compute_instance resource (#8801)
 * notebooks: fixed permadiff on labels for google_notebook_instance (#8799)
 * secretmanager: set required on secrest_data in google_secret_manager_secret_version (#8797)"
-108,"FEATURES:
+113,"FEATURES:
 * New Data Source: google_compute_health_check (#8725)
 * New Data Source: google_kms_secret_asymmetric (#8745)
 * New Resource: google_data_catalog_tag_template_iam_* (#8730)
@@ -3519,7 +3658,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * compute: fixed an issue where exceeding the operation rate limit would fail without retrying (#8746)
 * compute: corrected underlying type to integer for field mtu in google_compute_interconnect_attachment (#8744)"
-109,"IMPROVEMENTS:
+114,"IMPROVEMENTS:
 * provider: The provider now supports Workload Identity Federation. The federated json credentials must be loaded through the GOOGLE_APPLICATION_CREDENTIALS environment variable. (#8671)
 * compute: added proxy_bind to google_compute_target_tcp_proxy, google_compute_target_http_proxy and google_compute_target_https_proxy (#8706)
 * compute: changed google_compute_subnetwork to accept more values in the purpose field (#8647)
@@ -3536,7 +3675,7 @@ BUG FIXES:
 * healthcare: promoted google_healthcare_consent_store* to GA support (#8681)
 BUG FIXES:
 * container: Fixed updates on export_custom_routes and import_custom_routes in google_compute_network_peering (#8650)"
-110,"NOTES: From this release onwards google_compute_shared_vpc_service_project will not recognise the Shared VPC Admin role when assigned at the folder level in the GA provider, as that functionality is not enabled in the GA API. If you have folder-level IAM configured for Shared VPC permissions, use the google-beta provider instead.
+115,"NOTES: From this release onwards google_compute_shared_vpc_service_project will not recognise the Shared VPC Admin role when assigned at the folder level in the GA provider, as that functionality is not enabled in the GA API. If you have folder-level IAM configured for Shared VPC permissions, use the google-beta provider instead.
 FEATURES:
 * New Resource: google_apigee_envgroup (#8641)
 * New Resource: google_apigee_environment (#8596)
@@ -3587,7 +3726,7 @@ BUG FIXES:
 * container: Fixed failure in deleting maintenance_exclusion for google_container_cluster (#8589)
 * container: fixed an issue where release channel UNSPECIFIED could not be set (#8595)
 * essentialcontacts: made language_tag required for google_essential_contacts_contact (#8557)"
-111,"FEATURES:
+116,"FEATURES:
 * New Resource: google_workflows_workflow (#8549)
 * New Resource: google_apigee_instance (#8546)
 IMPROVEMENTS:
@@ -3614,7 +3753,7 @@ BUG FIXES:
 * compute : fixed a bug where guest_flush could not be set to false for the resource google_compute_resource_policy (#8517)
 * compute: fixed a panic on empty target_size in google_compute_region_instance_group_manager (#8528)
 * redis: fixed invalid value error on auth_string in google_redis_instance (#8493)"
-112,"NOTES:
+117,"NOTES:
 * google_bigquery_table resources now cannot be destroyed unless deletion_protection = false is set in state for the resource. (#8453)
 FEATURES:
 * New Data Source: google_iap_client (#8450)
@@ -3645,7 +3784,7 @@ BUG FIXES:
 * dataproc : fixed an issue where max_failure_per_hour was not set correctly for google_dataproc_job (#8441)
 * dlp : modified google_data_loss_prevention_stored_info_type regex.group_indexes field to trigger resource recreation on update (#8439)
 * sql: fixed diffs based on case for charset in google_sql_database (#8462)"
-113,"DEPRECATIONS:
+118,"DEPRECATIONS:
 * compute: deprecated source_disk_url field in google_compute_snapshot. (#8410)
 * kms: deprecated self_link field in google_kms_keyring and google_kms_cryptokey resource as it is identical value to id field. (#8410)
 * pubsub: deprecated path field in google_pubsub_subscription resource as it is identical value to id field. (#8410)
@@ -3670,7 +3809,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * appengine: added retry for P4SA propagation delay (#8409)
 * compute: fixed overly-aggressive detection of changes to google_compute_security_policy rules (#8417)"
-114,"FEATURES:
+119,"FEATURES:
 * New Resource: google_privateca_certificate (#8371)
 IMPROVEMENTS:
 * all: added plan time validations for fields that expect base64 values. (#8304)
@@ -3689,7 +3828,7 @@ BUG FIXES:
 * bigquery: fixed bug where you could not reorder columns on schema for resource google_bigquery_table (#8321)
 * cloudrun: suppressed run.googleapis.com/ingress-status annotation in google_cloud_run_service (#8361)
 * serviceaccount: loosened restrictions on account_id for datasource google_service_account (#8344)"
-115,"BREAKING CHANGES:
+120,"BREAKING CHANGES:
 * Reverted * bigquery: made incompatible changes to thegoogle_bigquery_table.schemafield to cause the resource to be recreated ([#8232](https://github.com/hashicorp/terraform-provider-google/pull/8232)) due to unintended interactions with a bug introduced in an earlier version of the resource.
 FEATURES:
 * New Data Source: google_runtimeconfig_config (#8268)
@@ -3718,7 +3857,7 @@ BUG FIXES:
 * billing: fixed perma-diff on currency_code in google_billing_budget (#8266)
  * compute: changed private_ipv6_google_access in google_compute_subnetwork to correctly send a fingerprint (#8290)
 * healthcare: add retry logic on healthcare dataset not initialized error (#8256)"
-116,"KNOWN ISSUES: New google_bigquery_table behaviour introduced in this version had unintended consequences, and may incorrectly flag tables for recreation. We expect to revert this for 3.55.0.
+121,"KNOWN ISSUES: New google_bigquery_table behaviour introduced in this version had unintended consequences, and may incorrectly flag tables for recreation. We expect to revert this for 3.55.0.
 FEATURES:
 * New Data Source: google_cloud_run_locations (#8192)
 * New Resource: google_privateca_certificate_authority (#8233)
@@ -3761,7 +3900,7 @@ BUG FIXES:
 * notebooks: fixed permadiff on noRemoveDataDisk for google_notebooks_instance (#8246)
 * resourcemanager: fixed an inconsistent result when IAM conditions are specified with google_folder_iam_* (#8235)
 * healthcare: added retry logic on healthcare dataset not initialized error (#8256)"
-117,"FEATURES:
+122,"FEATURES:
 * New Data Source: google_compute_instance_template (#8137)
 * New Resource: google_apigee_organization (#8178)
 IMPROVEMENTS:
@@ -3792,7 +3931,7 @@ BUG FIXES:
 * bigquery: enhanced diff suppress to ignore certain api divergences on resource table (#8134)
 * container: fixed crash due to nil exclusions object when updating an existent cluster with maintenance_policy but without exclusions (#8126)
 * project: fixed a bug in google_project_access_approval_settings where the default project was used rather than project_id (#8169)"
-118,"BREAKING CHANGES:
+123,"BREAKING CHANGES:
 * billing: removed import support for google_billing_budget as it never functioned correctly (#8023)
 FEATURES:
 * New Data Source: google_sql_backup_run (#8100)
@@ -3869,10 +4008,10 @@ BUG FIXES:
 * scheduler: Fixed syntax error in the Cloud Scheduler HTTP target example. (#8004)
 * sql: fixed a bug in google_sql_database_instance that caused a permadiff on settings.replication_type (#8006)
 * storage: updated IAM resources to refresh etag sooner on an IAM conflict error, which will make applications of multiple IAM resources much faster. (#8080)"
-119,"BUG FIXES:
+124,"BUG FIXES:
 * all: fixed a bug that would occur in various resources due to comparison of large integers (#8103)","BUG FIXES:
 * all: fixed a bug that would occur in various resources due to comparison of large integers (#8103)"
-120,"FEATURES:
+125,"FEATURES:
 * New Resource: google_firestore_document (#7932)
 * New Resource: google_notebooks_instance (#7933)
 * New Resource: google_notebooks_environment (#7933)
@@ -3905,7 +4044,7 @@ BUG FIXES:
 * project: fixed a bug where google_project_default_service_accounts would delete all IAM bindings on a project when run with action = ""DEPRIVILEGE"" (#7984)
 * spanner: fixed an issue in google_spanner_database where multi-statement updates were not formatted correctly (#7970)
 * sql: fixed a bug in google_sql_database_instance that caused a permadiff on settings.replication_type (#8006)"
-121,"FEATURES:
+126,"FEATURES:
 * New Data Source: google_composer_environment (#7902)
 * New Data Source: google_monitoring_cluster_istio_service (#7847)
 * New Data Source: google_monitoring_mesh_istio_service (#7847)
@@ -3940,7 +4079,7 @@ BUG FIXES:
 * bigqueryconnection: fixed failure to import a resource if it has a non-default project or location. (#7903)
 * iam: fixed iam conflict handling so that optimistic-locking retries will succeed more often. (#7915)
 * storage: fixed an issue in google_storage_bucket where cors could not be removed (#7858)"
-122,"FEATURES:
+127,"FEATURES:
 * New Resource: google_healthcare_consent_store (#7803)
 * New Resource: google_healthcare_consent_store_iam_binding (#7803)
 * New Resource: google_healthcare_consent_store_iam_member (#7803)
@@ -3975,7 +4114,7 @@ IMPROVEMENTS:
 * sql: added deletion_policy field to google_sql_user to enable abandoning users rather than deleting them (#7820)
 BUG FIXES:
 * bigtable: added ignore_warnings flag to create call for google_bigtable_app_profile (#7806)"
-123,"FEATURES:
+128,"FEATURES:
 * New Data Source: google_iam_workload_identity_pool_provider (#7733)
 IMPROVEMENTS:
 * apigateway: added api_config_id_prefix field to google_api_gateway_api_config resoure (#7753)
@@ -3998,7 +4137,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * cloudrun: added diff suppress function for google_cloud_run_domain_mapping metadata.annotations to ignore API-set fields (#7764)
 * spanner: marked google_spanner_instance.config as ForceNew as is not updatable (#7763)"
-124,"FEATURES:
+129,"FEATURES:
 * New Data Source: google_iam_workload_identity_pool (#7704)
 * New Resource: google_iam_workload_identity_pool_provider (#7712)
 * New Resource: google_project_default_service_accounts (#7709)
@@ -4023,7 +4162,7 @@ BUG FIXES:
 * monitoring: Fixed type of google_monitoring_slo's range values - some range values are doubles, others are integers. (#7676)
 * pubsub: Fixed permadiff on push_config.attributes. (#7714)
 * storage: fixed an issue in google_storage_bucket where lifecycle_rules were always included in update requests (#7727)"
-125,"NOTES:
+130,"NOTES:
 * compute: updated google_compute_machine_image resource to complete once the Image is ready. (#7629)
 FEATURES:
 * New Resource: google_api_gateway_api_config_iam_binding (#7626)
@@ -4104,7 +4243,7 @@ BUG FIXES:
 * monitoring: added more retries for potential failed monitoring operations (#7631)
 * osconfig: fixed an issue where the rollout.disruption_budget.percentage field in google_os_config_patch_deployment did not correspond to a field in the API (#7641)
 * sql: fixed a case in google_sql_database_instance where we inadvertently required the projects.get permission for a service networking precheck introduced in v3.44.0 (#7622)"
-126,"BREAKING CHANGES:
+131,"BREAKING CHANGES:
 * pubsub: changing the value of google_pubsub_subscription.enable_message_ordering will now recreate the resource. Previously, an error was returned. (#7584)
 * spanner: google_spanner_database resources now cannot be destroyed unless deletion_protection = false is set in state for the resource. (#7557)
 NOTES:
@@ -4155,7 +4294,7 @@ BUG FIXES:
 * iap: fixed an eventual consistency bug causing creates for google_iap_brand to fail (#7520)
 * provider: fixed an issue where the request headers would grow proportionally to the number of resources in a given terraform apply (#7576)
 * serviceusage: fixed bug where concurrent activations/deactivations of project services would fail, now they retry (#7519)"
-127,"BREAKING CHANGE:
+132,"BREAKING CHANGE:
 * Added deletion_protection to google_sql_database_instance, which defaults to true. SQL instances can no longer be destroyed without setting deletion_protection = false. (#7499)
 FEATURES:
 * New Data Source: google_app_engine_default_service_account (#7472)
@@ -4202,7 +4341,7 @@ BUG FIXES:
 * accessapproval: fixed issue where, due to a recent API change, google_*_access_approval.enrolled_services.cloud_product entries specified as a URL would result in a permadiff (#7468)
 * compute: fixed ability to clear description field on google_compute_health_check and google_compute_region_health_check (#7500)
 * monitoring: fixed bug where deleting a google_monitoring_dashboard would give an ""unsupported protocol scheme"" error (#7453)"
-128,"FEATURES:
+133,"FEATURES:
 * New Data Source: google_pubsub_topic (#7426)
 * New Data Source: google_compute_global_forwarding_rule (#7434)
 * New Data Source: google_cloud_run_service (#7388)
@@ -4251,7 +4390,7 @@ BUG FIXES:
 * container: fixed node_config.image_type perma-diff when specified in lower case. (#7412)
 * datacatalog: fixed an error in google_data_catalog_tag when trying to set boolean field to false (#7409)
 * monitoring: fixed bug where deleting a google_monitoring_dashboard would give an ""unsupported protocol scheme"" error"
-129,"FEATURES:
+134,"FEATURES:
 * New Resource: google_data_loss_prevention_deidentify_template (#7378)
 IMPROVEMENTS:
 * compute: added support for updating network_interface.[d].network and network_interface.[d].subnetwork properties on google_compute_instance. (#7358)
@@ -4268,12 +4407,12 @@ BUG FIXES:
 * bigquery: fixed an issue where google_bigquery_table would crash while reading an empty schema (#7359)
 * compute: fixed an issue where google_compute_instance_template would throw an error for unspecified disk_size_gb values while upgrading the provider. (#7355)
 * resourcemanager: fixed an issue in retrieving google_active_folder data source when the display name included whitespace (#7395)"
-130,"IMPROVEMENTS:
+135,"IMPROVEMENTS:
 * compute: added SEV_CAPABLE option to guest_os_features in google_compute_image resource. (#7313)
 * tpu: added use_service_networking to google_tpu_node which enables Shared VPC Support. (#7294)","IMPROVEMENTS:
 * compute: added SEV_CAPABLE option to guest_os_features in google_compute_image resource. (#7313)
 * tpu: added use_service_networking to google_tpu_node which enables Shared VPC Support. (#7294)"
-131,"DEPRECATIONS:
+136,"DEPRECATIONS:
 * bigtable: Deprecated instance_type for google_bigtable_instance - it is now recommended to leave field unspecified. (#7253)
 FEATURES:
 * New Data Source: google_compute_region_ssl_certificate (#7252)
@@ -4314,7 +4453,7 @@ BUG FIXES:
 * osconfig: fixed a potential crash in google_os_config_patch_deployment due to an unchecked nil value in recurring_schedule (#7265)
 * serviceusage: fixed intermittent failure when a service is already being modified - added retries #7230)
 * serviceusage: fixed an issue where bigquery.googleapis.com was getting enabled as the bigquery-json.googleapis.com alias instead, incorrectly. This had no user impact yet, but the alias may go away in the future. (#7230)"
-132,"IMPROVEMENTS:
+137,"IMPROVEMENTS:
 * compute: added storage_locations field to google_compute_snapshot (#7201)
 * compute: added kms_key_service_account, kms_key_self_link fields to snapshot_encryption_key field in google_compute_snapshot (#7201)
 * compute: added source_disk_encryption_key.kms_key_service_account field to google_compute_snapshot (#7201)
@@ -4335,7 +4474,7 @@ BUG FIXES:
 * bigquery: fixed bug where updating clustering would force a new resource rather than update. (#7195)
 * bigquerydatatransfer: fixed params.secret_access_key perma-diff for AWS S3 data transfer config types by adding a sensitive_params block with the secret_access_key attribute. (#7174)
 * compute: fixed bug where delete_default_routes_on_create=true was not actually deleting the default routes on create. (#7199)"
-133,"DEPRECATIONS:
+138,"DEPRECATIONS:
 * storage: deprecated bucket_policy_only field in google_storage_bucket in favour of uniform_bucket_level_access (#7143)
 FEATURES:
 * New Resource: google_compute_disk_iam_binding (#7110)
@@ -4380,7 +4519,7 @@ BUG FIXES:
 * bigquerydatatransfer: fixed params.secret_access_key perma-diff for AWS S3 data transfer config types by adding a sensitive_params block with the secret_access_key attribute. (#7174)
 * compute: Fixed bug with google_netblock_ip_ranges data source failing to read from the correct URL (#7156)
 * compute: fixed updating google_compute_instance.shielded_instance_config by adding it to the allow_stopping_for_update list (#7132)"
-134,"NOTES:
+139,"NOTES:
 * Drop recommendation to use -provider= on import in documentation (#7100)
 FEATURES:
 * New Resource: google_compute_image_iam_binding (#7070)
@@ -4425,7 +4564,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * compute: fixed an issue where google_compute_url_map path_matcher.default_route_action would conflict with default_url_redirect (#7063)
 * kms: updated data_source_secret_manager_secret_version to have consistent id value (#7098)"
-135,"FEATURES:
+140,"FEATURES:
 * New Resource: google_active_directory_domain_trust (#7056)
 * New Resource: google_access_context_manager_service_perimeters (#7027)
 * New Resource: google_access_context_manager_access_levels (#7027)
@@ -4468,7 +4607,7 @@ BUG FIXES:
 * bigquery: fixed an issue with use_legacy_sql not being set to false. (#7012)
 * dns: fixed an issue where google_dns_managed_zone would not remove private_visibility_config on updates (#7022)
 * sql: fixed an issue where google_sql_database_instance would throw an error when removing private_network. Removing private_network now recreates the resource. (#7054)"
-136,"NOTES:
+141,"NOTES:
 * all: Updated lists of enums to display the enum options in the documentation pages. (#6946)
 FEATURES:
 * New Resource: google_compute_region_network_endpoint_group (supports serverless NEGs) (#6960)
@@ -4523,7 +4662,7 @@ BUG FIXES:
 * compute: fixed shielded instance config, which had been failing to apply due to a field rename on the GCP side. (#6943)
 * monitoring: fixed validation rules for google_monitoring_slo windows_based_sli.metric_sum_in_range.max field (#6974)
 * osconfig: fixed google_os_config_patch_deployment windows_update.classifications field to work correctly, accepting multiple values. (#6946)"
-137,"NOTES:
+142,"NOTES:
 * redis: explicitly noted in google_redis_instance documentation that ""REDIS_5_0"" is supported (#6917)
 * all: fix markdown formatting while showing enum values in documentation (#6924).
 IMPROVEMENTS:
@@ -4546,7 +4685,7 @@ BUG FIXES:
 * all: fixed crash due to nil context when loading credentials (#6903)
 * compute: fixed issue where the project field in data.google_compute_network_endpoint_group was returning an error when specified (#6918)
 * sourcerepo: fixed perma-diff in google_sourcerepo_repository (#6886)"
-138,"DEPRECATIONS:
+143,"DEPRECATIONS:
 * compute: deprecated enable_logging on google_compute_firewall, define log_config.metadata to enable logging instead. (#6871)
 FEATURES:
 * New Resource: google_active_directory_domain (#6866)
@@ -4567,7 +4706,7 @@ BUG FIXES:
 * container: Fixed a crash in google_container_cluster when """" was specified for resource_usage_export_config.bigquery_destination.dataset_id. (#6839)
 * endpoints: Fixed a crash when google_endpoints_service is used on a machine without timezone data (#6849)
 * resourcemanager: bumped google_project timeout defaults to 10 minutes (from 4) (#6859)"
-139,"FEATURES:
+144,"FEATURES:
 * New Data Source: google_sql_database_instance  #2841 (#6797)
 * New Resource: google_cloud_asset_folder_feed (#6821)
 * New Resource: google_cloud_asset_organization_feed (#6821)
@@ -4592,7 +4731,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * container: Fixed a crash in google_container_cluster when """" was specified for resource_usage_export_config.bigquery_destination.dataset_id. (#6839)
 * bigquery: Fixed bug where a permadiff would show up when adding a column to the middle of a bigquery_table.schema (#6803)"
-140,"3.31.0 (July 20, 2020)
+145,"3.31.0 (July 20, 2020)
 FEATURES:
 * New Data Source: google_service_account_id_token (#6791)
 * New Resource: google_cloudiot_device (#6785)
@@ -4603,7 +4742,7 @@ FEATURES:
 * New Resource: google_cloudiot_device (#6785)
 IMPROVEMENTS:
 * bigquery: added support for BigQuery custom schemas for external data using CSV / NDJSON (#6772)"
-141,"FEATURES:
+146,"FEATURES:
 * New Resource: google_os_config_patch_deployment (#6741)
 IMPROVEMENTS:
 * iam: made the condition block GA for all IAM resource and datasource types. (#6748)
@@ -4618,7 +4757,7 @@ BUG FIXES:
 * container: added the ability to update database_encryption without recreating the cluster. (#6757)
 * endpoints: fixed google_endpoints_service to allow dependent resources to plan based on the config_id value. (#6722)
 * runtimeconfig: fixed Requested entity was not found. error when config was deleted outside of terraform. (#6753)"
-142,"NOTES:
+147,"NOTES:
 * added the https://www.googleapis.com/auth/cloud-identity scope to the provider by default (#6681)
 * google_app_engine_*_version's service field is required; previously it would have passed validation but failed on apply if it were absent. (#6720)
 FEATURES:
@@ -4647,7 +4786,7 @@ IMPROVEMENTS:
 * monitoring: added request_method, content_type, and body fields within the http_check object to google_monitoring_uptime_check_config resource (#6700)
 BUG FIXES:
 * compute: fixed an issue in compute_url_map where path_matcher sub-fields would conflict with default_service (#6721)"
-143,"3.28.0 (June 29, 2020)
+148,"3.28.0 (June 29, 2020)
 FEATURES:
 * New Data Source: google_redis_instance (#6649)
 * New Resource: google_notebook_environment (#6639)
@@ -4672,7 +4811,7 @@ BUG FIXES:
 * appengine: Added polling to google_app_engine_firewall_rule to prevent issues with eventually consistent creation (#6633)
 * compute: Allowed updating google_compute_network_peering_routes_config import_custom_routes and  export_custom_routes to false (#6625)
 * netblock: fixed the google netblock ranges returned by the google_netblock_ip_ranges by targeting json on gstatic domain instead of reading SPF dns records (solution provided by network team) (#6650)"
-144,"3.27.0 (June 23, 2020)
+149,"3.27.0 (June 23, 2020)
 IMPROVEMENTS:
 * accesscontextmanager: Added custom config to google_access_context_manager_access_level (#6611)
 * cloudbuild: Added invert_regex flag in Github PullRequestFilter and PushFilter in triggerTemplate (#6594)
@@ -4701,7 +4840,7 @@ BUG FIXES:
 * container: Fixed a regression in google_container_cluster where the location was not inferred when using a subnetwork shortname value like name (#6568)
 * datastore: Added retries to google_datastore_index requests when under contention. (#6563)
 * kms: Fixed the id value in the google_kms_crypto_key_version datasource to include a /v1 part following //cloudkms.googleapis.com/, making it useful for interpolation into Binary Authorization. (#6576)"
-145,"FEATURES:
+150,"FEATURES:
 * New Resource: google_data_catalog_tag (#6550)
 * New Resource: google_bigquery_dataset_iam_binding (#6553)
 * New Resource: google_bigquery_dataset_iam_member (#6553)
@@ -4734,7 +4873,7 @@ BUG FIXES:
 * compute: fixed issue where trying to update the region of google_compute_subnetwork would fail instead of destroying/recreating the subnetwork (#6522)
 * dataflow: added retries in google_dataflow_job for common retryable API errors when waiting for job to update (#6552)
 * dataflow: changed the update logic for google_dataflow_job to wait for the replacement job to start successfully before modifying the resource ID to point to the replacement job (#6534)"
-146,"FEATURES:
+151,"FEATURES:
 * New Resource: google_data_catalog_tag_template (#6485)
 * New Resource: google_container_analysis_occurence (#6474)
 IMPROVEMENTS:
@@ -4767,7 +4906,7 @@ BUG FIXES:
 * compute: fixed issue where removing all target pools from google_compute_instance_group_manager or google_compute_region_instance_group_manager had no effect (#6492)
 * functions: Added retry to google_cloudfunctions_function creation when API returns error while pulling source from GCS (#6476)
 * provider: Removed credentials from output error when provider cannot parse given credentials (#6473)"
-147,"FEATURES:
+152,"FEATURES:
 * New Data Source: google_secret_manager_secret_version (#6432)
 * New Resources: google_data_catalog_entry_group_iam_* (#6438)
 * New Resource: google_data_catalog_entry_group (#6438)
@@ -4804,7 +4943,7 @@ BUG FIXES:
 * dataflow: fixed an issue where google_dataflow_job would try to update max_workers (#6468)
 * dataflow: fixed an issue where updating on_delete in google_dataflow_job would cause the job to be replaced (#6468)
 * os_login: Fixed google_os_login_ssh_public_key key field attempting to update in-place (#6433)"
-148,"BREAKING CHANGES:
+153,"BREAKING CHANGES:
 * The base url for the monitoring endpoint no longer includes the API version (previously ""v3/""). If you use a monitoring_custom_endpoint, remove the trailing ""v3/"". (#6424)
 FEATURES:
 * New Data Source: google_iam_testable_permissions (#6382)
@@ -4843,7 +4982,7 @@ BUG FIXES:
 * compute: fixed error where plan would error if google_compute_region_disk_resource_policy_attachment had been deleted outside of terraform. (#6367)
 * compute: raise limit on number of src_ip_ranges values in google_compute_security_policy to supported 10 (#6394)
 * iam: Fixed an issue where google_service_account shows an error after creating the resource (#6391)"
-149,"BREAKING CHANGE:
+154,"BREAKING CHANGE:
 * google_bigtable_instance resources now cannot be destroyed unless deletion_protection = false is set in state for the resource. (#6357)
 FEATURES:
 * New Resource: google_dialogflow_entity_type (#6339)
@@ -4872,7 +5011,7 @@ BUG FIXES:
 * compute: Fixed permadiff in google_compute_instance_template's network_tier. (#6344)
 * compute: Removed permadiff or errors on update for google_compute_backend_service and google_compute_region_backend_service when consistent_hash values were previously set on  backend service but are not supported by updated value of locality_lb_policy (#6316)
 * sql: Fixed occasional failure to delete google_sql_database_instance and google_sql_user. (#6318)"
-150,"FEATURES:
+155,"FEATURES:
 * New Resource: google_compute_region_target_http_proxy is now GA (#6245)
 * New Resource: google_compute_region_target_https_proxy is now GA (#6245)
 * New Resource: google_compute_region_url_map is now GA (#6245)
@@ -4939,7 +5078,7 @@ BUG FIXES:
 * container: fixed issue where terraform would error if a gke instance group was deleted out-of-band (#6242)
 * storage: Fixed setting/reading google_storage_bucket_object  metadata on API object (#6271)
 * storage: Marked the credentials field in google_storage_object_signed_url as sensitive so it doesn't expose private credentials. (#6272)"
-151,"3.20.0 (May 04, 2020)
+156,"3.20.0 (May 04, 2020)
 FEATURES:
 * New Resource: google_healthcare_dataset_iam_binding is now GA (#6193)
 * New Resource: google_healthcare_dataset_iam_member is now GA (#6193)
@@ -5006,7 +5145,7 @@ BUG FIXES:
 * appengine: Changed google_app_engine_application to respect updates in iap (#6216)
 * sql: Allowed binary_log_enabled to be disabled. (#6163)
 * storage: Added retries for google_storage_bucket_iam_* on 412 (precondition not met) errors for eventually consistent bucket creation. (#6235)"
-152,"3.19.0 (April 27, 2020)
+157,"3.19.0 (April 27, 2020)
 FEATURES:
 * New Resource: google_bigquery_job (#6134)
 * New Resource: google_monitoring_slo (#6118)
@@ -5039,7 +5178,7 @@ BUG FIXES:
 * resourcemanager: Added a wait to google_project so that projects are more likely to be ready before the resource finishes creation (#6161)
 * sql: Allowed binary_log_enabled to be disabled. (#6163)
 * sql: Fixed behaviour in google_sql_database when the parent instance is deleted, removing it from state (#6162)"
-153,"3.18.0 (April 20, 2020)
+158,"3.18.0 (April 20, 2020)
 FEATURES:
 * New Data Source: google_monitoring_app_engine_service (#6078)
 * New Resource: google_monitoring_custom_service (#6078)
@@ -5066,7 +5205,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * container: Fixed importing/reading google_container_node_pool resources in non-RUNNING states (#6115)
 * monitoring: Made display_name optional on google_monitoring_notification_channel (#6090)"
-154,"3.17.0 (April 13, 2020)
+159,"3.17.0 (April 13, 2020)
 FEATURES:
 * New Resource: google_bigquery_dataset_access (#6035)
 * New Resource: google_dialogflow_intent (#6061)
@@ -5105,7 +5244,7 @@ BUG FIXES:
 * sql: fixed error that occurred on google_sql_database_instance when settings.ip_configuration was set but ipv4_enabled was not set to true and private_network was not configured, by defaulting ipv4_enabled to true. (#6041)
 * storage: fixed an issue where google_storage_bucket_iam_member showed a diff for bucket self links (#6019)
 * storage: fixed bug where deleting a google_storage_bucket that contained non-deletable objects would retry indefinitely (#6044)"
-155,"3.16.0 (April 06, 2020)
+160,"3.16.0 (April 06, 2020)
 FEATURES:
 * New Data Source: google_monitoring_uptime_check_ips (#6009)
 IMPROVEMENTS:
@@ -5134,7 +5273,7 @@ IMPROVEMENTS:
 BUG FIXES:
 * compute: Fixed an issue where port could not be removed from health checks (#5997)
 * storage: fixed an issue where google_storage_bucket_iam_member showed a diff for bucket self links (#6019)"
-156,"FEATURES:
+161,"FEATURES:
 * New Resource: google_compute_instance_group_named_port (#5932)
 * New Resource: google_service_usage_consumer_quota_override (#5966)
 * New Resource: google_iap_brand (#5881)
@@ -5167,7 +5306,7 @@ BUG FIXES:
 * kms: Fixed an issue in google_kms_crypto_key_version where public_key would return empty after apply (#5956)
 * logging: Fixed import issue with google_logging_metric in a non-default project. (#5944)
 * provider: Fixed an error with resources failing to upload large files (e.g. with google_storage_bucket_object) during retried requests (#5977)"
-157,"FEATURES:
+162,"FEATURES:
 * New Data Source: google_compute_instance_serial_port (#5911)
 * New Resource: google_compute_region_ssl_certificate (#5913)
 IMPROVEMENTS:
@@ -5186,7 +5325,7 @@ IMPROVEMENTS:
 * container: Added upgrade_settings to google_container_node_pool resource (#5910)
 * provider: Added provider-wide request retries for common temporary GCP error codes and network errors (#5902)
 * redis: Added connect_mode field to google_redis_instance resource (#5888)"
-158,"3.13.0 (March 16, 2020)
+163,"3.13.0 (March 16, 2020)
 BREAKING CHANGES:
 * dialogflow: Changed google_dialogflow_agent.time_zone to ForceNew. Updating this field will require recreation. This is due to a change in API behavior. (#5831)
 FEATURES:

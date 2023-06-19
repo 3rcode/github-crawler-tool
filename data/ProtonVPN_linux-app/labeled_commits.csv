@@ -1,471 +1,471 @@
-Index,Commit Message,Score,Correspond Changelog Sentence,Commit Description,Label
-1,Merge branch 'fix/VPNLINUX-274-memory-leak' into 'develop',0.5820969,Fix: Memory leak,,0
-2,Add tier chip,0.29599053,"Feature: Add troubleshooting dialog, including support for alternative routing",Setup new path to CI config and remove F36 references [VPNLINUX-533] See merge request ProtonVPN/linux/v3/linux-app!109,0
-3,Fix function idententation,0.47803324,Improve: Exception handling,,0
-4,Remove hard dependencies for deb and arch,0.42682844,Fix: Add missing dependency for Webkit,"If at any point a request is made with an invalid session, logout the user [VPNLINUX-425]. See merge request ProtonVPN/linux/linux-app!108",0
-5,Merge branch 'feature/VPNLINUX-144-quick-settings' into 'develop',0.41628414,Improved: Faster server list switching to/from Secure Core,,0
-6,Add gtkrevealer for a better error displaying UX,0.35106063,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Drop F34-35 and add F37 [VPNLINUX-441] See merge request ProtonVPN/linux/linux-app!107,0
-7,Make all country header text dark gray,0.3225643,"Fix: Display window icons (minimize, maximize and close)",,0
-8,Add server score property,0.36514145,Feature: Handle and display events,Release 1.11.0 2 See merge request ProtonVPN/linux/linux-app!106,0
-9,Add Keywords=vpn; to protonvpn.desktop,0.39652187,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-10,Update login UI and styling,0.6171187,Fix: Stop displaying new brand dialog on new login.,,0
-11,Fix bug for GIO versions lower then 2.63.2,0.8298063,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,1
-12,"Refactor how server list is generated, filtered and sorted",0.4371016,Improved: Faster server list switching to/from Secure Core,,0
-13,Merge branch 'fix/login-window-aspect-ration' into 'develop',0.44467425,"Fix: Display window icons (minimize, maximize and close)",,0
-14,Check for events every 12min,0.46825373,Feature: Handle and display events,Inform user if session is invalid and logout if so [VPNLINUX-425] See merge request ProtonVPN/linux/linux-app!105,0
-15,"When connected to secure-core servers, correctly display the country order",0.5471964,Improved: Faster server list switching to/from Secure Core,,0
-16,Merge branch 'publish-stable' into 'master',0.2525671,Improve: Handle accounting use cases,Fix bug where new brand dialog would appear multiple times during app lifetime See merge request ProtonVPN/linux/linux-app!104,0
-17,Fix typo,0.38236088,Improve: Exception handling,,0
-18,Add CI jobs for testing and packaging,0.33425233,Handle human verification,Update taskbar icon See merge request ProtonVPN/linux/linux-app!103,0
-19,Finish login MVVM implementation,0.4182226,"Ensure that whenever session is invalid, user is logged out",,0
-20,Change from protonvpn property to method,0.48829728,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",Fix bug for GIO versions lower then 2.63.2 See merge request ProtonVPN/linux/linux-app!102,0
-21,Correct version number in .spec file,0.32359883,First stable release,"As per documentation, the run_in_thread was introduced in 2.36 (https://docs.gtk.org/gio/callback.TaskThreadFunc.html), but after discussing with the devs, they actually forgot to implement the attribute for GTask, which meant that if one would try GTask.run_in_thread() on versions between 2.32 and 2.63.1, an exception with AttributeError would occur. Thus a check had to be implemented so that if it identifies and incompatible version, it should fallback to native python threads",0
-22,Fix PKGBUILD file,0.46876097,Fix: Memory leak,Update rpm changelog See merge request ProtonVPN/linux/linux-app!101,0
-23,Remove CentOS8 CI jobs,0.32156,Fix: Stop displaying new brand dialog on new login.,,0
-24,Refactor background process so that different backends can be used,0.36464,Improved: Faster server list switching to/from Secure Core,Update 'ProtonVPN' to 'Proton VPN' and changelog [VPNLINUX-327] See merge request ProtonVPN/linux/linux-app!100,0
-25,Further improve memory management,0.8902123,Improve: Further improve memory management to avoid potential leaks,,1
-26,Merge branch 'rebase/from-develop-release-1.7.0-5' into 'develop',0.28115612,First stable release,Add f36 support and deprecate f33 See merge request ProtonVPN/linux/linux-app!99,0
-27,Remove leftover comma as it was creating a tuple,0.22825953,Fix: Stop displaying new brand dialog on new login.,,0
-28,Add additional custom content to dialog if desired via add_extra_content() method,0.5348898,"Feature: Add troubleshooting dialog, including support for alternative routing",Fix UI glitches found in mx linux kde and generic event dialog creation See merge request ProtonVPN/linux/linux-app!96,0
-29,Rename library folder and skip tests in control,0.2681455,Improve: Further improve memory management to avoid potential leaks,,0
-30,Update rel version,0.36150196,Fix: Unable to update server list after 15min (crash report would appear on certain distros),Fix aspect ration of icon on login window See merge request ProtonVPN/linux/linux-app!95,0
-31,Display overlay after clicking on login button,0.5577187,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
-32,Fix UI flicker when no connection is found,0.5509683,Hotfix: Display message when library is not able to disable connectivity check,Fix/ui fixes See merge request ProtonVPN/linux/linux-app!94,0
-33,Ingore pycache folders,0.30000976,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-34,Merge branch 'feature/VPNLINUX-198-support-ubuntu-1804' into 'develop',0.330547,Fix: Add missing dependency for Webkit,Add new brand dialog and fix about dialog and login/logout issue See merge request ProtonVPN/linux/linux-app!93,0
-35,Add tray icons,0.52307373,"Fix: Display window icons (minimize, maximize and close)",,0
-36,Move pattern into patterns folder and updated path,0.35211283,"Feature: Add troubleshooting dialog, including support for alternative routing","Adjust login window to be displayed vertically Fixed login window bug where upon window launch, clicking on login would get triggered although there was no data in the fields",0
-37,Create new server objects so that they can be easily diplayed for the view,0.47713763,"Improvement: GUI responsiveness (loading servers, logout)",Add scroll to quick settings pop-over to prevent UI cuts See merge request ProtonVPN/linux/linux-app!92,0
-38,Add custom headerbar to login for consistency,0.53211784,Fix: Stop displaying new brand dialog on new login.,,0
-39,Merge branch 'feature/VPNLINUX-173-disable-always-on-ks-in-login-window' into 'develop',0.3984367,"Feature: Add troubleshooting dialog, including support for alternative routing","This issue is due to the fact that GTK popover does no bleed over parent window, thus if the content is wider/taller then the parent window, it'll just cut the popover view. This should be fixed in GTk4 but does not work in GTK3. Source: https://gitlab.gnome.org/GNOME/gtk/-/issues/543",0
-40,Add Rx package,0.36246097,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-41,Update changelog,0.5207533,Hotfix: Update event dialog,Replace all coulours for variables See merge request ProtonVPN/linux/linux-app!91,0
-42,Merge branch 'fix/arch-buildpkg' into 'develop',0.3417374,Fix: Add missing dependency for Webkit,Ensure that dialog buttons kept the appropriate size,0
-43,Display streaming services for provided countries,0.40092903,Feature: Handle and display events,,0
-44,Merge branch 'community/remove-shebang' into 'develop',0.21142702,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-45,Merge branch 'feature/VPNLINUX-184-app-tray-indicator' into 'develop',0.342243,"Feature: Add troubleshooting dialog, including support for alternative routing",Improve colouring and remove old css code,0
-46,"Fix typo and issue when switching to secure core servers, the reconneciton was not happening",0.5771924,Improved: Faster server list switching to/from Secure Core,,0
-47,Fix generate dialog pop-up,0.6614367,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-48,Merge branch 'fix/VPNLINUX-418-refresh-logic' into 'develop',0.38959193,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-49,Fix styling issues with different themes,0.43709785,"Fix: Display window icons (minimize, maximize and close)",,0
-50,Adapt to new refactored library,0.3814522,Improve: Exception handling,,0
-51,Create new server features window class,0.43685943,"Improvement: GUI responsiveness (loading servers, logout)",,0
-52,Drop F34-35 and add F37 [VPNLINUX-441],0.3581477,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-53,Reavealer should not expand vertically even if there is enough space,0.276864,"Fix: Display window icons (minimize, maximize and close)",,0
-54,Merge branch 'fix/rebranding-issues' into 'develop',0.28855577,Fix: Stop displaying new brand dialog on new login.,Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop' See merge request ProtonVPN/linux/linux-app!90,0
-55,Fix Tor case,0.32910335,Fix: Memory leak,Display error message if link buttons at login can not be reached [VPNLINUX-320] See merge request ProtonVPN/linux/linux-app!89,0
-56,Merge branch 'fix/VPNLINUX-155-treat-server-feature-as-bitmap' into 'develop',0.40808132,"Feature: Add troubleshooting dialog, including support for alternative routing",Display error message if link buttons at login can not be reached [VPNLINUX-320] See merge request ProtonVPN/linux/linux-app!89,0
-57,Simplify methods and rename class properties,0.29635435,Improve: Exception handling,,0
-58,Fix styling,0.39756843,"Fix: Display window icons (minimize, maximize and close)",Rebase/from develop release 1.7.0 5 See merge request ProtonVPN/linux/linux-app!88,0
-59,Remove unnecessary comma,0.2511372,Fix: Stop displaying new brand dialog on new login.,,0
-60,Merge branch 'release-1.5.0' into 'develop',0.33892745,First stable release,,0
-61,Fix rebase and update changelog,0.5141299,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-62,Fix ui,0.573143,nan,,0
-63,Update dependency,0.6037816,Fix: Add missing dependency for Webkit,,0
-64,Merge branch 'fix/unable-to-update-server-list' into 'develop',0.48288164,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-65,Add desktop entry for Fedora based systems and update .spec file accordingly,0.38099155,Hotfix: Update event dialog,,0
-66,Merge branch 'fix/VPNLINUX-192-overlay-blocks-top-quick-setting-buttons' into 'develop',0.40805578,"Feature: Add troubleshooting dialog, including support for alternative routing",Fix Tor case See merge request ProtonVPN/linux/linux-app!86,0
-67,Remove not needed import and add docstring,0.34334335,Fix: Add missing dependency for Webkit,,0
-68,Merge branch 'feature/VPNLINUX-229-human-verification' into 'develop',0.54625547,Handle human verification,fix a typo See merge request ProtonVPN/linux/linux-app!85,0
-69,Merge branch 'fix/python-constant-version' into 'develop',0.27983338,Fix: Add missing dependency for Webkit,“occurred” had been misspelled as “occured”,0
-70,Fix connect button glitch,0.50650084,Fix: New brand dialog will now only appear once after the dashboard has been loaded,Handle compromised password use case [VPNLINUX-297] See merge request ProtonVPN/linux/linux-app!84,0
-71,Merge branch 'release-1.11.0-2' into 'develop',0.33604577,First stable release,,0
-72,Create new abstract button factory,0.3799575,Fix: New brand dialog will now only appear once after the dashboard has been loaded,Handle username/password Update [VPNLINUX-298] See merge request ProtonVPN/linux/linux-app!83,0
-73,"Create new switch factory and add new objects for grid, switch and label",0.34434107,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-74,Remove button background in certain themes,0.5136934,"Fix: Display window icons (minimize, maximize and close)",Handle plan downgrade [VPNLINUX-298] See merge request ProtonVPN/linux/linux-app!82,0
-75,Use slash instead of dash,0.1975148,nan,,0
-76,Include documentation in manifest and update rel version,0.3633839,"Feature: Add troubleshooting dialog, including support for alternative routing",Handle delinquent use case [VPNLINUX-299] See merge request ProtonVPN/linux/linux-app!81,0
-77,Fix UI sizes,0.6351106,"Fix: Display window icons (minimize, maximize and close)",,0
-78,Change package to stable,0.42529157,First stable release,Handle max sessions/devices [VPNLINUX-295] See merge request ProtonVPN/linux/linux-app!80,0
-79,Dependency issue should now be fixed,0.46726537,Fix: Add missing dependency for Webkit,,0
-80,Fix secure core typo,0.38513973,Improved: Faster server list switching to/from Secure Core,Fix missing import See merge request ProtonVPN/linux/linux-app!79,0
-81,Add missing init files,0.37080154,Fix: Add missing dependency for Webkit,,0
-82,Merge branch 'fix/VPNLINUX-327-update-strings-and-changelog' into 'develop',0.415156,Fix: Unable to update server list after 15min (crash report would appear on certain distros),Rebase/release 1.5.2 fedora 35 from develop See merge request ProtonVPN/linux/linux-app!78,0
-83,Remove duplicate rpm group and add missing .gitkeep for folders,0.34265724,Fix: Add missing dependency for Webkit,,0
-84,Prepare for shutdown should not disconnect VPN as library manages that automatically,0.4899139,Improved: Faster server list switching to/from Secure Core,,0
-85,Fix bug for users that had to upgrade,0.62681544,Fix: Unable to update server list after 15min (crash report would appear on certain distros),Rebase/release 1.5.2 from develop See merge request ProtonVPN/linux/linux-app!77,0
-86,Fix crash when switching to/from secure-core servers,0.73107976,Improved: Faster server list switching to/from Secure Core,,1
-87,"Update library dependency, update changelog and bump version",0.4511792,Fix: Add missing dependency for Webkit,,0
-88,Rename test file and update python package name,0.20722328,Fix: New brand dialog will now only appear once after the dashboard has been loaded,Further improve memory management See merge request ProtonVPN/linux/linux-app!76,0
-89,Implement servers with multi-features aka bitmap,0.45144585,Improved: Faster server list switching to/from Secure Core,,0
-90,Update GUI and tray after reconnecting to VPN from suspend or network change,0.5318307,Fix: Unable to update server list after 15min (crash report would appear on certain distros),Hotfix: Fix issue with search not working See merge request ProtonVPN/linux/linux-app!75,0
-91,Display error message if link buttons at login can not be reached [VPNLINUX-320],0.61280525,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
-92,Fix visual glitch,0.4289108,"Fix: Display window icons (minimize, maximize and close)",Fix issues when logging out See merge request ProtonVPN/linux/linux-app!74,0
-93,Merge branch 'feature/VPNLINUX-279-black-friday' into 'develop',0.27650407,Improved: Faster server list switching to/from Secure Core,,0
-94,Setup new path to CI config and remove F36 references [VPNLINUX-533],0.4963683,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-95,Implement logout button,0.5104203,Fix: Stop displaying new brand dialog on new login.,Also create own dashboard state for event notification handling,0
-96,Displays troubleshoot dialog in login screen,0.7386955,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,1
-97,"Fix text in welcome to new brand, fix dashboard with and login window width",0.7032032,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,1
-98,Correctly handle exceptions on login and on connect,0.6033089,"Ensure that whenever session is invalid, user is logged out",,0
-99,Only displays features window if info icon is clicked,0.6427425,"Fix: Display window icons (minimize, maximize and close)",,0
-100,Merge branch 'fix/rpm-changelog' into 'develop',0.31359616,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-101,Merge branch 'community/add-keyword-to-desktop-file' into 'develop',0.30070278,"Feature: Add troubleshooting dialog, including support for alternative routing",Several issues were occuring after doing a logout following by a login. These issues have now been addressed and are listed below: -Duplication of windows -Application crashing -Duplication of events,0
-102,Fix styling for ambience theme,0.38700426,"Fix: Display window icons (minimize, maximize and close)",Correctly handle exceptions on login and on connect See merge request ProtonVPN/linux/linux-app!73,0
-103,Merge branch 'fix/missing-import' into 'develop',0.34300768,Fix: Add missing dependency for Webkit,,0
-104,Rename elements and apply flake8,0.27264932,Improve: Exception handling,Fix/vpnlinux 274 memory leak See merge request ProtonVPN/linux/linux-app!72,0
-105,Merge branch 'improve/VPNLINUX-298-handle-plan-downgrade' into 'develop',0.42023525,Improved: Faster server list switching to/from Secure Core,,0
-106,Update protonvpn-nm-lib version dependency in setup.py,0.45933908,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
-107,Add missing init file,0.37993637,Fix: Add missing dependency for Webkit,Feature/vpnlinux 279 black friday See merge request ProtonVPN/linux/linux-app!71,0
-108,Fix crash when quitting without a connection,0.5294558,Hotfix: Display message when library is not able to disable connectivity check,,0
-109,Merge branch 'fix/cache-streaming-logos' into 'develop',0.3832398,Fix: Memory leak,,0
-110,Merge branch 'refactor/VPNLINUX-125-MVVM' into 'develop',0.3146549,Improved: Faster server list switching to/from Secure Core,,0
-111,Showcase MVVM for login screen,0.47208536,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
-112,Merge branch 'fix/change-to-unstable' into 'develop',0.32539845,Fix: Memory leak,,0
-113,Merge branch 'fix/VPNLINUX-188-connect-button' into 'develop',0.42490044,"Feature: Add troubleshooting dialog, including support for alternative routing",Add missing dependency for webkit See merge request ProtonVPN/linux/linux-app!70,0
-114,Update rpm changelog,0.49577639,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-115,Merge branch 'release-1.1.0' into 'develop',0.3870708,First stable release,Fix PKGBUILD file See merge request ProtonVPN/linux/linux-app!69,0
-116,Fix found UI issues,0.5352699,Fix: Add missing dependency for Webkit,,0
-117,Merge branch 'release-1.4.1' into 'develop',0.3534745,First stable release,Feature/vpnlinux 229 human verification See merge request ProtonVPN/linux/linux-app!68,0
-118,Replace python thread for GTask,0.31742293,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-119,Merge branch 'feature/VPNLINUX-134-country' into 'develop',0.30036068,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-120,Fix typo in Smart Routing description,0.5777577,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-121,Rename file and add constant for filepath,0.29401368,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-122,Inlcude large flags in the package,0.37306988,"Fix: Display window icons (minimize, maximize and close)",,0
-123,Merge branch 'enchancement/VPNLINUX-220-improve-gui-responsiveness' into 'develop',0.44688523,"Improvement: GUI responsiveness (loading servers, logout)",Fix crash when switching to/from secure-core servers See merge request ProtonVPN/linux/linux-app!67,0
-124,Merge branch 'rebase/from-release-0.6.1' into 'develop',0.30073044,First stable release,,0
-125,Hotfix: Fix issue with search not working,0.9938761,Hotfix: Fixed issue with search not working,,1
-126,Remove protonvpn-cli references,0.34920835,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
-127,Handle compromised password use case [VPNLINUX-297],0.4460041,"Ensure that whenever session is invalid, user is logged out",,0
-128,Merge branch 'feature/VPNLINUX-249-show-streaming-list-when-pressing-on-streaming-icon-for-each-server' into 'develop',0.4147592,Improved: Faster server list switching to/from Secure Core,Also it should be displayed when there is no way to reach API,0
-129,Change quick settings from model button to ordinary button,0.47730055,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-130,Merge branch 'fix/tray-buttons-context-dependent' into 'develop',0.41295183,Fix: Add missing dependency for Webkit,,0
-131,Apply new button colours,0.42135096,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-132,Merge branch 'fix/human-verification' into 'develop',0.53485197,Handle human verification,,0
-133,Update python constant version,0.30983514,First stable release,,0
-134,Add GtkNotebook,0.34231603,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-135,Merge branch 'fix/VPNLINUX-533-move-prod-client-to-v3-folder' into 'develop',0.3719532,Improved: Faster server list switching to/from Secure Core,"The switch mechanism has been greatly improved as now both list views are created on app initalization and are only refreshed/recreated again when server values need to be updated. Since both lists are now stored in memory, switching from one view to another is now much quicker.",0
-136,Add hover effect for info icon,0.4849126,"Fix: Display window icons (minimize, maximize and close)",,0
-137,Update dependencies and changelog,0.5693372,Fix: Add missing dependency for Webkit,,0
-138,Merge branch 'fix/add-repo-docs' into 'develop',0.34447408,Fix: Add missing dependency for Webkit,,0
-139,Popover displays and updats content according to button pressed,0.53269905,"Fix: Display window icons (minimize, maximize and close)",,0
-140,Add debug flag,0.47553208,Fix: Add missing dependency for Webkit,Dislpay troubleshooting dialog See merge request ProtonVPN/linux/linux-app!58,0
-141,Change background color for selected quick setting and fix secure core typo on dropdown,0.4443199,"Fix: Display window icons (minimize, maximize and close)",,0
-142,Update CI jobs and trigger github publish manually,0.40385872,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
-143,Create dialog for black-friday,0.46993434,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-144,Fix issue where a variable is referenced before assignment,0.40826926,Improve: Exception handling,,0
-145,UI behaviour now correctly updates when pressing on buttons,0.5635996,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-146,Display streaming list when clicking on streaming icon on each server,0.49154547,Feature: Handle and display events,,0
-147,Add indicator/tray packages as recommended,0.4145257,"Feature: Add troubleshooting dialog, including support for alternative routing",This dialog will provide the user with additional solutions the any possible networking issues,0
-148,Turn internal variables to private,0.30684283,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
-149,Merge branch 'fix/update-to-newest-lib-version' into 'develop',0.358188,Fix: Add missing dependency for Webkit,,0
-150,Fix memory leak,0.9849082,Fix: Memory leak,Add no-default css class to dashboard buttons See merge request ProtonVPN/linux/linux-app!66,1
-151,Merge branch 'feature/VPNLINUX-175-adjust-servers-load' into 'develop',0.46176726,Improved: Faster server list switching to/from Secure Core,This class is needed to override default theme changes made by distros,0
-152,Add Enum to kill switch quick setting,0.3299874,Fix: Stop displaying new brand dialog on new login.,Update protonvpn-nm-lib version dependency in setup.py See merge request ProtonVPN/linux/linux-app!65,0
-153,Fix crash occuring on Ubuntu 20.04 and simillar distros,0.5833781,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-154,Update taskbar icon,0.58403647,"Fix: Display window icons (minimize, maximize and close)",Remove upper version limit for protonvpn-nm-lib See merge request ProtonVPN/linux/linux-app!64,0
-155,Add space to secure core sub-servers flags and label,0.5266607,Improved: Faster server list switching to/from Secure Core,,0
-156,Add smart routing icon if all country servers have a host country,0.49208203,"Feature: Add troubleshooting dialog, including support for alternative routing",Fix issue where get logs would not work due to new python threading fix See merge request ProtonVPN/linux/linux-app!63,0
-157,Merge branch 'release-0.8.0' into 'develop',0.35659426,First stable release,,0
-158,Rename ks from always-on to permanent,0.34128904,Fix: Stop displaying new brand dialog on new login.,Add Keywords=vpn; to protonvpn.desktop See merge request ProtonVPN/linux/linux-app!62,0
-159,Fix debian control issue,0.36906314,Fix: Unable to update server list after 15min (crash report would appear on certain distros),"Added Keywords=vpn; for GNOME overview since I often search for ""vpn"" when I'm looking to launch the ProtonVPN app.",0
-160,Merge branch 'rebase/release-1.5.2-from-develop' into 'develop',0.29752004,First stable release,Fix issue with Gio.Task not having run_in_thead method See merge request ProtonVPN/linux/linux-app!61,0
-161,Rename methods and set to update server list always when switching servers,0.56811434,Improved: Faster server list switching to/from Secure Core,,0
-162,Add docstrings and bum version,0.34200186,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-163,Make server features popover non-resizable,0.52629715,"Improvement: GUI responsiveness (loading servers, logout)","Even though the method has been implemented in Gio v2.36, it hasn't been fully implemented due to a typo, until version 2.63.2 The commit to this fix can be found here: https://gitlab.gnome.org/GNOME/glib/-/commit/42369df7c659b3a0f43530bd09288df0cea709b4 Now it checks for the Gio version and implements a custom version of python threading to execute callbacks, simillarly as to Gio.Task, in case the Gio version is not compatible",0
-164,Delete duplicate flag files,0.25918573,Fix: Stop displaying new brand dialog on new login.,Refactor plus features See merge request ProtonVPN/linux/linux-app!59,0
-165,Update styling,0.38235593,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-166,Update version,0.45438373,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,"For users that had to upgrade, servers would displays both city label and upgrade button at the same time, making it hard to read. Not the label has been corrected so that it displays only upgrade and it is hidden when overing over a server, which is replaced by a 'upgrade' button.",0
-167,Replace old for new icons and make small changes for new icons,0.5628457,"Fix: Display window icons (minimize, maximize and close)",,0
-168,Merge branch 'feature/VPNLINUX-138-ci-package-generation' into 'refactor/VPNLINUX-125-MVVM',0.36387897,Improved: Faster server list switching to/from Secure Core,,0
-169,Fix issue when speeds could be below 0,0.4772308,Fix: Unable to update server list after 15min (crash report would appear on certain distros),"PlusFeatures class should behave a simple aggregation of other types of features, while individual country features have to be individually createdin the case of needing to displays only specific features or a specific list with PlusFeatures",0
-170,Merge branch 'fix/VPNLINUX-227-window-icons-not-showing' into 'develop',0.48060274,"Fix: Display window icons (minimize, maximize and close)",Remove shebang See merge request ProtonVPN/linux/linux-app!57,0
-171,Add gitignore,0.46411717,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,This shebang is not required here and if left on the file it causes openSUSE Build System to trigger a warning in the package build.,0
-172,Merge branch 'fix/trigger-github-publish-manually' into 'develop',0.37845862,Fix: Add missing dependency for Webkit,Fix issue where server list would not update and app would crash See merge request ProtonVPN/linux/linux-app!56,0
-173,Handle username/password Update [VPNLINUX-298],0.4685724,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
-174,Display troubleshoot dialog when attempting to connect and API calls have to be made,0.6084188,"Feature: Add troubleshooting dialog, including support for alternative routing",Fix CSS rule where it would hide all non-classed buttons See merge request ProtonVPN/linux/linux-app!55,0
-175,Move flags to appropriate folder,0.39565536,"Fix: Display window icons (minimize, maximize and close)",Every button that would not have a custom css class would not display the content. This is part to prevent visual bugs on custom button. The rule has been adjusted so that it only affect custom buttons.,0
-176,Fix styling and flake8 issues,0.380008,"Fix: Display window icons (minimize, maximize and close)",Fix typo in Smart Routing description See merge request ProtonVPN/linux/linux-app!54,0
-177,Update package name,0.39160663,Hotfix: Update event dialog, Fix typo 'difficult-to-server',0
-178,Handle plan downgrade [VPNLINUX-298],0.5403998,Improved: Faster server list switching to/from Secure Core,Add dependencies for library (docker) testing See merge request ProtonVPN/linux/linux-app!53,0
-179,Merge branch 'fix/update-dependencies' into 'develop',0.388475,Fix: Add missing dependency for Webkit,,0
-180,Add dummy object so that methods from image factory can be used,0.3121181,Feature: Handle and display events,Convert log timezone to UTC See merge request ProtonVPN/linux/linux-app!52,0
-181,Fix changelog date,0.68436325,Fix: Logs should be using UTC time,,0
-182,Create GTK button factory,0.42432928,Fix: New brand dialog will now only appear once after the dashboard has been loaded,User main context when possible to update UI from within threads See merge request ProtonVPN/linux/linux-app!51,0
-183,Add to-do for cursor object,0.4361062,Feature: Handle and display events,,0
-184,Fix XML layout blink glitch,0.49023426,"Fix: Display window icons (minimize, maximize and close)",,0
-185,Remove shebang,0.36647713,Fix: Stop displaying new brand dialog on new login.,,0
-186,Merge branch 'feature/VPNLINUX-115-login-screen' into 'develop',0.35716754,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-187,Implement country headers,0.33208114,"Feature: Add troubleshooting dialog, including support for alternative routing",Also added a loading screen when disconnecting,0
-188,Merge branch 'improvement/VPNLINUX-295-handle-max-sessions' into 'develop',0.46046248,Improved: Faster server list switching to/from Secure Core,,0
-189,Merge branch 'release-1.8.0' into 'develop',0.35300586,First stable release,,0
-190,Remove frame borders,0.3483119,"Fix: Display window icons (minimize, maximize and close)",,0
-191,Update all quick settings icons when pressed,0.6371871,"Fix: Display window icons (minimize, maximize and close)",,0
-192,Update arch docker image to latest,0.3697775,"Fix: Display window icons (minimize, maximize and close)",This change should make UI updates more thread-safe,0
-193,Merge branch 'fix/VPNLINUX-261-unable-to-use-after-v1.1.0-7-update' into 'develop',0.46183825,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-194,Improve logic for detecting when netshield should be displayed as off,0.3651322,Feature: Handle and display events,Refactor dashboard view_model and server_list view See merge request ProtonVPN/linux/linux-app!50,0
-195,Merge branch 'fix/ui-disconnect-labels' into 'develop',0.36963183,Fix: Add missing dependency for Webkit,,0
-196,Finish adding the learn more link button,0.3638387,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-197,Handle max sessions/devices [VPNLINUX-295],0.51168954,Improved: Faster server list switching to/from Secure Core,,0
-198,Fix issue with labels being too long while connecting to server,0.5587853,Fix: Unable to update server list after 15min (crash report would appear on certain distros),"All processes are run in a thread-safe background process This prevents the GUI from freezing and by running in thread-safe mannger, no unexpected crashses should be expected",0
-199,Add viewport to window so that it can scroll in case it case many features,0.5498145,"Fix: Display window icons (minimize, maximize and close)",,0
-200,Add background color to list of server names belonging to a country,0.26326954,Improved: Faster server list switching to/from Secure Core,,0
-201,Add spacing to virtual servers,0.45380265,Improved: Faster server list switching to/from Secure Core,Currently both native python threading can be used and also the improved and thread-safe GTask threads,0
-202,Add and rename icons,0.4671399,"Fix: Display window icons (minimize, maximize and close)","GTask is a native implementaion of threading in GTK. As per documentation, GTask is thread-safe and should be used when possible instead of python native threading implementation as they're not thread-safe",0
-203,Add buttons to open preferences and quit app,0.551424,Fix: Stop displaying new brand dialog on new login.,,0
-204,Convert log timezone to UTC,0.8509599,Fix: Logs should be using UTC time,,1
-205,Rename collection list; Remove extra 'if' when checking for selected path; Remove upgrade button for killswitch,0.34016812,"Feature: Add troubleshooting dialog, including support for alternative routing",Display message when library is not able to disable connectivity check See merge request ProtonVPN/linux/linux-app!49,0
-206,Merge branch 'fix/missing-systemd-dependency' into 'develop',0.42550415,Fix: Add missing dependency for Webkit,,0
-207,Correctly use Enum for account,0.3416154,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",Update package to stable See merge request ProtonVPN/linux/linux-app!48,0
-208,Add docstrings and rename method,0.2970917,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-209,Finish rebrand colouring,0.3097558,Fix: New brand dialog will now only appear once after the dashboard has been loaded,Multiple changes See merge request ProtonVPN/linux/linux-app!47,0
-210,Add spinner,0.1991618,nan,The generate logs process will now always display the state of logs generation process,0
-211,Improve logout UX,0.5100907,"Improvement: GUI responsiveness (loading servers, logout)",,0
-212,Add css classes,0.22778615,Feature: Handle and display events,,0
-213,Display troubleshoot dialog at login,0.74836916,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",Update python constant version See merge request ProtonVPN/linux/linux-app!46,1
-214,Update version string,0.42477378,Hotfix: Update event dialog,,0
-215,Remove obsolete property and rename methods,0.3182896,Improve: Exception handling,Feature/vpnlinux 218 generate logs See merge request ProtonVPN/linux/linux-app!45,0
-216,Modify if check,0.5068829,Handle human verification,,0
-217,Add menu and quit button,0.56195176,Fix: Stop displaying new brand dialog on new login.,,0
-218,Attempt to login user,0.75913167,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",Fix changelog date See merge request ProtonVPN/linux/linux-app!44,1
-219,Display message when library is not able to disable connectivity check,0.83757377,Hotfix: Display message when library is not able to disable connectivity check,,1
-220,Replace http for https,0.3724741,Improved: Faster server list switching to/from Secure Core,Fix/add multiple distro support See merge request ProtonVPN/linux/linux-app!43,0
-221,Refactor header so that a custom callback can be passed to the info button,0.48147377,Feature: Handle and display events,,0
-222,Merge branch 'feature/drop-f34-35-and-add-f37' into 'develop',0.26302472,Improve: Exception handling,,0
-223,Apply suggested changes,0.47170073,Improve: Exception handling,"Update repo documentation: contributing, copying and updated readme See merge request ProtonVPN/linux/linux-app!42",0
-224,Merge branch 'fix/displays-message-on-dashboard-if-perma-ks-is-on' into 'develop',0.35002,Fix: Memory leak,,0
-225,Fix aspect ration of icon on login window,0.7357724,"Fix: Display window icons (minimize, maximize and close)",,1
-226,Merge branch 'improve/VPNLINUX-296-handle-oudated-vpn-user-password' into 'develop',0.39633757,Improved: Faster server list switching to/from Secure Core,Change test image tag structure See merge request ProtonVPN/linux/linux-app!41,0
-227,Add event notification dot,0.6100724,Feature: Handle and display events,,0
-228,Add timeout for getting the IP,0.37326837,Fix: Logs should be using UTC time,,0
-229,Add scroll to quick settings pop-over to prevent UI cuts,0.6001535,"Fix: Display window icons (minimize, maximize and close)",Update constant version See merge request ProtonVPN/linux/linux-app!40,0
-230,Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop',0.42903584,Fix: Add missing dependency for Webkit,,0
-231,Implement server headers,0.5016665,"Improvement: GUI responsiveness (loading servers, logout)","Update library dependency, update changelog and version See merge request ProtonVPN/linux/linux-app!39",0
-232,Display server load with contextual circle colour,0.43588838,"Improvement: GUI responsiveness (loading servers, logout)",,0
-233,Add threading to login button,0.5849457,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",Change package to unstable See merge request ProtonVPN/linux/linux-app!37,0
-234,Merge branch 'fix/update-constant-version' into 'develop',0.29717362,Hotfix: Update event dialog,,0
-235,fix a typo,0.37378687,Fix: Add missing dependency for Webkit,Merge tray crash See merge request ProtonVPN/linux/linux-app!35,0
-236,Add menu items to top menu button,0.4285791,"Fix: Display window icons (minimize, maximize and close)",Fix crash when dummy indicator is used in abscence of tray dependency See merge request ProtonVPN/linux/linux-app!34,0
-237,Fix CSS rule where it would hide all non-classed buttons,0.42941654,Fix: Stop displaying new brand dialog on new login.,,0
-238,"Add support for Fedora 31-34 and centos8 for testing, package generation and package publishing",0.41341132,First stable release,Change package to stable See merge request ProtonVPN/linux/linux-app!33,0
-239,Sort secure core servers and hide headers for secure core sub-servers,0.6630937,Improved: Faster server list switching to/from Secure Core,,0
-240,Add indicator/tray class,0.40950108,Feature: Handle and display events,Change to trigger git publish manually See merge request ProtonVPN/linux/linux-app!32,0
-241,Do not reset username/password if login has failed,0.62696046,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
-242,Update library dependency version,0.5631272,Fix: Add missing dependency for Webkit,Rebase/from release 0.7.1 See merge request ProtonVPN/linux/linux-app!31,0
-243,Replace img strings for constant icon set dict with enums,0.38284224,"Fix: Display window icons (minimize, maximize and close)",,0
-244,Replace all coulours for variables,0.2551576,Fix: Stop displaying new brand dialog on new login.,,0
-245,Rename files and classes,0.19854215,Fix: Stop displaying new brand dialog on new login.,,0
-246,Fix bug where new brand dialog would appear multiple times during app lifetime,0.7529808,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,1
-247,Finish styling of streaming services,0.4461475,Feature: Handle and display events,,0
-248,Create abstract and concrete factories,0.19553235,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-249,Merge branch 'release-1.3.0' into 'develop',0.35486102,First stable release,,0
-250,Merge branch 'rebase/from-release-0.6.2' into 'develop',0.3041079,First stable release,Feature/vpnlinux 198 support ubuntu 1804 See merge request ProtonVPN/linux/linux-app!30,0
-251,Update UI update refresh time,0.516834,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-252,Fix UI glitches found in mx linux kde and generic event dialog creation,0.52817583,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-253,Merge branch 'fix/update-icon-for-fedora' into 'develop',0.31334186,Fix: Add missing dependency for Webkit,Tray quick connect and disconnect buttons are context aware See merge request ProtonVPN/linux/linux-app!29,0
-254,Merge branch 'fix/changelog-dates' into 'develop',0.46339107,Fix: Logs should be using UTC time,,0
-255,Move quick settings state update to states file,0.42969024,Improved: Faster server list switching to/from Secure Core,"Disconnect button in tray will only appear when being connected to VPN, and the inverse for the quick-connect",0
-256,Create new facotry and improve existing one,0.31835654,Improve: Handle accounting use cases,Fix/vpnlinux 192 overlay blocks top quick setting buttons See merge request ProtonVPN/linux/linux-app!28,0
-257,Remove leftovers,0.2551099,"Fix: Display window icons (minimize, maximize and close)",,0
-258,Add initial window and styling for dashboard,0.6343911,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-259,Merge branch 'refactor/rebranding' into 'develop',0.24034284,Improve: Handle accounting use cases,Dependency issue fix See merge request ProtonVPN/linux/linux-app!27,0
-260,"Users who do not comply with tier requirments, are displayed a prompt to upgrade",0.5128678,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-261,Create troubleshooting dialog,0.71511644,"Feature: Add troubleshooting dialog, including support for alternative routing", GUI should now be able to run without issues on systems where dependencies are not met for the tray,1
-262,Update event dialog,0.7737076,Hotfix: Update event dialog,,1
-263,Move icon,0.48557293,"Fix: Display window icons (minimize, maximize and close)",,0
-264,Update changelogs after rebase,0.4911353,Hotfix: Update event dialog,,0
-265,Merge branch 'feature/VPNLINUX-182-about-dialog' into 'develop',0.48034716,"Feature: Add troubleshooting dialog, including support for alternative routing",Add logging See merge request ProtonVPN/linux/linux-app!26,0
-266,Skip getting IP if local variables are set,0.33343875,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-267,Update threading and window management,0.5010172,"Fix: Display window icons (minimize, maximize and close)",Add system tray icon See merge request ProtonVPN/linux/linux-app!25,0
-268,Need help button complete,0.42876703,Fix: Add missing dependency for Webkit,,0
-269,Update debian img path for desktop file,0.30554038,"Improvement: GUI responsiveness (loading servers, logout)",This new feature will allow users to have ProtonVPN always to be running in background,0
-270,Merge branch 'feature/VPNLINUX-160-implement-search' into 'develop',0.36510915,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-271,Rename source folder name,0.1900158,Fix: Stop displaying new brand dialog on new login.,,0
-272,Only show message of active kill switch when perman kill switch is on,0.40204772,"Ensure that whenever session is invalid, user is logged out",,0
-273,Replace python threads for GTask threads,0.34841436,"Feature: Add troubleshooting dialog, including support for alternative routing",Add space to secure core sub-servers flags and label See merge request ProtonVPN/linux/linux-app!24,0
-274,Display only countries when connecting to Secure Core servers,0.53117406,Improved: Faster server list switching to/from Secure Core,,0
-275,Merge branch 'feature/VPNLINUX-218-generate-logs' into 'develop',0.34969044,"Feature: Add troubleshooting dialog, including support for alternative routing",Also fix method typo,0
-276,Remove duplicate methods,0.38233668,Improve: Exception handling,Add streaming logos See merge request ProtonVPN/linux/linux-app!23,0
-277,Factor out classes into own files,0.2042582,Improve: Exception handling,,0
-278,Add system tray icon,0.49461564,"Fix: Display window icons (minimize, maximize and close)",,0
-279,Merge branch 'fix/update-package-to-stable' into 'develop',0.31802282,Fix: Add missing dependency for Webkit,"Displays only countries when connected to secure core, on dashboard See merge request ProtonVPN/linux/linux-app!22",0
-280,Correct return displays value,0.48965266,Feature: Handle and display events,,0
-281,Improve code readability,0.44390783,Improve: Exception handling,Fix/displays message on dashboard if perma ks is on See merge request ProtonVPN/linux/linux-app!21,0
-282,Merge branch 'typo-fix' into 'develop',0.30053005,Fix: Add missing dependency for Webkit,,0
-283,Create launcher for .deb packages,0.3491306,Fix: Add missing dependency for Webkit,,0
-284,Add error label,0.4210783,Fix: Add missing dependency for Webkit,Fix quick connect/disconnect glitch See merge request ProtonVPN/linux/linux-app!20,0
-285,Add label above entry and display it accordingly,0.43785316,Feature: Handle and display events,,0
-286,Add extra dependencies for indicator/tray on fedora,0.5368035,Fix: Add missing dependency for Webkit,"This is accomplished by creating a second button, thus, one button is used to quick connect and another one to disconnect, although they will never be revealed both at the same time",0
-287,Ensure that quick settings off buttons were reverted to white after changing,0.5580305,Fix: Stop displaying new brand dialog on new login.,Fix/ui disconnect labels See merge request ProtonVPN/linux/linux-app!19,0
-288,Add logger and rewrite dashboard,0.5031472,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-289,Merge branch 'improve/memory-leak' into 'develop',0.60301244,Improve: Further improve memory management to avoid potential leaks,,0
-290,Add new button classes,0.42002824,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-291,Change to trigger git publish manually,0.43552786,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix connect button glitch See merge request ProtonVPN/linux/linux-app!18,0
-292,Implement new locations top header,0.39318374,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-293,Fix dates in changelog,0.68472666,Fix: Logs should be using UTC time,,0
-294,"Add missing dependency, update changelog and bump rel version",0.5989779,Fix: Add missing dependency for Webkit,Also improve code readability,0
-295,Fix issue where quick settings are not updated,0.6331037,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-296,Removed notebook and added network speed converted,0.5313418,Improved: Faster server list switching to/from Secure Core,,0
-297,Merge branch 'fix/unable-to-get-logs' into 'develop',0.3747281,Fix: Add missing dependency for Webkit,,0
-298,Create features window and add respective style,0.5278675,"Fix: Display window icons (minimize, maximize and close)",Fix UI details See merge request ProtonVPN/linux/linux-app!17,0
-299,Finish functional dashboard,0.54475045,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-300,Add new brand dialog and fix about dialog and login/logout issue,0.8397658,Fix: Stop displaying new brand dialog on new login.,,1
-301,Expand Flake8 line length,0.27794987,"Fix: Display window icons (minimize, maximize and close)",,0
-302,Hide button by default,0.48831883,Fix: Stop displaying new brand dialog on new login.,,0
-303,Merge branch 'release-1.0.1' into 'develop',0.38210976,First stable release,,0
-304,Merge branch 'fix/add-multiple-distro-support' into 'develop',0.37981755,Fix: Add missing dependency for Webkit,,0
-305,Add streaming logos,0.47257715,"Improvement: GUI responsiveness (loading servers, logout)",,0
-306,Refresh server list after plan downgrade,0.668239,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-307,Simplify code,0.42762393,Improve: Exception handling,,0
-308,Merge branch 'fix/improve-logging' into 'develop',0.30057466,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-309,"Fix typo, update changelog and bump rel version",0.45194012,Fix: Unable to update server list after 15min (crash report would appear on certain distros),Refactor dashbord so that all posssible view reside in one place separate from the dashboard view,0
-310,Display troubleshooting dialog when connecting with alt routing disabled,0.7575302,"Feature: Add troubleshooting dialog, including support for alternative routing",,1
-311,Bump version,0.26031092,nan,Implement streaming and virtual location features See merge request ProtonVPN/linux/linux-app!16,0
-312,Merge branch 'fix/run-in-threads' into 'develop',0.33947486,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-313,Rename class to LoginView,0.46995407,Fix: Stop displaying new brand dialog on new login.,,0
-314,Support F38 [VPNLINUX-584],0.4248963,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-315,Add icon to error upon login and updated styling,0.57761675,Fix: Stop displaying new brand dialog on new login.,,0
-316,Merge branch 'fix/VPNLINUX-425-raise-invalid-session-when-api-fails-with-invalid-session' into 'develop',0.4595848,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-317,Add css to headers,0.28344804,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-318,Set char width dependant on if the upgrade label is present or not,0.35088885,"Fix: Display window icons (minimize, maximize and close)",,0
-319,Move logic to presenter,0.4082783,Feature: Handle and display events,,0
-320,Remove print and add description to docstring,0.28963274,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-321,Add extra exception to display troubleshoot dialog,0.6215885,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-322,Fix crash when dummy indicator is used in abscence of tray dependency,0.46664864,Fix: Add missing dependency for Webkit,,0
-323,Hide quick connect on login window,0.59369254,Fix: Stop displaying new brand dialog on new login.,,0
-324,Merge branch 'fix/crash-on-quit' into 'develop',0.38048786,Fix: Add missing dependency for Webkit,,0
-325,Inform user if session is invalid and logout if so [VPNLINUX-425],0.8513725,"Fix: If session is invalid, logout and inform the user about it.",,1
-326,Update quick settings colours,0.42330146,"Fix: Display window icons (minimize, maximize and close)",,0
-327,Merge branch 'feature/VPNLINUX-163-streaming-and-virtual-locations' into 'develop',0.41629025,"Feature: Add troubleshooting dialog, including support for alternative routing","Server headers are now displayed. At this point, some styling is still needed and also add the features for the plus servers",0
-328,Add no-default css class to dashboard buttons,0.5891514,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-329,Set window default background color,0.53480935,"Fix: Display window icons (minimize, maximize and close)",-Create new info image icon for plus features -Add host country to server_item -Adapt server_list model and view,0
-330,"Update repo documentation: contributing, copying and updated readme",0.41156846,Hotfix: Update event dialog,,0
-331,Fix issue with Gio.Task not having run_in_thead method,0.56979513,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
-332,Check if events need to be loaded on app start,0.5460765,Feature: Handle and display events,,0
-333,Merge branch 'rebase/release-1.5.1-on-develop' into 'develop',0.31462795,First stable release,,0
-334,Add background process to update server load,0.530848,Improved: Faster server list switching to/from Secure Core,,0
-335,Precent from quick connect and disconnect buttons to be triggered multiple times,0.5080444,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-336,Implement reconnect after changing secure core quick setting,0.64171994,Improved: Faster server list switching to/from Secure Core,This header will be only displayed for Plus users,0
-337,Fix missing import,0.48459846,Fix: Add missing dependency for Webkit,,0
-338,Add support for F35 and discontinue F31-32,0.3686379,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
-339,Update only dashboard window to new colour scheme,0.57805216,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-340,Merge branch 'fix/VPNLINUX-223-utc-timezone-in-logs' into 'develop',0.5713727,Fix: Logs should be using UTC time,,0
-341,"Update library dependency, update changelog and version",0.48323393,Fix: Add missing dependency for Webkit,Fix crash when quitting without a connection See merge request ProtonVPN/linux/linux-app!15,0
-342,Make window not resizeble,0.7448255,"Fix: Display window icons (minimize, maximize and close)",,1
-343,Merge branch 'tmp/view-model-example' into 'feature/VPNLINUX-121',0.4129356,"Feature: Add troubleshooting dialog, including support for alternative routing",Feature/vpnlinux 180 desktop launcher See merge request ProtonVPN/linux/linux-app!14,0
-344,Merge branch 'feature/VPNLINUX-120' into 'develop',0.3351491,Improved: Faster server list switching to/from Secure Core,,0
-345,Fix crash when attempting to reach API while connection is running,0.55150974,Hotfix: Display message when library is not able to disable connectivity check,,0
-346,Add id to search entry,0.3291235,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
-347,Fix text formatting and selection issues,0.37754357,"Fix: Display window icons (minimize, maximize and close)",,0
-348,Applied correct css styling and colouring,0.26582295,"Fix: Display window icons (minimize, maximize and close)",,0
-349,Add about dialog,0.57126796,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-350,Fix quick connect/disconnect loop,0.45793694,Fix: Memory leak,Feature/vpnlinux 182 about dialog See merge request ProtonVPN/linux/linux-app!13,0
-351,Fix login window title typo,0.59669393,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
-352,Add working quick connect button,0.49048603,"Improvement: GUI responsiveness (loading servers, logout)",,0
-353,"If at any point a request is made with an invalid session, logout the user [VPNLINUX-425].",0.7878847,"Fix: If session is invalid, logout and inform the user about it.",,1
-354,Only display upgrade button if tier is lower the min required for given feature,0.50047326,"Fix: Display window icons (minimize, maximize and close)",Implement disable kill switch in login screen See merge request ProtonVPN/linux/linux-app!10,0
-355,Add possibility to show/hide password,0.42597538,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
-356,Add setup.cfg and fix flake8 issues in main.py,0.44543347,Fix: Add missing dependency for Webkit,Refactored dialog class so that multiple dialog types can be used later,0
-357,Add missing dependency for webkit,0.96567476,Fix: Add missing dependency for Webkit,Fix/vpnlinux 155 treat server feature as bitmap See merge request ProtonVPN/linux/linux-app!12,1
-358,Add missingpackage to Suggests/Optdepends,0.547691,Fix: Add missing dependency for Webkit,,0
-359,Bump rel version,0.24013077,Improved: Faster server list switching to/from Secure Core,,0
-360,Merge branch 'feature/VPNLINUX-167-troubleshooting-screen' into 'develop',0.4170896,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-361,Initial commit,0.42999977,First stable release,Feature/vpnlinux 175 adjust servers load See merge request ProtonVPN/linux/linux-app!11,0
-362,Prevent logout race condition,0.35457513,Handle human verification,,0
-363,"Displays only countries when connected to secure core, on dashboard",0.3869041,Improved: Faster server list switching to/from Secure Core,,0
-364,"If country is under maintenance, then the UI wil displays appropriatly",0.3630554,"Improvement: GUI responsiveness (loading servers, logout)",,0
-365,Rename window title to ProtonVPN,0.45325387,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
-366,Merge branch 'rebase/from-release-0.7.0' into 'develop',0.2969164,First stable release,Implement country search/filter See merge request ProtonVPN/linux/linux-app!9,0
-367,Add css with font-sizes,0.30967885,"Fix: Display window icons (minimize, maximize and close)",,0
-368,Attempt to login upon pressing on enter button,0.7502013,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,1
-369,Remove CSS related to Notebook,0.3861692,"Fix: Display window icons (minimize, maximize and close)",,0
-370,Add captcha to login,0.5402299,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
-371,Simplify connecting overlay information display logic,0.49678263,Feature: Handle and display events,,0
-372,Update margin for login main box,0.53750753,Fix: Stop displaying new brand dialog on new login.,-grid factory get_child_at method args name have been updated so that they convey a more explicit meaning of what they mean -it's also possible now to get the total ammount of countries and the ammount of servers per country,0
-373,"Include UI, images and css into manifest",0.4678288,Feature: Handle and display events,"This change is need since if only a couple of countries are present and/or a couple of servers are displayed, the revealer will attempt to occupy free space, which looks not very good.",0
-374,Split server list class in into self-contained componenets,0.43718183,Improved: Faster server list switching to/from Secure Core,,0
-375,Update changelog and bump version,0.49290454,Hotfix: Update event dialog,Implement logout and quit buttons See merge request ProtonVPN/linux/linux-app!8,0
-376,Handle compromised password,0.43634164,"Ensure that whenever session is invalid, user is logged out",,0
-377,Update delay time to 3 seconds,0.51153684,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-378,Move background process to factory and rename method,0.32491598,Fix: Stop displaying new brand dialog on new login.,,0
-379,Merge branch 'release-1.2.0' into 'develop',0.35146445,First stable release,-Dialog has been refactored so that it can easily accomodate new implementations,0
-380,Only start thread if button is enabled,0.5146456,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-381,Update css classes and remove pre-defined classes in .ui files,0.3095777,Fix: Stop displaying new brand dialog on new login.,,0
-382,Add warning message if kill switch is blocking all connections,0.56236386,Hotfix: Display message when library is not able to disable connectivity check,,0
-383,Remove content instead of hiding label to keep same UI size after disconnecting,0.51540154,"Fix: Display window icons (minimize, maximize and close)",Add quick-settings buttons See merge request ProtonVPN/linux/linux-app!7,0
-384,Get current location data from library,0.25972292,Feature: Handle and display events,,0
-385,Fix changelog after rebase,0.45513844,Fix: Stop displaying new brand dialog on new login.,,0
-386,Remove abc meta as the super classes are not abstract classes,0.24839018,Fix: Stop displaying new brand dialog on new login.,,0
-387,Add connection overlay,0.4575215,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-388,Change package to unstable,0.37313622,Fix: Add missing dependency for Webkit,,0
-389,Remove egg folder,0.26437664,"Fix: Display window icons (minimize, maximize and close)",,0
-390,Attempt to fix crash when downgrading,0.531355,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-391,Refactor plus features,0.40006828,Feature: Handle and display events,,0
-392,Tray quick connect and disconnect buttons are context aware,0.50193,Feature: Handle and display events,,0
-393,Stop displaying new brand dialog on new login [VPNLINUX-431],0.8672885,Fix: Stop displaying new brand dialog on new login.,,1
-394,Implement disable kill switch in login screen,0.5801728,Fix: Stop displaying new brand dialog on new login.,,0
-395,Fix issue with pop-up window,0.6395799,"Fix: Display window icons (minimize, maximize and close)",,0
-396,Add dependencies for library (docker) testing,0.5290413,Fix: Add missing dependency for Webkit,,0
-397,Finish styling quick settings popover,0.5513844,"Fix: Display window icons (minimize, maximize and close)",,0
-398,Add f36 support and deprecate f33,0.387513,Improve: Exception handling,,0
-399,Fix rx issues,0.3862971,Hotfix: Fixed issue with search not working,,0
-400,Update 'ProtonVPN' to 'Proton VPN' and changelog [VPNLINUX-327],0.47712064,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
-401,Update changelog and bump rel version,0.43269315,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
-402,Merge branch 'fix/ui-glitches-and-generic-dialog' into 'develop',0.44181666,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-403,Update login UI,0.6384905,Fix: Stop displaying new brand dialog on new login.,,0
-404,Implement server search,0.4718197,Improved: Faster server list switching to/from Secure Core,,0
-405,Ignore temporary UI files,0.45177925,"Fix: Display window icons (minimize, maximize and close)",,0
-406,Add info icon to all country headers,0.42274302,"Fix: Display window icons (minimize, maximize and close)",,0
-407,Fix issue where server list would not update and app would crash,0.75992835,Fix: Unable to update server list after 15min (crash report would appear on certain distros),"Also, user configurations are correctly updated in the background Only remaining to fix the link button and reconnection flow.",1
-408,Add sidebar flags,0.41283342,"Fix: Display window icons (minimize, maximize and close)",,0
-409,Update constant version,0.4351741,Hotfix: Update event dialog,,0
-410,Merge branch 'improve/VPNLINUX-297-handle-compromised-password' into 'develop',0.40767106,Improved: Faster server list switching to/from Secure Core,,0
-411,Add button to get logs,0.38936517,Feature: Handle and display events,Add new css handler methods,0
-412,Handle delinquent use case [VPNLINUX-299],0.35966069,"Ensure that whenever session is invalid, user is logged out",,0
-413,Merge branch 'rebase/release-1.5.2-fedora-35-from-develop' into 'develop',0.3334477,First stable release,"The buttons still need to be configured so that they react to if the netshield is enabled or disabled, if ks is enabled or disabled and if secure core is to be displayed or not.",0
-414,Fix crash when downgrading account and server list needs to be updated,0.73916817,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,1
-415,Fix flake8 compliance,0.43531168,Improve: Exception handling,-Added popover view ui component and python class -Refactor how grids attach widgets -Factor out background process itno own class so that the implementation can be easily switched to another method,0
-416,Load dashboard with information if user is not connected,0.5120872,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-417,Merge branch 'community/tor-typo-fix' into 'develop',0.3254629,Fix: Add missing dependency for Webkit,Feature/vpnlinux 134 country See merge request ProtonVPN/linux/linux-app!6,0
-418,Hide start on boot switch and expand logout button,0.51800865,Fix: Stop displaying new brand dialog on new login.,,0
-419,Merge branch 'improve/VPNLINUX-299-handle-delinquent' into 'develop',0.38849476,Improved: Faster server list switching to/from Secure Core,,0
-420,Merge branch 'fix/update-dashboard-servername-when-connected-to-secure-core' into 'develop',0.5514496,Improved: Faster server list switching to/from Secure Core,,0
-421,Reduce the ammount of times that certain variables were fetched from protonvpn-nm-library,0.37967157,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
-422,Merge branch 'fix/update-python-nm-lib' into 'develop',0.33166838,Fix: Add missing dependency for Webkit,,0
-423,Create captcha webview,0.44760615,Feature: Handle and display events,These factories were created so that objects can be easily created,0
-424,Merge branch 'ci/docker-image-tags' into 'develop',0.32264322,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-425,Add missing deps for docker,0.39910704,Fix: Add missing dependency for Webkit,"If all servers in a country are under maintenance, then the country will no longer display a button to connect and will instead provide a wrench icon.",0
-426,Change test image tag structure,0.2745993,Feature: Handle and display events,,0
-427,Remove box shadow from gift icon,0.37843847,"Fix: Display window icons (minimize, maximize and close)",,0
-428,Merge branch 'release-1.8.0-fedora-36' into 'develop',0.3775416,First stable release,,0
-429,Displays appropriate error messaged if login fails,0.74982315,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,1
-430,Basic implementation of human verification dialog,0.8647846,Handle human verification,,1
-431,Fix issue when switching SC button would not reconnect,0.48160788,Hotfix: Display message when library is not able to disable connectivity check,,0
-432,Implement activate button if there is text in entry,0.49060237,Fix: New brand dialog will now only appear once after the dashboard has been loaded,Refactor/vpnlinux 125 mvvm See merge request ProtonVPN/linux/linux-app!4,0
-433,Feature: Connect to a country,0.45415917,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-434,Update changelog and bump version version,0.4834818,Hotfix: Update event dialog,Feature/vpnlinux 138 ci package generation See merge request ProtonVPN/linux/linux-app!5,0
-435,Remove unncessary css import,0.35343575,Fix: Stop displaying new brand dialog on new login.,,0
-436,Fix issue where get logs would not work due to new python threading fix,0.40513483,"Fix: If session is invalid, logout and inform the user about it.",,0
-437,Create properties that contain the number of servers per tier,0.41070408,Improved: Faster server list switching to/from Secure Core,,0
-438,Update changelog and remove unused class,0.4079179,Fix: Stop displaying new brand dialog on new login.,,0
-439,Refactor GUI for the latest library refactor which introduces singletons,0.39794266,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
-440,Merge branch 'fix/new-brand-dialog-pop-up-during-app-lifetime' into 'develop',0.34000185,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-441,Use thread context to avoid segmentation fault,0.42759567,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-442,Merge branch 'community/fix-smart-routing-desc' into 'develop',0.37461582,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-443,User main context when possible to update UI from within threads,0.45775932,Feature: Handle and display events,,0
-444,Merge branch 'feature/VPNLINUX-180-desktop-launcher' into 'develop',0.34515822,Improved: Faster server list switching to/from Secure Core,,0
-445,Merge branch 'feature/VPNLINUX-162-logout-quit' into 'develop',0.3415525,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-446,Add logout and quit buttons,0.65946627,Fix: Stop displaying new brand dialog on new login.,,0
-447,Remove new line and add space instead,0.36990044,Fix: Stop displaying new brand dialog on new login.,,0
-448,"Update UI with scrolled window, add icons and update css",0.66719234,"Fix: Display window icons (minimize, maximize and close)",,0
-449,Fix quick settings blocking overlay,0.5128888,"Fix: Display window icons (minimize, maximize and close)","Since profiles are not going to be initially shipped, there was not need for a GTKNotebook, thus it got removed -A speed converted has been introduced so that it displays the networks speeds as it increases in speeds and correctly converts to appropriate measure",0
-450,Fix issues when logging out,0.57794523,"Fix: If session is invalid, logout and inform the user about it.","Add buttons for future implementation of GUI features such as netshield, killswitch and secure-core.",0
-451,"Refactor dashboard view_model and server_list view so that servers are loaded async, thus preventing UI freeze",0.6454783,"Improvement: GUI responsiveness (loading servers, logout)",Refactor how background glib process are added and removed. Update UI so that the disconnect button display correct colours.,0
-452,Display secure core servers,0.7312828,Improved: Faster server list switching to/from Secure Core,Still missing notebook for different button and server list,1
-453,Fix bug where alt routing setting would not be saved after enabling it via dialog,0.7393811,"Feature: Add troubleshooting dialog, including support for alternative routing",,1
-454,Create new button and label classes,0.41902012,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
-455,Remove upper version limit for protonvpn-nm-lib,0.3941214,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",MVVM for login screen See merge request ProtonVPN/linux/linux-app!3,0
-456,Simplify how headers are tracked,0.38098788,Feature: Handle and display events,,0
-457,Update refresh API,0.56474984,Hotfix: Update event dialog,,0
-458,Add psutil dependency,0.4633054,Fix: Add missing dependency for Webkit,,0
-459,Prevent window from resizing horizontally when using the resize grip,0.64862627,"Fix: Display window icons (minimize, maximize and close)",,0
-460,Display incompatibility dialog on systems that GUI dependencies can not be met,0.552112,Fix: Add missing dependency for Webkit,,0
-461,Fix quick connect/disconnect glitch,0.51890206,Hotfix: Display message when library is not able to disable connectivity check,,0
-462,Fix issue with quick setting buttons having a top white outline in some distros,0.59721553,"Fix: Display window icons (minimize, maximize and close)",,0
-463,Merge branch 'fix/ui-fixes' into 'develop',0.36995387,Fix: Add missing dependency for Webkit,Feature/vpnlinux 120 See merge request ProtonVPN/linux/linux-app!2,0
-464,Update package to stable,0.47021082,First stable release,,0
-465,Add logging,0.41608292,Fix: Logs should be using UTC time,,0
-466,Merge branch 'fix/VPNLINUX-178-ui-details' into 'develop',0.4023115,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
-467,Bump version and update changelog,0.5202168,Hotfix: Update event dialog,,0
-468,Merge branch 'hotfix/fix-crash-if-no-tray-dependencies-are-found' into 'master',0.54790306,Hotfix: Fixed issue with search not working,,0
-469,Merge branch 'master' into 'develop',0.19553922,Improve: Handle accounting use cases,"Whenver a window is dragged, a strange border around the window is created whenevr the window is dragger. This issue can be replicated if the App Window has the property double-buffered set to False and the window has a GTKHeaderBar",0
-470,Merge branch 'rebase/from-release-0.7.1' into 'develop',0.30352184,First stable release,,0
+Commit Message,Score,Correspond Changelog Sentence,Commit Description,Label
+Support F38 [VPNLINUX-584],0.21091606,Improved: Faster server list switching to/from Secure Core,,0
+Merge branch 'fix/VPNLINUX-533-move-prod-client-to-v3-folder' into 'develop',0.32830408,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Setup new path to CI config and remove F36 references [VPNLINUX-533] See merge request ProtonVPN/linux/v3/linux-app!109,0
+Setup new path to CI config and remove F36 references [VPNLINUX-533],0.21625274,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Merge branch 'fix/VPNLINUX-425-raise-invalid-session-when-api-fails-with-invalid-session' into 'develop',0.32306722,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,"If at any point a request is made with an invalid session, logout the user [VPNLINUX-425]. See merge request ProtonVPN/linux/linux-app!108",0
+"If at any point a request is made with an invalid session, logout the user [VPNLINUX-425].",0.5987781,"Fix: If session is invalid, logout and inform the user about it.",,0
+Merge branch 'feature/drop-f34-35-and-add-f37' into 'develop',0.25499797,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Drop F34-35 and add F37 [VPNLINUX-441] See merge request ProtonVPN/linux/linux-app!107,0
+Drop F34-35 and add F37 [VPNLINUX-441],0.25456023,Fix: Memory leak,,0
+Merge branch 'release-1.11.0-2' into 'develop',0.29272893,First stable release,Release 1.11.0 2 See merge request ProtonVPN/linux/linux-app!106,0
+Stop displaying new brand dialog on new login [VPNLINUX-431],0.8032048,Fix: Stop displaying new brand dialog on new login.,,1
+Remove leftovers,0.24223635,Fix: Memory leak,,0
+Fix crash when attempting to reach API while connection is running,0.41665536,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Do not reset username/password if login has failed,0.5123174,"Ensure that whenever session is invalid, user is logged out",,0
+Fix crash occuring on Ubuntu 20.04 and simillar distros,0.4572082,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Merge branch 'fix/VPNLINUX-418-refresh-logic' into 'develop',0.31209463,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Inform user if session is invalid and logout if so [VPNLINUX-425] See merge request ProtonVPN/linux/linux-app!105,0
+Inform user if session is invalid and logout if so [VPNLINUX-425],0.7000627,"Ensure that whenever session is invalid, user is logged out",,1
+Merge branch 'fix/new-brand-dialog-pop-up-during-app-lifetime' into 'develop',0.43225324,Fix: Stop displaying new brand dialog on new login.,Fix bug where new brand dialog would appear multiple times during app lifetime See merge request ProtonVPN/linux/linux-app!104,0
+Fix bug where new brand dialog would appear multiple times during app lifetime,0.8329777,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,1
+Merge branch 'fix/update-icon-for-fedora' into 'develop',0.32318032,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Update taskbar icon See merge request ProtonVPN/linux/linux-app!103,0
+Update taskbar icon,0.4230243,"Fix: Display window icons (minimize, maximize and close)",,0
+Merge branch 'fix/run-in-threads' into 'develop',0.2745474,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix bug for GIO versions lower then 2.63.2 See merge request ProtonVPN/linux/linux-app!102,0
+Fix bug for GIO versions lower then 2.63.2,0.80839956,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,"As per documentation, the run_in_thread was introduced in 2.36 (https://docs.gtk.org/gio/callback.TaskThreadFunc.html), but after discussing with the devs, they actually forgot to implement the attribute for GTask, which meant that if one would try GTask.run_in_thread() on versions between 2.32 and 2.63.1, an exception with AttributeError would occur. Thus a check had to be implemented so that if it identifies and incompatible version, it should fallback to native python threads",1
+Merge branch 'fix/rpm-changelog' into 'develop',0.31203476,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Update rpm changelog See merge request ProtonVPN/linux/linux-app!101,0
+Update rpm changelog,0.2711519,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Merge branch 'fix/VPNLINUX-327-update-strings-and-changelog' into 'develop',0.32496986,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Update 'ProtonVPN' to 'Proton VPN' and changelog [VPNLINUX-327] See merge request ProtonVPN/linux/linux-app!100,0
+Update 'ProtonVPN' to 'Proton VPN' and changelog [VPNLINUX-327],0.36794096,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
+Merge branch 'release-1.8.0-fedora-36' into 'develop',0.2411662,First stable release,Add f36 support and deprecate f33 See merge request ProtonVPN/linux/linux-app!99,0
+Add f36 support and deprecate f33,0.2345965,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Merge branch 'fix/ui-glitches-and-generic-dialog' into 'develop',0.33647078,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix UI glitches found in mx linux kde and generic event dialog creation See merge request ProtonVPN/linux/linux-app!96,0
+Fix UI glitches found in mx linux kde and generic event dialog creation,0.36989853,Hotfix: Update event dialog,,0
+Merge branch 'fix/login-window-aspect-ration' into 'develop',0.2870289,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix aspect ration of icon on login window See merge request ProtonVPN/linux/linux-app!95,0
+Fix aspect ration of icon on login window,0.4769731,"Fix: Display window icons (minimize, maximize and close)",,0
+Merge branch 'fix/ui-fixes' into 'develop',0.3525671,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix/ui fixes See merge request ProtonVPN/linux/linux-app!94,0
+"Fix text in welcome to new brand, fix dashboard with and login window width",0.52708924,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
+Merge branch 'fix/rebranding-issues' into 'develop',0.29825616,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Add new brand dialog and fix about dialog and login/logout issue See merge request ProtonVPN/linux/linux-app!93,0
+Update version,0.35018775,First stable release,,0
+Add new brand dialog and fix about dialog and login/logout issue,0.70250845,Fix: Stop displaying new brand dialog on new login.,"Adjust login window to be displayed vertically Fixed login window bug where upon window launch, clicking on login would get triggered although there was no data in the fields",1
+Fix issue with quick setting buttons having a top white outline in some distros,0.39454713,"Fix: Display window icons (minimize, maximize and close)",,0
+Add scroll to quick settings pop-over to prevent UI cuts,0.24864626,"Fix: Display window icons (minimize, maximize and close)","This issue is due to the fact that GTK popover does no bleed over parent window, thus if the content is wider/taller then the parent window, it'll just cut the popover view. This should be fixed in GTk4 but does not work in GTK3. Source: https://gitlab.gnome.org/GNOME/gtk/-/issues/543",0
+Fix found UI issues,0.40550694,"Fix: Display window icons (minimize, maximize and close)",,0
+Merge branch 'refactor/rebranding' into 'develop',0.18502894,Fix: Stop displaying new brand dialog on new login.,Replace all coulours for variables See merge request ProtonVPN/linux/linux-app!91,0
+Ensure that quick settings off buttons were reverted to white after changing,0.31692642,Fix: New brand dialog will now only appear once after the dashboard has been loaded,Ensure that dialog buttons kept the appropriate size,0
+Replace old for new icons and make small changes for new icons,0.3226602,"Fix: Display window icons (minimize, maximize and close)",,0
+Update quick settings colours,0.21754415,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
+Replace all coulours for variables,0.10889168,Fix: Memory leak,Improve colouring and remove old css code,0
+Finish rebrand colouring,0.2586472,Fix: Stop displaying new brand dialog on new login.,,0
+Set window default background color,0.2560217,"Fix: Display window icons (minimize, maximize and close)",,0
+Update only dashboard window to new colour scheme,0.33777994,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
+Update css classes and remove pre-defined classes in .ui files,0.21512371,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Update margin for login main box,0.27264634,Fix: Stop displaying new brand dialog on new login.,,0
+Apply new button colours,0.19642264,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
+Update login UI,0.39136064,Fix: Stop displaying new brand dialog on new login.,,0
+Add new button classes,0.22488628,"Fix: Display window icons (minimize, maximize and close)",,0
+Merge branch 'release-1.8.0' into 'develop',0.31530702,First stable release,Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop' See merge request ProtonVPN/linux/linux-app!90,0
+Merge branch 'fix/VPNLINUX-320-display-message-on-signup-error' into 'develop',0.30717036,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Display error message if link buttons at login can not be reached [VPNLINUX-320] See merge request ProtonVPN/linux/linux-app!89,0
+Display error message if link buttons at login can not be reached [VPNLINUX-320],0.616621,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
+Merge branch 'rebase/from-develop-release-1.7.0-5' into 'develop',0.24018627,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Rebase/from develop release 1.7.0 5 See merge request ProtonVPN/linux/linux-app!88,0
+Attempt to fix crash when downgrading,0.33568612,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Fix crash when downgrading account and server list needs to be updated,0.62665546,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Update rel version,0.28767955,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Refresh server list after plan downgrade,0.39201158,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Correctly use Enum for account,0.20254955,Improve: Handle accounting use cases,,0
+Handle compromised password,0.31158614,Handle human verification,,0
+Fix text formatting and selection issues,0.18941793,Hotfix: Fixed issue with search not working,,0
+Merge branch 'community/tor-typo-fix' into 'develop',0.28680247,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix Tor case See merge request ProtonVPN/linux/linux-app!86,0
+Fix Tor case,0.24861246,Hotfix: Fixed issue with search not working,,0
+Merge branch 'typo-fix' into 'develop',0.2778347,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,fix a typo See merge request ProtonVPN/linux/linux-app!85,0
+fix a typo,0.32836527,Improve: Exception handling,“occurred” had been misspelled as “occured”,0
+Merge branch 'improve/VPNLINUX-297-handle-compromised-password' into 'develop',0.2597621,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Handle compromised password use case [VPNLINUX-297] See merge request ProtonVPN/linux/linux-app!84,0
+Handle compromised password use case [VPNLINUX-297],0.24696067,Handle human verification,,0
+Merge branch 'improve/VPNLINUX-296-handle-oudated-vpn-user-password' into 'develop',0.27227125,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Handle username/password Update [VPNLINUX-298] See merge request ProtonVPN/linux/linux-app!83,0
+Handle username/password Update [VPNLINUX-298],0.32428163,"Fix: If session is invalid, logout and inform the user about it.",,0
+Merge branch 'improve/VPNLINUX-298-handle-plan-downgrade' into 'develop',0.27842218,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Handle plan downgrade [VPNLINUX-298] See merge request ProtonVPN/linux/linux-app!82,0
+Handle plan downgrade [VPNLINUX-298],0.28220162,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Merge branch 'improve/VPNLINUX-299-handle-delinquent' into 'develop',0.25096256,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Handle delinquent use case [VPNLINUX-299] See merge request ProtonVPN/linux/linux-app!81,0
+Handle delinquent use case [VPNLINUX-299],0.31080836,Improve: Handle accounting use cases,,0
+Merge branch 'improvement/VPNLINUX-295-handle-max-sessions' into 'develop',0.28308564,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Handle max sessions/devices [VPNLINUX-295] See merge request ProtonVPN/linux/linux-app!80,0
+Handle max sessions/devices [VPNLINUX-295],0.31994665,"Ensure that whenever session is invalid, user is logged out",,0
+Merge branch 'fix/missing-import' into 'develop',0.286431,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix missing import See merge request ProtonVPN/linux/linux-app!79,0
+Fix missing import,0.33358514,Fix: Add missing dependency for Webkit,,0
+Merge branch 'rebase/release-1.5.2-fedora-35-from-develop' into 'develop',0.2222671,Fix: Add missing dependency for Webkit,Rebase/release 1.5.2 fedora 35 from develop See merge request ProtonVPN/linux/linux-app!78,0
+Fix dates in changelog,0.5062512,Fix: Logs should be using UTC time,,0
+Add support for F35 and discontinue F31-32,0.17019467,Improve: Handle accounting use cases,,0
+Merge branch 'rebase/release-1.5.2-from-develop' into 'develop',0.22256812,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Rebase/release 1.5.2 from develop See merge request ProtonVPN/linux/linux-app!77,0
+Update changelogs after rebase,0.28896934,Fix: Logs should be using UTC time,,0
+Update event dialog,0.84240276,Hotfix: Update event dialog,,1
+Merge branch 'improve/memory-leak' into 'develop',0.5066325,Improve: Further improve memory management to avoid potential leaks,Further improve memory management See merge request ProtonVPN/linux/linux-app!76,0
+Further improve memory management,0.8237648,Improve: Further improve memory management to avoid potential leaks,,1
+Merge branch 'rebase/release-1.5.1-on-develop' into 'develop',0.22591607,First stable release,Hotfix: Fix issue with search not working See merge request ProtonVPN/linux/linux-app!75,0
+Hotfix: Fix issue with search not working,0.9899806,Hotfix: Fixed issue with search not working,,1
+Merge branch 'release-1.5.0' into 'develop',0.3035157,First stable release,Fix issues when logging out See merge request ProtonVPN/linux/linux-app!74,0
+"Fix typo and issue when switching to secure core servers, the reconneciton was not happening",0.5460546,Improved: Faster server list switching to/from Secure Core,,0
+Fix issue where quick settings are not updated,0.34501994,Hotfix: Fixed issue with search not working,,0
+Check for events every 12min,0.35767746,Feature: Handle and display events,Also create own dashboard state for event notification handling,0
+Move quick settings state update to states file,0.23110855,Hotfix: Update event dialog,,0
+Improve code readability,0.2953911,Improve: Exception handling,,0
+Fix XML layout blink glitch,0.2800348,"Fix: Display window icons (minimize, maximize and close)",,0
+Remove box shadow from gift icon,0.24095593,"Fix: Display window icons (minimize, maximize and close)",,0
+Remove new line and add space instead,0.121370316,Fix: Stop displaying new brand dialog on new login.,,0
+Fix issues when logging out,0.509199,"Fix: If session is invalid, logout and inform the user about it.",Several issues were occuring after doing a logout following by a login. These issues have now been addressed and are listed below: -Duplication of windows -Application crashing -Duplication of events,0
+Merge branch 'fix/human-verification' into 'develop',0.29686204,Handle human verification,Correctly handle exceptions on login and on connect See merge request ProtonVPN/linux/linux-app!73,0
+Correctly handle exceptions on login and on connect,0.63005424,Improve: Exception handling,,0
+Merge branch 'fix/VPNLINUX-274-memory-leak' into 'develop',0.4118498,Fix: Memory leak,Fix/vpnlinux 274 memory leak See merge request ProtonVPN/linux/linux-app!72,0
+Fix rebase and update changelog,0.393408,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Fix memory leak,0.9254047,Fix: Memory leak,,1
+Merge branch 'feature/VPNLINUX-279-black-friday' into 'develop',0.24355969,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Feature/vpnlinux 279 black friday See merge request ProtonVPN/linux/linux-app!71,0
+Update changelog,0.34456316,Hotfix: Update event dialog,,0
+Add event notification dot,0.50490135,Feature: Handle and display events,,0
+Bump version and update changelog,0.3312732,Hotfix: Update event dialog,,0
+Check if events need to be loaded on app start,0.39181235,Feature: Handle and display events,,0
+Create dialog for black-friday,0.28259942,Hotfix: Update event dialog,,0
+Merge branch 'release-1.4.1' into 'develop',0.31794244,First stable release,Add missing dependency for webkit See merge request ProtonVPN/linux/linux-app!70,0
+Add missing dependency for webkit,0.9231777,Fix: Add missing dependency for Webkit,,1
+Merge branch 'fix/arch-buildpkg' into 'develop',0.32450575,Fix: Add missing dependency for Webkit,Fix PKGBUILD file See merge request ProtonVPN/linux/linux-app!69,0
+Fix PKGBUILD file,0.28284395,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Merge branch 'feature/VPNLINUX-229-human-verification' into 'develop',0.24968457,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Feature/vpnlinux 229 human verification See merge request ProtonVPN/linux/linux-app!68,0
+Remove print and add description to docstring,0.12585524,Improve: Handle accounting use cases,,0
+Add captcha to login,0.35224238,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
+Create captcha webview,0.28490335,Handle human verification,,0
+Basic implementation of human verification dialog,0.7042397,Handle human verification,,1
+Merge branch 'release-1.3.0' into 'develop',0.32588252,First stable release,Fix crash when switching to/from secure-core servers See merge request ProtonVPN/linux/linux-app!67,0
+"Fix typo, update changelog and bump rel version",0.32065642,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Add Enum to kill switch quick setting,0.2400185,Hotfix: Display message when library is not able to disable connectivity check,,0
+Bump rel version,0.2614777,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Fix issue when switching SC button would not reconnect,0.3534323,"Fix: If session is invalid, logout and inform the user about it.",,0
+Display troubleshooting dialog when connecting with alt routing disabled,0.4209684,"Feature: Add troubleshooting dialog, including support for alternative routing",Also it should be displayed when there is no way to reach API,0
+Fix issue where a variable is referenced before assignment,0.41088232,Fix: Memory leak,,0
+Update arch docker image to latest,0.20752129,First stable release,,0
+Bump version,0.3825593,First stable release,,0
+Skip getting IP if local variables are set,0.23746353,Hotfix: Display message when library is not able to disable connectivity check,,0
+Factor out classes into own files,0.107599586,Improve: Handle accounting use cases,,0
+Fix issue with pop-up window,0.40853888,Hotfix: Update event dialog,,0
+Fix crash when switching to/from secure-core servers,0.5765722,Improved: Faster server list switching to/from Secure Core,"The switch mechanism has been greatly improved as now both list views are created on app initalization and are only refreshed/recreated again when server values need to be updated. Since both lists are now stored in memory, switching from one view to another is now much quicker.",0
+Get current location data from library,0.15068305,Hotfix: Display message when library is not able to disable connectivity check,,0
+Reduce the ammount of times that certain variables were fetched from protonvpn-nm-library,0.30032402,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
+Fix bug where alt routing setting would not be saved after enabling it via dialog,0.4197559,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
+Remove leftover comma as it was creating a tuple,0.14950317,Fix: Memory leak,,0
+Merge branch 'feature/VPNLINUX-167-troubleshooting-screen' into 'develop',0.27753156,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Dislpay troubleshooting dialog See merge request ProtonVPN/linux/linux-app!58,0
+Display troubleshoot dialog at login,0.45873973,Fix: Stop displaying new brand dialog on new login.,,0
+Add extra exception to display troubleshoot dialog,0.49937093,Improve: Exception handling,,0
+Update changelog and bump version,0.34149796,Hotfix: Update event dialog,,0
+Replace http for https,0.26074222,Improved: Faster server list switching to/from Secure Core,,0
+Display troubleshoot dialog when attempting to connect and API calls have to be made,0.401599,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
+Displays troubleshoot dialog in login screen,0.5035243,Fix: Stop displaying new brand dialog on new login.,,0
+Create troubleshooting dialog,0.58796775,"Feature: Add troubleshooting dialog, including support for alternative routing",This dialog will provide the user with additional solutions the any possible networking issues,0
+Remove unnecessary comma,0.1681697,Improve: Exception handling,,0
+"Create new switch factory and add new objects for grid, switch and label",0.20189515,Feature: Handle and display events,,0
+Merge branch 'release-1.2.0' into 'develop',0.32453722,First stable release,Add no-default css class to dashboard buttons See merge request ProtonVPN/linux/linux-app!66,0
+Add no-default css class to dashboard buttons,0.3338056,Fix: New brand dialog will now only appear once after the dashboard has been loaded,This class is needed to override default theme changes made by distros,0
+Merge branch 'fix/update-python-nm-lib' into 'develop',0.25059116,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Update protonvpn-nm-lib version dependency in setup.py See merge request ProtonVPN/linux/linux-app!65,0
+Update protonvpn-nm-lib version dependency in setup.py,0.29731646,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
+Merge branch 'fix/update-dependencies' into 'develop',0.34589982,Fix: Add missing dependency for Webkit,Remove upper version limit for protonvpn-nm-lib See merge request ProtonVPN/linux/linux-app!64,0
+Remove upper version limit for protonvpn-nm-lib,0.28051937,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
+Merge branch 'fix/unable-to-get-logs' into 'develop',0.39248225,Fix: Logs should be using UTC time,Fix issue where get logs would not work due to new python threading fix See merge request ProtonVPN/linux/linux-app!63,0
+Fix issue where get logs would not work due to new python threading fix,0.4065441,Fix: Logs should be using UTC time,,0
+Merge branch 'community/add-keyword-to-desktop-file' into 'develop',0.23896429,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Add Keywords=vpn; to protonvpn.desktop See merge request ProtonVPN/linux/linux-app!62,0
+Add Keywords=vpn; to protonvpn.desktop,0.36544198,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default","Added Keywords=vpn; for GNOME overview since I often search for ""vpn"" when I'm looking to launch the ProtonVPN app.",0
+Merge branch 'fix/VPNLINUX-261-unable-to-use-after-v1.1.0-7-update' into 'develop',0.34200078,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix issue with Gio.Task not having run_in_thead method See merge request ProtonVPN/linux/linux-app!61,0
+Fix changelog after rebase,0.34149057,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Add missing deps for docker,0.19754793,Fix: Add missing dependency for Webkit,,0
+Fix issue with Gio.Task not having run_in_thead method,0.46450096,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,"Even though the method has been implemented in Gio v2.36, it hasn't been fully implemented due to a typo, until version 2.63.2 The commit to this fix can be found here: https://gitlab.gnome.org/GNOME/glib/-/commit/42369df7c659b3a0f43530bd09288df0cea709b4 Now it checks for the Gio version and implements a custom version of python threading to execute callbacks, simillarly as to Gio.Task, in case the Gio version is not compatible",0
+Merge branch 'feature/VPNLINUX-249-show-streaming-list-when-pressing-on-streaming-icon-for-each-server' into 'develop',0.3000821,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Refactor plus features See merge request ProtonVPN/linux/linux-app!59,0
+Add docstrings and rename method,0.19922742,Improve: Exception handling,,0
+Fix bug for users that had to upgrade,0.36781627,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,"For users that had to upgrade, servers would displays both city label and upgrade button at the same time, making it hard to read. Not the label has been corrected so that it displays only upgrade and it is hidden when overing over a server, which is replaced by a 'upgrade' button.",0
+Display streaming list when clicking on streaming icon on each server,0.30266324,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Simplify code,0.23340604,Improve: Exception handling,,0
+Refactor plus features,0.270171,Feature: Handle and display events,"PlusFeatures class should behave a simple aggregation of other types of features, while individual country features have to be individually createdin the case of needing to displays only specific features or a specific list with PlusFeatures",0
+Merge branch 'community/remove-shebang' into 'develop',0.21756706,Fix: Add missing dependency for Webkit,Remove shebang See merge request ProtonVPN/linux/linux-app!57,0
+Remove shebang,0.1955931,Fix: Memory leak,This shebang is not required here and if left on the file it causes openSUSE Build System to trigger a warning in the package build.,0
+Merge branch 'fix/unable-to-update-server-list' into 'develop',0.40425688,Fix: Unable to update server list after 15min (crash report would appear on certain distros),Fix issue where server list would not update and app would crash See merge request ProtonVPN/linux/linux-app!56,0
+Fix issue where server list would not update and app would crash,0.7055794,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,1
+Merge branch 'fix/VPNLINUX-227-window-icons-not-showing' into 'develop',0.33056894,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix CSS rule where it would hide all non-classed buttons See merge request ProtonVPN/linux/linux-app!55,0
+Fix CSS rule where it would hide all non-classed buttons,0.2856714,"Fix: Display window icons (minimize, maximize and close)",Every button that would not have a custom css class would not display the content. This is part to prevent visual bugs on custom button. The rule has been adjusted so that it only affect custom buttons.,0
+Merge branch 'community/fix-smart-routing-desc' into 'develop',0.31391633,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix typo in Smart Routing description See merge request ProtonVPN/linux/linux-app!54,0
+Fix typo in Smart Routing description,0.27137905,"Feature: Add troubleshooting dialog, including support for alternative routing", Fix typo 'difficult-to-server',0
+Merge branch 'fix/missing-systemd-dependency' into 'develop',0.34586278,Fix: Add missing dependency for Webkit,Add dependencies for library (docker) testing See merge request ProtonVPN/linux/linux-app!53,0
+Add dependencies for library (docker) testing,0.27298778,Hotfix: Display message when library is not able to disable connectivity check,,0
+Merge branch 'fix/VPNLINUX-223-utc-timezone-in-logs' into 'develop',0.5044167,Fix: Logs should be using UTC time,Convert log timezone to UTC See merge request ProtonVPN/linux/linux-app!52,0
+Convert log timezone to UTC,0.7022987,Fix: Logs should be using UTC time,,1
+Merge branch 'release-1.1.0' into 'develop',0.3400458,First stable release,User main context when possible to update UI from within threads See merge request ProtonVPN/linux/linux-app!51,0
+Prepare for shutdown should not disconnect VPN as library manages that automatically,0.31555292,Hotfix: Display message when library is not able to disable connectivity check,,0
+Fix function idententation,0.17818347,Fix: Memory leak,,0
+Use thread context to avoid segmentation fault,0.3015704,Improve: Further improve memory management to avoid potential leaks,,0
+Fix UI flicker when no connection is found,0.44382483,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Fix flake8 compliance,0.25905016,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Also added a loading screen when disconnecting,0
+Add menu items to top menu button,0.20486137,"Fix: Display window icons (minimize, maximize and close)",,0
+Update changelog and bump rel version,0.34736258,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Prevent window from resizing horizontally when using the resize grip,0.30262563,"Fix: Display window icons (minimize, maximize and close)",,0
+Fix UI sizes,0.35477656,"Fix: Display window icons (minimize, maximize and close)",,0
+User main context when possible to update UI from within threads,0.31783965,"Improvement: GUI responsiveness (loading servers, logout)",This change should make UI updates more thread-safe,0
+Prevent logout race condition,0.64827305,"Ensure that whenever session is invalid, user is logged out",,0
+Merge branch 'enchancement/VPNLINUX-220-improve-gui-responsiveness' into 'develop',0.27914006,Fix: Add missing dependency for Webkit,Refactor dashboard view_model and server_list view See merge request ProtonVPN/linux/linux-app!50,0
+Replace python threads for GTask threads,0.19653882,Improve: Further improve memory management to avoid potential leaks,,0
+Precent from quick connect and disconnect buttons to be triggered multiple times,0.31884667,Hotfix: Display message when library is not able to disable connectivity check,,0
+Improve logout UX,0.5449454,"Improvement: GUI responsiveness (loading servers, logout)","All processes are run in a thread-safe background process This prevents the GUI from freezing and by running in thread-safe mannger, no unexpected crashses should be expected",0
+Move background process to factory and rename method,0.1929997,Improve: Further improve memory management to avoid potential leaks,,0
+Add missingpackage to Suggests/Optdepends,0.3248798,Fix: Add missing dependency for Webkit,,0
+Refactor background process so that different backends can be used,0.27605888,Improved: Faster server list switching to/from Secure Core,Currently both native python threading can be used and also the improved and thread-safe GTask threads,0
+Replace python thread for GTask,0.16466998,Improve: Further improve memory management to avoid potential leaks,"GTask is a native implementaion of threading in GTK. As per documentation, GTask is thread-safe and should be used when possible instead of python native threading implementation as they're not thread-safe",0
+Update UI update refresh time,0.44923428,Hotfix: Update event dialog,,0
+"Refactor dashboard view_model and server_list view so that servers are loaded async, thus preventing UI freeze",0.6078243,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Merge branch 'release-1.0.1' into 'develop',0.3355993,First stable release,Display message when library is not able to disable connectivity check See merge request ProtonVPN/linux/linux-app!49,0
+Display message when library is not able to disable connectivity check,0.8894634,Hotfix: Display message when library is not able to disable connectivity check,,1
+Merge branch 'fix/update-package-to-stable' into 'develop',0.34711146,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Update package to stable See merge request ProtonVPN/linux/linux-app!48,0
+Update package to stable,0.47007796,First stable release,,0
+Merge branch 'release-0.8.0' into 'develop',0.3024654,First stable release,Multiple changes See merge request ProtonVPN/linux/linux-app!47,0
+Fix generate dialog pop-up,0.5065684,Hotfix: Update event dialog,The generate logs process will now always display the state of logs generation process,0
+"When connected to secure-core servers, correctly display the country order",0.53188306,Improved: Faster server list switching to/from Secure Core,,0
+Remove CentOS8 CI jobs,0.11435665,Fix: Stop displaying new brand dialog on new login.,,0
+Merge branch 'fix/python-constant-version' into 'develop',0.29222,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Update python constant version See merge request ProtonVPN/linux/linux-app!46,0
+Update python constant version,0.23082238,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Merge branch 'feature/VPNLINUX-218-generate-logs' into 'develop',0.2914785,Fix: Logs should be using UTC time,Feature/vpnlinux 218 generate logs See merge request ProtonVPN/linux/linux-app!45,0
+"Update library dependency, update changelog and bump version",0.3320083,Hotfix: Display message when library is not able to disable connectivity check,,0
+Add button to get logs,0.3319801,Fix: Logs should be using UTC time,,0
+Merge branch 'fix/changelog-dates' into 'develop',0.35483456,Fix: Logs should be using UTC time,Fix changelog date See merge request ProtonVPN/linux/linux-app!44,0
+Fix changelog date,0.58312607,Fix: Logs should be using UTC time,,0
+Merge branch 'fix/add-multiple-distro-support' into 'develop',0.30812722,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix/add multiple distro support See merge request ProtonVPN/linux/linux-app!43,0
+"Add support for Fedora 31-34 and centos8 for testing, package generation and package publishing",0.27439272,First stable release,,0
+Merge branch 'fix/add-repo-docs' into 'develop',0.35810748,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,"Update repo documentation: contributing, copying and updated readme See merge request ProtonVPN/linux/linux-app!42",0
+Include documentation in manifest and update rel version,0.18875337,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+"Update repo documentation: contributing, copying and updated readme",0.33898818,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Merge branch 'ci/docker-image-tags' into 'develop',0.25368303,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Change test image tag structure See merge request ProtonVPN/linux/linux-app!41,0
+Use slash instead of dash,0.18542375,Hotfix: Fixed issue with search not working,,0
+Change test image tag structure,0.0875411,Hotfix: Fixed issue with search not working,,0
+Merge branch 'fix/update-constant-version' into 'develop',0.3589788,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Update constant version See merge request ProtonVPN/linux/linux-app!40,0
+Update constant version,0.30357763,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Merge branch 'fix/update-to-newest-lib-version' into 'develop',0.35068586,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,"Update library dependency, update changelog and version See merge request ProtonVPN/linux/linux-app!39",0
+"Update library dependency, update changelog and version",0.33757538,Hotfix: Display message when library is not able to disable connectivity check,,0
+Merge branch 'fix/change-to-unstable' into 'develop',0.32453725,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Change package to unstable See merge request ProtonVPN/linux/linux-app!37,0
+Change package to unstable,0.40047982,First stable release,,0
+Merge branch 'master' into 'develop',0.14516933,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Merge tray crash See merge request ProtonVPN/linux/linux-app!35,0
+Merge branch 'hotfix/fix-crash-if-no-tray-dependencies-are-found' into 'master',0.42587212,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix crash when dummy indicator is used in abscence of tray dependency See merge request ProtonVPN/linux/linux-app!34,0
+Fix crash when dummy indicator is used in abscence of tray dependency,0.2613176,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Merge branch 'publish-stable' into 'master',0.3072549,First stable release,Change package to stable See merge request ProtonVPN/linux/linux-app!33,0
+Change package to stable,0.4344511,First stable release,,0
+Merge branch 'fix/trigger-github-publish-manually' into 'develop',0.33690172,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Change to trigger git publish manually See merge request ProtonVPN/linux/linux-app!32,0
+Change to trigger git publish manually,0.28616133,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Merge branch 'rebase/from-release-0.7.1' into 'develop',0.24440068,First stable release,Rebase/from release 0.7.1 See merge request ProtonVPN/linux/linux-app!31,0
+Update CI jobs and trigger github publish manually,0.22010596,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Update GUI and tray after reconnecting to VPN from suspend or network change,0.43443882,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Only show message of active kill switch when perman kill switch is on,0.3061859,Hotfix: Display message when library is not able to disable connectivity check,,0
+Hide quick connect on login window,0.46369117,Fix: Stop displaying new brand dialog on new login.,,0
+Merge branch 'feature/VPNLINUX-198-support-ubuntu-1804' into 'develop',0.24984515,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Feature/vpnlinux 198 support ubuntu 1804 See merge request ProtonVPN/linux/linux-app!30,0
+Display incompatibility dialog on systems that GUI dependencies can not be met,0.41907695,Hotfix: Display message when library is not able to disable connectivity check,,0
+Merge branch 'fix/tray-buttons-context-dependent' into 'develop',0.2981444,Fix: Add missing dependency for Webkit,Tray quick connect and disconnect buttons are context aware See merge request ProtonVPN/linux/linux-app!29,0
+Tray quick connect and disconnect buttons are context aware,0.35527587,"Improvement: GUI responsiveness (loading servers, logout)","Disconnect button in tray will only appear when being connected to VPN, and the inverse for the quick-connect",0
+Merge branch 'fix/VPNLINUX-192-overlay-blocks-top-quick-setting-buttons' into 'develop',0.32810265,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix/vpnlinux 192 overlay blocks top quick setting buttons See merge request ProtonVPN/linux/linux-app!28,0
+Fix quick settings blocking overlay,0.3270088,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
+Merge branch 'rebase/from-release-0.7.0' into 'develop',0.24589351,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Dependency issue fix See merge request ProtonVPN/linux/linux-app!27,0
+Remove hard dependencies for deb and arch,0.3022118,Fix: Add missing dependency for Webkit,,0
+Dependency issue should now be fixed,0.59396356,Fix: Add missing dependency for Webkit, GUI should now be able to run without issues on systems where dependencies are not met for the tray,0
+Add indicator/tray packages as recommended,0.25159848,Hotfix: Display message when library is not able to disable connectivity check,,0
+Add extra dependencies for indicator/tray on fedora,0.3000121,Fix: Add missing dependency for Webkit,,0
+"Add missing dependency, update changelog and bump rel version",0.3600663,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Merge branch 'fix/improve-logging' into 'develop',0.3266031,Fix: Logs should be using UTC time,Add logging See merge request ProtonVPN/linux/linux-app!26,0
+Add logging,0.3614607,Fix: Logs should be using UTC time,,0
+Merge branch 'feature/VPNLINUX-184-app-tray-indicator' into 'develop',0.2791127,Fix: Add missing dependency for Webkit,Add system tray icon See merge request ProtonVPN/linux/linux-app!25,0
+Add system tray icon,0.37963402,"Fix: Display window icons (minimize, maximize and close)",This new feature will allow users to have ProtonVPN always to be running in background,0
+Add indicator/tray class,0.28579867,"Fix: Display window icons (minimize, maximize and close)",,0
+Move pattern into patterns folder and updated path,0.10973956,Hotfix: Fixed issue with search not working,,0
+Add tray icons,0.45397687,"Fix: Display window icons (minimize, maximize and close)",,0
+Merge branch 'rebase/from-release-0.6.2' into 'develop',0.25532264,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Add space to secure core sub-servers flags and label See merge request ProtonVPN/linux/linux-app!24,0
+Add space to secure core sub-servers flags and label,0.4802694,Improved: Faster server list switching to/from Secure Core,Also fix method typo,0
+Merge branch 'fix/cache-streaming-logos' into 'develop',0.2861372,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Add streaming logos See merge request ProtonVPN/linux/linux-app!23,0
+Add streaming logos,0.17178576,Feature: Handle and display events,,0
+Merge branch 'fix/update-dashboard-servername-when-connected-to-secure-core' into 'develop',0.3639024,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,"Displays only countries when connected to secure core, on dashboard See merge request ProtonVPN/linux/linux-app!22",0
+"Displays only countries when connected to secure core, on dashboard",0.44093978,Improved: Faster server list switching to/from Secure Core,,0
+Merge branch 'fix/displays-message-on-dashboard-if-perma-ks-is-on' into 'develop',0.33691633,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix/displays message on dashboard if perma ks is on See merge request ProtonVPN/linux/linux-app!21,0
+Update changelog and bump version version,0.33935514,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Add warning message if kill switch is blocking all connections,0.5134331,Hotfix: Display message when library is not able to disable connectivity check,,0
+Merge branch 'rebase/from-release-0.6.1' into 'develop',0.2562183,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix quick connect/disconnect glitch See merge request ProtonVPN/linux/linux-app!20,0
+Fix quick connect/disconnect glitch,0.35976547,Hotfix: Display message when library is not able to disable connectivity check,"This is accomplished by creating a second button, thus, one button is used to quick connect and another one to disconnect, although they will never be revealed both at the same time",0
+Merge branch 'fix/ui-disconnect-labels' into 'develop',0.29691982,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix/ui disconnect labels See merge request ProtonVPN/linux/linux-app!19,0
+Remove content instead of hiding label to keep same UI size after disconnecting,0.36275324,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Add timeout for getting the IP,0.24427281,Hotfix: Display message when library is not able to disable connectivity check,,0
+Merge branch 'fix/VPNLINUX-188-connect-button' into 'develop',0.29797897,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix connect button glitch See merge request ProtonVPN/linux/linux-app!18,0
+Add hover effect for info icon,0.26540875,"Fix: Display window icons (minimize, maximize and close)",,0
+Fix connect button glitch,0.3168978,Fix: Stop displaying new brand dialog on new login.,Also improve code readability,0
+Hide button by default,0.27074954,Fix: Stop displaying new brand dialog on new login.,,0
+Add spacing to virtual servers,0.33929408,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Merge branch 'fix/VPNLINUX-178-ui-details' into 'develop',0.30640268,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix UI details See merge request ProtonVPN/linux/linux-app!17,0
+Change from protonvpn property to method,0.4114012,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
+Fix quick connect/disconnect loop,0.3749236,Hotfix: Display message when library is not able to disable connectivity check,,0
+Attempt to login upon pressing on enter button,0.45374912,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
+Make server features popover non-resizable,0.3330398,"Fix: Display window icons (minimize, maximize and close)",,0
+Add additional custom content to dialog if desired via add_extra_content() method,0.33873287,Hotfix: Update event dialog,,0
+Add css with font-sizes,0.11395985,Fix: Add missing dependency for Webkit,,0
+Simplify connecting overlay information display logic,0.2576292,Feature: Handle and display events,,0
+Displays appropriate error messaged if login fails,0.759658,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,1
+Fix styling for ambience theme,0.26361862,"Fix: Display window icons (minimize, maximize and close)",,0
+Display only countries when connecting to Secure Core servers,0.50236356,Improved: Faster server list switching to/from Secure Core,Refactor dashbord so that all posssible view reside in one place separate from the dashboard view,0
+Change background color for selected quick setting and fix secure core typo on dropdown,0.3844226,Improved: Faster server list switching to/from Secure Core,,0
+Merge branch 'feature/VPNLINUX-163-streaming-and-virtual-locations' into 'develop',0.24844941,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Implement streaming and virtual location features See merge request ProtonVPN/linux/linux-app!16,0
+Simplify methods and rename class properties,0.2548586,Improve: Exception handling,,0
+Update library dependency version,0.36052972,Fix: Add missing dependency for Webkit,,0
+Remove obsolete property and rename methods,0.2201602,Improve: Exception handling,,0
+Add info icon to all country headers,0.22734831,"Fix: Display window icons (minimize, maximize and close)",,0
+Add tier chip,0.1447958,Improve: Handle accounting use cases,,0
+Add smart routing icon if all country servers have a host country,0.37677735,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
+Make all country header text dark gray,0.13960554,Fix: Logs should be using UTC time,,0
+Finish styling of streaming services,0.27853358,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
+Display streaming services for provided countries,0.20156983,Improved: Faster server list switching to/from Secure Core,,0
+Sort secure core servers and hide headers for secure core sub-servers,0.6299478,Improved: Faster server list switching to/from Secure Core,,0
+Add viewport to window so that it can scroll in case it case many features,0.3698754,Feature: Handle and display events,,0
+Refactor header so that a custom callback can be passed to the info button,0.26389623,Feature: Handle and display events,,0
+Add background color to list of server names belonging to a country,0.33332667,Improved: Faster server list switching to/from Secure Core,,0
+Simplify how headers are tracked,0.20732647,Improved: Faster server list switching to/from Secure Core,,0
+Implement server headers,0.2944337,Improved: Faster server list switching to/from Secure Core,"Server headers are now displayed. At this point, some styling is still needed and also add the features for the plus servers",0
+Split server list class in into self-contained componenets,0.37621704,Improved: Faster server list switching to/from Secure Core,,0
+Implement country headers,0.13884324,Improved: Faster server list switching to/from Secure Core,-Create new info image icon for plus features -Add host country to server_item -Adapt server_list model and view,0
+Create new button and label classes,0.20801952,"Fix: Display window icons (minimize, maximize and close)",,0
+Add css to headers,0.09669901,Fix: Logs should be using UTC time,,0
+Create properties that contain the number of servers per tier,0.28154325,Improved: Faster server list switching to/from Secure Core,,0
+Only displays features window if info icon is clicked,0.49217606,"Fix: Display window icons (minimize, maximize and close)",,0
+Update version string,0.26737577,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Remove button background in certain themes,0.25903574,"Fix: Display window icons (minimize, maximize and close)",,0
+Implement new locations top header,0.13817704,"Feature: Add troubleshooting dialog, including support for alternative routing",This header will be only displayed for Plus users,0
+Create new server features window class,0.33987278,Feature: Handle and display events,,0
+Create features window and add respective style,0.316965,Feature: Handle and display events,,0
+Add css classes,0.15803361,Fix: Add missing dependency for Webkit,,0
+Add and rename icons,0.37296093,"Fix: Display window icons (minimize, maximize and close)",,0
+Merge branch 'fix/crash-on-quit' into 'develop',0.3099867,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix crash when quitting without a connection See merge request ProtonVPN/linux/linux-app!15,0
+Fix crash when quitting without a connection,0.41194862,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Merge branch 'feature/VPNLINUX-180-desktop-launcher' into 'develop',0.25523314,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Feature/vpnlinux 180 desktop launcher See merge request ProtonVPN/linux/linux-app!14,0
+Correct version number in .spec file,0.32982433,First stable release,,0
+Add desktop entry for Fedora based systems and update .spec file accordingly,0.24836305,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
+Update debian img path for desktop file,0.17543224,Hotfix: Update event dialog,,0
+Rename file and add constant for filepath,0.06739452,Fix: Logs should be using UTC time,,0
+Create launcher for .deb packages,0.16072464,"Fix: Display window icons (minimize, maximize and close)",,0
+Merge branch 'feature/VPNLINUX-182-about-dialog' into 'develop',0.24176592,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Feature/vpnlinux 182 about dialog See merge request ProtonVPN/linux/linux-app!13,0
+Correct return displays value,0.20247617,Improve: Exception handling,,0
+Add about dialog,0.37131655,Hotfix: Update event dialog,,0
+Merge branch 'feature/VPNLINUX-173-disable-always-on-ks-in-login-window' into 'develop',0.32048592,Fix: Add missing dependency for Webkit,Implement disable kill switch in login screen See merge request ProtonVPN/linux/linux-app!10,0
+Update changelog and remove unused class,0.26624388,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Implement disable kill switch in login screen,0.398202,"Ensure that whenever session is invalid, user is logged out",Refactored dialog class so that multiple dialog types can be used later,0
+Merge branch 'fix/VPNLINUX-155-treat-server-feature-as-bitmap' into 'develop',0.33217353,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Fix/vpnlinux 155 treat server feature as bitmap See merge request ProtonVPN/linux/linux-app!12,0
+Update dependencies and changelog,0.29602635,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Implement servers with multi-features aka bitmap,0.24182704,Feature: Handle and display events,,0
+Expand Flake8 line length,0.09346926,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Merge branch 'feature/VPNLINUX-175-adjust-servers-load' into 'develop',0.27353466,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Feature/vpnlinux 175 adjust servers load See merge request ProtonVPN/linux/linux-app!11,0
+Display server load with contextual circle colour,0.3894336,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Remove frame borders,0.19634253,"Fix: Display window icons (minimize, maximize and close)",,0
+Delete duplicate flag files,0.12997608,Fix: Logs should be using UTC time,,0
+Merge branch 'feature/VPNLINUX-160-implement-search' into 'develop',0.27321252,Hotfix: Fixed issue with search not working,Implement country search/filter See merge request ProtonVPN/linux/linux-app!9,0
+Update refresh API,0.36585313,Hotfix: Update event dialog,,0
+Rename ks from always-on to permanent,0.22326472,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
+Fix typo,0.29686213,Improve: Exception handling,,0
+Implement server search,0.39227575,Improved: Faster server list switching to/from Secure Core,-grid factory get_child_at method args name have been updated so that they convey a more explicit meaning of what they mean -it's also possible now to get the total ammount of countries and the ammount of servers per country,0
+Reavealer should not expand vertically even if there is enough space,0.28165385,"Fix: Display window icons (minimize, maximize and close)","This change is need since if only a couple of countries are present and/or a couple of servers are displayed, the revealer will attempt to occupy free space, which looks not very good.",0
+Add id to search entry,0.3377791,Hotfix: Fixed issue with search not working,,0
+Merge branch 'feature/VPNLINUX-162-logout-quit' into 'develop',0.26188833,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Implement logout and quit buttons See merge request ProtonVPN/linux/linux-app!8,0
+Add psutil dependency,0.24463075,Fix: Add missing dependency for Webkit,,0
+Fix secure core typo,0.38152692,Improved: Faster server list switching to/from Secure Core,,0
+Add logout and quit buttons,0.38720733,"Fix: Display window icons (minimize, maximize and close)",,0
+Implement logout button,0.47072756,"Ensure that whenever session is invalid, user is logged out",-Dialog has been refactored so that it can easily accomodate new implementations,0
+Hide start on boot switch and expand logout button,0.3166022,"Fix: Display window icons (minimize, maximize and close)",,0
+Only display upgrade button if tier is lower the min required for given feature,0.21963878,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
+Add missing init file,0.19248709,Fix: Add missing dependency for Webkit,,0
+Merge branch 'feature/VPNLINUX-144-quick-settings' into 'develop',0.26967958,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Add quick-settings buttons See merge request ProtonVPN/linux/linux-app!7,0
+Modify if check,0.25551754,Improve: Exception handling,,0
+Rename methods and set to update server list always when switching servers,0.47248495,Improved: Faster server list switching to/from Secure Core,,0
+Rename collection list; Remove extra 'if' when checking for selected path; Remove upgrade button for killswitch,0.2890809,Improve: Exception handling,,0
+Add debug flag,0.34241816,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
+Fix issue with labels being too long while connecting to server,0.36132962,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Implement reconnect after changing secure core quick setting,0.4925806,Improved: Faster server list switching to/from Secure Core,,0
+Add server score property,0.2878828,Improved: Faster server list switching to/from Secure Core,,0
+Fix issue when speeds could be below 0,0.24664396,Hotfix: Display message when library is not able to disable connectivity check,,0
+Display secure core servers,0.6524873,Improved: Faster server list switching to/from Secure Core,,0
+Update all quick settings icons when pressed,0.3667336,"Fix: Display window icons (minimize, maximize and close)",,0
+Inlcude large flags in the package,0.18322793,Hotfix: Display message when library is not able to disable connectivity check,,0
+Fix ui,0.40595376,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Add custom headerbar to login for consistency,0.3323284,"Ensure that whenever session is invalid, user is logged out",,0
+"Refactor how server list is generated, filtered and sorted",0.49354973,Improved: Faster server list switching to/from Secure Core,,0
+Turn internal variables to private,0.2526967,Improve: Further improve memory management to avoid potential leaks,,0
+Rename files and classes,0.10623258,Improve: Exception handling,,0
+Set char width dependant on if the upgrade label is present or not,0.22709252,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
+Improve logic for detecting when netshield should be displayed as off,0.43223357,Hotfix: Display message when library is not able to disable connectivity check,,0
+Finish adding the learn more link button,0.18484832,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
+Create new facotry and improve existing one,0.3422054,Improve: Handle accounting use cases,,0
+Create new abstract button factory,0.23236555,Feature: Handle and display events,,0
+UI behaviour now correctly updates when pressing on buttons,0.3662142,Hotfix: Update event dialog,"Also, user configurations are correctly updated in the background Only remaining to fix the link button and reconnection flow.",0
+Remove not needed import and add docstring,0.1822426,Fix: Add missing dependency for Webkit,,0
+Replace img strings for constant icon set dict with enums,0.21297872,"Fix: Display window icons (minimize, maximize and close)",,0
+Add to-do for cursor object,0.2114766,Feature: Handle and display events,,0
+Finish styling quick settings popover,0.3313857,Fix: New brand dialog will now only appear once after the dashboard has been loaded,Add new css handler methods,0
+Remove abc meta as the super classes are not abstract classes,0.189488,Fix: Stop displaying new brand dialog on new login.,,0
+Popover displays and updats content according to button pressed,0.41062734,Hotfix: Update event dialog,"The buttons still need to be configured so that they react to if the netshield is enabled or disabled, if ks is enabled or disabled and if secure core is to be displayed or not.",0
+Fix styling issues with different themes,0.21979873,"Fix: Display window icons (minimize, maximize and close)",,0
+Change quick settings from model button to ordinary button,0.2986908,Fix: New brand dialog will now only appear once after the dashboard has been loaded,-Added popover view ui component and python class -Refactor how grids attach widgets -Factor out background process itno own class so that the implementation can be easily switched to another method,0
+Rename library folder and skip tests in control,0.21107516,Hotfix: Display message when library is not able to disable connectivity check,,0
+Merge branch 'feature/VPNLINUX-134-country' into 'develop',0.2371108,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Feature/vpnlinux 134 country See merge request ProtonVPN/linux/linux-app!6,0
+Remove unncessary css import,0.29185295,Fix: Add missing dependency for Webkit,,0
+"Users who do not comply with tier requirments, are displayed a prompt to upgrade",0.22333167,Fix: Stop displaying new brand dialog on new login.,,0
+Add dummy object so that methods from image factory can be used,0.13188903,nan,,0
+Fix login window title typo,0.40596947,Fix: Stop displaying new brand dialog on new login.,,0
+Refactor GUI for the latest library refactor which introduces singletons,0.35410058,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Create abstract and concrete factories,0.16102321,Improve: Handle accounting use cases,These factories were created so that objects can be easily created,0
+Create GTK button factory,0.22454745,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
+"If country is under maintenance, then the UI wil displays appropriatly",0.2771962,"Improvement: GUI responsiveness (loading servers, logout)","If all servers in a country are under maintenance, then the country will no longer display a button to connect and will instead provide a wrench icon.",0
+Feature: Connect to a country,0.30195916,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
+Create new server objects so that they can be easily diplayed for the view,0.32966354,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Adapt to new refactored library,0.22493544,Hotfix: Display message when library is not able to disable connectivity check,,0
+Update dependency,0.361667,Fix: Add missing dependency for Webkit,,0
+"Update UI with scrolled window, add icons and update css",0.3938968,"Fix: Display window icons (minimize, maximize and close)",,0
+Move flags to appropriate folder,0.10258604,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
+Merge branch 'refactor/VPNLINUX-125-MVVM' into 'develop',0.21545553,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Refactor/vpnlinux 125 mvvm See merge request ProtonVPN/linux/linux-app!4,0
+Apply suggested changes,0.24201268,Hotfix: Update event dialog,,0
+Merge branch 'feature/VPNLINUX-138-ci-package-generation' into 'refactor/VPNLINUX-125-MVVM',0.27798674,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Feature/vpnlinux 138 ci package generation See merge request ProtonVPN/linux/linux-app!5,0
+Remove duplicate rpm group and add missing .gitkeep for folders,0.30684754,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Fix debian control issue,0.24781665,Hotfix: Fixed issue with search not working,,0
+Fix rx issues,0.2402027,Fix: Unable to update server list after 15min (crash report would appear on certain distros),,0
+Add missing init files,0.17233954,Fix: Add missing dependency for Webkit,,0
+Rename source folder name,0.13255063,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+"Include UI, images and css into manifest",0.25542194,"Fix: Display window icons (minimize, maximize and close)",,0
+Add Rx package,0.1825328,Fix: Add missing dependency for Webkit,,0
+Remove protonvpn-cli references,0.32600754,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
+Rename test file and update python package name,0.1490896,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Update package name,0.26793247,Hotfix: Update event dialog,,0
+Add CI jobs for testing and packaging,0.18961498,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
+Remove CSS related to Notebook,0.1797325,Fix: Stop displaying new brand dialog on new login.,,0
+Update delay time to 3 seconds,0.3263026,Hotfix: Update event dialog,,0
+Add docstrings and bum version,0.23194478,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Removed notebook and added network speed converted,0.12822646,Fix: Memory leak,"Since profiles are not going to be initially shipped, there was not need for a GTKNotebook, thus it got removed -A speed converted has been introduced so that it displays the networks speeds as it increases in speeds and correctly converts to appropriate measure",0
+Add GtkNotebook,0.24455506,Fix: Add missing dependency for Webkit,"Add buttons for future implementation of GUI features such as netshield, killswitch and secure-core.",0
+Add background process to update server load,0.37024143,"Improvement: GUI responsiveness (loading servers, logout)",Refactor how background glib process are added and removed. Update UI so that the disconnect button display correct colours.,0
+Finish functional dashboard,0.3808179,"Improvement: GUI responsiveness (loading servers, logout)",Still missing notebook for different button and server list,0
+Add sidebar flags,0.2012969,"Feature: Add troubleshooting dialog, including support for alternative routing",,0
+Finish login MVVM implementation,0.42022464,"Fix: If session is invalid, logout and inform the user about it.",,0
+Merge branch 'tmp/view-model-example' into 'feature/VPNLINUX-121',0.271254,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,MVVM for login screen See merge request ProtonVPN/linux/linux-app!3,0
+Remove duplicate methods,0.2516592,Improve: Exception handling,,0
+Showcase MVVM for login screen,0.27526128,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Add logger and rewrite dashboard,0.32084906,Fix: Logs should be using UTC time,,0
+Add connection overlay,0.2794281,Hotfix: Display message when library is not able to disable connectivity check,,0
+Add label above entry and display it accordingly,0.11713548,Feature: Handle and display events,,0
+Make window not resizeble,0.3425106,"Fix: Display window icons (minimize, maximize and close)",,0
+Add icon to error upon login and updated styling,0.4934824,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
+Merge branch 'feature/VPNLINUX-120' into 'develop',0.25222045,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Feature/vpnlinux 120 See merge request ProtonVPN/linux/linux-app!2,0
+Move logic to presenter,0.36439905,Feature: Handle and display events,,0
+Update styling,0.2461651,Hotfix: Update event dialog,,0
+Add working quick connect button,0.37657282,Hotfix: Display message when library is not able to disable connectivity check,,0
+Fix styling,0.17356637,Fix: Add missing dependency for Webkit,,0
+Fix visual glitch,0.34621078,Fix: Memory leak,"Whenver a window is dragged, a strange border around the window is created whenevr the window is dragger. This issue can be replicated if the App Window has the property double-buffered set to False and the window has a GTKHeaderBar",0
+Load dashboard with information if user is not connected,0.46484667,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
+Rename elements and apply flake8,0.11385775,Hotfix: Fixed issue with search not working,,0
+Add buttons to open preferences and quit app,0.32734975,"Fix: Display window icons (minimize, maximize and close)",,0
+Fix styling and flake8 issues,0.24194008,Fix: Add missing dependency for Webkit,,0
+Add menu and quit button,0.32809502,"Fix: Display window icons (minimize, maximize and close)",,0
+Add setup.cfg and fix flake8 issues in main.py,0.24400364,Fix: Add missing dependency for Webkit,,0
+Add initial window and styling for dashboard,0.38722205,Fix: New brand dialog will now only appear once after the dashboard has been loaded,,0
+Move icon,0.34485582,"Fix: Display window icons (minimize, maximize and close)",,0
+Rename window title to ProtonVPN,0.37435004,"Introducing Proton's refreshed look. As we continue to make privacy accessible to everyone, we've updated our apps to provide you with an even better experience with our services. Proton - Privacy by default",,0
+Only start thread if button is enabled,0.25118908,Feature: Handle and display events,,0
+Update login UI and styling,0.37959126,"Improvement: GUI responsiveness (loading servers, logout)",,0
+Update threading and window management,0.31866723,Hotfix: Update event dialog,Dashboard window will be displayed once there is a successfull login and login window will be closed.,0
+Merge branch 'feature/VPNLINUX-115-login-screen' into 'develop',0.24859041,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,Update version See merge request ProtonVPN/linux/linux-app!1,0
+Add spinner,0.15617329,Fix: Add missing dependency for Webkit,,0
+Add gtkrevealer for a better error displaying UX,0.4021246,Improve: Exception handling,,0
+Display overlay after clicking on login button,0.3515936,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
+Add threading to login button,0.34105593,"Fix: If session is invalid, logout and inform the user about it.",,0
+Attempt to login user,0.4667102,"Fix: If session is invalid, logout and inform the user about it.","If login attempt has failed, a top error banner will display the error message.",0
+Rename class to LoginView,0.27514133,Fix: Stop displaying new brand dialog on new login.,,0
+Implement activate button if there is text in entry,0.28092432,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
+Add error label,0.47625136,Improve: Exception handling,,0
+Need help button complete,0.26066944,"Feature: Add troubleshooting dialog, including support for alternative routing",Login button is by default disabled,0
+Add possibility to show/hide password,0.31468287,"Display error message if user presses on ""Create Account"" and page is not reachable via login window.",,0
+Applied correct css styling and colouring,0.11787805,Fix: Add missing dependency for Webkit,,0
+Ingore pycache folders,0.09379026,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Ignore temporary UI files,0.26539296,Fix: Stop displaying new brand dialog on new login.,,0
+Remove egg folder,0.19576466,Fix: Memory leak,,0
+Add gitignore,0.36926904,Hotfix: Previous improvement would not work on Gio versions lower then 2.63.2,,0
+Initial commit,0.436208,First stable release,,0

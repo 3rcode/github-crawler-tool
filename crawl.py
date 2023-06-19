@@ -6,7 +6,7 @@ from markdown import markdown
 import regex as re
 
 
-github_token = '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'
+github_token = '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'
 headers = {
     'Authorization': f'token {github_token}',
     'Accept': 'application/vnd.github.v3+json'
@@ -99,8 +99,8 @@ if __name__ == '__main__':
     corpus_repo_training = pd.read_csv(corpus_path)
     
     # Check corpus repo training
-    # print(corpus_repo_training.shape)
-    # print(corpus_repo_training.head())
+    print(corpus_repo_training.shape)
+    print(corpus_repo_training.head())
     
     num_repo = corpus_repo_training.shape[0]
     for i in range(num_repo):
@@ -117,7 +117,7 @@ if __name__ == '__main__':
             release_notes_abstract = [markdown_to_text_abstract(release) for release in release_notes]
             idx = range(1, len(release_notes) + 1)
             release_notes_df = pd.DataFrame({'Index': idx, 'Release Note': release_notes, 
-                                             'Release Note With Abstraction': release_notes_abstract})
+                                             'Release Note Abstract': release_notes_abstract})
             
             commits = crawl_commit(owner, repo)
             print('Crawl commits done')

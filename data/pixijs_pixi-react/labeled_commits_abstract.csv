@@ -1,780 +1,780 @@
-Index,Commit Message Abstract,Score Abstract,Corresponding Changelog Sentence Abstract,Commit Desription Abstract,Label
-1,Add codesandbox ci config (#406),0.80956686,Add codesandbox ci config by @baseten in link,,1
-2,Fix bootstrap,0.46110937,Fix linting,"VSCode API docs says fontWeight should be type TextStyleFontWeight = ""bold"" | ""normal"" | ""bolder"" | ""lighter"" | ""100"" | ""200"" | ""300"" | ""400"" | ""500"" | ""600"" | ""700"" | ""800"" | ""900""",0
-3,Merge pull request #1 from StudioASC/kiochan-patch,0.4828808,"import { Stage, AppConsumer } from '@inlet/react-pixi'",Expose root to injected components Change node version to see if it resolves github action issue Co-authored-by: Zyie 24736175+Zyie@users.noreply.github.com,0
-4,5.0.4,0.67289263,v2.0.0 🎉,Fix support for canvas renderer,0
-5,Clean up postinstall script,0.64681053,postinstall script for react-spring,,0
-6,Update about docs to match README,0.85688204,Update README and docs,try a GH action instead of circle no silent add test:ci command delete circle actions Co-authored-by: Alex Prokop alex.prokop@play.co,1
-7,Fix BitmapText double destroy bug (#378),0.8135488,Fix BitmapText double destroy bug by @baseten in link,Add AppProvider usage description in hooks docs Make description of custom AppProvider usage more accurate,1
-8,Update docs,1.0,Update docs,,1
-9,Remove docz cache,0.5985162,Versioned cache for CircleCI,,0
-10,5.1.6,0.6036953,v2.0.0 🎉,This reverts commit f277550733249cca6ba75219c62facc2af7c5976.,0
-11,Clean up,0.3960681,Improved,rollup config tweaks package tweaks clean up animated package split out invariant util into its own package split out react-components package split out react-reconciler into react-fiber package add react-modular package to wire everything together update main pixi-react package to be a wrapper for other modules codesandbox ci tweaks Co-authored-by: Alex Prokop alex.prokop@play.co,0
-12,:recycle: PIXI.Point.copy is renamed copyFrom,0.5503196,Add PixiFiber,,0
-13,Merge pull request #101 from mattjennings/suspense,0.43869588,Move sideEffects false to each package by @baseten in link,,0
-14,Update rollup config,0.8522363,Rollup config,"Fix typings for sprite with children Revert ""Fix typings for sprite with children"" This reverts commit 4f536c5660cc3a6a9f66b47b239192b24cddc5e9. Fix typings for Sprite by using PropsWithChildren type Fix typings for ParticleContainer by using PropsWithChildren type Co-authored-by: Igor.korol Igor.korol@stark.games",1
-15,Support constructor args in withFilter,0.65322924,withFilters to type definition,,0
-16,Merge branch 'master' into graphics-draw,0.50819916,Add preventRedraw prop to Graphics:,,0
-17,Provide more info in text node error,0.8416172,Better error message for text nodes,add starter codesandbox/ci.json add contents Co-authored-by: Alex Prokop alex.prokop@play.co,1
-18,1.3.0,0.71136415,v2.0.0 🎉,Co-authored-by: Alex Prokop alex.prokop@play.co,1
-19,2.0.0,0.8526368,v2.0.0 🎉,,1
-20,Fix Container type to prevent breaking partials,0.6504934,Type def for Container,,0
-21,Update lib,0.65951335,Updated,,0
-22,Update eslint config,0.7567588,ESLint config,Co-authored-by: Alex Prokop alex.prokop@play.co,1
-23,6.5.3,0.5470545,v2.0.0 🎉,Co-authored-by: Alex Prokop alex.prokop@play.co,0
-24,Implement Graphics.draw,0.83177453,Graphics draw prop. ,,1
-25,Merge pull request #8 from EloB/patch-1,0.5244407,"Performance fixes, thanks to @EloB ",,0
-26,Update graphics docs,0.74130607,Update docs,Co-authored-by: Alex Prokop alex.prokop@play.co,1
-27,Expose PixiFiber reconciler,0.73459524,Add PixiFiber,,1
-28,Export to animated,0.76824224,AnimatedSprite: link,switch doc.yml to node 18 try clearing docusaurus cache add verbose flag try skipping nx cache upgrade docusaurus install ci with legacy-peer-deps revert cache clearing Co-authored-by: Alex Prokop alex.prokop@play.co,1
-29,6.6.0,0.6059142,v2.0.0 🎉,,0
-30,Test PIXI events,0.7261493,React-Pixi:,,1
-31,6.5.2,0.67684597,v2.0.0 🎉,add React 18 CRA sandbox for better testing Fix quick start example in README add workaround for React 18 strict mode causing loss of WebGL context add README for animated package remove reference to legacy packages in react-spring docs add symlink to monorepo root README in packages/react tweak sandbox index.html Add announcement to README switch symlink direction fix linting Tweak package.json remove sandbox test command Co-authored-by: Alex Prokop alex.prokop@play.co,0
-32,Build docz,0.70270216,docz (added a temporary fix to make the build pass),Co-authored-by: Alex Prokop alex.prokop@play.co,1
-33,Add legacy import,0.5962849,import { Stage } from '@inlet/react-pixi/legacy';,Update README.md Update README.md,0
-34,Merge pull request #74 from inlet/update-type-def-pointlikes,0.47663906,Add applyDefaultProps to type definition and update docs,add createRoot api Update docs with createRoot API Co-authored-by: Alex Prokop alex.prokop@play.co,0
-35,Add folder structure,0.554186,Add contribution files,,0
-36,Prevent loading pixi and src while building html,0.51999766,Support pixi.js v5,,0
-37,Merge pull request #112 from inlet/patch/react-scheduler,0.5404616,"import { Stage, AppConsumer } from '@inlet/react-pixi'",,0
-38,6.0.5,0.61419225,v2.0.0 🎉,"switch for scoped packages add rollup package visualizer remove legacy packages moved animated type deps to devDeps update docs Update packages/docs/docs/fallback-to-canvas.mdx Co-authored-by: Zyie 24736175+Zyie@users.noreply.github.com Update packages/docs/docs/fallback-to-canvas.mdx Co-authored-by: Zyie 24736175+Zyie@users.noreply.github.com add pixi v7 hello message image to docs, fix img imports Co-authored-by: Alex Prokop alex.prokop@play.co Co-authored-by: Zyie 24736175+Zyie@users.noreply.github.com",0
-39,Add useApp,0.78736067,useTick and useApp,fix doc deployment fix font,1
-40,Merge pull request #30 from inlet/update-modules,0.4794556,Update modules,Co-authored-by: Alex Prokop alex.prokop@play.co,0
-41,Update jest config,0.97034883,Update configs,,1
-42,Merge pull request #304 from inlet/prevent-auto-destroy,0.5000631,Teardown  components,,0
-43,Changed graphics draw behaviour,0.7683568,Graphics draw prop. ,This reverts commit 6d5b98bc6d7eafd1b0016e60a725b2b6c9f46a33.,1
-44,0.1.0,0.73659134,v2.0.0 🎉,,1
-45,Add components,0.9709984,Add additional components,Co-authored-by: Alex Prokop alex.prokop@play.co,1
-46,Fix import of react-spring/animated in tests and build,0.7059096,Make  component compliant with react-spring,Co-authored-by: Alex Prokop alex.prokop@play.co,1
-47,Update README.md,0.8408998,Update README and docs,Co-authored-by: Alex Prokop alex.prokop@play.co,1
-48,add release action (#393),0.51695865,Update to React 16.7. Now with hooks!,This reverts commit a322f249d2e8fde24ed310c144851b1e6d4b3532.,0
-49,Fix reconciler tests,0.73074603,React reconciler,,1
-50,Fix type for IGraphics,0.52304286,Add preventRedraw prop to Graphics:,,0
-51,Set default prop for cursor to null,0.7835315,Default cursor is null,"rename packages to @pixi/react eslint ignore docs/docs (which uses prettier) and docs/build Change references for ""React Pixi"" to ""Pixi React"" change GH repo references change comments / docs references update Slack to Discord links update misc files fix types add sideEffects false fixup fix types add lerna for version/publish scripts, remove old release script deploy docs fix circle lint command fix docs build command Co-authored-by: Alex Prokop alex.prokop@play.co Co-authored-by: Zyie 24736175+Zyie@users.noreply.github.com",1
-52,Upgrade docz,0.8343895,Upgrade docz and internals,,1
-53,Merge pull request #68 from inlet/update-docs,0.54342264,Update README and docs,,0
-54,Update typings,0.6692728,Updated,move shared packages to root package.json for easier version management update pixi to v7 fix/update tests for pixi v7 copy assets from S3 bucket to docs static folder replace PIXILoader with PIXIAsset to use new Assets API maintain support for Pixi v6 rename PIXIAsset to ExampleAssetLoader for clarity update package peer dependencies Co-authored-by: Alex Prokop alex.prokop@play.co,0
-55,7.0.0-alpha.0,0.61699367,v2.0.0 🎉,fix BitmapText double destroy bug add unmount/destroy tests Co-authored-by: Alex Prokop alex.prokop@play.co,0
-56,Update modules and use the new React reconciler,0.9330733,Upgrade modules (including new React Reconciler),"create working Docusaurus docs Remove eslint-mdx as it wasn't working properly, format docs with prettier instead remove eslint config package and separate configs/processes it was too much to manage on top of a global linter too Tidy up menu order and remove example docs. Add react-spring example Fix prettier jsx live bug Co-authored-by: Alex Prokop alex.prokop@play.co",1
-57,Update FUNDING.yml,0.60588133,Update Babel,remove docz related stuff move code into separate packages with appropriate tooling add nx config and ensure all package scripts run from repo root move shared deps to root package.json fix husky move TYPES to separate package for easier sharing add global eslint configuration dynamically pulling in patterns from packages ignore eslintcache switch yarn commands to npm Co-authored-by: Alex Prokop alex.prokop@play.co,0
-58,Add Netlify config,0.567302,Update configs,"update node version to be compatible with docusaurus update all deps to latest version, add PIXI ecosystem template packages update rollup packages/config and remove umd update linting rules to codebase eslint tests + fix tests to work with new jest modern timers Co-authored-by: Alex Prokop alex.prokop@play.co",0
-59,switching from canvas prebuilt to canvas & forcing newer jsdom,0.6951729,Remove canvas-prebuilt and support new jest environment,Remove docz ready for release,0
-60,Do not build on CI,0.928347,Do not create builds on CI,,1
-61,:label: typescript,0.81526005,Typescript Definitions,,1
-62,Hack to make the docz build pass,0.7510103,docz (added a temporary fix to make the build pass),Update to support React 18,1
-63,Create doc.yml,0.63922656,Docs,,0
-64,implement filter wrapper for components,0.6626697,"Filter Wrapper support, thanks to @paolotozzo",,0
-65,Possibility to ignore event comparison with prop ignoreEvents,0.5234536,"Expose eventHandlers, allowing you to create custom DisplayObject events ",,0
-66,0.7.0,0.6701249,v2.0.0 🎉,,0
-67,6.4.0,0.6653251,v2.0.0 🎉,,0
-68,Remove post install script for react-spring,0.8604656,postinstall script for react-spring,,1
-69,Update rollup,0.708479,Rollup config,,1
-70,Merge pull request #105 from EloB/feature/improved-events,0.5672442,"Performance fixes, thanks to @EloB ",Move update events from window to root container,0
-71,Ignore eslint for legacy,0.42890644,Support for pixi legacy without having to create aliases in your project 🎉 ,,0
-72,Fixed typings for TS 2.8,0.6203294,Better overall typing support,,0
-73,Support Provider to pass down app to child components,0.5417315,Use AppProvider and AppConsumer in custom render(),,0
-74,Only auto destroy child if not prevented,0.61281896,"Default autoDensity=true, you can disable it: ",,0
-75,Do not include react-spring into bundle,0.75345916,Make  component compliant with react-spring,,1
-76,typings potential fix for PixiReact.render(),0.69536793,Typings for HOC withPixiApp,add geometry prop to Graphics,0
-77,"Handle autoDensity, only disable if value is false",0.82826483,"Default autoDensity=true, you can disable it: ",,1
-78,Make sure fiber is passed,0.6281543,Inject fiber into devtools,,0
-79,Add test utils,0.7047541,Tests,Support Federated Events API,1
-80,Add explainer for useIteration() in docs,0.67967343,Add applyDefaultProps to type definition and update docs,,0
-81,Use node 10,0.70812297,Node modules,,1
-82,6.7.0,0.5878322,v2.0.0 🎉,,0
-83,Expose root to injected components (#433),0.68832123,Expose root to injected components by @lunarraid in link,,0
-84,Add interaction event prop,0.81177104,Support interaction events,,1
-85,Modular Packages (#407),0.7204317,Modular Packages by @baseten in link,,1
-86,:bug: build works by remove pixi.js-legacy,0.69431835,npm install pixi.js-legacy,,0
-87,safer check for existing visible prop,0.5208875,Graphics preventDefault prop.,,0
-88,Merge pull request #23 from StudioASC/kiochan-patch,0.5069086,"import { Stage, AppConsumer } from '@inlet/react-pixi'",,0
-89,Merge pull request #334 from vijayth2-cerebras/master,0.4610445,Remove docz ready for release by @baseten in link,,0
-90,Update docs regarding react-spring,0.8717252,Docs regarding react-spring,,1
-91,Use the new interaction manager,0.6678767,"Instead of resetting the interaction manager, simply update the resolution of the interaction manager. Libraries like pixi-viewport depends on the interaction manager, this patch will fix any related issues.",Export InteractionEvent types,0
-92,Merge pull request #137 from paolotozzo/animated-sprites,0.5894517,"import { Stage, Sprite } from '@inlet/react-pixi'",,0
-93,Merge pull request #80 from inlet/update-react-reconciler,0.6709104,Upgrade React Reconciler (new API),,0
-94,move sideEffects false to each package (#387),0.7811296,Move sideEffects false to each package by @baseten in link,,1
-95,1.2.14,0.75042677,},,1
-96,Support Context API with fallback to higher order component,0.6932994,Use new React Context API,,0
-97,1.1.10,0.7661488,},,1
-98,Tap into commitUpdate and render stage respectively,0.6559962,Improved rendering stage when renderOnComponentChange is set to true,,0
-99,Merge pull request #89 from EloB/feature/improved-tick,0.56742394,"Performance fixes, thanks to @EloB ",,0
-100,2.0.1,0.8343897,v2.0.0 🎉,,1
-101,export TYPES on @pixi/react instead (#384),0.8525589,export TYPES on @pixi/react instead by @baseten in link,,1
-102,Use function components in type declaration file,0.6612767,"Add Context types AppContext, AppProvider and AppConsumer to type declaration file.",Fix assignment of missing config object,0
-103,Update hostconfig,0.7861676,Implement the prepareUpdate hook of the reconciler hostconfig.,,1
-104,Merge pull request #95 from inlet/fix-types,0.43229508,Fix Docs by @baseten in link,,0
-105,Add test,0.7525997,Tests,,1
-106,Merge pull request #61 from EloB/patch-1,0.49262103,"Performance fixes, thanks to @EloB ",,0
-107,Create new output formats,0.6043039,Build outputs:,,0
-108,Add git repo to docz,0.58021843,Update Docz,,0
-109,Add public API and move Stage to its own file,0.46048236,Add postinstall.js to npm files and move replace-in-file to deps,Prevent auto destroy,0
-110,Merge pull request #228 from inlet/update-resolution-auto-density,0.46692842,Update renderer resolution on options.resolution change,,0
-111,Update repo structure (#363),0.6830096,Update repo structure by @baseten in link,,0
-112,Remove docs from repo,0.67709994,Remove docz ready for release by @baseten in link,,0
-113,Merge pull request #43 from inlet/build-formats,0.4457189,export TYPES on @pixi/react instead by @baseten in link,,0
-114,1.2.8,0.66584,v2.0.0 🎉,,0
-115,Typings for animated components,1.0000001,Typings for animated components,,1
-116,Add module.js to npm files,0.67566156,Update npm modules,,0
-117,Merge pull request #305 from adsko/fix-config,0.41830498,Update configs,Make react-spring work with  components,0
-118,Export animated,0.77151436,AnimatedSprite: link,,1
-119,0.4.4,0.75367695,v2.0.0 🎉,,1
-120,Merge pull request #104 from wtgtybhertgeghgtwtg/use-options-view,0.4974748,Move sideEffects false to each package by @baseten in link,,0
-121,1.1.9,0.72301424,},,1
-122,Add pixi helper isPointType,0.77256215,Add PixiFiber,,1
-123,Update,0.9534285,Updated,,1
-124,"Update ParticleContainer, pass down properties",0.52887267,Update modules,,0
-125,Move hostconfig to a new file to isolate it for testing,0.6432382,Implement the prepareUpdate hook of the reconciler hostconfig.,,0
-126,Support refs in definition file,0.72176206,Use refs,Updated animated.d.ts to point to correct type references,1
-127,6.5.0,0.66332746,v2.0.0 🎉,,0
-128,Fix graphics spec,0.6677872,Graphics preventDefault prop.,,0
-129,Merge pull request #133 from RodrigoHamuy/expose-applyDefaultProps,0.52355117,"Change the applyDefaultProps behaviour, fixes #235 ",,0
-130,Use the alpha reconciler to support latest React,0.83180857,Support newest React version. (react-reconciler),Fix skipped return statement in custom applyProps,1
-131,Add files to package.json,0.60606366,Add starter codesandbox/ci.json by @baseten in link,,0
-132,Only set direct value if value is not undefined. Fix #235,0.56010634,"Change the applyDefaultProps behaviour, fixes #235 ",,0
-133,Add createRoot API (#392),0.74156857,Add createRoot API by @baseten in link,,1
-134,Update npm modules with new reconciler,0.87955856,Update npm modules,,1
-135,Fix filter props,0.64506197,"Filter Wrapper support, thanks to @paolotozzo",,0
-136,Export unmountComponentAtNode,0.7529355,Stage now uses the unmountComponentAtNode on componentWillUnmount,,1
-137,"Pass instance to didMount, willUnmount and applyProps",0.50866437,Expose applyDefaultProps  for Custom Components.,,0
-138,"Update tests, use @testing-library/react to test hooks",0.922992,@testing-library/react for testing hooks correctly,,1
-139,Create element needs to handle custom components,0.85202944,Add fixes for element creation regarding the config for custom components,,1
-140,Rename defaults to props,0.54255164,Make prop { options: { resizeTo } }  for  optional.,,0
-141,0.7.1,0.71797436,v2.0.0 🎉,,1
-142,Bootstrap node style,0.5817746,Node modules,,0
-143,update to the readme (#415),0.74535584,update to the readme by @GoodBoyDigital in link,,1
-144,5.1.3,0.6581763,},,0
-145,use visible property instead of alpha,0.3804978,Expose AppContext,,0
-146,Update react-spring to latest dependencies,0.7670094,Update react-spring types,,1
-147,Update module locations to new type location,0.64699113,Update modules,,0
-148,Use PIXI's built-in autoDensity,0.7358114,Add higher order component for providing the PIXI.Application:,,1
-149,4.1.1,0.60780203,v2.0.0 🎉,,0
-150,Test getTextureFromProps,0.55092776,@testing-library/react for testing hooks correctly,,0
-151,Update package.json,0.56785226,Forcing a newer jsdom,,0
-152,5.2.0,0.7940994,v2.0.0 🎉,,1
-153,Fix #197,0.5598326,Errors,Update README.mdx,0
-154,Fix parsing bitmap data in jsdom,0.63533974,Fix BitmapText double destroy bug by @baseten in link,,0
-155,Add packages to dev dependencies,0.53562355,Modular Packages by @baseten in link,,0
-156,Cache listeners,0.6013396,Performance for adding/removing event listeners.,,0
-157,Fix README,0.6708933,Update README and docs,,0
-158,Fix useTick with enabled state,0.6340357,The useTicker hook now correctly unmounts,,0
-159,Remove lodash and use sub packages,0.88224906,Remove lodash and use lodash submodules instead,,1
-160,Allow object with x/y property for PointLike type,0.65551996,Make skew a PointLike type,,0
-161,Merge pull request #254 from inlet/support-react-17,0.5478693,Update to support React 18 by @baseten in link,Update README & Docs,0
-162,Merge pull request #22 from inlet/update-ts-def,0.4597075,Move update events from window to root container,,0
-163,Merge pull request #227 from inlet/render-on-prop-change,0.4667908,import { Stage } from '@inlet/react-pixi/legacy';,,0
-164,Add AppProvider usage description in hooks docs (#420),0.90952015,Add AppProvider usage description in hooks docs by @AndreasWintherMoen in link,,1
-165,Include reconciler interface,0.71375924,React reconciler,,1
-166,Patch react-spring for now (bug),0.6470239,Update react-spring types,,0
-167,Ignore react-spring eslint,0.71610487,React Spring,,1
-168,Use latest node,0.8069288,Support latest NodeJS,Unmount component at node,1
-169,Merge pull request #88 from inlet/fix-double-events,0.47446185,Support Federated Events API,,0
-170,Partly implement and test Stage,0.67392576,Tests,,0
-171,Merge pull request #177 from dangen-effy/patch-1,0.47756124,New updated withFilters HOC. see link,,0
-172,Update resolution,0.7744581,Update renderer resolution on options.resolution change,,1
-173,0.0.11,0.66637117,v2.0.0 🎉,,0
-174,Add Stage component,0.7253865,Add additional components,,1
-175,Test module exports,0.6110873,module,,0
-176,Catch errors in Stage,1.0,Catch errors in Stage,,1
-177,:recycle: remove some test.skip,0.5764928,Removed,,0
-178,Merge pull request #216 from spassvogel/fix-ts-1.2.17,0.4791715,New updated withFilters HOC. see link,,0
-179,Update yarn lock,0.45499772,Update configs,Provide more info in text node error,0
-180,Fix tests,0.77383226,Update tests,,1
-181,Add legacy to npm files,0.5843011,Update npm modules,,0
-182,🐞 Fixed wrong lifecycle method name,0.45126837,"Change the applyDefaultProps behaviour, fixes #235 ",,0
-183,Fix type definitions for container,0.6957741,Type def for Container,,0
-184,Move getTextureFromProps to props,0.63002324,Update texture prop on AnimatedSprite,,0
-185,Merge pull request #79 from inlet/update-usetick-hook,0.52170455,Update to React 16.7. Now with hooks!,,0
-186,Add Stage to docz,0.6426158,Stage onUnmount prop,,0
-187,0.1.2,0.74761575,v2.0.0 🎉,,1
-188,Remove redundant list of elements,0.5828661,Removed,,0
-189,Make raf dynamic,0.7167626,Make Stage RAF dynamic,,1
-190,Ignore local examples,0.40648222,Remove lodash and use lodash submodules instead,,0
-191,Prettier,0.55999154,},,0
-192,Merge pull request #296 from negomansini/master,0.4293121,Remove docz ready for release by @baseten in link,,0
-193,withFilters is missing in typings.d.ts #158,0.5879342,withFilters to type definition,,0
-194,Add apply default props,0.71097344,Expose applyDefaultProps  for Custom Components.,,1
-195,6.0.0,0.71385217,v2.0.0 🎉,,1
-196,fix issue with updating animated sprite texture,0.83771735,Update texture prop on AnimatedSprite,,1
-197,fix spelling mistakes in readme.,0.481218,Typings,useTick wont crash trying to remove null ticker,0
-198,"Fix type of ""ref"" property on custom component",0.7379038,Ref's in custom components (PixiComponent):,,1
-199,Replace pixi-react PIXI package import with scoped packages (#391),0.8793749,Replace pixi-react PIXI package import with scoped packages by @baseten in link,,1
-200,Launch V7 (#394),0.71450055,Launch V7 by @baseten in link,See link,1
-201,Fix test,0.733273,Update tests,,1
-202,4.1.3,0.62894225,},,0
-203,1.1.1,0.58673966,},Unmount sub children,0
-204,Use beta rollup plugin babel,0.59244394,Rollup config,,0
-205,Don't delete the repository field during the build phase,0.548651,Do not create builds on CI,,0
-206,Add test fixtures,0.6886237,Update tests,,0
-207,Merge pull request #93 from miracle2k/patch-1,0.4174264,Fix BitmapText double destroy bug by @baseten in link,,0
-208,0.0.5,0.7086226,v2.0.0 🎉,,1
-209,Update reconciler,0.7676832,Upgrade modules (including new React Reconciler),Support react 17,1
-210,Supply an optional eventMap to tap into reconciler methods from outside,0.6381444,"Expose eventHandlers, allowing you to create custom DisplayObject events ",,0
-211,Fix serialize-javascript vulnerability,0.4320259,Forcing a newer jsdom,,0
-212,add options.view test,0.5476235,Provide options.view to Stage props.,,0
-213,"Update type defs, fix #202",0.5770925,Update configs,,0
-214,Update type defs,0.5978942,Type defs for Sprite and SimpleMesh,,0
-215,0.1.4,0.71485686,v2.0.0 🎉,,1
-216,Add circle test badge to README,0.4636355,CircleCI,,0
-217,fix borked versions (#397),0.7504127,Fix borked versions by @baseten in link,,1
-218,5.0.1,0.7082844,v2.0.0 🎉,,1
-219,4.1.2,0.6682359,v2.0.0 🎉,Support fallback to Canvas,0
-220,Add examples,0.7648993,Example:,,1
-221,6.2.1,0.6778363,v2.0.0 🎉,,0
-222,Merge pull request #157 from inlet/fix-react-reconciler-dep-in-typing,0.57913685,Upgrade React Reconciler (new API),,0
-223,Update index.js (#430),0.51427245,Update repo structure by @baseten in link,,0
-224,5.1.4,0.6167624,},,0
-225,Fix texture not updating,0.6740384,Update texture prop on AnimatedSprite,,0
-226,Merge pull request #136 from inlet/dependabot/npm_and_yarn/eslint-utils-1.4.2,0.45803678,Implement the prepareUpdate hook of the reconciler hostconfig.,,0
-227,Update babelrc to generate commonjs,0.5632997,Forcing a newer jsdom,,0
-228,Add docusaurus (#366),0.71175206,Add docusaurus by @baseten in link,,1
-229,Fix SimpleMesh types,0.64097476,Type defs for Sprite and SimpleMesh,,0
-230,Build umd and es with rollup,0.6689522,Rollup config,,0
-231,Update snapshot for display object props,0.69246733,source and video props on DisplayObjects like ,,0
-232,Add circle.yml,0.6402818,CircleCI,,0
-233,Merge pull request #32 from EloB/patch-1,0.52104634,"Performance fixes, thanks to @EloB ",,0
-234,Fixed an issue with the insertBefore method that was causing children of a container to sometimes be in an indeterminate order after re-ordering. (#423),0.46112546,Errors,,0
-235,Update modules to meet the new react reconciler,0.91706616,Upgrade modules (including new React Reconciler),,1
-236,Add util spec,0.66711724,Add,,0
-237,v7.0.3,0.71285576,Prep for v7 release by @baseten in link,,1
-238,Merge pull request #146 from pengx17/missing-sprite-ts-anchor,0.5197551,"import { Stage, Sprite } from '@inlet/react-pixi'",,0
-239,Add babel module resolver to replace pixi.js-legacy import,0.7245607,Replace pixi-react PIXI package import with scoped packages by @baseten in link,,1
-240,Fix stage spec,0.6464977,Catch errors in Stage,,0
-241,Add comments,0.7236147,Add,,1
-242,Merge pull request #223 from cometkim/patch-1,0.46541166,Move sideEffects false to each package by @baseten in link,,0
-243,Test reconciler,0.73382616,React reconciler,,1
-244,use view from options,0.5560379,Provide options.view to Stage props.,,0
-245,Update mdx files and make it work with the augmented react-pixi module,0.7020663,Support for updating the PIXI stage on React component change 🙌 ,Support for react-spring,1
-246,0.1.6,0.77612996,v2.0.0 🎉,,1
-247,Add applyDefaultProps to type def,0.7694956,Add applyDefaultProps to type definition and update docs,,1
-248,Fix docz build,0.8176229,docz (added a temporary fix to make the build pass),,1
-249,Merge pull request #261 from spassvogel/ticker-null,0.4547627,The useTicker hook now correctly unmounts,,0
-250,Create eventsMap in the custom renderer and pass it down to injectDevTools,0.7831793,"Expose eventHandlers, allowing you to create custom DisplayObject events ",,1
-251,Merge pull request #12 from inlet/update-props-for-builtin-components,0.53062636,Replace pixi-react PIXI package import with scoped packages by @baseten in link,,0
-252,update to react 18,0.7587818,Update to React v16.6.,,1
-253,Remove FunctionTypes for Container as it filters out any type as well,0.5744733,Add unmountComponentAtNode to remove a container from internal roots list,,0
-254,Lint,0.6641697,Fix linting,,0
-255,Create custom PIXI Components,0.78904057,Add higher order component for providing the PIXI.Application:,,1
-256,Add a validation check if callback is a valid function,0.4670856,Update tests,,0
-257,Merge pull request #246 from inlet/feature/react-spring-support,0.6257459,Compatible with react-spring@next (v9+). Note that older versions of react-spring don't work as they have a different API.,,0
-258,Fix #203,0.63412404,"Change the applyDefaultProps behaviour, fixes #235 ",,0
-259,Lint files,0.56746024,Fix linting,,0
-260,1.2.6,0.73274624,v2.0.0 🎉,,1
-261,v7.1.0,0.7010624,Prep for v7 release by @baseten in link,,1
-262,Do not lint docs,0.567732,Remove docz ready for release by @baseten in link,,0
-263,Use autoDensity by default,0.78129625,"Default autoDensity=true, you can disable it: ",,1
-264,Add invariant as util,0.9171419,Use invariant as util,,1
-265,Update snapshot,0.6547116,Updated,,0
-266,Merge pull request #196 from inlet/fix-animated-sprite,0.5736816,"import { Stage, Sprite } from '@inlet/react-pixi'","Fix type of ""ref"" property on custom component",0
-267,Add to type def,0.67621696,Type def for hooks,,0
-268,Update react-spring,0.9052577,Update react-spring types,Use PIXI's built-in autoDensity,1
-269,0.1.1,0.7769384,v2.0.0 🎉,,1
-270,Test useTick teardown unmount,0.69124395,Teardown  components,"The type of ""ref"" property on the class component always be a reference to an instance of a class component. But in react-pixi, it's a Pixi instance, so should set it to a function component and specify the type of ref property.",0
-271,Merge pull request #206 from hirotomk/master,0.46988285,New updated withFilters HOC. see link,,0
-272,"Revert ""Modular Packages (#407)""",0.59527445,Update modules,This makes null a valid value.,0
-273,Update docz,0.95902073,Update Docz,,1
-274,Merge pull request #311 from CreativeTechGuy/master,0.45323277,Remove docz ready for release by @baseten in link,Make compatible with pixi 5.3+,0
-275,Ignore docz cache,0.6349472,Versioned cache for CircleCI,,0
-276,6.6.2,0.5928936,v2.0.0 🎉,,0
-277,Try a GH action instead of circle (#431),0.70363253,Try a GH action instead of circle by @baseten in link,,1
-278,Merge pull request #335 from sabigara/support-federated-events,0.5434413,Support Federated Events API,,0
-279,Bump handlebars from 4.1.0 to 4.1.2,0.48882666,The useTicker hook now correctly unmounts,,0
-280,update package.lock,0.6266352,Update configs,,0
-281,Implement unmountComponentAtNode,0.8466516,Stage now uses the unmountComponentAtNode on componentWillUnmount,,1
-282,Merge pull request #31 from inlet/fix-cursor-prop,0.50510395,Implement the prepareUpdate hook of the reconciler hostconfig.,,0
-283,Add a config object to control instance destroy and destroy children manually,0.44318214,"You can now provide a config object in a PixiComponent to control the the reconciliation behaviour, see:",,0
-284,Convert to monorepo (#364),0.7035141,Convert to monorepo by @baseten in link,"Remove ""preventRedraw"" prop from index.d.ts",1
-285,4.0.0,0.73824084,v2.0.0 🎉,,1
-286,1.2.15,0.7336085,},,1
-287,Implement App Provider and Consumer,0.6838039,Use AppProvider and AppConsumer in custom render(),Support rendering of multiple apps,0
-288,Add unmount prop,0.6696965,Stage now uses the unmountComponentAtNode on componentWillUnmount,,0
-289,1.2.5,0.7279033,v2.0.0 🎉,,1
-290,Merge pull request #302 from inlet/apply-default-props-in-react-spring,0.6258821,Compatible with react-spring@next (v9+). Note that older versions of react-spring don't work as they have a different API.,,0
-291,update type definition for withFilters,0.77182055,Type definition for withFilters,,1
-292,Update type def,0.6331245,Updated type definitions,,0
-293,Upgrade react to work with newer Context API,0.83690673,Use new React Context API,,1
-294,Merge pull request #237 from vimcaw/fix-custom-component-ref-type,0.47619706,"Change the applyDefaultProps behaviour, fixes #235 ",,0
-295,Merge pull request #181 from EloB/patch-2,0.5061259,"Performance fixes, thanks to @EloB ",,0
-296,Fix dependecies and use correct peer dependecies,0.6779579,dependecies,,0
-297,6.6.3,0.52550125,v2.0.0 🎉,,0
-298,Update withFilter type,0.7196592,Add applyDefaultProps to type definition and update docs,,1
-299,Add test to use useContext,0.6253448,Use new React Context API,,0
-300,Merge pull request #116 from fabienjuif/pixiv5,0.55756426,export TYPES on @pixi/react instead by @baseten in link,,0
-301,Add PIXI.AnimatedSprite support (link),0.8026891,Add PixiFiber,,1
-302,Update babel,0.7812879,Update Babel,,1
-303,"Some helper methods are borrowed from others, let's give them credits",0.5282445,Helper utilities,,0
-304,1.3.2,0.7511991,v2.0.0 🎉,Update resolution,1
-305,Update type definition. More support and include interaction events,0.71476185,Updated type definitions,,1
-306,Merge pull request #11 from xaviergonz/patch-1,0.46080828,Move sideEffects false to each package by @baseten in link,,0
-307,"Always test silent, skip logs",0.4838522,@testing-library/react for testing hooks correctly,,0
-308,Implement position and scale of TilingSprite,0.46623692,Support for prop isSprite on Text component to render it as a texture and speed up performance. thanks @paolotozzo,,0
-309,Directly use useApp in useTick hook,0.85086036,useTick and useApp,Render PIXI stage on reconciliation,1
-310,1.0.4,0.6719552,v2.0.0 🎉,,0
-311,:arrow_up: pixi v5,0.6750181,Support PIXI v5,,0
-312,0.4.1,0.7471797,v2.0.0 🎉,,1
-313,Merge pull request #192 from phaux/patch-1,0.45329267,Upgrade React Reconciler (new API),,0
-314,Fix Docs (#395),0.6986276,Fix Docs by @baseten in link,,0
-315,0.2.0,0.7953129,v2.0.0 🎉,,1
-316,Add withPixiApp higher order component,0.8814982,Add higher order component for providing the PIXI.Application:,,1
-317,6.5.1,0.60447073,v2.0.0 🎉,,0
-318,Add working ci.json contents,0.6833435,Add starter codesandbox/ci.json by @baseten in link,,0
-319,1.2.0,0.8034574,v2.0.0 🎉,,1
-320,6.0.2,0.7524812,v2.0.0 🎉,Add object type support for _ReactPixi.PointLike,1
-321,Add render to docs,0.7841418,Update docs regarding render via DOM and custom render,,1
-322,1.3.1,0.68578184,v2.0.0 🎉,Changed graphics draw behaviour,0
-323,Fix PixiRef type,0.8028209,Add PixiFiber,,1
-324,Serve module based on node env,0.7685844,Load development/production build based on process.env.NODE_ENV.,,1
-325,First argument of render() expects a React.Component instead of a PIXI instance,0.67510617,React-Pixi:,,0
-326,add check for master branch prerelease script (#400),0.8448205,Add check for master branch prerelease script by @baseten in link,,1
-327,Merge pull request #73 from baco16g/feature/fix_README,0.52309906,Fix borked versions by @baseten in link,,0
-328,Merge pull request #159 from paolotozzo/with-filters-ts,0.70558316,"Filter Wrapper support, thanks to @paolotozzo",Fix broken withFilters type inference,1
-329,1.1.5,0.6762122,},,0
-330,Remove package lock and eslint config,0.5845425,ESLint config,,0
-331,0.0.9,0.64749444,v2.0.0 🎉,,0
-332,Fix for Parcel 2,0.61205065,Support for Parcel bundler,,0
-333,Fix lint,0.9397458,Fix linting,Use latest reconciler,1
-334,Run build on prepublish,0.590943,Build outputs:,,0
-335,1.1.11,0.75199974,},,1
-336,Merge pull request #42 from inlet/update-modules,0.4925376,Update modules,,0
-337,Merge pull request #50 from inlet/generic-pixiapp-context,0.5935539,"import { Stage, AppConsumer } from '@inlet/react-pixi'",,0
-338,Merge pull request #154 from paolotozzo/bundle-size,0.5648099,Optimize bundle size,,0
-339,Update docz README,0.8826034,Update README and docs,,1
-340,fix doc deployment (#390),0.7004487,fix doc deployment by @Zyie in link,,1
-341,Use node:lts docker for CI,0.62069905,cjs (node),,0
-342,Merge pull request #187 from EloB/graphics-draw,0.504585,Add preventRedraw prop to Graphics:,,0
-343,Merge pull request #92 from inlet/type-def-for-hoc,0.49996433,Support Federated Events API,,0
-344,v7.0.2,0.72419274,v2.0.0 🎉,,1
-345,:wrench: move jest-webgl-canvas-mock before bootstraping,0.60006833,Remove canvas-prebuilt and support new jest environment,,0
-346,Fix npm version,0.82423234,Update npm modules,,1
-347,Merge pull request #190 from mimshwright/fix/error-message,0.46766537,Fix BitmapText double destroy bug by @baseten in link,,0
-348,Merge pull request #284 from MrEmii/patch-1,0.4502411,Move sideEffects false to each package by @baseten in link,,0
-349,Added tests,0.81819355,Tests,,1
-350,Fix missing property preventRedraw in index.d.ts,0.51472914,Fix Container TS types bug by @baseten in link,,0
-351,Merge pull request #230 from inlet/support-mulitple-contexts,0.4863503,Move sideEffects false to each package by @baseten in link,,0
-352,more modern omit,0.4944629,Removed,,0
-353,"Fix BitmapText implementation, shorthand style is not supported anymore",0.6083325,Fix BitmapText double destroy bug by @baseten in link,,0
-354,0.5.5,0.61816216,v2.0.0 🎉,Fix ts 1.2.17,0
-355,Add construct to withFilters,0.76300406,withFilters to type definition,,1
-356,Update Readme,0.74015164,Update README and docs,,1
-357,implement hideInstance and unhideInstance,0.53835016,Stage now uses the unmountComponentAtNode on componentWillUnmount,,0
-358,Update circle node,0.5919701,Node modules,,0
-359,"Update def for ParticleContainer, accept children. Fix #214",0.5465393,"Change the applyDefaultProps behaviour, fixes #235 ",,0
-360,fix render() param typings,0.5801116,render() {,,0
-361,Merge pull request #142 from RodrigoHamuy/DevTools-version,0.55333406,DevTools React DOM version.,,0
-362,Change: Inject React-DOM version to React DevTools,0.8726959,DevTools React DOM version.,,1
-363,Add white space on import object,0.44919574,import * as React from 'react',,0
-364,Merge branch 'update-ts-def' into kiochan-patch,0.45925337,Update docs,,0
-365,Support typings for animated,0.9383979,Typings for animated,,1
-366,Merge pull request #62 from dschu-lab/master,0.44824845,Remove docz ready for release by @baseten in link,,0
-367,Clean type definition,0.58564126,Updated type definitions,,0
-368,6.5.4,0.549955,v2.0.0 🎉,,0
-369,:memo: badges and mdx version,0.41797638,update to the readme by @GoodBoyDigital in link,Fix type definitions for container,0
-370,Update reconciler snapshot,0.7081106,Upgrade modules (including new React Reconciler),,1
-371,Update peer dep,0.6066581,Peer dependencies are now accepting minor and patch versions.,,0
-372,Merge pull request #199 from zenios/master,0.44571084,Remove docz ready for release by @baseten in link,,0
-373,Move update events from window to root container,1.0000002,Move update events from window to root container,,1
-374,Update eslintignore,0.6916514,ESLint config,Apply PointLike type to skew,0
-375,5.1.0,0.73074776,v2.0.0 🎉,,1
-376,Add scheduler to deps,0.49698436,Add postinstall.js to npm files and move replace-in-file to deps,,0
-377,Fix typo in Text.mdx (#434),0.76813257,Fix typo in Text.mdx by @PabloLION in link,,1
-378,Test hooks separately,0.7653306,@testing-library/react for testing hooks correctly,,1
-379,Merge pull request #162 from ximing/master,0.39333245,New updated withFilters HOC. see link,Fixes #198,0
-380,6.3.0,0.6465634,v2.0.0 🎉,,0
-381,Export createHost in rollup config,0.66424215,Rollup config,Fixes #198,0
-382,Update Circle,0.68373954,Updated,,0
-383,Prep for v7 release (#380),0.7765596,Prep for v7 release by @baseten in link,,1
-384,Merge pull request #153 from paolotozzo/filters,0.7145977,"Filter Wrapper support, thanks to @paolotozzo",,1
-385,Make  a PointLike type.,0.7928545,Make PointLike type more strict,,1
-386,Update eslint,0.6453337,Updated,,0
-387,Merge pull request #144 from Mushus/bugfix/simple-mesh-types,0.46095297,Fix BitmapText double destroy bug by @baseten in link,,0
-388,Merge pull request #151 from paolotozzo/fix-animated-sprite,0.564375,"import { Stage, Sprite } from '@inlet/react-pixi'",,0
-389,0.0.2,0.7507361,v2.0.0 🎉,Update AnimatedSprite play state and add types,1
-390,1.2.4,0.73483646,},,1
-391,Update react spring docs with color example,0.6955546,Update react-spring types,,0
-392,Create FUNDING.yml,0.5522648,render() {,Fix Stage default height in docs to be correct value,0
-393,Use npm-scripts prepare,0.56056106,Update npm modules,,0
-394,maintain visible prop on unhideInstance,0.6283439,Stage now uses the unmountComponentAtNode on componentWillUnmount,,0
-395,6.6.5,0.48735246,v2.0.0 🎉,Fix for Parcel 2,0
-396,Augment react-pixi and return a nullable component if window is not defined,0.5753843,"ReactPixi API (SimpleRope, props, etc)",Seems like Parcel 2 can't detect the dependency when it's URL is produced dynamically.,0
-397,6.0.8,0.61070323,v2.0.0 🎉,,0
-398,0.5.11,0.64808166,v2.0.0 🎉,,0
-399,Compare prop texture and image before applying,0.6331222,Update texture prop on AnimatedSprite,,0
-400,6.0.3,0.6764998,v2.0.0 🎉,,0
-401,Update links to PIXI docs,0.72188234,Update docs,Added new error message,1
-402,Update interaction event types,0.7643932,Support interaction events,,1
-403,update doc.yml,0.74460185,Update docs,add pixi.js in install command in README.md,1
-404,6.0.4,0.6358094,v2.0.0 🎉,related to link,0
-405,"Revert to last stable reconciler, new reconciler is in alpha wait till stable",0.802932,"React Reconciler works again, wait for the alpha package react-reconciler to become stable.",,1
-406,6.6.1,0.5348581,v2.0.0 🎉,,0
-407,Support number[] as (Observable)Point values in JSX,0.6015358,jsx,,0
-408,1.2.2,0.7310115,},,1
-409,Stage responds to request render from reconciler,0.6831674,  stage = React.createRef(),,0
-410,Merge pull request #13 from xaviergonz/master,0.43533817,Fix typings and window compilation thanks to @xaviergonz ,,0
-411,Merge pull request #119 from inlet/dependabot/npm_and_yarn/lodash-4.17.13,0.46205565,import { Stage } from '@inlet/react-pixi/legacy';,,0
-412,Add Slack to docs,0.64266825,Add AppProvider usage description in hooks docs by @AndreasWintherMoen in link,,0
-413,Fix withPixiApp HOC,0.75344455,Typings for HOC withPixiApp,Expose eventHandlers,1
-414,Add option isSprite to render text as a sprite with it as a main texture,0.6692656,Support for prop isSprite on Text component to render it as a texture and speed up performance. thanks @paolotozzo,,0
-415,Add typescript to docs,0.75037795,Add applyDefaultProps to type definition and update docs,,1
-416,:heavy_minus_sign: pixi.js-legacy,0.5816237,npm install pixi.js-legacy,Improve texture updates on AnimatedSprite,0
-417,Fix links,0.7552025,link,,1
-418,Add hooks to type def,0.8839039,Type def for hooks,Right now if you add custom events to DisplayObject they are hard to use.,1
-419,Add typings to package.json,0.5956459,Add starter codesandbox/ci.json by @baseten in link,,0
-420,Update reconciler and watch builds,0.6819961,Upgrade modules (including new React Reconciler),,0
-421,Merge remote-tracking branch 'upstream/master',0.41065264,Add check for master branch prerelease script by @baseten in link,Add white space on import object,0
-422,Use terser to transpile es6,0.5109242,ESLint config,"Based on other ReactPIXI's example coding style, added white space.",0
-423,Texture.from now emits request render events on texture load,0.6125769,render() {,Bump handlebars from 4.1.2 to 4.5.3,0
-424,0.5.10,0.62102497,v2.0.0 🎉,Bumps handlebars from 4.1.2 to 4.5.3. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com,0
-425,Add contribution files,0.99999994,Add contribution files,,1
-426,Pixi V7 (#377),0.7388428,Pixi V7 by @baseten in link,,1
-427,Use yarn explicitly to prevent inconsistency so docz can build again.,0.47296342,Inject fiber into devtools,,0
-428,Update renderer,0.75914836,Update renderer resolution on options.resolution change,,1
-429,Merge pull request #208 from devsisters/fix-type-defs,0.5202169,DevTools React DOM version.,,0
-430,Support Federated Events API,0.9999999,Support Federated Events API,FIx Parcel bundler support,1
-431,Update types to meet PIXI's new types,0.6702828,Now compatible with PIXI v5.3+.,Parcel doesn't like the syntax for the require statement. This version does work though.,0
-432,Add PIXI events,0.7701758,Add PixiFiber,,1
-433,:memo: docs,0.66079223,Docs,,0
-434,"Update type definition, add Context. Fixes #83",0.78873074,Updated type definitions,Text as texture,1
-435,Fix skipped return statement in custom applyProps,0.64239943,"Change the applyDefaultProps behaviour, fixes #235 ",,0
-436,Merge pull request #280 from inlet/update-readme,0.51075566,Update README and docs,,0
-437,Update README regarding react spring,0.8561177,Update react-spring types,Fix missing property preventRedraw in index.d.ts,1
-438,AnimatedSprite.texture can be a FrameObject now. Fixes #290,0.8225951,Validate AnimatedSprite.texture for FrameObject as well,Fix syntax error in index.d.ts,1
-439,1.1.4,0.7299228,},,1
-440,"Head back to the old docz, newer is broken",0.53923947,Upgrade docz and internals,merge upstream,0
-441,Add PixiComponent to Public API,0.7005327,Add PixiFiber," was unclosed, let's close it.",1
-442,Prevent passing prop children to canvas element,0.58481085,Add preventRedraw prop to Graphics:,,0
-443,1.2.3,0.73534036,},withFilters is missing in typings.d.ts #158,1
-444,Test setValue,0.6508707,Tests,,0
-445,Add enabled flag to useTick type def,0.8601868,Add enabled flag to useTick type definition.,,1
-446,Merge pull request #231 from aktriver/remove-preventredraw-prop,0.537349,"Change the applyDefaultProps behaviour, fixes #235 ",Include reconciler interface,0
-447,1.0.0,0.75688124,v2.0.0 🎉,,1
-448,Merge pull request #226 from queq1890/modify-point-like-type,0.47708672,Make  component compliant with react-spring,,0
-449,Update peer deps to React 17.x,0.62045234,Update modules to latest (incl. React v17.0.1),,0
-450,Add types for AnimatedSprite,0.77926016,Types for Animated Sprite,Fix issue with bundle size,1
-451,Merge pull request #114 from inlet/update-docs,0.54289603,Update README and docs,,0
-452,1.2.9,0.72146916,},,1
-453,1.1.3,0.7289843,},,1
-454,1.2.11,0.7635813,},implement filter wrapper for components,1
-455,Add comments to support in-code suggestions and type feedback,0.88739216,Add comments to type declaration to support in-code type suggestions.,,1
-456,Merge pull request #124 from fabienjuif/patch-1,0.52860844,Move sideEffects false to each package by @baseten in link,,0
-457,Fix typings for sprite with children (#409),0.85835534,Fix typings for sprite with children by @Hogar in link,add property preventRedrawn to PIXI.Graphics,1
-458,Update modules,1.0000002,Update modules,,1
-459,Add legacy fallback to docs,0.60411674,Update docs,,0
-460,4.1.0,0.7191386,v2.0.0 🎉,,1
-461,Update README,0.8568523,Update README and docs,Fix animated sprite,1
-462,1.2.19,0.7459146,},,1
-463,Move replace-in-file to deps,0.73911697,Add postinstall.js to npm files and move replace-in-file to deps,,1
-464,Update types for PixiFiber,0.81963325,Add PixiFiber,,1
-465,1.2.17,0.7473558,},,1
-466,1.2.12,0.7696365,},,1
-467,0.0.6,0.67568,v2.0.0 🎉,,0
-468,Build docs,0.6588363,Build outputs:,Fix SimpleMesh types,0
-469,Expose applyDefaultProps,0.84138,Expose applyDefaultProps  for Custom Components.,ts: missing pointlike for sprite's Anchor prop,1
-470,Only update textures when changed,0.82840955,AnimatedSprite textures now only updates if actually changed.,,1
-471,Improved events handling,0.6950856,Support interaction events,,0
-472,Add tests for reconciler + add mock util to create spies of mocked module,0.5063128,@testing-library/react for testing hooks correctly,,0
-473,1.1.7,0.72239596,},,1
-474,Update Stage example,0.6679188,Updated,Change: Inject React-DOM version to React DevTools,0
-475,Update tests in ci,0.76815647,Update tests,,1
-476,added tests,0.8400386,Tests,,1
-477,Merge pull request #222 from inlet/use-latest-reconciler,0.6007458,Upgrade React Reconciler (new API),,0
-478,Add postinstall.js to npm,0.8161713,Add postinstall.js to npm files and move replace-in-file to deps,Add PIXI.AnimatedSprite support,1
-479,Add example to docs,0.67897516,Docs,,0
-480,Optimzed isFunction,0.46375975,Optimize bundle size,Bump eslint-utils from 1.4.0 to 1.4.2,0
-481,"Add test, update docs",0.80782735,Update tests,Bumps eslint-utils from 1.4.0 to 1.4.2. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,1
-482,Merge pull request #161 from threehams/patch-1,0.43797922,Move sideEffects false to each package by @baseten in link,,0
-483,6.0.6,0.58796775,v2.0.0 🎉,,0
-484,Fix #47,0.48977,"Change the applyDefaultProps behaviour, fixes #235 ",,0
-485,Export InteractionEvent types,0.9451021,Export internal types (InteractionEvents),,1
-486,Update animated types,0.70384026,Update texture prop on AnimatedSprite,,1
-487,Delete CNAME,0.47633368,Removed,,0
-488,Update snapshots,0.63393116,Updated,,0
-489,Update the resolution on interaction manager,0.80308825,"Instead of resetting the interaction manager, simply update the resolution of the interaction manager. Libraries like pixi-viewport depends on the interaction manager, this patch will fix any related issues.",,1
-490,Merge pull request #239 from inlet/fix/auto-density,0.43926734,"Change the applyDefaultProps behaviour, fixes #235 ",,0
-491,Enable all tests,0.6629383,Tests,,0
-492,Fix broken withFilters type inference,0.6542177,withFilters to type definition,,0
-493,Fix issue with bundle size,0.80072725,Optimize bundle size,,1
-494,Fix type,0.6332393,Updated type definitions,,0
-495,Merge pull request #3 from inlet/prepare-update,0.49962497,Implement the prepareUpdate hook of the reconciler hostconfig.,Expose applyDefaultProps,0
-496,Upgrade modules,0.88134634,Update modules,,1
-497,Update react reconciler to use the new hooks API,0.8455882,Upgrade React Reconciler (new API),,1
-498,Merge pull request #69 from inlet/add-hooks-to-type-def,0.56404114,Type def for hooks,,0
-499,Merge pull request #2 from inlet/master,0.431055,Implement the prepareUpdate hook of the reconciler hostconfig.,,0
-500,Apply PointLike type to skew,0.9613939,Make skew a PointLike type,Update README,1
-501,Update docs for Graphics,0.72261375,Update docs,,1
-502,add starter codesandbox/ci.json (#405),0.88264704,Add starter codesandbox/ci.json by @baseten in link,,1
-503,remove tsconfig package in favour of root file (#386),0.85821867,Remove tsconfig package in favour of root file by @baseten in link,,1
-504,expose 'crossorigin' property of Texture.fromImage,0.8371674,"Support crossorigin for Texture images, example:",,1
-505,"Remove examples, already on codepen",0.5103301,Removed,,0
-506,Update PIXI.Application options,0.8166223,Support PIXI v5,:memo: update v4 links and logo to v5,1
-507,Add comment,0.73476875,Add,,1
-508,Rename to index-animated,0.45394963,Update on initialFrame change,,0
-509,Get rid of eventsMap as we only can have one reconciler,0.484365,Upgrade React Reconciler (new API),,0
-510,Remove renderFromComponent`,0.7158218,render() {,:arrow_up: pixi v5,1
-511,5.0.3,0.7208027,v2.0.0 🎉,,1
-512,Render on update initialFrame,0.8428279,Update on initialFrame change,Bump lodash from 4.17.11 to 4.17.13,1
-513,:boom: use pixi.js-legacy,0.726607,npm install pixi.js-legacy,Bumps lodash from 4.17.11 to 4.17.13. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,1
-514,Remove shape type,0.7790047,Shape type,,1
-515,Removed Childless type,0.5843861,Unmount native sub children,,0
-516,Fix stage not having root link,0.5664357,Fix Docs by @baseten in link,,0
-517,6.4.1,0.6454815,v2.0.0 🎉,,0
-518,Merge pull request #25 from StudioASC/master,0.44594222,Add check for master branch prerelease script by @baseten in link,,0
-519,Bump lodash from 4.17.11 to 4.17.13,0.51610285,Update modules to latest (incl. React v17.0.1),,0
-520,Merge pull request #109 from rluncasu/master,0.46949404,Implement the prepareUpdate hook of the reconciler hostconfig.,,0
-521,6.6.6,0.48937228,},,0
-522,remove docz ready for release,0.8334516,Remove docz ready for release by @baseten in link,,1
-523,Add typings,0.8090804,Typings,,1
-524,Ignore legacy bundles,0.46001786,Removed,,0
-525,Update modules with new reconciler,0.8518131,Upgrade modules (including new React Reconciler),Add example to docs,1
-526,"Remove context, don't use the new Context API for now",0.7083068,Use new React Context API,,1
-527,Fix default height to be correct value,0.51324224,"AutoDensity is now set to PIXI.Application allowing app.renderer.resize to set width, height and css styles correctly.",,0
-528,applyDefaultProps now returns a changed boolean to determine if it needs to render,0.6647808,"Change the applyDefaultProps behaviour, fixes #235 ",Revert reconciler,0
-529,0.5.6,0.6238749,v2.0.0 🎉,,0
-530,Use single reconciler that emits request render events,0.5938122,render() {,,0
-531,Added new error message,0.6010658,Errors,,0
-532,Update isProduction check,0.74760777,Update tests,,1
-533,0.6.0,0.7004955,v2.0.0 🎉,,1
-534,0.5.7,0.62661123,v2.0.0 🎉,,0
-535,5.1.1,0.60737276,v2.0.0 🎉,,0
-536,Delete docs before building docs,0.5733526,Remove docz ready for release by @baseten in link,Upgrade reconciler,0
-537,Update peer deps,0.60391915,Peer dependencies are now accepting minor and patch versions.,,0
-538,6.1.1,0.5434032,v2.0.0 🎉,,0
-539,"Export cjs, module and umd",0.59755826,Export internal types (InteractionEvents),,0
-540,Merge pull request #4 from inlet/expose-reactfiber,0.55378044,Make  component compliant with react-spring,,0
-541,Fix props,0.7744266,Applying props,,1
-542,Split up context tests,0.5221873,Tests,switching from canvas prebuilt to canvas & forcing newer jsdom,0
-543,add publishConfig,0.5938377,Add applyDefaultProps to type definition and update docs,,0
-544,Fix typos,0.64145315,Typings,Bump js-yaml from 3.12.0 to 3.13.1,0
-545,0.3.0,0.71096915,v2.0.0 🎉,Bumps js-yaml from 3.12.0 to 3.13.1. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com,1
-546,0.5.4,0.6563823,v2.0.0 🎉,Bump handlebars from 4.1.0 to 4.1.2,0
-547,Merge pull request #279 from inlet/unmount-component-at-node,0.5604611,Stage now uses the unmountComponentAtNode on componentWillUnmount,Bumps handlebars from 4.1.0 to 4.1.2. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com,0
-548,Setup tests,0.7158091,Tests,,1
-549,Merge pull request #168 from paolotozzo/text-as-texture,0.52048755,export TYPES on @pixi/react instead by @baseten in link,Improved events handling,0
-550,Bump pixi version in badge,0.59779763,Add PixiFiber,,0
-551,1.1.8,0.71465206,},,1
-552,Merge pull request #16 from inlet/new-context-api,0.5984495,Use new React Context API,,0
-553,Render stage in ticker loop when renderComponentOnChange is set to true,0.8098439,Improved rendering stage when renderOnComponentChange is set to true,,1
-554,Update react-spring docs,0.8059666,Update react-spring types,Allow PIXI.Application instance to use options.view.,1
-555,missing pointlike ts def for sprite,0.6284896,Type defs for Sprite and SimpleMesh,,0
-556,Do not apply event handlers as props,0.6392313,"Expose eventHandlers, allowing you to create custom DisplayObject events ",,0
-557,Add PixiRef type,0.88625365,Add PixiFiber,,1
-558,Fix more links,0.70088786,link,,1
-559,Expose the AppProvider and AppConsumer,0.8133042,Expose AppContext,Support React Suspense,1
-560,"cross env for windows support, improved typings",0.5546026,Better overall typing support,,0
-561,Fix heading hierarchy,0.41390252,Remove lodash and use lodash submodules instead,,0
-562,Update reconciler.test.js,0.67822075,Update tests,,0
-563,Added test for stage raf toggle,0.6437439,Make Stage RAF dynamic,,0
-564,"Inject into devtools once, fixes #251",0.7149002,"Now the devtools will be injected once, this prevents warning errors or duplicate injections.",,1
-565,Expose Context,0.6592055,Expose AppContext,,0
-566,fix tests,0.77245635,Update tests,,1
-567,Fix #229,0.5781908,"Change the applyDefaultProps behaviour, fixes #235 ",expose 'crossorigin' property of Texture.fromImage,0
-568,Merge pull request #41 from inlet/note-graphics-clear,0.4793234,Add preventRedraw prop to Graphics:,,0
-569,6.2.2,0.73547566,v2.0.0 🎉,,1
-570,Merge pull request #273 from spassvogel/text-error,0.47434273,Fix BitmapText double destroy bug by @baseten in link,,0
-571,Export animated in separate folder,0.61085904,AnimatedSprite: link,,0
-572,Remove runningInBrowser function,0.56495607,The useTicker hook now correctly unmounts,,0
-573,suspense tests,0.6930738,Tests,,0
-574,Update wallaby config,0.83414596,Update configs,,1
-575,Update Stage implementation,0.6289809,Updated,,0
-576,6.1.0,0.679231,v2.0.0 🎉,,0
-577,Add tests,0.80190074,Tests,Clarify renderOnComponentChange documentation.,1
-578,6.0.7,0.5859871,v2.0.0 🎉,,0
-579,chore: cleanup files,0.42965487,Upgrade docz and internals,Fix types,0
-580,Ability to directly overwrite props for better performance,0.5868334,Applying props,,0
-581,"Update Mesh, pass down properties (vertices, uvs, indices and texture)",0.5796655,Update renderer resolution on options.resolution change,,0
-582,Add invariant to useApp,0.63898957,useTick and useApp,,0
-583,External eslint,0.5753864,ESLint config,,0
-584,Expose eventHandlers,0.8365904,"Expose eventHandlers, allowing you to create custom DisplayObject events ",Fix withPixiApp HOC,1
-585,Add additional hostconfig methods,0.7176941,Implement the prepareUpdate hook of the reconciler hostconfig.,,1
-586,Update modules to use latest stable React,0.85590696,Update modules to latest (incl. React v17.0.1),,1
-587,Make componentWillMount unsafe,0.5821047,Stage now uses the unmountComponentAtNode on componentWillUnmount,Added disabled to useTick,0
-588,add property preventRedrawn to PIXI.Graphics,0.734227,Add preventRedraw prop to Graphics:,,1
-589,better withPixiApp function,0.7624091,Add higher order component for providing the PIXI.Application:,,1
-590,Use new context API for Stage,0.75331604,Use new React Context API,,1
-591,Components can have children again,0.4354715,Add additional components,,0
-592,Serve build based on node env,0.8225404,Load development/production build based on process.env.NODE_ENV.,,1
-593,Update react-spring peer deps,0.7094983,Update react-spring types,Fix double events,1
-594,Remove postinstall from list of files,0.6091557,Removed,,0
-595,0.0.8,0.6694158,v2.0.0 🎉,,0
-596,Merge pull request #1 from inlet/master,0.44219297,Implement the prepareUpdate hook of the reconciler hostconfig.,,0
-597,v7.0.1,0.72218716,Prep for v7 release by @baseten in link,,1
-598,Send the caller to the request render,0.6645891,render() {,,0
-599,Update tests,1.0,Update tests,Optimzed applyDefaultProps,1
-600,:memo: update v4 links and logo to v5,0.52488613,Prep for v7 release by @baseten in link,Optimzed isFunction,0
-601,Make prop validation for resizeTo optional,0.8032644,Make prop { options: { resizeTo } }  for  optional.,,1
-602,v7.0.0-alpha.1,0.67435455,v2.0.0 🎉,,0
-603,Merge pull request #360 from pixijs/remove-docz-deps,0.4950639,Add postinstall.js to npm files and move replace-in-file to deps,,0
-604,1.1.6,0.71093214,},,1
-605,0.0.3,0.6979766,v2.0.0 🎉,,0
-606,Merge pull request #358 from pixijs/react-18,0.556712,React-Pixi with React-Spring support:,Update to React v16.8.0,0
-607,Make PointLike type more strict,0.99999994,Make PointLike type more strict,,1
-608,useTick wont crash trying to remove null ticker,0.62360495,"useTick now uses the ticker instance as this, example:",,0
-609,0.5.1,0.60956615,v2.0.0 🎉,,0
-610,Merge pull request #182 from inlet/update-textures-on-animated-sprite,0.5820093,"import { Stage, Sprite } from '@inlet/react-pixi'",,0
-611,1.1.2,0.7322972,},Make useTick state aware,1
-612,fix prerelease command,0.5669439,Update configs,,0
-613,Update nvm to use the latest node LTS,0.65702194,Update npm modules,,0
-614,3.0.0,0.7339475,v2.0.0 🎉,,1
-615,0.5.3,0.64828676,v2.0.0 🎉,,0
-616,1.1.13,0.74402016,},,1
-617,Init project,0.44909316,Build outputs:,fix spelling mistakes in readme.,0
-618,1.2.7,0.71948063,},,1
-619,6.6.4,0.54921114,},,0
-620,Merge pull request #188 from lm-noshiro/patch-1,0.46824038,Move sideEffects false to each package by @baseten in link,Support point-like (observable)point values,0
-621,Optimzed applyDefaultProps,0.7760185,Expose applyDefaultProps  for Custom Components.,,1
-622,5.1.7,0.6141539,},docs: There is a typo in the imported module name,0
-623,Expose PIXI to docz Playground,0.6299403,This minor release has breaking changes for accessing the PIXI.Application through render prop. ,,0
-624,Add title and disable PropsTables.,0.53941786,Add preventRedraw prop to Graphics:,,0
-625,Update test,0.9814241,Update tests,,1
-626,Merge pull request #45 from inlet/update-types,0.46517783,Full Changelog: link,Expose Context,0
-627,"Update modules, including new react-reconciler",0.9269173,Upgrade modules (including new React Reconciler),,1
-628,1.0.1,0.6834234,v2.0.0 🎉,,0
-629,do not format unrelated tests,0.5654366,Tests,Add hooks to type def,0
-630,Update README.md (#376),0.7535963,Update README and docs,,1
-631,Merge pull request #152 from paolotozzo/graphics-redraw,0.5545826,Add preventRedraw prop to Graphics:,Update docs,0
-632,using ComponentType instead of SFC,0.5227523,Type definition for withFilters,,0
-633,1.2.16,0.73016727,},,1
-634,Added test,0.77929676,Tests,,1
-635,Hotfix for applying default prop,0.5507356,Expose applyDefaultProps  for Custom Components.,React 16.7 hooks,0
-636,Fix missing config object,0.5407,Update configs,,0
-637,Remove lib from git,0.5055417,Remove docz ready for release by @baseten in link,,0
-638,:heavy_plus_sign: add jest-webgl-canvas-mock for tests (mock WebGL),0.56869006,Jest webGL support,,0
-639,Merge pull request #65 from inlet/react-16.7-hooks,0.5514784,Update to React 16.7. Now with hooks!,,0
-640,Test renderer,0.62913656,Tests,,0
-641,Add example for custom component,0.7550901,Add additional components,,1
-642,:white_check_mark: simple rope works,0.52210146,@testing-library/react for testing hooks correctly,,0
-643,Add react-spring as peer and dev deps,0.64270425,postinstall script for react-spring,,0
-644,integration of docz - first iteration - Mesh and BitmapText not working,0.510008,Fix BitmapText double destroy bug by @baseten in link,,0
-645,New withFilters API,0.6974541,withFilters to type definition,🐞 Fixed wrong lifecycle method name,0
-646,0.5.0,0.784275,v2.0.0 🎉,"componenDidMount -> componentDidMount Used ES6 arrow function, since it doesn't create a new context. Therefore, this.setState can be used without binding this inside class constructor",1
-647,Use PixiFiber directly in Stage,0.7447665,Add PixiFiber,,1
-648,Add default props,0.72252214,Make prop { options: { resizeTo } }  for  optional.,See more info about why here: link,1
-649,Merge pull request #48 from inlet/update-type-def-for-stage,0.47474527,Support Federated Events API,,0
-650,Remove dependencies,0.5792618,Removed,,0
-651,Add animated to npm files,0.7751904,Npm sub package for animated.,,1
-652,Update browserlist,0.6333091,Update docs,Update to React 16.6,0
-653,Call willUnmount on sub children,0.68165946,Unmount native sub children,,0
-654,1.2.13,0.7643832,},,1
-655,Export a react-spring version,0.6916126,Make  component compliant with react-spring,,0
-656,1.2.10,0.7776525,},Make PIXI.Application context more generic,1
-657,FIx Parcel bundler support,0.9101166,Support for Parcel bundler,,1
-658,Hook useTick now in sync with component state,0.66031873,Hook useTick is now state aware!,,0
-659,0.5.8,0.62115324,v2.0.0 🎉,,0
-660,Merge pull request #99 from zmike/master,0.5138727,fix doc deployment by @Zyie in link,,0
-661,Remove runner from Wallaby config to use default node,0.5262477,Wallaby config using new format,,0
-662,Upgrade modules with babel,0.79131556,Update modules,,1
-663,docs: There is a typo in the imported module name,0.5092512,import MyComponent from './MyComponent',,0
-664,Merge pull request #252 from inlet/feature/legacy-support,0.48178595,import { Stage } from '@inlet/react-pixi/legacy';,,0
-665,Merge pull request #110 from inlet/upgrade-reconciler,0.59919727,Upgrade React Reconciler (new API),,0
-666,Support source and video props,0.8497306,source and video props on DisplayObjects like ,Update type definition to support Canvas attributes.,1
-667,Remove idx package and clean up code,0.51396763,Remove docz ready for release by @baseten in link,,0
-668,Add hook useTick,0.7892314,Enable the useTick hook with a second argument:,,1
-669,add pixi.js in install command in README.md,0.69984335,npm install pixi.js-legacy,Support refs in definition file,0
-670,Merge pull request #84 from EloB/feature/optimize-isFunction,0.5825365,"Performance fixes, thanks to @EloB ",,0
-671,Update modules include pixi.js@6.0.0,0.6954833,Note: If you are restricted to pixi.js v4 you'll need an older release of @inlet/react-pixi,,0
-672,1.2.1,0.6688278,v2.0.0 🎉,Create new output formats,0
-673,Merge pull request #46 from inlet/update-types,0.4628278,Full Changelog: link,Update type definition,0
-674,Use the static fiber directly in Stage,0.5964134,Inject fiber into devtools,,0
-675,Clarify renderOnComponentChange documentation.,0.7033437,Improved rendering stage when renderOnComponentChange is set to true,,1
-676,0.0.13,0.6186949,v2.0.0 🎉,,0
-677,1.1.12,0.7586894,},,1
-678,Export to react-spring,0.7246032,Make  component compliant with react-spring,,1
-679,0.5.2,0.70603853,v2.0.0 🎉,,1
-680,"Revert ""v7.0.0-alpha.1""",0.61447966,v2.0.0 🎉,,0
-681,Update badge on README,0.63422894,Update README and docs,,0
-682,0.5.9,0.61286956,v2.0.0 🎉,,0
-683,1.2.18,0.7205063,},,1
-684,:bug: fix docz example that was in errors,0.585246,fix doc deployment by @Zyie in link,Upgrade node modules,0
-685,0.4.3,0.75204694,v2.0.0 🎉,,1
-686,Apply default props when applyProps is not defined,0.68517035,Expose applyDefaultProps  for Custom Components.,,0
-687,Fix syntax error in index.d.ts,0.5431367,Fix Container TS types bug by @baseten in link,Note graphics clear,0
-688,add geometry prop to Graphics,0.8061308,Graphics draw prop. ,,1
-689,Merge pull request #57 from inlet/update-to-react-16.6,0.5613761,Update to React 16.7. Now with hooks!,,0
-690,0.0.4,0.7180902,v2.0.0 🎉,,1
-691,Merge branch 'feature/improved-tick' of link into EloB-feature/improved-tick,0.46163106,"Performance fixes, thanks to @EloB ",,0
-692,0.1.5,0.7711885,v2.0.0 🎉,Make Stage raf dynamic,1
-693,"Redundant npmignore, files for npm are listed in package.json",0.58621347,Add postinstall.js to npm files and move replace-in-file to deps,,0
-694,Create LICENSE,0.38909957,idx dependency,,0
-695,fix discord link,0.616797,Fix borked versions by @baseten in link,,0
-696,Use AppProvider in Stage,0.6931981,Use AppProvider and AppConsumer in custom render(),,0
-697,Cleanup TS definitions,0.3978397,Removed,Fix cursor prop,0
-698,0.0.10,0.6555178,v2.0.0 🎉,,0
-699,1.0.3,0.7277186,v2.0.0 🎉,,1
-700,Update react,0.7670905,Update to React v16.6.,,1
-701,Update yarn lockfile,0.48073012,Update configs,,0
-702,1.1.0,0.68382365,v2.0.0 🎉,,0
-703,0.0.7,0.6801795,v2.0.0 🎉,,0
-704,Merge pull request #75 from juwoni/master,0.43556237,Forcing a newer jsdom,Update modules,0
-705,Bump handlebars from 4.1.2 to 4.5.3,0.47396332,The useTicker hook now correctly unmounts,,0
-706,Generate docs to docs/,0.6513686,Docs,,0
-707,Add donate button 🙏,0.5449778,Add contribution files,,0
-708,Merge pull request #340 from wisebits-tech/per-container-render,0.51059556,Support for Parcel bundler,,0
-709,Update README.mdx,0.7878845,Update README and docs,,1
-710,Fix resizeTo prop validation. Fixes #250,0.594252,"Change the applyDefaultProps behaviour, fixes #235 ",,0
-711,Merge pull request #106 from inlet/dependabot/npm_and_yarn/handlebars-4.1.2,0.49312848,New updated withFilters HOC. see link,,0
-712,Merge pull request #21 from inlet/implement-docz,0.47951138,"import { Stage, AppConsumer } from '@inlet/react-pixi'",,0
-713,Merge pull request #258 from inlet/unmount-subcomponents,0.57290155,Stage now uses the unmountComponentAtNode on componentWillUnmount,fix typings in render(),0
-714,Update Graphics.mdx,0.63994825,Update Docz,"now you can function as param: render( str => , app.stage)",0
-715,Update docs link,0.90782803,Update docs,sync from inlet/react-pixi confirm,1
-716,Update yarn.lock via yarn import,0.51755965,"Update imports, works in Parcel now",Update Typescript Definition,0
-717,Cleanup the interaction manager,0.6395828,"Instead of resetting the interaction manager, simply update the resolution of the interaction manager. Libraries like pixi-viewport depends on the interaction manager, this patch will fix any related issues.",little patch for the typings of render(),0
-718,Merge pull request #232 from inlet/compat-with-pixi-5.3,0.5763891,"import { Stage, AppConsumer } from '@inlet/react-pixi'",confirm merge,0
-719,6.0.1,0.6715455,v2.0.0 🎉,,0
-720,Updated documenation,0.8144182,Update docs,,1
-721,Import all components and return type,0.62581575,Export internal types (InteractionEvents),,0
-722,Test applyDefaultProps,0.71447635,Tests,,1
-723,Add new reconciler methods,0.7300304,Uses latest react-reconciler,,1
-724,5.1.5,0.636695,},Implement docz,0
-725,Add npm modules,0.8242339,Update npm modules,,1
-726,6.8.0,0.6403797,v2.0.0 🎉,,0
-727,v7.0.0-alpha.2,0.73331857,v2.0.0 🎉,,1
-728,update docs version and fix baseUrl (#388),0.8485936,Update docs version and fix baseUrl by @baseten in link,,1
-729,1.0.2,0.79477537,v2.0.0 🎉,,1
-730,Merge branch 'master' into patch-1,0.44648957,"Instead of resetting the interaction manager, simply update the resolution of the interaction manager. Libraries like pixi-viewport depends on the interaction manager, this patch will fix any related issues.",,0
-731,0.4.2,0.8083892,v2.0.0 🎉,,1
-732,Merge pull request #292 from adsko/skipped-return,0.4268523,Move sideEffects false to each package by @baseten in link,,0
-733,Unmount component,0.7490311,Stage now uses the unmountComponentAtNode on componentWillUnmount,,1
-734,Update play state,0.6016053,Updated,,0
-735,Add components to docz,0.7565606,Add additional components,,1
-736,Fix createRoot typings (#404),0.69682807,Fix createRoot typings by @Ledzz in link,,0
-737,Add pixi helper parsePoint,0.69988906,Add PixiFiber,,0
-738,Merge pull request #193 from Doesntmeananything/patch-1,0.4958443,Move sideEffects false to each package by @baseten in link,,0
-739,Merge pull request #171 from ascorbic/patch-1,0.4728074,Move sideEffects false to each package by @baseten in link,,0
-740,5.0.0,0.7385042,v2.0.0 🎉,,1
-741,"Add package-lock.json, fixes #86",0.45428297,"Update imports, works in Parcel now",,0
-742,0.4.0,0.7456392,v2.0.0 🎉,,1
-743,Add teardown of application in stage component,0.7150972,Teardown  components,,1
-744,Add utils,0.6741384,Add additional components,,0
-745,Explicitly tell jest to test the ./test folder,0.54893845,Tests,,0
-746,Only test and build on prepack,0.902515,Only auto test and build on prepack,,1
-747,Update About.mdx to match README announcement message,0.6371771,Update README.md by @GoodBoyDigital in link,Update the Context API and Reconciler,0
-748,Remove UNSAFE_componentWillMount to avoid warnings when react-pixi is run under StrictMode,0.5847672,Support for updating the PIXI stage on React component change 🙌 ,,0
-749,0.1.7,0.77035165,v2.0.0 🎉,,1
-750,Bump eslint-utils from 1.4.0 to 1.4.2,0.4948258,v2.0.0 🎉,,0
-751,Upgrade modules and use alpha reconciler,0.82706165,Upgrade modules (including new React Reconciler),,1
-752,Merge pull request #176 from inlet/dependabot/npm_and_yarn/handlebars-4.5.3,0.47618192,The useTicker hook now correctly unmounts,,0
-753,5.0.2,0.7933318,v2.0.0 🎉,,1
-754,6.2.0,0.75127065,v2.0.0 🎉,,1
-755,Merge pull request #107 from inlet/dependabot/npm_and_yarn/js-yaml-3.13.1,0.4669433,Forcing a newer jsdom,,0
-756,"Apply props for built in PIXI components, see #9",0.7247591,Add higher order component for providing the PIXI.Application:,,1
-757,0.1.3,0.70248294,v2.0.0 🎉,,1
-758,Implement reconciler prepareUpdate,0.7871976,Implement the prepareUpdate hook of the reconciler hostconfig.,,1
-759,Add tests for passing down the PIXI.Application in render(),0.6637768,"ReactPixi API (SimpleRope, props, etc)",windows compilation + better types,0
-760,6.0.9,0.6146414,v2.0.0 🎉,,0
-761,Update new yarn lock,0.46211037,Update configs,,0
-762,Update ticker hook,0.6625308,"useTick now uses the ticker instance as this, example:",,0
-763,Add context bridge to docs,0.628772,Add AppProvider usage description in hooks docs by @AndreasWintherMoen in link,,0
-764,Get rid of idx in hostconfig,0.5470989,idx dependency,update to master,0
-765,Expose hooks,0.62630814,Update to React 16.7. Now with hooks!,"Apply props for built in PIXI components, see #9",0
-766,Added disable and performance boost to useTick,0.5955554,useTick and useApp,,0
-767,Update repository field in package.json,0.55607647,Update repo structure by @baseten in link,Fixed typings for TS 2.8,0
-768,"Remove ""preventRedraw"" prop from index.d.ts",0.5988257,Graphics preventDefault prop.,,0
-769,Merge pull request #85 from EloB/feature/optimze-applyDefaultProps,0.5558179,"Performance fixes, thanks to @EloB ",Add teardown of application in stage component,0
-770,Update log message for postinstall script,0.61461043,postinstall script for react-spring,,0
-771,Add repo information for docz,0.68747723,Update Docz,,0
-772,Fix Container TS types bug (#401),0.78426456,Fix Container TS types bug by @baseten in link,,1
-773,Build to format based on environment var FORMAT,0.48573244,Expose applyDefaultProps  for Custom Components.,,0
-774,Export pixi legacy bundles,0.65641004,Replace pixi-react PIXI package import with scoped packages by @baseten in link,,0
-775,Bump js-yaml from 3.12.0 to 3.13.1,0.56928444,Forcing a newer jsdom,,0
-776,Changed name to AppContext,0.7358883,Fix: rename Provider to AppConsumer.,Expose PixiFiber reconciler,1
-777,Rename react-pixi-fiber to react-pixi,0.7854683,React-Pixi:,,1
-778,5.1.2,0.6339439,v2.0.0 🎉,,0
-779,Create CNAME,0.48395187,cjs (node),,0
+Commit Message,Score,Correspond Changelog Sentence,Commit Description,Label
+v7.1.0,0.7047336,v2.0.0 🎉,,1
+Fix typo in Text.mdx (#434),0.79300547,Fix typo in Text.mdx by @PabloLION in link,"VSCode API docs says fontWeight should be type TextStyleFontWeight = ""bold"" | ""normal"" | ""bolder"" | ""lighter"" | ""100"" | ""200"" | ""300"" | ""400"" | ""500"" | ""600"" | ""700"" | ""800"" | ""900""",1
+Expose root to injected components (#433),0.8290049,Expose root to injected components by @lunarraid in link,Expose root to injected components Change node version to see if it resolves github action issue Co-authored-by: Zyie 24736175+Zyie@users.noreply.github.com,1
+Update index.js (#430),0.4741938,Update npm modules,Fix support for canvas renderer,0
+chore: cleanup files,0.28872463,Helper utilities,,0
+Try a GH action instead of circle (#431),0.80799246,Try a GH action instead of circle by @baseten in link,try a GH action instead of circle no silent add test:ci command delete circle actions Co-authored-by: Alex Prokop alex.prokop@play.co,1
+Add AppProvider usage description in hooks docs (#420),0.9215323,Add AppProvider usage description in hooks docs by @AndreasWintherMoen in link,Add AppProvider usage description in hooks docs Make description of custom AppProvider usage more accurate,1
+v7.0.3,0.69667107,v2.0.0 🎉,,0
+Fixed an issue with the insertBefore method that was causing children of a container to sometimes be in an indeterminate order after re-ordering. (#423),0.41080812,The type definition wrapping Container works better.,,0
+"Revert ""Modular Packages (#407)""",0.39731598,Upgrade modules (including new React Reconciler),This reverts commit f277550733249cca6ba75219c62facc2af7c5976.,0
+Modular Packages (#407),0.49141818,Modular Packages by @baseten in link,rollup config tweaks package tweaks clean up animated package split out invariant util into its own package split out react-components package split out react-reconciler into react-fiber package add react-modular package to wire everything together update main pixi-react package to be a wrapper for other modules codesandbox ci tweaks Co-authored-by: Alex Prokop alex.prokop@play.co,0
+update to the readme (#415),0.82006156,update to the readme by @GoodBoyDigital in link,,1
+v7.0.2,0.7036623,v2.0.0 🎉,,1
+Fix typings for sprite with children (#409),0.7955253,Fix typings for sprite with children by @Hogar in link,"Fix typings for sprite with children Revert ""Fix typings for sprite with children"" This reverts commit 4f536c5660cc3a6a9f66b47b239192b24cddc5e9. Fix typings for Sprite by using PropsWithChildren type Fix typings for ParticleContainer by using PropsWithChildren type Co-authored-by: Igor.korol Igor.korol@stark.games",1
+Add working ci.json contents,0.6051079,Add starter codesandbox/ci.json by @baseten in link,,0
+Fix createRoot typings (#404),0.77014446,Fix createRoot typings by @Ledzz in link,,1
+Add codesandbox ci config (#406),0.774642,Add codesandbox ci config by @baseten in link,add starter codesandbox/ci.json add contents Co-authored-by: Alex Prokop alex.prokop@play.co,1
+add starter codesandbox/ci.json (#405),0.80045426,Add starter codesandbox/ci.json by @baseten in link,Co-authored-by: Alex Prokop alex.prokop@play.co,1
+Fix heading hierarchy,0.31185946,Unmount native sub children,,0
+Update about docs to match README,0.86620766,Update README and docs,,1
+v7.0.1,0.6976538,v2.0.0 🎉,,0
+add check for master branch prerelease script (#400),0.8235543,Add check for master branch prerelease script by @baseten in link,Co-authored-by: Alex Prokop alex.prokop@play.co,1
+Fix Container TS types bug (#401),0.7233193,Fix Container TS types bug by @baseten in link,Co-authored-by: Alex Prokop alex.prokop@play.co,1
+fix discord link,0.45396677,Fix typo in Text.mdx by @PabloLION in link,,0
+update package.lock,0.42010605,Update modules,,0
+fix borked versions (#397),0.6137074,Fix borked versions by @baseten in link,Co-authored-by: Alex Prokop alex.prokop@play.co,0
+Update About.mdx to match README announcement message,0.68428516,Update README.md by @GoodBoyDigital in link,,0
+Fix Docs (#395),0.6881998,Update docs,switch doc.yml to node 18 try clearing docusaurus cache add verbose flag try skipping nx cache upgrade docusaurus install ci with legacy-peer-deps revert cache clearing Co-authored-by: Alex Prokop alex.prokop@play.co,0
+Fix more links,0.49263906,Fix typo in Text.mdx by @PabloLION in link,,0
+Fix links,0.587714,Fix typo in Text.mdx by @PabloLION in link,,0
+Launch V7 (#394),0.5594656,v2.0.0 🎉,add React 18 CRA sandbox for better testing Fix quick start example in README add workaround for React 18 strict mode causing loss of WebGL context add README for animated package remove reference to legacy packages in react-spring docs add symlink to monorepo root README in packages/react tweak sandbox index.html Add announcement to README switch symlink direction fix linting Tweak package.json remove sandbox test command Co-authored-by: Alex Prokop alex.prokop@play.co,0
+add release action (#393),0.58144987,Add GH release action by @baseten in link,Co-authored-by: Alex Prokop alex.prokop@play.co,0
+Update README.md (#376),0.83195317,Update README.md by @GoodBoyDigital in link,Update README.md Update README.md,1
+Add createRoot API (#392),0.72637,Add createRoot API by @baseten in link,add createRoot api Update docs with createRoot API Co-authored-by: Alex Prokop alex.prokop@play.co,1
+Update docs link,0.78235096,Update docs,,1
+Fix typos,0.5702263,Fix typo in Text.mdx by @PabloLION in link,,0
+v7.0.0-alpha.2,0.68825537,v2.0.0 🎉,,0
+Replace pixi-react PIXI package import with scoped packages (#391),0.8264017,Replace pixi-react PIXI package import with scoped packages by @baseten in link,"switch for scoped packages add rollup package visualizer remove legacy packages moved animated type deps to devDeps update docs Update packages/docs/docs/fallback-to-canvas.mdx Co-authored-by: Zyie 24736175+Zyie@users.noreply.github.com Update packages/docs/docs/fallback-to-canvas.mdx Co-authored-by: Zyie 24736175+Zyie@users.noreply.github.com add pixi v7 hello message image to docs, fix img imports Co-authored-by: Alex Prokop alex.prokop@play.co Co-authored-by: Zyie 24736175+Zyie@users.noreply.github.com",1
+fix doc deployment (#390),0.603061,fix doc deployment by @Zyie in link,fix doc deployment fix font,0
+update docs version and fix baseUrl (#388),0.8442245,Update docs version and fix baseUrl by @baseten in link,Co-authored-by: Alex Prokop alex.prokop@play.co,1
+v7.0.0-alpha.1,0.6906816,v2.0.0 🎉,,0
+add publishConfig,0.50036776,Update configs,,0
+"Revert ""v7.0.0-alpha.1""",0.4349324,v2.0.0 🎉,This reverts commit 6d5b98bc6d7eafd1b0016e60a725b2b6c9f46a33.,0
+move sideEffects false to each package (#387),0.7993675,Move sideEffects false to each package by @baseten in link,Co-authored-by: Alex Prokop alex.prokop@play.co,1
+remove tsconfig package in favour of root file (#386),0.8362458,Remove tsconfig package in favour of root file by @baseten in link,Co-authored-by: Alex Prokop alex.prokop@play.co,1
+export TYPES on @pixi/react instead (#384),0.8073896,export TYPES on @pixi/react instead by @baseten in link,Co-authored-by: Alex Prokop alex.prokop@play.co,1
+fix prerelease command,0.49828175,Add check for master branch prerelease script by @baseten in link,,0
+Prep for v7 release (#380),0.5223274,Prep for v7 release by @baseten in link,"rename packages to @pixi/react eslint ignore docs/docs (which uses prettier) and docs/build Change references for ""React Pixi"" to ""Pixi React"" change GH repo references change comments / docs references update Slack to Discord links update misc files fix types add sideEffects false fixup fix types add lerna for version/publish scripts, remove old release script deploy docs fix circle lint command fix docs build command Co-authored-by: Alex Prokop alex.prokop@play.co Co-authored-by: Zyie 24736175+Zyie@users.noreply.github.com",0
+update doc.yml,0.7035082,Update docs,,1
+Create doc.yml,0.46367607,Update docs,,0
+Pixi V7 (#377),0.77980673,Pixi-legacy,move shared packages to root package.json for easier version management update pixi to v7 fix/update tests for pixi v7 copy assets from S3 bucket to docs static folder replace PIXILoader with PIXIAsset to use new Assets API maintain support for Pixi v6 rename PIXIAsset to ExampleAssetLoader for clarity update package peer dependencies Co-authored-by: Alex Prokop alex.prokop@play.co,1
+Fix BitmapText double destroy bug (#378),0.7450738,Fix BitmapText double destroy bug by @baseten in link,fix BitmapText double destroy bug add unmount/destroy tests Co-authored-by: Alex Prokop alex.prokop@play.co,1
+Add docusaurus (#366),0.5104025,Add,"create working Docusaurus docs Remove eslint-mdx as it wasn't working properly, format docs with prettier instead remove eslint config package and separate configs/processes it was too much to manage on top of a global linter too Tidy up menu order and remove example docs. Add react-spring example Fix prettier jsx live bug Co-authored-by: Alex Prokop alex.prokop@play.co",0
+Convert to monorepo (#364),0.55235827,Convert to monorepo by @baseten in link,remove docz related stuff move code into separate packages with appropriate tooling add nx config and ensure all package scripts run from repo root move shared deps to root package.json fix husky move TYPES to separate package for easier sharing add global eslint configuration dynamically pulling in patterns from packages ignore eslintcache switch yarn commands to npm Co-authored-by: Alex Prokop alex.prokop@play.co,0
+Update repo structure (#363),0.57490635,Update repo structure by @baseten in link,"update node version to be compatible with docusaurus update all deps to latest version, add PIXI ecosystem template packages update rollup packages/config and remove umd update linting rules to codebase eslint tests + fix tests to work with new jest modern timers Co-authored-by: Alex Prokop alex.prokop@play.co",0
+Merge pull request #360 from pixijs/remove-docz-deps,0.53358656,Support pixi.js v5,Remove docz ready for release,0
+remove docz ready for release,0.6352377,Remove docz ready for release by @baseten in link,,0
+7.0.0-alpha.0,0.5273637,v2.0.0 🎉,,0
+Merge pull request #358 from pixijs/react-18,0.67358017,React-Pixi:,Update to support React 18,0
+fix tests,0.74283826,Update tests,,1
+update to react 18,0.7901785,Update to React v16.6.,,1
+Update README,0.83944005,Update README and docs,,1
+Update graphics docs,0.6468463,Update docs,,0
+Fix graphics spec,0.35760522,Update renderer resolution on options.resolution change,,0
+6.8.0,0.54384685,v2.0.0 🎉,,0
+Update browserlist,0.32649183,umd (browser and node),,0
+Merge pull request #340 from wisebits-tech/per-container-render,0.43680096,Upgrade React Reconciler (new API),Move update events from window to root container,0
+Fix stage not having root link,0.4841901,Stage now uses the unmountComponentAtNode on componentWillUnmount,,0
+Fix texture not updating,0.60398114,AnimatedSprite textures now only updates if actually changed.,,0
+"Add test, update docs",0.75530016,Update tests,,1
+Move update events from window to root container,1.0,Move update events from window to root container,,1
+6.7.0,0.57195395,v2.0.0 🎉,,0
+Merge pull request #334 from vijayth2-cerebras/master,0.41449678,Upgrade React Reconciler (new API),add geometry prop to Graphics,0
+added tests,0.64451563,Tests,,0
+6.6.6,0.46782023,v2.0.0 🎉,,0
+Merge pull request #335 from sabigara/support-federated-events,0.6376872,Support Federated Events API,Support Federated Events API,0
+Fix test,0.6640752,Update tests,,0
+Add comment,0.5775409,Add,,0
+add geometry prop to Graphics,0.68018174,Graphics draw prop. ,,0
+Support Federated Events API,1.0,Support Federated Events API,,1
+Don't delete the repository field during the build phase,0.55490226,Do not create builds on CI,,0
+Update Readme,0.8394399,Update README and docs,,1
+Add context bridge to docs,0.40196297,Use new React Context API,,0
+Add repo information for docz,0.5664077,Update Docz,,0
+Add git repo to docz,0.4665101,Update Docz,,0
+Update animated types,0.70989597,Typings for animated,,1
+6.6.5,0.48260337,v2.0.0 🎉,,0
+Merge pull request #311 from CreativeTechGuy/master,0.33709204,Update README.md by @GoodBoyDigital in link,Export InteractionEvent types,0
+Export InteractionEvent types,0.9393919,Export internal types (InteractionEvents),,1
+6.6.4,0.5411439,v2.0.0 🎉,,0
+Update modules,1.0000002,Update modules,,1
+Update ticker hook,0.520902,or use the second param to retrieve the ticker instance:,,0
+External eslint,0.75456554,ESLint config,,1
+6.6.3,0.5407628,v2.0.0 🎉,,0
+Add packages to dev dependencies,0.4928236,Inject fiber into devtools,,0
+Remove dependencies,0.4667593,dependecies,,0
+6.6.2,0.57299554,v2.0.0 🎉,,0
+Merge pull request #305 from adsko/fix-config,0.39263004,Update README.md by @GoodBoyDigital in link,Fix assignment of missing config object,0
+Fix missing config object,0.6000198,Update configs,,0
+6.6.1,0.54928553,v2.0.0 🎉,,0
+Add a config object to control instance destroy and destroy children manually,0.33507153,Add fixes for element creation regarding the config for custom components,,0
+Update docs,1.0000002,Update docs,,1
+6.6.0,0.5765796,v2.0.0 🎉,,0
+Merge pull request #304 from inlet/prevent-auto-destroy,0.3758758,Upgrade React Reconciler (new API),Prevent auto destroy,0
+Add test,0.59433675,Add,,0
+Only auto destroy child if not prevented,0.3835293,Unmount native sub children,,0
+Add to type def,0.6422234,Type def for hooks,,0
+6.5.4,0.5543548,v2.0.0 🎉,,0
+Export createHost in rollup config,0.57152927,Rollup config,,0
+6.5.3,0.5523644,v2.0.0 🎉,,0
+Merge pull request #302 from inlet/apply-default-props-in-react-spring,0.5830122,Upgrade React Reconciler (new API),Make react-spring work with  components,0
+Hack to make the docz build pass,0.6805536,docz (added a temporary fix to make the build pass),,0
+Update repository field in package.json,0.5311367,Update repo structure by @baseten in link,,0
+Fix import of react-spring/animated in tests and build,0.6094709,Make  component compliant with react-spring,,0
+Apply default props when applyProps is not defined,0.6269267,Applying props,,0
+Fix lint,0.7621372,Fix linting,,1
+Remove postinstall from list of files,0.4306296,postinstall script for react-spring,,0
+6.5.2,0.57090837,v2.0.0 🎉,,0
+Merge pull request #296 from negomansini/master,0.3746521,Upgrade React Reconciler (new API),Updated animated.d.ts to point to correct type references,0
+Update module locations to new type location,0.5683137,Update modules,,0
+Update react-spring to latest dependencies,0.7073019,Update react-spring types,,1
+6.5.1,0.5573069,v2.0.0 🎉,,0
+Merge pull request #292 from adsko/skipped-return,0.3641918,Upgrade React Reconciler (new API),Fix skipped return statement in custom applyProps,0
+Fix skipped return statement in custom applyProps,0.57988805,"Change the applyDefaultProps behaviour, fixes #235 ",,0
+6.5.0,0.58761054,v2.0.0 🎉,,0
+Use autoDensity by default,0.6939569,"Default autoDensity=true, you can disable it: ",,0
+Update PIXI.Application options,0.6484044,This minor release has breaking changes for accessing the PIXI.Application through render prop. ,,0
+AnimatedSprite.texture can be a FrameObject now. Fixes #290,0.74622303,Validate AnimatedSprite.texture for FrameObject as well,,1
+6.4.1,0.58353513,v2.0.0 🎉,,0
+Update react-spring peer deps,0.61130464,Update react-spring types,,0
+Update README regarding react spring,0.8355778,Docs regarding react-spring,,1
+6.4.0,0.5976879,v2.0.0 🎉,,0
+Update react-spring,0.8420025,Update react-spring types,,1
+Remove post install script for react-spring,0.80751824,postinstall script for react-spring,,1
+6.3.0,0.6029144,v2.0.0 🎉,,0
+Render stage in ticker loop when renderComponentOnChange is set to true,0.7082678,Improved rendering stage when renderOnComponentChange is set to true,,1
+6.2.2,0.6081823,v2.0.0 🎉,,0
+Fix dependecies and use correct peer dependecies,0.6483725,Peer dependencies are now accepting minor and patch versions.,,0
+Merge pull request #284 from MrEmii/patch-1,0.45711884,update to the readme by @GoodBoyDigital in link,Update README.mdx,0
+Update README.mdx,0.79954743,Update README.md by @GoodBoyDigital in link,,1
+6.2.1,0.61719495,v2.0.0 🎉,,0
+Update interaction event types,0.8399863,Update Interaction Event types for pixi v6,,1
+6.2.0,0.6325669,v2.0.0 🎉,,0
+Bump pixi version in badge,0.596688,Now compatible with PIXI v5.3+.,,0
+"Fix BitmapText implementation, shorthand style is not supported anymore",0.5610002,Fix BitmapText double destroy bug by @baseten in link,,0
+Update modules include pixi.js@6.0.0,0.8221719,Support for Pixi.js v6 🎉,,1
+Merge pull request #280 from inlet/update-readme,0.46854883,Update README and docs,Update README & Docs,0
+Fix docz build,0.7971205,docz (added a temporary fix to make the build pass),,1
+6.1.1,0.57858366,v2.0.0 🎉,,0
+Unmount component,0.695467,Stage now uses the unmountComponentAtNode on componentWillUnmount,,0
+6.1.0,0.6092169,v2.0.0 🎉,,0
+Merge pull request #279 from inlet/unmount-component-at-node,0.4969504,Upgrade React Reconciler (new API),Unmount component at node,0
+Export unmountComponentAtNode,0.706983,Stage now uses the unmountComponentAtNode on componentWillUnmount,,1
+Update snapshots,0.40786427,Update tests,,0
+Add render to docs,0.58827657,Update docs regarding render via DOM and custom render,,0
+Implement unmountComponentAtNode,0.7535628,Add unmountComponentAtNode to remove a container from internal roots list,,1
+6.0.9,0.5693805,v2.0.0 🎉,,0
+6.0.8,0.57316804,v2.0.0 🎉,,0
+Update log message for postinstall script,0.54189456,postinstall script for react-spring,,0
+6.0.7,0.5811169,v2.0.0 🎉,,0
+Merge pull request #273 from spassvogel/text-error,0.3928072,docz (added a temporary fix to make the build pass),Provide more info in text node error,0
+Provide more info in text node error,0.7304069,Better error message for text nodes,,1
+Update links to PIXI docs,0.6114614,Support for pixi legacy without having to create aliases in your project 🎉 ,,0
+Update docs regarding react-spring,0.9147047,Docs regarding react-spring,,1
+6.0.6,0.5756756,v2.0.0 🎉,,0
+Clean up postinstall script,0.6331234,postinstall script for react-spring,,0
+6.0.5,0.5816475,v2.0.0 🎉,,0
+Move replace-in-file to deps,0.60158455,Add postinstall.js to npm files and move replace-in-file to deps,,0
+6.0.4,0.6114125,v2.0.0 🎉,,0
+Add postinstall.js to npm,0.8317419,Add postinstall.js to npm files and move replace-in-file to deps,,1
+6.0.3,0.6077837,v2.0.0 🎉,,0
+Test useTick teardown unmount,0.6312821,The useTicker hook now correctly unmounts,,0
+Test hooks separately,0.6366178,@testing-library/react for testing hooks correctly,,0
+Add invariant to useApp,0.61593795,Use invariant as util,,0
+Merge pull request #261 from spassvogel/ticker-null,0.3929282,Upgrade React Reconciler (new API),useTick wont crash trying to remove null ticker,0
+useTick wont crash trying to remove null ticker,0.64772636,"useTick now uses the ticker instance as this, example:",,0
+Update react spring docs with color example,0.6321351,Docs regarding react-spring,,0
+Patch react-spring for now (bug),0.7298462,Make  component compliant with react-spring,See link,1
+Update reconciler.test.js,0.6103945,Uses latest react-reconciler,,0
+6.0.2,0.6254509,v2.0.0 🎉,,0
+Merge pull request #258 from inlet/unmount-subcomponents,0.44621214,Upgrade React Reconciler (new API),Unmount sub children,0
+Call willUnmount on sub children,0.68995094,Unmount native sub children,,0
+6.0.1,0.6175978,v2.0.0 🎉,,0
+Update nvm to use the latest node LTS,0.5322002,Support latest NodeJS,,0
+6.0.0,0.6181545,v2.0.0 🎉,,0
+Merge pull request #254 from inlet/support-react-17,0.64420605,Upgrade React Reconciler (new API),Support react 17,0
+Update peer deps to React 17.x,0.6233023,Update modules to latest (incl. React v17.0.1),,0
+Fix stage spec,0.5017043,Make Stage RAF dynamic,,0
+Add a validation check if callback is a valid function,0.33921453,Catch errors in Stage,,0
+Directly use useApp in useTick hook,0.8746974,useTick and useApp,,1
+Update snapshot,0.40508282,Update docs,,0
+Add new reconciler methods,0.71510583,Include Reconciler type in type definition. ,,1
+Update react,0.71054494,Update to React v16.6.,,1
+5.2.0,0.6959516,v2.0.0 🎉,,0
+Merge pull request #252 from inlet/feature/legacy-support,0.42669874,Upgrade React Reconciler (new API),Support fallback to Canvas,0
+Ignore eslint for legacy,0.71540177,ESLint config,,1
+Add legacy fallback to docs,0.48089942,Update docs,,0
+Export pixi legacy bundles,0.6530425,Pixi-legacy,,0
+Add babel module resolver to replace pixi.js-legacy import,0.73438597,npm install pixi.js-legacy,,1
+Update peer deps,0.5502751,Peer dependencies are now accepting minor and patch versions.,,0
+Add legacy to npm files,0.63082063,Upgrade npm modules,,0
+Ignore legacy bundles,0.4826127,Support for Parcel bundler,,0
+Add legacy import,0.4652423,"Update imports, works in Parcel now",,0
+Rename to index-animated,0.4387282,Typings for animated,,0
+5.1.7,0.61337173,v2.0.0 🎉,,0
+"Inject into devtools once, fixes #251",0.79437983,"Now the devtools will be injected once, this prevents warning errors or duplicate injections.",,1
+5.1.6,0.6373528,v2.0.0 🎉,,0
+Make prop validation for resizeTo optional,0.7648935,Make prop { options: { resizeTo } }  for  optional.,,1
+5.1.5,0.5986358,v2.0.0 🎉,,0
+Fix resizeTo prop validation. Fixes #250,0.7056993,Make prop { options: { resizeTo } }  for  optional.,,1
+Clean up,0.25873488,Teardown  components,,0
+5.1.4,0.65815234,v2.0.0 🎉,,0
+Update react-spring docs,0.8483228,Docs regarding react-spring,,1
+Typings for animated components,0.9999998,Typings for animated components,,1
+Explicitly tell jest to test the ./test folder,0.41188896,Remove canvas-prebuilt and support new jest environment,,0
+5.1.3,0.655668,v2.0.0 🎉,,0
+Merge pull request #246 from inlet/feature/react-spring-support,0.60905004,Upgrade React Reconciler (new API),Support for react-spring,0
+Support typings for animated,0.9095001,Typings for animated,,1
+5.1.2,0.6775826,v2.0.0 🎉,,0
+Add animated to npm files,0.77552724,Npm sub package for animated.,,1
+5.1.1,0.60550606,v2.0.0 🎉,,0
+Export to animated,0.5157258,AnimatedSprite: link,,0
+Ignore react-spring eslint,0.63102853,React Spring,,0
+5.1.0,0.67588925,v2.0.0 🎉,,0
+Export to react-spring,0.73299474,React Spring,,1
+Export animated in separate folder,0.415111,Npm sub package for animated.,,0
+Export a react-spring version,0.6903786,React Spring to stable v9,,0
+Do not include react-spring into bundle,0.6293973,Make  component compliant with react-spring,,0
+Export animated,0.4956968,AnimatedSprite: link,,0
+Add react-spring as peer and dev deps,0.5730502,React-Pixi with React-Spring support:,,0
+Remove idx package and clean up code,0.65999603,idx dependency,,0
+Add invariant as util,0.9379244,Use invariant as util,,1
+Only test and build on prepack,0.92318624,Only auto test and build on prepack,,1
+5.0.4,0.66553426,v2.0.0 🎉,,0
+Update the resolution on interaction manager,0.6874821,"Instead of resetting the interaction manager, simply update the resolution of the interaction manager. Libraries like pixi-viewport depends on the interaction manager, this patch will fix any related issues.",,0
+5.0.3,0.67537725,v2.0.0 🎉,,0
+Merge pull request #237 from vimcaw/fix-custom-component-ref-type,0.49121583,Ref's in custom components (PixiComponent):,"Fix type of ""ref"" property on custom component",0
+5.0.2,0.69450307,v2.0.0 🎉,,0
+Merge pull request #239 from inlet/fix/auto-density,0.33883345,Upgrade React Reconciler (new API),Use PIXI's built-in autoDensity,0
+Use PIXI's built-in autoDensity,0.54097354,"AutoDensity is now set to PIXI.Application allowing app.renderer.resize to set width, height and css styles correctly.",,0
+"Fix type of ""ref"" property on custom component",0.75176007,Ref's in custom components (PixiComponent):,"The type of ""ref"" property on the class component always be a reference to an instance of a class component. But in react-pixi, it's a Pixi instance, so should set it to a function component and specify the type of ref property.",1
+5.0.1,0.68090403,v2.0.0 🎉,,0
+Only set direct value if value is not undefined. Fix #235,0.33152628,"Change the applyDefaultProps behaviour, fixes #235 ",This makes null a valid value.,0
+5.0.0,0.65810215,v2.0.0 🎉,,0
+Merge pull request #232 from inlet/compat-with-pixi-5.3,0.6172563,Now compatible with PIXI v5.3+.,Make compatible with pixi 5.3+,0
+Use the new interaction manager,0.543855,Support interaction events,,0
+Fix parsing bitmap data in jsdom,0.41038147,Forcing a newer jsdom,,0
+Update types to meet PIXI's new types,0.6447275,Update Interaction Event types for pixi v6,,0
+Fix tests,0.7428386,Update tests,,1
+Add typescript to docs,0.62281626,Typescript Typings,,0
+"Handle autoDensity, only disable if value is false",0.47467494,"Default autoDensity=true, you can disable it: ",,0
+4.1.3,0.6815949,v2.0.0 🎉,,0
+Merge pull request #231 from aktriver/remove-preventredraw-prop,0.4556418,Add preventRedraw prop to Graphics:,"Remove ""preventRedraw"" prop from index.d.ts",0
+"Remove ""preventRedraw"" prop from index.d.ts",0.6093282,Add preventRedraw prop to Graphics:,,0
+4.1.2,0.6962072,v2.0.0 🎉,,0
+Merge pull request #230 from inlet/support-mulitple-contexts,0.38396144,"Support for , see #334",Support rendering of multiple apps,0
+Update tests,0.99999976,Update tests,,1
+Send the caller to the request render,0.47610956,render() {,,0
+Update reconciler snapshot,0.5581029,Implement the prepareUpdate hook of the reconciler hostconfig.,,0
+Get rid of eventsMap as we only can have one reconciler,0.4714034,Include Reconciler type in type definition. ,,0
+Use PixiFiber directly in Stage,0.63001865,Add PixiFiber,,0
+Texture.from now emits request render events on texture load,0.4230466,AnimatedSprite textures now only updates if actually changed.,,0
+applyDefaultProps now returns a changed boolean to determine if it needs to render,0.72427964,"Change the applyDefaultProps behaviour, fixes #235 ",,1
+Stage responds to request render from reconciler,0.5445961,React reconciler,,0
+Cleanup the interaction manager,0.5000937,"Instead of resetting the interaction manager, simply update the resolution of the interaction manager. Libraries like pixi-viewport depends on the interaction manager, this patch will fix any related issues.",,0
+Use the static fiber directly in Stage,0.45775986,Inject fiber into devtools,,0
+Use single reconciler that emits request render events,0.60968554,React reconciler,,0
+4.1.1,0.64870363,v2.0.0 🎉,,0
+Fix #229,0.4714589,docz (added a temporary fix to make the build pass),,0
+4.1.0,0.70263284,v2.0.0 🎉,,1
+Merge pull request #228 from inlet/update-resolution-auto-density,0.3896883,Upgrade React Reconciler (new API),Update resolution,0
+Update resolution,0.56026787,Update renderer resolution on options.resolution change,,0
+Expose PIXI to docz Playground,0.59860325,Support pixi.js v5,,0
+Add explainer for useIteration() in docs,0.41265172,Add AppProvider usage description in hooks docs by @AndreasWintherMoen in link,,0
+4.0.0,0.7093438,v2.0.0 🎉,,1
+Merge pull request #227 from inlet/render-on-prop-change,0.5167629,Upgrade React Reconciler (new API),Render PIXI stage on reconciliation,0
+Add tests,0.6680112,Tests,,0
+Make sure fiber is passed,0.5317439,Inject fiber into devtools,,0
+Fix bootstrap,0.25922352,Fix linting,,0
+Tap into commitUpdate and render stage respectively,0.47172752,Support for updating the PIXI stage on React component change 🙌 ,,0
+Update types for PixiFiber,0.6151845,Update Interaction Event types for pixi v6,,0
+Create eventsMap in the custom renderer and pass it down to injectDevTools,0.5391506,"Expose eventHandlers, allowing you to create custom DisplayObject events ",,0
+Supply an optional eventMap to tap into reconciler methods from outside,0.46893245,Support interaction events,,0
+Build to format based on environment var FORMAT,0.49341655,Load development/production build based on process.env.NODE_ENV.,,0
+3.0.0,0.69341886,v2.0.0 🎉,,0
+Merge pull request #226 from queq1890/modify-point-like-type,0.41069698,"Typings for PointLike supporting { x: number, y: number }",Add object type support for _ReactPixi.PointLike,0
+Update Graphics.mdx,0.44751608,Update README.md by @GoodBoyDigital in link,,0
+Merge pull request #187 from EloB/graphics-draw,0.4221201,Fix support for canvas renderer by @salojoo in link,Changed graphics draw behaviour,0
+Merge branch 'master' into graphics-draw,0.32428852,Add check for master branch prerelease script by @baseten in link,,0
+Updated documenation,0.633443,Update docs,,0
+Allow object with x/y property for PointLike type,0.6791482,Make PointLike type more strict,,0
+2.0.1,0.7892475,v2.0.0 🎉,,1
+Merge pull request #223 from cometkim/patch-1,0.4347653,Upgrade React Reconciler (new API),Fix broken withFilters type inference,0
+update type definition for withFilters,0.87312365,Type definition for withFilters,,1
+Fix broken withFilters type inference,0.7939705,Type definition for withFilters,,1
+Update eslintignore,0.6005541,ESLint config,,0
+2.0.0,0.76427644,v2.0.0 🎉,,1
+Merge pull request #222 from inlet/use-latest-reconciler,0.5604923,Upgrade React Reconciler (new API),Use latest reconciler,0
+Update mdx files and make it work with the augmented react-pixi module,0.67294574,React-Pixi:,,0
+Augment react-pixi and return a nullable component if window is not defined,0.6389837,React-Pixi:,,0
+Prevent loading pixi and src while building html,0.42553967,Support pixi.js v5,,0
+Remove lodash and use sub packages,0.7836495,Remove lodash and use lodash submodules instead,,1
+"Head back to the old docz, newer is broken",0.61423475,Update Docz,,0
+Update eslint config,0.8918567,ESLint config,,1
+Update jest config,0.5890777,Remove canvas-prebuilt and support new jest environment,,0
+Fix reconciler tests,0.5724957,Include Reconciler type in type definition. ,,0
+"Update modules, including new react-reconciler",0.96964645,Upgrade modules (including new React Reconciler),,1
+Remove package lock and eslint config,0.6157019,ESLint config,,0
+1.3.2,0.6873084,v2.0.0 🎉,,0
+Remove FunctionTypes for Container as it filters out any type as well,0.5429473,The type definition wrapping Container works better.,,0
+1.3.1,0.6518074,v2.0.0 🎉,,0
+Add construct to withFilters,0.7503394,Type definition for withFilters,,1
+1.3.0,0.7120482,v2.0.0 🎉,,1
+Support constructor args in withFilter,0.7256704,Type definition for withFilters,,1
+1.2.19,0.6655221,v2.0.0 🎉,,0
+Fix Container type to prevent breaking partials,0.5220072,Type def for Container,,0
+1.2.18,0.6678114,v2.0.0 🎉,,0
+Merge pull request #216 from spassvogel/fix-ts-1.2.17,0.4259674,Upgrade React Reconciler (new API),Fix ts 1.2.17,0
+Removed Childless type,0.40420458,Rewritten type definition:,,0
+Components can have children again,0.53419477,Add additional components,,0
+Fix type for IGraphics,0.44513524,"Types for Graphics, and all Components have children props now",,0
+1.2.17,0.6673626,v2.0.0 🎉,,0
+Fix PixiRef type,0.5747572,Add PixiFiber,,0
+1.2.16,0.68553305,v2.0.0 🎉,,0
+Fix type,0.65947354,Rewritten type definition:,,0
+1.2.15,0.65936416,v2.0.0 🎉,,0
+"Update def for ParticleContainer, accept children. Fix #214",0.34265396,"Types for Graphics, and all Components have children props now",,0
+1.2.14,0.6483257,v2.0.0 🎉,,0
+Add PixiRef type,0.724599,Add PixiFiber,,1
+1.2.13,0.6427493,v2.0.0 🎉,,0
+Use function components in type declaration file,0.55764073,Typescript Definitions,,0
+1.2.12,0.6427302,v2.0.0 🎉,,0
+Merge pull request #208 from devsisters/fix-type-defs,0.5863712,Updated type definitions,Fix type definitions for container,0
+Fix type definitions for container,0.7968201,Type def for Container,,1
+1.2.11,0.6635045,v2.0.0 🎉,,0
+Render on update initialFrame,0.8170915,Update on initialFrame change,,1
+1.2.10,0.694683,v2.0.0 🎉,,0
+Merge pull request #206 from hirotomk/master,0.4181499,Upgrade React Reconciler (new API),Apply PointLike type to skew,0
+Apply PointLike type to skew,0.93166554,Make skew a PointLike type,,1
+1.2.9,0.69878757,v2.0.0 🎉,,0
+Fix #203,0.44826493,Fix typo in Text.mdx by @PabloLION in link,,0
+1.2.8,0.70535445,v2.0.0 🎉,,1
+Merge pull request #199 from zenios/master,0.41795188,Upgrade React Reconciler (new API),Fixes #198,0
+Remove runningInBrowser function,0.26694655,The useTicker hook now correctly unmounts,,0
+Remove UNSAFE_componentWillMount to avoid warnings when react-pixi is run under StrictMode,0.60950994,React-Pixi:,Fixes #198,0
+1.2.7,0.6827785,v2.0.0 🎉,,0
+"Update type defs, fix #202",0.6817388,Updated type definitions,,0
+1.2.6,0.6952616,v2.0.0 🎉,,0
+Update type def,0.55479133,Updated type definitions,,0
+1.2.5,0.6360276,v2.0.0 🎉,,0
+Fix #197,0.45292526,Fix typo in Text.mdx by @PabloLION in link,,0
+1.2.4,0.70028514,v2.0.0 🎉,,1
+Merge pull request #196 from inlet/fix-animated-sprite,0.42385727,"import { Stage, Sprite } from '@inlet/react-pixi'",Update AnimatedSprite play state and add types,0
+Add types for AnimatedSprite,0.8092781,Types for Animated Sprite,,1
+Update play state,0.36702454,Update on initialFrame change,,0
+Merge pull request #193 from Doesntmeananything/patch-1,0.4051009,Upgrade React Reconciler (new API),Fix Stage default height in docs to be correct value,0
+Fix default height to be correct value,0.36560443,"Default autoDensity=true, you can disable it: ",,0
+1.2.3,0.6342888,v2.0.0 🎉,,0
+Merge pull request #192 from phaux/patch-1,0.43003097,update to the readme by @GoodBoyDigital in link,Fix for Parcel 2,0
+Fix for Parcel 2,0.5897573,"Update imports, works in Parcel now",Seems like Parcel 2 can't detect the dependency when it's URL is produced dynamically.,0
+1.2.2,0.6642063,v2.0.0 🎉,,0
+Update withFilter type,0.6048619,Type definition for withFilters,,0
+Clean type definition,0.53558826,Rewritten type definition:,,0
+1.2.1,0.6809296,v2.0.0 🎉,,0
+Merge pull request #190 from mimshwright/fix/error-message,0.48734602,docz (added a temporary fix to make the build pass),Added new error message,0
+Added new error message,0.5442859,Better error message for text nodes,,0
+Merge pull request #188 from lm-noshiro/patch-1,0.4639433,update to the readme by @GoodBoyDigital in link,add pixi.js in install command in README.md,0
+add pixi.js in install command in README.md,0.7898769,npm install pixi.js-legacy,related to link,1
+Changed graphics draw behaviour,0.51196116,Graphics draw prop. ,,0
+1.2.0,0.7625841,v2.0.0 🎉,,1
+New withFilters API,0.72464,Type definition for withFilters,,1
+Update README.md,0.8703413,Update README.md by @GoodBoyDigital in link,,1
+1.1.13,0.5758277,v2.0.0 🎉,,0
+Merge pull request #181 from EloB/patch-2,0.44625372,update to the readme by @GoodBoyDigital in link,Expose eventHandlers,0
+Added tests,0.6445156,Tests,,0
+1.1.12,0.5967052,v2.0.0 🎉,,0
+Merge pull request #182 from inlet/update-textures-on-animated-sprite,0.52119064,AnimatedSprite textures now only updates if actually changed.,Improve texture updates on AnimatedSprite,0
+Only update textures when changed,0.6210823,AnimatedSprite textures now only updates if actually changed.,,0
+Expose eventHandlers,0.71480924,"Expose eventHandlers, allowing you to create custom DisplayObject events ",Right now if you add custom events to DisplayObject they are hard to use.,1
+Update FUNDING.yml,0.39420533,Update docs,,0
+Create FUNDING.yml,0.28566623,Add contribution files,,0
+Merge pull request #177 from dangen-effy/patch-1,0.4630567,update to the readme by @GoodBoyDigital in link,Add white space on import object,0
+Add white space on import object,0.2794681,"Update imports, works in Parcel now","Based on other ReactPIXI's example coding style, added white space.",0
+Merge pull request #176 from inlet/dependabot/npm_and_yarn/handlebars-4.5.3,0.5070411,Upgrade React Reconciler (new API),Bump handlebars from 4.1.2 to 4.5.3,0
+Bump handlebars from 4.1.2 to 4.5.3,0.3265744,Upgrade npm modules,Bumps handlebars from 4.1.2 to 4.5.3. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com,0
+Add Slack to docs,0.3712557,Update docs,,0
+Prettier,0.41690832,Improved,,0
+1.1.11,0.56815225,v2.0.0 🎉,,0
+Merge pull request #171 from ascorbic/patch-1,0.44084436,update to the readme by @GoodBoyDigital in link,FIx Parcel bundler support,0
+FIx Parcel bundler support,0.88078064,Support for Parcel bundler,Parcel doesn't like the syntax for the require statement. This version does work though.,1
+Fix serialize-javascript vulnerability,0.2849662,Security warning npm module esm.,,0
+1.1.10,0.5896559,v2.0.0 🎉,,0
+Merge pull request #168 from paolotozzo/text-as-texture,0.44199935,Support for prop isSprite on Text component to render it as a texture and speed up performance. thanks @paolotozzo,Text as texture,0
+Add option isSprite to render text as a sprite with it as a main texture,0.6193376,Support for prop isSprite on Text component to render it as a texture and speed up performance. thanks @paolotozzo,,0
+1.1.9,0.5649363,v2.0.0 🎉,,0
+Merge pull request #162 from ximing/master,0.34885865,update to the readme by @GoodBoyDigital in link,Fix missing property preventRedraw in index.d.ts,0
+Merge pull request #161 from threehams/patch-1,0.41762403,Upgrade React Reconciler (new API),Fix syntax error in index.d.ts,0
+Fix missing property preventRedraw in index.d.ts,0.48409668,Add preventRedraw prop to Graphics:,,0
+Merge pull request #1 from inlet/master,0.36319074,Upgrade React Reconciler (new API),merge upstream,0
+Fix syntax error in index.d.ts,0.49808288,Typescript Definitions," was unclosed, let's close it.",0
+1.1.8,0.5883945,v2.0.0 🎉,,0
+Merge pull request #159 from paolotozzo/with-filters-ts,0.48850116,"Filter Wrapper support, thanks to @paolotozzo",withFilters is missing in typings.d.ts #158,0
+withFilters is missing in typings.d.ts #158,0.71453774,withFilters to type definition,,1
+1.1.7,0.5778152,v2.0.0 🎉,,0
+Merge pull request #157 from inlet/fix-react-reconciler-dep-in-typing,0.73317224,Upgrade React Reconciler (new API),Include reconciler interface,1
+Include reconciler interface,0.7212912,Include Reconciler type in type definition. ,,1
+1.1.6,0.61086243,v2.0.0 🎉,,0
+Merge pull request #154 from paolotozzo/bundle-size,0.5464053,Optimize bundle size,Fix issue with bundle size,0
+Fix issue with bundle size,0.78980714,Optimize bundle size,,1
+1.1.5,0.520658,v2.0.0 🎉,,0
+Lint files,0.5812648,Fix linting,,0
+Merge pull request #153 from paolotozzo/filters,0.50164527,"Filter Wrapper support, thanks to @paolotozzo",implement filter wrapper for components,0
+implement filter wrapper for components,0.70220006,"Filter Wrapper support, thanks to @paolotozzo",,1
+1.1.4,0.63636804,v2.0.0 🎉,,0
+Merge pull request #152 from paolotozzo/graphics-redraw,0.4303321,The draw prop now accepts a function to redraw that is part of the ,add property preventRedrawn to PIXI.Graphics,0
+add property preventRedrawn to PIXI.Graphics,0.6663704,Add preventRedraw prop to Graphics:,,0
+1.1.3,0.64367837,v2.0.0 🎉,,0
+Merge pull request #151 from paolotozzo/fix-animated-sprite,0.42801213,AnimatedSprite textures now only updates if actually changed.,Fix animated sprite,0
+fix issue with updating animated sprite texture,0.78446364,AnimatedSprite textures now only updates if actually changed.,,1
+Merge remote-tracking branch 'upstream/master',0.380877,Add check for master branch prerelease script by @baseten in link,,0
+1.1.0,0.6762836,v2.0.0 🎉,,0
+Add PIXI.AnimatedSprite support (link),0.6113013,"🎉  Use React-Pixi with React Spring is now available through import @inlet/react-pixi/animated,",,0
+1.1.2,0.65330815,v2.0.0 🎉,,0
+Merge pull request #144 from Mushus/bugfix/simple-mesh-types,0.44497484,docz (added a temporary fix to make the build pass),Fix SimpleMesh types,0
+Merge pull request #146 from pengx17/missing-sprite-ts-anchor,0.47287214,Fix typings for sprite with children by @Hogar in link,ts: missing pointlike for sprite's Anchor prop,0
+missing pointlike ts def for sprite,0.5041924,Type defs for Sprite and SimpleMesh,,0
+Fix SimpleMesh types,0.65417904,Type defs for Sprite and SimpleMesh,,0
+1.1.1,0.48974973,v2.0.0 🎉,,0
+Merge pull request #142 from RodrigoHamuy/DevTools-version,0.47376823,"Now the devtools will be injected once, this prevents warning errors or duplicate injections.",Change: Inject React-DOM version to React DevTools,0
+Change: Inject React-DOM version to React DevTools,0.8341354,DevTools React DOM version.,,1
+Merge pull request #137 from paolotozzo/animated-sprites,0.40507653,AnimatedSprite: link,Add PIXI.AnimatedSprite support,0
+Merge pull request #136 from inlet/dependabot/npm_and_yarn/eslint-utils-1.4.2,0.5414765,ESLint config,Bump eslint-utils from 1.4.0 to 1.4.2,0
+Bump eslint-utils from 1.4.0 to 1.4.2,0.69748044,ESLint config,Bumps eslint-utils from 1.4.0 to 1.4.2. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,0
+1.0.4,0.68482023,v2.0.0 🎉,,0
+Add enabled flag to useTick type def,0.8880829,Add enabled flag to useTick type definition.,,1
+Add donate button 🙏,0.38206685,Add contribution files,,0
+Delete docs before building docs,0.44037598,Update docs,,0
+Remove docs from repo,0.4946055,Remove docz ready for release by @baseten in link,,0
+1.0.3,0.69453055,v2.0.0 🎉,,0
+Add applyDefaultProps to type def,0.8385566,Add applyDefaultProps to type definition and update docs,,1
+Lint,0.5812701,Fix linting,,0
+1.0.2,0.7405313,v2.0.0 🎉,,1
+Merge pull request #133 from RodrigoHamuy/expose-applyDefaultProps,0.5802045,Add applyDefaultProps to type definition and update docs,Expose applyDefaultProps,0
+Expose applyDefaultProps,0.81747305,Expose applyDefaultProps  for Custom Components.,,1
+1.0.1,0.65076673,v2.0.0 🎉,,0
+Update peer dep,0.559703,Peer dependencies are now accepting minor and patch versions.,,0
+1.0.0,0.64200777,v2.0.0 🎉,,0
+Update type defs,0.63081926,Updated type definitions,,0
+"Update tests, use @testing-library/react to test hooks",0.90505666,@testing-library/react for testing hooks correctly,,1
+Upgrade modules and use alpha reconciler,0.65423006,Upgrade modules (including new React Reconciler),,0
+Use latest node,0.49542442,Support latest NodeJS,,0
+Support source and video props,0.7619583,source and video props on DisplayObjects like ,,1
+Merge pull request #124 from fabienjuif/patch-1,0.4240756,Upgrade React Reconciler (new API),:memo: update v4 links and logo to v5,0
+:memo: badges and mdx version,0.3675924,Update README.md by @GoodBoyDigital in link,,0
+:memo: update v4 links and logo to v5,0.49377298,Full Changelog: link,,0
+Cleanup TS definitions,0.49214977,Typescript Definitions,,0
+Merge pull request #116 from fabienjuif/pixiv5,0.55870044,Support pixi.js v5,:arrow_up: pixi v5,0
+:label: typescript,0.60251033,Typescript Typings,,0
+Merge pull request #119 from inlet/dependabot/npm_and_yarn/lodash-4.17.13,0.5224283,Upgrade React Reconciler (new API),Bump lodash from 4.17.11 to 4.17.13,0
+Bump lodash from 4.17.11 to 4.17.13,0.5639732,Remove lodash and use lodash submodules instead,Bumps lodash from 4.17.11 to 4.17.13. - Release notes - Commits Signed-off-by: dependabot[bot] support@github.com,0
+:white_check_mark: simple rope works,0.32932353,Fix linting,,0
+:heavy_minus_sign: pixi.js-legacy,0.7424935,npm install pixi.js-legacy,,1
+:memo: docs,0.64068943,Docs,,0
+:boom: use pixi.js-legacy,0.8494419,Fully supports pixi.js v5!,,1
+:bug: fix docz example that was in errors,0.6753584,docz (added a temporary fix to make the build pass),,0
+:recycle: remove some test.skip,0.34324467,Only auto test and build on prepack,,0
+:recycle: PIXI.Point.copy is renamed copyFrom,0.4281919,"You can now provide a config object in a PixiComponent to control the the reconciliation behaviour, see:",,0
+:wrench: move jest-webgl-canvas-mock before bootstraping,0.63413644,Remove canvas-prebuilt and support new jest environment,,0
+:heavy_plus_sign: add jest-webgl-canvas-mock for tests (mock WebGL),0.7183651,Jest webGL support,,1
+:bug: build works by remove pixi.js-legacy,0.80226445,npm install pixi.js-legacy,,1
+:arrow_up: pixi v5,0.5238557,Now compatible with PIXI v5.3+.,,0
+Merge pull request #114 from inlet/update-docs,0.47314334,Update README and docs,Add example to docs,0
+Add example to docs,0.4698825,Update docs,,0
+0.7.1,0.6068709,v2.0.0 🎉,,0
+Merge pull request #112 from inlet/patch/react-scheduler,0.62496513,Upgrade React Reconciler (new API),Revert reconciler,0
+"Revert to last stable reconciler, new reconciler is in alpha wait till stable",0.6032753,"React Reconciler works again, wait for the alpha package react-reconciler to become stable.",,0
+Use the alpha reconciler to support latest React,0.8252228,Support newest React version. (react-reconciler),,1
+Add Netlify config,0.45764622,Update configs,,0
+Build docs,0.5855104,Update docs,,0
+Update docz,0.9999998,Update Docz,,1
+Use npm-scripts prepare,0.5662458,Add postinstall.js to npm files and move replace-in-file to deps,,0
+0.7.0,0.6214151,v2.0.0 🎉,,0
+Merge pull request #110 from inlet/upgrade-reconciler,0.54834616,Upgrade React Reconciler (new API),Upgrade reconciler,0
+Use node:lts docker for CI,0.40455163,Do not create builds on CI,,0
+Update rollup,0.6547572,Rollup config,,0
+Update modules and use the new React reconciler,0.9443147,Upgrade modules (including new React Reconciler),,1
+Update yarn lock,0.36559552,Update configs,,0
+0.6.0,0.6333318,v2.0.0 🎉,,0
+Merge pull request #109 from rluncasu/master,0.33465147,Update README.md by @GoodBoyDigital in link,switching from canvas prebuilt to canvas & forcing newer jsdom,0
+switching from canvas prebuilt to canvas & forcing newer jsdom,0.71146834,Forcing a newer jsdom,,1
+Merge pull request #107 from inlet/dependabot/npm_and_yarn/js-yaml-3.13.1,0.49139202,Upgrade React Reconciler (new API),Bump js-yaml from 3.12.0 to 3.13.1,0
+Bump js-yaml from 3.12.0 to 3.13.1,0.43229616,Upgrade npm modules,Bumps js-yaml from 3.12.0 to 3.13.1. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com,0
+Merge pull request #106 from inlet/dependabot/npm_and_yarn/handlebars-4.1.2,0.50781804,Upgrade React Reconciler (new API),Bump handlebars from 4.1.0 to 4.1.2,0
+Bump handlebars from 4.1.0 to 4.1.2,0.31169385,Update README and docs,Bumps handlebars from 4.1.0 to 4.1.2. - Release notes - Changelog - Commits Signed-off-by: dependabot[bot] support@github.com,0
+0.5.11,0.58767813,v2.0.0 🎉,,0
+Merge pull request #105 from EloB/feature/improved-events,0.4601149,Update Interaction Event types for pixi v6,Improved events handling,0
+Cache listeners,0.4731602,Performance for adding/removing event listeners.,,0
+Added test,0.5544966,Tests,,0
+Improved events handling,0.7136029,Support interaction events,,1
+0.5.10,0.5521394,v2.0.0 🎉,,0
+Merge pull request #104 from wtgtybhertgeghgtwtg/use-options-view,0.37675625,Full Changelog: link,Allow PIXI.Application instance to use options.view.,0
+do not format unrelated tests,0.4530466,Update tests,,0
+add options.view test,0.48496583,Provide options.view to Stage props.,,0
+use view from options,0.48015726,Provide options.view to Stage props.,,0
+0.5.9,0.45727202,v2.0.0 🎉,,0
+Merge pull request #101 from mattjennings/suspense,0.34589556,Upgrade React Reconciler (new API),Support React Suspense,0
+suspense tests,0.5750593,Tests,,0
+safer check for existing visible prop,0.4385341,Graphics preventDefault prop.,,0
+maintain visible prop on unhideInstance,0.49730873,Graphics preventDefault prop.,,0
+use visible property instead of alpha,0.40719742,Graphics preventDefault prop.,,0
+implement hideInstance and unhideInstance,0.35788888,Graphics preventDefault prop.,,0
+0.5.8,0.51272875,v2.0.0 🎉,,0
+Fix props,0.7602442,Applying props,,1
+Merge pull request #99 from zmike/master,0.348815,Update README.md by @GoodBoyDigital in link,expose 'crossorigin' property of Texture.fromImage,0
+expose 'crossorigin' property of Texture.fromImage,0.8193104,"Support crossorigin for Texture images, example:",,1
+0.5.7,0.46515787,v2.0.0 🎉,,0
+Make PointLike type more strict,1.0000002,Make PointLike type more strict,,1
+Use yarn explicitly to prevent inconsistency so docz can build again.,0.59351146,docz (added a temporary fix to make the build pass),,0
+Ignore docz cache,0.5820545,Update Docz,,0
+Remove docz cache,0.5698966,Update Docz,,0
+Merge pull request #93 from miracle2k/patch-1,0.38448626,Update README.md by @GoodBoyDigital in link,Clarify renderOnComponentChange documentation.,0
+0.5.6,0.50667,v2.0.0 🎉,,0
+Merge pull request #95 from inlet/fix-types,0.42233786,Updated type definitions,Fix types,0
+Add comments to support in-code suggestions and type feedback,0.70642334,Add comments to type declaration to support in-code type suggestions.,,1
+Make  a PointLike type.,0.700963,Make PointLike type more strict,,1
+Clarify renderOnComponentChange documentation.,0.64476657,Improved rendering stage when renderOnComponentChange is set to true,,0
+0.5.5,0.34406596,v2.0.0 🎉,,0
+Merge pull request #92 from inlet/type-def-for-hoc,0.52903926,Typings for HOC withPixiApp,Fix withPixiApp HOC,0
+Fix withPixiApp HOC,0.674071,Typings for HOC withPixiApp,,0
+0.5.4,0.53362113,v2.0.0 🎉,,0
+Merge pull request #89 from EloB/feature/improved-tick,0.41655344,Enable the useTick hook with a second argument:,Added disabled to useTick,0
+Fix useTick with enabled state,0.79778564,Add enabled flag to useTick type definition.,,1
+Merge branch 'feature/improved-tick' of link into EloB-feature/improved-tick,0.4387201,Fix borked versions by @baseten in link,,0
+Added disable and performance boost to useTick,0.7399876,Add enabled flag to useTick type definition.,,1
+0.5.3,0.59165317,v2.0.0 🎉,,0
+Update yarn.lock via yarn import,0.3192533,Update npm modules,,0
+Merge pull request #88 from inlet/fix-double-events,0.40663543,Upgrade React Reconciler (new API),Fix double events,0
+Fix filter props,0.64786243,Applying props,,0
+Split up context tests,0.4099247,Update tests,,0
+Enable all tests,0.55180115,Update tests,,0
+"Add package-lock.json, fixes #86",0.42651063,Peer dependencies are now accepting minor and patch versions.,,0
+0.5.2,0.64289296,v2.0.0 🎉,,0
+Merge pull request #85 from EloB/feature/optimze-applyDefaultProps,0.5628827,"Change the applyDefaultProps behaviour, fixes #235 ",Optimzed applyDefaultProps,0
+Merge pull request #84 from EloB/feature/optimize-isFunction,0.3815029,"Performance fixes, thanks to @EloB ",Optimzed isFunction,0
+Optimzed applyDefaultProps,0.64243793,Add applyDefaultProps to type definition and update docs,,0
+Optimzed isFunction,0.25380254,Type definition for withFilters,,0
+0.5.1,0.633674,v2.0.0 🎉,,0
+"Update type definition, add Context. Fixes #83",0.64078665,"Add Context types AppContext, AppProvider and AppConsumer to type declaration file.",,0
+0.5.0,0.57065374,v2.0.0 🎉,,0
+Merge pull request #80 from inlet/update-react-reconciler,0.7382217,Upgrade React Reconciler (new API),Update to React v16.8.0,1
+Add scheduler to deps,0.34409642,Add postinstall.js to npm files and move replace-in-file to deps,,0
+Add additional hostconfig methods,0.56677455,Implement the prepareUpdate hook of the reconciler hostconfig.,,0
+Update modules to use latest stable React,0.89567566,Update modules to latest (incl. React v17.0.1),,1
+0.4.4,0.53164816,v2.0.0 🎉,,0
+Merge pull request #79 from inlet/update-usetick-hook,0.5136294,Hook useTick is now state aware!,Make useTick state aware,0
+Update modules with new reconciler,0.7074152,Upgrade modules (including new React Reconciler),,1
+Hook useTick now in sync with component state,0.8543759,Hook useTick is now state aware!,,1
+Remove runner from Wallaby config to use default node,0.55804086,Wallaby config using new format,,0
+Fix README,0.70651394,Update README.md by @GoodBoyDigital in link,,1
+Merge pull request #75 from juwoni/master,0.3286263,Upgrade React Reconciler (new API),fix spelling mistakes in readme.,0
+fix spelling mistakes in readme.,0.60533667,Update README and docs,,0
+0.4.3,0.6232425,v2.0.0 🎉,,0
+Merge pull request #74 from inlet/update-type-def-pointlikes,0.43330908,PointLike props types,Support point-like (observable)point values,0
+Support number[] as (Observable)Point values in JSX,0.62915415,"Typescript support for (observable)points, now supports Array-like syntax, example:",,0
+Merge pull request #73 from baco16g/feature/fix_README,0.5215757,update to the readme by @GoodBoyDigital in link,docs: There is a typo in the imported module name,0
+docs: There is a typo in the imported module name,0.4674337,"Update imports, works in Parcel now",,0
+Update test,0.91557336,Update tests,,1
+0.4.2,0.6570132,v2.0.0 🎉,,0
+Merge pull request #61 from EloB/patch-1,0.42868364,update to the readme by @GoodBoyDigital in link,Expose Context,0
+Merge branch 'master' into patch-1,0.42576462,Add check for master branch prerelease script by @baseten in link,,0
+0.4.1,0.65337265,v2.0.0 🎉,,0
+Merge pull request #69 from inlet/add-hooks-to-type-def,0.48720318,Type def for hooks,Add hooks to type def,0
+Add hooks to type def,0.8999193,Type def for hooks,,1
+Merge pull request #68 from inlet/update-docs,0.47386172,Update README and docs,Update docs,0
+0.4.0,0.66291475,v2.0.0 🎉,,0
+Merge pull request #65 from inlet/react-16.7-hooks,0.68907094,Update to React 16.7. Now with hooks!,React 16.7 hooks,0
+Expose hooks,0.6062699,Type def for hooks,,0
+Add useApp,0.55253834,useTick and useApp,,0
+Update circle node,0.41345692,Versioned cache for CircleCI,,0
+Add hook useTick,0.85361946,Enable the useTick hook with a second argument:,,1
+Add test to use useContext,0.54221964,Expose AppContext,,0
+Update react reconciler to use the new hooks API,0.8691039,Upgrade React Reconciler (new API),,1
+Merge pull request #62 from dschu-lab/master,0.37708542,Update README.md by @GoodBoyDigital in link,🐞 Fixed wrong lifecycle method name,0
+🐞 Fixed wrong lifecycle method name,0.3574479,"Change the applyDefaultProps behaviour, fixes #235 ","componenDidMount -> componentDidMount Used ES6 arrow function, since it doesn't create a new context. Therefore, this.setState can be used without binding this inside class constructor",0
+Changed name to AppContext,0.68489504,"Add Context types AppContext, AppProvider and AppConsumer to type declaration file.",,0
+Expose Context,0.65633637,Expose AppContext,See more info about why here: link,0
+0.3.0,0.65739137,v2.0.0 🎉,,0
+Merge pull request #57 from inlet/update-to-react-16.6,0.6599583,Upgrade React Reconciler (new API),Update to React 16.6,0
+Update new yarn lock,0.35678065,Update configs,,0
+Update modules to meet the new react reconciler,0.9533324,Upgrade modules (including new React Reconciler),,1
+0.2.0,0.71936387,v2.0.0 🎉,,1
+Merge pull request #50 from inlet/generic-pixiapp-context,0.48169982,"You can now provide a config object in a PixiComponent to control the the reconciliation behaviour, see:",Make PIXI.Application context more generic,0
+Add tests for passing down the PIXI.Application in render(),0.5471872,This minor release has breaking changes for accessing the PIXI.Application through render prop. ,,0
+Expose the AppProvider and AppConsumer,0.7186724,Use AppProvider and AppConsumer in custom render(),,1
+Use AppProvider in Stage,0.6271478,Use AppProvider and AppConsumer in custom render(),,0
+Implement App Provider and Consumer,0.57680535,Fix: rename Provider to AppConsumer.,,0
+Update wallaby config,0.8295069,Wallaby config using new format,,1
+Upgrade modules,0.89336765,Update modules,,1
+0.1.7,0.59129,v2.0.0 🎉,,0
+Merge pull request #48 from inlet/update-type-def-for-stage,0.49208415,import { Stage } from '@inlet/react-pixi/legacy';,Update type definition to support Canvas attributes.,0
+Fix #47,0.45240328,docz (added a temporary fix to make the build pass),,0
+0.1.6,0.6060474,v2.0.0 🎉,,0
+Merge pull request #46 from inlet/update-types,0.46047384,Upgrade React Reconciler (new API),Support refs in definition file,0
+Support refs in definition file,0.36400074,Ref's in custom components (PixiComponent):,,0
+0.1.5,0.46279043,v2.0.0 🎉,,0
+Merge pull request #43 from inlet/build-formats,0.40352625,Build outputs:,Create new output formats,0
+Merge pull request #45 from inlet/update-types,0.45284444,Upgrade React Reconciler (new API),Update type definition,0
+Add interaction event prop,0.71226645,Support interaction events,,1
+Update type definition. More support and include interaction events,0.734991,Update Interaction Event types for pixi v6,,1
+Build docz,0.6818586,docz (added a temporary fix to make the build pass),,0
+Update docz README,0.847623,Update Docz,,1
+"Export cjs, module and umd",0.5093946,cjs (node),,0
+Update rollup config,0.88756037,Rollup config,,1
+Do not build on CI,0.8978941,Do not create builds on CI,,1
+Create new output formats,0.33716863,Wallaby config using new format,,0
+Merge pull request #42 from inlet/update-modules,0.49189192,Upgrade modules (including new React Reconciler),Upgrade node modules,0
+Merge pull request #41 from inlet/note-graphics-clear,0.41626728,Upgrade React Reconciler (new API),Note graphics clear,0
+Update docs for Graphics,0.64143115,Update docs,,0
+0.1.4,0.59932065,v2.0.0 🎉,,0
+0.1.3,0.62494564,v2.0.0 🎉,,0
+Merge pull request #32 from EloB/patch-1,0.42270434,update to the readme by @GoodBoyDigital in link,Make Stage raf dynamic,0
+Added test for stage raf toggle,0.5793966,Make Stage RAF dynamic,,0
+Make raf dynamic,0.7353979,Make Stage RAF dynamic,,1
+0.1.2,0.6652093,v2.0.0 🎉,,0
+Merge pull request #31 from inlet/fix-cursor-prop,0.39962196,Default cursor is null,Fix cursor prop,0
+Update snapshot for display object props,0.5377562,Applying props,,0
+Hotfix for applying default prop,0.5491399,Make prop { options: { resizeTo } }  for  optional.,,0
+Set default prop for cursor to null,0.7232551,Default cursor is null,,1
+Update Circle,0.50913894,CircleCI,,0
+Create CNAME,0.33336613,Add createRoot API by @baseten in link,,0
+0.1.1,0.6015075,v2.0.0 🎉,,0
+Merge pull request #30 from inlet/update-modules,0.47367433,Upgrade modules (including new React Reconciler),Update modules,0
+Update Stage example,0.51121926,Catch errors in Stage,,0
+Update babel,1.0000002,Update Babel,,1
+Use node 10,0.6196691,Support latest NodeJS,,0
+Upgrade modules with babel,0.7902461,Update Babel,,1
+Merge pull request #25 from StudioASC/master,0.348306,Upgrade React Reconciler (new API),fix typings in render(),0
+fix render() param typings,0.6229269,render() {,"now you can function as param: render( str => , app.stage)",0
+Merge pull request #2 from inlet/master,0.38248903,Upgrade React Reconciler (new API),sync from inlet/react-pixi confirm,0
+Merge pull request #22 from inlet/update-ts-def,0.5234931,Upgrade React Reconciler (new API),Update Typescript Definition,0
+Merge pull request #23 from StudioASC/kiochan-patch,0.39215448,docz (added a temporary fix to make the build pass),little patch for the typings of render(),0
+Merge pull request #1 from StudioASC/kiochan-patch,0.36395705,Update README.md by @GoodBoyDigital in link,confirm merge,0
+Merge branch 'update-ts-def' into kiochan-patch,0.38068056,Update README and docs,,0
+typings potential fix for PixiReact.render(),0.6462943,This minor release has breaking changes for accessing the PIXI.Application through render prop. ,,0
+First argument of render() expects a React.Component instead of a PIXI instance,0.7809261,React-Pixi:,,1
+Delete CNAME,0.25196734,Remove docz ready for release by @baseten in link,,0
+Merge pull request #21 from inlet/implement-docz,0.42171204,Upgrade React Reconciler (new API),Implement docz,0
+Do not lint docs,0.5365873,Fix linting,,0
+Generate docs to docs/,0.46483457,Update docs,,0
+Add Stage to docz,0.44974178,Update Docz,,0
+Add components to docz,0.58160657,Add additional components,,0
+"Update Mesh, pass down properties (vertices, uvs, indices and texture)",0.3297223,Update texture prop on AnimatedSprite,,0
+"Update ParticleContainer, pass down properties",0.35327208,Update on initialFrame change,,0
+Compare prop texture and image before applying,0.53064966,Update texture prop on AnimatedSprite,,0
+Get rid of idx in hostconfig,0.46669832,idx dependency,,0
+Ability to directly overwrite props for better performance,0.56261855,Applying props,,0
+Possibility to ignore event comparison with prop ignoreEvents,0.46348062,Support interaction events,,0
+Upgrade docz,0.82426256,Upgrade docz and internals,,1
+Add title and disable PropsTables.,0.47086504,Applying props,,0
+"Redundant npmignore, files for npm are listed in package.json",0.54893565,Upgrade npm modules,,0
+integration of docz - first iteration - Mesh and BitmapText not working,0.45917785,docz (added a temporary fix to make the build pass),,0
+0.1.0,0.6196106,v2.0.0 🎉,,0
+Merge pull request #16 from inlet/new-context-api,0.4890537,Upgrade React Reconciler (new API),Update the Context API and Reconciler,0
+Use terser to transpile es6,0.3838664,Typescript Typings,,0
+Make componentWillMount unsafe,0.5163629,Stage now uses the unmountComponentAtNode on componentWillUnmount,,0
+Use beta rollup plugin babel,0.57718885,Update Babel,,0
+Add unmount prop,0.6746595,The useTicker hook now correctly unmounts,,0
+Catch errors in Stage,1.0,Catch errors in Stage,,1
+Use new context API for Stage,0.62424165,Use new React Context API,,0
+Update hostconfig,0.6718973,Update configs,,0
+Bootstrap node style,0.27236474,Node modules,,0
+0.0.13,0.4304283,v2.0.0 🎉,,0
+Fix npm version,0.74909717,Update npm modules,,1
+Merge pull request #13 from xaviergonz/master,0.36965486,update to the readme by @GoodBoyDigital in link,windows compilation + better types,0
+using ComponentType instead of SFC,0.49332988,Typings for animated components,,0
+more modern omit,0.26530552,Example:,,0
+better withPixiApp function,0.47577006,Typings for HOC withPixiApp,,0
+"cross env for windows support, improved typings",0.5213571,Fix typings and window compilation thanks to @xaviergonz ,,0
+Merge pull request #12 from inlet/update-props-for-builtin-components,0.603097,Upgrade React Reconciler (new API),"Apply props for built in PIXI components, see #9",0
+"Apply props for built in PIXI components, see #9",0.77935326,Syntactic sugar for PIXI builtin components for props image and draw gets updated,,1
+Merge pull request #11 from xaviergonz/patch-1,0.43635136,update to the readme by @GoodBoyDigital in link,Fixed typings for TS 2.8,0
+Fixed typings for TS 2.8,0.7119291,Typescript Typings,,1
+Merge pull request #8 from EloB/patch-1,0.42385578,update to the readme by @GoodBoyDigital in link,Add teardown of application in stage component,0
+Add teardown of application in stage component,0.62439436,Teardown  components,,0
+"Some helper methods are borrowed from others, let's give them credits",0.46239328,Helper utilities,,0
+0.0.11,0.48971462,v2.0.0 🎉,,0
+Update npm modules with new reconciler,0.7971314,Update npm modules,,1
+0.0.10,0.48301923,v2.0.0 🎉,,0
+Merge pull request #4 from inlet/expose-reactfiber,0.62592185,Upgrade React Reconciler (new API),Expose PixiFiber reconciler,0
+Expose PixiFiber reconciler,0.73284054,"You can now provide a config object in a PixiComponent to control the the reconciliation behaviour, see:",,1
+0.0.9,0.35891324,v2.0.0 🎉,,0
+Add module.js to npm files,0.66505325,Update npm modules,,0
+0.0.8,0.3888305,v2.0.0 🎉,,0
+Serve module based on node env,0.6278685,Load development/production build based on process.env.NODE_ENV.,,0
+0.0.7,0.4325499,v2.0.0 🎉,,0
+Serve build based on node env,0.77086014,Load development/production build based on process.env.NODE_ENV.,,1
+0.0.6,0.4651185,v2.0.0 🎉,,0
+Merge pull request #3 from inlet/prepare-update,0.44256338,Upgrade React Reconciler (new API),Implement reconciler prepareUpdate,0
+Implement reconciler prepareUpdate,0.5856274,Include Reconciler type in type definition. ,,0
+0.0.5,0.337438,v2.0.0 🎉,,0
+Update typings,0.63512594,Updated type definitions,,0
+0.0.4,0.41736934,v2.0.0 🎉,,0
+0.0.3,0.48428878,v2.0.0 🎉,,0
+Add typings to package.json,0.58332896,Typescript Typings,,0
+Add typings,0.67819995,Typings,,0
+Remove shape type,0.6519089,Shape type,,0
+Add contribution files,0.99999976,Add contribution files,,1
+Ignore local examples,0.3369881,withFilters to type definition,,0
+"Remove examples, already on codepen",0.31645814,Remove canvas-prebuilt and support new jest environment,,0
+0.0.2,0.52925587,v2.0.0 🎉,,0
+Add withPixiApp higher order component,0.58702344,Add higher order component for providing the PIXI.Application:,,0
+Update eslint,0.7452818,ESLint config,,1
+Add files to package.json,0.49989074,Add postinstall.js to npm files and move replace-in-file to deps,,0
+Update package.json,0.56693983,Update npm modules,,0
+Add example for custom component,0.5730004,Add additional components,,0
+Add examples,0.5584325,Example:,,0
+Implement Graphics.draw,0.62648565,Graphics draw prop. ,,0
+Implement position and scale of TilingSprite,0.2537217,"AutoDensity is now set to PIXI.Application allowing app.renderer.resize to set width, height and css styles correctly.",,0
+Add PixiComponent to Public API,0.70799243,Add higher order component for providing the PIXI.Application:,,1
+"Pass instance to didMount, willUnmount and applyProps",0.40396142,The useTicker hook now correctly unmounts,,0
+Create custom PIXI Components,0.7110062,Add higher order component for providing the PIXI.Application:,,1
+Support Provider to pass down app to child components,0.4607376,Use AppProvider and AppConsumer in custom render(),,0
+"Remove context, don't use the new Context API for now",0.6122284,Use new React Context API,,0
+Support Context API with fallback to higher order component,0.5822225,Use new React Context API,,0
+Upgrade react to work with newer Context API,0.87941873,Use new React Context API,,1
+Run build on prepublish,0.6208718,Only auto test and build on prepack,,0
+Do not apply event handlers as props,0.5391509,Applying props,,0
+Update reconciler and watch builds,0.50201106,Return changes for native components needed to commit updates during reconciliation.,,0
+Import all components and return type,0.59663624,import MyComponent from './MyComponent',,0
+Prevent passing prop children to canvas element,0.57596123,Graphics preventDefault prop.,,0
+Rename react-pixi-fiber to react-pixi,0.71198153,React-Pixi:,,1
+Update yarn lockfile,0.36650658,Update configs,,0
+Build umd and es with rollup,0.575855,Rollup config,,0
+Update Stage implementation,0.47663286,Catch errors in Stage,,0
+Remove renderFromComponent`,0.55005336,Improved rendering stage when renderOnComponentChange is set to true,,0
+Create LICENSE,0.17918973,Do not create builds on CI,,0
+"Always test silent, skip logs",0.36799386,Update tests,,0
+Partly implement and test Stage,0.40493274,Catch errors in Stage,,0
+Test PIXI events,0.61635077,Update Interaction Event types for pixi v6,,0
+Test reconciler,0.5310121,Include Reconciler type in type definition. ,,0
+Add tests for reconciler + add mock util to create spies of mocked module,0.44592065,Update tests,,0
+Add circle test badge to README,0.37393576,CircleCI,,0
+Update tests in ci,0.7708135,Update tests,,1
+Add circle.yml,0.4042365,CircleCI,,0
+Move hostconfig to a new file to isolate it for testing,0.5346813,Implement the prepareUpdate hook of the reconciler hostconfig.,,0
+Update badge on README,0.5835004,Update README and docs,,0
+Test setValue,0.35149685,Update tests,,0
+Test applyDefaultProps,0.59658146,Add applyDefaultProps to type definition and update docs,,0
+Add apply default props,0.7398369,Applying props,,1
+Add PIXI events,0.70869493,Update Interaction Event types for pixi v6,,1
+Create element needs to handle custom components,0.69867384,Add fixes for element creation regarding the config for custom components,,0
+Test module exports,0.4002504,@testing-library/react for testing hooks correctly,,0
+Test renderer,0.45238373,render() {,,0
+Move getTextureFromProps to props,0.583672,Applying props,,0
+Update renderer,0.49704543,render() {,,0
+Add Stage component,0.6222257,  stage = React.createRef(),,0
+Add npm modules,0.7872042,Upgrade npm modules,,1
+Add public API and move Stage to its own file,0.4888383,"import { Stage, AppConsumer } from '@inlet/react-pixi'",,0
+Add pixi helper isPointType,0.59621555,Add higher order component for providing the PIXI.Application:,,0
+Add pixi helper parsePoint,0.5969736,Add higher order component for providing the PIXI.Application:,,0
+Rename defaults to props,0.60990846,Applying props,,0
+Update babelrc to generate commonjs,0.62781364,Update Babel,,0
+Add comments,0.4981873,Add,,0
+Remove redundant list of elements,0.2678591,Teardown  components,,0
+Add default props,0.7146595,Applying props,,1
+Test getTextureFromProps,0.40237096,Validate AnimatedSprite.texture for FrameObject as well,,0
+Remove lib from git,0.3134824,Fix borked versions by @baseten in link,,0
+Update lib,0.60992765,Update modules,,0
+Update reconciler,0.58908784,React reconciler,,0
+Add util spec,0.41201183,Add AppProvider usage description in hooks docs by @AndreasWintherMoen in link,,0
+Add utils,0.5177552,Add additional components,,0
+Add test utils,0.6026552,Update tests,,0
+Add test fixtures,0.57386506,Update tests,,0
+Add components,0.9200155,Add additional components,,1
+Setup tests,0.5990202,Update tests,,0
+Update,0.7695855,Updated,,1
+Add folder structure,0.3130221,Add additional components,,0
+Update isProduction check,0.45098007,Update tests,,0
+Init project,0.33005458,Inject fiber into devtools,,0

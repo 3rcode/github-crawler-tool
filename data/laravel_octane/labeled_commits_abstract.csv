@@ -1,413 +1,414 @@
-Index,Commit Message Abstract,Score Abstract,Corresponding Changelog Sentence Abstract,Commit Desription Abstract,Label
-1,Allow for swoole to serve static files trough symlink,0.65504825,Support setting swoole server mode by @sy-records in link,,0
-2,Remove all test docblock (#248),0.49129876,Removed,,0
-3,"Removes non needed ""dotenv"" option in roadrunner (#258)",0.643711,Adds support for RoadRunner v2.6.x (#449),,0
-4,[1.x] Fixes Octane's process output not being flushed (#428),0.5759368,Updates octane:install command when Swoole extension is missing (#427),,0
-5,Merge pull request #408 from laravel/driesvints-patch-1,0.52350914,Uses laravel/serializable-closure (#378),,0
-6,Utilise APP_BASE_PATH to identify base_path() location. (#17),0.41318828,Made Roadrunner log level configurable by @ejulen in link,,0
-7,Make IP to bind the server to configurable via env (#607),0.86798054,Make IP to bind the server to configurable via env by @xorinzor in link,,1
-8,fix variable name,0.45336318,Various fixes and changes.﻿,,0
-9,"Only logs ""swoole"" errors in production (#215)",0.5870544,Fix Swoole breaks when log is a valid JSON (#316),,0
-10,Handle invalid server option in octane:reload,0.72396284,Default --watch options making Octanes servers reload on file uploads (#247),,1
-11,[1.x] Fixes memory leak on Translator implementation (#416),0.5742389,Fix byte conversion (#465),,0
-12,updating to rr2,0.4849251,The new minimum RoadRunner binary version is now 2.1.1 (#258),,0
-13,Fixes RR reload by setting a different RPC port (#216),0.5340215,Add --rpc-host option for Roadrunner by @matthew-inamdar in link,feat: enable http compression by sending data not with chunked encoding - if possible Update SwooleClient.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
-14,Adds support for RoadRunner v2.6.x (#449),0.9999999,Adds support for RoadRunner v2.6.x (#449),,1
-15,Update StartRoadRunnerCommand.php,0.567356,Update InteractsWithServers.php by @ghostzero in link,support roadrunner http v3 Update InstallsRoadRunnerDependencies.php Update InstallsRoadRunnerDependencies.php Uses Roadrunner v3 only Bump dependencies Adjusts coding style Migrates to PHPUnit 10 Adds upgrade guide Ui improvements Updates upgrade guide Updates list of dependencies Adds pint Ensures latest versions of dependencies Updates upgrade guide Updates build file Fixes tests Updates upgrade guide Updates upgrade guide Update upgrade guide Update UPGRADE.md Co-authored-by: Fabio Capucci fabio.cappuc@gmail.com Co-authored-by: Taylor Otwell taylor@laravel.com,0
-16,Ignores message,0.5681397,Removes non-needed message by @nunomaduro in link,Conflicts: CHANGELOG.md,0
-17,Allow setting a max execution time for roadrunner (#37),0.55424374,RoadRunner Relay Overrides by @pmccarren in link,,0
-18,Fixes laravel/octane#287,0.62761104,Uses laravel/serializable-closure (#378),add ServerProcessInspector interface Update ServerProcessInspector.php Update ServerProcessInspector.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
-19,Update ServerProcessInspector.php (#79),0.6243546,Update InteractsWithServers.php by @ghostzero in link,,0
-20,Fix FilesystemManagerStateTest (#459),0.70832145,Fix FileNotFound error (#421)﻿,,1
-21,Require minimum Laravel version (#29),0.72612643,Laravel 9 support (#461),,1
-22,"Require ""laravel/framework"" using --dev for build (#630)",0.4792741,Support projects using type module by @timacdonald in link,,0
-23,add missing imports (#86),0.46469015,Fix FileNotFound error (#421)﻿,[1.x] Reverts #669,0
-24,Remove unuse use statement,0.5479254,Removed,,0
-25,use str_starts_with (#89),0.44582468,"Prints server logs to ""stderr"" (#326, 28cf5ee)﻿",,0
-26,Add clear the cache of APCu and Opcache,0.95638084,"Add clear the cache of APCu and Opcache (#385, 9ff568b)",Use getHost(),1
-27,Fixes cache forget return value (#72),0.6137614,Flushes Str cache between requests (#468),Give new app instance to session manager wip,0
-28,support socialite,0.33909547,Adds support for Swoole 5 by @nunomaduro in link,,0
-29,[1.x] Fix carbon locale when setting it via app locale setter (#557),0.8613018,Fix carbon locale when setting it via app locale setter by @nunomaduro in link,Give new app instance to cache manager ensure setApplication method exists,1
-30,Update 1_Bug_report.md (#130),0.44268066,Add FlushDatabaseQueryLog for cleaning up database query log (#394),,0
-31,The Issue #450 fix (#451),0.58346295,Resolve components when needed (#355),,0
-32,Just watch PHP files within public/resources directories (#247),0.47826302,Optimize PHP8.1 compatibility by @sy-records in link,add getRoutes to the providesRouting Trait Update ProvidesRouting.php Co-authored-by: charlesbilbo c.bilbo@rxmg.com Co-authored-by: Taylor Otwell taylor@laravel.com,0
-33,Bumps spiral/roadrunner on composer too,0.4847171,RoadRunner Relay Overrides by @pmccarren in link,,0
-34,max execution time for swoole,0.49764365,Fix max_execution_time config doesn't work by @sy-records in link,Fix return value error Remove useless code,0
-35,Prepare 2.x,0.4266957,Initial pre-release.﻿,Add static file headers Add support for file patterns formatting Co-authored-by: Taylor Otwell taylor@laravel.com,0
-36,[1.x] Flushes controller on route (#589),0.769081,Flushes controller on route by @nunomaduro in link,,1
-37,Merge branch 'feat/auto-rr-binary-updater',0.37407908,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",Fix timer table set failed Update octane.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
-38,[1.x] Add method to fix octane route caching.  (#659),0.87571645,Add method to fix octane route caching.  by @CharlesBilbo in link,Adds type checking Fixes tests Update .gitattributes Update static-analysis.yml,1
-39,Fix (#316),0.6803177,Resolve components when needed (#355),,0
-40,allow graceful reload after installing packages (#644),0.68127286,Allow graceful reload after installing packages by @taylorotwell in link,,0
-41,Remove variables in catches (#142),0.4410001,Remove buffer_output_size from Swoole's default options (#286),,0
-42,Fixes artisan commands exit code (#20),0.47272784,Updates octane:install command when Swoole extension is missing (#427),,0
-43,Fix typo,0.5522974,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
-44,expose the flag to turn on SWOOLE_SSL,0.9355316,"Expose the flag to turn on SWOOLE_SSL (#342, 86731cb)﻿",Fix unsetting a cookie value when using Swoole Update SwooleClient.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
-45,Adds docs about serving octane in HTTPS (#229),0.6527015,Add method to fix octane route caching.  by @CharlesBilbo in link,,0
-46,Fixes phpdocs on stream object,0.5720414,Update InteractsWithServers.php by @ghostzero in link,Ignores non necessary message Ignores non necessary message,0
-47,Adjust reload command (#199),0.5284008,Allow graceful reload after installing packages by @taylorotwell in link,,0
-48,Merge branch 'ticks',0.2989547,Resolve components when needed (#355),"The project composer.json already contain laravel/framework under require and having this line replace the ""locked"" supported versions.",0
-49,Merge pull request #193 from rochdiNassah/master,0.46382183,Add FlushDatabaseQueryLog for cleaning up database query log (#394),Adds Laravel 10 support Ignores Laravel 10 on PHP 8.0,0
-50,Add methods to facade doc block (#96),0.44272166,Add method to fix octane route caching.  by @CharlesBilbo in link,,0
-51,Fixes servers shutting down on concurrent exceptions (#419),0.5825405,"Requires to stop, and re-start your Octane server",,0
-52,Merge branch 'master' into ticks,0.3655204,Fix log level by @masterjus in link,[1.x] Adds support for Open Swoole v22.x,0
-53,Add querystring to request uri (#196),0.575899,Use getHost() by @chu121su12 in link,,0
-54,Adds support for Collision ^7.x (#643),0.765867,Adds support for Collision v7.x by @nunomaduro in link,Openswoole v22.x change swoole_cpu_num() to OpenSwoole\Util::getCPUNum() link,1
-55,Allow users to access $server with in Controller (#464),1.0,Allow users to access $server with in Controller (#464),,1
-56,Reverts #669,0.7134066,Reverts #669 by @nunomaduro in link,,1
-57,Merge pull request #12 from laravel/feat/makes-roadrunner-dependency-optional,0.5849726,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",,0
-58,[1.x] Fix byte conversion (#465),0.9560789,Fix byte conversion (#465),,1
-59,Improves octane:install command (#210),0.68637836,Updates octane:install command when Swoole extension is missing (#427),,0
-60,update change log,0.54226863,Changed,,0
-61,Add missing default listeners (#311),1.0000002,Add missing default listeners (#311)﻿,,1
-62,Update StartCommand.php,0.544644,Add possibility to launch swoole server with additional php options by @AbdelAbouhassane in link,Forces debug mode off in test Sets app debug false on swoole test,0
-63,Fixes wrong import,0.47386235,Fix FileNotFound error (#421)﻿,,0
-64,"Makes the ""SequentialTaskDispatcher"" to behave like ""SwooleTaskDispatcher"" when errors occurs (#60)",0.5061097,"Prints server logs to ""stderr"" (#326, 28cf5ee)﻿",,0
-65,List supported options (#91),0.38150713,Mission version configuration option on RoadRunner  (#482),Conflicts: CHANGELOG.md,0
-66,Updates coding style,0.4631703,Various fixes and changes.,,0
-67,warm transaction manager,0.81658584,Warm transaction manager by @taylorotwell in link,,1
-68,Merge branch 'kiddtang/1.x' into 1.x,0.37710035,Resolve components when needed (#360),,0
-69,"Revert ""A coroutine context already exists""",0.38815722,Flush shared log context by @timacdonald in link,Adds tests regarding controller __construct middleware Updates variable name Updates framework versions,0
-70,Give new app instance to database manager (#225),0.7641532,Give new application instance to database session handler (#302),,1
-71,"Undefined array key ""swoole"" (#351)",1.0000001,"Undefined array key ""swoole"" (#351)",,1
-72,Group same errors on swoole,0.5834749,Fix type declaration error of Swoole table by @sy-records in link,feat: add support for environment defined port chore: fix styleci errors formatting use env Co-authored-by: Hendrik Heil hendrik@stafftastic.com Co-authored-by: Taylor Otwell taylor@laravel.com,0
-73,Add Livewire listener and register (#400),0.9666752,Add Livewire listener (#400)﻿,Made RR log level configurable formatting Fixed subtle operator precedence bug Co-authored-by: Taylor Otwell taylor@laravel.com,1
-74,Merge branch 'rr2' of github.com:laravel/octane into rr2,0.4005197,Prefix rr binary permissions with 0 to specify it as an octal value by @Dylan-Buth in link,,0
-75,Shutdown the server on worker boot exceptions (#32),0.52719057,"Requires to stop, and re-start your Octane server",This reverts commit 8380c1345493a1e9b527e34f44daa7bd3455ea01.,0
-76,Display memory usage,0.86705524,"Display memory usage (#297, #304)",,1
-77,"[1.x] Adds tests against ""openswoole"" (#420)",0.6675755,Allow openswoole (#407)﻿,,0
-78,Set the process name when worker starts (#189),0.44916695,"Prints server logs to ""stderr"" (#326, 28cf5ee)﻿",fix: laravel/octane#598 implement rr relay override Update roadrunner-worker Update roadrunner-worker Update roadrunner-worker Co-authored-by: Taylor Otwell taylor@laravel.com,0
-79,Update CHANGELOG.md,0.64041364,Changed,,0
-80,Clean up code (#44),0.48394367,Add FlushDatabaseQueryLog for cleaning up database query log (#394),Ignore Response::create failed Update EnsureRequestsDontExceedMaxExecutionTime.php Update EnsureRequestsDontExceedMaxExecutionTime.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
-81,push static,0.3565392,Flushes controller on route by @nunomaduro in link,,0
-82,Change logo to work on Dark Theme (#381),0.36126703,"Expose the flag to turn on SWOOLE_SSL (#342, 86731cb)﻿",Flushes controller on route Adds test Adds memory leak tests Updates framework versions,0
-83,readme tweaks,0.5033836,Various fixes and changes.,,0
-84,note on config repo,0.49735326,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",add possibility to launch swoole server with php options spread config Update .gitignore Co-authored-by: Taylor Otwell taylor@laravel.com,0
-85,Rename update-changelog.md to update-changelog.yml,0.53399575,Changed,Link to official (Open)Swoole websites Revert to GitHub for Swoole,0
-86,[1.x] Validates Swoole Tables string column types (#434),0.9733076,Validates Swoole Tables string column types (#434)﻿,,1
-87,Fixes global environment variables not being taken in by workers (#257),0.93122816,Global environment variables not being used by workers (#257),Adds support for Swoole 5 Update OnWorkerStart.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
-88,Fixes stop on signals (#204),0.4937355,Add missing default listeners (#311)﻿,Fix carbon locale when setting it via app locale setter Uses latest version of Carbon Removes repositories on composer,0
-89,Fix timer table set failed (#650),0.70752513,Fix timer table set failed by @sy-records in link,Conflicts: CHANGELOG.md src/Commands/Concerns/InteractsWithServers.php,1
-90,handle env vars,0.43817365,Warm transaction manager by @taylorotwell in link,,0
-91,formatting,0.35038054,Uses laravel/serializable-closure (#378),,0
-92,Support setting swoole server mode (#666),0.73771685,Support setting swoole server mode by @sy-records in link,Fixes shared Carbon Locale between requests Apply fixes from StyleCI Co-authored-by: StyleCI Bot bot@styleci.io,1
-93,Missed param definition (#158),0.32551858,Removed,,0
-94,adding table ifno,0.3998592,Validates Swoole Tables string column types (#434)﻿,,0
-95,handle StreamedResponse,0.5328665,Flush shared log context by @timacdonald in link,,0
-96,Adds task timeout exception on timeouts (#56),0.8303286,Fix timeout value passed to taskWaitMulti (#380)﻿,,1
-97,[1.x] Fixes --watch files over a network (#488),0.5065324,Fix max_execution_time config doesn't work by @sy-records in link,,0
-98,Apply fixes from StyleCI (#42),0.50153637,Resolve components when needed (#355),refresh query duration handling adjust naming ensure only called when methods exist,0
-99,Merge branch 'patch-2' into 1.x,0.41041875,Resolve components when needed (#360),,0
-100,Merge branch 'feat/configurable-watch-paths',0.4098612,Re-do: Configurable Roadrunner log level by @ejulen in link,,0
-101,Fixes missing version option,0.48724824,Updates octane:install command when Swoole extension is missing (#427),,0
-102,Added basic roadrunner configs for healthcheck and rr commands (#149),0.6986536,Adds support for RoadRunner v2.6.x (#449),,0
-103,initial work on readme,0.34313235,Flush monolog state between requests (#460),,0
-104,Create pull-requests.yml,0.5037372,Use getHost() by @chu121su12 in link,,0
-105,wip (#26),0.40983242,Allow openswoole (#407)﻿,,0
-106,Use PHP Binary in Composer installs for Octane,0.49888298,Partial PHP 8.1 support (#402),,0
-107,[1.x] Give new app instance to cache manager (#667),0.787311,Give new app instance to cache manager by @smortexa in link,Create release.yml Update release.yml,1
-108,fix param,0.4247595,Changed,,0
-109,Remove basePath parameter (#177),0.4815429,add silent option to RoadRunner reset to remove info output which leads to non error by @ResuBaka in link,,0
-110,Makes watch paths configurable,0.51085776,Made Roadrunner log level configurable by @ejulen in link,test flushing logger shared context ignore Laravel 8 style,0
-111,Prepare release,0.716908,Initial pre-release.﻿,,1
-112,"Prints server logs to ""stderr""",0.9115113,"Prints server logs to ""stderr"" (#326, 28cf5ee)﻿",Using unused $paths variable,1
-113,Update phpunit.xml.dist,0.47426724,Revert PaginationState to resolve using new instance of the app by @farmani in link,Revert PaginationState to resolve using new instance of the app on each new request Use sandbox clone of application instance,0
-114,"Fix dispatchProcessSignal, check if the process exists before kill (#117)",0.55683446,Fix timeout value passed to taskWaitMulti (#380)﻿,,0
-115,Fix return value error and Remove useless code (#655),0.60082215,Fix return value error and Remove useless code by @sy-records in link,,0
-116,Merge branch 'swooleMaxExecutionTime',0.48209667,Fix max_execution_time config doesn't work by @sy-records in link,,0
-117,"Fix undefined array key ""type"" on empty array dump (#413)",0.99999994,"Fix undefined array key ""type"" on empty array dump (#413)﻿",,1
-118,Apply fixes from StyleCI (#38),0.53145826,Resolve components when needed (#355),Fix max_execution_time config doesn't work Add extension_loaded swoole verify Update EnsureRequestsDontExceedMaxExecutionTime.php Update EnsureRequestsDontExceedMaxExecutionTime.php,0
-119,Apply fixes from StyleCI (#3),0.4994743,Resolve components when needed (#355),,0
-120,better install error (#53),0.42038733,Fix FileNotFound error (#421)﻿,,0
-121,Use extension_loaded instead of function_exists (#233),0.42191267,Reload RoadRunner using the global executable if it's present (#288)﻿,make the bin file used by swoole and roadrunner configurable options Update StartRoadRunnerCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
-122,Merge pull request #5 from laravel/fix/phpdocs-within-stream,0.52366865,Update InteractsWithServers.php by @ghostzero in link,,0
-123,fix: resolve typo resulting in deprecation notice (#614),0.7258612,Resolve typo resulting in deprecation notice by @owenvoke in link,,1
-124,Log level fix (#456),0.7813634,Log level used in non-local environments (#456),Update FlushTemporaryContainerInstances.php Apply fixes from StyleCI Co-authored-by: StyleCI Bot bot@styleci.io,1
-125,Add support for custom HTTP headers on static files (#653),0.88346064,Add support for custom HTTP headers on static files by @Starfox64 in link,,1
-126,update readme,0.4334017,Allow graceful reload after installing packages by @taylorotwell in link,,0
-127,Improves handling multiple versions of openswoole,0.6762775,Allow openswoole (#407)﻿,,0
-128,Skip tests on openswoole that require mock response (#429),0.62376654,Allow openswoole (#407)﻿,,0
-129,Remove buffer_output_size from Swoole's default options (#286),0.9999998,Remove buffer_output_size from Swoole's default options (#286),,1
-130,a coroutine context already exists,0.3868611,Flush shared log context by @timacdonald in link,,0
-131,fix coding styles,0.3925919,Fix type declaration error of Swoole table by @sy-records in link,Fixes --watch files over a network Adds --poll option Apply fixes from StyleCI formatting Co-authored-by: StyleCI Bot bot@styleci.io Co-authored-by: Taylor Otwell taylor@laravel.com,0
-132,fix: ensure Testbench vendor symlink exists (#616),0.57288355,Fix timer table set failed by @sy-records in link,,0
-133,Apply StyleCI fix again,0.42036793,Allow graceful reload after installing packages by @taylorotwell in link,,0
-134,Use env helper to set server config (#80),0.68375516,Make IP to bind the server to configurable via env by @xorinzor in link,[1.x] Fixes missing version option,0
-135,Apply fixes from StyleCI (#217),0.5170661,Resolve components when needed (#355),,0
-136,Adds missing test in sequential dispatcher (#58),0.5024962,Fix issue where timed out tasks were not taken into account (#396)﻿,,0
-137,Apply fixes from StyleCI (#13),0.49556494,Resolve components when needed (#355),,0
-138,Refactors start commands,0.5819414,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",,0
-139,Apply StyleCI fix,0.43513548,Fix carbon locale when setting it via app locale setter by @nunomaduro in link,Throw deprecations Fix null deprecation,0
-140,Merge branch 'feat/proxy-raw-output-to-stderr' into 1.x,0.42313427,Force the processId to int by @sy-records in link,,0
-141,Fixes missing output on error (#55),0.61667705,Fix FileNotFound error (#421)﻿,"Listener for removing temporary files, which was created during uploading cs fixes Changelog updated Changelog updated Changelog updated add files simplify code rename again Co-authored-by: Taylor Otwell taylor@laravel.com",0
-142,Removes shutdown handler (#211),0.51326805,Reset application scope to flush scoped instances (#313),,0
-143,Updates upgrade guide,0.54656076,Various fixes and changes.,,0
-144,Fix timeout value passed to taskWaitMulti (#380),0.99999994,Fix timeout value passed to taskWaitMulti (#380)﻿,,1
-145,"Removes "" We are still in the process of ensuring Octane compatibility with all first-party Laravel packages."" (#219)",0.60472655,Laravel 9 support (#461),Conflicts: CHANGELOG.md,0
-146,Create issues.yml,0.43419677,Resolve components when needed (#355),,0
-147,Fix max_execution_time config doesn't work (#510),0.75059736,Fix max_execution_time config doesn't work by @sy-records in link,Flushes Str cache between requests Bumps framework version,1
-148,Fix unsetting a cookie value when using Swoole (#642),0.82380354,Fix unsetting a cookie value when using Swoole by @oprypkhantc in link,Fix byte conversion Fix test,1
-149,[1.x] Fix passing null to cookie for domain (#478),0.8513817,Fix passing null to cookie for domain by @driesvints in link,,1
-150,Handle empty responses (#195),0.5206905,Flush monolog state between requests (#460),,0
-151,module,0.4945338,Support projects using type module by @timacdonald in link,Laravel 9 support Update tests.yml Update composer.json Re-adds collision Sorts composer json dependencies Co-authored-by: Nuno Maduro enunomaduro@gmail.com,0
-152,Merge pull request #423 from vokamut/patch-2,0.51232797,Fix FileNotFound error (#421)﻿,,0
-153,Merge branch 'pr2' into 1.x,0.36155173,Resolve components when needed (#360),Fix FilesystemManagerStateTest Use available $app instance,0
-154,"Remove µs string before multiply, fix return type (#227)",0.4976377,Resolve components when needed (#355),,0
-155,"Revert ""Only streams throwable when env is not local""",0.5058323,Make IP to bind the server to configurable via env by @xorinzor in link,,0
-156,Use cli_set_process_title instead of swoole_set_process_name (#133),0.48703635,Force the processId to int by @sy-records in link,There was the PR to master which is fixes the issue #450 but it was not merged to the last version. The same fix is here,0
-157,remove beta warning,0.8227407,"Remove beta warning on ""octane:start"" command (5b25510)﻿",,1
-158,remove note from docs,0.5059891,Removed,,0
-159,wip (#27),0.44791892,Allow openswoole (#407)﻿,Co-authored-by: Eugene Kirdzei e.ki@nuwber.com,0
-160,Adds SameSite attribute for cookies (#299),1.0000001,Adds SameSite attribute for cookies (#299)﻿,Conflicts: CHANGELOG.md,1
-161,Adds status command (#207),0.48873067,Updates octane:install command when Swoole extension is missing (#427),,0
-162,Apply fixes from StyleCI (#262),0.54232585,Resolve components when needed (#355),,0
-163,Update issue_template (#261),0.5275699,Resolve components when needed (#355),,0
-164,Fix indentation for function (#43),0.56219244,Resolve components when needed (#355),[1.x] Adds links to Swoole / Open Swoole documentation Update README.md Co-authored-by: Taylor Otwell taylor@laravel.com,0
-165,Adds partial PHP 8.1 support (#402),0.9679069,Partial PHP 8.1 support (#402),Conflicts: CHANGELOG.md,1
-166,Update rr.yaml (#209),0.47006416,The new minimum RoadRunner binary version is now 2.1.1 (#258),,0
-167,Merge pull request #107 from shuvroroy/patch/fix-exception-issue,0.5642163,Fix Swoole breaks when log is a valid JSON (#316),Validates Swoole Tables string column types Uses a separated table definition for each swoole / openswoole tables Adds missing import Removes original table Adds missing requires Refactors ensures column sizes Apply fixes from StyleCI Fixes Swoole column declaration Co-authored-by: Taylor Otwell taylorotwell@users.noreply.github.com,0
-168,Test on PHP 8.2 (#606),0.68339807,Partial PHP 8.1 support (#402),,0
-169,Fixes missing property on task exception (#74),0.58636147,Fix issue where timed out tasks were not taken into account (#396)﻿,Fixes issue where php://temp may be full Update InteractsWithServers.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
-170,Ignores messages startingWith,0.572234,Removes internal messages from output by @nunomaduro in link,,0
-171,[1.x] Fix Symfony uploaded file moving (#317),0.97843933,Fix Symfony uploaded file moving (#317)﻿,,1
-172,Apply fixes from StyleCI (#11),0.47852543,Resolve components when needed (#355),Conflicts: CHANGELOG.md,0
-173,"Make sure file is not empty, test outside public (#179)",0.42713583,Fix FileNotFound error (#421)﻿,,0
-174,Re-do: Configurable Roadrunner log level (#604),0.8721452,Re-do: Configurable Roadrunner log level by @ejulen in link,Remove unuse use statement,1
-175,Fix typo in handleTask function,0.47764075,Fix type declaration error of Swoole table by @sy-records in link,,0
-176,Get memory from request if is  available if not use memory_get_usage function.,0.51291454,"Display memory usage (#297, #304)",,0
-177,Uses rr binary in favour of rr cli (#23),0.56710196,Prefix rr binary permissions with 0 to specify it as an octal value by @Dylan-Buth in link,Conflicts: CHANGELOG.md,0
-178,first,0.48029035,Initial pre-release.﻿,,0
-179,Stop servers on console signals (#35),0.5944202,"Requires to stop, and re-start your Octane server",Tests against open-swoole Fixes openswoole package name Continues on error on swoole Makes tests in a single file wip Update tests.yml Update tests.yml Update tests.yml Update tests.yml Update tests.yml Co-authored-by: Dries Vints dries@vints.io,0
-180,Updates code style,0.5010161,Various fixes and changes.,,0
-181,add ServerProcessInspector interface (#679),0.77478164,Add ServerProcessInspector interface by @yiming0 in link,Conflicts: CHANGELOG.md,1
-182,[1.x] Fixes test_error_method_sends_error_response_to_roadrunner test (#613),0.54336315,RoadRunner Relay Overrides by @pmccarren in link,,0
-183,[2.x] Adds support for RoadRunner v3 and updates dependencies (#690),0.87367034,Adds support for RoadRunner v2.6.x (#449),Fixes memory leak on translator keys Apply fixes from StyleCI Bumps framework dependency Co-authored-by: Taylor Otwell taylorotwell@users.noreply.github.com,1
-184,augment docs,0.49202275,Various fixes and changes.,Conflicts: CHANGELOG.md,0
-185,Fixes CommandTest failing test,0.40170938,Fix timeout value passed to taskWaitMulti (#380)﻿,,0
-186,Use constants instead of hard coding (#224),0.43516868,Fix byte conversion (#465),"FIX:  Undefined array key ""type"" on empty array dump Update src/Commands/Concerns/InteractsWithIO.php Co-authored-by: Dries Vints dries@vints.io Update InteractsWithIO.php Co-authored-by: Taylor Otwell taylor@laravel.com Co-authored-by: Dries Vints dries@vints.io",0
-187,fix return types,0.49418747,"Fix undefined array key ""type"" on empty array dump (#413)﻿",Conflicts: CHANGELOG.md,0
-188,Typo (#85),0.34594685,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
-189,Improves exception handling on RR (#31),0.46693656,Prefix rr binary permissions with 0 to specify it as an octal value by @Dylan-Buth in link,Update phpunit.xml.dist,0
-190,"Replace ""Next"" with ""First"" (#19)",0.31972623,Initial pre-release.﻿,,0
-191,Delete release.yml,0.5605843,Removed,,0
-192,Handle invalid server option in octane:start,0.7533314,"Requires to stop, and re-start your Octane server",,1
-193,Merge pull request #8 from laravel/driesvints-patch-1,0.5181971,Flushes Str cache between requests (#468),,0
-194,Make the bin files used by Swoole and Roadrunner config options (#502),0.90736586,Make the bin files used by Swoole and Roadrunner config options by @jedjones-uk in link,Conflicts: CHANGELOG.md,1
-195,Merge pull request #626 from laravel/patch-1,0.55927396,Uses laravel/serializable-closure (#378),,0
-196,Makes dd compatible with Octane (#146),0.5523196,Updates octane:install command when Swoole extension is missing (#427),,0
-197,Adds console UX improvements,0.47663257,Adds support for PSR-7 v2.x by @nunomaduro in link,Conflicts: CHANGELOG.md,0
-198,Update 1_Bug_report.md,0.47067213,Various fixes and changes.,,0
-199,Merge pull request #358 from lufei/fix-typo,0.51748383,Fix Symfony uploaded file moving (#317)﻿,Fix issue where timed out tasks were not taken into account Update SwooleTaskDispatcher.php Co-authored-by: Dries Vints dries@vints.io,0
-200,Added status codes (RFC6585 & RFC7725) (#550),0.47805423,Add Livewire listener (#400)﻿,,0
-201,add note,0.38422826,Adds support for Swoole 5 by @nunomaduro in link,Uses laravel/serializable-closure Updates framework version,0
-202,Added --rpc-host option (#619),0.7403123,Add --rpc-host option for Roadrunner by @matthew-inamdar in link,,1
-203,Merge pull request #676 from laravel/fix/broken-session-set-container-l,0.5032574,Uses laravel/serializable-closure (#378),,0
-204,wip,0.38851225,Allow openswoole (#407)﻿,Conflicts: CHANGELOG.md,0
-205,Removes unreleased notes,0.62889767,Removed,,0
-206,"Report error when server fails to stop, waits server to stop. (#203)",0.5888728,"Requires to stop, and re-start your Octane server",,0
-207,Update .styleci.yml,0.43490285,Revert PaginationState to resolve using new instance of the app by @farmani in link,,0
-208,[1.x] Flushes Str cache between requests (#468),0.9740001,Flushes Str cache between requests (#468),Change logo to work on Dark Theme Increase size to match,1
-209,Fixes docblocks on start command (#73),0.500503,Fix FileNotFound error (#421)﻿,,0
-210,Handle invalid server option in octane:stop,0.760028,"Requires to stop, and re-start your Octane server",,1
-211,Updates changelog,0.55870116,Various fixes and changes.,Conflicts: CHANGELOG.md,0
-212,support projects using type module (#696),0.7530805,Support projects using type module by @timacdonald in link,,1
-213,Merge branch 'pr12620',0.3743467,Resolve components when needed (#355),,0
-214,Apply fixes from StyleCI (#33),0.52868515,Resolve components when needed (#355),resolve components when needed reindent doc Co-authored-by: foremtehan foremtehan@gmailcom,0
-215,Update update-changelog.yml,0.48905763,Changed,Fix the bug of Swoole\Table using array access Remove ArrayObject,0
-216,Fix FileNotFound error (#421),1.0,Fix FileNotFound error (#421)﻿,Fix typo,1
-217,Update CHANGELOG,0.66969,Changed,,0
-218,Move FakeClient and FakeWorker to Laravel\Octane\Testing namespace (#51),0.49436527,Laravel 9 support (#461),Conflicts: CHANGELOG.md,0
-219,Only displays source when there is source (#640),0.7004525,Only displays source when there is source by @nunomaduro in link,,1
-220,RoadRunner Relay Overrides (#600),0.85804904,RoadRunner Relay Overrides by @pmccarren in link,resolve components when needed resolve components when needed fix tests indent doc Co-authored-by: foremtehan foremtehan@gmailcom,1
-221,Fixes issue related to changing non-standard HTTP status codes to 200 OK,0.48904154,Fix Swoole breaks when log is a valid JSON (#316),Only uses SWOOLE_SSL if exists Adds guard Co-Authored-By: 沈唁 lufei@php.net Co-authored-by: 沈唁 lufei@php.net,0
-222,Apply fixes from StyleCI (#228),0.5039687,Resolve components when needed (#355),"PHP Warning:  Undefined array key ""swoole"" in /var/www/vendor/laravel/octane/bin/createSwooleServer.php on line 10",0
-223,Prefix rr binary permissions with 0 to specify it as an octal value (#611),0.9176574,Prefix rr binary permissions with 0 to specify it as an octal value by @Dylan-Buth in link,,1
-224,build,0.34656596,Various fixes and changes.﻿,,0
-225,Update InteractsWithServers.php (#671),0.7977812,Update InteractsWithServers.php by @ghostzero in link,Conflicts: CHANGELOG.md,1
-226,Fix option param error (#205),0.4235031,Fix the bug of Swoole\Table using array access (#359)﻿,,0
-227,Updates tests,0.5419173,Various fixes and changes.,,0
-228,Apply fixes from StyleCI (#156),0.48884633,Resolve components when needed (#355),,0
-229,"Makes the ""SwooleHttpTaskDispatcher"" to behave like ""SwooleTaskDispatcher"" when errors occurs (#59)",0.537472,"Expose the flag to turn on SWOOLE_SSL (#342, 86731cb)﻿",,0
-230,Update MarshalsPsr7RequestsAndResponses.php,0.60203016,Update InteractsWithServers.php by @ghostzero in link,,0
-231,Update release.yml,0.48335984,Stable release.,,0
-232,Force the processId to int (#507),0.5906852,Force the processId to int by @sy-records in link,,0
-233,Fix FilesystemManager app instance (#458),0.77066445,Give the current App instance to FilesystemManager (#458),Conflicts: CHANGELOG.md,1
-234,Update Swoole default options (#253),0.5744306,Adds support for Open Swoole v22.x by @nunomaduro in link,,0
-235,add notice,0.4468314,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
-236,Remove test docblock,0.49617976,Removed,Addresses #332: pass config-file path for roadrunner style check absolute path foramtting Co-authored-by: Taylor Otwell taylorotwell@gmail.com,0
-237,[1.x] Adds support for Swoole 5 (#560),0.7662077,Adds support for Swoole 5 by @nunomaduro in link,,1
-238,Fixed typos (#84),0.52772963,Resolve typo resulting in deprecation notice by @owenvoke in link,Conflicts: CHANGELOG.md,0
-239,Update pull-requests.yml,0.5159198,Allow graceful reload after installing packages by @taylorotwell in link,,0
-240,Update .styleci.yml (#494),0.41759497,Revert PaginationState to resolve using new instance of the app by @farmani in link,,0
-241,Refresh query duration handling (#541),0.76867074,Refresh query duration handling by @timacdonald in link,Conflicts: CHANGELOG.md,1
-242,Remove unused import,0.600022,Removed,,0
-243,remove use statement,0.6119076,Removed,Set roadrunner http.middlware as an option Update comment accoring to StyleCI Update octane.php Update StartRoadRunnerCommand.php Update StartRoadRunnerCommand.php Co-authored-by: Maxime Layat mla@iec.ch Co-authored-by: Taylor Otwell taylor@laravel.com,0
-244,Typo (#192),0.3696803,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
-245,update readme for sail,0.39145276,Adds support for Open Swoole v22.x by @nunomaduro in link,,0
-246,Update link to OpenSwoole website (#569),0.6991494,Allow openswoole (#407)﻿,Conflicts: CHANGELOG.md,0
-247,[1.x] Give new container instance to session manager (#669),0.8268195,Give new container instance to session manager by @smortexa in link,,1
-248,Merge branch 'driesvints-patch-2',0.3472438,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",,0
-249,Removes spatie/once dependency (#24),0.51050776,Removed,,0
-250,Remove union type return,0.4400065,Removed,,0
-251,Fixes typo within worker docs,0.53236365,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
-252,load deferred providers (#67),0.5254514,Default --watch options making Octanes servers reload on file uploads (#247),,0
-253,test: run SwooleClientTest on openswoole as well. (#692),0.62354875,Allow openswoole (#407)﻿,fix(symfony): uploaded files moving make clear,0
-254,Typo,0.34602386,Resolve typo resulting in deprecation notice by @owenvoke in link,Co-authored-by: Henrique Bremenkanp henrique.bremenkanp@rakuten.com,0
-255,[1.x] Avoids usage of SWOOLE_SSL when openssl is not configured on swoole (#357),0.9849595,Avoids usage of SWOOLE_SSL when openssl is not configured on swoole (#357)﻿,reset application scope to flush scoped instances wip wip Apply fixes from StyleCI (#314) fix style,1
-256,Fixes call terminate() on null when worker is not booted (#445),0.44204062,Fix timeout value passed to taskWaitMulti (#380)﻿,Conflicts: CHANGELOG.md,0
-257,Merge pull request #482 from laravel/fix/version-option,0.5129566,Uses laravel/serializable-closure (#378),,0
-258,Apply fixes from StyleCI (#245),0.50925577,Resolve components when needed (#355),,0
-259,actually kill octane server,0.7192344,"Requires to stop, and re-start your Octane server",Two listeners were missing in the default config. This adds them.,1
-260,remove logger,0.54911464,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",,0
-261,Update InteractsWithServers.php,0.8099952,Update InteractsWithServers.php by @ghostzero in link,Conflicts: CHANGELOG.md,1
-262,Merge pull request #14 from laravel/tests/report-exception-test,0.48072687,Fix Swoole breaks when log is a valid JSON (#316),,0
-263,Merge branch 'patch-1',0.38091376,Resolve components when needed (#360),Displays memory usage from workers and only on swoole Apply fixes from StyleCI (#303),0
-264,Apply fixes from StyleCI (#76),0.48980236,Resolve components when needed (#355),,0
-265,Add void return to event listeners (#78),0.6528386,Add missing default listeners (#311)﻿,,0
-266,Adds warning about usage outside local env (#77),0.43988067,Reload RoadRunner using the global executable if it's present (#288)﻿,,0
-267,"Reload must run, otherwise throw error (#178)",0.49172518,Reload RoadRunner using the global executable if it's present (#288)﻿,,0
-268,Fix StyleCI & Tests,0.4321251,Resolve components when needed (#355),,0
-269,use chunk size of 1,0.47887215,Remove buffer_output_size from Swoole's default options (#286),,0
-270,[1.x] Fix issue where timed out tasks were not taken into account (#396),0.9721177,Fix issue where timed out tasks were not taken into account (#396)﻿,,1
-271,use strlen,0.43752006,Validates Swoole Tables string column types (#434)﻿,,0
-272,Use the latest dependencies of its dependencies,0.52914983,Adds support for RoadRunner v3 and updates dependencies by @nunomaduro in link,,0
-273,Groups errors because of tasks (#48),0.59912956,Fix issue where timed out tasks were not taken into account (#396)﻿,"Since the Laravel documentation does not provide how to check for memory leaks, many developers will opt in to use the Laravel debug bar but i found out that the debug bar it has a memory leak, so displaying the memory usage as well as the duration will help to easy spot, memory leaks without external tools.",0
-274,Remove unused import (#324),0.5302831,Removed,,0
-275,Improve console exceptions,0.38497078,Reset application scope to flush scoped instances (#313),Fix typo,0
-276,"Revert ""Made RR log level configurable (#601)"" (#603)",0.7349092,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",,1
-277,Merge branch 'pr21448',0.38111675,Resolve components when needed (#355),,0
-278,Add swoole/ide-helper to require-dev (#159),0.6040389,Adds support for Open Swoole v22.x by @nunomaduro in link,,0
-279,Update and rename 1_Bug_report.md to 1_Bug_report.yml,0.4654184,Update to new forgetScopedInstances method name by @driesvints in link,Conflicts: CHANGELOG.md,0
-280,feat: compatibility with openswoole v22.x,0.6897453,Adds support for Open Swoole v22.x by @nunomaduro in link,,0
-281,Merge pull request #175 from albertcht/patch-1,0.4815536,Flushes Str cache between requests (#468),,0
-282,Release v1.0.15,0.61447823,Initial pre-release.﻿,,0
-283,Update README.md,0.45876545,Allow graceful reload after installing packages by @taylorotwell in link,,0
-284,Merge pull request #165 from rochdiNassah/patch-1,0.5431564,Flushes Str cache between requests (#468),Fix #260,0
-285,Set roadrunner http.middlware as an option (#327),0.9831626,Set roadrunner http.middleware as an option (#327),Conflicts: CHANGELOG.md,1
-286,Use new class notation (#141),0.3952102,Update to new forgetScopedInstances method name by @driesvints in link,,0
-287,Merge pull request #10 from laravel/revert-6-pr17161,0.5270917,Uses laravel/serializable-closure (#378),,0
-288,Use PhpExecutableFinder for Octane server command,0.5750108,"Requires to stop, and re-start your Octane server",,0
-289,Only streams throwable when env is not local (#49),0.5020219,Make IP to bind the server to configurable via env by @xorinzor in link,Conflicts: CHANGELOG.md,0
-290,fix duration,0.54457986,Refresh query duration handling by @timacdonald in link,,0
-291,[1.x] Resolve components when needed (2) (#360),0.9283663,Resolve components when needed (#360),,1
-292,Fixes risky test,0.37005422,"Remove beta warning on ""octane:start"" command (5b25510)﻿",,0
-293,Merge branch 'handle-invalid-server',0.41532147,Fix timer table set failed by @sy-records in link,,0
-294,Merge branch 'pr1785',0.33889493,Resolve components when needed (#355),,0
-295,Adds entry to readme,0.37851503,Add missing default listeners (#311)﻿,,0
-296,Apply fixes from StyleCI (#312),0.5520812,Resolve components when needed (#355),,0
-297,[1.x] Adds type checking (#649),0.4587963,Validates Swoole Tables string column types (#434)﻿,,0
-298,Makes collision dependency optional,0.47996306,Adds support for Collision v7.x by @nunomaduro in link,,0
-299,Fix memory leaks (#181),0.5815739,"Display memory usage (#297, #304)",,0
-300,Grammar fix (#83),0.42689008,Various fixes and changes.,"Removes non needed ""dotenv"" option in roadrunner Updates changelog",0
-301,Addresses #332: pass config-file path for roadrunner (#335),0.7138636,Set roadrunner http.middleware as an option (#327),Fixes the way Octane handles environment variables Updates changelog,1
-302,Update grammar,0.5814209,Changed,,0
-303,"Since 4.1.7, swoole is called openswoole (#407)",0.69364214,Allow openswoole (#407)﻿,Remove test docblock,0
-304,Optimized the memory usage when writing chunks (#138),0.6962894,"Display memory usage (#297, #304)",,0
-305,[1.x] Update to new forgetScopedInstances method name (#501),0.8811814,Update to new forgetScopedInstances method name by @driesvints in link,Remove unused import,1
-306,set running in console env var,0.4030105,Make IP to bind the server to configurable via env by @xorinzor in link,,0
-307,Merge pull request #170 from eleven26/master,0.45485103,Fix log level by @masterjus in link,,0
-308,Merge pull request #6 from laravel/pr17161,0.53188324,Uses laravel/serializable-closure (#378),,0
-309,[1.x] Ignore Response::create failed (#590),0.56657803,Ignore Response::create failed by @sy-records in link,,0
-310,support .laravel directory,0.49633002,Adds Laravel 10 support by @nunomaduro in link,,0
-311,document more,0.34969476,Uses laravel/serializable-closure (#378),,0
-312,wrap task result (#69),0.5529117,Resolve components when needed (#355),Fix typo,0
-313,Made RR log level configurable (#601),0.7344248,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",,1
-314,Fix coding styles,0.38981384,Various fixes and changes.﻿,Adds docs about serving octane in HTTPS Update README.md Co-authored-by: Taylor Otwell taylor@laravel.com,0
-315,Merge pull request #251 from shuvroroy/patch-5,0.48177063,Fix the bug of Swoole\Table using array access (#359)﻿,,0
-316,Fixes request output on roadrunner (#22),0.6450025,Fix config key for roadrunner http.middlware (#333)﻿,Co-authored-by: Andrej Mihaliak andrej.mihaliak@wbpo.sk,0
-317,Flush monolog state (#460),0.8195713,Flush monolog state between requests (#460),,1
-318,Moved opcache clearing to before bootWorker (#547),0.9042766,Moved opcache clearing to before bootWorker by @LauJosefsen in link,,1
-319,Optimize PHP8.1 compatibility (#499),0.75292385,Optimize PHP8.1 compatibility by @sy-records in link,,1
-320,Normalize composer file (#71),0.4231837,Fix FileNotFound error (#421)﻿,give new app instance to database manager Update ProvidesDefaultConfigurationOptions.php Update GiveNewApplicationInstanceToDatabaseManager.php Apply fixes from StyleCI (#226) Co-authored-by: Taylor Otwell taylor@laravel.com,0
-321,"[1.x] Fixes sharing ""Carbon"" state shared between requests  (#552)",0.51764894,Flush monolog state between requests (#460),,0
-322,Merge pull request #249 from shuvroroy/patch-3,0.48060244,Fix the bug of Swoole\Table using array access (#359)﻿,,0
-323,Only streams throwable when env is not local,0.5176959,Make IP to bind the server to configurable via env by @xorinzor in link,,0
-324,Adds docs about the octane:status command (#212),0.6514953,Updates octane:install command when Swoole extension is missing (#427),,0
-325,Use start instead of run (#182),0.57388717,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",,0
-326,Reset application scope to flush scoped instances (#313),1.0,Reset application scope to flush scoped instances (#313),,1
-327,[1.x] Read port for http server from environment if no port is passed  (#605),0.89620245,Read port for http server from environment if no port is passed  by @hendrikheil in link,,1
-328,Fix type declaration error of Swoole table (#452),0.8173182,Fix type declaration error of Swoole table by @sy-records in link,,1
-329,Merge pull request #292 from lufei/typo,0.47433108,Resolve typo resulting in deprecation notice by @owenvoke in link,Only logs errors in production Update StartSwooleCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
-330,Merge branch 'rr2',0.3937159,Prefix rr binary permissions with 0 to specify it as an octal value by @Dylan-Buth in link,,0
-331,dark mode logo,0.35336626,The new minimum RoadRunner binary version is now 2.1.1 (#258),,0
-332,Adds report exceptions test,0.34514463,Validates Swoole Tables string column types (#434)﻿,Adds docs about the octane:stop command Update README.md Co-authored-by: Taylor Otwell taylor@laravel.com,0
-333,Displays memory usage from workers and only on swoole (#304),0.77707577,"Display memory usage (#297, #304)",,1
-334,Updates message,0.4830584,Various fixes and changes.﻿,,0
-335,Create update-changelog.md,0.49324548,Various fixes and changes.,,0
-336,Reformat multi-line constructors (#167),0.5025381,Uses laravel/serializable-closure (#378),,0
-337,add FlushDatabaseQueryLog for cleaning up database query log (#394),0.9995439,Add FlushDatabaseQueryLog for cleaning up database query log (#394),Improves install command Update InstallsRoadRunnerDependencies.php Update SwooleExtension.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
-338,Apply fixes from StyleCI,0.46694607,Support projects using type module by @timacdonald in link,,0
-339,"Removes beta warning on ""octane:start"" command",0.964746,"Remove beta warning on ""octane:start"" command (5b25510)﻿",,1
-340,Apply fixes from StyleCI (#30),0.53139025,Resolve components when needed (#355),,0
-341,test flushing logger shared context (#514),0.6966554,Flush shared log context by @timacdonald in link,,0
-342,[1.x] Adds Laravel 10 support (#629),0.8280707,Laravel 9 support (#461),,1
-343,Removes non-needed message about worker destroyed (#532),0.53431535,Removes non-needed message by @nunomaduro in link,,0
-344,[1.x] Adds links to Swoole / Open Swoole documentation (#441),0.7121696,Adds support for Open Swoole v22.x by @nunomaduro in link,,1
-345,Fixes code styling issue,0.4236829,Resolve components when needed (#355),,0
-346,Fixes tests,0.55374575,Various fixes and changes.,Simplify autoload code of bootstrap.php. Remove ineffective use statement. Wait for the specified number of seconds when the server fails to stop. Report error when server fails to stop. Update SignalDispatcher. Update StopCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
-347,Update tests.yml,0.40915748,Updates octane:install command when Swoole extension is missing (#427),Waits for console feedback before reload server Fixes tests,0
-348,Merge branch 'pr12620' of github.com:laravel/octane into pr12620,0.39571857,Revert PaginationState to resolve using new instance of the app by @farmani in link,handle empty responses Apply fixes from StyleCI (#194) Update src/Swoole/SwooleClient.php Co-authored-by: Andrea Marco Sartori andrea.marco.sartori@gmail.com Co-authored-by: Taylor Otwell taylor@laravel.com Co-authored-by: Andrea Marco Sartori andrea.marco.sartori@gmail.com,0
-349,Flush locale state between request (#63),0.67404485,Flush monolog state between requests (#460),Add querystring to request uri Update ConvertSwooleRequestToIlluminateRequest.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
-350,Merge pull request #232 from lufei/typo,0.46509764,Revert PaginationState to resolve using new instance of the app by @farmani in link,Typo,0
-351,Exit when watcher fails,0.41906482,Fix timeout value passed to taskWaitMulti (#380)﻿,,0
-352,handle real strams,0.33229035,Various fixes and changes.,,0
-353,"Makes ""spiral/roadrunner"" an optional package",0.7146274,Adds support for RoadRunner v2.6.x (#449),Set the process name when worker starts Update swoole-server Update OnWorkerStart.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
-354,Adds docs about the octane:stop command (#214),0.6689632,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",,0
-355,Update InstallsRoadRunnerDependencies.php,0.6336955,Adds support for RoadRunner v3 and updates dependencies by @nunomaduro in link,,0
-356,add possibility to launch swoole server with additional php options (#570),0.88398015,Add possibility to launch swoole server with additional php options by @AbdelAbouhassane in link,,1
-357,Apply fixes from StyleCI (#1),0.4941743,Resolve components when needed (#355),fix memory leaks flush the entire sandbox container Apply fixes from StyleCI (#186),0
-358,use swooleResponse- (#176),0.5801409,"Expose the flag to turn on SWOOLE_SSL (#342, 86731cb)﻿",,0
-359,Apply fixes from StyleCI (#152),0.4877106,Resolve components when needed (#355),Co-authored-by: Taylor Otwell taylor@laravel.com,0
-360,feat: enable http compression by sending data not with chunked encodi… (#691),0.9278349,feat: enable http compression by sending data not with chunked encodi… by @DeepDiver1975 in link,,1
-361,Update 1_Bug_report.yml,0.47103432,Add FlushDatabaseQueryLog for cleaning up database query log (#394),,0
-362,[1.x] Removes internal messages from output (#639),0.6787124,Removes internal messages from output by @nunomaduro in link,,0
-363,Merge pull request #147 from laravel/driesvints-patch-1,0.53387624,Uses laravel/serializable-closure (#378),,0
-364,fix comment,0.4427353,Various fixes and changes.,Fix typo in handleTask function,0
-365,"Revert ""Stop servers on console signals (#35)"" (#40)",0.601321,"Requires to stop, and re-start your Octane server",,0
-366,flush shared log context (#513),0.79555297,Flush shared log context by @timacdonald in link,,1
-367,Minor word change (#139),0.61664015,Changed,,0
-368,add test,0.3240984,Various fixes and changes.,,0
-369,Apply fixes from StyleCI (#7),0.481535,Resolve components when needed (#355),,0
-370,[1.x] Adds tests regarding flushing controller is computed middleware (#595),0.45666775,Resolve components when needed (#355),,0
-371,Auto generate release notes (#529),0.46662748,"Remove beta warning on ""octane:start"" command (5b25510)﻿",fix comment,0
-372,Adds missing changelog entries,0.47668976,Add FlushDatabaseQueryLog for cleaning up database query log (#394),,0
-373,"Revert ""Revert ""Stop servers on console signals (#35)"" (#40)"" (#41)",0.5520538,"Requires to stop, and re-start your Octane server",,0
-374,Add failing test for array cache should be flush between request. (#64),0.6598251,Flushes Str cache between requests (#468),,0
-375,Adds install artisan command (#52),0.44796944,Updates octane:install command when Swoole extension is missing (#427),,0
-376,Update test to display the memory usage,0.7573943,"Display memory usage (#297, #304)",Typo,1
-377,Kills manager when stopping server (#36),0.5393641,"Requires to stop, and re-start your Octane server",,0
-378,Update composer.json (#46),0.43836686,Revert PaginationState to resolve using new instance of the app by @farmani in link,"fix typo, fix param",0
-379,Merge branch 'swoole-serve-files-from-symlink',0.52757066,Make the bin files used by Swoole and Roadrunner config options by @jedjones-uk in link,,0
-380,Fix facade autoloading,0.40599465,Resolve components when needed (#360),,0
-381,Merge pull request #4 from laravel/fix/worker-docs-typo,0.5091051,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
-382,Merge pull request #166 from eleven26/master,0.46775323,Fix log level by @masterjus in link,,0
-383,[1.x] Resolve components when needed (#355),0.94950855,Resolve components when needed (#355),,1
-384,Fix exception issue,0.51158977,Fix FileNotFound error (#421)﻿,,0
-385,Allows serve static empty file (#162),0.53591526,Fix FileNotFound error (#421)﻿,Test streamed response Update mock,0
-386,Merge branch 'master' of github.com:laravel/octane,0.4183461,Fix log level by @masterjus in link,,0
-387,Laravel 9 support (#461),0.9999999,Laravel 9 support (#461),,1
-388,Update InteractsWithServers.php (#520),0.7989564,Update InteractsWithServers.php by @ghostzero in link,,1
-389,Tweak installing roadrunner binary command. (#28),0.70435226,Fix config key for roadrunner http.middlware (#333)﻿,,1
-390,Update UPGRADE.md,0.5001644,Various fixes and changes.,,0
-391,Merge branch 'cache' into 1.x,0.37845293,Moved opcache clearing to before bootWorker by @LauJosefsen in link,,0
-392,Makes tasks propagate exceptions (#47),0.48741195,Fix issue where timed out tasks were not taken into account (#396)﻿,Added basic roadrunner configs for healthcheck Update rr.yaml Co-authored-by: Taylor Otwell taylor@laravel.com,0
-393,Ensures RR binary is up-to-date,0.48409417,Prefix rr binary permissions with 0 to specify it as an octal value by @Dylan-Buth in link,,0
-394,Uses laravel/serializable-closure (#378),1.0000001,Uses laravel/serializable-closure (#378),,1
-395,add silent option to RoadRunner reset to remove info output which leads to non error (#525),0.86512816,add silent option to RoadRunner reset to remove info output which leads to non error by @ResuBaka in link,,1
-396,Uses laminas/laminas-diactoros@3 (#694),0.49724573,Reverts #669 by @nunomaduro in link,,0
-397,fix config key for roadrunner http.middlware (#333),0.99941295,Fix config key for roadrunner http.middlware (#333)﻿,,1
-398,Merge pull request #136 from thomaspalmer/grammar,0.5373931,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
-399,Remove packages list (#119),0.55184937,Removed,,0
-400,Use Coroutine's full name instead of the short name (#100),0.2648536,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",,0
-401,Revert PaginationState to resolve using new instance of the app (#519),0.836449,Revert PaginationState to resolve using new instance of the app by @farmani in link,,1
-402,Formatting,0.3670371,Uses laravel/serializable-closure (#378),dd is available now,0
-403,Test streamed response (#157),0.39344716,Flush monolog state between requests (#460),,0
-404,add roadrunner sail docs,0.6177493,Add --rpc-host option for Roadrunner by @matthew-inamdar in link,,0
-405,"Listener for removing temporary files, which was created during uploading (#477)",0.8965939,"Listener for removing temporary files, which was created during uploading by @tarampampam in link",Allow the usage of dd Fixes wrong exception class name,1
-406,Merge branch '1.x',0.35750386,Resolve components when needed (#355),,0
-407,ci: update actions/checkout to v3 (#615),0.46995318,Fix issue where timed out tasks were not taken into account (#396)﻿,,0
-408,"Removes ""spatie/laravel-package-tools"" dependency (#25)",0.5134491,Adds support for RoadRunner v3 and updates dependencies by @nunomaduro in link,optimize the memory usage when writing chunks php8 property Update .gitignore Update SwooleClient.php Co-authored-by: 谢彪 xiebiao@kucoin.com Co-authored-by: Dries Vints dries@vints.io Co-authored-by: Taylor Otwell taylor@laravel.com,0
-409,[1.x] Fix the bug of Swoole\Table using array access (#359),0.98316085,Fix the bug of Swoole\Table using array access (#359)﻿,,1
-410,Fix signal as int type in Swoole (#116),0.59727275,Fix type declaration error of Swoole table by @sy-records in link,,0
-411,Fixes missing Swoole error (#427),0.6645628,Updates octane:install command when Swoole extension is missing (#427),,0
-412,Adds missing docblock,0.42990834,Updates octane:install command when Swoole extension is missing (#427),,0
+Commit Message,Score,Correspond Changelog Sentence,Commit Description,Label
+Update CHANGELOG,0.39895058,Various fixes and changes.,,0
+--log-level option in octane:start command (#701),0.9424137,--log-level option in octane:start command by @glushkovds in link,,1
+wip,0.24168456,Removed,,0
+Update UPGRADE.md,0.3374714,Updates octane:install command when Swoole extension is missing (#427),,0
+Updates upgrade guide,0.37364873,Various fixes and changes.,,0
+Use the latest dependencies of its dependencies,0.390379,Adds support for RoadRunner v3 and updates dependencies by @nunomaduro in link,,0
+Merge branch '1.x',0.2588387,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",,0
+support projects using type module (#696),0.851374,Support projects using type module by @timacdonald in link,,1
+Uses laminas/laminas-diactoros@3 (#694),0.21373482,Adds support for Swoole 5 by @nunomaduro in link,,0
+Fixes risky test,0.28154054,Various fixes and changes.,,0
+feat: enable http compression by sending data not with chunked encodi… (#691),0.9646363,feat: enable http compression by sending data not with chunked encodi… by @DeepDiver1975 in link,feat: enable http compression by sending data not with chunked encoding - if possible Update SwooleClient.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+test: run SwooleClientTest on openswoole as well. (#692),0.65745896,Adds support for Open Swoole v22.x by @nunomaduro in link,,0
+[2.x] Adds support for RoadRunner v3 and updates dependencies (#690),0.9430822,Adds support for RoadRunner v3 and updates dependencies by @nunomaduro in link,support roadrunner http v3 Update InstallsRoadRunnerDependencies.php Update InstallsRoadRunnerDependencies.php Uses Roadrunner v3 only Bump dependencies Adjusts coding style Migrates to PHPUnit 10 Adds upgrade guide Ui improvements Updates upgrade guide Updates list of dependencies Adds pint Ensures latest versions of dependencies Updates upgrade guide Updates build file Fixes tests Updates upgrade guide Updates upgrade guide Update upgrade guide Update UPGRADE.md Co-authored-by: Fabio Capucci fabio.cappuc@gmail.com Co-authored-by: Taylor Otwell taylor@laravel.com,1
+add ServerProcessInspector interface (#679),0.8143057,Add ServerProcessInspector interface by @yiming0 in link,add ServerProcessInspector interface Update ServerProcessInspector.php Update ServerProcessInspector.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+Update 1_Bug_report.yml,0.3767463,Various fixes and changes.,,0
+Update and rename 1_Bug_report.md to 1_Bug_report.yml,0.31312904,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Update CHANGELOG.md,0.39078093,Add FlushDatabaseQueryLog for cleaning up database query log (#394),,0
+Merge pull request #676 from laravel/fix/broken-session-set-container-l,0.5990883,Laravel 9 support (#461),[1.x] Reverts #669,0
+Reverts #669,0.7373358,Reverts #669 by @nunomaduro in link,,1
+Update InteractsWithServers.php (#671),0.8331192,Update InteractsWithServers.php by @ghostzero in link,Use getHost(),1
+[1.x] Give new container instance to session manager (#669),0.84943503,Give new container instance to session manager by @smortexa in link,Give new app instance to session manager wip,1
+[1.x] Give new app instance to cache manager (#667),0.7945457,Give new app instance to cache manager by @smortexa in link,Give new app instance to cache manager ensure setApplication method exists,1
+Support setting swoole server mode (#666),0.78102607,Support setting swoole server mode by @sy-records in link,,1
+Apply fixes from StyleCI,0.26471967,Various fixes and changes.,,0
+[1.x] Add method to fix octane route caching.  (#659),0.9385941,Add method to fix octane route caching.  by @CharlesBilbo in link,add getRoutes to the providesRouting Trait Update ProvidesRouting.php Co-authored-by: charlesbilbo c.bilbo@rxmg.com Co-authored-by: Taylor Otwell taylor@laravel.com,1
+Fix return value error and Remove useless code (#655),0.5999387,Fix return value error and Remove useless code by @sy-records in link,Fix return value error Remove useless code,0
+Add support for custom HTTP headers on static files (#653),0.87654626,Add support for custom HTTP headers on static files by @Starfox64 in link,Add static file headers Add support for file patterns formatting Co-authored-by: Taylor Otwell taylor@laravel.com,1
+Fix timer table set failed (#650),0.7602796,Fix timer table set failed by @sy-records in link,Fix timer table set failed Update octane.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+[1.x] Adds type checking (#649),0.37618583,Validates Swoole Tables string column types (#434)﻿,Adds type checking Fixes tests Update .gitattributes Update static-analysis.yml,0
+allow graceful reload after installing packages (#644),0.84272397,Allow graceful reload after installing packages by @taylorotwell in link,,1
+support .laravel directory,0.6711126,Laravel 9 support (#461),,0
+Adds support for Collision ^7.x (#643),0.8595517,Adds support for Collision v7.x by @nunomaduro in link,,1
+Fix unsetting a cookie value when using Swoole (#642),0.9193927,Fix unsetting a cookie value when using Swoole by @oprypkhantc in link,Fix unsetting a cookie value when using Swoole Update SwooleClient.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+Only displays source when there is source (#640),0.6956932,Only displays source when there is source by @nunomaduro in link,,0
+[1.x] Removes internal messages from output (#639),0.6567042,Removes internal messages from output by @nunomaduro in link,Ignores non necessary message Ignores non necessary message,0
+"Require ""laravel/framework"" using --dev for build (#630)",0.55150783,Laravel 9 support (#461),"The project composer.json already contain laravel/framework under require and having this line replace the ""locked"" supported versions.",0
+[1.x] Adds Laravel 10 support (#629),0.79155415,Laravel 9 support (#461),Adds Laravel 10 support Ignores Laravel 10 on PHP 8.0,1
+Update tests.yml,0.2809707,Update to new forgetScopedInstances method name by @driesvints in link,,0
+Merge pull request #626 from laravel/patch-1,0.57061374,Laravel 9 support (#461),[1.x] Adds support for Open Swoole v22.x,0
+Improves handling multiple versions of openswoole,0.55384463,Allow openswoole (#407)﻿,,0
+feat: compatibility with openswoole v22.x,0.6634736,Allow openswoole (#407)﻿,Openswoole v22.x change swoole_cpu_num() to OpenSwoole\Util::getCPUNum() link,0
+Create issues.yml,0.2518647,Mission version configuration option on RoadRunner  (#482),,0
+Added --rpc-host option (#619),0.7350364,Add --rpc-host option for Roadrunner by @matthew-inamdar in link,,1
+fix: ensure Testbench vendor symlink exists (#616),0.3404557,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+ci: update actions/checkout to v3 (#615),0.41897386,Mission version configuration option on RoadRunner  (#482),,0
+fix: resolve typo resulting in deprecation notice (#614),0.7800625,Resolve typo resulting in deprecation notice by @owenvoke in link,,1
+[1.x] Fixes test_error_method_sends_error_response_to_roadrunner test (#613),0.55184376,The new minimum RoadRunner binary version is now 2.1.1 (#258),Forces debug mode off in test Sets app debug false on swoole test,0
+Prefix rr binary permissions with 0 to specify it as an octal value (#611),0.90019786,Prefix rr binary permissions with 0 to specify it as an octal value by @Dylan-Buth in link,,1
+Make IP to bind the server to configurable via env (#607),0.79259336,Make IP to bind the server to configurable via env by @xorinzor in link,,1
+[1.x] Adds tests regarding flushing controller is computed middleware (#595),0.5540658,Flushes controller on route by @nunomaduro in link,Adds tests regarding controller __construct middleware Updates variable name Updates framework versions,0
+Test on PHP 8.2 (#606),0.5899152,Partial PHP 8.1 support (#402),,0
+Update StartCommand.php,0.3421889,Update InteractsWithServers.php by @ghostzero in link,,0
+[1.x] Read port for http server from environment if no port is passed  (#605),0.85006934,Read port for http server from environment if no port is passed  by @hendrikheil in link,feat: add support for environment defined port chore: fix styleci errors formatting use env Co-authored-by: Hendrik Heil hendrik@stafftastic.com Co-authored-by: Taylor Otwell taylor@laravel.com,1
+Re-do: Configurable Roadrunner log level (#604),0.8592026,Re-do: Configurable Roadrunner log level by @ejulen in link,Made RR log level configurable formatting Fixed subtle operator precedence bug Co-authored-by: Taylor Otwell taylor@laravel.com,1
+"Revert ""Made RR log level configurable (#601)"" (#603)",0.8212273,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",This reverts commit 8380c1345493a1e9b527e34f44daa7bd3455ea01.,1
+Made RR log level configurable (#601),0.71537334,Made Roadrunner log level configurable by @ejulen in link,,1
+RoadRunner Relay Overrides (#600),0.79755354,RoadRunner Relay Overrides by @pmccarren in link,fix: laravel/octane#598 implement rr relay override Update roadrunner-worker Update roadrunner-worker Update roadrunner-worker Co-authored-by: Taylor Otwell taylor@laravel.com,1
+[1.x] Ignore Response::create failed (#590),0.63413465,Ignore Response::create failed by @sy-records in link,Ignore Response::create failed Update EnsureRequestsDontExceedMaxExecutionTime.php Update EnsureRequestsDontExceedMaxExecutionTime.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+[1.x] Flushes controller on route (#589),0.75962174,Flushes controller on route by @nunomaduro in link,Flushes controller on route Adds test Adds memory leak tests Updates framework versions,1
+add possibility to launch swoole server with additional php options (#570),0.9071224,Add possibility to launch swoole server with additional php options by @AbdelAbouhassane in link,add possibility to launch swoole server with php options spread config Update .gitignore Co-authored-by: Taylor Otwell taylor@laravel.com,1
+Update link to OpenSwoole website (#569),0.6967887,Allow openswoole (#407)﻿,Link to official (Open)Swoole websites Revert to GitHub for Swoole,0
+[1.x] Adds support for Swoole 5 (#560),0.8454834,Adds support for Swoole 5 by @nunomaduro in link,Adds support for Swoole 5 Update OnWorkerStart.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+[1.x] Fix carbon locale when setting it via app locale setter (#557),0.90535706,Fix carbon locale when setting it via app locale setter by @nunomaduro in link,Fix carbon locale when setting it via app locale setter Uses latest version of Carbon Removes repositories on composer,1
+Delete release.yml,0.32570726,Stable release.,,0
+"[1.x] Fixes sharing ""Carbon"" state shared between requests  (#552)",0.47463173,Flush monolog state between requests (#460),Fixes shared Carbon Locale between requests Apply fixes from StyleCI Co-authored-by: StyleCI Bot bot@styleci.io,0
+Added status codes (RFC6585 & RFC7725) (#550),0.393732,Adds support for RoadRunner v2.6.x (#449),,0
+Moved opcache clearing to before bootWorker (#547),0.93505895,Moved opcache clearing to before bootWorker by @LauJosefsen in link,,1
+Refresh query duration handling (#541),0.828827,Refresh query duration handling by @timacdonald in link,refresh query duration handling adjust naming ensure only called when methods exist,1
+Update release.yml,0.47017998,Stable release.,,0
+Update update-changelog.yml,0.3553041,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",,0
+Update pull-requests.yml,0.28644928,Updates octane:install command when Swoole extension is missing (#427),,0
+Removes non-needed message about worker destroyed (#532),0.46505088,Removes non-needed message by @nunomaduro in link,,0
+Auto generate release notes (#529),0.31945103,Stable release.,Create release.yml Update release.yml,0
+add silent option to RoadRunner reset to remove info output which leads to non error (#525),0.9489757,add silent option to RoadRunner reset to remove info output which leads to non error by @ResuBaka in link,,1
+test flushing logger shared context (#514),0.64162505,Flush shared log context by @timacdonald in link,test flushing logger shared context ignore Laravel 8 style,0
+Update InteractsWithServers.php (#520),0.8268091,Update InteractsWithServers.php by @ghostzero in link,Using unused $paths variable,1
+Revert PaginationState to resolve using new instance of the app (#519),0.9439225,Revert PaginationState to resolve using new instance of the app by @farmani in link,Revert PaginationState to resolve using new instance of the app on each new request Use sandbox clone of application instance,1
+warm transaction manager,0.82409745,Warm transaction manager by @taylorotwell in link,,1
+flush shared log context (#513),0.79902387,Flush shared log context by @timacdonald in link,,1
+Fix max_execution_time config doesn't work (#510),0.78359956,Fix max_execution_time config doesn't work by @sy-records in link,Fix max_execution_time config doesn't work Add extension_loaded swoole verify Update EnsureRequestsDontExceedMaxExecutionTime.php Update EnsureRequestsDontExceedMaxExecutionTime.php,1
+Force the processId to int (#507),0.7058873,Force the processId to int by @sy-records in link,,1
+Make the bin files used by Swoole and Roadrunner config options (#502),0.9473487,Make the bin files used by Swoole and Roadrunner config options by @jedjones-uk in link,make the bin file used by swoole and roadrunner configurable options Update StartRoadRunnerCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+Create pull-requests.yml,0.21938244,Mission version configuration option on RoadRunner  (#482),,0
+[1.x] Update to new forgetScopedInstances method name (#501),0.81056184,Update to new forgetScopedInstances method name by @driesvints in link,Update FlushTemporaryContainerInstances.php Apply fixes from StyleCI Co-authored-by: StyleCI Bot bot@styleci.io,1
+Optimize PHP8.1 compatibility (#499),0.8102075,Partial PHP 8.1 support (#402),,1
+Update .styleci.yml,0.2396119,"Add clear the cache of APCu and Opcache (#385, 9ff568b)",,0
+Update .styleci.yml (#494),0.2941879,"Add clear the cache of APCu and Opcache (#385, 9ff568b)",,0
+[1.x] Fixes --watch files over a network (#488),0.4736194,Default --watch options making Octanes servers reload on file uploads (#247),Fixes --watch files over a network Adds --poll option Apply fixes from StyleCI formatting Co-authored-by: StyleCI Bot bot@styleci.io Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Removes unreleased notes,0.2663297,"Listener for removing temporary files, which was created during uploading by @tarampampam in link",,0
+Merge pull request #482 from laravel/fix/version-option,0.6291977,Laravel 9 support (#461),[1.x] Fixes missing version option,0
+Ignores message,0.3752572,Removes non-needed message by @nunomaduro in link,,0
+Bumps spiral/roadrunner on composer too,0.37477174,The new minimum RoadRunner binary version is now 2.1.1 (#258),,0
+Fixes missing version option,0.46486974,Mission version configuration option on RoadRunner  (#482),,0
+[1.x] Fix passing null to cookie for domain (#478),0.82378435,Fix passing null to cookie for domain by @driesvints in link,Throw deprecations Fix null deprecation,1
+"Listener for removing temporary files, which was created during uploading (#477)",0.9427972,"Listener for removing temporary files, which was created during uploading by @tarampampam in link","Listener for removing temporary files, which was created during uploading cs fixes Changelog updated Changelog updated Changelog updated add files simplify code rename again Co-authored-by: Taylor Otwell taylor@laravel.com",1
+Rename update-changelog.md to update-changelog.yml,0.38769832,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",,0
+Create update-changelog.md,0.35160702,Add FlushDatabaseQueryLog for cleaning up database query log (#394),,0
+[1.x] Flushes Str cache between requests (#468),0.92349494,Flushes Str cache between requests (#468),Flushes Str cache between requests Bumps framework version,1
+[1.x] Fix byte conversion (#465),0.9193866,Fix byte conversion (#465),Fix byte conversion Fix test,1
+Allow users to access $server with in Controller (#464),1.0,Allow users to access $server with in Controller (#464),,1
+Laravel 9 support (#461),1.0,Laravel 9 support (#461),Laravel 9 support Update tests.yml Update composer.json Re-adds collision Sorts composer json dependencies Co-authored-by: Nuno Maduro enunomaduro@gmail.com,1
+Flush monolog state (#460),0.80806196,Flush monolog state between requests (#460),,1
+Fix FilesystemManagerStateTest (#459),0.4852293,Give the current App instance to FilesystemManager (#458),Fix FilesystemManagerStateTest Use available $app instance,0
+Fix FilesystemManager app instance (#458),0.68423736,Give the current App instance to FilesystemManager (#458),,0
+Log level fix (#456),0.6633027,Log level used in non-local environments (#456),There was the PR to master which is fixes the issue #450 but it was not merged to the last version. The same fix is here,0
+Fix type declaration error of Swoole table (#452),0.78454685,Fix type declaration error of Swoole table by @sy-records in link,,1
+The Issue #450 fix (#451),0.4611163,Various fixes and changes.,Co-authored-by: Eugene Kirdzei e.ki@nuwber.com,0
+Adds support for RoadRunner v2.6.x (#449),1.0000001,Adds support for RoadRunner v2.6.x (#449),,1
+Fixes call terminate() on null when worker is not booted (#445),0.47287607,Moved opcache clearing to before bootWorker by @LauJosefsen in link,,0
+[1.x] Adds links to Swoole / Open Swoole documentation (#441),0.8027791,Adds support for Open Swoole v22.x by @nunomaduro in link,[1.x] Adds links to Swoole / Open Swoole documentation Update README.md Co-authored-by: Taylor Otwell taylor@laravel.com,1
+[1.x] Validates Swoole Tables string column types (#434),0.9796137,Validates Swoole Tables string column types (#434)﻿,Validates Swoole Tables string column types Uses a separated table definition for each swoole / openswoole tables Adds missing import Removes original table Adds missing requires Refactors ensures column sizes Apply fixes from StyleCI Fixes Swoole column declaration Co-authored-by: Taylor Otwell taylorotwell@users.noreply.github.com,1
+[1.x] Fixes Octane's process output not being flushed (#428),0.5449487,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",Fixes issue where php://temp may be full Update InteractsWithServers.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Skip tests on openswoole that require mock response (#429),0.507894,Allow openswoole (#407)﻿,,0
+Fixes missing Swoole error (#427),0.7570016,Error No buffer space available when using Swoole (#253),,1
+Merge pull request #423 from vokamut/patch-2,0.36152893,Adds support for RoadRunner v2.6.x (#449),Remove unuse use statement,0
+Remove unuse use statement,0.352448,Reset application scope to flush scoped instances (#313),,0
+Fix FileNotFound error (#421),1.0000002,Fix FileNotFound error (#421)﻿,,1
+"[1.x] Adds tests against ""openswoole"" (#420)",0.58352566,Allow openswoole (#407)﻿,Tests against open-swoole Fixes openswoole package name Continues on error on swoole Makes tests in a single file wip Update tests.yml Update tests.yml Update tests.yml Update tests.yml Update tests.yml Co-authored-by: Dries Vints dries@vints.io,0
+Fixes servers shutting down on concurrent exceptions (#419),0.36466822,Fix issue where timed out tasks were not taken into account (#396)﻿,,0
+[1.x] Fixes memory leak on Translator implementation (#416),0.38879657,Fix byte conversion (#465),Fixes memory leak on translator keys Apply fixes from StyleCI Bumps framework dependency Co-authored-by: Taylor Otwell taylorotwell@users.noreply.github.com,0
+"Fix undefined array key ""type"" on empty array dump (#413)",1.0000002,"Fix undefined array key ""type"" on empty array dump (#413)﻿","FIX:  Undefined array key ""type"" on empty array dump Update src/Commands/Concerns/InteractsWithIO.php Co-authored-by: Dries Vints dries@vints.io Update InteractsWithIO.php Co-authored-by: Taylor Otwell taylor@laravel.com Co-authored-by: Dries Vints dries@vints.io",1
+Merge pull request #408 from laravel/driesvints-patch-1,0.54859644,Laravel 9 support (#461),Update phpunit.xml.dist,0
+Update phpunit.xml.dist,0.45403412,Partial PHP 8.1 support (#402),,0
+"Since 4.1.7, swoole is called openswoole (#407)",0.7603724,Adds support for Open Swoole v22.x by @nunomaduro in link,,1
+Release v1.0.15,0.664783,Stable release.,,0
+Adds partial PHP 8.1 support (#402),0.94989455,Partial PHP 8.1 support (#402),,1
+Add Livewire listener and register (#400),0.96554947,Add Livewire listener (#400)﻿,,1
+[1.x] Fix issue where timed out tasks were not taken into account (#396),0.9627142,Fix issue where timed out tasks were not taken into account (#396)﻿,Fix issue where timed out tasks were not taken into account Update SwooleTaskDispatcher.php Co-authored-by: Dries Vints dries@vints.io,1
+add FlushDatabaseQueryLog for cleaning up database query log (#394),1.0000001,Add FlushDatabaseQueryLog for cleaning up database query log (#394),,1
+Uses laravel/serializable-closure (#378),0.9999999,Uses laravel/serializable-closure (#378),Uses laravel/serializable-closure Updates framework version,1
+Merge branch 'cache' into 1.x,0.3604054,Moved opcache clearing to before bootWorker by @LauJosefsen in link,,0
+formatting,0.2997858,Changed,,0
+Add clear the cache of APCu and Opcache,0.94582593,"Add clear the cache of APCu and Opcache (#385, 9ff568b)",,1
+Change logo to work on Dark Theme (#381),0.23159459,Changed,Change logo to work on Dark Theme Increase size to match,0
+Fix timeout value passed to taskWaitMulti (#380),1.0000004,Fix timeout value passed to taskWaitMulti (#380)﻿,,1
+[1.x] Resolve components when needed (2) (#360),0.90991205,Resolve components when needed (#360),resolve components when needed reindent doc Co-authored-by: foremtehan foremtehan@gmailcom,1
+[1.x] Fix the bug of Swoole\Table using array access (#359),0.9773829,Fix the bug of Swoole\Table using array access (#359)﻿,Fix the bug of Swoole\Table using array access Remove ArrayObject,1
+Merge pull request #358 from lufei/fix-typo,0.4725275,Resolve typo resulting in deprecation notice by @owenvoke in link,Fix typo,0
+Fix typo,0.47110778,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+[1.x] Resolve components when needed (#355),0.9303278,Resolve components when needed (#355),resolve components when needed resolve components when needed fix tests indent doc Co-authored-by: foremtehan foremtehan@gmailcom,1
+[1.x] Avoids usage of SWOOLE_SSL when openssl is not configured on swoole (#357),0.988393,Avoids usage of SWOOLE_SSL when openssl is not configured on swoole (#357)﻿,Only uses SWOOLE_SSL if exists Adds guard Co-Authored-By: 沈唁 lufei@php.net Co-authored-by: 沈唁 lufei@php.net,1
+"Undefined array key ""swoole"" (#351)",1.0000002,"Undefined array key ""swoole"" (#351)","PHP Warning:  Undefined array key ""swoole"" in /var/www/vendor/laravel/octane/bin/createSwooleServer.php on line 10",1
+Merge branch 'kiddtang/1.x' into 1.x,0.25717077,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",,0
+Apply StyleCI fix again,0.24716458,"Add clear the cache of APCu and Opcache (#385, 9ff568b)",,0
+Apply StyleCI fix,0.22852069,Fix byte conversion (#465),,0
+expose the flag to turn on SWOOLE_SSL,0.9673482,"Expose the flag to turn on SWOOLE_SSL (#342, 86731cb)﻿",,1
+Addresses #332: pass config-file path for roadrunner (#335),0.68754256,Add --rpc-host option for Roadrunner by @matthew-inamdar in link,Addresses #332: pass config-file path for roadrunner style check absolute path foramtting Co-authored-by: Taylor Otwell taylorotwell@gmail.com,0
+module,0.38717586,Support projects using type module by @timacdonald in link,,0
+fix config key for roadrunner http.middlware (#333),1.0000001,Fix config key for roadrunner http.middlware (#333)﻿,,1
+Set roadrunner http.middlware as an option (#327),0.9134507,Set roadrunner http.middleware as an option (#327),Set roadrunner http.middlware as an option Update comment accoring to StyleCI Update octane.php Update StartRoadRunnerCommand.php Update StartRoadRunnerCommand.php Co-authored-by: Maxime Layat mla@iec.ch Co-authored-by: Taylor Otwell taylor@laravel.com,1
+Merge branch 'feat/proxy-raw-output-to-stderr' into 1.x,0.3735784,Remove buffer_output_size from Swoole's default options (#286),,0
+Ignores messages startingWith,0.39892483,Removes internal messages from output by @nunomaduro in link,,0
+"Prints server logs to ""stderr""",0.93930507,"Prints server logs to ""stderr"" (#326, 28cf5ee)﻿",,1
+Remove unused import (#324),0.32077548,"Listener for removing temporary files, which was created during uploading by @tarampampam in link",,0
+dark mode logo,0.22160566,Changed,,0
+[1.x] Fix Symfony uploaded file moving (#317),0.987342,Fix Symfony uploaded file moving (#317)﻿,fix(symfony): uploaded files moving make clear,1
+Fix (#316),0.45206648,Reverts #669 by @nunomaduro in link,Co-authored-by: Henrique Bremenkanp henrique.bremenkanp@rakuten.com,0
+Reset application scope to flush scoped instances (#313),1.0000002,Reset application scope to flush scoped instances (#313),reset application scope to flush scoped instances wip wip Apply fixes from StyleCI (#314) fix style,1
+Apply fixes from StyleCI (#312),0.318806,Various fixes and changes.,,0
+Add missing default listeners (#311),0.9999999,Add missing default listeners (#311)﻿,Two listeners were missing in the default config. This adds them.,1
+Update 1_Bug_report.md,0.4713949,Various fixes and changes.,,0
+Displays memory usage from workers and only on swoole (#304),0.60352886,Error No buffer space available when using Swoole (#253),Displays memory usage from workers and only on swoole Apply fixes from StyleCI (#303),0
+Fixes CommandTest failing test,0.22133434,Fix issue where timed out tasks were not taken into account (#396)﻿,,0
+Merge branch 'patch-2' into 1.x,0.31269333,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Adds SameSite attribute for cookies (#299),1.0,Adds SameSite attribute for cookies (#299)﻿,,1
+Get memory from request if is  available if not use memory_get_usage function.,0.42320204,"Display memory usage (#297, #304)",,0
+Update test to display the memory usage,0.54154205,"Display memory usage (#297, #304)",,0
+Fix coding styles,0.19644263,Changed,,0
+fix coding styles,0.19644263,Changed,,0
+Display memory usage,0.85672426,"Display memory usage (#297, #304)","Since the Laravel documentation does not provide how to check for memory leaks, many developers will opt in to use the Laravel debug bar but i found out that the debug bar it has a memory leak, so displaying the memory usage as well as the duration will help to easy spot, memory leaks without external tools.",1
+Merge branch 'pr2' into 1.x,0.28854796,The new minimum RoadRunner binary version is now 2.1.1 (#258),,0
+Merge pull request #292 from lufei/typo,0.4116373,Resolve typo resulting in deprecation notice by @owenvoke in link,Fix typo,0
+Formatting,0.2997858,Changed,,0
+Fixes issue related to changing non-standard HTTP status codes to 200 OK,0.41666055,Flushes Str cache between requests (#468),,0
+Fixes code styling issue,0.26630133,Various fixes and changes.,,0
+Fixes laravel/octane#287,0.6883699,Laravel 9 support (#461),,0
+Remove buffer_output_size from Swoole's default options (#286),1.0000002,Remove buffer_output_size from Swoole's default options (#286),Fix #260,1
+"Removes beta warning on ""octane:start"" command",0.9537568,"Remove beta warning on ""octane:start"" command (5b25510)﻿",,1
+remove beta warning,0.6834373,"Remove beta warning on ""octane:start"" command (5b25510)﻿",,0
+update change log,0.3818978,Flush shared log context by @timacdonald in link,,0
+Prepare 2.x,0.35875925,Initial pre-release.﻿,,0
+Fix facade autoloading,0.39837503,Resolve components when needed (#355),,0
+Prepare release,0.5471485,Initial pre-release.﻿,,0
+Updates changelog,0.4254317,Various fixes and changes.,,0
+Apply fixes from StyleCI (#262),0.31553888,Various fixes and changes.,,0
+Update issue_template (#261),0.39100906,"Add clear the cache of APCu and Opcache (#385, 9ff568b)",,0
+Adds missing changelog entries,0.40496424,Add FlushDatabaseQueryLog for cleaning up database query log (#394),,0
+"Removes non needed ""dotenv"" option in roadrunner (#258)",0.5418058,Adds support for RoadRunner v2.6.x (#449),"Removes non needed ""dotenv"" option in roadrunner Updates changelog",0
+Fixes global environment variables not being taken in by workers (#257),0.94221205,Global environment variables not being used by workers (#257),Fixes the way Octane handles environment variables Updates changelog,1
+Update Swoole default options (#253),0.7198947,Remove buffer_output_size from Swoole's default options (#286),,1
+Merge pull request #251 from shuvroroy/patch-5,0.35593453,Adds support for Collision v7.x by @nunomaduro in link,Remove test docblock,0
+Remove test docblock,0.24693018,add silent option to RoadRunner reset to remove info output which leads to non error by @ResuBaka in link,,0
+Merge pull request #249 from shuvroroy/patch-3,0.34439468,Adds support for RoadRunner v3 and updates dependencies by @nunomaduro in link,Remove unused import,0
+Remove unused import,0.32314914,"Listener for removing temporary files, which was created during uploading by @tarampampam in link",,0
+Remove all test docblock (#248),0.31419265,add silent option to RoadRunner reset to remove info output which leads to non error by @ResuBaka in link,,0
+Just watch PHP files within public/resources directories (#247),0.38366365,Partial PHP 8.1 support (#402),,0
+Apply fixes from StyleCI (#245),0.32202718,Various fixes and changes.,,0
+Use extension_loaded instead of function_exists (#233),0.33467647,Reload RoadRunner using the global executable if it's present (#288)﻿,,0
+Merge pull request #232 from lufei/typo,0.4095112,Resolve typo resulting in deprecation notice by @owenvoke in link,Fix typo,0
+Adds docs about serving octane in HTTPS (#229),0.43758035,"Requires to stop, and re-start your Octane server",Adds docs about serving octane in HTTPS Update README.md Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Apply fixes from StyleCI (#228),0.3205398,Various fixes and changes.,,0
+"Remove µs string before multiply, fix return type (#227)",0.46257412,Fix byte conversion (#465),Co-authored-by: Andrej Mihaliak andrej.mihaliak@wbpo.sk,0
+Merge branch 'feat/auto-rr-binary-updater',0.32275927,The new minimum RoadRunner binary version is now 2.1.1 (#258),,0
+Use constants instead of hard coding (#224),0.23706228,Fix byte conversion (#465),,0
+Give new app instance to database manager (#225),0.6204818,Give new application instance to database session handler (#302),give new app instance to database manager Update ProvidesDefaultConfigurationOptions.php Update GiveNewApplicationInstanceToDatabaseManager.php Apply fixes from StyleCI (#226) Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Updates message,0.39658576,Various fixes and changes.,,0
+Ensures RR binary is up-to-date,0.43998408,The new minimum RoadRunner binary version is now 2.1.1 (#258),,0
+"Removes "" We are still in the process of ensuring Octane compatibility with all first-party Laravel packages."" (#219)",0.61018854,Laravel 9 support (#461),,0
+Apply fixes from StyleCI (#217),0.3192758,Various fixes and changes.,,0
+handle env vars,0.51149,Global environment variables not being used by workers (#257),,0
+Fixes RR reload by setting a different RPC port (#216),0.49810815,Add --rpc-host option for Roadrunner by @matthew-inamdar in link,,0
+"Only logs ""swoole"" errors in production (#215)",0.72150296,Fix Swoole breaks when log is a valid JSON (#316),Only logs errors in production Update StartSwooleCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,1
+Adds docs about the octane:stop command (#214),0.64899004,"Requires to stop, and re-start your Octane server",Adds docs about the octane:stop command Update README.md Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Removes shutdown handler (#211),0.4003813,add silent option to RoadRunner reset to remove info output which leads to non error by @ResuBaka in link,,0
+Adds docs about the octane:status command (#212),0.57961214,--log-level option in octane:start command by @glushkovds in link,,0
+actually kill octane server,0.70749426,"Requires to stop, and re-start your Octane server",,1
+Improves octane:install command (#210),0.63062954,Updates octane:install command when Swoole extension is missing (#427),Improves install command Update InstallsRoadRunnerDependencies.php Update SwooleExtension.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Adds status command (#207),0.3949408,"Add clear the cache of APCu and Opcache (#385, 9ff568b)",,0
+Update rr.yaml (#209),0.4093069,Adds support for RoadRunner v2.6.x (#449),,0
+Merge branch 'pr21448',0.309089,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Fix option param error (#205),0.33405048,"Undefined array key ""swoole"" (#351)",,0
+Fixes stop on signals (#204),0.3893597,Various fixes and changes.,,0
+"Report error when server fails to stop, waits server to stop. (#203)",0.44871214,"Prints server logs to ""stderr"" (#326, 28cf5ee)﻿",Simplify autoload code of bootstrap.php. Remove ineffective use statement. Wait for the specified number of seconds when the server fails to stop. Report error when server fails to stop. Update SignalDispatcher. Update StopCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Adjust reload command (#199),0.43139136,Allow graceful reload after installing packages by @taylorotwell in link,Waits for console feedback before reload server Fixes tests,0
+Handle empty responses (#195),0.3364138,Ignore Response::create failed by @sy-records in link,handle empty responses Apply fixes from StyleCI (#194) Update src/Swoole/SwooleClient.php Co-authored-by: Andrea Marco Sartori andrea.marco.sartori@gmail.com Co-authored-by: Taylor Otwell taylor@laravel.com Co-authored-by: Andrea Marco Sartori andrea.marco.sartori@gmail.com,0
+Add querystring to request uri (#196),0.39452046,Flushes Str cache between requests (#468),Add querystring to request uri Update ConvertSwooleRequestToIlluminateRequest.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Merge pull request #193 from rochdiNassah/master,0.3241004,Resolve typo resulting in deprecation notice by @owenvoke in link,Typo,0
+Typo,0.3408987,Changed,,0
+Typo (#192),0.4632758,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Set the process name when worker starts (#189),0.4514544,Global environment variables not being used by workers (#257),Set the process name when worker starts Update swoole-server Update OnWorkerStart.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Fix memory leaks (#181),0.57496387,"Display memory usage (#297, #304)",fix memory leaks flush the entire sandbox container Apply fixes from StyleCI (#186),0
+Use start instead of run (#182),0.48133188,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",,0
+Remove basePath parameter (#177),0.4037933,Fix FileNotFound error (#421)﻿,Co-authored-by: Taylor Otwell taylor@laravel.com,0
+use swooleResponse- (#176),0.5552114,Adds support for Open Swoole v22.x by @nunomaduro in link,,0
+"Make sure file is not empty, test outside public (#179)",0.5446167,Fix FileNotFound error (#421)﻿,,0
+"Reload must run, otherwise throw error (#178)",0.47954446,Allow graceful reload after installing packages by @taylorotwell in link,,0
+Merge pull request #175 from albertcht/patch-1,0.39818874,Adds support for Collision v7.x by @nunomaduro in link,Fix typo in handleTask function,0
+Fix typo in handleTask function,0.3502527,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Merge branch 'swoole-serve-files-from-symlink',0.5832155,Adds support for Open Swoole v22.x by @nunomaduro in link,,0
+Add swoole/ide-helper to require-dev (#159),0.63654226,Adds support for Open Swoole v22.x by @nunomaduro in link,,0
+Allows serve static empty file (#162),0.5203344,Add support for custom HTTP headers on static files by @Starfox64 in link,,0
+Reformat multi-line constructors (#167),0.20135656,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Merge pull request #170 from eleven26/master,0.3591617,Resolve typo resulting in deprecation notice by @owenvoke in link,fix comment,0
+Remove union type return,0.34989208,Fix return value error and Remove useless code by @sy-records in link,,0
+fix comment,0.36376584,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Fix StyleCI & Tests,0.24679615,Fix byte conversion (#465),,0
+Allow for swoole to serve static files trough symlink,0.5646465,Support setting swoole server mode by @sy-records in link,,0
+Merge pull request #165 from rochdiNassah/patch-1,0.37430173,Adds support for Collision v7.x by @nunomaduro in link,Typo,0
+Update MarshalsPsr7RequestsAndResponses.php,0.45175463,Update InteractsWithServers.php by @ghostzero in link,,0
+Merge pull request #166 from eleven26/master,0.35585976,Resolve typo resulting in deprecation notice by @owenvoke in link,"fix typo, fix param",0
+remove use statement,0.34187797,Fix return value error and Remove useless code by @sy-records in link,,0
+fix param,0.3417282,Fix return value error and Remove useless code by @sy-records in link,,0
+fix return types,0.4611035,Fix return value error and Remove useless code by @sy-records in link,,0
+Missed param definition (#158),0.41616273,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Test streamed response (#157),0.41627687,Flushes Str cache between requests (#468),Test streamed response Update mock,0
+Merge branch 'pr12620',0.302823,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+remove logger,0.47702196,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",,0
+Apply fixes from StyleCI (#156),0.325875,Various fixes and changes.,,0
+use chunk size of 1,0.35020053,feat: enable http compression by sending data not with chunked encodi… by @DeepDiver1975 in link,,0
+use strlen,0.2732193,Prefix rr binary permissions with 0 to specify it as an octal value by @Dylan-Buth in link,,0
+handle real strams,0.22212787,Validates Swoole Tables string column types (#434)﻿,,0
+Added basic roadrunner configs for healthcheck and rr commands (#149),0.6258763,Adds support for RoadRunner v2.6.x (#449),Added basic roadrunner configs for healthcheck Update rr.yaml Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Merge branch 'feat/configurable-watch-paths',0.31785077,Re-do: Configurable Roadrunner log level by @ejulen in link,,0
+remove note from docs,0.33261618,Removes non-needed message by @nunomaduro in link,,0
+fix variable name,0.25225478,Update to new forgetScopedInstances method name by @driesvints in link,,0
+Merge branch 'pr12620' of github.com:laravel/octane into pr12620,0.43739182,Laravel 9 support (#461),,0
+handle StreamedResponse,0.35906506,Flush monolog state between requests (#460),,0
+Apply fixes from StyleCI (#152),0.32448035,Various fixes and changes.,,0
+Adds entry to readme,0.30944964,Adds support for RoadRunner v2.6.x (#449),,0
+Merge pull request #147 from laravel/driesvints-patch-1,0.5441518,Laravel 9 support (#461),dd is available now,0
+Makes watch paths configurable,0.3768137,Default --watch options making Octanes servers reload on file uploads (#247),,0
+Update README.md,0.41729558,Adds support for RoadRunner v3 and updates dependencies by @nunomaduro in link,,0
+Makes dd compatible with Octane (#146),0.40733436,"Requires to stop, and re-start your Octane server",Allow the usage of dd Fixes wrong exception class name,0
+Merge branch 'driesvints-patch-2',0.2882414,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Optimized the memory usage when writing chunks (#138),0.4072621,"Display memory usage (#297, #304)",optimize the memory usage when writing chunks php8 property Update .gitignore Update SwooleClient.php Co-authored-by: 谢彪 xiebiao@kucoin.com Co-authored-by: Dries Vints dries@vints.io Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Use cli_set_process_title instead of swoole_set_process_name (#133),0.58150506,Error No buffer space available when using Swoole (#253),,0
+Remove variables in catches (#142),0.35762808,Removes internal messages from output by @nunomaduro in link,,0
+Use new class notation (#141),0.25960428,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Minor word change (#139),0.4552203,Changed,,0
+Merge pull request #136 from thomaspalmer/grammar,0.3623377,Resolve typo resulting in deprecation notice by @owenvoke in link,Update grammar,0
+Update grammar,0.3760029,Changed,,0
+Merge branch 'patch-1',0.31114966,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Update 1_Bug_report.md (#130),0.43017536,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Update InteractsWithServers.php,0.8597025,Update InteractsWithServers.php by @ghostzero in link,,1
+Exit when watcher fails,0.29573736,Default --watch options making Octanes servers reload on file uploads (#247),Makes it more clear that something went wrong with watching.,0
+Merge branch 'handle-invalid-server',0.2813245,Fix log level by @masterjus in link,,0
+Use Coroutine's full name instead of the short name (#100),0.27499503,Resolve components when needed (#360),Because short names can be turned off with a configuration item,0
+Fix signal as int type in Swoole (#116),0.5540961,Error No buffer space available when using Swoole (#253),,0
+"Fix dispatchProcessSignal, check if the process exists before kill (#117)",0.36754763,Reset application scope to flush scoped instances (#313),,0
+Remove packages list (#119),0.3345068,Removed,,0
+update readme,0.43096304,Various fixes and changes.,,0
+Update InstallsRoadRunnerDependencies.php,0.42104724,Update InteractsWithServers.php by @ghostzero in link,,0
+Update StartRoadRunnerCommand.php,0.49353614,Reload RoadRunner using the global executable if it's present (#288)﻿,,0
+Merge pull request #107 from shuvroroy/patch/fix-exception-issue,0.41575837,Adds support for Collision v7.x by @nunomaduro in link,Fix exception issue,0
+Use PHP Binary in Composer installs for Octane,0.49938053,Partial PHP 8.1 support (#402),,0
+Use PhpExecutableFinder for Octane server command,0.4532625,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",,0
+Fix exception issue,0.38154742,Fix FileNotFound error (#421)﻿,,0
+Handle invalid server option in octane:stop,0.5561022,"Requires to stop, and re-start your Octane server",,0
+Handle invalid server option in octane:reload,0.54888415,"Requires to stop, and re-start your Octane server",,0
+Handle invalid server option in octane:start,0.58929586,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",,0
+Add methods to facade doc block (#96),0.32569656,Update to new forgetScopedInstances method name by @driesvints in link,Add methods to facade doc block Fix style CI,0
+List supported options (#91),0.33793303,Various fixes and changes.,List supported options Update octane.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+use str_starts_with (#89),0.23474757,Validates Swoole Tables string column types (#434)﻿,,0
+Typo (#85),0.4111985,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+add missing imports (#86),0.39270097,Updates octane:install command when Swoole extension is missing (#427),,0
+Fixed typos (#84),0.48053396,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Grammar fix (#83),0.3474467,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Merge branch 'master' of github.com:laravel/octane,0.41331172,Laravel 9 support (#461),,0
+Update ServerProcessInspector.php (#79),0.47309005,Update InteractsWithServers.php by @ghostzero in link,,0
+Use env helper to set server config (#80),0.5155599,Make IP to bind the server to configurable via env by @xorinzor in link,,0
+Add void return to event listeners (#78),0.4929514,Add missing default listeners (#311)﻿,,0
+augment docs,0.27828777,Updates octane:install command when Swoole extension is missing (#427),,0
+add roadrunner sail docs,0.546524,Adds support for RoadRunner v3 and updates dependencies by @nunomaduro in link,,0
+Fixes missing output on error (#55),0.40934515,Fix FileNotFound error (#421)﻿,,0
+Adds warning about usage outside local env (#77),0.5417658,Global environment variables not being used by workers (#257),,0
+Flush locale state between request (#63),0.56962776,Flushes Str cache between requests (#468),Flush locale state between request Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com update test name Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com reset value from config. Apply fixes from StyleCI (#75) Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Apply fixes from StyleCI (#76),0.31540203,Various fixes and changes.,,0
+"Makes the ""SwooleHttpTaskDispatcher"" to behave like ""SwooleTaskDispatcher"" when errors occurs (#59)",0.49075526,Fix Swoole breaks when log is a valid JSON (#316),Adds task timeout exception on timeouts Fixes swoole http task dispatcher exceptions Updates tests Apply fixes from StyleCI (#61) Updates to master Fixes missing route handling,0
+Add failing test for array cache should be flush between request. (#64),0.5768988,Flushes Str cache between requests (#468),Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com,0
+load deferred providers (#67),0.37526733,Resolve components when needed (#355),,0
+wrap task result (#69),0.40412444,Fix issue where timed out tasks were not taken into account (#396)﻿,wrap task result fix test Adds more tests Apply fixes from StyleCI (#70) Fixes tests Co-authored-by: Nuno Maduro enunomaduro@gmail.com,0
+Normalize composer file (#71),0.36544093,Fix Symfony uploaded file moving (#317)﻿,,0
+Fixes cache forget return value (#72),0.5437536,Flushes Str cache between requests (#468),,0
+Fixes docblocks on start command (#73),0.37362742,"Add --rr-config flag to octane:start command (#335, 00aa3b0)﻿",,0
+Fixes missing property on task exception (#74),0.5416422,Fix issue where timed out tasks were not taken into account (#396)﻿,,0
+Adds missing docblock,0.26975206,Only displays source when there is source by @nunomaduro in link,,0
+Adds missing test in sequential dispatcher (#58),0.28663826,Flushes controller on route by @nunomaduro in link,Adds missing test about exceptions in sequencial dispatcher Apply fixes from StyleCI (#57) Improves tests,0
+"Makes the ""SequentialTaskDispatcher"" to behave like ""SwooleTaskDispatcher"" when errors occurs (#60)",0.3700893,Fix Swoole breaks when log is a valid JSON (#316),,0
+Adds task timeout exception on timeouts (#56),0.7537823,Fix timeout value passed to taskWaitMulti (#380)﻿,Adds task timeout exception on timeouts Updates tests Improves test Adds tests,1
+Merge branch 'pr1785',0.30015886,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Makes tasks propagate exceptions (#47),0.51655865,Fix issue where timed out tasks were not taken into account (#396)﻿,Makes tasks propagate exceptions Fixes output when reporting closure exceptions Reverts number of traces,0
+Move FakeClient and FakeWorker to Laravel\Octane\Testing namespace (#51),0.5169897,Laravel 9 support (#461),Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com,0
+Adds install artisan command (#52),0.4805091,Adds Laravel 10 support by @nunomaduro in link,Adds install artisan command Update InstallCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+better install error (#53),0.3169517,Fix FileNotFound error (#421)﻿,,0
+readme tweaks,0.4063631,Various fixes and changes.,,0
+note on config repo,0.34437284,Fix config key for roadrunner http.middlware (#333)﻿,,0
+Groups errors because of tasks (#48),0.51360685,Fix issue where timed out tasks were not taken into account (#396)﻿,,0
+Only streams throwable when env is not local (#49),0.38376305,Global environment variables not being used by workers (#257),Only streams throwable when env is not local Adds testing on the list of envs,0
+"Revert ""Only streams throwable when env is not local""",0.3692364,Global environment variables not being used by workers (#257),This reverts commit 096f8cc0116649b05d4f7ed8d7d419d3c8c1bcfc.,0
+Only streams throwable when env is not local,0.36416787,Global environment variables not being used by workers (#257),,0
+set running in console env var,0.55933225,Global environment variables not being used by workers (#257),,0
+support socialite,0.19154564,Adds Laravel 10 support by @nunomaduro in link,,0
+Update composer.json (#46),0.4952852,Laravel 9 support (#461),,0
+Fix indentation for function (#43),0.18674722,Fix byte conversion (#465),,0
+Clean up code (#44),0.28077367,Reset application scope to flush scoped instances (#313),Clean up code Fix test,0
+build,0.28193632,Initial pre-release.﻿,,0
+update readme for sail,0.34125295,Adds support for RoadRunner v3 and updates dependencies by @nunomaduro in link,,0
+add notice,0.2581189,Removed,,0
+add note,0.22900489,Changed,,0
+adding table ifno,0.31305686,Fix type declaration error of Swoole table by @sy-records in link,,0
+document more,0.16386783,"Display memory usage (#297, #304)",,0
+initial work on readme,0.3604316,Initial pre-release.﻿,,0
+Apply fixes from StyleCI (#42),0.3126708,Various fixes and changes.,,0
+Merge branch 'swooleMaxExecutionTime',0.46971166,Adds support for Open Swoole v22.x by @nunomaduro in link,,0
+add test,0.2524926,"Add clear the cache of APCu and Opcache (#385, 9ff568b)",,0
+"Revert ""Revert ""Stop servers on console signals (#35)"" (#40)"" (#41)",0.47820294,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",This reverts commit c3768fea236e9b0ed1d95813b5bf8624f8a3425b.,0
+"Revert ""Stop servers on console signals (#35)"" (#40)",0.56741434,"Revert ""[1.x] Made Roadrunner log level configurable"" by @driesvints in link",This reverts commit 73b2e54ea32393c5772fcc1c8874c51dd3a201a5.,0
+Stop servers on console signals (#35),0.37839004,"Prints server logs to ""stderr"" (#326, 28cf5ee)﻿",Adds stop server signals Removes state files if servers are not running Update InteractsWithServers.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Refactors start commands,0.3730925,Reload RoadRunner using the global executable if it's present (#288)﻿,,0
+Kills manager when stopping server (#36),0.35313228,"Prints server logs to ""stderr"" (#326, 28cf5ee)﻿",,0
+Merge branch 'rr2',0.3064155,Prefix rr binary permissions with 0 to specify it as an octal value by @Dylan-Buth in link,,0
+Allow setting a max execution time for roadrunner (#37),0.5269204,Fix max_execution_time config doesn't work by @sy-records in link,allow setting a max execution time for roadrunner Update StartRoadRunnerCommand.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Apply fixes from StyleCI (#38),0.31588757,Various fixes and changes.,,0
+Apply fixes from StyleCI (#33),0.31247205,Various fixes and changes.,,0
+Shutdown the server on worker boot exceptions (#32),0.41782898,Moved opcache clearing to before bootWorker by @LauJosefsen in link,Shutdown the server on worker boot exceptions Fixes stop --server flag Update swoole-server Update InteractsWithIO.php Update Stream.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+Improves exception handling on RR (#31),0.3070481,Adds support for RoadRunner v2.6.x (#449),,0
+fix duration,0.45685607,Refresh query duration handling by @timacdonald in link,,0
+Apply fixes from StyleCI (#30),0.31291494,Various fixes and changes.,,0
+max execution time for swoole,0.5976973,Error No buffer space available when using Swoole (#253),,0
+Fixes wrong import,0.31449565,Fix byte conversion (#465),,0
+Require minimum Laravel version (#29),0.6667298,Laravel 9 support (#461),Require minimum Laravel version Update tests.yml Update composer.json Update tests.yml Update composer.json Update tests.yml Update tests.yml Update tests.yml,0
+Group same errors on swoole,0.6216756,Fix Swoole breaks when log is a valid JSON (#316),,0
+Tweak installing roadrunner binary command. (#28),0.69533086,The new minimum RoadRunner binary version is now 2.1.1 (#258),Tweak installing roadrunner binary command. Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com Update GitHub Action Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com Update InstallsRoadRunnerDependencies.php Co-authored-by: Taylor Otwell taylor@laravel.com,0
+wip (#27),0.2714998,Reverts #669 by @nunomaduro in link,,0
+wip (#26),0.27574086,Reverts #669 by @nunomaduro in link,,0
+Merge branch 'rr2' of github.com:laravel/octane into rr2,0.38613188,Laravel 9 support (#461),,0
+updating to rr2,0.4526622,The new minimum RoadRunner binary version is now 2.1.1 (#258),,0
+Makes collision dependency optional,0.5413823,Adds support for Collision v7.x by @nunomaduro in link,,0
+Updates tests,0.46944767,Various fixes and changes.,,0
+Improve console exceptions,0.27124807,Log level used in non-local environments (#456),,0
+"Removes ""spatie/laravel-package-tools"" dependency (#25)",0.53685826,Laravel 9 support (#461),,0
+Removes spatie/once dependency (#24),0.3618128,Updates octane:install command when Swoole extension is missing (#427),,0
+Uses rr binary in favour of rr cli (#23),0.53692704,Prefix rr binary permissions with 0 to specify it as an octal value by @Dylan-Buth in link,,0
+Fixes request output on roadrunner (#22),0.58408964,Adds support for RoadRunner v2.6.x (#449),Fixes request output on roadrunner Apply fixes from StyleCI (#21),0
+Fixes artisan commands exit code (#20),0.40761745,Laravel 9 support (#461),,0
+"Replace ""Next"" with ""First"" (#19)",0.21570678,Re-do: Configurable Roadrunner log level by @ejulen in link,"Replace ""Next"" with ""First"" Update bootstrap.php Co-authored-by: Taylor Otwell taylor@laravel.com",0
+Merge branch 'ticks',0.16018896,Stable release.,,0
+Utilise APP_BASE_PATH to identify base_path() location. (#17),0.46374437,Use getHost() by @chu121su12 in link,Utilise APP_BASE_PATH to identify base_path() location. Use passing environment variable using symfony/process Reduce need to maintain additional configuration values. Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com Update StartSwooleCommand.php Add tests. Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com remove temporary path detection method Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com Use Testbench 6.16 which fixes vendor path reference from bootstrap/app.php Signed-off-by: Mior Muhammad Zaki crynobone@gmail.com,0
+Merge branch 'master' into ticks,0.22782686,Fix log level by @masterjus in link,,0
+push static,0.23150383,Stable release.,,0
+Merge pull request #12 from laravel/feat/makes-roadrunner-dependency-optional,0.58427143,Adds support for RoadRunner v3 and updates dependencies by @nunomaduro in link,"Makes ""spiral/roadrunner"" an optional package",0
+Merge pull request #14 from laravel/tests/report-exception-test,0.505449,Laravel 9 support (#461),Adds tests concerning the ReportException::class listener.,0
+Adds report exceptions test,0.20696159,Give new application instance to database session handler (#302),,0
+Apply fixes from StyleCI (#13),0.30792898,Various fixes and changes.,,0
+"Makes ""spiral/roadrunner"" an optional package",0.5470961,Adds support for RoadRunner v2.6.x (#449),,0
+Apply fixes from StyleCI (#11),0.29668736,Various fixes and changes.,,0
+Merge pull request #10 from laravel/revert-6-pr17161,0.5647522,Laravel 9 support (#461),"Revert ""A coroutine context already exists""",0
+"Revert ""A coroutine context already exists""",0.44075006,Reset application scope to flush scoped instances (#313),,0
+Merge pull request #6 from laravel/pr17161,0.55017674,Laravel 9 support (#461),A coroutine context already exists,0
+Merge pull request #8 from laravel/driesvints-patch-1,0.5410686,Laravel 9 support (#461),Enable PHP 8 for StyleCI,0
+Merge pull request #5 from laravel/fix/phpdocs-within-stream,0.5314064,Laravel 9 support (#461),Fixes phpdocs on stream object,0
+Apply fixes from StyleCI (#7),0.2957309,Various fixes and changes.,,0
+a coroutine context already exists,0.33596465,Reset application scope to flush scoped instances (#313),,0
+Fixes phpdocs on stream object,0.4041233,Fix Symfony uploaded file moving (#317)﻿,,0
+Merge pull request #4 from laravel/fix/worker-docs-typo,0.52316386,Laravel 9 support (#461),Fixes typo within worker docs,0
+Fixes typo within worker docs,0.4751053,Resolve typo resulting in deprecation notice by @owenvoke in link,,0
+Updates code style,0.4179411,Various fixes and changes.,Co-authored-by: Dries Vints dries@vints.io,0
+Updates coding style,0.44857028,Various fixes and changes.,Co-authored-by: Dries Vints dries@vints.io,0
+Apply fixes from StyleCI (#1),0.26600692,Various fixes and changes.,,0
+Fixes tests,0.55368054,Various fixes and changes.,,0
+Adds console UX improvements,0.4180725,Various fixes and changes.,,0
+Apply fixes from StyleCI (#3),0.28194588,Various fixes and changes.,,0
+first,0.27581012,Removed,,0

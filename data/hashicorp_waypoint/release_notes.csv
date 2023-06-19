@@ -1,5 +1,68 @@
-Index,Release Note,Release Note With Abstraction
-1,"0.11.1 (May 11, 2023)
+Index,Release Note,Release Note Abstract
+1,"0.11.2 (June 15, 2023)
+IMPROVEMENTS:
+
+cli,server: Introduce explicit delete endpoint for CLI and Server for Config
+  and Config Sourcers. [GH-4754]
+cli: Use -w flag for workspace scoping on config set and config delete,
+  instead of workspace-scope. [GH-4770]
+plugin/aws-ecs: Add config options for the target group protocol and protocol
+  version. [GH-4742]
+runnerinstall/nomad: Add CLI flags for setting custom CPU and memory resources. [GH-4798]
+serverinstall/nomad: Add config flag -nomad-host-network for specifying the
+  host network of the Waypoint server Nomad job's gRPC and HTTP (UI) ports. [GH-4804]
+
+BUG FIXES:
+
+auth: Prevent a runner token from generating a new token for a different runner [GH-4707]
+builtin: de-dupe various hcl annotation keys [GH-4701]
+cli: Honor runner install -platform arg [GH-4699]
+config-sources: Return correct workspace-scoped config sources at the global
+  scope, when a workspace is specified. [GH-4774]
+config: Remove extra eval context append for parsing configs which caused a slowdown during pipeline config parsing. [GH-4744]
+plugin/aws-ecs: Destroy the ALB only if it is managed by Waypoint. [GH-4742]
+plugin/aws-ecs: Fix failure when destroying the target group during a release
+  destroy operation. [GH-4742]
+plugin/aws-ecs: Fix panic when settings grpc_code or http_code for a health
+  check. [GH-4742]
+plugin/aws-ecs: Set the protocol of a health check correctly. [GH-4742]
+plugin/azure-aci: Update plugin to attempt CLI auth if environment auth fails. [GH-4763]
+plugin/ecs: Make alb.load_balancer_arn optional [GH-4729]
+plugin/ecs: Set health check timeout and interval values to compatible default
+  values. [GH-4767]
+runnerinstall/aws-ecs: Add missing permission to on-demand runner IAM policy. [GH-4742]
+runneruninstall/aws-ecs: Fix deletion of file system for AWS ECS runner. [GH-4792]
+","0.11.2 (June 15, 2023)
+IMPROVEMENTS:
+cli,server: Introduce explicit delete endpoint for CLI and Server for Config
+  and Config Sourcers. [GH-4754]
+cli: Use -w flag for workspace scoping on config set and config delete,
+  instead of workspace-scope. [GH-4770]
+plugin/aws-ecs: Add config options for the target group protocol and protocol
+  version. [GH-4742]
+runnerinstall/nomad: Add CLI flags for setting custom CPU and memory resources. [GH-4798]
+serverinstall/nomad: Add config flag -nomad-host-network for specifying the
+  host network of the Waypoint server Nomad job's gRPC and HTTP (UI) ports. [GH-4804]
+BUG FIXES:
+auth: Prevent a runner token from generating a new token for a different runner [GH-4707]
+builtin: de-dupe various hcl annotation keys [GH-4701]
+cli: Honor runner install -platform arg [GH-4699]
+config-sources: Return correct workspace-scoped config sources at the global
+  scope, when a workspace is specified. [GH-4774]
+config: Remove extra eval context append for parsing configs which caused a slowdown during pipeline config parsing. [GH-4744]
+plugin/aws-ecs: Destroy the ALB only if it is managed by Waypoint. [GH-4742]
+plugin/aws-ecs: Fix failure when destroying the target group during a release
+  destroy operation. [GH-4742]
+plugin/aws-ecs: Fix panic when settings grpc_code or http_code for a health
+  check. [GH-4742]
+plugin/aws-ecs: Set the protocol of a health check correctly. [GH-4742]
+plugin/azure-aci: Update plugin to attempt CLI auth if environment auth fails. [GH-4763]
+plugin/ecs: Make alb.load_balancer_arn optional [GH-4729]
+plugin/ecs: Set health check timeout and interval values to compatible default
+  values. [GH-4767]
+runnerinstall/aws-ecs: Add missing permission to on-demand runner IAM policy. [GH-4742]
+runneruninstall/aws-ecs: Fix deletion of file system for AWS ECS runner. [GH-4792]"
+2,"0.11.1 (May 11, 2023)
 IMPROVEMENTS:
 
 cli: Add a -verbose flag to waypoint job list to improve relevant columns shown to user
@@ -50,7 +113,7 @@ plugin/ecs: Update ECS destroyer to wait for there to be zero listeners for the
   target group before destroying the target group. [GH-4497]
 trigger: Ensure trigger Name is only alpha-numeric [GH-4660]
 ui: Only show health-check “Re-run” button if project has a data source. [GH-4553]"
-2,"0.11.0 (February 16, 2023)
+3,"0.11.0 (February 16, 2023)
 FEATURES:
 
 server: Add pagination protobuffs and stubs for pagination in ListProjects [GH-4203]
@@ -125,7 +188,7 @@ is optional and not a hard requirement to use the k8s apply plugin. [GH-4517]
 ui: fix safari bug with xterm/webgl rendering [GH-4054]
 upgrade: Fixes a bug where pre-v0.10.4 config sources could not be updated or
 deleted. [GH-4382]"
-3,"0.10.5 (December 15, 2022)
+4,"0.10.5 (December 15, 2022)
 SECURITY:
 * Waypoint now uses Go 1.19.4 to address security vulnerability (CVE-2022-41717) See the Go announcement for more details.
 IMPROVEMENTS:
@@ -148,7 +211,7 @@ config: Remove the multi-app deprecation warning.
   Please see link for more information. [GH-4265]
 BUG FIXES:
 plugin/ecs: runner install now creates aws policies to facilitate remotely running StopTask and WatchTask jobs [GH-4296]"
-4,"0.10.4 (December 08, 2022)
+5,"0.10.4 (December 08, 2022)
 FEATURES:
 
 plugin/ecs: Accept ALB security group IDs. [GH-4230]
@@ -191,7 +254,7 @@ plugin/nomad: Update Nomad task launcher plugin to use entrypoint config - fixes
   pipeline exec steps run in Nomad. [GH-4185]
 plugin/vault: Fix usage of dynamic secrets from Vault for dynamic Waypoint app
   config. [GH-3988]"
-5,"0.10.3 (November 03, 2022)
+6,"0.10.3 (November 03, 2022)
 FEATURES:
 
 plugin/consul: Consul key-value data config sourcer plugin [GH-4045]
@@ -274,7 +337,7 @@ install/nomad: Update installation with Nomad to use CSI parameters. [GH-4157]
 pipelines: Properly mark a pipeline run as complete [GH-4053]
 plugin/docker: fix issue with authenticating with registries when using
 docker-pull [GH-4121]"
-6,"0.10.2 (October 03, 2022)
+7,"0.10.2 (October 03, 2022)
 BREAKING CHANGES:
 
 plugin/helm: Add support for create_namespace and skip_crds (default is now false) [GH-3950]
@@ -313,7 +376,7 @@ core: Connected entrypoints for deleted projects now error out properly. [GH-394
 core: Fix out of order job ids for waypoint pipeline run job stream CLI. [GH-3946]
 plugin/nomad-jobspec: Fix deployment of periodic and system Nomad jobs. [GH-3963]
 ui: Fix crash when encountering resources without IDs [GH-3929]"
-7,"0.10.1 (September 22, 2022)
+8,"0.10.1 (September 22, 2022)
 IMPROVEMENTS:
 
 core: Update TaskCancel to also cancel WatchTask job, if it was launched. [GH-3893]
@@ -338,7 +401,7 @@ configs in runner profile [GH-3883]
 plugin: Fix panic in non-ECS plugins when destroying resources [GH-3896]
 runner-install/k8s: Use the service account created by helm in the runner profile, rather than using the default service account. [GH-3894]
 runner-install/kubernetes: Fix the static runner image used in the waypoint runner install command [GH-3890]"
-8,"0.10.0 (September 13, 2022)
+9,"0.10.0 (September 13, 2022)
 FEATURES:
 
 core: Custom Pipelines as a Tech Preview gives users the ability to define custom pipelines to run various Waypoint actions such as a build, deploy, release, up and more for deploying applications. Waypoint will monitor and log each pipeline run, associated jobs, and show the results of executing that pipeline. [GH-3777]
@@ -467,7 +530,7 @@ upgrade: Nomad server upgrade upgrade now detects runners with the name
 waypoint-runner or waypoint-static-runner [GH-3804]
 upgrade: Update ECS server upgrade to respect -ecs-server-image flag when the
 existing server image is hashicorp/waypoint:latest [GH-3820]"
-9,"0.9.1 (July 28, 2022)
+10,"0.9.1 (July 28, 2022)
 IMPROVEMENTS:
 
 core: Adds string replace function for HCL configs [GH-3522]
@@ -484,7 +547,7 @@ plugin/nomad: Convert Nomad job for ODR to batch job [GH-3468]
 BUG FIXES:
 internal: Fix deprecation warning being fatal [GH-3605]
 plugin/tfc: Fix HCL field, refresh_interval [GH-3524]"
-10,"0.9.0 (July 05, 2022)
+11,"0.9.0 (July 05, 2022)
 FEATURES:
 
 Waypoint Task Tracking: Waypoint now tracks the lifecycle of on-demand
@@ -583,7 +646,7 @@ block to be set when attempting to load a task config to launch a task. [GH-3486
 plugin/docker: fix issue with remote operations for docker-pull builder [GH-3398]
 plugin/k8s: Properly parse kubernetes task launcher config on plugin invoke. [GH-3475]
 upgrade: Update existing runner profile during server upgrade & change naming convention of initial runner profile [GH-3490]"
-11,"0.8.2 (May 19, 2022)
+12,"0.8.2 (May 19, 2022)
 IMPROVEMENTS:
 
 cli: Output message if no runners are found for 'runner list' [GH-3266]
@@ -634,7 +697,7 @@ plugin/k8s: Ensure container=docker environment variable is set for Kaniko
 to properly detect running inside a container, which prevented on-demand
 runners from working on Kubernetes 1.23. [GH-3322]
 server: fix issue cleaning up tasks in Kubernetes that completed successfully [GH-3299]"
-12,"0.8.1 (April 08, 2022)
+13,"0.8.1 (April 08, 2022)
 FEATURES:
 IMPROVEMENTS:
 BUG FIXES:
@@ -645,7 +708,7 @@ FEATURES:
 IMPROVEMENTS:
 BUG FIXES:
 server: Fix runner database by setting proper runner bucket for initialization. Sever upgrades to 0.8.0 would previously fail before this fix. [GH-3200]"
-13,"0.8.0 (April 07, 2022)
+14,"0.8.0 (April 07, 2022)
 FEATURES:
 
 Targetable Runners with Labels: Waypoint now supports runner profiles that target specific on-demand runners by labels.
@@ -750,7 +813,7 @@ server: Fix project poll job singleton id to only include application on project
 poll jobs if exist. Otherwise, only include the workspace and project. [GH-3158]
 ui: Fix missing links to resources [GH-3172]
 ui: fix missing link on release detail page [GH-3142]"
-14,"0.7.2 (February 24, 2022)
+15,"0.7.2 (February 24, 2022)
 FEATURES:
 
 Targetable Runners: Allow apps and projects to target specific runner profiles.
@@ -789,7 +852,7 @@ server: Cache Horizon hostname URL lookup when listing deployments in the
 UI_ListDeployments bundle. Now we look up the deployment URL once, and craft
 the deployment URLs based on the original hostname lookup. [GH-2950]
 ui: fixed issue with focus jumping back to the skip link on automatic refresh [GH-3019]"
-15,"0.7.1 (January 25, 2022)
+16,"0.7.1 (January 25, 2022)
 IMPROVEMENTS:
 
 ui: Automatically select the appropriate workspace [GH-2835]
@@ -810,7 +873,7 @@ plugin/nomad: Fix Nomad job namespace when using ODRs [GH-2896]
 ui: Ensure logs update correctly when switching between deployments [GH-2901]
 ui: Limit number of deployments requested [GH-2930]
 ui: Update empty logs message [GH-2925]"
-16,"0.7.0 (January 13, 2022)
+17,"0.7.0 (January 13, 2022)
 FEATURES:
 
 Source variable values from remote systems: The default value for input variables
@@ -919,12 +982,12 @@ cli: Fix issue where users could not disable project polling from the CLI [GH-26
 core: fix issue where runners would fail but not shut down [GH-2571]
 ui: Fix edge case issue where users would not be redirected to the authentication screen if no api token was set [GH-2696]
 ui: Logs & Exec Terminals resize smoothly [GH-2890]"
-17,"0.6.3 (December 10, 2021)
+18,"0.6.3 (December 10, 2021)
 SECURITY UPDATE:
 * Update Go build version to 1.16.12 per Go security release","0.6.3 (December 10, 2021)
 SECURITY UPDATE:
 * Update Go build version to 1.16.12 per Go security release"
-18,"0.6.2 (November 4, 2021)
+19,"0.6.2 (November 4, 2021)
 FEATURES:
 
 plugin/nomad: Introduce Nomad On-Demand Runner support for Waypoint server. Launch
@@ -961,7 +1024,7 @@ did not properly implement a Registry component with AccessInfoFunc() [GH-2532]
 serverinstall/k8s: Clean up rbac resources on uninstall, and do not error when existing rbac resources are detected during server upgrade. [GH-2654]
 ui: avoid loading all status reports [GH-2562]
 ui: improve docker reference parsing [GH-2518]"
-19,"0.6.1 (October 21, 2021)
+20,"0.6.1 (October 21, 2021)
 BUG FIXES:
 
 cli: Fix project apply to set runner profiles by name [GH-2489]
@@ -978,7 +1041,7 @@ cli: Fix panic in logs and exec commands [GH-2526]
 cli: Fix issue where sending ctrl-c to the CLI could block all subsiquent operations on the app/project/workspace for two minutes [GH-2513]
 serverinstall/ecs: Fix potential panic in some ECS On-Demand Runner releases [GH-2533]
 serverinstall/ecs: Update ODR role permissions to enable status reports [GH-2543]"
-20,"0.6.0 (October 14, 2021)
+21,"0.6.0 (October 14, 2021)
 FEATURES:
 
 cli: Add new commands workspace inspect and workspace list to view and list
@@ -1135,7 +1198,7 @@ server: Validate GetDeployment request has a valid request body to avoid a serve
 panic. [GH-2269]
 ui: Fixed config variable duplication when renaming [GH-2421]
 ui: Notification messages display nicely when containing long words such as URLs [GH-2411]"
-21,"0.5.2 (September 09, 2021)
+22,"0.5.2 (September 09, 2021)
 FEATURES:
 
 cli: Add a new command for inspecting project information, waypoint project inspect. [GH-2055]
@@ -1182,7 +1245,7 @@ plugin/aws-ecs: Fix panic when specifying a sidecar without a health check [GH-2
 plugin/nomad: Only use non-empty job.StatusDescription for HealthMessage [GH-2093]
 server/singleprocess: Stop returning error when polling an app with no deployment or release [GH-2204]
 ui: Fix leaky project repository settings being reused when creating a new project [GH-2250]"
-22,"0.5.1 (August 19, 2021)
+23,"0.5.1 (August 19, 2021)
 IMPROVEMENTS:
 cli/status: Display '(unknown)' when the time a status report was generated is not known [GH-2047]
 cli/uninstall: Remove hard requirement on platform flag, attempt to read server platform from server context. Platform flag overrides anything set in a server platform context [GH-2052]
@@ -1197,7 +1260,7 @@ BUG FIXES:
 plugin/aws/alb: Always set the generated time for a status report [GH-2048]
 plugin/aws/ecs: Fix destroy non-latest deployments in ECS [GH-2054]
 ui: Prevent deletion of git/input variable settings when saving the other [GH-2057]"
-23,"0.5.0 (August 12, 2021)
+24,"0.5.0 (August 12, 2021)
 FEATURES:
 
 Status Reports: Waypoint now has multiple improvements to support status
@@ -1290,7 +1353,7 @@ plugin/nomad: Fix case where nomad error would be ignored during a status check 
 plugin/k8s: Fix ports configurability [GH-1650]
 serverinstall/ecs: Handle errors when resources are already destroyed [GH-1984]
 ui: Display and read/write base64 strings correctly in SSH and Hcl inputs [GH-1967]"
-24,"0.4.2 (July 22, 2021)
+25,"0.4.2 (July 22, 2021)
 FEATURES:
 
 plugin: Allow debugging of plugins with tools like delve [GH-1716]
@@ -1315,7 +1378,7 @@ BUG FIXES:
 plugin/aws/ecs: Validate memory and cpu values [GH-1872]
 plugin/nomad: Fix broken -nomad-runner-memory and -nomad-server-memory flags [GH-1895]
 serverinstall/ecs: Validate memory and cpu values [GH-1872]"
-25,"0.4.1 (July 1, 2021)
+26,"0.4.1 (July 1, 2021)
 FEATURES:
 
 config: Add ${app.name} variable [GH-1709]
@@ -1366,7 +1429,7 @@ plugin/nomad: Fix case where Nomad error would be ignored during a status check 
 server/client: Configure keepalive properties to RPC connections to persist connections even after inactivity [GH-1735]
 server/runner: Correctly exit liveness listener when connection is closed [GH-1732]
 serverinstall/k8s: Accept k8s-namespace when uninstalling server [GH-1730]"
-26,"0.4.0 (June 03, 2021)
+27,"0.4.0 (June 03, 2021)
 FEATURES:
 
 Mutable Deployments: Waypoint now supports the concept of ""mutable"" deployments
@@ -1457,7 +1520,7 @@ ui/checkbox-inputs-safari: Custom Inputs in the browser Ui now render properly o
 ui: unread log count resets after scrolling [GH-1373]
 BREAKING CHANGES:
 plugin/netlify: Removed the netlify plugin [GH-1525]"
-27,"0.3.2 (May 13, 2021)
+28,"0.3.2 (May 13, 2021)
 BREAKING CHANGES:
 
 plugin/k8s: scratch_path now uses an array of strings instead of a string, allowing you to specify multiple directories to be mounted as emptyDir [GH-1317]
@@ -1514,7 +1577,7 @@ plugin/aws/ec2: Check Auto Scaling activites for failures or cancellations [GH-1
 plugin/aws/ecs: Fix bug where certificate and other fields had to be set to empty string to use listener. [GH-1401]
 plugin/aws/ecs: Retry actions that cross AWS service boundaries to fix eventual consistency issues. [GH-1454]
 plugin/pack: Honor DOCKER_HOST properly [GH-1457]"
-28,"0.3.1 (April 20, 2021)
+29,"0.3.1 (April 20, 2021)
 IMPROVEMENTS:
 
 cli: Make purge default and remove flag for Nomad uninstall [GH-1326]
@@ -1547,7 +1610,7 @@ cli: connections with TLS without insecure flag properly connect [GH-1307]
 cli: server bootstrap will not give auth token errors [GH-1320]
 plugin/aws/ecs: Route 53 ""A"" Type record properly created when not found for domain name [GH-1256]
 plugin/nomad: use namespace config option for deploy [GH-1300]"
-29,"0.3.0 (April 08, 2021)
+30,"0.3.0 (April 08, 2021)
 BREAKING CHANGES:
 
 ui: dropped support for Internet Explorer [GH-1075]
@@ -1616,7 +1679,7 @@ core: default releasers initialize properly when they use HCL variables [GH-1254
 cli: require at least one argument [GH-1188]
 plugin/aws/alb: clamp alb name per aws limits [GH-1225]
 ui: output failed build errors in logs [GH-1280]"
-30,"0.2.4 (March 18, 2021)
+31,"0.2.4 (March 18, 2021)
 FEATURES:
 IMPROVEMENTS:
 
@@ -1641,7 +1704,7 @@ entrypoint: fix URL service memory leak [GH-1200]
 builtin/k8s/release: Allow target_port to be int or string [GH-1154]
 builtin/k8s/release: Include name field for service port release [GH-1184]
 builtin/docker: Revert #918, ensure HostPort is randomly assigned between container deploys [GH-1189]"
-31,"0.2.3 (February 23, 2021)
+32,"0.2.3 (February 23, 2021)
 FEATURES:
 IMPROVEMENTS:
 
@@ -1666,7 +1729,7 @@ builtin/docker: Fix host port mapping defined by service_port [GH-918]
 builtin/k8s: Surface pod failures on deploy [GH-1110]
 serverinstall/nomad: Set platform as nomad at end of Install [GH-1129]
 builtin/aws-ecs: Fix nil check on optional logging block [GH-1120]"
-32,"0.2.2 (February 17, 2021)
+33,"0.2.2 (February 17, 2021)
 FEATURES:
 IMPROVEMENTS:
 
@@ -1697,7 +1760,7 @@ builtin/aws/ecs: fix listener deletion on deployment deletion [GH-1087]
 builtin/k8s: Handle application config sync with K8s and Secrets [GH-1073]
 cli/hostname: fix panic with no hostname arg specified [GH-1044]
 core: Fix empty gitreftag response in config [GH-1047]"
-33,"0.2.1 (February 02, 2021)
+34,"0.2.1 (February 02, 2021)
 FEATURES:
 
 Uninstall command for all server platforms:
@@ -1748,7 +1811,7 @@ server: don't block startup on URL service being unavailable [GH-950]
 server: UpsertProject will not delete all application metadata [GH-1027]
 server: increase timeout for hostname registration [GH-1040]
 plugin/google-cloud-run: fix error on deploys about missing type [GH-955]"
-34,"0.2.0 (December 10, 2020)
+35,"0.2.0 (December 10, 2020)
 FEATURES:
 
 Application config syncing with Kubernetes (ConfigMaps), Vault, Consul, and AWS SSM;
@@ -1833,7 +1896,7 @@ core: waypoint exec with no TTY won't hang open until a ctrl-c [GH-830]
 cli: server config-set doesn't require a Waypoint configuration file. [GH-819]
 cli/token: fix issue where tokens could be cut off on narrow terminals [GH-885]
 plugin/aws-ecs: task_role_name is optional [GH-824]"
-35,"0.1.5 (November 09, 2020)
+36,"0.1.5 (November 09, 2020)
 FEATURES:
 IMPROVEMENTS:
 
@@ -1856,7 +1919,7 @@ plugin/google-cloud-run: less strict image validation to allow projects with sla
 plugin/k8s: default releaser should create service with correct namespace [GH-759]
 entrypoint: be careful to not spawn multiple url agents [GH-752]
 cli: return error for ErrSentinel types to signal exit codes [GH-768]"
-36,"0.1.4 (October 26, 2020)
+37,"0.1.4 (October 26, 2020)
 FEATURES:
 IMPROVEMENTS:
 
@@ -1891,7 +1954,7 @@ cli: plugins loaded in pwd work properly and don't give PATH errors [GH-699]
 cli: support plugins in $HOME/.config/waypoint/plugins even if XDG path doesn't match [GH-707]
 plugin/docker: remove intermediate containers on build [GH-667]
 plugin/docker, plugin/pack: support ssh accessible docker hosts [GH-664]"
-37,"0.1.3 (October 19, 2020)
+38,"0.1.3 (October 19, 2020)
 FEATURES:
 IMPROVEMENTS:
 
@@ -1938,6 +2001,6 @@ plugin/aws-ecs: delete ECS ALB listener on destroy [GH-607]
 plugin/google-cloud-run: Don't crash if capacity or autoscaling settings are nil [GH-620]
 install/nomad: if -nomad-dc flag is set, dc1 won't be set [GH-603]
 cli: contexts will fall back to not using symlinks if symlinks aren't available [GH-633]"
-38,,
 39,,
 40,,
+41,,

@@ -1,353 +1,355 @@
-Index,Commit Message Abstract,Score Abstract,Corresponding Changelog Sentence Abstract,Commit Desription Abstract,Label
-1,Limit Nav Header max lines of username and url to 2,0.5442727,Fix navigation drawer header when having a long server URL by @cyb3rko ,TranslucentStatusBar by default.,0
-2,Update Share design,0.5365605,Update app design by @cyb3rko ,,0
-3,Merge pull request #249 from quthla/change_wording,0.40876144,Rename some texts,,0
-4,Show precise timestamp when pressing on message time (closes #90).,0.77361727,Show precise timestamp on click (#90 via #103 by @leopoldsedev),feat: observe network changes,1
-5,Reformat lambda expressions,0.42199147,Rename some texts,"syncExec synced on the Listener instance, but it modified properties of the WebSocketConnection without synchronizing on the WebSocketConnection.",0
-6,added some lines to get foreground notification (a little) less intrusive,0.7212664,Make the foreground notification less intrusive (#30 fxied in #33 by @ialokim),,1
-7,Update sdk version 30,0.6063454,Increase targetSdkVersion to 33,Fix F-Droid metadata folder,0
-8,Added local Picasso instance instead of singleton,0.3155188,Fix base64 markdown images,,0
-9,Fix sportless issues,0.44046193,Fix release,,0
-10,Add LogManager for reading the logs in react-native,0.5844552,Update log view after log is cleared,Co-authored-by: Jannis Mattheis contact@jmattheis.de,0
-11,Add gif & tables plugin,0.5655145,Fix links inside tables (link),Separate Notification channels for each app,0
-12,Add fastlane metadata and images,0.99765795,Add fastlane metadata + images,,1
-13,Add Readme,0.37590536,Add copy logs button (#57 via #105 by @happymario),"The PicassoHandler doesn't really need access to the full list, as it only requires the application image.",0
-14,Add LED light for message notifications,0.5898926,Change notification icon by @PanderMusubi,,0
-15,Simplify and optimize Kotlin code snippets,0.48577148,Add compact message layout by @cyb3rko,,0
-16,Version 2.0.0,0.5582055,Update dependencies,,0
-17,deletebutton,0.74778974,Add delete application button (#150 by @p1gp1g),,1
-18,Update code to use new client,0.54731834,Update app design by @cyb3rko ,Fix pink button background bug,0
-19,Fix crash on delete (app|message|client),0.6650133,Add delete message undo (#99 by @leopoldsedev),,0
-20,Add LogsActivity,0.65384954,Add logs button to login (#23),,0
-21,Add client::notification.bigImageUrl extra,0.90654945,Add client::notification.bigImageUrl extra (#200 by @ngruychev),,1
-22,Update workflow java version to 11,0.80569863,Update to Java 11,,1
-23,Add ugly hacky oreo notification support,0.57598513,Change notification icon by @PanderMusubi,Simplify Navigation Header,0
-24,Version 2.0.1,0.5689317,Initial Release,Fix MessageImageCombiner error,0
-25,Add main activity and push service,0.5675491,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
-26,Move encrypting key to before deploy,0.30934727,Allow usage of user certificates (#131 by @KROSF),,0
-27,Replace custom splashscreen with native one,0.793939,Add native android splash screen,,1
-28,Implement changes required by new Kotlin codebase,0.5483082,Migrate to Kotlin,,0
-29,Merge pull request #255 from cyb3rko/fix-log-clear,0.557781,Fix error when refreshing the app by @cyb3rko ,,0
-30,Merge branch 'master' of github.com:gotify/android into feature/self-signed-ssl,0.53578293,Migrate to GitHub actions (#157),,0
-31,"Revert ""Update *SdkVersion""",0.57316566,Notification improvements (#18 partly fixed in #16 & #22 by @schwma),,0
-32,TranslucentStatusBar by default.,0.47048134,Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel),Design Renewal,0
-33,Map Gotify message priorities to notification channels,0.70686936,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,1
-34,Format android manifest,0.54620004,Migrate to android view bindings by @cyb3rko,,0
-35,Update spotless,0.5468148,Update dependencies,,0
-36,Use data class,0.34304774,Add fastlane metadata + images,,0
-37,Merge pull request #279 from cyb3rko/fix-pink-background,0.581989,Fix error when refreshing the app by @cyb3rko ,,0
-38,Fix cancelable client name dialog,0.61666846,Delete client on logout (#114),,0
-39,Add support for opening urls when clicking on notifications  (#91),0.8095954,Add support for open url on notification click (#66 via #91 by @mzoeller),,1
-40,Add manifest (with push service),0.49883968,Add notification permission popup,,0
-41,Version 2.0.11,0.5762875,Update dependencies (#110),,0
-42,Add state holder for message activity,0.6427162,Do not start message activity twice (#23),,0
-43,Add delete app option,0.7372418,Add delete application button (#150 by @p1gp1g),,1
-44,Add travis script,0.4073953,Add compact message layout by @cyb3rko,,0
-45,Remove javax generated annotation for now,0.5113586,Update to Java 11,,0
-46,Show messages that were missed while being disconnected & Use models,0.5948207,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
-47,Add java 8 requirement,0.520742,Update to Java 11,Native splashscreen,0
-48,Fix clearing log not updating textview,0.8090498,Update log view after log is cleared,,1
-49,Make new methods for undoing deletions synchronized.,0.48378137,Limit the reconnect timeout link,Fix missing permissions on newer Android versions,0
-50,Replace legacy support library only with swipe refresh layout library,0.48193836,Fix CVE-2019-11932 by removing the android-gif-drawable-library (#87),,0
-51,Enable vibration by default for high and default importance notification channels,0.53893656,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,0
-52,Update missed components,0.6573092,Update several dependencies (#87),,0
-53,Add battery and notification improvements,0.50773203,Change notification icon by @PanderMusubi,,0
-54,Use QuickPermissions fork + use custom dialogs,0.42924714,Allow cleartext traffic (#31 fixed in #34),Codebase rewrite to Kotlin,0
-55,Remove nullability of ClientFactory functions returns,0.4702586,Delete client on logout (#114),,0
-56,Truncate precise timestamp to seconds.,0.62561405,Show precise timestamp on click (#90 via #103 by @leopoldsedev),Fixes #262,0
-57,Fix workflow build lint error,0.39958587,Fix error when refreshing the app by @cyb3rko ,,0
-58,Remove unused intent filter,0.52652323,Add setting to exclude the message activity from the recent apps by @sgpublic ,deletebutton,0
-59,Add Home-Component,0.4156282,Add compact message layout by @cyb3rko,,0
-60,Implement general coroutine helper method,0.3349588,Update app design by @cyb3rko ,,0
-61,Update compile sdk,0.55725384,Update dependencies,,0
-62,Adjust notification channel names to include their corresponding gotify priorities,0.7350063,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,1
-63,Version 2.0.2,0.5445567,Update several dependencies (#87),,0
-64,Update app bar design,0.67327034,Update app design by @cyb3rko ,,0
-65,Update AppCompat to newest version,0.6224136,Update app design by @cyb3rko ,,0
-66,Fix typo,0.46681976,Fix release,,0
-67,Implement compact message layout in Adapter,0.7441646,Add compact message layout by @cyb3rko,,1
-68,Merge pull request #286 from cyb3rko/fdroid-metadata,0.5131247,Migrate to android view bindings by @cyb3rko,,0
-69,Update build badge,0.49963823,Update dependencies,,0
-70,Rename de.gotify to com.github.gotify,0.49441236,Migrate to GitHub actions (#157),,0
-71,Version 2.0.13,0.5529616,Update several dependencies (#87),,0
-72,Adapt delete button code to fit with other changes.,0.632692,Add delete application button (#150 by @p1gp1g),,0
-73,Update Spotless gradle plugin,0.50725955,Update dependencies (link),,0
-74,Update Messages design,0.6404885,Messages are now rendered as text/plain by default. In v2.0.6 it was text/markdown.,,0
-75,Clear notifications on open app (#93),0.9017156,Clear notifications on open app (#62 via #93 by @mzoeller),,1
-76,Update Nav Header placeholder text,0.5400876,Change label of foreground notification by @Sternagfonkel,,0
-77,Version 2.5.1,0.55042875,Update several dependencies (#87),,0
-78,Wait for network when websocket connection failed,0.815938,Fix closed WebSocket connection on timeout (#129 via #137),,1
-79,Rewrite 'api' to Kotlin,0.5823019,Migrate to Kotlin,,0
-80,Add logo,0.5328966,Add compact message layout by @cyb3rko,,0
-81,Remove old project,0.5273277,Delete client on logout (#114),,0
-82,Version 2.0.14,0.5910137,Update dependencies,,0
-83,Merge pull request #278 from cyb3rko/notification-channels,0.60450447,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,0
-84,Ignore events from already discarded websocket listeners,0.60197425,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
-85,Use singleTask launch mode,0.38392794,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
-86,Add exclude from recents,0.47096807,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
-87,Version 2.2.0,0.5240755,Update dependencies,,0
-88,Ignore multiple reconnects,0.667634,Limit the reconnect timeout link,,0
-89,Add markdown support to notifications,0.8716731,Add markdown support in notifications (#184 by @Sternagfonkel),,1
-90,Change login icons to ion & Format,0.6014979,Change notification icon by @PanderMusubi,,0
-91,Try to instantly reconnect to WS on first error,0.64591587,Fix scheduled reconnect (#117),Fix clearing log not updating textview,0
-92,Rewrite 'service' to Kotlin,0.5789659,Migrate to Kotlin,,0
-93,Migrate gotify to new client,0.5667355,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,0
-94,Fix ugly hacky oreo notification support,0.5871185,Fix error when refreshing the app by @cyb3rko ,,0
-95,Add gotify icon,0.5617184,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,0
-96,Version 2.3.1,0.5494884,Update dependencies,,0
-97,Fix thread safety for drawer onClose,0.38032,Prevent duplicated WebSocket connections (#137),,0
-98,Fix missing permissions on newer Android versions,0.7003615,Remove unused permission (READ_PHONE_STATE),,1
-99,Version 2.1.2,0.5288028,Update several dependencies (#87),Major build updates,0
-100,Add README,0.43775925,Add copy logs button (#57 via #105 by @happymario),,0
-101,Update oauth package and ignore linting for it,0.49494871,Update several dependencies (#87),,0
-102,Don't scroll to position when undoing a deletion.,0.4689689,Add delete application button (#150 by @p1gp1g),,0
-103,MovementPlugin fixes clicking links,0.58404726,Fix links inside tables (link),,0
-104,Fix Java requirement,0.5799424,Update to Java 11,,0
-105,Change swipe color to softer red.,0.4438817,Improve link colors by @Sternagfonkel,,0
-106,Add missed messages util,0.66036797,Add 'no messages' text with explanation how to send messages (#97 by @leopoldsedev),,0
-107,Load data: urls in markdown,0.7171926,Support data: image urls in markdown (#107 via #108),,1
-108,Change wording,0.7690166,Rename some texts,,1
-109,Correct class and method visibility modifiers,0.35482967,Use extra property to determine how the message content is rendered (#67) ,,0
-110,Rewrite 'messages' to Kotlin,0.585683,Add 'no messages' text with explanation how to send messages (#97 by @leopoldsedev),,0
-111,Start Gotify WebSocketService on boot completed,0.7004891,Start Gotify on boot (#25 fixed in #32 by @schwma),,1
-112,Add common utils,0.41283557,Add fastlane metadata + images,,0
-113,Version 2.1.1,0.6000552,Initial Release,,0
-114,Use big style for foreground notification,0.57932776,Make the foreground notification less intrusive (#30 fxied in #33 by @ialokim),,0
-115,Fix error when combining Message and Image,0.60858667,Fix not loading images (#47),Increase minSdkVersion,0
-116,Use application index in menu items,0.41852292,Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel),,0
-117,Update butterknife,0.4613945,Update several dependencies (#87),,0
-118,Fix showSnackbar function,0.50640315,Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel),"This reverts commit 5360cf401e2a17790a1fd08f09ff6003060466ab. Changing this requires modification of the app. It is not required just yet, so revert this for now.",0
-119,Delete client on logout,0.92764604,Delete client on logout (#114),,1
-120,Fix not working scheduled reconnect,0.9077947,Fix scheduled reconnect (#117),,1
-121,Disallow null response of SuccessCallback,0.4915359,Fix uncaught exception while parsing message id (#119 via #127 and #125),Improve wording,0
-122,Fill xml message layouts with dummy values,0.51026917,Add compact message layout by @cyb3rko,,0
-123,Replace Butterknife code with ViewBinding,0.45161253,Allow cleartext traffic (#31 fixed in #34),Refactor Butterknife to ViewBinding,0
-124,colorPrimary changed for transplant status bar.,0.43151098,Improve link colors by @Sternagfonkel,,0
-125,Make logs copyable,0.5997951,Add copy logs button (#57 via #105 by @happymario),,0
-126,Rewrite 'init' to Kotlin,0.55349785,Migrate to Kotlin,Compact message layout,0
-127,Remove Butterknife dependencies,0.48458514,Update dependencies,,0
-128,Cut the username prefix of url in Nav Header,0.5215596,Fix navigation drawer header when having a long server URL by @cyb3rko ,,0
-129,Add react native js components,0.35111928,Improve websocket reconnects,,0
-130,Set message notification accent color to colorPrimary,0.5505128,Change notification icon by @PanderMusubi,,0
-131,Disallow push message if no applications exist,0.7272613,Disallow sending messages if no applications exists (#182 by @Sternagfonkel),,1
-132,Move appIdToApp to WebSocketService,0.6271973,Improve websocket reconnects,,0
-133,Fix icons,0.6205461,Change notification icon by @PanderMusubi,,0
-134,Fix thread safety,0.4932253,Prevent duplicated WebSocket connections (#137),,0
-135,Add api utils,0.4809479,Add client::notification.bigImageUrl extra (#200 by @ngruychev),Co-authored-by: Matthias Weis matthias1.weis@web.de,0
-136,Version 2.4.0,0.58088773,Update dependencies,,0
-137,Version 2.0.4,0.5746156,Update dependencies,,0
-138,Shrink signature of channel fallback creation method,0.47727692,Limit the reconnect timeout link,,0
-139,Fix support for base64 images,0.8412968,Fix base64 markdown images,,1
-140,"Add handling for extra ""android::action:onReceive:intentUrl""",0.5618348,Migrate to android view bindings by @cyb3rko,,0
-141,Merge pull request #22 from schwma/master,0.4701077,Notification improvements (#18 partly fixed in #16 & #22 by @schwma),java.lang.RuntimeException:   at android.app.ActivityThread.performLaunchActivity (ActivityThread.java:2957)   at android.app.ActivityThread.handleLaunchActivity (ActivityThread.java:3032)   at android.app.ActivityThread.-wrap11 (Unknown Source)   at android.app.ActivityThread$H.handleMessage (ActivityThread.java:1696)   at android.os.Handler.dispatchMessage (Handler.java:105)   at android.os.Looper.loop (Looper.java:164)   at android.app.ActivityThread.main (ActivityThread.java:6944)   at java.lang.reflect.Method.invoke (Native Method)   at com.android.internal.os.Zygote$MethodAndArgsCaller.run (Zygote.java:327)   at com.android.internal.os.ZygoteInit.main (ZygoteInit.java:1374) Caused by: java.lang.IllegalArgumentException:   at okhttp3.HttpUrl$Builder.parse (HttpUrl.java:1333)   at okhttp3.HttpUrl.get (HttpUrl.java:916)   at retrofit2.Retrofit$Builder.baseUrl (Retrofit.java:458)   at com.github.gotify.api.ClientFactory.defaultClient (ClientFactory.java:47)   at com.github.gotify.api.ClientFactory.clientToken (ClientFactory.java:28)   at com.github.gotify.sharing.ShareActivity.onCreate (ShareActivity.java:82)   at android.app.Activity.performCreate (Activity.java:7183)   at android.app.Instrumentation.callActivityOnCreate (Instrumentation.java:1220)   at android.app.ActivityThread.performLaunchActivity (ActivityThread.java:2910),0
-142,Use long for ids,0.3615776,Add fastlane metadata + images,Fixes #81,0
-143,Shrink url validation,0.53620696,Support data: image urls in markdown (#107 via #108),,0
-144,Remove unused dialog style,0.49844372,Messages are now rendered as text/plain by default. In v2.0.6 it was text/markdown.,,0
-145,Rewrite 'picasso' to Kotlin,0.5342756,Migrate to Kotlin,,0
-146,Merge pull request #258 from cyb3rko/kotlin-rewrite,0.5642458,Add compact message layout by @cyb3rko,closes #185,0
-147,Add gradlew,0.44473892,Add fastlane metadata + images,,0
-148,Only restart web socket if url/token was changed,0.69185096,Improve websocket reconnects,,0
-149,Fix link color for dark mode,0.6958104,Improve link colors by @Sternagfonkel,,0
-150,Downgrade appcompat (breaks build),0.47040367,Update dependencies,,0
-151,Update swagger client,0.57336414,Update app design by @cyb3rko ,,0
-152,Fix signing,0.75228465,Fix APK signing,,1
-153,Version 2.0.7,0.5768261,Update several dependencies (#87),,0
-154,Update retrofit,0.63787204,Update dependencies,,0
-155,Add privacy policy,0.5093781,Add notification permission popup,Fixes #179,0
-156,Rewrite 'settings' to Kotlin,0.62134737,Migrate to Kotlin,,0
-157,Show appicon in notifications,0.8086231,Show app icon in notifications (#106 by @newhinton),,1
-158,Added SSL Validation Override and CA Selection,0.5227677,Support self-signed certificates (#13 fixed in #15 by @gjabell),,0
-159,Add logs button to Login,0.8925488,Add logs button to login (#23),Fixes 164,1
-160,Change client to retrofit2,0.5177897,Improve websocket reconnects,,0
-161,Apply Material 3 design to preference switch,0.43362063,Add compact message layout by @cyb3rko,,0
-162,"Revert ""Remove message delete button.""",0.75125116,Add delete message undo (#99 by @leopoldsedev),,1
-163,Replace MessageActivity's AsyncTasks with Coroutines,0.55889064,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
-164,Let Nav Header expand to fit multi line textviews,0.48717466,Add compact message layout by @cyb3rko,Fixes #136,0
-165,Update androidx dependencies as far as possible,0.66554636,Update dependencies,,0
-166,Update dependencies,1.0000002,Update dependencies,Added setting to toggle precise date as default display Applied spotless Improved time format setting with a ListPreference Fixed default time format value in list preference Co-authored-by: Rémi Rigal remi.rigal@orange.com,1
-167,Add push service,0.5582686,Add share and push message support (#72 via #122 by @tomasvanagas),,0
-168,Add generated client,0.51175237,Add client::notification.bigImageUrl extra (#200 by @ngruychev),,0
-169,Add init activity,0.38663417,Do not start message activity twice (#23),,0
-170,Various UI enhancements.,0.51887214,Add native android splash screen,,0
-171,Merge pull request #248 from cyb3rko/butterknife-to-viewbinding,0.6083883,Migrate to android view bindings by @cyb3rko,,0
-172,Add fdroid badge,0.4552338,Change label of foreground notification by @Sternagfonkel,,0
-173,Version 2.0.3,0.55479467,Update several dependencies (#87),,0
-174,Merge pull request #41 from eternal-flame-AD/upstream-patch-network,0.5884886,Listen to network changes to prevent unnecessary reconnects (#40 fixed in #41 by @eternal-flame-AD),,0
-175,Add settings wrapper,0.4662794,Add compact message layout by @cyb3rko,,0
-176,Add LoginActivity,0.7251192,Add logs button to login (#23),,1
-177,Update notification logo (#243),0.7087682,Change notification icon by @PanderMusubi,,1
-178,Call Snackbar in Coroutine from Main thread,0.4098619,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
-179,Add markdown strike-through support (#183),0.84284675,Add support for strike-through in markdown messages (#183 by @Sternagfonkel),,1
-180,Replace LogsActivity's AsyncTask with Coroutine,0.49997076,Add copy logs button (#57 via #105 by @happymario),,0
-181,Merge branch 'master' into kotlin-rewrite,0.5189905,Migrate to Kotlin,,0
-182,Update Settings design,0.5633001,Update app design by @cyb3rko ,"Documentation for postDelayed: Causes the Runnable r to be added to the message queue, to be run after the specified amount of time elapses. The runnable will be run on the thread to which this handler is attached. The time-base is {@link android.os.SystemClock#uptimeMillis}. Time spent in deep sleep will add an additional delay to execution. TL;DR: if the CPU is in deep sleep, the postDelayed runnable won't be executed.",0
-183,Fixed Picasso + refactors,0.50349665,Fix base64 markdown images,api.deleteClient() only create a call but doesn't execute it.,0
-184,Update gradle wrapper,0.4838909,Change label of foreground notification by @Sternagfonkel,,0
-185,Move source files from 'java' to 'kotlin' folder,0.58639586,Migrate to Kotlin,,0
-186,Satisfy new PendingIntent requirements for api version 31,0.4654354,Allow cleartext traffic (#31 fixed in #34),,0
-187,Version 2.3.0,0.5423273,Update dependencies,,0
-188,Move channel creation to WebSocketService,0.6251509,Improve websocket reconnects,,0
-189,Implement optional separate app notification channels,0.7173039,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,disable updating when text is selected Closes #105,1
-190,Implement undo snackbar when deleting messages by swiping.,0.65116996,Delete messages by swiping (#38 via #99 by @leopoldsedev),,0
-191,Merge pull request #275 from cyb3rko/message-image-combine-fix,0.5939586,Add compact message layout by @cyb3rko,,0
-192,Merge pull request #34 from gotify/cleartext-traffic,0.63517296,Allow cleartext traffic (#31 fixed in #34),,0
-193,Increase minSdkVersion to 23,1.0,Increase minSdkVersion to 23,,1
-194,Use an dialog to show advanced settings,0.418372,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
-195,Fix pink button background bug,0.48812118,Fix styling of messages (#37 fixed in #54 by @hugegreenbug),,0
-196,Merge pull request #35 from gotify/deps,0.42246997,Start Gotify on boot (#25 fixed in #32 by @schwma),,0
-197,Move deprecated package in manifest to namespace declaration,0.39198345,Rename some texts,This reverts commit b0e85623861e48abb1c6fb49800234f453fc82ee.,0
-198,Reverse Log entries to have newest at the top,0.55803597,Update log view after log is cleared,"Previously the MessageFacade and MessageStateHolder both had their own state of the last deleted message, which was redundant. Now only MessageStateHolder governs the state of a pending deletion and MessageFacade handles commiting the deletion to the server.",0
-199,Version 2.0.12,0.536876,Update several dependencies (#87),,0
-200,Update Logs design,0.7178469,Update log view after log is cleared,,1
-201,Fix NPE,0.5886163,Fix APK signing,,0
-202,Prevent duplicate notification sounds from message group notification,0.61264,Do not start message activity twice (#23),"This seems to cause an issue where onSwipe is not being called anymore afterwards. Steps to reproduce: 1. Delete a message 2. Scroll a little bit down 3. Undo delete 4. Try delete again -> Swiping works, but callback is not being called.",0
-203,Adjust notification channel importances,0.66929394,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,"When swiping away a message it is only removed from the local message lists and a snackbar appears. When the snackbar is dismissed or the user deletes another message the delete request is sent to the server. If the user presses ""undo"" on the snackbar the message is reinserted into the local lists at its previous position.",0
-204,Limit reconnect timeout,0.9274205,Limit the reconnect timeout link,,1
-205,Disallow null response in Callback,0.4947104,Fix uncaught exception while parsing message id (#119 via #127 and #125),,0
-206,Update Nav Header component style,0.48590598,Fix navigation drawer header when having a long server URL by @cyb3rko ,,0
-207,Version 2.0.8,0.57091725,Update several dependencies (#87),,0
-208,Version 2.1.0,0.5756264,Initial Release,,0
-209,Update gradle + android gradle,0.53261626,Fix CVE-2019-11932 by removing the android-gif-drawable-library (#87),Scrolling interaction works out of the box only if ListView is the only child of SwipeRefreshLayout. See link,0
-210,Rewrite 'sharing' to Kotlin,0.5620265,Migrate to Kotlin,Add information (link to documentation) when no messages are present Add example URL in LoginActivity to indicate the expected format Fix capitalization in UI,0
-211,Rewrite 'log' to Kotlin,0.59124714,Migrate to Kotlin,"The problem is that HttpUrl.parse parses URLs with trailing whitespace without problems, but during the URL parsing in ClientFactory an exception is thrown in that case. Other errors when instantiating the API client are now handled as well.",0
-212,Simply Log retrieval,0.58554834,Update log view after log is cleared,,0
-213,Remove unused .jar import,0.37877944,Fix CVE-2019-11932 by removing the android-gif-drawable-library (#87),,0
-214,Add image resources,0.6905788,Add fastlane metadata + images,,0
-215,Removed catch-all hostname verifier if a cert is present,0.44499364,Delete client on logout (#114),,0
-216,Version 2.1.3,0.55140114,Update several dependencies (#87),,0
-217,Add funding info,0.36622885,  See link,,0
-218,Fix F-Droid metadata folder,0.5398295,Fix CVE-2019-11932 by removing the android-gif-drawable-library (#87),,0
-219,Reimplement ConcurrentHashMap for Picasso,0.45804137,Add fastlane metadata + images,,0
-220,Add cache for images (#88),0.7111421,Cache images to disk (#88 by @dylanparker),,1
-221,Add travis build,0.35247272,Add dark mode (#26 via #110),,0
-222,Add permission ACCESS_NETWORK_STATE,0.5810636,Add notification permission popup,,0
-223,Update client,0.68561196,Update dependencies,,0
-224,Support URLs with path prefix (#46),0.52330256,Show full url in connection string (#59 fixed in #60),,0
-225,Migrate to github actions,0.90807086,Migrate to GitHub actions (#157),,1
-226,message body autolink,0.6731071,Add android autolink to message item (#39 fixed in #43 by @eternal-flame-AD),,0
-227,Add MessagesActivity,0.6447273,Add setting to exclude the message activity from the recent apps by @sgpublic ,Without this plugin links aren't clickable.,0
-228,Cherry-picked Advanced Settings dialog,0.43195415,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
-229,Merge pull request #251 from cyb3rko/increase-minSdkVersion,0.607532,Increase minSdkVersion to 23,,0
-230,Fix crash on share when not loggedin,0.761819,"Fix crash when sharing, but there is no active user",,1
-231,Improve readme,0.45705104,Allow cleartext traffic (#31 fixed in #34),,0
-232,Simplify refreshAll onclick method,0.447093,Limit the reconnect timeout link,,0
-233,Fix ShareActivity back button,0.5768435,"Fix crash when sharing, but there is no active user",,0
-234,Add navigation for Home - Messages,0.5435393,Add compact message layout by @cyb3rko,,0
-235,Update android lib deps,0.55255985,Fix CVE-2019-11932 by removing the android-gif-drawable-library (#87),,0
-236,Use new sdk implementation syntax,0.4198534,Increase targetSdkVersion to 33,,0
-237,Merge pull request #15 from gjabell/feature/self-signed-ssl,0.6295196,Support self-signed certificates (#13 fixed in #15 by @gjabell),,0
-238,Add gitignore,0.58893836,Migrate to GitHub actions (#157),,0
-239,Show full url in connection string,0.87301576,Show full url in connection string (#59 fixed in #60),,1
-240,Update targetSdkVersion to 33,0.9115944,Increase targetSdkVersion to 33,,1
-241,Merge pull request #268 from intergalacticfm/deletebutton,0.55456644,Add delete application button (#150 by @p1gp1g),,0
-242,Set Java requirement to version 11,0.80149686,Update to Java 11,,1
-243,Rewrite root directory files to Kotlin,0.5520536,Migrate to Kotlin,"Images didn't load correctly when the following scenario occurred: * ApplicationHolder#request * MessagesActivity.SelectApplicationAndUpdateMessages#execute * MessagesActivity.SelectApplicationAndUpdateMessages#doInBackground   - method returns List, but images are ""null"" because     apps aren't loaded yet. * MessagesActivity#onUpdateApps   - Now apps were loaded and cached. * MessagesActivity.SelectApplicationAndUpdateMessages#onPostExecute   - receives List from #doInBackgroud with ""null"" images -> Messages with ""null"" images are rendered in the ListView",0
-244,Add message layout setting to SettingsPage (incl. restart dialog),0.6201873,Add compact message layout by @cyb3rko,See gotify/server#127 gotify/server#122,0
-245,Make gradlew executable,0.31985518,Make message content copyable (#21 fixed in #64),Add android autolink to message item layout,0
-246,Reformat smaller parts of code,0.4808029,Rename some texts,,0
-247,Use table aware movement plugin,0.41825536,Add fastlane metadata + images,listen for network changes,0
-248,Remove message delete button.,0.7504728,Add delete message undo (#99 by @leopoldsedev),removes obsolete reconnect callbacks scheduled before network reconnects to prevent unwanted reconnection also renamed WebSocketConnection.onFailure to onNetworkFailure to clear confusion,1
-249,Images plugin allows images,0.5625457,Fix not loading images (#47),,0
-250,Use constants for preference keys,0.25921565,Support self-signed certificates (#13 fixed in #15 by @gjabell),,0
-251,Fix unexpected settings dialog behaviour,0.52334166,Fix crash when polling new messages and the request fails,,0
-252,Update markwon,0.6023518,Add markdown support in notifications (#184 by @Sternagfonkel),,0
-253,Add License,0.47225705,Allow usage of user certificates (#131 by @KROSF),,0
-254,Add long press option to copy content to clipboard (#135),0.68178374,Add long press to copy message (#128 via #135 by @KROSF),,0
-255,Set color on foreground notification,0.66969645,Change label of foreground notification by @Sternagfonkel,Update retrofit,0
-256,Add log utils,0.63558406,Add logs button to login (#23),,0
-257,Merge pull request #273 from cyb3rko/design-renewal,0.6047839,Update app design by @cyb3rko ,Allow cleartext traffic,0
-258,Autolink web prevents other markdown links from beeing rendered,0.56119895,Support data: image urls in markdown (#107 via #108),,0
-259,Add notification support,0.7588242,Add markdown support in notifications (#184 by @Sternagfonkel),,1
-260,Add gradle config,0.41165635,Add client::notification.bigImageUrl extra (#200 by @ngruychev),Some changes to foreground notification (channel),0
-261,Set connection timeout to 10 seconds,0.7736076,Limit the reconnect timeout link,Start Gotify WebSocketService on boot completed,1
-262,Fix freeze when login URL has trailing whitespace.,0.79130983,Fix crash when login url has trailing whitespace (#96 by @leopoldsedev),,1
-263,Replace ShareActivity's AsyncTask with Coroutine,0.4343069,"Fix crash when sharing, but there is no active user",,0
-264,Merge pull request #32 from schwma/start-on-boot,0.600935,Start Gotify on boot (#25 fixed in #32 by @schwma),,0
-265,Add markdown support for messages,0.78124213,Add markdown support in notifications (#184 by @Sternagfonkel),,1
-266,Document steps to update client,0.54180753,Update dependencies,OAuth2 isnt used therefore we can ignore it,0
-267,Make title bold,0.42103833,Rename some texts,,0
-268,Add .gitignore,0.50799847,Migrate to GitHub actions (#157),,0
-269,Remove reconnect callback,0.6587628,Fix scheduled reconnect (#117),,0
-270,Add empty proguard rules,0.34122324,Change label of foreground notification by @Sternagfonkel,New notifications created a new activity even if the activity was already on top,0
-271,Add model structures,0.3479927,Add compact message layout by @cyb3rko,,0
-272,Reduced the title font size (#54),0.47723314,Add compact message layout by @cyb3rko,Map Gotify message priorities to notification channels,0
-273,Fix incoming message crash,0.74642754,Fix crash when polling new messages and the request fails,Added SSL Validation Override and CA Selection,1
-274,Switch channel id components,0.47032893,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,0
-275,Show restart dialog on setting change,0.5058334,Do not start message activity twice (#23),,0
-276,Add warning message when using http,0.5199557,Add support for open url on notification click (#66 via #91 by @mzoeller),,0
-277,Merge pull request #276 from cyb3rko/simplify-header,0.6211405,Add compact message layout by @cyb3rko,,0
-278,Show full messages,0.60376,Messages are now rendered as text/plain by default. In v2.0.6 it was text/markdown.,,0
-279,Allow clear text traffic,0.8155392,Allow cleartext traffic (#31 fixed in #34),MessagesActivity now constructs a new Picasso instance each onCreate   and passes it to ListMessageAdapter,1
-280,Version 2.0.9,0.5710114,Update dependencies,,0
-281,Add values,0.45164967,Use extra property to determine how the message content is rendered (#67) ,Switched raw strings to string resources Removed unused fields / views from LoginActivity Reset 'Check Version' button text when changing SSL settings Fixed formatting,0
-282,Replace ListView with RecyclerView for the message list.,0.4545617,Add delete application button (#150 by @p1gp1g),,0
-283,Keep selected application on screen rotation,0.8478651,Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel),Removed comment Moved SSLSettings to its own top-level class Fixed picasso not setting SSL settings and failing to load images over   self-signed connection,1
-284,Fix #131 allow app to use user certificates,0.73395777,Allow usage of user certificates (#131 by @KROSF),Moved certificate-related utilities to separate class Added settings method to return an entire SSLSettings object; refactored   methods using separate parameters to take single SSLSettings parameter Advanced Settings section on login page now hides / shows along with   other buttons to prevent it from showing up in front of the loading   spinner Fixed star imports Refactored applySslSettings as per code from merge request Fixed formatting,1
-285,Add absolute/relative time format setting,0.86912537,Add relative/absolute time format setting (#156 by @RemiRigal),,1
-286,Add inputs for the pushed message to share activity,0.68572444,Add share and push message support (#72 via #122 by @tomasvanagas),,0
-287,Change class variable to local variable,0.34600002,Rename some texts,,0
-288,Merge pull request #271 from cyb3rko/permissions-fix,0.54838693,Fix error when refreshing the app by @cyb3rko ,,0
-289,Implement swiping left/right to delete messages (closes #38).,0.778383,Delete messages by swiping (#38 via #99 by @leopoldsedev),,1
-290,Add strings & styles.xml,0.41508895,Add fastlane metadata + images,With PRs from forked repositories the release key can't be decrypted because the secured variables are hidden.,0
-291,Merge pull request #33 from ialokim/foreground-notification,0.50805414,Make the foreground notification less intrusive (#30 fxied in #33 by @ialokim),Added fields to login page to a) disable ssl validation or b) select   a custom Certificate Authority certificate to use with the server. Changed visibility of widgets on login page from INVISIBLE to GONE so   they don't take up space while hidden (since this was causing weird   spacing issues with the new fields). Added state to settings to store ssl validation choice or certificate   data. Added fields to various HTTP methods to disable ssl validation or set   valid certificate authority if either setting is enabled.,0
-292,Try to reconnect when network gets available,0.73508954,Fix scheduled reconnect (#117),,1
-293,Add Logs-Component,0.6012523,Add logs button to login (#23),,0
-294,Fix lint error because of incompatible Kotlin version,0.45239878,Fix error when refreshing the app by @cyb3rko ,,0
-295,Merge pull request #252 from cyb3rko/major-build-updates,0.5202408,Fix error when refreshing the app by @cyb3rko ,"On refresh the service was restarted but the connection wasn't closed, therefore each incoming message was handled n times.",0
-296,Merge pull request #288 from chunfengyao/master-ObserveNetworkChanges,0.49084318,Prevent duplicated WebSocket connections (#137),,0
-297,Add more specific permission description,0.60001427,Add notification permission popup,,0
-298,Add null-check of swipe icon.,0.55127823,Change notification icon by @PanderMusubi,,0
-299,Merge pull request #43 from eternal-flame-AD/upstream-autolink,0.5678578,Add android autolink to message item (#39 fixed in #43 by @eternal-flame-AD),,0
-300,Version 2.0.5,0.5598103,Update dependencies,,0
-301,Apply Material3 styles,0.5184009,Add compact message layout by @cyb3rko,,0
-302,Move title above image & allow multiline title,0.47168237,Change label of foreground notification by @Sternagfonkel,,0
-303,Replace spotless for Java with kotlinter,0.4780861,Update to Java 11,,0
-304,Add share activity,0.56627,"Fix crash when sharing, but there is no active user",,0
-305,Use extra property to determine the content of messages,0.8528527,Use extra property to determine how the message content is rendered (#67) ,,1
-306,Reconnect on websocket close,0.8874694,Improve websocket reconnects,,1
-307,Adjust log messages,0.6271575,Update log view after log is cleared,,0
-308,Increase timeout after reconnect,0.7993014,Limit the reconnect timeout link,,1
-309,Version 2.0.10,0.565752,Update dependencies (#110),,0
-310,Use master for generating spec,0.28587586,Add dark mode (#26 via #110),,0
-311,Update compileSdkVersion,0.63447815,Update dependencies,,0
-312,Merge pull request #292 from chunfengyao/master-TranslucentStatusBar,0.5048677,Add client::notification.bigImageUrl extra (#200 by @ngruychev),,0
-313,Add in memory log,0.46683756,Add logs button to login (#23),,0
-314,Remove unused jcenter repo and empty dependency declaration,0.43101662,Delete client on logout (#114),,0
-315,Make remaining public methods synchronized.,0.39134246,Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel),,0
-316,Version 2.0.6,0.5600989,Update several dependencies (#87),,0
-317,Refactor foreground notification text,0.78221554,Change label of foreground notification by @Sternagfonkel,,1
-318,Add message priority to readme,0.5669404,Do not start message activity twice (#23),,0
-319,Fix SwipeRefreshLayout and ListView interaction.,0.5219864,Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel),,0
-320,Build Variant for development (#220),0.38629335,Update app design by @cyb3rko ,,0
-321,Make text in logs view selectable,0.5651662,Update log view after log is cleared,,0
-322,Add manifest,0.4201964,Add client::notification.bigImageUrl extra (#200 by @ngruychev),,0
-323,Make message selectable,0.6027249,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
-324,Remove travis enc file,0.44698188,Delete client on logout (#114),,0
-325,Improve readability of MessagesActivity by adding blank lines,0.59414697,Messages are now rendered as text/plain by default. In v2.0.6 it was text/markdown.,,0
-326,Remove obsolete reconnect callbacks,0.669678,Fix scheduled reconnect (#117),,0
-327,Merge pull request #246 from cyb3rko/compact-message-layout,0.6097472,Add compact message layout by @cyb3rko,,0
-328,Add snackbar for successful copy logs,0.6235726,Add copy logs button (#57 via #105 by @happymario),,0
-329,Update Login design,0.64736354,Add logs button to login (#23),,0
-330,Mention link,0.85697925,  See link,,1
-331,Merge pull request #272 from cyb3rko/fix-splashscreen,0.631829,Fix error when refreshing the app by @cyb3rko ,,0
-332,Merge request changes,0.34999657,Improve websocket reconnects,,0
-333,Version 2.3.3,0.5492024,Update several dependencies (#87),,0
-334,Remove READ_PHONE_STATE permission,0.9393334,Remove unused permission (READ_PHONE_STATE),,1
-335,Add background color and icon when swiping.,0.5633235,Change notification icon by @PanderMusubi,,0
-336,Let kotlinter format the code,0.5809215,Add compact message layout by @cyb3rko,,0
-337,Fix websocket connection on refresh,0.8699849,Improve websocket reconnects,,1
-338,Rewrite 'login' to Kotlin,0.59038436,Migrate to Kotlin,,0
-339,Fix race condition while loading messages,0.60940206,Fix crash when polling new messages and the request fails,,0
-340,Add compact message layout,0.8625125,Add compact message layout by @cyb3rko,,1
-341,Fix duplicate class build error,0.332393,Prevent duplicated WebSocket connections (#137),,0
-342,Add dark mode,0.8623524,Add dark mode (#26 via #110),,1
-343,Add auto generated configuation,0.3321241,Add android autolink to message item (#39 fixed in #43 by @eternal-flame-AD),,0
-344,Rework undo deletion logic.,0.49366057,Add delete message undo (#99 by @leopoldsedev),,0
-345,Add Kotlin to project,0.5602391,Migrate to Kotlin,logcat doesn't really support showing logs see link Solution is to delegate to the logcat log and save the logs in memory that it can be viewed later.,0
-346,Version 1.0.1,0.64736193,Initial Release,,0
-347,Update Splashscreen dialog design,0.71280205,Add native android splash screen,,1
-348,Rename content to context.,0.6520202,Rename some texts,,0
-349,Fix formatting as suggested by spotlessJava,0.46962023,Messages are now rendered as text/plain by default. In v2.0.6 it was text/markdown.,,0
-350,Version 2.6.0,0.55582416,Update several dependencies (#87),,0
-351,Update *SdkVersion,0.59481555,Notification improvements (#18 partly fixed in #16 & #22 by @schwma),,0
-352,Fix messages not being selectable,0.67753685,Fix crash when polling new messages and the request fails,,0
+Commit Message,Score,Correspond Changelog Sentence,Commit Description,Label
+Merge pull request #296 from cyb3rko/message-delete-confirmation,0.60212684,Add delete message undo (#99 by @leopoldsedev),Confirmation dialog to delete all messages,0
+Require confirmation to delete all messages,0.56185466,Add delete message undo (#99 by @leopoldsedev),,0
+Merge pull request #292 from chunfengyao/master-TranslucentStatusBar,0.36933687,Notification improvements (#18 partly fixed in #16 & #22 by @schwma),TranslucentStatusBar by default.,0
+colorPrimary changed for transplant status bar.,0.37323138,Change notification icon by @PanderMusubi,,0
+TranslucentStatusBar by default.,0.32374868,Add dark mode (#26 via #110),,0
+Merge pull request #288 from chunfengyao/master-ObserveNetworkChanges,0.37509626,Migrate to GitHub actions (#157),feat: observe network changes,0
+Fix thread safety,0.26768038,Fix release,"syncExec synced on the Listener instance, but it modified properties of the WebSocketConnection without synchronizing on the WebSocketConnection.",0
+Try to reconnect when network gets available,0.64246535,Listen to network changes to prevent unnecessary reconnects (#40 fixed in #41 by @eternal-flame-AD),,0
+Merge pull request #286 from cyb3rko/fdroid-metadata,0.4284175,Huge thanks to @cyb3rko for implementing most of the changes!,Fix F-Droid metadata folder,0
+Fix F-Droid metadata folder,0.30439696,Remove unused permission (READ_PHONE_STATE),,0
+Version 2.6.0,0.39928824,Fix release,,0
+Add exclude from recents,0.5310458,Add setting to exclude the message activity from the recent apps by @sgpublic ,Co-authored-by: Jannis Mattheis contact@jmattheis.de,0
+Merge pull request #278 from cyb3rko/notification-channels,0.532573,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,Separate Notification channels for each app,0
+Remove unused intent filter,0.46904027,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
+Move appIdToApp to WebSocketService,0.471323,Improve websocket reconnects,"The PicassoHandler doesn't really need access to the full list, as it only requires the application image.",0
+Move channel creation to WebSocketService,0.5110745,Improve websocket reconnects,,0
+Shrink signature of channel fallback creation method,0.3084982,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,0
+Switch channel id components,0.26997587,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,0
+Show restart dialog on setting change,0.35250247,Add notification permission popup,,0
+Merge pull request #279 from cyb3rko/fix-pink-background,0.50760794,Huge thanks to @cyb3rko for implementing most of the changes!,Fix pink button background bug,0
+Fix pink button background bug,0.35892385,Improve link colors by @Sternagfonkel,,0
+Fix unexpected settings dialog behaviour,0.23973715,Do not start message activity twice (#23),,0
+Apply Material 3 design to preference switch,0.26927942,Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel),,0
+Implement optional separate app notification channels,0.72890425,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,1
+Merge pull request #276 from cyb3rko/simplify-header,0.47632888,Huge thanks to @cyb3rko for implementing most of the changes!,Simplify Navigation Header,0
+Merge pull request #275 from cyb3rko/message-image-combine-fix,0.52062607,Fix styling of messages (#37 fixed in #54 by @hugegreenbug),Fix MessageImageCombiner error,0
+Use data class,0.14489043,Add fastlane metadata + images,,0
+Let Nav Header expand to fit multi line textviews,0.4874308,Fix navigation drawer header when having a long server URL by @cyb3rko ,,0
+Update Nav Header component style,0.44991165,Fix navigation drawer header when having a long server URL by @cyb3rko ,,0
+Cut the username prefix of url in Nav Header,0.54033023,Fix navigation drawer header when having a long server URL by @cyb3rko ,,0
+Limit Nav Header max lines of username and url to 2,0.57866955,Fix navigation drawer header when having a long server URL by @cyb3rko ,,0
+Update Nav Header placeholder text,0.4401494,Fix navigation drawer header when having a long server URL by @cyb3rko ,,0
+Fix error when combining Message and Image,0.4794047,Fix styling of messages (#37 fixed in #54 by @hugegreenbug),,0
+Merge pull request #273 from cyb3rko/design-renewal,0.52606297,Huge thanks to @cyb3rko for implementing most of the changes!,Design Renewal,0
+Fix cancelable client name dialog,0.482749,Delete client on logout (#114),,0
+Fix messages not being selectable,0.5737846,Fix styling of messages (#37 fixed in #54 by @hugegreenbug),,0
+Update missed components,0.51944405,Update dependencies (link),,0
+Remove unused dialog style,0.36383453,Fix styling of messages (#37 fixed in #54 by @hugegreenbug),,0
+Update app bar design,0.6112471,Update app design by @cyb3rko ,,0
+Update Messages design,0.5311107,Add 'no messages' text with explanation how to send messages (#97 by @leopoldsedev),,0
+Update Splashscreen dialog design,0.6107925,Add native android splash screen,,0
+Update Settings design,0.4719308,Update app design by @cyb3rko ,,0
+Fix Java requirement,0.5928229,Update to Java 11,,0
+Update Logs design,0.58450294,Update log view after log is cleared,,0
+Update Share design,0.4909129,Update app design by @cyb3rko ,,0
+Update Login design,0.4072261,Update app design by @cyb3rko ,,0
+Apply Material3 styles,0.2775199,Improve link colors by @Sternagfonkel,,0
+Version 2.5.1,0.39668342,Fix release,,0
+Merge pull request #272 from cyb3rko/fix-splashscreen,0.50370276,Huge thanks to @cyb3rko for implementing most of the changes!,Native splashscreen,0
+Replace custom splashscreen with native one,0.76767874,Add native android splash screen,,1
+Merge pull request #271 from cyb3rko/permissions-fix,0.4763694,Huge thanks to @cyb3rko for implementing most of the changes!,Fix missing permissions on newer Android versions,0
+Add more specific permission description,0.5618877,Add notification permission popup,,0
+Fix lint error because of incompatible Kotlin version,0.609172,Migrate to Kotlin,,0
+Use QuickPermissions fork + use custom dialogs,0.5005831,Add notification permission popup,,0
+Fix missing permissions on newer Android versions,0.5012061,Remove unused permission (READ_PHONE_STATE),,0
+Merge pull request #258 from cyb3rko/kotlin-rewrite,0.53607506,Migrate to Kotlin,Codebase rewrite to Kotlin,0
+Merge branch 'master' into kotlin-rewrite,0.54807234,Migrate to Kotlin,,0
+Add fastlane metadata and images,0.9936031,Add fastlane metadata + images,Fixes #262,1
+Fix crash on delete (app|message|client),0.5887631,Fix crash when polling new messages and the request fails,,0
+Merge pull request #268 from intergalacticfm/deletebutton,0.55025554,Add delete application button (#150 by @p1gp1g),deletebutton,0
+deletebutton,0.67840403,Add delete application button (#150 by @p1gp1g),,0
+Fix incoming message crash,0.6494081,Fix crash when polling new messages and the request fails,,0
+Move source files from 'java' to 'kotlin' folder,0.7368336,Migrate to Kotlin,,1
+Let kotlinter format the code,0.5098884,Migrate to Kotlin,,0
+Replace spotless for Java with kotlinter,0.5358441,Migrate to Kotlin,,0
+Reformat smaller parts of code,0.33127028,Rename some texts,,0
+Reformat lambda expressions,0.22144637,Rename some texts,,0
+Call Snackbar in Coroutine from Main thread,0.26800326,Change label of foreground notification by @Sternagfonkel,,0
+Disallow null response of SuccessCallback,0.3860107,Fix crash when polling new messages and the request fails,,0
+Fix thread safety for drawer onClose,0.29949158,Fix navigation drawer header when having a long server URL by @cyb3rko ,,0
+Shrink url validation,0.32884648,Show full url in connection string (#59 fixed in #60),,0
+Remove nullability of ClientFactory functions returns,0.30143276,Delete client on logout (#114),,0
+Disallow null response in Callback,0.29687697,Fix crash when polling new messages and the request fails,,0
+Improve readability of MessagesActivity by adding blank lines,0.6338024,Add 'no messages' text with explanation how to send messages (#97 by @leopoldsedev),,0
+Simplify refreshAll onclick method,0.31728584,Show precise timestamp on click (#90 via #103 by @leopoldsedev),,0
+Reverse Log entries to have newest at the top,0.48348355,Update log view after log is cleared,,0
+Reimplement ConcurrentHashMap for Picasso,0.4849437,Cache images in messages with picasso (#79 via #87),,0
+Simplify and optimize Kotlin code snippets,0.54775405,Migrate to Kotlin,,0
+Replace MessageActivity's AsyncTasks with Coroutines,0.43045104,Do not start message activity twice (#23),,0
+Replace ShareActivity's AsyncTask with Coroutine,0.38650692,Add share and push message support (#72 via #122 by @tomasvanagas),,0
+Replace LogsActivity's AsyncTask with Coroutine,0.4413498,Update log view after log is cleared,,0
+Implement general coroutine helper method,0.22219372,Update several dependencies (#87),,0
+Simply Log retrieval,0.41939923,Update log view after log is cleared,,0
+Fix showSnackbar function,0.30262998,Fix navigation drawer header when having a long server URL by @cyb3rko ,,0
+Fix ShareActivity back button,0.3576857,Add share and push message support (#72 via #122 by @tomasvanagas),,0
+Correct class and method visibility modifiers,0.22611623,Use extra property to determine how the message content is rendered (#67) ,,0
+Implement changes required by new Kotlin codebase,0.7800048,Migrate to Kotlin,,1
+Rewrite root directory files to Kotlin,0.5209871,Migrate to Kotlin,,0
+Rewrite 'log' to Kotlin,0.52692175,Migrate to Kotlin,,0
+Rewrite 'api' to Kotlin,0.60244346,Migrate to Kotlin,,0
+Rewrite 'messages' to Kotlin,0.5705504,Migrate to Kotlin,,0
+Rewrite 'settings' to Kotlin,0.5896085,Migrate to Kotlin,,0
+Merge pull request #255 from cyb3rko/fix-log-clear,0.44801435,Huge thanks to @cyb3rko for implementing most of the changes!,Fix clearing log not updating textview,0
+Rewrite 'sharing' to Kotlin,0.5131711,Migrate to Kotlin,,0
+Rewrite 'service' to Kotlin,0.5527055,Migrate to Kotlin,,0
+Rewrite 'picasso' to Kotlin,0.6048956,Migrate to Kotlin,,0
+Rewrite 'init' to Kotlin,0.61405736,Migrate to Kotlin,,0
+Rewrite 'login' to Kotlin,0.5995616,Migrate to Kotlin,,0
+Add Kotlin to project,0.7447454,Migrate to Kotlin,,1
+Fix clearing log not updating textview,0.6755096,Update log view after log is cleared,,0
+Merge pull request #252 from cyb3rko/major-build-updates,0.46997976,Huge thanks to @cyb3rko for implementing most of the changes!,Major build updates,0
+Update gradle wrapper,0.36028296,Fix APK signing,,0
+Move deprecated package in manifest to namespace declaration,0.33346784,Increase targetSdkVersion to 33,,0
+Fix workflow build lint error,0.281396,Update dependencies (#110),,0
+Update workflow java version to 11,0.73476034,Update to Java 11,,1
+Set Java requirement to version 11,0.7982595,Update to Java 11,,1
+Remove unused .jar import,0.26663658,Fix CVE-2019-11932 by removing the android-gif-drawable-library (#87),,0
+Replace legacy support library only with swipe refresh layout library,0.3843315,Migrate to android view bindings by @cyb3rko,,0
+Fix duplicate class build error,0.34908238,Update dependencies (#110),,0
+Update AppCompat to newest version,0.49492496,Increase targetSdkVersion to 33,,0
+Update Spotless gradle plugin,0.36215872,Update dependencies (link),,0
+Remove unused jcenter repo and empty dependency declaration,0.36253142,Update several dependencies (#87),,0
+Use new sdk implementation syntax,0.3967133,Migrate to android view bindings by @cyb3rko,,0
+Update targetSdkVersion to 33,0.95518106,Increase targetSdkVersion to 33,,1
+Update gradle + android gradle,0.4133379,Update dependencies,,0
+Update androidx dependencies as far as possible,0.5532425,Update dependencies,,0
+Merge pull request #251 from cyb3rko/increase-minSdkVersion,0.59371597,Increase minSdkVersion to 23,Increase minSdkVersion,0
+Satisfy new PendingIntent requirements for api version 31,0.38265353,Notification improvements (#18 partly fixed in #16 & #22 by @schwma),,0
+Increase minSdkVersion to 23,0.9999999,Increase minSdkVersion to 23,,1
+"Revert ""Update *SdkVersion""",0.5458111,Increase minSdkVersion to 23,"This reverts commit 5360cf401e2a17790a1fd08f09ff6003060466ab. Changing this requires modification of the app. It is not required just yet, so revert this for now.",0
+Version 2.4.0,0.4062519,Fix release,,0
+Update *SdkVersion,0.60439396,Increase targetSdkVersion to 33,,0
+Merge pull request #249 from quthla/change_wording,0.41336456,Migrate to GitHub actions (#157),Improve wording,0
+Change wording,0.510973,Rename some texts,,0
+Merge pull request #248 from cyb3rko/butterknife-to-viewbinding,0.4268614,Migrate to android view bindings by @cyb3rko,Refactor Butterknife to ViewBinding,0
+Remove Butterknife dependencies,0.4860081,Update several dependencies (#87),,0
+Replace Butterknife code with ViewBinding,0.3991182,Migrate to android view bindings by @cyb3rko,,0
+Merge pull request #246 from cyb3rko/compact-message-layout,0.6725538,Add compact message layout by @cyb3rko,Compact message layout,0
+Remove javax generated annotation for now,0.332196,Update to Java 11,,0
+Implement compact message layout in Adapter,0.6464782,Add compact message layout by @cyb3rko,,0
+Fill xml message layouts with dummy values,0.48258677,Use extra property to determine how the message content is rendered (#67) ,,0
+Add compact message layout,0.8625181,Add compact message layout by @cyb3rko,,1
+Add message layout setting to SettingsPage (incl. restart dialog),0.50083894,Add compact message layout by @cyb3rko,,0
+Update notification logo (#243),0.7061,Change notification icon by @PanderMusubi,,1
+Add privacy policy,0.3831461,Add notification permission popup,,0
+Fix link color for dark mode,0.69391215,Improve link colors by @Sternagfonkel,,0
+Build Variant for development (#220),0.28338328,Update app design by @cyb3rko ,Co-authored-by: Matthias Weis matthias1.weis@web.de,0
+Add java 8 requirement,0.5733797,Update to Java 11,,0
+Refactor foreground notification text,0.73047626,Change label of foreground notification by @Sternagfonkel,,1
+Version 2.3.3,0.4240455,Fix release,,0
+Keep selected application on screen rotation,0.9472283,Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel),,1
+Version 2.3.1,0.40653247,Initial Release,,0
+Fix crash on share when not loggedin,0.8079667,"Fix crash when sharing, but there is no active user",java.lang.RuntimeException:   at android.app.ActivityThread.performLaunchActivity (ActivityThread.java:2957)   at android.app.ActivityThread.handleLaunchActivity (ActivityThread.java:3032)   at android.app.ActivityThread.-wrap11 (Unknown Source)   at android.app.ActivityThread$H.handleMessage (ActivityThread.java:1696)   at android.os.Handler.dispatchMessage (Handler.java:105)   at android.os.Looper.loop (Looper.java:164)   at android.app.ActivityThread.main (ActivityThread.java:6944)   at java.lang.reflect.Method.invoke (Native Method)   at com.android.internal.os.Zygote$MethodAndArgsCaller.run (Zygote.java:327)   at com.android.internal.os.ZygoteInit.main (ZygoteInit.java:1374) Caused by: java.lang.IllegalArgumentException:   at okhttp3.HttpUrl$Builder.parse (HttpUrl.java:1333)   at okhttp3.HttpUrl.get (HttpUrl.java:916)   at retrofit2.Retrofit$Builder.baseUrl (Retrofit.java:458)   at com.github.gotify.api.ClientFactory.defaultClient (ClientFactory.java:47)   at com.github.gotify.api.ClientFactory.clientToken (ClientFactory.java:28)   at com.github.gotify.sharing.ShareActivity.onCreate (ShareActivity.java:82)   at android.app.Activity.performCreate (Activity.java:7183)   at android.app.Instrumentation.callActivityOnCreate (Instrumentation.java:1220)   at android.app.ActivityThread.performLaunchActivity (ActivityThread.java:2910),1
+Fix NPE,0.41456345,Fix release,Fixes #81,0
+Downgrade appcompat (breaks build),0.4315921,Increase targetSdkVersion to 33,,0
+Version 2.3.0,0.41088122,Fix release,,0
+Update dependencies,1.0000004,Update dependencies,,1
+Add client::notification.bigImageUrl extra,0.90213144,Add client::notification.bigImageUrl extra (#200 by @ngruychev),closes #185,1
+Fix signing,0.6849426,Fix APK signing,,0
+Version 2.2.0,0.43433192,Fix release,,0
+Update sdk version 30,0.5851916,Increase targetSdkVersion to 33,,0
+Add markdown support to notifications,0.9546389,Add markdown support in notifications (#184 by @Sternagfonkel),,1
+Version 2.1.3,0.4133895,Initial Release,,0
+Mention link,0.51253116,  See link,,0
+Add funding info,0.27168214,Update app design by @cyb3rko ,,0
+Add markdown strike-through support (#183),0.8839344,Add support for strike-through in markdown messages (#183 by @Sternagfonkel),,1
+Disallow push message if no applications exist,0.7971927,Disallow sending messages if no applications exists (#182 by @Sternagfonkel),Fixes #179,1
+Version 2.1.2,0.43917394,Initial Release,,0
+Remove reconnect callback,0.63724405,Limit the reconnect timeout link,,0
+Version 2.1.1,0.442479,Initial Release,,0
+Fix support for base64 images,0.7744491,Fix base64 markdown images,Fixes 164,1
+Version 2.1.0,0.43064725,Initial Release,,0
+Update build badge,0.3749207,Update app design by @cyb3rko ,,0
+Remove travis enc file,0.21223027,Delete client on logout (#114),,0
+Migrate to github actions,0.9272988,Migrate to GitHub actions (#157),,1
+Use table aware movement plugin,0.45689195,Fix links inside tables (link),Fixes #136,0
+Add absolute/relative time format setting,0.88018864,Add relative/absolute time format setting (#156 by @RemiRigal),Added setting to toggle precise date as default display Applied spotless Improved time format setting with a ListPreference Fixed default time format value in list preference Co-authored-by: Rémi Rigal remi.rigal@orange.com,1
+Add delete app option,0.7913604,Add delete application button (#150 by @p1gp1g),,1
+Version 2.0.14,0.4200896,Fix release,,0
+Increase timeout after reconnect,0.83671576,Limit the reconnect timeout link,,1
+Ignore multiple reconnects,0.7588114,Listen to network changes to prevent unnecessary reconnects (#40 fixed in #41 by @eternal-flame-AD),,1
+Reconnect on websocket close,0.8110253,Improve websocket reconnects,,1
+Ignore events from already discarded websocket listeners,0.6493188,Prevent duplicated WebSocket connections (#137),,0
+Add long press option to copy content to clipboard (#135),0.7315042,Add long press to copy message (#128 via #135 by @KROSF),,1
+Fix #131 allow app to use user certificates,0.7294862,Allow usage of user certificates (#131 by @KROSF),,1
+Use application index in menu items,0.35033315,Add delete application button (#150 by @p1gp1g),,0
+Use long for ids,0.19973502,Fix uncaught exception while parsing message id (#119 via #127 and #125),,0
+Update client,0.5082509,Update dependencies (link),,0
+Version 2.0.13,0.4285527,Fix release,,0
+Add inputs for the pushed message to share activity,0.72698265,Add share and push message support (#72 via #122 by @tomasvanagas),,1
+Add share activity,0.51625323,Add share and push message support (#72 via #122 by @tomasvanagas),,0
+Show appicon in notifications,0.8737135,Show app icon in notifications (#106 by @newhinton),,1
+Fix not working scheduled reconnect,0.84506524,Fix scheduled reconnect (#117),"Documentation for postDelayed: Causes the Runnable r to be added to the message queue, to be run after the specified amount of time elapses. The runnable will be run on the thread to which this handler is attached. The time-base is {@link android.os.SystemClock#uptimeMillis}. Time spent in deep sleep will add an additional delay to execution. TL;DR: if the CPU is in deep sleep, the postDelayed runnable won't be executed.",1
+Delete client on logout,0.9467304,Delete client on logout (#114),api.deleteClient() only create a call but doesn't execute it.,1
+Version 2.0.12,0.40623313,Fix release,,0
+Add dark mode,0.8609355,Add dark mode (#26 via #110),,1
+Version 2.0.11,0.4328258,Update to Java 11,,0
+Load data: urls in markdown,0.7224683,Support data: image urls in markdown (#107 via #108),,1
+Make text in logs view selectable,0.46527523,Add copy logs button (#57 via #105 by @happymario),disable updating when text is selected Closes #105,0
+Add snackbar for successful copy logs,0.64416146,Add copy logs button (#57 via #105 by @happymario),,0
+Make logs copyable,0.76200306,Add copy logs button (#57 via #105 by @happymario),,1
+Truncate precise timestamp to seconds.,0.5452604,Show precise timestamp on click (#90 via #103 by @leopoldsedev),,0
+Rename content to context.,0.48857173,Rename some texts,,0
+Show precise timestamp when pressing on message time (closes #90).,0.6729123,Show precise timestamp on click (#90 via #103 by @leopoldsedev),,0
+Make remaining public methods synchronized.,0.34204888,Do not start message activity twice (#23),,0
+Adapt delete button code to fit with other changes.,0.64209837,Add delete application button (#150 by @p1gp1g),,0
+"Revert ""Remove message delete button.""",0.6917406,Add delete message undo (#99 by @leopoldsedev),This reverts commit b0e85623861e48abb1c6fb49800234f453fc82ee.,0
+Rework undo deletion logic.,0.7257682,Add delete message undo (#99 by @leopoldsedev),"Previously the MessageFacade and MessageStateHolder both had their own state of the last deleted message, which was redundant. Now only MessageStateHolder governs the state of a pending deletion and MessageFacade handles commiting the deletion to the server.",1
+Make new methods for undoing deletions synchronized.,0.6106809,Add delete message undo (#99 by @leopoldsedev),,0
+Change swipe color to softer red.,0.41362804,Delete messages by swiping (#38 via #99 by @leopoldsedev),,0
+Add null-check of swipe icon.,0.48070055,Delete messages by swiping (#38 via #99 by @leopoldsedev),,0
+Don't scroll to position when undoing a deletion.,0.5884459,Add delete message undo (#99 by @leopoldsedev),"This seems to cause an issue where onSwipe is not being called anymore afterwards. Steps to reproduce: 1. Delete a message 2. Scroll a little bit down 3. Undo delete 4. Try delete again -> Swiping works, but callback is not being called.",0
+Implement undo snackbar when deleting messages by swiping.,0.72351205,Delete messages by swiping (#38 via #99 by @leopoldsedev),"When swiping away a message it is only removed from the local message lists and a snackbar appears. When the snackbar is dismissed or the user deletes another message the delete request is sent to the server. If the user presses ""undo"" on the snackbar the message is reinserted into the local lists at its previous position.",1
+Remove message delete button.,0.66240335,Delete messages by swiping (#38 via #99 by @leopoldsedev),,0
+Add background color and icon when swiping.,0.44270426,Change notification icon by @PanderMusubi,,0
+Implement swiping left/right to delete messages (closes #38).,0.84667575,Delete messages by swiping (#38 via #99 by @leopoldsedev),,1
+Replace ListView with RecyclerView for the message list.,0.5309752,Add android autolink to message item (#39 fixed in #43 by @eternal-flame-AD),,0
+"Add handling for extra ""android::action:onReceive:intentUrl""",0.538379,Add android autolink to message item (#39 fixed in #43 by @eternal-flame-AD),,0
+Fix SwipeRefreshLayout and ListView interaction.,0.31552386,Delete messages by swiping (#38 via #99 by @leopoldsedev),Scrolling interaction works out of the box only if ListView is the only child of SwipeRefreshLayout. See link,0
+Various UI enhancements.,0.38762766,Update app design by @cyb3rko ,Add information (link to documentation) when no messages are present Add example URL in LoginActivity to indicate the expected format Fix capitalization in UI,0
+Fix freeze when login URL has trailing whitespace.,0.8177636,Fix crash when login url has trailing whitespace (#96 by @leopoldsedev),"The problem is that HttpUrl.parse parses URLs with trailing whitespace without problems, but during the URL parsing in ClientFactory an exception is thrown in that case. Other errors when instantiating the API client are now handled as well.",1
+Clear notifications on open app (#93),0.9703198,Clear notifications on open app (#62 via #93 by @mzoeller),,1
+Version 2.0.10,0.39373916,Initial Release,,0
+Add support for opening urls when clicking on notifications  (#91),0.93570316,Add support for open url on notification click (#66 via #91 by @mzoeller),,1
+Version 2.0.9,0.40757263,Fix release,,0
+Add cache for images (#88),0.7800646,Cache images to disk (#88 by @dylanparker),,1
+Add message priority to readme,0.42495352,Make message content copyable (#21 fixed in #64),,0
+Version 2.0.8,0.41427022,Fix release,,0
+Update compile sdk,0.52226365,Increase targetSdkVersion to 33,,0
+Update butterknife,0.44926843,Update dependencies (link),,0
+Update markwon,0.44304812,Update dependencies (#110),,0
+Update spotless,0.47161746,Update dependencies (#110),,0
+Update android lib deps,0.48809224,Update dependencies,,0
+Version 2.0.7,0.3877778,Fix release,,0
+Add gif & tables plugin,0.30752608,Fix links inside tables (link),,0
+Images plugin allows images,0.45213863,Fix not loading images (#47),,0
+MovementPlugin fixes clicking links,0.45995054,Fix links inside tables (link),Without this plugin links aren't clickable.,0
+Autolink web prevents other markdown links from beeing rendered,0.5130155,Fix links inside tables (link),,0
+Use extra property to determine the content of messages,0.82743037,Use extra property to determine how the message content is rendered (#67) ,,1
+Version 2.0.6,0.40667257,Fix release,,0
+Make message selectable,0.59397787,Add 'no messages' text with explanation how to send messages (#97 by @leopoldsedev),,0
+Add markdown support for messages,0.8176689,Allow markdown in messages (#49 fixed in #64),,1
+Show full url in connection string,0.9048518,Show full url in connection string (#59 fixed in #60),,1
+Version 2.0.5,0.4055655,Fix release,,0
+Fix typo,0.39603794,Fix release,,0
+Move title above image & allow multiline title,0.22093517,Fix styling of messages (#37 fixed in #54 by @hugegreenbug),,0
+Make title bold,0.33095208,Add dark mode (#26 via #110),,0
+Reduced the title font size (#54),0.38008118,Fix styling of messages (#37 fixed in #54 by @hugegreenbug),,0
+Document steps to update client,0.3716145,Update dependencies,,0
+Update code to use new client,0.38629442,Update dependencies,,0
+Update swagger client,0.33242816,Update dependencies,,0
+Use master for generating spec,0.12921213,Add fastlane metadata + images,,0
+Fix race condition while loading messages,0.6077099,Fix crash when polling new messages and the request fails,"Images didn't load correctly when the following scenario occurred: * ApplicationHolder#request * MessagesActivity.SelectApplicationAndUpdateMessages#execute * MessagesActivity.SelectApplicationAndUpdateMessages#doInBackground   - method returns List, but images are ""null"" because     apps aren't loaded yet. * MessagesActivity#onUpdateApps   - Now apps were loaded and cached. * MessagesActivity.SelectApplicationAndUpdateMessages#onPostExecute   - receives List from #doInBackgroud with ""null"" images -> Messages with ""null"" images are rendered in the ListView",0
+Support URLs with path prefix (#46),0.46331483,Show full url in connection string (#59 fixed in #60),See gotify/server#127 gotify/server#122,0
+Merge pull request #43 from eternal-flame-AD/upstream-autolink,0.43796492,Migrate to GitHub actions (#157),Add android autolink to message item layout,0
+message body autolink,0.653262,Add android autolink to message item (#39 fixed in #43 by @eternal-flame-AD),,0
+Merge pull request #41 from eternal-flame-AD/upstream-patch-network,0.3803193,Migrate to GitHub actions (#157),listen for network changes,0
+Remove obsolete reconnect callbacks,0.64567995,Listen to network changes to prevent unnecessary reconnects (#40 fixed in #41 by @eternal-flame-AD),removes obsolete reconnect callbacks scheduled before network reconnects to prevent unwanted reconnection also renamed WebSocketConnection.onFailure to onNetworkFailure to clear confusion,0
+Wait for network when websocket connection failed,0.72332,Fix closed WebSocket connection on timeout (#129 via #137),,1
+Add permission ACCESS_NETWORK_STATE,0.46512985,Remove unused permission (READ_PHONE_STATE),,0
+Add battery and notification improvements,0.4822043,Notification improvements (#18 partly fixed in #16 & #22 by @schwma),,0
+Improve readme,0.3072972,Improve link colors by @Sternagfonkel,,0
+Limit reconnect timeout,0.90853727,Limit the reconnect timeout link,,1
+Version 2.0.4,0.41483903,Fix release,,0
+Merge pull request #35 from gotify/deps,0.42290583,Start Gotify on boot (#25 fixed in #32 by @schwma),Update retrofit,0
+Update retrofit,0.47065496,Update to Java 11,,0
+Merge pull request #34 from gotify/cleartext-traffic,0.47549176,Allow cleartext traffic (#31 fixed in #34),Allow cleartext traffic,0
+Add warning message when using http,0.4154434,HTTP2 Support (#24 fixed in #27),,0
+Allow clear text traffic,0.5779826,Allow cleartext traffic (#31 fixed in #34),,0
+Merge pull request #33 from ialokim/foreground-notification,0.5669893,Make the foreground notification less intrusive (#30 fxied in #33 by @ialokim),Some changes to foreground notification (channel),0
+Merge pull request #32 from schwma/start-on-boot,0.42618093,Start Gotify on boot (#25 fixed in #32 by @schwma),Start Gotify WebSocketService on boot completed,0
+added some lines to get foreground notification (a little) less intrusive,0.8654319,Make the foreground notification less intrusive (#30 fxied in #33 by @ialokim),,1
+Change class variable to local variable,0.18596941,Rename some texts,,0
+Start Gotify WebSocketService on boot completed,0.6666918,Start Gotify on boot (#25 fixed in #32 by @schwma),,0
+Version 2.0.3,0.4081328,Fix release,,0
+Update oauth package and ignore linting for it,0.3666473,Update dependencies (link),OAuth2 isnt used therefore we can ignore it,0
+Migrate gotify to new client,0.4641012,Start Gotify on boot (#25 fixed in #32 by @schwma),,0
+Change client to retrofit2,0.39416263,Update to Java 11,,0
+Version 2.0.2,0.4167247,Initial Release,,0
+Use singleTask launch mode,0.3948679,Do not start message activity twice (#23),New notifications created a new activity even if the activity was already on top,0
+Add logs button to Login,0.9567392,Add logs button to login (#23),,1
+Merge pull request #22 from schwma/master,0.4307164,Migrate to GitHub actions (#157),Map Gotify message priorities to notification channels,0
+Merge pull request #15 from gjabell/feature/self-signed-ssl,0.63557774,Support self-signed certificates (#13 fixed in #15 by @gjabell),Added SSL Validation Override and CA Selection,0
+Enable vibration by default for high and default importance notification channels,0.5118072,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,0
+Removed catch-all hostname verifier if a cert is present,0.46727717,Support self-signed certificates (#13 fixed in #15 by @gjabell),,0
+Adjust notification channel names to include their corresponding gotify priorities,0.7507647,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,1
+Fix formatting as suggested by spotlessJava,0.4784376,Fix styling of messages (#37 fixed in #54 by @hugegreenbug),,0
+Map Gotify message priorities to notification channels,0.745204,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,1
+Added local Picasso instance instead of singleton,0.44405356,Cache images in messages with picasso (#79 via #87),MessagesActivity now constructs a new Picasso instance each onCreate   and passes it to ListMessageAdapter,0
+Merge branch 'master' of github.com:gotify/android into feature/self-signed-ssl,0.40521502,Support self-signed certificates (#13 fixed in #15 by @gjabell),,0
+Cherry-picked Advanced Settings dialog,0.26392496,Add notification permission popup,Switched raw strings to string resources Removed unused fields / views from LoginActivity Reset 'Check Version' button text when changing SSL settings Fixed formatting,0
+Use an dialog to show advanced settings,0.41803527,Add notification permission popup,,0
+Fixed Picasso + refactors,0.45163244,Cache images in messages with picasso (#79 via #87),Removed comment Moved SSLSettings to its own top-level class Fixed picasso not setting SSL settings and failing to load images over   self-signed connection,0
+Merge request changes,0.30908543,Migrate to GitHub actions (#157),Moved certificate-related utilities to separate class Added settings method to return an entire SSLSettings object; refactored   methods using separate parameters to take single SSLSettings parameter Advanced Settings section on login page now hides / shows along with   other buttons to prevent it from showing up in front of the loading   spinner Fixed star imports Refactored applySslSettings as per code from merge request Fixed formatting,0
+Set color on foreground notification,0.6708262,Change label of foreground notification by @Sternagfonkel,,0
+Prevent duplicate notification sounds from message group notification,0.513276,Do not start message activity twice (#23),,0
+Set message notification accent color to colorPrimary,0.52366424,Change label of foreground notification by @Sternagfonkel,,0
+Add LED light for message notifications,0.5280174,Make the foreground notification less intrusive (#30 fxied in #33 by @ialokim),,0
+Adjust notification channel importances,0.66656154,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,0
+Move encrypting key to before deploy,0.26568022,Migrate to GitHub actions (#157),With PRs from forked repositories the release key can't be decrypted because the secured variables are hidden.,0
+Added SSL Validation Override and CA Selection,0.4193481,Allow usage of user certificates (#131 by @KROSF),Added fields to login page to a) disable ssl validation or b) select   a custom Certificate Authority certificate to use with the server. Changed visibility of widgets on login page from INVISIBLE to GONE so   they don't take up space while hidden (since this was causing weird   spacing issues with the new fields). Added state to settings to store ssl validation choice or certificate   data. Added fields to various HTTP methods to disable ssl validation or set   valid certificate authority if either setting is enabled.,0
+Add fdroid badge,0.29561168,Change notification icon by @PanderMusubi,,0
+Add License,0.3016398,Fix APK signing,,0
+Version 2.0.1,0.43097192,Initial Release,,0
+Fix websocket connection on refresh,0.8370801,Improve websocket reconnects,"On refresh the service was restarted but the connection wasn't closed, therefore each incoming message was handled n times.",1
+Show full messages,0.56454855,Add compact message layout by @cyb3rko,,0
+Version 2.0.0,0.41860786,Initial Release,,0
+Add Readme,0.35042742,  See link,,0
+Add travis script,0.21166307,Add fastlane metadata + images,,0
+Fix sportless issues,0.2428692,Fix release,,0
+Make gradlew executable,0.27082863,Fix CVE-2019-11932 by removing the android-gif-drawable-library (#87),,0
+Add empty proguard rules,0.2694221,Disallow sending messages if no applications exists (#182 by @Sternagfonkel),,0
+Add push service,0.59271896,Add share and push message support (#72 via #122 by @tomasvanagas),,0
+Add LogsActivity,0.5968531,Add logs button to login (#23),,0
+Add MessagesActivity,0.6071558,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
+Add state holder for message activity,0.5416348,Do not start message activity twice (#23),,0
+Add missed messages util,0.52908516,Add 'no messages' text with explanation how to send messages (#97 by @leopoldsedev),,0
+Add LoginActivity,0.5631323,Add logs button to login (#23),,0
+Add common utils,0.20067829,Add dark mode (#26 via #110),,0
+Add init activity,0.40439236,Do not start message activity twice (#23),,0
+Add notification support,0.6151917,Add notification permission popup,,0
+Add log utils,0.6431509,Add logs button to login (#23),,0
+Add settings wrapper,0.30776733,Add compact message layout by @cyb3rko,,0
+Add api utils,0.24042614,Update app design by @cyb3rko ,,0
+Add values,0.2474001,Add dark mode (#26 via #110),,0
+Add image resources,0.41831553,Add fastlane metadata + images,,0
+Add manifest,0.33575064,Show app icon in notifications (#106 by @newhinton),,0
+Add generated client,0.40024424,Delete client on logout (#114),,0
+Add gradle config,0.30550465,Increase targetSdkVersion to 33,,0
+Add gradlew,0.31100452,Update dependencies (link),,0
+Add gitignore,0.36923692,Migrate to GitHub actions (#157),,0
+Remove old project,0.4481567,Add delete application button (#150 by @p1gp1g),,0
+Version 1.0.1,0.4458195,Initial Release,,0
+Format android manifest,0.36294153,Fix APK signing,,0
+Remove READ_PHONE_STATE permission,0.95069504,Remove unused permission (READ_PHONE_STATE),,1
+Rename de.gotify to com.github.gotify,0.5667615,Start Gotify on boot (#25 fixed in #32 by @schwma),,0
+Update compileSdkVersion,0.584355,Increase targetSdkVersion to 33,,0
+Fix ugly hacky oreo notification support,0.58247894,Notification improvements (#18 partly fixed in #16 & #22 by @schwma),,0
+Fix icons,0.5017215,Change notification icon by @PanderMusubi,,0
+Add ugly hacky oreo notification support,0.562067,Make the foreground notification less intrusive (#30 fxied in #33 by @ialokim),,0
+Show messages that were missed while being disconnected & Use models,0.45183086,Add 'no messages' text with explanation how to send messages (#97 by @leopoldsedev),,0
+Add model structures,0.19779176,Add dark mode (#26 via #110),,0
+Add navigation for Home - Messages,0.4620156,Add 'no messages' text with explanation how to send messages (#97 by @leopoldsedev),,0
+Add Logs-Component,0.59187907,Add logs button to login (#23),,0
+Add logo,0.35888934,Change notification icon by @PanderMusubi,,0
+Add Home-Component,0.24199574,Add delete application button (#150 by @p1gp1g),,0
+Change login icons to ion & Format,0.47247452,Change notification icon by @PanderMusubi,,0
+Set connection timeout to 10 seconds,0.7677567,Limit the reconnect timeout link,,1
+Try to instantly reconnect to WS on first error,0.5208177,Listen to network changes to prevent unnecessary reconnects (#40 fixed in #41 by @eternal-flame-AD),,0
+Only restart web socket if url/token was changed,0.55552244,Improve websocket reconnects,,0
+Use big style for foreground notification,0.66889095,Make the foreground notification less intrusive (#30 fxied in #33 by @ialokim),,0
+Use constants for preference keys,0.18592913,Keep selected application on screen rotation (#207 via #208 by @Sternagfonkel),,0
+Adjust log messages,0.5054457,Update log view after log is cleared,,0
+Add LogManager for reading the logs in react-native,0.41620797,Add logs button to login (#23),,0
+Add in memory log,0.44025704,Add logs button to login (#23),logcat doesn't really support showing logs see link Solution is to delegate to the logcat log and save the logs in memory that it can be viewed later.,0
+Add README,0.35042742,  See link,,0
+Add travis build,0.33267507,Increase targetSdkVersion to 33,,0
+Add react native js components,0.2927363,Add native android splash screen,,0
+Add main activity and push service,0.41914612,Add setting to exclude the message activity from the recent apps by @sgpublic ,,0
+Add strings & styles.xml,0.32757115,Add compact message layout by @cyb3rko,,0
+Add manifest (with push service),0.42863673,Add share and push message support (#72 via #122 by @tomasvanagas),,0
+Add gotify icon,0.62034506,Show app icon in notifications (#106 by @newhinton),,0
+Add auto generated configuation,0.2533126,Add setting for separate notification channels per Gotify application by @cyb3rko and @newhinton ,,0
+Add .gitignore,0.38186893,Migrate to GitHub actions (#157),,0
