@@ -18,7 +18,7 @@ linking_statement = [r"(?i)fixes:?", r"(?i)what's changed:?", r"(?i)other change
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-def load_origin_data(file_path):
+def load_data(file_path):
     df = pd.read_csv(file_path)
     def merge(row):
         if pd.isna(row['Commit Description']):
@@ -26,18 +26,6 @@ def load_origin_data(file_path):
         else:
             return str(row['Commit Message']) + str(row['Commit Description'])
 
-    commit = df.apply(merge, axis=1)
-    label = df['Label']
-    return np.asarray(commit), np.asarray(label)
-
-
-def load_abstract_data(file_path):
-    df = pd.read_csv(file_path)
-    def merge(row):
-        if pd.isna(row['Commit Description Abstract']):
-            return str(row['Commit Message Abstract'])
-        else:
-            return str(row['Commit Message Abstract']) + str(row['Commit Description Abstract'])
     commit = df.apply(merge, axis=1)
     label = df['Label']
     return np.asarray(commit), np.asarray(label)
@@ -56,7 +44,6 @@ if __name__ == '__main__':
 
     def approach2(test_name, train_repos, test_repos, _type):
         file_name = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv'
-        load_data = load_origin_data if _type == 'origin' else load_abstract_data 
         # load changelog sentences database
         all_changelog_sentences = []
 
@@ -89,7 +76,7 @@ if __name__ == '__main__':
         print('Successfully encoded changelog sentences')
         print('Encoded changelog sentences shape:', encoded_changelog_sentences.shape)
         encoded_file = os.path.join(ROOT_DIR, 'models', 'encoded_vectors', f'{test_name}_{_type}')
-        with open (encoded_file, 'wb') as f:
+        with open(encoded_file, 'wb') as f:
             np.save(f, encoded_file)
 
         # Encode test commit
