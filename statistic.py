@@ -113,6 +113,7 @@ def summarize_data():
 
         num_processed_commit_abstract = labeled_commits_abstract.shape[0]
         num_commit_label_abstract = labeled_commits_abstract['Label'].value_counts()
+        print(num_commit_label_abstract)
         
         origin_data.append([repo, num_processed_commit_origin, num_release_note_sentences_origin,
                             num_commit_label_origin[0], num_commit_label_origin[1]])
@@ -137,4 +138,4 @@ def summarize_data():
     abstract_data.to_csv(os.path.join(data_info_folder, 'abstract_data.csv'))
   
 
-summarize_data()
+summarize_result()

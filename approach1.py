@@ -5,26 +5,13 @@ import yaml
 from yaml.loader import SafeLoader
 from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM, Embedding, TextVectorization
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import TfidfVectorizer
+from base_functions import load_data, save_result, sample_wrong_cases
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 max_commit_length = 30
-
-
-def load_data(file_path):
-    df = pd.read_csv(file_path)
-    def merge(row):
-        if pd.isna(row['Commit Description']):
-            return str(row['Commit Message'])
-        else:
-            return str(row['Commit Message']) + str(row['Commit Description'])
-
-    commit = df.apply(merge, axis=1)
-    label = df['Label']
-    return np.asarray(commit), np.asarray(label)
 
 
 if __name__ == '__main__':
@@ -32,8 +19,6 @@ if __name__ == '__main__':
     data_path = os.path.join(ROOT_DIR, 'data')
     for subdir, dirs, files in os.walk(data_path):
         repos.extend(dirs)
-    X = np.asarray([])
-    y = np.asarray([]) 
     
     test_cases_path = os.path.join(ROOT_DIR, 'test_cases.yaml')
     test_cases = None
@@ -104,23 +89,13 @@ if __name__ == '__main__':
             print("Accuracy: %.2f%%" % (accuracy))
             accuracy = str(int(accuracy * 100) / 100) + '%'
             y_preds = model.predict(X_test)
-
             y_preds = [1 if x > 0.5 else 0 for x in y_preds]
-            
             f1 = f1_score(y_test, y_preds)
             print(f"F1 score: {f1}")
             f1 = str(f1)
-
             result_path = os.path.join(ROOT_DIR, 'LSTM_model.yaml')
-            with open(result_path, 'r') as f:
-                result = yaml.safe_load(f)
-                if result is None:
-                    result = {}
-                result.update({f'{test_name}_{_type}': {'Num Commits': test_size, 'Accuracy': accuracy, 'F1 score': f1}})
-            with open(result_path, 'w') as f:
-                yaml.safe_dump(result, f)
+            save_result(result_path, test_case=(test_name, _type), result=(test_size, accuracy, f1))
 
-        
         def naive_bayes(test_name, _type, X_train, y_train, X_test, y_test):
             vectorizer = TfidfVectorizer()
             X_train = vectorizer.fit_transform(X_train)
@@ -130,12 +105,14 @@ if __name__ == '__main__':
             model.fit(X_train, y_train)
             
             test_size = len(X_test)
+            test_commits = X_test
             X_test = vectorizer.transform(X_test)
             y_test = np.asarray(y_test).astype(np.float32)
             print(f"Num Test: {X_test.shape[0]}")
             y_pred = model.predict(X_test)
             true_pred = sum([y_pred[i] == y_test[i] for i in range(test_size)])
-
+            path = os.path.join(ROOT_DIR, 'sample_wrong_cases', 'naive_bayes.yaml')
+            sample_wrong_cases(path, (test_name, _type), test_commits, y_pred, y_test)
             accuracy = true_pred / test_size * 100
             print("Accuracy: %.2f%%" % (accuracy))
             accuracy = str(int(accuracy * 100) / 100) + '%'
@@ -143,21 +120,14 @@ if __name__ == '__main__':
             f1 = f1_score(y_test, y_pred)
             print(f"F1 score: {f1}")
             f1 = str(f1)
-
             result_path = os.path.join(ROOT_DIR, 'naive_bayes.yaml')
-            with open(result_path, 'r') as f:
-                result = yaml.safe_load(f)
-                if result is None:
-                    result = {}
-                result.update({f'{test_name}_{_type}': {'Num Commits': test_size, 'Accuracy': accuracy, 'F1 score': f1}})
-            with open(result_path, 'w') as f:
-                yaml.safe_dump(result, f)
+            save_result(result_path, test_case=(test_name, _type), result=(test_size, accuracy, f1))
         
         naive_bayes(test_name, _type, X_train, y_train, X_test, y_test) 
     
     for test_case, test_repos in test_cases.items():
         train_repos = list(set(repos) - set(test_repos))
-        approach1(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='abstract') 
+        approach1(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='origin') 
     
     
     

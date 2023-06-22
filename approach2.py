@@ -7,6 +7,7 @@ from yaml.loader import SafeLoader
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics import f1_score
+from base_functions import load_data, save_result
 
 model = SentenceTransformer('all-mpnet-base-v2')
 THRESHOLD = 0.7
@@ -17,18 +18,6 @@ linking_statement = [r"(?i)fixes:?", r"(?i)what's changed:?", r"(?i)other change
                      r"(?i)changes:?", r"(?i)fixed:?", r"(?i)maintenance:?", r"(?i)added:?"]
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-def load_data(file_path):
-    df = pd.read_csv(file_path)
-    def merge(row):
-        if pd.isna(row['Commit Description']):
-            return str(row['Commit Message'])
-        else:
-            return str(row['Commit Message']) + str(row['Commit Description'])
-
-    commit = df.apply(merge, axis=1)
-    label = df['Label']
-    return np.asarray(commit), np.asarray(label)
 
 
 if __name__ == '__main__':
@@ -103,13 +92,7 @@ if __name__ == '__main__':
         print(f"F1 score: {f1}")
         f1 = str(f1)
         result_path = os.path.join(ROOT_DIR, 'encode_cosine.yaml')
-        with open(result_path, 'r') as f:
-            result = yaml.safe_load(f)
-            if result is None:
-                result = {}
-            result.update({f'{test_name}_{_type}': {'Num Commits': test_size, 'Accuracy': accuracy, 'F1 score': f1}})
-        with open(result_path, 'w') as f:
-            yaml.safe_dump(result, f)
+        save_result(result_path, test_case=(test_name, _type), result=(test_size, accuracy, f1))
 
     for test_case, test_repos in test_cases.items():
         train_repos = list(set(repos) - set(test_repos))
