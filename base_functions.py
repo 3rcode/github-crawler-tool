@@ -49,6 +49,8 @@ def sample_wrong_cases(path, test_case, commits, prediction, Y):
     
 
 def find_commit(commit):
+    print(commit)
+    print()
     data_path = os.path.join(ROOT_DIR, 'data')
     repos = []
     for subdir, dirs, files in os.walk(data_path):
@@ -57,10 +59,9 @@ def find_commit(commit):
     for repo in repos:
         path = os.path.join(data_path, repo, 'labeled_commits.csv')
         df = pd.read_csv(path)
-        row = df.loc[df['Commit Message'] == commit] 
+        row = df.loc[(df['Commit Message'] == commit) | (df['Commit Message'] + df['Commit Description'] == commit)] 
         if not row.empty:
-            results.append('{}: {}'.format(repo, '||'.join(np.squeeze(row.to_numpy()).astype(str))))
+            print(row)
+            results.append('Repo ({}): {}'.format(repo, '||'.join(np.squeeze(row.to_numpy()).astype(str))))
     return results
-
-find_commit('Hello World')
 
