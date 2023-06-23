@@ -90,6 +90,8 @@ if __name__ == '__main__':
             accuracy = str(int(accuracy * 100) / 100) + '%'
             y_preds = model.predict(X_test)
             y_preds = [1 if x > 0.5 else 0 for x in y_preds]
+            path = os.path.join(ROOT_DIR, 'sample_wrong_cases', 'LSTM_model.yaml')
+            sample_wrong_cases(path, (test_name, _type), X_test, y_preds, y_test)
             f1 = f1_score(y_test, y_preds)
             print(f"F1 score: {f1}")
             f1 = str(f1)
@@ -109,10 +111,10 @@ if __name__ == '__main__':
             X_test = vectorizer.transform(X_test)
             y_test = np.asarray(y_test).astype(np.float32)
             print(f"Num Test: {X_test.shape[0]}")
-            y_pred = model.predict(X_test)
-            true_pred = sum([y_pred[i] == y_test[i] for i in range(test_size)])
+            y_preds = model.predict(X_test)
+            true_pred = sum([y_preds[i] == y_test[i] for i in range(test_size)])
             path = os.path.join(ROOT_DIR, 'sample_wrong_cases', 'naive_bayes.yaml')
-            sample_wrong_cases(path, (test_name, _type), test_commits, y_pred, y_test)
+            sample_wrong_cases(path, (test_name, _type), test_commits, y_preds, y_test)
             accuracy = true_pred / test_size * 100
             print("Accuracy: %.2f%%" % (accuracy))
             accuracy = str(int(accuracy * 100) / 100) + '%'

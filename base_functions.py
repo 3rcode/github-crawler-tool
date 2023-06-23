@@ -11,7 +11,7 @@ def load_data(file_path):
         if pd.isna(row['Commit Description']):
             return str(row['Commit Message'])
         else:
-            return str(row['Commit Message']) + str(row['Commit Description'])
+            return str(row['Commit Message']) + "\n" + str(row['Commit Description'])
 
     commit = df.apply(merge, axis=1)
     label = df['Label']
@@ -41,6 +41,7 @@ def sample_wrong_cases(path, test_case, commits, prediction, Y):
     false_negative = [commits[index] for _, index in enumerate(false_case) if prediction[index] == 0]
     sample_fp = random.choices(false_positive, k=5)
     sample_fp_info = {commit: find_commit(commit) for commit in sample_fp}
+    print(type(sample_fp_info))
     sample_fn = random.choices(false_negative, k=5)
     sample_fn_info = {commit: find_commit(commit) for commit in sample_fn}
     _save_result(path, {f'{test_name}_{_type}': {'False Positive': sample_fp_info, 
@@ -59,9 +60,9 @@ def find_commit(commit):
     for repo in repos:
         path = os.path.join(data_path, repo, 'labeled_commits.csv')
         df = pd.read_csv(path)
-        row = df.loc[(df['Commit Message'] == commit) | (df['Commit Message'] + df['Commit Description'] == commit)] 
+        row = df.loc[(df['Commit Message'].astype(str) == commit) | (df['Commit Message'].astype(str) + '\n' + df['Commit Description'].astype(str) == commit)] 
         if not row.empty:
-            print(row)
             results.append('Repo ({}): {}'.format(repo, '||'.join(np.squeeze(row.to_numpy()).astype(str))))
     return results
+
 
