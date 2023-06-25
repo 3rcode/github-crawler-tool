@@ -7,6 +7,7 @@ from yaml.loader import SafeLoader
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics import f1_score
+from base_functions import load_data, save_result, sample_wrong_cases
 
 model = SentenceTransformer('all-mpnet-base-v2')
 THRESHOLD = 0.7
@@ -17,18 +18,6 @@ linking_statement = [r"(?i)fixes:?", r"(?i)what's changed:?", r"(?i)other change
                      r"(?i)changes:?", r"(?i)fixed:?", r"(?i)maintenance:?", r"(?i)added:?"]
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-def load_data(file_path):
-    df = pd.read_csv(file_path)
-    def merge(row):
-        if pd.isna(row['Commit Description']):
-            return str(row['Commit Message'])
-        else:
-            return str(row['Commit Message']) + str(row['Commit Description'])
-
-    commit = df.apply(merge, axis=1)
-    label = df['Label']
-    return np.asarray(commit), np.asarray(label)
 
 
 if __name__ == '__main__':
@@ -89,27 +78,22 @@ if __name__ == '__main__':
         print('Start to calculate cosine similarity')
         cosine_similarities = cosine_similarity(encoded_test_commit, encoded_changelog_sentences)
         scores = np.amax(cosine_similarities, axis=1)
-        preds = np.where(scores >= THRESHOLD, 1, 0)
+        y_preds = np.where(scores >= THRESHOLD, 1, 0)
 
         print('Successfully calculated cosine similarity')
         # Score result
         test_size = len(X_test)
-        true_pred = sum([preds[i] == y_test[i] for i in range(test_size)])
+        true_pred = sum([y_preds[i] == y_test[i] for i in range(test_size)])
         accuracy = true_pred / test_size * 100
         print("Accuracy: %.2f%%" % (accuracy))
         accuracy = str(int(accuracy * 100) / 100) + '%'
-
-        f1 = f1_score(y_test, preds)
+        path = os.path.join(ROOT_DIR, 'sample_wrong_cases', 'encode_cosine.yaml')
+        sample_wrong_cases(path, (test_name, _type), X_test, y_preds, y_test)
+        f1 = f1_score(y_test, y_preds)
         print(f"F1 score: {f1}")
         f1 = str(f1)
         result_path = os.path.join(ROOT_DIR, 'encode_cosine.yaml')
-        with open(result_path, 'r') as f:
-            result = yaml.safe_load(f)
-            if result is None:
-                result = {}
-            result.update({f'{test_name}_{_type}': {'Num Commits': test_size, 'Accuracy': accuracy, 'F1 score': f1}})
-        with open(result_path, 'w') as f:
-            yaml.safe_dump(result, f)
+        save_result(result_path, test_case=(test_name, _type), result=(test_size, accuracy, f1))
 
     for test_case, test_repos in test_cases.items():
         train_repos = list(set(repos) - set(test_repos))
