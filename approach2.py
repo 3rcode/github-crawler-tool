@@ -11,6 +11,7 @@ from base_functions import load_data, save_result, sample_wrong_cases
 
 model = SentenceTransformer('all-mpnet-base-v2')
 THRESHOLD = 0.7
+BATCH_SIZE = 1000
 
 linking_statement = [r"(?i)fixes:?", r"(?i)what's changed:?", r"(?i)other changes:?", r"(?i)documentation:?",
                      r"(?i)features:?", r"(?i)new contributors:?", r"(?i)bug fixes:?", r"(?i)changelog:?",
@@ -64,9 +65,9 @@ if __name__ == '__main__':
         encoded_changelog_sentences = model.encode(all_changelog_sentences)
         print('Successfully encoded changelog sentences')
         print('Encoded changelog sentences shape:', encoded_changelog_sentences.shape)
-        encoded_file = os.path.join(ROOT_DIR, 'models', 'encoded_vectors', f'{test_name}_{_type}')
+        encoded_file = os.path.join(ROOT_DIR, 'models', 'encoded_vectors', f'{test_name}_{_type}.npy')
         with open(encoded_file, 'wb') as f:
-            np.save(f, encoded_file)
+            np.save(f, encoded_changelog_sentences)
 
         # Encode test commit
         print('Start to encode test commit')
@@ -74,12 +75,21 @@ if __name__ == '__main__':
         print('Successfully encoded test commit')
         print('Encoded test commit shape:', encoded_test_commit.shape)
 
-        # Calculate cosine similarity
         print('Start to calculate cosine similarity')
-        cosine_similarities = cosine_similarity(encoded_test_commit, encoded_changelog_sentences)
-        scores = np.amax(cosine_similarities, axis=1)
-        y_preds = np.where(scores >= THRESHOLD, 1, 0)
+        scores = np.asarray([])
+        # Split 
+        rounds = len(encoded_test_commit) // BATCH_SIZE
+        for i in range(rounds):
+            cosine_similarities = cosine_similarity(encoded_test_commit[i * BATCH_SIZE: (i + 1) * BATCH_SIZE], encoded_changelog_sentences)
+            scores = np.concatenate((scores, np.amax(cosine_similarities, axis=1)), axis=0)
+        # Calculate rest commits
+        cosine_similarities = cosine_similarity(encoded_test_commit[i * rounds:], encoded_changelog_sentences)
+        scores = np.concatenate((scores, np.amax(cosine_similarities, axis=1)), axis=0)
+        score_file = os.path.join(ROOT_DIR, 'models', 'approach2_scores', f'{test_name}_{_type}.npy')
+        with open(score_file, 'wb') as f:
+            np.save(f, scores)
 
+        y_preds = np.where(scores >= THRESHOLD, 1, 0)
         print('Successfully calculated cosine similarity')
         # Score result
         test_size = len(X_test)
@@ -98,4 +108,4 @@ if __name__ == '__main__':
     for test_case, test_repos in test_cases.items():
         train_repos = list(set(repos) - set(test_repos))
         approach2(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='origin')
-
+        break

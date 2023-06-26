@@ -328,3 +328,84 @@ test3_abstract:
     fix ref_app tyep:
     - 'Repo (hashicorp_waypoint): fix ref_app tyep||0.4680068||config: Remove the
       multi-app deprecation warning.||nan||0'
+test4_abstract:
+  False Negative:
+    ? 'Merge pull request #19499 from emberjs/deprecate-argument-less-helper-paren-less-invocation
+
+      [BUGFIX beta] [DEPRECATION] Deprecate @foo={{helper}}'
+    : - 'Repo (emberjs_ember.js): Merge pull request #19499 from emberjs/deprecate-argument-less-helper-paren-less-invocation||0.7579606||#16956
+        [DEPRECATION] Deprecate Ember.merge||[BUGFIX beta] [DEPRECATION] Deprecate
+        @foo={{helper}}||1'
+    Properly exclude type-tests from build:
+    - "Repo (emberjs_ember.js): Properly exclude type-tests from build||0.73906404||#19589\
+      \ [BUGFIX] Don\u2019t include type-tests in build output||nan||1"
+    '[BUGFIX beta] setProperties should handle non-object properties':
+    - 'Repo (emberjs_ember.js): [BUGFIX beta] setProperties should handle non-object
+      properties||0.8049534||[BUGFIX] Enable setProperties to work on Object.create(null)
+      objects.||nan||1'
+    ? 'docker v19.03.10
+
+      Signed-off-by: Yoan Blanc yoan@dosimple.ch'
+    : - 'Repo (hashicorp_nomad): docker v19.03.10||0.7203196||deps: Update github.com/fsouza/go-dockerclient
+        from 1.8.2 to 1.9.0 [GH-14898]||Signed-off-by: Yoan Blanc yoan@dosimple.ch||1'
+    'docs: Add delete-version-after to kv command line docs':
+    - 'Repo (hashicorp_vault): docs: Add delete-version-after to kv command line docs||0.7463054||cli/kv:
+      improve kv CLI to remove data or custom metadata using kv patch [GH-18067]||nan||1'
+  False Positive:
+    ? 'Merge pull request #5565 from hashicorp/dani/alloc-restart-docs
+
+      docs: Add docs for nomad-alloc-restart'
+    : - 'Repo (hashicorp_nomad): Merge pull request #5565 from hashicorp/dani/alloc-restart-docs||0.58028066||cli:
+        Added a -task flag to alloc restart and alloc signal for consistent UX with
+        alloc exec and alloc logs [GH-10859]||docs: Add docs for nomad-alloc-restart||0'
+    auth_soft_fail needed for public images when agent is configured with auth (#11190):
+    - 'Repo (hashicorp_nomad): auth_soft_fail needed for public images when agent
+      is configured with auth (#11190)||0.5754806||agent: Added unauthenticated connection
+      timeouts and limits to prevent resource exhaustion. CVE-2020-7218 [GH-7002]||nan||0'
+    'bin/changelog: Fix ESLint issues':
+    - 'Repo (emberjs_ember.js): bin/changelog: Fix ESLint issues||0.6074731||#19825
+      [BUGFIX] Replace assert.equal in blueprints with assert.strictEqual to pass
+      eslint-plugin-qunit v7 on generation||nan||0'
+    ? 'eventstream: Handle missing policy documents in event streams (#15495)
+
+      Fixes link Co-authored-by: Tim Gross tgross@hashicorp.com'
+    : []
+    update dependencies to apply mdx-enhanced build cache fix:
+    - 'Repo (hashicorp_nomad): update dependencies to apply mdx-enhanced build cache
+      fix||0.44172588||build: Update to go1.20 [GH-16029]||nan||0'
+test5_abstract:
+  False Negative:
+    ':arrow_up: tree-view@0.198':
+    - 'Repo (atom_atom): :arrow_up: tree-view@0.198||0.68301874||* [atom/atom#17088
+      - :arrow_up: tree-view@0.224.0](https://github.com/atom/atom/pull/17088)||nan||0'
+    Always provide a devResourcePath in load settings:
+    - 'Repo (atom_atom): Always provide a devResourcePath in load settings||0.59113085||*
+      [atom/atom#17903 - Always provide a devResourcePath in load settings](https://github.com/atom/atom/pull/17903)||nan||0'
+    Export ::isTextEditor function:
+    - 'Repo (atom_atom): Export ::isTextEditor function||0.8317135||- atom/atom#9711
+      - Export ::isTextEditor function||nan||1'
+    ? 'Merge pull request #14131 from atom/mkt-prepare-build-for-per-package-transpilation
+
+      Update build to pre-compile packages with per-package transpilation configs'
+    : - 'Repo (atom_atom): Merge pull request #14131 from atom/mkt-prepare-build-for-per-package-transpilation||0.7592771||*
+        [atom/atom#14131 - Update build to pre-compile packages with per-package transpilation
+        configs](https://github.com/atom/atom/pull/14131)||Update build to pre-compile
+        packages with per-package transpilation configs||1'
+    'refactor(): rename gateway build service':
+    - 'Repo (nestjs_graphql): refactor(): rename gateway build service||0.931949||refactor():
+      rename gateway build service (ce89331)||nan||1'
+  False Positive:
+    Add Project::onDidChangePaths event:
+    - 'Repo (atom_atom): Add Project::onDidChangePaths event||0.44329733||Don''t watch
+      TextEditors outside of the current project in Project Find||nan||0'
+    Increase timeouts:
+    - 'Repo (atom_atom): Increase timeouts||0.45523903||Improved startup time||nan||0'
+    Upgrade to whitespace@0.21.0:
+    - 'Repo (atom_atom): Upgrade to whitespace@0.21.0||0.6143564||* [atom/whitespace#196
+      - Migrate to Github Actions](https://github.com/atom/whitespace/pull/196)||nan||0'
+    do not call site.process twice:
+    - 'Repo (jekyll_jekyll-admin): do not call site.process twice||0.5668312||Disable
+      watch to prevent race condition between threads calling site.process #320 ||nan||0'
+    'fix Bug #1321033':
+    - 'Repo (elementary_photos): fix Bug #1321033||0.29962036||* Use Granite.MessageDialog
+      throughout||nan||0'
