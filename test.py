@@ -1,6 +1,7 @@
-# This file use data in test1_origin train repos to test whether input commit is important or not
 import numpy as np
 import os
+import yaml
+from yaml.loader import SafeLoader
 from base_functions import load_data
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
@@ -17,23 +18,20 @@ repos = []
 data_path = os.path.join(ROOT_DIR, 'data')
 for subdir, dirs, files in os.walk(data_path):
     repos.extend(dirs)
-test1_test_repos = ['keystonejs_keystone',
-                    'hashicorp_terraform-cdk',
-                    'jenkinsci_jenkins',
-                    'vercel_swr',
-                    'hashicorp_terraform-provider-azurerm',
-                    'elementary_calculator',
-                    'nestjs_bull',
-                    'irccloud_android',
-                    'tailwindlabs_tailwindcss',
-                    'hashicorp_terraform']
 
-def test_naive_bayes(commit):   
-    test1_train_repos = list(set(repos) - set(test1_test_repos))
+test_cases_path = os.path.join(ROOT_DIR, 'test_cases.yaml')
+with open(test_cases_path, 'r') as f:
+    test_cases = yaml.load(f, Loader=SafeLoader)
+
+def test_naive_bayes(test_case, commit):   
+    test_name, _type = test_case.split('_')
+    file = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv'
+    test_repos = test_cases[test_name]
+    train_repos = list(set(repos) - set(test_repos))
     X_train = np.asarray([])
     y_train = np.asarray([])
-    for repo in test1_test_repos:
-        path = os.path.join(data_path, repo, 'labeled_commits.csv')
+    for repo in train_repos:
+        path = os.path.join(data_path, repo, file)
         cm, label = load_data(path)
         X_train = np.concatenate((X_train, cm), axis=0)
         y_train = np.concatenate((y_train, label), axis=0)
@@ -44,13 +42,14 @@ def test_naive_bayes(commit):
     vectorized_commit = vectorizer.transform([commit])
     prediction = model.predict(vectorized_commit)
     print("Predict commit is in class:", prediction[0])
-    commit_info = find_commit(commit)
+    commit_info = find_commit(commit, _type)
     print("Commit info:")
     print(commit_info)
     
 
-def test_encode_cosine(commit):
-    path_test1_origin = os.path.join(ROOT_DIR, 'models', 'encoded_vectors', 'test1_origin.npy')
+def test_encode_cosine(test_case, commit):
+    test_name, _type = test_case.split('_')
+    path_test1_origin = os.path.join(ROOT_DIR, 'models', 'encoded_vectors', f'{test_case}.npy')
     print(path_test1_origin)
     with open(path_test1_origin, 'rb') as f:
         encoded_changelog_sentences = np.load(f)
@@ -58,24 +57,24 @@ def test_encode_cosine(commit):
     scores = cosine_similarity(encoded_commit, encoded_changelog_sentences)[0]
     max_score = max(scores)
     print("Commit's score is:", max_score)  
-    commit_info = find_commit(commit)
+    commit_info = find_commit(commit, _type)
     print("Commit info:")
     print(commit_info)
 
 
-def test_nn(commit):
-    model_path = os.path.join(ROOT_DIR, 'models', 'lstm_models', 'test1_origin')
+def test_nn(test_case, commit):
+    test_name, _type = test_case.split('_')
+    model_path = os.path.join(ROOT_DIR, 'models', 'lstm_models', test_case)
     model = load_model(model_path)
     print(model.summary())
     print("Commit's score is:", model.predict([commit])[0])
-    commit_info = find_commit(commit)
+    commit_info = find_commit(commit, _type)
     print("Commit info:")
     print(commit_info)
 
 
 if __name__ == '__main__':
-    # Test 3 approachs here
-    # Input is commit want to test
-    test_nn("Hello world")
-    test_naive_bayes("Hello world")
-    test_encode_cosine("Hello world")
+    # Test 3 approach using 3 functions: test_naive_bayes, test_nn, test_encode_cosine
+    # First parameter is database
+    # Second parameter is commit want to test
+    test_nn("test10_abstract", "Allow to open directories directly (#747)")

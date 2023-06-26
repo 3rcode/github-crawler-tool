@@ -60,8 +60,11 @@ if __name__ == '__main__':
 
         # Encode all changelog sentences
         print('Start to encode changelog sentences')
-        # with open('models/encoded_changelog_sentences.npy', 'r') as f:
+        # Load encoded changelog sentences
+        # encoded_file = os.path.join(ROOT_DIR, 'models', 'encoded_vectors', f'{test_name}_{_type}.npy')
+        # with open(encoded_file, 'rb') as f:
         #     encoded_changelog_sentences = np.load(f)
+
         encoded_changelog_sentences = model.encode(all_changelog_sentences)
         print('Successfully encoded changelog sentences')
         print('Encoded changelog sentences shape:', encoded_changelog_sentences.shape)
@@ -83,7 +86,7 @@ if __name__ == '__main__':
             cosine_similarities = cosine_similarity(encoded_test_commit[i * BATCH_SIZE: (i + 1) * BATCH_SIZE], encoded_changelog_sentences)
             scores = np.concatenate((scores, np.amax(cosine_similarities, axis=1)), axis=0)
         # Calculate rest commits
-        cosine_similarities = cosine_similarity(encoded_test_commit[i * rounds:], encoded_changelog_sentences)
+        cosine_similarities = cosine_similarity(encoded_test_commit[rounds * BATCH_SIZE:], encoded_changelog_sentences)
         scores = np.concatenate((scores, np.amax(cosine_similarities, axis=1)), axis=0)
         score_file = os.path.join(ROOT_DIR, 'models', 'approach2_scores', f'{test_name}_{_type}.npy')
         with open(score_file, 'wb') as f:
@@ -108,4 +111,4 @@ if __name__ == '__main__':
     for test_case, test_repos in test_cases.items():
         train_repos = list(set(repos) - set(test_repos))
         approach2(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='origin')
-        break
+        

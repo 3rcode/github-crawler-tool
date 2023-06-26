@@ -1,0 +1,60 @@
+test1_origin:
+  False Negative:
+    ? "Allow empty_dir volume shared across containers in container group (#13374)\n\
+      \ Allow empty_dir volume to be shared across containers in container group.\
+      \  fixes hashicorp/terraform-provider-azurerm#11444   Add acctest for emptydir\
+      \ volume shared across containers   Fix formatting "
+    : - 'Repo (hashicorp_terraform-provider-azurerm): Allow empty_dir volume shared
+        across containers in container group (#13374)||0.8175652||azurerm_container_group
+        - support for the volume.empty_dir property (#9836)|| Allow empty_dir volume
+        to be shared across containers in container group.  fixes hashicorp/terraform-provider-azurerm#11444   Add
+        acctest for emptydir volume shared across containers   Fix formatting ||1'
+    'Allow half-ops to edit the topic, closes #64':
+    - "Repo (irccloud_android): Allow half-ops to edit the topic, closes #64||0.7157535||\u2022\
+      \ Half-ops can now edit topics||nan||1"
+    azurerm_disk_encryption_set support for enable_auto_key_rotation:
+    - 'Repo (hashicorp_terraform-provider-azurerm): azurerm_disk_encryption_set support
+      for enable_auto_key_rotation||0.978162||azurerm_disk_encryption_set - support
+      for the auto_key_rotation_enabled property (#13747)||nan||1'
+    azurerm_windows_function_app and azurerm_windows_function_app_slot fix bug in setting value for 'WindowsFxString' (#18014):
+    - 'Repo (hashicorp_terraform-provider-azurerm): azurerm_windows_function_app and
+      azurerm_windows_function_app_slot fix bug in setting value for ''WindowsFxString''
+      (#18014)||0.9692606||azurerm_windows_function_app_slot - fix a bug with setting
+      values for WindowsFxString (#18014)||nan||1'
+    ? 'use new winstone 5.11.1 with downgraded Jetty version 9.4.30.v20200611 because
+      of JENKINS-63958
+
+      Signed-off-by: olivier lamy olamy@apache.org'
+    : - 'Repo (jenkinsci_jenkins): use new winstone 5.11.1 with downgraded Jetty version
+        9.4.30.v20200611 because of JENKINS-63958||0.90784717||JENKINS-64035 - Winstone
+        5.12: Update Jetty from 9.4.30.v20200611 to 9.4.33.v20201020 (#5034) @oleg-nenashev||Signed-off-by:
+        olivier lamy olamy@apache.org||1'
+  False Positive:
+    'CHANGELOG #17635':
+    - 'Repo (hashicorp_terraform-provider-azurerm): CHANGELOG #17635||0.5891134||2.46.0
+      (February 04, 2021)||nan||0'
+    Merge branch 'add-e2e-tests':
+    - 'Repo (nestjs_bull): Merge branch ''add-e2e-tests''||0.6494643||Merge branch
+      ''master'' into test/fix-bull-explorer-test (10063a1)||nan||0'
+    adding the 3.0 major notes section to the changelog:
+    - 'Repo (hashicorp_terraform-provider-azurerm): adding the 3.0 major notes section
+      to the changelog||0.5709212||UPGRADE NOTES||nan||0'
+    address pr comments (#1958):
+    - 'Repo (hashicorp_terraform-provider-azurerm): address pr comments (#1958)||0.36756933||New
+      Resource: azurerm_orbital_contact_profile (#18317)||nan||0'
+    refactor:
+    - 'Repo (remix-run_react-router): refactor||0.5330094||Refactor as follows:||nan||0'
+    - 'Repo (JuliaLang_PackageCompiler.jl): refactor||0.36640972||- Sort out PRs (#245)||nan||0'
+    - 'Repo (hashicorp_terraform-provider-aws): refactor||0.424948||BREAKING CHANGES||nan||0'
+    - 'Repo (hashicorp_terraform-provider-azurerm): refactor||0.42494798||BREAKING
+      CHANGES||nan||0'
+    - 'Repo (vercel_turbo): refactor||0.42494798||Breaking changes||integrate Analyzer
+      into workflow more test cases handle free vars correctly handle bindings by
+      class and function||0'
+    - 'Repo (webpack_webpack): refactor||0.87875664||Refactoring||nan||1'
+    - 'Repo (django-cms_django-cms): refactor||0.6756653||Refactoring and Cleanups:||nan||0'
+    - 'Repo (storybookjs_storybook): refactor||0.5910409||Design refresh||nan||0'
+    - 'Repo (Lightning-AI_lightning): refactor||0.8787566||Refactoring||nan||1'
+    - 'Repo (laravel_framework): refactor||0.8787565||Refactoring||nan||1'
+    - 'Repo (laravel_horizon): refactor||0.38935935||Remove unused functions (#722)||nan||0'
+    - 'Repo (laravel_dusk): refactor||0.3538334||Changed||nan||0'

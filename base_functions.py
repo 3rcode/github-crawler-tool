@@ -39,26 +39,21 @@ def sample_wrong_cases(path, test_case, commits, prediction, Y):
     false_case = [index for index in range(len(Y)) if prediction[index] != Y[index]]
     false_positive = [commits[index] for _, index in enumerate(false_case) if prediction[index] == 1]
     false_negative = [commits[index] for _, index in enumerate(false_case) if prediction[index] == 0]
-    sample_fp = random.choices(false_positive, k=5)
-    sample_fp_info = {commit: find_commit(commit) for commit in sample_fp}
-    print(type(sample_fp_info))
-    sample_fn = random.choices(false_negative, k=5)
-    sample_fn_info = {commit: find_commit(commit) for commit in sample_fn}
-    _save_result(path, {f'{test_name}_{_type}': {'False Positive': sample_fp_info, 
-                                                 'False Negative': sample_fn_info}})
+    _save_result(path, {f'{test_name}_{_type}': {'False Positive': false_positive, 
+                                                 'False Negative': false_negative}})
 
     
 
-def find_commit(commit):
-    print(commit)
-    print()
+def find_commit(commit, _type):
+    file = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv'
     data_path = os.path.join(ROOT_DIR, 'data')
     repos = []
     for subdir, dirs, files in os.walk(data_path):
         repos.extend(dirs)
     results = []
+
     for repo in repos:
-        path = os.path.join(data_path, repo, 'labeled_commits.csv')
+        path = os.path.join(data_path, repo, file)
         df = pd.read_csv(path)
         row = df.loc[(df['Commit Message'].astype(str) == commit) | (df['Commit Message'].astype(str) + '\n' + df['Commit Description'].astype(str) == commit)] 
         if not row.empty:

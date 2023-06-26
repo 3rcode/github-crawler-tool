@@ -21,7 +21,6 @@ if __name__ == '__main__':
         repos.extend(dirs)
     
     test_cases_path = os.path.join(ROOT_DIR, 'test_cases.yaml')
-    test_cases = None
     with open(test_cases_path, 'r') as f:
         test_cases = yaml.load(f, Loader=SafeLoader)
     
@@ -53,31 +52,32 @@ if __name__ == '__main__':
         # print(y_test.shape)
 
         def LSTM_model(test_name, _type, X_train, y_train, X_test, y_test):
-            vectorize_layer = TextVectorization(
-                standardize='strip_punctuation',
-                split="whitespace",
-                output_mode="int",
-                output_sequence_length=max_commit_length              
-            )
-            vectorize_layer.adapt(X_train)
-            top_words = len(vectorize_layer.get_vocabulary()) + 1
-            embedding_vector_length = 300
             # Build model
-            model = Sequential()
-            model.add(vectorize_layer)
-            model.add(Embedding(top_words, embedding_vector_length, input_length=max_commit_length))
-            model.add(LSTM(32, dropout=0.05, recurrent_dropout=0.05, unroll=True))
-            model.add(Dense(1, activation='sigmoid'))
-            model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+            # vectorize_layer = TextVectorization(
+            #     standardize='strip_punctuation',
+            #     split="whitespace",
+            #     output_mode="int",
+            #     output_sequence_length=max_commit_length              
+            # )
+            # vectorize_layer.adapt(X_train)
+            # top_words = len(vectorize_layer.get_vocabulary()) + 1
+            # embedding_vector_length = 300
+            # model = Sequential()
+            # model.add(vectorize_layer)
+            # model.add(Embedding(top_words, embedding_vector_length, input_length=max_commit_length))
+            # model.add(LSTM(32, dropout=0.05, recurrent_dropout=0.05, unroll=True))
+            # model.add(Dense(1, activation='sigmoid'))
+            # model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+            
             # Load model
-            # model_file = os.path.join(ROOT_DIR, 'models', 'lstm_models', f'{test_name}_{_type}')
-            # model = load_model(model_file)
+            model_file = os.path.join(ROOT_DIR, 'models', 'lstm_models', f'{test_name}_{_type}')
+            model = load_model(model_file)
 
             # Check build_model function
             print(model.summary())
             
             # Train model
-            model.fit(X_train, y_train, epochs=3, batch_size=64) 
+            # model.fit(X_train, y_train, epochs=3, batch_size=64) 
             
             # Save model 
             model_file = os.path.join(ROOT_DIR, 'models', 'lstm_models', f'{test_name}_{_type}')
@@ -127,6 +127,6 @@ if __name__ == '__main__':
     
     for test_case, test_repos in test_cases.items():
         train_repos = list(set(repos) - set(test_repos))
-        approach1(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='abstract') 
+        approach1(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='origin') 
         
     
