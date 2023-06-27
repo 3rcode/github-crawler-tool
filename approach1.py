@@ -5,10 +5,9 @@ import yaml
 from yaml.loader import SafeLoader
 from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM, Embedding, TextVectorization
-from sklearn.metrics import f1_score
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-from base_functions import load_data, save_result, sample_wrong_cases
+from base_functions import load_data, analyze_result, show_result, save_result
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 max_commit_length = 30
@@ -86,44 +85,32 @@ if __name__ == '__main__':
             # model.save(model_file)
 
             # Test model
-            test_size = len(X_test)
-            accuracy = model.evaluate(X_test, y_test, verbose=0)[1] * 100
             y_preds = model.predict(X_test)
             y_preds = [1 if x > 0.5 else 0 for x in y_preds]
             path = os.path.join(ROOT_DIR, 'sample_wrong_cases', 'LSTM_model.yaml')
-            sample_wrong_cases(path, (test_name, _type), X_test, y_preds, y_test)
-            print("Accuracy: %.2f%%" % (accuracy))
-            accuracy = str(int(accuracy * 100) / 100) + '%'
-            f1 = f1_score(y_test, y_preds)
-            print(f"F1 score: {f1}")
-            f1 = str(f1)
+            result = analyze_result(path, (test_name, _type), X_test, y_preds, y_test)
+            show_result(result)
             result_path = os.path.join(ROOT_DIR, 'LSTM_model.yaml')
-            save_result(result_path, test_case=(test_name, _type), result=(test_size, accuracy, f1))
+            save_result(result_path, (test_name, _type), result)
 
         def naive_bayes(test_name, _type, X_train, y_train, X_test, y_test):
             vectorizer = TfidfVectorizer()
             X_train = vectorizer.fit_transform(X_train)
             print(f"Num Samples: {X_train.shape[0]}\nNum Features: {X_train.shape[1]}")
             model = MultinomialNB()
+
+            # Train model
             model.fit(X_train, y_train)
             
-            test_size = len(X_test)
+            # Test
             test_commits = X_test
             X_test = vectorizer.transform(X_test)
-            print(f"Num Test: {X_test.shape[0]}")
             y_preds = model.predict(X_test)
-            true_pred = sum([y_preds[i] == y_test[i] for i in range(test_size)])
             path = os.path.join(ROOT_DIR, 'sample_wrong_cases', 'naive_bayes.yaml')
-            sample_wrong_cases(path, (test_name, _type), test_commits, y_preds, y_test)
-            accuracy = true_pred / test_size * 100
-            print("Accuracy: %.2f%%" % (accuracy))
-            accuracy = str(int(accuracy * 100) / 100) + '%'
-
-            f1 = f1_score(y_test, y_preds)
-            print(f"F1 score: {f1}")
-            f1 = str(f1)
+            result = analyze_result(path, (test_name, _type), test_commits, y_preds, y_test)
+            show_result(result)
             result_path = os.path.join(ROOT_DIR, 'naive_bayes.yaml')
-            save_result(result_path, test_case=(test_name, _type), result=(test_size, accuracy, f1))
+            save_result(result_path, (test_name, _type), result)
         
         LSTM_model(test_name, _type, X_train, y_train, X_test, y_test) 
     

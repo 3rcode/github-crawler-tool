@@ -20,8 +20,15 @@ def load_data(file_path):
 
 def save_result(result_path, test_case, result):
     test_name, _type = test_case
-    test_size, accuracy, f1 = result
-    _save_result(result_path, {f'{test_name}_{_type}': {'Num Commits': test_size, 'Accuracy': accuracy, 'F1 score': f1}})
+    total_test, precision, recall, f1_score, accuracy, true_neg_rate = result
+    # Need to save result into file
+    _save_result(result_path, {f'{test_name}_{_type}': {'Total test': total_test, 
+                                                        'Precision': precision,
+                                                        'Recall': recall,
+                                                        'F1 score': f1_score,
+                                                        'Accuracy': accuracy,
+                                                        'True negative rate': true_neg_rate
+                                                        }})
     
     
 def _save_result(path, content):
@@ -34,7 +41,7 @@ def _save_result(path, content):
         yaml.safe_dump(result, f)
 
 
-def sample_wrong_cases(path, test_case, commits, prediction, Y):
+def analyze_result(path, test_case, commits, prediction, Y):
     test_name, _type = test_case
     false_case = [index for index in range(len(Y)) if prediction[index] != Y[index]]
     true_case = [index for index in range(len(Y)) if prediction[index] == Y[index]]
@@ -42,20 +49,22 @@ def sample_wrong_cases(path, test_case, commits, prediction, Y):
     true_negative = [commits[index] for _, index in enumerate(true_case) if prediction[index] == 0]
     false_positive = [commits[index] for _, index in enumerate(false_case) if prediction[index] == 1]
     false_negative = [commits[index] for _, index in enumerate(false_case) if prediction[index] == 0]
-    print("Total test:", len(Y))
-    print("True Positive:", len(true_positive))
-    print("True Negative:", len(true_negative))
-    print("False Positive:", len(false_positive))
-    print("False Negative:", len(false_negative))
+    
     tp = len(true_positive)
     tn = len(true_negative)
     fp = len(false_positive)
     fn = len(false_negative)
-    print("Precision:", tp / (tp + fp))
-    print("Recall:", tp / (tp + fn))
-    print("True negative rate:", tn / (tn + fp))
+    
+    total_test = len(Y)
+    precision = tp / (tp + fp)
+    recall = tp / (tp + fn)
+    true_neg_rate = tn / (tn + fp)
+    f1_score = 2 * precision * recall / (precision + recall)
+    accuracy = (tp + tn) / (tp + tn + fp + fn)
+
     _save_result(path, {f'{test_name}_{_type}': {'False Positive': false_positive, 
                                                  'False Negative': false_negative}})
+    return total_test, precision, recall, f1_score, accuracy, true_neg_rate
 
     
 
@@ -75,4 +84,12 @@ def find_commit(commit, _type):
             results.append('Repo ({}): {}'.format(repo, '||'.join(np.squeeze(row.to_numpy()).astype(str))))
     return results
 
+def show_result(result):
+    total_test, precision, recall, f1_score, accuracy, true_neg_rate = result
+    print("Total test:", total_test)
+    print("Precision:", precision)
+    print("Recall:", recall)
+    print("F1 score:", f1_score)
+    print("Accuracy:", accuracy)
+    print("True negative rate:", true_neg_rate)
 

@@ -12,7 +12,7 @@ linking_statement = [r"(?i)fixes:?", r"(?i)what's changed:?", r"(?i)other change
 
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 
-def summarize_result(approach='naive_bayes'):
+def summarize_result(approach):
     result_path = os.path.join(ROOT_DIR, f'{approach}.yaml')
     result = None
     with open(result_path, 'r') as f:
@@ -28,40 +28,31 @@ def summarize_result(approach='naive_bayes'):
             result_origin.append([test_case, *value.values()])
         else:
             result_abstract.append([test_case, *value.values()])
-
-    def p2f(x):
-        return float(x.strip('%')) / 100.0
-
-    def f2p(x):
-        return str(round(x * 100.0, 2)) + '%'
     
-    result_folder = os.path.join(ROOT_DIR, 'statistic', approach)
+    origin = pd.DataFrame(result_origin, columns=['Test case', 'Accuracy', 'F1 score',  'Precision', 'Recall', 'Total test',  'True negative rate'])
+    # abstract = pd.DataFrame(result_abstract, columns=['Test case', 'Accuracy', 'F1 score',  'Precision', 'Recall', 'Total test',  'True negative rate'])
+    def _summary(df):
+        np_df = df.to_numpy()
+        overall_tt = np.sum(np_df[:, 5], axis=0)
+        overall_a = np.sum(np_df[:, 1] * np_df[:, 5], axis=0) / overall_tt
+        overall_f = np.sum(np_df[:, 2] * np_df[:, 5], axis=0) / overall_tt
+        overall_p = np.sum(np_df[:, 3] * np_df[:, 5], axis=0) / overall_tt
+        overall_r = np.sum(np_df[:, 4] * np_df[:, 5], axis=0) / overall_tt
+        overall_tnr = np.sum(np_df[:, 6] * np_df[:, 5], axis=0) / overall_tt
+        return ['Overall', overall_a, overall_f, overall_p, overall_r, overall_tt, overall_tnr]
+    
+    origin.loc[len(origin)] = _summary(origin)
+    origin.set_index('Test case')
+    # abstract.loc[len(abstract)] = _summary(abstract)
+    # abstract.set_index('Test case')
+    result_folder = os.path.join(ROOT_DIR, 'statistic', f'{approach}')
     os.mkdir(result_folder)
+    path_to_origin = os.path.join(result_folder, 'origin.csv')
+    origin.to_csv(path_to_origin)
+    # path_to_abstract = os.path.join(result_folder, 'abstract.csv')
+    # abstract.to_csv(path_to_abstract)
 
-    accuracy = [p2f(result_origin[i][1]) for i in range(len(result_origin))]
-    num_commits = [result_origin[i][3] for i in range(len(result_origin))]
-    overall_com = sum(num_commits)
-    overall_acc = sum([accuracy[i] * num_commits[i] for i in range(len(result_origin))]) / overall_com
-    overall_f1 = sum([float(result_origin[i][2]) for i in range(len(result_origin))]) / len(result_origin)
-    summarize = ['Overall', f2p(overall_acc), overall_f1, overall_com]
-    result_origin.append(summarize)
 
-    result_origin_path = os.path.join(ROOT_DIR, 'statistic', approach, 'origin.csv')
-    df = pd.DataFrame(result_origin, columns=['Test', 'Accuracy', 'F1 Score', 'Num Commits'])
-    df.set_index('Test')
-    df.to_csv(result_origin_path, index=False)
-
-    accuracy = [p2f(result_abstract[i][1]) for i in range(len(result_abstract))]
-    num_commits = [result_abstract[i][3] for i in range(len(result_abstract))]
-    overall_com = sum(num_commits)
-    overall_acc = sum([accuracy[i] * num_commits[i] for i in range(len(result_abstract))]) / overall_com
-    overall_f1 = sum([float(result_abstract[i][2]) for i in range(len(result_abstract))]) / len(result_abstract)
-    summarize = ['Overall', f2p(overall_acc), overall_f1, overall_com]
-    result_abstract.append(summarize)
-    result_abstract_path = os.path.join(ROOT_DIR, 'statistic', approach, 'abstract.csv')
-    df = pd.DataFrame(result_abstract, columns=['Test', 'Accuracy', 'F1 Score', 'Num Commits'])
-    df.set_index('Test')
-    df.to_csv(result_abstract_path, index=False)
 
 def summarize_data():
     data_path = os.path.join(ROOT_DIR, 'data')
