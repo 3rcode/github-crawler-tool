@@ -7,7 +7,7 @@ from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM, Embedding, TextVectorization
 from sklearn.metrics import f1_score
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from base_functions import load_data, save_result, sample_wrong_cases
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -37,6 +37,7 @@ if __name__ == '__main__':
             X_train = np.concatenate((X_train, commit), axis=0)
             y_train = np.concatenate((y_train, label), axis=0)
         
+        
         # Check number of dataset
         # print(X_train.shape)
         # print(y_train.shape)
@@ -47,6 +48,7 @@ if __name__ == '__main__':
             commit, label = load_data(path)
             X_test = np.concatenate((X_test, commit), axis=0)
             y_test = np.concatenate((y_test, label), axis=0)
+        
         
         # print(X_test.shape)
         # print(y_test.shape)
@@ -69,7 +71,7 @@ if __name__ == '__main__':
             # model.add(Dense(1, activation='sigmoid'))
             # model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
             
-            # Load model
+            # Load model has trained in previous running session
             model_file = os.path.join(ROOT_DIR, 'models', 'lstm_models', f'{test_name}_{_type}')
             model = load_model(model_file)
 
@@ -80,18 +82,18 @@ if __name__ == '__main__':
             # model.fit(X_train, y_train, epochs=3, batch_size=64) 
             
             # Save model 
-            model_file = os.path.join(ROOT_DIR, 'models', 'lstm_models', f'{test_name}_{_type}')
-            model.save(model_file)
+            # model_file = os.path.join(ROOT_DIR, 'models', 'lstm_models', f'{test_name}_{_type}')
+            # model.save(model_file)
 
             # Test model
             test_size = len(X_test)
             accuracy = model.evaluate(X_test, y_test, verbose=0)[1] * 100
-            print("Accuracy: %.2f%%" % (accuracy))
-            accuracy = str(int(accuracy * 100) / 100) + '%'
             y_preds = model.predict(X_test)
             y_preds = [1 if x > 0.5 else 0 for x in y_preds]
             path = os.path.join(ROOT_DIR, 'sample_wrong_cases', 'LSTM_model.yaml')
             sample_wrong_cases(path, (test_name, _type), X_test, y_preds, y_test)
+            print("Accuracy: %.2f%%" % (accuracy))
+            accuracy = str(int(accuracy * 100) / 100) + '%'
             f1 = f1_score(y_test, y_preds)
             print(f"F1 score: {f1}")
             f1 = str(f1)
@@ -127,6 +129,4 @@ if __name__ == '__main__':
     
     for test_case, test_repos in test_cases.items():
         train_repos = list(set(repos) - set(test_repos))
-        approach1(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='origin') 
-        
-    
+        approach1(test_name=test_case, train_repos=train_repos, test_repos=test_repos, _type='abstract') 

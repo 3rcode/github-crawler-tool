@@ -37,8 +37,23 @@ def _save_result(path, content):
 def sample_wrong_cases(path, test_case, commits, prediction, Y):
     test_name, _type = test_case
     false_case = [index for index in range(len(Y)) if prediction[index] != Y[index]]
+    true_case = [index for index in range(len(Y)) if prediction[index] == Y[index]]
+    true_positive = [commits[index] for _, index in enumerate(true_case) if prediction[index] == 1]
+    true_negative = [commits[index] for _, index in enumerate(true_case) if prediction[index] == 0]
     false_positive = [commits[index] for _, index in enumerate(false_case) if prediction[index] == 1]
     false_negative = [commits[index] for _, index in enumerate(false_case) if prediction[index] == 0]
+    print("Total test:", len(Y))
+    print("True Positive:", len(true_positive))
+    print("True Negative:", len(true_negative))
+    print("False Positive:", len(false_positive))
+    print("False Negative:", len(false_negative))
+    tp = len(true_positive)
+    tn = len(true_negative)
+    fp = len(false_positive)
+    fn = len(false_negative)
+    print("Precision:", tp / (tp + fp))
+    print("Recall:", tp / (tp + fn))
+    print("True negative rate:", tn / (tn + fp))
     _save_result(path, {f'{test_name}_{_type}': {'False Positive': false_positive, 
                                                  'False Negative': false_negative}})
 

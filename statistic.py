@@ -138,8 +138,4 @@ def summarize_data():
     abstract_data.to_csv(os.path.join(data_info_folder, 'abstract_data.csv'))
   
 
-<<<<<<< HEAD
 summarize_result(approach='encode_cosine')
-=======
-summarize_result()
->>>>>>> 53e031acef4541903f11992ee4b17a7fd6fa73e5
