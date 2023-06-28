@@ -3,8 +3,10 @@ import numpy as np
 import os
 import random
 import yaml
+from sklearn.model_selection import KFold
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def load_data(file_path):
     df = pd.read_csv(file_path)
     def merge(row):
@@ -16,7 +18,6 @@ def load_data(file_path):
     commit = df.apply(merge, axis=1)
     label = df['Label']
     return np.asarray(commit), np.asarray(label)
-
 
 def save_result(result_path, test_case, result):
     test_name, _type = test_case
@@ -30,7 +31,6 @@ def save_result(result_path, test_case, result):
                                                         'True negative rate': true_neg_rate
                                                         }})
     
-    
 def _save_result(path, content):
     with open(path, 'r') as f:
         result = yaml.safe_load(f)
@@ -39,7 +39,6 @@ def _save_result(path, content):
         result.update(content)
     with open(path, 'w') as f:
         yaml.safe_dump(result, f)
-
 
 def analyze_result(path, test_case, commits, prediction, Y):
     test_name, _type = test_case
@@ -66,8 +65,6 @@ def analyze_result(path, test_case, commits, prediction, Y):
                                                  'False Negative': false_negative}})
     return total_test, precision, recall, f1_score, accuracy, true_neg_rate
 
-    
-
 def find_commit(commit, _type):
     file = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv'
     data_path = os.path.join(ROOT_DIR, 'data')
@@ -93,3 +90,56 @@ def show_result(result):
     print("Accuracy:", accuracy)
     print("True negative rate:", true_neg_rate)
 
+def k_fold_splitter(_type):
+    # Load data in all repositories
+    file_name = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv'
+    data_path = os.path.join(ROOT_DIR, 'data')
+    repos = []
+    for subdir, dirs, files in os.walk(data_path):
+        repos.extend(dirs)
+    dfs = []
+    for repo in repos:
+        path = os.path.join(data_path, repo, file_name)
+        df = pd.read_csv(path)
+        dfs.append(df)
+
+    # Merge all repositories data into one dataframe 
+    all_data = pd.concat(dfs)
+
+    # Remove all duplicates of commit message, if that commit message has any occurance 
+    # with label 1 then label that commit message 1 
+    all_data = all_data.sort_values('Label').drop_duplicates('Commit Message', keep='last')
+
+    # Shuffle data after sort:
+    all_data.sample(frac=1, axis=0, replace=True)
+
+    # Get commit messages and commit descriptions as features of models and label column is label
+    def merge(row):
+        if pd.isna(row['Commit Description']):
+            return str(row['Commit Message'])
+        else:
+            return str(row['Commit Message']) + "\n" + str(row['Commit Description'])
+
+    commit = all_data.apply(merge, axis=1)
+    label = all_data['Label']
+    data = np.column_stack((commit, label))
+
+    # Create folder to save datasets
+    folder = 'datasets_' + _type
+    folder_path = os.path.join(ROOT_DIR, folder)
+    if not os.path.exists(folder_path):
+        os.mkdir(folder_path)
+
+    # Use K-Fold technique to separate data into 10 (train, test) datasets and save it into folder
+    kf = KFold(n_splits=10, shuffle=True, random_state=10)
+    for i, (train_index, test_index) in enumerate(kf.split(data)):
+        train_data = pd.DataFrame(data[train_index], columns=['X_train', 'y_train'])
+        test_data = pd.DataFrame(data[test_index], columns=['X_test', 'y_test'])
+        path = os.path.join(folder_path, f'test_{i + 1}')
+        if not os.path.exists(path):
+            os.mkdir(path)
+        train_data.to_csv(os.path.join(path, 'train.csv'))
+        test_data.to_csv(os.path.join(path, 'test.csv'))
+
+if __name__ == '__main__':
+    k_fold_splitter('abstract')

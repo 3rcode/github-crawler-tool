@@ -14,44 +14,45 @@ max_commit_length = 30
 
 
 if __name__ == '__main__':
-    repos = []
-    data_path = os.path.join(ROOT_DIR, 'data')
-    for subdir, dirs, files in os.walk(data_path):
-        repos.extend(dirs)
+    # repos = []
+    # data_path = os.path.join(ROOT_DIR, 'data')
+    # for subdir, dirs, files in os.walk(data_path):
+    #     repos.extend(dirs)
     
-    test_cases_path = os.path.join(ROOT_DIR, 'test_cases.yaml')
-    with open(test_cases_path, 'r') as f:
-        test_cases = yaml.load(f, Loader=SafeLoader)
+    # test_cases_path = os.path.join(ROOT_DIR, 'test_cases.yaml')
+    # with open(test_cases_path, 'r') as f:
+    #     test_cases = yaml.load(f, Loader=SafeLoader)
     
-    def approach1(test_name, train_repos, test_repos, _type):
-        X_train = [] 
-        X_test = []
-        y_train = []
-        y_test = []
-        file_name = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv' 
+    def approach1(test_name, _type): # test_name, train_repos, test_repos, _type
+        # X_train = [] 
+        # X_test = []
+        # y_train = []
+        # y_test = []
+        # datasets = 'datasets_' + _type
+        # file_name = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv' 
 
-        for repo in train_repos:
-            path = os.path.join(data_path, repo, file_name)
-            commit, label = load_data(path)
-            X_train = np.concatenate((X_train, commit), axis=0)
-            y_train = np.concatenate((y_train, label), axis=0)
+        # for repo in train_repos:
+        #     path = os.path.join(data_path, repo, file_name)
+        #     commit, label = load_data(path)
+        #     X_train = np.concatenate((X_train, commit), axis=0)
+        #     y_train = np.concatenate((y_train, label), axis=0)
         
         
-        # Check number of dataset
-        # print(X_train.shape)
-        # print(y_train.shape)
+        # # Check number of dataset
+        # # print(X_train.shape)
+        # # print(y_train.shape)
         
-        # Load commit messages and expected label of commits
-        for repo in test_repos:
-            path = os.path.join(data_path, repo, file_name)
-            commit, label = load_data(path)
-            X_test = np.concatenate((X_test, commit), axis=0)
-            y_test = np.concatenate((y_test, label), axis=0)
+        # # Load commit messages and expected label of commits
+        # for repo in test_repos:
+        #     path = os.path.join(data_path, repo, file_name)
+        #     commit, label = load_data(path)
+        #     X_test = np.concatenate((X_test, commit), axis=0)
+        #     y_test = np.concatenate((y_test, label), axis=0)
         
         
-        # print(X_test.shape)
-        # print(y_test.shape)
-
+        # # print(X_test.shape)
+        # # print(y_test.shape)
+        X_train, y_train, X_test, y_test = load_data(test_name, _type)
         def LSTM_model(test_name, _type, X_train, y_train, X_test, y_test):
             # Build model
             # vectorize_layer = TextVectorization(

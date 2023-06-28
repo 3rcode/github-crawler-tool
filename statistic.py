@@ -30,7 +30,7 @@ def summarize_result(approach):
             result_abstract.append([test_case, *value.values()])
     
     origin = pd.DataFrame(result_origin, columns=['Test case', 'Accuracy', 'F1 score',  'Precision', 'Recall', 'Total test',  'True negative rate'])
-    # abstract = pd.DataFrame(result_abstract, columns=['Test case', 'Accuracy', 'F1 score',  'Precision', 'Recall', 'Total test',  'True negative rate'])
+    abstract = pd.DataFrame(result_abstract, columns=['Test case', 'Accuracy', 'F1 score',  'Precision', 'Recall', 'Total test',  'True negative rate'])
     def _summary(df):
         np_df = df.to_numpy()
         overall_tt = np.sum(np_df[:, 5], axis=0)
@@ -43,14 +43,14 @@ def summarize_result(approach):
     
     origin.loc[len(origin)] = _summary(origin)
     origin.set_index('Test case')
-    # abstract.loc[len(abstract)] = _summary(abstract)
-    # abstract.set_index('Test case')
+    abstract.loc[len(abstract)] = _summary(abstract)
+    abstract.set_index('Test case')
     result_folder = os.path.join(ROOT_DIR, 'statistic', f'{approach}')
     os.mkdir(result_folder)
     path_to_origin = os.path.join(result_folder, 'origin.csv')
     origin.to_csv(path_to_origin)
-    # path_to_abstract = os.path.join(result_folder, 'abstract.csv')
-    # abstract.to_csv(path_to_abstract)
+    path_to_abstract = os.path.join(result_folder, 'abstract.csv')
+    abstract.to_csv(path_to_abstract)
 
 
 
