@@ -22,7 +22,9 @@ def summarize_result(approach):
     result_abstract = []
 
     for key, value in result.items():
-        test_case, _type = key.split('_')
+        print(key)
+        tmp, test_case, _type = key.split('_')
+        test_case = tmp + '_' + test_case
         
         if _type == 'origin':
             result_origin.append([test_case, *value.values()])
@@ -129,4 +131,4 @@ def summarize_data():
     abstract_data.to_csv(os.path.join(data_info_folder, 'abstract_data.csv'))
   
 
-summarize_result(approach='encode_cosine')
+summarize_result(approach='naive_bayes')

@@ -19,6 +19,26 @@ def load_data(file_path):
     label = df['Label']
     return np.asarray(commit), np.asarray(label)
 
+def load_data(test_name, _type, adjust_train_data=False, over_sampling=1, under_sampling=1):
+    path = os.path.join(ROOT_DIR, 'datasets_'+_type, test_name)
+    train_data = pd.read_csv(os.path.join(path, 'train.csv'))
+    test_data = pd.read_csv(os.path.join(path, 'test.csv'))
+    
+    if adjust_train_data:
+        train_data_label_1 = train_data[train_data['y_train'] == 1]
+        train_data_label_0 = train_data[train_data['y_train'] == 0]
+        train_data_label_1 = train_data_label_1.sample(frac=over_sampling, replace=True, random_state=0)
+        train_data_label_0 = train_data_label_0.sample(frac=under_sampling, replace=False, random_state=1)
+        train_data = pd.concat([train_data_label_0, train_data_label_1])
+        train_data = train_data.sample(frac=1, random_state=2)
+
+    X_train = train_data['X_train'].astype('str')
+    y_train = train_data['y_train'].astype('bool')
+    X_test = test_data['X_test'].astype('str')
+    y_test = test_data['y_test'].astype('bool')
+    return X_train, y_train, X_test, y_test
+
+
 def save_result(result_path, test_case, result):
     test_name, _type = test_case
     total_test, precision, recall, f1_score, accuracy, true_neg_rate = result
@@ -61,8 +81,8 @@ def analyze_result(path, test_case, commits, prediction, Y):
     f1_score = 2 * precision * recall / (precision + recall)
     accuracy = (tp + tn) / (tp + tn + fp + fn)
 
-    _save_result(path, {f'{test_name}_{_type}': {'False Positive': false_positive, 
-                                                 'False Negative': false_negative}})
+    # _save_result(path, {f'{test_name}_{_type}': {'False Positive': false_positive, 
+    #                                              'False Negative': false_negative}})
     return total_test, precision, recall, f1_score, accuracy, true_neg_rate
 
 def find_commit(commit, _type):
@@ -109,11 +129,11 @@ def k_fold_splitter(_type):
     # Remove all duplicates of commit message, if that commit message has any occurance 
     # with label 1 then label that commit message 1 
     all_data = all_data.sort_values('Label').drop_duplicates('Commit Message', keep='last')
-
+    
     # Shuffle data after sort:
-    all_data.sample(frac=1, axis=0, replace=True)
-
-    # Get commit messages and commit descriptions as features of models and label column is label
+    all_data = all_data.sample(frac=1, axis=0, random_state=5)
+    
+    # Get commit messages and commit descriptions as features of models and label is label
     def merge(row):
         if pd.isna(row['Commit Description']):
             return str(row['Commit Message'])
@@ -135,11 +155,12 @@ def k_fold_splitter(_type):
     for i, (train_index, test_index) in enumerate(kf.split(data)):
         train_data = pd.DataFrame(data[train_index], columns=['X_train', 'y_train'])
         test_data = pd.DataFrame(data[test_index], columns=['X_test', 'y_test'])
+        print(train_data.head())
         path = os.path.join(folder_path, f'test_{i + 1}')
         if not os.path.exists(path):
             os.mkdir(path)
-        train_data.to_csv(os.path.join(path, 'train.csv'))
-        test_data.to_csv(os.path.join(path, 'test.csv'))
+        train_data.to_csv(os.path.join(path, 'train.csv'), index=False)
+        test_data.to_csv(os.path.join(path, 'test.csv'), index=False)
 
 if __name__ == '__main__':
     k_fold_splitter('abstract')
