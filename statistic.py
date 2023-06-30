@@ -31,8 +31,8 @@ def summarize_result(approach):
         else:
             result_abstract.append([test_case, *value.values()])
     
-    origin = pd.DataFrame(result_origin, columns=['Test case', 'Accuracy', 'F1 score',  'Precision', 'Recall', 'Total test',  'True negative rate'])
-    abstract = pd.DataFrame(result_abstract, columns=['Test case', 'Accuracy', 'F1 score',  'Precision', 'Recall', 'Total test',  'True negative rate'])
+    origin = pd.DataFrame(result_origin, columns=['Test case', 'Accuracy', 'F1 score',  'Precision', 'Recall', 'Total test',  'True negative rate', 'True positive', 'True negative', 'False positive', 'False negative'])
+    abstract = pd.DataFrame(result_abstract, columns=['Test case', 'Accuracy', 'F1 score',  'Precision', 'Recall', 'Total test',  'True negative rate', 'True positive', 'True negative', 'False positive', 'False negative'])
     def _summary(df):
         np_df = df.to_numpy()
         overall_tt = np.sum(np_df[:, 5], axis=0)
@@ -41,7 +41,11 @@ def summarize_result(approach):
         overall_p = np.sum(np_df[:, 3] * np_df[:, 5], axis=0) / overall_tt
         overall_r = np.sum(np_df[:, 4] * np_df[:, 5], axis=0) / overall_tt
         overall_tnr = np.sum(np_df[:, 6] * np_df[:, 5], axis=0) / overall_tt
-        return ['Overall', overall_a, overall_f, overall_p, overall_r, overall_tt, overall_tnr]
+        overall_tp = np.sum(np_df[:, 7] * np_df[:, 5], axis=0) / overall_tt
+        overall_tn = np.sum(np_df[:, 8] * np_df[:, 5], axis=0) / overall_tt
+        overall_fp = np.sum(np_df[:, 9] * np_df[:, 5], axis=0) / overall_tt
+        overall_fn = np.sum(np_df[:, 10] * np_df[:, 5], axis=0) / overall_tt
+        return ['Overall', overall_a, overall_f, overall_p, overall_r, overall_tt, overall_tnr, overall_tp, overall_tn, overall_fp, overall_fn]
     
     origin.loc[len(origin)] = _summary(origin)
     origin.set_index('Test case')

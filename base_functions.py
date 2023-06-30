@@ -38,17 +38,20 @@ def load_data(test_name, _type, adjust_train_data=False, over_sampling=1, under_
     y_test = test_data['y_test'].astype('bool')
     return X_train, y_train, X_test, y_test
 
-
 def save_result(result_path, test_case, result):
     test_name, _type = test_case
-    total_test, precision, recall, f1_score, accuracy, true_neg_rate = result
+    total_test, precision, recall, f1_score, accuracy, true_neg_rate, tp, tn, fp, fn = result
     # Need to save result into file
     _save_result(result_path, {f'{test_name}_{_type}': {'Total test': total_test, 
                                                         'Precision': precision,
                                                         'Recall': recall,
                                                         'F1 score': f1_score,
                                                         'Accuracy': accuracy,
-                                                        'True negative rate': true_neg_rate
+                                                        'True negative rate': true_neg_rate,
+                                                        'True positive': tp,
+                                                        'True negative': tn,
+                                                        'False positive': fp,
+                                                        'False negative': fn
                                                         }})
     
 def _save_result(path, content):
@@ -83,7 +86,7 @@ def analyze_result(path, test_case, commits, prediction, Y):
 
     # _save_result(path, {f'{test_name}_{_type}': {'False Positive': false_positive, 
     #                                              'False Negative': false_negative}})
-    return total_test, precision, recall, f1_score, accuracy, true_neg_rate
+    return total_test, precision, recall, f1_score, accuracy, true_neg_rate, tp, tn, fp, fn
 
 def find_commit(commit, _type):
     file = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv'
@@ -102,13 +105,17 @@ def find_commit(commit, _type):
     return results
 
 def show_result(result):
-    total_test, precision, recall, f1_score, accuracy, true_neg_rate = result
+    total_test, precision, recall, f1_score, accuracy, true_neg_rate, tp, tn, fp, fn = result
     print("Total test:", total_test)
     print("Precision:", precision)
     print("Recall:", recall)
     print("F1 score:", f1_score)
     print("Accuracy:", accuracy)
     print("True negative rate:", true_neg_rate)
+    print("True positive:", tp)
+    print("True negative:", tn)
+    print("False positive:", fp)
+    print("False negative", fn)
 
 def k_fold_splitter(_type):
     # Load data in all repositories
@@ -163,4 +170,4 @@ def k_fold_splitter(_type):
         test_data.to_csv(os.path.join(path, 'test.csv'), index=False)
 
 if __name__ == '__main__':
-    k_fold_splitter('abstract')
+    print(find_commit('Backport #5871 for v3.4.x: Convert StaticFile liquid representation to a Drop & add front matter defaults support to StaticFiles #5940', 'origin'))

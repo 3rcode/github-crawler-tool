@@ -83,7 +83,7 @@ def naive_bayes(test_name, _type, X_train, y_train, X_test, y_test, vectorizer):
     save_result(result_path, (test_name, _type), result)
     
 
-# def encode_cosine(test_name, _type, X_test, y_test):
+# def encode_cosine(test_name, _type, X_train, y_train, X_test, y_test):
 #     file_name = 'labeled_commits.csv' if _type == 'origin' else 'labeled_commits_abstract.csv'
 #     # load changelog sentences database
 #     all_changelog_sentences = []
@@ -166,5 +166,5 @@ if __name__ == '__main__':
     _type = 'abstract'
 
     for test_name in tests:
-        X_train, y_train, X_test, y_test = load_data(test_name, _type, adjust_train_data=True, under_sampling=1, over_sampling=2)
+        X_train, y_train, X_test, y_test = load_data(test_name, _type, adjust_train_data=False, under_sampling=1, over_sampling=2)
         naive_bayes(test_name, _type, X_train, y_train, X_test, y_test, vectorizer=CountVectorizer())
