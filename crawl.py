@@ -1,20 +1,19 @@
 import requests
 import pandas as pd
 import os
+import traceback
 from bs4 import BeautifulSoup
 from markdown import markdown
 import regex as re
-import numpy as np
 
 
-github_token = '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'
+github_token = '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'
 headers = {
     'Authorization': f'token {github_token}',   
     'Accept': 'application/vnd.github.v3+json'
 }
 
 def crawl_changelogs(owner, repo):
-    global headers
     page = 1
     all_changelogs = []
     while True:
@@ -32,9 +31,7 @@ def crawl_changelogs(owner, repo):
         page += 1
     return all_changelogs
 
-
-def crawl_commit(owner, repo):
-    global headers
+def crawl_commits(owner, repo):
     page = 1
     all_commits = []
     while True:
@@ -52,59 +49,28 @@ def crawl_commit(owner, repo):
         page += 1
     return all_commits
 
-
 def get_commit(commit, replace=False):
     if not commit:
-        return ('', [])
+        return None
     html = markdown(commit)
     soup = BeautifulSoup(html, 'html.parser')
-    sentences = [p.text.stip() for p in soup.find_all('p')]
+    sentences = [p.text.strip() for p in soup.find_all('p')]
+    if not sentences:
+        return None
     message = sentences[0]
     description = sentences[1:]
     description = '<.> '.join(description)
     return message, description
 
-def get_release_note_sentences(release, replace=False):
-    if not release:
+def get_changelog_sentences(changelog, replace=False):
+    if not changelog:
         return []
-    html = markdown(release)
+    html = markdown(changelog)
     soup = BeautifulSoup(html, 'html.parser')
     sentences = [li.text.strip() for li in soup.find_all('li')]
-    # print(sentences)
     return sentences
 
-
-def markdown_to_text(markdown_string):
-    """ Converts a markdown string to plaintext """
-    if not markdown_string:
-        return ''
-    # md -> html -> text 
-    html = markdown(markdown_string)
-    soup = BeautifulSoup(html, "html.parser")
-    # Extract text    
-    text = ''.join(soup.findAll(string=True))
-    return text
-
-def markdown_to_text_abstract(markdown_string):
-    # md -> html -> text 
-    if not markdown_string:
-        return ''
-    # Replace link with 'link' as abstraction
-    markdown_string = re.sub(r'(?|(?<txt>(?<url>(?:ht|f)tps?://\S+(?<=\P{P})))|\(([^)]+)\)\[(\g<url>)\])', 'link', markdown_string)
-    
-    html = markdown(markdown_string)
-
-    soup = BeautifulSoup(html, "html.parser")
-
-    # Replace code tag with 'module' as abstraction
-    for code in soup.find_all('code'):
-        code.string = 'module'
-
-    # Extract text
-    text = ''.join(soup.findAll(string=True))
-    return text
-
-if __name__ == '__main__':
+def crawl_data():
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     corpus_path = os.path.join(ROOT_DIR, 'data', 'Corpus Repo - Training.csv')
     corpus_repo_training = pd.read_csv(corpus_path)
@@ -120,49 +86,156 @@ if __name__ == '__main__':
         repo = corpus_repo_training.loc[i, 'Repo name']
         folder_name = f'{owner}_{repo}'
         print(owner, repo)
+        try:
+            # Crawl changelogs
+            changelogs = crawl_changelogs(owner, repo)
+            print('Crawl changelogs done')
 
-        # Crawl release notes and commits
-        release_notes = crawl_release_notes(owner, repo)
-        print('Crawl releases done')
+            # Get changelogs sentences
+            changelogs_sentences = [get_changelog_sentences(changelog) for changelog in changelogs]
+            changelogs_sentences = [sentence for changelog_sentences in changelogs_sentences
+                                            for sentence in changelog_sentences ]
+            idx = range(1, len(changelogs_sentences) + 1)
+            changelogs_df = pd.DataFrame({'Index': idx, 'Changelog Sentence': changelogs_sentences})
+            print(changelogs_df.head())
+            print(changelogs_df.shape)
+            # Crawl commits
+            commits = crawl_commits(owner, repo)
+            print('Crawl commits done')
 
-        # Get release note sentences
-        release_notes_sentences = np.array([get_release_note_sentences(release_note) 
-                                            for release_note in release_notes])
-        release_notes_sentences = release_notes_sentences.flatten().reshape(-1, 1)
-        idx = np.array(range(1, len(release_notes) + 1))
+            # Get commit messages and commit descriptions
+            commits = [get_commit(commit) for commit in commits if get_commit(commit)]
+            messages, descriptions = zip(*commits)
+            idx = range(1, len(commits) + 1)
+            commits_df = pd.DataFrame({'Index': idx, 'Message': messages, 'Description': descriptions})
+
+            # Check dataframe
+            print(commits_df.shape)
+            print(changelogs_df.shape)
+            print(commits_df.head())
+            print(changelogs_df.head())
+
+
+            # Save data to folder
+            repo_folder_path = os.path.join(ROOT_DIR, 'data', folder_name)
+            if not os.path.exists(repo_folder_path):
+                os.mkdir(repo_folder_path)
+
+            changelogs_path = os.path.join(ROOT_DIR, 'data', folder_name, 'changelogs.csv')
+            commits_path = os.path.join(ROOT_DIR, 'data', folder_name, 'commits.csv')
+            changelogs_df.to_csv(changelogs_path, index=False)
+            commits_df.to_csv(commits_path, index=False)
+            corpus_repo_training.loc[i, 'Crawl status'] = 'Done'
+        except:
+            corpus_repo_training.loc[i, 'Crawl status'] = 'Error'
         
-        release_notes_df = pd.DataFrame(np.hstack((idx, release_notes_sentences)), 
-                                        columns=['Index', 'Release Note'])
-        
-        # Crawl commits
-        commits = crawl_commit(owner, repo)
-        print('Crawl commits done')
-
-        # Get commit messages and commit descriptions
-        commits = [get_commit_message(commit) for commit in commits]
-        messages, descriptions = zip(*commits)
-        idx = range(1, len(commits) + 1)
-        commits_df = pd.DataFrame({'Index': idx, 'Message': messages, 'Description': descriptions})
-
-        # Check dataframe
-        print(commits_df.shape)
-        print(release_notes_df.shape)
-        print(commits_df.head())
-        print(release_notes_df.head())
-
-
-        # Save data to folder
-        repo_folder_path = os.path.join(ROOT_DIR, 'data', folder_name)
-        if not os.path.exists(repo_folder_path):
-            os.mkdir(repo_folder_path)
-
-        release_notes_path = os.path.join(ROOT_DIR, 'data', folder_name, 'release_notes.csv')
-        commits_path = os.path.join(ROOT_DIR, 'data', folder_name, 'commits.csv')
-        release_notes_df.to_csv(release_notes_path, index=False)
-        commits_df.to_csv(commits_path, index=False)
-
-        corpus_repo_training.loc[i, 'Crawl status'] = 'Done'
         corpus_repo_training.to_csv(corpus_path, index=False)
+
+def is_commit(href):
+    components = href.split('/')
+    return (len(components) == 7 and components[0] == 'https:' and components[1] == ''
+            and components[2] == 'github.com' and components[5] == 'commit')
+
+def is_pull(href):
+    components = href.split('/')
+    return (len(components) == 7 and components[0] == 'https:' and components[1] == ''
+            and components[2] == 'github.com' and components[5] == 'pull')
+
+def sha(commit_link):
+    components = commit_link.split('/')
+    return components[6]
+
+def pull_number(pull_link):
+    components = pull_link.split('/')
+    return components[6]
+
+def collect_hash_link(changelog):
+    if not changelog:
+        return ([], [])
+    html = markdown(changelog)
+    
+    soup = BeautifulSoup(html, 'html.parser')
+    commit_shas = list()
+    pull_numbers = list()
+    for li in soup.find_all('li'):
+        for a in li.find_all('a'):
+            href = a.get('href')
+            if is_commit(href):
+                commit_shas.append(sha(href))
+            if is_pull(href):
+                pull_numbers.append(pull_number(href))
+    return (commit_shas, pull_numbers)
+
+def crawl_commit_from_sha(owner, repo, _sha):
+    url = f'https://api.github.com/repos/{owner}/{repo}/commits/{_sha}'
+    response = requests.get(url, headers=headers)
+    if response.status_code != 200:
+        print(response.status_code)
+        print(response.text)
+    commit = response.json()
+    return commit['commit']['message']
+
+def crawl_compare_commit(owner, repo, base, head):
+    url = f'https://api.github.com/repos/{owner}/{repo}/compare/{base}...{head}'
+    response = requests.get(url, headers=headers)
+    if response.status_code != 200:
+        print(response.status_code)
+        print(response.text)
+    commits = response.json()['commits']
+    all_commits = [commit['commit']['message'] for commit in commits]
+    return all_commits
+
+def crawl_commits_from_pull_number(owner, repo, _pull_number):
+    pull_request_url = f'https://api.github.com/repos/{owner}/{repo}/pulls/{_pull_number}'
+    response = requests.get(pull_request_url, headers=headers)
+    if response.status_code != 200:
+        print(response.status_code)
+        print(response.text)
+    pull_request = response.json()
+    merge_commit_sha = pull_request['merge_commit_sha']
+    head_commit_sha = pull_request['head']['sha']
+    base_commit_sha = pull_request['base']['sha']
+    merge_commit = crawl_commit_from_sha(owner, repo, merge_commit_sha)
+    compare_commits = crawl_compare_commit(owner, repo, base_commit_sha, head_commit_sha)
+    return [merge_commit, *compare_commits]
+    
+def assess_label_data_method():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+    corpus_path = os.path.join(ROOT_DIR, 'data', 'Corpus Repo - Training.csv')
+    corpus_repo_training = pd.read_csv(corpus_path)
+    
+    repos_testing = corpus_repo_training.sample(frac=0.4, random_state=1).reset_index(drop=True)
+    print(repos_testing.shape)
+    num_repo = repos_testing.shape[0]
+
+    for i in range(num_repo):
+        owner = repos_testing.loc[i, 'User']
+        repo = repos_testing.loc[i, 'Repo name']
+        print(owner, repo)
+        changelogs = crawl_changelogs(owner, repo)
+        all_commit_shas = set()
+        all_pull_numbers = set()
+        print(len(changelogs))
+        for changelog in changelogs:
+            try:
+                commit_shas, pull_numbers = collect_hash_link(changelog)
+                all_commit_shas.update(commit_shas)
+                all_pull_numbers.update(pull_numbers)
+            except:
+                print('Terminate')
+                break
+        all_commits = set()
+        all_commits.update([crawl_commit_from_sha(owner, repo, _sha) for _sha in all_commit_shas])
+        for _pull_number in all_pull_numbers:
+            all_commits.update(crawl_commits_from_pull_number(owner, repo, _pull_number))
+        for commit in all_commits:
+            print(commit)
+        break   
+            
+if __name__ == '__main__':
+    # crawl_data()
+    assess_label_data_method()
+            
     
 
 
