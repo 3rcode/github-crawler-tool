@@ -7,11 +7,12 @@ from markdown import markdown
 import regex as re
 
 
-github_token = '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'
+github_token = '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'
 headers = {
     'Authorization': f'token {github_token}',   
     'Accept': 'application/vnd.github.v3+json'
 }
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def crawl_changelogs(owner, repo):
     page = 1
@@ -71,7 +72,6 @@ def get_changelog_sentences(changelog, replace=False):
     return sentences
 
 def crawl_data():
-    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     corpus_path = os.path.join(ROOT_DIR, 'data', 'Corpus Repo - Training.csv')
     corpus_repo_training = pd.read_csv(corpus_path)
     
@@ -172,6 +172,7 @@ def crawl_commit_from_sha(owner, repo, _sha):
     if response.status_code != 200:
         print(response.status_code)
         print(response.text)
+        return None
     commit = response.json()
     return commit['commit']['message']
 
@@ -181,6 +182,7 @@ def crawl_compare_commit(owner, repo, base, head):
     if response.status_code != 200:
         print(response.status_code)
         print(response.text)
+        return None
     commits = response.json()['commits']
     all_commits = [commit['commit']['message'] for commit in commits]
     return all_commits
@@ -191,47 +193,91 @@ def crawl_commits_from_pull_number(owner, repo, _pull_number):
     if response.status_code != 200:
         print(response.status_code)
         print(response.text)
+        return None
     pull_request = response.json()
     merge_commit_sha = pull_request['merge_commit_sha']
     head_commit_sha = pull_request['head']['sha']
     base_commit_sha = pull_request['base']['sha']
     merge_commit = crawl_commit_from_sha(owner, repo, merge_commit_sha)
     compare_commits = crawl_compare_commit(owner, repo, base_commit_sha, head_commit_sha)
-    return [merge_commit, *compare_commits]
+    if merge_commit:
+        return [merge_commit, *compare_commits]
+    return compare_commits
+
+def check_accuracy(owner, repo, all_commit_mes):
+    folder = f'{owner}_{repo}'
+    labeled_commit_path = os.path.join(ROOT_DIR, 'data', folder, 'labeled_commits.csv')
+    labeled_commit = pd.read_csv(labeled_commit_path)
+    total_commit = len(labeled_commit)
+    total_test_commit = len(all_commit_mes)
+    print(f'{owner} {repo}:')
+    print('\tTotal commit:', total_commit)
+    print('\tTotal test commit:', total_test_commit)
+
+    test_labeled_commit = labeled_commit.loc[labeled_commit['Commit Message'].isin(all_commit_mes)]
+    labels = dict(test_labeled_commit.value_counts())
+    print(labels)
+    true_label = labels['1']
+    false_label = labels['0']
+    accuracy_rate = true_label / total_test_commit
+    return [owner, repo, total_commit, total_test_commit, true_label, false_label, accuracy_rate]
     
+
 def assess_label_data_method():
-    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     corpus_path = os.path.join(ROOT_DIR, 'data', 'Corpus Repo - Training.csv')
     corpus_repo_training = pd.read_csv(corpus_path)
-    
+    corpus_repo_training = corpus_repo_training[(corpus_repo_training['Crawl status'] == 'Done') & (corpus_repo_training['Label status'] == 'Done')]
     repos_testing = corpus_repo_training.sample(frac=0.4, random_state=1).reset_index(drop=True)
     print(repos_testing.shape)
     num_repo = repos_testing.shape[0]
+
+    check_result_path = os.path.join(ROOT_DIR, 'statistic', 'check_label_method.csv')
+    check_result = pd.read_csv(check_result_path)
 
     for i in range(num_repo):
         owner = repos_testing.loc[i, 'User']
         repo = repos_testing.loc[i, 'Repo name']
         print(owner, repo)
-        changelogs = crawl_changelogs(owner, repo)
-        all_commit_shas = set()
-        all_pull_numbers = set()
-        print(len(changelogs))
-        for changelog in changelogs:
-            try:
-                commit_shas, pull_numbers = collect_hash_link(changelog)
-                all_commit_shas.update(commit_shas)
-                all_pull_numbers.update(pull_numbers)
-            except:
-                print('Terminate')
-                break
-        all_commits = set()
-        all_commits.update([crawl_commit_from_sha(owner, repo, _sha) for _sha in all_commit_shas])
-        for _pull_number in all_pull_numbers:
-            all_commits.update(crawl_commits_from_pull_number(owner, repo, _pull_number))
-        for commit in all_commits:
-            print(commit)
-        break   
-            
+        try:
+            changelogs = crawl_changelogs(owner, repo)
+            all_commit_shas = set()
+            all_pull_numbers = set()
+            print(len(changelogs))
+            for changelog in changelogs:
+                try:
+                    commit_shas, pull_numbers = collect_hash_link(changelog)
+                    all_commit_shas.update(commit_shas)
+                    all_pull_numbers.update(pull_numbers)
+                except:
+                    print('Terminate')
+                    break
+            print('Num commit sha:', len(all_commit_shas))
+            print('Num pull number:', len(all_pull_numbers))
+            all_commits = set()
+            all_commits.update([crawl_commit_from_sha(owner, repo, _sha) 
+                                for _sha in all_commit_shas if crawl_commit_from_sha(owner, repo, _sha)])
+            for _pull_number in all_pull_numbers:
+                commits = crawl_commits_from_pull_number(owner, repo, _pull_number)
+                if commits:
+                    all_commits.update(commits)
+
+            all_commits = [get_commit(commit) for commit in all_commits if get_commit(commit)]
+            print('Num commit had referred in changelog:', len(all_commits))
+            all_commit_mes, all_commit_des = zip(*all_commits)
+            idx = range(1, len(all_commits) + 1)
+            df = pd.DataFrame({'Index': idx, 'Commit Message': all_commit_mes, 
+                               'Commit Description': all_commit_des})
+            test_commit_path = os.path.join(ROOT_DIR, 'statistic', 'test_commit', f'{owner}_{repo}')
+            df.to_csv(test_commit_path, index=False)
+
+            result = check_accuracy(owner, repo, all_commit_mes)
+            check_result.loc[len(check_result)] = result
+            check_result.to_csv(check_result_path, index=False)
+        except:
+            print(traceback.format_exc())
+            print('Terminate')
+            break        
+
 if __name__ == '__main__':
     # crawl_data()
     assess_label_data_method()

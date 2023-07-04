@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import re
+import traceback
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -18,17 +19,18 @@ if __name__ == '__main__':
         owner = corpus_repo_training.loc[i, 'User']
         repo = corpus_repo_training.loc[i, 'Repo name']
         folder_name = f'{owner}_{repo}'
-        print(owner, repo)
+        # print(owner, repo)
+        
         try:
             # Load and encode changelog sentences
             changelogs_path = os.path.join(ROOT_DIR, 'data', folder_name, 'changelogs.csv')
             changelogs_sentences = pd.read_csv(changelogs_path)['Changelog Sentence']
-            # print(changelogs_sentences.info())
-
+            print(changelogs_sentences.info())
             # Encode changelog sentences
             print('Start to encode changelog sentences')
             encoded_changelog_sentences = model.encode(changelogs_sentences, convert_to_tensor=True)
             print('Successfully encoded changelog sentences')
+            
             
             # Check encoded changelog sentences results
             print('Encoded changelog sentences shape:', encoded_changelog_sentences.shape)
@@ -66,7 +68,8 @@ if __name__ == '__main__':
             labeled_commits_path = os.path.join(ROOT_DIR, 'data', folder_name, 'labeled_commits.csv')
             df.to_csv(labeled_commits_path, index=False)
             corpus_repo_training.loc[i, 'Label status'] = 'Done'
-        except:
+        except Exception as e:
+            print(traceback.format_exc())
             corpus_repo_training.loc[i, 'Label status'] = 'Error'
         
         corpus_repo_training.to_csv(corpus_path, index=False)
