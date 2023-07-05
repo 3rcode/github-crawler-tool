@@ -4,11 +4,7 @@ import numpy as np
 import re
 import yaml
 from yaml.loader import SafeLoader
-
-linking_statement = [r"(?i)fixes:?", r"(?i)what's changed:?", r"(?i)other changes:?", r"(?i)documentation:?",
-                     r"(?i)features:?", r"(?i)new contributors:?", r"(?i)bug fixes:?", r"(?i)changelog:?",
-                     r"(?i)notes:?", r"(?i)improvements:?", r"(?i)deprecations:?", r"(?i)minor updates:?",
-                     r"(?i)changes:?", r"(?i)fixed:?", r"(?i)maintenance:?", r"(?i)added:?"]
+from collections import defaultdict
 
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -61,78 +57,42 @@ def summarize_result(approach):
 
 
 def summarize_data():
+    corpus_path = os.path.join(ROOT_DIR, 'data', 'Corpus Repo - Training.csv')
     data_path = os.path.join(ROOT_DIR, 'data')
-    repos = []
-    for subdir, dirs, files in os.walk(data_path):
-        repos.extend(dirs)
+    corpus_repos = pd.read_csv(corpus_path)
+    corpus_repos = corpus_repos[(corpus_repos['Crawl status'] == 'Done') 
+                                & (corpus_repos['Label status'] == 'Done')]
 
-    def num_release_notes_sentences(release_notes):
-        result = []
-        for col in ['Release Note', 'Release Note Abstract']:
-            all_release_note_sentences = []
-            for release_note in release_notes[col]:
-                release_note_sentences = str(release_note).split('\n')
-                all_release_note_sentences.extend(release_note_sentences)
-            
-            # Remove duplicate sentences and linking statements
-            all_release_note_sentences = list(set(all_release_note_sentences))
-            all_release_note_sentences = [sentence for sentence in all_release_note_sentences  
-                                            if not (any(re.match(pattern, sentence) for pattern in linking_statement) or sentence == '')]
-            result.append(len(all_release_note_sentences))
-        return result
-    
-    raw_data = []
-    origin_data = []
-    abstract_data = []
-    
+    repos = (corpus_repos.loc[:, 'User'] + '_' + corpus_repos.loc[:, 'Repo name']).tolist()
+    data = []
     for repo in repos:
         repo_dir = os.path.join(data_path, repo)
-        release_notes = os.path.join(repo_dir, 'release_notes.csv')
-        commits = os.path.join(repo_dir, 'commits.csv')
-        labeled_commits_origin = os.path.join(repo_dir, 'labeled_commits.csv')
-        labeled_commits_abstract = os.path.join(repo_dir, 'labeled_commits_abstract.csv')
+        changelogs_path = os.path.join(repo_dir, 'changelogs.csv')
+        commits_path = os.path.join(repo_dir, 'commits.csv')
+        labeled_commits_path= os.path.join(repo_dir, 'labeled_commits.csv')
 
         # Load raw data
-        release_notes = pd.read_csv(release_notes)
-        commits = pd.read_csv(commits)
-        num_release_notes = release_notes.shape[0]
-        num_raw_commits = commits.shape[0]
-
-        raw_data.append([repo, num_raw_commits, num_release_notes])
+        changelogs = pd.read_csv(changelogs_path)
+        commits = pd.read_csv(commits_path)
+        num_changelogs_sentences = len(changelogs)
+        num_commits = len(commits)
 
         # Load processed data
-        labeled_commits_origin = pd.read_csv(labeled_commits_origin)
-        labeled_commits_abstract = pd.read_csv(labeled_commits_abstract)
+        labeled_commits = pd.read_csv(labeled_commits_path)
 
-        num_release_note_sentences_origin, num_release_note_sentences_abstract = num_release_notes_sentences(release_notes)
-        num_processed_commit_origin = labeled_commits_origin.shape[0]
-        num_commit_label_origin = labeled_commits_origin['Label'].value_counts()
+        num_commit_labels = defaultdict(int, labeled_commits['Label'].value_counts())
+        if 1 not in num_commit_labels:
+            num_commit_labels[1] = 0
 
-        num_processed_commit_abstract = labeled_commits_abstract.shape[0]
-        num_commit_label_abstract = labeled_commits_abstract['Label'].value_counts()
-        print(num_commit_label_abstract)
+        data.append([repo, num_commits, num_changelogs_sentences, 
+                     num_commit_labels[0], num_commit_labels[1]])        
         
-        origin_data.append([repo, num_processed_commit_origin, num_release_note_sentences_origin,
-                            num_commit_label_origin[0], num_commit_label_origin[1]])
         
-        abstract_data.append([repo, num_processed_commit_abstract, num_release_note_sentences_abstract,
-                            num_commit_label_abstract[0], num_commit_label_abstract[1]])
-        
-    data_info_folder = os.path.join(ROOT_DIR, 'statistic', 'data_info')
-    os.mkdir(data_info_folder)
-    raw_data = pd.DataFrame(raw_data, columns=['Repo', 'Num Raw Commit', 'Num Release Note'])
-    raw_data.set_index('Repo')
-    raw_data.to_csv(os.path.join(data_info_folder, 'raw_data.csv'))
-
-    origin_data = pd.DataFrame(origin_data, columns=['Repo', 'Num Commit', 'Num Release Note Sentece',
-                                                    'Num Label 0', 'Num Label 1'])
-    origin_data.set_index('Repo')
-    origin_data.to_csv(os.path.join(data_info_folder, 'origin_data.csv'))
-
-    abstract_data = pd.DataFrame(abstract_data, columns=['Repo', 'Num Commit', 'Num Release Note Sentece',
-                                                    'Num Label 0', 'Num Label 1'])
-    abstract_data.set_index('Repo')
-    abstract_data.to_csv(os.path.join(data_info_folder, 'abstract_data.csv'))
+    data_info_path = os.path.join(ROOT_DIR, 'statistic', 'data_info.csv')
+    data = pd.DataFrame(data, columns=['Repo', 'Num Commit', 'Num Changelog Sentence',
+                                       'Num Label 0', 'Num Label 1'])
+    data.set_index('Repo')
+    data.to_csv(data_info_path, index=False)
   
 
-summarize_result(approach='naive_bayes')
+summarize_data()
