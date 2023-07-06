@@ -84,7 +84,7 @@ def crawl_commits_from_pull_number(owner, repo, _pull_number):
     return [merge_commit, *compare_commits]
 
 def check_accuracy(owner, repo, test_commits):
-    folder = f'{owner}_{repo}'
+    folder = f"{owner}_{repo}"
     labelled_commit_path = os.path.join(ROOT_DIR, "data", folder, "labelled_commits.csv")
     labelled_commits = pd.read_csv(labelled_commit_path)
     total_commit = len(labelled_commits)

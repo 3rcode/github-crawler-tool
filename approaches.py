@@ -1,41 +1,27 @@
 import os
-import pandas as pd
-import numpy as np
-import re
 from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM, Embedding, TextVectorization
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-from sentence_transformers import SentenceTransformer
+from settings import MODEL, ROOT_DIR, INPUT_VECTOR_LEN, EMBEDDED_VECTOR_LEN
 from sklearn.metrics.pairwise import cosine_similarity
 from base_functions import load_data, analyze_result, show_result, save_result
 
-model = SentenceTransformer('all-mpnet-base-v2')
-THRESHOLD = 0.7
-BATCH_SIZE = 1000
-
-linking_statement = [r"(?i)fixes:?", r"(?i)what's changed:?", r"(?i)other changes:?", r"(?i)documentation:?",
-                     r"(?i)features:?", r"(?i)new contributors:?", r"(?i)bug fixes:?", r"(?i)changelog:?",
-                     r"(?i)notes:?", r"(?i)improvements:?", r"(?i)deprecations:?", r"(?i)minor updates:?",
-                     r"(?i)changes:?", r"(?i)fixed:?", r"(?i)maintenance:?", r"(?i)added:?"]
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-max_commit_length = 30
 
 def LSTM_model(test_name, _type, X_train, y_train, X_test, y_test):
     # Build model
     vectorize_layer = TextVectorization(
-        standardize='strip_punctuation',
         split="whitespace",
         output_mode="int",
-        output_sequence_length=max_commit_length              
+        pad_to_max_tokens=True,
+        output_sequence_length=INPUT_VECTOR_LEN           
     )
     vectorize_layer.adapt(X_train)
     top_words = len(vectorize_layer.get_vocabulary()) + 1
-    embedding_vector_length = 300
     model = Sequential()
     model.add(vectorize_layer)
-    model.add(Embedding(top_words, embedding_vector_length, input_length=max_commit_length))
-    model.add(LSTM(32, dropout=0.05, recurrent_dropout=0.05, unroll=True))
+    model.add(Embedding(top_words, EMBEDDED_VECTOR_LEN, input_length=INPUT_VECTOR_LEN))
+    model.add(LSTM(64, dropout=0.3, recurrent_dropout=0.3, unroll=True))
     model.add(Dense(1, activation='sigmoid'))
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy', 'precision', 'recall', 'auc'])
     
@@ -50,23 +36,22 @@ def LSTM_model(test_name, _type, X_train, y_train, X_test, y_test):
     model.fit(X_train, y_train, epochs=3, batch_size=64) 
     
     # Save model 
-    model_file = os.path.join(ROOT_DIR, 'models', 'lstm_models', f'{test_name}_{_type}')
+    model_file = os.path.join(ROOT_DIR, "models", "lstm_models", f"{test_name}_{_type}")
     model.save(model_file)
 
     # Test model
     y_preds = model.predict(X_test)
     y_preds = [1 if x > 0.5 else 0 for x in y_preds]
-    path = os.path.join(ROOT_DIR, 'sample_wrong_cases', 'LSTM_model.yaml')
+    path = os.path.join(ROOT_DIR, "sample_wrong_cases", "LSTM_model.yml")
     result = analyze_result(path, (test_name, _type), X_test, y_preds, y_test)
     show_result(result)
-    result_path = os.path.join(ROOT_DIR, 'LSTM_model.yaml')
+    result_path = os.path.join(ROOT_DIR, "LSTM_model.yml")
     save_result(result_path, (test_name, _type), result)
 
         
 def naive_bayes(test_name, _type, X_train, y_train, X_test, y_test, vectorizer):
-
     X_train = vectorizer.fit_transform(X_train)
-    print(f"Num Samples: {X_train.shape[0]}\nNum Features: {X_train.shape[1]}")
+    print(f"\nNum Samples: {X_train.shape[0]}\nNum Features: {X_train.shape[1]}")
     model = MultinomialNB()
 
     # Train model
