@@ -29,19 +29,26 @@ def pull_number(pull_link):
     components = pull_link.split('/')
     return components[6]
 
+
 def collect_refer_commit_link(changelog):
+    print("Changelog:", changelog)
     if not changelog:
         return ([], [])
     html = markdown(changelog)
     soup = BeautifulSoup(html, "html.parser")
     commit_shas = set()
     pull_numbers = set()
+    print("Num link", len(soup.find_all('a')))
     for a in soup.find_all('a'):
         href = a.get("href")
-        if is_commit(href):
-            commit_shas.add(sha(href))
-        if is_pull(href):
-            pull_numbers.add(pull_number(href))
+        if href:
+            r = requests.get(href)
+            href = r.url
+            if is_commit(href):
+                commit_shas.add(sha(href))
+            if is_pull(href):
+                pull_numbers.add(pull_number(href))
+
     return (commit_shas, pull_numbers)
 
 def crawl_commit_from_sha(owner, repo, _sha):
@@ -99,18 +106,20 @@ def check_accuracy(owner, repo, test_commits):
     print("\tTotal test commit:", total_test_commit)
 
     test_labelled_commits = labelled_commits.loc[labelled_commits["Commit Message"].isin(test_commits)]
+
     test_label = defaultdict(int, test_labelled_commits["Label"].value_counts())
     true_label = test_label[1]
+    false_label = test_label[0]
     recall = true_label / total_test_commit
-    return [owner, repo, total_commit, label_1, label_0, total_test_commit, recall]
+    return [owner, repo, total_commit, label_1, label_0, total_test_commit, true_label, false_label, recall]
     
 
 def assess_label_data_method():
     # Select random repo to test
     repos_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
     repos = pd.read_csv(repos_path)
-    repos = repos[(repos["Crawl status"] == "Done") & (repos["Label status"] == "Done")]
-    repos_testing = repos.sample(frac=0.2, random_state=1).reset_index(drop=True)
+    repos_testing = repos
+    repos_testing = repos.sample(frac=0.2, random_state=5).reset_index(drop=True)
     print("Test num:", len(repos_testing))
     num_repo = repos_testing.shape[0]
     
@@ -121,39 +130,41 @@ def assess_label_data_method():
     for i in range(num_repo):
         owner = repos_testing.loc[i, "Owner"]
         repo = repos_testing.loc[i, "Repo"]
-        print("Repo:", owner, repo)
-        
-        changelogs = crawl_changelogs(owner, repo)
-        all_commit_shas = set()
-        all_pull_numbers = set()
-        print("Num changelogs:", len(changelogs))
-        for changelog in changelogs:
-            commit_shas, pull_numbers = collect_refer_commit_link(changelog)
-            all_commit_shas.update(commit_shas)
-            all_pull_numbers.update(pull_numbers)
-            
-        print("Num commit shas:", len(all_commit_shas))
-        print("Num pull numbers:", len(all_pull_numbers))
-        commits = set()
-        commits.update([crawl_commit_from_sha(owner, repo, _sha) 
-                            for _sha in all_commit_shas if crawl_commit_from_sha(owner, repo, _sha)])
-        for _pull_number in all_pull_numbers:
-            commit_arr = crawl_commits_from_pull_number(owner, repo, _pull_number)
-            if commit_arr:
-                commits.update(commit_arr)
-
-        commits = [get_commit(commit) for commit in commits if get_commit(commit)]
-        print("Num commit had referred in changelog:", len(commits))
-        if commits:
-            commit_mes, commit_des = zip(*commits)
-            idx = range(1, len(commits) + 1)
-            df = pd.DataFrame({"Index": idx, "Commit Message": commit_mes, 
-                                "Commit Description": commit_des})
-            test_commit_path = os.path.join(ROOT_DIR, "test", "test_commit", f"{owner}_{repo}.csv")
-            df.to_csv(test_commit_path, index=False)
-            result = check_accuracy(owner, repo, commit_mes)
-            check_result.loc[len(check_result)] = result
-            check_result.to_csv(path, index=False)
+        # print("Repo:", owner, repo)
+        if owner == "hashicorp" and repo == "terraform-provider-kubernetes":  # Add to test
+            print("Repo:", owner, repo)  #  Add to test
+            changelogs = crawl_changelogs(owner, repo)
+            all_commit_shas = set()
+            all_pull_numbers = set()
+            print("Num changelogs:", len(changelogs))
+            for changelog in changelogs[:2]:
+                commit_shas, pull_numbers = collect_refer_commit_link(changelog)
+                all_commit_shas.update(commit_shas)
+                all_pull_numbers.update(pull_numbers)
+                
+                
+            print("Num commit shas:", len(all_commit_shas))
+            print("Num pull numbers:", len(all_pull_numbers))
+            commits = set()
+            commits.update([crawl_commit_from_sha(owner, repo, _sha) 
+                                for _sha in all_commit_shas if crawl_commit_from_sha(owner, repo, _sha)])
+            for _pull_number in all_pull_numbers:
+                commit_arr = crawl_commits_from_pull_number(owner, repo, _pull_number)
+                if commit_arr:
+                    commits.update(commit_arr)
+            print("Commits", commits)  # Add to test
+            commits = [get_commit(commit) for commit in commits if get_commit(commit)]
+            print("Num commit had referred in changelog:", len(commits))
+            if commits:
+                commit_mes, commit_des = zip(*commits)
+                idx = range(1, len(commits) + 1)
+                df = pd.DataFrame({"Index": idx, "Commit Message": commit_mes, 
+                                    "Commit Description": commit_des})
+                test_commit_path = os.path.join(ROOT_DIR, "test", "test_commit", f"{owner}_{repo}.csv")
+                df.to_csv(test_commit_path, index=False)
+                result = check_accuracy(owner, repo, commit_mes)
+                check_result.loc[len(check_result)] = result
+                check_result.to_csv(path, index=False)
     
     err_sha_path = os.path.join(ROOT_DIR, "test", "error_sha.csv")
     err_pull_num_path = os.path.join(ROOT_DIR, "test", "error_pull_num.csv")

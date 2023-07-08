@@ -4,4 +4,4 @@ from base_functions import find_commit
 from statistic import summarize_data
 from test_label_method import assess_label_data_method
 if __name__ == '__main__':
-    assess_label_data_method()
+    crawl_data()
