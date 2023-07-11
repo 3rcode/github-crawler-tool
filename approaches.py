@@ -22,18 +22,18 @@ def LSTM_model(test_name, _type, X_train, y_train, X_test, y_test):
     model.add(vectorize_layer)
     model.add(Embedding(top_words, EMBEDDED_VECTOR_LEN, input_length=INPUT_VECTOR_LEN))
     model.add(LSTM(64, dropout=0.3, recurrent_dropout=0.3, unroll=True))
-    model.add(Dense(1, activation='sigmoid'))
-    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy', 'precision', 'recall', 'auc'])
+    model.add(Dense(1, activation="sigmoid"))
+    model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy", "precision", "recall", "auc"])
     
     # Load model has trained in previous running session
-    # model_file = os.path.join(ROOT_DIR, 'models', 'lstm_models', f'{test_name}_{_type}')
+    # model_file = os.path.join(ROOT_DIR, "models", "lstm_models", f"{test_name}_{_type}"")
     # model = load_model(model_file)
 
     # Check build_model function
     print(model.summary())
     
     # Train model
-    model.fit(X_train, y_train, epochs=3, batch_size=64) 
+    model.fit(X_train, y_train, epochs=3, batch_size=64, verbose=1) 
     
     # Save model 
     model_file = os.path.join(ROOT_DIR, "models", "lstm_models", f"{test_name}_{_type}")
@@ -61,10 +61,10 @@ def naive_bayes(test_name, _type, X_train, y_train, X_test, y_test, vectorizer):
     test_commits = X_test
     X_test = vectorizer.transform(X_test)
     y_preds = model.predict(X_test)
-    path = os.path.join(ROOT_DIR, 'sample_wrong_cases', 'naive_bayes.yaml')
+    path = os.path.join(ROOT_DIR, "sample_wrong_cases", "naive_bayes.yml")
     result = analyze_result(path, (test_name, _type), test_commits, y_preds, y_test)
     show_result(result)
-    result_path = os.path.join(ROOT_DIR, 'naive_bayes.yaml')
+    result_path = os.path.join(ROOT_DIR, "naive_bayes.yml")
     save_result(result_path, (test_name, _type), result)
     
 
@@ -145,10 +145,10 @@ def naive_bayes(test_name, _type, X_train, y_train, X_test, y_test, vectorizer):
 #     result_path = os.path.join(ROOT_DIR, 'encode_cosine.yaml')
 #     save_result(result_path, (test_name, _type), result)
 
-if __name__ == '__main__':
-    tests = ['test_1', 'test_2', 'test_3', 'test_4', 'test_5', 
-             'test_6', 'test_7', 'test_8', 'test_9', 'test_10']
-    _type = 'abstract'
+if __name__ == "__main__":
+    tests = ["test_1", "test_2", "test_3", "test_4", "test_5", 
+             "test_6", "test_7", "test_8", "test_9", "test_10"]
+    _type = "abstract"
 
     for test_name in tests:
         X_train, y_train, X_test, y_test = load_data(test_name, _type, adjust_train_data=False, under_sampling=1, over_sampling=2)

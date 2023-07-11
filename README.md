@@ -1,3 +1,3 @@
-# changelog_generation
+# Commit classification
 
-This is an AI model for rendering changelog of a github repository from list of commits automatically.
+This is an AI model to classify if a commit should be refer in changelog

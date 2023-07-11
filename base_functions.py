@@ -4,6 +4,13 @@ import os
 import yaml
 from sklearn.model_selection import KFold
 from settings import ROOT_DIR
+import pygit2
+
+class MyRemoteCallbacks(pygit2.RemoteCallbacks):
+
+    def transfer_progress(self, stats):
+        print(f'{stats.indexed_objects}/{stats.total_objects}')
+
 
 def load_data(file_path):
     df = pd.read_csv(file_path)
@@ -174,4 +181,15 @@ def k_fold_splitter(_type="origin"):
         train_data.to_csv(os.path.join(path, "train.csv"), index=False)
         test_data.to_csv(os.path.join(path, "test.csv"), index=False)
 
-    
+def clone_repos():
+    repos_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
+    repos = pd.read_csv(repos_path)
+    num_repo = len(repos)
+
+    for i in range(31, num_repo):
+        owner = repos.loc[i, "Owner"]
+        repo = repos.loc[i, "Repo"]
+        path = os.path.join(ROOT_DIR, "..", "data", f"{owner}_{repo}")
+        pygit2.clone_repository(f"https://github.com/{owner}/{repo}", path, 
+                                callbacks=MyRemoteCallbacks())
+
