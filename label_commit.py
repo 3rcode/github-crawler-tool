@@ -60,11 +60,13 @@ def label_commit():
             ccs = np.array([changelog_sentences[x] for x in index])  # Corresponding changelog sentences
             cd = np.asarray(commits["Description"])  # Commit descriptions
             label = np.where(score >= LABEL_THRESHOLD, 1, 0) # Label of commits
-            df = pd.DataFrame({"Commit Message": cm, 
-                            "Score": score, 
-                            "Correspond Changelog Sentence": ccs, 
-                            "Commit Description": cd, 
-                            "Label": label
+            idx = np.asarray(range(1, len(cm) + 1))
+            df = pd.DataFrame({"Index": idx,
+                               "Commit Message": cm, 
+                               "Score": score, 
+                               "Correspond Changelog Sentence": ccs, 
+                               "Commit Description": cd, 
+                               "Label": label
                             })
             print("Label commit:", df.head())
 
