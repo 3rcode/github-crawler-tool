@@ -37,7 +37,7 @@ def LSTM_model(test_name, _type, X_train, y_train, X_test, y_test):
     
     # Save model 
     model_file = os.path.join(ROOT_DIR, "models", "lstm_models", f"{test_name}_{_type}")
-    model.save(model_file)
+    model.save(model_file)  
 
     # Test model
     y_preds = model.predict(X_test)

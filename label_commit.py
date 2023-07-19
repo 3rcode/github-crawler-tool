@@ -13,72 +13,119 @@ def label_commit():
     for i in range(num_repo):
         owner = repos.loc[i, "Owner"]
         repo = repos.loc[i, "Repo"]
-        folder_name = f"{owner}_{repo}"
+        folder = f"{owner}_{repo}"
         print("Repo:", owner, repo)
         
         try:
-            print(folder_name)
+            print(folder)
             # Load and encode changelog sentences
-            changelog_path = os.path.join(ROOT_DIR, "data", folder_name, "changelogs.csv")
-            changelog_sentences = pd.read_csv(changelog_path)["Changelog Sentence"]
-            changelog_sentences = changelog_sentences.astype("str")
-            
+            c_log_path = os.path.join(ROOT_DIR, "data", 
+                                      folder, "changelogs.csv")
+            c_log_sen = pd.read_csv(c_log_path)["Changelog Sentence"]\
+                            .astype("str")
             # Encode changelog sentences
             print("Start to encode changelog sentences")
-            encoded_changelog_sentences = MODEL.encode(changelog_sentences, convert_to_tensor=True)
+            encoded_c_log_sen = MODEL.encode(c_log_sen, 
+                                             convert_to_tensor=True)
             print("Successfully encoded changelog sentences")
-            
-            
             # Check encoded changelog sentences results
-            print("Encoded changelog sentences shape:", encoded_changelog_sentences.shape)
+            print("Encoded changelog sentences shape:", 
+                  encoded_c_log_sen.shape)
+            
 
             # Load commit messages
-            commits_path = os.path.join(ROOT_DIR, "data", folder_name, "commits.csv")
-            commits = pd.read_csv(commits_path)[["Message", "Description"]]
-            # print(commits.info())
-            commits = commits.astype("str")
-
+            commits_path = os.path.join(ROOT_DIR, "data", 
+                                        folder, "commits.csv")
+            commits = pd.read_csv(commits_path).astype("str")
             # Encode commit messages
             print("Start to encode commit messages")
-            encoded_commit_messages = MODEL.encode(commits["Message"], convert_to_tensor=True)
+            encoded_cm = MODEL.encode(commits["Message"], 
+                                      convert_to_tensor=True)
             print("Successfully encoded commit messages")
-            
             # Check encoded commit messages result
-            print("Encoded commit messages shape:", encoded_commit_messages.shape)
+            print("Encoded commit messages shape:", encoded_cm.shape)
 
-            # Score commit messages without abstraction
-            cosine_scores = cosine_similarity(encoded_commit_messages, encoded_changelog_sentences)
-
+            # Calculate cosine similarity
+            scores = cosine_similarity(encoded_cm, 
+                                       encoded_c_log_sen)
             # Score is the max of cosine similarity scores 
             # between encoded commit and encoded changelog sentences 
-            score = np.amax(cosine_scores, axis=1)  
-
+            max_scores = np.amax(scores, axis=1) 
             # Index of corresponding changelog sentence 
             # that result max cosine similarity score with commits
-            index = np.argmax(cosine_scores, axis=1) 
+            index = np.argmax(scores, axis=1) 
             cm = np.asarray(commits["Message"])  # Commit messages
-            ccs = np.array([changelog_sentences[x] for x in index])  # Corresponding changelog sentences
-            cd = np.asarray(commits["Description"])  # Commit descriptions
-            label = np.where(score >= LABEL_THRESHOLD, 1, 0) # Label of commits
-            idx = np.asarray(range(1, len(cm) + 1))
+            # Corresponding changelog sentences
+            ccs = np.array([c_log_sen[x] for x in index])  
+            # Commit descriptions
+            addition_info = commits[[
+                "Description",
+                "Owner",
+                "Repo",
+                "Sha"
+            ]]
+            # Label of commits 
+            label = np.where(max_scores >= LABEL_THRESHOLD, 1, 0) 
+            idx = np.asarray(range(1, len(cm) + 1))  # Index
             df = pd.DataFrame({"Index": idx,
                                "Commit Message": cm, 
-                               "Score": score, 
+                               "Score": max_scores, 
                                "Correspond Changelog Sentence": ccs, 
-                               "Commit Description": cd, 
                                "Label": label
                             })
-            print("Label commit:", df.head())
+            df = pd.concat([df, addition_info], axis=1)
+            print("Labelled commit:", df.head())
 
             # Write label result to the dataset
-            labelled_commits_path = os.path.join(ROOT_DIR, "data", folder_name, "labelled_commits.csv")
+            labelled_commits_path = os.path.join(ROOT_DIR, "data", 
+                                                 folder, 
+                                                 "labelled_commits.csv")
             df.to_csv(labelled_commits_path, index=False)
             repos.loc[i, "Label status"] = "Done"
         except Exception as e:
             repos.loc[i, "Label status"] = "Error"
     
         repos.to_csv(repos_path, index=False)
-        
 
-
+    
+def score_similarity():
+    sample_path = os.path.join(ROOT_DIR, "data", "sample_data.csv")
+    sample_dataset = pd.read_csv(sample_path).astype("str")
+    sample_commit_path = os.path.join(ROOT_DIR, "data", "sample_commit")
+    if not os.path.exists(sample_commit_path):
+        os.mkdir(sample_commit_path)
+    for i in range(len(sample_dataset)):
+        _, sha, owner, repo, message, description = sample_dataset.loc[i]
+        folder = f"{owner}_{repo}"
+        print(folder)
+        c_log_path = os.path.join(ROOT_DIR, "data", 
+                                  folder, "changelogs.csv")
+        c_log_sen = pd.read_csv(c_log_path)["Changelog Sentence"]\
+                      .to_numpy().astype("str")
         
+        encoded_mes = MODEL.encode([message], convert_to_tensor=True)
+        encoded_c_log_sen = MODEL.encode(c_log_sen, convert_to_tensor=True)
+        scores = cosine_similarity(encoded_mes, encoded_c_log_sen)[0]
+        scores = np.concatenate((
+            c_log_sen.reshape(-1, 1),
+            scores.reshape(-1, 1)
+        ), axis=1)
+        c_log_sen = pd.DataFrame(scores, 
+                                 columns=["Changelog Sentence", "Score"])
+        header = {
+            "Label": "",
+            "Message": f"{message}",
+            "Description": f"{description}",
+            "Sha": f"{sha}",
+            "Owner": f"{owner}",
+            "Repo": f"{repo}",
+            "": "",
+            "Changelog Sentence": "Score"
+        }
+        header = np.array(list(header.items()))
+        record = np.concatenate([header, scores.astype("str")], axis=0)
+        print(record.shape)
+        record = pd.DataFrame(record, columns=["Attribute", "Value"])
+        record.to_csv(os.path.join(sample_commit_path, f"test_{i + 1}.csv"))
+        
+score_similarity()
