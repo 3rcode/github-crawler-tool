@@ -109,9 +109,10 @@ def score_similarity() -> None:
         }
         header = np.array(list(header.items()))
         header = pd.DataFrame(header, columns=["Attribute", "Value"])
-        record = np.concatenate([header, c_log_sen], axis=0)
+        record = pd.concat([header, c_log_sen], axis=0)
+        record["Index"] = [idx + 1 for idx in record.index]
+        record = record[["Index", "Attribute", "Value"]]
         print(record.shape)
-        record = pd.DataFrame(record, columns=["Attribute", "Value"])
-        record.to_csv(os.path.join(sample_commit_path, f"test_{i + 1}.csv"))
+        record.to_csv(os.path.join(sample_commit_path, f"test_{i + 1}.csv"), index=False)
 
 score_similarity()

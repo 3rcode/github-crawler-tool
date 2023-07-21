@@ -5,7 +5,7 @@ import yaml
 from sklearn.model_selection import KFold
 from settings import ROOT_DIR
 import pygit2
-
+from matplotlib import pyplot as plt
 
 class MyRemoteCallbacks(pygit2.RemoteCallbacks):
 
@@ -234,13 +234,35 @@ def join_dataset() -> None:
 
 def sampling_dataset() -> None:
     """ Sample commits from all commits """
-    
+
     path = os.path.join(ROOT_DIR, "data", "all_data.csv")
     sample_path = os.path.join(ROOT_DIR, "data", "sample_data.csv")
     all_data = pd.read_csv(path)
     print(all_data.info())
     sample_dataset = all_data.sample(n=384)
     sample_dataset.to_csv(sample_path, index=False)
+
+def check_acc_threshold() -> float:
+    # human_label_path = os.path.join(ROOT_DIR, "data", "human_label.csv")
+    # human_label = pd.read_csv(human_label_path)["Label"].to_numpy()
+    commit_scores = []
+    for i in range(1, 385):
+        path = os.path.join(ROOT_DIR, "data", "sample_commit", f"test_{i}.csv")
+        test = pd.read_csv(path)
+        print(test.head())
+        scores = test.loc[8:, "Value"].astype("float64").to_numpy()
+        max_score = scores.max()
+        commit_scores.append(max_score)
+    threshold = range(0, 1, 0.01)
+    for i in threshold:
+        pass
+
+
+
+
+
+check_acc_threshold()
+
 
 
 
