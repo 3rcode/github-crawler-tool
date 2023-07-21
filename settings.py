@@ -1,6 +1,6 @@
 import os
 from sentence_transformers import SentenceTransformer
-github_token = "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"
+github_token = "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"
 HEADERS = {
     "Authorization": f"token {github_token}",   
     "Accept": "application/vnd.github.v3+json"

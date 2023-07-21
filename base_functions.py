@@ -196,10 +196,10 @@ def clone_repos() -> None:
     repos = pd.read_csv(repos_path)
     num_repo = len(repos)
 
-    for i in range(num_repo):
+    for i in range(24, num_repo):
         owner = repos.loc[i, "Owner"]
         repo = repos.loc[i, "Repo"]
-        path = os.path.join(ROOT_DIR, "..", "data", f"{owner}_{repo}")
+        path = os.path.join(ROOT_DIR, "..", "repos", f"{owner}_{repo}")
         pygit2.clone_repository(f"https://github.com/{owner}/{repo}", path, callbacks=MyRemoteCallbacks())
 
 
@@ -242,26 +242,39 @@ def sampling_dataset() -> None:
     sample_dataset = all_data.sample(n=384)
     sample_dataset.to_csv(sample_path, index=False)
 
+
 def check_acc_threshold() -> float:
-    # human_label_path = os.path.join(ROOT_DIR, "data", "human_label.csv")
-    # human_label = pd.read_csv(human_label_path)["Label"].to_numpy()
+    human_label_path = os.path.join(ROOT_DIR, "data", "human_label.csv")
+    human_label = pd.read_csv(human_label_path)["Label"].astype("float64").to_numpy()
     commit_scores = []
     for i in range(1, 385):
         path = os.path.join(ROOT_DIR, "data", "sample_commit", f"test_{i}.csv")
         test = pd.read_csv(path)
-        print(test.head())
         scores = test.loc[8:, "Value"].astype("float64").to_numpy()
         max_score = scores.max()
         commit_scores.append(max_score)
-    threshold = range(0, 1, 0.01)
+    print("Loaded commit scores")
+    accuracy = []
+    threshold = np.arange(0, 1, 0.01)
     for i in threshold:
-        pass
+        cnt = 0
+        for k in range(384):
+            if ((commit_scores[k] >= i and human_label[k] == 1) or
+                (commit_scores[k] < i and human_label[k] == 0)):
+                cnt += 1    
+        accuracy.append(cnt / 384 * 100)
+    
+    print(accuracy)
+    plt.plot(threshold, accuracy, color="tab:blue", linestyle="solid")
+    plt.title("Label accuracy")
+    plt.xlabel("Threshold")
+    plt.ylabel("Accuracy")
+    plt.savefig("label_accuracy.png")
 
+    return threshold[accuracy.index(max(accuracy))]
+    
 
-
-
-
-check_acc_threshold()
+clone_repos()
 
 
 

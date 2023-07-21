@@ -1,12 +1,14 @@
 import pandas as pd
 import os
 import requests
-from collections import defaultdict
 import pygit2
+from datetime import datetime
 from settings import HEADERS, ROOT_DIR
 from bs4 import BeautifulSoup
 from markdown import markdown
-from typing import List, Callable, Optional, Tuple
+from typing import List, Callable, Optional, Tuple, TypeVar
+
+Time = TypeVar("Time")
 
 
 def github_api(owner: str, repo: str, type: str, func: Callable, option: str = "") -> List[str]:
@@ -35,8 +37,11 @@ def github_api(owner: str, repo: str, type: str, func: Callable, option: str = "
 
 def crawl_changelogs(owner: str, repo: str) -> Callable[[str, str, str, Callable], List[str]]:
     """ Crawl all changelogs in https://github.com/owner/repo"""
-
-    return github_api(owner, repo, type="releases", func=lambda el: el["body"])
+    
+    func = lambda el: {"tag_name": el["tag_name"], "target_commitish": el["target_commitish"],
+                       "body": el["body"], "created_at": el["created_at"]}
+    
+    return github_api(owner, repo, type="releases", func=func)
 
 
 # def crawl_branches(owner, repo):
@@ -56,20 +61,49 @@ def crawl_changelogs(owner: str, repo: str) -> Callable[[str, str, str, Callable
 #     return all_commits
 
 
-def crawl_commits(owner: str, repo: str) -> List[str]:
+def crawl_commits(owner: str, repo: str, target_branches: List[str], lastest: Time, oldest: Time) -> List[str]:
     """ Crawl all commits in https://github.com/owner/repo """
 
-    path = os.path.join(ROOT_DIR, "..", "data", f"{owner}_{repo}")
-    cmd = f"""cd {path} 
-        git rev-list --branches=* --remotes=*"""
-    commit_shas = os.popen(cmd).read()
-    # Each line is a commit sha and the last line is empty line
-    commit_shas = commit_shas.split('\n')[:-1]  
+    path = os.path.join(ROOT_DIR, "..", "repos", f"{owner}_{repo}")
+    cmd = f""" cd {path} 
+            git branch -a"""
+    all_branches = os.popen(cmd).read().split('\n')[:-1]
+    all_branches = [branch.strip() for branch in all_branches]
+    remote_branches = [branch.split('/')[-1] for branch in all_branches[1:]]
+    
+    all_commit_shas = set()
+    for branch in target_branches[:2]:
+        if any([branch == rb for rb in remote_branches]):
+            cmd = f"""cd {path} 
+            git rev-list remotes/origin/{branch}"""
+        else:
+            "In here"
+            cmd = f"""cd {path} 
+            git rev-list {branch}"""
+        commit_shas = os.popen(cmd).read()
+        # Each line is a commit sha and the last line is empty line
+        commit_shas = commit_shas.split('\n')[:-1]
+        all_commit_shas.update(commit_shas)
+         
     repo = pygit2.Repository(path)
     # Get commit message from commit sha
-    commits = [repo.revparse_single(commit_sha) for commit_sha in commit_shas]
+    commits = [repo.revparse_single(commit_sha) for commit_sha in all_commit_shas]
+
+    def valid(commit, lastest, oldest):
+        return oldest.to_pydatetime().timestamp() <= commit.commit_time <= lastest.to_pydatetime().timestamp()
+
     # Get all commit message and commit sha
-    commits = [{"message": commit.message, "sha": commit.hex} for commit in commits]
+    commits = [
+        {
+            "message": commit.message, 
+            "sha": commit.hex, 
+            "author": commit.author, 
+            "commit_time": commit.commit_time, 
+            "committer": commit.committer
+        } 
+        for commit in commits if valid(commit, lastest, oldest)
+    ]
+
     
     return commits
 
@@ -82,10 +116,11 @@ def crawl_commits(owner: str, repo: str) -> List[str]:
 #     print(result)
 
 
-def get_commit(commit: str, sha: str) -> Optional[Tuple[str, str, str]]:
-    """ Split commit into commit message (the first line) and follow by commti description """
+def get_commit(commit: str) -> Optional[Tuple[str, str]]:
+    """ Split commit into commit message (the first line) and follow by commit description """
 
     try:
+        print("In here")
         # Convert markdown into html
         html = markdown(commit)
         soup = BeautifulSoup(html, "html.parser")
@@ -93,7 +128,7 @@ def get_commit(commit: str, sha: str) -> Optional[Tuple[str, str, str]]:
         message = lines[0]
         description = "<.> ".join(lines[1:])
 
-        return sha, message, description
+        return message, description
     except:
 
         return None
@@ -105,19 +140,47 @@ def get_changelog_sentences(changelog: str) -> List[str]:
     try:
         html = markdown(changelog)
         soup = BeautifulSoup(html, "html.parser")
-        sentences_li = [li.text.strip() 
-                        for li in soup.find_all("li")]
-        sentences_p = [p.text.strip().split("\n") 
-                    for p in soup.find_all('p')]
-        sentences_p = [sentence[i] 
-                    for sentence in sentences_p 
-                        for i in range(len(sentence))]
+        sentences_li = [li.text.strip() for li in soup.find_all("li")]
+        sentences_p = [p.text.strip().split("\n") for p in soup.find_all('p')]
+        sentences_p = [sentence[i] for sentence in sentences_p for i in range(len(sentence))]
         sentences = [*sentences_li, *sentences_p]
 
         return sentences
     except:
 
         return []
+
+
+def crawl_changelog_info() -> None:
+    repos_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
+    repos = pd.read_csv(repos_path)
+    # Check repos
+    print(repos.shape)
+    print(repos.head())
+    num_repo = repos.shape[0]
+    for i in range(num_repo):
+        owner = repos.loc[i, "Owner"]
+        repo = repos.loc[i, "Repo"]
+        folder = f"{owner}_{repo}"
+        print("Repo:", owner, repo)
+        try:
+            # Crawl changelogs
+            print("Start crawl changelogs")
+            changelog_info = crawl_changelogs(owner, repo)
+            print("Crawl changelogs done")
+            changelog_info = pd.DataFrame(changelog_info)
+            changelog_info.index.name = "Index"
+            print(changelog_info.head())
+            
+            folder_path = os.path.join(ROOT_DIR, "data", folder)
+            if not os.path.exists(folder_path):
+                os.mkdir(folder_path)
+            ci_path = os.path.join(folder_path, "changelog_info.csv")
+            changelog_info.to_csv(ci_path)
+            repos["Crawl status"] = "Done"
+        except Exception as e:
+            print(e)
+            repos.loc[i, "Crawl status"] = "Error"
 
 
 def crawl_data() -> None:   
@@ -135,63 +198,69 @@ def crawl_data() -> None:
         folder = f"{owner}_{repo}"
         print("Repo:", owner, repo)
         try:
-            # Crawl changelogs
-            print("Start crawl changelogs")
-            changelogs = crawl_changelogs(owner, repo)
-            print("Crawl changelogs done")
-            # Get changelog sentences
-            # cs_arr is sort for changelog sentences array
-            cs_arr = [get_changelog_sentences(changelog) for changelog in changelogs]  
-            changelog_sentences = [sentence for cs in cs_arr for sentence in cs]
-            changelogs_df = pd.DataFrame({"Changelog Sentence": changelog_sentences})
-            changelogs_df = changelogs_df.drop_duplicates(subset=["Changelog Sentence"], keep="first")\
-                                         .reset_index(drop=True)
-            changelogs_df["Index"] = [idx + 1 for idx in changelogs_df.index]
-            changelogs_df = changelogs_df[["Index", "Changelog Sentence"]]
-            # Check changelog sentences
-            print("Num changelog sentences:", len(changelogs_df))
+            # Load changelogs
+            print("Start load changelogs")
+            folder_path = os.path.join(ROOT_DIR, "data", folder)
+            changelog_info_path = os.path.join(folder_path, "changelog_info.csv")
+            changelog_info = pd.read_csv(changelog_info_path)
+            print("Changelogs loaded")
+            changelog_info["created_at"] = pd.to_datetime(changelog_info["created_at"])
 
+            lastest = changelog_info["created_at"].max()
+            oldest = changelog_info["created_at"].min()
+            target_branches = changelog_info["target_commitish"].unique().tolist()
+        
+            # # Get changelog sentences
+            # # cs_arr is sort for changelog sentences array
+            # cs_arr = [get_changelog_sentences(changelog) for changelog in changelog_info.loc[:, "body"]]  
+            # changelog_sentences = [sentence for cs in cs_arr for sentence in cs]
+            # changelog_sen_df = pd.DataFrame({"Changelog Sentence": changelog_sentences})
+            # changelog_sen_df = changelog_sen_df.drop_duplicates(subset=["Changelog Sentence"], keep="first")\
+            #                              .reset_index(drop=True)
+            # # Check changelog sentences
+            # print("Num changelog sentences:", len(changelog_sen_df))
+    
             # Crawl commits
-            print("Start crawl commits")
-            commits = crawl_commits(owner, repo)
-            print("Crawl commits done")
+            print("Start load commits")
+            commits = crawl_commits(owner, repo, target_branches, lastest, oldest)
+            print("Commits loaded")
+            print(len(commits))
             # Get commit messages and commit descriptions
-            commits = [get_commit(commit["message"], commit["sha"]) 
-                       for commit in commits if get_commit(commit["message"], commit["sha"])]
-            shas, messages, descriptions = zip(*commits)
-            commits_df = pd.DataFrame({
-                "Sha": shas,
+            commits = [get_commit(commit["message"]) 
+                       for commit in commits if get_commit(commit["message"])]
+            print(len(commits))
+            messages, descriptions = zip(*commits)
+            commit_df = pd.DataFrame({
                 "Owner": owner,
                 "Repo": repo,
                 "Message": messages, 
-                "Description": descriptions
-        
+                "Description": descriptions,
+                "Sha": commits["sha"],
+                "Author": commits["author"],
+                "Committer": commits["committer"],
+                "Commit Time": commits["commit_time"]
+
             })
-            commits_df = commits_df.drop_duplicates(subset=["Message"]).reset_index(drop=True)
-            commits_df["Index"] = [idx + 1 for idx in commits_df.index]
-            commits_df = commits_df[["Index", "Sha", "Owner", "Repo", "Message", "Description"]]
+            commit_df = commit_df.drop_duplicates(subset=["Message"]).reset_index(drop=True)
             # Check commit messages
-            print("Num commit messages:", len(commits_df))
+            print("Num commit messages:", len(commit_df))
             print("\n")
             print("==============================================")
             print("\n")
 
             # Save data to folder
-            folder_path = os.path.join(ROOT_DIR, "data", folder)
-            if not os.path.exists(folder_path):
-                os.mkdir(folder_path)
-
-            c_logs_path = os.path.join(folder_path, "changelogs.csv")
-            commits_path = os.path.join(folder_path, "commits.csv")
-            changelogs_df.to_csv(c_logs_path, index=False)
-            # commits_df.to_csv(commits_path, index=False)
+            # changelog_sen_path = os.path.join(folder_path, "changelog_sentence.csv")
+            # changelog_sen_df.index.name = "Index"
+            # changelog_sen_df.to_csv(changelog_sen_path)
+            commit_path = os.path.join(folder_path, "commit.csv")
+            commit_df.index.name = "Index"
+            commit_df.to_csv(commit_path)
             repos.loc[i, "Crawl status"] = "Done"
         except Exception as e:
             print(e)
             repos.loc[i, "Crawl status"] = "Error"
-        
+        break        
         repos.to_csv(repos_path, index=False)
 
 
-
-    
+crawl_data()
