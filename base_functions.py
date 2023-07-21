@@ -190,7 +190,8 @@ class MyRemoteCallbacks(pygit2.RemoteCallbacks):
 #         test_data.to_csv(os.path.join(path, "test.csv"), index=False)
 
 
-def clone_repos():
+def clone_repos() -> None:
+    """ Clone all repositories in "Repos.csv" file """
     repos_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
     repos = pd.read_csv(repos_path)
     num_repo = len(repos)
@@ -198,13 +199,14 @@ def clone_repos():
     for i in range(num_repo):
         owner = repos.loc[i, "Owner"]
         repo = repos.loc[i, "Repo"]
-        path = os.path.join(ROOT_DIR, "..", "data", 
-                            f"{owner}_{repo}")
-        pygit2.clone_repository(f"https://github.com/{owner}/{repo}", 
-                                path, callbacks=MyRemoteCallbacks())
+        path = os.path.join(ROOT_DIR, "..", "data", f"{owner}_{repo}")
+        pygit2.clone_repository(f"https://github.com/{owner}/{repo}", path, callbacks=MyRemoteCallbacks())
 
 
-def join_dataset():
+def join_dataset() -> None:
+    """ Join commits of all repositories into one file """
+
+    # Load all repositories commits into dataframes
     repo_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
     repos = pd.read_csv(repo_path)
     num_repo = len(repos)
@@ -212,25 +214,27 @@ def join_dataset():
     for i in range(num_repo):
         owner = repos.loc[i, "Owner"]
         repo = repos.loc[i, "Repo"]
-        path = os.path.join(ROOT_DIR, "data", 
-                            f"{owner}_{repo}", "commits.csv")
+        path = os.path.join(ROOT_DIR, "data", f"{owner}_{repo}", "commits.csv")
         df = pd.read_csv(path)
         dfs.append(df)
 
-    # Merge all repositories data into one dataframe 
+    # Merge all repositories commits into one dataframe 
     all_data = pd.concat(dfs)
-    all_data = all_data.dropna(subset=["Message"])\
-                       .reset_index(drop=True)
-    all_data = all_data.drop_duplicates(subset=["Message"])\
-                       .reset_index(drop=True)
-    
+    # Remove null commit has no message
+    all_data = all_data.dropna(subset=["Message"]).reset_index(drop=True)
+    # Remove duplicate commits has same message
+    all_data = all_data.drop_duplicates(subset=["Message"]).reset_index(drop=True)
+    # Shuffle commits
     all_data = all_data.sample(frac=1, axis=0).reset_index(drop=True)
+    # Number commits
     all_data["Index"] = [idx + 1 for idx in all_data.index]
     print(all_data.head())
-    all_data.to_csv(os.path.join(ROOT_DIR, "data", "all_data.csv"), 
-                    index=False)
+    all_data.to_csv(os.path.join(ROOT_DIR, "data", "all_data.csv"), index=False)
 
-def sampling_dataset():
+
+def sampling_dataset() -> None:
+    """ Sample commits from all commits """
+    
     path = os.path.join(ROOT_DIR, "data", "all_data.csv")
     sample_path = os.path.join(ROOT_DIR, "data", "sample_data.csv")
     all_data = pd.read_csv(path)
