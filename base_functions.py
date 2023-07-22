@@ -1,16 +1,7 @@
-import pandas as pd
-import numpy as np
 import os
-import yaml
-from sklearn.model_selection import KFold
+import pandas as pd
+from typing import Callable 
 from settings import ROOT_DIR
-import pygit2
-from matplotlib import pyplot as plt
-
-class MyRemoteCallbacks(pygit2.RemoteCallbacks):
-
-    def transfer_progress(self, stats):
-        print(f'{stats.indexed_objects}/{stats.total_objects}')
 
 
 # def load_data(file_path):
@@ -104,24 +95,6 @@ class MyRemoteCallbacks(pygit2.RemoteCallbacks):
 #     return total_test, precision, recall, f1_score, accuracy, true_neg_rate, tp, tn, fp, fn
 
 
-# def find_commit(commit, _type="origin"):
-#     file = "labeled_commits.csv" if _type == "origin" else "labeled_commits_abstract.csv"
-#     data_path = os.path.join(ROOT_DIR, "data")
-#     repos = []
-#     for subdir, dirs, files in os.walk(data_path):
-#         repos.extend(dirs)
-#     results = []
-
-#     for repo in repos:
-#         path = os.path.join(data_path, repo, file)
-#         df = pd.read_csv(path)
-#         row = df.loc[(df["Commit Message"] == commit) | (df["Commit Message"] + "<.> " + df["Commit Description"].astype("str") == commit)] 
-#         if not row.empty:
-#             mes, score, ccs, des, label = np.squeeze(row.to_numpy()).astype(str)
-#             results.append("Repo {}:\nMessage:{}\nScore:{}\nCorrespond Changelog Sentence:{}\nCommit Description:{}\nLabel:{}\n\n".format(repo, mes, score, ccs, des, label))
-#     return results
-
-
 # def show_result(result):
 #     total_test, precision, recall, f1_score, accuracy, true_neg_rate, tp, tn, fp, fn = result
 #     print("Total test:", total_test)
@@ -136,74 +109,23 @@ class MyRemoteCallbacks(pygit2.RemoteCallbacks):
 #     print("False negative", fn)
 
 
-# def k_fold_splitter(_type="origin"):
-#     # Load data in all repositories
-#     file_name = "labeled_commits.csv" if _type == "origin" else "labeled_commits_abstract.csv"
-#     data_path = os.path.join(ROOT_DIR, "data")
-#     repos = []
-#     for subdir, dirs, files in os.walk(data_path):
-#         repos.extend(dirs)
-#     dfs = []
-#     for repo in repos:
-#         path = os.path.join(data_path, repo, file_name)
-#         df = pd.read_csv(path)
-#         dfs.append(df)
-
-#     # Merge all repositories data into one dataframe 
-#     all_data = pd.concat(dfs)
-#     all_data = all_data.dropna(subset=["Commit Message"]).reset_index(drop=True)
-
-#     # Remove all duplicates of commit message, if that commit message has any occurance 
-#     # with label 1 then label that commit message 1 
-#     all_data = all_data.sort_values("Label").drop_duplicates("Commit Message", keep="last").reset_index(drop=True)
-    
-#     # Shuffle data after sort:
-#     all_data = all_data.sample(frac=1, axis=0, random_state=5)
-    
-#     # Get commit messages and commit descriptions as features of models and label is label
-#     def merge(row):
-#         if pd.isna(row["Commit Description"]):
-#             return row["Commit Message"]
-#         else:
-#             return row["Commit Message"] + "<.> " + row["Commit Description"]
-
-#     commit = all_data.apply(merge, axis=1)
-#     label = all_data["Label"]
-#     data = np.column_stack((commit, label))
-
-#     # Create folder to save datasets
-#     folder = f"datasets_{_type}"
-#     folder_path = os.path.join(ROOT_DIR, folder)
-#     if not os.path.exists(folder_path):
-#         os.mkdir(folder_path)
-
-#     # Use K-Fold technique to separate data into 10 (train, test) datasets and save it into folder
-#     kf = KFold(n_splits=10, shuffle=True, random_state=10)
-#     for i, (train_index, test_index) in enumerate(kf.split(data)):
-#         train_data = pd.DataFrame(data[train_index], columns=["X_train", "y_train"])
-#         test_data = pd.DataFrame(data[test_index], columns=["X_test", "y_test"])
-#         print(train_data.head())
-#         path = os.path.join(folder_path, f"test_{i + 1}")
-#         if not os.path.exists(path):
-#             os.mkdir(path)
-#         train_data.to_csv(os.path.join(path, "train.csv"), index=False)
-#         test_data.to_csv(os.path.join(path, "test.csv"), index=False)
-
-
-def clone_repos() -> None:
-    """ Clone all repositories in "Repos.csv" file """
+def traverse_repos(func: Callable[[str, str], None]) -> None:
     repos_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
     repos = pd.read_csv(repos_path)
+    # Check repos
+    print(repos.shape)
+    print(repos.head())
     num_repo = len(repos)
-
-    for i in range(24, num_repo):
+    error_log = open("error_log.txt", "a+")
+    for i in range(num_repo):
         owner = repos.loc[i, "Owner"]
         repo = repos.loc[i, "Repo"]
-        path = os.path.join(ROOT_DIR, "..", "repos", f"{owner}_{repo}")
-        pygit2.clone_repository(f"https://github.com/{owner}/{repo}", path, callbacks=MyRemoteCallbacks())
-
-
-
+        try:
+            func(owner, repo)
+        except Exception as e:
+            error_log.writelines(f"Repo {owner}/{repo} encounter error: {e} in function {func.__name__}")
+    error_log.close()
+            
 
 
 

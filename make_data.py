@@ -1,14 +1,21 @@
-import pandas as pd
 import os
 import requests
 import pygit2
-from datetime import datetime
-from settings import HEADERS, ROOT_DIR
+import pandas as pd
+import numpy as np
+from settings import HEADERS, ROOT_DIR, MODEL, LABEL_THRESHOLD
 from bs4 import BeautifulSoup
 from markdown import markdown
-from typing import List, Callable, Optional, Tuple, TypeVar
+from sklearn.metrics.pairwise import cosine_similarity
+from base_functions import traverse_repos
+from typing import List, Callable,  Tuple, TypeVar
+
 
 Time = TypeVar("Time")
+
+class MyRemoteCallbacks(pygit2.RemoteCallbacks):
+    def transfer_progress(self, stats):
+        print(f'{stats.indexed_objects}/{stats.total_objects}')
 
 
 def github_api(owner: str, repo: str, type: str, func: Callable, option: str = "") -> List[str]:
@@ -152,16 +159,16 @@ def get_changelog_sentences(changelog: str) -> List[str]:
         return []
 
 
-def crawl_changelog_info() -> None:
-    repos_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
-    repos = pd.read_csv(repos_path)
-    # Check repos
-    print(repos.shape)
-    print(repos.head())
-    num_repo = repos.shape[0]
-    for i in range(num_repo):
-        owner = repos.loc[i, "Owner"]
-        repo = repos.loc[i, "Repo"]
+def make_data() -> None:
+    """ Functions to make data """
+
+    def clone_repos(owner: str, repo: str) -> None:
+        path = os.path.join(ROOT_DIR, "..", "repos", f"{owner}_{repo}")
+        pygit2.clone_repository(f"https://github.com/{owner}/{repo}", path, callbacks=MyRemoteCallbacks())
+    
+    def crawl_changelog_info(owner: str, repo: str) -> None:
+        """ Get information of changelogs in https://github.com/owner/repo"""
+
         folder = f"{owner}_{repo}"
         print("Repo:", owner, repo)
         try:
@@ -170,7 +177,7 @@ def crawl_changelog_info() -> None:
             changelog_info = crawl_changelogs(owner, repo)
             print("Crawl changelogs done")
             changelog_info = pd.DataFrame(changelog_info)
-            changelog_info.index.name = "Index"
+            changelog_info.index.name = "index"
             print(changelog_info.head())
             
             folder_path = os.path.join(ROOT_DIR, "data", folder)
@@ -178,27 +185,14 @@ def crawl_changelog_info() -> None:
                 os.mkdir(folder_path)
             ci_path = os.path.join(folder_path, "changelog_info.csv")
             changelog_info.to_csv(ci_path)
-            repos["Crawl status"] = "Done"
         except Exception as e:
-            print(e)
-            repos.loc[i, "Crawl status"] = "Error"
+            raise e
 
-
-def crawl_data() -> None:   
-    """ Crawl commits and changelog sentences of all repositories in "Repos.csv" file """
-    
-    repos_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
-    repos = pd.read_csv(repos_path)
-    # Check repos
-    print(repos.shape)
-    print(repos.head())
-    num_repo = repos.shape[0]
-    for i in range(num_repo):
-        owner = repos.loc[i, "Owner"]
-        repo = repos.loc[i, "Repo"]
+    def crawl_data(owner: str, repo: str) -> None:   
+        """ Crawl commits and changelog sentences of all repositories in "Repos.csv" file """
+        
         folder = f"{owner}_{repo}"
         print("Repo:", owner, repo)
-        
         try:
             # Load changelogs
             print("Start load changelogs")
@@ -212,16 +206,16 @@ def crawl_data() -> None:
             oldest = changelog_info["created_at"].min()
             target_branches = changelog_info["target_commitish"].unique().tolist()
         
-            # # Get changelog sentences
-            # # cs_arr is sort for changelog sentences array
-            # cs_arr = [get_changelog_sentences(changelog) for changelog in changelog_info.loc[:, "body"]]  
-            # changelog_sentences = [sentence for cs in cs_arr for sentence in cs]
-            # changelog_sen_df = pd.DataFrame({"Changelog Sentence": changelog_sentences})
-            # changelog_sen_df = changelog_sen_df.drop_duplicates(subset=["Changelog Sentence"], keep="first")\
-            #                              .reset_index(drop=True)
-            # # Check changelog sentences
-            # print("Num changelog sentences:", len(changelog_sen_df))
-    
+            # Get changelog sentences
+            # cs_arr is sort for changelog sentences array
+            cs_arr = [get_changelog_sentences(changelog) for changelog in changelog_info.loc[:, "body"]]  
+            changelog_sentences = [sentence for cs in cs_arr for sentence in cs]
+            changelog_sen_df = pd.DataFrame({"Changelog Sentence": changelog_sentences})
+            changelog_sen_df = changelog_sen_df.drop_duplicates(subset=["Changelog Sentence"], keep="first")\
+                                        .reset_index(drop=True)
+            # Check changelog sentences
+            print("Num changelog sentences:", len(changelog_sen_df))
+
             # Crawl commits
             print("Start load commits")
             commits = crawl_commits(owner, repo, target_branches, lastest, oldest)
@@ -256,11 +250,65 @@ def crawl_data() -> None:
             commit_path = os.path.join(folder_path, "commit.csv")
             commit_df.index.name = "Index"
             commit_df.to_csv(commit_path)
-            repos.loc[i, "Crawl status"] = "Done"
         except Exception as e:
-            print(e)
-            repos.loc[i, "Crawl status"] = "Error"      
-        repos.to_csv(repos_path, index=False)
+            raise e
 
+    def label_commit(owner: str, repo: str) -> None:
+        """ Label commit using pretrained sentence-BERT model and cosine similarity function """
 
-crawl_data()
+        folder = f"{owner}_{repo}"
+        print("Repo:", owner, repo)
+        try:
+            # Load and encode changelog sentences
+            c_log_path = os.path.join(ROOT_DIR, "data", folder, "changelogs.csv")
+            c_log_sen = pd.read_csv(c_log_path)["Changelog Sentence"].astype("str")
+            # Encode changelog sentences
+            print("Start to encode changelog sentences")
+            encoded_c_log_sen = MODEL.encode(c_log_sen, convert_to_numpy=True)
+            print("Successfully encoded changelog sentences")
+            # Check encoded changelog sentences results
+            print("Encoded changelog sentences shape:", encoded_c_log_sen.shape)
+            
+            # Load commit messages
+            commits_path = os.path.join(ROOT_DIR, "data", folder, "commits.csv")
+            commits = pd.read_csv(commits_path).astype("str")
+            # Encode commit messages
+            print("Start to encode commit messages")
+            encoded_cm = MODEL.encode(commits["Message"], convert_to_numpy=True)
+            print("Successfully encoded commit messages")
+            # Check encoded commit messages result
+            print("Encoded commit messages shape:", encoded_cm.shape)
+
+            # Calculate cosine similarity
+            scores = cosine_similarity(encoded_cm, encoded_c_log_sen)
+            # Score is the max of cosine similarity scores 
+            # between encoded commit and encoded changelog sentences 
+            max_scores = np.amax(scores, axis=1) 
+            # Index of corresponding changelog sentence 
+            # that result max cosine similarity score with commits
+            index = np.argmax(scores, axis=1) 
+            cm = np.asarray(commits["Message"])  # Commit messages
+            # Corresponding changelog sentences
+            ccs = np.array([c_log_sen[x] for x in index])  
+            # Commit descriptions
+            addition_info = commits[["Description", "Owner", "Repo", "Sha"]]
+            # Label of commits 
+            label = np.where(max_scores >= LABEL_THRESHOLD, 1, 0) 
+            idx = np.asarray(range(1, len(cm) + 1))  # Index
+            df = pd.DataFrame({"Index": idx,
+                                "Commit Message": cm, 
+                                "Score": max_scores, 
+                                "Correspond Changelog Sentence": ccs, 
+                                "Label": label
+                            })
+            df = pd.concat([df, addition_info], axis=1)
+            print("Labelled commit:", df.head())
+
+            # Write label result to the dataset
+            labelled_commits_path = os.path.join(ROOT_DIR, "data", folder, "labelled_commits.csv")
+            df.to_csv(labelled_commits_path, index=False)
+        except Exception as e:
+            raise e
+     
+    traverse_repos(crawl_changelog_info)
+
