@@ -69,21 +69,23 @@ def crawl_commits(owner: str, repo: str, target_branches: List[str], lastest: Ti
             git branch -a"""
     all_branches = os.popen(cmd).read().split('\n')[:-1]
     all_branches = [branch.strip() for branch in all_branches]
-    remote_branches = [branch.split('/')[-1] for branch in all_branches[1:]]
+    remote_branches = ['/'.join(branch.split('/')[2:]) for branch in all_branches[1:]]
     
     all_commit_shas = set()
-    for branch in target_branches[:2]:
-        if any([branch == rb for rb in remote_branches]):
-            cmd = f"""cd {path} 
-            git rev-list remotes/origin/{branch}"""
-        else:
-            "In here"
-            cmd = f"""cd {path} 
-            git rev-list {branch}"""
-        commit_shas = os.popen(cmd).read()
-        # Each line is a commit sha and the last line is empty line
-        commit_shas = commit_shas.split('\n')[:-1]
-        all_commit_shas.update(commit_shas)
+    for branch in target_branches:
+        try:
+            if any(rb == branch for rb in remote_branches):
+                cmd = f"""cd {path} 
+                git rev-list remotes/origin/{branch}"""
+            else:
+                cmd = f"""cd {path} 
+                git rev-list {branch}"""
+            commit_shas = os.popen(cmd).read()
+            # Each line is a commit sha and the last line is empty line
+            commit_shas = commit_shas.split('\n')[:-1]
+            all_commit_shas.update(commit_shas)
+        except:
+            continue
          
     repo = pygit2.Repository(path)
     # Get commit message from commit sha
@@ -103,8 +105,8 @@ def crawl_commits(owner: str, repo: str, target_branches: List[str], lastest: Ti
         } 
         for commit in commits if valid(commit, lastest, oldest)
     ]
+    commits = pd.DataFrame(commits)
 
-    
     return commits
 
 
@@ -116,11 +118,10 @@ def crawl_commits(owner: str, repo: str, target_branches: List[str], lastest: Ti
 #     print(result)
 
 
-def get_commit(commit: str) -> Optional[Tuple[str, str]]:
+def get_commit(commit: str) -> Tuple[str, str]:
     """ Split commit into commit message (the first line) and follow by commit description """
 
     try:
-        print("In here")
         # Convert markdown into html
         html = markdown(commit)
         soup = BeautifulSoup(html, "html.parser")
@@ -131,7 +132,7 @@ def get_commit(commit: str) -> Optional[Tuple[str, str]]:
         return message, description
     except:
 
-        return None
+        return None, None
 
 
 def get_changelog_sentences(changelog: str) -> List[str]:
@@ -197,6 +198,7 @@ def crawl_data() -> None:
         repo = repos.loc[i, "Repo"]
         folder = f"{owner}_{repo}"
         print("Repo:", owner, repo)
+        
         try:
             # Load changelogs
             print("Start load changelogs")
@@ -224,12 +226,11 @@ def crawl_data() -> None:
             print("Start load commits")
             commits = crawl_commits(owner, repo, target_branches, lastest, oldest)
             print("Commits loaded")
-            print(len(commits))
             # Get commit messages and commit descriptions
-            commits = [get_commit(commit["message"]) 
-                       for commit in commits if get_commit(commit["message"])]
-            print(len(commits))
-            messages, descriptions = zip(*commits)
+            mes_des = [get_commit(commit) 
+                    for commit in commits.loc[:, "message"]]
+            messages, descriptions = zip(*mes_des)
+
             commit_df = pd.DataFrame({
                 "Owner": owner,
                 "Repo": repo,
@@ -239,8 +240,8 @@ def crawl_data() -> None:
                 "Author": commits["author"],
                 "Committer": commits["committer"],
                 "Commit Time": commits["commit_time"]
-
             })
+            commit_df = commit_df.dropna(subset=["Message"]).reset_index(drop=True)
             commit_df = commit_df.drop_duplicates(subset=["Message"]).reset_index(drop=True)
             # Check commit messages
             print("Num commit messages:", len(commit_df))
@@ -258,8 +259,7 @@ def crawl_data() -> None:
             repos.loc[i, "Crawl status"] = "Done"
         except Exception as e:
             print(e)
-            repos.loc[i, "Crawl status"] = "Error"
-        break        
+            repos.loc[i, "Crawl status"] = "Error"      
         repos.to_csv(repos_path, index=False)
 
 

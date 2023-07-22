@@ -80,13 +80,14 @@ def score_similarity() -> None:
     sample_commit_path = os.path.join(ROOT_DIR, "data", "sample_commit")
     if not os.path.exists(sample_commit_path):
         os.mkdir(sample_commit_path)
-    for i in range(len(sample_dataset)):
-        _, sha, owner, repo, message, description = sample_dataset.loc[i]
+    print(sample_dataset.head())
+    for i in range(0, 81):
+        _, _, owner, repo, message, description, sha, _, _, _ = sample_dataset.loc[i]
         
         # Load changelog sentences
         folder = f"{owner}_{repo}"
         print(folder)
-        c_log_path = os.path.join(ROOT_DIR, "data", folder, "changelogs.csv")
+        c_log_path = os.path.join(ROOT_DIR, "data", folder, "changelog_sentence.csv")
         c_log_sen = pd.read_csv(c_log_path)["Changelog Sentence"].to_numpy().astype("str")
 
         # Score commit for each changelog sentences
@@ -110,8 +111,6 @@ def score_similarity() -> None:
         header = np.array(list(header.items()))
         header = pd.DataFrame(header, columns=["Attribute", "Value"])
         record = pd.concat([header, c_log_sen], axis=0)
-        record["Index"] = [idx + 1 for idx in record.index]
-        record = record[["Index", "Attribute", "Value"]]
         print(record.shape)
         record.to_csv(os.path.join(sample_commit_path, f"test_{i + 1}.csv"), index=False)
 

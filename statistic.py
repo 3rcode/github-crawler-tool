@@ -1,10 +1,10 @@
-# import os
-# import pandas as pd
-# import numpy as np
+import os
+import pandas as pd
+import numpy as np
 # import yaml
 # from yaml.loader import SafeLoader
 # from collections import defaultdict
-# from settings import ROOT_DIR
+from settings import ROOT_DIR
 
 # def summarize_result(approach):
 #     result_path = os.path.join(ROOT_DIR, f'{approach}.yml')
@@ -53,39 +53,30 @@
 #     abstract.to_csv(path_to_abstract)
 
 
-# def summarize_data():
-#     repos_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
-#     data_path = os.path.join(ROOT_DIR, "data")
-#     repos = pd.read_csv(repos_path)
-#     repos = repos[(repos["Crawl status"] == "Done") 
-#                                 & (repos["Label status"] == "Done")]
-
-#     repos = (repos.loc[:, "Owner"] + '_' + repos.loc[:, "Repo"]).tolist()
-#     data = []
-#     for repo in repos:
-#         repo_dir = os.path.join(data_path, repo)
-#         changelogs_path = os.path.join(repo_dir, "changelogs.csv")
-#         commits_path = os.path.join(repo_dir, "commits.csv")
-#         labelled_commits_path= os.path.join(repo_dir, 'labelled_commits.csv')
-
-#         # Load raw data
-#         changelogs = pd.read_csv(changelogs_path)
-#         commits = pd.read_csv(commits_path)
-#         num_changelog_sentences = len(changelogs)
-#         num_commits = len(commits)
-
-#         # Load processed data
-#         labelled_commits = pd.read_csv(labelled_commits_path)
-
-#         num_commit_labels = defaultdict(int, labelled_commits["Label"].value_counts())
-
-#         data.append([repo, num_commits, num_changelog_sentences, 
-#                      num_commit_labels[0], num_commit_labels[1]])        
+def summarize_data():
+    repos_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
+    repos = pd.read_csv(repos_path)
+    data = []
+    for i in range(len(repos)):
+        owner = repos.loc[i, "Owner"]
+        repo = repos.loc[i, "Repo"]
+        folder = f"{owner}_{repo}"
+        changelog_sen_path = os.path.join(ROOT_DIR, "data", folder, "changelog_sentence.csv")
+        commit_path = os.path.join(ROOT_DIR, "data", folder, "commit.csv")
         
+
+        # Load raw data
+        changelog_sen_df = pd.read_csv(changelog_sen_path)
+        commit_df = pd.read_csv(commit_path)
+        num_changelog_sen = len(changelog_sen_df)
+        num_commit = len(commit_df)
+
+        data.append([repo, num_commit, num_changelog_sen])        
         
-#     data_info_path = os.path.join(ROOT_DIR, "statistic", "data_info.csv")
-#     data = pd.DataFrame(data, columns=["Repo", "Num Commit", "Num Changelog Sentence",
-#                                        "Num Label 0", "Num Label 1"])
-#     data.set_index("Repo")
-#     data.to_csv(data_info_path, index=False)
+
+    data = pd.DataFrame(data, columns=["Repo", "Num Commit", "Num Changelog Sentence"])
+    data.set_index("Repo")
+    data.to_csv("data_info.csv", index=False)
+
+summarize_data()
   

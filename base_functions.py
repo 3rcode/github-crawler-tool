@@ -214,7 +214,7 @@ def join_dataset() -> None:
     for i in range(num_repo):
         owner = repos.loc[i, "Owner"]
         repo = repos.loc[i, "Repo"]
-        path = os.path.join(ROOT_DIR, "data", f"{owner}_{repo}", "commits.csv")
+        path = os.path.join(ROOT_DIR, "data", f"{owner}_{repo}", "commit.csv")
         df = pd.read_csv(path)
         dfs.append(df)
 
@@ -227,7 +227,6 @@ def join_dataset() -> None:
     # Shuffle commits
     all_data = all_data.sample(frac=1, axis=0).reset_index(drop=True)
     # Number commits
-    all_data["Index"] = [idx + 1 for idx in all_data.index]
     print(all_data.head())
     all_data.to_csv(os.path.join(ROOT_DIR, "data", "all_data.csv"), index=False)
 
@@ -238,9 +237,12 @@ def sampling_dataset() -> None:
     path = os.path.join(ROOT_DIR, "data", "all_data.csv")
     sample_path = os.path.join(ROOT_DIR, "data", "sample_data.csv")
     all_data = pd.read_csv(path)
-    print(all_data.info())
     sample_dataset = all_data.sample(n=384)
-    sample_dataset.to_csv(sample_path, index=False)
+    sample_dataset = sample_dataset.drop(columns="Index")
+    sample_dataset = sample_dataset.reset_index()
+    sample_dataset.index.name = "Index"
+    print(sample_dataset.info())
+    sample_dataset.to_csv(sample_path)
 
 
 def check_acc_threshold() -> float:
@@ -274,7 +276,7 @@ def check_acc_threshold() -> float:
     return threshold[accuracy.index(max(accuracy))]
     
 
-clone_repos()
+sampling_dataset()
 
 
 
