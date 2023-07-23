@@ -46,7 +46,7 @@ def crawl_changelogs(owner: str, repo: str) -> Callable[[str, str, str, Callable
     """ Crawl all changelogs in https://github.com/owner/repo"""
     
     func = lambda el: {"tag_name": el["tag_name"], "target_commitish": el["target_commitish"],
-                       "body": el["body"], "created_at": el["created_at"]}
+                       "body": el["body"], "created_at": el["created_at"], "published_at": el["published_at"]}
     
     return github_api(owner, repo, type="releases", func=func)
 
@@ -312,3 +312,4 @@ def make_data() -> None:
      
     traverse_repos(crawl_changelog_info)
 
+make_data()

@@ -124,7 +124,7 @@ def check_acc_threshold() -> float:
     
 
 def excel_join():
-    for i in [7, 13, 14, 16, 17]:
+    for i in [9]:
         input_path = os.path.join(ROOT_DIR, "data", "sample_commit", f"group_{i + 1}")
         output_path = os.path.join(ROOT_DIR, "data", "sample_commit", f"group_{i + 1}.xlsx")
         try:
