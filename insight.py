@@ -318,12 +318,12 @@ def check_changelog_has_commit_link(owner: str, repo: str) -> Tuple[int, int]:
         try:
             html = markdown(changelog)
             soup = BeautifulSoup(html, "html.parser")
-            for a in soup.find_all('a'):
-                if re.findall(pattern, a):
-                    num += 1
-                    break
+            text = soup.get_text()
+            if re.findall(pattern,text):
+                num += 1
         except:
             print(f"Wrong at {owner}/{repo}")
+        
     return len(changelogs), num
 
 
@@ -338,10 +338,11 @@ def craw_changelog_has_commit_link():
         num_changelog, num_changelog_has_commit_link = check_changelog_has_commit_link(owner, repo)
         total_changelog += num_changelog
         total_changelog_has_link += num_changelog_has_commit_link
+        
     
     print("Total changelog:", total_changelog)
     print("Total changelog has commit link:", total_changelog_has_link)
-    print("\% changelog don't have link to commit:", 
+    print("Changelog don't have link to commit:", 
           f"{(total_changelog - total_changelog_has_link) / total_changelog * 100}%")
 
 craw_changelog_has_commit_link()

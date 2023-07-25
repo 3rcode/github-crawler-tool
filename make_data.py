@@ -24,7 +24,7 @@ def github_api(owner: str, repo: str, type: str, func: Callable, option: str = "
     page = 1
     all_els = []
     while True:
-        url ="https://api.github.com/repos/{owner}/{repo}/{type}?{option}&per_page=100&page={page}"
+        url =f"https://api.github.com/repos/{owner}/{repo}/{type}?{option}&per_page=100&page={page}"
         response = requests.get(url, headers=HEADERS)
         if response.status_code != 200:
             print(response.status_code)
@@ -410,4 +410,5 @@ def join_labelled_data_by_time():
     all_data = all_data.sort_values(by=["Commit Time"], ascending=True).reset_index(drop=True)
     print(all_data.head())
     all_data.to_csv(os.path.join(ROOT_DIR, "data", "dataset_by_time.csv"), index=False)
+
 

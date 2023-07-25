@@ -5,6 +5,7 @@ from settings import ROOT_DIR, HEADERS
 import re
 import requests
 from typing import Tuple, List
+from make_data import github_api
 from markdown import markdown
 from bs4 import BeautifulSoup
 import datetime
@@ -15,7 +16,7 @@ def commit_to_release(repo_path: str, sorted_releases: pd.DataFrame, outlier_pat
     outlier = open(outlier_path, "a+")
     for i in range(len(sorted_releases) - 1):
         cmd = f"""cd {repo_path}
-        git rev-list --max-parents=0 {sorted_releases.loc[i, "tag_name"]}"""
+        git rev-list --reverse {sorted_releases.loc[i, "tag_name"]} ^{sorted_releases.loc[i + 1, "tag_name"]}"""
         sha = os.popen(cmd).read().split('\n')
         if sha:
             last_sha = sha[0]
@@ -75,8 +76,8 @@ def check_releases_relationship():
 
         changelog_info["tag_sha"] = tag_shas
         changelog_info["commit_sha"] = commit_shas 
-        changelog_info = changelog_info.drop_duplicates(subset=["created_at"]).reset_index(drop=True)
-        changelog_info = changelog_info.drop_duplicates(subset=["commit_sha"]).reset_index(drop=True)
+        # changelog_info = changelog_info.drop_duplicates(subset=["created_at"]).reset_index(drop=True)
+        # changelog_info = changelog_info.drop_duplicates(subset=["commit_sha"]).reset_index(drop=True)
         changelog_info = changelog_info.set_index(np.arange(len(changelog_info.index)))
         # Get time between two consecutive release
         try:
