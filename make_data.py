@@ -24,8 +24,7 @@ def github_api(owner: str, repo: str, type: str, func: Callable, option: str = "
     page = 1
     all_els = []
     while True:
-        url ="https://api.github.com/repos/"\
-             f"{owner}/{repo}/{type}?{option}&per_page=100&page={page}"
+        url ="https://api.github.com/repos/{owner}/{repo}/{type}?{option}&per_page=100&page={page}"
         response = requests.get(url, headers=HEADERS)
         if response.status_code != 200:
             print(response.status_code)
@@ -115,14 +114,6 @@ def crawl_commits(owner: str, repo: str, target_branches: List[str], lastest: Ti
     commits = pd.DataFrame(commits)
 
     return commits
-
-
-# def crawl_changelogs(owner, repo):
-#     path = os.path.join(ROOT_DIR, "..", "data", f"{owner}_{repo}")
-#     cmd = f"cd {path} \
-#         git for-each-ref refs/tags/v2.2.0 --format='%(contents)'"
-#     result = os.popen(cmd).read()
-#     print(result)
 
 
 def get_commit(commit: str) -> Tuple[str, str]:
@@ -260,7 +251,7 @@ def make_data() -> None:
         print("Repo:", owner, repo)
         try:
             # Load and encode changelog sentences
-            c_log_path = os.path.join(ROOT_DIR, "data", folder, "changelogs.csv")
+            c_log_path = os.path.join(ROOT_DIR, "data", folder, "changelog_sentence.csv")
             c_log_sen = pd.read_csv(c_log_path)["Changelog Sentence"].astype("str")
             # Encode changelog sentences
             print("Start to encode changelog sentences")
@@ -270,7 +261,7 @@ def make_data() -> None:
             print("Encoded changelog sentences shape:", encoded_c_log_sen.shape)
             
             # Load commit messages
-            commits_path = os.path.join(ROOT_DIR, "data", folder, "commits.csv")
+            commits_path = os.path.join(ROOT_DIR, "data", folder, "commit.csv")
             commits = pd.read_csv(commits_path).astype("str")
             # Encode commit messages
             print("Start to encode commit messages")
@@ -281,11 +272,9 @@ def make_data() -> None:
 
             # Calculate cosine similarity
             scores = cosine_similarity(encoded_cm, encoded_c_log_sen)
-            # Score is the max of cosine similarity scores 
-            # between encoded commit and encoded changelog sentences 
+            # Score is the max of cosine similarity scores between encoded commit and encoded changelog sentences 
             max_scores = np.amax(scores, axis=1) 
-            # Index of corresponding changelog sentence 
-            # that result max cosine similarity score with commits
+            # Index of corresponding changelog sentence that result max cosine similarity score with commits
             index = np.argmax(scores, axis=1) 
             cm = np.asarray(commits["Message"])  # Commit messages
             # Corresponding changelog sentences
@@ -305,11 +294,120 @@ def make_data() -> None:
             print("Labelled commit:", df.head())
 
             # Write label result to the dataset
-            labelled_commits_path = os.path.join(ROOT_DIR, "data", folder, "labelled_commits.csv")
+            labelled_commits_path = os.path.join(ROOT_DIR, "data", folder, "labelled_commit.csv")
             df.to_csv(labelled_commits_path, index=False)
         except Exception as e:
             raise e
-     
-    traverse_repos(crawl_changelog_info)
+    
+    traverse_repos(label_commit)
 
-make_data()
+
+# def join_labelled_data():
+#     """ Join labelled commits of all repositories into one file """
+
+#     # Load all repositories commits into dataframes
+#     repo_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
+#     repos = pd.read_csv(repo_path)
+#     num_repo = len(repos)
+#     dfs = []
+#     for i in range(num_repo):
+#         owner = repos.loc[i, "Owner"]
+#         repo = repos.loc[i, "Repo"]
+#         path = os.path.join(ROOT_DIR, "data", f"{owner}_{repo}", "labelled_commit.csv")
+#         df = pd.read_csv(path)[["Commit Message", "Description", "Score", "Label"]]
+#         dfs.append(df)
+
+#     # Merge all repositories commits into one dataframe 
+#     all_data = pd.concat(dfs)
+#     # Remove null commit has no message
+#     all_data = all_data.dropna(subset=["Commit Message"]).reset_index(drop=True)
+#     # Remove duplicate commits has same message
+#     all_data = all_data.drop_duplicates(subset=["Commit Message"]).reset_index(drop=True)
+#     # Shuffle commits
+#     all_data = all_data.sample(frac=1, axis=0).reset_index(drop=True)
+#     # Number commits
+#     print(all_data.head())
+#     all_data.to_csv(os.path.join(ROOT_DIR, "data", "dataset.csv"), index=False)
+
+
+# def join_labelled_data_by_repo():
+#     """ Join labelled commits of all repositories into train.csv and test.csv by repo """
+
+#     # Load all repositories commits into dataframes
+#     repo_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
+#     repos = pd.read_csv(repo_path)
+#     num_repo = len(repos)
+#     train_dfs = []
+#     test_dfs = []
+#     repos = repos.sample(frac=1, axis=0, random_state=1)
+#     repos = repos.set_index(np.arange(len(repos.index))) 
+#     num_train_repo = int(num_repo * 0.8)
+#     print(num_train_repo)
+#     # for i in range(num_repo):
+#     #     owner = repos.loc[i, "Owner"]
+#     #     repo = repos.loc[i, "Repo"]
+#     #     path = os.path.join(ROOT_DIR, "data", f"{owner}_{repo}", "labelled_commit.csv")
+#     #     df = pd.read_csv(path)[["Commit Message", "Description", "Score", "Label"]]
+#     #     if i < num_train_repo:
+#     #         train_dfs.append(df)
+#     #     else:
+#     #         test_dfs.append(df)
+#     # all_data = pd.concat(train_dfs)
+#     # # Remove null commit has no message
+#     # all_data = all_data.dropna(subset=["Commit Message"]).reset_index(drop=True)
+#     # # Remove duplicate commits has same message
+#     # all_data = all_data.drop_duplicates(subset=["Commit Message"]).reset_index(drop=True)
+#     # # Shuffle commits
+#     # all_data = all_data.sample(frac=1, axis=0).reset_index(drop=True)
+#     # # Number commits
+#     # print(all_data.head())
+#     # all_data.to_csv(os.path.join(ROOT_DIR, "data", "train_repo_dataset.csv"), index=False)
+
+#     # test_data = pd.concat(test_dfs)
+#     # # Remove null commit has no message
+#     # test_data = test_data.dropna(subset=["Commit Message"]).reset_index(drop=True)
+#     # # Remove duplicate commits has same message
+#     # test_data = test_data.drop_duplicates(subset=["Commit Message"]).reset_index(drop=True)
+#     # # Shuffle commits
+#     # test_data = test_data.sample(frac=1, axis=0).reset_index(drop=True)
+#     # # Number commits
+#     # print(test_data.head())
+#     # test_data.to_csv(os.path.join(ROOT_DIR, "data", "test_repo_dataset.csv"), index=False)
+                
+
+def join_labelled_data_by_time():
+    """ Join labelled commits of all repositories into train.csv and test.csv by repo """
+
+    # Load all repositories commits into dataframes
+    repo_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
+    repos = pd.read_csv(repo_path)
+    num_repo = len(repos)
+    dfs = []
+    for i in range(num_repo):
+        owner = repos.loc[i, "Owner"]
+        repo = repos.loc[i, "Repo"]
+        print("Repo:", owner, repo)
+        path = os.path.join(ROOT_DIR, "data", f"{owner}_{repo}", "labelled_commit.csv")
+        df = pd.read_csv(path)
+        commit_time = []
+        path = os.path.join(ROOT_DIR, "..", "repos", f"{owner}_{repo}")
+        for j in range(len(df)):
+            cmd = f"""cd {path}
+                git show --no-patch --no-notes --format="%ct" {df.loc[j, "Sha"]}"""
+            time = int(os.popen(cmd).read()[:-1])
+            commit_time.append(time)
+        df["Commit Time"] = pd.to_datetime(commit_time, unit='s')
+        dfs.append(df)
+        
+    all_data = pd.concat(dfs)
+    # Remove null commit has no message
+    all_data = all_data.dropna(subset=["Commit Message"]).reset_index(drop=True)
+    # Remove duplicate commits has same message
+    all_data = all_data.drop_duplicates(subset=["Commit Message"]).reset_index(drop=True)
+    # Shuffle commits
+    all_data = all_data.sample(frac=1, axis=0).reset_index(drop=True)
+    # Number commits
+    all_data = all_data.sort_values(by=["Commit Time"], ascending=True).reset_index(drop=True)
+    print(all_data.head())
+    all_data.to_csv(os.path.join(ROOT_DIR, "data", "dataset_by_time.csv"), index=False)
+
