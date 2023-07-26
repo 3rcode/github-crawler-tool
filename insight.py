@@ -8,6 +8,8 @@ from typing import Tuple, List
 from make_data import github_api
 from markdown import markdown
 from bs4 import BeautifulSoup
+from collections import defaultdict
+from datetime import datetime
 
 def summarize_data() -> None:
     """ Summarize number of commits and number of changelog sentences """
@@ -116,8 +118,10 @@ def check_commit_not_in_release_branches() -> float:
 
 def commit_between_two_releases(repo_path: str, sorted_releases: pd.DataFrame, outlier_path: str) -> List[int]:
     compare_commit = []
+    if repo_path == "/home/tranmanhcuong/CG/CC/../repos/hashicorp_terraform-provider-aws":
+        return compare_commit
     outlier = open(outlier_path, "a+")
-    for i in range(len(sorted_releases)):
+    for i in range(len(sorted_releases) - 1):
         try:
             for j in range(i + 1, len(sorted_releases)):
                 cmd = f"""cd {repo_path}
@@ -125,16 +129,24 @@ def commit_between_two_releases(repo_path: str, sorted_releases: pd.DataFrame, o
                 num_commit = int(os.popen(cmd).read())
                 if num_commit > 0:
                     compare_commit.append(num_commit)
+                    if num_commit == 13845:
+                        outlier.write(repo_path + '\n')
+                        outlier.write(sorted_releases.loc[i].to_string() + '\n')
+                        outlier.write(sorted_releases.loc[j].to_string() + '\n')
                     break
             else:
                 cmd = f"""cd {repo_path}
                     git rev-list {sorted_releases.loc[i, "tag_name"]} --count"""
                 num_commit = int(os.popen(cmd).read())
                 if num_commit > 0:
+                    if num_commit == 13845:
+                        outlier.write(repo_path + '\n')
+                        outlier.write(sorted_releases.loc[i].to_string() + '\n')
                     compare_commit.append(num_commit)
-        except:
-            outlier.writelines(f"{repo_path}\t{sorted_releases.loc[i, 'tag_name']}\t{sorted_releases.loc[i + 1, 'tag_name']}")
-        outlier.close()
+        except Exception as e:
+            pass
+
+    outlier.close()
     
     return compare_commit
 
@@ -153,11 +165,43 @@ def commit_to_release(repo_path: str, sorted_releases: pd.DataFrame, outlier_pat
             last_commit_time = int(os.popen(cmd).read())
             time = sorted_releases.loc[i, "created_at"].to_pydatetime().timestamp() - last_commit_time
             if time <= 0: 
-                outlier.writelines(f"Outlier at: {repo_path}\t{sorted_releases.loc[i, 'tag_name']}\n")
+                pass
+                # outlier.writelines(f"Outlier at: {repo_path}\t{sorted_releases.loc[i, 'tag_name']}\n")
             else:
+                if time == 246305732:
+                    outlier.write(repo_path + '\n')
+                    outlier.write(sorted_releases.loc[i].to_string() + '\n')   
                 times.append(time)
     outlier.close()
 
+    return times
+
+
+def check_commit_in_dataset(repo_path: str, sorted_releases: pd.DataFrame, outlier_path: str) -> List[int]:
+    folder = repo_path.split('/')[-1]
+    print(folder)
+    path = os.path.join(ROOT_DIR, "data", folder, "commit.csv")
+    commit_time = sorted(pd.read_csv(path)["Commit Time"].to_list())
+    time_node = (sorted_releases["created_at"].astype(int) // 10**9)[::-1]
+    bucket = defaultdict(list)
+    print(len(commit_time))
+    i = 0
+    for time in commit_time:
+        try:
+            if time <= time_node[i]:
+                bucket[i].append(time)
+            else:
+                print("here")
+                i += 1
+        except:
+            continue
+    print(len(bucket[0]))
+    # times = []
+    # # for i in bucket:
+        
+    #     # for j in bucket[i]:
+    #     #     times.append(bucket[i] - j)
+    times = 0
     return times
 
 
@@ -171,6 +215,7 @@ def check_releases_relationship():
     time_between_2_release = np.array([]).astype("timedelta64")
     time_commit_to_release = np.array([])
     num_commit_between_2_releases = np.array([]).astype("int64")
+    
     outlier_cases = "outlier_cases.txt"
     num_changelog = 0
     for i in range(num_repo):
@@ -214,14 +259,19 @@ def check_releases_relationship():
             #     np.array(commit_between_two_releases(repo_path, changelog_info, outlier_cases)).astype("int64"),
             #     num_commit_between_2_releases
             # )
+            # time_commit_to_release = np.append(
+            #     np.array(commit_to_release(repo_path, changelog_info,outlier_cases)),
+            #     time_commit_to_release
+            # )
             time_commit_to_release = np.append(
-                np.array(commit_to_release(repo_path, changelog_info,outlier_cases)),
+                np.array(check_commit_in_dataset(repo_path, changelog_info, outlier_cases)),
                 time_commit_to_release
             )
 
         except Exception as e:
             print(e)
             break
+        break
       
     print("Time last commit to release:")
     print("\tMax:", f"{np.max(time_commit_to_release)}s")
@@ -345,4 +395,7 @@ def craw_changelog_has_commit_link():
     print("Changelog don't have link to commit:", 
           f"{(total_changelog - total_changelog_has_link) / total_changelog * 100}%")
 
-craw_changelog_has_commit_link()
+check_releases_relationship()
+
+
+

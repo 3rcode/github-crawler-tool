@@ -18,6 +18,8 @@ def commit_to_release(repo_path: str, sorted_releases: pd.DataFrame, outlier_pat
         cmd = f"""cd {repo_path}
         git rev-list --reverse {sorted_releases.loc[i, "tag_name"]} ^{sorted_releases.loc[i + 1, "tag_name"]}"""
         sha = os.popen(cmd).read().split('\n')
+
+        print(cmd)
         if sha:
             last_sha = sha[0]
             cmd = f"""cd {repo_path}

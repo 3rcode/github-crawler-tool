@@ -375,40 +375,53 @@ def make_data() -> None:
 #     # test_data.to_csv(os.path.join(ROOT_DIR, "data", "test_repo_dataset.csv"), index=False)
                 
 
-def join_labelled_data_by_time():
-    """ Join labelled commits of all repositories into train.csv and test.csv by repo """
+# def join_labelled_data_by_time():
+#     """ Join labelled commits of all repositories into train.csv and test.csv by repo """
 
-    # Load all repositories commits into dataframes
-    repo_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
-    repos = pd.read_csv(repo_path)
-    num_repo = len(repos)
-    dfs = []
-    for i in range(num_repo):
-        owner = repos.loc[i, "Owner"]
-        repo = repos.loc[i, "Repo"]
-        print("Repo:", owner, repo)
-        path = os.path.join(ROOT_DIR, "data", f"{owner}_{repo}", "labelled_commit.csv")
-        df = pd.read_csv(path)
-        commit_time = []
-        path = os.path.join(ROOT_DIR, "..", "repos", f"{owner}_{repo}")
-        for j in range(len(df)):
-            cmd = f"""cd {path}
-                git show --no-patch --no-notes --format="%ct" {df.loc[j, "Sha"]}"""
-            time = int(os.popen(cmd).read()[:-1])
-            commit_time.append(time)
-        df["Commit Time"] = pd.to_datetime(commit_time, unit='s')
-        dfs.append(df)
+#     # Load all repositories commits into dataframes
+#     repo_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
+#     repos = pd.read_csv(repo_path)
+#     num_repo = len(repos)
+#     dfs = []
+#     for i in range(num_repo):
+#         owner = repos.loc[i, "Owner"]
+#         repo = repos.loc[i, "Repo"]
+#         print("Repo:", owner, repo)
+#         path = os.path.join(ROOT_DIR, "data", f"{owner}_{repo}", "commit.csv")
+#         df = pd.read_csv(path)
+#         # commit_time = []
+#         # path = os.path.join(ROOT_DIR, "..", "repos", f"{owner}_{repo}")
+#         # for j in range(len(df)):
+#         #     cmd = f"""cd {path}
+#         #         git show --no-patch --no-notes --format="%ct" {df.loc[j, "Sha"]}"""
+#         #     time = int(os.popen(cmd).read()[:-1])
+#         #     commit_time.append(time)
+#         # df["Commit Time"] = pd.to_datetime(commit_time, unit='s')
+#         dfs.append(df)
         
-    all_data = pd.concat(dfs)
-    # Remove null commit has no message
-    all_data = all_data.dropna(subset=["Commit Message"]).reset_index(drop=True)
-    # Remove duplicate commits has same message
-    all_data = all_data.drop_duplicates(subset=["Commit Message"]).reset_index(drop=True)
-    # Shuffle commits
-    all_data = all_data.sample(frac=1, axis=0).reset_index(drop=True)
-    # Number commits
-    all_data = all_data.sort_values(by=["Commit Time"], ascending=True).reset_index(drop=True)
-    print(all_data.head())
-    all_data.to_csv(os.path.join(ROOT_DIR, "data", "dataset_by_time.csv"), index=False)
+#     all_data = pd.concat(dfs)
+#     # Remove null commit has no message
+#     all_data = all_data.dropna(subset=["Commit Message"]).reset_index(drop=True)
+#     # Remove duplicate commits has same message
+#     all_data = all_data.drop_duplicates(subset=["Commit Message"]).reset_index(drop=True)
+#     # Shuffle commits
+#     all_data = all_data.sample(frac=1, axis=0).reset_index(drop=True)
+#     # Number commits
+#     all_data = all_data.sort_values(by=["Commit Time"], ascending=True).reset_index(drop=True)
+#     print(all_data.head())
+#     all_data = all_data.set_index(np.arange(len(all_data.index)))
+#     all_data = all_data[["Owner", "Repo", "Sha"]]
+#     all_data.to_csv(os.path.join(ROOT_DIR, "data", "final.csv"), index=False)
 
+# join_labelled_data_by_time()
 
+def check_all_data():
+    path = os.path.join(ROOT_DIR, "data", "final.csv")
+    all_data = pd.read_csv(path)
+    print(all_data.info())
+    # all_data = all_data[["Owner", "Repo", "Sha"]]
+    # all_data = all_data.set_index(1 + np.arange(len(all_data.index)))
+    # all_data.index.name = "Index"
+    # all_data.to_csv(os.path.join(ROOT_DIR, "data", "final.csv"))
+
+check_all_data()
