@@ -93,6 +93,8 @@ def sampling_dataset() -> None:
 
 
 def check_acc_threshold() -> float:
+    """ Fine appropriate threshold for commit message score """
+
     human_label_path = os.path.join(ROOT_DIR, "data", "human_label.csv")
     human_label = pd.read_csv(human_label_path)["Label"].astype("float64").to_numpy()
     commit_scores = []
@@ -123,7 +125,9 @@ def check_acc_threshold() -> float:
     return threshold[accuracy.index(max(accuracy))], max(accuracy)
     
 
-def excel_join():
+def excel_join() -> None:
+    """ Join multiple csv file into xlsx file (excel) """
+
     for i in [9]:
         input_path = os.path.join(ROOT_DIR, "data", "sample_commit", f"group_{i + 1}")
         output_path = os.path.join(ROOT_DIR, "data", "sample_commit", f"group_{i + 1}.xlsx")

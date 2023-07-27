@@ -40,6 +40,8 @@ def summarize_data() -> None:
 
 
 def check_bot() -> Tuple[float, float]:
+    """ Check whether author and commiter is bot """
+
     path = os.path.join(ROOT_DIR, "data", "all_data.csv")
     all_data = pd.read_csv(path)
     print(all_data.info())
@@ -117,9 +119,9 @@ def check_commit_not_in_release_branches() -> float:
 
 
 def commit_between_two_releases(repo_path: str, sorted_releases: pd.DataFrame, outlier_path: str) -> List[int]:
+    """ Calculate number of commits between two releases version of a Github repo """
+    
     compare_commit = []
-    if repo_path == "/home/tranmanhcuong/CG/CC/../repos/hashicorp_terraform-provider-aws":
-        return compare_commit
     outlier = open(outlier_path, "a+")
     for i in range(len(sorted_releases) - 1):
         try:
@@ -129,29 +131,24 @@ def commit_between_two_releases(repo_path: str, sorted_releases: pd.DataFrame, o
                 num_commit = int(os.popen(cmd).read())
                 if num_commit > 0:
                     compare_commit.append(num_commit)
-                    if num_commit == 13845:
-                        outlier.write(repo_path + '\n')
-                        outlier.write(sorted_releases.loc[i].to_string() + '\n')
-                        outlier.write(sorted_releases.loc[j].to_string() + '\n')
-                    break
             else:
                 cmd = f"""cd {repo_path}
                     git rev-list {sorted_releases.loc[i, "tag_name"]} --count"""
                 num_commit = int(os.popen(cmd).read())
                 if num_commit > 0:
-                    if num_commit == 13845:
-                        outlier.write(repo_path + '\n')
-                        outlier.write(sorted_releases.loc[i].to_string() + '\n')
                     compare_commit.append(num_commit)
         except Exception as e:
-            pass
+            outlier.write(f"{repo_path}\t{sorted_releases.loc[i, 'tag_name']}" \
+                          f"\t{sorted_releases.loc[j, 'tag_name']}\n")
 
     outlier.close()
     
     return compare_commit
 
 
-def commit_to_release(repo_path: str, sorted_releases: pd.DataFrame, outlier_path: str) -> List[int]:
+def time_commit_to_release(repo_path: str, sorted_releases: pd.DataFrame, outlier_path: str) -> List[int]:
+    """ Calculate time from oldest commit of a release version to that release public """
+
     times = []
     outlier = open(outlier_path, "a+")
     for i in range(len(sorted_releases) - 1):
@@ -165,73 +162,48 @@ def commit_to_release(repo_path: str, sorted_releases: pd.DataFrame, outlier_pat
             last_commit_time = int(os.popen(cmd).read())
             time = sorted_releases.loc[i, "created_at"].to_pydatetime().timestamp() - last_commit_time
             if time <= 0: 
-                pass
-                # outlier.writelines(f"Outlier at: {repo_path}\t{sorted_releases.loc[i, 'tag_name']}\n")
-            else:
-                if time == 246305732:
-                    outlier.write(repo_path + '\n')
-                    outlier.write(sorted_releases.loc[i].to_string() + '\n')   
+                outlier.writelines(f"Outlier at: {repo_path}\t{sorted_releases.loc[i, 'tag_name']}\n")
+            else:  
                 times.append(time)
     outlier.close()
 
     return times
 
 
-def check_commit_in_dataset(repo_path: str, sorted_releases: pd.DataFrame, outlier_path: str) -> List[int]:
-    folder = repo_path.split('/')[-1]
-    print(folder)
-    path = os.path.join(ROOT_DIR, "data", folder, "commit.csv")
-    commit_time = sorted(pd.read_csv(path)["Commit Time"].to_list())
-    time_node = (sorted_releases["created_at"].astype(int) // 10**9)[::-1]
-    bucket = defaultdict(list)
-    print(len(commit_time))
-    i = 0
-    for time in commit_time:
-        try:
-            if time <= time_node[i]:
-                bucket[i].append(time)
-            else:
-                print("here")
-                i += 1
-        except:
-            continue
-    print(len(bucket[0]))
-    # times = []
-    # # for i in bucket:
-        
-    #     # for j in bucket[i]:
-    #     #     times.append(bucket[i] - j)
-    times = 0
-    return times
+def check_releases_relationship() -> None:
+    """ Do some functions with sorted releases"""
 
-
-def check_releases_relationship():
+    # Load repositories
     repos_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
     repos = pd.read_csv(repos_path)
     # Check repos
     print(repos.shape)
     print(repos.head())
-    num_repo = repos.shape[0]
+
+    # Initial 
     time_between_2_release = np.array([]).astype("timedelta64")
-    time_commit_to_release = np.array([])
+    time_commit_2_release = np.array([])
     num_commit_between_2_releases = np.array([]).astype("int64")
-    
     outlier_cases = "outlier_cases.txt"
-    num_changelog = 0
-    for i in range(num_repo):
+
+    # Traverse all repositories
+    for i in range(len(repos)):
         owner = repos.loc[i, "Owner"]
         repo = repos.loc[i, "Repo"]
         folder = f"{owner}_{repo}"
         print("Repo:", folder)
         path = os.path.join(ROOT_DIR, "data", folder, "changelog_info.csv")
         changelog_info = pd.read_csv(path)
-        num_changelog += len(changelog_info)    
+
+        # Sort release version by created and published time
         changelog_info = changelog_info.drop(columns=["index"])
         changelog_info["created_at"] = pd.to_datetime(changelog_info["created_at"])
         changelog_info["published_at"] = pd.to_datetime(changelog_info["published_at"])
         changelog_info = changelog_info.sort_values(by=["created_at", "published_at"], ascending=[False, False])
         changelog_info = changelog_info.set_index(np.arange(len(changelog_info.index)))
         repo_path = os.path.join(ROOT_DIR, "..", "repos", folder)
+
+        # Add tag sha and commit sha corresponding with release tag name
         tag_shas = []
         commit_shas = []
         for j in range(len(changelog_info)):
@@ -239,106 +211,94 @@ def check_releases_relationship():
                     git rev-parse {changelog_info.loc[j, "tag_name"]}"""
             tag_sha = os.popen(tag_cmd).read()
             tag_shas.append(tag_sha[:-1])
-
             commit_cmd = f"""cd {repo_path}
                         git rev-parse {changelog_info.loc[j, "tag_name"]}~"""
             commit_sha = os.popen(commit_cmd).read() 
-            commit_shas.append(commit_sha[:-1])        
-
+            commit_shas.append(commit_sha[:-1])       
         changelog_info["tag_sha"] = tag_shas
         changelog_info["commit_sha"] = commit_shas 
+
+        # Remove releases that created at the same time or pointed to the same commit
         changelog_info = changelog_info.drop_duplicates(subset=["created_at"]).reset_index(drop=True)
         changelog_info = changelog_info.drop_duplicates(subset=["commit_sha"]).reset_index(drop=True)
         changelog_info = changelog_info.set_index(np.arange(len(changelog_info.index)))
         # Get time between two consecutive release
         try:
-            # times = np.array([changelog_info.loc[j, "created_at"] - changelog_info.loc[j + 1, "created_at"]
-            #                   for j in range(len(changelog_info) - 1)]).astype("timedelta64")
-            # time_between_2_release = np.append(times, time_between_2_release)
-            # num_commit_between_2_releases = np.append(
-            #     np.array(commit_between_two_releases(repo_path, changelog_info, outlier_cases)).astype("int64"),
-            #     num_commit_between_2_releases
-            # )
-            # time_commit_to_release = np.append(
-            #     np.array(commit_to_release(repo_path, changelog_info,outlier_cases)),
-            #     time_commit_to_release
-            # )
-            time_commit_to_release = np.append(
-                np.array(check_commit_in_dataset(repo_path, changelog_info, outlier_cases)),
-                time_commit_to_release
+            # Find all time between two consecutive releases
+            times = np.array([changelog_info.loc[j, "created_at"] - changelog_info.loc[j + 1, "created_at"]
+                              for j in range(len(changelog_info) - 1)]).astype("timedelta64")
+            time_between_2_release = np.append(times, time_between_2_release)
+
+            # Find number of commits between two releases
+            num_commit_between_2_releases = np.append(
+                np.array(commit_between_two_releases(repo_path, changelog_info, outlier_cases)).astype("int64"),
+                num_commit_between_2_releases
             )
 
+            # Find time from oldest commit of a release version to the time that release created
+            time_commit_2_release = np.append(
+                np.array(time_commit_to_release(repo_path, changelog_info,outlier_cases)),
+                time_commit_2_release
+            )
         except Exception as e:
             print(e)
             break
-        break
-      
+    
     print("Time last commit to release:")
     print("\tMax:", f"{np.max(time_commit_to_release)}s")
     print("\tMin:", f"{np.min(time_commit_to_release)}s")
     print("\tMean:", f"{np.mean(time_commit_to_release)}s")
     print("\tMedian:", f"{np.median(time_commit_to_release)}s")
     pd.DataFrame(time_commit_to_release, columns=["Time"]).to_csv("time_cm_2_re.csv")
-    # print("Time between two releases:")
-    # print("\tMax:", np.max(time_between_2_release))
-    # print("\tMin:", np.min(time_between_2_release))
-    # print("\tMean:", np.mean(time_between_2_release))
-    # print("\tMedian:", np.median(time_between_2_release))
-    # df = pd.DataFrame(time_between_2_release, columns=["Time"])
-    # df["Time"] = df["Time"].dt.total_seconds().astype("int")
-    # df.to_csv("time_between_2_re.csv")
-    # num_commit_between_2_releases = num_commit_between_2_releases[num_commit_between_2_releases != 0]
-    
-    # print("Num commit between two releases")
-    # print("\tMax:", np.max(num_commit_between_2_releases))
-    # print("\tMin:", np.min(num_commit_between_2_releases))
-    # print("\tMean:", np.mean(num_commit_between_2_releases))
-    # print("\tMedian:", np.median(num_commit_between_2_releases))
-    # pd.DataFrame(num_commit_between_2_releases, columns=["Num commit"]).to_csv("num_cm_between_2_re.csv")
+
+    print("Time between two releases:")
+    print("\tMax:", np.max(time_between_2_release))
+    print("\tMin:", np.min(time_between_2_release))
+    print("\tMean:", np.mean(time_between_2_release))
+    print("\tMedian:", np.median(time_between_2_release))
+    df = pd.DataFrame(time_between_2_release, columns=["Time"])
+    df["Time"] = df["Time"].dt.total_seconds().astype("int")
+    df.to_csv("time_between_2_re.csv")
+
+    num_commit_between_2_releases = num_commit_between_2_releases[num_commit_between_2_releases != 0]
+    print("Num commit between two releases")
+    print("\tMax:", np.max(num_commit_between_2_releases))
+    print("\tMin:", np.min(num_commit_between_2_releases))
+    print("\tMean:", np.mean(num_commit_between_2_releases))
+    print("\tMedian:", np.median(num_commit_between_2_releases))
+    pd.DataFrame(num_commit_between_2_releases, columns=["Num commit"]).to_csv("num_cm_between_2_re.csv")
 
      
-def check_number_of_author():
+def check_number_of_author() -> None:
+    """ Check number of authors in a Github repo"""
+
     repo_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
     repos = pd.read_csv(repo_path)
-    # all_authors = set()
-    # years = []
-    num_tag = 0
+    all_authors = set()
     for i in range(len(repos)):
         owner = repos.loc[i, "Owner"]
         repo = repos.loc[i,  "Repo"]
         path = os.path.join(ROOT_DIR, "..", "repos", f"{owner}_{repo}")
         cmd = f"""cd {path}
-            git tag | wc -l"""
-        num_tag += int(os.popen(cmd).read())
-    print(num_tag)
+            git shortlog -s -n -e --all"""
+        try:
+            authors = os.popen(cmd).read().split("\n")[:-1]
+            authors = [author[7:] for author in authors]
+            all_authors.update(authors)
+        except:
+            print(owner, repo)
 
-        # cmd = f"""cd {path}
-        #     git log --reverse --date="format:%Y" --format="format:%ad" | head -n 1"""
-        # try:
-        #     year = int(os.popen(cmd).read())
-        #     years.append(year)
-        # except:
-        #     print(owner, repo)
-
-        # cmd = f"""cd {path}
-        #     git shortlog -s -n -e --all"""
-        # try:
-        #     authors = os.popen(cmd).read().split("\n")[:-1]
-        #     authors = [author[7:] for author in authors]
-        #     all_authors.update(authors)
-        # except:
-        #     print(owner, repo)
-    #print(min(years))
-    #print(len(all_authors)) 
-    
-    # num_authors = np.array(num_authors)
-    # print("Max:", np.max(num_authors))
-    # print("Min:", np.min(num_authors))
-    # print("Mean:", np.mean(num_authors))
-    # print("Median:", np.median(num_authors))
+    print(len(all_authors)) 
+    num_authors = np.array(num_authors)
+    print("Max:", np.max(num_authors))
+    print("Min:", np.min(num_authors))
+    print("Mean:", np.mean(num_authors))
+    print("Median:", np.median(num_authors))
 
 
-def check_num_language():
+def check_num_language() -> None:
+    """ Check programming language Github repo used """
+
     repo_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
     repos = pd.read_csv(repo_path)
     all_languages = set()
@@ -377,7 +337,9 @@ def check_changelog_has_commit_link(owner: str, repo: str) -> Tuple[int, int]:
     return len(changelogs), num
 
 
-def craw_changelog_has_commit_link():
+def crawl_changelog_has_commit_link() -> None:
+    """ Traverse all repositories in Repos.csv file to find number of changelog has commit link """
+    
     repo_path = os.path.join(ROOT_DIR, "data", "Repos.csv")
     repos = pd.read_csv(repo_path)
     total_changelog = total_changelog_has_link = 0
@@ -395,7 +357,6 @@ def craw_changelog_has_commit_link():
     print("Changelog don't have link to commit:", 
           f"{(total_changelog - total_changelog_has_link) / total_changelog * 100}%")
 
-check_releases_relationship()
 
 
 
