@@ -1,11 +1,19 @@
 import os
+from configparser import ConfigParser
 from typing import List, TypeVar
 
 import pandas as pd
 import pygit2
 import requests
 
-from config import HEADERS, REPOS_STORE, ROOT_DIR
+config = ConfigParser()
+config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.ini")
+config.read(config_file)
+
+root = config["Paths"]["root"]
+repos_store = config["Paths"]["repos_store"]
+headers = eval(config["API"]["headers"])
+
 
 Time = TypeVar("Time")
 
@@ -45,7 +53,7 @@ class MakeData:
         all_els = []
         while True:
             url = f"https://api.github.com/repos/{self.owner}/{self.repo}/{comp}?{option}&per_page=100&page={page}"
-            response = requests.get(url, headers=HEADERS)
+            response = requests.get(url, headers=headers)
             if response.status_code != 200:
                 print(response.status_code)
                 print(response.text)
@@ -66,6 +74,7 @@ class MakeData:
 
     def store_release_note_info(self) -> None:
         """Store information of release notes of Github repo to data/"""
+
         try:
             # Crawl release notes
             print("Start crawl release notes")
@@ -73,7 +82,7 @@ class MakeData:
             print("Crawl release notes done")
             release_note_info = pd.DataFrame(release_note_info)
             print(release_note_info.head())
-            folder_path = os.path.join(ROOT_DIR, "data", self.folder)
+            folder_path = os.path.join(root, "data", self.folder)
             if not os.path.exists(folder_path):
                 os.mkdir(folder_path)
             rn_info_path = os.path.join(folder_path, "release_note_info.csv")
@@ -89,40 +98,39 @@ class MakeData:
     def crawl_commits_using_api(self):
         """Crawl all commits of a Github repo using Github API"""
 
-        branches = [
-            branch["name"] for branch in self.crawl_branches(self.owner, self.repo)
-        ]
+        branches = [branch["name"] for branch in self.crawl_branches()]
         print("Num branches:", len(branches))
-        all_commits = set()
+        all_commits = []
         for branch in branches:
-            commits = self.github_api(comp="commits", option=f"sha={branch}")
+            commits = self._github_api(comp="commits", option=f"sha={branch}")
             print(f"Number commits in branch {branch}:", len(commits))
-            all_commits.update(commits)
+            all_commits.extend(commits)
 
         return all_commits
 
-    def crawl_commits_after_clone(
-        self, target_branches: List[str], lastest: Time, oldest: Time
-    ) -> List[str]:
+    def crawl_commits_after_clone(self) -> List[str]:
         """Get all commits of Github repo using method that clone repository and using git command to
         retrieval"""
-
-        path = os.path.join(REPOS_STORE, self.folder)
-        cmd = f""" cd {path} 
+        self.clone_repos()
+        path = os.path.join(repos_store, self.folder)
+        print(path)
+        cmd = f""" cd {path}
                 git branch -a"""
         all_branches = os.popen(cmd).read().split("\n")[:-1]
         all_branches = [branch.strip() for branch in all_branches]
+        all_branches.remove("* main")
         remote_branches = [
             "/".join(branch.split("/")[2:]) for branch in all_branches[1:]
         ]
+        remote_branches.remove("HEAD -> origin/main")
         all_commit_shas = set()
-        for branch in target_branches:
+        for branch in all_branches:
             try:
-                if any(rb == branch for rb in remote_branches):
-                    cmd = f"""cd {path} 
+                if branch in remote_branches:
+                    cmd = f"""cd {path}
                     git rev-list remotes/origin/{branch}"""
                 else:
-                    cmd = f"""cd {path} 
+                    cmd = f"""cd {path}
                     git rev-list {branch}"""
                 commit_shas = os.popen(cmd).read()
                 # Each line is a commit sha and the last line is empty line
@@ -134,14 +142,6 @@ class MakeData:
         repo = pygit2.Repository(path)
         # Get commit message from commit sha
         commits = [repo.revparse_single(commit_sha) for commit_sha in all_commit_shas]
-
-        def valid(commit, lastest, oldest):
-            return (
-                oldest.to_pydatetime().timestamp()
-                <= commit.commit_time
-                <= lastest.to_pydatetime().timestamp()
-            )
-
         commits = [
             {
                 "message": commit.message,
@@ -151,7 +151,6 @@ class MakeData:
                 "committer": commit.committer,
             }
             for commit in commits
-            if valid(commit, lastest, oldest)
         ]
 
         return commits
@@ -159,9 +158,10 @@ class MakeData:
     def clone_repos(self) -> None:
         """Clone github repository"""
 
-        path = os.path.join(REPOS_STORE, self.folder)
-        pygit2.clone_repository(
-            f"https://github.com/{self.owner}/{self.repo}",
-            path,
-            callbacks=MyRemoteCallbacks(),
-        )
+        path = os.path.join(repos_store, self.folder)
+        if not os.path.exists(path):
+            pygit2.clone_repository(
+                f"https://github.com/{self.owner}/{self.repo}",
+                path,
+                callbacks=MyRemoteCallbacks(),
+            )
